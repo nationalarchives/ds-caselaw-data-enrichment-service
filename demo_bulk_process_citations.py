@@ -48,6 +48,14 @@ def analyse_matched_ids(MATCHED_RULE_ID):
     df.plot(x="rule_name", y=0, kind="barh", figsize=(20,20), legend=False, color="black")
     plt.savefig("plots/matched_rules.png")
 
+def replacer(file_data, replacement):
+    """Do a basic replacement in the XML"""
+    replacement_string = f'<ref type="case" canonical_form"{replacement[1]}">{replacement[0]}</ref>'
+    file_data = str(file_data).replace(replacement[0], replacement_string)
+    return file_data
+
+
+
 ROOTDIR = "tna-backcatalogue/ewca/civ/2020"
 rules_manifest = load_manifest()
 nlp = English()
@@ -57,7 +65,8 @@ citation_ruler = nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns
 MATCHED_RULE_ID = []
 
 for subdir, dirs, files in os.walk(ROOTDIR):
-    for file in files:
+    for file in files[:100]:
+        REPLACEMENTS = []
         file_path = os.path.join(subdir, file)
         with open(file_path, "r", encoding="utf-8") as file_in:
             print(file)
@@ -72,9 +81,20 @@ for subdir, dirs, files in os.walk(ROOTDIR):
                 MATCHED_RULE_ID.append(rule_id_)
                 if check_if_canonical(rule_id_) == False:
                     corrected_citation = correct_malformed_citation(rule_id_, citation_match)
-                    print ("CORRECTED:", corrected_citation)
+                    print ("-----> CORRECTED:", corrected_citation, file)
+                    replacement_entry = (citation_match, corrected_citation)
                 else:
-                    pass
+                    replacement_entry = (citation_match, citation_match)
+                REPLACEMENTS.append(replacement_entry)
+        
+        for replacement in REPLACEMENTS:
+            file_data = replacer(file_data, replacement)
+        
+        output_file = f"output/{file}".replace(".xml", "_enriched.xml")
+
+        with open(output_file, "w") as data_out:
+            data_out.write(file_data)
+
 
 analyse_matched_ids(MATCHED_RULE_ID)
 
