@@ -10,6 +10,8 @@ import bs4 as BeautifulSoup
 from utils.demo_text import test_string
 from rules.correction_strategies import apply_correction_strategy
 
+#TODO: capture year from well-formed references that include years
+
 def check_if_canonical(rule_id_):
     """Check if the matched citation is well-formed"""
     matched_rule = rules_manifest.loc[rules_manifest["id"] == rule_id_]
@@ -50,10 +52,9 @@ def analyse_matched_ids(MATCHED_RULE_ID):
 
 def replacer(file_data, replacement):
     """Do a basic replacement in the XML"""
-    replacement_string = f'<ref type="case" canonical_form"{replacement[1]}">{replacement[0]}</ref>'
+    replacement_string = f'<ref type="case" canonical_form="{replacement[1]}">{replacement[0]}</ref>'
     file_data = str(file_data).replace(replacement[0], replacement_string)
     return file_data
-
 
 
 ROOTDIR = "tna-backcatalogue/ewca/civ/2020"
