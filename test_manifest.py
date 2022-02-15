@@ -4,7 +4,7 @@ from spacy.lang.en import English
 
 from utils.demo_text import test_string
 
-MANIFEST = pd.read_csv("2022_02_08_Citation_Manifest.csv")
+MANIFEST = pd.read_csv("rules/2022_02_08_Citation_Manifest.csv")
 
 nlp = English()
 nlp.max_length = 1500000
@@ -27,6 +27,7 @@ for example in examples:
     
 MATCHED_IDS = list(set(MATCHED_IDS))
 print(len(MATCHED_IDS), MANIFEST.shape[0])
+assert len(MATCHED_IDS) == MANIFEST.shape[0]
 
 
 
