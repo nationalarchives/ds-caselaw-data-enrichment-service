@@ -27,7 +27,7 @@ def correct_malformed_citation(rule_id_, citation_match):
 
 def load_manifest():
     """Load the rules manifest and patterns file"""
-    rules_manifest = pd.read_csv("rules/2022_02_08_Citation_Manifest.csv")
+    rules_manifest = pd.read_csv("rules/2022_02_16_Citation_Manifest.csv")
     patterns = rules_manifest["pattern"].tolist()
     with open("rules/citation_patterns.jsonl", "w+") as patterns_file:
         for pattern in patterns:
