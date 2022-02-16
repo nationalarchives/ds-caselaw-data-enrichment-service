@@ -4,7 +4,7 @@ from spacy.lang.en import English
 
 from utils.demo_text import test_string
 
-MANIFEST = pd.read_csv("rules/2022_02_08_Citation_Manifest.csv")
+MANIFEST = pd.read_csv("rules/2022_02_16_Citation_Manifest.csv")
 
 nlp = English()
 nlp.max_length = 1500000
@@ -23,6 +23,7 @@ MATCHED_IDS = []
 for example in examples:
     doc = nlp(example)
     ent = [str(ent.ent_id_) for ent in doc.ents][0]
+    print (example,ent)
     MATCHED_IDS.append(ent)
     
 MATCHED_IDS = list(set(MATCHED_IDS))
