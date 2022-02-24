@@ -11,6 +11,7 @@ from utils.demo_text import test_string
 from rules.correction_strategies import apply_correction_strategy
 
 #TODO: capture year from well-formed references that include years
+#TODO: refactor so that the path to the manifest file isn't hardcoded
 
 def check_if_canonical(rule_id_):
     """Check if the matched citation is well-formed"""
@@ -27,7 +28,7 @@ def correct_malformed_citation(rule_id_, citation_match):
 
 def load_manifest():
     """Load the rules manifest and patterns file"""
-    rules_manifest = pd.read_csv("rules/2022_02_16_Citation_Manifest.csv")
+    rules_manifest = pd.read_csv("rules/2024_02_16_Citation_Manifest.csv")
     patterns = rules_manifest["pattern"].tolist()
     with open("rules/citation_patterns.jsonl", "w+") as patterns_file:
         for pattern in patterns:
