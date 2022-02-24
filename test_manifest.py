@@ -20,6 +20,8 @@ MATCHED_IDS = []
 
 for example in examples:
     doc = nlp(example)
+    for token in doc:
+        print (token.text)
     ent = [str(ent.ent_id_) for ent in doc.ents][0]
     print (example,ent)
     MATCHED_IDS.append(ent)
@@ -27,11 +29,3 @@ for example in examples:
 MATCHED_IDS = list(set(MATCHED_IDS))
 print(len(MATCHED_IDS), MANIFEST.shape[0])
 assert len(MATCHED_IDS) == MANIFEST.shape[0]
-
-
-
-
-       
-       
-
-       
