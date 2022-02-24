@@ -2,9 +2,7 @@ from cgi import test
 import pandas as pd
 from spacy.lang.en import English
 
-from utils.demo_text import test_string
-
-MANIFEST = pd.read_csv("rules/2022_02_16_Citation_Manifest.csv")
+MANIFEST = pd.read_csv("rules/2022_02_24_Citation_Manifest.csv")
 
 nlp = English()
 nlp.max_length = 1500000
