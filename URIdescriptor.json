@@ -1,0 +1,22 @@
+{"uriformat": "http://www.legislation.gov.uk/id/{type}/{year}/{number}",
+"params": {
+    "type":{
+            "description":"The legislation type codes are the same as those used on the Statute Law Database, and within the OPSI site",
+            "category":{
+                "primary":["ukpga","ukla","apgb","aep","aosp","asp","aip","apni","mnia","nia","ukcm","mwa","anaw"],
+                "secondary":["uksi","ssi","wsi","nisr","ukci","nisi","ukmo"],
+                "draft":["ukdsi","sdsi","nidsr","nidsi","wdsi"]
+                }
+            },
+    "year":{
+            "description":"Uses calendar years for legislation after 1963 ; otherwise, uses regnal years.",
+             "category":{
+                "calendar":[1963, 2022],
+                "regnal": [1267, 1962]
+                }
+            },
+    "number":{
+        "description":"an integer that reflects the legislation's chapter number according to the primary numbering sequence for the type."
+        }
+    }
+}
