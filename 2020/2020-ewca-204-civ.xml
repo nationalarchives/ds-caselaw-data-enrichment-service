@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/204"/>
+	  <FRBRuri value="ewca/civ/2020/204"/>
+	  <FRBRdate date="2020-02-21" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="204"/>
+	  <FRBRname value="Clark v HM Revenue and Customs"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/204/eng"/>
+	  <FRBRuri value="ewca/civ/2020/204/eng"/>
+	  <FRBRdate date="2020-02-21" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/204/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/204/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:28:18" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/204/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>204</uk:number>
+	<uk:cite>[2020] EWCA Civ 204</uk:cite>
+	<uk:hash>8603f7cc4dc9f57494f133defac46af28aba479111d410de8750df13a9cbc36a</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/204/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.01in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 204</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>A3/2019/0360</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE UPPER TRIBUNAL</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">TAX AND CHANCERY CHAMBER</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">MR JUSTICE ARNOLD AND JUDGE HERRINGTON</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">[2018] UKUT 0397 (TCC)</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 21/02/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE BEAN</span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE HENDERSON</span>
+      </p>
+      <p style="text-align:center">and</p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE NICOLA DAVIES</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:1.08in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">GARETH CLARK </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:1.08in">
+	  <span style="font-weight:bold">and - </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:2.15in;margin-right:0.00in;text-indent:-1.97in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE COMMISSIONERS FOR HER MAJESTY’S </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Respondents</span>
+	<span style="font-weight:bold"> REVENUE AND CUSTOMS </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:1.08in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.18in;margin-right:0.00in"><span style="font-weight:bold">Mr Michael Jones</span> (instructed by <span style="font-weight:bold">Reynolds Porter Chamberlain LLP</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:left;margin-left:0.15in;margin-right:0.00in"><span style="font-weight:bold">Mr Jonathan Davey QC and Mr Sam Chandler </span>(instructed by<span style="font-weight:bold"> the General Counsel and </span></p>
+      <p style="text-align:center;margin-right:0.04in"><span style="font-weight:bold">Solicitor to HMRC</span>) for the <span style="font-weight:bold">Respondents</span></p>
+      <p style="text-align:center;margin-right:0.04in">Hearing dates: 29 and 30 January 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:1.08in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Lord Justice Henderson:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">Introduction</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This appeal involves two distinct questions of principle. The first concerns the meaning of the word “payment” in the definition of the term “unauthorised member payment” in section 160(2) of the Finance Act 2004, and the consequential charges to income tax in respect of such payments contained in sections 208 to 210. The question, in short, is whether the word “payment”, construed in its statutory context, is apt to include a transfer of money (in the tax year 2009/10) from one registered pension scheme to another, in circumstances where it later transpired that the trusts of the recipient scheme were void for uncertainty. The agreed consequence of this is that the transfer was in law effective to transfer only bare legal title to the money, the beneficial interest in which was held on a resulting trust for the transferor.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The transferor pension scheme was a self-invested personal pension plan, or “SIPP”, established by Suffolk Life for the appellant taxpayer, Mr Gareth Clark. “Suffolk Life” was at the material time the trading name of two companies registered in England and Wales, Suffolk Life Annuities Limited and Suffolk Life Pensions Limited, each of which was authorised and regulated by the Financial Services Authority. Their business was the operation and administration of SIPPs and similar pensions products. The transferee scheme, by contrast, had been set up for the purposes of a scheme devised and sold to Mr Clark as a means of freeing the assets held for him in the Suffolk Life SIPP from the investment and fiscal constraints to which they were subject, and enabling him to control and invest them as he wished, particularly in the London residential property market.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The recipient pension scheme was called the Laversham Marketing Limited Pension Scheme. It was established by a Deed of Trust dated 19 February 2009, made between a company incorporated in Cyprus called Laversham Marketing Limited (“LML”) and a UK-resident and incorporated trustee company, Equity First Trustees Limited. The scheme administrator was a company registered in the Isle of Man, Aston Court </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">Chambers IOM Limited (“Aston Court IOM”). I will refer to this scheme as the “LML Pension”. LML was the principal employer under the scheme, and Mr Clark was its only member. On 20 February 2009, Mr Clark entered into a written contract of employment with LML for an initial fixed period of one year, under which he agreed (at least ostensibly) to “[u]se his expertise and knowledge of the newspaper and magazine publishing industry to identify potential investment opportunities for [<span style="font-style:italic">LML</span>] within the United Kingdom.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The “Prescribed Benefits” payable to Mr Clark under the LML Pension were defined in Schedule 1 to the Trust Deed as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“The benefits under the Scheme for any Scheme Member shall be exclusively the benefits of such kind as are prescribed by Part 4 FA 2004 and shall be computed in accordance with the limits prescribed by Part 4 FA 2004.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.42in">The amount of such prescribed benefits shall be 90% (ninety percent) from time to time of the maximum permissible under </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">Part 4 FA 2004.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">In the case of <span style="text-decoration:underline">Re LPA Umbrella Trust and Others, Pensions Regulator v A Admin</span><span> </span><span style="text-decoration:underline">Limited and Others</span> [2014] Pens. L. R 319, Rose J (as she then was) held that member benefits defined in materially identical words in other “pension freedom” schemes were void for uncertainty: see her judgment at [10] to [25]. The insuperable difficulty was that no method of computing pension benefits is set out in Part 4 of the 2004 Act, so as the judge put it at [24]: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.53in">“neither the Trustee, nor in default of the Trustee the court, knows from the deed how to go about computing the pension.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">In due course, the First-tier Tribunal (“the FTT”) held in the present case that the trusts of the LML Pension were likewise void for uncertainty. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">If the answer to the first question is that the transfer from the Suffolk Life SIPP to the LML Pension was a payment within the meaning of section 160(2) of the 2004 Act, it is common ground that the other requirements for it to be an “unauthorised member payment” were satisfied, and that Mr Clark was therefore in principle liable to pay income tax on the amount of the payment (approximately £2.115 million) at the aggregate rate of 55%, comprising an unauthorised payments charge at the rate of 40% under section 208 and an unauthorised payments surcharge at the rate of 15% under section 209. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The second question which we have to determine is whether Mr Clark has been validly assessed to that tax, by means of a “discovery” assessment made under section 29 of the Taxes Management Act 1970 (“TMA 1970”) on 25 March 2014 by an officer of the respondent Commissioners for HM Revenue and Customs (“HMRC”). The question arises because, when the assessment was made, the invalidity of the LML Pension had not yet come to light. The attention of HMRC was instead focused on the next stage in the scheme, under which Mr Clark purportedly surrendered his benefits under the LML Pension to the principal employer, LML. The intention of the promoters of the scheme was that this step should constitute an “authorised surplus payment” within section 177 of FA 2004, and thus an “authorised employer payment” within section 175. As such, it would have attracted a charge to tax levied at the rate of 35% on the scheme administrator under section 207, but the idea was that this charge would be unenforceable in practice because Aston Court IOM was a Manx company thought to be outside the charge to UK corporation tax. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At the time when it was made, the primary basis of the assessment was that the ostensible “surrender” by Mr Clark of his benefits under the LML Pension did not give rise to an authorised employer payment within the meaning of the 2004 Act, and that the payment made to LML in purported implementation of the surrender was instead an unauthorised member payment chargeable to tax under the provisions which I have already mentioned. The amount of the payment to LML was exactly the same as the amount of the previous payment from the Suffolk Life SIPP to the LML Pension. The assessment was addressed to Mr Clark in his personal capacity, as the person in respect of whom the payment had been made, and it related to the same tax year, 2009/10. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In those circumstances, the question, again shortly stated, is whether it is open to HMRC to rely on the assessment of 25 March 2014 as being broad enough in its scope to encompass the first step in the scheme, namely the transfer from the Suffolk Life </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-right:-0.00in">SIPP of the same amount of money to the LML Pension. It is now common ground that, </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">once the invalidity of the LML Pension had become apparent, HMRC could no longer rely on Mr Clark’s surrender of his void benefits, and the consequential payment of the £2.115 million by the LML Pension to LML, as events which gave rise to an unauthorised member payment. Because the trusts of the LML Pension were void, it could no longer be treated as a validly registered pension scheme, nor could Mr Clark be treated as a member of it. On the other hand, the relevant movements of money had actually taken place, the remaining steps in the scheme had apparently been implemented, albeit with varying degrees of legal efficacy, and Mr Clark had in practice achieved his objective of being able to manage and invest the money as he wished, including by making profitable investments in the London residential property market. Indeed, the position today, more than a decade later, is that not a penny of the £2.115 million has been restored to the Suffolk Life SIPP, which was presumably terminated once its assets had been liquidated and transferred to the LML Pension in February 2010. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Clark appealed against the assessment to the FTT (Judge Roger Berner and Ms Gill Hunter), who heard his appeal over three days in July 2016. By a decision released on 12 September 2016 (“the First FTT Decsion”, [2016] UKFTT 0630 (TC)), they found the relevant facts and determined a number of issues of law, including the question whether the initial transfer of the money by the Suffolk Life SIPP to LML Pension was a payment within the meaning of section 160(2) of the 2004 Act, on the assumption (as the FTT also held, and is no longer in dispute) that the trusts of the LML Pension were void for uncertainty, with the consequence that the money was at all material times held on a resulting trust for the Suffolk Life SIPP. The conclusion of the FTT, as stated in [140(2)], was that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“the transfer of funds by Suffolk Life SIPP to LML Pension, which we have found was constituted under a trust void for uncertainty, although giving rise to a resulting trust in favour of Suffolk Life SIPP, was also such a payment [<span style="font-style:italic">i.e. a payment within section 160(2) of FA 2004</span>].” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Having reached those conclusions, the FTT decided to adjourn the second (assessment) issue, on which it had heard only brief submissions, so as to give Mr Clark the opportunity, if he wished, to dispute the validity of the assessment in relation to the initial transfer of the money by the Suffolk Life SIPP to the LML Pension: see the First FTT Decision at [144]. Mr Clark took up this invitation, and a further hearing before the FTT took place on 27 April 2017. For the reasons given in a second decision, released on 12 May 2017 (“the Second FTT Decision”, [2017] UKFTT 0392 (TC)), the FTT concluded that the scope of the assessment was wide enough to cover the initial transfer of funds into the LML Pension, with the result that the assessment should be upheld. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Clark then appealed to the Tax and Chancery Chamber of the Upper Tribunal (Arnold J and Judge Timothy Herrington), who by their decision released on 26 November 2018 (“the UT Decision”, [2018] UKUT 0397 (TCC)) dismissed his appeal on both issues. Mr Clark now appeals to this court, with permission granted by the Upper Tribunal. In granting permission on 21 January 2019, the Upper Tribunal observed that the grounds of appeal on each issue “raise important points of principle”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">We have had the benefit of excellent written and oral arguments on both sides. Mr Clark has throughout been represented by Michael Jones of counsel, whose submissions to us were a model of concision and clarity. HMRC have been represented by Jonathan Davey QC, leading Sam Chandler (although Mr Davey appeared alone at the first FTT hearing). </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">The factual background</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The facts are set out in detail in the First FTT Decision at [5] to [56], and in the Second FTT Decision at [6] to [9]. The Upper Tribunal provided a helpful summary, largely based on the skeleton argument of Mr Jones, at [2] to [11] of the UT Decision. While reference should be made to those passages for a full description of the facts, a shorter summary will suffice for the purposes of this appeal. Much of what follows is, however, based, often verbatim, on the summary in the UT Decision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Clark is a retired businessman, having retired from full-time work in 2000. His pension was originally in a fund established by his employer Southnews PLC, of which he was chairman. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In 2000 the Southnews Group was acquired by Trinity Mirror Group PLC, which also took over the pension fund. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In 2004 or 2005 it appeared that Trinity Mirror was proposing to make changes to the pension scheme which would eliminate the requirement for it to make further contributions. Mr Clark therefore established two SIPPs, the Suffolk Life SIPP in the amount of £2.115 million and another, with Scottish Equitable, in the amount of £600,000.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Clark became concerned at the lack of returns being produced by the SIPPs, and wished to become more involved in the management of the funds and also to be able to borrow from the funds in order to invest in his own capacity. A particular motivating factor was that Mr Clark had a £3 million capital loss which he could use to offset against capital gains. A further motivating factor was that Mr Clark had contacts in the property business, including his son (a chartered surveyor), who could introduce him to investment opportunities in the London residential property market offering significantly higher returns than those expected from the SIPPs. Mr Clark understood that, in order to achieve these objectives, the funds would need to be moved to a vehicle that would permit loans to be made to him for investment in London residential property. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In 2007 Mr Clark was introduced by his financial adviser and friend, Ross Wheldon, to Aston Court Chambers International SA (“Aston Court”), which described itself as “a specialist boutique providing innovative commercial, taxation and asset protection solutions to the challenges faced by businesses and business people in today’s world”. Aston Court prepared a report which set out a number of options for Mr Clark, which included the so-called Pension Transfer Plan. The description of the Plan in the report set out a number of steps broadly similar to those which Mr Clark subsequently adopted, under advice from Aston Court, but did not explain how they were intended to avoid giving rise to unauthorised payment charges under the relevant legislation. The FTT found that Mr Clark’s own understanding of what was meant by the reference in the report to “tax efficiency” was confined to his original purpose of making use of his accrued capital losses, and that he was unaware of the tax avoidance steps inherent in the scheme: see the First FTT Decision at [14]. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The report recommended that both the Suffolk Life SIPP and the Scottish Equitable SIPP should be subject to the pension transfer scheme, but in the event Mr Clark decided to proceed with the Suffolk Life SIPP only. Aston Court charged Mr Clark a substantial fee for this, comprising a fixed arrangement fee of £35,000 and a “success fee” equal to 10% of the value of the pension funds transferred. The FTT accepted Mr </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">Clark’s evidence that he regarded “success” in this context as synonymous with “implementation”, and he “did not consider that this connoted successfully avoiding tax charges”: ibid, at [15]. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The steps that were then taken in implementation of the Pension Transfer Plan are set out in 21 numbered sub-paragraphs of paragraph [9] of the UT Decision, which it is unnecessary to repeat. I have already described the initial steps, involving the establishment of LML (in Cyprus) and the LML Pension, the liquidation of the funds in the Suffolk Life SIPP and their transfer to the LML Pension, the so-called contract of employment entered into between LML and Mr Clark, and the purported surrender by Mr Clark of his benefits under the LML Pension, leading to the payment of the funds from the LML Pension to LML on or before 14 May 2009, on the basis that they constituted an authorised scheme surplus. All these steps were clearly pre-ordained, and they took place within a period of about three months, beginning with the incorporation of LML on 11 February 2009. On the same date, a company was incorporated in the British Virgin Islands called Cedar Investment Management Limited (“CIM”), owned by a service company of Aston Court. Mr Clark was the first director of CIM and the signatory to its bank account, although in July 2009 Aston Court also became a corporate director of CIM and a representative of Aston Court became a co-signatory of the company’s bank account.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The next main stage in the scheme, after the money had reached LML, was the onward transfer on 14 May 2009 by LML to CIM of £1,885,980. That sum represented the original £2.115 million, less a fee of £229,000 that was paid to Aston Court. The FTT found that the basis for the payment from LML to CIM was unclear, although the documents which had been produced by Aston Court to Mr Clark for his signature included a so-called Deed of Agreement in relation to the LML Pension Scheme dated 27 February 2009 under which it was provided that, if any cash or other assets were paid to LML from the LML Pension, then a dividend of the same amount would be paid to CIM as soon as reasonably practicable, and CIM would apply the full amount of that dividend to provide benefits for the dependants of LML’s employees.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">CIM was by this stage the parent company of LML, so in principle the sum of £1,885,980 could have been paid by LML to CIM by way of dividend, but that is not what happened. This, and other discrepancies in the scheme documentation and its implementation, led the FTT to say in the First FTT Decision at [40]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“It is not necessary for us to resolve these discrepancies. We simply find that this was another example of the unsatisfactory nature of the documentation that was entered into. It is clear to us that the promoters of the scheme had very little idea of the detail of what they were doing. The documents give every impression of having been cobbled together from unreliable precedents with little, if any, thought being given to the detail of the individual case at hand.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The FTT continued with the following further important findings of fact: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“41. At all events, the proceeds of what had been the Suffolk Life SIPP, less the considerable fee to Aston Court, ended up in CIM. Up to 13 July 2009, Mr Clark was the sole director of CIM. On that date, Aston Court was appointed an additional director. From 14 May 2009 to 7 September 2010, the funds in CIM remained held in its current account. Mr Clark’s explanation for this, at least up to the time he ceased to be the sole director of CIM, was that he did not wish to be seen to be moving the cash around without proper authorisation. We accept this, as we find that Mr Clark, having been advised that he should not exercise control over the funds, was astute to follow that advice. But no explanation was offered for the failure of CIM to invest any of the funds between July 2009 and September 2010. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">42. Although Mr Clark’s witness statement characterised CIM’s role as one of making recommendations to the trustee of the Cedar Purpose Trust (the shareholder of CIM), there was no evidence of the trust having any role in the investment of the funds. We find that it was CIM that was intended to be the investment vehicle, and that although the trust had shareholder control, the control of the funds lay with CIM, and it was CIM that was at least intended as the vehicle for the making of all investment decisions. This was accepted by Mr Clark in crossexamination.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Clark then proceeded to make investments in the London residential property market, using money borrowed from CIM. The details of the loans and the investments do not matter, but they involved properties in Mayfair and Kensington. As well as the loans, £899,988 was transferred by CIM to an investment management firm, Quilter &amp; Co, on 22 September 2010. The FTT found that the purpose of this transfer was to give Mr Clark access to fund managers, which he had not had when the funds were in the Suffolk Life SIPP. At the time of the first FTT hearing in July 2016, the funds still remained with Quilter on a segregated basis in a “Cedar Purpose Trust portfolio”, and it was Mr Clark who had the relationship with Quilter: see the First FTT Decision, at [56]. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">Legislation</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Part 4 of FA 2004 introduced a comprehensive new regime for the taxation of pensions schemes, running from sections 149 to 284. Most of the provisions came into force on 6 April 2006: see section 284(1). The subjects for which provision was made included: (a) the registration and de-registration of pension schemes (Chapter 2); (b) the payments that may be made by registered pension schemes and related matters (Chapter 3); (c) the tax reliefs and exemptions available in connection with registered pension schemes (Chapter 4); and (d) the imposition of tax charges in connection with such schemes </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-right:-0.00in">(Chapter 5). In very general terms, the underlying policy of the legislation, in common </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">with much predecessor legislation in the same field, was to provide fiscal incentives for the establishment and investment of occupational pension schemes, so as to provide retirement pensions and associated benefits for employees and their dependants, but coupled with strict provisions designed to ensure that the schemes would be properly administered, and that payments made out of them to beneficiaries or sponsoring employers would be confined to certain authorised categories of payment. If unauthorised payments were made, they would be taxed at high rates intended to have a deterrent effect and to compensate the State, in a rough and ready way, for the fiscal benefits previously enjoyed by the relevant funds.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As I have already noted, both the Suffolk Life SIPP and the LML Pension were registered pension schemes. Every registered pension scheme has to have a scheme administrator which fulfils specified requirements and has made the necessary declarations to HMRC. By virtue of section 153(3), the declarations which HMRC may require to accompany an application for registration of a pension scheme “include, in particular, a declaration that the instruments or agreements by which it is constituted do not entitle any person to unauthorised payments”. The LML Pension duly contains such a provision, and although we have not seen the documentation constituting the Suffolk Life SIPP, it may safely be inferred that it too contained a similar provision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The payments that may be made by a registered pension scheme are set out in section 160, which provided, so far as relevant, that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“(1) The only payments which a registered pension scheme is authorised to make to or in respect of a person who is or has been a member of the pension scheme are those specified in section 164.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">(2) In this Part “unauthorised member payment” means –  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.01in;text-indent:0.5in">a payment by a registered pension scheme to or in respect of a person who is or has been a member of the pension scheme which is not authorised by section 164, and  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.01in;text-indent:0.5in">anything which is to be treated as an unauthorised payment to or in respect of a person who is or has been a member of the pension scheme under this Part. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.24in;text-indent:-0.24in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.24in;margin-right:0.50in">The only payments which a registered pension scheme that is an occupational pension scheme is authorised to make to or in respect of a person who is or has been a sponsoring employer are those specified in section 175. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.24in;text-indent:-0.24in">(4)</num>
+	  <content>
+	    <p style="margin-left:1.24in;margin-right:0.50in">In this Part “unauthorised employer payment” means –  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">a payment by a registered pension scheme that is an occupational pension scheme, to or in respect of a person who is or has been a sponsoring employer, which is not authorised by section 175, and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">anything which is to be treated as an unauthorised payment to a person who is or has been a sponsoring employer under section 181. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">(5) In this Part “unauthorised payment” means –  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.00in">an unauthorised member payment, or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.00in">an unauthorised employer payment.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 161, which applied for the interpretation of Chapter 3, provided by subsection (2) that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.83in">““Payment” includes a transfer of assets and any other transfer of money’s worth.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is also relevant to note in this connection section 279(2), which stated that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“In this Part references to payments made, or benefits provided, by a pension scheme are to payments made or benefits provided from sums or assets held for the purposes of the pension scheme.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The list of “authorised member payments” in section 164 included “recognised transfers”, which by virtue of section 169(1) were defined as (broadly) a transfer of sums or assets from one registered pension scheme to another, in connection with a member of that pension scheme. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The list of “authorised employer payments” in section 175 included authorised surplus payments of a description prescribed by regulations made by HMRC: see section 177.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The tax reliefs and exemptions for registered pension schemes contained in Chapter 4 principally comprised (a) exemptions from income tax and capital gains tax in respect of investments or deposits held for the purposes of the scheme, and (b) various forms of relief for contributions to the scheme made by both members and employers, subject to specified conditions and upper limits. The overall effect of these provisions was to place registered pension schemes in a very favourable tax environment, as an incentive to members and their employers to make suitable retirement provision for members. When a member retired, his pension was taxable in the normal way as employment income, subject to the option to take up to 25% of the fund as a tax free lump sum. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The charges to tax contained in Chapter 5 included: (a) the unauthorised payments charge and surcharge (sections 208 to 210); (b) the lifetime allowance charges (where an individual’s annual contribution limits or lifetime pension allowance were exceeded); (c) the charge on authorised employer payments; (d) the scheme sanction charge (levied on the scheme administrator, where an unauthorised payment was made by the pension scheme); and (e) a de-registration charge, also levied on the scheme administrator, when the registration of a registered pension scheme was withdrawn. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">So far as material, section 208 provided as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“(1) A charge to income tax, to be known as the unauthorised payments charge, arises where an unauthorised payment is made by a registered pension scheme. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">(2) The person liable to be charged –  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.01in">(a) in the case of an unauthorised member payment made to or in respect of a person before the person’s death, is the person, </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:0.52in">(c) in the case of an unauthorised employer payment, is the person to or in respect of whom the payment is made. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.35in">(5) The rate of charge is 40% in respect of the unauthorised payment. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">(7) An unauthorised payment may also be subject to –  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.36in">the unauthorised payments surcharge under section 209, and  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.36in">the scheme sanction charge under section 239.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As I have already noted, it is common ground that, if Mr Clark is liable to the unauthorised payments charge under section 208, he is also liable to the unauthorised payments surcharge under section 209, with the result that tax is levied on him at the aggregate rate of 55%. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">The first issue: was the Suffolk Life Transfer a “payment”?</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Clark’s first ground of appeal states the issue with commendable brevity. It alleges that:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“The UT erred in law in concluding that a transfer of funds or assets which did not transfer the beneficial title to those funds or assets, and in particular the Suffolk Life Transfer, was a </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">“<span style="font-style:italic">payment</span>” for the purposes of s. 160(2) FA 2004.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">It is convenient to adopt the expression “the Suffolk Life Transfer” to refer to the initial transfer of the £2.115 million made from the Suffolk Life SIPP to the LML Pension on 21 April 2009. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Unknown to the parties at the time, the Suffolk Life Transfer gave rise to a resulting trust in favour of the Suffolk Life SIPP because the trusts of the LML Pension were void for uncertainty. The LML Pension had been registered by HMRC on 2 March </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-right:-0.00in">2009, and a registration certificate had been issued on that date: see the First FTT Decision at [29]. Accordingly, the transfer, viewed in isolation, was intended to be a straightforward transfer from one registered pension scheme to another, and (as such) a “recognised transfer” within section 169(1) of the 2004 Act, and therefore an authorised member payment within section 164(1)(c). It is agreed, however, that the effect of the failure of the trusts of the LML Pension is that the transfer conveyed only bare legal title to the money, because an immediate resulting trust arose by operation of law.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The relevant type of resulting trust is described in <span style="text-decoration:underline">Lewin on Trusts</span>, 19<span style="vertical-align:super;font-size:smaller">th</span> Edition, para 8-002: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“A resulting trust arises by operation of law if a person makes a disposition of property upon trust but no trusts are effectively declared, or if the trusts that are declared fail to exhaust the beneficial interest.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">The examples then given in paragraph 8-004 include where “trusts are declared that fail at the outset for perpetuity, uncertainty, lapse, or some other reason”. As a matter of trust law, this analysis is in my view correct, and it has not been challenged before us by either side. It is worth observing, however, that Suffolk Life was not a settlor in any normal sense of that word. It was acting as a pension scheme trustee and/or administrator (we do not know the precise structure of the Suffolk Life SIPP), and presumably thought it was merely giving effect to a standard request by the SIPP member, Mr Clark, to liquidate his investments and transfer the resulting cash sum to another registered pension scheme of which he was the sole member.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As a preliminary comment, I have to say that in such a context it strikes me as deeply unrealistic to approach the question whether the Suffolk Life Transfer was a “payment” for the purposes of section 160(2) on the basis that the failure of the trusts of the LML Pension should, without more, prevent the subsection from applying. As a matter of practical reality, the money left the Suffolk Life SIPP and was credited by means of a CHAPS transfer to an LML Pension bank account with National Westminster Bank in Bristol: see the First FTT Decision at [31]. The money therefore passed from the direct control of Suffolk Life, and as we have seen it was then used to implement (with some variations) the subsequent stages of the scheme devised for Mr Clark by Aston Court. Meanwhile, the Suffolk Life SIPP must have been closed, because there were no longer any assets in Mr Clark’s account. There is no express finding to this effect, but it is the natural inference to draw from the documents in the bundle relating to the Suffolk Life Transfer, including in particular a summary of the plan details supplied by Suffolk Life to Aston Court IOM on 22 April 2009 which concluded with a signed declaration “that the transfer value represents the whole of the applicant’s accrued rights to benefits under the transferring scheme/arrangements”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In those circumstances, the natural reaction of anybody to the question whether there had been a payment of the £2.115 million by Suffolk Life to the LML Pension would surely be that of course there had. The money was intended to pass from the control and supervision of one registered pension scheme to another, the Suffolk Life SIPP was thereby left apparently defunct, and legal title (at least) to the money had passed from Suffolk Life to the LML Pension. From a practical and common-sense perspective, why should it make any difference to this analysis if it later transpired that, unknown to everybody at the time, the transfer was in fact defective and gave rise to a resulting </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">trust? In the context of the carefully designed scheme of the 2004 Act, one would not expect the meaning of an everyday word like “payment” to depend on legal niceties of that kind.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Furthermore, such a result would seem particularly strange in the context of section 160(2) itself, read in conjunction with the list of authorised member payments in section 164. Mr Clark, through the agency of Aston Court, had been responsible for bringing about a situation where an ostensible recognised transfer between registered pension schemes was in fact nothing of the sort. In such a case, there is surely every reason why he should be liable to the charge to tax on unauthorised member payments, and the charge to tax would be self-defeating in many cases where it is most needed were his argument on this appeal to prevail. That conclusion is only reinforced when one looks at the use which he has, in practice, been able to make of the money over the last ten years.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is also material to note in this connection that, if Mr Clark had sought to invest in London residential property through a SIPP, this would either have been prohibited or (after 2006) subject to taxation as an unauthorised member payment. We did not hear argument on this point, but the position appears to be that HMRC originally published a list of permitted and prohibited investments for SIPPs, which were strictly applied. The prohibited assets included residential property. As a result of amendments introduced by the Finance Act 2006, this approach was modified so that, instead of an outright prohibition, residential property became one of a range of assets classified as </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">“taxable property” for which tax charges at high rates would apply if a SIPP chose to invest in them.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By virtue of section 174A of FA 2004, which came into force on 6 April 2006, an investment-regulated pension scheme (which includes a SIPP) is to be treated as making an unauthorised payment to a member of the pension scheme if: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.72in">“(a) the pension scheme acquires an interest in taxable property, and </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">(b) the interest is held by the pension scheme for the purposes of an arrangement under the pension scheme relating to the member.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-right:-0.00in">The definition of “taxable property” in Part 2 of Schedule 29A to the 2004 Act includes </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">“residential property”: see paragraphs 6 to 10. Part 4 of Schedule 29A contains detailed rules for ascertaining the amount and timing of an unauthorised payment treated as made to a member by virtue of section 174A. The basic rule is that the full amount of the consideration and related fees paid or incurred in relation to the acquisition of the property constitutes the taxable amount, and normally the whole of the unauthorised payment is treated as made to the member concerned: see paragraphs 32 and 45. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Accordingly, if Mr Clark had been able to make his London property investments through a SIPP, he would have been subject to substantially the same tax liabilities in respect of the investments as those which he now seeks to avoid. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There is a further reason why it seems to me implausible that Parliament, at least for the purposes of section 160(2), would have intended to exclude a transfer of bare legal </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">title to an asset from the scope of an unauthorised member payment. The reason is this. Such an unauthorised transfer will often, although not necessarily, be made in breach of trust. In the present case, it seems likely that the Suffolk Life Transfer was made in breach of trust, albeit innocently so far as Suffolk Life was concerned. The effect of a transfer made in breach of trust is that beneficial title to the property does not pass to the transferee, but if the property reaches a bona fide purchaser for value without notice the effect is then in substance the same as if the trustee in breach had been authorised to transfer the beneficial interest to the purchaser. This was clearly explained by Lloyd LJ in <span style="text-decoration:underline">Independent Trustee Services Limited v GP Noble Trustees Limited (Morris</span><span> </span><span style="text-decoration:underline">intervening)</span> [2012] EWCA Civ 195, [2013] Ch 91, at [106], approved by Lord Mance JSC in <span style="text-decoration:underline">Akers v Samba Financial Group</span> [2017] UKSC 6, [2017] AC 424, at [51] to [52]. Thus, property which is transferred to or in respect of a pension scheme member in breach of trust is always potentially liable to end up in the hands of a bona fide purchaser for value without notice, in which case the position will in substance be the same as if beneficial title to the property had been transferred from the outset. To my mind, this reinforces the unreality of the construction of “payment” for which Mr Clark contends. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In support of that construction, Mr Jones relies on a number of linguistic indicators (although he accepts that none of them is conclusive) and on the guidance which he submits can be obtained from case law relating to similar predecessor provisions in the relevant legislation before the 2004 Act came into force. I must now examine those submissions. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">
+	      <span style="font-style:italic">Linguistic points </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Jones’s first indicator is that the charges on unauthorised payments under Part 4 of FA 2004 are on the value or amount of the “payment” in question. This indicates, he submits, that the sections are concerned with transactions which transfer value. Furthermore, since there is nothing to suggest that money should be treated differently from other assets, and since the value of a transfer of bare legal title to an asset is negligible, it follows that a transfer that does not carry with it beneficial title to the asset concerned, whether it be cash or some other asset, is not a “payment” for the purposes of Part 4. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Jones derives support for this submission from a passage in the judgment of Arden J (as she then was) in <span style="text-decoration:underline">Hillsdown Holdings PLC v Inland Revenue Commissioners</span> [1999] STC 561 at 571, where she found indications in section 601 of the Income and Corporation Taxes Act 1988 (“ICTA 1988”) that it was concerned only with “real” payments which transferred value, and that tax was chargeable on that value. I will return to the <span style="text-decoration:underline">Hillsdown</span> case in due course, but leaving it on one side for the moment, and subject to what I will say about section 161(2), this indicator seems to me more a statement of the conclusion which Mr Jones invites the court to draw than an inference which may safely be derived from the statutory language of Part 4 in general, or section </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">160(2) in particular. It is nowhere stated in terms that the taxable amount of an “unauthorised member payment” is the value, rather than the nominal amount, of the sum transferred (where it is cash), or that a transfer of bare legal title to an asset is to be disregarded because it is of negligible value. Instead, the charge to tax under section 208 is simply on the unauthorised payment itself. I respectfully agree with the Upper Tribunal that there is nothing in the wording of the charge and surcharge in sections </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-right:-0.00in">208 and 209 of the 2004 Act to show that they only operate in respect of payments </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">which transfer beneficial ownership: see the UT Decision at [43]. As the Upper Tribunal said, “[t]he wording neither refers to, nor necessitates, passing of beneficial title.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Jones may be on firmer ground with his second indicator, which is the inclusive definition of “payment” contained in section 161(2). This shows, he says, that for a transfer of an asset to amount to a “payment” for the purposes of the extended definition, it must be a transfer of “money’s worth”, i.e. a transfer of value. The use of the word “other” before “transfer of money’s worth”, demonstrates that the “transfer of assets” referred to in the definition is intended to be a subset of “transfers of money’s worth”. The definition therefore introduces a form of limitation on what can constitute a “payment”. Moreover, it simply gives the words of the definition their natural meaning. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I would see the force of this point if the definition of “payment” in section 161(2) were an exhaustive one, or were at least stated to apply unless the context otherwise required. But the word “includes” shows unambiguously that the definition is not exhaustive, and on a natural reading its obvious primary purpose is to make it clear that the word “payment” is not confined to payments of money, but extends to payments in kind or other transfers of money’s worth. Indeed, to describe the subsection as a “definition” at all may be misleading, as its evident purpose is to extend what might otherwise be taken to be the natural meaning of the word “payment” rather than to limit or circumscribe that meaning. Even so, Mr Jones is entitled to say that the word “other” does indicate that the draftsman was here thinking in terms of transfers of value, even if his primary purpose was to extend the meaning of “payment”, and this might in turn suggest that payments of money were similarly intended to be confined to transfers of value. But the indication is at best a slight one, where Parliament has chosen to use an ordinary English word, “payment”, which is not a term of art, is not exhaustively defined, and is agreed to have a flexible meaning depending on the context in which it is used. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The third indicator is said to be found in the language of section 279(2), quoted at [29] above. Mr Jones says that the reference to “payments made or benefits provided from sums or assets held for the purposes of the pension scheme” suggests that a “payment” requires sums or assets effectively to leave the pension fund as intended by the transaction. He also seeks to draw a similar inference from the reference in section 110 to the fund being “used up” on the making of an unauthorised payment, in the context of the rather complicated rules which determine whether an unauthorised member payment is liable to the surcharge under section 209. In my view, however, these supposed indications are too slight to carry any real weight, either alone or in combination with the other alleged indicators. I agree with both Tribunals that section 279(2) merely describes the source of the payments and sheds little light on their quality: see the UT Decision at [46], and the First FTT Decision at [138]. Furthermore, if the relevant question is whether the funds in the Suffolk Life SIPP were “used up”, or whether the Suffolk Life Transfer was made from sums or assets held for the purposes of the Suffolk Life SIPP, the answer in practical terms is in my judgment clear for the reasons I have already given. The money left the SIPP, Mr Clark has had unfettered use of it for over ten years, and none of it has been repaid. The questions must in my view be answered from the perspective of a practical person of business, not an equity lawyer versed in the law of resulting and constructive trusts. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The same considerations also provide the answer, in my judgment, to the fourth indication relied on by Mr Jones, which fastens on the requirement for the relevant “payment” to be made “to or in respect of” a member of the pension scheme (in the case of an unauthorised member payment), or “to or in respect of” a sponsoring employer (in the case of an unauthorised employer payment). This must mean, says Mr Jones, “to or in respect of” that person in their capacity as member or employer respectively, not in their capacity as trustee under a trust arising by operation of law. This argument again seems to me to ignore the practical reality of what happens in cases of the present type, especially where (as in the present case) the factor which vitiates the transfer and renders it void only comes to light some years later.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For these reasons, I conclude that the linguistic indications relied on by Mr Jones carry little, if any, weight. Nor do I accept his submission that there are no indicators the other way which support HMRC’s construction. On the contrary, the legislative scheme as a whole seems to me to point strongly towards the conclusion that the Suffolk Life Transfer was indeed an unauthorised member payment within the meaning of section 160(2). I therefore turn to consider what guidance can be obtained from the authorities. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">
+	      <span style="font-style:italic">The authorities </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There are three cases which need to be considered. Apart from <span style="text-decoration:underline">Hillsdown</span>, the other two (in chronological order) are: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">(a)</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">the decision of this court in <span style="text-decoration:underline">Venables v Hornby</span> [2002] EWCA Civ 1277, [2002] STC 1248 (“<span style="text-decoration:underline">Venables</span>”); and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">(b)</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">the decision of Sir Edward Evans-Lombe sitting in the High Court, on  appeal from a special commissioner (Julian Ghosh QC), in <span style="text-decoration:underline">Thorpe v Revenue and Customs</span><span> </span><span style="text-decoration:underline">Commissioners</span> [2009] EWHC 611 (Ch), [2009] STC 2107 (“<span style="text-decoration:underline">Thorpe</span>”). </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">None of the cases is of more than persuasive authority, because they all relate to predecessor legislation, and Part 4 of FA 2004 was not a consolidating enactment.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The three cases are fully discussed, and most of the relevant passages from the judgments are set out, in the UT Decision at [26] to [37]. I can therefore be selective in my treatment of them, and will take those passages in the UT Decision as read. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Sections 600 and 601 of ICTA 1988, as in force in 1998/99, imposed charges to tax on unauthorised payments to or for employees, and on payments to employers, made from retirement benefit schemes approved by HMRC. So far as material, the sections provided as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.19in">“600. <span style="font-weight:bold">Charge to tax: unauthorised payments to or for employees</span>. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">(1) This section applies to any payment to or for the benefit of an employee, otherwise than in course of payment of a pension, being a payment made out of funds which are held for the purposes of a scheme which is approved for the purposes of— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:0.00in">(a) this Chapter; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">(2) If the payment is not expressly authorised by the rules of the scheme, or by virtue of paragraph 33 of Schedule 6 to the Finance Act 1989 the employee (whether or not he is the recipient of the payment) shall be chargeable to tax on the amount of the payment under Schedule E for the year of assessment in which the payment is made. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.83in">(4) References in this section to any payment include references to any transfer of assets or other transfer of money’s worth. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.00in">601. <span style="font-weight:bold">Charge to tax: payments to employers</span>. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.60in;text-indent:0.5in">Subsection (2) below applies where a payment is made to an employer out of funds which are or have been held for the purposes of a scheme which is or has at any time been an exempt approved scheme and whether or not the payment is made in pursuance of Schedule 22. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.60in;text-indent:0.5in">An amount equal to 40 per cent of the payment shall be recoverable by the Board from the employer. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.00in">... </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.00in">(6) In this section— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.00in">(a) references to any payment include references to any transfer of assets or other transfer of money’s worth;  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.00in">…” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It can be seen, therefore, that section 600 was, in broad terms, a precursor of the charge to tax in FA 2004 on unauthorised employee payments, while section 601 was a precursor of the charges to tax on both authorised and unauthorised employer payments. Each section provided that references to any payment included “references to any transfer of assets or other transfer of money’s worth”, which is materially identical to the wording found in section 161(2) of the 2004 Act.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The underlying transactions in <span style="text-decoration:underline">Hillsdown</span> concerned two exempt approved occupational pension schemes in the <span style="text-decoration:underline">Hillsdown</span> group, the FMC scheme and the HF scheme. By the late 1980’s, the FMC scheme had a substantial surplus, but its rules prohibited any transfer of assets to the employer except on a winding up, nor were the powers of amendment in the scheme wide enough to authorise such a transfer. The HF scheme, by contrast, had no significant surplus. With the benefit of legal advice, steps were then taken to transfer the assets and liabilities of the FMC scheme to the HF scheme, on terms that part of the surplus be used to enhance benefits under the FMC scheme, and subject to a further understanding that part of the surplus of the FMC scheme would be paid to Hillsdown in return for its agreement to the enlarged benefits. The FMC scheme was then wound up. Following the transfer, the HF scheme had a substantial surplus in excess of the permitted limits. With the approval of HMRC, sums in excess of £16 million were then paid by the HF trustee to Hillsdown in order to reduce the surplus in accordance with Schedule 22 to ICTA 1988. On the basis that the payments were chargeable to tax under section 601, tax at the rate of 40% was duly accounted for to HMRC.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There matters rested until, some five years later, a complaint was made to the Pensions Ombudsman in 1995 about the transactions. He upheld the complaint, and ordered Hillsdown to return to the HF trustee the sums which it had received with interest. Hillsdown appealed to the High Court, but in July 1996 Knox J upheld the Ombudsman’s decision on the basis that the FMC trustee had misused the power to transfer the assets and liabilities of the FMC scheme for the improper purpose of defeating the restrictions in that scheme on transfers to the employer. At a subsequent hearing, Knox J ordered that Hillsdown should only be required to account for the tax element of the sums distributed out of the HF scheme to the extent that such tax was recoverable from HMRC. In August 1999, Hillsdown duly repaid the net sums which it had received with accrued interest, by then amounting to nearly £18.9 million. Hillsdown and the HF trustee then took proceedings against HMRC to recover the tax which had been paid under section 601. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Against this background, the first issue which Arden J had to decide was whether tax had been due under section 601 when the sums in question were paid from the HF scheme to Hillsdown in 1989 and 1990. HMRC conceded that the tax should be repaid if it had never been due in the first place: see <span style="text-decoration:underline">Woolwich Equitable Building Society v</span><span> </span><span style="text-decoration:underline">Inland Revenue Commissioners</span> [1993] AC 70. As in the present case, the issue turned on the meaning of the word “payment” in its statutory context. The argument for HMRC, advanced by Ian Glick QC, was simple. Monies had actually moved from the pension funds to the employer; that was the event which, under section 601, gave rise to a charge to tax; the wording of the section was clear and unambiguous; and there was accordingly no need to apply a purposive construction: see [1999] STC 561 at 570 c-f. Arden J rejected this submission, and held that a purposive approach had to be adopted. She said, at 570g: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“As to the purpose of s 601, Mr Glick submits that the purpose is to recoup the benefit given while the monies were in the fund when they could be accumulated free of tax, and that the method is necessarily rough and ready, but this does not to my mind satisfactorily explain why the tax is, on his submissions, imposed even if, in reality, the monies do not leave the fund.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Much of the reasoning in Arden J’s judgment is taken up with her explanation of why, in her view, the monies had never in reality left the HF scheme. I gratefully adopt the summary of the main strands in her reasoning given in the First FTT Decision at [120]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“(1) Tax was calculated on the amount if the payment was in cash. If the payment was in kind, it was paid on the value of the asset transferred. Subject to certain exceptions, there was no reason why the two types of payment should bear different rates of tax, and on that basis the payment would have to be a real payment.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">Section 606(6)(a) ICTA, which (we interpose) was in the same terms as s 161(2) FA 2004 used the words “transfer” in relation to the transfer of assets. The provision was not talking about a transfer of legal title, but to a real transfer of an asset. The use of the word “other” before “transfer of money’s worth” supported this conclusion. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">One of the ways in which a surplus in an approved scheme could be reduced was by “making payments to an employer” (ICTA, Sch 22, para 3(3)(a)). A surplus could not be reduced by a payment which did not have the effect of transferring the equitable interest in the monies to the employer. That indicated that such a payment was a transaction of substance, and the same meaning should apply to s 601. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(4)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">Further support was to be found in s 601(1) itself: the payment had to be “out of” the fund. Those words indicated that the payment must result in funds effectively leaving the fund as intended by the transaction (whether absolutely or for a period, as in the case of a loan). The words “out of” are not apt to describe a payment which, contrary to the stated effect of the transaction, does not have the effect of changing the ownership of the monies paid and is in fact reversed.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The first, second and fourth of those reasons have an obvious affinity with the linguistic points relied on by Mr Jones in the present case, but I have already explained why, in the different context of section 160(2) of FA 2004, I find them of little, if any, assistance. A critical difference between the situation in the present case, and that which Arden J had to consider in <span style="text-decoration:underline">Hillsdown</span>, is that the sums paid in the latter case were <span style="font-style:italic">authorised</span> amounts intended to reduce a scheme surplus (or, in modern parlance, authorised employer payments), whereas we are concerned with <span style="font-style:italic">unauthorised</span> sums transferred to or in respect of a scheme member. In a case of that nature, which is far removed from anything which Arden J had to consider, the charge to tax on unauthorised member payments would become self-defeating if it did not apply to cases where the payment was made in breach of trust or for any other reason did not transfer beneficial title to the money or other property transferred. It was essentially for this reason that both Tribunals distinguished <span style="text-decoration:underline">Hillsdown</span>: see the First FTT Decision at [137], and the UT Decision at [49] to [51]. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Arden J also found assistance in what she called (at 567e-f) “the general principle laid down by the House of Lords in <span style="font-style:italic">Paton v IRC</span> [1938] AC 341, 21 TC 626”. The question in that case was “whether a borrower had paid interest to his bank when the latter had debited it to his account and added it to the debit balance due on the account. If the interest was “paid”, the taxpayer was entitled to a repayment of tax”. Arden J then cited passages from the speeches of Lord Atkin and Lord Macmillan to the effect that, far from being paid, the interest is debited to the account because it is <span style="font-style:italic">not</span> paid, and the relevant legislation required the payment to be “such as to discharge the debt; the payment must be a fact not a fiction”. The proposition which Arden J derived from these passages is “that the payment should be a reality and not a fiction – that is the court must look to the substance and not to the form of the payment”: see 568a.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">With great respect to Arden J, I have some doubts whether a case about what constituted a payment of bank interest could throw much light on the meaning of “payment” in the very different statutory context under consideration in <span style="text-decoration:underline">Hillsdown</span>. The “reality” of the payment is, I agree, an important aspect of the statutory purpose, but I would not for my part contrast it with “a fiction”. The question is, rather, what kind of reality a transfer of money or other assets must possess in order to qualify as a “payment” within the meaning of section 160(2). As I have already indicated, I think that, in the context of unauthorised member payments, it is the practical or business reality of the transaction which counts, rather than a legal analysis of whether beneficial title passed to the recipient. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The need to avoid, if possible, a self-defeating construction of “payment” formed an important part of the reasoning of this court in the next case which I have to consider, <span style="text-decoration:underline">Venables</span>. As the FTT explained, at [127] to [128]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“That case concerned payments out of a pension scheme that were authorised to be made if a member had retired “in normal health”. The taxpayer was assessed under s 600(1) ICTA on the basis that because the taxpayer had remained a director he had not retired for the purposes of the pension scheme rules. Both the special commissioner and Lawrence Collins J found that the taxpayer had retired, but Lawrence Collins J allowed the taxpayer’s appeal on the basis that the special commissioner had been wrong to decide that the state of the taxpayer’s health disentitled him to early retirement benefits. The Court of Appeal allowed the Crown’s appeal, holding that the taxpayer had not retired. That conclusion was itself reversed by a majority of the House of Lords.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">As well as arguments concerning his retirement and his state of health, the taxpayer had also argued that if the payments to him had attracted tax under s 600 they would have been in breach of the terms of the pension scheme’s trust deed and that, as the taxpayer was one of the trustees, he would have continued to hold the money as such and could not be said to have received anything in his personal capacity. That question did not arise in the High Court in view of Lawrence Collins J’s conclusion on the retirement and normal health questions, but he went on to consider it <span style="font-style:italic">obiter</span>.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the course of that consideration, Lawrence Collins J had concluded ([2001] STC 1221, at [37]) that there was no taxable payment for the purposes of section 600 if each of the following three conditions was satisfied: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“that the payment is in breach of trust, that the recipient is accountable to the trustees as an actual or constructive trustee, and that the recipient is able and prepared to account to the trustees.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">In those circumstances, Lawrence Collins J accepted that “the rationale of the <span style="font-style:italic">Hillsdown</span> case” applied, and said he would follow it. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In this court, the leading judgment was given by Chadwick LJ, with whom Peter Gibson and Potter LJJ agreed. Having decided the retirement issue against the taxpayer, Chadwick LJ continued, at [26]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“26. This issue, as the judge recognised, did not arise on the appeals before him in the circumstances that he had held that the payments were authorised by the rules of the scheme. Nevertheless the issue had been argued before him and he addressed it in his judgment. He summarised the argument advanced on behalf of the taxpayers in four propositions: (a) if the payment to Mr Venables was not authorised by the trust deed or the rules then he was not beneficially entitled to it; (b) Mr Venables was a trustee of the scheme, and if he was not entitled to the payment, he could not have taken it free from the trusts of the scheme; (c) consequently, the money remained subject to the trusts of the scheme, and nothing  accrued to Mr Venables; (d) accordingly he received nothing and there was therefore no payment to him… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">27. In my view, that argument was plainly untenable. Section 600 of the 1988 Act imposes a charge to tax in circumstances where (i) a payment to or for the benefit of an employee (otherwise than in course of payment of a pension) is made out of funds which are held for the purposes of an approved scheme and (ii) the payment is not expressly authorised by the rules of the scheme. In those circumstances the employee is chargeable to tax on the amount of the payment (whether or not he was the recipient of the payment). It is axiomatic that monies or property transferred in breach of trust out of funds subject to a trust will, for so long as they are identifiable, continue to be subject to that trust until they come into the hands of a bona fide purchaser for value without notice of the equity to trace… To hold that there had been no payment because the monies paid remained subject to the trusts of the scheme would be to defeat the obvious purpose of the taxing provision. It could not have been the intention of the legislator that the question whether or not a charge to tax arose under s 600(2) of the 1988 Act would turn upon an investigation whether or not there remained out of the monies or properties transferred some monies or property which </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.83in">(into whoever’s hands they might have come) were still subject to the trusts of the scheme.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Chadwick LJ then considered the more limited version of the argument which Lawrence Collins J had said he would accept if the three conditions mentioned by him were all satisfied. After considering <span style="text-decoration:underline">Hillsdown</span>, Chadwick LJ accepted HMRC’s submission that it could be distinguished. In explaining why he reached this conclusion, Chadwick LJ drew a distinction between sections 601 and 600 of ICTA 1988. He expressed the contrast in this way:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.32in">“32. … The charge to tax under s 601 of the 1988 Act arises whenever a payment is made to an employer out of funds which are or have been held for the purposes of an exempt approved scheme. The object of that taxing provision – as counsel for Hillsdown had submitted and Arden J, I think, accepted – was </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“in a rough-and-ready way” to reverse the tax advantage which an employer would otherwise obtain if there were repaid to it, free of tax, monies derived from contributions which it had made into an exempt approved scheme (see [1999] STC 561 at 567 a-</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">b). It must be kept in mind that the employer will have obtained tax relief in respect of its contributions; and that (as the law then stood) the investment income generated in the pension fund would be exempt from tax. So, if surplus assets are repaid to the employer, there must be a tax charge. It is also necessary to keep in mind that an employer’s scheme may be expected to contain provision for the return of surplus assets (after actuarial certification) and that s 603 of the 1988 Act, and Sch 22, provide for the making of regulations in relation to the reduction or repayment of surpluses. It is to be expected that payments which attract tax under s 601 of the Act will be payments which are authorised by the scheme rules and comply with Sch 22 and the regulations. The unauthorised payment is likely to be the exception. Effect can be given to s 601 of the 1988 Act on the basis that unauthorised payments are not to be treated as payments at all – as Arden J decided. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">33. By contrast, the charge to tax under s 600 of the 1988 Act arises only where the payment is unauthorised and in breach of trust. If an unauthorised payment is to be treated as no payment at all, the section is self-defeating. That cannot have been Parliament’s intention.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Chadwick LJ then explained why the three conditions identified by Lawrence Collins J could not provide a satisfactory answer to the problem, not least because the third condition makes the question whether or not a payment has been made depend “on the state of mind (and the financial position) of the recipient after the event”: see the last sentence of [33], and the example given in [34].  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Finally, Chadwick LJ noted the evidential difficulty that the special commissioner had made no finding whether Mr Venables was willing and able to repay to the trustees the money paid to him in 1994. It could not be assumed that he would be willing, since the scheme had meanwhile ceased to be an exempt approved scheme. Chadwick LJ added, at the end of [35]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“What the position would have been if Mr Venables had repaid to the trustees the monies paid to him before any assessment had been made does not arise for decision in the present case.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the House of Lords, Mr Venables emerged victorious because the majority decided the retirement issue in his favour. This made it unnecessary for the majority to decide the payment issue, but Lord Millett did briefly comment, at [34], on the related question whether the payments were “made out of” the trust funds, if they were paid in breach </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">of trust in circumstances where the recipient came under an obligation enforceable in equity to repay them. Leaving the question open, Lord Millett said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“It depends on whether it is sufficient that the payments were made to the recipient for his own use and benefit and were valid to pass the legal title to the money, or whether they must also have been received free from any legal or equitable obligation on the part of the recipient to make restitution. In short, it may depend on whether the determining factor is the payment or the receipt.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Neither side in the present case sought to rely on this rather Delphic passage, no doubt because it poses rather than answers the question. For what it is worth, however, I would observe that it seems to me implicit in Lord Millett’s formulation of the question, and the language which he used, that he thought it sufficient to constitute a “payment” within section 600 if the money in question was transferred to the recipient for his own use and benefit, and he obtained legal title to it. The question whether the recipient was also under an enforceable obligation in equity to repay the money went, not to the issue whether a payment had been made to him, but rather to the issue whether the payment had been “made out of” the fund.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Lord Walker dissented on the retirement issue, so it was necessary for him to express a view on the question whether Mr Venables was subject to tax under section 600. As to this, he said at [50]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“I consider that the Court of Appeal were also correct in their view on section 600 of [<span style="font-style:italic">ICTA 1988</span>]. I would therefore have dismissed this appeal.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I can deal more briefly with the remaining case which I need to consider, <span style="text-decoration:underline">Thorpe</span>. At the relevant time, Mr Thorpe was the only surviving member, and also a trustee, of an approved pension scheme. He considered that he was entitled to require the trustees to deliver the fund to him under the rule in <span style="text-decoration:underline">Saunders v Vautier</span>, and he procured the making of three payments to him between 1998 and 2000 which exhausted the fund. Mr Thorpe was later assessed to tax under section 600(1) of ICTA 1988, on the basis that the payments to him from the fund were unauthorised. HMRC also withdrew approval of the scheme with effect from a date prior to the making of the payments, and a further assessment on Mr Thorpe was made under section 596A of ICTA 1988 on benefits received by him under a non-approved scheme. A third assessment was also made on Mr Thorpe, in his capacity as administrator of the scheme, under section 591C, occasioned by the cessation of approval of the scheme. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The special commissioner upheld the assessments under sections 591C and 596A, observing that the element of double taxation might be considered Draconian, but he could find nothing in the relevant provisions of ICTA 1988 to indicate that this was not the result prescribed by the legislation: see [2009] STC 2107 at 2120a. It was therefore unnecessary for him to consider the alternative charge to tax under section 600, it being common ground that such a charge could not be imposed in addition to the charge under section 596A: ibid, at 2120b. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On Mr Thorpe’s appeal to the High Court, Sir Edward Evans-Lombe agreed with the special commissioner that the rule in <span style="text-decoration:underline">Saunders v Vautier</span> had no application on the facts. Accordingly, Mr Thorpe’s withdrawal of the fund by the three payments was unauthorised: see the judgment at [15]. This then led the judge to consider the position of Mr Thorpe, in the context of a misguided attempt by Mr Thorpe to rely on the socalled rule in <span style="text-decoration:underline">Re Hastings-Bass</span> as it was then understood. In that context, the judge said of Mr Thorpe, at [19]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“He was, by sanctioning an unauthorised payment, committing a breach of trust. Accordingly, when he received the three payments from the building society, he received those payments with notice of his own breach of trust and has held the sum received as a constructive trustee for the fund ever since. It seems to me that the proper analysis of the facts is that, notwithstanding that at the direction of a trustee the entirety of the fund has been paid out to a private account in the name of Mr Thorpe, a trustee, with the intention, at the time, that it should become his property absolutely, property in the money comprising the fund never left the trusts of the Scheme. If this conclusion is correct, neither s  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">596A nor 600(1) of ICTA applies to the three payments.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This line of reasoning had occurred to the judge after he reserved his judgment at the end of the hearing, but he requested, and duly received, further written and oral submissions on it: see the judgment at [20]. With the benefit of those submissions, he then conducted a detailed examination of <span style="text-decoration:underline">Venables</span> and <span style="text-decoration:underline">Hillsdown</span>, before deciding with “no little hesitation” that he should not follow the approach of this court in </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in"><span style="text-decoration:underline">Venables</span>, but should rather follow the approach of Lawrence Collins J in that case: see [42]. The judge’s main reasons for coming to this conclusion are set out in [34] and [35], which are quoted in full by the Upper Tribunal in the UT Decision at [35]. In those paragraphs, the judge identified the relevant statutory purpose as follows: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“It seems to me that the purpose of the group of sections of ICTA with which this appeal is concerned is to ensure that income, which, once consigned to a pension scheme has the benefit thereafter of very favourable tax treatment, should surrender those benefits where funds are removed from the Scheme other than for its approved purpose. In my view both ss 596A and 600 have this purpose.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">That purpose is achieved where the funds wrongfully removed can be returned to the Scheme with interest, but to the extent that they cannot be so returned, the recipient is charged to tax as if the funds received were part of his income.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Consistently with this reasoning, the judge allowed Mr Thorpe’s appeal against the assessment under section 596A, subject to being satisfied that the relevant fund held by Mr Thorpe had been returned into the control of the original trustees of the scheme, including the corporate pensioneer trustee (which Mr Thorpe had previously purported to dismiss): see [42].  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Returning to the present case, both Tribunals preferred the approach and reasoning of this court in <span style="text-decoration:underline">Venables</span> to that of Lawrence Collins J and Sir Edward Evans-Lombe in the High Court in <span style="text-decoration:underline">Venables</span> and <span style="text-decoration:underline">Thorpe</span> respectively. I have no doubt that they were right to do so. The concept of a charge to tax which can vary in amount, or even be negated, depending on the happening of events subsequent to those which gave rise to the assessment, seems to me a very strange one which Parliament is most unlikely to have contemplated. The validity and amount of an assessment to tax should normally be determined by reference to the facts as they stood at the date of assessment, not by reference to steps later taken by the taxpayer in an effort to retrieve the situation which led to the charge being incurred. At least in the context of unauthorised payments made to members of pension schemes which have enjoyed generous fiscal benefits, I consider that charges to tax under provisions such as section 600 of ICTA 1988, and section 208 of FA 2004, were clearly intended to have a strong deterrent effect, as well as to preserve the integrity of the pension fund. These objectives would be significantly compromised if it were open to the taxpayer, after the conditions for liability to the charge have arisen and an assessment to tax has been made, to escape liability by restoring the relevant assets to the fund. In common with the Tribunals below, I find the reasoning of Chadwick LJ in <span style="text-decoration:underline">Venables</span> on this aspect of the matter compelling.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In oral argument, Mr Jones did his best to persuade us that there is no real analogy between the charge to tax under section 600 of ICTA 1988 and the charge to tax on unauthorised member payments with which we are directly concerned. He pointed out, correctly, that the charge under section 600, as originally enacted, was confined to payments “not expressly authorised by the rules of the scheme”. Breach of the scheme rules was therefore incorporated as an integral part of the statutory purpose, in contrast to the position under Part 4 of FA 2004 where the question whether a payment is </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">“unauthorised” can only be answered by looking at the list of authorised member payments in section 164. It follows that an unauthorised member payment will not necessarily involve any breach of the scheme rules. Nor need it involve a breach of trust, because, as Mr Jones reminded us, there is no requirement for an approved pension scheme to be constituted under a deed of trust. Many such schemes are of a purely contractual nature.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Jones also referred us to the definition of “unauthorised payment” in section 160(5), namely “(a) an unauthorised member payment, or (b) an unauthorised employer payment”. The list of authorised employer payments in section 175 is again of such a </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:-0.50in">nature that there may be categories of payments from a registered scheme to or in respect of a sponsoring employer which are unauthorised, but do not involve any breach of the scheme rules or breach of trust. If these points are borne in mind, said Mr Jones, the closer analogy with the present case is to be found, not in section 600, but in section 601 of ICTA 1988, which is of course the section which Arden J had to consider in <span style="text-decoration:underline">Hillsdown</span>. He invited us to prefer the approach and reasoning of Arden J in that case, and emphasised that it is no part of HMRC’s case that <span style="text-decoration:underline">Hillsdown</span> was wrongly decided. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Attractively though these submissions were advanced, I find them unconvincing. In my view, the clear purpose of Part 4 of FA 2004 is to impose a charge to tax at a high rate (40% or 55%, depending on the amount of the fund used up) in respect of unauthorised payments as defined, whether the payment in question is an unauthorised member payment or an unauthorised employer payment, and whether or not a breach of the scheme rules or a breach of trust is involved. In most cases, there probably will be such </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">(a)</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">breach, but that is not an essential feature of the charge. Rather, it is the responsibility of scheme trustees and administrators, as well as of scheme members and sponsoring employers, to ensure that payments which are made out of the fund to or in respect of members or employers fall within one of the authorised categories. If they do, no tax will be chargeable, but if they do not, tax will chargeable under sections 207 to 209. The question whether a “payment” is made for these purposes should be answered by looking at the practical, business reality of the transaction, including any composite transaction of which the payment forms part. If the intended purpose and effect of the transactions is that money leaves the scheme and is placed at the free disposal of the member, the mere fact that the money may be subject to an equitable obligation to restore it to the scheme will not prevent it from being a “payment” in the ordinary sense of that word. To conclude otherwise would deprive the charge to tax of effect in many of the most egregious cases where it is most needed.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">83.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For all these reasons, I would dismiss Mr Clark’s appeal on the first issue. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">84.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Before moving on, I have two comments to make by way of footnotes. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">85.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">First, in 2015 substantial amendments were made to Part 4 of FA 2004 which for the first time permitted flexible access to assets held in registered pension schemes after the member has reached the age of 55. Those provisions did not have retrospective effect, however, and they have no relevance to the statutory scheme as it stood in 2009/10.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">86.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Secondly, I recognise that different considerations may arguably arise in cases where an unauthorised payment is inadvertently or carelessly made, and the member concerned takes prompt and effective steps to restore it to the fund before any assessment is made by HMRC. Again, however, the present case is not one of that nature. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">The second issue: did the Suffolk Life Transfer fall within the scope of the discovery</span>
+	      <span style="font-weight:bold"> </span>
+	      <span style="font-weight:bold;text-decoration:underline">assessment</span>
+	      <span style="font-weight:bold">? </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">87.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The discovery assessment was made on 25 March 2014, near the end of the tax year 2013/14. At that time, section 29(1) of TMA 1970 provided that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.72in">“(1) If an officer of the Board or the Board discover, as regards any person (the taxpayer) and a year of assessment –  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.29in">that any income which ought to have been assessed to income tax, or chargeable gains which ought to have been assessed to capital gains tax, have not been assessed, or  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.29in">that an assessment to tax is or has become insufficient, or  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.29in">that any relief which has been given is or has become excessive,  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">the officer or, as the case may be, the Board may, subject to subsections (2) and (3) below, make an assessment in the amount, or the further amount, which ought in his or their opinion to be charged in order to make good to the Crown the loss of tax.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">88.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 29(2) then provided that, where the taxpayer had made and delivered a return in respect of the relevant year of assessment, and the situation mentioned in subsection </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">(1) was “attributable to an error or mistake in the return as to the basis on which his liability ought to have been computed”, then the taxpayer shall not be assessed under the section “if the return was in fact made on the basis or in accordance with the practice generally prevailing at the time when it was made.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">89.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 29(3) imposed further restrictions on the making of an assessment under the section where the taxpayer had made and delivered a return in respect of the relevant year. In short, the taxpayer was not to be assessed unless one or other of two conditions was satisfied. The first condition was that the situation mentioned in subsection (1) “was brought about carelessly or deliberately by the taxpayer or a person acting on his behalf”: subsection (4). The second condition was that, at the time when an officer of HMRC was no longer entitled to give notice of his intention to enquire into the taxpayer’s return, or when he informed the taxpayer that he had completed his enquiries into the return, “the officer could not have been reasonably expected, on the basis of the information made available to him before that time, to be aware of the situation mentioned in subsection (1)”:  see subsection (5). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">90.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 29(6) then provided that, for the purposes of subsection (5): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-right:0.05in">“…information is made available to an officer of the Board if –  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">it is contained in the taxpayer’s return under section 8 or 8A of this Act in respect of the relevant year of assessment (the return), or in any accounts, statements or documents accompanying the return;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">it is contained in any claim made as regards the relevant year of assessment by the taxpayer acting in the same capacity as that in which he made the return, or in any accounts, statements or documents accompanying any such claim;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">it is contained in any documents, accounts or particulars which, for the purposes of any enquiries into the return or any such claim by an officer of the Board, are produced or furnished by the taxpayer to the officer…; or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">it is information the existence of which, and the relevance of which as regards the situation mentioned in subsection (1) above –  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.58in">(i)</num>
+	  <content>
+	    <p style="margin-left:1.58in;margin-right:0.91in;text-indent:0.5in">could reasonably be expected to be inferred by an officer of the Board from information falling within paragraphs (a) to (c) above; or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.58in">(ii)</num>
+	  <content>
+	    <p style="margin-left:1.58in;margin-right:0.91in;text-indent:0.5in">are notified in writing by the taxpayer to an officer of the Board.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">91.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The notice of assessment sent by officer Sarbjit Sidhu to Mr Clark on 25 March 2014 was headed “Notice of assessment for the year ended 5 April 2010”. It stated the amount charged by the assessment as £1,163,277.32. The notice then explained: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“I am sending this assessment to you because we have found that there is additional tax due that was not previously shown on your tax return. It is now too late for us to amend your tax return so this assessment allows us to collect the additional tax. We have made this assessment under Section 29 of the Taxes Management Act 1970. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">I enclose a copy of my calculation of the amount charged by this assessment. I have also included this amount on your Self Assessment statement, a copy of which is enclosed.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">…  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:0.85in;text-indent:1.00in">I have sent a copy of this notice to your adviser, KPMG LLP.” 92.<span style="font-family:Arial"> </span><marker name="tab"/>In a covering letter to Mr Clark of the same date, officer Sidhu said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“Our information indicates that a payment made by Laversham Marketing Ltd Pension Scheme to you or in respect of you was not an authorised payment. I am currently liaising with Aston Court Chambers IOM Limited on obtaining further information regarding this matter. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">Following a change in legislation brought about by Schedule 39 Finance Act 2008 in relation to HMRC time limits for the issue of assessments and determinations, HMRC has issued an assessment in order to protect its position and ensure that any potential tax due for the year ended 5 April 2010 is not lost. This is in connection with the ongoing enquiry into the transfers into the Laversham Marketing Ltd Pension Scheme, your surrender of benefits under that scheme and the subsequent payment from the scheme to Laversham Marketing Ltd. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.60in">The assessment is based on the surplus payment figure that was made to Laversham Marketing Ltd.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/>Amount of unauthorised payment <marker name="tab"/><span> </span><marker name="tab"/>        £2,115,049.68 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">Tax due at 40%                                                     £846,019.87 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">Tax due at 15% (surcharge)                                  £317,257.45 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">Total tax                                                                £1,163,277.32 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">HMRC will continue with its enquiries in order to establish the correct amount of tax due for the year ended 5 April 2010 and you should not, therefore, consider this assessment to signify the closure of HMRC’s enquiries. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">A copy of this letter had been sent to your agent KPMG LLP.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">93.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The “ongoing enquiry” referred to in the second paragraph of the letter was an enquiry into the tax affairs of LML, not Mr Clark. We were also informed that the calculation set out in the letter was the copy calculation said to be enclosed with the notice of assessment: there was no other document sent to Mr Clark, apart from his copy Self Assessment statement (upon which nothing turns).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">94.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Clark’s second ground of appeal is that the Upper Tribunal: “erred in law in concluding that the discovery assessment made by HMRC, notice of which was dated 25 March 2014, was sufficient in its scope to encompass the Suffolk Life Transfer as an unauthorised member payment.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">95.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 29 of TMA 1970, in its modern form, was enacted in 1994 and came into force with effect from the tax year 1996/7, with the advent of self-assessment for individual taxpayers. The power of HMRC to make so-called “discovery” assessments, however, went back much further. Section 29(3) of TMA 1970, as originally enacted, was in materially similar terms to the present section 29(1), save that the final words “in order to make good to the Crown the loss of tax” were not included. Before then, similar provision was made in relation to income tax in predecessor legislation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">96.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As Lewison LJ explained in <span style="text-decoration:underline">Hankinson v Revenue &amp; Customs Commissioners</span> [2011] EWCA Civ 1566, [2012] 1 WLR 2322, at [15]:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“The word “discovers” in this context has a long history. Although the conditions under which a discovery assessment can be made have been tightened in recent years following the introduction of the self-assessment regime, the meaning of the word ‘discovers’ in this context has not changed. In<span style="font-style:italic"> R v Kensington Income Tax General Purposes Comrs</span>, [1913] 3 KB </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">870, 889 Bray J said that it meant “comes to the conclusion from the examination he makes and from any information he may choose to receive”; and Lush J said, at p 898, that it was equivalent to “finds” or “satisfies himself”. In <span style="font-style:italic">Cenlon Finance Co Ltd v Ellwood</span> [1962] AC 782 the House of Lords considered the meaning of the word “discovers”. They rejected the argument that a discovery entailed the ascertainment of a new fact. Viscount Simonds at p 799 said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“I can see no reason for saying that a discovery of undercharge can only arise where a new fact has been discovered. The words are apt to include any case in which for any reason it newly appears that the taxpayer has been undercharged and the context supports rather than detracts from this interpretation.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">18. That section 29(1) is dealing with the subjective views of the officer concerned is borne out by the consequence of the making of a discovery viz that he may make an assessment of the amount “which ought in his … opinion” to be charged to make good the loss of tax. It is true that this power is said to be subject to subsections (2) and (3). However, those subsections do not refer to the officerʼs opinion at all.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">97.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">More recently, the law on what constitutes a discovery for the purposes of section 29(1) was exhaustively reviewed by the Upper Tribunal (Morgan J and Judge Berner) in <span style="text-decoration:underline">Anderson v Revenue and Customs Commissioners</span> [2018] UKUT 159 (TCC), [2018] STC 1210. Mr Davey QC, on behalf of HMRC, particularly relies on what the Upper Tribunal said, in the course of that review, at [26]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:1.00in;text-indent:0.50in">“Any test which is devised as to the necessary subjective belief on the part of the officer must be a practical and workable test. The expression of the test has to recognise that at the time when an officer thinks that it is desirable to make a discovery assessment, the officer may appreciate that in certain respects he may not be in possession of all the relevant facts. Further, the officer may foresee that a discovery assessment might give rise to questions of law some of which might not be straightforward.” I agree. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">98.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="text-decoration:underline">Sanderson v Revenue and Customs Commissioner</span> [2016] EWCA Civ 19, [2016] STC 638, this court drew a distinction between the largely subjective requirements of section 29(1) and the objective second condition in section 29(5), which looks at the state of mind of a hypothetical officer at the time when it became too late to enquire into the taxpayer’s return, or when the taxpayer was informed that enquiries into his return had been completed. The leading judgment was delivered by Patten LJ, with whom Briggs and Simon LJJ agreed. Patten LJ said, at [25]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“The exercise of the s 29(1) power is made by a real officer who is required to come to a conclusion about a possible insufficiency based on all the available information at the time when the discovery assessment is made. Section 29(5) operates to place a restriction on the exercise of that power by reference to a hypothetical officer who is required to carry out an evaluation of the adequacy of the return at a fixed and different point in time on the basis of a fixed and limited class of information. The purpose of the condition is to test the adequacy of the taxpayer’s disclosure, not to prescribe the circumstances which would justify the real officer in exercising the s 29(1) power.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">99.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On behalf of Mr Clark, Mr Jones does not dissent from any of these statements of principle. But, he submits, the only assessment which officer Sidhu had jurisdiction to make was one which reflected the subjective discovery she had made; and the question of what that discovery consisted of can only be answered by looking at the letter which she sent to Mr Clark with the notice of assessment. The officer was not called to give evidence before the FTT, so the question of what she discovered can only be answered </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">by reference to the letter she wrote. If, on the true construction of the letter, the only loss of tax which she discovered was one occasioned by the transfer of the £2.115 million from the LML Pension to LML (“the LML Transfer”), the scope of the assessment was necessarily limited to the loss of tax occasioned by the LML Transfer. When it was discovered, some years later, that the trusts of the LML Pension were void and the LML Transfer therefore could not constitute an unauthorised member payment, and that the Suffolk Life Transfer might instead have constituted an unauthorised member payment, a different discovery assessment relating to that different loss of tax should have been made in order to make it good. What cannot be done is to enlarge the scope of the original discovery assessment to make it encompass something that was never in officer Sidhu’s mind when it was made in March 2014.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">100.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Jones submits that the loss of tax which officer Sidhu had in mind is made unambiguously clear by the first paragraph of her letter to Mr Clark. It was a loss of tax arising from the LML Transfer, and nothing else. Furthermore, he says that this was the finding made by the FTT itself. In the Second FTT Decsion, at [28], the FTT said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“We agree with [<span style="font-style:italic">Mr Jones</span>] to the extent that it is said that, for the purpose of determining whether a discovery assessment has been validly made, it is necessary to identify the loss of tax that has subjectively been asserted by the actual officer and then to test whether the further conditions in s 29 have been met by reference to that loss of tax. Thus, to use the instant case as an example, the validity of the discovery assessment in this case would relevantly have fallen to be tested by reference to section 29(2), (4) and (5) <span style="font-style:italic">with respect to the asserted charge on the LML Transfer</span> [my emphasis].” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">101.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I will say at once that I do not read this passage as a finding of fact by the FTT about the full extent of what the officer had in mind at the relevant time. That would be to ignore the other clear indications in the letter that: (a) further information was still being sought from Aston Court IOM; (b) HMRC had issued the assessment in order to protect their position before relevant time limits expired; (c) there was an ongoing enquiry into the “transfers” (plural) into the LML Pension, Mr Clark’s surrender of benefits under that scheme and the subsequent payment from it to LML (i.e. the LML Transfer itself); and (d) HMRC would continue with their enquiries in order to establish the correct amount of tax due for 2009/10. Clearly, Ms Sidhu must have had all those other matters in mind, because she expressly referred to them in her letter.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">102.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The reason why the FTT focused on Ms Sidhu’s subjective opinion with regard to the LML Transfer alone was in my view rather different. There was no need (as they saw it) for the FTT to press the factual enquiry any further, because, as a matter of law, they considered that on an appeal to the FTT from the assessment, by analogy with the position on an appeal from a closure notice, the scope of the assessment could be widened to include other charges to tax of the same nature arising out of the same factual matrix associated with the loss of tax that gave rise to the assessment based on the officer’s original opinion.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">103.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">After referring to leading cases on the scope of an appeal from a closure notice, including in particular the decision of the Supreme Court in <span style="text-decoration:underline">Tower MCashback LLP 1</span><span> </span><span style="text-decoration:underline">v Revenue and Customs Commissioners</span> [2011] UKSC 19, [2011] 2 AC 457, at [15] to </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">[18], and the decision of this court in <span style="text-decoration:underline">Fidex Limited v Revenue and Customs</span><span> </span><span style="text-decoration:underline">Commissioners</span> [2016] EWCA Civ 385, [2016] STC 1920, at [31] to [45], the FTT said at [43]: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“The scope of the assessment, and consequently of the appeal, must therefore have some limitation. We consider that it is consistent with s 29, taken as a whole, for the scope of the assessment to be limited to a charge of the particular nature which is considered to have given rise to the loss of tax for a particular year of assessment, and which arises out of the factual matrix that is found to have been associated with the loss of tax that gave rise to the assessment on the basis of the officer’s opinion. That too will be the scope of the appeal. On an appeal, by virtue of s 50(6) and (7) [<span style="font-style:italic">of TMA 1970</span>], the Tribunal is not confined to the reasons for the opinion of the officer when coming to the opinion that there had been a loss of tax, nor is it confined to examination only of the facts on which that opinion was based, or the legal analysis applied at that time… The public interest in taxpayers paying the right amount of tax is as strong as, if not stronger or at least more evident than, it has ever been, and the duty of the Tribunal remains to determine whether the assessment undercharges or overcharges the appellant.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">104.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Upper Tribunal also considered the same authorities, and stated its own conclusions at [58] of the UT Decision: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“58. Turning to the present case, counsel for Mr Clark submitted that the scope of [<span style="font-style:italic">the</span>] assessment was confined to the LML Transfer. Like the FTT, we do not accept this. We can state our reasons quite shortly. The discovery asserted in the letter dated 25 March 2014 was of an insufficiency of tax in the 2009/10 tax year in respect of an unauthorised payment from a pension scheme. The letter made it clear that the assessment was a provisional one and it stated that the assessment was made in connection with “the ongoing enquiry into the transfers <span style="font-style:italic">into</span> [the LML Pension] …  and the subsequent payment <span style="font-style:italic">from</span> the scheme to [LML] [emphases added]”. It is true that the assessment focused upon the LML Transfer, but we consider that its scope extended to the Suffolk Life Transfer. We would reach this conclusion in any event, but we consider that it is reinforced by the facts that, at that time, it was common ground that the LML Pension was a registered scheme and that it was Mr Clark who later challenged the status of the LML Pension, leading to the issue over the Suffolk Life Transfer. We note that, rightly, no complaint of procedural unfairness is made by Mr Clark.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">105.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">My own view of the matter differs slightly from that of the Upper Tribunal, which in turn differs significantly from that of the FTT. My conclusion, however, is the same: the scope of the assessment was wide enough to encompass the charge to tax on the Suffolk Life Transfer as an unauthorised member payment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">106.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the first place, I agree with Mr Jones that the scope of the assessment, and of any appeal from it, must be defined by the subjective discovery that the assessing officer has made. That is the only assessment which the officer has jurisdiction to make, and the scope of the assessment, as opposed to the arguments which may be used to support it, cannot in my view be extended by virtue of the appeal process. The correct approach was in my judgment that stated by Kitchin LJ (as he then was) in the <span style="text-decoration:underline">Fidex</span> case at [45], in the context of an appeal from a closure notice: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“In my judgment the principles to be applied are those set out by Henderson J [<span style="font-style:italic">in the Tower MCashback case, at first instance</span>] as approved by and elaborated upon by the Supreme Court. So far as material to this appeal, they may be summarised in the following propositions: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(i)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">The scope and subject matter of an appeal are defined by the conclusions stated in the closure notice and by the amendments required to give effect to those conclusions. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(ii)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">What matters are the conclusions set out in the closure notice, not the process of reasoning by which HMRC reached those conclusions. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(iii)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">The closure notice must be read in context in order properly to understand its meaning. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.19in">(iv)</num>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.00in;text-indent:0.5in">Subject always to the requirements of fairness and proper case management, HMRC can advance new arguments before the FTT to support the conclusions set out in the closure notice.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">107.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I draw attention in particular to the third of the principles stated by Kitchin LJ, namely that the closure notice (or, in the present case, the discovery assessment) must be read in context in order properly to understand its meaning. In my view, the basic fallacy in the argument so skilfully advanced by Mr Jones is that it adopts an unduly narrow reading of officer Sidhu’s letter, by focusing on the LML Transfer alone to the exclusion of the other matters which (as I have already explained) she clearly had in mind when writing the letter. On a fair reading of the letter as a whole, it seems clear to me that HMRC were still in the course of investigating the composite series of transactions which began with the Suffolk Life Transfer, and that the critical loss of tax identified by the officer was not one arising from the LML Transfer viewed in isolation, but rather one arising from the making of an unauthorised member payment in respect of Mr Clark, in the tax year 2009/10, in the course of the composite series of transactions which included the LML Transfer and was still under investigation by </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">HMRC. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">108.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, it is an inescapable inference that officer Sidhu had this wider picture well in mind when she made the assessment, and on the proper construction of the letter her “discovery” extended to any loss of tax in 2009/10 occasioned by an unauthorised member payment made to or in respect of Mr Clark, arising from the series of transactions beginning with the transfer of assets into the LML Pension. As I have already noted, the amount of the Suffolk Life Transfer was exactly the same as the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">amount of the LML Transfer, and the calculation of tax payable in the letter is therefore identical for both transfers. Importantly, as the Upper Tribunal rightly recognised, neither Mr Clark nor his professional advisers were left in any doubt about the precise amount of tax said to be due from Mr Clark in respect of an unauthorised member payment made in respect of him in the relevant tax year. If HMRC were not yet in possession of the full facts relating to the bizarre series of transactions which Mr Clark set in train, and did not yet appreciate (any more than Mr Clark or his advisers) that the trusts of the LML Pension were void for uncertainty, it seems to me that this was a misfortune for which Mr Clark ultimately has nobody to blame but himself.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">109.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For these reasons, I would also dismiss Mr Clark’s second ground of appeal, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">Conclusion</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">110.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">If the other members of the court agree, I would dismiss Mr Clark’s appeal.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Nicola Davies LJ:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">111.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Bean LJ: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">112.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Jones presented the case for the Appellant with great skill and clarity, but I agree with Henderson LJ’s characterisation of it as “deeply unrealistic”. The Appellant’s case on the first ground of appeal can, as it seems to me, be boiled down to the following:- </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">In 2009 Mr Clark had over £2 million in the Suffolk Life SIPP. He reckoned, correctly as it turned out, that it could earn him greater returns if it came under his control so that he could invest in property in central London. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">His tax advisors therefore devised and sold to him a scheme involving what Henderson LJ has described as “a bizarre series of transactions” to free the assets from the investment and fiscal constraints to which they were subject. The first of these transactions was the transfer of the assets from the Suffolk Life SIPP to the LML Pension Scheme. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The outcome of the series of transactions was that Mr Clark was indeed able to control and invest the money as he wished. He has done so now for more than 10 years. His Suffolk Life SIPP is no doubt long since defunct. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(4)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Nevertheless, because the trusts of the LML Pension Scheme were void for uncertainty, the beneficial interest in the assets was never transferred; instead, as a matter of law, the assets were held on a resulting trust in favour of the Suffolk Life SIPP. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(5)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The transfer of the assets out of the Suffolk Life SIPP was accordingly, for the purposes of the relevant provisions of the Finance Act 2004, not a “payment” at all. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(6)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The tax charge levied on unauthorised member payments therefore could not apply. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">113.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree with Henderson LJ that “the natural reaction of anybody to the question whether there had been a payment of the £2.115 million by Suffolk Life to the LML Pension would surely be that of course there had”. As he observes, Mr Clark, through the agency of his advisors Aston Court, had been responsible for bringing about a situation where what appeared to be a recognised transfer between registered pension schemes was in fact nothing of the sort. In such a case, there is indeed every reason why he should be liable to the charge to tax on unauthorised member payments. To conclude otherwise would deprive the charge to tax of effect in many of the most egregious cases where it is most needed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">114.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The argument for the Appellant on the second ground of appeal is similarly artificial. Both grounds seem to me to be examples of tax litigation as a board game, with large prizes for the winners. People who pay tax in the usual way are entitled to feel aggrieved when elaborate avoidance schemes such as the one devised by Aston Court in this case succeed. For all the reasons given by Henderson LJ, I agree that this scheme failed to achieve its objective. Accordingly I too would dismiss this appeal. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

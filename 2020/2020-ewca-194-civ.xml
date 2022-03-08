@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/194"/>
+	  <FRBRuri value="ewca/civ/2020/194"/>
+	  <FRBRdate date="2020-03-12" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="194"/>
+	  <FRBRname value="Parveen, R (on the application of) v London Borough of Redbridge"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/194/eng"/>
+	  <FRBRuri value="ewca/civ/2020/194/eng"/>
+	  <FRBRdate date="2020-03-12" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/194/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/194/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:28:01" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/194/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>194</uk:number>
+	<uk:cite>[2020] EWCA Civ 194</uk:cite>
+	<uk:hash>af7692c3ec6772787ff09dbbf02831b77b744e9a40d2db77a8cf805b9b8fd5e0</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/194/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.26in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading3 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading3Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 194</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>C1/2019/1556</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:2.56in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE HIGH COURT</span>
+	<span style="font-weight:bold"> </span>
+	<span style="font-weight:bold;text-decoration:underline">QUEEN’S BENCH DIVISION</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ADMINISTRATIVE COURT</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">(Steven Kovats QC (Sitting as a Deputy High Court Judge))</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 12/03/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE UNDERHILL, VICE PRESIDENT OF THE COURT OF APPEAL,</span>
+	<span style="font-weight:bold"> </span>
+	<span style="font-weight:bold;text-decoration:underline">CIVIL DIVISION</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE NICOLA DAVIES</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE MALES</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:1.48in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.04in;margin-right:0.07in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE QUEEN </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <p style="text-align:center;margin-left:0.04in;margin-right:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold">(ON THE APPLICATION OF BUSHRA PARVEEN) </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:1.48in">
+	  <span style="font-weight:bold">and - </span>
+	</p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">LONDON BOROUGH OF REDBRIDGE </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">Respondent</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.04in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Mr Lindsay Johnson</span> (instructed by <span style="font-weight:bold">Hopkin Murray Beskine Ltd</span>) for the <span style="font-weight:bold">Appellant</span><span> </span><span style="font-weight:bold">Ms Millie Polimac </span>(instructed by<span style="font-weight:bold"> Redbridge Legal Services</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing date: <date date="2020-02-13">13<span style="vertical-align:super;font-size:smaller">th</span> February 2020</date><span> </span></p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Males:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Introduction </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">1.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">This is an appeal against an order made in the Administrative Court that each party should bear its own costs following the appellant’s withdrawal of a claim for judicial review.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">2.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The appellant, the claimant in the court below, contends that she was the successful party, having obtained substantially all of the relief which she sought, and that she should have been awarded her costs in accordance with the guidance set out in <span style="font-style:italic">M v Croydon London Borough Council</span> [2012] EWCA Civ 595, [2012] 1 WLR 2607. The judge, Mr Steven Kovats QC (sitting as a Deputy High Court Judge), ruled that it was impossible, without conducting a full trial of the claim, to determine whether there was any causal connection between the claim for judicial review and the offer of accommodation made to and accepted by the appellant shortly before the claim was due to be heard. The appellant submits that this represented a failure to apply the guidance in <span style="font-style:italic">M v Croydon</span> and that the judge failed to take account of factors which should have resulted in an award of costs in her favour. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The facts </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">3.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The appellant and her five eldest daughters came to the United Kingdom from Pakistan in 2011. She was pregnant at the time with her sixth daughter. She was a victim of severe domestic violence, spoke no English and had limited mobility. She applied for leave to remain and was accommodated with her daughters by the Secretary of State in a series of temporary accommodation units. In October 2018 the family was granted leave to remain and was given a month’s notice, expiring on 8<span style="vertical-align:super;font-size:smaller">th</span> November 2018, to leave the accommodation provided by the Secretary of State.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">4.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">On 26<span style="vertical-align:super;font-size:smaller">th</span> October 2018 the appellant applied to the respondent council for assistance with housing for herself and her daughters. After an initial interview she was provided with a Personal Housing Plan (“PHP”) pursuant to section 189A of the Housing Act 1996. This recorded that the appellant found stairs difficult to manage and that the interviewing officer had asked her to provide a letter confirming her medical problems. It went into no further detail concerning the appellant’s housing needs, save that the accommodation was to be for herself and her six daughters.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">5.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The council accepted an interim duty under section 188 of the 1996 Act to secure accommodation for the appellant pending a decision on what further duties were owed and, subsequently, accepted a duty under section 189B of the Act to help the appellant to secure that suitable accommodation became available for at least six months.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">6.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The appellant was referred to solicitors, who sent a pre-action letter dated 2<span style="vertical-align:super;font-size:smaller">nd</span> November 2018. The letter referred to the urgent need for accommodation on or before 8<span style="vertical-align:super;font-size:smaller">th</span> November and complained that the PHP provided on 26<span style="vertical-align:super;font-size:smaller">th</span> October had included no assessment of the appellant’s housing needs. It said that the appellant needed self-contained accommodation and (but presumably alternatively) single-sex accommodation because of the extreme domestic violence the family had experienced. It needed also to be close to the schools attended by the children. A letter dated 28<span style="vertical-align:super;font-size:smaller">th</span> January 2016 from the appellant’s GP was enclosed referring to mobility problems. The letter concluded by requiring the council to do three things: (1) to provide a copy of its file on the appellant; (2) to confirm that an urgent assessment of housing needs would be carried out; and (3) to provide self-contained accommodation in the borough on or before 8<span style="vertical-align:super;font-size:smaller">th</span> November 2018. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">7.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">On 5<span style="vertical-align:super;font-size:smaller">th</span> November 2018 the council provided the appellant with accommodation in a mixedsex family hostel for herself and her daughters. Although described as a single room, it was in fact two rooms with a corridor (but no doors) between them, with shared access to bathroom and toilet facilities, and a shared kitchen and living room. On the same day the appellant was interviewed and an accommodation needs assessment form was completed. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in;text-indent:0.00in">It stated that a “B&amp;B or Hostel is suitable, self-contained is obviously most ideal but might be lengthy given that they are a large family and unlikely to be available immediately” and noted that two of the children were at a critical stage of their education. It noted also that the appellant’s medical issues referred to by her GP appeared to be relatively minor and not related to housing need apart from her limited mobility. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">8.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">On 6<span style="vertical-align:super;font-size:smaller">th</span> November 2018 the council responded to the pre-action letter. The response did not address the points set out in some detail by the appellant’s solicitors, but went straight to the three demands which they had made. As to these, the council (1) agreed to provide a copy of the appellant’s housing file, (2) confirmed that an assessment of housing needs had now been carried out, and (3) advised that an offer of accommodation had been made (i.e. in the hostel) which the appellant had accepted. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">9.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">This did not satisfy the appellant, who issued judicial review proceedings on 12<span style="vertical-align:super;font-size:smaller">th</span> November 2018. She contended that the council had breached both the duty owed to her under section 189A of the Housing Act 1996 to produce a lawful PHP (because, she said, the PHP initially provided had included no assessment of her housing needs) and the duty to provide suitable accommodation. She sought (1) a mandatory order requiring the council to secure suitable accommodation for herself and her daughters, (2) a declaration that the accommodation provided for her was not suitable for a family of seven, and (3) a declaration that the council had failed adequately or at all to comply with its duty to prepare a lawful PHP. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">10.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The appellant sought also an interim order requiring the family to be moved to suitable accommodation. At the hearing of that application on 20<span style="vertical-align:super;font-size:smaller">th</span> November 2018 the council argued that the accommodation provided was suitable in the short term, that is to say for a period of up to 56 days (although in the event the appellant and her daughters were to remain there for rather longer than this), bearing in mind the extreme shortage of accommodation for large families in the borough and the appellant’s unwillingness to move away from the area which would mean the children having to change schools. It agreed to make a prompt decision on whether to accept that it owed the appellant a full housing duty under section 193 of the 1996 Act. It agreed also to carry out some work to improve the rooms which had been provided. On that basis the application for interim relief was withdrawn. Some work was carried out to deal with the most obvious problems with the hostel rooms: blinds were provided, gaps in doors were sealed, additional furniture was provided and furniture was placed in the bathrooms. But the fundamental problems of overcrowding and shared use of bathroom and toilet facilities remained. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">11.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The council did accept that it owed the full housing duty, but on 22<span style="vertical-align:super;font-size:smaller">nd</span> November 2018 it determined pursuant to section 184 of the 1996 Act that the accommodation provided was suitable as temporary accommodation pending the securing of other accommodation. The appellant requested a review of this determination under section 202 of the Act, but the council confirmed its decision on 19<span style="vertical-align:super;font-size:smaller">th</span> December 2018. The reviewing officer explained that the council’s policy, in view of high demand and scarce supply, was to move families </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in;text-indent:0.00in">on from the hostel accommodation on a “first in, first out” basis, and that there were six households already in the queue to be considered before the appellant. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">12.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The council contended that the right to request a review and, if dissatisfied, to appeal to the County Court, was an alternative remedy rendering judicial review inappropriate, but despite this permission was granted for the judicial review claim to proceed on 20<span style="vertical-align:super;font-size:smaller">th</span> December 2018. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">13.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">On 10<span style="vertical-align:super;font-size:smaller">th</span> January 2019 the appellant exercised her right to appeal to the County Court under section 204 of the Act against the council’s decision on suitability.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">14.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The hearing of the substantive claim for judicial review was listed for 5<span style="vertical-align:super;font-size:smaller">th</span> March 2019. The appellant continued to argue that the accommodation provided was unsuitable and that selfcontained accommodation was required. The council accepted that the accommodation provided was not ideal, but contended that in the context of a severe housing shortage and benefit restrictions, its determination that the accommodation provided in a family hostel was suitable as temporary accommodation was not irrational. The council contended also that the County Court was the appropriate forum in which to argue about the suitability of the accommodation, rather than the claim for judicial review.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">15.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">In the meanwhile the appellant was provided with updated PHPs from time to time. An update provided on 29<span style="vertical-align:super;font-size:smaller">th</span> January 2019 referred to the history of abuse which the appellant had suffered and recorded that she had been asked to provide a “further supporting letter regarding ongoing problems which causes difficulties with sharing facilities”. As already noted, the appellant had already provided a report from her GP dated 28<span style="vertical-align:super;font-size:smaller">th</span> January 2016 but this did not state in terms that she required either single-sex or self-contained accommodation. On 15<span style="vertical-align:super;font-size:smaller">th</span> February 2019, however, the appellant did provide a report from Dr Eileen Walsh which stated that in her clinical opinion the appellant needed selfcontained accommodation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">16.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">On 22<span style="vertical-align:super;font-size:smaller">nd</span> February 2019 the council offered to rehouse the appellant in self-contained accommodation. She accepted that offer on 28<span style="vertical-align:super;font-size:smaller">th</span> February. An updated PHP provided on 27<span style="vertical-align:super;font-size:smaller">th</span> February indicated that this was the result of the council being provided with Dr Walsh’s report: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Given this new medical information we sourced alternative self-contained accommodation for you and made you an offer on 22/2/19.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">17.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">There were discussions between the parties as to the terms on which the proceedings might be compromised, but they were unable to agree about costs. In the course of that correspondence the council’s legal department said the offer had been made because by 22<span style="vertical-align:super;font-size:smaller">nd</span> February the appellant:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“had reached the top of the queue and was next in line for a property. We considered that to be suitable accommodation, taking into account the most recent medical evidence that was presented.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">18.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Eventually it was agreed that the appellant would withdraw the claim for judicial review with neither party accepting the other’s position on the merits and with liability for costs to be determined by the court on the basis of written submissions. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The costs submissions made to the judge </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">19.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The standard directions agreed provided for the council to go first. It submitted that as the claim had been withdrawn, the presumption was that the appellant should pay its costs; the proceedings had been compromised because of the provision of new accommodation, which had not been provided as a result of the claim but rather because the council had always accepted that such accommodation would be provided as soon as it became available; the appellant had not obtained anything over and above what would have been obtained anyway; the council had not accepted that the accommodation initially provided was unsuitable, at any rate in the short term; the challenge to the PHP had now been withdrawn; and in any event the appropriate forum in which to challenge the suitability of the hostel accommodation was the County Court. The right course was therefore to make no order for costs. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">20.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The appellant sought payment of her costs. She submitted that this was a case in which she had been wholly successful; it had been accepted that the accommodation initially provided was unsuitable; she had now been moved; and the PHP about which she complained had been replaced; it was misleading to suggest that there was no connection between the proceedings and the offer of alternative accommodation. She was therefore the successful party and should recover all her costs of the proceedings. Alternatively, even if only partly successful, the merits of the case were overwhelmingly in her favour. Moreover, while the appellant had behaved reasonably throughout, the council’s conduct had been such as to merit an award of costs in the appellant’s favour. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">21.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The council’s reply reiterated that it had not accepted that the accommodation was unsuitable as temporary accommodation and stated that the offer of new accommodation was made because alternative accommodation was sourced, not because the council accepted the appellant’s argument that self-contained accommodation was needed. <span style="font-weight:bold">The judgment </span></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">22.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">After reciting the history of the proceedings, the judge said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“A consent order was sealed on 3 June 2019 which, after reciting that the parties agreed that the claim had become academic because the defendant has now provided the claimant with a tenancy of a 4/5 bedroom property and neither party conceded the argument advanced by the other and that both parties reserved the right to raise the same points in subsequent litigation, provided that the claim for judicial review be withdrawn, with costs to be determined on the basis of written submissions. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">In my judgment, it is not possible to determine, without conducting a full trial of the claim, what, if any causal connection there was between the claim for judicial review and the offer and acceptance of the claimant’s current accommodation. Both parties have made lengthy and forceful submissions in support of their respective contentions. This is accordingly a case in which, in my judgment, the appropriate order is no order for costs.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The legal framework </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">23.<span style="font-family:Arial"> </span>This court has only very recently reiterated the approach to be taken in appeals about costs. In <span style="font-style:italic">Lejonvarn v Burgess</span> [2020] EWCA Civ 114 Coulson LJ said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“49. I deal with each of those issues in turn below. I do so against the background of the test to be applied to appeals concerned with costs, articulated by Sir Murray Stuart-Smith in <span style="font-style:italic">Roache v Newsgroup Newspapers </span>[1998] EMLR 161, when he said at page 172:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.00in;text-indent:0.00in">‘Before the court can interfere it must be shown that the judge has either erred in principle in his approach, or has left out of account, or taken into account, some feature that he should, or should not, have considered, or that his decision is wholly wrong because the court is forced to the conclusion that he has not balanced the various factors in the scale.’ </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">This approach has been adopted in a number of more recent cases, including <span style="font-style:italic">Islam v Ali </span>[2003] EWCA Civ 612 at paragraph 20. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">50. There are therefore only two ways in which this court may interfere with a costs decision. The first is if there has been an error in law. The second, which is generally much harder to establish, is based on the submission that the discretion was exercised in a manner which led to an unjust or perverse result. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">…” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The M v Croydon guidance </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">24.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The leading case dealing with the costs of public law cases which settle or are withdrawn before trial because the claimant has obtained some or all of the relief sought is <span style="font-style:italic">M v Croydon</span>, where Lord Neuberger MR described the issue as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“1. This appeal raises the issue as to the proper approach to awarding costs in judicial review proceedings, where the defendant public authority effectively concedes some or all of the relief which the claimant seeks. As with any question relating to costs, the issue is both highly fact-sensitive and very much a matter for the discretion of the first instance tribunal. However, a degree of consistency of approach is self-evidently desirable, and the issue gives rise to some points of principle and policy.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">25.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Lord Neuberger summarised the rules as to costs in civil cases contained in CPR 44 (i.e. that in general the unsuccessful party will be ordered to pay the costs of the party, but that </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in;text-indent:0.00in">the court may make a different order if the circumstances, including the conduct of the parties, demand such an order) and referred to previous authority concerned with compromised claims for judicial review. He then set out “three relevant general principles which appear to me to apply to awards of costs after a trial in ordinary civil litigation”: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“44. … The first is that any decision relating to costs is primarily a matter for the discretion of the trial judge, which means that an appellate court should normally be very slow indeed to interfere with any decision on costs. However, while wide, the discretion must be exercised rationally and in accordance with certain generally accepted principles. …  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">45.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The second principle is that, as has long been the case in English civil litigation, and is expressly stated in CPR r 44.3(2)(a), the general rule in all civil litigation is that a successful party can look to the unsuccessful party for his costs. Of course, as CPR r 44.3(2)(b) (4)(5) and (6) demonstrate, there maybe all sorts of reasons for departing from this principle, but it represents the <span style="font-style:italic">prima facie</span> position. …  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">46.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The third principle is that the basis upon which the successful party’s lawyers are funded, whether privately in the traditional way, under a no win no fee basis, by the Community Legal Service, by a law centre, or on a <span style="font-style:italic">pro bono</span> arrangement, will rarely if ever make any difference to that party’s right to recover costs. …” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">26.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">On the other hand, where a case settled before trial, the parties could invite the court to deal with costs, but the court was not obliged to do so. It might take the view that such an exercise would be disproportionate. But if it was clear which party had been successful, the court would normally order costs in that party’s favour: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“49. … Given normal principles applicable to costs when litigation goes to a trial, it is hard to see why a claimant who, after complying with any relevant protocol and issuing proceedings, is accorded by consent all the relief he seeks, should not recover his costs from the defendant, at least in the absence of some good reason to the contrary. In particular, it seems to me that there is no ground for refusing the claimant’s costs simply on the ground that he was accorded such relief by the defendants conceding it in a consent order, rather than by the court ordering it after a contested hearing. In the words of CPR r 44.3(2) the claimant in such a case is every bit as much the successful party as he would have been if he had won after a trial.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">27.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The position would be different, however, if the consent order “does not involve the claimant getting all, or substantively all, the relief which he has claimed”: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.77in;text-indent:0.00in">“50. … In such cases the court will often decide to make no order for costs, unless it can without much effort decide that one of the parties has clearly won, or has won to a sufficient extent to justify some order for costs in its favour. Thus the fact that the claimant has succeeded in obtaining part of the relief he sought may justify his recovering some of his costs, for instance where the issue on which the claimant succeeded was clearly the most important and/or expensive issue. But in many such cases the court may consider that it cannot fairly award the claimant any costs because, for instance, it is not easy to assess whether the defendants should have their costs of the issue on which the claimant did not succeed, and whether that would wipe out the costs which the claimant might recover in relation to the issue on which he won.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">28.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Finally, there were cases which settled on terms which did not accord with the relief which the claimant had sought, in which the court would not normally be able to decide who had won, and therefore would make no order for costs, although in such cases it might be reasonably clear which party would have succeeded if the case had proceeded to trial, in which case that would lend considerable support to the argument that that party should be awarded its costs. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">29.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Lord Neuberger then considered and rejected five arguments to the effect that the position should be different in public law claims in the Administrative Court. He concluded as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“60. Thus in Administrative Court cases just as in other civil litigation, particularly where a claim has been settled, there is, in my view, a sharp difference between (i) a case where a claimant has been wholly successful whether following a contested hearing or pursuant to a settlement, and (ii) a case where he has only succeeded in part following a contested hearing, or pursuant to a settlement, and (iii) a case where there has been some compromise which does not actually reflect the claimant’s claims. While in every case the allocation of costs will depend on the specific facts, there are some points which can be made about these different types of case  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">61.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">In case (i), it is hard to see why the claimant should not recover all his costs, unless there is some good reason to the contrary. Whether pursuant to judgment following a contested hearing, or by virtue of a settlement, the claimant can, at least absent special circumstances, say that he has been vindicated, and as the successful party that he should recover his costs. …  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">62.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">In case (ii), when deciding how to allocate liability for costs after a trial, the court will normally determine questions such as how reasonable the claimant was in pursuing the unsuccessful claim, how important it was compared with the successful claim, and how much the costs were increased as a result of the claimant pursuing the answers. Given that there will have been a hearing, the court will be in a reasonably good position to make findings on such questions. However, where there has been a settlement, the court will, at least normally, be in a significantly worse position to make findings on such issues than where the case has been fought out. In many such cases the court will be able to form a view as to the appropriate costs order based on such issues; in other cases it will be much more difficult. I would accept the argument that, where the parties have settled the claimant’s substantive claims on the basis that he succeeds in part, but only in part, there is often much to be said for concluding that there is no order for costs. …  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">63.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">In case (iii), the court is often unable to gauge whether there is a successful party in any respect and, if so, who it is. In such cases, therefore, there is an even more powerful argument that the default position should be no order for costs. However, in some such cases it may well be sensible to look at the underlying claims and enquire whether it was tolerably clear who would have won if the matter had not settled. If it is, then that may well strongly support the contention that the party who would have won did better out of the settlement, and therefore did win.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">30.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">However, Lord Neuberger concluded with the following emphasis: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“65. Having given such general guidance on cost issues in relation to Administrative Court cases which settle on all issues save costs, it is right to emphasise that, as in most cases involving judicial guidance on costs, each case turns on its own facts. A particular case may have an unusual feature which would, or at least could, justify departing from what would otherwise be the appropriate order.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">Causation </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">31.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The fact that the claimant has obtained the relief which he or she was seeking in the proceedings does not necessarily mean that the existence of the proceedings has caused or contributed to that result. It may be that it would have happened anyway. The cases show that causation is a relevant and sometimes decisive factor in the exercise of the court’s discretion concerning costs. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">32.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">In <span style="font-style:italic">Speciality Produce Ltd v Secretary of State for the Environment</span> [2014] EWCA Civ 225 the application of the <span style="font-style:italic">M v Croydon</span> principles was considered in a case where the claimant had been pursuing two distinct grounds of challenge to the Secretary of State’s decision, a statutory appeal and a claim for judicial review. When the statutory appeal was successful, the claim for judicial review became academic. Vos J made no order for the costs of the claim for judicial review and the Court of Appeal upheld this decision. Patten LJ said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“29. The decision in <span style="font-style:italic">M</span> represents an acceptance that there will be cases where the link between the claim and the agreed relief is so clear that the claimant can properly be treated as the successful party for the purpose of an award of costs. But for that link to be established the court is, I think, usually required to be satisfied that the claimant is likely to have won: see Lord Neuberger at [51] of <span style="font-style:italic">M</span>. In any event, the claim must be causative of the relief obtained.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">33.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">A subsequent case on causation, in the housing field, was <span style="font-style:italic">Ersus v London Borough of Redbridge</span> [2016] EWHC 1025 (QB). The claimant challenged the suitability of temporary accommodation, a room in a hostel which he had to share with his wife and two daughters, but by the time his appeal came before the County Court judge, he was approaching the top of the housing list. The judge adjourned the appeal and, before the case came back, the claimant accepted an offer of a two-bedroom maisonette. The appeal therefore became academic. The judge was unable to say whether it was the bringing of proceedings which had focused the council’s mind or whether the claimant would have been offered the alternative accommodation in any event. He was also unable to say whether the claimant’s challenge would have succeeded if the claim had been fought out. Accordingly he made no order for costs. On an appeal to the High Court, Supperstone J affirmed this order, holding that there was no error of law in the judge’s approach. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">34.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in"><span style="font-style:italic">RL v Croydon London Borough Council</span> [2018] EWCA Civ 726, [2019] 1 WLR 224 was another case in the housing field where causation played an important role. The claimants, who were ineligible for housing assistance due to their immigration status, sought an assessment under section 17 of the Children Act 1989 to determine if accommodation could be provided on the basis that the child claimants were children in need. They were dissatisfied with the progress of that assessment and commenced judicial review proceedings, contending that the local authority had delayed unlawfully in carrying it out. A week later the assessment was completed and temporary accommodation was provided. The claim for judicial review was withdrawn, but the claimants contended that they should be awarded their costs as the successful party. The judge found that the completion of the assessment had nothing to do with the claim for judicial review and made no order for costs. That decision was upheld on appeal. Underhill LJ (with whom Sir Rupert Jackson agreed) said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“74. I do not believe that the Appellants can succeed in their claim for costs in this case on the conventional <span style="font-style:italic">R (M) v Croydon</span> basis – that is, that they obtained substantially the relief sought and are accordingly to be viewed as the successful party. Although in broad terms the relief sought was the provision of accommodation, such relief was not, as Moylan LJ demonstrates, available as a matter of law. More accurately, what the Appellants were seeking was an assessment under section 17 of the 1989 Act, which might (and indeed eventually did) lead to the provision of accommodation. At the time that the proceedings were issued there was no dispute between the Appellants and the Council that it was under an obligation to carry out such an assessment: it had indeed started, to the Appellants' knowledge, some time prior to the commencement of proceedings. The object of the proceedings was not to secure an assessment but to secure it sooner than it was feared would otherwise be the case. That being so, the fact that the assessment was in fact completed, and that the Appellants were accommodated accordingly, does not represent ‘success’: that would have happened anyway. I thus agree with Moylan LJ that that outcome was not the result of the proceedings. In a case of this kind the measure of ‘success’ has to be whether as a result of the proceedings being brought the assessment was completed substantially sooner than it otherwise would have been. I can see no reason for supposing that to have been the case here, and indeed given the time-scales it seems very unlikely. Accordingly, I do not think it would be fair to award the Appellants their costs simply on the basis that they were ‘the successful party’.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">35.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Underhill LJ went on, however, to say that this was not the end of the matter: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“75. … It is necessary to look at the particular circumstances of the case. The Appellants believed that the assessment had already been unlawfully delayed, and although we now know that it would be completed within the week, that was something they had no way of knowing. That being so, I believe that it would be appropriate for them to be awarded their costs if the Court were in a position to decide with sufficient confidence both (a) that Croydon had been legally obliged to produce the assessment prior to 28 October 2015 and (b) that it was reasonable of the Appellants to issue the proceedings on that date. I say ‘with sufficient confidence’ because it would not be proportionate to hold the equivalent of a full trial simply in order to determine liability for costs: the Court has to do its best to reach a fair conclusion on a summary basis, with the fallback of making no order if that is not possible.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">36.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">However, that way of approaching the matter did not avail the claimants because they could not readily show that the local authority had been guilty of unlawful delay in completing the assessment and “it would not be proportionate on a costs assessment to attempt to get to the bottom of exactly what had gone wrong or whose fault it was” (see [76]). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">37.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Thus <span style="font-style:italic">RL v Croydon</span> makes (for present purposes) two important points. The first is that success may consist not only of obtaining the relief which the claimant was seeking, but also of obtaining it earlier than would otherwise have been the case. In some cases accommodation may be provided because a claimant happens to have reached the head of the queue and would have done so regardless of any legal challenge. In others, however, a local authority may always have accepted a duty to provide suitable accommodation, but the result of legal proceedings may be that it gives greater attention to a claimant’s situation than it would otherwise have done and, having done so, gives greater priority to her case. That can fairly be regarded as success, although it is fair to add that priority to one claimant may mean a longer wait for another.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">Proportionality </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">38.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">On the other hand, the second point made in <span style="font-style:italic">RL v Croydon</span> is that investigation of such matters must be kept within reasonable and proportionate bounds.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">39.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">In this connection it is necessary to bear in mind the summary nature of determination of liability for costs when claims for judicial review are settled but the parties are unable to agree upon costs. Guidance about this is set out in Annex 5 to the Administrative Court Guide, which records that the court faces a significant number of such cases. The procedure is for written submissions which should not normally exceed two pages in length. The decision will be made on paper without an oral hearing. As emphasised in <span style="font-style:italic">Baxter v Lincolnshire County Council</span> [2015] EWCA Civ 1290, [2016] Costs LO 37 at [40], “the parties will be taken to accept that the court’s approach will necessarily be a summary and proportionate assessment”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">40.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">In circumstances such as the present, where liability for costs is to be determined on paper after a claim has been withdrawn because the claimant has obtained substantially all of the relief sought (here, an offer of alternative accommodation), it is important that the investigation of such liability should not become disproportionate. There is limited if any scope to resolve conflicting evidence and in any event the production of witness evidence going to issues of costs would be inappropriate.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">41.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">It follows that, if there is a dispute about whether or to what extent the existence of legal proceedings caused or contributed to the claimant obtaining accommodation when she did, the court may not be able to resolve that dispute unless the position is reasonably plain. If the position is not reasonably plain, a factual enquiry could easily become disproportionate. It would not be concerned so much with whether the claimant would have won if the proceedings had continued, but rather with the distinct question of what factors had influenced the conduct of the local authority’s housing department in offering accommodation to one family rather than another. In circumstances where hard decisions often have to be made about the allocation of scarce resources and fairness between applicants for housing, many of whom will have urgent needs, this would not necessarily be a simple matter. It would involve undesirable satellite litigation which neither publicly funded party could readily afford.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">42.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Further, a judge determining liability for costs is entitled to express his reasons shortly and an appellate court should not interfere with his decision unless it is clear that he has gone wrong. Judges dealing with such paper applications will have many cases to consider on any given day. For rulings to become too elaborate or formulaic in an attempt to make them appeal-proof would be contrary to the interests of justice. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The submissions on appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">43.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Mr Lindsay Johnson for the appellant submitted that in this case the judge failed to have regard to the guidance in <span style="font-style:italic">M v Croydon</span>; he should have concluded that this was a category (i) case in which the appellant had obtained the relief which she sought, that is to say alternative accommodation and a revised PHP; but instead, the judge had not considered who had been the successful party or whether it was tolerably clear (as Mr Johnson submitted it was) that the appellant would have succeeded in her claim. Moreover, the approach in <span style="font-style:italic">Ersus</span> was only appropriate when it was shown that there was no causal link between the proceedings and the obtaining of the relief sought; in this case, there was such a link because it was clear that the council had given priority to the appellant’s case on receipt of the report of Dr Walsh, but this contained no more than the appellant had been saying all along and if the council had not accepted what the appellant was saying about the need for self-contained accommodation, it had been under a duty to make enquiries about this. Finally, the judge had failed to take into account conduct of the council which was material to the question of costs. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">44.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Ms Millie Polimac for the council submitted that the order made was an exercise of discretion which the judge was entitled to make and with which an appellate court should not interfere; it was clear from the terms of the consent order that neither party conceded the arguments advanced by the other; where the appellant had withdrawn the claim, the starting point for any costs order should be the rules governing discontinuance or withdrawal of a claim (i.e. that the claimant should pay the defendant’s costs); the parties’ submissions to the judge had addressed the guidance in <span style="font-style:italic">M v Croydon</span> and it was unlikely that the judge had overlooked it; the judge was entitled to conclude that it was impossible to say whether there was any causal link between the existence of the proceedings and the offer of alternative accommodation; the appellant had not in fact obtained the declarations which she sought; the judge was entitled to conclude that the outcome of the claim for judicial review, where the appellant would have to discharge the heavy burden of showing that the council’s decision was irrational, was uncertain; and the appellant’s criticisms of the council’s conduct were unfounded. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Discussion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">45.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">I should begin by making clear that in a case where a claim is withdrawn leaving costs to be determined by the court, there is no rule, even as a starting point or default position, that the claimant should pay the defendant’s costs. Rather, liability for costs should be determined in accordance with the guidance (which emphasises the discretionary and factspecific nature of the exercise) set out in <span style="font-style:italic">M v Croydon</span> and the further cases referred to above. What matters is the substance of the matter. Here the claim had become academic, neither party accepted the position of the other, and this was expressly recorded in the terms of the order, as was the fact that liability for costs was to be determined by the court.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">46.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The first question of substance was therefore to determine which party was the successful party. I see no reason to suppose that the judge overlooked the guidance in <span style="font-style:italic">M v Croydon</span> on which the parties had made detailed written submissions. Rather it appears that he acknowledged that the appellant had obtained what she sought and went straight to what he regarded as the decisive question in the case so far as costs were concerned, that is to say the issue of causation. I see nothing wrong with that approach. Indeed the issue of causation would only arise on the footing that the appellant had obtained at least much of what she sought, so it is necessarily implicit in the judge’s reasons that he accepted the appellant’s case on this question. It cannot be a valid ground of complaint by the appellant that the judge did not set this out expressly. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">47.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Whether there is a causal link between the bringing of the claim and the obtaining of relief (including not only the offer of self-contained accommodation but also its timing) is plainly a highly relevant consideration, as already explained. In this case, having considered the forceful submissions made by each party, the judge concluded that it was not possible to say what if any causal connection there was between the claim for judicial review and the offer and acceptance of the appellant’s current accommodation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">48.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">When considering the way in which the judge approached his exercise of discretion, we must remember that in this court we have now had the benefit of detailed written submissions (far exceeding the page limit which applied below) and of counsel’s oral submissions over a half day hearing in which we were taken carefully through the history of the matter and the relevant written exchanges which I have set out in summary above. For my part, that has given me a considerably greater understanding of these issues than I would otherwise have had. However, the treatment which we have received bears little resemblance to the summary exercise which the judge was required to undertake.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">49.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The result may be that we are in a better position than the judge was to form some views about why it was that the offer of alternative accommodation was made to the appellant on 22<span style="vertical-align:super;font-size:smaller">nd</span> February 2019. For example, it appears that the report from Dr Walsh may have led the council to accept that the appellant’s case was more urgent than it had previously accepted, and that the explanation for the timing of the offer may not have been as simple as saying that the six families previously ahead of the appellant had been accommodated so that the appellant had reached the head of the queue. None of this, however, was gone into in any detail before the judge. The submissions made to him about causation were as limited as I have described above, consisting of little more than assertion and counter assertion. His task was to exercise his discretion on the basis of those submissions and the material to which they expressly referred him. He was not required, and it would not be reasonable to expect him, to carry out an extensive analysis of the substantial bundle of documents provided to him to see whether there were other points which might be made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">50.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">On the basis of the submissions made to the judge, it is not possible for this court to say that his conclusion in this case was not open to him. Some judges might perhaps have regarded the timing of the offer as telling, coming as it did only a short while before the hearing of the judicial review claim, and might have been sceptical about the speed with which the appellant had apparently reached the head of the queue when the average delay had previously been stated to be of the order of something more than six months. But it is impossible to say that the judge was not entitled to conclude that the position was not clear. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">51.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Nor am I persuaded, to the extent if at all that it is relevant, that the position is much clearer in the light of the more detailed analysis of the evidence undertaken in this court. The position appears to be that although the appellant’s solicitors were asserting that the appellant needed self-contained or single-sex accommodation from the outset, the council had indicated that it would need medical evidence to support that assertion, which was only provided in Dr Walsh’s report. Once it was provided, the council did accept that the appellant urgently needed self-contained accommodation, acted promptly to source this, and succeeded in doing so. The council’s request for that evidence was independent of the judicial review claim and was part of its ongoing review of the appellant’s housing needs. Although the appellant’s solicitors appear to have played a part in obtaining the medical report, it is at least open to question whether in these circumstances the offer of accommodation made following its receipt should be regarded as having been caused by the claim for judicial review. At all events, I am not persuaded that the judge would have reached a different conclusion if these matters had been gone into before him, or that we should do so now. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">52.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">Equally, as to the merits of the claim, I would accept Ms Polimac’s submission that (at any rate until the medical report was provided after which the council acted promptly) there were arguments to be made on both sides about the suitability, at any rate as short term accommodation, of the hostel rooms initially provided to the appellant and her daughters. While at first sight there was a strong case that (what on one view could be described as) a single room with shared facilities is unsuitable for a mother and her six daughters, it was in reality two rooms separated by a corridor which was only ever intended to be temporary, some of its more glaring defects had been remedied, and for some periods in the past the family had previously been placed in similar hostel accommodation without it appearing that this was intrinsically unacceptable in the short term. Suitability is a highly fact-specific issue and the question would have been whether the council’s position was irrational. In these circumstances the judge was entitled to conclude that it would not have been practicable without going into the matter in more detail than would have been appropriate to say who would have been the successful party if the matter had been fought out. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">53.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The judge did not expressly address the appellant’s complaints about the council’s conduct, but these were makeweights at most. The first complaint was that the council had failed to respond to the pre-action letter. But that letter was sent before the council had made any offer of accommodation at all, and the council did respond by addressing the three specific action points which it had been required to address, including the offer of the temporary hostel room. While the appellant did not accept that this room was suitable even in the short term, it is unrealistic to think that the council could have provided self-contained accommodation for this family on a few days’ notice. The remaining criticisms were that (1) the council had made a late concession at the interim relief hearing which made that hearing unnecessary, (2) the council had not provided its skeleton argument for the substantive hearing (which was due before the claim had settled but after the alternative accommodation had been provided), and (3) the council’s argument that the starting point was that the appellant should pay the council’s costs because the claim had been withdrawn was unreasonable. In my judgment these had little if any substance in the circumstances of this case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">54.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">In all these circumstances the judge was entitled to conclude that the appropriate course was to make no order for costs. At all events, it is impossible for us to say that this was an exercise of discretion which was not open to him. His decision involved no error of law which would entitle this court to interfere and was neither unjust nor perverse. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">55.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">In <span style="font-style:italic">RL v Croydon</span>, Underhill LJ referred at [78] to “the importance to solicitors undertaking publicly funded work of recovering costs on an <span style="font-style:italic">inter partes</span> basis not only when they succeed in litigation but when the litigation is resolved on a basis that represent success”. I respectfully agree that solicitors and counsel undertaking this work perform an important public service in ensuring access to justice for those faced with homelessness. The appellant’s solicitors in this case demonstrated impressive dedication and commitment on her behalf. However, we must determine this appeal by reference to the principles which I </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">have set out which do not justify overturning the judge’s decision. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Disposal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">56.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">I would dismiss the appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lady Justice Nicola Davies: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">57.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Underhill: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.25in;text-indent:-0.25in">58.</num>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

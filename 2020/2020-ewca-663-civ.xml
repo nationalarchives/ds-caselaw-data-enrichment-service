@@ -1,0 +1,866 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/663"/>
+	  <FRBRuri value="ewca/civ/2020/663"/>
+	  <FRBRdate date="2020-05-21" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="663"/>
+	  <FRBRname value="Revenue And Customs v NCL Investments Ltd &amp; Anor"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/663/eng"/>
+	  <FRBRuri value="ewca/civ/2020/663/eng"/>
+	  <FRBRdate date="2020-05-21" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/663/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/663/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:39:25" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/663/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>663</uk:number>
+	<uk:cite>[2020] EWCA Civ 663</uk:cite>
+	<uk:hash>7e3011a11a0d154ace05a8f04c17fc795d13c251c82f1ff90641bccc8801333c</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/663/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.51in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0604166666666666in;height:1.051388888888889in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 663</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>A3/2019/1598</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE UPPER TRIBUNAL</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">TAX AND CHANCERY CHAMBER</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Mann J and Judge Timothy Herrington</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">UT/2017/0130</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.10in">
+	<span style="text-decoration:underline">Date: 21 May 2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PATTEN</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE DAVID RICHARDS</span>
+      </p>
+      <p style="text-align:center;margin-left:2.16in;margin-right:2.19in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE MOYLAN</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:left;margin-left:1.22in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:2.07in;margin-right:0.00in;text-indent:-1.97in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE COMMISSIONERS FOR HER MAJESTY’S </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+	<span style="font-weight:bold"> REVENUE AND CUSTOMS </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:left;margin-left:1.22in;margin-right:1.10in">
+	  <span style="font-weight:bold">and – </span>
+	</p>
+      </blockContainer>
+      <blockContainer>
+	<num>(1)</num>
+	<p style="text-align:right;margin-left:0.23in;margin-right:1.03in">
+	  <span style="font-weight:bold">NCL INVESTMENTS LIMITED </span>
+	</p>
+      </blockContainer>
+      <blockContainer>
+	<num>(2)</num>
+	<p style="text-align:right;margin-left:0.23in;margin-right:1.03in">
+	  <span style="font-weight:bold">SMITH &amp; WILLIAMSON CORPORATE SERVICES </span>
+	  <marker name="tab"/>
+	  <span style="font-weight:bold;text-decoration:underline">Respondents</span>
+	</p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.12in;text-indent:-0.01in">
+	<span style="font-weight:bold">LIMITED </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Julian Ghosh QC and Jonathan Bremner QC</span> (instructed by <span style="font-weight:bold">the General Counsel and </span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Solicitor to HM Revenue and Customs</span>) for the <span style="font-weight:bold">Appellants</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Jolyon Maugham QC </span>(instructed on a <span style="font-weight:bold">Direct Access basis</span>) for the <span style="font-weight:bold">Respondents</span></p>
+      <p style="text-align:center;margin-left:2.16in;margin-right:2.19in;text-indent:-0.01in">Hearing dates: 19 March 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice David Richards: </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Introduction</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The issue on this appeal is whether debits to the profit and loss accounts of the taxpayer companies, required by generally accepted accounting practice and resulting from the grant to their employees by the trustees of an employee benefit scheme of options to acquire shares in the holding company of the group, are allowable as deductions in the computation of their profits for the purposes of corporation tax. The First-tier Tribunal (Judge Jonathan Richards) (the FTT) allowed the respondents’ appeals against closure notices which disallowed the deductions. The Upper Tribunal (Mann J and Judge Timothy Herrington) dismissed the appeal of the Revenue and Customs Commissioners (HMRC), who appeal to this court with permission granted by Lewison LJ. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The respondents (the taxpayers) are wholly-owned subsidiaries of Smith &amp; Williamson Holdings Limited (the holding company). The taxpayers employ staff who are made available to other group companies in return for a fee, based on the costs incurred in employing the staff with an appropriate mark-up. It is accepted that this constitutes a trade carried on by each of the taxpayers. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In 2003, the holding company established an employee benefit trust (EBT) which, in the years ended 30 April 2010, 2011 and 2012, granted options to staff employed by the taxpayers. The options entitled the grantees to acquire shares in the holding company from the EBT. There were a significant number of options which were never exercised, and therefore lapsed, either because the vesting conditions were not satisfied or because the options were out of the money at the exercise dates. Whether or not the options were in due course exercised had no impact on the deductions claimed by the taxpayers. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The options represented purely contractual rights as against the trustee of the EBT and did not purport to give their holders any proprietary rights over shares. While the trustee normally held some shares in the holding company to satisfy options, it did not always have sufficient shares to do so and it would acquire shares as and when necessary to ensure that it could satisfy options that were exercised. The holding company made payments to the EBT from time to time to enable the trustee to purchase or subscribe for shares in the holding company. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">When options were granted to employees of one of the taxpayers, it would recognise an indebtedness to the holding company equal to the fair value of the options, which was settled monthly (the Recharge). The taxpayers passed the cost of the Recharge to the group companies using the services of their employees as part of the charge made to those companies. The options were regarded as part of the remuneration of those employees. There was no suggestion of any tax avoidance or tax mitigation scheme. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The issues principally concern the construction and application of sections 46, 48 and 54 of the Corporation Tax Act 2009 (the 2009 Act). These issues have been designated as the “incurred” issue, the “purpose” issue and the “capital” issue. A further issue arises under section 1290 of the 2009 Act. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Accounting treatment </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The accounting treatment by the taxpayers of the grant of the options is central to the issues, other than the issue under section 1290. The FTT heard expert evidence called by the taxpayers and by HMRC and made findings that have not been challenged. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The holding company and its subsidiaries prepared their statutory accounts in accordance with international accounting standards, as permitted by section 395(1)<span style="font-weight:bold"> </span>of the Companies Act 2006. Such standards comprise International Financial Reporting Standards (IFRS)<span style="font-weight:bold"> </span>promulgated by the International Accounting Standards Board and form part of generally accepted accounting practice (GAAP). It was common ground that the accounts complied with all applicable standards.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It was also common ground that the applicable standard in relation to the grant of the options was IFRS 2, entitled Share-based Payment.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Before summarising the effect of IFRS 2 in this case, as found by the FTT, it should first be noted (and this is common ground) that the fact of the Recharge is irrelevant to the accounting treatment, particularly as regards the debit in the computation of the taxpayers’ profits. Indeed, the expert evidence was that it would be contrary to IFRS 2 to recognise a debit for the Recharge. As will be seen, IFRS 2 required the taxpayers to recognise a debit unconnected with the Recharge and irrespective of any recharge or other outflow of funds from the taxpayers. There is something counter-intuitive about requiring a debit to profit and loss account even though there is no outflow of funds but prohibiting a debit that does recognise an outflow of funds. This is not the first occasion on which GAAP has produced what may to the non-expert appear surprising results (see, for example, <span style="font-style:italic">The Union Castle Mail Steamship Co Ltd v HMRC </span>[2020] EWCA Civ 547 (<span style="font-style:italic">Union Castle</span>)) but accounting standards are the product of careful expert evaluation and wide consultation and it is not for this court to question whether a standard is appropriate. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ironically, it is HMRC that seek to take advantage of this paradox, by submitting that the debit required by IFRS 2 does not constitute a deductible expense, and at the same time relying on IFRS 2 for the irrelevance of the Recharge.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Paragraph 7 of IFRS 2 provides:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“An entity shall recognise the goods or services received in a share-based payment transaction when it obtains the goods or as the services are received. The entity shall recognise a corresponding increase in equity if the goods or services were received in an equity-settled share-based payment transaction, or a liability if the goods or services were acquired in a cashsettled share-based payment transaction. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">When the goods or services received or acquired in a sharebased payment transaction do not qualify for recognition as assets, they shall be recognised as expenses.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The options granted by the EBT to employees of the taxpayers were treated as “equity-settled”. The taxpayers were treated as receiving the services of their employees under a share-based payment transaction and were required to account for the services received. As the services of the employees were regarded as consumed immediately on receipt, IFRS 2 required the taxpayers to recognise an expense reflecting the consumption of the services. Given the practical difficulty in measuring directly the fair value of the employee services received, IFRS 2 required the fair value of the equity instruments granted for those services to be used as a surrogate for the fair value of the services. As the FTT noted in its Decision at [26], “any grant of share options by the EBT Trustee to employees triggered an obligation on the [taxpayers] to recognise an expense in their income statements equal to the fair value of the options that the EBT Trustee had granted…whether or not the [taxpayers] had to pay any amount to any other person (such as [the holding company] or the EBT Trustee) in relation to the grant of these options”. There was a process for allocating the debits to different accounting periods which, it was common ground, the taxpayers had correctly followed.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The debits required by IFRS 2 had to be matched by corresponding entries in the taxpayers’ balance sheets. IFRS 2, addressing the situation where a parent company issues share options to employees of a subsidiary, required the subsidiary to recognise a capital contribution received from the parent as a credit on its balance sheet. As the FTT remarked at [33], this treatment “might be thought to sit oddly” with a recharge arrangement; if the subsidiary “was compensating the parent for the grant of the options with a cash payment, it might be thought that the parent should not be regarded as making a capital contribution at all”. However, the effect of IFRS 2 was clear.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">While the taxpayers were therefore required to adopt a method of accounting that gave effect to the requirement for showing a capital contribution, they also had to account for the Recharge. IFRS 2 made no provision for this, so the treatment had to be determined in accordance with general principles. There were a number of possible treatments, but no professional consensus on which was to be preferred. The taxpayers adopted a policy of treating the Recharge as reducing the capital contribution. The result was that in their year-end accounts, the income statement recorded the debit required by IFRS 2 but no capital contribution appeared in the balance sheet because, as at the balance sheet date, it was treated as having been repaid by the Recharge. The FTT found that this was a proper accounting treatment.       </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The “incurred” issue </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This issue, and the “purpose” issue, turn on sections 46(1), 48 and 54 of the 2009 Act. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 46(1), as in force at the relevant times, provides:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“The profits of a trade must be calculated in accordance with generally accepted accounting practice, subject to any adjustment required or authorised by law in calculating profits for corporation tax purposes” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 48 provides:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“(1) In the Corporation Taxes Acts, in the context of the calculation of the profits of a trade, references to receipts and expenses are to any items brought into account as credits or debits in calculating the profits. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.65in;text-indent:0.50in">It follows that references in that context to receipts or expenses do not imply that an amount has actually been received or paid. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.65in;text-indent:0.50in">This section is subject to any express provision to the contrary.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 54 provides:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.44in;text-indent:0.00in">“(1) In calculating the profits of a trade, no deduction is allowed for </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.19in;text-indent:0.50in">expenses not incurred wholly and exclusively for the purposes of the trade, or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.19in;text-indent:0.50in">losses not connected with or arising out of the trade. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">(2) If an expense is incurred for more than one purpose, this section does not prohibit a deduction for any identifiable part or identifiable proportion of the expense which is incurred wholly and exclusively for the purposes of the trade.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The UT approached this issue in two parts: see their Decision at [50]. First, they considered whether the debits constituted “expenses” for the purposes of section 48. If they did not, it would dispose of the appeal in favour of HMRC. Second, if (as the UT concluded) they were “expenses”, the UT considered whether they were “incurred” within the meaning of section 54(1)(a). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The UT considered the first of these issues at [60]-[73]. In agreement with the FTT, they held that, in the absence of any express statutory provision to the contrary, the fact that the debits were validly recognised in the taxpayers’ income statements in accordance with GAAP was sufficient for sections 46 and 48 to apply and caused the debits to be treated as expenses. It was of no consequence that the expense recognised by the application of IFRS 2 did not reflect any money actually spent by the taxpayers. The UT rejected the submissions made on behalf of HMRC, based to a significant extent on the decision of the House of Lords in <span style="font-style:italic">Lowry v Consolidated African Selection Trust </span>(1940) 23 TC 259 (<span style="font-style:italic">Lowry</span>), that these accounting debits did not truly reflect any expenses of the taxpayers. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On the second issue, HMRC to an extent repeated their submissions on sections 46 and 48, arguing that in order for an expense to be “incurred”, it must reflect money actually spent or to be spent by the taxpayer. The UT rejected HMRC’s submissions and held that the word “incurred” could not bear the weight that HMRC sought to place on it. It did not impose an additional requirement on what was an “expense” for the purposes of sections 46 and 48. By requiring expenses to be incurred wholly and exclusively for the purposes of the taxpayer’s trade, section 54(1)(a) ensured that expenses which had a dual purpose were not deductible. They agreed with the FTT that the word “incurred” operated simply as a participle that took its colour from the word “expenses”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">HMRC submit that the UT erred as a matter of law in its construction of sections 46 and 48, when read with section 54. By focusing on the provision in section 48 that </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">“references to receipts and expenses are to any items brought into account as credits or debits in calculating the profits” and the requirement of section 46 that the “profits of a trade must be calculated in accordance with generally accepted accounting practice”, the UT ignored the requirement of section 54 that, in calculating the profits of a trade, no deduction was allowed for “expenses not <span style="font-style:italic">incurred </span>wholly and exclusively for the purpose of the trade” (emphasis added). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The use of the word “incurred” in section 54 showed that, in order to qualify as a deductible expense, a debit must reflect an actual or prospective outgoing. The effect of section 46 was that it was a necessary, but not a sufficient, condition that a debit should be made in accordance with GAAP. Trading profits are thus measured initially by accounting receipts and expenses. An expense is not deductible if it is not reflected in an accounting debit. But, when read with section 54, it was also necessary that the debit should reflect an incurred expense, i.e. an actual or (as in the case of a provision) a prospective outgoing. Section 54 operated as an “adjustment required…by law in calculating profits for corporation tax purposes” (section 46(1)). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The determination of a deductible expense therefore involved a two-stage process. The expenses in issue in the present case involved accounting debits required by GAAP which did not reflect any actual or prospective outgoings by the taxpayers. While therefore they satisfied the requirement of section 46, they did not satisfy section 54 and were not therefore deductible in calculating the profits of their respective trades. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Although there were times in the course of the oral submissions of Mr Ghosh QC on behalf of HMRC when he seemed to suggest that, even without section 54, an accounting debit had to reflect an actual or prospective outgoing (a construction considered and rejected by the UT, as noted above), his submissions hinged on section 54.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Ghosh submitted that the UT had fallen into error in its construction of section 54, by in effect pre-judging the issue when it concluded that by reason of sections 46 and 48 an expense need only be a debit required or permitted by GAAP. On that assumption, it followed, as the UT held, that the word “incurred” was used simply as a drafting device and did not introduce any substantive requirement and that section 54(1)(a) was directed only at ensuring that, to be deductible, expenses had to be “wholly and exclusively for the purposes of the trade”.   In this respect, the UT erred in not accepting that section 54 played a more general role by introducing the second general requirement that an expense should reflect an actual or prospective outgoing. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Ghosh drew support from the Decision of the Upper Tribunal in <span style="font-style:italic">Ingenious Games LLP v HMRC </span>[2019] UKUT 226 (TCC), [2019] STC 1851. The UT there expressed the view, <span style="font-style:italic">obiter</span>, that the expenditure which the taxpayers sought to deduct was not “incurred” for the purposes of section 54(1)(a) and for the purposes of the equivalent income tax provision, because the taxpayers did not bear its economic burden.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The true effect of section 54(1)(a) is a question of construction of that provision, read with sections 46 and 48, in their context. For the reasons which follow, “expenses not incurred” in section 54(1)(a) cannot in my judgment bear the meaning for which HMRC contend. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 2 of the 2009 Act provides that corporation tax is charged on profits of companies and that “profits” meant income and chargeable gains, except in so far as the context otherwise required. Section 2 forms part of Part 2 of the 2009 Act, headed “Charge to corporation tax: basic provisions”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Part 3 of the 2009 Act, which contains sections 46, 48 and 54, is headed “Income taxed as trade profits”. Section 35 provides that the charge to corporation tax on income applies to the profits of a trade. Sections 46 and 48 are contained in Chapter 3, headed “Trade profits: basic rules”. As already noted, section 46(1) provides that “[t]he profits of a trade must be calculated in accordance with” GAAP, subject to any adjustment required or authorised by law in calculating profits for corporation tax purposes. It is not disputed that the taxpayers’ profits, determined after deduction of the debits required by IFRS 2 in respect of the options, were calculated in accordance with GAAP. It is common ground that, in order to succeed, HMRC must therefore show that the elimination of such debits is an adjustment required or authorised by law in calculating their profits for corporation tax purposes. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 48 is a definitional provision. Section 48(1) provides that in “the Corporation Tax Acts” (which includes the 2009 Act) “in the context of the calculation of the profits of a trade, references to receipts and expenses are to any items brought into account as credits or debits in calculating profits”. Read with section 46, this clearly encompasses all credits and debits that are brought into account in accordance with GAAP. That includes the debits in the present case, brought into account in accordance with IFRS 2. Section 48(2) is a provision for the avoidance of doubt, which makes clear the wide scope of sub-section (1). It provides that “[i]t follows that references in that context to receipts or expenses do not imply that an amount has actually been received or paid”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It might be supposed that the words “an amount has actually been received or paid” referred to the transfer of funds (or other property) in respect of receipts or expenses, but it is accepted that they have a wider meaning. In <span style="font-style:italic">Jenners Princes Street Edinburgh Ltd v IRC </span>[1998] STC (SCD) 196, the Special Commissioners held that a provision made by the taxpayer company in its accounts for year 1, in respect of uncontracted prospective expenditure in year 2, was allowable as a deduction for the purpose of calculating its profits for year 1. The provision was properly shown in its profit and loss account in accordance with normal principles of commercial accountancy, even though no payment had been made nor had any liability been incurred. The Revenue’s argument, that the provision was not deductible because it was not a sum “actually expended” for the repair of premises within section 74(1)(d) of the Income and Corporation Taxes Act 1988, was rejected. While the Revenue accepted that “expended” on its own was not restricted to money that was physically spent, they argued that when coupled with “actually”, it had that meaning. The </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Special Commissioners held that, as an adverb, “actually” did not change the meaning of “expended” but only required greater accuracy or precision. Thus, it meant “no more than what was truly expended in the accountancy sense” (para 10). It required “an accurate assessment as opposed to a broad or notional figure” (para 27). It could thus cover a provision against a future liability, as well as the creation or payment of an enforceable liability.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By providing that references to expenses “do not imply that an amount has actually been…paid”, section 48(2) is therefore not restricted to amounts that either had been physically paid or had been incurred as enforceable obligations or had been included in accounts as provisions against what was likely to be spent in future years.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 54(1)(a), referring “in calculating the profits of a trade” to “expenses”, is a provision to which section 48 applies. The construction advanced by HMRC, that the use of the word “incurred” to qualify “expenses” means that the expenses must have been incurred as a matter of legal liability or be a prospective liability for which a provision should be made, is thus at odds with the definitional effect of section 48(1) and (2).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For that reason, it is not a permissible construction, unless HMRC can rely on section </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">48(3) which provides that section 48 is “subject to any express provision to the contrary”. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">HMRC seek to extract out of the use of the word “incurred” in section 54 a provision to the contrary. The difficulty for HMRC is that it would not so much be a provision to the contrary as a provision that denies the effect of section 48(1) and (2) not for a restricted class of case but in all cases. It will be remembered that HMRC’s case is that there is a two-stage test for an expense, involving satisfaction of both GAAP (sections 46 and 48) and their interpretation of “incurred” in section 54. But, if a general effect is given to section 54, as HMRC contend, it robs the definitional effect of section 48 of its purpose. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This conclusion is consistent with the structure of the relevant provisions. Sections 46 and 48 appear in Chapter 3 dealing with the “basic rules” applicable to trading profits, whereas section 54 appears in Chapter 4 headed “Trade profits: rules restricting deductions”. Chapter 4 deals with a miscellany of topics ranging from capital allowances and bad debts to car hire and patent royalties. HMRC’s constructions amounts to a basic rule applicable to all “expenses”. If that had been the intention, it would have been included in Chapter 3, not as a restriction in Chapter 4.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, the UT was correct in its approach to sections 46 and 48 and to section 54. The combined effect of sections 46 and 48 is to define allowable expenses as those debits made in accordance with GAAP in calculating the profits of a trade. They do not require any further examination of whether such accounting debits were “expenses”.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This is consistent with the position taken by the courts for many years, that the profits and losses of a trade are to be calculated in accordance with the principles of commercial accounting, or GAAP as they now generally called: see, by way of more recent example, <span style="font-style:italic">Gallagher v Jones (Inspector of Taxes) </span>[1994] Ch 107 (CA)<span style="font-weight:bold"> </span>and <span style="font-style:italic">HMRC v</span><span> </span><span style="font-style:italic">William Grant and Sons Distillers Ltd</span> [2007] UKHL 15, [2007] 1 WLR 1448. As Mr Ghosh himself submitted, that case law has been codified and appears as section 46 in the legislation relevant to the present case. If Parliament wished to add a further check on whether accounting debits and credits were to be treated as receipts and expenses for the purposes of corporation tax, it could do so, as it has in the provisions relating to loan relationships and derivative contracts (which, when enacted, appeared in the 2009 Act at Parts 5 and 7): see <span style="font-style:italic">GDF</span><span style="font-style:italic;font-weight:bold"> </span><span style="font-style:italic">Suez Teeside Ltd v HMRC </span>[2018] EWCA Civ 2075, [2009] 1 All ER 528<span style="font-style:italic"> </span>and<span style="font-style:italic;font-weight:bold"> </span><span style="font-style:italic">Union Castle</span>.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Ghosh relied before the UT and in his skeleton argument for this appeal on the majority decision of the House of Lords in <span style="font-style:italic">Lowry</span>, but he did not address it in his oral submissions. It concerned an issue of shares at par to employees at a time when their market value stood at a considerable premium to par. The company sought to treat the amount of the premium as a deductible expense in the calculation of its profits for tax purposes, as if it had expended that amount in the remuneration of its employees. The question, Viscount Caldecote LC said, was whether the company could be said “to have incurred a trading expense to the amount of the premium” (p.278). He concluded at p.282 that “the cost to the Company of earning its trading receipts was not increased by the issue of these shares at less than their full market value”. Viscount Maugham agreed in the result but on the ground that an issue of shares was not a trading transaction, giving rise to either trading profits or losses. Lord Russell of Killowen based his decision on both grounds: see pp. 292 and 295. The other two members of the House dissented. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The provision in question in <span style="font-style:italic">Lowry </span>was rule 3(a) applicable to Cases I and II of Schedule D in the Income Tax Act 1918, which provided that, in computing the profits of a trade, no sum was to be deducted in respect of “any disbursements or expenses, not being money wholly and exclusively laid out or expended of the purposes of the trade”. Similar language was used in successive legislation up to section 74(1)(a) of the Income and Corporation Taxes Act 1988, which was replaced by section 54(1)(a) of the 2009 Act as part of the Tax Re-write. Reference to earlier authority, such as <span style="font-style:italic">Lowry</span>, may be made only where there is ambiguity in the replacement provision. Like the UT, I do not think that, when read in context, there is ambiguity in section 54(1)(a). The language of section 54 is significantly different and it must be read in the context of sections 46 and 48. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The case on which Mr Ghosh did rely in his oral submission was the UT’s decision in <span style="font-style:italic">Ingenious. </span>The constitution comprised Falk J and, as in the present case, Judge Herrington. It was a complex case, raising a number of legal and factual issues, including issues of expert evidence on the proper application of GAAP to the accounts of the taxpayer entities. It arose out of tax avoidance schemes linked to film production, whereby trading losses of 100 were purportedly generated for an outlay of 30 (to use the notional figures adopted by the UT). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The UT held that the taxpayers were not carrying on a trade in the years in question. This disposed of the appeals in favour of HMRC. The UT also examined in detail the issue whether, if the taxpayers were carrying on a trade, they were doing so with a view to profit, concluding that they were not doing so. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A number of other issues arose which, in view of the decision on the trading issue, it was unnecessary for the UT to decide but at [50] the UT said that they would set out their views “relatively briefly”. Those issues included whether the taxpayers’ accounts were properly prepared in accordance with GAAP, in particular by including 100, rather than 30, as an expense. Affirming the FTT, which had heard expert evidence on this point, the UT held that the accounts were not prepared in accordance with GAAP.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A further issue, relevant to the present case, was whether the taxpayers had “incurred” expenses of 100, or only 30, for the purposes of section 54(1)(a). At [433] the UT reiterated that they did not need to determine this issue and that they would therefore </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">deal with it briefly. Although 100 was provided for the production of films, the only economic burden suffered by the taxpayers was the outflow of 30. The remaining 70 was provided by non-recourse borrowing. The UT rejected the premise on which the taxpayers’ submissions rested, that they were contractually bound to pay 100% of the production costs of the films. It was liable for and paid 30, but it was neither liable for nor in fact paid more than 30. The only “real expenditure…incurred by the LLPs” was 30. The authorities relied on related to capital allowances. The UT acknowledged that care was required in applying the principles in those cases to whether expenditure was deductible as a trading expense: see [448]. They nonetheless considered that the emphasis in <span style="font-style:italic">Tower MCashback LLP v HMRC </span>[2011] UKSC 19, [2011] 2 AC 457, on whether there was “real” expenditure was highly relevant. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The UT stated its conclusion at [457]:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“We agree with the FTT that in determining whether there was real expenditure, it is necessary to consider whether the LLPs bore the economic burden of that expenditure. That approach makes sense given the context of the statutory test, namely the determination of profit…In our view, bearing in mind what we have said about there being no requirement that there should be a legal commitment to make the expenditure in question, and that the focus should be on what expenditure the taxpayer actually laid out (the ‘reality’ of the expenditure), in our view the FTT correctly formulated the statutory question as being whether realistically the LLPs bore the economic burden of the liability in question. In this case, the LLPs clearly only bore an economic burden to the extent of 30.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The UT’s analysis of section 54(1)(a) in <span style="font-style:italic">Ingenious </span>is at odds with the UT’s analysis in the present case, which was published after the hearing but before release of the Decision in <span style="font-style:italic">Ingenious</span>. This was acknowledged in <span style="font-style:italic">Ingenious </span>at [449], where having summarised the analysis in the present case, the UT said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“This is an important point, but given our conclusions on the correct accounting treatment to be applied in this case, as we discuss below, the point makes no difference in this case. We have therefore considered the question of ‘incurred’ by reference to the submissions made to us, rather than simply by reference to the correct accounting principles to be applied.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I am not persuaded to apply the analysis of section 54(1)(a) adopted by the UT in <span style="font-style:italic">Ingenious</span> to the present case. First, it was, as the UT itself explained, a briefly stated <span style="font-style:italic">obiter </span>view. Moreover, it was, as Mr Maugham QC for the taxpayers submitted to us, doubly <span style="font-style:italic">obiter</span>. Not only had the UT held that the taxpayers were not either trading or trading with a view to profit, they also affirmed the FTTs conclusion that the inclusion of 70 as expenses was contrary to GAAP. The basic requirement of section </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">46 was not satisfied. As the UT said in the passage just quoted, “given our conclusions on the correct accounting treatment to be applied in this case, as we discuss below, the point makes no difference in this case”. Second, the view on section 54 was based on submissions drawing an imperfect analogy with authorities on capital allowances which have not been advanced before us. This appears to have led the UT to equate “expenses” in section 54 with “expenditure”, without taking account of the effect of sections 46 and 48. Third, as they acknowledged, they were reaching their view based on the submissions made to them. Those submissions did not include the submissions made to the UT and to us in the present case. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I therefore conclude that the word “incurred” in section 54(1)(a) does not have the effect for which HMRC contend and that it is sufficient that the debit in respect of the options was required by IFRS 2. The use of “incurred” does not impose any additional requirement. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The “purpose” issue </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The remaining issue arising under section 54(1)(a) is whether the debits in respect of the options were “wholly and exclusively for the purposes” of the taxpayers’ trades.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">HMRC submitted to the UT that, as the debits did not reflect any outflows from the taxpayers but were only accounting entries, they could not be characterised as being for the purposes of the trades. The UT rejected this submission, saying at [94] that it was “necessary to focus not purely on the accounting debit itself, but on the nature of the transaction which that debit records and look at the purpose of the transaction which that debit records”. The debits recorded the effects of the grant of the options which formed part of the remuneration package of the employees. The purpose of the transaction, as found by the FTT, was to reward the employees, and thereby enable the taxpayers to make a profit, and the FTT was therefore fully entitled to find, as it did, that the options were granted wholly and exclusively for the purposes of the taxpayers’ trades. Moreover, this was one of those obvious cases recognised by Lord Brightman in <span style="font-style:italic">Mallalieu v Drummond</span> [1983] 2 AC 861 which speaks for itself, in the absence of any other purpose not related to the taxpayers’ trades.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">HMRC submit that the UT erred in law in its approach to this issue. They emphasise that the accounting debits arose because of transactions to which the taxpayers were not parties, involving the grant of options by the EBT Trustee over shares in the holding company. The debits arose purely because of IFRS 2. The notion of purpose is subjective: see <span style="font-style:italic">Mallalieu v Drummond</span>. The taxpayers cannot have any purpose informing accounting debits arising from transactions to which they were not parties. Their only purpose in making the debits was to comply with IFRS 2.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I do not accept this submission. In one sense, it is true of all accounting entries, as Mr Maugham submitted, that they are made to comply with the requirements of GAAP. To identify the purpose of a debit in the context of section 54, it is necessary to look beyond this and investigate the underlying reason for the debit. As the FTT found, the debits in this case were required by IFRS 2 to reflect the consumption by the taxpayers of the services provided by the employees, who were in part remunerated by the grant of the options. The taxpayers consumed those services wholly and exclusively for the purposes of their trades, being the provision of their employees’ services to other group companies at a profit. It follows that the purpose requirement of section 54(1)(a) was satisfied. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I reach this conclusion irrespective of whether the taxpayers were in fact paying for the grant of the options. However, the fact that the taxpayers were paying for the grant through the Recharge also shows, in my judgment, that the taxpayers had a purpose in </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">making the debits which went beyond simply complying with GAAP and was directed solely at carrying on their trades. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The “capital” issue </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">56.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Section 53(1) of the 2009 Act provides: “In calculating the profits of a trade, no deduction is allowed for items of a capital nature”. Where this section applies, it operates “as an adjustment required or authorised by law” to debits as shown in GAAP-compliant accounts, as provided by section 46(1). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">57.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">HMRC submitted to the UT that the debits required by IFRS 2 were items of a capital nature, because the corresponding credits in the balance sheets represented capital contributions from the holding company. The UT rejected this submission, holding that, as with the “purpose” issue, it was necessary to look at the nature of the transactions that gave rise to the need to record the debits in the taxpayers’ profit and loss accounts. As these were clearly revenue transactions, it followed that the debits did not represent items of a capital nature. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">58.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Mr Ghosh repeated these submissions before us, arguing that the accounting debits represented the consumption of the capital contributions treated as having been made by the holding company. The accounting evidence showed these to be capital items. Further, the remuneration came in the form of options giving rise to the capital contributions in the taxpayers’ balance sheets. It was irrelevant that the grant of the options formed part of the employees’ remuneration. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">59.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">In my judgment, these submissions rest on a misreading of the FTT’s findings as to the accountancy evidence. The debits were required to be made in the taxpayers’ profit and loss accounts because they represented the consumption of services provided by the employees to the taxpayers for the purposes of their trades. The debit was fixed by reference to the fair value of the options as a surrogate measure for the fair value of those services. The analysis is much the same as applies in the determination of the purpose of the debits and leads to the conclusion that they represent revenue, not capital, items.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Section 1290 </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 1290 appears in Part 20, Chapter 1, headed “Restriction of deductions”, which contains provisions restricting the deduction of various categories of expenses in the computation of profits chargeable to corporation tax. Sections 1290-1297 deal with employee benefit contributions.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 1290(1)-(3) provides:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“(1)This section applies if, in calculating for corporation tax purposes the profits of a company (“the employer”) of a period of account, a deduction would otherwise be allowable for the period in respect of employee benefit contributions made or to be made (but see subsection (4)). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.53in;text-indent:0.00in">(2) No deduction is allowed for the contributions for the period except so far as— </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.50in">qualifying benefits are provided, or qualifying expenses are paid, out of the contributions during the period or within 9 months from the end of it, or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.50in">if the making of the contributions is itself the provision of qualifying benefits, the contributions are made during the period or within 9 months from the end of it. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.31in;text-indent:0.00in">(3) An amount disallowed under subsection (2) is allowed as a deduction for a subsequent period of account so far as— </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.77in;text-indent:0.50in">qualifying benefits are provided out of the contributions before the end of the subsequent period, or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.77in;text-indent:0.50in">if the making of the contributions is itself the provision of qualifying benefits, the contributions are made before the end of the subsequent period.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 1291 provides so far as relevant:  “(1) For the purposes of section 1290 an “employee benefit contribution” is made if, as a result of any act or omission— </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.72in;text-indent:0.50in">property is held, or may be used, under an employee benefit scheme, or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.72in;text-indent:0.50in">there is an increase in the total value of property that is so held or may be so used (or a reduction in any liabilities under an employee benefit scheme). </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">(2) For this purpose “employee benefit scheme” means a trust, scheme or other arrangement for the benefit of persons who are, or include, present or former employees of the employer or persons linked with present or former employees of the employer.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">“Qualifying benefits” are defined by section 1292 and it is common ground that the grant of share options to employees did not constitute the provision of qualifying benefits.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">HMRC’s submissions to the UT are summarised at [112] of the UT’s Decision. They submitted, as they did to the FTT, that section 1290 applied in the present case, for two reasons. First, the grant of the options was an act under which property became subject to an arrangement, set out in the terms of the options, which was for the benefit of employees. The property comprised the shares in the holding company or the contractual rights granted under the options. Second, the share incentive schemes were “employee benefit schemes” as defined by section 1291(2). Until the options were exercised, the options (or the contractual rights under them or the shares to which they related) were property which was held, or which might be used, under an employee benefit scheme. They were part of an arrangement for the benefit of persons who included employees. For either reason, the grant of an option was an “employee benefit contribution” in respect of which deduction was deferred by section 1290.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The UT adopted the reasoning of the FTT in rejecting HMRC’s case on section 1290. The FTT dealt with this issue at [92]-[102] of its Decision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">While the width of the terms used in section 1290 had given the FTT judge “much pause for thought”, he concluded on balance that section 1290 did not apply to deny or defer the deduction of the debits in this case.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The FTT correctly noted that the debits arose in respect of the grant of share options and that the issue turned on whether the grant of share options amounted to an “employee benefit contribution” within the meaning of sections 1290-1291. Observing that section 1291 did not define an “employee benefit contribution” as such, the FTT judge again correctly noted that the contribution is the “act or omission” that leads to the results specified in section 1291(1). On that basis, the question was whether, as a result of the grant of the options, either limb of section 1291(1) was satisfied.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The FTT rejected the submission that the options themselves constituted “property” that was “held, or may be used, under an employee benefit scheme”. Rather, they were contractual rights to acquire shares from the Trustee which, once granted, were held by the employees in their own names absolutely. Although granted in the context of (or, as I think it right to say, pursuant to) employee share schemes, they were not held by the grantees <span style="font-style:italic">under </span>the schemes.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Like the UT, I agree with this conclusion and reasoning, and Mr Ghosh did not challenge it before us.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The FTT then turned to the question whether section 1291 applied on the basis that shares in the holding company were held or acquired by the Trustee to satisfy options, if exercised.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It was common ground that the EBT was an “employee benefit scheme”, as defined in section 1291(2), for the purposes of section 1291(1). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There were a number of grounds for the FTT’s conclusion that section 1291 did not apply on this alternative basis.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">First, the shares acquired by the Trustee to satisfy options were not held “under” the employee benefit scheme in the necessary sense, because the shares “were not acquired to confer a separate benefit on employees, but rather to enable the EBT Trustee to honour the contractual benefit that had already been provided in the form of the option”: para [99].</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Second, for the reasons the FTT judge explained at [100], he was not satisfied on the evidence that “as a result” of the grant of any particular option, the Trustee acquired any shares. HMRC did not seek to challenge this as a finding of fact but, at any rate before us, put their case on the basis that as a result of the grant of options shares in the holding company “may be used under an employee benefit scheme”, the relevant use being the transfer of shares to grantees on the exercise by them of their options. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Third, at [101], the FTT took account of what it saw as the overall purpose of section 1290. Its purpose was not to deny a corporation tax deduction whenever a company </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">makes outright payments to employees that are not subject to tax in the employees’ hands. If it had been, it could have been expressed much more briefly. The FTT continued:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Rather, s.1290 is concerned with situations in which an employer incurs expenses in putting property into an arrangement that can be expected (in due course) to result in employees receiving benefits but the corporation tax deduction is taken before employees are subjected to a tax liability on their benefit. That is emphasised by the fact that s.1290(2) permits a deduction to be given where qualifying benefits are provided “out of” employee benefit contributions (suggesting that an employee benefit contribution is something other than an outright transfer to employees). It is also emphasised by the fact that the definition of “employee benefit arrangement” envisages that there is some sort of intermediary arrangement standing between the provision of property by the employer and the receipt of benefits by the employee.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Ghosh submitted before us that HMRC’s case was simple. If and to the extent that options were exercised, the Trustee would use shares, which it already held or which it acquired specifically for the purpose, to fulfil its obligations to the option-holders. Those shares were property which “may be used” under the EBT, which was an employee benefit scheme. The shares to be delivered on exercise of the options were as much a benefit as the options themselves.  Accordingly, the grant of options by the Trustee were “employee benefit contributions” within sections 1290-1291, with the result that no deduction was allowable in respect of the relevant debits in the taxpayers’ profit and loss accounts. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A literal reading of section 1291(1) is capable of leading to the conclusion for which HMRC contends. In my judgment, however, such a reading ignores the context created by section 1290. The FTT was right to note that “employee benefit contributions” is not itself directly defined. Even if it were, the choice of words used for a defined term is not to be treated as wholly neutral but may properly influence its meaning: see <span style="font-style:italic">Chartbrook Ltd v Persimmon Homes Ltd </span>[2009] UKHL 38, [2009] 1 AC </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">1101 per Lord Hoffmann at [17]. “Employee benefit contributions” is not an empty vessel or algebraic symbol, dependent wholly on section 1291(1) for any meaning.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A contribution, resulting in property being held or used under an employee benefit scheme, suggests a payment or transfer from which benefits will be provided to employees. As the FTT said, this is expressly contemplated by section 1290(2)(a). In the present case, the benefit received by an employee was the option. It was the option that entitled the employee to acquire shares at a price that might be less than their market value. The acquisition of shares on exercise of the option was not the benefit received by the employee, but the fulfilment of an existing contractual entitlement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For the reasons given above and by the FTT, I am satisfied that section 1290 does not apply to deny or defer allowance of the relevant debits in this case.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Conclusion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For the reasons given in this judgment, I would dismiss the appeal.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Moylan: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Patten: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree.</p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

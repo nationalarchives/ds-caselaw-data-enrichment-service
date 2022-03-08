@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/296"/>
+	  <FRBRuri value="ewca/civ/2020/296"/>
+	  <FRBRdate date="2020-03-03" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="296"/>
+	  <FRBRname value="Williams, R (On the Application Of) v Caerphilly County Borough Council"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/296/eng"/>
+	  <FRBRuri value="ewca/civ/2020/296/eng"/>
+	  <FRBRdate date="2020-03-03" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/296/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/296/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:30:15" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/296/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>296</uk:number>
+	<uk:cite>[2020] EWCA Civ 296</uk:cite>
+	<uk:hash>4d49173af43e543d6540c46a5482fb740bc1b0734b0acf2240632ce5051fa37a</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/296/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.01in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading3 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading3Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 296</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>C1/2019/1922</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">QUEEN’S BENCH DIVISION</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">ADMINISTRATIVE COURT IN WALES</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">(Mr Justice Swift)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<neutralCitation style="font-weight:bold;text-decoration:underline">[2019] EWHC 1618 (Admin)</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 03/03/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE FLAUX</span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE HADDON-CAVE</span>
+      </p>
+      <p style="text-align:center">and</p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE MALES</span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE QUEEN </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <p style="text-align:center;margin-right:0.13in">
+	<span style="font-weight:bold">(ON THE APPLICATION OF SHANE WILLIAMS) </span>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:0.11in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:none"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">- and - </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">  </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">CAERPHILLY COUNTY BOROUGH COUNCIL </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">Respondent</span>
+      </p>
+      <p style="text-align:center;margin-left:2.16in;margin-right:2.15in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      <p class="Heading1" style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:none">Philip Havers QC</span>
+	<span style="text-decoration:none"> and</span>
+	<span style="font-weight:bold;text-decoration:none"> Christian Howells</span>
+	<span style="text-decoration:none"> (instructed by </span>
+	<span style="font-weight:bold;text-decoration:none">Watkins &amp; Gunn</span>
+	<span style="text-decoration:none">) for the </span>
+	<span style="font-weight:bold;text-decoration:none">Appellant</span>
+	<span style="text-decoration:none"> </span>
+	<span style="font-weight:bold;text-decoration:none">James Goudie QC</span>
+	<span style="text-decoration:none"> and</span>
+	<span style="font-weight:bold;text-decoration:none">  Ronnie Dennis </span>
+	<span style="text-decoration:none">(instructed by</span>
+	<span style="font-weight:bold;text-decoration:none"> Caerphilly County Borough Council </span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in"><span style="font-weight:bold">Legal Services</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center">Hearing date: <date date="2020-02-20">20<span style="vertical-align:super;font-size:smaller">th</span> February 2020</date><span> </span></p>
+      <p style="text-align:center;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold"> Lord Justice Males :</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Introduction </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This is an appeal against the decision of Swift J by which he dismissed a challenge to the lawfulness of the decision of the respondent local authority, acting by its cabinet, to adopt a Strategy for the provision of Sports and Recreation facilities covering the ten year period from 2019 to 2029. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Strategy, adopted at a cabinet meeting on 14<span style="vertical-align:super;font-size:smaller">th</span> November 2018, was described as setting out “a future purpose and direction for the provision of sport and active recreation in Caerphilly County Borough” which would establish “the key principles and vision which will inform future decisions and actions”. It stated that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“Where necessary, as and when required, the strategy implementation will be supported by more detailed communications, consultation, and business cases for action to support reports to the relevant Scrutiny Committee, Cabinet and/or Full Council.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Strategy pointed out that the provision of sport and recreation facilities was not a statutory responsibility of the local authority and that the facilities which it provided were, therefore, a part of its discretionary provision, which needed “to be measured against their positive impact on [the council’s] priorities of health, regeneration, education, and future affordability”. It noted that, at present, the council provided ten leisure centres, which was more than any other Welsh local authority, and which took up over 70% of the council’s sport and leisure budget. However, these centres varied in quality, and many of them were old and in need of high levels of maintenance. The Strategy noted also that the budget for community and leisure services needed to achieve reductions over the course of the ten year period which it covered, and that the provision of leisure centres needed to be “rationalised”. It stated that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“A rationalisation of facilities will result in 4 strategic, high quality, multi service leisure centres that are managed by the authority’s Sport and Leisure Service. The 4 strategic centres will be located in Risca, Caerphilly, and Newbridge, and one in Bargoed/Aberbargoed areas to serve the north of the county borough. It is therefore anticipated that the other leisure centres would either transfer to school management (if they are joint use facilities located on a school site, subject to governing body approval) or could close completely. Careful consideration will be given to opportunities for alternative provision before any facilities are withdrawn.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">One of the existing leisure centres was at Pontllanfraith. This was not to be one of the four strategic centres and was not a joint use facility located on a school site. One of the issues arising on this appeal is whether adoption of the Strategy amounted in effect to a firm decision to close the Pontllanfraith centre. In fact the council had already deferred a decision on its future pending the adoption of the Strategy. Once the Strategy had been adopted, the council commissioned a report on the centre which recommended closure. At a meeting on 10th April 2019 the council, once again acting </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">by its cabinet, resolved that the centre should be closed. The cabinet member for Neighbourhood Services whose responsibility this was referred to the Strategy and to the fact that the council “cannot continue to spread its resources so thinly across ageing buildings and facilities” and stated that “to keep this leisure centre open would undermine the vision for future delivery set out in the Strategy”. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In a claim for judicial review the appellant, a regular user of the centre who has campaigned against its closure, contended that both decisions, to adopt the Strategy and to close the Pontllanfraith centre, were unlawful. Swift J dismissed the claim so far as the decision to adopt the Strategy was concerned, but held that the decision to close the centre was unlawful for failure to comply with the public sector equality duty. In this appeal the appellant contends that the decision to adopt the Strategy was unlawful. There is no cross-appeal by the council so far as the decision to close the Pontllanfraith centre is concerned. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">We are not concerned with the merits or otherwise of the Strategy, let alone with whether the Pontllanfraith centre should be closed. We are concerned only with whether the decision to adopt the Strategy was unlawful, which depends on whether the correct process was followed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There are three issues, reflected in the grounds of appeal. The appellant contends that: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">the decision to adopt the Strategy was a decision which could only be made by the full council; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">the cabinet failed to have regard to the cost of implementing the Strategy which was a material consideration; and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">the Strategy was an “arrangement to secure continuous improvement in the exercise” of the council’s functions within the meaning of section 2 of the Local Government (Wales) Measure 2009 (“the 2009 Measure”) which required the council to have regard to the efficiency (and thus the cost) of its proposals and to undertake a consultation pursuant to section 5 of the Measure. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The facts  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I can take the facts from the appellant’s skeleton argument. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant is a Blackwood resident and user of the Pontllanfraith leisure centre.  He is a long-time campaigner against its closure. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 20<span style="vertical-align:super;font-size:smaller">th</span> September 2017 the cabinet resolved to consult on the closure of the centre. The officer’s report to cabinet for that meeting noted that the centre was not identified as a strategic leisure centre in the emerging sport and leisure services strategy. The purpose of the report was to seek approval for closure and sale of the land. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Following consultation, the cabinet resolved on 13<span style="vertical-align:super;font-size:smaller">th</span> December 2017 to close the leisure centre. The appellant challenged that decision by way of letter before claim dated 14<span style="vertical-align:super;font-size:smaller">th</span> February 2018. On 20<span style="vertical-align:super;font-size:smaller">th</span> February 2018 the council responded stating that the decision to close the leisure centre had been deferred until the issues were looked at by the cabinet in the context of the Strategy. That was followed by a resolution of </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">the cabinet on 28<span style="vertical-align:super;font-size:smaller">th</span> March 2018 that the decision to close the leisure centre be deferred and reconsidered once the Strategy had been adopted. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 27<span style="vertical-align:super;font-size:smaller">th</span> June 2018 the cabinet was presented with the draft Strategy and resolved to put it out to consultation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 30<span style="vertical-align:super;font-size:smaller">th</span> October 2018 the Scrutiny Committee passed a motion calling for the cabinet to refer the adoption of the Strategy to the full Council, given the consultation results and a petition against the closure of Cefn Fforest and Pontllanfraith leisure centres signed by 5343 residents. The Scrutiny Committee considered the Strategy again on 8<span style="vertical-align:super;font-size:smaller">th</span> November 2018 and was informed that Heolddu Leisure Centre would be the fourth strategic site. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The cabinet met on 14<span style="vertical-align:super;font-size:smaller">th</span> November 2018. It declined to refer the matter to the full council and resolved to adopt the Strategy (as amended following consultation).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 26<span style="vertical-align:super;font-size:smaller">th</span> March 2019 the Scrutiny Committee considered again the proposal to close the Pontllanfraith leisure centre. The officer’s report for the meeting recommended closure. The Scrutiny Committee did not support the proposal. However, on 10<span style="vertical-align:super;font-size:smaller">th</span> April 2019 the cabinet resolved to close the leisure centre by 30<span style="vertical-align:super;font-size:smaller">th</span> June. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The claim for judicial review was originally issued in February 2019 against the decision to adopt the Strategy. By order of Spencer J dated 17<span style="vertical-align:super;font-size:smaller">th</span> May 2019 the claim was amended to include a challenge to the closure decision. An interim injunction was granted preventing the council from taking any irreversible steps to close the leisure centre. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There was a rolled up hearing of the claim before Swift J on 19<span style="vertical-align:super;font-size:smaller">th</span> June 2019. He handed down judgment at a hearing on 24<span style="vertical-align:super;font-size:smaller">th</span> June. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The Strategy Decision </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge’s view was that appreciation of the substance of the Strategy and hence of what it did and did not do was central to the determination of all the grounds of challenge directed to the decision to adopt it. He described the Strategy as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“9. The Council's description of the Sports Strategy is that it sets out the future purpose and direction for the provision of sport and active recreation in the County Borough, and establishes ‘… the key principles and vision over the next 10 years’. This description is accurate. On consideration of the document, it is clear that it is genuinely a strategy document. It identifies the Council's ‘vision’ to ‘encourage healthy lifestyles and support … residents to be more active more often’. It identifies the role of the Council's Community and Leisure Service as being to lead ‘the promotion of sport and active recreation’ and to co-ordinate the delivery of the Strategy. In this way the Sports Strategy signals the Council's intention to move from an approach which assumed that the Council would be the main provider of leisure facilities, and towards one resting on a mix of Council-provided facilities and facilities provided by others. The Sports Strategy next sets out how the Council's approach will fit with the ‘7 Wellbeing Goals’ listed in the Wellbeing of Future Generations (Wales) Act 2015, and the Wellbeing Objectives in the Council's own corporate plan. While it would be wrong to describe these parts of the Sports Strategy as purely aspirational, it is certainly the case that the Strategy is not written in hard-edged or prescriptive language. Rather, the document describes a collection of ideas, principles and objectives. It is not a set of marching orders. In this same vein, the Sports Strategy states that the Council will, in respect of facilities, adopt the approach advocated by the Welsh Government and Sport Wales in their March 2016 document ‘Facilities for Future Generations’, including what is referred to as the ‘Decision-Making Matrix’ contained in that document to determine which leisure facilities are to be considered ‘strategic leisure facilities’ and are to be directly managed by the Council. Under the heading ‘What Needs to be Done’, the Sports Strategy sets out the Council's Corporate Policy; states that the facilities it will provide are to comprise four ‘strategic, high quality, multi-service leisure centres’ in Risca, Caerphilly, Newbridge and either the Bargoed area or the Aberbargoed area; states that a plan will be developed to enhance outdoor recreational spaces; develop a plan for swimming facilities; and will seek to collaborate with schools, community groups and clubs through a recreation outreach and intervention programme.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The minutes of the cabinet meeting of 14<span style="vertical-align:super;font-size:smaller">th</span> November 2018 at which the decision to adopt the Strategy was made record that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“Members … were reminded of the time frame within which the strategy would operate and the importance of remembering that any decisions arising from it would be taken over a ten year period and would therefore be subject to further and specific reports to Cabinet. Officers advised that current provision cannot continue in its present form as it is not sustainable.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">… Officers referred to paragraph 4.13 in the report where it was highlighted that a number of responses [to the consultation] centred specifically on concerns relating to the potential closure of two facilities, Pontllanfraith Leisure centre and Cefn Fforest Leisure Centre, and with 52% of the respondents stating that any closure of facilities would have a negative impact. In terms of Leisure Centre provision Officers confirmed that any proposals for the closure of facilities would be the subject of further reports which would be presented to Members for consideration. …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">One councillor who was not a member of the cabinet but was invited to address the meeting stated his agreement with the concerns about closure of facilities including </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">the Pontllanfraith leisure centre which had been expressed by respondents to the consultation and by signatories to the petition opposing its closure. He said that he would have liked to have seen “draft financial implications” for the cost of implementing the Strategy. The response given by council officers was that “any individual decisions would be subject to further reports”. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The decision of the meeting was that the Strategy was approved and formally adopted for the reasons contained in the report which was before the cabinet. That report also emphasised that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“An important factor for Members to consider is the period of time (2019-2029) be covered by the Strategy. It is therefore important to remember that any decisions arising from the Strategy (if adopted) will be taken over the 10 year period and will be the subject of specific reports to Cabinet.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This was reiterated specifically in the section of the report which dealt with public responses to the consultation which had shown concern about the potential closure of the Pontllanfraith and Cefn Fforest leisure centres. The report stated that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“The Council is acutely aware of concerns regarding any potential loss of facilities and will give careful consideration to opportunities for alternative provision before any facilities are withdrawn. Decisions on each will be the subject of separate reports and a specific decision making process as the Authority evolves to the new model of provision over the lifetime of the Strategy.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Dealing with financial obligations, the report stated that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“There are no financial implications at this stage. Should the Strategy be formally adopted then proposed actions will be the subject of separate reports over the 10 year course of the Strategy that will include detailed financial implications. Any decisions will be dependent on the availability of funding and the approval of a robust business case.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the case of the Caerphilly leisure centre, which was proposed to be one of the four strategic centres, the approximate cost of four possible courses of action was set out as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">“1. Do nothing and continue to subsidise at present values.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.17in;text-indent:-0.17in">2.</num>
+	  <content>
+	    <p style="margin-left:1.17in;margin-right:0.00in">Refurbishment Option 1 – Circa £5.188m  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.17in;text-indent:-0.17in">3.</num>
+	  <content>
+	    <p style="margin-left:1.17in;margin-right:0.00in">Refurbishment Option 2 – Circa £8.915m  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.17in;text-indent:-0.17in">4.</num>
+	  <content>
+	    <p style="margin-left:1.17in;margin-right:0.00in">New Build Option – Circa £13-15m” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Thus the cost of creating the proposed strategic centres could vary widely, depending on whether a new centre would be constructed or an existing centre would be upgraded and, in the latter case, what that would involve. The figures were stated to </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">be some 12 months out of date and therefore subject to construction industry inflation. There were no equivalent figures for other facilities. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I will deal with each ground of challenge in turn, although there is a considerable overlap between them. Before doing so I should note that section 19(1) of the Local Government (Miscellaneous Provisions) Act 1976 provides that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“A local authority may provide, inside or outside its area, such recreational facilities as it thinks fit and, without prejudice to the generality of the powers conferred by the preceding provisions of this subsection, those powers include in particular powers to provide –  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">indoor facilities consisting of sports centres, swimming pools, skating rinks, tennis, squash and badminton courts, bowling centres, dance studios and riding schools;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">outdoor facilities consisting of pitches for team games, athletics grounds, swimming pools, tennis courts, cycle tracks, golf courses, bowling greens, riding schools, camp sites and facilities for gliding; …” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Further, a Welsh local authority has power pursuant to section 2 of the Local Government Act 2000 (as amended by the Localism Act 2011) (“the LGA 2000”) to do anything which it considers likely to achieve the promotion or improvement of the economic, social or environmental well-being of its area. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Strategy was therefore correct in stating that the council had the power to provide sport and recreational facilities, but no statutory obligation to do so. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Ground 1 – not within the responsibility of the cabinet</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:-0.50in">29.<span style="font-family:Arial"> </span>The first issue is whether the cabinet had power to adopt the Strategy. The appellant contends that this was a decision which could only be taken by the full council. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The legislation </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Some functions of a local authority are the responsibility of the full council, while others are the responsibility of an executive (or cabinet). Section 13 of the LGA 2000 sets out how the allocation of responsibility is to be determined. It provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“(1) This section has effect for the purposes of determining the functions of a local authority which are the responsibility of an executive of the authority under executive arrangements.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">Subject to any provision made by this Act or by any enactment which is passed or made after the day on which this Act is passed, any function of a local authority which is not specified in regulations under subsection (3) is to be the responsibility of an executive authority under executive arrangements.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">The Welsh Ministers may by regulations make provision for any function of a local authority specified in the regulations – (a) to be a function which is not to be the responsibility of an executive of the authority under executive arrangements … </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.33in">(10) Accordingly any function which is the responsibility of an executive of a local authority under executive arrangements –  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:0.00in">(a) may not be discharged by the authority. …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Thus the default position is that a function will be the responsibility of the executive unless otherwise provided in statute or regulations made by the Welsh Ministers. If a function is the responsibility of the executive, it may not be discharged by the full council.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Regulation 6 of the Regulations made by the Welsh Ministers (the Local Authorities (Executive Arrangements) (Functions and Responsibilities) (Wales) Regulations 2007/399) (“the 2007 Regulations”) provides as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:1.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:normal">“</span>Discharge of specified function by authorities</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:-0.25in">(1)<span style="font-family:Arial"> </span>Subject to paragraph (2), a function of any of the descriptions specified in column (1) of Schedule 4 (which, but for this paragraph, might be the responsibility of an executive of the authority), is not the responsibility of an executive in the circumstances specified in column (2) in relation to that function.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Schedule 4 includes the following: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <table>
+	      <tr>
+		<td rowspan="1" colspan="1">
+		  <p style="text-align:left;margin-left:0.25in;margin-right:0.00in;text-indent:0.00in">
+		    <span style="font-weight:bold">(1)</span>
+		    <span style="font-weight:bold;font-family:Arial"> </span>
+		    <span style="font-weight:bold">Function </span>
+		  </p>
+		</td>
+		<td rowspan="1" colspan="1">
+		  <p style="text-align:left;margin-left:0.25in;margin-right:0.00in;text-indent:0.00in">
+		    <span style="font-weight:bold">(2)</span>
+		    <span style="font-weight:bold;font-family:Arial"> </span>
+		    <span style="font-weight:bold">Circumstances </span>
+		  </p>
+		</td>
+	      </tr>
+	      <tr>
+		<td rowspan="1" colspan="1">
+		  <p style="margin-left:0.50in;text-indent:-0.25in">1.<span style="font-family:Arial"> </span>The adoption or approval of a plan or strategy (whether statutory or non-statutory), other than a plan or strategy for the control of the authority’s borrowing or capital expenditure or referred to in Schedule 3. </p>
+		</td>
+		<td rowspan="1" colspan="1">
+		  <p style="margin-left:0.00in;text-indent:0.00in">The authority determines that the decision whether the plan or strategy should be adopted or approved should be taken by them. </p>
+		</td>
+	      </tr>
+	      <tr>
+		<td rowspan="1" colspan="1">
+		  <p style="margin-left:0.50in;margin-right:0.04in;text-indent:-0.25in">2.<span style="font-family:Arial"> </span>The determination of any matter in the discharge of a function which –  </p>
+		  <blockContainer>
+		    <num>(a)</num>
+		    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.50in">is the responsibility of the executive; and  </p>
+		  </blockContainer>
+		  <blockContainer>
+		    <num>(b)</num>
+		    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.50in">is concerned with the authority’s budget, or their </p>
+		  </blockContainer>
+		</td>
+		<td rowspan="1" colspan="1">
+		  <p style="margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">The individual or body by whom, by virtue of any of sections 14 to 17 of the </p>
+		  <p style="margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">Local Government Act 2000 or provision made under section 18 or 20 of that Act, the determination is to be made –  </p>
+		  <p style="margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">(a) is minded to determine the matter contrary to, or not wholly in accordance </p>
+		</td>
+	      </tr>
+	      <tr>
+		<td rowspan="1" colspan="1">
+		  <p style="text-align:left;margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">borrowing <marker name="tab"/>or <marker name="tab"/>capital expenditure. </p>
+		</td>
+		<td rowspan="1" colspan="1">
+		  <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">with  </p>
+		  <blockContainer>
+		    <num>(i)</num>
+		    <p style="text-align:left;margin-left:0.00in;margin-right:0.02in;text-indent:0.50in">the authority’s budget; or  </p>
+		  </blockContainer>
+		  <blockContainer>
+		    <num>(ii)</num>
+		    <p style="text-align:left;margin-left:0.00in;margin-right:0.02in;text-indent:0.50in">the plan or strategy for the time being approved or adopted by the authority in relation to their borrowing or capital expenditure; and  </p>
+		  </blockContainer>
+		  <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">(b) is not authorised by the authority’s executive <marker name="tab"/>arrangements, <marker name="tab"/>financial regulations, standing orders or other rules <marker name="tab"/>or <marker name="tab"/>procedures <marker name="tab"/>to <marker name="tab"/>make <marker name="tab"/>a determination in those terms. </p>
+		</td>
+	      </tr>
+	      <tr>
+		<td rowspan="1" colspan="1">
+		  <p style="margin-left:0.50in;margin-right:0.00in;text-indent:-0.25in">3.<span style="font-family:Arial"> </span>The determination of any matter in the discharge of a function –  </p>
+		  <blockContainer>
+		    <num>(a)</num>
+		    <p style="margin-left:0.50in;margin-right:0.02in;text-indent:0.50in">which is the responsibility of the executive; and  </p>
+		  </blockContainer>
+		  <blockContainer>
+		    <num>(b)</num>
+		    <p style="margin-left:0.50in;margin-right:0.02in;text-indent:0.50in">in relation to which a plan or strategy (whether statutory or non-statutory) has been adopted or approved by the authority. </p>
+		  </blockContainer>
+		</td>
+		<td rowspan="1" colspan="1">
+		  <p style="margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">The individual or body by whom, , by virtue of any of sections 14 to 17 of the </p>
+		  <p style="margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">Local Government Act 2000 or provision made under section 18 or 20 of that Act, the determination is to be made, is minded to determine the matter in terms contrary to the plan or, as the case may be the strategy adopted or approved by the authority. </p>
+		</td>
+	      </tr>
+	    </table>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Thus the scheme of the Regulations is that the default position remains that a local authority’s functions are the responsibility of the executive, but this position is qualified in a number of respects. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">First, the adoption or approval of a plan or strategy for the control of an authority’s borrowing or capital expenditure is the responsibility of the full council. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Second, the adoption or approval of other types of plan or strategy is the responsibility of the executive <span style="font-style:italic">unless</span> the full council determines that it should itself take the decision whether to approve the plan or strategy.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Third, where the determination of any matter in the discharge of a function which is within the responsibility of the executive is concerned with the authority’s budget, borrowing or capital expenditure, the executive may determine the matter itself <span style="font-style:italic">unless</span> it is minded to do so in a way which is contrary to, or not wholly in accordance with, either (i) the authority’s budget, or (ii) a plan or strategy approved or adopted by the authority in relation to borrowing or capital expenditure. In other words, an executive may make decisions which are in accordance with the budget or with existing borrowing or capital expenditure plans, but may not do so if those decisions are contrary to, or even if they are not wholly in accordance with, the budget or existing plans. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As explained by Lord Dyson MR in <span style="font-style:italic">Buck v Doncaster Metropolitan Borough Council</span> [2013] EWCA Civ 1190, [2014] PTSR 111 at [20] and [21], determining a matter in a </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">manner that is “contrary to or not wholly in accordance with the authority’s budget” means “determining a matter which will result in incurring expenditure in excess of that for which budget approval has been given by the full council”. That was a case where the mayor and cabinet had resolved to close library services, but the full council had amended the mayor’s proposed budget by adding a contingency fund enabling the existing level of services to be maintained. The mayor decided not to spend the additional funds and it was held that it was within his responsibility to make this decision. The full council was “the final arbiter of what goes into the budget”, but it was not for the full council to require the mayor to spend money in a particular way or, unless he proposed to act in a way contrary to the plans and strategies reserved to the full council, to spend money on a particular function. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Fourth, where a plan or strategy has been adopted, the executive may make decisions which are in accordance with that plan or strategy, but may not do so in terms which are contrary to or not wholly in accordance with the plan or strategy.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The distinction between approval of a plan and its implementation was also explained in <span style="font-style:italic">Buck</span> at [24]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“… The language of ‘plan or strategy’, read in the context of the 2000 Regulations, denotes something that operates at a general level. It cannot embrace any and every decision that may be taken on an individual issue. If it did, it would undermine the basic distinction between executive and nonexecutive functions which lies at the heart of the relevant part of the 2000 Act. The basic idea is that the full council may in certain respects set the policy framework for the authority, but its detailed implementation is a matter for the executive (provided that what it does is not contrary to and is wholly in accordance with the budget). …” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The judgment </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The first issue before the judge was whether adoption of the Strategy was a matter reserved to the full council under paragraph 2 of Schedule 4. That, said the judge, gave rise to four questions: (1) what was the function being discharged when the Strategy was adopted; (2) was the discharge of that function concerned with any of the council’s budget, borrowing or capital expenditure; (3) if so, which parts of the budget were material; and (4) was the adoption of the Strategy contrary to, or not wholly in accordance with, the council’s budget or any approved plan or strategy for borrowing or capital expenditure? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge’s answer to these questions was that (1) the function being exercised was not the power of a local authority under section 19 of the 1976 Act to provide “such recreational facilities as it thinks fit”, but rather the power under section 111 of the Local Government Act 1972 “to do any thing … which is calculated to facilitate, or is conducive or incidental to, the discharge of any of their functions”; (2) the decision to adopt the Strategy was not “concerned with” the budget, borrowing or capital expenditure because that expression was to be given a narrow meaning focused on the direct consequences of the decision and, in this case, the Strategy contained no decision that committed the council to specific expenditure, capital expenditure or borrowing; (3) and (4) the only budget which could be in issue was the budget for 2019-20 and the only plan which could be in issue was the capital programme covering the period from 2019 until the end of the 2021-22 financial year, but the Strategy did not involve any expenditure not provided for in that budget or plan. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I note at this stage that the judge’s answer to his first question was contrary to what was common ground before him and before us, namely that the function being exercised was the power under section 19 of the 1976 Act to provide “such recreational facilities as [the authority] thinks fit”. I proceed on the basis that this was indeed the function being exercised, as the parties agreed, although it was not suggested that this makes any difference to the outcome of this appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The submissions on appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For the appellant, Mr Philip Havers QC submitted that adoption of the Strategy amounted to a firm decision to provide four strategic leisure centres and to transfer or close the remaining six, which had inevitable and significant cost consequences for the council’s budget and capital expenditure. He submitted that, if adoption of the Strategy had any real purpose, it would result in expenditure on providing the four strategic leisure centres and closing or transferring others, either within the current financial year or, at any rate, within the period up to 2022 covered by the current capital expenditure plan. This was demonstrated by the fact that, within only a few months, the council incurred expenditure of £225,000 on a report on the closure of the Pontllanfraith centre and approved further expenditure of £550,000 on upgrading the Newbridge centre, which was one of the four chosen strategic centres, and that the cabinet decision on 10<span style="vertical-align:super;font-size:smaller">th</span> April 2019 to close the Pontllanfraith centre was made, at least in part, on the ground that it was not one of the four strategic centres and “to keep the leisure centre open would undermine the vision for future delivery set out in the Strategy”. Accordingly he submitted that the decision to adopt the Strategy was </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">“concerned with the authority’s budget or … capital expenditure” and that, because there was no provision in the authority’s budget for the expenditure totalling £775,000 referred to above, the decision was contrary to or not wholly in accordance with the budget, and was therefore a decision which was reserved to the full council. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The council’s budget for the 2018-19 financial year was not in evidence, but Mr James Goudie QC for the respondent council did not challenge the proposition that it contained no provision for the expenditure of £775,000. He took his stand on the characterisation of the Strategy which, he submitted, made no firm decisions about upgrading or closing particular centres but set out a policy objective which was to be implemented over a ten year period and would provide the context for later decisions, including as to the closure of particular centres; those decisions would be made in accordance with circumstances as they might exist in future, including the availability of funding. He submitted that the Strategy itself neither authorised nor mandated any particular expenditure, either in the current year or at all, and therefore was not </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">“concerned with” the council’s budget, let alone “contrary to, or not wholly in accordance with” it. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">Discussion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There had been no determination by the full council that it should itself determine the council’s future strategy for sport and recreation facilities. <span style="font-style:italic">Prima facie</span>, therefore, the adoption or approval of such a strategy was the responsibility of the executive pursuant to paragraph 1 of the table in Schedule 4 of the 2007 Regulations. Nevertheless, the executive would not have the authority to adopt a strategy if that strategy was “concerned with” the authority’s budget or capital expenditure plan and its adoption was “contrary to, or not wholly in accordance with” that budget or plan. As any strategy is likely to have implications for future expenditure in the event that it is implemented, the structure of the table in Schedule 4 suggests that the expression “concerned with” in column 1 should be given a fairly narrow meaning, while “the authority’s budget” and “the plan or strategy for the time being approved or adopted by the authority in relation to their borrowing or capital expenditure” can only refer to an existing budget or plan, in this case the budget for the 2018-19 financial year and the capital expenditure plan for the financial years 2019-22. The structure and language of the table suggest also that it is only a firm decision involving the expenditure of money not provided for in the budget or capital expenditure plan which will fall within the responsibility of the full council, and that a decision which is merely likely (or even very likely) to lead to a future decision involving such expenditure will remain the responsibility of the executive. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge dealt with this issue as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“10. Mr Howells relies in particular on the part of the Sports Strategy that refers to the four proposed strategic leisure centres, to support his submission that the Strategy Decision was a ‘gateway decision’ which committed the Council to clear and prescribed courses of action. As such, he submitted, the Sports Strategy was a strategy for investment. Although he accepted that the Sports Strategy was not itself a mandate to close or redevelop any specific leisure facility, he contends that when the Sports Strategy was adopted a die was cast. In my view this is a significant over-reading of the Sport Strategy. The Strategy sets a direction – but only in generic terms. Any specific decision, for example to redevelop or close a leisure centre could not be taken by the Council simply on the basis that it was, in general terms, in-keeping with the Sports Strategy; rather, the specifics of any such proposal would have to be worked through in detail. Even by reference to the four strategic leisure centres, the Sports Strategy goes no further than saying that over a 10 year period these facilities should be provided. That is a policy objective rather than a hard-edged plan. The cost or other implications of that objective could significantly change over the 10 year life of the Strategy. Those matters are only capable of being distilled in specifics at such time as the Council chooses to make an operational decision. Put shortly, the Sports Strategy is a demonstration of intent; the way in which or the extent to which that intent becomes manifest in the course of the next 10 years is not set in stone.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">11. I now turn to the second question posed at paragraph 6 above – was the discharge of the section 111 power, the decision to adopt the Sports Strategy, ‘concerned with’ the Council's budget, borrowing or capital expenditure? The words ‘concerned with’ have a flexible meaning. At one end of a scale, any decision that could, even indirectly, result in expenditure or borrowing might be said to be ‘concerned with’ those matters. Yet that would not be a realistic application of those words in the context in which they appear. How they are applied must be guided by the purpose of paragraph 2 of Schedule 4 to the 2007 Regulations, namely that decisions which are inconsistent with a relevant budget or borrowing or capital expenditure plan should only be taken by persons authorised under the Council's own executive arrangements to take decisions which have those consequences. Thus while the words ‘concerned with’ are to be applied taking good account of the specifics of the decision in hand, the focus should be on the direct consequences of the decision. Applied to the facts of this case, I do not consider it is correct to say that the Strategy Decision was a decision concerned with the Council's budget, borrowing or capital expenditure. Most obviously, the Strategy Decision was concerned with the Council's policy for sports and leisure provision over the period to 2029. It was not in the nature of the Sports Strategy – as I have described it above – that it was concerned with the Council's budget, borrowing or capital expenditure. The Sports Strategy contained no decision that committed the Council, as a matter of law, to specific expenditure, capital expenditure or borrowing. The fact that the Sports Strategy might be described as a plan that if implemented would inevitably entail expenditure of Council funds, is not to the point. Such spending decisions are yet to be taken; when proposals for development are put forward they will have to be assessed by the Council, on their own terms. (The Officer's Report for the Cabinet meeting on 14 November 2018 said as much at paragraph 7.1 – see below at paragraph 15 of this judgment).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree with that reasoning (save for its reference to the section 111 power which does not matter for present purposes). It is supported by the following submissions made by Mr Goudie to the effect that the Strategy itself did not amount to a decision to close the Pontllanfraith centre, and that any such future decision was a distinct matter which would need to be considered on its own merits: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">The council recognised when adopting the Strategy that any closure of a leisure centre would require a future decision. I have set out above the repeated statements to that effect in the minutes of the cabinet meeting and the report presented to the meeting. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">Any such future decision would not be determined by the Strategy, but would require its own justification in accordance with relevant public law principles and would be open to legal challenge. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">The decision on 10<span style="vertical-align:super;font-size:smaller">th</span> April 2019 to close the Pontllanfraith centre was in fact successfully challenged and the decision was quashed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(4)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">In contrast with adoption of the Strategy, a future decision to build or refurbish one leisure centre, or to close another, would have financial implications and would be subject to the availability of funding. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(5)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">When the time came for such a future decision to be made, the Strategy would be a relevant and important consideration to be taken into account, but it would not be the only consideration. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is fair to say that, once the Strategy was adopted, the long term future of the Pontllanfraith centre must have looked bleak, and that its closure at some point was likely, not least against the background that a decision on its closure had already been deferred pending adoption of the Strategy. But there was nothing in the Strategy to say that this would inevitably happen, let alone that it would happen in the current financial year so as to involve expenditure contrary to the budget. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I would therefore hold that the decision whether to adopt the Strategy was the responsibility of the executive and not the full council. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I say nothing about whether any future decision to close a leisure centre, or to provide funds for the construction or refurbishment of one of the proposed strategic centres, will be a decision for the executive or the full council. That, as it seems to me, will depend on what is contained in any budget, borrowing plan or capital expenditure plan which is current at the time. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Ground 2 – failure to have regard to the cost of implementing the Strategy </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:-0.50in">52.<span style="font-family:Arial"> </span>The appellant’s second ground is that the cabinet failed to have regard to the cost of implementing the Strategy, which was a material consideration: at the time when it took the decision it had no information about the likely cost of providing the four strategic centres, but it needed to have such information in order to make a proper and lawful decision. This is therefore a rationality challenge on traditional <span style="font-style:italic">Wednesbury</span> grounds. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The judgment</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:-0.50in">53.<span style="font-family:Arial"> </span>The judge rejected this second ground, essentially because of his view as to what the Strategy did and did not do: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“17. My conclusion is that the Strategy Decision was not unlawful by reason of a failure to take account of the likely costs of implementing the Sports Strategy. The Strategy Decision did not commit the Council to any specific expenditure. As is apparent from paragraph 7.1 of the Officer's Report, a decision to adopt the Sports Strategy ran the risk of political embarrassment if over the 10 year period the Council lacked the resources to realise the Strategy. Yet in my view, that is an approach that the Council was entitled to take. Given that the Sports Strategy was set to endure for 10 years, it is equally reasonable to assume that anything approaching detailed costings would be either impossible or artificial given the difficulty of estimating now the cost of works that might not commence for 5, 7 or even 10 years.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">18. In the premises the second ground of challenge fails. Once the nature and substance of the Sports Strategy, as I have described it, is taken into account, it was not <span style="font-style:italic">Wednesbury</span> unlawful for the Council to adopt the Sports Strategy without information about the likely cost that its implementation might entail. Given that the Strategy Decision did not commit the Council to any specific programme of work, it was open to the Council to proceed on the basis that information about the cost of implementation was not a material consideration at that stage, and that such financial considerations would be addressed step by step as implementing plans came forward. This ran a political risk if implementation turned out not to be possible; but that is not a matter going to the legality of the decision.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The submissions on appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Havers submitted that it was necessary in any assessment of the merits and affordability of the Strategy that the cabinet should have some idea of the overall cost of implementation. He pointed to the figures which had been provided for the Caerphilly leisure centre set out above and submitted that equivalent estimates should have been provided for each of the other three proposed strategic centres, as well as estimates of the running costs for the four centres; the cabinet also needed information about the cost of closing other centres and the savings which would be achieved by doing so; such information could have been presented on a number of alternative bases to deal with the fact that implementation (and thus the incurring of expense and the achievement of savings) would take place over a ten year period. He submitted that unless an overall assessment was done when the Strategy was adopted, it would never be done as future decisions would be no more than the piecemeal implementation of the Strategy concerned with individual centres; and that without such an assessment it was impossible to say whether the stated objective of making savings in the budget would be achieved. As the cabinet was not provided with this information, it should have declined to adopt the Strategy until it was. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Goudie supported the judge’s reasoning. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">Discussion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree with the judge that whether the cabinet needed to have the kind of financial information as to the cost of implementation described by Mr Havers depended on the nature of the Strategy. If, as I have concluded, the Strategy set out broad policy objectives to be implemented over a ten year period, but with implementation to be subject to later decisions for which detailed financial information would be provided at the time, it was not irrational for the cabinet to adopt the strategy without insisting on being provided with the information described by Mr Havers. In any event there were so many permutations, depending on the timing and nature of decisions about individual centres, and so many uncertainties about the way in which the Strategy would be implemented, that the value of any such estimates must be questionable. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">The figures provided for the Caerphilly centre set out above, varying significantly as they do depending on what option may be chosen, illustrate the difficulty. This would be multiplied if equivalent figures had to be provided for the other three proposed strategic centres, while it would also have been necessary to bear in mind the cost of not closing other leisure centres for which there was a significant maintenance backlog. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I would therefore reject this ground of appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.32in;text-indent:-0.01in">Ground 3 – an “arrangement to secure continuous improvement in the exercise” of the council’s functions </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:-0.50in">58.<span style="font-family:Arial"> </span>The appellant contends that the decision to adopt the Strategy fell within the scope of the general duty in section 2 of the 2009 Measure, with the consequence that the council was obliged to have regard to the cost of implementing the Strategy and to undertake a consultation in accordance with section 5 of the Measure. The argument is that, because the cabinet did not have information about the financial implications of the Strategy, it failed to comply with its obligation under section 2 because it lacked the information to form a view whether the Strategy would improve the exercise of its functions in terms of “efficiency” and, for the same reason, that the consultation undertaken in connection with the draft Strategy did not provide the information which respondents would need in order to provide an informed response. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The legislation </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:-0.50in">59.<span style="font-family:Arial"> </span>In the language of the 2009 Measure, the council is a “Welsh improvement authority”, and is therefore subject to the “general duty in relation to improvement” in section 2 of the Measure and the “improvement objectives” in section 3. These provide: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:1.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:normal">“</span>2 General duty in relation to improvement</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in;text-indent:0.5in">A Welsh improvement authority must make arrangements to secure continuous improvement in the exercise of its functions.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in;text-indent:0.5in">In discharging its duty under subsection (1), an authority must have regard in particular to the need to improve the exercise of its functions in terms of—  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.00in">strategic effectiveness;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.00in">service quality; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.00in">service availability;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.00in">fairness;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(e)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.00in">sustainability;  (f) efficiency; and  (g) innovation.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in;text-indent:0.5in">For the meanings of paragraphs (a) to (g) of subsection (2), see section 4.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:1.01in;text-indent:-0.01in">
+	      <span style="font-style:normal;font-weight:bold">3 Improvement objectives</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.92in">For each financial year, a Welsh improvement authority must set itself objectives for improving the exercise of its functions during that year (‘improvement objectives’). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.92in">A Welsh improvement authority must make arrangements to secure achievement of its improvement objectives. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.92in">An improvement objective must be framed so as to improve the exercise of the function or functions to which it relates in terms of at least one of the following –  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">strategic effectiveness;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">service quality;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">service availability; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">fairness;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(e)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">sustainability;  (f) efficiency; and  (g) innovation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(4)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.92in">For the meanings of paragraphs (a) to (g) of subsection (3), see section 4.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.01in;margin-right:0.00in;text-indent:0.00in">60.<span style="font-family:Arial"> </span><marker name="tab"/>Section 4 provides (limited) assistance as to the meaning of some of these terms: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/><span style="font-weight:normal"> </span><marker name="tab"/><span style="font-weight:normal">“</span>4 Aspects of improvement</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.79in">This section provides for the meanings of paragraphs (a) to (g) of:  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.91in">section 2(2); (b) section 3(3); and (c) section 8(5). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.79in">A Welsh improvement authority improves the exercise of its functions in terms of:  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.91in">strategic effectiveness, if it exercises its functions in a way which is reasonably likely to lead to the achievement of, or assist in achieving, any of its strategic objectives;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.91in">service quality, if there is an improvement in the quality of services;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.91in">service availability, if there is an improvement in the availability of services;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.91in">fairness, if –  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.58in">(i)</num>
+	  <content>
+	    <p style="margin-left:1.58in;margin-right:1.01in;text-indent:0.5in">disadvantages faced by particular groups in accessing, or taking full advantage of, services are reduced; or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.58in">(ii)</num>
+	  <content>
+	    <p style="margin-left:1.58in;margin-right:1.01in;text-indent:0.5in">social well-being is improved as a result of the provision of services or the way in which functions are otherwise exercised;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(e)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.91in">sustainability, if services are provided or functions are otherwise exercised in a way which contributes towards the achievement of sustainable development in the authority’s area;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(f)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.91in">efficiency, if there is an improvement in the efficiency with which resources are used in the provision of services or in the way in which functions are otherwise exercised; and  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.42in;text-indent:-0.23in">(g)</num>
+	  <content>
+	    <p style="margin-left:1.42in;margin-right:0.91in">innovation, if the way in which services are provided or functions are otherwise exercised is altered in a manner which is reasonably likely to lead to any outcome described in paragraphs (a) to (f).” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Lest it be thought that these are purely Welsh aspirations, I should note that the “general duty in relation to improvement” in section 2 appears to be based on Part 1 of the Local Government Act 1999 (“the LGA 1999”) which provides that an English local authority is to be a “best value authority” which is subject to a general duty in section 3 to “make arrangements to secure continuous improvement in the way in which its functions are exercised, having regard to a combination of economy, efficiency and effectiveness”. I note also that while the duty in England is to make arrangements to secure continuous improvement “in the way in which its functions are exercised”, the language of the Welsh measure is subtly different, being to make arrangements to secure continuous improvement “in the exercise of its functions”. It is hard to think, however, that this difference of language is intended to be a difference of substance. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Whether in England or in Wales, this is very general language and it is hard to know to what it applies. When is an authority making an “arrangement to secure continuous improvement in the exercise of its functions”, as distinct for example from merely providing a service which it hopes will be better than what existed before? We must assume that the section was intended to be understood by councillors and council officials who would be responsible for complying with the duty, but exactly when it applies is not easy to discern. This is unfortunate because when the general duty applies, a specific obligation to consult in accordance with section 5 is triggered.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It appears that even Underhill LJ struggled with the elusive concept of “making arrangements to secure continuous improvement” in <span style="font-style:italic">Nash v Barnet London Borough Council</span> [2013] EWHC 1067 (Admin), which involved a challenge to a decision by the council to outsource to private sector organisations a higher proportion of its functions and services. That decision was said to engage the “best value duty” so as to require the council to carry out a consultation in accordance with section 3(2) of the LGA 1999. In a passage which sheds helpful light on interpretation of that section, and thus of section 2 of the 2009 Measure, Underhill LJ said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.21in">“69. I start with sub-section (1), which establishes the substantive best value duty. I would analyse it as follows: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">The core subject-matter is ‘the way in which’ the authority’s functions are exercised. That is very general language. It could in a different context cover almost any choice about anything that the authority does. But in this context it seems to me clear that it connotes high-level choices about how, as a matter of principle and approach, an authority goes about performing its functions. I do not say that the choice of whether, or to what extent, to outsource is the only such choice; but in the light of the legislative background outlined above the ‘ways’ in which functions can be performed must include whether they are performed directly by the authority itself or in partnership with others: indeed that would seem to be a paradigm of the kinds of choices with which section 3(1) is concerned. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">The duty is aimed at securing ‘improvements’ in the way in which the authority’s functions are exercised. That inevitably means change, where the authority judges that change would be for the better having regard to the specified criteria. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">The actual duty is not formulated as a duty to secure improvements <span style="font-style:italic">simpliciter</span> but as a duty to ‘make arrangements’ to do so. I am not sure why this formula was adopted. I do not think that the draftsman was concerned with administrative ‘arrangements’. It may have been thought that to impose a duty simply ‘to secure improvements’ would expose authorities to legal challenges from those who contended that particular decisions were for the worse, or that authorities were wrong in failing to take particular steps which it was asserted would make things better: the reference to ‘making arrangements’ would make it clear that the duty was concerned with intentions rather than outcome. It may also be that the draftsman wanted to emphasise the need to build the fulfilment of the best value duty into authorities’ plans and procedures. Or perhaps it is just circumlocution. But, whatever the explanation, the important point for present purposes is what the arrangements are aimed at, namely securing improvements in the <span style="font-style:italic">way</span> in which authorities perform their functions. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.49in">It follows that one of the effects of the best value duty is to require local authorities to outsource – or, if you prefer, to make arrangements to outsource – the performance of particular functions where it considers, having regard to the specified criteria, that would constitute an improvement.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In Wales the duty to consult is set out in section 5 of the 2009 Measure: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:1.01in;margin-right:0.26in;text-indent:-0.01in"><span style="font-weight:normal">“5 </span>Consultation about the general duty and improvement objectives</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">(1) For the purpose of deciding how to fulfil the duties under section 2(1) and 3(1) a Welsh improvement authority must consult—  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.72in">representatives of persons resident in the authority's area;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.72in">representatives of persons liable to pay non-domestic rates in respect of any area within which the authority carries out functions; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.72in">representatives of persons who use or are likely to use services provided by the authority; and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.72in">representatives of persons appearing to the authority to have an interest in any area within which the authority carries out functions.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">(2) For the purposes of subsection (1) "representatives" in relation to a group of persons means persons who appear to the authority to be representative of that group."  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The judgment </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:-0.50in">65.<span style="font-family:Arial"> </span>The judge said that if the general duty under section 2 of the Measure was material to the decision to adopt the Strategy, the appellant’s argument that financial information would need to be provided “would clearly have force”. He held, however, that the duty was not relevant: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“20. … The first point is the way in which the section 2(1) duty is formulated. It is not – for example, in the manner of the public sector equality duty under section 149(1) of the Equality Act 2010 – expressed in terms of an obligation to have regard to prescribed considerations whenever a decision is taken. Rather, it is an obligation to ‘make arrangements to secure continuous improvement in the exercise of functions’. This suggests that the section requires relevant authorities to put in place free-standing measures to improve decision-making processes by reference to the criteria listed at section 2(2) of the 2009 Measure. These arrangements are distinct from what a relevant authority might do in the exercise of its ordinary substantive functions; the section 2 arrangements are intended to improve the way in which those other functions are used. …  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">21. None of this is to say that the section 2 duty is not enforceable through judicial proceedings. However, it does indicate that section 2 is aimed at matters which are in their nature arrangements for the improvement of the exercise of functions; this is something discrete from a relevant authority's ‘ordinary’ executive decision-making. My conclusion is that neither the section 2 duty, nor the section 5 obligation to consult is a criterion for the legality of the Strategy Decision, because that decision was not in the manner of a decision to make improvement arrangements, and for that reason was not a decision within the scope of section 2 of the 2009 Measure.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The submissions on appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Havers submitted that the section 2 duty is not limited to improvements in a council’s decision-making processes, but may be concerned with substantive decisions aimed at improving services; that the adoption of the Strategy was to secure improvements in the exercise of the council’s function of providing sports and recreation facilities, so that the duty to have regard to the need to improve efficiency in the exercise of that function applied, as did the duty to carry out a consultation in accordance with section 5 of the 2009 Measure. He submitted that there was no ambiguity in section 2 of the Measure but, if there were, it was appropriate to have regard to Guidance issued by the Welsh Ministers as to the implementation of the Measure. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Goudie again supported the reasoning of the judge, emphasising that section 2 of the Measure was concerned with making “arrangements” to secure improvements in the exercise of its functions generally, as distinct from improvements in the exercise of specific functions. He contrasted the terms of section 2(2) (“have regard in particular to the need to improve the exercise of its functions”) with those of section 3(3) (“so as to improve the exercise of the function or functions to which it relates”), submitting that while the duty in section 3 to set annual improvement objectives could relate to the exercise of a specific function, section 2 was concerned only with the exercise of functions in general. He submitted also that the Guidance was inadmissible as an aid to construction, but that in any event it provided no real assistance. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">Discussion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">While the language of section 2 is somewhat nebulous, it is at least clear in my judgment that it operates at a fairly high level. It is concerned, not with the making of improvements, but rather with the making of arrangements intended to secure the achievement of improvements in the exercise of an authority’s functions. Further, I would accept Mr Goudie’s submission that the section is concerned with the exercise of the authority’s functions generally and that, in this respect, the contrast with the language of section 3 is relevant. I would not accept that section 2 is concerned only with measures which are intended to improve an authority’s decision making processes, although that is a good example of the kind of measure on which the section is primarily focused. To limit it to such measures, however, would be hard to reconcile with the decision in <span style="font-style:italic">Nash</span> that a decision to outsource the performance of the council’s functions fell within the scope of the best value duty. That, however, was a measure concerned with the way in which the council’s functions generally would be exercised.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is legitimate in my view to have regard to the consequences of giving the section a broad construction encompassing any measure aimed at improving the exercise of a function performed by a local authority. Such a construction would include a very wide range of local authority decisions, since it can be assumed that (within financial constraints) most such decisions will be aimed at making improvements in the services which a local authority provides. Councils do what they do intending to make things better for their communities rather than the reverse. The result would be that every such decision is subject to an obligation to consult under section 5 which could have adverse consequences for the efficiency of local government.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Even if a measure or decision can be characterised as the adoption of a strategy, or as a “high level” decision, that does not necessarily mean that it is subject to the section 2 duty. As to this, the judge said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“24. The conclusion in <span style="font-style:italic">Nash</span> on the application of section 3 of the 1999 Act to the decision under challenge turned on the nature of that decision. Underhill LJ's reasoning cannot be understood as meaning that every ‘high level’ decision necessarily falls within the scope of the section 3 duty (or, for the purposes of the present case, the duty at section 2 of the 2009 Measure). Rather, given the way in which the duty is formulated (both under the 1999 Act and under the 2009 Measure) the issue must be whether the decision taken was by its nature, a decision on the arrangements to be made by the authority to secure improvement in the exercise of its functions. The decision under challenge in <span style="font-style:italic">Nash</span> clearly was of this nature since it entailed wholesale contracting-out of functions. That contracting-out was an arrangement aimed at improving the delivery of services.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">25.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">Not every strategic decision will be of this nature. In fact it is more than likely that the majority of such decisions will not. This stems from the fact that the improvement obligation is free-standing of the exercise of functions <span style="font-style:italic">per se</span>. This is underlined by the various provisions directed to securing compliance with the improvement obligation. So far as concerns the 2009 Measure I have referred to them above; so far as concerns the 1999 Act, sections 10 – 15 of that Act establish a system for inspection of compliance and give the Secretary of State powers of direction in instances where there is a failure to comply with obligations under Part 1 of the 1999 Act. This structure is material since it displaces any incentive to construe or apply the obligations under section 3 of the 1999 Act or section 2 of the 2009 Measure as if they attach to all, or any class of, instances of decision-making.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">26.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">Turning to the Strategy Decision, the Sports Strategy was in the nature of a plan for the future exercise of functions under section 19 of the Local Government (Miscellaneous Provisions) Act 1976. That decision is qualitatively different to the contracting-out decision in <span style="font-style:italic">Nash</span>. The Strategy Decision was not in the nature of an arrangement to secure continuous improvement in the exercise of functions. It was a strategy for the steps the Council wanted to take in respect of its provision of recreational facilities. It would be wrong to construe section 2 of the 2009 Measure as applying to any/every strategic decision. That would be an artificial application of section 2 of the 2009 Measure. It would also have the unwarranted consequence of creating – via section 5 of the 2009 Measure – a statutory obligation to consult in respect of any proposed strategic decision. While it may be a matter of good practice that strategic decisions should be the subject of consultation, applying the section 5 obligation to all such decisions would be a step too far, absent an express statutory provision to that effect.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">27.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">For these reasons, the challenge to the Strategy Decision based on the 2009 Measure fails. The proposal to adopt the Sports Strategy was not an arrangement falling within the scope of section 2(1) of the 2009 Measure; in consequence the section </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">5(1) obligation to consult did not arise.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree with this reasoning and would therefore reject this ground of appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is unnecessary to decide whether it is permissible to have regard to the Guidance issued by the Welsh Ministers as this does not in my judgment shed any real light on the issue. I am doubtful, however, whether the Guidance is admissible as there is nothing in the Measure which requires the court to have regard to such Guidance and, in this case, the Guidance in question was produced some time after the passing of the Measure. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Equally, it is unnecessary to consider what relief would be appropriate in the event that the adoption of the Strategy was an arrangement falling within the scope of section 2. While Mr Goudie accepted that there was no consultation satisfying the requirements of section 5, he did point out that the draft Strategy had been put out to consultation, and I have already referred to the difficulty of providing meaningful financial information as to the consequences of adopting the Strategy. It is questionable, therefore, whether it would be sensible to quash the decision to adopt the Strategy because such information was not provided. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Disposal  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For these reasons, which are essentially the same as those of the judge, I would dismiss the appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Lord Justice Haddon-Cave: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Lord Justice Flaux: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-right:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">________________</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-right:0.00in">
+	      <span style="font-weight:bold">ORDER </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-right:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">________________</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.00in"><span style="font-weight:bold">UPON</span> the Appellant’s appeal against paragraph 3 of the Order of Mr Justice Swift dated 26 June 2019 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.00in"><span style="font-weight:bold">AND UPON</span> reading the written submissions and hearing Leading and Junior Counsel for each of the parties at a hearing on 20 February 2020  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">IT IS ORDERED THAT:  </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Calibri, sans-serif;font-size:11pt;color:#000000;background-color:auto;margin-left:0.49in;text-indent:-0.25in">1.</num>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in">
+	      <span style="font-family:Calibri, sans-serif;font-size:11pt">The appeal is dismissed.  </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Calibri, sans-serif;font-size:11pt;color:#000000;background-color:auto;margin-left:0.49in;text-indent:-0.25in">2.</num>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in">
+	      <span style="font-family:Calibri, sans-serif;font-size:11pt">The Appellant shall pay the Respondent’s costs of and incidental to the appeal in an amount to be determined in accordance with section 26 of the Legal Aid, Sentencing and Punishment of Offenders Act 2012 and Regulations made under it. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Calibri, sans-serif;font-size:11pt;color:#000000;background-color:auto;margin-left:0.49in;text-indent:-0.25in">3.</num>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in">
+	      <span style="font-family:Calibri, sans-serif;font-size:11pt">There shall be a detailed assessment of the Appellant’s legal aid costs. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Calibri, sans-serif;font-size:11pt;color:#000000;background-color:auto;margin-left:0.49in;text-indent:-0.25in">4.</num>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in">
+	      <span style="font-family:Calibri, sans-serif;font-size:11pt">Permission to appeal to the Supreme Court is refused. </span>
+	    </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

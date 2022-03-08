@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1642"/>
+	  <FRBRuri value="ewca/civ/2020/1642"/>
+	  <FRBRdate date="2020-10-22" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1642"/>
+	  <FRBRname value="Butt &amp; Ors v Reading Borough Council"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1642/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1642/eng"/>
+	  <FRBRdate date="2020-10-22" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1642/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1642/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:24:07" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="butt-&amp;-ors" href="" showAs="BUTT &amp; ORS"/>
+	<TLCRole eId="respondent" href="" showAs="Respondent"/>
+	<TLCPerson eId="judge-lord-justice-underhill" href="/judge-lord-justice-underhill" showAs="LORD JUSTICE UNDERHILL"/>
+	<TLCPerson eId="judge-lord-justice-lewis" href="/judge-lord-justice-lewis" showAs="LORD JUSTICE LEWIS"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1642/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1642</uk:number>
+	<uk:cite>[2020] EWCA Civ 1642</uk:cite>
+	<uk:hash>5e134386dd5de39ff1f7c5944703050cdd8714e12826cbad00a4878f0346de29</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1642/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.01in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; margin-right: 0.04in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0666666666666667in;height:1.0583333333333333in;"/>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>A2/2019/2824</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:1.23in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:1.23in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE EMPLOYMENT APPEAL TRIBUNAL</span>
+	<span style="font-weight:bold"> </span>
+	<span style="font-weight:bold;text-decoration:underline">(MR JUSTICE LAVENDER)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:1.23in">
+	<span style="font-weight:bold;text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="font-weight:bold;text-decoration:underline">[2020] EWCA Civ 1642</neutralCitation>
+      </p>
+      <p style="text-align:right;margin-right:0.03in">
+	<span style="text-decoration:underline">The Royal Courts of Justice</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<docDate date="2020-10-22">Thursday, 22 October 2020</docDate>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold">Before: </span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<judge refersTo="#judge-lord-justice-underhill" style="font-weight:bold;text-decoration:underline">LORD JUSTICE UNDERHILL</judge>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<judge refersTo="#judge-lord-justice-lewis" style="font-weight:bold;text-decoration:underline">LORD JUSTICE LEWIS</judge>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#butt-&amp;-ors" as="#respondent" style="font-weight:bold">BUTT &amp; ORS </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.00in;margin-right:0.02in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:0.07in;margin-right:0.00in;text-indent:0.00in">
+	      <role refersTo="#respondent" style="font-weight:bold">Claimants/ </role>
+	    </p>
+	    <p style="margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <role refersTo="#respondent" style="font-weight:bold">Respondents </role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">- and - </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">READING BOROUGH COUNCIL </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.00in;margin-right:0.02in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:right;margin-right:0.05in">
+	<span style="font-weight:bold">Defendant/ </span>
+      </p>
+      <p style="text-align:right;margin-right:0.05in">
+	<span style="font-weight:bold">Appellant </span>
+      </p>
+      <p style="text-align:center;margin-left:0.35in;margin-right:0.26in;text-indent:0.00in">
+	<span style="font-size:10pt">Transcript of Epiq Europe Ltd, Unit 1 Blenheim Court, Beaufort Business Park, Bristol BS32 4NE Tel No: 020 7404 1400  Email: </span>
+	<span style="text-decoration:underline;font-size:10pt;color:#0000FF">civil@epiqglobal.co.uk</span>
+	<span style="font-size:10pt">  (Official Shorthand Writers to the Court) </span>
+      </p>
+      <p style="text-align:left;margin-left:0.88in;margin-right:0.00in;text-indent:-0.68in">
+	<span style="font-style:italic;font-size:10pt">This transcript is Crown Copyright.  It may not be reproduced in whole or in part other than in accordance with relevant licence or with the express consent of the Authority.  All rights are reserved. </span>
+      </p>
+      <p style="text-align:left;margin-left:0.55in;margin-right:0.00in;text-indent:-0.38in">
+	<span style="font-style:italic;font-size:10pt">WARNING: reporting restrictions may apply to the contents transcribed in this document, particularly if the case concerned a sexual offence or involved a child. Reporting restrictions prohibit the publication of </span>
+      </p>
+      <p style="text-align:center;margin-left:0.42in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-style:italic;font-size:10pt">the applicable information to the public or any section of the public, in writing, in a broadcast or by means of the internet, including social media. Anyone who receives a copy of this transcript is </span>
+      </p>
+      <p style="text-align:left;margin-left:0.75in;margin-right:0.00in">
+	<span style="font-style:italic;font-size:10pt">responsible in law for making sure that applicable restrictions are not breached. A person who </span>
+      </p>
+      <p style="text-align:left;margin-left:0.68in;margin-right:0.00in">
+	<span style="font-style:italic;font-size:10pt">breaches a reporting restriction is liable to a fine and/or imprisonment. For guidance on whether </span>
+      </p>
+      <p style="text-align:left;margin-left:0.68in;margin-right:0.00in">
+	<span style="font-style:italic;font-size:10pt">reporting restrictions apply, and to what information, ask at the court office or take legal advice. </span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in"><span style="font-weight:bold">MS D ROMNEY, QC </span>and<span style="font-weight:bold"> MR P SMITH</span> appeared on behalf of the <span style="font-weight:bold">Claimants/Respondents</span><span> </span><span style="font-weight:bold"> MR R LEIPER, QC </span>and<span style="font-weight:bold"> MR A BLAKE </span>appeared on behalf of the <span style="font-weight:bold">Defendant/Appellant </span></p>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Judgment </span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold">(Approved) </span>
+      </p>
+      <p style="text-align:left;margin-left:2.56in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold;font-size:10pt">Crown Copyright©</span>
+	<br/>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">LORD JUSTICE UNDERHILL: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">1.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">In 2008 over 150 women employed by Reading Borough Council started equal pay proceedings in the Employment Tribunal.  The claims were of the familiar kind where female employees, doing work of a kind predominantly done by women, claimed that they were being paid less than male comparators doing manual jobs predominantly done by men.  They relied on both the "rated as equivalent" and the "equal value" gateways.  In due course the claims were consolidated into a multiple known as the <span style="font-style:italic">James</span> multiple.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">2.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The claims proceeded in the Reading Employment Tribunal.  Their management and resolution was complex, as such cases inevitably are.  The so-called GMF defence was taken first, and decisions in the claimants' favour on that issue were reached in May and October 2011.  The claims in the <span style="font-style:italic">James</span> multiple related to the structure of pay and conditions applying at the time that they were brought, but it is common ground that they could and would, probably by consent, have been used as the vehicle for any claims accruing following the date of the ET1, absent any material change in the relevant circumstances. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">3.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">With effect from 1 May 2011 the council introduced a new "single status" pay structure purporting to follow the so-called Green Book principles: that is a reference to the agreement reached nationally between the relevant trade unions and representatives of local authorities many years previously.  The new structure brought together employees from the previous manual and APT&amp;C categories and assigned them to grades based on a job evaluation study which covered both.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">4.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">On 26 October 2011 83 equal pay claims were brought by council employees all of whom were already claimants in the <span style="font-style:italic">James</span> multiple.  In due course the number increased to 95.  This was known as the <span style="font-style:italic">Gordon</span> multiple.  It is common ground that the proceedings were brought in response to the introduction of the new single status terms – though, as will appear, there is some dispute as to the reason why the claimants thought it necessary to bring them or in any event to do so at that time.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">5.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">On 16 January 2013 the claims in the <span style="font-style:italic">Gordon</span> multiple were stayed pending determination of the outstanding issues in the <span style="font-style:italic">James</span> multiple.  In early 2018 13 of the claimants in the <span style="font-style:italic">James</span> multiple withdrew their claims because they accepted that they had failed to comply with the requirements of the grievance procedure under Part 3 of the Employment Act 2002, which was in force at the time that the proceedings were started.  However, most of them were claimants in the <span style="font-style:italic">Gordon</span> multiple, and a group of them, now amounting to seven (who are the respondents before us), contended that they could still pursue in those proceedings the claims which they had originally made in the <span style="font-style:italic">James</span> proceedings.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">6.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">It is the council's case that the claims pleaded in the <span style="font-style:italic">Gordon</span> multiple did not cover the period covered by the <span style="font-style:italic">James</span> multiple, and related only to the period since the introduction of single status on 1 May 2011; and that they cannot now be pressed into use as a vehicle for the claims which the claimants in question had been debarred from advancing in their original proceedings.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">7.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">That issue was heard at a preliminary hearing before Employment Judge Gumbiti-Zimuto and two lay members on 9 July 2018.  By judgment sent to the parties on 8 August the tribunal decided the issue in the council's favour.  The formal judgment reads:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.38in">"The claimants' claims presented as part of the Gordon multiple ... do not include complaints about equal pay which pre-date 1 May 2011."  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">8.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I should note for completeness that the council also advanced an alternative argument to the effect that if, contrary to its case, the claims in the <span style="font-style:italic">Gordon</span> multiple did extend back before 1 May 2011 they should to that extent be struck out as an abuse of process because they duplicated the claims in the <span style="font-style:italic">James</span> multiple.  That is no longer an issue before us, and I need say nothing more about it.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">9.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The claimants in question appealed to the Employment Appeal Tribunal.  By an <span style="font-style:italic">ex tempore</span> judgment given on 4 October 2019 Lavender J allowed their appeal.  This is an appeal against that decision, with permission granted by Simler LJ.  The claimants are represented by Ms Daphne Romney QC leading Mr Paul Smith, and the council by Mr Richard Leiper QC leading Mr Andrew Blake.  Ms Romney and Mr Leiper appeared both in the Employment Tribunal and in the EAT. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">10.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The issue which we have to decide is whether, on an objective construction of the claim form (which was in identical terms for all seven respondents, and indeed for all the claimants in the <span style="font-style:italic">Gordon</span> multiple), it advanced claims in respect of breaches of the equal pay legislation occurring in the period prior to 1 May 2011.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">11.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The relevant part of the form is Section 5 headed "Your claim".  In Section 5.1 the box was ticked which indicates that the claim is for “sex discrimination (including equal pay)".  The grounds of the claim are required to be pleaded in Section 5.2.  They begin, omitting irrelevant details, as follows:   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in">"1. The Claimant has already submitted a claim to the Employment Tribunal under the Equal Pay Act 1970 and/or the Equality Act 2010.  However, the Respondent implemented a new pay and grading structure on 1 May 2011 for all or most employees, and the Claimant's terms and conditions were altered to reflect that.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">2.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in;text-indent:0.5in">The Claimant has been employed by the respondent in the post listed on the attached schedule.  The claim relates however to all posts held or jobs done by the Claimant in the previous six years unless covered by a COT3 or compromise agreement.  The Claimant and comparators are all employed by the same employer in the same establishment and/or on common terms and conditions.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">3.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in;text-indent:0.5in">The Claimant relies on the pleadings, comparators and decision of the Employment Tribunal in the Genuine Material Factor defence hearing in [the <span style="font-style:italic">James</span> multiple].  The claimant adopts the finding that the following payments given to the relevant male employees were discriminatory and the failure of the Council's defences regarding those payments."   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.03in">The pleading then enumerates various kinds of payment made in respect of particular jobs which were being said in the <span style="font-style:italic">James</span> multiple to be discriminatory.  I need not set out or substantively summarise the entirety of the remaining paragraphs, which are numbered 4 to 14 (although there are in fact two paragraphs 8 and three paragraphs 9).  That is perhaps fortunate, because their structure and language is not a model of clear pleading.  I shall have to come back to one or two particular paragraphs later.  All that I need say at this stage is that the specific challenges advanced (or, at any rate, adumbrated, because a major part of the claimants' complaint is that they have not been given sufficient information to assess what, if any, claim they wish to advance) are to the validity of the new job evaluation study and the new pay and grading structure which is based on it: see the second paragraph 9 up to paragraph 14.  They are to the effect that the job evaluation study and the pay and grading structure do not comply with either the Green Book principles (see paragraph 11) or the requirements for a valid job evaluation study under the 2010 Act (see in particular paragraphs 9 and 10).  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">12.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">Mr Leiper submits that the only natural reading of that claim form, in the context known to the parties and the tribunal, is that it was intended to raise claims in relation only to the period following the implementation of the new pay structure.  The purpose of paragraph 1, which is central to his submissions, is plainly to explain why new claims have had to be brought notwithstanding the pendency of the <span style="font-style:italic">James</span> claims, namely because of the new pay structure.  The claimants evidently recognised that the introduction of that structure meant that the claim would have to be advanced by reference to what they themselves refer to as the "altered" terms and conditions, and that it would give rise to new issues, including whether the structure continued to embody, albeit in a new form, the pay discrimination which they said obtained under the old structure, and whether the job evaluation study was reliable.  The substantive matters pleaded at paragraphs 9 to 14 are directed entirely to those issues.  That being so, the claim form could not be understood to be making any claim in relation to a period covered by a wholly different pay and grading structure giving rise to different legal issues.  That of course is reinforced by the fact that the pre-1 May 2011 period was already covered by the <span style="font-style:italic">James</span> claims.  No one, Mr Leiper says, would expect it to be intended to go back and duplicate the claims already advanced in the other proceedings: there would be no point and it might indeed be abusive.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">13.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">That argument was accepted by the Employment Tribunal which said succinctly, at paragraphs 12 to 16 of its reasons: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in">"12. The question that we have had to determine is whether the claimants' claims presented as part of the Gordon multiple include complaints about equal pay which pre-date 1 May 2011 and if they do whether the said claimants' claims presented as part of the Gordon multiple should be struck out because they are an abuse of process.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">13.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in;text-indent:0.5in">The conclusion of the tribunal is that the claimants' claims presented as part of the Gordon multiple do not include complaints about equal pay which pre-date 1 May 2011.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">14.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in;text-indent:0.5in">We consider that the claims presented as part of the Gordon multiple were presented to deal with different issues from those in the James multiple.  They were not intended to cover the same ground and did not cover the same ground.  The claims in the Gordon multiple take up events from 1 May 2011.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">15.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in;text-indent:0.5in">We consider that on a proper reading of the complaints in that case, read on their face and also taken in context of what was happening at the time and in the light of the existence of the James multiple, the answer to the first question in our view must be no."   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">14.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The reason why Lavender J reached a different conclusion was the reference, in the second sentence of paragraph 2 of the grounds, to the claim relating "to all posts held or jobs done by the claimant in the previous six years" – six years being of course the relevant limitation period under section 132 of the 2010 Act.  As he said at paragraph 43 of his judgment: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in">"Given the background of the James multiple, anyone reading the claim form might not be expecting to find a claim covering the period before 1 May 2011, but that appears to be what it contains, perhaps, as was suggested in the argument, because the draftsmen of the claim form sought at that early stage to cast the net as wide as possible.  On balance, I conclude that the correct interpretation of the claim forms is that they did include a claim in respect of the period before 1 May 2011." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">15.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">That had been the essence of Ms Romney's case before him, though she had advanced another points also; and she maintains it before us.  The other points which she had advanced and which she continues to maintain in reliance on a respondent's notice, are threefold.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">16.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">First, she points out that two of the paragraphs in the grounds refer to provisions of the Equal Pay Act 1970 as well as the Equality Act 2010.  She says that since the 2010 Act came into force on 1 October 2010 those references could only be relevant if the proceedings covered claims accruing prior to that date.  The paragraphs in question are paragraphs 6 and 10.  The relevant part of paragraph 6 reads:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in">"The Claimants also reserve their position as to whether the Respondent have [<span style="font-style:italic">sic</span>] properly implemented the Green Book JES in accordance with section 1(5) of the Equal Pay Act 1970 or alternatively section 65(4) of the Equality Act 2010 until disclosure has been provided."  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.03in">Paragraph 10 requires to be read in the context of the preceding paragraph, which is the second paragraph 9.  The two together are headed "Sections 65(4) and 80, Equality Act 2010" and continue: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in">"9. The Respondent has carried out and implemented a 'single status' job evaluation study (JES) on 1 May 2011 which is designed to comply with the requirements under the National Agreement on Pay and Conditions of Service 1997 ('the Green Book').   </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in">10. The Respondent has not disclosed sufficient information to the Claimant which would allow the Claimant to consider whether the Green Book JES has complied with ss. 65(4) and 80 Equality Act 2010 (formerly s.1(5) of the Equal Pay Act 1970).  The Claimant therefore reserves the right to contend that the JES carried out by the Respondent under the Green Book or any previous evaluation fails to comply with ss.65(4) and 80 Equality Act 2010 and s.1(5) of the Equal Pay Act 1970." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">17.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">Secondly, Ms Romney relies on the terms of paragraph 5 which reads (so far as relevant): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.63in">"The Claimant is not paid the same as men employed in posts rated either the same or lower than her post, or who do work of equal value to her (and the claim is pursued in the alternative for the whole of the relevant period …)."  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.03in">She relies on the reference to "the whole of the relevant period" in the parenthesis and says that that must mean the period referred to in paragraph 2, i.e. the period going back for six years.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">18.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">Thirdly, Ms Romney says that the purpose of the <span style="font-style:italic">Gordon</span> claims being brought, as would or should have been apparent, was that the claimants feared that the council might at some point in the future take the point against them that the introduction of the new pay and grading structure represented a break in the so-called "stable employment relationship" (see the decision of the CJEU in <span style="font-style:italic">Preston v Wolverhampton Healthcare NHS Trust</span> C78/98, and the subsequent legislation giving effect to it), with the result that they </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.03in">could not claim in respect of the period after 1 May 2011 unless they had brought a claim within six months of that date.  Ms Romney accepted that they would sooner or later have had to advance a claim reflecting the changes made on 1 May 2011 but, as she put it, THAT that could have been done at any time.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">19.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">In my view the EAT was wrong to overturn the decision of the Employment Tribunal.  Essentially I accept Mr Leiper's submissions as summarised above, which I need not repeat.  The clear effect of the grounds, read as a whole and in the context of the procedural history to which they themselves refer in paragraph 1, is that the claims are confined to the period following the introduction of the new pay structure, and the separate role of the new set of proceedings is likely to have been understood by all those concerned.  As regards the latter point, I regard it as significant that that was the understanding of the Employment Tribunal itself, which was steeped in the history of the litigation.  I should also in that connection mention one point made by Mr Leiper in his oral submissions, relating to the circumstances of a Ms Kamara.  Ms Kamara was not originally a claimant in the <span style="font-style:italic">James</span> multiple, but on 26 and 27 October 2011 she put in two claims, the first using the <span style="font-style:italic">James</span>-type claim form, and the second the <span style="font-style:italic">Gordon</span>-type claim form.  (I say 26th <span style="text-decoration:underline">and</span> 27th because although the claim forms had consecutive ET numbers they are recorded as having been issued on different days.  That quirk has no significance, and in substance they can be regarded as simultaneous.)  The fact that the claimants' solicitors took the trouble to bring the two separate proceedings simultaneously clearly suggests that they understood that the claims were of different characters: if the <span style="font-style:italic">James</span> claims are covered by the <span style="font-style:italic">Gordon</span> claim form, why take the trouble to issue both?   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">20.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I cannot see that it helps Ms Romney to say that the reason why the <span style="font-style:italic">Gordon</span> proceedings were brought – or in any event brought when they were – was to defuse a possible argument based on a break in the stable employment relationship.  I have to say that I find the explanation rather odd, because I cannot see how the introduction of the new pay and grading structure could even arguably have been said to constitute such a break, at least since the decision of this court in <span style="font-style:italic">Slack v Cumbria County Council</span> [2009] EWCA Civ 293.  But even if that was indeed what motivated the claimants there is nothing whatever in the grounds that shows that that was the case.  Nor, even if it was, would it </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.03in">affect the fundamental point that the grounds, read as a whole, evince an intention to claim only in respect of the period subsequent to 1 May 2011.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">21.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The most powerful counter-argument, and the one on which, as I have said, Lavender J relied, is that the second sentence of paragraph 2 of the grounds evinces an intention to claim back for the full period of six years permitted by the statute.  Mr Leiper attempted to argue that that was not the effect of the words in question, but insofar as I could understand his alternative construction I was not persuaded by it.  However, that only means that we are in a situation, sometimes encountered in construing many kinds of document, where the main thrust of the document points in one direction but a particular provision, read in isolation, points in the opposite direction.  In such a case it may be legitimate to conclude that, reading the document as a whole, the words in question cannot have been intended to have effect in accordance with their apparent meaning.  In my view this is such a case.  Wording of the kind in question is entirely standard in equal pay pleadings of this kind.  It appears, for example, in the grounds pleaded in the original <span style="font-style:italic">James</span> multiple.  Its deployment in this case has all the appearance of an unthinking use of a boilerplate provision, in contrast to the very case-specific pleading of paragraphs 1 and 3.  Indeed, the character of paragraph 2 as a whole is generic.  It has to be said that the pleading as a whole has a kitchen-sink appearance and does not inspire confidence that it was put together in a careful and considered way. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">22.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">As for Ms Romney's other points based on the language of particular paragraphs of the grounds, insofar as they lend her any support at all it is faint and equivocal and cannot counteract the points in favour of the council's construction which I have already enumerated.  Thus, although it is true that the references to the Equal Pay Act as opposed to the Equality Act in paragraphs 6 and 10 are redundant if the claims do not go back beyond 1 May 2011, it seems in fact to have been clearly the drafter’s policy to refer to both statutes on a belt-and-braces basis even if it was inappropriate to do so.  For example, the first sentence of paragraph 1 refers to the claimants having submitted claims "under the Equal Pay Act 1970 and/or the Equality Act 2010", whereas in fact the <span style="font-style:italic">James</span> claims were brought under the 1970 Act alone.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">23.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">As for paragraph 5, the paragraph is poorly drafted and it is difficult to see what the effect of the phrase "in the alternative" in the parenthesis is meant to be.  But, whatever it means, the "relevant period" would appear simply to refer to the period in respect of which a rated-as-equivalent claim or an equal value claim, as the case might be, is made.  That does not help on the question whether such periods are intended to extend back before 1 May 2011.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">24.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I would for those reasons allow the appeal and restore the decision of the Employment Tribunal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">LORD JUSTICE LEWIS: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">25.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I agree.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.03in"><span style="font-weight:bold">Order: </span>Appeal allowed. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.03in"><span style="font-weight:bold">Epiq Europe Ltd</span> hereby certify that the above is an accurate and complete record of the proceedings or part thereof. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.03in">Unit 1 Blenheim Court, Beaufort Business Park, Bristol BS32 4NE </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.03in">Tel No: 020 7404 1400 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.03in">Email: civil@epiqglobal.co.uk </p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

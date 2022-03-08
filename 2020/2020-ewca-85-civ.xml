@@ -1,0 +1,670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/85"/>
+	  <FRBRuri value="ewca/civ/2020/85"/>
+	  <FRBRdate date="2020-02-04" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="85"/>
+	  <FRBRname value="Guest Services Worldwide Limited v David Shelmerdine"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/85/eng"/>
+	  <FRBRuri value="ewca/civ/2020/85/eng"/>
+	  <FRBRdate date="2020-02-04" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/85/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/85/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:42:44" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="guest-services-worldwide-limited" href="" showAs="Guest Services Worldwide Limited"/>
+	<TLCPerson eId="david-shelmerdine" href="" showAs="David Shelmerdine"/>
+	<TLCRole eId="appellant" href="" showAs="Appellant"/>
+	<TLCRole eId="respondent" href="" showAs="Respondent"/>
+      </references>
+      <proprietary source="ewca/civ/2020/85/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>85</uk:number>
+	<uk:cite>[2020] EWCA Civ 85</uk:cite>
+	<uk:hash>1aab1815866c516040eac61410d7ade22e0dd42094b604e6f23c673465f14ecc</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/85/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 2.66in; margin-right: 2.15in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.02in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:0.00in;text-indent:0.00in">Neutral Citation Number: <neutralCitation>[2020] EWCA Civ 85</neutralCitation><span style="text-decoration:none"> </span>Case No: A3/2019/2157 AND A3/2019/2294</p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE HIGH COURT</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">(Chancery Division) Manchester Business and Property Courts</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">His Honour Judge Halliwell</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">BL-2019-MAN-000032</span>
+      </p>
+      <p style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Royal Courts of Justice</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Date: <docDate date="2020-02-04">04/02/2020</docDate></p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:1.16in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">Before: </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.20in;margin-right:0.00in;text-indent:0.00in">
+	      <span> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.18in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PATTEN</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:1.83in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PETER JACKSON</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.16in;margin-right:0.00in;text-indent:0.00in">and<span style="font-weight:bold"> </span></p>
+	    <p style="text-align:left;margin-left:2.22in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LADY JUSTICE ASPLIN</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.18in;margin-right:0.00in;text-indent:0.00in">- - - - - - - - - - - - - - - - - - - - - </p>
+	    <p style="text-align:center;margin-left:1.17in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">Between: </span>
+	    </p>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#guest-services-worldwide-limited" as="#appellant" style="font-weight:bold">Guest Services Worldwide Limited </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.30in;margin-right:0.00in;text-indent:0.00in">
+	      <role refersTo="#appellant">
+		<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+		<span style="font-weight:bold"> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">- and - </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#david-shelmerdine" as="#respondent" style="font-weight:bold">David Shelmerdine </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.05in;text-indent:0.00in">
+	      <role refersTo="#respondent">
+		<span style="font-weight:bold;text-decoration:underline">Respondent</span>
+		<span style="font-weight:bold"> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Mr Martin Budworth</span> (instructed by <span style="font-weight:bold">BBS Law Ltd</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Mr Neil Berragan </span>(instructed by<span style="font-weight:bold"> Berrymans Lace Mawer LLP</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing date: 18<span style="vertical-align:super;font-size:smaller">th</span> December 2019 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lady Justice Asplin:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This appeal is concerned with the proper construction of restrictive covenants in a Shareholders’ Agreement and whether those covenants are unenforceable because of their duration and/or their nature and extent.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appeal is against the parts of the order of His Honour Judge Halliwell dated 12 July 2019 by which he dismissed the Appellant’s claim.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Appellant, Guest Services Worldwide Limited (“GSW”) is in the business of producing maps for distribution to the guests of luxury hotels. Revenue is generated from advertising fees paid by businesses in the locality of the hotel in question, which are featured on the particular map. The hotels are situated worldwide and 90-95% of GSW’s income stream is generated from overseas. The business was founded by the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.52in;margin-right:0.00in;text-indent:0.00in">Respondent, Mr David Shelmerdine. In around 2011, he sold the business to Vicinity Group Limited which subsequently went into administration. GSW acquired the business from the administrators.  Mr Shelmerdine was initially retained as an employee. It was Mr Shelmerdine, (amongst others) who visited locations outside the United Kingdom, organised the relevant map and the advertisers, before moving on to another luxury hotel.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In July 2015, GSW, Mr Shelmerdine and DLS Media Limited, Mr Shelmerdine’s company, entered into a consultancy agreement in which DLS Media Ltd was defined as the “Consultant” and Mr Shelmerdine as the “Provider” (the “Consultancy Agreement”). In the Consultancy Agreement it was recorded that GSW carried on the business of producing advertising-based maps for distribution in four and five star hotels and that it required specialist services relating to advising, assisting and selling advertising to appear on the maps across the world. It was also recorded that the Consultant was in the business of providing personnel, that it could supply the Provider, Mr Shelmerdine, and that he had the appropriate skills and was willing to make himself available outside the United Kingdom only, through the Consultant, to provide the consultancy services. The appointment was to commence on 6 April 2015 and to continue until 6 April 2017, or such later date as the parties might agree. Amongst other things, at clause 10 the Consultancy Agreement contained posttermination covenants in relation to enticing away employees of managerial status and above, enticing away suppliers and introducers of business, solicitation, canvassing and dealing with customers and competition with the “Relevant Business” in the “Prohibited Area” (both of which terms being defined). The restrictions in the covenants applied for a duration of 12 months after the cessation of the consultancy.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Shelmerdine was also a shareholder of GSW. He was party to a shareholders’ agreement dated 15 June 2016 which was made between GSW and the persons listed in schedule 1 to the agreement who were referred to as “Shareholders”, of whom Mr Shelmerdine was one (the “Shareholders’ Agreement”). It will be necessary to consider the Shareholders’ Agreement in some detail. At this stage, however, it is sufficient to note that at clause 5 it also contained a number of covenants including a post termination non-competition covenant and restrictions in relation to the solicitation of clients or customers, and the solicitation of employees and suppliers. It is the proper construction of those covenants which is at the centre of this appeal.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The fixed term of the Consultancy Agreement having expired, Mr Shelmerdine continued to provide services to GSW through his company, known by that time as Destination Luxury Sales Limited. He did so on the understanding that commission would be payable pending a new agreement. There were lengthy negotiations in this regard which, by mid-2018, had culminated in a travelling draft of a new consultancy agreement. At clause 10, the draft contained a series of covenants which provided that Destination Luxury Sales Limited as the Consultant and Mr Shelmerdine as the Provider should not, for a period of six months after termination of the agreement, be engaged or interested in any capacity or otherwise in any other business which carries on “Relevant Business” as defined. There were also restrictions lasting for twelve months from the termination of the agreement in relation to enticing away employees of managerial status and above, enticing away suppliers and introducers of business, and the solicitation, canvassing and dealing with customers or clients and those whom GSW was negotiating in relation to the “Relevant Business”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">However, the negotiations faltered and the ad hoc consultancy arrangements between GSW and Mr Shelmerdine were terminated by notice which expired on 9 February 2019. It is not in dispute that as a result of the termination of the agency, Mr Shelmerdine was deemed to have served a transfer notice in respect of his shares in GSW pursuant to article 22.3 of the Articles of Association of GSW. As I understand it, nevertheless, Mr Shelmerdine remains a shareholder at present.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">To return to the chronology of events, shortly after the agency arrangements were terminated, it was alleged that Mr Shelmerdine had used a map produced for GSW to solicit business in Gstaad, Switzerland in March 2019 and had subsequently solicited business from the Ritz Carlton, Budapest and the Metropole in Monaco.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By a letter dated 18 March 2019, GSW asked Mr Shelmerdine to complete and return a number of undertakings which were appended to the letter, which included undertakings to comply with the restrictions in clause 5 of the Shareholders’ Agreement, to provide details of all hotels he had contacted and to provide details of any advertisers. Having failed to receive a satisfactory response, proceedings were issued on 1 April 2019 seeking an injunction restraining breach of post-termination covenants in the Shareholders’ Agreement and what was referred to as the new Consultancy Agreement in the form of the travelling draft. An injunction to restrain Mr Shelmerdine from misusing confidential information belonging to GSW was also sought.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">An application for an interim injunction was issued. At the first hearing of that application, Mr Shelmerdine offered undertakings over until trial except in relation to non-competition with GSW. Directions were given for a return day in relation to whether to grant an interim injunction in relation to non-competition with GSW and for a speedy trial. In the event, GSW decided not to pursue the application for an interim injunction in relation to non-competition, and the return date was vacated. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The trial took place before His Honour Judge Halliwell on 11 and 12 July 2019 and the judge gave an ex tempore judgment on the final afternoon of the hearing.  The judge considered first whether Mr Shelmerdine was bound by the terms of the new Consultancy Agreement and decided that he was not. He held that whilst the parties had entered into the Shareholders’ Agreement, they had not extended the Consultancy </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.01in;margin-right:-0.00in;text-indent:-0.01in">Agreement beyond the expiry of the agreed fixed term, being 6 April 2017, Mr Shelmerdine had provided services thereafter in anticipation that a new agreement would be reached but the parties did not reach agreement on the travelling draft in 2018 and, therefore, that Mr Shelmerdine was not bound by the provisions of that draft which had been referred to as the new Consultancy Agreement. See [37] – [41] of the judgment.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Secondly, the judge turned to the proper interpretation of the restrictions contained in clause 5 of the Shareholders’ Agreement.  Having noted that the scope of the restrictions was clear, the judge commented at [44] of the judgment that the restrictions only apply to “Employee Shareholders”, not the shareholders as a whole. Having considered the definition of “Employee Shareholder” the judge concluded that on a proper construction of clause 5 and the relevant definitions, if an employee, agent or director ceases to be an Employee Shareholder he must also cease to be subject to the covenants at that time. Accordingly, he held that it was no longer open to GSW to advance a claim on the basis of the covenants in the Shareholders’ Agreement once Mr Shelmerdine ceased to be its agent in February 2019. See [47] of the judgment.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge’s reasoning in this regard was as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.46in;text-indent:0.00in">“44.  However, the restriction applies to “Employee Shareholders” only, not the shareholders as a whole. I have already referred to the difficult contractual definition of “Employee Shareholder” in clause 1.1 of the Agreement. Although denoted as “Employee Shareholders”, the class encompasses “employees, agents or directors who are not employees”. It thus includes employees but also agents and/or directors. It refers to “employees, agents or directors” in the present tense but, by way of clarification, it states that those employees who are Employee Shareholders at the date of the Agreement are identified in the table to Schedule 1. It is thus implicit that shareholders who were not employees, agents or directors at the time of the Agreement can become Employee Shareholders if they become employees, agents or directors after the Agreement. It is logically consistent with this that a Shareholder who ceases to be an employee, agent or a director ceases to be an Employee Shareholder at that point in time. However, if he does cease to be an Employee Shareholder at that point in time, he must also cease to be subject to the covenants at the same time.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">45.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.46in;text-indent:0.50in">Mr. Budworth submits that where a shareholder ceases to be an employee or agent he remains subject to the restrictions. That is for an indefinite period subject, of course, to the transfer provisions of the Articles, or for a period of 12 months. However, on this issue Mr </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.45in;text-indent:0.00in">Budworth’s submissions fly in the face of the contractual definition of “Employee Shareholders” and they are not rescued by anything elsewhere in the agreement. If “Employee Shareholders” are limited in time to the period over which they are an employee, the agreement does not expressly extend their liability on the covenants following termination of their employment. Mr Budworth submitted that their continuing liability could be restricted to a period of 12 months in light of the 12 month restrictions in clauses 5.1, 5.2, 5.3 and 5.4 of the agreement. However, in my judgment, this confuses the treatment of their status as an employee with their status as a shareholder. The restrictions in clauses 5.1, 5.2, 5.3 and 5.4 continue for a period of 12 months from the date when a party ceases to be a shareholder, but the 12 month restriction does not apply to his status as an employee. There is no room for the 12 month restriction to apply by implication to his status as an employee because it has not been drawn up with reference to his shareholder status only. Had it been intended to refer to his status as an employee, that could very easily have been achieved. The parties have elected not to draw up the agreement in that way.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">46.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.46in;text-indent:0.50in">This, of course, has the curious result (to which I referred in argument) that, if an employee remains in the company’s employment but ceases to be a shareholder, he will cease to be subject to the restriction after 12 months notwithstanding that he remains in the company’s employment. Mr Budworth submitted to me that the logic of the provision is that the restrictions are a function of the Defendant’s rights and obligations as a shareholder. However, the restrictions are imposed on employee shareholders only as a specific class. The parties could have provided for a post 12-month restriction following his loss of status as an employee but did not do so. To imply a term to that effect, the claimant would have to satisfy the test of necessity in <span style="font-style:italic">Marks and Spencer plc v BNP Paribas</span> [2015] UKSC 72. No formula for doing that has been presented before me.”  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In case his construction was wrong, the judge went on to consider the position on the basis of the alternative interpretation that once a party is identified as an Employee Shareholder, he remains so even after his employment/agency comes to an end if he remains a Shareholder, and the 12-month period runs from the date on which he ceases to be a Shareholder. The judge decided that if that interpretation were correct, GSW would have a legitimate business interest meriting protection, given that: the business is narrow and specific in nature; it has a particular modus operandi; it cannot function properly without records and that there was almost certainly a database relating to the identity and addresses of clients and their terms of business; and there will be a significant measure of goodwill. See [48] of the judgment.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On the basis that there was a legitimate business interest, the judge went on to consider next whether the restrictions imposed on Mr Shelmerdine were no more than what was reasonably necessary for the protection of that interest. He held that if the restrictions in clauses 5.1 to 5.4 of the Shareholders’ Agreement were construed so as to cease when Mr Shelmerdine ceased to have the status of an employee or agent, the restrictions would be reasonably necessary. If, however, as GSW alleged, the restrictions were apt to remain in effect as long as Mr Shelmerdine remained a shareholder, regardless of the length of time since he had ceased to be an employee/agent, then they were longer in duration than was necessary to protect the legitimate business interest. See [49] – [54] of the judgment. The judge observed at [53] of the judgment that if GSW’s interpretation were correct, Mr Shelmerdine </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.01in;margin-right:-0.00in;text-indent:-0.01in">“could remain subject to the restrictions for a potentially indefinite period whilst he remains a shareholder before he can be bought out, if indeed, he is bought out at all . . </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.52in;margin-right:0.00in;text-indent:0.00in">.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Lastly, the judge considered the claim based on the misuse of confidential information and the hypothetical question of whether Mr Shelmerdine would have been entitled to terminate the Shareholders’ Agreement, with which we are not directly concerned. However, for the sake of completeness, I should add that in relation to the alleged use of confidential information the judge accepted Mr Shelmerdine’s evidence that: he was contacted by the manager of the hotel in Gstaad and not vice versa; Mr Shelmerdine did not know that GSW had any connection with that hotel and, therefore, could not have drawn on its confidential information in that regard; the call made to the Hotel Metropole in Monaco was made on behalf of GSW; and that the allegations in relation to the Ritz Carlton, Budapest were based on inference. See [58] of the judgment.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.01in;text-indent:-0.01in">Grounds of appeal and Respondent’s Notice </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Permission to appeal was granted in relation to two of the eight grounds of appeal. They are that the judge: misconstrued the provisions of the Shareholders’ Agreement in concluding that restraints which purported to apply for the period of 12 months following the relinquishment of shareholder status never came into effect, having disappeared in the same moment that the consultancy ended (the “Construction issue”); and secondly, that he erred in concluding that restraints which applied for 12 months after ceasing to be a shareholder (in circumstances where there were compulsory acquisition provisions) must have extended further than reasonably necessary to protect GSW’s<span style="color:#FF0000"> </span>legitimate business interests (the “Duration issue”).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Shelmerdine also seeks to uphold the judge’s decision on additional grounds if GSW is successful on the Construction and Duration issues. Those additional grounds are that: the covenants in clauses 5.1 to 5.4 of the Shareholders’ Agreement are unenforceable because the restrictions, by their scope, nature and extent, were in excess of what was reasonably necessary to protect any legitimate business interests of GSW and GSW failed to demonstrate the contrary; and GSW failed to prove any actual or threatened breach of the restrictions at clauses 5.1 to 5.4 of the Shareholders’ Agreement or, alternatively, failed to prove any actual or threatened breach sufficiently substantial to justify injunctive relief.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.01in;text-indent:-0.01in">The Shareholders’ Agreement in more detail  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Before turning to the issues which must be determined on this appeal, it is necessary to consider the Shareholders’ Agreement in more detail. As I have already mentioned, the Shareholders’ Agreement was made between GSW and the persons whose names were set out in Schedule 1, who were referred to as the “Shareholders”. Schedule 1 contains a list of names and addresses. The number and class of shares held by each named person is also set out. There is a further column headed “Employee Shareholder? (Yes/No)” and either “Yes” or “No” has been inserted against each name. “Yes” appears in the column which relates to Mr Shelmerdine. Further, “Employee Shareholder” was defined at clause 1.1 of the Shareholders’ Agreement as meaning: “any Shareholder who is also an employee, agent or director of the Company and those Shareholders who are Employee Shareholders as at the date of </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.52in;margin-right:0.00in;text-indent:0.00in">this Agreement are identified as such in the table at Schedule 1”. The Company is a reference to GSW.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Clause 1.1 also contains the definition of “Articles” and “Deed of Adherence” amongst other things. “Articles” was defined as the “new articles of association of the Company in agreed form to be adopted on or about the date hereof, as amended or superseded from time to time.”  The Shareholders’ Agreement contains numerous references to the Articles, some of which are relevant for the purposes of the Construction Issue. In fact, new Articles of Association in respect of GSW were adopted by resolution approximately a month after the Shareholders’ Agreement was executed.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">“Deed of Adherence” was defined by reference to the document contained in schedule 3 to the Shareholders’ Agreement. It took the form of a template containing the provisions by which a new shareholder might agree with GSW and the continuing Shareholders to perform and be bound by the provisions of the Shareholders’ </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.52in;margin-right:0.00in;text-indent:0.00in">Agreement as though the incoming shareholder were an original party to the Shareholders’ Agreement. The requirement only to transfer or otherwise dispose of shares in GSW in accordance with the Articles of Association is contained in clause 10.1. Further, clause 10.2 provides that except as expressly provided in the Articles, the parties to the Shareholders’ Agreement shall procure that no transfer of shares shall be registered unless the transferee has executed and delivered a Deed of Adherence. The mirror provisions are contained in Article 18.4 of the Articles of Association.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As I have already mentioned, the covenants with which this appeal is concerned are contained in clauses 5.1 to 5.4. It is helpful to set them out in full:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.45in;text-indent:0.00in">“5.1 No Employee Shareholder shall during the times specified below, carry on or be employed, engaged or interested in any business which would be in competition with any part of the Business, including any developments in the Business after the date of this agreement. The times during which the restrictions apply are:  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">any time when the party in question is a shareholder; and  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">for a period of 12 months after the party in question ceases to be a Shareholder. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.46in;text-indent:0.00in">5.2 No Employee Shareholder shall, except as an authorised representative of the Company, in the same area of business in which the Company operates and during the times specified below, deal with or seek the custom of any person that is, or was within the previous 12 months, a client or customer of the Company or, where the Employee Shareholder is no longer a Shareholder, any person that was a client or customer at any time during the period of 12 months immediately preceding the party in question ceasing to be a Shareholder. The times during which the restrictions apply are:  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">any time when the party in question is a Shareholder; and  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">for a period of 12 months after the party in question ceases to be a Shareholder. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.46in;text-indent:0.00in">5.3 No Employee Shareholder shall, during the times specified below, offer employment to, enter into a contract for the services of, or attempt to solicit or seek to entice away from the Company any individual who is at the time of the offer, or attempt, a director, officer or employee of the Company or procure or facilitate the making of any such offer or attempt by any other person. The times during which the restrictions apply are:  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">any time when the party in question is a Shareholder; and  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">for a period of 12 months after the party in question ceases to be a Shareholder.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.46in;text-indent:0.00in">5.4 No Employee Shareholder shall, during the times specified below, solicit or endeavour to entice away from the Company any supplier who supplies, or has supplied within the previous 12 months goods or services to the Company or, where the party is no longer a Shareholder, any supplier who has supplied goods or services to the Company at any time during the period of 12 months immediately preceding the party in question ceasing to be a Shareholder if that solicitation or enticement causes or would cause such supplier to cease supplying, or materially reduce its supply of, those goods or services to the Company. The times during which the restrictions apply are: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">any time when the party in question is a Shareholder; and  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">for a period of 12 months after the party in question ceases to be a Shareholder.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Clause 5.5 provided that the undertakings in clause 5 were given by each Employee Shareholder to each of the other Shareholders and the Company [GSW] and applied to actions carried out by each Employee Shareholder in any capacity and whether directly or indirectly on the party’s own behalf, on behalf of any other person or jointly with any other person. “Business” which is referred to in clause 5.1 is given the meaning in clause 2 of the Shareholders’ Agreement (see clause 1.1). Clause 2.1 provides that:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">“The business of the Company is the providing of maps, apps and vouchers which incorporate advertising (Business).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As the restrictions in clause 5 of the Shareholders’ Agreement continue at any time when a party is a Shareholder and for a period of 12 months after the party ceases to be a Shareholder, it is helpful to have the provisions of the Articles of Association in relation to the transfer of shares, in mind. (It is also important to bear in mind that not only are there references in the Shareholders’ Agreement to the Articles of Association, there are also references in the Articles to the Shareholders’ Agreement which is a defined term.) </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As one might expect, there are detailed provisions in the Articles of Association in relation to pre-emption, valuation and compulsory transfer of shares. In particular, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.52in;margin-right:0.00in;text-indent:0.00in">under Article 22, which is headed “Compulsory Transfers”, article 22.3 provides that unless a “Shareholder Majority” directs otherwise in writing, if an “Employee” becomes a “Departing Employee”, in other words, if they cease to be a director, employee, consultant or agent of any group company and do not continue in one of those roles or become such a person in relation to any group company, a “Transfer Notice” is deemed to have been served in relation to all of his or her shares. Such circumstances are referred to as “Compulsory Employee Transfer” and the “Transfer Price” for the shares is subject to the provisions of article 22.4(b) in which distinctions are made between a “Good Leaver”, a “Bad Leaver” and an “Early Leaver”. For the purposes of the Articles, “Employee” is defined as “an individual who is <span style="font-weight:bold">or has</span><span> </span><span style="font-weight:bold">been</span> a director . . .” (emphasis added). See Article 1.1 of the Articles of Association.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Although Mr Budworth on behalf of GSW submitted otherwise, it seems clear to me that where a Deemed Transfer Notice is served in the case of a Compulsory Employee Transfer, the pre-emption provisions in article 20 apply. That article contains express reference to the service of a Deemed Transfer Notice and at article 20.4 there is also express reference to article 22.4 which contains the formula to be applied in relation to the Transfer Price where there is a Compulsory Employee Transfer. It seems to me therefore, that, as Mr Berragan submitted on behalf of Mr Shelmerdine, article 20.1 must be construed to mean that any transfer of shares is subject to the pre-emption rights in article 20, except where the provisions in article 22 (and the other provisions expressly mentioned) are inconsistent.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The mechanism for determining the “Transfer Price” for the shares under articles 21.1, 21.2 and 22.4 also applies where there is a Deemed Transfer Notice. In default of agreement, the mechanism provides for the appointment of an Independent Expert to determine the “Fair Value” of the shares. If the shares are not purchased as a result of the operation of the pre-emption mechanism, the shareholder may sell them to a third party, unless the board of directors reasonably considers that the proposed purchaser/transferee is a competitor with the Company. See articles 20.18 and 20.19. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.01in;text-indent:-0.01in">The Construction Issue  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The principles to be applied when construing a commercial contract are very well known and there is no need to set them out again here. They have been considered in detail most recently, both in <span style="font-style:italic">Arnold v Britton</span> [2015] UKSC 36 per Lord Neuberger PSC at [15] – [23] (with whom Lords Sumption and Hughes JJSC agreed) and in <span style="font-style:italic">Wood v Capita</span><span> </span><span style="font-style:italic">Insurance Services Limited </span>[2017] UKSC 24 per Lord Hodge at [10] - [14] (with whom Lord Neuberger PSC and Lords Mance, Clarke and Sumption JJSC agreed).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Applying those principles to this case, I bear in mind, in particular, that it is necessary to ascertain the objective meaning of the language used, taking into account the factual and commercial context. The natural and ordinary meaning of the words must be assessed in the light of the clause as a whole, its purpose, other relevant parts of the Shareholders’ Agreement and the factual and commercial matrix.   Furthermore, whilst commercial common sense is a very important factor to take into account it is relevant to how matters would or could have been perceived by the parties, or by reasonable people in the position of the parties, at the date of the agreement, and should not be applied in retrospect.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Budworth, who appeared on behalf of GSW before us and before the judge, submits that although it is possible to attain the status of an Employee Shareholder after the Shareholders’ Agreement was executed (see the definition of Employee Shareholder and the provisions in relation to a Deed of Adherence) and although it follows that a person who was an Employee Shareholder at the date of the Shareholders’ Agreement may subsequently cease to be an employee, agent or director, and therefore, cease to be an Employee Shareholder, it does not follow that if one ceases to be an Employee Shareholder, one also ceases, in the same moment, to be subject to the covenants in clause 5. He says that the covenant applies to Shareholder status and is not a substitute for the restraint which one might find in the employment contract or agency agreement. Accordingly, there is no reason why the restraint should cease immediately an Employee Shareholder ceases to be an employee as the judge has decided.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">What is the objective meaning of the words which were used in clause 5 (and clause 5.1 in particular) when read in their factual and commercial context? First, clause 5 must be construed in the context of the Shareholders’ Agreement as a whole. It contained a series of rights and obligations afforded to and imposed upon the parties to that agreement who were defined as “Shareholders”, some of whom were also “Employee Shareholders” and some of whom were investors with no direct knowledge of the internal workings of GSW’s business and no direct contact with its clients and suppliers.  It seems clear that the purpose of those rights and obligations, therefore, was, in general, to protect GSW, its goodwill and the value of its shares. That protection was provided, in particular, by the restrictions imposed upon Employee Shareholders who had a knowledge of the business.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Secondly, the Articles of Association form an important part of the factual and commercial context. They contain provisions not only for the compulsory transfer of shares if an “Employee” (defined widely to include an agent and an individual who “is or has been” an employee agent or director) ceases to be so (see article 22) but also contain provisions which apply if there is a disposal of all or a substantial part of GSW’s business and assets (see article 11).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Having given due weight to the words used and taken the context into account, it seems to me that clause 5.1 cannot have the meaning attributed to it by the judge. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.52in;margin-right:0.00in;text-indent:0.00in">Although the restrictions in clause 5.1 apply to an “Employee Shareholder” which is defined as a Shareholder who “<span style="font-weight:bold">is</span> also an employee  . . .” (emphasis added) it makes no commercial sense at all (nor would it at the time the Shareholders’ Agreement was executed) if the restrictions in clause 5.1 can be avoided altogether and with immediate effect, by terminating one’s employment, agency or directorship. That is the effect of Mr Berragan’s construction but it gives the clause no real meaning or effect. Furthermore, it seems to me that such a construction cannot be justified on the basis that such a person would be caught by whatever restrictions were in his or her individual employment or agency agreement. That may or may not be the case, but it cannot give meaning to a clause in the Shareholders’ Agreement which is otherwise left without real force. That cannot have been the intention of the parties or, to put the matter another way, cannot be how the reasonable person with the relevant background knowledge, reading the clause at the time, would have understood it.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It seems to me that when read as a whole, the proper interpretation of clause 5.1 is that a person falling within the definition of “Employee Shareholder” who is described as such in Schedule 1 to the Shareholder’s Agreement (such as Mr Shelmerdine) and those who become so thereafter, having adhered to the terms of the Shareholders’ Agreement, remains subject to the restrictions in clause 5.1 until either they cease to be a shareholder having chosen to transfer his shares (and for 12 months thereafter) or they cease to be a shareholder as a result of the compulsory transfer provisions which apply on ceasing to be an employee, agent or director (and for 12 months thereafter). Such a construction is consistent with the definition of Employee Shareholder in clause 1.1 of the Shareholder Agreement itself and gives meaning to clause 5.1.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is also consistent with the compulsory transfer provisions in article 22.3 of the Articles of Association. That article makes clear that a person ceasing to be an “Employee” would immediately become subject to the compulsory transfer provisions and, therefore, be in the process of ceasing to be a Shareholder. It is, no doubt, for that reason that the definition of “Employee” for the purposes of the Articles includes “is or was”. It seems to me that the circumstances which troubled the judge, therefore, would not arise. If one ceases to be an Employee it is likely that one would cease to be a Shareholder relatively shortly thereafter. A Deemed Transfer Notice is treated as having been served once the Employee ceases to hold the position in question unless a position is taken up with another Group Company or the Shareholder Majority directs otherwise in writing. See the definition of “Departing Employee” in article 1.1 and article 22.3. The period during which such a person would be bound by the restriction in (a) of clause 5.1 would be likely, therefore, to be roughly co-terminous with one’s employment or in all likelihood would not continue for much longer and certainly would not be indefinite. Further, the period of 12 months referred to in (b) would start to run roughly from the date on which the person ceased to be an Employee and, in any event, there would not be an indefinite delay before that period began. Such an interpretation creates symmetry with the circumstances in which a person remains an Employee but relinquishes his shares. In such circumstances, at the outset, he is an Employee Shareholder to whom clause 5.1 applies. Once the shares are relinquished the period in (a) comes to an end and the period in (b) comes to an end 12 months thereafter.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Berragan submitted in relation to the Duration issue, that, in fact, an Employee Shareholder may not be able to sell his shares and may be locked in forever. He also took us through the provisions which apply under the Articles of Association upon a compulsory transfer and submitted that the delay in fixing the price for the Shares, let alone exercising the pre-emption mechanism, may be considerable. He also emphasised that although notice to terminate Mr Shelmerdine’s agency agreement had expired on 9 February 2019, he still remains a Shareholder.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It seems to me that neither the possibility of delay in the process of a compulsory transfer nor the fact that the dispute between the parties in this case has, no doubt, exacerbated the delay, can affect the factual and commercial context as it would have been understood by the reasonable person in the shoes of the parties at the date of the Shareholders’ Agreement. It would have been understood that the process would have commenced immediately, that the timetable was relatively tight and that it was intended that a person who ceased to be an Employee would cease to be a Shareholder very shortly thereafter. GSW is a relatively small private company and the Shareholders’ Agreement, combined with the provisions of the Articles of Association, agreed and adopted at approximately the same time, require an outgoing Employee to cease to be a Shareholder under a relatively tight timetable, unless the Shareholder Majority agrees otherwise.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It seems to me, therefore, that Mr Shelmerdine is bound by the terms of clause 5.1 and will continue to be so until he ceases to be a Shareholder and for 12 months thereafter.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.01in;text-indent:-0.01in">Duration Issue  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is necessary, therefore, to consider the second ground of appeal. As I have already mentioned, the judge held that if he was wrong about the construction of clause 5.1 the restrictions are longer than is necessary to protect GSW’s legitimate business interest and, therefore, were unenforceable as a matter of public policy. See [49] of the judgment which, where relevant, is as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.45in;text-indent:0.00in">“ . . . if the restrictions are apt to remain in effect for so long as the Defendant remains a shareholder regardless of for how long he has ceased to be an agent or employee, in my judgment they are longer in duration than is necessary to protect the Claimant’s legitimate business interests. If the defendant were to case as an agent or employee and remain as a shareholder for an indefinite period, it cannot be said, - and Mr Berragan is obviously right in this - that the restriction is for no longer than is reasonably necessary to protect the claimant’s legitimate business interests.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Budworth submits that the duration of the covenants does not offend public policy and is necessary to protect the legitimate business interests of GSW. He says that Mr Shelmerdine is not locked in as a shareholder and, therefore, there is nothing objectionable about (a) or the 12-month period in (b) in clause 5.1. Mr Berragan says that the wording of the covenants make clear that the purpose of the restriction is to protect the company from misuse of information or connections acquired by a party in the role of employee or agent rather than as shareholder. He submitted, therefore, that whilst it is accepted that a restriction for a period of 12 months from the end of employment would be reasonably necessary to protect GSW’s legitimate business interests because within that period the employee would have information and contacts which he might use to the detriment of the business, the same was not true if the period of 12 months runs from cessation of the status of “Shareholder” as it does in (b) of clause 5.1. In part, his objection in such a case arises because he says that the period during which the former Employee may remain a Shareholder and, accordingly, subject to the restrictions as a result of (a) may be indefinite and will delay the beginning of the 12-month period under (b). He says that the judge’s reasoning at [49] – [54] and his conclusion that a former Employee may remain subject to the restrictions indefinitely and therefore, the restrictions are longer than is necessary to protect GSW’s legitimate business interests is right.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There is no dispute that all covenants in restraint of trade are, prima facie, unenforceable at common law unless they are reasonable.  The first issue in such circumstances is to determine the level of scrutiny which is appropriate. Mr Budworth says that the court is less vigilant where covenants of this kind are contained in a Shareholders’ Agreement or an agreement akin to it, rather than in an employment contract. I agree. Mr Budworth took us to the judgment of Neuberger J (as he then </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.52in;margin-right:0.00in;text-indent:0.00in">was) in <span style="font-style:italic">Dyno-Rod &amp; Anr v Reeve </span>[1999] FLR 148. That was a case in which the claimant organised its business on a franchise basis. The franchise agreement contained restrictive covenants. Injunctive relief was obtained on the strength of evidence that the franchisee who had received extensive training from the claimant company had covertly been running a parallel business in breach of the restrictive covenant. Neuberger J granted an injunction and noted at 152 the comments of Lord Denning in <span style="font-style:italic">Office Overload Ltd v Gunn </span>[1977] FSR 39 at [41]<span style="font-style:italic">,</span> that where the agreement in question is a franchise agreement, it does not fall happily between employee/employer cases and vendor/purchaser cases. Having also noted that in <span style="font-style:italic">Scully UK Ltd v Lee</span> [1998] IRLR 259, the Court of Appeal decided that an employee restraint clause had to be subject to very rigorous and careful scrutiny and enforced only if it went no further than necessary to protect the trade secrets of the previous employer, he went on at 154 as follows:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.46in;text-indent:0.00in">“That emphasises the extent to which the court is concerned that a restrictive covenant is reasonable before it will be enforced, but it is to be borne in mind that the court was there dealing with an employer/employee covenant which – the passages to which I have referred in particular – the observations of Lord Denning indicate have to satisfy far more stringent tests before they are reasonable.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.52in;margin-right:0.00in;text-indent:0.00in">Indeed, he went on to state that he found it difficult to see how it could seriously be argued that a period of 12 months could not be reasonable, in the circumstances of that case.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Ideal Standard v Herbert</span> [2018] EWHC 3326 (Comm) the court was concerned with a non-competition clause in a shareholders’ agreement. In considering this, Sir Ross Cranston noted at [28] as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.45in;text-indent:0.00in">“My reading of these authorities is that it is not simply a matter of categorization, non-compete clauses in employment agreements on one hand, non-compete clauses in shareholder agreements on the other. Non-compete clauses for the vendor of a partnership share or the shares in a business will generally be enforced as reasonable and enforceable. Apart from anything else, such clauses are negotiated in a commercial context and have the legitimate aim of preventing vendors from attacking the goodwill of the partnership or business which they have just transferred. Towards the other end of the spectrum are ordinary employees, who have a small shareholding in their employer-company as part of a share participation scheme.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.52in;margin-right:0.00in;text-indent:0.00in">Wyn Williams J also gave detailed consideration of the circumstances in which such clauses are enforceable where they arise in a shareholders’ agreement and seek to bind employees in <span style="font-style:italic">Kynixa Ltd v Hynes &amp; Ors</span> [2008] EWHC 1495 (QB). His explanation of the relevant analysis bears careful consideration. See, in particular, [130] – [132].   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Taking all of this into account I do not accept that a period of 12 months is unreasonable in respect of the restraints specified in clause 5 and, in particular, in relation to clause 5.1. Firstly, it is clear that GSW has a legitimate interest in seeking to prevent Employee Shareholders from competing with the business and soliciting clients, given the particular nature of the business and the knowledge that such individuals are likely to have obtained. Secondly, the clause appears in a shareholders’ agreement made between experienced commercial parties. Thirdly, in my judgment, a period of restraint lasting 12 months was entirely reasonable to protect that interest. It seems to me that that is the case even though the 12 month period under clause 5.1(b) runs from the date on which the individual ceases to be a Shareholder rather than the cessation of his employment, agency or directorship. As I have already mentioned, in all likelihood, the cessation of employment, agency or directorship and ceasing to be a Shareholder will be co-terminous or, at least, there will be only a limited lapse of time between the cessation of employment and the disposal of the individual’s shares. Although I accept that delay in the process of relinquishing Shares in GSW is possible, I do not consider that the clause should be declared to be unreasonable on the basis of the relatively unlikely possibility that there may be considerable delay or the extreme and very unlikely possibility that a Shareholder may be locked in indefinitely.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It follows, therefore, that I would allow the appeal on both grounds. In the circumstances, the issues raised in the Respondent’s Notice as to whether the restrictions in clauses 5.1 and 5.2 are unenforceable as a result of their area and scope become live. However, they are essentially questions of fact and it seems to me that we are not best placed to deal with them. Those matters should be remitted to be dealt with in the Business and Property Courts.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Peter Jackson: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Patten: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

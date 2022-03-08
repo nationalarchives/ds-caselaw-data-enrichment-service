@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/924"/>
+	  <FRBRuri value="ewca/civ/2020/924"/>
+	  <FRBRdate date="2020-07-17" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="924"/>
+	  <FRBRname value="Mendes, R (On the Application Of) v The Secretary of State for the Home Department"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/924/eng"/>
+	  <FRBRuri value="ewca/civ/2020/924/eng"/>
+	  <FRBRdate date="2020-07-17" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/924/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/924/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:44:16" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/924/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>924</uk:number>
+	<uk:cite>[2020] EWCA Civ 924</uk:cite>
+	<uk:hash>6152b8a425e7c67671ddf3151c616a8c94600a28237ce7e3abdb445c129fe6ce</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/924/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.01in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: center; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0604166666666666in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 924</neutralCitation>
+      </p>
+      <p style="text-align:right;margin-right:0.03in">
+	<span style="text-decoration:underline">Case No: </span>
+	<docketNumber style="text-decoration:underline">C9/2019/2146</docketNumber>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline;font-size:12pt">IN THE COURT OF APPEAL (CIVIL DIVISION)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">ON APPEAL FROM THE HIGH COURT</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">QUEEN’S BENCH DIVISION (ADMINISTRATIVE COURT)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">THE HON MR JUSTICE MURRAY</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">[2019] EWHC 2233 (Admin)</span>
+      </p>
+      <p class="Heading2" style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="font-weight:normal">Royal Courts of Justice</span>
+	<span style="font-weight:normal;text-decoration:none"> </span>
+	<span style="font-weight:normal">Strand, London, WC2A 2LL</span>
+      </p>
+      <p style="text-align:left;margin-left:2.86in;margin-right:0.00in;text-indent:2.42in">
+	<span style="text-decoration:underline">Date: 17/07/20</span>
+	<span style="font-weight:bold"> Before : </span>
+      </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE UNDERHILL</span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">(Vice-President of the Court of Appeal (Civil Division))</span>
+      </p>
+      <p style="text-align:center;margin-left:1.73in;margin-right:1.72in"><span style="font-weight:bold;text-decoration:underline">LORD JUSTICE HICKINBOTTOM</span><span style="font-weight:bold"> </span>and </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PETER JACKSON</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.32in;margin-right:0.35in">
+	<span style="font-weight:bold">Between : </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE QUEEN ON THE APPLICATION OF </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">YURI MENDES </span>
+      </p>
+      <p style="text-align:right;margin-right:0.22in">
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in">
+	  <span style="font-weight:bold">and-  </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE SECRETARY OF STATE  </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">FOR THE HOME DEPARTMENT </span>
+      </p>
+      <p style="text-align:right;margin-right:0.14in">
+	<span style="font-weight:bold;text-decoration:underline">Respondent</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in">
+	  <span style="font-weight:bold">and-  </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE ADVICE ON INDIVIDUAL RIGHTS IN EUROPE </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">(AIRE) CENTRE </span>
+      </p>
+      <p style="text-align:right;margin-right:0.14in">
+	<span style="font-weight:bold;text-decoration:underline">Intervener</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.32in;margin-right:0.27in"><span style="font-weight:bold">Becket Bedford</span> and <span style="font-weight:bold">Natasha Jackson </span>(instructed by <span style="font-weight:bold">Instalaw Solicitors Limited</span>)  for the<span style="font-weight:bold"> Appellant  </span></p>
+      <p style="text-align:left;margin-left:0.10in;margin-right:0.00in"><span style="font-weight:bold">David Blundell QC </span>and <span style="font-weight:bold">Julia Smyth </span>(instructed by <span style="font-weight:bold">Government Legal Department</span>) for the </p>
+      <p style="text-align:center;margin-left:0.32in;margin-right:0.35in">
+	<span style="font-weight:bold">Respondent </span>
+      </p>
+      <p style="text-align:center;margin-left:0.65in;margin-right:0.60in"><span style="font-weight:bold">Simon Cox, Bojana Asanovic</span> and <span style="font-weight:bold">Agata Patyna </span>(instructed by  <span style="font-weight:bold">Freshfields Bruckhaus Deringer LLP</span>) for the <span style="font-weight:bold">Intervener</span></p>
+      <p style="text-align:center;margin-right:0.04in">Hearing date: 13 July 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1">Approved Judgment </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-right:0.00in">
+	      <span style="font-weight:bold">Lord Justice Hickinbottom: </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Introduction</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This is an appeal against the Order of Murray J dated 15 August 2019 refusing interim relief in the form of a mandatory order requiring the Secretary of State to facilitate the return of the Appellant to the United Kingdom in the context of a judicial review challenging a decision of the Secretary of State dated 17 September 2018 to certify under regulation 33 of the Immigration (European Economic Area) Regulations 2016 (SI 2016 No 1052) (“the EEA Regulations”) that his removal to Portugal pending the outcome of an appeal against a deportation decision would not be in breach of his human rights.  Murray J’s judgment is reported as [2019] EWHC 2233 (Admin).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Pursuant to my Order of 12 May 2020, this is a rolled-up hearing of the Appellant’s application for permission to appeal and, if granted, the substantive appeal.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Before us, Becket Bedford and Natasha Jackson appeared for the Appellant; David Blundell QC and Julia Smyth for the Secretary of State; and Simon Cox, Bojana Asanovic and Agata Patyna for the Intervener.  At the outset, I thank them all for their contribution. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At the end of the hearing, the court indicated that it would grant permission to appeal, allow the appeal, quash the order of Murray J refusing the application for interim relief, and remit the application to the Administrative Court for re-consideration and re-determination; and would give its reasons for so doing in a later reserved judgment.  These are my reasons for considering that to be the appropriate order. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Law</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Freedom of movement is a fundamental right of European Union citizens, as reflected in the European Parliament and Council Directive 2004/38/EC<span style="font-weight:bold"> </span>of 29 April 2004 about the right of citizens of the Union and their family members to move and reside freely within the territory of the EU and EEA Member States (“the Directive”).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">However, the right is not absolute.  Article 27(1) and (2) of the Directive provide: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“1. Subject to the provisions of this Chapter, Member States may restrict the freedom of movement and residence of Union citizens and their family members, irrespective of nationality, on grounds of public policy, public security or public health.  These grounds shall not be invoked to serve economic ends. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">2.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.5in">Measures taken on grounds of public policy or public security shall comply with the principle of proportionality and shall be based exclusively on the personal conduct of the individual concerned.  Previous criminal convictions shall not in themselves constitute grounds for taking such measures. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">The personal conduct of the individual concerned must represent a genuine, present and sufficiently serious threat affecting one of the fundamental interests of society.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">Justifications that are isolated from the particulars of the case or that rely on considerations of general prevention shall not be accepted.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Where that provision is invoked, article 28 nevertheless provides for “Protection from expulsion”: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:1.00in">“1. Before taking an expulsion decision on grounds of public policy or public security, the host Member State shall take account of considerations such as how long the individual concerned has resided on its territory, his/her age, state of health, family and economic situation, social and cultural integration into the host Member State and the extent of his/her links with the country of origin. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">2.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.5in">The host Member State may not take an expulsion decision against Union citizens or their family members, irrespective of nationality, who have the right of permanent residence on its territory, except on serious grounds of public policy or public security. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">3.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.5in">An expulsion decision may not be taken against Union citizens, except if the decision is based on imperative grounds of public security, as defined by Member States, if they: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.77in;text-indent:-0.39in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.77in;margin-right:0.46in">have resided in the host Member State for the previous ten years; or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.77in;text-indent:-0.39in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.77in;margin-right:0.46in">are a minor, except if the expulsion is necessary for the best interests of the child, as provided for in the United Nations Convention on the Rights of the Child of 20 November 1989.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Articles 30 and 31 deal with relevant procedural matters, as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.99in;margin-right:0.00in">“<span style="font-weight:bold">Article 30 </span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.99in;margin-right:0.00in">
+	      <span style="font-weight:bold">Notification of decisions</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">1.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:1.00in;text-indent:0.5in">The persons concerned shall be notified in writing of any decision taken under article 27(1), in such a way that they are able to comprehend its content and the implications for them. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">2.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:1.00in;text-indent:0.5in">The persons concerned shall be informed, precisely and in full, of the public policy, public security or public health grounds on which the decision taken in their case is based, unless this is contrary to the interests of state security </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">3.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:1.00in;text-indent:0.5in">The notification shall specify the court or administrative authority with which the person concerned may lodge an appeal, the time limit for the appeal and, where applicable, the time allowed for the person to leave the territory of the Member State.  Save in duly substantiated cases of urgency, the time allowed to leave the territory shall be not less than one month from the date of notification. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.99in;margin-right:0.00in">
+	      <span style="font-weight:bold">Article 31 </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.99in;margin-right:0.00in">
+	      <span style="font-weight:bold">Procedural safeguards </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">1.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:1.00in;text-indent:0.5in">The persons concerned shall have access to judicial and, where appropriate, administrative redress procedures in the host Member State to appeal against or seek review of any decision taken against them on the grounds of public policy, public security or public health. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">2.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:1.00in;text-indent:0.5in">Where the application for appeal against or judicial review of the expulsion decision is accompanied by an application for an interim order to suspend enforcement of that decision, actual removal from the territory may not take place until such time as the decision on the interim order has been taken, except: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.58in;margin-right:0.47in;text-indent:-0.30in">‒ where the expulsion decision is based on a previous judicial decision; or </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.58in;margin-right:0.83in;text-indent:-0.30in">‒ where the persons concerned have had previous access to judicial review; or </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.58in;margin-right:0.43in;text-indent:-0.30in">‒ where the expulsion decision is based on imperative grounds of public security under article 28(3). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">3.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:1.00in;text-indent:0.5in">The redress procedures shall allow for an examination of the legality of the decision, as well as of the facts and circumstances on which the proposed measure is based.  They shall ensure that the decision is not disproportionate, particularly in view of the requirements laid down in article 28. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.99in">4.</num>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:1.00in;text-indent:0.5in">Member States may exclude the individual concerned from their territory pending the redress procedure, but they may not prevent the individual from submitting his/her defence in person, except when his/her appearance may cause serious troubles to public policy or public security or when the appeal or judicial review concerns a denial of entry to the territory.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Therefore, an appeal against an expulsion decision does not have automatic suspensory effect: but, where there is an application for an interim order, then generally removal cannot be effected unless and until that application has been determined.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The EEA Regulations give effect to the Directive in the UK.  Reflecting article 27, regulation 23(6)(b) provides (so far as relevant to this appeal): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.67in">“… [A]n EEA national who has entered the United Kingdom… may be removed if… the Secretary of State has decided that the person’s removal is justified on grounds of public policy, public security or public health in accordance with regulation 27…”. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Regulation 27 sets out various criteria which apply to “Decisions taken on grounds of public policy, public security and public health”, including at subsection (5): </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“The public policy and public security requirements of the United Kingdom include restricting rights otherwise conferred by these Regulations in order to protect the fundamental interests of society, and where a relevant decision is taken on grounds of public policy or public security it must also be taken in accordance with the following principles—  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in;text-indent:-0.28in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.72in">the <marker name="tab"/>decision <marker name="tab"/>must <marker name="tab"/>comply <marker name="tab"/>with <marker name="tab"/>the <marker name="tab"/>principle <marker name="tab"/>of </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">proportionality; </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in;text-indent:-0.28in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.72in">the decision must be based exclusively on the personal conduct of the person concerned; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in;text-indent:-0.28in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.72in">the personal conduct of the person must represent a genuine, present and sufficiently serious threat affecting one of the fundamental interests of society, taking into account past conduct of the person and that the threat does not need to be imminent; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in;text-indent:-0.28in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.72in">matters isolated from the particulars of the case or which relate to considerations of general prevention do not justify the decision; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in;text-indent:-0.28in">(e)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.72in">a person’s previous criminal convictions do not in themselves justify the decision; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in;text-indent:-0.28in">(f)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.72in">the decision may be taken on preventative grounds, even in the absence of a previous criminal conviction, provided the grounds are specific to the person.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">When read together, regulations 23(6)(b) and 27 thus require an EU proportionality exercise, i.e. an assessment of whether the adverse impact to an EU citizen of his or her removal is proportionate when compared with the adverse impact to the public interest that his or her remaining in the United Kingdom would have with regard to public policy, public security and public health. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Regulation 36 gives a general right of appeal to the First-tier Tribunal (Immigration and Asylum Chamber) (“the FtT”) against “an EEA decision” which, by article 2, is defined to include “a decision under these Regulations that concerns… a person’s removal from the United Kingdom”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Regulation 33 deals with interim relief pending an appeal against a decision to remove, as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in"> “(1) This regulation applies where the Secretary of State intends to give directions for the removal of a person (“P”) to whom regulation 32(3) applies, in circumstances where—  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.39in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.39in;margin-right:0.77in;text-indent:0.5in">P has not appealed against the EEA decision to which regulation 32(3) applies, but would be entitled, and remains within time, to do so from within the United Kingdom (ignoring any possibility of an appeal out of time with permission); or  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.39in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.39in;margin-right:0.77in;text-indent:0.5in">P has so appealed but the appeal has not been finally determined.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">2.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.5in">The Secretary of State may only give directions for P’s removal if the Secretary of State certifies that, despite the appeals process not having been begun or not having been finally determined, removal of P to the country or territory to which P is proposed to be removed, pending the outcome of P’s appeal, would not be unlawful under section 6 of the Human Rights Act 1998 (public authority not to act contrary to Human Rights Convention).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">3.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.5in">The grounds upon which the Secretary of State may certify a removal under paragraph (2) include (in particular) that P would not, before the appeal is finally determined, face a real risk of serious irreversible harm if removed to the country or territory to which P is proposed to be removed.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">4.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.5in">If P applies to the appropriate court or tribunal (whether by means of judicial review or otherwise) for an interim order to suspend enforcement of the removal decision, P may not be removed from the United Kingdom until such time as the decision on the interim order has been taken, except—  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.77in;text-indent:-0.39in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.77in;margin-right:0.46in">where the removal decision is based on a previous judicial decision;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.77in;text-indent:-0.39in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.77in;margin-right:0.46in">where P has had previous access to judicial review; </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.39in;margin-right:0.00in">or  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.77in;text-indent:-0.39in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.77in;margin-right:0.46in">where the removal decision is based on imperative grounds of public security.”  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Regulation 32(3) applies to those in respect of whom a removal decision under regulation 23(6)(b) has been made. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">However, certification is not an appealable decision, because “EEA decision” in regulation 36 is defined by regulation 2 expressly to exclude “any decisions under regulation 33”.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Therefore, in summary, the scheme so far as interim orders are concerned is that, where the Secretary of State considers that it would not breach the individual’s human </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">rights to remove him pending the appeal of (e.g.) a decision to deport him to an EEA country, she has power to certify that that is so.  The FtT has no power to grant interim relief in the appeal; but, in parallel with the appeal proceedings, the individual is able to challenge the certification by way of judicial review in the Administrative Court.  Where necessary, he is able to seek interim relief in those judicial review proceedings. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On the face of the EEA Regulations, the decision-making requirements set out in regulation 27 do not apply to a decision under regulation 33.  They only apply to a “relevant decision”, defined by regulation 27(1) to be “an EEA decision taken on grounds of public policy, public security or public health”; and, as I have described, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">“EEA decision” is defined by regulation 2 expressly to exclude “any decisions under regulation 33”.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">However, in the recent case of <span style="text-decoration:underline">R (Hafeez) v Secretary of State for the Home</span><span> </span><span style="text-decoration:underline">Department</span> [2020] EWHC 437 (Admin); [2020] 1 WLR 1877 it was contended that regulation 33 was unlawful as not properly implementing the Directive because certification was a “measure” which restricted an individual’s freedom of movement to which the safeguards of article 27 (as reflected in regulation 27 of the EEA Regulations) must apply.  Foster J accepted that submission.  In doing so, she said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“51. It cannot be implied, in my judgement, that, if it is necessary for a decision to be made in the Member State as a matter of interim application (because no suspensive right is given), that it is not in some way a decision (a ‘measure’) with the potential to curtail rights of free movement.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">52. In order to determine whether or not it is to be suspensory in any case, an application will be made to the court and must be determined before any further steps are taken with respect to the Deportation Order. The provision itself is not purporting to characterise the exclusion decision in any particular way. It is not drawing a distinction between a deportation decision on the one hand, and an exclusion decision pending an appeal on the other. They both in my judgement are measures that curtail rights of free movement, nothing in the wording of article 31 suggests otherwise.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Therefore, a certification decision involved an EU proportionality exercise as I have described.  Foster J consequently granted the judicial review before her; and, in terms of relief, she considered that, in accordance with the principle described in <span style="text-decoration:underline">Marleasing</span><span> </span><span style="text-decoration:underline">SA v La Comercial Internacional de Alementación SA</span> (Case C-106/89) [1990] ECR I-4135,  the EEA Regulations could be appropriately read down so that the exclusion of regulation 27 from regulation 33 decisions was simply read out.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Secretary of State has accepted that decision – which, in my respectful view, appears correct – and has issued guidance to decision makers in line with it </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">(Regulations 33 and 41 of the Immigration (European Economic Area) Regulations </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">(Version 7) (3 April 2020) (“the new Guidance”)).  All certification decisions are now made (or, where already extant, are being re-made) on the basis of an EU proportionality exercise. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Facts</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The background facts to this application are set out in considerable detail in both Murray J’s judgment (at [6]-[20]), and in my earlier judgment following the 12 May 2020 hearing for directions in this appeal ([2020] EWCA Civ 621 at [11]-18]).  For the purposes of this application, I can be brief. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Appellant was born in 2000.  He is a Portuguese national, and consequently an EU citizen.  In 2013 or 2014, he settled in the UK with his family.  From 2015 to 2018, he was convicted of numerous criminal offences, including, on 6 March 2018, six robberies for which he was sentenced to a 12-month detention and training order.                 </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 16 August 2018, whilst still serving the custodial part of that sentence and still only 17 years of age, the Secretary of State gave the Appellant notice of liability to deportation, in respect of which the Appellant made representations on 3 September 2018.  Those representations were rejected, and a deportation order made, on 17 September 2018, the Appellant’s eighteenth birthday.  As part of the same decision letter, under regulation 33, the Secretary of State certified that the Appellant’s removal pending any appeal would not be in breach of his human rights. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 21 June 2019, removal directions were set for 2 July 2019.  It is the Appellant’s evidence that he lodged an appeal against the decision to deport him on 24 June 2019 – and he has produced a fax frontsheet under cover of which he says it was sent – but no appeal was then actioned or even acknowledged by the FtT.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Appellant’s current solicitors were instructed on 27 June 2019; and, the next day, they sent a letter before action requesting a response by the following day.  None was received; and judicial review proceedings challenging the regulation 33 certification were issued on 2 July 2019.  It was contended that regulation 33 was unlawful because, in respect of interim relief pending determination of an appeal against deportation, it did not require an EU proportionality balance to be performed and replaced the usual <span style="text-decoration:underline">American Cyanamid</span> criteria (<span style="text-decoration:underline">American Cyanamid Co v Ethicon</span><span> </span><span style="text-decoration:underline">Limited</span> [1975] AC 396) with a test restricted to a consideration of whether removal would interfere with the individual’s human rights which was contrary to the requirements of the Directive.  It was further submitted that in any event the application of regulation 33 to the Appellant had been unlawful, because the notice of liability to deportation had been served on him when he was detained and was an unrepresented child who could not reasonably have been expected to have (e.g.) obtained evidence as to the length of time he had been in the UK which went to the basis upon which the underlying deportation order had been made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At the 12 May 2020 directions hearing before me, Mr Bedford sought permission to amend those grounds of challenge in the light of <span style="text-decoration:underline">Hafeez</span>, but I refused to allow any such amendments, remitting that application to the Administrative Court.  As I understand it, no such amendments have yet been made.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the judicial review claim, the Appellant sought an order quashing the decision to certify and, in the meantime, an order for interim relief preventing his removal to Portugal pending determination of his challenge to the decision to certify.  It seems that the Appellant and his solicitors thought that they had more time than they did have to restrain removal, because they mistook the landing time of the relevant flight </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">(14.05) for the take-off time (11.20); but, in any event, Lang J refused application for interim relief some time that day on the papers. In the meantime, however, the Appellant was in fact removed to Portugal on that flight. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Appellant renewed his application for interim relief, now in the form of a mandatory order requiring the Secretary of State to facilitate the return of the Appellant to the UK, and that application was heard by Murray J on 11 July 2019.  At that hearing, Mr Bedford’s submissions on the Appellant’s behalf were based on the merits of his substantive challenge to the certification decision as pleaded in the grounds of claim (including the merits of his contentions in respect of the underlying deportation order), to which he said the court should have regard on the basis of <span style="text-decoration:underline">American Cyanamid</span>.  There was a short witness statement from the Appellant, which dealt very briefly with the advice he had received when the notice of intended deportation was served and also (though this was not as such relied on by Mr Bedford) the difficulties that he faced in Portugal.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In a reserved judgment handed down on 11 August 2019, Murray J refused the application.  It is against that refusal that the Appellant now seeks to appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The three grounds of appeal generally reflect the grounds put forward in the substantive judicial review, but they are not identical.  As Ground 1, it is submitted that regulation 33 of the EEA Regulations is unlawful in requiring an application for interim relief to be pursued in a different forum from the appeal itself, the EEA Regulations are in violation of the article 31(2) of the Directive.  As Ground 2, it is contended that requiring such an approach – dissociating the appeal from the application for interim relief pending the appeal – infringes the EU principle of equivalence because, in the judicial review proceedings, an appellant has to show that there is a serious issue to be tried on human rights grounds whereas, if the interim application could be made in the appeal, then it would be sufficient to show that there was a serious issue on EU law grounds including grounds under Part VI of the Directive (which concerns restrictions on the rights of entry and residence on grounds of public policy, public security and public health).  Finally, as Ground 3, it is submitted that such an approach also infringes the EU principle of effectiveness, in that (a) the Appellant was a child when he was given the opportunity to make representations on the notice of liability to deportation and there was a failure to ensure that, as a minor, he was properly represented, (b) the scheme did not provide for notification to the Appellant of the right to seek judicial review or the time limit for bringing a claim, and (c) the Appellant is exposed to a greater costs risk.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ground 1 appears to be new: it was not argued as such before Murray J.  However, before us, Mr Bedford helpfully explained that the importance of the systemic challenge as to correct forum was as a mere building block for his ultimate key argument that the correct approach on any challenge to interim relief pending the determination of the substantive appeal (i.e. under the statutory scheme, certification) was the same as if the interim relief had been sought in the appeal itself.  The substance of that argument had been put before Murray J.  That approach required the consideration of merits of the underlying claim (i.e. in the case of a challenge to certification, the merits of the appeal against the deportation order), even if only the limited consideration as prescribed by Lord Diplock in <span style="text-decoration:underline">American Cyanamid</span> (at page 407).  Lord Diplock made clear that, on an application for interim relief, it was unnecessary for the court to be involved in the respective merits of the parties’ underlying case in any detail because an applicant only has to show that there is a serious issue to be tried and, if there is, the merits are not relevant unless the applicant can show that he is highly likely to succeed.  Merits therefore only matter if they are clear, one way or the other: otherwise, as has been said, it does not matter whether the claimant’s chances of winning the underlying claim are 90% or 20% (<span style="text-decoration:underline">Mothercare</span><span> </span><span style="text-decoration:underline">Limited v Robson Books Limited</span> [1979] FSR 466 at page 474).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Bedford also confirmed that, leaving aside what might be called the systemic grounds of challenge, the Appellant’s complaint as pleaded focused on the alleged procedural unfairness derived from his treatment after he was served with the notice of liability to deportation on 16 August 2018 when he was still a child. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In support of the appeal, Mr Bedford seeks to adduce fresh evidence, not before Murray J, notably a further statement from the Appellant dated 30 April 2020 dealing with the history of the case including, still briefly, the assistance he received prior to receiving the deportation order itself (paragraph 9) and, even more shortly, the difficulties he faces in Portugal (paragraph 24). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">To complete the chronology, since the judgment of Murray J, the following events have occurred. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">On 19 January 2020, the Appellant in person submitted an application to the FtT for an out-of-time appeal of the decision to deport him.  The application and the covering letter are both dated 19 January 2020; and there is no reference in either to any earlier application to appeal.  The appeal was set down for a hearing before Designated FtT Judge McClure on 19 March 2020.  The Appellant did not attend; and it is now apparent that contemporaneous correspondence from Bail for Immigration Detainees (“BID”) who had been assisting the Appellant, which had requested an adjournment because the Appellant had been granted legal aid in relation to the appeal and wished to instruct legal representatives in relation to it, was not before Judge McClure.  In a determination promulgated on 26 March 2020, on the basis that the Appellant did not lodge an appeal until January 2020 (i.e. after his removal), the judge concluded that the appeal was out-of-time and there were no good reasons for extending time.  He accordingly did not accept the appeal.  However, on 10 July 2020, that decision was set aside by Resident FtT Judge Campbell because it had been made without the benefit of the BID correspondence.  The Appellant’s application to bring an out-of-time appeal currently awaits redetermination.  As I understand it, the matter is due to be set down in the tribunal for a general Case Management Review at which all aspects of the appeal (including this application) will be considered. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">In the 12 May 2020 directions hearing to which I have referred, Mr Bedford submitted that, as well as dealing with the discrete issue concerning interim relief raised in the appeal, this court could and should retain the judicial review proceedings.  I rejected that submission, and the claim (together with an application to amend the grounds of challenge in the light of <span style="text-decoration:underline">Hafeez</span>) remains in the Administrative Court, where decisions on the applications to amend and for permission to proceed are awaited. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">In the meantime, on 28 February 2020, Foster J handed down judgment in <span style="text-decoration:underline">Hafeez</span>.  Following that judgment, the Secretary of State accepts that she must make a new decision as to whether the Appellant’s case should be certified under regulation 33, applying the new Guidance including the EU proportionality test.  That decision has yet to be made. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Appeal</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This appeal is restricted in its scope: its sole target is the order of Murray J refusing interim relief in the form of a mandatory order requiring the Secretary of State to facilitate the return of the Appellant to the United Kingdom pending determination of the judicial review challenge of the regulation 33 certification. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the light of <span style="text-decoration:underline">Hafeez</span>, Mr Blundell frankly (and, in my respectful view, properly) accepted that (i) in respect of an application for interim relief in a judicial review of a regulation 33 certification (as well as in a challenge to the certification itself), regulation 27 must apply and an EU proportionality exercise must be performed; and (ii) it is clear from [42] of his judgment that Murray J neither considered that exercise necessary nor in fact performed such.  The judge’s approach was therefore wrong in law; and the resulting exercise of his discretion in relation to interim relief consequently unlawful.  It cannot be said that that error is immaterial.  In those circumstances, in my view, the appropriate course is to grant permission to appeal, allow the appeal and quash Murray J’s order refusing the Appellant’s application for interim relief. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In such circumstances, it would often be the case that this court would be in as good a position as the court below to re-determine the application; but, in this case, I do not consider that this court could fairly decide now whether interim relief should be granted for the following reasons. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">First, the parties did not entirely agree about the correct approach to the merits of the underlying appeal when considering an application for interim relief.  I have set out Mr Bedford’s submissions above (see paragraph 29).  Mr Blundell submitted that the merits of the underlying appeal could only be indirectly relevant in an application for interim relief pending a judicial review of certification, because the focus in such an application must be on the merits of temporary removal pending the ultimate outcome of the certification decision, rather than permanent removal as a result of deportation; and, in respect of the former, the merits of an appeal against the deportation order can only be obliquely relevant.  However, even on the basis of Mr Bedford’s submissions on this issue, in my view this is not a case in which it would be right for this court now to determine the interim relief application taking into account the merits of the underlying appeal, because that was not envisaged by the Order of 12 May 2020 and, even if we were able properly to conduct such an exercise involving consideration of the merits, that would to an extent usurp not only the certifying function of the Secretary of State granted to her by the EEA Regulations (which she is in the process of (re-)exercising in the Appellant’s case), but also the function of the FtT (if the Upper Tribunal were to extend time) in determining whether there was (e.g.) procedural unfairness as alleged. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">However, more importantly, leaving aside the systemic challenges (to which I shall return), as I have described, the ultimate substantive point in the judicial review claim </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">is whether the treatment of the Appellant involved procedural unfairness when the notice of liability to deportation was first served upon him as a child.  That involves factual assessments and decisions which, in my view, this court is not in a position now to make, even if we were to admit the fresh evidence that Mr Bedford asks us to admit.  That this evidence is late, and was not before Murray J, only strengthens my view.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Second and in any event, even if Mr Bedford were to expand the basis upon which he sought interim relief, the Appellant is seeking a mandatory order for the Secretary of State to facilitate his return to the UK, having been removed to Portugal prior to the time of the hearing before Murray J in the circumstances I have described.  As discussed in <span style="text-decoration:underline">R (Nixon and Tracey) v Secretary of State for the Home Department</span> [2018] EWCA Civ 3; [2018] HRLR 7 and <span style="text-decoration:underline">R (QR (Pakistan) v Secretary of State for</span><span> </span><span style="text-decoration:underline">the Home Department</span> [2018] EWCA Civ 1413, such applications for mandatory orders involve consideration of factors and jurisprudence relevant to the exercise of the court’s discretion over and above those relevant to orders simply restraining removal, e.g. the circumstances of the individual abroad.  In this case, it would require evidence (e.g. as to the Appellant’s circumstances in Portugal) and/or submissions not currently before the court.  The evidence of the Appellant’s current circumstances is exceedingly thin; and there are simply no submissions from either the Appellant or the Secretary of State in respect of these issues. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In those circumstances, I do not intend to say anything about what I have called the systemic challenges which feature in the grounds, and in particular the contention that the current certification regime in the EEA Regulations is contrary to the Directive because there is no right for an appellant to seek interim relief in the FtT.  That is an issue which does not directly arise on the specific facts of this appeal; because the Appellant did not apply to the FtT for interim relief only to be refused, but rather applied to the Administrative Court or such relief and has pressed this court on appeal to grant such relief.  Mr Bedford does not suggest that the Administrative Court does not have jurisdiction to grant interim relief: his complaint is that, under the EEA Regulations, the FtT does not have that jurisdiction.  In this case, the Appellant had his route for interim relief, which he exercised: it is irrelevant for current purposes that the EEA Regulations might have deprived him of a potentially easier route.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In any event, it is now clear that this ground (Ground 1) is merely a step towards Mr Bedford’s core submission as to the correct approach to the grant of interim relief pending determination of the underlying appeal (i.e. certification) which is (i) the very issue left to the Administrative Court as a result of the 12 May 2020 directions hearing, and (ii) apparently not now greatly in issue, both parties agreeing that a challenge to certification requires an EU proportionality exercise following <span style="text-decoration:underline">Hafeez</span> and (despite the difference in precise formulation to which I have referred) consideration of the merits in essentially the manner prescribed in <span style="text-decoration:underline">American</span><span> </span><span style="text-decoration:underline">Cyanamid</span>.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Those are my reasons for concluding that, having set aside the order of Murray J refusing the application for interim relief in the judicial review, that application should be remitted to the Administrative Court for re-determination of the application, in accordance with this judgment including the concessions made by the parties as recorded herein.  I would encourage the court to use its case management powers to ensure that, so far as possible, all the Appellant’s applications now before it are determined together and as soon as reasonably possible.  I would also encourage both the FtT to proceed to determine the appeal before it with all expedition and, in the meantime, the Secretary of State to decide very soon whether or not she wishes to (re)certify.  If she does not, the litigation becomes redundant.  If she does, it is highly desirable that any challenge to the certificate is dealt with alongside the issues raised by the current proceedings.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-right:0.00in"><span style="font-weight:bold">Lord Justice Peter Jackson </span>: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-right:0.00in"><span style="font-weight:bold">Lord Justice Underhill</span>  : </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree.  I wish to associate myself particularly with what Hickinbottom LJ says at the end of his final paragraph.  The Appellant has now been excluded from the UK for over a year: that is a long time if his appeal against deportation eventually succeeds.  The sooner there is some resolution of whether he can return on an interim basis (as a result either of a decision of the Secretary of State or of a decision of the court) the better.  Of course a final resolution will be achieved once the Appellant’s appeal against his deportation order is determined one way or the other.  We now know that the First-tier Tribunal will be reconsidering his appeal, and I would hope that in view of the history that can be done as soon as possible. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

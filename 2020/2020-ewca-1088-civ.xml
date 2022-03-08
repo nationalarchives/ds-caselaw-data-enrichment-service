@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1088"/>
+	  <FRBRuri value="ewca/civ/2020/1088"/>
+	  <FRBRdate date="2020-08-18" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1088"/>
+	  <FRBRname value="R v P (Children: Similar Fact Evidence)"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1088/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1088/eng"/>
+	  <FRBRdate date="2020-08-18" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1088/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1088/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:13:57" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1088/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1088</uk:number>
+	<uk:cite>[2020] EWCA Civ 1088</uk:cite>
+	<uk:hash>64be515c8ae47e4f15d96deaec733dffeed56677c44de27bd65ded7780c99518</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1088/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.51in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.26in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1088</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>B4/2020/1196</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE FAMILY COURT</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Her Honour Judge Jacklin QC</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ZE17P01593</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.86in;margin-right:0.00in;text-indent:1.94in">
+	<span style="text-decoration:underline">Date: 18 August 2020</span>
+	<span style="font-weight:bold"> Before : </span>
+      </p>
+      <p style="text-align:center;margin-left:1.71in;margin-right:1.74in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE DAVID RICHARDS</span>
+      </p>
+      <p style="text-align:center;margin-left:1.71in;margin-right:1.67in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE HICKINBOTTOM</span>
+	<span style="font-weight:bold">  and </span>
+      </p>
+      <p style="text-align:center;margin-left:1.71in;margin-right:1.74in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PETER JACKSON</span>
+      </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">R v P (Children: Similar Fact Evidence) </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.17in;margin-right:0.12in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.27in;margin-right:0.27in;text-indent:0.00in"><span style="font-weight:bold">Maggie Jones </span>(instructed by <span style="font-weight:bold">Duncan Lewis Solicitors</span>) for the <span style="font-weight:bold">Appellant Mother Tom Wilson </span>(instructed by <span style="font-weight:bold">Freemans Solicitors</span>) for the <span style="font-weight:bold">Respondent Father</span></p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">Hearing date: 6 August 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.17in;margin-right:0.12in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.09in;text-indent:-0.01in">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website.  The date and time for hand-down is deemed to be at 10:30am on Tuesday, 18 August 2020. </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.26in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Peter Jackson:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;text-indent:-0.01in">Introduction </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">This is an appeal from a case management decision to exclude evidence in family proceedings.  The proceedings are a father's application for contact with children now aged 5 and 2.  The mother opposes contact on the basis that the father had subjected her to extreme coercive and controlling behaviour and to sexual abuse, including rape.  In support of her case, she wants to rely on evidence of what she argues is strikingly similar coercive and controlling behaviour by the father towards another woman, with whom he began a relationship shortly after her relationship with him ended.  It was that evidence that was excluded. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">At the end of the appeal hearing, we told the parties that the appeal would be allowed and that the contested evidence would be reinstated.  We transferred the proceedings to High Court level for a fact-finding hearing.  I now give my reasons for agreeing with that decision.  In doing so, I will consider the approach to be taken to similar fact evidence in civil and family proceedings. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;text-indent:-0.01in">The background </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The children's parents, who are in their mid-twenties, began a relationship in 2013 when they were university students.  They married in 2014 and in the same year the older child was born.  They then moved around a great deal.  In September 2017, by which time they were living in London, the mother left the father and later that year the younger child was born.  The father has not seen the older child since the separation and has never seen the younger child. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In October 2017, the father began proceedings for contact.  It is unnecessary to describe the extremely difficult procedural history in full.  It is enough to say that there has unfortunately been no judicial continuity, with the case coming in front of at least 15 judges, that the parents have both been unrepresented at times, that the papers that were before the judge ran to 1600 pages, that the mother now has an intermediary, and that a fact-finding hearing, listed for the week of 17 August 2020, was the sixth occasion on which such hearing had been listed.  It is not at all surprising that the judge, who was new to the case,  was determined that that hearing should go ahead if possible. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In November 2017, the mother applied for and was granted a non-molestation order against the father.  That order has been renewed and remains in effect. The allegations that the mother has made in support of that order and in opposition to the father's contact application include these allegations of coercive and controlling behaviour by the father: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">He insisted on her abandoning her studies. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">He mispresented his name, occupation and financial position to her parents. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">He sent messages to her family purporting to be from her. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">He isolated and alienated her from hitherto close family and friends. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">He made baseless allegations to public bodies, including to the police, against her family. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">He required her to move constantly to isolate her and to avoid them being found by family and public bodies, to the extent that her parents hired a private detective to locate her and their grandchild.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">He shouted at the older child </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">She alleges that the father’s behaviour led to a wholesale change in her demeanour and character.  In support of this, she relies on statements from her own parents.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In the contact proceedings, the court commissioned reports under s.7 Children Act 1989 from a London local authority.  The first report in March 2018 recommended some supervised contact.  The second report in May 2019 recommended that there should be no contact until there had been a fact-finding hearing.  The change in recommendation arose in this way.  Three months after the mother had left the father, so in January 2018, he began a relationship with a Mrs D.  She was a 45-year-old graduate who worked as a primary school teacher and lived in the London area with her two children, aged 11 and 9.  She had separated from the children's father, Mr D, two years previously and he was seeing the children regularly.  When the first report was prepared by the London authority, Mrs D had been interviewed as the father’s new partner and she spoke in favour of his application for contact.  Until the mother received that report, she had been unaware of the father's relationship with Mrs D. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In January 2019, on police advice, a Welsh local authority contacted the London local authority to alert it to the fact that there were ongoing proceedings in Wales in respect of Mr and Mrs D’s children.  Mr D had issued a contact application and in those proceedings the court had commissioned a section 37 report, which had been completed in early December 2018.  The report raised considerable concerns about the welfare of those children and about the nature of the relationship between the father and Mrs D.  It revealed that Mrs D had abruptly resigned from her teaching job in London, that she and the father had moved to Wales with the children and that all contact between the children and Mr D had stopped.  In December 2018, following receipt of the section 37 report, the court in Wales had ordered that the children be removed from their mother’s care and placed in the care of their father under an interim order.  Since the children's removal from her care, Mrs D had not engaged with the local authority or made any efforts to see her children.  The Welsh local authority had concluded that the father had behaved in a coercive and controlling way towards Mrs D.  It was communicating its report because it considered that its information was likely to be relevant to the enquiries of the London local authority.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In February 2019, the Welsh local authority filed a section 7 report recommending that a final order be made for the children to live with Mr D, and in the same month the court made that order without participation from Mrs D.  The report described her as a high functioning, intelligent and sensible adult who had been a committed and doting mother.  It referred to accounts given by the boys of being mistreated by the father.  The author, KS, described it a very sad situation and said that she had concerns for the welfare of Mrs D.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The mother’s case is that the unsolicited reports from the Welsh proceedings contain relevant evidence showing that: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">Mrs D left her job as a primary school teacher within months of meeting F, and that the school was sufficiently concerned to make a referral to adult and child social services.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">Mrs D quickly became estranged from hitherto close family relationships and friends. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">Mrs D  lost the care of her much-loved children and appeared not to have made efforts to keep in contact with them.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">The father had made baseless accusations to public bodies, including the police, against Mrs D’s family, claiming harassment by them, and had applied for and obtained a non-molestation order against the mother (in February 2019 in a court in the North-West, where he and Mrs D were by then apparently living).    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">The father and Mrs D had repeatedly moved around (including with the D children) to avoid detection by family and public bodies, leading to Mrs D’s parents hiring private detectives to try to locate her and their grandchildren. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">The father had repeatedly shouted at one of the D children (this was videoed by a concerned neighbour). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">The father mispresented himself to Mrs D and her parents including in respect of his name, occupation and financial position.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:8pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.00in">Mrs D underwent a rapid and wholesale change in her demeanour.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Returning to the proceedings concerning these children, the issue of the admission of evidence relating to the father’s relationship with Mrs D was played out in an unsatisfactory way against the background of repeated attempts to hold a fact-finding hearing.  In brief, the issue arose at four hearings before the one with which we are concerned on this appeal: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.33in;text-indent:-0.59in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.33in;margin-right:0.00in">In February 2019, the court ordered the mother’s solicitors to write to the court in Wales seeking disclosure of the two reports of the Welsh local authority and recited that the court was of the view that those reports would be of assistance in the current proceedings.  The father was absent from that hearing. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.33in;text-indent:-0.59in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.33in;margin-right:0.00in">In May 2019, a deputy district judge directed the updating section 7 report from the London local authority in order to take account of the contents of the Cardiff reports, which had by then been received.  The mother was unrepresented.  The father sought a direction for the attendance of KS and she was invited to attend, though the court indicated that the fact-finding hearing would go ahead in any event.  The non-molestation order against the father was extended.  The father’s application for a continued nonmolestation order against the mother (transferred from the North-West in February) was dismissed as being without merit.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.33in;text-indent:-0.59in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.33in;margin-right:0.00in">In July 2019, the parties appeared before the same deputy district judge.  The mother was unrepresented.  The order recorded that the court would not be assisted at the fact-finding hearing by the evidence of KS.  What was meant by this was obscure until an email was discovered during the course of this appeal which showed that the father's former solicitors had stated that they did not require the attendance of KS.  Until then, the meaning of the order was disputed, it being suggested on behalf of the father that it showed that the court had excluded the Welsh reports. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.33in;text-indent:-0.59in">(4)</num>
+	  <content>
+	    <p style="margin-left:1.33in;margin-right:0.00in">In September 2019, when the matter came before a  district judge, both parents were unrepresented, with the father, bizarrely, being allowed to have Mrs D as his ‘MacKenzie friend’.  The court recorded that the mother had sought permission to rely on the Welsh reports but that permission was refused on the basis that it had been refused at the July hearing and that nothing had changed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In November 2019, the matter came twice before another deputy district judge, whose orders did not relate to the question of the disputed evidence. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">This procedural muddle, which arose from lack of judicial continuity and inconsistent or non-existent legal representation, continued until the hearing before HHJ Jacklin QC.  In the meantime, the Welsh reports, which the court had itself directed should be obtained, remained in the court bundle, and the second report of the London local authority commented extensively upon them, as the court had intended.  Further to that, in January 2020, by which time she had regained legal representation, the mother filed a long statement setting out her case and exhibiting letters from Mr D and from Mrs D’s parents, one of which was accompanied by a statement of truth.  She had also produced statements from her own parents.  Later in January, there was a further hearing before a different district judge at which both parties were represented, father by leading counsel on direct access.  Directions were given for the matter to be allocated to circuit judge level, for an intermediary assessment to be prepared in relation to the mother, and for a three day fact-finding hearing in June 2020.  Nothing was apparently said about the Welsh reports or the evidence from Mr D or Mrs D’s parents. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;text-indent:-0.01in">The hearing before the judge </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">By the time the matter came before judge on 24 June, the hearing had already been converted into a pre-trial review, with a view to a final hearing in August.  It was a remote hearing and there were substantial difficulties in establishing connections, so that the hearing started about 2½ hours late with mother’s counsel attending by telephone.   By that stage, only half an hour of hearing time remained<span style="font-family:Arial">.  </span>As the agreed and approved note of the hearing shows, there were a number of outstanding case management issues concerning the format of the hearing in August and the question of special measures for the mother.  Full position statements were filed by both counsel, neither of whom appeared on this appeal.  Those statements dealt in some detail with the authorities to which I will later refer.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">When the judge came to the question of the Welsh evidence, she was highly critical of the mother’s solicitors for, as she put it, exhibiting documents that the court had decided were not to be admitted.  Counsel for the mother explained how the professional reports had evolved, and drew attention to the second report of the London local authority.  The judge then said that the difficulty was that the report contained hearsay and that she did not see how the father could have a fair trial if the report was admitted on the assumption that everything in it was true.  Counsel replied that he was certainly not suggesting the report would be admitted on the basis everything in it was true and that the father would have the opportunity to challenge the contents.  The judge disagreed.  She then asked whether enquiries had been made about the availability of everyone to whom the social worker had spoken, saying that the proper course was to seek permission to submit a statement in evidence from every witness.  Instead, as she is noted to have said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.00in">"You haven't done that.  You've ignored previous court orders, simply put the reports in the bundle and exhibited.  Deeply disrespectful of court orders.  Won’t allow that report to go before the court of fact finding hearing.  Too late to do anything about it now.  Hearing has to go ahead."   </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in;text-indent:0.00in">Counsel pointed out that there were also letters from Mrs D's parents and from Mr D, and that they were willing to come to court to give evidence.  The judge asked why statements had not been prepared and permission sought to admit them.  She noted that much of the evidence was hearsay from other people, including the mother’s own parents.  Counsel said that hearsay evidence was admissible.  Counsel for the father then made submissions about removing the letters from Mrs D's parents and from Mr D on the basis that they were filed without permission and did not speak to the allegations in the case.  The judge said that she was not going to admit the evidence.  She was again highly critical of the mother's solicitors.<span style="font-family:Arial">  </span>She permitted the mother's own parents to be called as witnesses, but refused the mother's application to rely on the reports from the Welsh local authority or the letters provided by Mr D and Mrs D's parents and she directed that they were to be removed from the trial bundle and that all references to their evidence should be redacted from the mother's statement.  She further directed that the fact-finding hearing would begin on 17 August before a recorder or a district judge. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In the circumstances of a severely abbreviated remote hearing, a case that was in such evident disarray was bound to cause a judge coming to it for the first time real concern.  However, I consider that the judge’s criticism of the mother's solicitors was based on a misunderstanding of the procedural history.  It is not a history out of which anyone comes very well, least of all the court, but there had been no previous order for the removal of the Welsh reports from the bundle and it is clear that the solicitor's actions were not intended to be disrespectful.  Moreover, the mother's statement, exhibiting the letters from Mr D and Mrs D’s parents had by then been sitting in the court papers for five months without the father, who was by then represented, taking any counter-measures.  Now that the procedural history has been unravelled, I do not regard such severe criticism as having been justified.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;text-indent:-0.01in">The appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The mother appealed to the High Court.  On 28 July, Cohen J granted permission to appeal and, in view of the issues involved, assigned the appeal to this Court pursuant to FPR 2010 rule 30.13.  It was heard as a matter of urgency in the light of the upcoming fact-finding hearing. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">On behalf of the mother, Ms Maggie Jones accepted that this was a case management decision and that the court has broad powers to admit or exclude evidence.  However, she argued that the judge was wrong to exclude this evidence as it was highly relevant, both to the fact finding hearing and to any welfare decision.  The evidence concerning the father's relationship with Mrs D and the D children showed a strikingly similar pattern of behaviour to that alleged by the mother.  It was logically probative as showing a propensity for the father to act in a coercive and controlling manner.  It is often difficult for a party to prove that the other party’s behaviour has been coercive and controlling because behaviour of that sort is a pattern rather than an event.   The second section 7 report of the London local authority was prepared on the direction of the court, specifically to take account of the Welsh reports.  These reports cannot simply be ignored.  They would certainly be relevant at the welfare stage and it would be illogical to exclude them from the fact-finding exercise.  The judge did not consider their relevance at all, nor did she carry out the necessary analytical exercise in relation to admission or exclusion, despite having been referred to the legal principles.  She was wrong to have regard only to fairness to the father when exclusion of such significant evidence would be unfair to the mother.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">On behalf of the father, Mr Tom Wilson submitted that this was a case management decision for the judge and that she was entitled to exclude this evidence so that the upcoming fact-finding hearing could continue in circumstances where the father has gone without contact for three years.  Mr Wilson did not seek to suggest that the material was not relevant, but he described much of it is hearsay and speculation, and argued that the question of propensity could only be an incidental issue.  The judge was entitled to find the court would need to make findings of fact about the father's relationship with Mrs D and she was rightly concerned about the fairness of the process and the forensic difficulties.  She had in substance, carried out the necessary analysis and reached a decision with which this court should not interfere.  However, if the appeal was allowed, the father wish to mount a full challenge to the evidence and would seek further police disclosure. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;text-indent:-0.01in">Evidence in cases of alleged domestic abuse </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The court has a broad power to control evidence.  The Family Procedure Rules 2010  provide: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.04in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Power of court to control evidence </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.04in;margin-right:0.00in;text-indent:0.00in">22.1   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.04in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.04in;margin-right:0.57in;text-indent:0.50in">The court may control the evidence by giving directions as to –  (a) the issues on which it requires evidence; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.24in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.24in;margin-right:0.55in;text-indent:0.50in">the nature of the evidence which it requires to decide those issues; and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.24in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.24in;margin-right:0.55in;text-indent:0.50in">the way in which the evidence is to be placed before the court. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.04in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.04in;margin-right:0.57in;text-indent:0.50in">The court may use its power under this rule to exclude evidence that would otherwise be admissible. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.04in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.04in;margin-right:0.57in;text-indent:0.50in">The court may permit a party to adduce evidence, or to seek to rely on a document, in respect of which that party has failed to comply with the requirements of this Part. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.04in">(4)</num>
+	  <content>
+	    <p style="margin-left:1.04in;margin-right:0.57in;text-indent:0.50in">The court may limit cross-examination. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in;text-indent:0.00in">Other provisions of Part 22 concern the circumstances in which oral and written evidence is to be given, witness statements, and so on.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Hearsay evidence is admissible in proceedings concerning children by virtue of the Children (Admissibility of Hearsay Evidence) Order 1993.  Part 23 of the Rules includes provisions for the management of such evidence.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Practice Direction 12J applies when it is alleged or admitted or there is other reason to believe that the child or a party has experienced domestic abuse perpetrated by another party or that there is a risk of such abuse.  Domestic abuse includes any incident or pattern of incidents of controlling, coercive or threatening behaviour, violence or abuse between those aged 16 or over who are or have been intimate partners or family members.  Coercive behaviour is defined as “an act or a pattern of acts of assault, threats, humiliation and intimidation or other abuse which is used to harm, punish or frighten the victim.”  Controlling behaviour is defined as “an act or pattern of acts designed to make a person subordinate and/or dependent by isolating them from sources of support, exploiting their resources and capacities for personal gain, depriving them of the means needed for independence, resistance and escape and regulating their everyday behaviour.”  Paragraph 19 of the Practice Direction contains a list of matters that the court must consider  when making directions for a fact finding hearing in a case of this kind, including at paragraph (d) what evidence is required to determine the existence of coercive, controlling or threatening behaviour, or of any other form of domestic abuse. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The definition of domestic abuse as consisting of acts or a pattern of acts is an acknowledgement that some forms of abuse do not consist of isolated individual incidents, but of harmful patterns of behaviour.   This issue is underlined in the final report of the expert panel to the Ministry of Justice in June 2020: <span style="font-style:italic">Assessing Risk of Harm to Children and Parents in Private Law Children Cases</span>.  The report notes that a focus on recent incidents may fail to acknowledge a pattern of behaviour over a long period of time (page 55) and expresses concern about the limitations of Scott Schedules, which may tend to disguise the subtle and persistent patterns of behaviour involved in coercive control, harassment and stalking (page 94).  As a consequence, family courts may not gain a full awareness of the extent and nature of abuse that might be present in the cases coming before them (page 95).  This theme was also discussed by Baker J in <span style="font-style:italic">Re LG (Re-opening of Fact-finding) </span>[2017] EWHC 2626 (Fam) at [27]:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.00in">“It is therefore entirely appropriate for a court in the exercise of its case management powers to confine a fact-finding hearing to the issues that it considers necessary and relevant. Not infrequently, a party alleging domestic violence is directed to identify and rely on a few allegations as “specimen” allegations on which to seek findings. In taking this course, however, parties and the court must be careful to ensure that significant issues are not overlooked. Sometimes a pattern of harassment and other forms of domestic abuse is only discernible by conducting a broader examination of the allegations.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;text-indent:-0.01in">Similar fact evidence in civil and family cases </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In <span style="font-style:italic">O’Brien v Chief Constable of South Wales Police </span>[2005] UKHL 26; <span style="color:#222222">[2005] 2 AC 534 </span>the House of Lords considered the issue of similar fact evidence in civil cases, where it is contended that an individual’s behaviour in other circumstances makes it more likely that he will have behaved in the manner now alleged because it is evidence of a propensity to behave in that way.  Lord Bingham stated the position in this way; </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.00in">“3.  Any evidence, to be admissible, must be relevant. Contested trials last long enough as it is without spending time on evidence which is irrelevant and cannot affect the outcome. Relevance must, and can only, be judged by reference to the issue which the court (whether judge or jury) is called upon to decide. As Lord Simon of Glaisdale observed in <span style="font-style:italic">Director of Public Prosecutions v Kilbourne</span> [1973] AC 729, 756, </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.00in">"Evidence is relevant if it is logically probative or disprobative of some matter which requires proof ….. relevant (ie. logically probative or disprobative) evidence is evidence which makes the matter which requires proof more or less probable". </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in">4.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.50in">That evidence of what happened on an earlier occasion may make the occurrence of what happened on the occasion in question more or less probable can scarcely be denied. … To regard evidence of such earlier events as potentially probative is a process of thought which an entirely rational, objective and fair-minded person might, depending on the facts, follow. If such a person would, or might, attach importance to evidence such as this, it would require good reasons to deny a judicial decision-maker the opportunity to consider it. For while there is a need for some special rules to protect the integrity of judicial decision-making on matters of fact, such as the burden and standard of proof, it is on the whole undesirable that the process of judicial decision-making on issues of fact should diverge more than it need from the process followed by rational, objective and fair-minded people called upon to decide questions of fact in other contexts where reaching the right answer matters. Thus in a civil case such as this the question of admissibility turns, and turns only, on whether the evidence which it is sought to adduce, assuming it (provisionally) to be true, is in Lord Simon's sense probative. If so, the evidence is legally admissible. That is the first stage of the enquiry. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in">5.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.50in">The second stage of the enquiry requires the case management judge or the trial judge to make what will often be a very difficult and sometimes a finely balanced judgment: whether evidence or some of it (and if so which parts of it), which ex hypothesi is legally admissible, should be admitted. For the party seeking admission, the argument will always be that justice requires the evidence to be admitted; if it is excluded, a wrong result may be reached. In some cases, as in the present, the argument will be fortified by reference to wider considerations: the public interest in exposing official misfeasance and protecting the integrity of the criminal trial process; vindication of reputation; the public righting of public wrongs. These are important considerations to which weight must be given. But even without them, the importance of doing justice in the particular case is a factor the judge will always respect. The strength of the argument for admitting the evidence will always depend primarily on the judge's assessment of the potential significance of the evidence, assuming it to be true, in the context of the case as a whole. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in">6.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.50in">While the argument against admitting evidence found to be legally admissible will necessarily depend on the particular case, some objections are likely to recur. First, it is likely to be said that admission of the evidence will distort the trial and distract the attention of the decision-maker by focusing attention on issues collateral to the issue to be decided. This… is often a potent argument, particularly where trial is by jury. Secondly, and again particularly when the trial is by jury, it will be necessary to weigh the potential probative value of the evidence against its potential for causing unfair prejudice: unless the former is judged to outweigh the latter by a considerable margin, the evidence is likely to be excluded. Thirdly, stress will be laid on the burden which admission would lay on the resisting party: the burden in time, cost and personnel resources, very considerable in a case such as this, of giving disclosure; the lengthening of the trial, with the increased cost and stress inevitably involved; the potential prejudice to witnesses called upon to recall matters long closed, or thought to be closed; the loss of documentation; the fading of recollections. … In deciding whether evidence in a given case should be admitted the judge's overriding purpose will be to promote the ends of justice. But the judge must always bear in mind that justice requires not only that the right answer be given but also that it be achieved by a trial process which is fair to all parties.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">This analysis, given in a civil case, applies also to family proceedings.  There are two questions that the judge must address in a case where there is a dispute about the admission of evidence of this kind.  Firstly, is the evidence relevant, as potentially making the matter requiring proof more or less probable?  If so, it will be admissible.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in;text-indent:0.00in">Secondly, is it in the interests of justice for the evidence to be admitted?  This calls for a balancing of factors of the kind that Lord Bingham identifies at paragraphs 5 and 6 of <span style="font-style:italic">O’Brien</span>.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Where the similar fact evidence comprises an alleged pattern of behaviour, the assertion is that the core allegation is more likely to be true because of the character of the person accused, as shown by conduct on other occasions.  To what extent do the facts relating to the other occasions have to be proved for propensity to be established?  That question was considered by the Supreme Court in the criminal case of <span style="font-style:italic">R v Mitchell </span>[2016] UKSC 55 [2017] AC 571, where it was said that the defendant, who was charged with murder by stabbing, had used knives on a number of other occasions, none of which had led to a conviction but which on the prosecution’s case showed propensity.  Lord Kerr addressed this issue in the following way: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.17in;margin-right:0.00in;text-indent:0.00in">“<span style="font-style:italic">Propensity - the correct question/what requires to be proved? </span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.00in">39. <span style="font-size:7pt">             </span>A distinction must be recognised between, on the one hand, proof of a propensity and, on the other, the individual underlying facts said to establish that a propensity exists. In a case where there are several incidents which are relied on by the prosecution to show a propensity on the part of the defendant, is it necessary to prove beyond reasonable doubt that each incident happened in precisely the way that it is alleged to have occurred? Must the facts of each individual incident be considered by the jury in isolation from each other? In my view, the answer to both these questions is “No”. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in">43.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.50in">The proper issue for the jury on the question of propensity… is whether they are sure that the propensity has been proved. … That does not mean that in cases where there are several instances of misconduct, all tending to show a propensity, the jury has to be convinced of the truth and accuracy of all aspects of each of those. The jury is entitled to - and should - consider the evidence about propensity in the round. There are two interrelated reasons for this. First the improbability of a number of similar incidents alleged against a defendant being false is a consideration which should naturally inform a jury’s deliberations on whether propensity has been proved. Secondly, obvious similarities in various incidents may constitute mutual corroboration of those incidents. Each incident may thus inform another. The question … is whether, overall, propensity has been proved. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in">44.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:0.50in">… the jury should be directed that, if they are to take propensity into account, they should be sure that it has been proved. This does not require that each individual item of evidence said to show propensity must be proved beyond reasonable doubt. It means that all the material touching on the issue should be considered with a view to reaching a conclusion as to whether they are sure that the existence of a propensity has been established.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Again, this analysis is applicable to civil and family cases, with appropriate adjustment to the standard of proof.   In summary, the court must be satisfied on the basis of proven facts that propensity has been proven, in each case to the civil standard.   The proven facts must form a sufficient basis to sustain a finding of propensity but each individual item of evidence does not have to be proved. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The issue of similar fact evidence was considered by this court in the family case of <span style="font-style:italic">Re S (A Child) </span>[2017] EWCA Civ 44.  A mother appealed against the dismissal of allegations of domestic abuse, including sexual assaults, by a father.  One of the grounds of appeal was that the judge had erred in excluding similar fact evidence in relation to the father’s alleged rape of a previous partner.  That argument did not succeed for reasons given by Black LJ at [63] and summarised at [58]: the judge had excluded the evidence because the material had only very recently surfaced as part of the mother's case, that the previous partner was not being called, and that it would be unfair to the father to explore the allegation with him on the basis of the paper evidence alone.  In other words, the evidence was potentially relevant but it would have been unfair to have allowed the mother to have relied upon the alleged rape of a previous partner.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">I mention this decision because it touched on the question of similar fact evidence, but there are significant differences between that case and the present one, both as to the underlying facts and the procedural history.  In particular, in the present case, the father had been aware of the allegations for well over a year and the allegations were contained in professional reports that the court itself had directed should be gathered. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;text-indent:-0.01in">Conclusion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Applying these principles, it is clear that the judge's decision cannot stand.  No doubt, at least in part because of the difficult circumstances in which the hearing was taking place, the necessary analysis concerning whether the disputed evidence should be admitted was simply not carried out.  Moreover, the judge was mistaken (as was the district judge in September 2019) about the stance that had been taken by the court previously.  Despite Mr Wilson’s able efforts to sustain the judge’s order, Ms Jones’s submissions are well made and the appeal must be allowed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In our remaking of the decision, I have no doubt that the Welsh reports, the second London local authority report, and the evidence from Mr D and Mrs D’s parents are relevant and therefore admissible.  I am also in no doubt that the evidence should be admitted in the interests of justice.  As there is finally to be a fact-finding hearing, I do not wish to say more than that the evidence may be capable of establishing propensity that may be of probative value in relation to the core allegations in this case.  Whether propensity is established and whether it will be of probative value will be matters for the trial judge.  Similarly, there will now need to be close case management to ensure that the evidence is presented in a way that is fair to both parties.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">We have therefore allowed the appeal and set aside the judge’s order.  We reallocated the case to High Court level because of the history of the case and the importance of the underlying issues, and we are grateful that arrangements have been made for a case management hearing to take place before the allocated judge on 19 August, followed by a fact-finding hearing at the earliest available date. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Hickinbottom</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.24in;margin-right:4.22in;text-indent:-0.25in"><span style="font-weight:bold">Lord Justice David Richards </span>33.<span style="font-family:Arial"> </span><marker name="tab"/>I also agree. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:2.55in;text-indent:0.00in">_________________ </p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1469"/>
+	  <FRBRuri value="ewca/civ/2020/1469"/>
+	  <FRBRdate date="2020-11-09" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1469"/>
+	  <FRBRname value="In the Matter of Mrs Nicola Jane Ide (in bankruptcy)"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1469/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1469/eng"/>
+	  <FRBRdate date="2020-11-09" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1469/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1469/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:20:30" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1469/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1469</uk:number>
+	<uk:cite>[2020] EWCA Civ 1469</uk:cite>
+	<uk:hash>767783c827eadff2c175fef348fb5459101f1fabec86732b0eb9e302510586e4</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1469/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.51in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading3 { margin-left: 0.74in; font-weight: bold; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Heading3Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 11pt; color: #000000; }
+#judgment .Heading2Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0604166666666666in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1469</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: A2/2020/0463<span style="text-decoration:none"> </span>A2/2020/0464</p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE COUNTY COURT AT BRISTOL</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">HHJ Paul Matthews</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">AND ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">BUSINESS AND PROPERTY COURTS AT BRISTOL</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">INSOLVENCY AND COMPANIES LIST (ChD)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">HHJ Paul Matthews sitting as a Judge of the High Court</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Case No 43 of 2019</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<docTitle style="font-weight:bold;text-decoration:underline">In the Matter of Mrs Nicola Jane Ide (in bankruptcy)</docTitle>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">And in the Matter of the Insolvency Act 1986</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.86in;margin-right:0.00in;text-indent:1.81in">
+	<span style="text-decoration:underline">Date: 9 November 2020</span>
+	<span style="font-weight:bold"> Before : </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE LEWISON</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE ARNOLD</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE NUGEE</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between : </span>
+      </p>
+      <blockContainer>
+	<num>(1)</num>
+	<p style="text-align:left;margin-left:0.32in;margin-right:0.05in">
+	  <span style="font-weight:bold">HH ALUMINIUM &amp; BUILDING PRODUCTS LTD </span>
+	</p>
+      </blockContainer>
+      <blockContainer>
+	<num>(2)</num>
+	<p style="text-align:left;margin-left:0.32in;margin-right:0.05in">
+	  <span style="font-weight:bold">PETER ROBERT HOUSE </span>
+	  <marker name="tab"/>
+	  <span style="font-weight:bold">  </span>
+	  <span style="font-weight:bold;text-decoration:underline">Appellants</span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">- and - </span>
+      </p>
+      <blockContainer>
+	<num>(1)</num>
+	<p style="text-align:left;margin-left:1.40in;margin-right:0.00in">
+	  <span style="font-weight:bold">SARAH HELEN BELL </span>
+	</p>
+      </blockContainer>
+      <blockContainer>
+	<num>(2)</num>
+	<p style="text-align:left;margin-left:1.40in;margin-right:0.00in">
+	  <span style="font-weight:bold">PAUL WILLIAMS </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">(as Joint Trustees in Bankruptcy of Nicola Jane Ide) </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Respondents</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Jessica Powers</span> (instructed by <span style="font-weight:bold">Isadore Goldman</span>) for the <span style="font-weight:bold">Appellants</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Steven Fennell </span>(instructed by<span style="font-weight:bold"> Hewlett Swanson Ltd</span>) for the <span style="font-weight:bold">Respondents</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing date: 28 October 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">Covid-19 Protocol: This judgment was handed down remotely by circulation to the parties' representatives by email, release to BAILII and publication on the Courts and Tribunals </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">Judiciary website. The date and time for hand-down is deemed to be at 10:30 am on 9 </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.05in;text-indent:-0.01in">November 2020 </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Nugee:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Introduction  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">These conjoined appeals raise two points of general importance as to procedural aspects of applications in insolvency proceedings, and one point of no general significance.  They arise out of the bankruptcy of Mrs Nicola Jane Ide who was made bankrupt on her own petition on 6 December 2012.  The respondents in this Court, Ms Sarah Bell and Mr Paul Williams, are the current joint trustees in bankruptcy of Mrs Ide (<span style="font-weight:bold">“the Trustees”</span>) and brought an application in the County Court against a number of respondents, including the present appellants, HH Aluminium &amp; Building Products Ltd (<span style="font-weight:bold">“HH”</span>) and Mr Peter House, who were 4<span style="vertical-align:super;font-size:smaller">th</span> and 5<span style="vertical-align:super;font-size:smaller">th</span> respondents to that application.  Mr House is a director of HH.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The first issue is whether it is possible for the County Court to transfer part (only) of insolvency proceedings to the High Court.  On 4 February 2020 HHJ Matthews, sitting in the County Court at Bristol, decided that the answer was Yes, and by his Order of that date transferred to the High Court (also in Bristol) an application made by HH and Mr House to strike out, or grant summary judgment on, the Trustees’ application against them.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Having transferred HH’s and Mr House’s application from the County Court to the High Court, HHJ Matthews proceeded to hear it himself sitting as a Judge of the High Court.  The second issue arises out of his substantive decision, given in a judgment dated 12 February 2020.  This is whether the same principles apply to an extension of time for service of an insolvency application as apply to the extension of time for service of a claim form under the CPR.  In the latter case it is well established that where a claim form has been issued, but not served, within the limitation period, an extension of time for service should not, save in exceptional circumstances, be granted as that would be to deprive the defendant of a limitation defence.  That was applied to the case of an application in insolvency proceedings by HHJ WaldenSmith, also sitting as a Judge of the High Court, in <span style="font-style:italic">Re Kelcrown Homes Ltd </span>[2017] EWHC 537 (Ch) (<span style="font-style:italic;font-weight:bold">“Kelcrown”</span>).  In the present case HHJ Matthews declined to follow <span style="font-style:italic">Kelcrown</span>, holding that the vacating and re-fixing of the first hearing of the application had the practical effect of extending time for service, and that there was no need to have regard to limitation considerations in the same way as there would have been under the CPR.  By his Order dated 12 February 2020 he therefore dismissed HH’s and Mr House’s application to strike out the Trustees’ application for failure to serve in time.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The third issue is whether HHJ Matthews was wrong to decline to grant summary judgment in favour of Mr House on the Trustees’ claim against him.  This raises no issue of general importance and turns on the application of well established principles to the particular facts of this case.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">HHJ Matthews himself gave permission to appeal both his decision in the County Court transferring HH’s and Mr House’s application to the High Court (recommending that the appeal be transferred to this Court, the transfer being accepted by Lewison LJ), and his decision in the High Court dismissing, save in one respect with which we are not concerned, that application.  HH and Mr House now appeal both decisions.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Facts </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mrs Ide was made bankrupt on her own petition on 6 December 2012.  Joint trustees in bankruptcy (Ms Bell and a Mr John Whitfield) were appointed with effect from 30 January 2013.  Mr Whitfield was later replaced by Mr Williams. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By application notice dated 29 January 2019 the Trustees issued an application under the Insolvency Act 1986 (<span style="font-weight:bold">“IA 1986”</span>) in the County Court at Southampton against 6 respondents (<span style="font-weight:bold">“the substantive application”</span>).  These were (1) Mrs Ide; (2) her husband Mr Ide; (3) Mr Alexander Burnett; (4) HH; (5) Mr House; and (6) Mrs Ide’s father, Mr George Webb.  The application sought relief in respect of various payments made directly or indirectly by Mrs Ide to the respondents before her bankruptcy which were said to have been transactions at an undervalue, preferences or transactions defrauding creditors.  It is not necessary to refer to the basis for those claims in any detail but in brief summary they all stemmed from the fact that Mrs Ide had sold a property known as Ortus House in Lyndhurst, Hampshire in April 2012.  She received net proceeds of sale of over £840,000, and on 11 April 2012 made two payments, one of £350,000 to Mr Burnett and one of £485,000 to HH.  HH had retained some of the money for itself but also made various payments to, or for the benefit of, Mr Ide, Mr Webb and (possibly) Mr House.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Although the application notice for the substantive application was dated 29 January 2019, it was not in fact issued, in the County Court at Southampton, until the afternoon of 30 January 2019 after the Trustees had obtained ATE cover.  It was then too late to pay the court fee and the Trustees’ solicitors paid it on the morning of 31 January 2019.  It was common ground that it was issued, or at least arguably issued, on the last day of the limitation period, on the basis that time ran from the appointment of trustees in bankruptcy; we were not addressed on the effect, if any, of the court fee not being paid until the next day.  The printed form of Insolvency Act application notice used by the Trustees contained a textbox for completion by the Court as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <table>
+	      <tr>
+		<td rowspan="1" colspan="1">
+		  <p style="text-align:left;margin-left:0.00in;margin-right:2.10in;text-indent:0.00in"><span style="font-weight:bold">Endorsement by the Court </span>This application will be heard: </p>
+		  <p style="text-align:left;margin-left:0.00in;margin-right:3.01in;text-indent:0.00in">Date ……….. Time ………. </p>
+		  <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">Place ………. </p>
+		</td>
+	      </tr>
+	    </table>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The County Court at Southampton sought further information from the Trustees, as a result of which by Order dated 28 March 2019 DDJ Underhill transferred the application to the County Court at Bristol.  That was in accordance with para 3.6 of the Practice Direction (Insolvency Proceedings) dated 4 July 2018 and issued by Sir Geoffrey Vos C with the approval of the Lord Chancellor (<span style="font-weight:bold">“the Insolvency PD”</span>).  After transfer to the County Court at Bristol the application notice was, on or about 29 April 2019, endorsed by the Court by filling in the textbox with a hearing date and time of 9 July 2019 at 11 am, and in May 2019 it was returned so endorsed to the Trustees’ solicitors.  That hearing, being the first hearing of the substantive application, would have been a short directions hearing.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Procedure in proceedings under the IA 1986 is governed by the Insolvency (England and Wales) Rules 2016, SI 2016/1024.  I will refer to these as <span style="font-weight:bold">“the 2016 rules”</span>, and references hereafter to numbered rules are to the 2016 rules unless otherwise specified.  The endorsement by the Court of the hearing date and time was in accordance with rule 12.8 which provides that (subject to certain exceptions) when an application is filed the Court must fix a venue for it to be heard, “venue” being defined by rule 1.2(2) as meaning the “date, time and place or platform for the proceedings”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As appears below rule 12.9 obliges the applicant to serve a sealed copy of the application notice endorsed with the venue for hearing on the respondent (unless the Court directs or the rules provide otherwise) at least 14 days before the date fixed for the hearing of the application.  That would have required the Trustees to serve the application notice by 24 June 2019 (Ms Jessica Powers, who appeared for HH and Mr House, suggested the last day for service would have been 25 June 2019 but I think it was actually 24 June, the 14 days being clear days (see sch 5 para 1 to the 2016 rules and CPR r 2.8), although nothing turns on this).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By application notice dated 7 June 2019, however, before the time for service arrived and before any of the respondents had in fact been served with the substantive application, the Trustees applied to the Court.  That application (<span style="font-weight:bold">“the June application”</span>) was made without notice to any of the respondents (and the application notice said that it was not intended to serve anyone with it).  It sought a number of things.  The first two concerned service out of the jurisdiction, and substituted service, on Mr Burnett who was running a bar in Montserrat; the third the amendment of the application notice for the substantive application by correcting a couple of errors.  The fourth sought an order that the hearing fixed for 11 am on 9 July 2019 be vacated and re-listed for the first available date after 1 October 2019.  The witness statement in support (from Ms Karen Unsworth of the Trustees’ solicitors) made it clear that the substantive application had not yet been served on any of the respondents and said that it was intended to serve all the respondents at the same time once the June application had been determined. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The June application was dealt with on paper by DDJ Hebblethwaite on 27 June 2019.  By his Order of that date he granted the various heads of relief sought by the application, including at paragraph 7 an Order vacating the hearing for 11 am on 9 July 2019 and relisting it for 30 minutes on the first available date after 1 October 2019.  Since he had disposed of the application without notice he provided at paragraph 8 that any of the respondents could apply to set it aside or vary it within 7 days of the Order being served on him or her.  That was pursuant to CPR r 23.10, rule 12.1 providing that the provisions of the CPR apply for the purposes of proceedings under Parts 1 to 11 of IA 1986, except so far as disapplied or inconsistent with the 2016 rules.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 2 July 2019 the hearing of the substantive application was relisted for 15 October 2019 at 11.30 am. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On or about 6 September 2019 the substantive application was served on HH and </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.01in;margin-right:-0.00in;text-indent:-0.01in">Mr House.  This was of course considerably more than 14 days before the relisted </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">hearing on 15 October, but well after 24 June 2019.    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By application notice dated 14 October 2019 (<span style="font-weight:bold">“the October application”</span>) HH and Mr House applied (i) to set aside DDJ Hebblethwaite’s Order of 27 June 2019; (ii) to dismiss or strike out the substantive application for failure to serve it in compliance with rule 12.9; (iii) for summary judgment on, or strike out of, the Trustees’ claim against HH so far as based on s. 340 IA 1986 (preferences); and (iv) for summary judgment on the Trustees’ claim against Mr House.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By application notice dated 13 November 2019 <span style="font-weight:bold">(“the transfer application”</span>) the Trustees applied for the October application to be heard by a section 9 Judge.  By a separate application notice dated 13 November 2019 (<span style="font-weight:bold">“the variation application”</span>) the Trustees made an application to vary DDJ Hebblethwaite’s order; we have not seen this application but I understand it to have been an application, if and insofar as necessary, for a retrospective extension of time for service of the substantive application.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The October application and the transfer and variation applications all came before HHJ Matthews on 4 February 2020 and led to the two judgments under appeal, the first on 4 February 2020 in the County Court transferring the October application to the High Court, and the second on 12 February 2020 in the High Court dealing with the substance of the October application.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">HHJ Matthews’ Judgment of 4 February 2020 in the County Court  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">HHJ Matthews first gave an unreserved judgment on the transfer application, the neutral citation being <span style="font-style:italic">Bell v Ide </span>[2020] EW Misc 3 (CC).  He treated the application as an application to transfer the October application to the High Court [2].  He rejected a submission that there was no power to transfer the October application alone to the High Court, distinguishing two High Court decisions, <span style="font-style:italic">Re Kouyoumdjian </span>[1956] 1 WLR 558, a decision of Upjohn J, followed by Scott J in <span style="font-style:italic">Re A Debtor </span>[1985] 1 WLR 6, in which it had been held that the then power of transfer, found in the Bankruptcy Act 1914 and Bankruptcy Rules 1952, did not permit transfer of part of proceedings in bankruptcy.  He found a surer guide in <span style="font-style:italic">Hall &amp; Shivers v Van der Heiden </span>[2010] EWHC 537 (TCC), a decision on the Insolvency Rules 1986, where Coulson J, albeit without the earlier cases being cited to him, held that there was power for the High Court to call in one aspect alone of insolvency proceedings in the County Court.  HHJ Matthews therefore held that he had jurisdiction to transfer part only of insolvency proceedings from the County Court to the High Court [16].  That is the decision which is challenged in Ground 1 of this appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Having decided that there was jurisdiction to do so, HHJ Matthews went on to consider whether he should exercise it as a matter of discretion, and concluded that he should [22].  That was sought to be challenged by Ground 2 of the appeal, but permission for this ground was refused both by HHJ Matthews and by Lewison LJ, and it is unnecessary to say any more about it. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">HHJ Matthews’ Judgment of 12 February 2020 in the High Court </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">HHJ Matthews, sitting as a Judge of the High Court, then proceeded to hear the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.01in;margin-right:-0.00in;text-indent:-0.01in">October application, and gave a written reserved judgment on 12 February 2020, the </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">neutral citation of which is <span style="font-style:italic">Bell v Ide </span>[2020] EWHC 230 (Ch). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He first considered whether rule 12.9, which requires an application to be served at least 14 days before the “date fixed for the hearing” required service of the substantive application at least 14 days before the date originally fixed for the hearing (9 July 2019), or the date subsequently fixed for the hearing (15 October 2019).  He concluded that it was the latter, not following the decision of Deputy ICCJ Prentis in <span style="font-style:italic">Re HS Works Ltd </span>[2018] EWHC 1405 (Ch) which was to the opposite effect.  That meant that there was no failure by the Trustees to serve in accordance with the 2016 rules [12]-[19].  This is the subject of Ground 3 of the appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He then considered what the position would be if he were wrong on that point.  HH and Mr House argued that in that case the effect of DDJ Hebblethwaite’s decision to vacate and re-fix the first hearing of the application was to extend the time for service, and that before doing so he should have taken into account the effect on them, and in particular that it would deprive them of the benefit of a limitation defence.  They relied on <span style="font-style:italic">Kelcrown</span> where HHJ Walden-Smith had in similar circumstances held that the Court ought to apply the principles applicable under the CPR to the extension of time for service of a claim form.  HHJ Matthews however disagreed. In his view it was a significant difference that unlike a claim form which ceases to be valid if not served in time, an application notice does not become a nullity if not duly served [27][28]; and hence the problem of the potential loss of a limitation defence does not arise [38].  He therefore declined to follow <span style="font-style:italic">Kelcrown </span>[39].  This is the subject of Ground 4 of the appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He next considered whether DDJ Hebblethwaite’s decision should be set aside.  Having dealt with the limitation point, he said that his decision that it was appropriate to adjourn was not outside the reasonable range of possible decisions that could be made, and declined to set it aside [42].  This is the subject of Ground 5 of the appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He then considered and allowed HH’s application to strike out the preference claim on the simple basis that by s. 340(3)(a) IA 1986 a preference requires the person preferred to be one of the bankrupt’s creditors and the Trustees did not suggest that HH was a creditor of Mrs Ide [43].  There is no appeal against that aspect of his decision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Finally he dealt with Mr House’s application for summary judgment on the claim against him.  He acknowledged that the documentary evidence all appeared to suggest that there was no viable claim but declined to grant summary judgment in favour of Mr House [48].  This is the subject of Ground 6 of the appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By his Order dated 12 February 2020 he therefore struck out the Trustees’ preference claim against HH, but otherwise dismissed the October application; he made no order on the variation application.    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Ground 1 – power to transfer a specific application  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ground 1 is that there was no power to transfer the October application to the High Court, being a single application made in the course of insolvency proceedings. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Rule 12.30(2) provides as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.29in;text-indent:-0.07in">
+	      <span style="font-size:11pt">“The County Court may order insolvency proceedings which are pending in a hearing centre to be transferred either to the High Court or to another hearing centre.”  </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">The question is whether “insolvency proceedings” in this sub-rule is to be given a narrow interpretation under which it refers only to the entirety of a set of insolvency proceedings (in the present case the entire proceedings relating to Mrs Ide’s bankruptcy, and all applications in the bankruptcy) or is to be given a wider interpretation under which it is capable of including a particular application in the bankruptcy.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In support of the narrow interpretation, Ms Powers relied on a number of aids to interpretation.  She referred to rule 1.1 which sets out the scope of the 2016 rules as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:0.73in;text-indent:-0.01in"><span style="font-weight:normal">“</span>1.1   Scope </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">These Rules are made to give effect to Parts 1 to 11 of the Insolvency Act 1986 and the EU Regulation. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">Consequently references to insolvency proceedings and requirements relating to such proceedings are, unless the context otherwise requires, limited to proceedings in respect of Parts 1 to 11 of the Act and the EU Regulation (whether or not court proceedings).”   </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">That does not seem to me to take matters any further.  Part IX IA 1986 (ss. 263H to 371) concerns bankruptcy.  There is no doubt therefore that bankruptcy proceedings are “insolvency proceedings” and within the scope of the 2016 rules.  But equally Part IX includes within it provisions such as s. 339 and s. 340 under which the trustee can apply to court (in relation to transactions at an undervalue and preferences respectively).  So if “insolvency proceedings” is given the wider interpretation, applications under s. 339 and s. 340, being proceedings in respect of Part IX IA 1986, would equally be insolvency proceedings within the scope of the 2016 rules.  I do not myself think therefore that rule 1.1, which sets out the scope of the 2016 rules, assists in choosing between the wide interpretation or the narrow interpretation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Nor do I think that the reference to the EU Regulation assists.  The regulation referred to is Regulation (EU) 2015/848 of the European Parliament and of the Council on insolvency proceedings.  Art 2(4) contains a definition of “insolvency proceedings” for the purposes of the regulation: it means the proceedings listed in Annex A.  This lists a number of different types of insolvency proceedings for each Member State described in general terms: those for the UK for example include winding up, administration and bankruptcy.  But the primary purpose of the regulation is to allocate jurisdiction to open main insolvency proceedings to the Member State where the debtor’s centre of main interests is situated and to provide that insolvency proceedings opened in other Member States are secondary proceedings with limited effect (Art 3).  It is not surprising therefore that the Annex lists specific types of proceedings that can be regarded as opening a particular insolvency regime.  That seems to me to cast no light on the meaning of “insolvency proceedings” in the 2016 rules, which on any view is wider than the meaning in the regulation: Mr Fennell, who appeared for the Trustees, gave the example of receivership.  Receivership is not one of the insolvency proceedings listed in the regulation.  But IA 1986 contains (in </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Part III) provisions applicable to receivership, including s. 35 under which receivers appointed out of court can apply to the Court for directions.  It seems clear that such an application would not be “insolvency proceedings” for the purpose of the EU regulation, but equally I see no reason to doubt that it would be “insolvency proceedings” within the scope of the 2016 rules.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ms Powers next relied on rule 12.33.  So far as material this provides as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:0.73in;text-indent:-0.01in"><span style="font-weight:normal">“</span>12.33  Procedure following order for transfer </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">Where a court makes an order for the transfer of proceedings under rule 12.30 …,  it must as soon as reasonably practicable deliver to the transferee court or hearing centre a sealed copy of the order and the file of the proceedings. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">A transferee court (or hearing centre) which receives such an order and the file in winding up proceedings or bankruptcy proceedings or proceedings relating to a debt relief order must, as soon as reasonably practicable, deliver notice of the transfer to the official receiver attached to that court or hearing centre and the transferor court respectively.”  </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ms Powers said that that suggested that a transfer could only be made of the entire proceedings (the bankruptcy proceedings as a whole) as it would not make sense to have to deliver the whole file to the transferee court if only a particular application was being transferred.  But that depends on what “proceedings” means in rule 12.33(1).  If it means the entire proceedings, then no doubt the “file of the proceedings” is the entire file of the bankruptcy and all the applications made in it.  But if rule 12.30 permits transfer of a particular application, then those are the proceedings referred to in rule 12.33(1), and the “file of the proceedings” can quite reasonably be interpreted as limited to the file relating to that particular application, as indeed Ms Powers accepted.  On analysis therefore this does not help to answer whether “proceedings” is to be given a narrow or wide interpretation.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ms Powers also sought to derive some support from rule 12.33(2) on the basis that it would seem unnecessary, and increase costs and run the risk of confusion, if the official receiver had to be notified every time a particular application was transferred.  I do not think that any particular weight can be placed on that point: we were told by Mr Fennell that even after trustees had been appointed, official receivers had some residual functions to perform in a bankruptcy and there does not seem anything surprising in them being notified whenever proceedings in a bankruptcy are transferred.  If the transfer is limited to a particular application, the notification will no doubt say so and unless the official receiver had any particular interest in that application, there would be no reason for him or her to do anything.  But I do not see that it would be confusing, and the cost (which would appear to fall on the Court anyway) would be minimal.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ms Powers also sought to rely on the High Court decisions under the Bankruptcy Act 1914 and Bankruptcy Rules 1952, namely <span style="font-style:italic">Re Kouyoumdjian </span>[1956] 1 WLR 558 and <span style="font-style:italic">Re A Debtor </span>[1985] 1 WLR 6, on the principle that where a subject has been dealt with by a developing series of Acts, the Courts often find it necessary, in construing the latest Act (or here rules) to trace the course of the development: see <span style="font-style:italic">Bennion on Statutory Interpretation</span> (7<span style="vertical-align:super;font-size:smaller">th</span> edn, 2017) at §24.5.  But I do not consider that those cases are of any assistance either.  First, they were decisions on differently worded provisions.  Second, it was established, very shortly after the IA 1986 and its accompanying rules (the Insolvency Rules 1986) were introduced, that they formed a new code which was in general to be interpreted without reference to the previous law.  A comparatively recent statement to that effect can be found in the judgment of Lord Neuberger in <span style="font-style:italic">Re Lehman Brothers International (Europe) (in administration)</span> [2017] UKSC 38 at [12] where he referred to the 1986 legislation as representing a “comprehensive overhaul” of the insolvency legislation and said that it cannot be assumed that judicial decisions relating to previous insolvency legislation necessarily hold good in relation to the 1986 legislation; but the principle was well established long before that.  In the light of that I do not consider that the interpretation of rule 12.30(2) of the 2016 rules should be governed, or even influenced, by the decisions on predecessor legislation in different terms. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">We are left therefore to make sense of the rule as it stands.  As a matter of language, “proceedings” is one of those words that has a fluid meaning.  It can quite sensibly be used to mean the entirety of bankruptcy proceedings; but there is no reason why it cannot also be used to describe a discrete application within bankruptcy proceedings as a whole.  So the language of the rule does not provide any clear answer.  In those circumstances we should interpret the rule in such a way as to make most practical sense.  I agree with Mr Fennell that that points towards adopting the wide interpretation under which it is possible for the County Court to transfer a particular application in the bankruptcy to the High Court.  He gave as an example a case where a trustee in bankruptcy brings two applications in the bankruptcy, one complex and high-value that was suitable to be tried in the High Court (such as a claim to recover a preference) and one that was a straightforward low-value claim that was routine County Court work (such as a claim for possession and sale of the bankrupt’s house), where both applications are proceeding at the same time.  If the County Court could only transfer the whole bankruptcy, it would mean that either the High Court would have to deal with the low-value claim, or the County Court would have to deal with the high-value one, or the bankruptcy proceedings as a whole would have to be transferred back and forth every time another hearing in one of the applications loomed.  None of this makes any sense.  In my judgment it is more sensible to interpret rule 12.30(2) as enabling the County Court to transfer a particular application in bankruptcy without having to transfer the whole bankruptcy, and that is the meaning we should give it.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">That is consistent with the view reached, as an alternative ground for his decision, by Coulson J in <span style="font-style:italic">Hall and Shivers v Van der Heiden </span>[2010] EWHC 537 (TCC) on the previous rules (rule 7.11 of the Insolvency Rules 1986): see at [21]-[22].  It also has the merit of being consistent with the Insolvency PD, para 3.6 of which clearly envisages that a transfer might be made either of an “application within existing insolvency proceedings” or of “the entirety of those insolvency proceedings”.  Ms Powers correctly pointed out that Practice Directions have no legislative force and if they misstate the law they “carry no authority at all” (<span style="font-style:italic">U v Liverpool City Council</span> [2005] EWCA Civ 475 at [48] per Brooke LJ) but it is nevertheless some reassurance to find that a Practice Direction issued by Sir Geoffrey Vos C takes the same view of the 2016 rules as I do. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For these reasons I conclude that HHJ Matthews was right in his judgment of 4 </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.01in;margin-right:-0.00in;text-indent:-0.01in">February 2020 and would dismiss the appeal against his Order of 4 February 2020 transferring the October application to the High Court. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Ground 3 – meaning of rule 12.9 </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ground 3 is that on a true construction of rule 12.9(3) the Trustees were required to serve their substantive application at least 14 days before 9 July 2019. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Rule 12.9 provides as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:0.73in;text-indent:-0.01in"><span style="font-weight:normal">“</span>12.9 Service or delivery of application</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">The applicant must serve a sealed copy of the application, endorsed with the venue for the hearing, on the respondent named in the application unless the court directs or these Rules provide otherwise. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">The court may also give one or more of the following directions— </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.40in;text-indent:-0.30in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.40in;margin-right:0.29in">
+	      <span style="font-size:11pt">that the application be served upon persons other than those specified by the relevant provision of the Act or these Rules; </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.40in;text-indent:-0.30in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.40in;margin-right:0.29in">
+	      <span style="font-size:11pt">that service upon, or the delivery of a notice to any person may be dispensed with; </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.40in;text-indent:-0.30in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.40in;margin-right:0.29in">
+	      <span style="font-size:11pt">that such persons be notified of the application and venue in such other a way as the court specifies; or </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.40in;text-indent:-0.30in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.40in;margin-right:0.29in">
+	      <span style="font-size:11pt">such other directions as the court sees fit. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">A sealed copy of the application must be served, or notice of the application and venue must be delivered, at least 14 days before the date fixed for its hearing unless— </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.40in;text-indent:-0.30in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.40in;margin-right:0.29in">
+	      <span style="font-size:11pt">the provision of the Act or these Rules under which the application is made makes different provision; </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.40in;text-indent:-0.30in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.40in;margin-right:0.29in">
+	      <span style="font-size:11pt">the case is urgent and the court acts under rule 12.10; or </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.40in;text-indent:-0.30in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.40in;margin-right:0.29in">
+	      <span style="font-size:11pt">the court extends or abridges the time limit.” </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The question is what “the date fixed for the hearing” in rule 12.9(3) means.  Does it refer to the date originally fixed for hearing and endorsed by the Court on the application notice (in the present case 9 July 2019)?  Or does it refer to the date ultimately fixed for the hearing (in the present case 15 October 2019) as HHJ Matthews held?   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Again both constructions are linguistically possible.  The choice between them must be determined by the structure of the 2016 rules as a whole, and the practical consequences.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">So far as the structure of the 2016 rules as a whole is concerned, this to my mind points quite strongly towards the date originally fixed for the hearing being intended.  Part 12 of the 2016 rules is concerned with “Court Procedure and Practice”.  It is divided into chapters.  Chapter 3 (rules 12.6 to rule 12.13) deals with “Making applications to court: general”.  Rule 12.6 (“Preliminary”) explains which applications </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Chapter 3 applies to.  Rule 12.7 (“Filing of application”) tells the applicant what to do when filing the application.  Rule 12.8 then provides: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:0.73in;text-indent:-0.01in"><span style="font-weight:normal">“</span>12.8 Fixing the venue</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.29in;text-indent:0.00in">
+	      <span style="font-size:11pt">When an application is filed the court must fix a venue for it to be heard unless— </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">it considers it is not appropriate to do so; </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">the rule under which the application is brought provides otherwise; or </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11pt;color:#000000;background-color:auto;margin-left:1.09in;text-indent:-0.30in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.09in;margin-right:0.29in">
+	      <span style="font-size:11pt">the case is one to which </span>
+	      <a href="https://uk.westlaw.com/Document/IF6C55B909D8111E68282E420861F8948/View/FullText.html?originationContext=document&amp;transitionType=DocumentItem&amp;contextData=(sc.DocLink)">
+		<span style="font-size:11pt">rule 12.12</span>
+	      </a>
+	      <a href="https://uk.westlaw.com/Document/IF6C55B909D8111E68282E420861F8948/View/FullText.html?originationContext=document&amp;transitionType=DocumentItem&amp;contextData=(sc.DocLink)">
+		<span style="font-size:11pt"> </span>
+	      </a>
+	      <span style="font-size:11pt">applies.” </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">That is then followed by rule 12.9 which I have already set out.  Rules 12.10 to 12.13 then give the Court various procedural powers (to hear urgent matters immediately, to give directions, to determine matters without notice or without a hearing), including in rule 12.13 a power to adjourn a hearing.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">These rules seem to me to follow a logical and chronological structure in which the applicant first files the application under rule 12.7, the Court then fixes a venue under rule 12.8, and the applicant then serves the application, endorsed with the venue, on the respondent.  Seen in that light it is natural to read the reference to the “date fixed for the hearing” in rule 12.9(3) as a reference back to the date fixed under rule 12.8.  That was the view taken, in my judgment rightly, by Deputy ICCJ Prentis in <span style="font-style:italic">Re HS Works Ltd </span>at [56.1].  In the present case HHJ Matthews disagreed (at [16]) on the grounds that rule 12.8 does not refer to fixing a time at all.  That suggests that he was unfortunately not referred to the definition of “venue” in rule 1.2(2) (see paragraph 10 above), which makes it clear that the fixing of the “venue” under rule 12.8 requires the Court to fix a date, time and place; that is then the “venue” endorsed on the sealed copy which is referred to in rule 12.9(1), as provided for in the form used by the Trustees.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This interpretation is supported by two more minor points.  One is found in rule 12.12(1)(b).  This rule deals with applications that do not need to be served and provides a number of ways in which the Court can deal with such an application, of which (b) provides that the Court may: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.29in;text-indent:-0.07in">
+	      <span style="font-size:11pt">“fix a venue for the application to be heard, in which case rule 12.9 applies to the extent that is relevant.”   </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">That is some indication that the drafter of the rules saw the application of rule 12.9 as logically following on from the fixing of a venue.  The other is the fact that the power to adjourn in rule 12.13 is placed at the end of Chapter 3.  The order in which rules are placed cannot carry any great weight, but it does perhaps suggest that the drafter of the rules saw the logical order of events to have been the filing of the application, the fixing of the venue and the service of the application before the question of adjournment arose. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">So far as practical considerations are concerned, I think we should, if other things are equal, favour an interpretation that leads to earlier service of applications rather than later.  In the usual course that too would point to rule 12.9(3) referring to the date originally fixed for the hearing, as it is in the nature of things more likely that a </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">hearing will be adjourned off to a later date than brought forward.  It should not be forgotten that although some applications are purely procedural, an application such as the substantive application here amounts to the bringing of a substantive claim against the respondent.  It is in that respect analogous to the issue of a claim form.  Although technically brought in the bankruptcy proceedings (and hence in one sense not an originating process), this is very often irrelevant from the point of view of the respondent who may not have been involved in any aspect of the bankruptcy proceedings before (as indeed was the case with HH and Mr House here) and may not even know from pre-litigation correspondence that proceedings are contemplated, let alone that they have been brought, against him (this was in fact the case here with Mr House).   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Service of a claim form, as this Court said in <span style="font-style:italic">Hoddinott v Persimmon Homes (Wessex) Ltd </span>[2007] EWCA Civ 1203 at [54], serves three purposes: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.29in;text-indent:-0.07in">
+	      <span style="font-size:11pt">“The first is to notify the defendant that the claimant has embarked on the formal process of litigation and to inform him of the nature of the claim. The second is to enable the defendant to participate in the process and have some say in the way in which the claim is prosecuted: until he has been served, the defendant may know that proceedings are likely to be issued, but he does not know for certain and he can do nothing to move things along. The third is to enable the court to control the litigation process.  If extensions of time for serving pleadings or taking other steps are justified, they will be granted by the court. But until the claim form is served, the court has no part to play in the proceedings.”     </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">The third purpose may not apply in quite the same way in insolvency proceedings, but the first two undoubtedly do.  These considerations apply with equal force to any form of process under which a formal claim is made in proceedings for the first time against a respondent.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The importance which the law attaches to service of originating process is well articulated in <span style="font-style:italic">Zuckerman on Civil Procedure: Principles of Practice </span>(3<span style="vertical-align:super;font-size:smaller">rd</span> edn, 2013) at §§5.1ff.  There Professor Zuckerman refers to service, especially of originating process, as no mere formality, but as fulfilling two purposes.  One of these is the notification of proceedings to the defendant, which is a “fundamental requirement of justice” such that decisions arrived at without due notice lack legitimacy (§5.2).  The other is to ensure the proper operation of limitation periods (§5.3).  Limitation periods underpin the stability of rights by ensuring that they cannot be challenged after the passage of a certain period of time.  But since limitation periods are met by the claimant issuing a claim, it is essential to place a time period on service: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.29in;text-indent:-0.07in">
+	      <span style="font-size:11pt">“In the absence of such time limit a claimant would be able to keep alive the possibility of legal proceedings indefinitely, subverting the principle of finality of litigation and condemning the defendant’s rights to perpetual uncertainty. Put differently, the objective of limitation rules would be thwarted if, having issued proceedings, claimants could indefinitely put off service and thereby keep their claims alive infinitely into the future.” </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">This is of course written from the perspective of claim forms issued under the CPR.  But the principles are equally applicable to claims made in insolvency proceedings.  It is unsatisfactory for an applicant to have issued an application, thereby formally invoking the processes of the Court against a respondent, and for the respondent to be kept in ignorance of that fact for an indefinite amount of time.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Fennell said that unlike a claim form where there is a fixed period of 4 months to serve it, there is no fixed period under the 2016 rules for service of an application.  That is true but to my mind is a point which goes the other way.  A potential defendant to a Part 7 claim will know, if well advised, that the claimant will usually have 6 years (or whatever the appropriate limitation period is) to issue, and a further 4 months to serve, a claim form, so in the ordinary case can assume that no claim is likely to be able to be brought if 6 years and 4 months have elapsed.  A potential respondent to an application in insolvency proceedings will not be able to calculate the period so nicely; but if rule 12.9(3) refers to the date first fixed for the hearing will at least be able to form some view of whether he is still at risk of proceedings, depending on how long the Court usually allows between issue and the date fixed for the first hearing.  But if rule 12.9(3) refers not to the date initially fixed but to a refixed date, and it is possible for the applicant to re-fix the date without reference to the respondent, the potential length of time for which the respondent remains at risk – as the present case illustrates – is even less predictable.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">These considerations seem to me to point to an interpretation of the 2016 rules under which, once the applicant has issued an application, the applicant should notify the respondent of that sooner rather than later.  That to my mind supports the interpretation of rule 12.9(3) under which the date fixed for the hearing is the date endorsed on the sealed copy of the application notice as part of the venue originally fixed by the Court under rule 12.8, rather than the date that might ultimately be the first hearing date.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The only practical difficulty that Mr Fennell suggested that might cause would be if the Court, having initially fixed a date some months after issue, were persuaded to bring the hearing date forward, in which case it would make no sense for the time for service to be tied to the original date.  We did not receive detailed submissions on whether that could be done, as Mr Fennell suggested, as an administrative matter, or whether the moving of the date of a hearing, whether forwards or back, was, as Lewison LJ suggested, something that required a judicial decision.  One suspects that it is relatively unusual for the Court to be able to accommodate a hearing earlier than initially fixed.  But if this were to happen, it seems to me to be obvious that the applicant would have to notify the respondent both that the proceedings had been issued and of the hearing date, in order to make it an effective hearing.  That would be so regardless of what rule 12.9(3) means.  I do not therefore think that this example is a good reason to adopt an interpretation of rule 12.9(3) under which the effect of the applicant having a hearing moved to a later date is to put off the date for service of the application. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For these reasons I respectfully disagree with the conclusion reached by HHJ Matthews.  In my judgment rule 12.9(3) requires the applicant to serve the application 14 days before the date initially fixed for its hearing and endorsed on the application notice.  In the present case that was 9 July 2019, and the application notice should have been served by 24 June 2019, which it was not. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Grounds 4 and 5 – impact of expiry of limitation period </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is convenient to take Grounds 4 and 5 together.  Ground 4 is that HHJ Matthews was wrong to hold that when the Court is considering an application to vacate and refix a hearing (and hence to extend time for service of the application notice) the potential loss of a limitation defence was an irrelevant consideration.  Ground 5 is that HHJ Matthews was wrong to fail to set aside the Order of DDJ Hebblethwaite.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The effective question under Ground 4 is whether the principles applicable under the CPR to an application to extend the time for service of a claim form where the limitation period has expired equally apply to an extension of time for service of an application brought under the 2016 rules.  I will say immediately that my instinct is that there is no reason why they should not, and every reason why they should.  Some applications in insolvency proceedings are more in the nature of applications for directions in which limitation periods either have no, or a much reduced, part to play.  But as the present case illustrates some insolvency applications are claims to recover money from the respondents and differ little in effect from claims under the CPR.  In each case the applicant or claimant seeks to prove certain allegations which entitle him to make a substantive claim against the respondent or defendant.  Indeed it was common ground that certain claims could be brought either by way of Part 7 claim or by application under the 2016 rules.  One example is a claim brought against a director for breach of fiduciary duty in relation to a company in liquidation.  That could be brought in the name of the company as a Part 7 claim alleging a breach of duty, or it could be brought by the liquidator as an application under s. 212 IA 1986 alleging a misfeasance, but the substance of the claim would be the same.  It is also common ground that limitation periods apply to applications in insolvency proceedings: see the interesting historical account by HHJ Matthews at [22]-[23].   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In those circumstances one would expect the applicable principles to be similar, and not to lead to radically differing outcomes, unless there is good reason.  I will say straightaway that I am not persuaded that there is any good reason for the principles to be different. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There was no dispute as to the position under the CPR.  A claim is brought within the relevant limitation period if it is issued within that period.  The claimant then has 4 months in which to serve it (or 6 months if it is to be served outside the jurisdiction).  That is the effect of CPR r 7.5 which provides that a claimant “must” complete the relevant step required by midnight on the calendar day 4 months after issue, the relevant step depending on the method of service adopted (for example posting in the case of service by first class post).  CPR r 7.6 permits the Court to extend time for service.  Neither rule says anything about limitation.  But the practice is, and has been for very many years, that the expiry of the limitation period is a very material consideration when considering an extension of time.  The way it was put by this Court in <span style="font-style:italic">Cecil v Bayat </span>[2011] EWCA Civ 135 at [54]-[55] by Stanley Burnton LJ was: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.10in;margin-right:0.29in;text-indent:-0.37in">
+	      <span style="font-size:11pt">“54  … The primary question [in a case where limitation is engaged] is whether, if an extension of time is granted, the defendant will or may be deprived of a limitation defence. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.10in;margin-right:0.29in;text-indent:-0.37in">
+	      <span style="font-size:11pt"> 55  It is of course relevant that the effect of a refusal to extend time for service of the claim form will deprive the claimant of what may be a good claim.  But the stronger the claim, the more important is the defendant’s limitation defence, which should not be circumvented by an extension of time for serving a claim </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.10in;margin-right:0.29in;text-indent:0.00in">
+	      <span style="font-size:11pt">form save in exceptional circumstances.” </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ms Powers submitted that there was no reason why the same should not apply here.  Once it was held that rule 12.9(3) required service by 24 June 2019, the Trustees needed an extension of time to serve the application.  Ms Powers accepted that DDJ Hebblethwaite’s Order of 27 June 2019 should be regarded as granting an implied extension of time, but said that in granting such an extension he should have had regard to the fact that the limitation period had by then expired.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Fennell said that there was a significant difference between the failure to serve a claim form within 4 months under the CPR and a failure to serve an application notice within the time specified by rule 12.9(3).  He referred to the fact that judges regularly refer to a claim form not served within the 4 months as having “expired”: see eg <span style="font-style:italic">Barton v Wright Hassall LLP </span>[2018] UKSC 12 at [1] per Lord Sumption, and <span style="font-style:italic">Woodward v Phoenix Healthcare Distribution Ltd</span> [2019] EWCA Civ 985 at [2] per Asplin LJ, where in each case the judge referred to the claim form as having “expired unserved”.  That usage may be influenced by the fact that, as Lewison LJ pointed out, under the RSC there was an express provision in RSC Ord 6 r 8 that a writ should be “valid” in the first instance for 12 months (or 4 months or whatever) so that it ceased to be valid if not served. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">But CPR r 7.5 does not contain any similar express provision.  Instead it simply provides (as already referred to) that the relevant step must be taken within 4 months.  Failure to do so does not totally invalidate the claim form, as the Court has power to grant an extension of time under CPR r 7.6.  I do not myself see any relevant difference between this and the 2016 rules which provide that an application notice “must” be served by a particular time.  That is again subject to the Court’s powers which include (by rule 12.9(3)(c)) a power to abridge the time limit, and more generally (by CPR r 3.1(2)(a), as incorporated by rule 12.1(1)) a power to extend time.  Mr Fennell expressly accepted that if an application notice was not served in time, and the Court refused to grant the necessary extension of time for service, then the application could not be proceeded with.  That seems to me no different in practice from a claim form “expiring”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I therefore do not accept the premise of Mr Fennell’s argument that there is a difference in substance between the position of a claim form not served in accordance with CPR r 7.5 and that of an application notice not served in accordance with rule 12.9.  In each case an extension of time for service is needed from the Court if the proceedings are to continue.  In each case if the proceedings were brought within the limitation period but the limitation period has (or even arguably has) expired by the time the claimant or applicant applies for an extension, the effect of granting one would be to deprive (or arguably deprive) the defendant or respondent of a limitation defence.  In my judgment the same principles ought to be applicable.  That was the view adopted by HHJ Walden-Smith in <span style="font-style:italic">Kelcrown</span>, in my view rightly. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">HHJ Matthews did not actually have to decide the point in light of his view on the meaning of rule 12.9 but in a thoughtful judgment expressed a clear preference for not following <span style="font-style:italic">Kelcrown</span>.  The basis on which he did so was that there was a distinction between a claim form which “becomes a nullity” if not served in time, and an application notice where the requirement for service is “purely procedural” with the result that failure to serve in time does not invalidate the application: see at [24]-[28].  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">But in this Court, as I have said, Mr Fennell accepted that if an application notice is not served in time, and the Court refuses an extension of time, then it cannot be proceeded with.  That seems to me to rob the suggested distinction between an unserved claim form and an unserved application notice of any substance.  In each case an extension of time is needed, and if limitation is engaged I can see no principled reason why it should be the “primary question” for the Court under the CPR but of no relevance at all under the 2016 rules. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">No doubt if there is no question of limitation, the Court will usually deal with late service under the 2016 rules by permitting it and, if necessary, granting an adjournment.  In that sense I agree that service is a procedural matter, to be regulated by the Court’s case management powers.  But, as can be seen from <span style="font-style:italic">Zuckerman</span>,<span style="font-style:italic"> </span>in cases where limitation is engaged, the requirement for timely service ceases to be simply a matter of case management and becomes a matter of substance.  Limitation is a defence, not just a procedural matter, and a defendant is entitled to expect that a claimant who issues a claim form within the limitation period but does not serve it within the 4 months will not, absent exceptional circumstances, be able to obtain an extension if the limitation period has by then expired.  I see no reason why the same should not apply to an application under the IA 1986.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For these reasons, which are effectively those advanced by Ms Powers in her wellstructured and cogent submissions, I would hold that once the relevant limitation period has expired the same principles should be applied by the Court in considering an extension of time for service of an application notice raising a substantive claim as are applicable under the CPR to an extension of time for service of a claim form. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">So far as Ground 5 is concerned, Mr Fennell ultimately accepted that if this Court reached that conclusion then the decision of DDJ Hebblethwaite did not take into account a highly material factor and would have to be set aside, at any rate as against HH and Mr House.  I would therefore allow the appeal and set aside the Order of DDJ Hebblethwaite as against HH and Mr House, with the consequence, if my Lords agree with me, that the claims against HH and Mr House cannot be proceeded with. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Ground 6</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">66.<span style="font-family:Arial"> </span>Ground 6 is that HHJ Matthews was wrong to decline to grant summary judgment dismissing the claim against Mr House.  It raises no point of principle, and merely concerns the application of well established principles to the particular facts of this case.  In the light of my decision on Grounds 3 to 5, it does not arise and I do not see that there is any particular value in considering it. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Conclusion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I would dismiss the appeal against HHJ Matthews’ Order of 4 February 2020 transferring the October application to the High Court, but allow the appeal against his Order of 12 February 2020, set aside the Order of DDJ Hebblethwaite dated 27 June 2019 as against HH and Mr House, and strike out the substantive application as against HH and Mr House. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Arnold:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree without hesitation with the judgment of Nugee LJ in relation to grounds 1, 3 and 4 of the appeals.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Two points have caused me some hesitation concerning ground 5. The first is a general one. As Nugee LJ has explained, the CPR provide a clear framework for considering the impact of limitation. Proceedings are commenced when the claim form is issued. Thus no limitation defence is available if the claim form is issued on the last day of the limitation period (six years from the accrual of the cause of action in most cases), but limitation will bar the claim if the claim form is issued a day later. If the claim form has been issued in time, it may be served on the last day of the period allowed for service (four months if within the jurisdiction, six months if outside). No extension of time for service will be granted if the limitation period has expired save in exceptional circumstances, and that is so even if the application is made prior to the expiry of the period permitted for service. The criterion for judging whether a claim is barred by limitation is equally applicable to insolvency applications, but the approach to applications for extensions of time for service cannot be applied without modification to the insolvency context because the Insolvency Rules 2016 do not specify any fixed period for service and, as Nugee LJ has explained, the date of the first hearing, and hence the date by which the application must be served, is determined by the court and not by the applicant. I agree with Nugee LJ that, for the reasons he has given, limitation considerations are just as relevant to insolvency applications as they are to claims under the CPR. Even so, it seems to me that an applicant which has issued its insolvency application on the last day of the limitation period and has only been given two months in which to serve it by the court stands in a different position when it comes to seeking an extension of time for service to an applicant which has issued its insolvency application on the last day of the limitation period and has been given four months in which to serve it by the court. If one takes the period specified by CPR rule 7.5 as the yardstick, and assuming that service is to be within the jurisdiction, then that would suggest that, other things being equal, the first applicant should be given a two-month extension of time whereas the second applicant should be refused an extension. In both cases, however, it would be relevant to consider what efforts the applicant had made to serve the application in time and why, therefore, the applicant needed an extension of time for service. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The second point concerns the facts of the present case. It was common ground before HHJ Matthews, and this Court, that the substantive application by the Trustees was issued on 30 January 2019, and that that was at least arguably the last day of the limitation period. As Nugee LJ has explained, the court fixed a hearing date of 9 July </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">2019, and hence the Trustees were required to serve the application by 24 June 2019. That was a generous period of nearly five months. The Trustees’ June application to postpone the hearing date was made on 7 June 2019, prior to the expiry of the period for service. There were three problems with this application. First, it did not explicitly seek an extension of time for service of the substantive application. Secondly, the witness statement of Ms Unsworth in support of the application made no mention of the limitation position. (HH and Mr House do not complain that the Trustees thereby failed to comply with their duty of disclosure on a without notice application, however.) Thirdly, although Ms Unsworth stated that the substantive application had not been served on any of the respondents, she did not suggest that the Trustees had had any difficulty in serving the respondents other than Mr Burnett (<span style="font-weight:bold">“the nonBurnett respondents”</span>). Rather, she said that it was the Trustees’ intention to serve the substantive application on all the respondents at the same time once the June application had been determined and she requested that the hearing on 9 July 2019 be put back in order to give the court time to deal with the June application and (assuming that the application for permission to serve out was successful) for Mr Burnett to be served and to respond to the substantive application. Thus it appears that the reason for the delay in serving the non-Burnett respondents was the preparation and making of the application for service out of the jurisdiction on Mr Burnett. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">DDJ Hebblethwaite cannot be criticised for making the order he did given that the limitation position was not drawn to his attention. But what order should he have made if it had been? Subject to the point I have made in paragraph 69 above, I agree with Nugee LJ that he should have approached the matter in accordance with <span style="font-style:italic">Cecil v Bayat</span>. Approaching the matter in that way, I consider that the only correct exercise of his discretion would have been to refuse an extension of time for service of the substantive application on the non-Burnett respondents: the Trustees had had plenty of time in which serve the non-Burnett respondents and the need to obtain permission to serve the substantive application on Mr Burnett outside the jurisdiction was not a good reason for delaying service on the non-Burnett respondents. It was perfectly sensible for the Trustees to seek directions for the claim against Mr Burnett to proceed in accordance with the same timetable as the claims against the non-Burnett respondents, but that did not require service on the non-Burnett respondents to be delayed, still less for it to be delayed until (as it turned out) 6 September 2019 i.e. over 10 weeks after the original date for service and over seven months after the substantive application was issued. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The effect of this would have depended on when the application was dealt with, however. DDJ Hebblethwaite dealt with the June application on the papers, presumably as part of the boxwork assigned to him in the week commencing 24 June 2019. By the time that DDJ Hebblethwaite made his order, the Trustees were out of time for serving the substantive application on the non-Burnett respondents for 9 July 2019. If one imagines that the court had assigned the June application to DDJ Hebblethwaite in the week commencing 7 June 2019 and that he had made an order refusing an extension of time during the course of that week, then the Trustees would have been able to serve the substantive application on the non-Burnett respondents in time for 9 July 2019. The reason why that did not happen was that the Trustees not only did not draw the limitation position to the court’s attention, but also did not request that the June application be dealt with expeditiously. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the end, therefore, I consider that the concession ultimately made by counsel for the Trustees which Nugee LJ has recorded in paragraph 65 above was rightly made. Accordingly, I agree with Nugee LJ’s conclusion on ground 5. As Nugee LJ has explained, in those circumstances it is not necessary to consider ground 6. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Lewison </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree that the appeal should be allowed for the reasons given by Nugee LJ. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

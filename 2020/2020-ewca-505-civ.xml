@@ -1,0 +1,572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/505"/>
+	  <FRBRuri value="ewca/civ/2020/505"/>
+	  <FRBRdate date="2020-04-07" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="505"/>
+	  <FRBRname value="LE (St Vincent And the Grenadines) v The Secretary of State for the Home Department"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/505/eng"/>
+	  <FRBRuri value="ewca/civ/2020/505/eng"/>
+	  <FRBRdate date="2020-04-07" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/505/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/505/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:35:35" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/505/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>505</uk:number>
+	<uk:cite>[2020] EWCA Civ 505</uk:cite>
+	<uk:hash>d6b1d1390e37ae9347e634a86a3fc260ed41710304e09e14dae06fd0e408685b</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/505/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.01in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 505</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>C5/2019/1398</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE UPPER TRIBUNAL</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">IMMIGRATION AND ASYLUM CHAMBER)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">UPPER TRIBUNAL JUDGE PERKINS</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">HU/14291/2017</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 07/04/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE KING DBE</span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold">-and- </span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE FLAUX</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">LE (ST VINCENT AND THE GRENADINES) </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">
+	  <span style="font-weight:bold">and - </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:2.50in;margin-right:0.00in;text-indent:-2.41in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE SECRETARY OF STATE FOR THE HOME </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Respondent</span>
+	<span style="font-weight:bold"> DEPARTMENT </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-right:0.04in"><span style="font-weight:bold">Mikhil Karnik</span> (instructed by <span style="font-weight:bold">Paragon Law</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:center;margin-right:0.04in"><span style="font-weight:bold">Zane Malik </span>(instructed by<span style="font-weight:bold"> The Government Legal Department</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center;margin-left:2.16in;margin-right:2.19in">Hearing date: 19 March 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-style:italic;font-weight:bold">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website.  The date and time for hand-down is deemed to be 10:30am on 7 April 2020. </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-right:0.00in">
+	      <span style="font-weight:bold">Lord Justice Flaux:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.00in">Introduction </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant appeals, with permission granted by Sir Ross Cranston on 22 September 2019, against the decisions of the Upper Tribunal: (i) dated 26 September 2018 that the First-tier Tribunal had made an error or law when it allowed his appeal against the decision of the respondent dated 19 October 2017 to make a deportation order; and (ii) dated 6 February 2019 dismissing his appeal against the deportation order. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.00in">Background facts </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant was born in July 1977 as a citizen of the UK and Colonies, a status which ceased when St Vincent and the Grenadines gained independence in 1979. Since then he has been a citizen of St Vincent and the Grenadines. From 4 November 2002 until 22 October 2016, he served as a Royal Marine Commando and as a consequence was exempt from immigration control under section 8(4) of the Immigration Act 1971. He saw active service in Afghanistan and Iraq and was commended. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 28 October 2016, the appellant was convicted of dishonestly making false representations. He tricked an elderly vulnerable woman into allowing him access to her bank account and emptied it of £20,000 to £30,000 for his own use. He was sentenced to 2 years imprisonment.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He was notified of his liability to deportation on 14 December 2016. He made submissions and a human rights claim. The respondent refused those submissions and made the decision to deport him from the United Kingdom on 19 October 2017. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant has two sons by different relationships. R was born on 29th November 2005. The appellant has had infrequent contact with him. At the time of the second Upper Tribunal hearing in December 2018, he had not seen him since April 2016. The second son D was born on 31 March 2011. On 30 November 2012 the appellant married the child’s mother S. Aside from his time on active service and whilst in custody, they lived together as a family. When he was released from custody in February 2018, he resumed cohabitation with S and had daily contact with D. However the appellant and S separated after a few months, since when the appellant’s contact with D has been occasional.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant appealed the respondent’s deportation decision to the First-tier Tribunal, which allowed his appeal on 20 February 2018. The judge held that the effect of his deportation on his children would be “unduly harsh” within the meaning of section 117C(5) of the Nationality, Immigration and Asylum Act 2002 and that his deportation would be a disproportionate interference with his family life.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The respondent appealed that decision to the Upper Tribunal with the permission of the First-tier Tribunal. On 28 September 2018, the Upper Tribunal held that the Firsttier Tribunal had made an error of law in allowing the appeal on the basis that the judge had failed to show exceptional circumstances or particular problems and matters rendering separation unduly harsh, so as to override the public interest in deporting foreign criminals as set out in section 117C(1) of the 2002 Act. The Upper Tribunal set aside the decision of the First-tier Tribunal and directed that the case be decided again in the Upper Tribunal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.00in">The Decision of the Upper Tribunal under appeal  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Upper Tribunal heard the case again on 13 December 2018. The judge heard evidence from the appellant, S and the appellant’s current partner CW and from C, someone who had employed him. In his Decision and Reasons promulgated on 6 February 2019, the judge said that he considered the evidence given to be truthful. He made findings of fact as summarised at [2] and [5] above. In relation to S’s evidence the judge recorded that she said that D did not want to see his father but wishes to be kept in touch. She said that a time will come when he will want to see his father. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge noted at [14] that the difficulty he faced was that Parliament had decided that the public interest lies in deporting people who are foreign criminals and the claimant was a foreign criminal. He considered first the position under section 117C saying the only relevant consideration was whether it would be unduly harsh on the sons for their father to be deported. So far as R was concerned, the position was straightforward. He had no contact with his father and had not had for some time. The deportation would bring to an end the prospect of anything being re-established except possible long-distance contact, but that was more than exists at present. There was no basis for saying the effect on R would be unduly harsh. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">D was in a different position. He had suffered the uncertainties of being a military child and having his father come back into his life then go away again after a short time. The judge considered it would be in his best interests to continue to have a relationship with his father, which would settle down into fruitful occasional contact. Removal would mean little prospect for a meaningful close relationship. However, there was no basis for saying removal would have unduly harsh consequences for the child. The judge said disruption of close relationships is the natural consequence of deportation and there was nothing here which aggravated the harm or made it particularly difficult.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge then considered the Military Covenant, upon which Mr Karnik, who appeared for the appellant as he did before this Court, placed particular reliance, noting that it extends to the families of those who serve. The judge said that he inclined to the view that the gambling habit which lay behind the appellant’s criminal behaviour was connected in some way with his unpleasant experiences whilst serving in the Armed Forces. However, Parliament had not made any statutory exception for members or former members of the Armed Forces involved in deportation and nothing in the statute that said their families were entitled to special consideration. He made the point that the respect everyone has for the Armed Forces is diminished if someone commits a serious offence like the appellant had.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge took account of the favourable probation report and favourable military material which showed that the criminal behaviour was by no means the extent of his personality and character. However, the judge could not agree that the military connections amount to compelling compassionate circumstances. He was confident that the Crown Court judge would have thought very carefully before sentencing the appellant about his military service and possible reasons for offending, as he referred </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">to and commented on it. The judge said that, by reason of the sentence, the appellant was subject to “automatic deportation” and his military service was not a weighty factor. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge repeated again the family circumstances and how the appellant could not show that the effect of his deportation was unduly harsh on his close relatives. The other factors in the case did not save the day. The judge looked at all matters in the round and said that whilst it was difficult to say that anything was <span style="font-style:italic">irrelevant </span>for the purposes of the Article 8 balancing exercise, the statutory criteria dominated his analysis, leading him to dismiss the appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.00in">The legal framework </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Sections 32 and 33 of the Borders Act 2007 concerning automatic deportation of foreign criminals and the exceptions to automatic deportation are familiar and do not require repetition here. Section 117A(2)(b) of the Nationality Immigration and Asylum Act 2002, as amended by the Immigration Act 2014, provides that, in considering the public interest question, in cases concerning deportation of foreign criminals, the court or tribunal must in particular have regard to the considerations listed in section 117C. That provides as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.30in">“<span style="font-weight:bold">117C Article 8: additional considerations in cases involving foreign criminals</span></p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.50in">The deportation of foreign criminals is in the public interest. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.50in">The more serious the offence committed by a foreign criminal, the greater is the public interest in deportation of the criminal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.50in">In the case of a foreign criminal (“C”) who has not been sentenced to a period of imprisonment of four years or more, the public interest requires C's deportation unless Exception 1 or Exception 2 applies. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(4)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.50in">Exception 1 applies where— </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.64in;text-indent:0.5in">C has been lawfully resident in the United Kingdom for most of C's life, </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.64in;text-indent:0.5in">C is socially and culturally integrated in the United Kingdom, and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.64in;text-indent:0.5in">there would be very significant obstacles to C's integration into the country to which C is proposed to be deported. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(5)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">Exception 2 applies where C has a genuine and subsisting relationship with a qualifying partner, or a genuine and subsisting parental relationship with a qualifying child, and the effect of C's deportation on the partner or child would be unduly harsh.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(6)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">In the case of a foreign criminal who has been sentenced to a period of imprisonment of at least four years, the public interest requires deportation unless there are very compelling circumstances, over and above those described in Exceptions 1 and 2. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">(7)</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">The considerations in subsections (1) to (6) are to be taken into account where a court or tribunal is considering a decision to deport a foreign criminal only to the extent that the reason for the decision was the offence or offences for which the criminal has been convicted.<span style="font-weight:bold">” </span></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Guidance as to the meaning of the expression “unduly harsh” was provided by the decision of the Supreme Court in <span style="font-style:italic">KO (Nigeria) v Secretary of State for the Home Department</span> [2018] UKSC 53; [2018] 1 WLR 5273. At [22]-[23] Lord Carnwath said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“On its face [Exception 2] raises a factual issue seen from the point of view of the partner or child: would the effect of C’s deportation be “unduly harsh”? Although the language is perhaps less precise than that of exception 1, there is nothing to suggest that the word “unduly” is intended as a reference back to the issue of relative seriousness introduced by subsection (2). Like exception 1, and like the test of “reasonableness” under section 117B, exception 2 appears self-contained.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">23. <span style="font-size:7pt">             </span>On the other hand the expression “unduly harsh” seems clearly intended to introduce a higher hurdle than that of “reasonableness” under section 117B(6), taking account of the public interest in the deportation of foreign criminals. Further the word “unduly” implies an element of comparison. It assumes that there is a “due” level of “harshness”, that is a level which may be acceptable or justifiable in the relevant context. “Unduly” implies something going beyond that level. The relevant context is that set by section 117C(1), that is the public interest in the deportation of foreign criminals. One is looking for a degree of harshness going beyond what would necessarily be involved for any child faced with the deportation of a parent. What it does not require in my view (and subject to the discussion of the cases in the next section) is a balancing of relative levels of severity of the parent’s offence, other than is inherent in the distinction drawn by the section itself by reference to length of sentence. Nor (contrary to the view of the Court of Appeal in <span style="font-style:italic">IT (Jamaica) v Secretary of State for the Home Department </span><a href="http://www.bailii.org/ew/cases/EWCA/Civ/2016/932.html">[2016] </a><a href="http://www.bailii.org/ew/cases/EWCA/Civ/2016/932.html">EWCA Civ 932</a><a href="http://www.bailii.org/ew/cases/EWCA/Civ/2016/932.html">,</a><a href="http://www.bailii.org/cgi-bin/redirect.cgi?path=/ew/cases/EWCA/Civ/2016/932.html">
+		<span> </span>
+	      </a><a href="http://www.bailii.org/cgi-bin/redirect.cgi?path=/ew/cases/EWCA/Civ/2016/932.html">[2017] 1 WLR 240</a><a href="http://www.bailii.org/cgi-bin/redirect.cgi?path=/ew/cases/EWCA/Civ/2016/932.html">,</a> paras 55, 64) can it be equated with a requirement to show “very compelling reasons”. That would be in effect to replicate the additional test applied by section 117C(6) with respect to sentences of four years or more.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Subsequent decisions of this Court have emphasised that “unduly harsh” requires the court or tribunal to focus on whether the effects of deportation of a foreign criminal </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">on a child or partner would go beyond the degree of harshness which would necessarily be involved for any child or partner of any foreign criminal faced with deportation: see for example per Holroyde LJ at [34] of <span style="font-style:italic">Secretary of State for the Home Department v PG (Jamaica) </span>[2019] EWCA Civ 1213. As Irwin LJ said in <span style="font-style:italic">OH (Algeria) v Secretary of State for the Home Department</span> [2019] EWCA Civ 1763 at [63]: “As a matter of language and logic, this is a very high bar indeed”. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is clear that, in the case of an offender sentenced to less than 4 years imprisonment, even if Exceptions 1 and 2 cannot be satisfied, the offender may still avoid deportation if there are “very compelling circumstances” within subsection (6). In giving the judgment of this Court in <span style="font-style:italic">NA (Pakistan) v Secretary of State for the Home Department </span>[2016] EWCA Civ 662; [2017] 1 WLR 207, Jackson LJ said: “the lacuna in section 117C(3) is an obvious drafting error. Parliament must have intended medium offenders to have the same fall back protection as serious offenders”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">However, he went on to emphasise at [32] to [33] how stringent a test “very compelling circumstances” is:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“32. Similarly, in the case of a medium offender, if all he could advance in support of his Article 8 claim was a "near miss" case in which he fell short of bringing himself within either Exception 1 or Exception 2, it would not be possible to say that he had shown that there were "very compelling circumstances, over and above those described in Exceptions 1 and 2". He would need to have a far stronger case than that by reference to the interests protected by Article 8 to bring himself within that fall back protection. But again, in principle there may be cases in which such an offender can say that features of his case of a kind described in Exceptions 1 and 2 have such great force for Article 8 purposes that they do constitute such very compelling circumstances, whether taken by themselves or in conjunction with other factors relevant to Article 8 but not falling within the factors described in Exceptions 1 and 2. The decision maker, be it the Secretary of State or a tribunal, must look at all the matters relied upon collectively, in order to determine whether they are sufficiently compelling to outweigh the high public interest in deportation.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">33. Although there is no 'exceptionality' requirement, it inexorably follows from the statutory scheme that the cases in which circumstances are sufficiently compelling to outweigh the high public interest in deportation will be rare. The commonplace incidents of family life, such as ageing parents in poor health or the natural love between parents and children, will not be sufficient.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Subsequent decisions of this Court have emphasised that there is not a closed list of what will constitute “very compelling circumstances” and that a flexible approach is required, most recently in <span style="font-style:italic">Akinyemi</span><span> </span><span style="font-style:italic">v Secretary of State for the Home Department (No. 2)</span> [2019] EWCA Civ 2098, where Sir Ernest Ryder, Senior President of </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">Tribunals said at [39]:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“The correct approach to be taken to the 'public interest' in the balance to be undertaken by a tribunal is to recognise that the public interest in the deportation of foreign criminals has a <span style="font-style:italic">moveable </span>rather than fixed quality. It is necessary to approach the public interest flexibly, recognising that there will be cases where the person's circumstances in the individual case reduce the legitimate and strong public interest in removal. The number of these cases will necessarily be very few i.e. they will be exceptional having regard to the legislation and the Rules.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">CI (Nigeria) v Secretary of State for the Home Department</span> [2019] EWCA Civ 2027, at [103] Leggatt LJ confirmed what had been said in <span style="font-style:italic">NA (Pakistan)</span> at [38] that it is necessary when considering whether circumstances are sufficiently compelling to outweigh the public interest in the deportation of foreign criminals, to take into account the jurisprudence of the European Court of Human Rights, including <span style="font-style:italic">Űner v The Netherlands </span>(2006) 45 EHHR 14 and <span style="font-style:italic">Maslov v Austria</span> [2009] INLR 47. However, it was not suggested by either party that there was any relevant Strasbourg jurisprudence bearing on the issue in the present case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At one point in his submissions, Mr Karnik relied upon the decision of the Upper Tribunal in <span style="font-style:italic">MK (Sierra Leone) v Secretary of State for the Home Department</span> [2015] UKUT 00223 (IAC), to which Lord Carnwath referred with approval in <span style="font-style:italic">KO (Nigeria)</span>, in support of a submission that the Article 8 balancing exercise in a case such as the present might go beyond section 117C(6). However, I would reject that submission. What Lord Carnwath approved at [27] was the discussion at [46] of <span style="font-style:italic">MK</span> of the meaning of “unduly harsh”. To the extent that the case suggests that the Article 8 balancing exercise in the case of deportation of foreign criminals goes beyond section 117C, that approach was disapproved in the subsequent decision of this Court in <span style="font-style:italic">NE-A (Nigeria) v Secretary of State for the Home Department</span> [2017] EWCA Civ 239, where Sir Stephen Richards said at [14]-[15]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“14…I see no reason to doubt what was common ground in <span style="font-style:italic">Rhuppiah </span>and was drawn from <span style="font-style:italic">NA (Pakistan)</span>, that sections 117A-117D, taken together, are intended to provide for a structured approach to the application of Article 8 which produces in all cases a final result which is compatible with Article 8. In particular, if in working through the structured approach one gets to section 117C(6), the proper application of that provision produces a final result compatible with Article 8 in all cases to which it applies. The provision contains more than a statement of policy to which regard must be had as a relevant consideration. Parliament's assessment that “the public interest requires deportation unless there are very compelling circumstances, over and above those described in Exceptions 1 and 2” is one to which the tribunal is bound by law to give effect.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">15. None of this is problematic for the proper application of Article 8. That a requirement of "very compelling circumstances" in order to outweigh the public interest in the deportation of foreign criminals sentenced to at least four years' imprisonment is compatible with Article 8 was accepted in <span style="font-style:italic">MF (Nigeria) </span>and in <span style="font-style:italic">Hesham Ali </span>itself. Of course, the provision to that effect in section 117C(6) must not be applied as if it contained some abstract statutory formula. The context is that of the balancing exercise under Article 8, and the “very compelling circumstances” required are circumstances sufficient to outweigh the strong public interest in the deportation of the foreign criminals concerned. Provided that a tribunal has that context in mind, however, a finding that “very compelling circumstances” do not exist in a case to which section 117C(6) applies will produce a final result, compatible with Article 8, that the public interest requires deportation. There is no room for any additional element in the </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">proportionality balancing exercise under Article 8.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.00in">The grounds of appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The two grounds of appeal are: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">That in the first Upper Tribunal decision, Upper Tribunal Judge Hanson erred in finding that there was an error of law in the decision of the First-tier Tribunal;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">That Upper Tribunal Judge Perkins erred in the remade decision by disregarding and/or failing to have proper regard to the duty owed to service people under the Armed Forces Covenant when considering whether deportation would be unduly harsh and whether there were very compelling circumstances which outweighed the public interest in deportation.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.00in">The parties’ submissions </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On behalf of the appellant Mr Karnik submitted in relation to the first ground that Upper Tribunal Judge Hanson had failed to apply the proper approach to consideration of whether there had been an error of law by the First-tier Tribunal. Guidance as to the proper approach was provided by the decision of this Court in <span style="font-style:italic">UT (Sri Lanka) v Secretary of State for the Home Department</span> [2019] EWCA Civ 1095 where Floyd LJ said at [19]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in">“I start with two preliminary observations about the nature of, and approach to, an appeal to the UT. First, the right of appeal to the UT is "on any point of law arising from a decision made by the [FTT] other than an excluded decision": Tribunals, Courts and Enforcement Act 2007 ("the 2007 Act"), section 11(1) and (2). If the UT finds an error of law, the UT may set aside the decision of the FTT and remake the decision: section 12(1) and (2) of the 2007 Act. If there is no error of law in the FTT's decision, the decision will stand. Secondly, although "error of law" is widely defined, it is not the case that the UT is entitled to remake the decision of the FTT simply because it does not agree with it, or because it thinks it can produce a better one. Thus, the reasons given for considering there to be an error of law really matter. Baroness Hale put it in this way in <span style="font-style:italic">AH (Sudan) v Secretary of State for the Home Department</span> at [30]:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“Appellate courts should not rush to find such misdirections simply because they might have reached a different conclusion on the facts or expressed themselves differently.”” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Karnik submitted that there was no defect in the findings or reasoning of the Firsttier Tribunal judge. Upper Tribunal Judge Hanson had been wrong to conclude that the First-tier Tribunal had failed to give adequate reasons for why separating the children from their father would be unduly harsh, had failed to give appropriate weight to the public interest in deportation and had failed to show compelling circumstances sufficient to override the public interest. Merely because the Upper Tribunal disagreed with the decision it did not follow that there was an error of law. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Karnik’s submissions on the second ground focused on the Armed Forces </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">Covenant. He drew the attention of the Court in particular to the passages concerning Family Life and Support After Service. The Covenant was to the effect that the stresses imposed on family life by military service should be recognised and the Upper Tribunal should have concluded that it was a materially relevant and positive factor in determining whether the deportation of the appellant would be unduly harsh and in the evaluation of whether there were very compelling circumstances under section 117C(6).  He submitted that the children of service personnel were not the same as others. The two boys had suffered already as a consequence of the appellant’s military service, as he had been absent because he was on active service. The appellant had endured horrendous experiences on active service and suffered from post-traumatic stress disorder, which must have contributed to the relationship difficulties which he had had. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On behalf of the respondent, Mr Zane Malik submitted, in relation to the first ground of appeal, that there were clear errors of law in the approach of the First-tier Tribunal. In particular, the judge simply did not appreciate or apply the high threshold required to show an “undue” level of harshness. He also submitted that, at [23] to [26] of the Decision, the First-tier tribunal conducted a conventional balancing exercise under Article 8, holding that the appellant’s deportation would “not be proportionate” and would be “unjust and unfair”, in other words, contrary to <span style="font-style:italic">NE-A (Nigeria)</span>, the judge conducted an assessment outside the statutory provisions and did not direct himself to the correct test under section 117C(6), namely whether there were “very compelling circumstances” over and above Exceptions 1 and 2. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In relation to the second ground, Mr Malik submitted that Exception 2 required a degree of harshness beyond what was necessarily involved for any child whose parent was deported. The focus was on the consequences for the child, not the parent, as was made clear by the decision of this Court in <span style="font-style:italic">Secretary of State for the Home Department</span><span> </span><span style="font-style:italic">v KF (Nigeria)</span> [2019] EWCA Civ 2051: see per Baker LJ at [30]-[31].   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Malik submitted that the effect of Mr Karnik’s submissions about the Covenant was to invite the Court to create an Exception 3, but there was no exception in section 117C for those who had served in the Armed Forces. He submitted that military service by a foreign criminal, without more, would be unlikely to have any material impact on the assessment under either subsection (5) or subsection (6).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He submitted that the real difficulty that the appellant faced was the findings of fact of the Upper Tribunal, in particular the findings that the appellant has not seen the older boy R since April 2016 and that, on the basis of the evidence of S, the younger boy D does not wish to see his father but wishes to be kept in touch. On this evidence, the conclusion that deportation of the appellant would not be unduly harsh for the children was inevitable. Furthermore, contrary to Mr Karnik’s submission, the Upper Tribunal judge did take account of the Covenant and the submissions about it. The question of what weight to give it was a matter for the Upper Tribunal as the finder of fact. It could not be said that the judge had failed to take account of something relevant or that he had taken account of something irrelevant. He had reached a decision which was open to him, with which this Court should not interfere. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.00in">Discussion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In relation to the first ground of appeal, I am quite satisfied that the First-tier Tribunal erred in law and that Upper Tribunal Judge Hanson was right to set aside that decision and to order that the decision be re-made by the Upper Tribunal. The First-tier Tribunal simply failed to have proper regard to the expression “unduly harsh” and to recognise that it requires a degree of harshness beyond the inevitable disruption to family life and upset that deportation of a parent necessarily involves for any child. It is a very high bar, as Irwin LJ said, but the First-tier Tribunal failed to recognise that and apply the right test. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The First-tier Tribunal also erred in conducting what appears to have been a conventional balancing exercise under Article 8 and failing to focus on the language and purpose of section 117C. Expressions such as that the deportation decision was not “proportionate” and “unjust and unfair” are wide of the mark and fail to focus on the requirement that the appellant must show “very compelling circumstances” to outweigh the public interest in the deportation of foreign criminals. That is a stringent test and, as all the authorities recognise, cases where the circumstances are sufficiently compelling will be comparatively rare. In the circumstances, the First-tier Tribunal clearly erred in law.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">So far as the second ground is concerned, it simply cannot be said that Upper Tribunal Judge Perkins failed to have regard to the Covenant. He expressly referred to it and to Mr Karnik’s submissions about it and said that he had considered them carefully. The real complaint is that he failed to give it sufficient weight. Part of the problem which the appellant faces is that the Covenant is silent about the status of non-UK service personnel who commit criminal offences and there is nothing in section 117C or the Immigration Rules which provides for any sort of exception or special treatment for foreign criminals who have served in the Armed Forces. Mr Karnik rightly did not go so far as to submit that military service would always amount to “very compelling circumstances”, from which it necessarily follows that the assessment of whether there are very compelling circumstances arising from a particular individual’s military service is an evaluative one for the tribunal with which this Court would be reluctant to interfere. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Karnik referred to the immigration status of the appellant, noting that whilst he was in the Armed Forces he was exempt from immigration control under section 8(4) of the Immigration Act 1971. Had he not committed a criminal offence, upon leaving the Royal Marines he would have been eligible to apply for indefinite leave to remain pursuant to the Immigration Rules Appendix Armed Forces, which replaced the Armed Forces Concession: see the discussion of this by Blake J in the Gurkha veterans case <span style="font-style:italic">R (On the application of Limbu and others) v Secretary of State for the Home Department </span>[2008] EWHC 2261 (Admin) at [29]-[31]. As King LJ pointed out during the course of argument, if he had not committed the offence, he would have benefited from indefinite leave to remain and that in turn would have benefited his children, which would have been an example of the Covenant working in practice.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">However, nothing in the Covenant suggests that service personnel who commit criminal offences whilst they are still in the Armed Forces, as this appellant did, are somehow entitled to preferential treatment. On the contrary, the Covenant makes clear at [10] of section D Obligations and Principles, that serving members should not bring the Armed Forces into disrepute in any of their actions.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the light of the evidence and the findings of fact as to the appellant’s relationship with his children, the finding that the effect of his deportation on the children would not be unduly harsh was not only correct but inevitable, as Mr Malik submitted. There was simply no evidence that because they were the children of a father who had served in the Armed Forces, the effect of his deportation would involve a degree of harshness beyond that inevitably suffered by any child whose father is deported. As Hickinbottom LJ said in <span style="font-style:italic">PG (Jamaica)</span> at [46]:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“When a parent is deported, one can only have great sympathy for the entirely innocent children involved. Even in circumstances in which they can remain in the United Kingdom with their other parent, they will inevitably be distressed. However, in section 117C(5) of the 2002 Act, Parliament has made clear its will that, for foreign offenders who are sentenced to one to four years, only where the consequences for the children are "unduly harsh" will deportation be constrained. That is entirely consistent with article 8 of the ECHR. It is important that decision-makers and, when their decisions are challenged, tribunals and courts honour that expression of Parliamentary will.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Similarly, whatever one’s own opinion as to the fairness or appropriateness of deporting a man who endured danger serving in this country’s Armed Forces for fourteen years, the statutory regime is clear. Unless one or other of the Exceptions can be satisfied, the public interest in deporting foreign criminals will only be outweighed if the appellant can show “very compelling circumstances”. Once it is accepted, as it rightly is by Mr Karnik, that military service without more will not always amount to such circumstances, one has to look at the circumstances of this appellant, his military service and family and personal life to determine whether they are very compelling. However regrettable it is for the appellant, in my judgment nothing in his particular life or military service amounts to such very compelling circumstances. That conclusion is not altered by the existence of the Covenant. Whilst it recognises the stresses imposed on family life by military service, it is silent about non-UK exservice personnel who have committed criminal offences. Parliament has not created any statutory exception for foreign criminals who have served in the Armed Forces and the clear wording of the statute cannot be overridden by any general duty to ex-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">service personnel and their families contained in the Covenant. In all the circumstances, this appeal must be dismissed. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-right:0.00in">
+	      <span style="font-weight:bold">Lady Justice King: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

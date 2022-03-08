@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1458"/>
+	  <FRBRuri value="ewca/civ/2020/1458"/>
+	  <FRBRdate date="2020-11-06" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1458"/>
+	  <FRBRname value="Stanley v Welwyn Hatfield Borough Council"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1458/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1458/eng"/>
+	  <FRBRdate date="2020-11-06" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1458/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1458/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:20:00" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1458/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1458</uk:number>
+	<uk:cite>[2020] EWCA Civ 1458</uk:cite>
+	<uk:hash>f3aa5ac90650858e376f23b364c134e1230bcaabf08d9d118f8f8e62d03e2613</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1458/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.01in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: center; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0604166666666666in;height:1.051388888888889in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1458</neutralCitation>
+      </p>
+      <p style="text-align:right;margin-right:0.03in">
+	<span style="text-decoration:underline">Case No: </span>
+	<docketNumber style="text-decoration:underline">B5/2020/0221</docketNumber>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline;font-size:12pt">IN THE COURT OF APPEAL (CIVIL DIVISION)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">ON APPEAL FROM THE COUNTY COURT AT LUTON</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">Her Honour Judge Bloom</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">F00WD960</span>
+      </p>
+      <p class="Heading2" style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="font-weight:normal">Royal Courts of Justice</span>
+	<span style="font-weight:normal;text-decoration:none"> </span>
+	<span style="font-weight:normal">Strand, London, WC2A 2LL</span>
+      </p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 06/11/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE McCOMBE</span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PETER JACKSON</span>
+      </p>
+      <p style="text-align:center;margin-left:0.04in;margin-right:0.07in">and</p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">MRS JUSTICE ROBERTS</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.16in;margin-right:0.07in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">OHIO STANLEY </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.16in;margin-right:0.07in">
+	  <span style="font-weight:bold">and - </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">WELWYN HATFIELD BOROUGH COUNCIL </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Respondent</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.16in;margin-right:0.07in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.04in;margin-right:0.07in"><span style="font-weight:bold">Toby Vanhegan and Siân McGibbon</span> (instructed by Duncan Lewis) for the Appellant </p>
+      <p style="margin-left:0.13in;margin-right:0.00in"><span style="font-weight:bold">Andrew Lane and Riccardo Calzavara </span>(instructed by<span style="font-weight:bold"> </span>Legal Department, Welwyn Hatfield </p>
+      <p style="text-align:center;margin-left:0.04in;margin-right:0.07in">Borough Council) for the Respondent </p>
+      <p style="text-align:center;margin-left:0.04in;margin-right:0.07in">Hearing date: 13 October 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.16in;margin-right:0.07in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1">Approved Judgment </p>
+      <p style="text-align:center;margin-left:0.04in;margin-right:0.08in"><span style="font-weight:bold">Covid-19 Protocol: </span> This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website.  The date and time for hand-down is deemed to be   10:30am on Friday, 6 November 2020.</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Lord Justice McCombe:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.01in;text-indent:-0.01in">Introduction</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This is the appeal of Ms Ohio Stanley from the order of 15 January 2020 of HH Judge </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">Bloom, sitting in the County Court at Luton, whereby she struck out Ms Stanley’s appeal from the decision of 1 July 2019 of Welwyn Hatfield Borough Council (“the Council”), made under s.184 of the Housing Act 1996 (“the Act”), in respect of her application for homelessness assistance. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Where a person applies to a local housing authority for homelessness assistance the authority makes a decision as to the ambit of its duty to assist and as to what (if any) assistance it is willing to provide. If the decision is unfavourable to the applicant, he/she may ask the authority to review it: s.202 of the Act. That review must be carried out and a decision must be notified to the applicant within certain regulatory time limits or “within such longer period as [the applicant] and the reviewer may agree in writing”: ss. 202(4), 203(3) and (4) and reg. 9(1) of The Homelessness (Review Procedure etc.) Regulations 2018 (made by the Secretary of State pursuant to powers conferred by the Act.) </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">If the review decision is not made within the time permitted or otherwise agreed, an applicant aggrieved by the original decision under s.184 of the Act may appeal to the County Court on any point of law arising from the decision. If a review decision is made within the permitted or agreed longer time, the applicant may similarly appeal, on a point of law, from the review decision: s.204 of the Act.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In this case, Ms Stanley brought appeals to the County Court against both an original s.184 decision, made adversely to her, and also against the s.202 review decision that was made by the reviewer on a date which she contends was outside the permitted time limits. Judge Bloom struck out her appeal against the s.184 decision and dismissed her appeal against the s. 202 decision. She held that Ms Stanley and the reviewer had agreed an extension to the relevant time limit and that, in any event, having brought an appeal against the review decision, Ms Stanley had waived any right to object to the timing of that decision and/or had “validated” it. Ms Stanley now appeals to this court against the judge’s order striking out her appeal against the s. 184 order, by permission granted by Asplin LJ by her order of 17 August 2020. She does not appeal against the dismissal of her appeal against the review decision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Two points arise. The first point is whether Ms Stanley (through her solicitors) and the reviewer agreed in writing that notice of her requested review decision could be given within a longer period than that provided by the ordinary application of reg. 9. The second point is whether, in any event, having brought an appeal against the review decision that was ultimately made by the reviewer, Ms Stanley had waived objection to the review decision or otherwise had elected to pursue the appeal against the review in place of her appeal against the first decision. Those two points have been argued by Mr Vanhegan and Ms McGibbon for Ms Stanley and Mr Lane and Mr Calzavara for the Council. I am grateful to them for their written and oral submissions.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I would add here that there is an issue arising in respect of the second point: Mr Vanhegan argued that if the review decision was outside the time prescribed and any </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">agreed extension it was “not lawful, of no effect, and liable to be quashed for want of vires” (his skeleton argument, paragraph 23). I return to this additional issue, in its correct place, under the second issue on the appeal. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">While the appeal does give rise to questions of law as to the application of reg. 9 to the facts of this case, cases of this type almost invariably fall to be decided largely upon the precise of facts of each of them. So, it is the facts that I address first. They are uncontroversial and much depends upon the proper understanding of exchanges of correspondence between Ms Stanley’s solicitors and the Council’s reviewing officer, Mr David Trewick, and upon the circumstances surrounding the presentation of the two appeals. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Facts</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Council’s s.184 decision was made by letter to Ms Stanley of 1 July 2019. As was correctly explained to Ms Stanley in that letter, under the terms of the Act when an application is made to an authority which is satisfied that the applicant is homeless and eligible for assistance, it must take reasonable steps to help the applicant to secure that suitable accommodation becomes available for their occupation and, if unsuccessful, reach a final decision on the application. For a full housing duty to subsist the authority has to be satisfied that the applicant is homeless, or threatened with homelessness, whether he/she is “eligible for assistance” and, if so, whether he/she is in “priority need”; further, the applicant must not be “intentionally homeless”. In this case, the Council decided that Ms Stanley was “intentionally homeless” by failing to pay rent, which was affordable to her, under her tenancy of her previous property. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By e-mail of 19 July 2019, Ms Stanley’s solicitors requested a review of the Council’s decision. By letter of 31 July 2019, Ms Stanley was informed of the procedure for the review. The period for the notification of the decision, specified in reg. 9, was 8 weeks from the date of the request for review, in this case by 13 September 2019.  She was entitled to make representations (reg. 5) and was informed that she should do so within 21 days (here, by 21 August 2019). By e-mail of 20 August, the solicitors asked for an extension to 27 August. Mr Trewick responded immediately that this would be agreed so long as an extension for the review decision could also be agreed. The solicitors readily agreed, on the same day, to a similar extension to the time for notification of the review decision by 7 days, i.e. to 20 September 2019. By letter dated 27 August 2019, possibly only sent by an e-mail of 1038 hrs on 28 August 2019, representations were made in support of the review by Ms Stanley’s solicitors. By e-mail of 1151 hrs on that day, Mr Trewick replied simply, “Thank you”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I shall endeavour to set out verbatim the material parts of the subsequent important exchanges between the solicitors and Mr Trewick in the period up to 2 October 2019. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 11 September 2019 Mr Trewick wrote to the solicitors in these terms, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.72in">“I would like for us to agree an extension on the review date and for accommodation to continue to be provided … </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.32in">Can you let me know whether your client is open to agreeing an extension until the end of November 2019 … with the agreement that accommodation pending review will of course continue to be provided …” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">It seems that the request was made in the light of parallel proceedings in the High Court involving an outstanding injunction. The details of those proceedings do not play any part in the points that we have to decide, and we were not told anything about them. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 16 September 2019, Mr Trewick sent to the solicitors the necessary formal letter informing Ms Stanley that, in spite of an irregularity in the Council’s original decision, he was “minded to” uphold it (reg.7) but giving the opportunity for further representations. He wrote: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“… I am still minded to make a decision to uphold the decision, however I must give you the opportunity to make further comment or submissions before finalising my decision. … </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">I</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">ask that you provide further submissions either in writing or in person, or both, within 7 days of this letter, therefore, by Tuesday 24 September 2019.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It will be noted that the date stipulated for the further representations was 24 September, 4 days beyond the extended date for notification of the review decision previously agreed, i.e. 20 September. The caseworker dealing with the matter within the solicitors’ firm was apparently on holiday when that letter was received and, in his place, on 17 September, a solicitor colleague wrote:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“Thank you for your e-mail. Gareth will be back on Thursday so he can revert as to whether he can make representations within 7 days on his return.” (“Thursday” was 19 September 2019.) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Trewick replied immediately: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.90in;margin-right:0.00in">“Thanks for the quick response, I will await Gareth’s reply,” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 20 September 2019, “Gareth” (Mr Gareth Hutton of the firm) wrote to Mr Trewick: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">“Thank you for your email.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">I</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">was out of the office on annual leave from Monday. I hope to consider the contents of the attached minded to letter on Monday, but I would appreciate it if you could allow an extension until 25 September 2019 for our response. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:2.26in;text-indent:0.50in">Please let me know if you are agreeable.” On the same day Mr Trewick replied:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.55in">“I wasn’t aware you were on leave, but your colleagues let me know. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">Happy to agree this extension …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By e-mail of 26 September 2019 at 1359 hrs, the solicitors (Mr Hutton) sent to Mr Trewick a letter responding to the letter of 16 September. They wrote:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">“My apologies for the delay. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.60in">Please find attached the response to your ‘minded to’ letter dated 16 September 2019. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:1.04in;text-indent:0.50in">We look forward to receiving the review decision shortly.” The formal letter attached also said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.72in">“I look forward to receiving the s202 decision in this matter in due course.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 1 October 2019 at 1728 hrs, the solicitors wrote again in these terms: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“I must hasten to note that our response to the minded to letter is without prejudice to the contention that the review decision is now out of time and would therefore be ineffective. Our client has instructed us that she is not in agreement to your request for an extension as proposed in your email dated 11 September 2019. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.49in">Therefore, we will now be taking steps to issue a s204 appeal against the initial s184 decision.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 2 October 2019 at 1110 hrs, Mr Trewick sent to the solicitors an e-mail stating that a review decision was attached, upholding the decision that Ms Stanley was intentionally homeless. (The attached letter was still headed – “Request for Review of </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">Decision – Minded To Letter”, as was the original “minded to” letter of 16 September, although its contents were indeed in a form upholding the original decision and informing Ms Stanley of the right of appeal within 21 days of receipt of the letter. No point arises on this mislabelling). The covering e-mail to the solicitors included the following: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“… With regard to the timing of the review decision, it would be helpful for us to reach agreement on the timing of the decision  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">I</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:0.5in">have attached a timeline of the case and would ask you to review the situation before issuing any court proceedings for a late s202 decision…” (We were not shown the “timeline”.) </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">The decision letter attached stated,  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“You requested a review on 19 July 2019, giving me until 13 September to complete the review. On 20 August an agreement was reached to delay the decision by 7 days, until 20 September.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Appeals to the County Court</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 4 October 2019, two days after receipt of the review decision, the solicitors lodged the appeal to the County Court against the initial decision made under s.184 of the Act. On 24 October 2019, they lodged the appeal against the s.202 decision. The Grounds of Appeal against the s.202 decision stated: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“2 …The Appeal is without prejudice to the appellant’s appeal against the section 184 decision which she wants to pursue instead… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">6. The appellant has not validated the review. This appeal is without prejudice to her contention that the review was out of time, and should not be considered as a validation of the out of time review. The appellant never agreed to the review being concluded out of time. She has appealed the section 184 decision, which she had the right to do under section 204(1)(b) because the review was out of time. She wishes to pursue that appeal instead.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">Similar contentions were made in paragraph 29 of the skeleton argument for Ms Stanley in the County Court on the s.202 appeal. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Both appeals were listed for hearing before Judge Bloom on 15 January 2020 and, on that day, she made her order striking out the appeal against the s.184 decision and dismissing the appeal against the s.202 decision. The essence of the learned judge’s decision on the first point before us (agreed extension) can be seen in paragraphs 28 and 29 of the transcript of her careful judgment, delivered <span style="font-style:italic">ex tempore</span> as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“28. I am quite satisfied that if one looks at the emails, one must read them as an agreement by the appellant to give the respondent a longer period in which to reach their decision on review. It does not assist them to then later say ‘Oh, what I said earlier was without prejudice to my primary contention that it is out of time.’ If they have already agreed to a longer period, they cannot rectify it by later saying, ‘I’m sorry. I meant to say that was without prejudice’  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">29. The appellant could have put the matter very clearly on 20<span style="vertical-align:super;font-size:smaller">th</span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">September by saying, ‘I am not going to make any representations. I want your decision today. If I don’t get it today, you’re out of time.’ But they chose a different route. They chose to extend the statutory review process. They chose to ask for time to make a response and in doing so I am quite satisfied that they agreed to extend the time for the decision until after representations had been received by the respondent. Mr Vanhegan is correct that no specific date was agreed but a longer period was agreed and I find that as a matter of fact they did agree a longer period and hence the section 202 was in time.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Her decision on the second point (waiver/election) is to be found in paragraphs 30 and </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">31 in these terms  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“30. Alternatively, if I am wrong, I am satisfied looking at the decision of <span style="font-style:italic">Jobe</span> and indeed <span style="font-style:italic">Muloko</span>, that the appellant elected to validate the decision by issuing this appeal. By the time of this appeal, they had already issued the section 184 appeal and they had activated the section 204(1)(b) provisions. They then chose to issue an appeal under section 204(1)(a). I am satisfied that was a validation of the section 202 decision. They had an election. They could have said they were not going to proceed under section 204(1)(a) as they already had a valid appeal under section 204(1)(b). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">31. Section 204(1) envisages that the appellate routes are alternatives. If they choose to appeal the section 202 decision that is a validation of the decision. In my view, this conclusion is in line with both <span style="font-style:italic">Muloko</span> and <span style="font-style:italic">Jobe</span>. If they choose not to appeal the section 202 decision, that is because they have a choice. If they are confident that the review is out of time, then they do not need to appeal it, they proceed by appealing the section 184. It is a matter for the appellant to decide whether it is a clear case or not. In some cases, if there is an ambivalence, it may well be that the sensible course of action for an appellant is to appeal the section 202 rather than lose their rights. But it is a risk that they have to take. In my view that is what section 204 envisages, not that both routes are proceeded under. As Mr Lane says, the appellant, of course, could have made his position clear by extending time or indeed, as I have said, on 20<span style="vertical-align:super;font-size:smaller">th</span> September making it clear that there was no extension of time and that the final date was 20<span style="vertical-align:super;font-size:smaller">th</span> September. But they cannot, in my view, do what they have done and appeal under both section 204(1)(a) and (1)(b) and I am satisfied that by issuing the appeal against the s202 decision, they have made an election, and the section 202 is validated by that election.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.04in;margin-right:-0.05in">(I return to the <span style="font-style:italic">Muloko</span> and <span style="font-style:italic">Jobe</span> decisions later in this judgment.) </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Statute and Regulations</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Under s.202(4) of the Act,  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.28in">“On a request being duly made to them, the authority concerned shall review their decision.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 203(3) provides that the housing authority concerned shall notify the applicant of the decision on the review. The regulations set out the procedure to be followed on a review. Section 203(7) states that, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“(7) Provision may be made by regulations as to the period within which the review must be carried out and notice given of the decision.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The important regulation for our purposes is reg. 9 which provides, so far as relevant, this: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">“9-  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.82in">Notice of the decision on a review under section 203(3) must be given to A [the applicant] … </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:0.00in">(b)<span style="font-family:Arial"> </span>Where the original decision falls within –  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.51in;margin-right:0.00in">(i) section 202(1) … (b) … </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.51in;margin-right:0.48in">…eight weeks beginning with the day on which the request for the review is made, … </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.51in;margin-right:0.68in">… or within such longer period as A and the reviewer may agree in writing.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A right of appeal to the county court on a point of law is conferred by s.204, as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">“(1) If an applicant who has requested a review under section </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.00in">202 – </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.97in;text-indent:-0.49in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.97in;margin-right:0.00in">is dissatisfied with the decision on review, or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.97in;text-indent:-0.49in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.97in;margin-right:0.00in">is not notified of the decision on the review within the time prescribed under section 203, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.34in;margin-right:0.11in">he may appeal to the county court on any point of law arising from the decision, or as the case may be, the original decision. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.82in">An appeal must be brought within 21 days of his being notified of the decision or, as the case may be, of the date on which he should have been notified of a decision on review.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">Issue 1: Was there an agreed extension of time?</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Vanhegan’s succinct submission on this point was this. Any extension in time in this case was no more than general and that does not satisfy the requirements of reg. 9 on its proper construction. What is required, he said, is agreement on extension to a specific date. He said that this is so for a number of reasons. First, the language of reg. 9 speaks of the relevant period of time for notification as being in a specific period of weeks or such longer period as is agreed; that implies a period of specific length, either in weeks or to an alternative specific date, for an agreed extension. Secondly, such a specific date is required because an appeal can only be brought against the decision under s.184 within 21 days of the date on which the review should have been notified; without a specified date it is impossible to know when an appeal must be brought. Thirdly, a date is needed because otherwise the authority is unable to comply with its duty (under reg. 5(3)(c)) to inform the applicant of the review procedure, which must include the period within which he/she will be informed of the decision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Lane submitted that in September 2019 Ms Stanley’s solicitors agreed to an extension of the timetable for the review process and, with it, to an extension of the date for notification of the decision. The “Minded To” letter proposed a date for representations (24 September) that was outside the previously agreed date for notification of the decision (20 September). Ms Stanley’s solicitors did not merely agree to that, they also asked for an additional 24 hours (25 September). Then on 26 September they sent the representations to Mr Trewick saying expressly that they looked forward to receipt of the review decision “shortly”. They got the decision </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">“shortly” by receiving it on 2 October, a mere six days afterwards, in accordance with the agreement. Mr Lane said that the judge was correct in her decision, encapsulated in paragraph 29 of the transcript (quoted above). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, the judge was correct on this point.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Given the machinery put in place by the Act, I cannot see that parties are to be precluded from agreeing a general extension of time for notification of a review decision. This is still an extension for an agreed period, even if its precise end is not immediately known. This may well be a sensible course for parties to take in a number of situations, e.g. where negotiations are being conducted between them or information is being collected from outside sources, such as medical opinions on suitability of particular accommodation. I see no reason why, in such circumstances, the Minister should be saying in the regulations that an applicant could not give the authority an extension until it was put upon notice that further time will not be allowed. A sensible applicant in such a situation, after an expiry of time, might say that he/she now wanted the decision within (say) 7 days. An unreasonable applicant might say, “I’ve lost patience; I want your decision today”. In either case, either the review would be forthcoming as demanded or not. If not, the applicant could initiate an appeal to the County Court because he/she had not received a decision. Nothing would be lost.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">If a review decision were then to be forthcoming, after the launching of the appeal against the s.184 decision, further possibilities arise, including a right to appeal against that review decision. If that course is adopted, there may be questions as to whether or not the first appeal is academic or whether the applicant still has benefit or advantage in pursuing the appeal against the first decision of which he/she should not be deprived: see <span style="font-style:italic">Deugi v Tower Hamlet LBC </span>[2006] H.L.R. at [28];<span style="font-family:Garamond"> </span>[2006] EWCA Civ 159 at [32], per May LJ (which whom Rix and Gage LJJ agreed). However, none of that should rule out the possibility of parties agreeing an open-ended extension of the review procedure in particular circumstances.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On the facts of the present case, it seems clear to me that both parties wanted the review procedure to continue, notwithstanding the expiry of the initial fixed extension to 20 September. The reviewing officer asked for representations in his letter of 16 </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">September by 24 September. Ms Stanley’s solicitors asked for time to do that until 25 September which was readily agreed. That request obviously amounted to an agreement that notification of the decision on the review could be given later than 25 September. The representations were duly made, and the solicitors said that they looked forward to the formal decision “shortly”. They got it “shortly”, as asked.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Both sides knew the full facts and neither wanted to insist upon a decision being reached by 20 September, as had been originally agreed. The actions of Ms Stanley’s solicitors were entirely inconsistent with a wish on their part to stick strictly to the previous time limit and were inconsistent with any idea that a review decision delivered “shortly” (as asked) would be void and of no effect. If the letter making further representations on 26 September was truly intended to be “without prejudice” to an argument that any review decision would be out of time, it did not say so, and if that was intended “<span style="font-style:italic">sub silentio</span>”, it would have been simply deceptive, which it is not suggested that it was. As the judge said, the solicitors might have insisted upon a decision on 20 September, but they did not do so.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, on these facts, the parties agreed in writing that there would be an extension for the time for notification of the review decision for a short unspecified time after 26 September 2019. Ms Stanley did not insist on receiving the decision at any particular time, but merely sought to say later that any decision made would be ineffective. Having acted as she did, that was not permissible in the face of the agreement made by her solicitors. The delivery of the decision on 2 October 2019 was within the extended time agreed and was accordingly within the period provided for by reg. 9. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">That is sufficient for the purposes of deciding this appeal. However, as the second point has been fully argued, I will nonetheless address it. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Issue 2: Waiver/Election/Validation: the effect of bringing two appeals</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This second point proceeds upon the basis that, contrary to my conclusion above, the review decision was notified outside the time prescribed by reg. 9. Mr Vanhegan submitted that a late decision is no decision at all. Presumably, on this basis therefore, if it were to be adverse to the applicant, it could be wholly ignored and all that would be necessary would be to continue with an appeal against the original decision.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I do not accept that proposition. The Act requires that, once a request for review has been made, the authority shall review its decision: s. 202(4) and once made it must be notified to the applicant: s. 203(3). Section 203(4) envisages that if the earlier decision is confirmed against the applicant’s interest, the reasons for it must be given. Nothing is said in the Act to suggest that the obligation to review lapses upon expiry of the time, under the regulations, within which it is required to be provided. If it is late, the applicant has the remedy of appealing the original decision, instead of a cumbersome alternative of applying to the High Court on judicial review for an order requiring the decision to be made and notified.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It would be surprising if Parliament had intended that, in a case such as the present, if a review decision is made, the parties and the court should ignore it, and then go through an argument as to the adequacy of the original decision and potentially start the whole procedure all over again. This seems a strange result in a case in which the review decision is in the applicant’s hands even before he/she begins an appeal against the original decision. In all the time since the passing of the Act, it does not </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">seem to have been said, in any fully reported decision, that a late review decision is no decision at all – which is also surprising, if that were so. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In a number of decisions in the County Courts (only briefly, but usefully, reported in “Legal Action”, in its section on “Housing: recent developments”), it has been held that where, as here, an applicant brings appeals against both the s.184 decision and against a late decision on review, he/she has either elected to pursue the latter rather than the former and/or has “validated” the late s. 202 decision. Judge Bloom in the present case found that Ms Stanley had validated the decision by issuing her appeal against it, even if (contrary to her view) it was made outside the permitted time: see paragraphs 30 to 32 of her judgment. In some other cases, also reported in the same publication, two judges are reported as having held that late review decisions are a nullity of no effect, unless “validated” by the housing applicant. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Jobe v Lambeth LBC </span>(7 December 2017) Mr Recorder Gasztowicz QC held that the bringing of a second appeal against a late s.202 decision amounted to an election to pursue the latter to the exclusion of the former. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Muloko v Newham LBC </span>(6 April 2018), a housing applicant appealed against a decision made under s.184 that she was not in “priority need”. The appeal was brought after the authority had not produced the review decision requested by her within the prescribed time. A review decision was then sent to the applicant. She considered that her appeal against the original decision had become academic and sought its dismissal with an order for costs against the authority. Judge Luba QC dismissed the appeal as asked but he declined to make the costs order. In the brief report, he is said to have found that the late decision on review was not a decision under s.202 at all. It was held that the applicant was entitled to “elect” whether or not to validate the decision notified out of time. If she did so, she could then appeal against that decision, as had happened in <span style="font-style:italic">Jobe</span>. If she did not so elect, then she was entitled to pursue an appeal against the original decision. It was said that such a course could have a number of potential benefits, if an appeal were successful: there would be chance of a review against a new decision by a different officer and the chance to make new submissions and advance fresh evidence; there would be delay, with a concomitant possibility of improvement in her position; and the interim accommodation duty under s.188(1) of the Act would continue. (Mr Vanhegan naturally adopted much of this reasoning in his argument before us.) </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Castro v Lambeth LBC </span>(11 January 2019) Judge Monty QC decided that the use of the word “or” twice in section 204 concerning appeals against review decisions or original decisions in the absence of a timely review (as the case may be) indicated that an applicant could pursue only one of these avenues of appeal, not both. He is reported as relying on a passage of the judgment of Chadwick LJ in <span style="font-style:italic">Bellamy v Hounslow LBC</span> [2006] EWCA Civ 535; [2006] HLR 809, at [55] and the decision in <span style="font-style:italic">Jobe’s </span>case. In <span style="font-style:italic">Bellamy</span>, Chadwick LJ said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">“The applicant appealed to the county court from both the original decision notified on August 4, 2004 and from the review decision of November 15, 2004. For my part, I doubt whether s.204 of the 1996 Act confers a right of appeal from the original decision in circumstances where there has been a review decision under s.202 of that Act. The reference, in </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">s.204(1), to an appeal from the original decision – in the context of the phrase ‘an appeal … arising from the decision [on the review] or, as the case may be, the original decision’ – is , as it seems to me, included in order to make it clear that there can be an appeal from the original decision in the case (for which para.(b) of that subsection provides) where the decision on review has not been notified within the period prescribed under section 203 of the Act. Be that as it may, when the appeal came before HH Judge Marcus Edwards, on September 6, 2005, he treated it (correctly, as I think) as an appeal from the review decision of November 15, 2004.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Judge Monty decided that as the applicant had elected to pursue the appeal against the review decision notified out of time it was no longer open to him to appeal against the original decision. He is reported as saying that the position might have been different had the appeal against the first decision been brought before the out of time review decision was notified, as in <span style="font-style:italic">Muloko</span>’s case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Khamassi v Hillingdon LBC </span>(2 March 2020), Judge Lochrane followed the decision in <span style="font-style:italic">Muloko</span> and, on an appeal against a late decision brought without prejudice to the contention that it was a nullity, held that it was indeed a nullity unless and until the recipient elected to treat it as valid.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In contrast, in <span style="font-style:italic">Karimi v Southwark LBC</span> (26 April 2020), Judge Saunders is reported as dismissing an appeal against a late review decision brought on the ground that the late decision was a nullity and of no effect. He held that the bringing of two appeals against both s.184 and s.202 decisions, as had occurred in that case, was not permissible, referring to <span style="font-style:italic">Jobe </span>and <span style="font-style:italic">Castro</span>. He held that the lodging of the appeal against the s.202 decision had “validated” it. Further, he noted that the Act contained no deadline for completion of the review process and accordingly it cannot have been intended that non-provision of the review decision in time would render the review process invalid. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Finally, in <span style="font-style:italic">Ngnoguem v Milton Keynes Council </span>(24 May 2019), the housing applicant also brought two appeals, one from the s.184 decision and another from a late decision on review. The latter was apparently expressed to be made without prejudice to her non-acceptance/non-validation of the decision delivered out of time. This case is the subject of a pending appeal to this Court which was due to be heard together with the present appeal. It has, however, now been adjourned, at the appellant’s request, to a new date to be fixed after the decision in the present appeal. We have a transcript of Judge Melissa Clarke’s judgment in that case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Ngnoguem</span>, Judge Clarke noted the mandatory requirement for a review to be carried out and notified: s.202(4). Nothing in the Act, she said, provides for that obligation to cease even in a case where the prescribed time period has elapsed. She held that, if a review were not forthcoming in time, an appeal against the original decision could be brought. Once brought it would remain to be determined, even though it might become academic because a review decision was delivered out of time after the appeal had been brought. She said that  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.00in;margin-right:0.80in;text-indent:0.00in">“… whether or not the appeal becomes academic would depend on whether there [was] any additional benefit to the appellant in pursuing the appeal (per <span style="font-style:italic">Deugi</span>)”.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In Judge Clarke’s judgment, a later appeal against the late review would not “validate” the decision which would still be a decision whether there was an extant appeal against the original decision or not. Judge Clarke referred to the comment by Chadwick LJ in <span style="font-style:italic">Bellamy v Hounslow </span>(quoted supra) and she held (at paragraphs 33 and 34) that,  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.36in">“33. … there can only be one decision, namely the review decision, even though it was issued out of time </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in">34. …[t]he out of time Review Decision, properly notified and received by the Appellant, overtook the Initial Decision in relation to which the Appellant has a right of appeal. Accordingly, I will not go on to consider whether the s.184 Appeal was rendered academic by the Review Decision, since it should never have been brought in the first place, having been superseded by the Review Decision albeit that it was notified out of time. I dismiss the s184 Appeal and will go on to consider the s202 Appeal.” (which she also dismissed) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I have found these varying decisions of the experienced County Court judges very helpful in resolving the present appeal. Each has assisted greatly in throwing light upon the implications of the arguments that have been raised as to the proper solution to problems arising in this type of case. In the end, I do not find that any of the decisions precisely resolves the matter in issue in this case and I find it easier to address afresh the problem posed by this case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As I have said, the Act envisages that a review once requested must be carried out and the decision must be notified to the applicant. There is nothing to suggest that a review carried out pursuant to this obligation is of no effect. Nor is there anything in <span style="font-style:italic">Bellamy’s </span>case (supra) (a case where there were appeals against an original decision of 4 August 2004 and against a decision on review out of time on 15 November 2004) to suggest that the review decision under appeal was a nullity, as is suggested by the decisions in <span style="font-style:italic">Muloko </span>and <span style="font-style:italic">Khamassi</span>. Therefore, I do not see the bringing of the appeal against the s.202 decision in this case as “validating” an otherwise invalid decision.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the passage quoted above from the judgment of Chadwick LJ in <span style="font-style:italic">Bellamy</span>, the learned Lord Justice expressed the view that the County Court judge had been correct to treat the appeal before him as being against the later review decision of 15 November 2004; it was a route to dealing with the case on its merits and on an up-todate basis. This and the wording of s.204, to which Chadwick LJ and Judge Monty QC in <span style="font-style:italic">Castro</span> referred, indicate that once the authority fails to notify a review decision in time, but produces a late review decision, the applicant has a choice of an appeal against the original decision or the review decision but not both. If he/she does appeal against both, as Judge Clarke said in <span style="font-style:italic">Ngnoguem</span>, the first appeal will remain an appeal before the County Court, but the review decision will not be a nullity; unless there is some distinct factor giving rise to a legitimate interest in pursuing a quashing of the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">first decision (<span style="font-style:italic">Deugi</span>), the court (as in <span style="font-style:italic">Bellamy</span>) will treat the composite case as an appeal against the review.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also think that Judge Clarke was correct to say in <span style="font-style:italic">Ngnoguem</span> that, as at the date of the review decision, that decision replaced the original decision of the authority and there would be no legitimate interest in doing other than addressing such legal challenge as there might be to what was decided on the review.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I do not see that seeking the quashing of the original decision simply in the speculative hope of a more favourable decision from a different officer would be legitimate in the relevant sense. Nor would the mere hope of fresh evidence be of use, provided the reviewing officer had had all the material evidence. A desire to preserve the interim housing duty under s.188 would seem to be simply an attempt to play the system which is not what the public housing system is for. In the present case, there was nothing on the facts advanced to suggest that the original decision maker or the reviewing officer had not had all necessary material before them nor was there advanced any other distinct advantage for Ms Stanley of a determination of the appeal against the first decision. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Conclusion</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I would, therefore, dismiss the appeal against paragraph 1 of the Judge’s order of 15 </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in">January 2020. As already indicated, there is no appeal against the Judge’s dismissal of the appeal from the review decision. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Lord Justice Peter Jackson:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in"><span style="font-weight:bold">Mrs Justice Roberts</span>: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

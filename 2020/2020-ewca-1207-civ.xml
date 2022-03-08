@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1207"/>
+	  <FRBRuri value="ewca/civ/2020/1207"/>
+	  <FRBRdate date="2020-09-15" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1207"/>
+	  <FRBRname value="WALID KHALIL FAKHRY v LAURENCE PAGDEN"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1207/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1207/eng"/>
+	  <FRBRdate date="2020-09-15" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1207/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1207/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:15:39" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="walid-khalil-fakhry" href="" showAs="WALID KHALIL FAKHRY"/>
+	<TLCPerson eId="laurence-pagden" href="" showAs="LAURENCE PAGDEN"/>
+	<TLCPerson eId="simon-james-underwood" href="" showAs="SIMON JAMES UNDERWOOD"/>
+	<TLCRole eId="appellant" href="" showAs="Appellant"/>
+	<TLCRole eId="respondent" href="" showAs="Respondent"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1207/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1207</uk:number>
+	<uk:cite>[2020] EWCA Civ 1207</uk:cite>
+	<uk:hash>46379b97396773d4ca46891bd6d0df2ecf68fa7d2bbc9aca2e8d0172e92489a5</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1207/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.51in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0604166666666666in;height:1.051388888888889in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1207</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>A2/2019/0784</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.30in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.30in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.30in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">BUSINESS AND PROPERTY COURTS</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.30in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">INSOLVENCY AND COMPANIES LIST (ChD)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.30in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Mr Jeremy Cousins QC (sitting as a Deputy Judge of the High Court)</span>
+	<span style="font-weight:bold"> </span>
+	<span style="font-weight:bold;text-decoration:underline">CR-2018-007079</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:1.69in">
+	<span style="text-decoration:underline">Date: 15 September 2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE FLOYD</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE DAVID RICHARDS</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE NEWEY</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#walid-khalil-fakhry" as="#appellant" style="font-weight:bold">WALID KHALIL FAKHRY </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.10in;margin-right:0.00in;text-indent:0.00in">
+	      <role refersTo="#appellant">
+		<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+		<span style="font-weight:bold"> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">- and - </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#laurence-pagden" as="#respondent" style="font-weight:bold">LAURENCE PAGDEN  </party>
+	    </p>
+	    <p style="text-align:left;margin-left:1.96in;margin-right:0.00in;text-indent:0.00in">
+	      <party refersTo="#simon-james-underwood" as="#respondent" style="font-weight:bold">SIMON JAMES UNDERWOOD </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <role refersTo="#respondent">
+		<span style="font-weight:bold;text-decoration:underline">Respondents</span>
+		<span style="font-weight:bold"> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Jonathan Crow QC and Joseph Curl</span> (instructed by <span style="font-weight:bold">Pinsent Masons LLP</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Andrew Sutcliffe QC, Sophie Mallinckrodt and William Day </span>(instructed by<span style="font-weight:bold"> Harcus Parker </span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Limited</span>) for the <span style="font-weight:bold">Respondents</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing dates: 10 and 11 March 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice David Richards: </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Introduction</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This appeal, brought with permission granted by Patten LJ, is against an order made by Jeremy Cousins QC, sitting as a Deputy Judge of the High Court, dismissing an application dated 11 September 2018 made jointly by the appellant (Mr Fakhry) and Mark Robert Fry.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The application sought, among other relief, to set aside an <span style="font-style:italic">ex parte </span>order<span style="font-style:italic"> </span>made by Fancourt J on 20 July 2018. By that order, three associated companies, which had been dissolved at the conclusion of their respective members’ voluntary liquidations, were restored to the register of companies and new liquidators, not the liquidators who had previously been in office, were appointed. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Background facts </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The three companies, Core VCT plc, Core VCT IV plc and Core VCT V plc (the Companies), were established as venture capital trusts for investment in small and medium enterprises. They raised a total of some £66 million from about 2,700<span style="font-weight:bold"> </span>retail investors through the issue of shares listed on the London Stock Exchange. The Companies were managed by Core Capital LLP (CC) until 31 December 2013 and by Core Capital Partners LLP (CCP) from 1 January 2014, whose founders and managing partners were Mr Fakhry and Stephen Edwards, both of whom were also members of each of the Companies.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By resolutions passed by overwhelming majorities at meetings of members of the Companies, each was placed in members’ voluntary liquidation on 16 April 2015. The liquidators appointed at the meetings were Mr Fry and Neil Mather, both partners in Begbies Traynor Group plc<span style="font-weight:bold"> </span>(the former liquidators). The final general meetings of the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Companies were held on 10 August 2016. The liquidators’ final account for each Company was sent to the members in advance of the meetings and approved by overwhelming majorities at each meeting, as was the release of the liquidators. In accordance with section 201 of the Insolvency Act 1986 (the Act), the liquidators’ final accounts and returns were sent to, and registered by, the registrar of companies, and on 18 November 2016 the Companies were deemed to be dissolved.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">After the final meetings were convened but before they were held, Simon<span style="font-weight:bold"> </span>Hussey, a member of Core VCT plc (holding 0.04% of its shares), set out a number of concerns in a letter dated 29 July 2016 to the former liquidators. Mr Hussey and other members raised these concerns at the final meetings. The concerns related to the management of some of the Companies’ investments before they went into liquidation, the transfer of some of the investments to an associated company in 2011, which had been approved by resolutions of the members at that time, and the terms on which the Companies’ remaining investments were sold to an associated company in the course of the liquidation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Timothy Grattan, a member of each Company (holding 0.331% of shares in Core, 0.25% of shares in Core IV and 0.32% of shares in Core V), had voiced concerns about the transfer of investments in 2011 at the annual general meetings in that year, and he voiced other concerns at the annual general meetings in 2013 and 2014. Mr </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Hussey and a number of other members had raised some of the concerns set out in the letter dated 29 July 2016 with Mr Fakhry in correspondence and at meetings in the period September to December 2015. Following the final meetings, there was an informal meeting with Mr Fry and his colleagues, attended by Mr Hussey and Mr Grattan, to discuss the concerns and some email correspondence that continued into September 2016. The former liquidators were not persuaded to take any steps with regard to these concerns.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The restoration applications </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 18 June 2018, Mr Grattan issued three Part 8 claim forms by which he sought orders that included the restoration of each of the companies to the register of companies, pursuant to section 1029 of the Companies Act 2006, and the appointment of the respondents Laurence Pagden and Simon Underwood (the present liquidators) as liquidators of each company, pursuant to section 108 of the Act (the restoration applications). These applications were supported by witness statements of Mr Grattan and Mr Hussey, the latter running to 42 pages with over 3,000 pages of exhibits. These statements detailed what were described as “serious questions that need to be answered” about the management of the Companies’ investments, the transactions undertaken in 2011 and the conduct of the liquidations.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The applications were heard by Fancourt J on 20 July 2018, with only the applicant represented. Notwithstanding the requirement to give notice of the applications to the former liquidators under the <span style="font-style:italic">Practice Note: Claims for an Order Restoring the Name of a Company to the Register (Companies Court</span><span> </span><span style="font-style:italic">Practice Note 1 of 2012)</span> [2012] BCC 880, no notice was given to them. This was deliberate, as counsel appearing for Mr Grattan explained to Fancourt J. The reason given was that the purpose of the restoration and appointment of new liquidators was, in part, to investigate the conduct of the former liquidators. Counsel drew the judge’s attention to the relevant paragraph of the Practice Note. Inadvertently, the judge was wrongly told that the registrar of companies had consented to the absence of notice to the former liquidators. Counsel explained to the judge why, having regard to the matters alleged in the witness statements, the former liquidators were not proposed for appointment as liquidators. Fancourt J made a composite order for the restoration of the Companies to the register and for the appointment of the present liquidators (the restoration order). The order was received by the registrar of companies on 25 July 2018, whereupon the restorations became effective.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The present liquidators lost no time in getting on with their investigations. On 24 July 2018, they wrote to the former liquidators, Mr Fakhry, Mr Edwards and others, informing them of Fancourt J’s order and requiring documents, information and undertakings. After correspondence between the present liquidators and solicitors for the former liquidators and CCP, the evidence in support of the restoration applications was provided on 7 August 2018. On 23 August 2018, the present liquidators applied under sections 234 to 236 of the 1986 Act, for production of documents by the former liquidators, Mr Fakhry, Mr Edwards and others. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The set-aside application </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 11 September 2018, Mr Fakhry and Mr Fry (the applicants) issued the application, which is the subject of this appeal. It was dismissed by Mr Cousins QC (the Judge) </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">for reasons given in a careful and well-organised judgment: [2019] EWHC 540 (Ch), [2019] BCC 845. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The principal relief sought by the application (the set-aside application) was (1) an order setting aside the order of Fancourt J, (2) alternatively, an order pursuant to section 108(2) of the 1986 Act removing the present liquidators and appointing Mr Fry in their place, and (3) further or alternatively, an order pursuant to section 171(3)(b) of the 1986 Act directing that meetings of members of each Company be held to consider (i) whether the Companies should continue in members’ voluntary liquidation and, if so, (ii) the identity of the liquidator(s).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A significant amount of evidence was filed by the applicants, and by Mr Grattan, Mr Hussey and the present liquidators in answer, much of which was directed to the merits of the issues raised by Mr Grattan and Mr Hussey. However, the applicants accepted before the Judge, and before us, that for present purposes, and without admitting that any of the allegations were well-founded, the court should proceed on the basis that the evidence disclosed matters worthy of investigation. At [19] the Judge helpfully summarised those issues and it is not necessary for me to repeat his summary or deal further with the issues.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Before the Judge, it was submitted for the applicants that the restoration applications were made on a misconceived basis because it is a basic principle of company law that decision-making in a solvent company is for the members and the majority can bind the minority. This principle was subverted in this case by the use of the statutory procedure to restore a company to the register on the application of one member, supported by one<span style="font-weight:bold"> </span>other member, without the involvement of any other members. The liquidators appointed on that application were invested with the wide powers conferred by the 1986 Act, which they were seeking to use to pursue investigations again without the consent or involvement of the members, who owned the companies and for whose benefit the present liquidators were purporting to act. Moreover, the present liquidators resisted the proposal that the members should decide who the liquidator should be and had rejected the compromise suggestion of meetings of members of the companies. The present liquidators’ approach was summarised by Mr Pagden in a witness statement: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“…we propose to contact the members and provide an opportunity for a meeting once we are able to report conclusions (preliminary or otherwise) arising from our investigations. There is no point in calling a members’ meeting now, since we would not be in a position to put our findings to the members for them to determine whether further investigations should be made and/or whether claims should be brought against Mr Fakhry, Mr Fry and/or others.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In support of the application to set aside the order of Fancourt J, it was submitted that it had not been regularly obtained, because the judge had been led mistakenly to believe that it had been made clear to the registrar of companies that notice was not going to be given to the former liquidators and that the registrar had agreed to this course. Further, the Treasury Solicitor had referred to the need to comply with the Practice Note in this regard. The former liquidators were denied the opportunity to respond to the evidence on which the application was made.  Where, on an <span style="font-style:italic">ex parte </span>application, the court is misled, even inadvertently, on a material point such that the order might well not have been made, the court should discharge the order. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As an alternative to the primary submission that Fancourt J’s order should be set aside, it was submitted that the present liquidators should be removed and Mr Fry appointed in their place, thereby restoring the <span style="font-style:italic">status quo ante</span>. The reason for their appointment by Fancourt J was to revisit decisions previously taken to accept the final accounts of the former liquidators and to release them by the overwhelming majority of members, but there was no evidence that they enjoyed the support of a majority of members. In the further alternative, it was submitted that the court should direct meetings of members to enable the majority to make their choice.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The judgment below </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In rejecting the set-aside application in its entirety, the Judge began by considering the approach that the court should take when there is evidence before the court that could justify an investigation of (in this case) the former liquidators’ conduct. Relying on <span style="font-style:italic">Clydesdale Financial Services v Smailes </span>[2009] EWHC 1745 (Ch), (2009) BCC 810, where the court removed administrators without any personal imputation against them personally, in circumstances where they could not be expected to investigate allegations against themselves, he said that the scope of the court’s enquiry must necessarily be limited to deciding whether issues worthy of investigation have been raised. While that approach did not necessarily dictate the outcome of the applications, he said at [78]: “I consider that the approach does shape how I should make my assessment as to (i) whether there is sufficient material to justify the investigations that the liquidators now seek to pursue; and (ii) the whole process which was started when Mr Hussey and Mr Grattan made the application for the restoration of the companies and the appointment of new liquidators”. The right test was whether the material now relied on by the present liquidators raised serious issues to be investigated. The applicants did not seek to argue that the evidence failed to raise issues worthy of investigation. This, as the Judge commented, was a realistic and correct position to adopt, both in light of the state of the evidence and because the application was not a suitable forum for resolving such disputes once there is a credible evidence as to the existence of such issues.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As regards the submission concerning the paramountcy of shareholder control, the Judge said at [81] that he did “not doubt the correctness of the principles described by Mr Curl as a starting point for the consideration of issues in relation to corporate governance in the case of a solvent company, or, indeed, for the conduct of an MVL </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">[members voluntary liquidation]” but it was a starting point “and many inroads can be identified which affect the operation of those principles”. He instanced derivative actions and the statutory power of the court to remove liquidators appointed by the members, on which the wishes of the majority are a factor to which the court will have regard, but which are not determinative. Thus, the Judge held, while the court will respect principles of corporate autonomy in relation to majority decision making, those principles have to accommodate wider concerns such as minority protection or holding a liquidator to account. Those principles did not provide an overarching objection to the procedure adopted in this case, contrary to the submissions of counsel for the applicants.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Judge turned to consider the individual steps in the procedure, starting with the application to Fancourt J. He accepted that Fancourt J had been misled, inadvertently, into thinking that the registrar of companies had agreed that the former liquidators need not be served with the applications. He also accepted, relying on the decision of this court in <span style="font-style:italic">Welsh Ministers v Price </span>[2017] EWCA Civ 1768, [2018] 1 WLR 738, that applications to restore companies to the register are effectively <span style="font-style:italic">ex parte</span> so that there is a duty of full and frank disclosure on the applicant in respect of all material facts. He considered that there had been no non-disclosure of material facts. Fancourt J had been informed (i) of the requirement under the Practice Note as to service on former liquidators, (ii) that the former liquidators in this case had not been served, and (iii) that the proposed liquidators were different from the former liquidators. The Judge also accepted that the evidence explained, as required by the Practice Note, why different liquidators were being proposed. The misstatement as to the registrar’s consent to non-service on the former liquidators was not material because Fancourt J was made fully aware that they had not been served. The failure to inform Fancourt J </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">that the former liquidators had been released by resolutions passed at the final meetings of the Companies in August 2016 was not material because the releases did not operate as complete bars to future proceedings.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In any event, the Judge was satisfied that Fancourt J would have made the same order if there had been full and accurate disclosure. Fancourt J clearly thought that the right course was to notify the former liquidators after the event, and knowledge of the releases would not have led to any different orders.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Judge rejected the submission that there had been an injustice and a denial of rights to the former liquidators in not allowing them the opportunity to appear and make representations on the restoration applications. He based this on the wellestablished principle, as explained by Sir Terence Etherton MR in <span style="font-style:italic">Welsh Ministers v Price </span>at [61], that the court will not permit interventions in a restoration application by a third party who merely wishes to argue that the proceedings to be brought by the company, if restored, against the third party have no prospect of success. The position was, if anything, stronger in the present case where proceedings are not proposed, but merely under consideration. If the former liquidators had attended, the Judge did not think that Fancourt J would have been persuaded to make any different order, particularly as it was clearly impossible for them to investigate the allegations against themselves.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As for removal of the present liquidators, the Judge did not accept that any cause for their removal had been shown. The present liquidators were willing and qualified to be appointed and there were no grounds to remove them. On the other hand, the applicants were persons whose past conduct in relation to the companies merited investigation. They were not proper persons to invoke the jurisdiction: see <span style="font-style:italic">Deloitte &amp; Touche AG v Johnson </span>[1999] 1 WLR 1608, where a defendant to a negligence action brought by liquidators applied to remove them. In giving the advice of the Privy Council, Lord Millett said of the applicant at p.1611 that it “is not merely a stranger to the liquidation; its interests are adverse to the liquidation and the interests of the creditors…it has no legitimate interest in the identity of the liquidators, and is not a proper person to invoke the statutory jurisdiction of the court to remove the incumbent office-holders”. The application could be seen as an attempt to thwart any investigation into the applicants’ conduct.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The principal basis for the removal applications was that there were good grounds to suppose that the present liquidators did not have the support of a majority of members. As to that, the judge said at [109]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“…there is material before the court which suggests that they do indeed enjoy significant support. When the Meetings took place in 2011, 2015 and 2016, the members did not have the benefit of the evidence that has now been assembled, and which I have held raises serious issues to be investigated; their views as to the conduct of a liquidation by the former liquidators against that background has not been tested.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge rejected the application for meetings of members. Meetings would not have the benefit of the investigations which the present liquidators wished to undertake and, given the voting power of the manager-related vote, there seemed a real risk that it could be deployed to prevent any investigation of matters that merited it. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Judge summarised his conclusions at [117]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“I am satisfied the evidence before me demonstrates that there are serious issues to be investigated in respect of the management of the companies, and the conduct of their liquidations. It was therefore entirely just that they should be restored to the register. I consider that there was no failure of frank and full disclosure upon the making of the applications that were considered by Fancourt J in July of last year; the misstatement as to what had been mentioned to the registrar was immaterial, and Fancourt J himself was clearly satisfied that it would be a satisfactory way forward for the former liquidators to be served with his order within 21 days from the hearing before him. The appointment of new liquidators was inevitable. The former liquidators could not sensibly be reappointed when the pressing task to be undertaken would include investigating their own previous conduct. The investigations needed to be undertaken properly, and by someone whose independence is not in doubt. This was achieved by Fancourt J’s order. No good cause to remove the liquidators has been demonstrated. It would not be appropriate to order a meeting of the companies at this stage. Such meeting would not have the benefit of the proposed investigations, and there is, because of the voting power available to those whose interests are aligned against investigation, a real danger that proper investigation would be defeated.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Legislation on members’ voluntary liquidations </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Before considering the issues and submissions on this appeal, it is convenient to refer to the relevant legislative background.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There are essentially three types of liquidation. They share the fundamental purpose of collecting and realising the assets of the company, including any claims whether </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">under the general law or under insolvency legislation, and distributing the net proceeds after the costs and expenses of the liquidation among the persons entitled, with creditors ranking in priority to members.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A winding up by the court, or compulsory liquidation, is commenced by an order of the court, made on a petition presented by a creditor or a contributory (who for practical purposes is a member of the company concerned) or by a public authority on public interest grounds. The liquidation is conducted by the official receiver or by a liquidator as an officer of the court. Although the court will not generally interfere with the conduct of the liquidation, it remains a liquidation by the court which retains a supervisory function over the liquidator. There are some provisions for creditors or members to make decisions on certain matters.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The other types of liquidation are creditors’ and members’ voluntary liquidations. They are not under the control of the court and the liquidators are not officers of the court, although the court has a statutory power to give directions to liquidators, on the application of the liquidator or a creditor or member. The essential difference between the two is the solvency of the company. If the company is and remains solvent, creditors will be paid and the persons with the real economic interest in the liquidation are the members. It is a process for their benefit. They do not, however, become the beneficial owners of the assets vested in the company. In all types of liquidation, the beneficial interest in the assets is suspended and they are held on a statutory trust to be dealt with in accordance with the statutory scheme: see <span style="font-style:italic">Ayerst (Inspector of Taxes) v C&amp;K Construction Ltd </span>[1976] AC 167. Nonetheless, the liquidations are processes for the benefit of those entitled to the assets, which in the case of a members’ voluntary liquidation in effect means the members.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">These differences are reflected in the legislation. Both types of voluntary liquidation are commenced by a resolution of the company in general meeting, but, by virtue of section 90 of the Act, the liquidation will be a members’ voluntary liquidation if a declaration of solvency is made by the directors in accordance with section 89 before the resolution to wind up is passed.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In a members’ voluntary liquidation, it is the members who appoint the liquidator(s) (section 91) whereas it is the creditors who have the right to control the appointment in a creditors’ voluntary liquidation (section 100). If a vacancy occurs in a members’ voluntary liquidation, the members are entitled to fill it: section 92. Annual progress reports must be sent to the members (section 92A). The members determine the basis of remuneration of the liquidators: rule 18.19 of the Insolvency (England and Wales) Rules 2016 (SI 2016/1024).<span style="font-weight:bold"> </span>The members may remove a liquidator in a members’ voluntary liquidation, at a meeting summoned specially for that purpose: section 171(2).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The court also has powers in relation to the appointment and removal of liquidators in a members’ voluntary liquidation. Under section 108(1), the court may appoint a liquidator if, from any cause whatever, there is no liquidator acting. This provision supplements the power of the members to fill a vacancy under section 92. Under section 108(2), the court may, on cause shown, remove a liquidator and appoint another, so supplementing both section 171 and section 92. If a liquidator is appointed by the court, his or her position is to an extent entrenched by section 171(3) which provides that a meeting under section 171(2) to remove such a liquidator may be summoned only if (a) the liquidator thinks fit, or (b) the court so directs, or (c) the meeting is requested in accordance with the rules by members representing not less than one-half of the total voting rights of all the members having at the date of the request a right to vote at the meeting.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As soon as the company’s affairs are fully wound up, the liquidator must prepare and send to the members “an account of the winding up, showing how it has been conducted and the company’s property has been disposed of” (section 94(1)). The liquidator must send a copy of the account to the registrar of companies within 14 days after its completion.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There have been changes made to the statutory procedure thereafter since the dissolution of the Companies in 2016. At that time, section 94(1) further provided that the liquidator should thereupon call a general meeting for the purpose of laying before it the account and giving an explanation of it. Section 171(6) provided that, where the meeting had been held, the liquidator vacated office as soon as he or she had complied with section 94(3) and “given notice to the registrar of companies that the meeting…[has] been held and of the decisions (if any) of the meeting”. Typically, as in the case of the Companies, those decisions would include a resolution approving the<span style="font-weight:bold"> </span>release of the<span style="font-weight:bold"> </span>liquidator. In any event, under section 173(2)(d), the liquidator had his or her release as from the time of ceasing to hold office.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The procedure has changed with effect from 6 April 2017, by reason of amendments made by the Small Business, Enterprise and Employment Act 2015. There is no longer a final meeting of members. Under sections 171(6) and 173(2)(d), the liquidator vacates office and is released as soon as he or she has sent the final account to the registrar.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On receipt of the final account, the registrar is required to register it and on the expiration of three months from the date of registration, the company is deemed to be dissolved: section 201(2).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Under section 1029 of the Companies Act 2006, application can be made to the court to restore a company to the register of companies. The application may be made by the persons listed in section 1029(2), including any former member of the company. The court may order the restoration of the company<span style="font-weight:bold"> </span>if it considers it just to do so: section 1031(1)(c). The effect of the order is that the company is deemed to have continued in existence as if it had not been dissolved: section 1032(1).</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The appeal</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Fakhry’s appeal is a comprehensive challenge to all aspects of the Judge’s decision to dismiss the set-aside application. It is submitted that this court should allow the appeal and, in descending order of preference, either set aside Fancourt J’s order in its entirety with the result that the Companies would revert to their dissolved status, or remove the present liquidators and appoint Mr Fry in their place (Mr Mather having left Begbies), or direct that meetings of the members of each Company be held to consider whether to continue the existence of the Companies and, if so, to decide on the identity of the liquidator(s).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Grattan, on whose application Fancourt J made the restoration order, was represented before the Judge, but he is not a party to this appeal, nor has he appeared or been represented before us. When this was raised very early in the hearing of the appeal, the court was assured by Mr Sutcliffe QC, who appears for the present liquidators, that Mr Grattan was well aware of the appeal and would be bound by the outcome. The appeal proceeded on that basis.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The positions taken by the parties in these proceedings are unconventional in some respects. The respondents to the set-aside application were quite properly the present liquidators and Mr Grattan and Mr Hussey. It was said by the applicants that Mr Grattan and Mr Hussey were joined only for the purpose of obtaining costs orders against them. However, the restoration order, which the applicants were seeking to have set aside, was obtained on applications made by Mr Grattan. He, not the present liquidators, was the proper respondent as regards that relief. The same is true of the application for an order for meetings. These were essentially matters between the members of the Companies, although as allegations were made against the former liquidators and as (for reasons which I shall give later) they had standing on the setaside application, they could legitimately address those allegations. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The role of the present liquidators should have been confined to providing information to the court. On applications of this sort, liquidators are expected to adopt a neutral position: see, for example, in the context of a petition to wind up a company already in voluntary liquidation, <span style="font-style:italic">Re Roselmar Properties Ltd (No 2) </span>(1986) 2 BCC 96,157. If the application to remove the present liquidators had been made on grounds that reflected on them personally, for example their competence or integrity or that their conduct required investigation, they could be heard in opposition to that relief but that formed no part of the application, which instead was based on the proposition that they should not have been appointed without the support of the members of each Company as a body. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There has clearly been close cooperation between Mr Grattan and the present liquidators, before and after the restoration applications were made. Stewarts Law LLP acted as Mr Grattan’s solicitors up to and including the hearing of the restoration applications, as did leading counsel, and thereafter both the solicitors and counsel acted for the present liquidators. More recently, Harcus Parker Limited, whose partners acted for Mr Grattan and Mr Hussey below, now act for the present liquidators in place of Stewarts Law. There is nothing improper in any of this, but it may go some way to explaining the blurring of roles.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is important that liquidators should have a keen appreciation of the circumstances when they can act in an adverse capacity and those circumstances where neutrality is expected. In these proceedings, both below and on appeal, the parties have acted as I have described without, so far as I am aware, the Judge or the applicants objecting (and, given that the applicants joined Mr Grattan and Mr Hussey for the purposes of costs only, it was not open to the applicants to object). The submissions in opposition to the appeal were made on behalf of the present liquidators and I will address the appeal and the respondents’ submissions on their merits. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Locus standi </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is appropriate to consider first a submission made by Mr Sutcliffe which, if successful, is a complete answer to the appeal. He submitted that neither Mr Fakhry nor Mr Fry had <span style="font-style:italic">locus standi </span>to appear on the restoration application, still less to resist the orders sought, or to seek any of the orders in the set-aside application.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As regards Mr Fakhry, it was submitted that (i) no member, other than the applicant, had standing to appear on an application to restore a company to the register or on an application under section 108 to appoint a liquidator, and (ii) in any event, Mr Fakhry had no standing to do so, because he was one of the intended subjects of the proposed investigations. The same submissions were in effect made as regards Mr Fry as a former liquidator. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In addressing these submissions, I will first leave to one side the submission that neither Mr Fakhry nor Mr Fry had standing because they were the intended subjects of the proposed investigations.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I deal first with the position of Mr Fakhry who, like Mr Grattan, is a member of each Company. Section 1029(2) sets out eleven categories of person who may apply for a restoration order, including a former member of the company (“former” because the company has been dissolved). In addition, it permits the application to be made by “any other person appearing to the court to have an interest in the matter” (emphasis added). A former member is, by virtue of that status alone, considered to be a person with a sufficient interest in the restoration of the company to be designated as a person who may make the application. If a restoration order is made, it will directly affect all the members. The company of which they were members will be revived and, if they were members at the date of dissolution, their status as such will also be revived. They will become again the owners of an asset, their shares in the company. Although there is no requirement for former members to be given notice of a restoration application, it is frankly impossible to see why members should not have standing to be heard on it. They may indeed have many legitimate reasons to support or to oppose restoration. For the same reasons, it is clear that they are “directly affected” by a restoration order for the purposes of CPR 40.9 and so have standing to apply to the court to vary or set aside a restoration order.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On reflection, Mr Sutcliffe accepted that members have standing to appear on a restoration application and to apply under CPR 40.9 to vary or set aside a restoration order, provided that their grounds for doing so are linked to their positions as members.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As regards an application to appoint a liquidator, section 108 of the Act does not even specify who may make the application. It is left to the court to determine whether the applicant has a sufficient interest to do so. In a members’ voluntary liquidation, members clearly have sufficient interest by virtue of their membership. Equally, they also have sufficient interest to oppose an appointment or to set aside an order making an appointment under CPR 40.9. A member might, on any view, have legitimate reasons for opposing the appointment of a particular liquidator.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As regards the standing of Mr Fry, Mr Sutcliffe pointed out that he and Mr Mather had automatically ceased to be the liquidators under section<span style="font-weight:bold"> </span>171(6) of the Act<span style="font-weight:bold"> </span>in August 2016, three months before the dissolution of the Companies in November </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.01in;text-indent:0.00in">2016. Accordingly, they did not become liquidators again on restoration of the Companies and the application to appoint the present liquidators did not involve the removal of the former liquidators from office. If it had, they would have been respondents to the application and would have been entitled to be heard. In these circumstances, Mr Sutcliffe submitted that the former liquidators were not directly affected by Fancourt J’s order and so were not entitled to apply to vary it or set it aside.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The difficulty with Mr Sutcliffe’s submission on this point is that the Practice Note requires that, in the case of a company which was dissolved whilst in or following its liquidation, evidence of service of the application on the former liquidator must be filed with the court: paragraph 3.5 of the Practice Note. This pre-supposes, without expressly providing, that the application must be served on the former liquidators. Service of proceedings, rather than just giving notice of them, is a formal step not only informing the recipient of the proceedings but also asserting the court’s jurisdiction over that person.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Neither the Companies Act nor the CPR make provision for respondents or other parties to restoration applications. Paragraph (6) of the Practice Note refers to “the parties” without specifying them. The identity of parties to a restoration application has been developed over the years by the court’s practice. In <span style="font-style:italic">Welsh Ministers v Price </span>at [74], Sir Terence Etherton MR said that “as a matter of practice the Registrar of Companies is always made a respondent to restoration applications” and referred to the Practice Note (although it contains no express provision to that effect). Referring to section 651 of the Companies Act 1985, which contained the previous procedure for declaring the dissolution of a company void, Hoffmann LJ said in <span style="font-style:italic">Stanhope Pension Trust Ltd v Registrar of Companies </span>[1994] BCC 84 at 86E that “the registrar of companies and the former liquidator are normally the only respondents to an application under section 651”. The same had applied under the equivalent provisions of earlier Companies Acts.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, the terms of the Practice Note reflect the practice of joining the former liquidator to an application to restore a company which had been dissolved following the completion of its liquidation. For this reason, evidence of service of the application on the former liquidator is required to be filed. There is no indication in the Practice Note, or anywhere else so far as I am aware, of any intention to change the court’s longstanding practice.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Even if the prior practice of joining former liquidators as respondents no longer applies, the requirement for service on them necessarily means that they are considered to be persons interested in the application. A self-evident purpose of service on former liquidators is to enable them to bring to the attention of the court any matters relevant to the proposed restoration and, as an application will also be required for the appointment of liquidators under section 108 (see paragraph (6) of the Practice Note), any matters relevant to that application as well. In my judgment, the Judge was in error to say at [100] that the former liquidators were not entitled to participate in the restoration applications.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Sutcliffe submitted that the only reason why the Practice Note made provision for service on a former liquidator was to facilitate restoration applications being dealt with on paper. This is wrong, as shown by reference to the earlier practice when such applications were always heard in court or in chambers. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">While it is open to the court hearing the restoration application to waive on proper grounds the requirement to serve the former liquidator, it makes no sense to say that he is thereby deprived of standing as regards an application to set aside the order. There may remain matters which it is appropriate for the former liquidator to draw to the attention of the court as regards the restoration or the appointment of new liquidators. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I therefore reject the submission that neither a member nor the former liquidator has standing to apply to vary or set aside orders restoring a company to the register and appointing liquidators. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Sutcliffe’s fallback submission was that a member or former liquidator does not have standing to apply to vary or set aside orders restoring a company to the register and appointing new liquidators, if their purpose is to prevent investigations into their conduct or proceedings against them. This appears to me to confuse standing with the submissions which the court will permit a person to advance.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In this connection, Mr Sutcliffe relied on <span style="font-style:italic">Welsh Ministers v Price</span>, but there is nothing in that case that touches on the standing of members or former liquidators to appear on a restoration application or to apply to vary or set aside a restoration order. It concerned an application by a third party, who was a defendant in proceedings brought following the making of a restoration order, to be joined under CPR 19.2 to the restoration application with a view to applying to revoke the order on grounds on non-disclosure. The judgment of Sir Terence Etherton MR, with which Longmore and Coulson LJJ agreed, is framed exclusively in terms of an application by a third party. As the Master of the Rolls said at [60]: “There may be many third parties who perceive that their interests may be indirectly affected by restoration and who may wish to advance all manner of reasons for seeking to prevent or reverse an order for restoration rather than wait to face and, where appropriate, resist actions of the company against them”. Relying on this court’s decision in <span style="font-style:italic">Stanhope Pension Trust Ltd v Registrar of Companies</span>, he said at [61] that “it is well established that the court will not allow the intervention in proceedings for restoration by a third party who merely wishes to argue that the proceedings which the revived company proposes to bring against the third party have no prospect of success”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The present case is distinguishable from <span style="font-style:italic">Welsh Ministers v Price</span> on two important grounds. First, Mr Fakhry and Mr Fry were not third parties but, for the reasons given, were legitimately interested in the restoration application and, in Mr Fry’s case, was or was to be treated as a party to it. Second, neither of them sought to argue, whether </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">“merely” or at all, that the proposed investigations would not uncover anything or that any proceedings would have no prospect of success. It was accepted before the Judge, for the purposes of the application, that the issues raised by Mr Grattan and Mr Hussey raised matters worthy of investigation. Their submissions could not and did not therefore involve any reliance on a suggestion that there was nothing to investigate. As a member and a former liquidator respectively, they had standing to raise other matters that were relevant to the restoration order. Mr Fakhry’s case was that the restoration orders ignored or failed properly to take into account the right of the members as a body to determine whether the liquidation should be revived for the purpose of the proposed investigations. Whatever the merits of that case, it was directly connected to Mr Fakhry’s position as a member and one that he was entitled to advance. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is therefore unnecessary to decide whether Mr Fakhry or Mr Fry would have been entitled to adduce any evidence and advance any submissions directed to whether the allegations against them raised issues for investigation. I would not wish to be taken as agreeing that they had no right to do so. The case made by Mr Grattan was that there were matters worthy of investigation. He had to persuade the court of that, as the Judge acknowledged at [79]. If Mr Fakhry and Mr Fry had been served or given notice of the application, it is not clear to me why they should not have been heard in opposition to that necessary part of Mr Grattan’s case. As a member, Mr Fakhry had a legitimate interest in opposing the restoration of the Companies if the purpose was to pursue investigations into concerns which he could demonstrate, within the confines of this type of application, were groundless. He would clearly be entitled to do so if the concerns did not relate to him, and it is not clear why he should be denied that opportunity where the concerns did relate to him. The position is critically different from <span style="font-style:italic">Welsh Ministers v Price </span>where the objectors were truly third parties, with no connection with the company except that proceedings were being brought against them.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Different considerations apply to Mr Fry as the former liquidator. In the usual course of events, the expectation would be that the former liquidator would be re-appointed on restoration of the company. This is demonstrated by paragraph (6) of the Practice Note which requires evidence to explain the reasons if a different liquidator is proposed. If the application is served on the former liquidator, he or she is entitled to appear on the application and to assist the court with evidence and submissions relevant to the application. In my view, those matters include the reasons put forward for not re-appointing the former liquidator, including whether there are grounds for investigating his or her conduct. This was the view taken, correctly in my judgment, by Norris J in <span style="font-style:italic">Barclays Bank plc v Registrar of Companies </span>[2015] EWHC 2806 (Ch), [2016] BCC 64 at [19] – [20].<span style="font-style:italic"> </span>Although the present type of application is technically not an application to remove the former liquidator, it has that practical effect in a case where the former liquidator is willing to act. If it were an application for removal, the liquidator would be entitled to be heard as to whether there were grounds for an independent investigation (see <span style="font-style:italic">Clydesdale Financial Services Ltd v Smailes </span>on which the Judge relied) and I see no reason why the same should not apply on this type of application. It follows that these are matters that the former liquidator could also raise on an application to set aside or vary the order.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For these reasons, I reject Mr Sutcliffe’s submission that Mr Fakhry and Mr Fry did not have standing to apply to set aside the restoration order.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I turn now to the submissions of Mr Crow QC on behalf of Mr Fakhry in support of the appeal.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The appellant’s overarching submissions </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The overarching submissions for  Mr Fakhry were, first, that decision-making in relation to a solvent company, both as to whether it should go into liquidation and as to whether the final account of the liquidator should be accepted, is vested by the Act in the members. Having lost the vote on the second of these matters, a minority shareholder should not be permitted to achieve by application to the court the very result he failed to achieve at a general meeting, Second, this is all the more so where, as here, that result is achieved without notice to the other members or to the former liquidators and where the shareholder had raised concerns before and at the general meeting which passed the resolutions leading to the Companies’ dissolution. Third, the case is even stronger where remedies were available to the minority shareholders during the liquidation, but they did not avail themselves of them. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In support of his first principal submission, Mr Crow took us through the statutory provisions concerning members’ voluntary liquidations which I have summarised above. They demonstrated, he submitted, that, as one might expect of a process designed for their benefit (the interests of creditors being assured by the solvency of the company), the members are in ultimate control. In exercising their voting rights, members are entitled to have regard to their own personal interests, subject only to questions of oppression or unfair prejudice, and in this context he referred us to two authorities concerned with members’ voting rights outside the context of liquidation: <span style="font-style:italic">North-West Transportation Company Ltd v Beatty </span>(1887) 12 App Cas 589 and <span style="font-style:italic">Smith v Butler</span> [2012] EWCA Civ 314, [2012] Bus LR 1836.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As will be seen, I consider the role of members and the degree of control given to them by the legislation in a members’ voluntary liquidation, reflecting their interests as members in the process, to be a central issue in this case. However, it is important not to overstate it. Three points are relevant in this respect. First, while members may by a simple majority remove a director or, in a members’ voluntary liquidation, the liquidator, there is also vested in the court by section 108 of the Act the power to remove a liquidator, on cause shown, on the application of any person whom the court considers proper, including a member. No similar power exists as regards the removal of directors. Second, the court also enjoys the power to appoint a liquidator under section 108, either to fill a vacancy or in place of a liquidator. Again, no similar power exists as regards the appointment of directors. A liquidator appointed in this way may be removed by the members only through the mechanism set out in section 171(3). Third, the members do not enjoy powers to control the actions of liquidators. While the articles of association usually confer on the directors the power and responsibility to conduct the business of the company as they, in accordance with their duties, see fit, it is open to the members to exert control and instruct the directors in their conduct of the business by special resolution, altering the relevant articles either generally or <span style="font-style:italic">pro tanto</span>. The members enjoy no such powers over the liquidator even in a members’ voluntary liquidation. The most they can do, short of taking steps to remove the liquidator, is to apply to the court for directions under section 112 of the Act. It is then for the court to decide whether any directions be given to the liquidator. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The fact that the members of the Companies had resolved to accept the final accounts of the former liquidators and to give them their release could not of itself preclude the court from exercising its powers under section 1029 of the Companies Act and section 108 of the Act and Mr Crow did not suggest otherwise. As Hoffmann LJ said in <span style="font-style:italic">Stanhope Pension Trust Ltd v Registrar of Companies </span>at p.89E, “the finality of the dissolution is qualified by the express provisions of section 651” [of the Companies Act 1985]. <span style="font-style:italic"> </span>Leaving aside any issues arising from the <span style="font-style:italic">ex parte </span>character of the restoration application as it was made, Mr Crow relied on two factors as demonstrating that the relief should have been denied. First, Mr Grattan and Mr Hussey had raised concerns at the final meetings and had voted against the resolutions but they had lost the vote, which went in favour of the resolutions. Second, remedies </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">were available to them to pursue legal redress in respect of their concerns, but they did not do so. It was therefore too late for them, by the restoration application, to undo the effect of the majority decisions of the members taken at the meetings.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The first of those points could not, in the circumstances of the present case, provide a bar to the restoration application, and again Mr Crow did not, as I understood him, submit the contrary. The reason is that the resolutions were passed without most members having any knowledge of the matters of concern raised by Mr Grattan and Mr Hussey. There was no circular to members, informing them of these matters. Although Mr Grattan and Mr Hussey raised questions at the meetings, very few members were present in person to hear them and most of the votes had already been cast by proxy, as is usually the case with meetings of this sort. Only if there has been informed consent given by the majority of members voting for the resolutions to conclude the liquidations, could it be said that the resolutions should be treated as a bar to, or as strong grounds against, subsequent applications for restoration and the appointment of new liquidators. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The critical step in Mr Crow’s overarching submissions is the availability of remedies to Mr Grattan which he should have used before the dissolution of the Companies but did not do so.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Crow canvassed with us a number of avenues that were open to him. Some may be controversial, such as in particular a derivative action sanctioned under section 260 <span style="font-style:italic">et seq </span>of the Companies Act 2006, but there is no doubt that remedies were available. Most obviously, he could have applied to remove the former liquidators under section 108 and appoint other liquidators who could investigate their concerns and bring proceedings, if they considered it appropriate. Of course, on any such application, the onus would have been on him to establish that there was good cause for the removal of the former liquidators. Alternatives existed, although they would be less attractive from a practical standpoint. Misfeasance proceedings could have been brought under section 212 of the Act against Mr Fakhry and others, with the leave of the court under section 212(5). It is uncertain whether such proceedings could be brought against the former liquidators while they remained in office, as section 212(1)(b) refers to “a person who has acted as liquidator…of the company”. In theory, proceedings could have been brought in the names of the Companies, with an indemnity in favour of the liquidators as regards costs, as ordered by Walton J in <span style="font-style:italic">Fargro Ltd v Godfroy </span>[1986] 1 WLR 1134.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">These possibilities could have been explored even after the final meeting of members in August 2016 and delivery by the former liquidators of their final account to the registrar of companies. Although section 201(2) provides for the automatic dissolution of companies three months later, section 201(3) empowers the court to defer the date of dissolution on the application of any interested person. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">While remedies existed, the real issue is whether it can be said that Mr Grattan should, in the particular circumstances of the case, have pursued them. Was his neglect to do so such that the court should not have acceded to the restoration applications? It is certainly possible to envisage circumstances where this would be the case. A decision to refuse restoration on this ground would depend on an examination of all relevant circumstances, including the extent of Mr Grattan’s knowledge of the relevant matters, the information reasonably available to him in the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">time available, the response of the liquidators to his concerns and, perhaps, his financial ability to take the necessary steps. It must also be borne in mind that he and Mr Hussey were retail investors without ready access either to the information known to Mr Fakhry and Mr Fry or to the level of professional resources available to them.  If the evidence showed that Mr Grattan had sat on his hands, with knowledge of the alleged facts and in circumstances where he should have applied to remove the former liquidators or even brought proceedings against the alleged wrongdoers, this would at the very least be a highly relevant factor in the exercise of the court’s discretion to restore the Companies to the register and to appoint the present liquidators.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Counsel for the applicants raised before the Judge the question whether Mr Grattan and Mr Hussey had discovered any new information, as opposed to supplementing from public sources the information they already possessed, between the dissolution of the Companies and the issue of the restoration applications. The Judge did not deal with this point in his judgment. It was raised again by Mr Crow before us. His submission was that it had not been shown on the evidence that Mr Grattan and Mr Hussey had discovered any new information. Mr Sutcliffe did not accept this, and he pointed to the detailed evidence given by Mr Hussey in his witness statement in support of the restoration applications and to the large volume of documents exhibited to it. Mr Crow was in difficulty in developing this submission because the appellant had not agreed to any of the relevant evidence being in the appeal bundles and, although the respondents had filed an “unagreed bundle” which included Mr Hussey’s witness statement, we still did not have critical documents, including in particular Mr Hussey’s letter dated 29 July 2016 to the former liquidators. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In any event, it is not, in my judgment, a matter simply of what new information Mr Grattan and Mr Hussey obtained after the dissolution. Whether Mr Grattan was in effect debarred from making the restoration applications on account of not taking steps before the dissolution raises the wide range of considerations to which I referred above. It is a highly fact-sensitive issue which should be raised and explored at first instance, so that it can be ruled on by a judge who is thoroughly acquainted with all the relevant evidence. It is not, save in exceptional circumstances, the type of exercise which this court should undertake as if it were a first instance court, without the benefit of a reasoned judgment below. It was not a contention advanced before the Judge and it is too late to advance it now. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I therefore reject Mr Crow’s overarching submission as a ground for allowing the appeal against the Judge’s refusal to set aside Fancourt J’s order. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The views of members </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Crow’s second principal submission relates to the absence of any consideration of the views and wishes of the members of the Companies as regards the restoration of the Companies and the appointment of the present liquidators. I will deal with the parties’ submissions in the course of the discussion which follows. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As earlier noted, it is a decision for the members of a company whether to place it in members’ voluntary liquidation. The members have the right to appoint liquidators under section 171. For reasons already discussed, this is to be expected, given that a company in members’ voluntary liquidation is necessarily solvent and the process is </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">for the benefit of the members. While the court has power under section 108 to appoint liquidators, the usual course is for the members to make the appointment. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">When the restoration application was made <span style="font-style:italic">ex parte </span>to Fancourt J, no reference at all was made, in the evidence or in the written and oral submissions, to the rights and powers of members in this respect nor was there any reference to the need or desirability of consulting the members as a whole as to whether they were in favour of the restoration of the Companies and the appointment of new liquidators to conduct the proposed investigations. It is therefore not surprising that these considerations did not feature in the <span style="font-style:italic">ex tempore </span>judgment given by Fancourt J.<span style="font-style:italic"> </span>(Nor was any reference made to another material point, namely how the proposed investigations by the present liquidators were to be funded, given that the Companies had no assets following the final distributions to members. I will return to this later.)  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is in this context that the decision not to serve the application on the former liquidators and inadvertently to mislead the court as to the circumstances of this decision is relevant. Fancourt J was told that the registrar of companies had consented to this course. In fact, this was wrong. Moreover, in letters dated 17 July 2018, the Treasury Solicitor had<span style="font-weight:bold"> </span>made clear<span style="font-weight:bold"> </span>to<span style="font-weight:bold"> </span>Mr Grattan’s solicitors that they must comply with the requirements of the Practice Note to file the documents required by paragraph (3), which included evidence of service on the former liquidators. I do not accept that Fancourt J would have viewed the non-service with such equanimity if he had known this. In any event, the decision to depart from the Practice Note was without justification. The reason proffered was that it was intended to investigate the conduct of the former liquidators. That could not be a good reason for not serving them. This was not akin to an application, such as for a freezing order, where notice to a party may well frustrate the application. Fancourt J fell into error in accepting the reason given for non-service on the former liquidators, an error which he might well not have made if he had been correctly informed of the registrar’s position on the need for service on the former liquidators. Service on them would have enabled other material considerations, not raised by Mr Grattan’s legal team, to be put before Fancourt J, by both the former liquidators and by any members such as Mr Fakhry who might then have been alerted to the application. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, it was essential for the court to have considered whether and, if so, how the members should be consulted. The failure to do so was a failure to have regard to a material consideration which should have been central to the court’s decision.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Further, in my judgment, the circumstances of this case were such that the wishes of the members of the Companies should have been ascertained before the court reached a final decision on the restoration application. This is a case in which one member, with a very small shareholding in each of the Companies, supported by a member with a very small shareholding in just one of the Companies, was inviting the court to reverse the effect of the resolutions by which the members as a body had approved the dissolution and released the former liquidators and to appoint liquidators to pursue extensive investigations with a view to substantial civil proceedings. In my judgment, it is manifest that the members as a whole should be consulted before embarking on such a course, apparently for their benefit. They are entitled to decide, or at least be consulted on, what is for their benefit.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The circumstances are analogous to a derivative action proposed by a minority shareholder in a company which is a going concern. Where there is an independent body of shareholders, they will almost invariably be consulted before such proceedings are permitted to commence or continue, precisely because it is they as the general body of shareholders who have the economic interest in whether proceedings are brought: see, for example, <span style="font-style:italic">Prudential Assurance v Newman Industries Ltd (No 2) </span>[1982] Ch 204.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">83.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Submissions along these lines were advanced before the Judge on the set-aside application, as he acknowledged in the passages summarised above. He continued by referring to a derivative action by a shareholder of a company not in liquidation and the need for permission under CPR 19.9, without however mentioning the practice of putting the issue to a meeting of shareholders. He also referred to the fact that on an application to <span style="font-style:italic">remove</span> a liquidator under section 108 of the Act, the wishes of the majority of members are a factor to which the court will have regard but which is not determinative. Likewise, a decision by a majority of members which gives rise to a release of a liquidator is not absolute because a misfeasance claim can be made against a former liquidator with the leave of the court under section 212(4). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">84.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the light of these factors, the Judge said at [85]:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“These considerations lead me to the conclusion that whilst the law will respect principles of corporate autonomy in relation to majority decision making, those principles have to accommodate wider concerns such as minority protection…or ensuring that a suitable liquidator holds office…or that a liquidator may be held to account even after he has been released.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">85.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">With respect to the Judge, I do not think that he provided sufficient reasons for not accepting that the future existence of the Companies and, if they were to continue, the identity of their liquidators were matters for the members. The present case is starker than the analogy with a derivative action would suggest, because it is the very existence of the Companies that is at issue.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">86.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It will be apparent that in my judgment the only proper course that both Fancourt J and the Judge could have taken was to direct that meetings of the members of the Company be held, before final decisions were taken on the applications.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">87.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The solicitors acting for Mr Fakhry and Mr Fry suggested in late August or early September 2018 that meetings of members should be held but, by a letter dated 6 September 2018, the applicants’ solicitors, by now acting for the present liquidators, rejected the suggestion: see the judgment at [30]. Their grounds were stated to be that the former liquidators had failed to deliver up the statutory books, including presumably the register of members. This was a less than compelling reason. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">88.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Judge rejected the idea of meetings for reasons that he briefly stated at [111]:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“In my judgment, it would not be appropriate at this stage to order that a meeting be held pursuant to section 171(3)(b) of the 1986 Act for any of the companies. By definition, a meeting at this stage would not have the benefit of the investigations which the liquidators wish to undertake. Given the voting power of the manager related vote there does seem to me to be a real risk that it could be deployed so as to prevent matters from being investigated which I consider to be worthy of investigation.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">89.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The first reason, reflecting Mr Pagden’s evidence, does not in my judgment bear examination. The issue facing the court was whether these Companies should be revived at all. It was, in my view, this issue on which the members should be consulted, together with whether they wanted liquidators to embark on the proposed investigations. The Judge referred to the investigations which the liquidators wished to undertake, but the crucial issue is not whether they wanted to undertake investigations but whether the members wanted them to do so. It was an error of principle to delay meetings of members until the liquidators had concluded those investigations. I will revert to the other reason given by the Judge, that there was a real risk that the manager’s voting power might be deployed to prevent the investigations. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">90.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Judge also mentioned that there was material before the court which suggested that the present liquidators enjoyed significant support among members. The information provided to us by the present liquidators shows that the views of some, but by no means all, members have been canvassed and that the present liquidators are supported by members holding 7% of the total votes in Core, 11.98% in Core IV and 10.63% in Core V. These are not levels of support that could justify a decision not to hold meetings. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">91.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For these reasons, in my judgment, the Judge’s decision cannot stand. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">92.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The question that arises is what should happen now. Given that it is still not known whether the members of the Companies wish them to continue in existence and whether they want the present liquidators to continue their investigations, it would not in my view be right to set aside the orders made by Fancourt J and dismiss the restoration applications.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">93.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Nor do I think it would be right to remove the present liquidators. The Companies are currently in existence and they need to have liquidators in office while that remains the case. Given that Mr Fry accepts, for present purposes, that there are matters worthy of investigation as regards the former liquidators’ conduct of the liquidation, it would not be appropriate to appoint him. While it can fairly be said of the present liquidators that they were appointed for the sole purpose of conducting those investigations and were energetic in doing so, the expense of appointing liquidators temporarily to hold the ring is not justified, even assuming there were funds to pay them. For this reason, it is unnecessary to enter into the debate as to the “adverse interest principle” advanced by Mr Sutcliffe, which would deprive Mr Fakhry as a member of standing to apply for the removal of the present liquidators, to which the Judge referred at [61] and [104] – [107]. I only wish to say that I am not persuaded that there is anything as elevated as a “principle” at work here and that I am more inclined to the view of Marcus Smith J in <span style="font-style:italic">Raithata v Arnold Holstein GmbH </span>[2017] EWHC 3069 (Ch) that the existence of matters worthy of investigation as regards the conduct of an applicant seeking the removal of a liquidator is highly material to the application but not determinative in all cases; there might be reasons to remove the liquidators which could not properly be resisted on this ground. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">94.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The proper  course, in my judgment, is to do now what should have been done at the beginning, that is, to convene meetings of members of each Company to consider resolutions addressed to whether that Company is to remain restored to the register for the purpose of investigating the conduct of management and the former liquidators and whether the present liquidators should remain in office. These should be ordinary resolutions decided on a simple majority of votes. Once the meetings have been held, the court would decide whether to confirm or set aside the orders made by Fancourt J. In the absence of exceptional circumstances and subject to the next paragraph, it is to be expected that the court would give effect to the resolutions. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">95.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is necessary to consider the position of those members who would be the subject of the proposed investigations and other members so closely associated with them that they would be likely to be influenced by regard for the personal interests of those subjects. This is the second reason given by the Judge at [111] for not convening meetings. This problem has been considered in the context of derivative actions and resolved by having regard only to the votes of shareholders independent of the proposed defendants: see <span style="font-style:italic">Smith v Croft (No 2) </span>[1988] Ch 114. This can be achieved either by not permitting such members to vote at the meeting or by noting their votes and the court deciding whether to disregard them. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">96.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A related issue arises in connection with the funding arrangements in place for the present liquidators. I mentioned earlier that no mention of this was made, still less were details provided, to Fancourt J. It is an obvious question to ask, how the liquidators will be funded when the Companies have no assets. This was raised by counsel for the applicants before the Judge, but the present liquidators declined to provide any information on it, commenting that they were not required to do so. We requested details of the funding arrangements, and some information was provided in a note after the conclusion of the hearing.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">97.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Two points of significance emerge. First, the present liquidators are relying on resolutions passed during the “previous” liquidation for the remuneration of the former liquidators as authority for their own remuneration. To date some £250,000 plus VAT has been paid to them on this basis. This may be legally permissible, a point on which I express no view, but it underlines the need for the members as a body to resolve what they consider should be the future of the Companies.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">98.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Second, the present liquidators’ remuneration, expenses and legal costs are being funded by “shareholders in the Companies”. The legal costs are very substantial, principally as a result of these proceedings. This funding is designed to cover the investigation phase, but not the costs of any proceedings that may follow. If no claims are brought, or the claims are unsuccessful, those shareholders will not be repaid. If claims are brought, and are successful, those shareholders “will be returned the monies invested and a return on their investment for putting their money at risk”. No information has been provided as to the size of that return. Full disclosure of the terms of these funding arrangements will need to be made to members, at the latest when notice of the meetings is given to members. Given that these shareholders have a financial interest in the continuation of the investigations, I am inclined to the view that, like the managers and others associated with them, they and their associates </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">should be treated in the same way, either not voting at the meetings or having their votes recorded.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">99.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As the approach to the treatment of the votes of members with particular interests in the outcome of the meetings has not been the subject of submissions, I would suggest that written submissions are provided to the court following the hand-down of our judgments. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">100.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There are a number of practical but important issues to be decided. These include the contents of circular(s) to be sent to members, which must fairly present the facts and issues, the length of notice of the meetings, the mechanics of giving notice, the date, time and venue of the meetings and the person to chair each meeting. Fortunately, the judges of the Companies and Insolvency Court are well-experienced in dealing with questions of this sort, for example in connection with schemes of arrangement. I would allow the appeal and remit the set-aside and restoration applications to the Chief Insolvency and Companies Court Judge for directions as to the meetings which are to be convened of members of the Companies. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Newey: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">101.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Floyd: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">102.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

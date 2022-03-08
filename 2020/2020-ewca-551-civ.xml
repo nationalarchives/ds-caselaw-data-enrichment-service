@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/551"/>
+	  <FRBRuri value="ewca/civ/2020/551"/>
+	  <FRBRdate date="2020-02-18" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="551"/>
+	  <FRBRname value="Kilraine v Lion Academy Trust"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/551/eng"/>
+	  <FRBRuri value="ewca/civ/2020/551/eng"/>
+	  <FRBRdate date="2020-02-18" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/551/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/551/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:36:43" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="ms-k-kilraine" href="" showAs="MS K KILRAINE"/>
+	<TLCRole eId="appellant" href="" showAs="Appellant"/>
+	<TLCPerson eId="judge-lord-justice-underhill" href="/judge-lord-justice-underhill" showAs="LORD JUSTICE UNDERHILL"/>
+      </references>
+      <proprietary source="ewca/civ/2020/551/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>551</uk:number>
+	<uk:cite>[2020] EWCA Civ 551</uk:cite>
+	<uk:hash>c6b7ef8c257b27f0ba7e230d35e0b4d445d48cfe01adac4f2162eaa49632e55b</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/551/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.40in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0625in;height:1.0520833333333333in;"/>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 551</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>A2/2018/1085</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE EMPLOYMENT APPEAL TRIBUNAL</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">(MR JUSTICE LAVENDER)</span>
+      </p>
+      <p style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="text-decoration:underline">The Royal Courts of Justice</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<docDate date="2020-02-18">Tuesday, 18 February 2020</docDate>
+      </p>
+      <p style="text-align:center;margin-left:0.36in;margin-right:0.39in;text-indent:-0.01in">
+	<span style="font-weight:bold">Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.36in;margin-right:0.39in;text-indent:-0.01in">
+	<judge refersTo="#judge-lord-justice-underhill" style="font-weight:bold">LORD JUSTICE UNDERHILL </judge>
+      </p>
+      <p style="text-align:center;margin-left:0.36in;margin-right:0.39in;text-indent:-0.01in">
+	<span style="font-weight:bold">(Vice-President of the Court of Appeal (Civil Division)) </span>
+      </p>
+      <p style="text-align:center;margin-left:0.36in;margin-right:0.39in;text-indent:-0.01in">
+	<span style="font-weight:bold">LORD JUSTICE HENDERSON </span>
+      </p>
+      <p style="text-align:center;margin-left:0.36in;margin-right:0.39in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#ms-k-kilraine" as="#appellant" style="font-weight:bold">MS K KILRAINE </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.00in;margin-right:0.01in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:0.07in;text-indent:0.00in">
+	      <role refersTo="#appellant" style="font-weight:bold">Appellant </role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:2.99in;margin-right:1.97in;text-indent:-2.99in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">- and –  </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">LION ACADEMY TRUST </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.00in;margin-right:0.01in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:right;margin-left:0.00in;margin-right:0.15in;text-indent:0.00in">
+	<span style="font-weight:bold">Respondent </span>
+      </p>
+      <p style="text-align:center;margin-left:0.07in;text-indent:-0.01in">
+	<span style="font-size:10pt">Transcript of Epiq Europe Ltd, Lower Ground, 18-22 Furnival Street, London EC4A 1JS </span>
+      </p>
+      <p style="text-align:center;margin-left:0.07in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-size:10pt">Tel No: 020 7404 1400  Email: </span>
+	<span style="text-decoration:underline;font-size:10pt;color:#0000FF">civil@epiqglobal.co.uk</span>
+	<span style="font-size:10pt">  (Official Shorthand Writers to the Court) </span>
+      </p>
+      <p style="text-align:left;margin-left:0.88in;text-indent:-0.68in">
+	<span style="font-style:italic;font-size:10pt">This transcript is Crown Copyright.  It may not be reproduced in whole or in part other than in accordance with relevant licence or with the express consent of the Authority.  All rights are reserved. </span>
+      </p>
+      <p style="text-align:left;margin-left:0.55in;text-indent:-0.38in">
+	<span style="font-style:italic;font-size:10pt">WARNING: reporting restrictions may apply to the contents transcribed in this document, particularly if the case concerned a sexual offence or involved a child. Reporting restrictions prohibit the publication of </span>
+      </p>
+      <p style="text-align:center;margin-left:0.42in;text-indent:0.00in">
+	<span style="font-style:italic;font-size:10pt">the applicable information to the public or any section of the public, in writing, in a broadcast or by means of the internet, including social media. Anyone who receives a copy of this transcript is </span>
+      </p>
+      <p style="text-align:left;margin-left:0.75in;text-indent:-0.01in">
+	<span style="font-style:italic;font-size:10pt">responsible in law for making sure that applicable restrictions are not breached. A person who </span>
+      </p>
+      <p style="text-align:left;margin-left:0.68in;text-indent:-0.01in">
+	<span style="font-style:italic;font-size:10pt">breaches a reporting restriction is liable to a fine and/or imprisonment. For guidance on whether </span>
+      </p>
+      <p style="text-align:left;margin-left:0.68in;text-indent:-0.01in">
+	<span style="font-style:italic;font-size:10pt">reporting restrictions apply, and to what information, ask at the court office or take legal advice. </span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in"><span style="font-weight:bold">Ms Ijeoma Omambala</span> appeared on behalf of the <span style="font-weight:bold">Appellant</span></p>
+      <p style="margin-left:0.39in;margin-right:0.03in"><span style="font-weight:bold">Ms Elaine Banton </span>(instructed by ASB Law LLP, Origin Two, 106 High Street, Crawley, West Sussex, RH10 1BF) appeared on behalf of the <span style="font-weight:bold">Respondent </span></p>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;font-size:10pt">Crown Copyright©</span>
+	<br/>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">LORD JUSTICE UNDERHILL: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">1.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The claimant, who is the appellant before us, was employed as a teacher at the Thomas Gamuel Primary School in Walthamstow under the terms of a letter signed by her and her employer engaging her on what was described as a fixed-term contract starting on 1 September 2013 and ending on 31 August 2014, in other words for a full year.  On 10 July 2014, she was told that her contract would not be renewed or extended at the expiry of that period, which was at that point some seven weeks away.  The issue on this appeal is whether she was entitled to a period of three months' notice of termination in accordance with the terms of a collective agreement colloquially known as “the Burgundy Book” (August 2000 edn).  An employment tribunal sitting in East London chaired by Employment Judge Jones held that she was.  The Employment Appeal Tribunal (Lavender J sitting alone) held that she was not.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">2.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">That issue was in fact only a small part of what the ET had to decide.  In particular, the claimant also brought claims that she had been unfairly dismissed and subjected to a large number of detriments contrary to the “whistleblower” provisions of the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.39in;text-indent:0.00in">Employment Rights Act 1996.  Those claims were dismissed, and the claimant’s appeal in that regard was dismissed.  She was refused permission to appeal to this Court in that regard.   I can accordingly proceed directly to the contractual documents.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">3.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The engagement letter was sent by the head teacher of the school on 22 April 2013.  It will be noted that that is some months before the employment was due to start, but the claimant was already working at the school on an agency basis.  It was signed by her by way of acceptance on 18 September.  It offered her the post of key stage 2 teacher, "with effect from 1 September 2013 fixed-term until 31 August 2014."  Apart from identifying the applicable pay scale, the letter says nothing else about any terms and conditions.  At the time that the contract commenced the school was still formally a local authority school, although the respondent Trust had apparently already taken over the management; but the claimant became employed by the respondent under TUPE with effect from 1 January 2014.  Rather surprisingly, no fuller contract or statutory statement of terms appears to have been before the employment tribunal, though even if </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in;text-indent:0.00in">such a document existed it is unlikely that it would have contained anything relevant to the issue before us. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">4.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I should mention, because it is referred to by the EAT, that at or around the time of the start of the employment someone in the school office prepared a "starter and leaver form," which contained some details of the claimant’s employment.  There was a box for "contract type" giving the alternatives “permanent”, “fixed-term” and “temporary/casual”.  "Fixed-term” was ringed, and the end date was given as 31 August 2014.  The ET found that this document was sent to the claimant.  I do not believe, however, that that finding adds anything of substance to what appears from the signed engagement letter. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">5.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The ET  found that the terms and conditions set out in the August 2000 edition of the Burgundy Book – that is, formally, the Conditions of Service for School Teachers in England and Wales, agreed between the Local Government Association and a number of trade unions – were incorporated into the claimant's contract of employment.  That conclusion was not challenged in the EAT.  The terms with which we are primarily concerned are in section 3 of the Burgundy Book which is entitled “Appointment: Resignation: Retirement”.  Part 4 of section 3 is headed "Period of Notice and Termination of Contract."  There are four paragraphs, 4.1 to 4.4.  I need only read 4.1 and 4.4: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.00in">"4.1.  All teachers shall be under a minimum of two months' notice and in the summer term three months’, terminating at the end of a school term as defined in paragraph 1 above. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.03in;text-indent:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.00in">4.4.  The provisions of paragraphs 4.1 to 4.3 apply to the termination of a teacher's contract for any reason other than gross misconduct including dismissal for ill-health and redundancy." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">6.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The term “teacher” is defined in paragraph 1.1 of section 2.  I need not set out the definition since it is common ground that the appellant falls within its terms.  The terms are there defined as "the summer term from May 1 to August 31, the autumn term from September 1 to December 31, the spring term from January 1 to April 30."  Those of course are terms for contractual and pay purposes rather than the actual teaching terms. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">7.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">It may also be relevant to note that in part 2 of section 3, which is headed "Teachers Resigning their Appointments", paragraph 2.2 requires teachers who resign "to give notice in accordance with the periods specified in paragraph 4"  - that is, paragraph 4.1.  In other words, as is usual though not invariable, employees and employers are subject to the same notice obligations. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">8.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I should mention for completeness that the Burgundy Book also incorporates a "joint commentary" by the National Employers' Organisation for School Teachers, but it was not suggested that this sheds any light on the issues which we will have to consider. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">9.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The school’s letter of 10 July 2014 to which I have referred is headed "Notification of the non-renewal of your fixed-term contract."  I need only quote the final sentence which says, "I am writing to notify you that your current fixed-term contract at Thomas Gamuel Primary School will end on 31 August 2014."  It goes on to notify the claimant of her rights of appeal and to assure her that "the decision not to renew your fixed-term contract" was unrelated to an ongoing grievance which she had raised. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">10.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">It was the claimant's case in the ET that paragraph 4.1 of the Burgundy Book applied to the ending of her employment and that its effect was that she was entitled to notice expiring on 31 December 2014, that is at the end of the autumn term.  The tribunal held that she was indeed entitled to further notice but that that should only be a three-month period from the date of the letter of 11 July, i.e. expiring on 10 October.  At paragraph 196 of its reasons, it set out the terms of paragraph 4.1.  It then said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.64in;text-indent:0.00in">"Paragraph 4.4 states that the provisions of paragraphs 4.1 to 4.3 applied to the termination of a teacher's contract for any reason other than gross misconduct, including dismissal for ill health and redundancy.  We find that it would therefore apply to the ending of a fixed-term contract." </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in;text-indent:0.00in">At paragraph 298 it applied the conclusion in the last sentence of that passage to the claimant's claim.  It said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.00in">"Even though the contract stated that it would end on 31 August, as there is always a possibility of contracts being extended or a new one being issued, the respondent as an employer has to give an employee formal notice of the contract coming to an end.  The requirement under the Burgundy Book is for three months' notice and no exemption in it is made for fixed-term contracts." </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in;text-indent:0.00in">That conclusion meant that she was entitled to compensation for lost notice in the sum of just over £3,000 net. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in">11.</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.50in">The claimant appealed to the EAT against various aspects of the ET’s decision.  For our purposes the only ground that matters is that she contended that the tribunal should have held that the notice to which she was entitled expired at the end of the year.  I note in passing that it was common ground before us that if she was indeed entitled to notice under paragraph 4.1 that contention was correct.  However, the premise for that argument was challenged by a cross-appeal on the part of the respondent.  It argued that paragraph 4.1 of the Burgundy Book had no application to the case of the expiry of a fixed-term contract. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in">12.</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.50in">Lavender J upheld the cross-appeal.  The relevant passage of his judgment reads as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.00in">“12.  However, the respondent has cross-appealed.  The respondent contends that the tribunal erred in that it ought to have found that the claimant was not entitled to notice of a fixed-term contract, alternatively that adequate notice was given when she was informed at the outset of the terms of her contract, including that it was for a fixed-term expiring on 31 August 2014. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in">13.</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.50in">In my judgment, on its true construction, paragraph 4.1 of the <span style="font-style:italic">Burgundy Book</span> was inapplicable to the facts of the present case.  Part 2 of section 3 of the <span style="font-style:italic">Burgundy Book</span> concerned the termination of a </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.00in">teacher's employment by his or her decision to resign.  Part 4 of section 3 of the <span style="font-style:italic">Burgundy Book</span> concerned termination of a teacher's employment contract by notice given by his or her employer.  Neither of them dealt with the situation where the teacher and the employer agreed when the employment should come to an end.  In this case, the claimant's contract was not terminated by the respondent.  It expired in accordance with its terms as agreed by the claimant and her employer. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in">14.</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.50in">Moreover, paragraph 4.1 of the <span style="font-style:italic">Burgundy Book</span> was plainly not intended to convert a fixed-term contract into an open-ended contract, yet that is, in effect, what the claims contends.  She agreed to a fixed-term contract ending on 31 August 2014, but she says that the one-year fixed-term was really only a minimum term and that the claimant was obliged to employ her beyond that date unless and until it gave her three months' notice of termination.  Much clearer provisions will be required to demonstrate that the parties intended to bring about that result.  The parties' agreement that this was to be a fixed-term contract was contained in a brief letter which both the claimant and her employer signed.  It would be an unusual thing for general provisions contained in another document to override the parties' express and specific agreement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in">15.</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.63in;text-indent:0.50in">Alternatively, if notice was required, it was given when the claimant's employer wrote to her on 28 April 2013 and /or gave her the starter and leaver form on 19 September 2013.  Both of those documents notified the claimant that her fixed-term contract would expire on 31 August 2014.  The tribunal erred in considering this point." </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">13.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I should also quote paragraph 4 of his judgment, where he referred to the judgment of Wall LJ in this court in <span style="font-style:italic">Department for Work and Pensions v Webley</span> [2004] EWCA Civ 745, [2005] IRLR 288.  He said at paragraph  4 (p. 47): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.03in;text-indent:0.00in">"Wall LJ said as follows about a fixed-term contract:  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.43in;text-indent:0.50in">‘It is of the essence of a fixed-term contract that it comes to an end at the expiry of the fixed-term’ (paragraph 36);  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.43in;text-indent:0.50in">‘The termination of the contract is an inevitable consequence of it being for a fixed-term’ (paragraph 37).   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.15in;text-indent:0.00in">Wall LJ also referred to ‘the termination of such a contract by the simple effluxion of time.’" </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">14.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">Lewison LJ gave the appellant permission to appeal as regards this aspect of the EAT’s decision.  At the stage that the claimant’s grounds of appeal were drafted she was unrepresented, but she has been represented before us by Ijeoma Omambala of counsel acting under the auspices of Advocate (formerly the Bar Pro Bono Unit).  The court is very grateful to her, as I am sure the claimant is also, for providing her services pro </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in;text-indent:0.00in">bono.  (The claimant also had the benefit of representation by pro bono counsel in the EAT.  In the ET she represented herself, albeit with some assistance from a trade union representative.) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">15.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">Ms Omambala submitted that Lavender J was wrong to overturn the ET's conclusion that paragraph 4.1 applied in the claimant's case.  She submitted that the effect of paragraph 4.4 in particular was that the requirements of paragraph 4.1 should apply to any means by which a contract came to an end, including the expiry of a fixed term.  It was, she submitted, perfectly natural to use the word "termination" in that sense.  She pointed out that Wall LJ in fact did so in paragraph 37 of his judgment in <span style="font-style:italic">Webley </span>to which the EAT had referred.  She encouraged us also to construe part 4 in its factual matrix.  In that connection she referred to the centrality of the ends of the school terms, as defined in paragraph 1.1 of section 3, to the way in which teachers are employed and recruited, and  she submitted that that made it particularly important that teachers on fixed-term contracts whose terms are not to be renewed should have good notice that that was going to be the case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">16.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">Attractively though Ms Omambala developed those submissions, I was unpersuaded by them, and we did not need to hear submissions from Ms Elaine Banton of counsel for the respondent.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">17.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The starting point has to be the express and quite unambiguous statement of the engagement letter that the claimant was being engaged on a "fixed term until 31 August 2014."  As Wall LJ said in <span style="font-style:italic">Webley</span>, "it is of the essence of a fixed-term contract that it comes to an end at the expiry of the term by the simple effluxion of time."  There is no requirement for notice of any kind.  Another way of putting it might be to say, as Lavender J did at paragraph 15 of his judgment, that the notice was given at the start of the employment by the specification of its end-date, but that seems to me to be rather artificial: it is simpler to say, as is plainly the case, that a fixed-term contract expires at the end of its term without the need for any notice of termination. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">18.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The claimant's case depends on the proposition that the clear effect of the primary contractual documents providing for a fixed-term contract was modified – indeed, frankly, reversed – by a provision in the applicable collective agreement.  A fixed-term contract would be converted into a contract terminable only on notice.  When that was put to Ms Omambala, she was anxious to clarify that it was no part of her client's case that the contract could not have ended on 31 August, but only that three months' prior notice of termination had to be given.  I accept that, but it remains the case that the nature of the contract provided for in the primary contractual documents would have been wholly changed.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">19.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">It would, as Lavender J noted at paragraph 14 of his judgment, be unusual for such a change to the terms specifically agreed between the individual parties to be changed by reference to the terms of the collective agreement.  I do not believe that that that is the effect of paragraph 4.1 of the Burgundy Book.  In my view it is concerned only with the amount of notice which the employer has to give in the case of what are generally called "permanent" contracts – that is, contracts which are terminable only on notice.  It is not intended to apply in cases where notice is not required in the first place, whether because the contract is for a fixed-term or, I might add, because the parties have agreed to its termination on no notice or on less notice than would otherwise be required.  That is what I understand Lavender J to be saying at paragraph 13 of his judgement and I agree with him.  As regards Ms Omambala's emphasis on the word "termination", I do not believe that the use of that term in paragraph 4.4, and indeed in the title to part 4, suggests anything different.  "Termination" is a word that can be used in more than one sense and it needs to be understood in the particular context in which it is used.  Although it can, as Ms Omambala says, be used in a general way so as to refer to any circumstances in which a contract comes to an end, it can also be used more specifically so as to refer to a positive act of termination by one or other party.  That seems to me to be clearly the meaning here.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">20.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I can see nothing in the factual matrix relied on by Ms Omambala to cast doubt on that reading.  A fixed-term contract can be framed so as to expire at the end of a school term (in the sense defined in the Burgundy Book), as indeed happened in this case and is in no doubt the practice in all or most cases in which fixed-term contracts are employed.  No doubt employees on such contracts will wish to know well in advance whether the contract is going to be renewed or extended, and no doubt that will normally happen: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in;text-indent:0.00in">we can in fact see here that the claimant was notified of the non-renewal of her contract about seven weeks before it expired.  However, the fact that that may be good practice does not justify building in a formal notice obligation, in the absence of which the contract would presumably be deemed simply to continue.  That appears to have been the approach taken by the ET at paragraph 298 of its reasons.  It is with all respect impermissible.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">21.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I would add one further point.  As noted at para. 7 above, the Burgundy Book equates the notice obligations of teachers and their employers.  It would be surprising if a teacher who was on a fixed-term contract and who wished to resign was obliged, despite the fact that the contract had a set expiry date, to give notice two or three months before its expiry.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">22.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">For those reasons I would dismiss this appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">HENDERSON LJ:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">23.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.36in;text-indent:-0.01in">
+	      <span style="font-weight:bold">(After further submissions) </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">UNDERHILL LJ: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">24.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">We are not persuaded that there is anything in the circumstances relied on by Ms Omambala that would justify our departing from the starting point that as the losing party she should pay the respondent’s costs, still less in circumstances where she rejected an offer made over a year ago to walk away on a drop-hands basis.  The fact that the case was said, on the basis advanced by the claimant herself, to raise a point of general public interest does not seem to me to be a sufficient justification.  Nor does what we were told about her having been unwell at some stages in the run-up to the appeal, including at the time when she received the settlement offer.  Even if we had evidence of that, which we do not, it does not seem to me to be a matter which in justice to the respondent would justify our departing from the normal starting point. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">25.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">As regards quantum, we will of course conduct a summary assessment.  The sum claimed inclusive of VAT is £28,579.20.  There is nothing that could possibly be objected to in counsel's fees for the hearing.  As regards the prior stages, the schedule submitted makes clear that there was more than the usual amount of work required as a result in particular of various unfounded applications made by the claimant which also involved a certain amount of work by counsel.  We do have to say that one element in that work does seem to us to require to be disallowed, that is to say advice and correspondence in relation to the application for permission to appeal to the Supreme Court for which it was plain that the court had no jurisdiction.  It is impossible to identify the precise amount attributable to that.  There may be a slight element of unnecessary, even if in human terms understandable, work in connection with the other applications.  We are not in a position in the summary assessment to attach precise figures to these elements, but it seems to us that justice will be done if we award a total figure of £25,000 inclusive of VAT.  Unless anyone wants to argue with it, it seems to us that we would simply make the usual order that that be payable within 14 days.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">26.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.03in">The appellant will pay the respondent's costs in the sum summarily assessed at £25,000 inclusive of VAT within 14 days. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:0.03in;text-indent:0.00in"><span style="font-weight:bold">Order:</span>  Appeal dismissed.  Appellant will pay respondent's costs of £25,000 inclusive of VAT within 14 days.</p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

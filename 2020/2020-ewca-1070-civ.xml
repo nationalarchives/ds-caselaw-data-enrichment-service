@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1070"/>
+	  <FRBRuri value="ewca/civ/2020/1070"/>
+	  <FRBRdate date="2020-08-12" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1070"/>
+	  <FRBRname value="N (Children: Interim Order/ Stay), Re"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1070/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1070/eng"/>
+	  <FRBRdate date="2020-08-12" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1070/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1070/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:13:35" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1070/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1070</uk:number>
+	<uk:cite>[2020] EWCA Civ 1070</uk:cite>
+	<uk:hash>8971c660f5b6828a65d276958d2c5a43bf4c467ed368fc3f10a53298c9a0e328</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1070/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.51in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1070</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>B4/2020/0705</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE FAMILY COURT AT COVENTRY</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Her Honour Judge Watson</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">CV19C01519</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.86in;margin-right:0.00in;text-indent:1.94in">
+	<span style="text-decoration:underline">Date: 12 August 2020</span>
+	<span style="font-weight:bold"> Before : </span>
+      </p>
+      <p style="text-align:center;margin-left:1.71in;margin-right:1.74in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE DAVID RICHARDS</span>
+      </p>
+      <p style="text-align:center;margin-left:1.71in;margin-right:1.67in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE HICKINBOTTOM</span>
+	<span style="font-weight:bold">  and </span>
+      </p>
+      <p style="text-align:center;margin-left:1.71in;margin-right:1.74in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PETER JACKSON</span>
+      </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">N (Children: Interim Order / Stay) </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.17in;margin-right:0.12in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.01in;text-indent:-0.01in"><span style="font-weight:bold">Jonathan Sampson QC and Adelle Eveleigh-Winstone </span>(instructed by <span style="font-weight:bold">Kundert Solicitors LLP</span>) for the <span style="font-weight:bold">Appellant Mother </span></p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.01in;text-indent:-0.01in"><span style="font-weight:bold">Aidan Vine QC and Sanjay Patel</span> (instructed by <span style="font-weight:bold">Coventry City Council</span>) for the <span style="font-weight:bold">Respondent Local Authority </span></p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.05in;text-indent:-0.01in"><span style="font-weight:bold">Gemma Bowes </span>(instructed by <span style="font-weight:bold">Hammons Solicitors</span>) for the <span style="font-weight:bold">Respondent Father</span></p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.01in;text-indent:-0.01in"><span style="font-weight:bold">Abigail Turner</span> (instructed by <span style="font-weight:bold">Jackson West Solicitors</span>) for the <span style="font-weight:bold">Respondent Children by their Children’s Guardian </span></p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">Hearing date: 29 July 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.17in;margin-right:0.12in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.09in;text-indent:-0.01in">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website.  The date and time for hand-down is deemed to be at 10:30am on Wednesday, 12 August 2020. </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Peter Jackson:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 6 May 2020, the Family Court approved the removal of three children from their mother and their placement in local authority foster care under pre-existing interim care orders.  The removal was opposed by the parents and it was not supported by the Children’s Guardian.  At the end of the hearing, which took place by video conference, the judge was asked by counsel for the mother to grant a short stay to allow for an urgent application to be made to this court.  This was refused and the children were taken into foster care that evening.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At the end of the appeal hearing we informed the parties that the appeal would be allowed so that the children, who have not had face to face contact with their mother for three months during the current health restrictions, would return to her care on the following day.  My reasons for agreeing with that decision appear below.  At the end I restate the practice in relation to the granting of short term stays. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The background </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The parents come from Afghanistan.  The mother speaks no English.  The father works as a taxi driver.  There are three children: two boys aged 12 and 5, and S, a girl aged 7.  S has global learning difficulties.  The family came to the attention of the local authority in November 2019, when the older boy came to school with a mark on his face, saying that he had been slapped by his father.  He also spoke of being hit on other occasions, including with a cloth belt.  A neighbour reported that the mother had visited her for help in March 2018 after being assaulted by the father.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The children were taken into police protection on 8 November 2019 and placed together in foster care, where they remained for a week.  An application for interim care orders was made.  The local authority plan was for the children to stay in foster care pending assessments, but at a hearing before a Circuit Judge on 15 November 2019, it agreed that the children should be returned to their mother on the basis of a working agreement.  The parents accepted that the interim threshold under s. 38 Children Act 1989 was crossed, and an order was made under s. 38A of the Act excluding the father from the home. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A further hearing took place before a District Judge on 18 December, when the local authority sought the removal of the children on the basis that S had told her teacher that she had been shopping for shoes with her father.  The father produced a receipt for the shoes, showing that they had been bought while S was at school.  The removal application was not pursued. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 20 February 2020, the local authority made a without notice application requiring the surrender of the family passports on the basis that S had told her teacher that the family was going abroad on holiday and that it was secret.  The parents, who denied any such plan, surrendered their passports and a hearing on notice took place on 28 February. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On that occasion, when the matter came before Her Honour Judge Watson, the local authority again sought the removal of the children.  It relied on a number of features, including: S telling an assessor that she sees her daddy every day and that she had hurt her leg in his taxi, her comments about the holiday, and a report from a neighbour that </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">the father was at the family home on 18 February.  The application, opposed by the Guardian on the basis that the evidence was insufficiently clear to justify removal, was withdrawn, again with judicial endorsement.  The importance of compliance with the orders were emphasised to the parents.   </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The local authority’s further application  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The local authority applied again for the children's removal at a hearing on 27 April 2020.  Its care plan provided for indirect contact only due to the lockdown, and thereafter supervised contact with the mother twice a week.  The evidence relied upon this time was: the social worker having seen a pair of adult sandals in the garden of the family home and S asking what time her father was coming over; the mother saying through an interpreter during an assessment that the father had removed a games console from the oldest child as he was using it too much; S saying during a social work visit on 20 April that she had been to the park on Sunday and daddy took them in his taxi.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The hearing, which was again before HHJ Watson, sitting as a Deputy High Court Judge, could not take place that day for lack of time and of an appropriate interpreter.  It was adjourned to a one-day remote hearing on 6 May 2020.  The parties had collectively asked for a longer hearing to allow for evidence to be taken from the main witnesses.  However, when adjourning the matter, the judge directed that the only witness to give evidence would be the social worker.  The parents were directed to file sworn statements which the judge stated that she would take "at face value."  She also made clear that she would need to have "robust" evidence from the social worker.  She also noted that the Guardian, who was unable to attend the adjourned hearing, did not support the removal of the children on the basis of the evidence filed.  We were told that the impression left on the parties was that the local authority’s evidence was going to be scrutinised to see whether it was capable of sustaining its revised care plan. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The parents filed detailed statements in which they denied every alleged breach of the working agreement or the exclusion order.  For example, the mother said that she had </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">“much more problems to think about than a holiday”.  She agreed that she had spoken to the father about the eldest child using his computer too much and that the father had told her to remove it, which she did: he did not remove it himself.  Likewise, she did take the children to the park, but with another adult, and not with the father.  Whenever S sees a taxi she thinks it is her father driving it.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At the hearing on 6 May 2020, the social worker gave evidence for 3½ hours, not limited to the three latest allegations, but ranging over alleged breaches going back to December 2019.  The mother’s advocate was at something of a disadvantage in that the remote hearing was being interpreted to the mother by an interpreter connected via the judge’s laptop and there was no ready means of taking instructions during the hearing.  During the course of the evidence, the solicitor for the father applied for him to be allowed to give evidence, at least in relation to the games console.  The judge refused, confirming that she had read the father’s statement and understood that he disputed what the social worker said.  During closing submissions, the request was repeated for the parents to be allowed to give evidence if the judge was considering removal of the children. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">After submissions, the judge adjourned for a short period and then delivered her decision.  The hearing ended at 5.40 pm.  Counsel for the mother sought permission to appeal and a stay; both were refused.  The children were taken from their home sometime later that evening. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The main proceedings are currently listed for a substantial fact finding hearing on 23 September 2020.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The judge’s decision </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge set the scene, noting that the safety of the children was dependent on the exclusion order and the written agreement.  She set out at some length the local authority’s case and remarked that the ability to monitor during the stressful period of lockdown was limited.  She reminded herself that the court was only entitled to make an order for removal where it was both necessary and proportionate and that there was no more drastic step than to take children from their mother and place them with strangers.  She continued:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“10.  Both [parents] deny the exclusion order has been breached.  It is submitted that the children have not been in the unsupervised care of their father, nor have the children seen their father in the family home.  It is said on behalf of the parents, supported by the Guardian, that the social worker has brought the case to court on two earlier occasions and the local authority has not pursued removal of the children notwithstanding having concerns that there had been breaches of the safety agreement and that the evidence supporting removal on this occasion, the third occasion the matter comes to court, is insufficient to pass the test of necessity and proportionality that I have referred to. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">11. I do not agree with that analysis of the current situation.  I look at a pattern of behaviour which begins with the events leading to the first attendance at court and brings us right through to the three specific concerns that have been raised in March/April of this year.  It is that pattern of behaviour which builds up a body of circumstantial evidence which individually could be ignored, but together demonstrates a concerning persistent pattern of breaches of safety agreements, flouting a court orders and failure to implement the safety plan put in place for the protection of the children.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">The last sentence contains the core reason for the resulting decision. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge reminded herself that S has global developmental delay, but found that she was not a child who lies, but who recalls accurately and literally what she has seen, heard or experienced.  She then reviewed a series of events and allegations preceding the current application, stating that she was setting out this background chronology from the social worker statement because it showed "a developing pattern of concerns" that were the background to three specific incidents which brought the matter back to court yet again.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As to the first allegation, the sandals seen in the garden on 14 April, the judge accepted that this could be explained as being one of a number of belongings left by the father in the home, “but the pattern of behaviour continues because it was S who said in the presence of the social worker, "what time is daddy coming over?"” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As to the mother's reference to the games console on 17 April, the judge described this as "another indication, this time from mother, that father was in the family home."  She referred to differences in the parents' denials, but said that she was entitled to have reasonable grounds to believe that the father had been in the home after lockdown. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge then turned to the events of 20 April, saying that they caused her the greatest concern that there had been a significant breach of the exclusion order and safety plan.  The social worker said that S had said that she had been to the park with daddy and that he had taken them in the taxi and that it was on Sunday; it was the reaction of the other family members, contradicting S, that made her realise that it was a recent incident.  The next day she asked S about it at school, but S only giggled and laughed and would not engage with the conversation.  The judge said that the court had reasonable grounds to believe that S was telling the truth about a visit to the park with her father in breach of the exclusion order. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge then concluded in this way: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“28. The risks to the children are that they could be subjected to further physical chastisement or that there could be a repetition of domestic violence and that the risks posed to S and her two brothers set out at the start of this judgement cannot be managed.…  I am also satisfied that there is very significant emotional and psychological harm to the children being asked to cover up or to mislead social workers about events that have happened. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">29.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">If father took the children to a park some way from their home as S said there would be less risk of being seen by the authorities. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">30.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">In summary, I cannot be satisfied that if the children remain in the family home that the exclusion order will protect them in the way that was intended when it was made.  It is therefore both necessary and proportionate for the children to be removed into foster care until the assessments have been completed and the ability of mother to protect children from harm, has been adjudicated upon. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">31.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">I have set out the pattern of evidence upon which I rely at this interim stage before the factual matters have been fully aired and evidence called.  It is, indeed, a holding order which preserves the security and safeguarding of the children, whilst the assessments are completed.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">During the discussions that followed, the judge further said this: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">"Clearly, I am satisfied that the pattern of evidence in this case gives the court reasonable grounds to believe that the matters as  are set out in the judgment have been established to the standard that is required at this interim hearing." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Counsel for the mother, Ms Adelle Eveleigh-Winstone, sought permission to appeal and a stay of removal so that an application could be made to this court, saying that it would be far more destructive for the children to be removed and then returned a few days later, particularly after they had been removed at the end of last year.  The judge responded: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The difficulty I have with your request that I suspend the operation of the removal is that there are grave risks and concerns to the children in respect of breached exclusion orders and, of course, in this case there is also the additional risk that there has been prohibited steps put in place to prevent the children from being removed from the jurisdiction and the removal of the passport.  It would be incredibly difficult for the children to be taken out of the jurisdiction at this time, but they could, of course, be taken away and taken to another part of the country and they would not be easily found in the current circumstances.  I am afraid that I'm going to refuse you permission to appeal and I'm also going to refuse your application for a stay of the removal order for the reasons I have set out.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">During the hearing, the mother and children were at home, together with the interpreter.  Mr Sanjay Patel, representing the local authority, very fairly suggested that it might be appropriate to have the matter listed for further directions on the following afternoon to allow the parents' representatives to take instructions.  The judge did not take up this suggestion, saying that it was a matter for the local authority as to when it implemented its interim care order.  At this point Ms Eveleigh-Winstone had not even been able to take her client’s instructions following the decision because communication with the interpreter came to an end when the judge rose.  As a result, an application to the outof-hours judge in this court was not possible before the children were removed.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is then a matter of regret that the appeal took considerably longer to be heard than is normal.  The application for permission to appeal was filed on 11 May, but it was not accompanied by a request for a stay and a transcript of the judgment was not received until 29 May.  There was also an application to amend the grounds of appeal.  Permission to appeal was granted by King LJ on 29 June 2020 and the matter was listed for hearing in vacation.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On behalf of the mother, Mr Jonathan Sampson QC, leading Ms Eveleigh-Winstone, distilled the grounds of appeal in this way: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.29in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">The judge's decision to hear evidence only from the social worker and not from the parents rendered the hearing unfair.  She did not take the parents’ evidence "at face value" as she had said she would, but instead gave no weight to it and made adverse findings of fact without hearing from them.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.29in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">In consequence, findings were made without disputed matters being tested. That was particularly inappropriate where the language barrier gave rise to a potential for misunderstanding between the family and the social worker and where such reliance was being placed upon comments made by a child with global developmental delay. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.29in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">The judge should have heard evidence from the Guardian about the level of risk and the proportionality of removal, particularly as the Guardian did not support removal, and where face to face contact during the pandemic was not at the time practicable.  More broadly, paragraph 30 was an insufficient balancing-up of the relevant welfare factors, even making allowance for the fact that this was an oral judgment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.29in">(4)</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">In adopting a ‘reasonable grounds to believe’ test, the judge applied the wrong standard of proof.  That test applies to the establishment of the threshold, not to fact-finding at the welfare stage. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Sampson referred to a number of recent decisions of this court that emphasise that fundamental principles of substantive law and procedural fairness are unchanged in the current circumstances.  He accepted that a party has no absolute right to give evidence, but argued that where the issue centres on disputed facts it is inappropriate to refuse to hear evidence in rebuttal.  He referred to the decision in <span style="font-style:italic">Re S (a child)</span> [2018] EWCA Civ 2512<span style="font-weight:bold">, </span>a successful appeal from the interim removal of children on the basis of serious adverse findings that were made without hearing readily available evidence from the parent concerned.  He also reminded us of the line of authority on Article 6 from the European Court of Human Rights on the question of equality of arms, of which the decision in <span style="font-style:italic">Dombo Beheer B.V. v. The Netherlands</span> (Application no. 14448/88) is an example.  It was there said at paragraph 33 that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The Court agrees with the Commission that as regards litigation involving opposing private interests, "equality of arms" implies that each party must be afforded a reasonable opportunity to present his case - including his evidence - under conditions that do not place him at a substantial disadvantage vis-à-vis his opponent.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.68in;text-indent:0.00in">It is left to the national authorities to ensure in each individual case that the requirements of a "fair hearing" are met.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">It was, therefore, Mr Sampson submits, remarkable that the judge decided to hear from the social worker, but not from the parents. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For the father, Ms Gemma Bowes, supported the appeal.  He was willing to be bound by an order under the Family Law Act 1996 to achieve the effect of the exclusion requirement in the interim care order, if this is required to facilitate the children being returned to their mother’s care. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Guardian was neutral on the appeal.  Ms Abigail Turner confirmed to us that the position at the hearing had been that the Guardian did not consider that the evidence adduced by the local authority justified the removal of the children.  It had been a surprise to the Guardian that the court had moved to making such an order in the light of the expectations raised at the pre-trial hearing.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In response, Mr Aidan Vine QC, leading Mr Patel, argued that the judge had a wide discretion as to what if any oral evidence she heard, provided the hearing was fair.  It is not accepted that the judge made findings of fact, nor was she required to do so at an interim hearing.  She was required to make an assessment of risk, and it was not necessary for evidence from the parents to be heard for that purpose.  Their likely denials would add little.  She expressly considered necessity and proportionality, and concluded that interim removal was justified.  Read as a whole, the judgment carefully describes the basis for the judge's decision that the risk matrix had changed and that the children could no longer be safe from their father in their mother’s care.  This court should not interfere with that exercise of discretion.  Finally, Mr Vine stated in his skeleton argument that the local authority’s case is that the children had “revealed further relevant information in foster care about the threshold events and whether their father continued to live at home”.  He submitted that if the appeal succeeds the case should be therefore be remitted for a rehearing. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Conclusion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The power to make interim orders in cases involving children allows the court to regulate matters that cannot await the final hearing.  Common examples are interim contact orders in a private law case or interim care orders in a public law case.  When exercising interim powers the court is inevitably acting on incomplete information and often has to act with urgency.  The principles of child welfare, family rights and procedural fairness will apply in the context of the provisional nature of the court’s task.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Here, the interim threshold was accepted to have been crossed and the court was making an interim welfare decision.  The issue for the judge was the balance of risks and benefits for the children of remaining in their mother's care.   She correctly directed herself as to the test for removal at an interim stage.  The fact that the children were already subject to interim care orders on the basis of a placement at home did not alter that.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A court considering an interim application in proceedings concerning children is required to undertake a level of investigation that is appropriate to the issues that need to be decided and sufficient to enable it to make a fair and effective evaluation of the advantages and disadvantages for the children of making or not making the interim order.  Acting within the framework of the relevant substantive and procedural law, the court has a wide and flexible discretion as to how its investigation and evaluation should be conducted at the interim stage.  Depending upon the case and the issues to be decided, the decision may well be properly taken without hearing any oral evidence: the question will be whether it is necessary to hear some, probably limited, oral evidence to enable a fair and effective evaluation to be made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is understandable that the judge did not feel able to deal with the issue before her on submissions only and that she needed to hear some evidence.  However, once she had decided to do that, fairness required that in this situation she should hear from both the accuser and the accused.  There will be cases, for example where the court needs to hear and evaluate professional opinion, where it will be proper to hear from witnesses from one side only.  This was not such a case.  The investigation was a factual one into events where the parents were primary witnesses.  It is no answer to say that the court would not have been helped by hearing their denials.  They were not making bare denials but giving possible explanations for much of the evidence brought against them and, at least on paper, those explanations were not self-evidently implausible and deserved proper consideration.  However, instead of taking them at face value (whatever that might be taken to mean), the judge largely left them out of account. The investigation that was carried out was therefore not fair and effective. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As to the  process of evaluation, there was insufficient consideration of all aspects of the children’s welfare.  The judge was entitled to regard compliance with the working agreement and the exclusion order to be a matter of real significance, but it does not minimise the harm that has been and may be caused to these children to say that the case was not at the upper end of the scale of seriousness and that the welfare evaluation could not depend upon risk alone.  In my view the judge’s characterisation of the risks as ‘grave’ was not in keeping with the evidence and her evaluation of the children’s welfare was at a level of generality that was inadequate to underpin an order for their interim removal.  Nor did she factor in that the evidence that she did hear was, truth be told, a relatively flimsy basis for such a disruptive order.  Though mindful of the limited role of this court, I consider that the test for interim removal could not reasonably have been met on the evidence that the judge received.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">We allowed the appeal for these reasons.  It is unnecessary in the circumstances to enter into a discussion of Mr Sampson’s fourth ground of appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In making our order we did not overlook the local authority’s request for a rehearing on the basis that further information had come to light.  However it did not identify the information or seek to file any further evidence.  In the circumstances, we considered that the proper order was one that allowed for the immediate return of the children to their mother.  Upon being informed of our decision, the local authority sensibly agreed with the suggestion that the best form of order was the one that existed before the removal of the children, and the parents were also content.  We therefore maintained the interim care orders on the basis that the children would return home on the following day, with the s. 38A exclusion order in respect of the father remaining in full effect and subject to a written agreement with the mother. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I would emphasise that the outcome of this interim appeal cannot influence the final outcome of these proceedings, or bind the court in relation to any future interim application that may be made by any party. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Short term stays </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A short term stay to enable an application to be considered by an appeal court before an order is put into effect is to be distinguished from a stay pending a decision on permission to appeal or a stay pending appeal.  Applications for stays of the latter kind will be considered in accordance with the principles set out in <span style="font-style:italic">Hammond Suddart Solicitors v Agrichem International Holdings Ltd. </span>[2001] EWCA Civ 2065.  By contrast, a short term stay is a purely practical remedy, distinct from the decision about permission to appeal.  The correct approach for the court to take to an application of this kind was described by Wilson LJ in <span style="font-style:italic">Re A</span> [2007] EWCA 899 at [27], where he confirmed that the judge should always give serious consideration to allowing an applicant “a narrow opportunity” to approach this court so that the opportunity for a successful appeal is not unfairly eroded: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“27.  When a judge considers that a significant change in the arrangements for a child needs to be made in effect forthwith and learns that there is an aspiration to appeal to this court, he should in my view always give serious consideration to making an order which affords the aspiring appellant a narrow opportunity to approach this court for further, temporary, relief before his order takes effect. No doubt the welfare of the child remains paramount; but, subject thereto, the judge needs to consider whether a refusal to afford a narrow opportunity for such an approach unfairly erodes the facility for effective appeal. If he decides to afford it, he can do so either by directing that the change in the arrangements should occur only at the end (say) of the following working day or by directing that the change should occur forthwith but that execution of his order be stayed until the end (say) of the following working day. The difference seems to me to be immaterial. When, however, a judge declines to take either of these courses, there remains the facility for the aspiring appellant to approach this court by telephone and no doubt usually on notice to the other party.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Wilson LJ then set out the arrangements that then prevailed.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The current arrangements are that this court can be contacted during working hours on <span style="text-decoration:underline;color:#0563C1">civilappeals.registry@justice.gov.uk</span> between 9.00 am and 4.15 pm and out of hours through the security officers at the Royal Courts of Justice on 020 7947 6260, who will refer the matter on to the Duty Clerk.  Urgent applications should whenever possible be made within court hours.  Unless already filed, the applicant or the applicant’s representative will be required to give an undertaking to file the necessary application form and court fee.  Instructions may then be given for the transmission of essential information by email so that the application can be considered by a judge, who may decide to grant a stay, for example until the end of the following working day, to enable further documents, such as a note of the judgment and draft grounds of appeal, to be sent to the court for consideration of the merits of a further stay. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In this case, I consider that the request for a short term stay should have been granted, particularly where the mother was at a disadvantage in instructing her lawyers. The reasons given by the judge fell short of justifying refusal.  The nature of the risks involved in the children remaining at home for a further very short period can be measured by the fact that the court itself had sanctioned them remaining there between 27 April and 6 May for procedural reasons.  Further, as the judge herself acknowledged, there was no real risk to the children being taken out of the country and, bearing in mind that the family had not disappeared in the previous six months when it could have done, the prospect of internal flight was hardly likely either. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Hickinbottom </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. <span style="font-weight:bold">Lord Justice David Richards </span>40.<span style="font-family:Arial"> </span><marker name="tab"/>I also agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:2.39in;text-indent:0.00in">__________________ </p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

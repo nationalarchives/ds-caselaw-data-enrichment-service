@@ -1,0 +1,912 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/717"/>
+	  <FRBRuri value="ewca/civ/2020/717"/>
+	  <FRBRdate date="2020-06-05" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="717"/>
+	  <FRBRname value="Mahmood, R (on the application of) v Upper Tribunal (Immigration and Asylum Chamber) &amp; Ors"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/717/eng"/>
+	  <FRBRuri value="ewca/civ/2020/717/eng"/>
+	  <FRBRdate date="2020-06-05" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/717/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/717/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:40:16" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/717/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>717</uk:number>
+	<uk:cite>[2020] EWCA 717 (Civ)</uk:cite>
+	<uk:hash>5f74111f974e52920159531ec06f0ebd4f8d694272fbff86f2f60b6902c7fd9e</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/717/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 1.18in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { margin-left: 0.01in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.15in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0604166666666666in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA 717 (Civ)</neutralCitation>
+      </p>
+      <p class="Heading1" style="text-align:right;margin-left:0.01in;margin-right:0.18in;text-indent:-0.01in">
+	<span style="font-weight:normal;text-decoration:underline">Case No: C4/2019/2259; C5/2019/1960; C5/2019/2202</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">The High Court of Justice</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:2.86in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Queen’s Bench Division (Administrative Court)</span>
+	<span style="font-weight:bold"> </span>
+	<span style="font-weight:bold;text-decoration:underline">and</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">The Upper Tribunal (Immigration and Asylum Chamber)</span>
+      </p>
+      <p class="Heading1" style="text-align:right;margin-left:0.01in;margin-right:0.18in;text-indent:-0.01in">
+	<span style="font-weight:normal;text-decoration:underline">Royal Courts of Justice</span>
+	<span style="font-weight:normal"> </span>
+	<span style="font-weight:normal;text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p style="text-align:left;margin-left:2.88in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 05/06/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.19in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE SIMON</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.19in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE COULSON</span>
+      </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.19in;text-indent:0.00in">
+	<span style="text-decoration:underline">and</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.19in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE MALES</span>
+      </p>
+      <p style="text-align:left;margin-left:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">R (on the application of Yasir Mahmood) </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.28in;text-indent:0.00in">
+	<span style="font-weight:bold">and </span>
+      </p>
+      <p class="Heading1" style="margin-left:2.96in;text-indent:-1.73in">Upper Tribunal (Immigration and Asylum Chamber)  <marker name="tab"/><span style="text-decoration:underline">1st Respondent</span> and  </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">Secretary of State for Home Department </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">2nd Respondent</span>
+      </p>
+      <p style="text-align:left;margin-left:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">                           Muraley Estnerie  </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <p class="Heading1" style="margin-left:1.90in;text-indent:-0.01in">                          and </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">                       Secretary of State for Home Department </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Respondent</span>
+      </p>
+      <p style="text-align:left;margin-left:0.10in;margin-right:1.04in;text-indent:2.44in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold"> and between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">                       Riabiaz Kadir  </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <p class="Heading1" style="margin-left:2.54in;margin-right:3.28in;text-indent:-0.61in">                        and  </p>
+      <p style="text-align:left;margin-left:2.54in;text-indent:-1.86in"><span style="font-weight:bold">                       Secretary of State for Home Department </span><marker name="tab"/><span style="font-weight:bold;text-decoration:underline">Respondent</span><span style="font-weight:bold">  </span>- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      <p class="Heading1" style="margin-left:0.40in;text-indent:-0.01in">Michael Biggs<span style="font-weight:normal"> and </span>Nazir Ahmed <span style="font-weight:normal">(instructed by </span>Knightsbridge Solicitors<span style="font-weight:normal">) for </span>Mahmood Alexis Slatter <span style="font-weight:normal">(instructed by</span> KTS Legal<span style="font-weight:normal">) for </span>Estnerie Michael Biggs<span style="font-weight:normal"> and </span>Arif Rahman <span style="font-weight:normal">(instructed by </span>My Legal Ltd<span style="font-weight:normal">) for </span>Kadir Marcus Pilgerstorfer QC <span style="font-weight:normal">(instructed by </span>Government Legal Department<span style="font-weight:normal">) for the </span>Respondents </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.19in;text-indent:-0.01in">Virtual hearing date: 12 May 2020 </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.19in;text-indent:-0.01in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.20in;text-indent:0.00in">
+	<span style="font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.15in;text-indent:-0.01in">
+	<span style="font-weight:bold">Covid-19 Protocol: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.15in;text-indent:-0.01in">
+	<span style="font-weight:bold">This judgment was handed down remotely by circulation to the parties’ representatives by email, released to BAILII and publication on the Courts and Tribunal Judiciary website (press.enquiries@judiciary.uk).  The date and time for hand-down is deemed to be 10:00am on Friday, 5 June 2020. </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.01in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Simon:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.01in;text-indent:0.00in">1.<span style="font-family:Arial"> </span><marker name="tab"/>This is the judgment of the Court. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Introduction  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in">These appeals raise a short initial issue: whether the appellants committed ‘an offence that has caused serious harm’, within the meaning of section 117D(2)(c)(ii) of the Nationality, Immigration and Asylum Act 2002 (‘NIAA 2002’). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in">It is convenient to summarise the relevant statutory scheme, before turning to the facts of each case and its procedural history.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Sections 117A-D of the NIAA 2002 form part of Part 5A, which was inserted with effect from 28 July 2014 by s.19 of the Immigration Act 2014. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The definition of a ‘foreign criminal’ is set out in s.117D, which provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;text-indent:0.00in">(2)  In this Part, ‘foreign criminal’ means a person – </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.18in;text-indent:0.50in">who is not a British citizen </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.18in;text-indent:0.50in">who has been convicted in the United Kingdom of an   offence, and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.18in;text-indent:0.50in">who – </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.36in">(i)</num>
+	  <content>
+	    <p style="margin-left:1.36in;margin-right:0.49in;text-indent:0.50in">has been sentenced to a period of imprisonment of at least 12 months, </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.36in">(ii)</num>
+	  <content>
+	    <p style="margin-left:1.36in;margin-right:0.49in;text-indent:0.50in">has been convicted of an offence that has caused serious harm, or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.36in">(iii)</num>
+	  <content>
+	    <p style="margin-left:1.36in;margin-right:0.49in;text-indent:0.50in">is a persistent offender. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In the case of a person who falls within this definition, s.117C provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.35in;text-indent:0.00in">Article 8: additional considerations in cases involving foreign criminals - </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.50in">The deportation of foreign criminals is in the public interest. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.50in">The more serious the offence committed by a foreign criminal, the greater is the public interest in deportation of the criminal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The later provisions of s.117C provide criteria for an assessment of the foreign criminal’s article 8 rights.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in">As noted by Leggatt LJ in <span style="font-style:italic">CI (Nigeria) v. Secretary of State for the Home Department</span> [2019] EWCA Civ 2027 at [20], the purpose of Part 5A of the 2002 Act was to introduce a structured approach to the application of article 8(2) of the European Convention on Human Rights in the cases of foreign criminal offenders which produces in all cases a final result compatible with those rights; see also Lord Carnwath in <span style="font-style:italic">KO (Nigeria) v. Secretary of State for the Home Department</span> [2018] UKSC 53 at [12]-[15].  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In the present cases there has been such an assessment that has resulted in conclusions that were adverse to these appellants. The main issue on this appeal is the logically prior question: whether they fell within the definition of ‘foreign criminal’. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in">There are two other provisions which can be touched on shortly. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in">First, the Immigration Rules. Part 13 of the Rules, concerning deportation, refers to the terms ‘foreign criminal’ and ‘serious harm’. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;text-indent:0.00in">A398. These rules apply where: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.75in;text-indent:0.50in">a foreign criminal liable to deportation claims that his deportation would be contrary to the United Kingdom’s obligations under Article 8 of the Human Rights Convention; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.75in;text-indent:0.50in">a foreign criminal applies for a deportation order made against him to be revoked. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">398. Where a person claims that their deportation would be contrary to the UK’s obligations under Article 8 of the Human Rights Convention, and …  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;text-indent:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.00in;text-indent:0.00in">(c) the deportation of the person from the UK is conducive to the public good and in the public interest because, in the view of the Secretary of State, their offending has caused serious harm or they are a persistent offender who shows a particular disregard for the law, the Secretary of State in assessing that claim will consider whether paragraph 399 or 399A applies and, if it does not, the public interest in deportation will only be outweighed by other factors where there are very compelling circumstances over and above those described in paragraphs 399 and 399A. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The words of paragraph 398(c) are similar to the words in s.117D(2)(c)(ii) and (iii) and have been subject to consideration by this Court.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Second, sections 3(5)-(6) and 5(1) of the Immigration Act 1971 (‘IA 1971’) provide the respondent with the power to order deportation. Section 3(5) provides:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.64in;text-indent:0.00in">A person who is not a British citizen is liable to deportation from the United Kingdom if – </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.83in;text-indent:0.00in">(a) the Secretary of State deems his deportation to be conducive to the public good; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;text-indent:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.01in;margin-right:0.01in;text-indent:-0.01in">Section 5 sets out ‘the procedure for, and further provisions as to, deportation’: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.50in">Where a person is under section 3(5) or (6) above liable to deportation, then subject to the following provisions of this Act the Secretary of State may make a deportation order against him …  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in">As a preliminary to considering why each offender contends that he does not fall within the definition of a foreign criminal for the purposes of ss.117C and D, it is necessary to set out the facts which led the First-tier Tribunal (‘FtT’) to conclude that each of them did. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Mahmood   The offending </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Yasir Mahmood is a Pakistani National, who was born in January 1991. He arrived in the United Kingdom in September 2008; and was granted indefinite leave to remain in March 2011. He is married to, and lives with, a Pakistani national who also has leave to remain.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In July 2016 (when he was 23), he was convicted of ‘causing/inciting prostitution of/pornography involving a child between 13 and 17’, contrary to s.48 Sexual Offences Act 2003. In summary, he had sent a picture of his penis to a girl aged 14/15 and had caused her to take an intimate picture of herself and send it to him. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In August 2016, he was sentenced to a 3-year non-custodial sentence, comprising of supervision and 100 hours of unpaid work. He was also made the subject of a 5-year Sexual Offenders Notice requirement, and a 5-year Sexual Harm Prevention Order (‘SHPO’) with a programme requirement of 110 days. An adverse costs order of £450 was also made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Two years later, on 12 July 2018, he was convicted of failing to comply with the Notice requirement and a breach of the SHPO. He was sentenced in November 2018 to a term of 6 months’ imprisonment on each count, to run concurrently.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The following day, on 9 November 2018, he was served with notice of a decision by the Secretary of State to deport him to Pakistan as a ‘foreign criminal’, on the basis that his sexual offence had caused serious harm; and his deportation would therefore be conducive to the public good, see s.3(5)(a) of the IA 1971. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.01in;text-indent:-0.01in">                     Procedural steps </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in">On 4 December 2018, he appealed against the Secretary of State’s decision, arguing that his deportation to Pakistan would involve a breach of his rights under article 8 of the ECHR, and would therefore be a breach of s.6 Human Rights Act 1998 (‘HRA 1998’). The Secretary of State rejected this argument in January 2019 and maintained the deportation decision. In January 2019, he appealed the refusal of his human rights claim to the FtT. Following a hearing in April 2019, his appeal was rejected by FTJ O’Brien in a decision dated 10 April 2019.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in">He applied for permission to appeal this decision to the Upper Tribunal (‘UT’). His first application was refused by FTJ Easterman on 24 May 2019. A second application was refused by Deputy UTJ Mailer on 4 July 2019. The July refusal formed the basis </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">for an application for Judicial Review. The initial application was refused by the High Court in August 2019. However, permission was granted by Leggatt LJ in September 2019, with a direction that the application be retained in the Court of Appeal.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Estnerie The offending </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Muraley Estnerie is a Malaysian national, who was born in March 1969. He entered the United Kingdom; and, on 15 January 2002, claimed asylum under a false identity: that of a Sri Lankan national Murilitharan Thamotharan, born in March 1972. His application was refused. Between 2013 and 2016, he made a further five applications for leave to remain on human rights grounds, all based on the false Sri Lankan identity. These applications were all rejected. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in">On 14 July 2017, he pleaded guilty to six counts of being in possession of false identity documents and of seeking to obtain leave to remain by deception. On 2 August 2017, he was sentenced as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">Count 1, an offence of possessing or controlling identity documents with intent, contrary to s.4 of the Identity Documents Act 2010 (offence date: 23 December 2013 to 31 July 2015), 4 months’ imprisonment. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">Counts 2-6, offences of being a person who is not a British Citizen obtaining or seeking leave to enter or remain in the United Kingdom, contrary to s.24A(a) of the Immigration Act 1971 (offence dates: 15 January 2002, 20 May 2013, 5 May 2015, 2 October 2015 and 9 March 2016): 8 months’ imprisonment, concurrent with each other, but consecutive to the 4 months’ term imposed under count 1. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In passing sentence, the Judge said this: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">… this is a 48 year old man who… made a completely bogus asylum application, which failed and he did not attend the hearing, being out of the country at the time, that is the first aspect; the second is between 2013 and 2016, he made a string of immigration applications from within the United Kingdom and deceived his wife into supporting him along the way by becoming a sponsor; and the third aspect is that, having been issued in the midst of all of this, with a temporary residence permit, he extended it himself by falsifying the expiry date and used that document to obtain work, indeed difficult and important work, for which he was paid … he worked for a period of 15 months in the particular employment that he obtained with the false identity card. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in">On 19 August 2017, he was served with a deportation notice. As in the case of Mahmood, the Secretary of State’s decision was based on the view that his deportation would be conducive to the public good because his offences had caused serious harm; and his deportation was ordered pursuant to s.3(5)(a) of the IA 1971.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.79in;text-indent:-0.01in">Procedural steps </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in">26.<span style="font-family:Arial"> </span>On 14 September 2017, he challenged the Secretary of State’s decision on the basis that his deportation would breach his article 8 rights and was thus a breach of s.6 of the HRA 1998. The challenge was rejected in February 2018. He appealed to the FtT; and, following a hearing in April 2018, FTJ Widdup dismissed his appeal. He then appealed to the UT. A hearing took place in January 2019, following which UTJ Allen and UTJ Canavan dismissed his appeal in a determination dated May 2019. He subsequently applied for permission to appeal to this Court on the basis that he had not been convicted of an offence that caused serious harm. Davis LJ granted permission in November 2019, giving as his reason that the point of statutory interpretation was of sufficient importance and sufficiently arguable to meet the second appeals test.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Kadir The offending  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Rabiaz Kadir is an Iranian citizen, born in January 1990, who came to the United </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">Kingdom in November 2005, aged 15. His application for asylum was rejected in January 2006. However, as he was a minor, he was granted discretionary leave to remain until 1 January 2008. He applied to extend his leave on the grounds of private and family life; but his application was refused in March 2008. In February 2011, he was granted indefinite leave to remain under the legacy programme; and in 2015 he applied for British citizenship. That application was refused because of a conviction on 22 June 2015 for causing criminal damage. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in">On 3 November 2017, he was sentenced for an offence of Assault Occasioning Actual Bodily Harm contrary to s.47 of the Offences against the Person Act 1861. Armed with a weapon, he and another man assaulted another individual in what the Recorder who sentenced him described as an act of ‘road rage’. While unable to identify its precise nature from footage of the incident recorded on a device in the victim’s car, the Recorder described the weapon as ‘quite long’ and ‘blunt edged’, and Kadir using it in a stabbing motion. He was sentenced to a term of 8 months’ imprisonment and ordered to pay a victim surcharge of £140. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in">On 14 November 2017, the Secretary of State served him with a deportation notice as being conducive to the public good because his offence had caused serious harm. He challenged that decision, but it was affirmed in January 2018.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.79in;text-indent:-0.01in">Procedural steps </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in">He appealed to the FtT against the deportation decision; and the appeal was successful in part. Following a hearing in May 2018 and a decision promulgated in June 2018, FTJ Monson found that he was a foreign criminal because he had committed an offence that had caused serious harm; however, he found that the impact of the deportation on his partner and child was such that it would be ‘unduly harsh’ within the meaning of exception two in s.117C(5) NIAA 2002. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The Secretary of State appealed against the FtT’s ruling that the s.117C(5) exception applied. The appeal was successful. In a judgment promulgated in October 2018, UTJ Frances held that (i) FTJ Monson was correct to hold that Kadir was a foreign criminal (in fact, this does not appear to have been challenged in the UT); however, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">(ii) the FtT had failed to identity why his deportation was ‘unduly harsh’, and (iii) the matter should be remitted to the FtT, with the finding that Kadir was a foreign criminal being preserved at the further hearing before the FtT.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Following a hearing before FTJ Buckwell in February 2019, the FtT ruled that: (i) the finding that Kadir was a foreign criminal was preserved pursuant to the UT judgment; (ii), following the Supreme Court decision in <span style="font-style:italic">KO (Nigeria) v. SSHD</span> (above), the effect of his deportation on his partner and child would not be ‘unduly harsh’, and (iii) there were no other exceptions or other very compelling circumstances to prevent his deportation.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in">He appealed FTJ Blackwell’s ruling to the UT. Deputy UTJ Symes heard the appeal in April 2019. All grounds of appeal were rejected in a decision promulgated in June </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">2019.  The present position is that Kadir’s application for permission to appeal has been ordered to be heard with the appeals of Mahmood and Estnerie, with a hearing of his appeal if permission is granted. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">The interpretation of s.117D(2) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Various issues arise as to the interpretation of this provision; but a number of preliminary points can be made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in">First, the three categories in subsection (2)(c) have a potential to overlap. Plainly an offender who has received a sentence of more than 12 months may have done so because he committed an offence which caused serious harm. Equally, an offender who persistently offends is likely to receive a longer sentence (and more than 12 months) because of a poor antecedent history.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Second, the provision must be given its ordinary meaning informed by its context. The three categories must be read together. This is more than simply a conventional approach to statutory interpretation. It is plain, for example, from the structure of the provision that an offender who has been sentenced to a term of less than 12 months for an offence may nevertheless be treated as a ‘foreign criminal’ if the offence caused serious harm; and that ‘serious harm’ will only be relevant when the sentence for an offence is less than 12 months. This throws light on what may be encompassed by an offence which causes serious harm. While it is possible to think of offences which, despite causing the most serious harm, would not typically attract an immediate prison sentence of at least 12 months (causing death by careless driving is an example), in general paragraph (c)(ii) is not concerned with the most serious kind of harm which comes before the Crown Court. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Third, Mr Biggs drew our attention to s.32(1)-(5) of the UK Borders Act 2007 (‘UKBA 2007’). Section 32(3) provides that, where an offender is sentenced to imprisonment for an offence specified by the Secretary of State by order, a deportation order may be made under s.5(1) of the IA 1971. His submission was that allowing the ‘serious harm’ test under s.117D(2)(c)(ii) to be satisfied where a given type of offence has been committed, merely because of a perceived generalised harm caused by such offending, would ‘trespass into territory’ covered by s.32(3) of the UKBA. We are not persuaded that there is any merit in this argument. Section 32(3) has not been brought into legislative effect and the Secretary of State has not made any order as envisaged; and part 5A of the NIAA 2002 was introduced so as to provide a structured approach to the issue of deporting foreign criminals by reference to rights under article 8 of the ECHR.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Although, Mr Biggs in his attractive submissions sought to confine the ambit of section 117D(2)(c)(ii) by reference to the words ‘caused’ and ‘harm’, these are words in common usage and do not call for extensive commentary. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in">So far as the word ‘caused’ is concerned, the harm must plainly be causatively linked to the offence. In the case of an offence of violence, injury will be caused to the immediate victim and possibly others. However, what matters is the harm caused by the particular offence. The prevalence of (even minor) offending may cause serious harm to society, but that does not mean that an individual offence considered in isolation has done so. Shoplifting, for example, may be a significant social problem, causing serious economic harm and distress to the owner of a modest corner shop; and a thief who steals a single item of low value may contribute to that harm, but it cannot realistically be said that such a thief caused serious harm himself, either to the owner or to society in general. Beyond this, we are doubtful that a more general analysis of how the law approaches causation in other fields is helpful. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in">As to ‘harm’, often it will be clear from the nature of the offence that harm has been caused. Assault Occasioning Actual Bodily Harm under s.47 of the Offences Against the Person Act 1861 is an obvious example. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Mr Biggs argued on behalf of Mahmood that the harm must be physical or psychological harm to an identifiable individual that is identifiable and quantifiable. We see no good reason for interpreting the provision in this way. The criminal law is designed to prevent harm that may include psychological, emotional or economic harm. Nor is there good reason to suppose a statutory intent to limit the harm to an individual. Some crimes, for example, supplying class A drugs, money laundering, possession of firearms, cybercrimes, perjury and perverting the course of public justice may cause societal harm. In most cases the nature of the harm will be apparent from the nature of the offence itself, the sentencing remarks or from victim statements. However, we agree with Mr Biggs, at least to this extent:  harm in this context does not include the potential for harm or an intention to do harm. Where there is a conviction for a serious attempt offence, it is likely that the sentence will be more than 12 months.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The adjective ‘serious’ qualifies the extent of the harm; but provides no precise criteria. It is implicit that an evaluative judgment has to be made in the light of the facts and circumstances of the offending. There can be no general and all-embracing test of seriousness. In some cases, it will be a straightforward evaluation and will not need specific evidence of the extent of the harm; but in every case, it will be for the tribunal to evaluate the extent of the harm on the basis of the evidence that is available and drawing common sense conclusions. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In <span style="font-style:italic">LT (Kosovo) and DC (Jamaica) v. Secretary of State for the Home Department </span>[2016] EWCA Civ 1246, the Court considered the proper application of s.3(5)(a) and paragraph 398(c) of the Immigration Rules (see above). The issue was whether an offence of supplying a class A drug fell to be treated as causing ‘serious harm’ within the meaning of paragraph 398(c), regardless of the particular circumstances of the offending.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in">One of the arguments before the Court was that the seriousness of harm should be considered by reference to the sentencing of ‘dangerous offenders’ under the Criminal Justice Act 2003 and the definition of ‘serious harm’ in s.224(3) as meaning ‘death or serious personal injury, whether physical or psychological.’ Laws LJ, giving a judgment with which Lewison and Tomlinson LJJ agreed, rejected the argument. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">17. I should say straightaway that I am afraid that I do not consider that the references to the Criminal Justice Act or the sentencing guidelines are of any assistance to the adjudication of the questions before us on this appeal. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">That may be putting the matter too high, since the characteristic of an offence as causing ‘serious harm’ within the Sentencing Council Definitive Guidelines may be referred to in the sentencing remarks which are likely to be of assistance. On the other hand, the fact that the offence is not characterised as one causing ‘serious harm’ for sentencing purposes is plainly not determinative of the issue that arises under s.117D(2)(c)(ii). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Although in<span style="font-style:italic"> LT (Kosovo) </span>at [24], the Court questioned the Secretary of State’s view that ‘all drugs offences are by their nature serious’; it accepted as ‘perfectly reasonable’ the Secretary of State’s view that supplying class A drugs causes serious harm. In that case, LT had been convicted of an offence of possession with intent to supply a single deal of less than one gram of a class A drug, cocaine, to a friend, for which he had been sentenced to a term of 10 months. We consider below the argument that it is not the Secretary of State’s view of the matter that is material when considering the provisions of Part 5A of the NIAA 2002. However, we note the Court’s view in <span style="font-style:italic">LT (Kosovo) </span>that it was a reasonable view that dealing in class A drugs even on a personal basis caused serious harm, on the basis of societal harm caused by the distribution and consumption of drugs. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Proof </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in">We have already touched on this above. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Appeals to the FtT on the basis of Article 8 ECHR rights in the context of deportation decisions taken in relation to foreign nationals assessed to be foreign criminals are contested hearings between an appellant (the person the subject of the deportation decision) and the Secretary of State. In cases where subsection (2)(c)(ii) is said to apply, the burden is on the Secretary of State to prove each element of that subsection to the civil standard.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Neither the direct victim of a crime (if there is one) nor the prosecuting authority is a party to the tribunal proceedings. The focus of the hearing is whether the deportation decision is a proportionate response to the criminality and the legitimate aims that the Secretary of State seeks to achieve by deporting the foreign national.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The relevant criminal file (the contents of the Crown Court Digital Case System) is not produced or made available to the FtT. The record of the conviction, which is rarely in dispute, stands as the authoritative evidence of conviction. Tribunals are often provided with the record of conviction or the sentence order of the criminal court, along with (where available) the remarks of the judge who passed sentence, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">which may be reproduced in the Home Office decision letter. Under its procedure rules the FtT may admit such evidence whether or not the evidence would be admissible in a civil trial in the United Kingdom (see Rule 14(2)(a) FtT Rules).  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in">While an appellant may give and call live evidence, prosecution witnesses do not usually give evidence before the FtT about the criminality. This will have been conclusively established by the conviction that led to the decision to deport.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Mr Biggs argued that the Secretary of State must prove the case against the offender by adducing specific items of evidence that would include, if the seriousness of the harm were in issue, evidence from the victim. We see no proper basis for this argument. In many cases, a victim statement will be put before the sentencing judge. This will describe the impact caused by the offence as at the date of the statement. A victim statement adduced in criminal proceedings has the status of evidence which a defendant has an opportunity to challenge before sentence is passed (<span style="font-style:italic">R v. Perkins</span> [2013] 2 Cr. App. R. (S) 72). There is no justification for allowing a second such opportunity in proceedings before the FtT. In cases where the Secretary of State relies on the causing of serious harm alone for treating an offender as a ‘foreign criminal’, we would expect the sentencing remarks (if available) and the victim statement (if it exists) to form part of the Secretary of State’s evidence before the tribunal. However, we recognise that in many cases a victim or those less directly affected by a crime may be reluctant to make a statement as to the harm endured by an offence, and no proper conclusions can be drawn from the lack of such a statement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The suggestion that a victim of crime should have to give evidence of the effect of that crime before a tribunal, with the prospect of cross-examination by or on behalf of the perpetrator can be rejected outright: not least because of the potential for causing additional harm to a victim. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in">While an offender may choose to give evidence about the underlying criminality, the FtT will be aware that this will not necessarily be the whole, or even a truthful, picture. As the tribunal observed at §43 in the case of Mahmood, it had heard about the circumstances of the offending, ‘as described by the Appellant.’  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in">As noted above, an issue arises as to the weight to be given to the views of the Secretary of State.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In <span style="font-style:italic">SC (Zimbabwe) v. Secretary of State for the Home Department</span> [2018] EWCA Civ 929, the Court of Appeal, in the context of s.117D(2)(c)(iii) of the NIAA 2002 (‘persistent offender’), doubted the observation in <span style="font-style:italic">LT (Kosovo) </span>(above) at [21] that the Secretary of State’s view as to ‘serious harm’ was ‘an important relevant factor’ when applying s.117(2)(c)(iii). McCombe LJ, with whom Lindblom and Leggatt LJJ agreed, noted that it was an <span style="font-style:italic">obiter</span> observation: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">19. … The view of the Secretary of State or indeed of a judge in sentencing remarks may be of assistance to a tribunal or court in deciding whether an offence has caused serious harm or whether an offender is a persistent offender, but I do not see that the statutory words compel any particular weight to be given to the Secretary of State’s view on either in the assessment ... </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in">We agree. The views of the Secretary of State are a starting point and the reasoning of a decision letter may be compelling; but ultimately the issues that arise under s.117D(2)(c)(ii) will be a matter for the FtT. Provided the tribunal has taken into account all relevant factors, has not taken into account immaterial factors and has reached a conclusion which is not perverse, its conclusion will not give rise to an actionable error of law. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in">We turn then to the individual cases. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Mahmood </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Book Antiqua';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The FtT decision noted that the Secretary of State had adduced (among other things) a trial record sheet and the judge’s sentencing remarks in the later sentencing exercise in November 2018. Mahmood, his wife and parents all gave evidence. It appears that the sentencing remarks at the hearing in August 2016 were not available; and it is apparent that there was no victim statement and therefore no specific evidence of the harm caused by the offence. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Book Antiqua';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in">At §46, FTJ O’Brien set out his conclusions on the point:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">I</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">have been given no further information about the [sexual offence]. However, I do know that she was a young girl no older than 14/15 who received an intimate picture from a 23year old man, and who sent an intimate picture by return. [Counsel for Mahmood] says that there is no evidence that she was thereby caused serious harm; however, I disagree. She was a young teenager who was sexually exploited by a significantly older man. That experience will live not only with her but also with her parents for a considerable time. The sexual exploitation of children causes serious harm to society in general as well as the direct victims. I consider that I am entitled to and do find, in the absence of evidence to the contrary, that serious harm was caused to the victim, her parents and to wider society. The harm is exacerbated by [Mahmood’s] failure to comply with reporting requirements and the SHPO, the objectives are to protect vulnerable children and the public at large from sexual offenders and from child exploitation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Book Antiqua';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in">We do not accept Mr Biggs’s criticism that, in referring to an ‘absence of evidence to the contrary,’ FTJ O’Brien was reversing the burden of proof. He was simply recording the state of the evidence.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Book Antiqua';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in">He added at §47: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">I</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">do not consider that a lack of serious harm can be inferred from the imposition (at least initially) of a non-custodial sentence. [Mahmood] received the longest community order allowed by law … </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Book Antiqua';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In our view FTJ O’Brien was, at least, entitled to the view that serious harm had been caused by the sexual offence to the child and her parents. A tribunal is entitled to take judicial notice of the emotional and psychological impact, often long lasting, that such offending generally causes to a young victim who is sexually exploited by an older man; and to find, on the balance of probabilities, that serious harm had been caused.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Estnerie  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in">At §71, FTJ Widdup rejected Estnerie’s submission that ‘this was not an offence which caused serious harm’ because there were no victims. He rightly noted that an offence did not need individual victims for it to cause serious harm; and added: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">Abuses of the asylum system or human rights applications delay the claims of those with meritorious claims. They cause public concern and undermine trust and confidence in the system of immigration controls. The use of false identity cards can give rise to various concerns and these were described in the decision letter. By any standards these were serious offences which harmed the administration of the system of immigration control. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In its decision in May 2019, the UT considered that this was a reasonable conclusion that was properly open to the FtT. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in">Estnerie had been convicted of six offences committed between January 2002 and March 2016. Such offences did not cause harm to individual victims, although it would be sufficient that they caused harm to society in general. In the decision letter of 27 February 2018, the Secretary of State explained that falsified documents can be used for the purposes of identity theft, age deception, illegal immigration and organised crime, with identity-based fraud undermining the integrity of a wide variety of institutions and systems.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in">No doubt each offence of this nature contributes to a serious and perhaps widespread problem. However, the issue under s.117D(2)(c)(ii) is whether the offender has been convicted of ‘an offence’ which has caused serious harm. We accept that an individual offence of this sort can be said to cause serious harm, but there has to be some evidence that it has done so. The decision letter refers to the undermining of the integrity of the revenue and benefits system, banking and employment, and even national security; but there was insufficient evidence that these offences, even if aggregated, had such an effect. These offences usually result in a prison sentence because identity fraud is regarded as a serious matter; but that cannot, of itself, be enough to satisfy the requirement of causing ‘serious harm’. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The Secretary of State, perhaps aware of these difficulties, issued a Respondent’s Notice contending that, on the facts found by the FtT, Estnerie was plainly a ‘persistent offender’, and therefore a ‘foreign criminal’, within the meaning of s.117D(2)(c)(iii). This point was not taken in the Secretary of State’s decision letter nor at any stage in the proceedings below. The question therefore arises whether the Secretary of State should be permitted to advance this argument. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in">It is established that this court has a discretion to allow a point to be argued on appeal from the UT notwithstanding that it was not taken in the proceedings before the FtT and the UT. That discretion must be exercised with caution so as to ensure that the other party is not unfairly prejudiced. In particular, the discretion should rarely if ever be exercised unless all the necessary facts have been found or if the tribunal’s findings would or might have been affected by evidence which was not adduced in the proceedings below; see <span style="font-style:italic">Miskovic v. Secretary of State for Work &amp; Pensions</span> [2011] EWCA Civ 16 (Elias LJ at [68]-[70], Sedley LJ at [109]-[124] and Moore-Bick LJ at [126]-[134]), applied in an immigration context in <span style="font-style:italic">GS (India) v. Secretary of State for the Home Department </span>[2015] EWCA Civ 40 (Underhill LJ at [106] and Sullivan LJ at [116]), and <span style="font-style:italic">RJG v. Secretary of State for the Home Department</span> [2016] EWCA Civ 1042 at [51]. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In the present case the material facts as to Estnerie’s convictions for repeated dishonesty have been found. Moreover, while it might in theory be relevant to consider whether an appellant should no longer be regarded as a persistent offender because, since the date of his last offence, he has succeeded in rehabilitating himself, it is plain for the reasons given below that he would have had no prospect of obtaining such a finding. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in">There can, therefore, be no unfairness in allowing the Secretary of State to take the point now. Moreover, if the point can be taken without such unfairness, it is in the public interest that it should be. That is because Parliament has determined in s.117C of the 2002 Act that it is in the public interest that those who fall within the definition of ‘foreign criminal’ should be deported in cases such as the present where neither of the statutory exceptions apply.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The test in <span style="font-style:italic">Chege v. SSHD</span> [2016] UKUT 187 (IAC), approved in <span style="font-style:italic">SC (Zimbabwe)</span> and <span style="font-style:italic">Binbuga v. SSHD</span> [2019] EWCA Civ 551, pithily summarised a persistent offender as someone who ‘keeps on breaking the law’. There can be no doubt that this is an apt description of Estnerie: his offending encompassed six separate criminal offences committed over a period of 14 years (from 2002 to 2016). While we recognise that there may be some cases where a person who was a persistent offender can show, through remorse or rehabilitation, that they are no longer properly categorised as such, the cases are likely to be exceptional. As Hamblen LJ noted in <span style="font-style:italic">Binbuga</span> at [46], this would usually involve ‘keeping out of trouble for a significant period of time’. This cannot apply to Estnerie because his last offence was committed only a year before his conviction; because the FtT heard his appeal less than a year after he was convicted and sentenced; and because even at that appeal hearing he was found to have lied in his evidence to try and improve his position (see paragraphs [53]-[58] of the FtT judgment), which lies were consistent with the dishonest behaviour of which he was convicted ([59]).<span style="color:#2F5496"> </span>The evidence is therefore irrefutable that Estnerie has kept on breaking the law and is manifestly neither remorseful nor rehabilitated. He is therefore a persistent offender within the meaning of s.117D(2)(c)(iii). </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Kadir </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in">At §47 of the FtT decision, FTJ Monson expressed concern that there was no medical evidence to substantiate the claim that Kadir’s offending had caused serious harm, either physical or psychological, to his victim. He observed that there was only the ‘hearsay evidence’ of the sentencing remarks, in respect of which there was an issue </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">as to whether the injuries described ‘could reasonably be characterised as serious’. If the reference to the sentencing remarks being ‘hearsay evidence’ resulted in attaching less weight to them, we consider that the approach was wrong, for the reasons we have set out above.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The sentencing remarks of Recorder Whittaker show that he considered the Sentencing Council Definitive Guidelines on crimes of s.47 Assault Occasioning Actual Bodily Harm, and that he concluded, in relation to the injuries to the victim, ‘plainly there are aspects of greater harm in the present case.’ As we have noted above, this finding was not the key to a finding of serious harm for the purposes of </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.00in">s.117D(2)(c)(ii). However, the FtT went on to make its own finding (at §51) based on the sentencing remarks that serious harm had been caused to the victim, ‘albeit that it was less serious than the serious harm that was intended to be inflicted;’ and therefore, ‘by a narrow margin,’ that Kadir was a foreign criminal.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in">In our view this conclusion was, at the very least, open to the FtT. Indeed, we would have expressed our conclusions with less diffidence. Actual bodily harm is by definition bodily harm that is more than trivial. It does not always attract a prison sentence. If it is sufficiently serious to require a prison sentence (‘so serious that nothing less will do’), a tribunal will generally be entitled to conclude (without more) that it has caused serious harm for the purpose of section 117D(2)(c)(ii). The offending in this case was an incident of road rage committed on a public highway in which a weapon was used in a repeated stabbing motion, with the immediate victim sustaining two cuts to her scalp, four superficial cuts on her back close to the spine, and a bruise and grazes to her cheek.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p style="margin-left:0.50in">The Secretary of State contended that, in view of the procedural history that we have set out above, including the fact that the UT preserved the finding of fact that Kadir was a foreign criminal when it remitted that case to the FtT, it is no longer open to Kadir to challenge his status as a foreign criminal. In the light of our conclusion it is unnecessary for us to decide this issue. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.50in;text-indent:-0.01in">Conclusion </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.01in;text-indent:0.00in">76.<span style="font-family:Arial"> </span><marker name="tab"/>In the light of the above: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.50in">We dismiss the claim for judicial review in the case of Mahmood. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.50in">We dismiss the appeal in the case of Estnerie, not because it has been shown that any of his six offences caused serious harm, but because (as set out in the respondent’s notice) he is a persistent offender.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.50in;text-indent:0.50in">We refuse permission to appeal in the case of Kadir. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>
