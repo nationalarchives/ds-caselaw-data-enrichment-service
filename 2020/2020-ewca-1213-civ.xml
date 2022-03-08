@@ -1,0 +1,932 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1213"/>
+	  <FRBRuri value="ewca/civ/2020/1213"/>
+	  <FRBRdate date="2020-09-28" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1213"/>
+	  <FRBRname value="PN (Uganda), R (On the Application Of) v Secretary of State for the Home Department"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1213/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1213/eng"/>
+	  <FRBRdate date="2020-09-28" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1213/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1213/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:15:44" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="the-lord-chancellor" href="" showAs="THE LORD CHANCELLOR"/>
+	<TLCRole eId="interested-party" href="" showAs="Interested Party"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1213/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1213</uk:number>
+	<uk:cite>[2020] EWCA Civ 1213</uk:cite>
+	<uk:hash>2efdfd9f9dee172bf56fa7133c0bdf2d908b1e99c919b77985a2b311db6135d5</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1213/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 11pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.48in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 11pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 11pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; margin-right: 0.03in; font-family: 'Times New Roman'; font-size: 11pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 11pt; color: #000000; }
+#judgment .Heading2Char { font-family: 'Times New Roman'; font-size: 11pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0016666666666667in;height:0.9916666666666667in;"/>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1213</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case Nos: C4/2019/1609 &amp; C4/2019/1757</p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">ON APPEAL FROM THE QUEEN'S BENCH DIVISION</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">THE ADMINISTRATIVE COURT</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">THE HONOURABLE MR JUSTICE LEWIS</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<neutralCitation style="text-decoration:underline">[2019] EWHC 1616 (Admin)</neutralCitation>
+      </p>
+      <p style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Royal Courts of Justice</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Date: <docDate date="2020-09-28">28/09/2020</docDate></p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.93in;margin-right:0.00in;text-indent:0.00in">Before : </p>
+	    <p style="text-align:center;margin-left:0.96in;margin-right:0.00in;text-indent:0.00in">
+	      <span> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:1.80in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="text-decoration:underline">LORD JUSTICE McCOMBE</span>
+	      <span>  </span>
+	    </p>
+	    <p style="text-align:left;margin-left:1.71in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="text-decoration:underline">LORD JUSTICE HENDERSON</span>
+	      <span> </span>
+	    </p>
+	    <p style="text-align:center;margin-left:0.93in;margin-right:0.00in;text-indent:0.00in">and </p>
+	    <p style="text-align:left;margin-left:1.72in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="text-decoration:underline">LORD JUSTICE DINGEMANS</span>
+	      <span> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:1.88in;margin-right:0.00in;text-indent:0.00in">- - - - - - - - - - - - - - - - - - - - - </p>
+	    <p style="text-align:center;margin-left:0.93in;margin-right:0.00in;text-indent:0.00in">Between : </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><span> </span><marker name="tab"/>THE QUEEN </p>
+	    <p style="text-align:left;margin-left:1.65in;margin-right:0.00in;text-indent:0.00in">On the application of PN (Uganda) </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.35in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="text-decoration:underline">Claimant/</span>
+	      <span> </span>
+	    </p>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.09in;text-indent:0.00in">
+	      <span style="text-decoration:underline">Appellant/</span>
+	      <span> </span>
+	    </p>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.05in;text-indent:0.00in">
+	      <span style="text-decoration:underline">Respondent</span>
+	      <span> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><span> </span><marker name="tab"/>- and - </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><span> </span><marker name="tab"/>SECRETARY OF STATE FOR THE HOME </p>
+	    <p style="text-align:center;margin-left:0.99in;margin-right:0.00in;text-indent:0.00in">DEPARTMENT </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.08in;text-indent:0.00in">
+	      <span style="text-decoration:underline">Defendant/</span>
+	      <span> </span>
+	    </p>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.05in;text-indent:0.00in">
+	      <span style="text-decoration:underline">Respondent</span>
+	    </p>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.09in;text-indent:0.00in">
+	      <span style="text-decoration:underline">/Appellant</span>
+	      <span> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><span> </span><marker name="tab"/>- and - </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.28in;margin-right:0.00in;text-indent:0.00in">
+	      <span> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <marker name="tab"/>
+	      <span> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#the-lord-chancellor" as="#interested-party">THE LORD CHANCELLOR </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.16in;margin-right:0.00in;text-indent:0.00in">
+	      <role refersTo="#interested-party">
+		<span style="text-decoration:underline">Interested</span>
+		<span> </span>
+		<span style="text-decoration:underline">Party</span>
+		<span> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Chris Buttler (instructed by Duncan Lewis) for the Claimant/Appellant/Respondent</p>
+      <p class="Heading2" style="margin-left:0.05in;margin-right:0.00in;text-indent:-0.01in">Robin Tam QC and Natasha Barnes (instructed by Government Legal Department) for the </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Defendant/Respondent/Appellant </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">The Interested Party did not appear and was not represented</p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">Hearing dates : 15 &amp; 16 July 2020 </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-size:17pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">Covid-19 Protocol:  This judgment was handed down by the judge remotely by circulation to the parties’ representatives by email and release to Bailii.  The date and time for handdown is deemed to be 10.30 on 28 September 2020. </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level class="author">
+	  <content>
+	    <p style="text-align:left;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">Lord Justice Dingemans:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Introduction  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">1.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">This appeal raises an issue about whether the judge was entitled to find that PN’s hearing before the First-tier Tribunal (Immigration and Asylum Chamber) (“FTT”) was unfair.  The FTT hearing took place pursuant to the Asylum and Immigration Tribunal (Fast Track Procedure) Rules, known as the Detained Fast Track Rules (“the 2005 DFT Rules”), which have been declared in other proceedings to have been ultra vires, as appears from paragraphs 27 to 35 below.  There are also issues about the lawfulness of periods of PN’s detention. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">2.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">This appeal is from the judgment of Mr Justice Lewis (“the judge”) dated 24 June 2019, [2019] EWHC 1616 (Admin).  The judge found that PN’s appeal to the FTT had been unfair under the 2005 DFT Rules and that the period of PN’s detention between 6 August and 10 September 2013 was unlawful.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">3.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Both PN and the Secretary of State appeal against the judgment.  PN seeks to set aside the findings of the judge that she was lawfully detained from 29 July to 6 August 2013 and from 10 September to 12 December 2013.  The Secretary of State seeks to set aside the judge’s finding that the Court had, on an earlier occasion, granted PN permission to apply for judicial review to quash the decision of the FTT.  The Secretary of State contends that even if PN was granted permission to apply for judicial review to quash the decision of the FTT, that decision should not have been quashed because in fact the proceedings before the FTT were fair to PN.  This also means that the consequential findings of unlawful detention should be set aside.  The Secretary of State also served a Respondent’s Notice in relation to the period of detention between 10 September 2013 and 12 December 2013, seeking to affirm the judge’s finding on the basis that the judge should have found that the proceedings before the FTT were fair. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">4.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">I am very grateful to Mr Buttler and Mr Tam QC, and their respective legal teams, for their very helpful written and oral submissions.  By the conclusion of the proceedings it was apparent that the following matters were in issue in the appeal: (1) whether PN had been granted permission by the Court to apply for judicial review of the FTT’s decision; (2) whether the judge was entitled to find that the proceedings before the FTT under the 2005 DFT Rules were unfair and should be quashed; (3) whether the period of detention from 29 July to 6 August 2013 was unlawful; and (4) whether the period of detention from 10 September to 12 December 2013 was unlawful.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Factual background </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">5.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The factual background is taken from the findings made by the judge.  PN was born in July 1993 and is now aged 27 years.  She is a citizen of Uganda and lived there as she was growing up.  She claimed that she did not know who her mother was, and her father had died young.  She said she had been brought up by other members of her family and sexually abused and raped as a child.  PN said she had had lesbian relationships as she was growing up in Uganda.  It is common ground that lesbians are persecuted on the grounds of their sexual orientation in Uganda but the Secretary of State does not accept that PN is a lesbian. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">6.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In September 2010, when she was aged 17 years, PN entered the UK as an accompanying child on a visitor’s visa.  PN was accompanying a person who purported to be her father.  It appears to be common ground that the person accompanying PN was not her father.  It became apparent in the course of the FTT proceedings that the file relating to the grant of the entry visa had been destroyed.   On 25 February 2011, when she was still aged 17 years, PN’s visa expired and she became an overstayer. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">7.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 21 July 2013 PN, who was then aged 20 years, was arrested in London for overstaying.  When she was arrested PN was in bed with a man, and the various explanations given for that fact became an issue in the asylum claim.  PN gave a false identity on arrest.  It was common ground that PN’s initial detention was lawful. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">The first period of detention from 22 July to 6 August 2013 </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">8.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">At trial the first period of detention was analysed as being from 22 July to 6 August 2013.  On 22 July 2013 PN claimed asylum on the basis that she would be at risk of persecution if returned to Uganda on the basis of her sexuality as a lesbian.  On 25 July 2013 it was noted that referral to the Detained Fast Track (“DFT”) process was appropriate, but it was also recorded that if PN was not accepted within that process, temporary release would be considered.  Arrangements were made for PN’s screening interview, and on 28 July 2013 that interview took place.  After that screening interview, on 29 July 2013 the Secretary of State decided to progress PN’s asylum claim within the DFT.   On 31 July 2013 PN was allocated a solicitor.  On 5 August 2013 PN’s asylum interview took place.  PN’s solicitors requested an extension until 7 August 2013 to enable them to contact PN’s partner and refer the case to the Helen Bamber Foundation.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">9.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 6 August 2013 PN’s solicitors made representations as to why PN should be granted asylum or removed from the DFT process. They also referred the case to the Helen Bamber Foundation.  On the same day the Secretary of State refused PN’s asylum claim.  The Secretary of State did not accept that PN was a lesbian.  The Secretary of State noted the absence of evidence of any of the relationships claimed by PN, various other matters were pointed out in PN’s account which were said to be implausible, and it was noted that PN had been found in bed with a man on arrest and had not given any proper explanation for that fact. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">The second period of detention from 6 August to 10 September 2013 </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">10.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The second period of detention relates to the time that PN was in detention pending the hearing and determination of her applications for permission to appeal against the determination of the FTT.  On 7 August 2013 the Helen Bamber Foundation wrote to PN providing her with an initial appointment on 11 November 2013 to determine whether she would be suitable for a further assessment.  On 8 August 2013 PN appealed against the SSHD’s refusal of her asylum claim to the FTT, and the hearing was scheduled for 14 August 2013. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">11.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 12 August 2013 PN applied for an adjournment of her appeal to the FTT on the basis that she wished to obtain a medico-legal report. On 13 August 2013 the FTT refused PN’s adjournment request on the papers but stated that PN could renew the application at her appeal hearing the following day.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">12.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 14 August 2013 PN renewed her request for an adjournment and for the case to be taken out of the DFT procedure.  It was said that there was a friend of PN who had given evidence by email, and PN said that because of the earlier rape she was suffering from flashbacks and depression and a medical report was sought to be obtained from the Helen Bamber Foundation in support of the psychological aspects of her appeal.  PN’s medical records were obtained, they did not show any reporting of torture or mistreatment outside the UK, although it was noted that PN suffered from anxiety related symptoms.  It was submitted on behalf of the Secretary of State that there was no guarantee that the report would address the real issue on the asylum claim, namely whether PN was a lesbian.  During the course of the hearing of the application to adjourn, five friends of PN arrived.  The FTT Judge looked at the visa and thought that it would be helpful to see the original application, which had been initially refused.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">13.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The FTT adjourned PN’s appeal until 28 August 2013 so that further information: about the refusal of the earlier visa application; and about what had happened on PN’s arrest; could be obtained.  The FTT Judge did not consider that it would be helpful to have evidence from a medical report.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">The hearing in the FTT </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">14.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 28 August 2013 the hearing of PN’s appeal to the FTT took place at Yarl’s Wood Immigration Removal Centre.  PN was represented by counsel instructed by Duncan Lewis, solicitors.  The Secretary of State was represented by a Home Office Presenting Officer.  The visa information was not available, nor was further information from the immigration officers who had arrested PN on 21 July 2013.  At the FTT hearing PN gave evidence of her sexual experiences in Uganda and London.  She explained that she had been in bed with a man when she was arrested because he had helped her home the night before.  Although she had thought about having a baby, and had mentioned that in her interviews when asked about the man who had been in her bed when she was detained, she said she had not had sexual relations with the man, that she did not like men sexually, and was not thinking of using him as a sperm donor.  She had only mentioned this because she had thought that the immigration officers wanted an explanation.  The man found in PN’s bed gave evidence that PN had become drunk at a nightclub, the man had walked PN back home, and had fallen asleep on her bed.  They had not had sexual relations.  SM, a friend of PN, gave evidence that she had had samesex sexual relationships with PN on two occasions before losing PN’s contact details.  She had heard through others that PN had been arrested and had come to assist.  Another male friend gave evidence that he understood PN to be a lesbian.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">15.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The Secretary of State contended that there was no evidence of any of the relationships claimed by PN, various other matters were pointed to in PN’s account which were said to be implausible, and it was noted that PN had been found in bed with a man on arrest. The judgment of the FTT Judge </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">16.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In a comprehensive written determination dated 30 August 2013 the FTT Judge (FTT Judge Levins) dismissed PN’s appeal against the refusal of her asylum claim.  The FTT Judge recorded that there was no application for an adjournment, and was satisfied that PN was fit to attend the hearing.  The FTT Judge found that he was “… satisfied that there is nothing before me to indicate that she has not had sufficient time to prepare for the appeal …”.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">17.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The FTT Judge found that the only issue in the appeal was whether PN was, as she claimed, a lesbian. It was common ground that if PN was a lesbian she would want to live openly as a gay person and it was common ground that openly gay people in Uganda faced a real risk of persecution. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">18.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The FTT Judge considered first whether PN was gay or would be treated as gay by potential persecutors.   The FTT Judge recorded that he gave the case most anxious scrutiny.  The FTT Judge recorded that “I am well aware of the difficulty inherent in a judge’s assessment of something as private, personal and sensitive as a person’s sexual orientation”.  The FTT Judge applied the UNHCR Guidelines on international protection number 9, dated 23 October 2012.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">19.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The FTT Judge recorded a number of reasons which caused him to have concerns about PN’s general credibility.  PN had been granted a visa with her father, but she had said her father had died when she was young.  PN claimed that her partner had paid for her to come to the UK because of concerns about her safety, but had not either accompanied her or taken steps to keep in contact.  PN claimed in evidence to have had three samesex sexual relationships in the UK, but in interview had claimed to have had only one.  The FTT Judge said that the one fact that was established, was that PN was arrested with a man, and had come up with an explanation about wanting a baby.  The FTT Judge rejected PN’s claim that she was a lesbian, and therefore dismissed PN’s claim for asylum. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">20.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 5 September 2013 the FTT refused PN permission to appeal to the Upper Tribunal (“UT”).  On 10 September 2013 the UT refused PN permission to appeal.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">The third period of detention 10 September to 12 December 2013 </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">21.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The refusal of leave to appeal on 10 September 2013 meant that PN was “Appeal Rights Exhausted”.  PN remained in detention pending her removal to Uganda and this was the third period of detention.  On 23 September 2013 the Secretary of State gave directions for the removal of PN on 14 October 2013.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">22.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 8 October 2013 PN made further submissions raising human rights and asylum grounds, and sent a pre-action protocol letter.  These submissions included an affidavit from “Rose” (it is not necessary to give her second name) who was still living in Uganda, who said she had had lesbian relationships with PN.  The affidavit confirmed the existence of those relationships, but also said that PN was married.  This was not PN’s case and was inconsistent with PN’s evidence.  It was suggested in submissions to this Court that there might have been a typographical error in the affidavit because Rose might have been referring to her own marriage.  PN explained that she had not been able to obtain Rose’s evidence earlier, because PN had been in detention and had had to make contact through a carer for her sister’s children.  A letter from a medical practitioner suggested that PN needed a medical assessment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">23.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 11 October 2013 the Secretary of State refused to accept PN’s further submissions as a fresh claim.  On 13 October 2013 PN filed an application for judicial review challenging the lawfulness of the Secretary of State’s determination that the materials submitted did not amount to a fresh claim.  On 14 October 2013 Jeremy Baker J. refused permission to apply for judicial review. He also refused PN’s application for interim relief in the form of a stay on removal.  In fact PN’s removal was postponed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">24.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 11 November 2013 the Secretary of State again issued directions for PN’s removal, this time on 14 November 2013.  On 13 November 2013 a report was provided by Dr Hartree of Medical Justice.  This concluded that PN was suffering from post-traumatic stress disorder.  On 14 November 2013 PN filed her second judicial review claim challenging the further removal directions.  Upper Tribunal Judge Warr refused the application for a stay on removal, but PN was not removed.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">25.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">On 22 November 2013 PN filed a third application for judicial review.  On 28 November 2013 the Secretary of State issued directions for PN’s removal on 12 December 2013.  PN applied for a stay of removal on 12 December 2013 but this was refused by Upper Tribunal Judge Southern.  PN was removed to Uganda.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">26.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">There had been concerns about the DFT schemes and various challenges to the lawfulness of those rules succeeded in other claims, as appears below.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">The invalidity of the 2005 DFT Rules  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">27.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In order to understand the basis on which the FTT proceedings were quashed, it is necessary to refer to some previous judgments relating to the lawfulness of the DFT Rules.  In 2003 the Immigration and Asylum Appeals (Fast Track Procedure) Rules 2003 which provided for a DFT appeals process were brought into force.  The fairness of DFT decision making was considered in R(Refugee Legal Centre) v Secretary of State for the Home Department [2004] EWCA Civ 1481; [2005] 1 WLR 2219, but there was no challenge to the lawfulness of the 2003 Rules.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">28.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In 2005 the 2005 DFT Rules were brought into force.  On 20 October 2014 the 2005 DFT Rules were replaced by the Fast Track Rules contained in the Schedule to the Tribunal Procedure (First-tier Tribunal)(Immigration and Asylum Chamber) Rules 2014 (“the 2014 Rules”).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">29.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Challenges were brought to the 2014 Rules, and these challenges were to the lawfulness of the rules.  In R(Detention Action) v Secretary of State for the Home Department [2014] EWHC 2245 (Admin)  (“DA1”) the Administrative Court considered a challenge to the operation of the initial decision-making in the detained fast track.  It was held that part of the operation of the system up to the start of the appeal stage was unlawful.  There was a judgment on consequential orders in R(Detention Action) v Secretary of State for the Home Department [2014] EWHC 2525 (Admin) (“DA2”).   The Court of Appeal dismissed an appeal about the relief granted in the consequential orders in R(Detention Action) v Secretary of State for the Home Department [2014] EWCA Civ 1270 (“DA 3”).  In R(Detention Action) v Secretary of State for the Home Department [2014] EWCA Civ 1634 (“DA4”) the Court of Appeal found that the policy concerning detention for the purposes of the DFT process had changed in 2008.  Before that date only those who satisfied the criteria in the Enforcement Instructions Guidance (“EIG”) were detained pending appeals.  After that date persons who were included in the DFT process were detained pending appeals to the FTT until their appeal rights were exhausted.  The change in policy was held to be unlawful because it lacked clarity and transparency and detention pending exhaustion of appeal rights was not justified in the light of the principles set out in R v Governor of Durham Prison, ex parte Hardial Singh [1984] 1 WLR 704. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">30.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Following the judgments in DA1, DA2, DA3 and DA4, in R(Detention Action) v Firsttier Tribunal (Immigration and Asylum Chamber) [2015] EWHC 1689 (Admin) Nicol J held that the 2014 Rules, so far as they related to the hearing of appeals before the FTT, were ultra vires and they were quashed.  On appeal from Nicol J in R(Detention Action) v First-tier Tribunal (Immigration and Asylum Chamber) [2015] EWCA Civ 840; [2015] 1 WLR 5341, the Court of Appeal upheld the finding that the 2014 Rules were systemically unfair.  This was because the period of seven days between the asylum decision and the appeal hearing in the FTT was bound to be insufficient in many cases for evidence to be found to corroborate the appellant’s account of the case.  Lord Dyson noted that “the time limits are so tight as to make it impossible for there to be a fair hearing of appeals in a significant number of cases”.  The 2014 Rules were quashed but the Court of Appeal did not set out what was to happen to cases determined under the 2014 Rules.  The President of the FTT decided that he would, on application, set aside those determinations, with the result that the appeals would be reheard as they had not, once the earlier decision had been set aside, yet been determined.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">31.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">As a result of the successful challenge to the 2014 Rules, claims in other judicial review proceedings were made concerning the 2005 DFT Rules.  These claims were determined in R(TN (Vietnam)) v Secretary of State for the Home Department [2017] EWHC 59 (Admin); [2017] 1 WLR 2595 by Ouseley J.  Ouseley J. followed the approach of the Court of Appeal in R(Detention Action) [2015] 1 WLR 5341 and found that the 2005 DFT Rules were ultra vires and therefore unlawful.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">32.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Ouseley J. held that the fact that the 2005 DFT Rules were ultra vires meant that they were a nullity and of no effect, for the reasons given in Hoffmann-La Roche v Secretary of State for Trade and Industry [1975] AC 295 at 365 and Boddington v British Transport Police [1999] 2 AC 143 at 155c.  Ouseley J. held that while the 2005 DFT Rules were a nullity and of no effect, the procedural errors were not such that any or all appeal decisions made under them were automatically or inevitably unfair.  Ouseley J. held at paragraphs 80 and 94 that the decision to quash the appeal would depend on whether the proceedings were in fact unfair in the individual case.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">33.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Ouseley J. then addressed the issue of whether claims to set aside the determination in the FTT should be brought by way of application to set aside in the FTT or in the Administrative Court, and said that the claim should be made in the FTT.  Ouseley J. noted that if any claim to set aside had to be brought by way of judicial review in the Administrative Court, there would be a number of procedural hurdles to overcome.  These were identified from paragraph 105 of the judgment, and included the need to obtain an extension of time.  Ouseley J. emphasised the importance of avoiding prejudice to good administration, the need for finality in litigation and alternative remedies. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">34.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">An appeal from the judgment of Ouseley J. was dismissed by the Court of Appeal in R(TN (Vietnam)) v Secretary of State for the Home Department [2018] EWCA Civ 2838; [2019] 1 WLR 2647 on 29 December 2018.  The Court of Appeal held that in order to invalidate appeal decisions it was necessary to show that they had been influenced or infected by the ultra vires rules, which required a careful assessment of whether there had been procedural unfairness on the facts of the individual case.  The finding that the 2005 DFT Rules were void did not mean that the proceedings in the FTT were themselves void, because the FTT Judge had power to act validly notwithstanding the invalid rules.  The same constitution of the Court (Sharp, Peter Jackson and Singh LJJ) sat as a Divisional Court in R(TN (Vietnam)) v First-tier Tribunal (Immigration and Asylum Chamber) and another [2018] EWHC 3546; [2019] 1 WLR 2675 and in another judgment dated 19 December 2018 held that the FTT did not have power to set aside earlier determinations of the FTT under the rules then applicable.  It was held that applications to quash the decisions of the FTT had to be made in judicial review proceedings in the Administrative Court. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">35.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In deciding whether the proceedings in the FTT were to be set aside, the Court identified a number of relevant matters to be considered: (1) a high degree of fairness was required in the proceedings; (2) the 2005 DFT Rules created an unacceptable risk of unfairness in a significant number of cases; (3) there was no presumption that the procedure was fair or unfair; (4) finality in litigation was important; and (5) a long delay in locating what was said to be critical evidence might suggest that the unfairness in the 2005 DFT Rules did not make the proceedings in the FTT unfair.  The Court noted at paragraph 90 that whether the proceedings were in fact unfair and liable to be set aside would “depend on a careful assessment of the individual facts”. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">These proceedings  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">36.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">These proceedings were commenced on 30 October 2015.  They were the fourth set of proceedings brought by PN for judicial review, but the first following her removal from the UK.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">37.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">On 5 November 2015 Mr Justice William Davis refused permission to apply for judicial review on the papers recording, among other matters, that the claim was out of time because the relevant decisions had been taken in 2013.  On 11 November 2015 PN applied to renew orally her application for permission to apply for judicial review.  By a consent order on 1 December 2015 PN’s renewed application was stayed pending an application in the FTT to set aside the FTT decision dated 30 August 2013.  By a further consent order dated 10 May 2017 the case was stayed, pending applications in the FTT to set aside the determinations in the cases in R(TN (Vietnam)).  On 30 May 2017 the FTT gave judgment finding that it had no jurisdiction to order the setting aside of the earlier FTT determination, which was upheld by the same constitution of the Court of Appeal sitting as a Divisional Court in R(TN (Vietnam)).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">38.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">There was an oral hearing of the renewed application for permission to apply for judicial review on 21 September 2017.  Permission to apply for judicial review was granted.  It does not appear that there were any submissions about the issue of delay.  This meant that the points highlighted in R(TN (Vietnam)) about the effects of delay on good administration were not addressed.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">39.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The order granting permission to apply for judicial review provided that the claim be stayed pending the determination of the appeals in R(TN (Vietnam)).  An application made on behalf of PN to lift the stay was refused on 25 July 2018.  The Court of Appeal gave judgment in R(TN (Vietnam)) on 19 December 2018. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">40.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">Following the judgment of the Court of Appeal and Divisional Court in R(TN (Vietnam)) the solicitors acting on behalf of PN applied for a listing of the substantive application for judicial review.  There was a procedural hearing before Supperstone J. on 6 February 2019.  Draft directions were provided by counsel for PN, but it does not appear that there were any substantive submissions about those directions.  Supperstone </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in;text-indent:0.00in">J. ordered that the substantive hearing be listed on the first available date after 6 May 2019.  He also ordered, in accordance with the draft directions, that: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.94in;margin-right:0.98in;text-indent:0.00in">“2. The Claimant have permission to amend her Detailed Grounds of Claim to  reflect the judgments of the Court of Appeal and Divisional Court in R (TN and US) v FTT, Lord Chancellor [2018] EWHC 3546; R (TN and US) v SSHD  [2018] </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.94in;margin-right:0.03in;text-indent:0.00in">EWCA Civ 2838 by 15 February 2019.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">41.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">On 15 March 2019 PN’s legal representatives served “amended detailed grounds”.  This made a claim that the determination of the FTT of 30 August 2013 should be quashed on the basis that the 2005 DFT Rules had been quashed and there had been unfairness in PN’s case.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">42.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">Detailed grounds of defence were served on behalf of the Secretary of State on 22 March 2019.  On 12 April 2019 an application was made to amend those grounds, and permission was granted at the hearing by the judge.  On 20 May 2019 further evidence was served on behalf of Secretary of State, which was admitted at trial.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Judgment of Lewis J. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">43.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The hearing of this claim for judicial review took place on 22 and 23 May 2019 and judgment was given on 24 June 2019.  The judge noted some difficulties in ascertaining the relevant facts because of the absence of a witness statement from anyone involved in the decision making and the lack of clarity in some contemporaneous documents.  The judge set out his findings of fact from paragraphs 4 to 49 of the judgment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">44.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The judge then turned to the present proceedings and issues in paragraphs 50 to 58 of the judgment.  On the first issue, the judge addressed the scope of the grant of permission in paragraphs 59 to 62 of the judgment.  The judge held that the original grant of permission did not include the challenge to the FTT proceedings, because the claim form indicated that an application to set aside the FTT decision was being made to the FTT.  However the judgments of the Court of Appeal and Divisional Court in R(TN (Vietnam)) had made it clear that it was the High Court and not the FTT which had jurisdiction to set aside the FTT determination, and Supperstone J. had granted permission to amend the claim to reflect those judgments.  This meant that the FTT judgment could be challenged in these proceedings.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">45.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The judge addressed the fairness of the proceedings before the FTT from paragraphs 63 to 77 of the judgment.  The judge stated that the specific unfairness relied on was the lack of sufficient opportunity under the 2005 DFT Rules to obtain evidence from Uganda to support PN’s case about her sexuality.  The judge considered that PN’s asylum claim necessarily involved obtaining evidence from external sources, including sources in Uganda. The DFT Rules did not provide sufficient time to enable such evidence to be obtained.  PN had provided further evidence relatively quickly after the appeal hearing and explained the difficulties that she had had in obtaining such evidence.  Although PN did not seek to adjourn the appeal hearing on the basis that she was seeking evidence from Uganda, the DFT Rules put her in an unfair position.  This was because if she had applied to adjourn on the basis that there was missing evidence, it would simply have highlighted the missing evidence in her case.  The judge rejected a second complaint about unfairness because of an inability to obtain evidence from the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in;text-indent:0.00in">Helen Bamber Foundation, because that inability did not affect the essence of PN’s appeal.  The judge then turned to consider the appropriate remedy.  The judge held that it would not be contrary to good administration to require the Secretary of State to use best endeavours to enable PN to return to the UK to pursue her appeal. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">46.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The judge addressed the claims for false imprisonment from paragraph 86 of the judgment, and set out the relevant statutory powers and principles.  As to the first period of detention (from 22 July to 6 August 2013) the judge considered the first part of this first period (from 22 July to 29 July 2013) when the decision was taken to process the asylum claim in the DFT process after the screening interview.  The judge reviewed the documentation and found that the reviewing officer was entitled on 25 July 2013 to consider that PN might abscond.  Asylum was a bar to removal but if the claim was accepted in the DFT process detention was permissible.  The judge held that detention in the period to 29 July 2013 was justified for these reasons in paragraph 106 of the judgment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">47.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The judge then turned to the second part of the first period (from 29 July 2013 to 6 August 2013) and held that after the screening interview it was still reasonable to maintain PN’s detention in the DFT process because the focus of the screening interview had been on one relationship with a person in the UK.  The judge therefore concluded that the Secretary of State acted lawfully in concluding that PN might be detained so that her application could be decided quickly using the asylum fast track procedures.  The judge specifically recorded in paragraph 116 of the judgment that it was in the asylum interview on 5 August 2013 that PN mentioned her lesbian relationships abroad, which then made the case unsuitable for inclusion within the DFT process.  That interview had finished at 1745 hours on 5 August 2013 and it was only after that time that the asylum claim became unsuitable for inclusion within the fast track process.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">48.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">In relation to the second period of detention (from 6 August 2013 to 10 September 2013), the judge referred to the decision in DA4 and held that the detention was unlawful because the policy applied to PN was not transparent.  Further the judge held that from 6 August 2013 onwards it had become clear that PN could not lawfully be held in the DFT process because she was relying on the existence of foreign lesbian relationships to prove her case and more time was needed to prove that case.  This meant that from 6 August 2013 the detention became unlawful.  The judge held that although it was possible that PN might have been detained applying the general criteria in the EIG, he was not satisfied, on the balance of probabilities, that she would have been detained.  This was because the contemporaneous notes made it clear that an assessment of detention would have needed to be carried out and it was not possible to know what conclusion would have been arrived at.  This meant that the claim for detention over this period would not be restricted to nominal damages. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">49.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">In relation to the third period of detention (from 10 September to PN’s removal on 12 December 2013), the judge referred to contemporaneous notes about PN’s adverse immigration history, which he held must have been a reference to the fact that she was a person likely to abscond.  The judge concluded at paragraph 129 that “On the evidence before the defendant there were reasonable grounds for believing that she was someone to whom  removal directions could be issued”.  The judge said that the Secretary of State was entitled to conclude that detention complied with the EIG because PN now had no incentive to remain in contact with immigration authorities.  There were no other medical reasons suggesting that detention would be unlawful.  The judge held in paragraph 133 that “the fact that the determination of the  appeal is now to be quashed does not, in my judgment, render the decision to detain  unlawful. … there was no such apparent barrier to removal”.  The judge considered that the situation in PN’s case was akin to R(AB) v Secretary of State for the Home Department [2017] EWCA Civ 59.  In R(AB) the Court of Appeal had held that a subsequent decision that the DFT process and FTT appeal was unlawful did not prevent the Secretary of State relying on the validity of the tribunal decisions.  The judge concluded that the decision in R(AB) provided strong support for the conclusion that detention pending removal was not unlawful.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">50.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The judge also referred to the decision in Secretary of State for the Home Department v Draga [2012] EWCA Civ 842 where the Court of Appeal held that the Secretary of State was entitled to rely upon a FTT’s determination even though it was subsequently found to be unlawful.  The judge referred to the Court of Appeal’s judgment in R(DN (Rwanda)) v Secretary of State for the Home Department [2018] EWCA Civ 273, [2019] QB 71 that the decision in Draga was binding.  He recorded that the Supreme Court had granted permission to appeal in R(DN (Rwanda)) and said that he found the decision in Draga to be of little assistance in resolving the present case.  The judge concluded at paragraph 141 that the Secretary of State was exercising powers for the purpose conferred by the relevant statutory provisions and had complied with relevant policy and common law principles in Hardial Singh.  The judge ordered the Secretary of State to use best endeavours to facilitate the return of PN to the United Kingdom.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in;text-indent:0.00in">PN has been returned to the UK. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.01in;margin-right:0.09in;text-indent:-0.01in">The proper interpretation of the grant of permission to amend (issue one) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">51.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">It was common ground that the proper approach to the interpretation of a Court order was set out in paragraph 64 of JSC BTA Bank v Ablyazov (No.10) [2013] EWCA Civ 928; [2014] 1 WLR 1414.  The words of the order must be given their ordinary meaning, and the background, context and purposes of the order are relevant in determining that ordinary meaning.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">52.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">In submissions Mr Tam accepted that, on a literal reading of the order made by the Administrative Court dated 6 February 2019 (“… the Claimant have permission to amend her Detailed Grounds of Claim to  reflect the judgments of the Court of Appeal and Divisional Court in R (TN (Vietnam) v SSHD [2018] EWHC 3546; R (TN (Vietnam) v SSHD  [2018] EWCA Civ 2838 …”) PN had been granted permission to challenge the decision of the FTT dated 30 August 2013.  However Mr Tam submitted that such a reading of the order must be wrong because there had been no consideration of the issues of delay, the effect on good administration, and the need to add a third party (namely the FTT itself) when permission was granted and subsequently amended.  Mr Buttler submitted that there was nothing to alter the usual meaning of the words used in the order, and that if the Secretary of State thought that the order was too wide, the Secretary of State could have appealed the order made by Supperstone J., but did not do so. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">53.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">In my judgment the order made by Supperstone J. permitted PN to amend her claim so that she could challenge and seek to quash the determination of the FTT dated 30 August 2013.  This was because the judgments of the Divisional Court and Court of </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">Appeal in R(TN (Vietnam)) (as they are now referred to, rather than R(TN and US) as </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in;text-indent:0.00in">they were referred to in Supperstone J.’s order) explained that any challenge to the fairness of the proceedings before the FTT had to be made to the Administrative Court.  The effect of the order was to ensure that in the amended grounds PN could make a claim that the proceedings in the FTT under the 2005 DFT Rules which resulted in the determination dated 30 August 2013 were unfair.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">54.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The relevant context to the order was that, until these judgments, delivered on the same day by the Divisional Court and Court of Appeal, there had been controversy about whether the claims to set aside should have been made to the FTT, as suggested by Ouseley J. at first instance in R(TN (Vietnam)), or should be made to the Administrative Court, as suggested in some FTT determinations.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">55.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">As a matter of fairness to PN it should be recorded that, when proceedings were issued in 2015, in paragraph 3(1) of the Statement of Grounds PN sought to set aside the determination of the FTT dated 30 August 2013, albeit in the FTT.  It was not particularly surprising that when the procedural route became clear, PN claimed in the Administrative Court to set aside the determination of the FTT.  In my judgment there is nothing in the relevant background, context and purpose of the order to give the words used in the order a different meaning to that which appears on an ordinary reading of them.  As a matter of fairness to the Secretary of State it is also right to record that the Secretary of State at paragraph 5 of the detailed grounds of defence served in response to the amended grounds of claim contended immediately that PN did not have permission to challenge the decision of the FTT dated 30 August 2013.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">56.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">Although, as the judge held and I agree, PN did have permission under the order of the Administrative Court dated 6 February 2019 to amend her claim to challenge the decision of the FTT dated 30 August 2013, it was very unfortunate that the court was asked to permit the amendment without being provided with draft amended grounds of claim by PN’s legal team.  There was no good reason for the failure, and I should make it clear that neither Mr Buttler nor Duncan Lewis solicitors were at that stage representing PN.  Those representing the Secretary of State should have pointed out the failure to Supperstone J., and I should make it clear that neither Mr Tam nor Ms Barnes were at that stage representing the Secretary of State.  If the draft amended grounds had been produced, there would have been clarity about what amendments were being permitted.  The parties would also have appreciated that the FTT should be joined to the claim because the FTT decision was now a formal target in the claim.  As it is no one has suggested that the failure to join the FTT makes the amendment a nullity, and it has not been suggested that the FTT would have either participated in the proceedings or had different points to raise.  This Court in Fayad v Secretary of State for the Home Department [2018] EWCA Civ 54 emphasised at paragraphs 48 and 56 the importance of pleading and particularising claims in judicial review.  Proposed amendments to claims should receive the same care and attention. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">57.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">There are two other procedural matters to mention.  First, although complaint was made by the Secretary of State in her detailed grounds of defence about the amendment, the detailed grounds of defence proceeded on the basis that permission had not been given, and it could all be addressed on a “rolled up” basis at the hearing of the claim for judicial review.  This was not a satisfactory approach to take because it did not deal with the possibility that the order, properly construed, permitted the amendment.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">58.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">Secondly, in R (TN (Vietnam)) Ouseley J. rightly recorded that the system of public law does not permit someone to hold back from making a challenge until someone else has succeeded.  Proceedings should be brought promptly and in any event not later than three months after the grounds to make the claim first arose.  The way in which the challenges in this case were permitted by both sides to develop meant that the Court did not have an opportunity to consider the question of delay or the effect of the earlier judicial review proceedings brought by PN when deciding whether to grant permission to apply in this case.  If the Court had had such an opportunity, account could have been taken of the fact that PN had commenced three claims for judicial review before her removal on 10 December 2013.  In any of those proceedings it would have been open to PN to challenge the fairness of the FTT proceedings, but she had not done so.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">59.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">For the reasons given above I accept, in agreement with the judge, that PN did have permission to challenge the determination of the FTT dated 30 August 2013.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">Was there such unfairness in the FTT appeal that it should be set aside (issue two) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">60.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">Mr Tam submitted that the judge’s finding that the proceedings before the FTT were unfair was wrong.  Mr Tam pointed out that: an application had been made to adjourn the FTT proceedings on behalf of PN; an adjournment had been granted albeit for other reasons; and the FTT Judge had specifically addressed whether the proceedings were fair and had found them to be fair.  Mr Tam also relied on the fact that when the Secretary of State had refused to treat the evidence from Rose as amounting to a fresh claim, Jeremy Baker J. had refused permission to apply for judicial review to challenge that decision.  This meant, Mr Tam said, that obtaining the evidence from Rose could not have affected the fairness of the proceedings before the FTT.  Mr Buttler submitted that there were well-known difficulties in obtaining evidence to prove sexual orientation, and that those difficulties were very substantially increased when an individual was in detention.  He submitted that if PN had been required to ask for an adjournment it would only have highlighted the deficiencies in PN’s case at that point, and the decision by Jeremy Baker J. was made against the background of a finding of adverse credibility made by the FTT Judge which might not have been made if the evidence of Rose was available.  Mr Buttler also noted that the judge had made a finding of fact that the proceedings were unfair and there was no basis for this court to set it aside. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">61.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">In R(TN (Vietnam)) at paragraphs 103 and 104 the Court of Appeal identified relevant matters to consider when determining whether the procedure was unfair in any particular case.  The decision had to be made by reference to all the facts of the case.  In R(JB (Jamaica)) v Secretary of State for the Home Department [2014] 1 WLR Moore-Bick LJ observed that homosexuality was a characteristic that could not be readily established without evidence from sources other than the claimant, and that evidence in that case was likely to be available only in Jamaica and it was likely that the claimant would need additional time to obtain it.  It was held “a failure to allow him that time was likely to lead … to a decision that was neither fair nor sustainable.”   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">62.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">It is relevant to record that this is an appeal by way of review and not re-hearing, see CPR 52.21(1).  This Court can only overturn a finding of fact made by the court below if it has concluded that it was wrong: see CPR 52.21(3).  Where findings of fact have been made in judicial review proceedings, including evaluative findings about whether proceedings were fair, the approach by an appellate court to reviewing the findings of </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in;text-indent:0.00in">fact mirrors the approach by appellate courts to findings of fact generally.  This approach applies even where, as here, there was no live witness evidence at first instance: see R (BT) v HM Treasury [2020] EWCA Civ 1, [2020] Pens LR 12, at paragraphs 45-47 adopting the approach set out in Smech Properties Ltd v Runnymede Borough Council [2016] EWCA Civ 42 at paragraph 27, and see Re Sprintroom [2019] EWCA Civ 932, [2019] BCC 1031 at paragraphs 72-78 and R(Hoareau and Bancoult) v Secretary of State for the Foreign and Commonwealth Office [2020] EWCA Civ 1010 at paragraphs 166 and 167.  As the White Book 2020 identifies in the notes at 52.21.5 it is necessary to identity “some gap in logic, lack of consistency, or a failure to take account of some material factor, which undermines the cogency of the conclusion”.    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">63.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">In this case the judge considered that the proceedings were made unfair because of the effect of the 2005 DFT Rules.  This was because PN did not have the opportunity to obtain the evidence from Rose.  Rose’s evidence came too late to assist in the proceedings before the FTT.  This was a judgment made on the particular facts in this case by the judge and I can see no basis for interfering with that finding.  The judge had legitimate and proper grounds for reaching his decision because there was an affidavit from Rose which was not before the FTT Judge but which became available shortly after the proceedings in the FTT.  It is right that no application was made to adjourn so that the evidence from Rose could be located and adduced.  However, as Lord Dyson MR noted in R(Detention Action) [2015] 1 WLR 5341, the effect of the DFT process was that it put the advocate into an unfair dilemma, namely whether to seek an adjournment and highlight difficulties with a case or to do the best on the material available.  Although the FTT Judge did consider whether the proceedings were fair, that evaluation was carried out without the benefit of knowing that efforts to trace Rose were being made, and that those efforts would result in Rose providing an affidavit.  Similarly Jeremy Baker J. was evaluating whether Rose’s affidavit should have been treated as fresh evidence against a finding of adverse credibility against PN.  The ruling by Jeremy Baker J. was not addressing the question whether the finding of adverse credibility was unfair because of the effect of the 2005 DFT Rules. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">64.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The Court is focussing on the effect of the 2005 DFT Rules on the fairness of the FTT proceedings, and is not assessing whether PN’s appeal to the FTT should have succeeded.  However if it is apparent that Rose’s evidence could not have contributed to the proceedings in the FTT, for example because she could not be located or could give no relevant evidence, then there would be no basis to impugn the fairness of the proceedings.  In this respect I have considered whether that part of Rose’s affidavit which stated that PN was married, in circumstances where it was common ground that PN was not married, meant that the whole affidavit should have been discounted.  I accept that there might be an innocent explanation for this apparent inconsistency, and I am unable to say that such an explanation would, if accepted, mean that PN’s case was bound to fail so that the fairness of the proceedings would not be affected.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">65.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">In my judgment therefore the judge was entitled to find that the proceedings before the FTT were not fair, because of the time limits contained in the 2005 DFT Rules which have been quashed.  This means that the determination of 30 August 2013 is quashed and PN’s appeal to the FTT will have to be heard again.  In circumstances where PN has now been returned to the UK under the judge’s order, it seems very likely that this would have happened in any event.  This is because PN has claimed asylum again and </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in;text-indent:0.00in">if the Secretary of State rejects the claim and does not certify it, there would be a hearing before the FTT for the new claim. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.48in">66.</num>
+	  <content>
+	    <p style="margin-left:0.48in;margin-right:0.03in;text-indent:0.5in">The effect of my conclusions on the first and second issues is that the judge’s finding that PN was unlawfully detained between 6 August and 10 September 2013 is undisturbed.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Detention from 29 July to 6 August 2013 (issue three) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">67.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">I turn next to consider PN’s appeal against the judge’s findings that PN was lawfully detained for the first period, from 22 July to 6 August 2013.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">68.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In the submissions before us, and contrary to the position taken before the judge below, Mr Buttler accepted that detention for the first part of the first period (from 22 to 29 July 2013) was lawful.  This was because PN had been validly detained after being located by immigration officers, there was considered to be risk of absconding which justified her detention, and at that stage PN had not been detained for the purposes of the DFT process, and so any unlawfulness in the 2005 DFT Rules and the unfairness of the FTT proceedings, could not have affected the decision to detain.  I accept, in agreement with the judge, that the detention from 22 to 29 July 2013 was lawful because the public law failings were not relevant to the decision to detain.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">69.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In relation to the second part of the first period of detention Mr Buttler submits that matters changed.  PN was detained so that she could be processed under the DFT Rules.  The 2005 DFT Rules have been held to be unlawful because they were systemically unfair, and although not all proceedings under the 2005 DFT Rules would be unfair, these proceedings were unfair.  There was therefore no lawful basis to detain PN.  It might be noted that this was not the way in which PN’s case was put before the judge below, but I accept that this raises an issue of law only and the burden has always been on the Secretary of State to justify the detention so it is necessary for this Court to determine the point. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">70.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Mr Tam submitted that the judge was right to find that the detention was lawful because PN had not in fact disclosed the existence of her lesbian relationship with Rose, which was the particular fact which led to the FTT proceedings becoming unfair.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Statutory materials and policies relating to immigration detention </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">71.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In order to resolve this issue it is necessary to set out relevant statutory powers to detain for immigration purposes, and the policies then in force relating to those statutory powers.  The statutory power to remove persons from the UK is set out in section 10 of the Immigration and Asylum Act 1999.  This provides, so far as material, that:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in;text-indent:0.00in">“(1) A person may be removed from the United Kingdom under the authority of the Secretary of State or an immigration officer if the person requires leave to enter or remain  in the United Kingdom and does not have it.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">72.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The statutory power providing for detention of persons pending their removal is set out in  paragraph 16 of schedule 2 to the Immigration Act 1971 (“the 1971 Act”). This provides that:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.94in;margin-right:0.98in;text-indent:0.00in">“(1) A person who may be required to submit to examination under paragraph 2 above  may be detained under the authority of an immigration officer pending his examination  and pending a decision to give or refuse leave to enter.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.94in;margin-right:0.03in;text-indent:0.00in">…..  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.94in;margin-right:0.98in;text-indent:0.00in">(2) If there are reasonable grounds for suspecting that a person is someone in respect of  whom directions may be given under any of paragraphs 8 to 10A or 12 to 14, that person  may be detained under the authority of an immigration officer pending –  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.94in;margin-right:0.43in;text-indent:0.00in">(a) a decision whether or not to give such directions;  (b) his removal in pursuance of such directions.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">73.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The EIG provides the policy for detention for those not in the DFT process.  That policy makes it clear that there is a presumption in favour of temporary admission or release and, whenever possible, alternatives to detention are to be used.  Detention is most usually appropriate to effect removal, establish identity or the basis of a claim, or where there are good reasons to believe that a person will fail to comply with any conditions attached to temporary admission or release.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">74.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Detention within the DFT process was, at the material time, governed by the Detained Fast Track Processes, referred to as the DFT Guidance.  Paragraph 2.1 provided:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.94in;margin-right:0.03in;text-indent:0.00in">“2.1 Detained Fast Track Process Suitability Policy  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.94in;margin-right:0.98in;text-indent:0.00in">An applicant may enter into or remain in DFT/DNSA processes only if there is a  power in immigration law to detain, and only if on consideration of the known  facts relating to the applicant and their case obtained at asylum screening (and,  where relevant, subsequently) it appears that a quick decision is possible, and none  of the Detained Fast Track Suitability Exclusion Criteria apply.”   </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Some relevant legal principles relating to claims for false imprisonment </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">75.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The tort of false imprisonment "has two ingredients: the fact of imprisonment and the absence of lawful authority to justify it”, see R v Deputy Governor of  Parkhurst Prison ex p. Hague [1992] AC 58 at 162D and R(Lumba) v  Secretary of State for the Home Department [2011] UKSC 12; [2012] AC 245 at paragraph 65.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">76.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Although a statutory power to detain may exist, the statutory power to detain must be exercised for the purpose of the statute.  The first consequence of this is that the Courts have determined that these statutory purposes require that: the Secretary of State must intend to deport or otherwise remove the detained person; the person may be detained only for a reasonable time; if deportation within a reasonable time is not possible detention will become unlawful; and the Secretary of State must act with reasonable diligence to deport or otherwise remove, see ex parte Hardial Singh [1984] 11 WLR 704, R (I) v Secretary of State for the Home Department  [2003] INLR 196, and R(Lumba) at paragraph 22. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">77.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">The second consequence of exercising the power to detain for the statutory purpose, is that the Secretary of State may make policies to explain the bases on which those statutory powers will be exercised.  If policies are made they must be transparently identified, see paragraph 34 of R(Lumba).  It was not suggested that any of the relevant periods found to be lawful by the judge were affected by any relevant lack of transparency of a policy in this case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">78.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">If the statutory power to detain is exercised pursuant to an unlawful policy, the detention itself will not be lawful if the unlawful policy bore on and was relevant to the decision to detain.  This means, in the immigration law context, that the unlawful policy has been applied by or taken into account by the decision-maker, see paragraphs 63 and 68 of R(Lumba).  If the unlawful policy did not affect the decision to detain, its unlawful nature will not affect the lawfulness of the detention.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">79.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">There was some discussion in the submissions before this Court about whether a second administrative act will be wrongful if the first administrative act is unlawful.  This has sometimes been termed “the second actor theory” and Mr Tam relied on the judgment in Percy v Hall [1997] QB 924.  In Percy v Hall  the Court of Appeal held that byelaws, which prevented access to Ministry of Defence land, were valid. The Court went on to consider whether arrests for infringing the bye-laws would have been lawful if the bye-laws were invalid.  The Military Lands Act 1892, as amended by the Criminal Justice Act 1982, provided a power of arrest “if any person commits an offence against any byelaw”.  The Court in Percy v Hall considered the construction of various statutes incorporating a power of arrest, including the Town Police Clauses Act 1847, where the Courts had interpreted constables’ powers of arrest for offences to include a power of arrest for persons that they honestly (but mistakenly) believed had committed an offence.  This was on the basis that Parliament must have intended to protect a constable in such circumstances.  The Court held that even if the bye-laws had been invalid, the arrests of trespassers by MOD police officers would have been lawful because they could show that they had a reasonable belief that the claimants were committing an offence.  Percy v Hall is therefore a decision on the proper statutory interpretation of the powers of arrest contained in the Military Lands Act 1892.  The decision does not justify finding detention to be lawful where the detention has been carried out pursuant to an unlawful policy. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">80.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">It was apparent that in the Court below there was some discussion about the effect of the decisions in Draga and R(AB).  The effect of those cases was that where there was a statutory scheme provided by appeals to the FTT to determine whether the Secretary of State was acting lawfully, later decisions taken in reliance of a decision of the FTT could not be impugned.  However in R(DN (Rwanda)) v Secretary of State for the Home Department [2020] UKSC 7; [2020] 2 WLR 611 the Supreme Court overruled the decision of the Court of Appeal in Draga.  In R(DN) Lord Carnwath made obiter statements to the effect that the answer might have been provided by the doctrines of res iudicata and issue estoppel. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">81.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Mr Tam, when asked about what had been said by Lord Carnwath in R(DN), made no submissions about res iudicata and issue estoppel, but asked to reserve his position.  I would not allow any reservation on these matters.  If res iudicata and issue estoppel provide an answer to this appeal, the matter should be argued when relevant at the hearing of the appeal, and not reserved for some future hearing.  Any other approach will delay proceedings and increase costs.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Lawful detention from 29 July to 6 August 2013</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">82.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">I agree that it was the need to locate Rose which made the shortened time limits in the DFT process unfair.  As Lord Dyson made clear in R(Lumba) at paragraph 64 when rejecting submissions made on behalf of the Secretary of State to the effect that the Court was expanding the tort of false imprisonment beyond its proper bounds, it “is not every breach of public law that is sufficient to give rise to a cause of action in false imprisonment”.  It is right that the 2005 DFT Rules were a nullity, but in R(TN (Vietnam)) it was held that this did not mean that all proceedings under the 2005 DFT Rules were unfair.  It is also right to say that the FTT proceedings involving PN were unfair and have been quashed.  However that unfairness arose only when it became apparent that there was a need to obtain evidence from abroad.  On the judge’s findings that need had not arisen until the asylum interview took place on 5 August 2013.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">83.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In those circumstances the continued exercise of the statutory powers to detain up to 6 August 2013 was lawful.  This is because the statutory powers were being exercised for a purpose, namely detention in the fast track process in relation to potential FTT proceedings, pursuant to the unlawful 2005 DFT Rules, that were still at that stage fair.  This meant that the FTT proceedings had not yet become unlawful.  In my judgment the judge was therefore right to find that the second part of the first period of detention, namely from 29 July 2013 to 6 August 2013, was lawful.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.18in;margin-right:0.00in;text-indent:-0.01in">Detention for the period from 10 September to 12 December 2013 (issue four) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">84.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In relation to the third period of detention from 10 September to PN’s removal on 12 December 2013, the judge concluded at paragraph 129 that “On the evidence before the defendant there were reasonable grounds for believing that she was someone to whom  removal directions could be issued”.  The judge in paragraph 133 held that “the fact that the determination of the  appeal is now to be quashed does not, in my judgment, render the decision to detain  unlawful. … there was no such apparent barrier to removal”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">85.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">Mr Buttler pointed out that the 2005 DFT Rules were unlawful and had led to unfair FTT proceedings which had been quashed.  The public law illegality in this case was relevant to and bore upon the decision to detain PN.  Mr Tam said that the judge was entitled to find that the detention was lawful, and pointed to the existence of the statutory powers in the 1971 Act. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">86.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">In my judgment the public law failures in this case, being the unlawful 2005 DFT Rules and the unfair FTT proceedings which were quashed by the judge, were relevant to and bore upon the decision to detain PN after 10 September 2013.  This was because PN was being detained following the conclusion of the FTT proceedings which have been quashed.  In those circumstances the detention from 10 September 2013 to 12 December 2013 was unlawful because, properly analysed, there had been no determination in the FTT and it would not be possible to complete such a determination within a reasonable period of time.  Further, there is no basis for finding that absent the public law error PN would have been detained, so issues of nominal damages do not arise in relation to this third period of detention.  As a matter of fairness to the judge it might be noted that his reasoning was influenced by the decision in R(AB) which was itself based on Draga, which has now been overruled by the Supreme Court in R(DN).  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Conclusion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">87.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">For the detailed reasons given above: (1) I accept that PN did have permission to challenge the determination of the FTT dated 10 August 2013; (2) the judge was entitled to find that the proceedings before the FTT were not fair and should be quashed, and this means that the judge’s finding that the period of detention between 6 August and 10 September 2013 was unlawful is upheld; (3) it is common ground that detention from 22 July to 29 July 2013 was lawful, and I find that the detention from 29 July to 6 August 2013 was lawful; and (4) I find that the detention from 10 September to 12 December 2013 was unlawful.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">88.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">I would therefore dismiss the Secretary of State’s appeal against the judgment, and I would allow part of PN’s appeal against the judgment to the extent of holding that PN’s detention from 10 September to 12 December 2013 was unlawful. </p>
+	  </content>
+	</paragraph>
+      </decision>
+      <decision>
+	<level class="author">
+	  <content>
+	    <p style="text-align:left;margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Lord Justice Henderson: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">89.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.47in;margin-right:0.00in;text-indent:-0.01in">Lord Justice McCombe: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:11.5pt;color:#000000;background-color:auto;margin-left:0.47in;text-indent:-0.47in">90.</num>
+	  <content>
+	    <p style="margin-left:0.47in;margin-right:0.03in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

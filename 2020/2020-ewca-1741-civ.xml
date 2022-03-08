@@ -1,0 +1,1782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1741"/>
+	  <FRBRuri value="ewca/civ/2020/1741"/>
+	  <FRBRdate date="2020-12-18" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1741"/>
+	  <FRBRname value="Fratila &amp; Anor v Secretary of State for Works and Pensions &amp; Anor"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1741/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1741/eng"/>
+	  <FRBRdate date="2020-12-18" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1741/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1741/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:26:15" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1741/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1741</uk:number>
+	<uk:cite>[2020] EWCA Civ 1741</uk:cite>
+	<uk:hash>db35f3d60a14b367378ffbf0b6361956462c4f9d1d203b3e26a0deb66a073aaa</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1741/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.01in; margin-right: 0.23in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: center; margin-right: 0.23in; font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .footnotedescription { margin-right: 0.21in; font-family: 'Times New Roman'; font-size: 10pt; color: #000000; }
+#judgment .Heading1Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .footnotedescriptionChar { font-family: 'Times New Roman'; font-size: 10pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .footnotemark { vertical-align: super; font-family: 'Times New Roman'; font-size: 10pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.19in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.051388888888889in;"/>
+      </p>
+      <p style="margin-left:-0.00in;margin-right:0.05in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1741</neutralCitation>
+      </p>
+      <p style="text-align:right;margin-right:0.22in">
+	<span style="text-decoration:underline">Case No: </span>
+	<docketNumber style="text-decoration:underline">C1/2020/0678</docketNumber>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline;font-size:12pt">IN THE COURT OF APPEAL (CIVIL DIVISION)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">QUEEN’S BENCH DIVISION (ADMINISTRATIVE COURT)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">Mr Justice Swift</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">CO/3632/2019</span>
+      </p>
+      <p class="Heading2" style="text-align:right;margin-left:0.01in;margin-right:0.22in;text-indent:-0.01in">
+	<span style="font-weight:normal">Royal Courts of Justice</span>
+	<span style="font-weight:normal;text-decoration:none"> </span>
+	<span style="font-weight:normal">Strand, London, WC2A 2LL</span>
+      </p>
+      <p style="margin-left:2.88in;margin-right:0.05in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 18/12/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-right:0.23in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE McCOMBE</span>
+      </p>
+      <p style="text-align:center;margin-right:0.23in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE MOYLAN</span>
+      </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.31in">and</p>
+      <p style="text-align:center;margin-right:0.23in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE DINGEMANS</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.18in;margin-right:0.31in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.23in;text-indent:0.00in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">GEANINA FRATILA </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">RAZVAN TANASE </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellants</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.18in;margin-right:0.31in">
+	  <span style="font-weight:bold">and - </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">SECRETARY OF STATE FOR WORKS AND PENSIONS  </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Respondent</span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">-and- </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE ADVICE ON INDIVIDUAL RIGHTS IN EUROPE </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Intervener</span>
+      </p>
+      <p style="text-align:left;margin-left:2.48in;margin-right:0.00in">
+	<span style="font-weight:bold">(AIRE) CENTRE                                       </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.18in;margin-right:0.31in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.08in"><span style="font-weight:bold">Thomas de la Mare QC, Tom Royston and Gayatri Sarathy</span> (instructed by Claire Hall, Child Poverty Action Group) for the Appellants </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.08in"><span style="font-weight:bold">Sir James Eadie QC, Julie Anderson and </span>(absent from the hearing owing to illness) <span style="font-weight:bold">George Molyneaux </span>(instructed by<span style="font-weight:bold"> </span>the Government Legal Department) for the Respondent </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.20in"><span style="font-weight:bold">Charles Banner QC and Yaaser Vanderman </span>(instructed by Herbert Smith Freehills LLP) for the Intervener </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.31in">Hearing dates: 27 &amp; 28 October 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.18in;margin-right:0.31in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1">Approved Judgment </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.23in">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.23in">and Tribunals Judiciary website.  The date and time for hand-down is deemed to be 10:30am on Friday, 18 December 2020. </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold">Lord Justice McCombe:</span>
+      </p>
+      <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Introduction</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">This is the appeal of Ms Geanina Fratila and Mr Razvan Tanase (“Ms Fratila” and “Mr Tanase” respectively, or together “the Appellants”) from the order of 27 April 2020 of Swift J dismissing their application for judicial review of the legality of the amendment to social security rules introduced by the Social Security (Income Related </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-right:0.22in">Benefits) (Updating and Amendment) (EU exit) Regulations 2019 (“the </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">Regulations”). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Regulations have the effect of preventing reliance upon the leave to remain in the United Kingdom arising from the “pre-settled status” (“PSS”) (granted to European Union nationals including the Appellants, in anticipation of the UK’s secession from the Union) in order for them to meet the qualifying residence tests which are a condition of entitlement to certain social assistance benefits, listed by the judge in para. 1 of his judgment below. PSS is one of two statuses, introduced by the Government under amendments to the Immigration Rules, permitting the grant of leave to enter or remain and thus a right of residence in the United Kingdom, in a manner designed to protect the residence position of European Union (“EU”) nationals, living in the UK, at the time of and following the UK’s secession and the end of the transition period on 31 December 2020. The amendment to the Immigration Rules is affected by Immigration Rules HC395, Appendix EU (“Appendix EU”). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The case raised by the Appellants is that the change introduced by the Regulations preventing reliance on PSS for the purposes of entitlement to benefits is unlawful discrimination against them on grounds of nationality contrary to EU law.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Appeal is brought with permission granted by my Lord, Dingemans LJ, by his order of 29 May 2020. It is supported by the Intervener, The Advice on Individual Rights in Europe Centre (“the AIRE Centre”). It is opposed by the Secretary of State for Work and Pensions (“SSWP”). The case has been argued skilfully and helpfully by all Counsel, whose names appear on the cover sheet of these judgments. I am grateful to all of them for both their written and oral submissions. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.51in;text-indent:-0.01in">Legislation, Regulations and Immigration Rules</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Regulations were made by the SSWP pursuant to powers contained in a number of Acts of Parliament, listed in the preamble, which it is not necessary to recite. They amend the seven sets of Regulations listed by the judge. The argument has centred upon an amendment to regulation 9 of the Universal Credit Regulations 2013 (“the UC Regulations”). I set out regulation 9 in the Appendix to this judgment.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">By section 3 of the Welfare Reform Act 2012 persons are entitled to Universal Credit (“UC”) if they meet certain “basic conditions” and certain “financial conditions”. One of the basic conditions is that a claimant must be “in Great Britain”.<authorialNote class="footnote" marker="1">
+		<p class="footnotedescription"><span> </span>Upon our inquiry we were informed by counsel, who produced a helpful short note on the matter, that while the term “Great Britain” is used a similar legislative scheme to that operating in Great Britain is in force in Northern Ireland. </p>
+	      </authorialNote> Section 4(5) of that Act provides that regulations may be made in order to specify what that </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">deceptively simple term, “in Great Britain”, may mean for relevant purposes. Regulation 9, in its four sub-paragraphs and eleven sub-, sub-paragraphs, is the provision doing that for the purposes of UC. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Under regulation 9(1), with certain exceptions specified in regulation 9(4), a person is <span style="font-style:italic">not</span> to be treated as being in Great Britain if he/she is not habitually resident in the UK, the Channel Islands, the Isle of Man or the Republic of Ireland. A person is not to be treated as habitually resident in one of those places unless he/she “has a right to reside” in one of them (regulation 9(2)). Then, by regulation 9(3), “a right to reside does not include a right which exists by virtue of, or in accordance with …”:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“(c) a person having been granted limited leave to enter, or remain in, the United Kingdom under the Immigration Act 1971 by virtue of – (i) Appendix EU to the immigration rules made under section 3(2) of that Act; …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Thus, one of the categories of person <span style="font-style:italic">not</span> counting as having a relevant right to reside for the purpose of entitlement to UC is the category comprising those persons, such as the Appellants, whose right to reside arises by virtue of PSS obtained under Appendix EU. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Regulation 9(4) provides for the classes of person who are exceptionally able to meet the requirement of being “in Great Britain” without needing to show habitual residence. It includes those who are “qualified persons” by reason of being workers or self-employed persons for the purposes of the Immigration (European Economic Area) Regulations 2016 (and their family members) or retired persons of that character. Further, both before and after the amendments to regulation 9, the types of residence that did not count for the purposes of establishing habitual residence included (i) residence in the initial 3 month period of residence available to EU nationals and (ii) residence on the basis of being a “jobseeker” or a family member of such a person. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Appendix EU was introduced, first as a limited pilot scheme (in August 2018) and then more fully in March 2019, in accordance with the Immigration (European Economic Area Nationals) (EU Exit) Order 2019. The Appendix provides for a settlement scheme for EEA nationals present in the UK as at the date of the UK’s secession from the EU. Such persons may apply for permanent leave to remain (“settled status”) or limited leave to remain (“pre-settled status” or PSS).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Settled status is available to “relevant EEA citizens” defined as any EEA citizen resident in the UK “for a continuous qualifying period” which began before the “specified date” which, for practical purposes, is 31 December 2020 – the end of the transitional period after formal secession from the EU at the end of January 2020.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Entitlement to PSS is regulated by para. EU14 of Appendix EU. I set that out also in the Appendix to the judgment. The paragraph provides a limited right to remain in the UK to EU nationals who, before the end of the transition period, have begun to live in the UK, but have not so resided for 5 years. They are allowed to remain until such time as 5 years residence has been achieved, then enabling them to apply for full settled status and, with it, indefinite leave to remain in the UK. As the judge notes in para. 8 of his judgment the scope of PSS under para. EU14 is significantly wider than </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">the range of persons for whom a right of residence is available as EEA nationals with extended rights of residence who do not have 5 years residence, under current EEA Regulations 13-16.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.51in;text-indent:-0.01in">The Appellants</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Appellants are both Romanian nationals. Ms Fratila came to this country on 9 June 2014 and worked here from November 2014 until September 2015, when her employer sold the business in which she had worked. She has not been in employment since then. On 6 June 2019 she applied for PSS, but by 9 June 2019 she had achieved </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">5 years residence and applied for settled status. That was granted on 25 June 2019. On 13 June 2019 she had made an application for UC which was refused on 17 June 2019 on the grounds that she was a jobseeker and did not satisfy the habitual residence test. After notification of her settled status she applied again for UC and this was accepted on 3 July 2019. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Mr Tanase suffered polio as a child and is reliant upon a wheelchair for mobility. He has various benefit entitlements from Romania, including a disability pension, a basic retirement pension and an allowance for costs of care. He came to the UK on 30 January 2019; he lives with Ms Fratila who provides care for him. On 30 May 2019 he was granted PSS until 31 May 2024. In June 2019 he too applied for UC which was refused on 13 June 2019. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The judge decided that, on these facts, only Mr Tanase of the two Appellants had status to bring the claim in these proceedings, as Ms Fratila is no longer affected by regulation 9(3)(c)(i) and her initial application for UC had been refused on the basis of regulation 9(3)(aa) (i.e. as a jobseeker). That decision as to status is contested by Ms Fratila on the basis that but for the 2019 Regulations she would have been entitled to UC at an earlier date and so has suffered financial loss. I would hold that she does have sufficient standing in these proceedings accordingly and I would reverse the judge’s decision on the point. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Appellants argue that regulation 9(3)(c)(i) infringes Article 18 of the Treaty on the Functioning of the European Union (“TFEU”). That Article provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“Within the scope of application of the Treaties, and without prejudice to any special provisions contained therein any discrimination on grounds of nationality shall be prohibited. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">The European Parliament and the Council, acting in accordance with the ordinary legislative procedure, may adopt rules designed to prohibit such discrimination.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Appellants submit that this case gives rise to unlawful discrimination contrary to Article 18 and that this view is supported by a number of decisions of the CJEU: <span style="font-style:italic">Martinez-Sala v Freistaat Bayern </span>[1998] ECR I-0269 (“<span style="font-style:italic">Martinez-Sala</span>”); <span style="font-style:italic">Grzelc</span>zyk v </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in"><span style="font-style:italic">Centre Public d’Aide Sociale </span>[“CPAS”]<span style="font-style:italic"> d’Ottognies Louvain la Neuve </span>[2002] 1 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">CMLR 19 (“<span style="font-style:italic">Grzelczyk</span>”); <span style="font-style:italic">Trojani v CPAS de Bruxelles </span>[2004] 3 CMLR 38 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">(<span style="font-style:italic">“Trojani”</span>); and <span style="font-style:italic">Jobcenter Krefeld v JD </span>C-181/19 (Judgment, 6 October 2020) (“<span style="font-style:italic">Krefeld</span>”). The Appellants say that the cases demonstrate that once an EU citizen is granted a right of residence in another member state, under the provisions of that state’s law, he/she is entitled to the same benefits as those to which a national of that state, also having such right of residence, would be entitled. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The SSWP argues in response that there is no room for a free-standing reliance upon Article 18 of the TFEU because all relevant rights arising from a right of residence under EU law are, in effect, codified by Directive 2004/38/EC, the Citizens Rights Directive (“CRD”), implemented in English law by the EEA Regulations. The SSWP submits that the CRD provides for only one relevant non-discrimination provision which is to be found in its Article 24 as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.00in">“<span style="font-weight:bold">Equal Treatment</span></p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in;text-indent:-0.18in">1.</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.23in">Subject to such specific provisions as are expressly provided for in the Treaty and secondary law, all Union citizens residing on the basis of this Directive in the territory of the host Member State shall enjoy equal treatment with nationals of that Member State within the scope of the Treaty. The benefit of this right shall be extended to family members who are not nationals of a Member State and who have the right of residence or permanent residence. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in;text-indent:-0.18in">2.</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.23in">By way of derogation from paragraph 1, the host Member State shall not be obliged to confer entitlement to social assistance during the first three months of residence or, where appropriate the longer period provided for in Article 14(4)(b), nor shall it be obliged, prior to acquisition of the right of permanent residence, to grant maintenance aid for studies, including vocational training, consisting in student grants or student loans to persons other than workers, selfemployed persons, persons who retain such status and members of their families.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The SSWP contends that any claim for discrimination by the Appellants must fail because of the derogation found in Article 24(2). She relies upon two further decisions of the CJEU in <span style="font-style:italic">Dano v Jobcenter Leipzig</span> [2015] 1 WLR 2519 (“<span style="font-style:italic">Dano</span>”) and <span style="font-style:italic">Jobcenter Berlin Neukölln v Alimanovic</span> [2016] QB 308 (“<span style="font-style:italic">Alimanovic</span>”). It is submitted that <span style="font-style:italic">Martinez-Sala, Grzelczyk </span>and<span style="font-style:italic"> Trojani </span>all precede the enactment of the CRD and should no longer be seen as good law in the EU field, particularly when the CRD is applied together with <span style="font-style:italic">Dano</span> and <span style="font-style:italic">Alimanovic</span>. For reasons that I will explain, this argument is rendered significantly more difficult and, in my view impossible, for the SSWP by reason of the decision of the CJEU of 6 October 2020 in the <span style="font-style:italic">Krefeld</span> case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In the alternative, it is argued for the SSWP that, if Article 18 does apply and if the exclusion from entitlement to UC does give rise to any discrimination at all, such discrimination is indirect and not direct. If the discrimination is indirect, then the SSWP can argue that the discriminatory impact is objectively justified and therefore lawful. The justification advanced is that the exclusion is there to protect the social security system from claims by persons who are not sufficiently economically integrated into, or sufficiently closely connected with, the UK. It is submitted further that persons such as the Appellants are in no worse a position than they would have been under the law prevailing before the introduction of PSS under Appendix EU.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.51in;text-indent:-0.01in">The judgment of Swift J</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The learned judge dismissed the Appellants’ claim to judicial review. He held that the Appellants were entitled to rely upon Article 18, but he went on to hold that the relevant exclusion was only indirectly discriminatory and was objectively justified on the facts of this case.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">At para. 22 of his judgment, the judge said this:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“I do not accept the submission that the reasoning in <span style="font-style:italic">Grzelczyk </span>and<span style="font-style:italic"> Trojani</span> is no longer good law. I accept that when the CJEU decides to reverse away from reasoning it has deployed, or conclusions reached in earlier cases it does not always say that is what it is doing. However, I do not consider this is one of those occasions. Occam’s razor applies. The more likely explanation of the lack of reference to claims based on Article </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">18 TFEU in either <span style="font-style:italic">Dano’s</span> case or <span style="font-style:italic">Alimanovic’s</span> case is that neither case was argued on the basis that either claimant had a right of residence other than a right arising under the Citizen’s Rights Directive (or more specifically, the German Law on Freedom of Movement which implemented that Directive).” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">I will return to the cases later in this judgment. In para. 23, the judge said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“Turning to the present case, the pre-settled status available under the provisions of Appendix EU is a right of residence that exists apart from anything available under the Citizens’ Rights Directive (as transposed into English law by the EEA Regulations). It has a distinct legal basis (rules made under the Immigration Act 1971), and for that matter also, is apt to cover a wider class of persons than the “extended right of residence” available under regulation 14 of the EEA Regulations because of the scope of the definition of “relevant EEA citizen” in Appendix EU when set against the notion of “qualified person”, defined in regulation 6 and then applied in regulation 14 of the EEA Regulations.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The judge accepted that any discrimination created by the amendments to the Regulations was only indirect, following a detailed, and in part respectfully critical, analysis of the decision of the Supreme Court in <span style="font-style:italic">Patmalniece v Secretary of State for Work and Pensions </span>[2011] 1 WLR 783 (“<span style="font-style:italic">Patmalniece</span>”). He went on to hold that the indirect discrimination was justified, essentially for the reasons advanced by the SSWP.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.51in;text-indent:-0.01in">The Appeal and my Conclusions</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Appellants advance two grounds of appeal, admirably succinctly expressed. They argue that the judge was wrong to find that the discrimination was justified, and that he was wrong to find Ms Fratila lacked standing to bring her claim. On an equally short ground, advanced in a Respondent’s Notice, the SSWP argues that the judge’s decision should be upheld on the further or alternative ground that he ought to have held that the Appellants were not entitled to rely upon Article 18 of the TFEU. In essence, the appeal raises the same three arguments that were debated before the judge: (1) TFEU Article 18; (2) Direct/Indirect Discrimination; and (3) Justification. While point 1 arises only under the Respondent’s Notice it is logically anterior to the other two points. I will, therefore, address the issues, as the judge did, in that numerical order. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">
+	      <span style="font-style:italic">(1)</span>
+	      <span style="font-style:italic;font-family:Arial"> </span>
+	      <span style="font-style:italic">TFEU Article 18 </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">I agree with the judge that the Appellants are entitled to rely upon Article 18, essentially for the reasons that he gave. What I now add on this point is written only to enable the present judgment to be read in a free-standing fashion and to add a little more about the European cases. I do not intend to add to or detract from the reasoning behind the judge’s decision on the point. I must, however, also address the <span style="font-style:italic">Krefeld</span> case decided after the judge gave his judgment. That case also supports the conclusion that he reached. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The arguments here turn upon the present state of EU law, as it still applies in the United Kingdom during the transition period, after formal secession from the EU and up to the end of the transition period on 31 December 2020. This depends upon the effect of the cases referred to in paragraphs 17 and 19 above. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in"><span style="font-style:italic">Martinez-Sala </span>was the case of a Spanish national who had lived in Germany since May 1968 and had worked there in various periods from 1976 to 1986 and in 1989. Since then she had received social assistance from local and national sources in </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">Germany. Until 1984 she had had residence permits running “more or less without interruption”. Thereafter, she had obtained documents certifying that she had applied for an extension to her permit. The referring court pointed out that the European Convention on Social and Medical Assistance of 1 December 1953 did not allow her to be deported. A residence permit was issued to her again on 19 April 1994 which, with a further year’s extension, permitted her residence until 18 April 1996. The case concerned the rejection of Ms Martinez-Sala’s application for child-raising allowance (“<span style="font-style:italic">Erziehungsgeld</span>”) in a period in which she did not have a formal residence permit. A number of questions were referred to the Court. The fourth of these asked whether it was compatible with the law of the Union for a Member State to require possession of a formal residence permit for the grant of the allowance to nationals of a Member State, even though they were permitted to reside in Germany. The Court answered that question in the negative. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Court found that under the relevant local statute a claimant must be permanently or ordinarily resident in German territory and that a national of another Member State who does reside there lawfully met that condition; such a person was in the same position as a German national so residing. Unlike a German national, however, a national of another Member State had to possess a particular type of residence permit </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">and a document merely certifying that an application for such a permit had been made did not suffice, even though such a document “warrant[ed]” that the person concerned was entitled to stay. The Commission had argued that the right to reside and move freely under what was then Article 8a of the then EC treaty covered the position. However, the Court took the view that the right of residence conferred by local law sufficed to require an answer favourable to Ms Martinez-Sala on the fourth question. At para. 60 to 65 of the judgment, the Court said:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“60. It should, however, be pointed out that, in a case such as the present, it is not necessary to examine whether the person concerned can rely on Article 8a of the Treaty in order to obtain recognition of a new right to reside in the territory of the Member State concerned, since it is common ground that she has already been authorised to reside there, although she has been refused issue of a residence permit. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">61.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">As a national of a Member State lawfully residing in the territory of another Member State, the appellant in the main proceedings comes within the scope <span style="font-style:italic">ratione personae </span>of the provisions of the Treaty on European citizenship. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">62.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">Article 8(2) of the Treaty attaches to the status of citizen of the Union the rights and duties laid down by the Treaty, including the right, laid down in Article 6 of the Treaty, not to suffer discrimination on grounds of nationality within the scope of application <span style="font-style:italic">ratione materiae </span>of the Treaty. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">63.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">It follows that a citizen of the European Union, such as the appellant in the main proceedings, lawfully resident in the territory of the host Member State, can rely on Article 6 of the Treaty in all situations which fall within the scope <span style="font-style:italic">ratione materiae </span>of Community law, including the situation where that Member State delays or refuses to grant to that claimant a benefit that is provided to all persons lawfully resident in the territory of that State on the ground that the claimant is not in possession of a document which nationals of that same State are not required to have and the issue of which may be delayed or refused by the authorities of that State. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">64.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">Since the unequal treatment in question thus comes within the scope of the Treaty, it cannot be considered to be justified: it is discrimination directly based on the appellant's nationality and, in any event, nothing to justify such unequal treatment has been put before the Court. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">65.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">The answer to the fourth question must therefore be that Community law precludes a Member State from requiring nationals of other Member States authorised to reside in its territory to produce a formal residence permit issued by the national authorities in order to receive a child-raising allowance, whereas that Member State's own nationals are only required to be permanently or ordinarily resident in that Member State.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The next case is <span style="font-style:italic">Grzelczyk. </span>There the claimant was a French national studying in Belgium. He applied for payment of the Belgian “minimex”, a minimum subsistence payment. Under Belgian law the payment was available to any Belgian who was actually resident in Belgium and by those who were nationals of an EU Member State if they fell within the provisions of the predecessor to the CRD (Regulation 1612/68). The claimant did not fall within Regulation 1612/68. Other than by reason of having called upon social assistance he would have had a right to reside in Belgium. At paras. 29-33 of the judgment of the court, one finds the following:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“29. It is clear from the documents before the Court that a student of Belgian nationality, though not a worker within the meaning of Regulation 1612/68, who found himself in exactly the same circumstances as Mr<span style="font-weight:bold"> </span>Grzelczyk would satisfy the conditions for obtaining the minimex. The fact that Mr Grzelczyk is not of Belgian nationality is the only bar to its being granted to him. It is not therefore in dispute that the case is one of discrimination solely on the ground of nationality. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Within the sphere of application of the Treaty, such discrimination is, in principle, prohibited by Article 6. In the present case, Article 6 must be read in conjunction with the provisions of the Treaty concerning citizenship of the Union in order to determine its sphere of application. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Union citizenship is destined to be the fundamental status of nationals of the Member States, enabling those who find themselves in the same situation to enjoy the same treatment in law irrespective of their nationality, subject to such exceptions as are expressly provided for. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">As the Court held in paragraph 63 of its judgment in <span style="font-style:italic">Martinez Sala, </span>cited above, a citizen of the European Union, lawfully resident in the territory of a host Member State, can rely on Article 6 of the Treaty in all situations which fall within the scope <span style="font-style:italic">ratione materiae </span>of Community law. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Those situations include those involving the exercise of the fundamental freedoms guaranteed by the Treaty and those involving the exercise of the right to move and reside freely in another Member State, as conferred by Article 8a of the Treaty.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">The Court held (at para. 46) that,  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“Articles 6 and 8 of the EC Treaty [no discrimination on the grounds of nationality/freedom of movement and residence] preclude entitlement to a non-contributory social benefit, such as the minimex, from being made conditional in the case of nationals of Member States other than the host State where they are legally resident, on their falling within the scope of Regulation 1612/68 when no such condition applies to nationals of the host Member State.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in"><span style="font-style:italic">Trojani</span> was another case turning upon entitlement to the Belgian minimex. The claimant lived in a Salvation Army hostel, doing odd jobs in return for board, lodging and some “pocket money”. He had a temporary residence certificate from the Commune of Brussels initially for 5 months and thereafter for 5 years. His application for minimex was refused. The Belgian court asked the CJEU, first, whether the claimant had a right of residence as a “worker” under Regulation 1612/68; and, if not, secondly, whether he could rely upon what is now Article 18 (then Article 12) of the TFEU to preclude discrimination against him on nationality grounds.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Court’s Grand Chamber held that the question of worker status was to be decided by the national court on the basis of whether Mr Trojani’s paid activity was sufficiently “real and genuine” for him to count as a worker. On the second question, the Court’s held as follows, at paras. 39 to 44 of the judgment:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“39. In the context of the present case, it should be examined more particularly whether, despite the conclusion in para. [36] above, a citizen of the Union in a situation such as that of the claimant in the main proceedings may rely on Art.12 EC, under which, within the scope of application of the Treaty and without prejudice to any special provisions contained therein, all discrimination on grounds of nationality is prohibited. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">40.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.23in">In the present case, it must be stated that, while the Member States may make residence of a citizen of the Union who is not economically active, conditional on his having sufficient resources, that does not mean that such a person cannot, during his lawful residence in the host Member State, benefit from the fundamental principle of equal treatment as laid down in Art.12 EC. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">41.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.23in">In that connection three points should be made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">42.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.23in">First, as the Court has held, a social assistance benefit such as the <span style="font-style:italic">minimex </span>falls within the scope of the Treaty. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">43.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.23in">Secondly, with regard to such benefits, a citizen of the Union who is not economically active may rely on Art.12 EC where he has been lawfully resident in the host Member State for a certain time or possesses a residence permit. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">44.</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.23in">Thirdly, national legislation such as that at issue in the main proceedings, in so far as it does not grant the social assistance benefit to citizens of the European Union, non-nationals of the Member State, who reside there lawfully even though they satisfy the conditions required of nationals of that Member State, constitutes discrimination on grounds of nationality prohibited by Art.12 EC.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">At para. 46, the Court concluded:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“Consequently, the answer to the second question must be that a citizen of the Union who does not enjoy a right of residence in the host Member State under Arts 39 EC, 43 EC or 49 EC may, simply as a citizen of the Union, enjoy a right of residence there by direct application of Art.18(1) EC. The exercise of that right is subject to the limitations and conditions referred to in that provision, but the competent authorities must ensure that those limitations and conditions are applied in compliance with the general principles of Community law, in particular the principle of proportionality. However, once it is ascertained that a person in a situation such as that of the claimant in the main proceedings is in possession of a residence permit, he may rely on Art.12 EC in order to be granted a social assistance benefit such as the minimex.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Since Mr Trojani was lawfully resident in Belgium under Belgian law, he could rely upon the predecessor to Article 18 (then Article 12) to assert that the refusal to him of benefit was unlawful when benefit would be paid to a Belgian national in similar circumstances.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Turning to <span style="font-style:italic">Dano</span>, it is this case upon which Sir James Eadie QC for the SSWP perhaps most strongly relied. The claimants were Romanian nationals, a mother and her son, who had lived in Germany for more than three months but less than five years. By the time of her application, it seems she had been issued with a residence permit by the City of Leipzig. Mrs Dano applied for welfare benefits payable to jobseekers under German law. Her application failed because even though she was ordinarily resident in Germany, she was excluded from the relevant benefit under the German statute (the <span style="font-style:italic">Sozialgesetzbuch Zweites Buch</span> – SGB II, para. 7(4)) which disqualified foreign nationals who did not fall within the law on freedom of movement of Union citizens (<span style="font-style:italic">Freizügigkeitsgesetz/EU</span> – FreizügG/EU), being the German implementation of the CRD. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In paragraph 56 of its judgment the Court summarised the discrimination questions referred by the German court (Question (2) and (3)). It did so in these terms:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“56. By its second and third questions, which it is appropriate to examine together, the referring court asks, in essence, whether article 18FEU, article 20(2)FEU, article 24(2) of Directive 2004/38 and article 4 of Regulation No 883/2004 must be interpreted as precluding legislation of a member state under which nationals of other member states who are not economically active are excluded, in full or in part, from entitlement to certain special non-contributory cash benefits within the meaning of Regulation No 883/2004 although those benefits are granted to nationals of the member state concerned who are in the same situation.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">As the judge said, it was clear that the Court was approaching Mrs Dano’s case on the basis that she was exercising rights under the CRD (Directive 2004/38). The judgment continued in paragraphs 61 and 62, as follows:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“61. Thus, the principle of non-discrimination, laid down generally in article 18FEU, is given more specific expression in article 24 of Directive 2004/38 in relation to Union citizens who, like the applicants in the main proceedings, exercise their right to move and reside within the territory of the member states. That principle is also given more specific expression in article 4 of Regulation No 883/2004 in relation to Union citizens, such as the applicants in the main proceedings, who invoke in the host member state the benefits referred to in article 70(2) of the Regulation. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.57in">62. Accordingly, the court should interpret article 24 of Directive 2004/38 and article 4 of Regulation No 883/2004.<authorialNote class="footnote" marker="2">
+		<p class="footnotedescription" style="margin-right:0.19in"> Whether the single sentence of para. 62 contains a main verb or not in this English version is perhaps moot. The German version is “Daher sind Art. 24 der Richtlinie 2004/38 und Art. 4 der Verordnung Nr. 883/2004 auszulegen“. Possibly the sentence might be read as: “Accordingly, the court should [in the sense of “has to”] interpret [i.e. consider/apply] article 24 of Directive 2004/38 and article 4 of Regulation 883/2004”. Cf.  (below) the last sentence of para. 78 of the <span style="font-style:italic">Krefeld</span> judgment. </p>
+	      </authorialNote> ” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Sir James referred us to further paragraphs of the judgment which also draw solely upon the terms of the CRD and regulation no 883/2004, without reference to any right of residence enjoyed by Mrs Dano under the local law, as verified by her residence certificate issued by the City of Leipzig. In paragraphs 64 to 69, the Court said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“64. That having been said, it must be pointed out that, whilst article <span style="font-family:Calibri, sans-serif">24</span>(<span style="font-family:Calibri, sans-serif">1</span>) of Directive <span style="font-family:Calibri, sans-serif">2004</span>/<span style="font-family:Calibri, sans-serif">38 </span>and article <span style="font-family:Calibri, sans-serif">4 </span>of Regulation No 883/2004 reiterate the prohibition of discrimination on grounds of nationality, article 24(2) of that Directive contains a derogation from the principle of non-discrimination. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">65.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">Under article 24(2) of Directive 2004/38, the host member state is not obliged to confer entitlement to social assistance during the first three months of residence or, where appropriate, the period of seeking employment, referred to in article 14(4)(b) of the Directive, that extends beyond that first period, nor is it obliged, prior to acquisition of the right of permanent residence, to grant maintenance aid for studies to persons other than workers, self-employed persons, persons who retain such status and members of their families. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">66.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">It is apparent from the documents before the court that Ms Dano has been residing in Germany for more than three months, that she is not seeking employment and that she did not enter Germany in order to work. She therefore does not fall within the scope ratione personae of article 24(2) of Directive 2004/38. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">67.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">In those circumstances, it must be established whether article 24(1) of Directive 2004/38 and article 4 of Regulation No 883/2004 preclude refusal to grant social benefits in a situation such as that at issue in the main proceedings. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">68.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">Article 24(1) of Directive 2004/38 provides that all Union citizens residing on the basis of the Directive in the territory of the host member state are to enjoy equal treatment with the nationals of that member state within the scope of the Treaty. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">69.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">It follows that, so far as concerns access to social benefits, such as those at issue in the main proceedings, a Union citizen can claim equal treatment with nationals of the host member state only if his residence in the territory of the host member state complies with the conditions of Directive 2004/38.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">No reference is made in the judgment in <span style="font-style:italic">Dano</span> to the previous Grand Chamber decision in <span style="font-style:italic">Trojani, </span>although it was mentioned in paragraph 102 of the opinion of Advocate General Wathelet as the “most extreme example of that case law”, i.e. the earlier case law in the area. Neither the Court nor the Advocate General referred to <span style="font-style:italic">Martinez-Sala</span>. Swift J said (in para. 19 of his judgment) that the Court’s conclusion (at paras 80-81 of its decision in <span style="font-style:italic">Dano</span>) was that, because on the facts Mrs Dano did not qualify for a right of residence under the CRD, she could not invoke the nondiscrimination provision in Article 24 of that Directive. He noted at para. 22 that, in her case, the German government had submitted that the certificate issued to her by the City of Leipzig was not a document that gave her a right of residence in Germany. In <span style="font-style:italic">Dano, </span>the Court was proceeding upon the basis that the sole right of residence being invoked by Mrs Dano was her right under the CRD which was a right specifically excluded by the German law implementing the Directive. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in"><span style="font-style:italic">Alimanovic </span>is another case in which the sole right of residence invoked was that conferred by the CRD and again the claimant was ruled out of entitlement to benefits by Article 24(2) of the Directive. In this 2017 decision the Court invoked its decision of three years earlier in <span style="font-style:italic">Dano</span>. Again, no right of residence under local law, independent of the Directive, appears to have been relied upon. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">It was submitted for the SSWP that the decisions in <span style="font-style:italic">Martinez-Sala, Grzelczyk </span>and<span style="font-style:italic"> Trojani </span>(and especially <span style="font-style:italic">Trojani</span>) could no longer be regarded as good law in the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-right:0.22in">European Union, since they pre-date the CRD, and that the decision in <span style="font-style:italic">Dano </span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">(followed in <span style="font-style:italic">Alimanovic</span>) had superseded those earlier cases in the light of the new Directive. The judge rejected that submission. He said that, while he accepted that the CJEU sometimes reverses away from earlier jurisprudence without acknowledging that fact, this was not one of those occasions. He held that the explanation of <span style="font-style:italic">Dano </span>and <span style="font-style:italic">Alimanovic</span> was that in each case the only right of residence invoked was that conferred by the CRD and no other right was claimed. Mr de la Mare QC, for the Appellants, submitted that the judge was right about this and that it was not open to us to depart from previous binding authority of the Grand Chamber decision in <span style="font-style:italic">Trojani</span>. Similar submissions were advanced by Mr Banner QC on behalf of the Intervener, the AIRE Centre. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Mr de la Mare also submitted that the judge’s decision was in accord with the interpretation of <span style="font-style:italic">Trojani</span> by the English courts in a number of instances. For example, Lloyd LJ (with whom Sir Andrew Morritt C and Moses LJ agreed) in this court in <span style="font-style:italic">Abdirahman v Secretary of Work and Pensions</span> [2008] 1 WLR 254 at paras. 32(iv) and 44. Lloyd LJ noted that Mr Trojani had no right of residence in Belgium if one did not have regard to the Belgian residence permit. He said, however, that,  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“… Mr Trojani’s possession of the residence permit made all the difference, as is apparent from the last sentence of the answer given to the second question referred to the court, at para. 46” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">I have quoted paragraph 46 of the judgment in <span style="font-style:italic">Trojani</span> above. At para. 44 in that case, Lloyd LJ expressed agreement with the argument of Mr Sales QC (as he then was) for the SSWP as follows:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“44. I accept Mr Sales’s proposition that the European cases show that, in this area, the scope of application of the Treaty, for the purposes of article 12EC, <span style="font-style:italic">includes both cases where a right of residence arises directly under the Treaty and those where it arises separately under the law of the member state</span>. It does not extend to cases where no right of residence exists under either the Treaty or the relevant domestic law.” (Emphasis added) </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">As already noted, Article 12 there referred to was the equivalent of Article 18 of the TFEU. To similar effect is the passage in the judgment of Baroness Hale of Richmond in <span style="font-style:italic">Patmalniece</span> at paras. 105-106:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“105. … The SSWP understandably places weight on the observation of Advocate General Geelhoed, at para 70 (opinion) of the <span style="font-style:italic">Trojani</span> case: “The basic principle of Community law is that persons who depend upon social assistance will be taken care of in their own member state”. But the court, having held that a person such as Mr Trojani did not derive a right to reside from European Union law, went on to say that a citizen of the Union who had been lawfully resident in the host member state for a certain time or possessed a residence permit, and satisfied the conditions required of nationals of that member state, could not be denied such benefits. He was entitled, during his lawful residence in the host member state, to benefit from the fundamental principle of equal treatment in article 12.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">106. I take that to mean that, even where a national of another member state does not have the right to reside in the host country under European Union law, if he has the right to reside under the national law of the host country, he is also entitled to claim these benefits on the same terms as nationals of the host country. ” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">Again, Lady Hale refers to para. 46 of the CJEU judgment in <span style="font-style:italic">Trojani</span>.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">It is pointed out by the Intervener that the SSWP’s argument in the present case is entirely inconsistent with the submission made for the Government by the SSWP in its written case to the Supreme Court in <span style="font-style:italic">Patmalniece</span> as follows. In their skeleton argument, counsel for the Intervener in the present case put it this way: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“8. Furthermore, it is worth noting that the Respondent’s submissions before the Supreme Court in <span style="font-style:italic">Patmalniece </span>flatly contradict what she is now arguing. In her written case in <span style="font-style:italic">Patmalniece</span>, she submitted that: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.23in">“60. The ECJ [in <span style="font-style:italic">Trojani</span>] agreed that the claimant had no EU law right of residence, on account of his lack of resources and limitations and conditions which attached to that EU law right. It thereby endorsed the conclusions which the Advocate General had expressed regarding the EU law obligations of Belgium to provide social assistance to Mr Trojani. <span style="text-decoration:underline">However, it attached importance to the Belgian</span><span> </span><span style="text-decoration:underline">domestic law right of residence which had in the meantime</span><span> </span><span style="text-decoration:underline">been granted to the claimant, by which Belgium had</span><span> </span><span style="text-decoration:underline">undertaken obligations to Mr Trojani without being required</span><span> </span><span style="text-decoration:underline">to do so by EU law. This brought him within the scope of</span><span> </span><span style="text-decoration:underline">EU law and enabled to him to complain under Article 12 EC</span><span> </span><span style="text-decoration:underline">about the conditions for grant of the minimex which were</span><span> </span><span style="text-decoration:underline">directly discriminatory on grounds of nationality.</span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:0.22in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.23in">62. In other words, the ECJ considered that where a person had no right to reside under EU law or national law, he would not be entitled to claim entitlement to the minimex. But where the EU national had acquired a right of residence under domestic law, <span style="text-decoration:underline">then he was entitled to be assimilated to</span><span> </span><span style="text-decoration:underline">the position of a national in the host Member State and could</span><span> </span><span style="text-decoration:underline">rely on the prohibition on discrimination on grounds of</span><span> </span><span style="text-decoration:underline">nationality in Article 12 EC Treaty</span>. That emerges from §46 of the judgment of the ECJ and the last sentence in particular. The judgment is – correctly in the Respondent’s submission – analysed by the Court of Appeal in <span style="font-style:italic">Abdirahman v SSWP for Work and Pensions </span>[2008] 1 WLR 254, at §32(iv) and <span style="font-style:italic">Kaczmarek v SSWP for Work and Pensions </span>[2008] EWCA Civ 1310, §§2 and 16.”  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:0.22in">(Emphasis as in the Intervener’s skeleton argument). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Appellants and the Intervener now also rely upon the decision of the CJEU, delivered as recently as 6 October 2020, in the <span style="font-style:italic">Krefeld</span> case.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In that case, the claimant JD was a Polish national who moved to Germany with his two daughters. Between 2015 and 2017 he had periods of employment and other </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">periods where he received benefits. The question arose as to whether he was entitled to benefits between June and December 2015, during which time he had lost the status of “worker” and was looking for another job. He had, however, a right of residence, based upon Article 10 of Regulation 492/2011, which derived from his daughters who had been at school in Germany since 2016. Article 10 provided:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“The children of a national of a Member State who is or has been employed in the territory of another Member State shall be admitted to that State’s general educational, apprenticeship and vocational training courses under the same conditions as the nationals of that State, if such children are residing in its territory.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">Member States shall encourage all efforts to enable such children to attend these courses under the best possible conditions.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">The rights of residence in Germany enjoyed by JD and his daughters derived from this Article and were the foundation of the claim of entitlement to benefit: see para. 33 of the Advocate General’s opinion. The Jobcenter and the German Government sought to rely upon the provisions of the CRD and, in particular, upon the derogation provided for in Article 24(2) of that Directive. Reliance was placed by them upon <span style="font-style:italic">Alimanovic</span>. They sought to say that Article 24(2) “regulates exhaustively the issue of equal treatment with regard to social assistance benefits”: see the same Opinion, para. 35. They also invoked the arguments about the discouragement of “benefit tourism”, against which Article 24(2) was designed to protect, which are raised by the SSWP in this case. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Both the Advocate General and the Court rejected the arguments of the Jobcenter and the Government.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Advocate General, in paras. 36-47 of his Opinion said that there was no indication that Article 24 was intended to range beyond the Directive itself (para. 38); the objective of the EU legislature, relied upon by the Government, could not by itself justify transferring a rule of secondary legislation to a different legislative context (para. 39); derogation provisions are to be interpreted restrictively (para. 40); <span style="font-style:italic">Alimanovic</span> did not consider the possible alternative right of residence of the claimant derived from Article 10 of Regulation 492/2011 – that question did not arise – and the case turned upon the limits of entitlement of those whose right of residence was “on the sole basis” of Article 14(4)(b) of the CRD (paras. 44 and 45); Article 24 was “not intended to govern the application of the principle of equal treatment to a Union citizen who has a right of residence on the basis of Article 10 of Regulation No, 492/2011” (para 47). At para. 80, the Advocate General added:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“80. Finally, as I have taken the view that the questions raised by the referring court may be resolved by interpreting Regulation No 492/2011, which contains a precise breakdown of the principle of nondiscrimination [sic], which is enshrined as a general principle in Article 18 TFEU, I do not consider it necessary to carry out an independent analysis of the latter provision.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">This paragraph cross-referred to footnote 59 which stated:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“What is more, the national court did not refer any questions which relate solely to Article 18 TFEU. Such an analysis would be necessary only if the Court were to take the view that JD does not fall within the scope of Article 24 of Directive 2004/38, cannot benefit from the principle of equal treatment under Article 7(2) of Regulation No 492/2011 because he does not have the status of worker and does not enjoy direct or indirect protection against discrimination when accessing basic social security benefits under Article 10 of Regulation No 492/2011. JD could then rely only on his status as an economically inactive Union citizen, who is legally resident in the host Member State and claiming entitlement to a basic social security benefit. Such a situation would then be similar to that in the case which gave rise to the judgment of 7 September 2004, <span style="font-style:italic">Trojani </span>(C-456/02, EU:C:2004:488).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">As the Appellants and the Intervener point out, there is no suggestion there that <span style="font-style:italic">Trojani</span> is not still good law in the EU. While the SSWP, now faced with the <span style="font-style:italic">Krefeld</span> case, is compelled to argue that the case is only concerned with an alternative European right of residence and benefits derived therefrom, <span style="font-style:italic">Trojani </span>clearly turned upon entitlement derived from national rights of residence granted by one Member State alone.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Court took a similar view to the Advocate General. Immediately before the hearing we were provided with an English translation of the judgment, which we were warned was not in its final official form but was a certified translation, to add to the official German version already included in the papers.<authorialNote class="footnote" marker="3">
+		<p class="footnotedescription" style="margin-right:0.23in"> Very shortly before the date fixed for the handing down of judgment, we were kindly provided with the official translation of the CJEU judgment in <span style="font-style:italic">Krefeld</span>, which is now available. I have not, however, changed my own judgment to adopt the official version of the quoted passages as there is no change to the underlying sense to be gained from the official version. Further, it did not seem sensible to risk delay in publication of the judgments of this court. </p>
+	      </authorialNote></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In para. 33 the Court said that the first question posed by the national court was whether Article 18 of the TFEU and Articles 7(2) and 10 of Regulation 492/2011 had to be interpreted in the light of Article 24(2) of the CRD as meaning that they did not preclude legislation in a Member State which automatically excluded a national of another Member State and his minor children, all of whom enjoyed a right of residence by virtue of Article 10. In para. 79 of the judgment, it is made clear that Articles 7(2) and 10 do indeed preclude such legislation: (in the translation) “This interpretation is not considered by Article 24(2).” <authorialNote class="footnote" marker="4">
+		<p class="footnotedescription" style="margin-right:0.03in"> In the German: „Diese Auslegung<span style="font-style:italic"> wird</span> durch Art. 24 Abs. 3 der Richtlinie <span style="font-style:italic">nicht in</span><span style="font-style:italic"> Frage gestellt</span>“ (my italics): i.e. The interpretation in the previous part of the paragraph “is not called into question” by Article 24(2). </p>
+	      </authorialNote></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In para. 38, the Court said that Article 10 had to be applied independently of provisions of European law which like the CRD lay down the conditions of the exercise of a right of residence in a Member State. In para. 58 et seq. the Court considered <span style="font-style:italic">Alimanovic</span> and said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“58. The Court also held, in margin no. 57 and 58 of its ruling of 15 September 2015, Alimanovic (C-67/14, EU: C: 2015: 597), that the host Member State may rely on the derogation provided for in Article 24(2) of Directive 2004/38 in order to refuse to grant social assistance benefits, such as the maintenance benefits at issue in the main proceedings, to a Union citizen who has a right of residence solely on the basis of Article 14(4)(b) of that directive. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">59.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">However, as is apparent from margin no. 40 of that ruling, the Court proceeded on the basis of the national court’s finding that the persons concerned only enjoyed a right of residence as job-seekers [sic] under Article 14(4)(b) of Directive 2004/38. It did not express a view on the situation in which, as in the present case, the persons concerned have a right of residence under Article 10 of Regulation No 492/2011. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.01in">60.</num>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in;text-indent:0.5in">In relation to such a situation, it should be noted, first, that the Court has already held on several occasions that Article 24(2) of Directive 2004/38, as an exception to the principle of equal treatment laid down in Article 18(1) TFEU, which is merely a specific expression of Article 24(1) of Directive 2004/38, must be interpreted strictly and in accordance with the provisions of the Treaty, including those relating to citizenship of the Union and the free movement of workers (ruling of 21 February 2013, N., C.-46/12, EU: C: 2013: 97, margin no. 33).” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Court went on to point out that Article 24(2) operated by derogation from Article 24(1), which only concerns Union citizens who reside in a host Member State “pursuant to this Directive” (para. 62); although the CRD was adopted to codify existing instruments, the codification was <span style="font-style:italic">not</span> exhaustive, and the “autonomy” of laws based upon Article 10 of Regulation 492/2011 could not be questioned (paras. 63 and 64). In paras. 63 and 64, the Court said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“63. Secondly, it is clear from the regulatory context of this provision that, although Directive 2004/38 was adopted in order, as the Union legislature stated in recitals 3 and 4 in its preamble, to codify and revise “the existing [Union law] instruments”, which treat separately employed and selfemployed persons and students and other unemployed persons, with a view to simplifying and strengthening the right to move and reside freely for all Union citizens, and overcoming the previous sectoral and fragmented approaches. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">64. However, this codification was not exhaustive. When Directive 2004/38 was adopted, Article 12 of Regulation No. 1612/68, the content of which was incorporated in Article 10 of Regulation No. 492/2011, was neither repealed nor amended. On the contrary, that directive was drafted in such a way as to comply with Article 12 of Regulation No 1612/68 and with the case law interpreting it. Consequently, Directive 2004/38 cannot, as such, call into question the autonomy of the laws based on Article 10 of Regulation No. 492/2011 or alter their scope (cf. in this sense ruling of 23 February 2010, Teixeira, C-</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.22in">480/08, EU: C: 2010: 83, margin nos. 54 and 56 to 58).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">It was pointed out further that the case differed from <span style="font-style:italic">Dano</span>. At paras. 68 and 69, one finds this:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“68. The facts of the present case also differ from those of the case in which the ruling of 11 November 2014, Dano (C333/13, EU:C:2014:2358), was given. The latter concerned unemployed nationals of a Member State who had exercised their freedom of movement for the sole purpose of receiving social assistance in another Member State and who did not enjoy a right of residence in the host Member State under Directive 2004/38 or any other provision of Union law. In those circumstances, the Court held that it would be contrary to the purpose referred to in paragraph 66 of the present ruling to grant those persons entitlement to social assistance benefits under the same conditions as nationals. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">69. Moreover, although persons such as JD and his daughters also fall within the scope of Article 24 of Directive 2004/38, including the exception in its paragraph 2, since they enjoy a right of residence under Article 14(4)(b) of that directive, they are not covered by that provision. However, that exception cannot be relied on against them, since they may also rely on an independent right of residence under Article 10 of Regulation No. 492/2011.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In para. 78, it was said that Article 18 of the TFEU only applies of its own motion where no other special anti-discrimination provision is in place. In that case article 7(2) of Regulation 492/2011 was in play: “Consequently, Article 18 TFEU is not to be interpreted,” says the translation.<authorialNote class="footnote" marker="5">
+		<p class="footnotedescription" style="margin-right:0.21in"> (“Folglich ist Art. 18 AEUV nicht auszulegen” - i.e. Article 18 need not be “laid out” or perhaps “considered”.)<span> </span></p>
+	      </authorialNote> This seems to me to be an approach similar to that taken by the Advocate General in para. 80 of his Opinion and footnote 59 (supra). Again, no doubt is placed upon <span style="font-style:italic">Trojani, Martinez-Sala </span>or<span style="font-style:italic"> Grzelczyk.</span></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In written argument, it was submitted for SSWP that recent jurisprudence of the CJEU made it clear that a person “cannot rely upon Article 18 of TFEU in relation to social assistance unless he/she has a right of residence under the CRD”: skeleton argument, para. 23. In the first of six points argued orally by Sir James Eadie he said that the CRD “comprehensively, if not exhaustively, sets out European Union residency rights”. In my judgment, that argument is now precluded by the CJEU decision in <span style="font-style:italic">Krefeld, </span>and expressly so by what the court said at paras. 63 and 64 of its judgment. That case demonstrates that relevant rights of residence, giving rise to benefits entitlement, can arise outside the four corners of the residence rights arising under the CRD.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Sir James’s second and third points were that the CRD does not deal with any other rights of residence and it is said to be integral to the scheme of the CRD that clear provisions as to the limits of the equal treatment provisions of Article 24 are those set by Article 24(2). This is said to be all consistent with Member States having control of social assistance and domestic rights of residence; the Appellants’ case it was said, would lead to a right being conferred which would lead to a loss of such control. The right claimed would bring Article 18 of TFEU into the range of a residence rights that had nothing to do with the law of the EU and was not required by any EU law obligation (points 4 and 5 of the six points). The sixth point was that the Appellants’ contentions produce possible “adventitious results”. For example, under the old rules an EU national jobseeker would have a right to reside in the UK by virtue of Art 14(4)(b) of the CRD, but would be denied entitlement to social assistance by Article 24(2). However, such a national could acquire PSS and have benefits entitlement immediately on arrival.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">It seems to me that all the points made in this regard were dependent upon the primary argument that Article 24 of the CRD, with its derogation in Article 24(2), is comprehensive in its scope so far as equal treatment is concerned in the field of entitlement to social assistance benefits, which was the first of the six points advanced. They do not answer the clear decision in <span style="font-style:italic">Krefeld </span>that there can be other rights of residence, apart from those under the CRD, which can import equal treatment obligations. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The fair point can be made that the right of residence claimed in <span style="font-style:italic">Krefeld </span>was a specific right arising under a different piece of secondary EU legislation, whereas here the right of residence is conferred by domestic law, pursuant to no specific EU law obligation. However, the right relied upon in <span style="font-style:italic">Trojani </span>also arose under domestic Belgian law. That is clear from that case itself and from the understanding of it stated by Lloyd LJ in <span style="font-style:italic">Abdirahman </span>and by Lady Hale in <span style="font-style:italic">Patmalniece.</span> It is also clear from the judgments in <span style="font-style:italic">Dano </span>and <span style="font-style:italic">Alimanovic</span> that the claims to benefit were founded upon residence rights flowing from the CRD or its equivalent. No question of domestic law right of residence was raised in those two cases. In <span style="font-style:italic">Krefeld</span>, the Advocate General emphasised that it was not necessary for the claimant to invoke Article 18 of the TFEU, because of the separate residence rights arising under Regulation 492/2011; he referred to <span style="font-style:italic">Trojani</span> but did not throw doubt on the decision. The Court’s reasoning on the point (in para. 78 of the judgment), while not mentioning <span style="font-style:italic">Trojani</span>, takes a similar line. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">It may be that, as time goes on, most entitlements of EU nationals to reside in an EU State other than their own will usually fall to be regulated by the CRD and reliance upon discrete rights granted by individual Member States may become rare, but, as the law stands, it seems to me that the CJEU cases firmly recognise that the right to social assistance may be drawn in some cases from a domestic right to reside, conferred otherwise than pursuant to EU legislation. It is perhaps not surprising that EU law should, in principle, allow EU nationals to take benefit from particular national laws of individual States if they lawfully reside in the State in question, without discrimination on the basis of nationality. Such entitlement would be entirely consonant with the aims and objects of the Union. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">As Mr de la Mare submitted, the <span style="font-style:italic">Trojani</span> case has not been rejected by the CJEU and it is not a mere “outlier” in the EU jurisprudence. We are bound to follow those cases, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">unless the CJEU or the Supreme Court decides otherwise. If it were not for the final effect of the UK’s secession from the Union being imminent, with the end of the transitional period on 31 December 2020, it might well have been desirable to make a reference to the CJEU on this aspect of the present case. That is, however, unrealistic in the timeframe and, for my part, I consider that we are bound to follow the CJEU decision in <span style="font-style:italic">Trojani, </span>as interpreted in this Court and in the Supreme Court, and to uphold the judge’s decision on this first point of his judgment and to reject the SSWP’s submissions in her Respondent’s Notice. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">
+	      <span style="font-style:italic">(2)</span>
+	      <span style="font-style:italic;font-family:Arial"> </span>
+	      <span style="font-style:italic">Direct/Indirect Discrimination </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">I turn to the second issue, whether the provision in regulation 9(3)(c)(i) is directly or indirectly discriminatory against EU nationals on the basis of their nationality. Respectfully, I share in the “cri de coeur” of Lady Hale in <span style="font-style:italic">Patmalniece </span>(at para. 82) as to the inherent complexity of the concepts developed in the pursuit of equal treatment in the law. However, in my view, much of the apparent complexity in this present case disappears once it is appreciated that it involves a different type of discrimination from that considered by the Supreme Court in <span style="font-style:italic">Patmalniece</span>. Further, as already mentioned, the argument now presented by the SSWP in this case is flatly contradictory to the argument deployed by her predecessor in the Supreme Court in <span style="font-style:italic">Patmalniece</span> itself. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The learned judge in this case proceeded immediately from his decision on the application of Article 18 of the TFEU to analyse the problem in this case through the prism of the <span style="font-style:italic">Patmalniece</span> case: see his judgment at paras. 94 et seq. Mr de la Mare argued for the Appellants that this step failed to recognise or address his logically anterior submission that once it is seen that the present case falls within the ratio of <span style="font-style:italic">Trojani</span>, the law of the CJEU dictates that the discrimination in question is directly discriminatory and prohibited by EU law: he referred us, in this respect, to paragraphs 69-70 and 94-95 of his written argument before the judge.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">His submission is that the <span style="font-style:italic">Trojani </span>line of cases renders otiose any consideration of the distinction between direct and indirect discrimination in this type of case; once the discrimination was established it was unlawful and prohibited by EU law without further ado. He argues that the discrimination complained of in <span style="font-style:italic">Patmalniece</span> was of an entirely different character from that criticised on behalf of the Appellants in this case. In <span style="font-style:italic">Patmalniece</span> what was in issue was the test of entitlement to pension credit based upon two features: habitual residence and the right to reside in the historic Common Travel Area (comprising the UK, the Channel Islands, the Isle of Man and the Republic of Ireland). That test is, of course, essentially the same qualification for benefit as applies in this case. However, what was in issue was whether the requirement of a right to reside in the UK was itself unlawfully discriminatory on nationality grounds. It was not a case, like here, where the challenge is to the exclusion from benefit of persons <span style="font-style:italic">with</span> such a right to reside. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The claimant, Ms Patmalniece, a Latvian EU national, being economically inactive in the UK, had no right to reside here. She complained that the requirement to have a right to reside, in order to be entitled to benefit, was unlawfully discriminatory against her on nationality grounds. Lord Hope of Craighead (with whom Lord Rodger and Lord Brown of Eaton-under-Heywood agreed) said (at para. 26 of his judgment, p.794G) that if the right to reside test stood alone it would undoubtedly have been directly discriminatory, but as it was part of a “composite” test of entitlement, the other aspects of which were not discriminatory, the discrimination complained of, created by the habitual residence test (as defined in part by the right to reside requirement), when looked at overall, was only indirect and was, therefore, capable of justification. It was held that it was justified as having the legitimate purpose of ensuring that only claimants who had achieved economic and social integration in the UK, or elsewhere in the Common Travel Area, should be entitled to claim. This requirement was independent of the nationality of the persons concerned. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Supreme Court reached its result with reference to the further decision of the CJEU in <span style="font-style:italic">Bressol v Gouvernement de la Communauté Française</span> [2010] 3 CMLR 559. That case also involved a “composite test” of entitlement. The Belgian government, faced with an influx of non-Belgian francophone medical students, sought to limit the number of non-resident students entitled to enrol in certain courses. A resident student was designated as one who, at the time of registration, proved, first, that his principal place of residence was in Belgium, and secondly, that he satisfied one of eight other conditions, one of which was that he had the right to remain permanently in Belgium. Belgians, of course had that right by virtue of their nationality. Citizens of other Member States only had it if they had a right to do so recognised in EU law.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in"><span style="font-style:italic">Bressol</span> is noticeable, if for no other reason than for the difference of opinion between the Advocate General and the Court on the question of whether the discrimination imposed by qualification through the right of permanent residence in Belgium was direct or indirect. Advocate General Sharpston thought it was direct discrimination; the Court, in somewhat rudimentary terms, found that the requirements of the legislation, looked at as a whole, were merely indirectly discriminatory. The court considered that the second condition, as to the right to remain permanently in Belgium, which the Advocate General had said was necessarily discriminatory in the direct sense, was subsumed in the first condition when looked at cumulatively. It went on to consider whether the difference in treatment, which led to the conditions being more easily satisfied by Belgian nationals than by others, was objectively justifiable.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">It is, of course, clear that in <span style="font-style:italic">Bressol </span>the disadvantaged class had no domestic right of residence and only had such residence rights as EU law might confer upon them. It was not a “<span style="font-style:italic">Trojani</span>” type case at all. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Mr de la Mare submits that the discrimination complained of here is indeed not the same as that in issue in <span style="font-style:italic">Patmalniece</span>. Here, the Appellants, and others in a similar position, would have established entitlement to UC, on the basis of habitual residence, including the necessary right to reside by virtue of the PSS (the <span style="font-style:italic">entire</span> composite test identified in <span style="font-style:italic">Patmalniece</span>), but for the separate and distinct “carve out” from entitlement enacted for those whose right to reside results from the grant of limited leave to enter or remain by virtue of Appendix EU. He also points out that before the introduction of the Regulations the grant of limited leave to remain in the United Kingdom, such as that granted with PSS, would have entitled the Appellants to benefit. Unlike Ms Patmalniece, they do not complain about the imposition of a right to reside requirement (which she did not have) as a pre-condition of benefit; they have that right, and their complaint is that they are specifically excluded from the normal incidents of it by a quite separate exception to entitlement, applicable to EU citizens alone, if their leave to enter or remain is based upon PSS.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Mr de la Mare gave a graphic example. Imagine, he said, a composite test of the present character with conditions (a), (b) and (c), but stating that persons still cannot qualify if they are, for example, of colour, Jewish, Muslim or a woman. Such an exclusion would be clearly directly discriminatory, even when phrased as an exclusion from a composite test. This disqualifying rule in regulation 9(3)(c)(i) is, he submitted, similar. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Reference is made again to Lady Hale’s judgment in <span style="font-style:italic">Patmalniece</span> (with which Lord Brown also agreed), at paras. 105-106 already quoted in part above. In this context, para. 106 is worth quoting rather more fully:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“106. I take that to mean that, even where a national of another member state does not have the right to reside in the host country under European Union law, if he has the right to reside under the national law of the host country, he is also entitled to claim these benefits on the same terms as nationals of the host country. I do not find anything in the <span style="font-style:italic">Trojani</span> case to suggest that mere presence, without any right to reside in the host country, is sufficient. All the emphasis in the relevant paras 40—45 is on residence and not presence and moreover on formally approved residence. The court’s answer to the question posed concludes, at para 46: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:1.23in">“However, once it is ascertained that a person in a situation such as  that of the claimant in the main proceedings is in possession of a residence permit, he may rely on article 12EC in order to be granted a social assistance benefit such as the minimex.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">This is a fairly clear indication that it is open to member states to make entitlement to such benefits dependent on the right to reside in the host country, even though, of necessity, such a right will be enjoyed by all nationals but only some nonnationals.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">It is submitted that this shows that a right to reside conferred by domestic law of a host state entails a right to claim benefits on the same terms as nationals of the host state; an exclusion from such entitlement would be automatically discriminatory and incapable of justification. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Sir James argued that this analysis was flawed. He submitted that the “carve out” imposed by regulation 9(3)(c)(i) was simply a further “layer” in a composite test of entitlement to benefit overall, akin to the test considered in <span style="font-style:italic">Patmalniece</span>. As such, the discrimination is merely indirect, rather than direct, and in this case justifiable. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Sir James supported the judge’s reasoning on this aspect of the case, to be found in paragraphs 24 to 29 of the judgment. The judge carefully analysed the decisions in <span style="font-style:italic">Patmalniece</span> and <span style="font-style:italic">Bressol</span> and stated his conclusion on this issue in paragraph 29 of the judgment as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“29 …On its own terms, the restriction imposed by regulation 9(3)(c)(i) does not give rise to direct discrimination. The question must be whether the exclusion of pre-settled status gives rise to a situation in which all non-United Kingdom EU nationals are excluded from making claims for Universal Credit. A rule that pre-settled status is a right of residence that does not count for the purpose of establishing habitual residence does not have that effect: it excludes only some members of the class of non-United Kingdom EU nationals. Other members of the class are able to satisfy the conditions to obtain Universal Credit: see for example, the effect of regulation 9(4), and the limitation on the exclusion at regulation 9(3)(aa). As such, the discrimination that arises by reason of regulation 9(3)(c)(i) is indirect discrimination, which will be unlawful only if not objectively justified.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Mr Banner QC for the Intervener pointed out, however, that the other exceptions to entitlement to benefits arising under regulation 9(3) in respect of EU nationals were for cases expressly within Article 24 of the CRD, with the derogation in Article 24(2) or for cases applicable to non-EU citizens who did not have the right not be discriminated against on nationality grounds, conferred on EU nationals alone, by Article 18 of the TFEU.  As he put it, the only “cuckoo in the nest” is where an EU national (with a domestic right to remain in the UK under PSS status) is excluded from benefit, by regulation 9(3)(c)(i). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In my judgment, Mr de la Mare and Mr Banner have the better of the argument on this part of the case. It seems to me that they are right to submit, with respect, that, in this part of the case too, the SSWP “overplayed her hand” in saying in written argument that any discrimination in entitlement to benefit was regulated entirely by the CRD (Article 24 and the derogation in Article 24(2)) and that <span style="font-style:italic">Dano</span> and <span style="font-style:italic">Alimanovic</span> indicated that the line of cases leading to <span style="font-style:italic">Trojani</span> were no longer good law. That argument was rendered impossible by the decision in <span style="font-style:italic">Krefeld.</span> The SSWP was thrown back upon the secondary argument that for discrimination to come into play, because of a right of residence, that right had to derive from EU law and not national law. I do not think that secondary argument is right either, for the reasons already advanced in relation to the application of Article 18 in the present case. The CJEU has not repudiated <span style="font-style:italic">Trojani</span> and moreover the Supreme Court here, in <span style="font-style:italic">Patmalniece</span>, has treated it as still representing the law of the Union. It is not for us to say otherwise. Accordingly, by direct application of the CJEU decisions, as interpreted in our own courts, a discrimination of the present type is prohibited by EU law and the question of justification does not arise. The case law leading to <span style="font-style:italic">Trojani, </span>and now including <span style="font-style:italic">Krefeld</span>, resolves the issue. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">I agree with Mr de la Mare that <span style="font-style:italic">Krefeld</span> provides the same answer as <span style="font-style:italic">Trojani</span> on the point in paragraphs 72 to 79 of the judgment. The CJEU found that once a right of residence had been established, the discrimination was prohibited outright. Far from <span style="font-style:italic">Trojani</span> no longer remaining good law, the CJEU has again expressly adopted the same reasoning, leading to the same outcome.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Mr Banner QC in his argument on this aspect of the case referred to paragraphs 63 and 64 in <span style="font-style:italic">Martinez-Sala</span>, quoted above. There is nothing in that case, or in the others, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">to suggest that a national law right to reside and an EU law right to reside are to be treated differently. In this respect, <span style="font-style:italic">Trojani</span> tells us that discrimination against an EU national who has a right to reside in the host state in such a case is prohibited and that ends the debate about direct and indirect discrimination in the present matter. I would add that I also accept, if need be, Mr de la Mare’s submission that, in any event, the qualification for minimex in issue in <span style="font-style:italic">Trojani</span> was also a “composite” one, requiring Belgian nationality and actual residence. There was no question of examining the composite requirements as a whole in such a case. The right of residence in Belgium was determinative in favour of the resident EU national. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Finally, I agree with Mr de la Mare and Mr Banner that it is nothing to the point that the relevant discrimination may not have impact on all EU citizens alike. It is sufficient that the discrimination on grounds of nationality impacts these Appellants and others in their position. Taking again Mr de la Mare’s graphic example of a directly discriminatory exclusion from a composite test of qualification for some advantage under national law, suppose the qualifiers were again (a), (b) and (c), but the law said, “except citizens of Spain or Austria”. It would be no answer to the complaint of discrimination on nationality grounds by a Spanish or Austrian citizen that other EU nationals, e.g. from France or Germany, were not excluded. The point is made clear by the decision of the Supreme Court in <span style="font-style:italic">R (Coll) v SSWP for Justice</span> [2017] 1 WLR 2093, per Lade Hale at para. 30:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“… [I]t cannot be a requirement of direct discrimination that all the people who share a particular protected characteristic must suffer the less favourable treatment complained of. It is not necessary, for example, that an employer always discriminates against women: it is enough to show that he did so in this case.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">On this second point too, therefore, I find that cases such as <span style="font-style:italic">Trojani</span> are determinative of this appeal in the Appellants’ favour.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">
+	      <span style="font-style:italic">(3)</span>
+	      <span style="font-style:italic;font-family:Arial"> </span>
+	      <span style="font-style:italic">Justification </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Given my views on these first two points the third point, justification of the discrimination, would not arise, and I propose to say very little about it. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The learned judge dealt with the matter in paragraphs 30 to 33 of his judgment. As the materials on this issue are within a very narrow compass, I do not think that this would be one of those cases, where this court would be at a distinct disadvantage from the judge at first instance in making the necessary evaluative decision on the facts.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The judge referred, in paragraph 31, to Mr David Malcolm’s evidence filed on behalf of the SSWP. This described the overall purpose of the amendment to the Regulations in question as being to protect the social security system from persons who come to the UK to live off benefits rather than to work, so that access to benefits has to be restricted to persons who are “economically integrated” with the UK or have a “particularly close connection” with this country. It was also noted that the intention had been to maintain the status quo prior to the introduction of PSS, excluding it from the list of rights of residence that count for the purpose of the habitual residence test for those purposes.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The judge found the exception in regulation 9(3)(c)(i) justified for these reasons. The core of his conclusion is in paragraph 32 of the judgment in the following passage:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“32. …For so long as the transition period continues and the EEA Regulations remain in force, the rights of residence available under the EEA Regulations will continue to exist side by side with those newly available under Appendix EU. Thus, for the purpose of the operation of regulation 9 of the Universal Credit Regulations the only persons advantaged by a grant of presettled status are those whose position under the EEA Regulations would not permit them to meet the requirements of regulation 9 as they stood prior to the amendment made by the 2019 Social Security Regulations. In this way the amendment made by those Regulations does, as the SSWP submits, maintain the status quo. More significantly for the purposes of the justification argument the restriction that applies to presettled status serves to maintain the prior rationale for the regulation 9 habitual residence requirement, as explained in Mr Malcolm’s witness statement. These reasons come to the same thing as the reasons accepted by the Supreme Court in <span style="font-style:italic">Patmalniece </span>as justifying the habitual residence test that is part of the State Pension Credit Regulations 2002.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In fact, in <span style="font-style:italic">Patmalniece</span> Lord Hope said that the purpose of regulation 2 of the 2002 Regulations was “to ensure that the claimant has achieved economic integration or a sufficient degree of social integration in the United Kingdom …as a pre-condition of entitlement to benefit”: para. 46, p. 802 C-D. Of course, as counsel for the Appellants point out in their skeleton argument this purpose was advanced as a justification of the <span style="font-style:italic">requirement</span> of a right to reside as a qualifying condition. At para. 52, Lord Hope said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“52. …[t]he SSWP’s purpose was to protect the resources of the United Kingdom against resort to benefit or social tourism by persons who are not economically or socially integrated with this country. This is not because of their nationality or because of where they have come from. It is because of the principle that only those who are economical or socially integrated with the host member state should have access to its social assistance system. The principle, which I take from the decision in the <span style="font-style:italic">Trojani </span>case, is that it is open to member states to say that economical or social integration is required. A person’s nationality does, of course, have a bearing on whether that test can be satisfied. But the justification itself is blind to the person’s nationality. The requirement that there must be a right to reside here applies to everyone, irrespective of their nationality.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In this case limited leave to remain, i.e. a right of residence, is given as an incident of PSS, as an encouragement to integration and those with that status have a greater protection against removal or deportation than those who do not. As noted earlier, as argued by the Appellants in paragraph 29 of their skeleton argument, prior to the 2019 changes EU nationals with limited right to remain in this country would have had </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">benefit entitlements, which would suggest that those with that right are generally regarded as sufficiently integrated with this country as to qualify for such benefits. Equally, that indicates that one way of looking at the status quo would be to see what the rights of those EU citizens were who had limited right to remain before that same right was granted to those with the new PSS. The Appellants argue that, looked at in that way, the “carve out” was not to ensure relevant integration into the UK, but simply to save the expense that would otherwise be inherent in the grant of limited right to remain to a larger cohort of people. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">The Appellants and the Intervener have referred us to a number of statements made by those in Government as to the purpose behind the EU Settlement Scheme. For example, in the policy paper published by the Department for exiting the European Union, published in December 2018, the following was said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“a. In the Department for Exiting the European Union’s policy paper, “Citizens’ Rights – EU citizens in the UK and UK nationals in the EU” (December 2018), it was stated that: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.19in;margin-right:0.40in">“4… We have been clear: EU citizens are our friends, our neighbours, our colleagues, and we want them to stay… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/><span> </span><marker name="tab"/>… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in"> 7. We have always been clear that we highly value the  contributions EU citizens make to the social, economic and  cultural fabric of the UK and that we want them to stay in  the UK… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/><span> </span><marker name="tab"/>… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:1.23in;text-indent:0.50in"> UK nationals who went to the EU and EU citizens who came  to the UK before the UK’s exit from the EU did so on the  basis  that they would be able to settle permanently and build  a life  here, or in the EU. That is why the UK has taken steps  to remove any ambiguity and provide complete  reassurance for  EU citizens in the UK. We ask that the EU  and Member States do the same for our nationals.” Several other examples were cited. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">83.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In contrast, the SSWP argues that the purpose of the exclusion is to safeguard the social security system from those “not sufficiently economically integrated into, or sufficiently closely connected with the UK”, substantially as held to be justification of the habitual residence and right to reside test in <span style="font-style:italic">Patmalniece</span>. In addition, the following points are advanced: (a) a person can obtain PSS without any degree of economic or social integration into the UK; (b) receipt of PSS does not disqualify anyone for UC who would otherwise be eligible, e.g. as a “worker”; (c) the UK established the EU settlement scheme voluntarily and on the express basis that PSS should not give rise to any new benefit entitlements; (d) several other EU Member States, including some with significant UK citizens in their populations, do not provide benefits to those who are economically inactive; (e) the cost of paying benefits to those with PSS is estimated at £100-£150 million per year. Thus, on the basis that any discrimination is indirect, it is submitted that the “carve out” UC entitlement for those with the limited PSS is justified. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">84.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">I find these competing considerations finely balanced and I am not confident that the learned judge’s judgment, making all allowances for the complexity of this case in its various aspects, took fully into account the features advanced by the Appellants and by the Intervener on this part of the argument. However, given that the acquisition of PSS was distinctly time limited to the end of the transition period and that the ambition of the Government was to encourage potential pre-settlers (in anticipation of more permanent settlement after 5 years), but with the express and well-publicised intention of excluding them from benefit entitlement initially, I would have been inclined to say that, in the very unusual circumstances presented by a Member State leaving the Union, justification of an indirect discrimination <span style="font-style:italic">might</span> have been established under EU law.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">85.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Both the Appellants and the Intervener sought to invite us to review the justification of exclusion from benefits of those with PSS, in the light of the likely impacts on such persons of the COVID 19 pandemic. To this end, the Appellants sought permission to adduce fresh evidence on the point, in the form of two witness statements. Permission to rely on this further evidence was refused by the order of Moylan LJ dated 18 September 2020.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">86.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Mr de la Mare argued before us that the burden of justifying an indirect discrimination was on the SSWP and that, even in the absence of evidence from the Appellants’ side, the SSWP had produced nothing in aid of justification of excluding a number of people from UC in the straitened circumstances caused by the pandemic. He submitted that the likely adverse effects were so obvious that we should take judicial notice of them. In my judgment, while one does not ignore the difficulties that might well be faced by a number of people with PSS nor does one put aside instinctive sympathy, I do not consider that this court in reviewing the judge’s decision on an appeal, essentially on points of law, can sensibly re-evaluate the decision on justification of any potential indirect discrimination merely on the basis of counsel’s submissions. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.51in;text-indent:-0.01in">Conclusion</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">87.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">For the reasons given on points 1 and 2 above, I would hold that the discrimination effected by regulation 9(3)(c)(i) of the amended Regulations amounts to unlawful discrimination on the grounds of nationality and I would allow the appeal accordingly. Subject to the views of my Lords, I would invite counsel to submit a draft order to us for approval. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Lord Justice Moylan: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">88.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">I agree, for the reasons given by McCombe LJ, that the SSWP’s appeal from the judge’s decision as to the scope and applicability of article 18 TFEU should be dismissed.  I do not propose to say any more about this aspect of the appeal because this part of our decision is also agreed by Dingemans LJ.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">89.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In contrast to Dingemans LJ, I also agree with McCombe LJ’s decision to, and his reasons for, allowing the Appellants’ appeal from the judge’s determination that the provisions of regulation 9(3)(c)(i) constitute indirect discrimination. In my view, as explained by McCombe LJ, they constitute direct discrimination. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">90.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In common with McCombe LJ, I consider that this case involves a different form of discrimination to that which was involved in <span style="font-style:italic">Patmalniece</span>. As explained by McCombe LJ, that case addressed whether the requirement that an individual must have a right to reside in the UK, in order to be “treated as habitually resident”, as part of the test to qualify as being “in Great Britain”, was unlawfully discriminatory on the grounds of nationality. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">91.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In the Court of Appeal in <span style="font-style:italic">Patmalniece</span> [2009] 4 All ER 738, Moses LJ (with whom Lord Clarke MR and Sullivan LJ agreed) said, at [21], that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“If conditions of entitlement to benefits within the scope of 1408/71 make an express and disadvantageous distinction between the nationals of one member state and the nationals of other member states, they are proscribed by Article 3. Discrimination based on nationality is forbidden.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">In my view, this provides a simple example of the difference between direct, or as Moses LJ said “overt” (adopting the language of decisions of the CJEU), discrimination and indirect, or “covert”, discrimination. The former is explicit and the latter only becomes apparent when the practical effect of the challenged provision is analysed.  It also makes clear that an “express and disadvantageous distinction” would be unlawful discrimination. However, in the different situation in that case, Moses LJ concluded, at [24], that: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“I conclude that the conditions for entitlement to State Pension Credit are not overtly based upon the nationality of the claimant. The fact that nationals from other Member States may qualify, whether as workers, members of the same family, or for other reasons, precludes such a conclusion.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">92.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">A recent example of the use of the words overt and covert is the decision of the CJEU in <span style="font-style:italic">Antonio Bocero Torrico and Jörg Paul Konrad Fritz Bode v Instituto Nacional de la Seguridad Social and Tesorería General de la Seguridad Social</span>, C-398/18 and C428/18, ECLI:EU:C:2019:1050, 5 December 2019: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“[40] In that regard, it must be noted that the principle of equal treatment, as laid down in Article 4 of Regulation No 883/2004, prohibits not only overt discrimination based on the nationality of the beneficiaries of social security schemes but also all covert forms of discrimination which, through the application of other distinguishing criteria, lead in fact to the same result (see, by analogy, judgment of 22 June 2011, <span style="font-style:italic">Landtová,</span> C-399/09, EU:C:2011:415, paragraph 44 and the case-law cited).  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">[41] Accordingly, conditions imposed by national law must be regarded as indirectly discriminatory where, although applicable irrespective of nationality, they affect essentially migrant workers or the great majority of those affected are migrant workers, where they are applicable without distinction but can more easily be satisfied by national workers than by migrant workers, or where there is a risk that they may operate to the particular detriment of the latter (judgment of 22 June 2011, <span style="font-style:italic">Landtová,</span> C-399/09, EU:C:2011:415, paragraph 45 and the case-law cited).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">93.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In the Supreme Court in <span style="font-style:italic">Patmalniece</span>, Lord Hope said, at [24]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“But I think that Mr Lewis identified the issue in this case correctly when he said that the key question on the discrimination issue is whether the conditions for entitlement to state pension credit are formulated in terms of the nationality of the claimants, or in terms of criteria other than nationality.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">I acknowledge that he went on the say, at [27], that: “The effect of regulation 2(2) of the 2002 Regulations must, however, be looked at in the context of section 1(2)(a) of the 2002 Act and regulation 2 as a whole”. However, this was in the context of a provision which did not include any condition which was “formulated in terms of the nationality of the claimants”. I would suggest that this was why it was not appropriate to single out one element of the test because it was the effect of the test overall which would reveal whether it was discriminatory. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">94.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">In <span style="font-style:italic">Bressol</span>, the CJEU was, also, dealing with provisions which did not overtly target non-Belgian nationals but which, at [44], created “a difference in treatment between resident and non-resident students” (i.e. resident or not resident in Belgium). This was because, at [45], the “residence condition … is more easily satisfied by Belgian nationals … than by nationals of other Member States” and, as a result, at [46], nationals of other Member States were placed “at a particular disadvantage”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">95.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Further, in the course of its judgment, the CJEU said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">“[40] It should be recalled that the principle of nondiscrimination prohibits not only direct discrimination on grounds of nationality but also all indirect forms of discrimination which, by the application of other criteria of differentiation, lead in fact to the same result (see, to that effect, <span style="font-style:italic">Hartmann v Freistaat Bayern</span> (C-212/05) [2007] ECR I-6303, paragraph 29). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.23in">[41] Unless objectively justified and proportionate to the aim pursued, a provision of national law must be regarded as indirectly discriminatory if it is intrinsically liable to affect nationals of other Member States more than nationals of the host State and there is a consequent risk that it will place the former at a particular disadvantage (see, to that effect, Case C195/98 <span style="font-style:italic">Österreichischer Gewerkschaftsbund (Gewerkschaft  öffentlicher  Dienst) v Austria</span> [2000] ECR 1-10497, paragraph </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:0.22in">40, and <span style="font-style:italic">Hartmann</span>, paragraph 30).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">96.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Applying the above authorities, I am persuaded that the present case is one of direct discrimination. This is a case, to adopt the words of Moses LJ, of an “express and disadvantageous distinction between the nationals of one member state and the nationals of other member states”.  Similarly, it is a case in which, to adopt the words from Lord Hope’s judgment, at [24], the conditions for entitlement are <span style="font-style:italic">not</span> formulated “in terms of criteria other than nationality”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">97.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Regulation 9(3)(c)(i) is specifically directed at nationality. I consider that it is “overt”, even though it might be said not to refer expressly to nationality, because those eligible to apply under Appendix EU are <span style="font-style:italic">only</span> nationals of other EU Member States (and nationals of EFTA countries). It is not a provision which is “intrinsically liable to affect nationals of other Member States more than nationals” because, as I have said, it specifically and directly targets EU nationals.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">98.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">This is not, therefore, a case dealing with “other criteria of differentiation”, but one dealing with “direct discrimination on grounds of nationality” (the quotations are from <span style="font-style:italic">Bressol</span> at [40]). Accordingly, I do not see, as submitted by Mr de la Mare, that, because this particular provision is but a part of regulation 9, you can escape its directly discriminatory effect by pointing to the regulation as a whole. In any event, I would also consider the operation of the regulation to be directly discriminatory because, as I have described, it has the limited and express effect of excluding a specific group because they are EU nationals. Finally, I agree with McCombe LJ’s observations, in paragraph 74, that a provision does not cease to be discriminatory because it affects only some, and not all, EU nationals. It remains discriminatory on the grounds of nationality. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Lord Justice Dingemans: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">99.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">I gratefully adopt the summary of the factual background and issues set out in the judgment of my Lord, McCombe LJ, which I have had the privilege of reading in draft.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">100.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">On the first issue, namely the scope of article 18 TFEU, I agree with McCombe LJ’s masterly analysis of the relevant jurisprudence of the CJEU and agree that the appellants are entitled to rely upon article 18 TFEU.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">101.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">On the second issue, namely whether there was direct or indirect discrimination in this case, I regret that I cannot agree with McCombe LJ and with Moylan LJ, who agrees with McCombe LJ. McCombe LJ addresses the second issue of direct and indirect discrimination in paragraphs 58 to 75 of his judgment.  As this is a dissenting judgment on this second issue (and is therefore not to be treated as a reliable summary of the law), I hope that I will be forgiven for stating briefly my reasons for the dissent and my agreement with Swift J that this was a case of indirect discrimination.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">102.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">I note first that this is a claim relying on article 18 TFEU to claim unjustifiable discrimination against the appellants.  As is well-known domestic law has a statutory basis and has concepts of direct discrimination, which can never be justified, and indirect discrimination, which might be justified.  EU law has developed in slightly different ways as explained by Advocate General Sharpston in her opinion in <span style="font-style:italic">Bressol</span>, in particular at paragraphs 43 to 49.  However, the CJEU in <span style="font-style:italic">Bressol </span>implicitly rejected the analysis of Advocate General Sharpston explaining direct and indirect discrimination in ways which would have been capable of being equated with the statutory provisions in England and Wales.  The CJEU did not apply the Advocate General’s test for direct discrimination, formulated at paragraph 56 of her opinion, but found that the discrimination in that case was indirect discrimination because the provision was intrinsically liable to affect nationals of other member states more than nationals of the host state, putting the former at a particular disadvantage.  As this court is considering rights under article 18 TFEU, we have to apply this test for indirect discrimination set out by the CJEU in <span style="font-style:italic">Bressol</span> at paragraph 41.  In <span style="font-style:italic">Patmalniece </span>at paragraph 30 the Supreme Court stated that “the approach which EU law takes to a composite test of this kind” was indicated by the decision in <span style="font-style:italic">Bressol</span>.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">103.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Secondly the legislation itself is, on its face, apparently neutral because it requires a claimant to be “habitually resident”.  A person is not habitually resident unless they have “a right to reside” (see paragraph 7 of McCombe LJ’s judgment).  Pre-settled status (“PSS”) is not treated as a qualifying right of residence.  It is apparent that the requirement for habitual residence is a provision which can affect UK nationals returning from abroad who, it was common ground in argument, would not immediately be treated as being habitually resident.  A provision which disadvantages others as well as the claimants is not normally treated as direct discrimination.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">104.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Thirdly other EU nationals are treated as being habitually resident, a group which now includes the first appellant, Ms Fratila, as appears from paragraph 13 of the judgment of McCombe LJ.  Mr de la Mare’s graphic example referred to in paragraph 66 of McCombe LJ’s judgment is a case of direct discrimination because the protected characteristic is targeted by the legislation. This legislation does not target the protected characteristic because not all EU nationals are affected. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">105.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Fourthly, and reverting to domestic law concepts to consider whether a comparator might assist in determining this case, compare <span style="font-style:italic">Shamoon v Chief Constable of the Royal Ulster Constabulary </span>[2003] UKHL 11; [2003] 2 All ER 26 at paragraph 7, I have not been able to identify any comparator which would assist.  Claimants for universal credit who are British nationals are not in a comparable situation to the appellants in this case.  This is because they will not receive benefits such as those received by the second appellant, Mr Tanase.  He receives benefits from Romania, see paragraph 14 of the judgment of McCombe LJ.  It is not apparent that British nationals in other EU member states have been provided with any status equivalent to PSS and so there is no helpful comparison to draw there.  In argument Mr de la Mare submitted that the respondent could have created PSS to come into effect at midnight on 31 December 2020, when the transitional arrangements for the UK’s departure from the EU will cease, and he accepted that if that had been the legislative device used by the respondent, there would have been no direct or indirect discrimination because EU law would not have applied.  This rather suggests that there is no direct discrimination in the case of PSS as enacted, because the group of those with PSS such as the appellants is being created only for the purposes of the EU exit.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">106.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">Finally in my judgment Swift J’s analysis of <span style="font-style:italic">Bressol </span>and <span style="font-style:italic">Patmalniece </span>was right for the reasons that he gave.  All of this makes this a case of discrimination, but indirect discrimination which might be justified. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">107.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">This means that in my judgment the third issue, namely whether the indirect discrimination can be justified, does arise for decision.  This was addressed by McCombe LJ in paragraphs 76 to 86 of his judgment.  I would have held that the discrimination was capable of being justified, very much for the reasons given by Swift J.  In this respect I note that if PSS could have been lawfully created as a status to come into effect after midnight on 31 December 2020, it suggests that these are decisions which it is lawful for the respondent to make. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">108.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.22in">For these short reasons I would have dismissed the appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.09in;margin-right:0.31in">Appendix </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Regulation 9, Universal Credit Regulations 2013 </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in"><span style="font-weight:bold">9</span>. <span style="font-weight:bold">— Persons treated as not being in Great Britain</span></p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.23in;text-indent:-0.23in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.23in;margin-right:0.22in">For the purposes of determining whether a person meets the basic condition to be in Great Britain, except where a person falls within paragraph (4), a person is to be treated as not being in Great Britain if the person is not habitually resident in the United Kingdom, the Channel Islands, the Isle of Man or the Republic of Ireland. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.23in;text-indent:-0.23in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.23in;margin-right:0.22in">A person must not be treated as habitually resident in the United Kingdom, the Channel Islands, the Isle of Man or the Republic of Ireland unless the person has a right to reside in one of those places. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.23in;text-indent:-0.23in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.23in;margin-right:0.22in">For the purposes of paragraph (2), a right to reside does not include a right which exists by virtue of, or in accordance with— </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(a)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">regulation 13 of the EEA Regulations or Article 6 of Council Directive No. 2004/38/EC; </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">(aa) regulation 14 of the EEA Regulations, but only in cases where the right exists under that regulation because the person is– </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(i)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.22in">a qualified person for the purposes of regulation 6(1) of those Regulations as a jobseeker; or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(ii)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.22in">a family member (within the meaning of regulation 7 of those Regulations) of such a jobseeker; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(b)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">regulation 16 of the EEA Regulations, but only in cases where the right exists under that regulation because the person satisfies the criteria in regulation 16(5) of those Regulations or article 20 of the Treaty on the Functioning of the European Union (in a case where the right to reside arises because a British citizen would otherwise be deprived of the genuine enjoyment of their rights as a European citizen); or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(c)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">a person having been granted limited leave to enter, or remain in, the United </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">Kingdom under the Immigration Act 1971 by virtue of— </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(i)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.22in"><span style="text-decoration:underline">Appendix EU to the immigration rules made under section 3(2) of that Act</span>; or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(ii)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.22in">being a person with a Zambrano right to reside as defined in Annex 1 of Appendix EU to the immigration rules made under section 3(2) of that Act. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.23in;text-indent:-0.23in">(4)</num>
+	  <content>
+	    <p style="margin-left:0.23in;margin-right:0.22in">A person falls within this paragraph if the person is— </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(a)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">a qualified person for the purposes of regulation 6 of the EEA Regulations as a worker or a self-employed person; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(b)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">a family member of a person referred to in sub-paragraph (a) within the meaning of regulation 7(1)(a), (b), or (c) of the EEA Regulations; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(c)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">a person who has a right to reside permanently in the United Kingdom by virtue of regulation 15(1)(c), (d) or (e) of the EEA Regulations; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(d)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">a refugee within the definition in Article 1 of the Convention relating to the Status of Refugees done at Geneva on 28th July 1951, as extended by Article 1(2) of the Protocol relating to the Status of Refugees done at New York on 31st January 1967; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(e)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">a person who has been granted, or who is deemed to have been granted, leave outside the rules made under section 3(2) of the Immigration Act 1971 where that leave is— </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(i)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.22in">discretionary leave to enter or remain in the United Kingdom, </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(ii)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.22in">leave to remain under the Destitution Domestic Violence concession, or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.25in;text-indent:-0.25in">(iii)</num>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:0.22in">leave deemed to have been granted by virtue of regulation 3 of the Displaced Persons (Temporary Protection) Regulations 2005; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(f)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">a person who has humanitarian protection granted under those rules; or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.26in">(g)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.22in">a person who is not a person subject to immigration control within the meaning of section 115(9) of the Immigration and Asylum Act 1999 and who is in the United Kingdom as a result of their deportation, expulsion or other removal by compulsion of law from another country to the United Kingdom. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.22in">[Emphasis added] </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold">Immigration Rules Appendix EU, EU14 </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.22in"><span style="font-weight:bold">EU14.</span> The applicant meets the eligibility requirements for limited leave to enter or remain where the Secretary of State is satisfied, including (where applicable) by the required evidence of family relationship, that, at the date of application, condition 1 or 2 set out in the following table is met: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold;color:#0B0C0C">Condition Is met where: </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:-0.17in;text-indent:0.00in"/>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#0B0C0C;background-color:auto;margin-left:0.82in;text-indent:-0.82in">1.</num>
+	  <content>
+	    <p style="text-align:left;margin-left:0.82in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">(a) The applicant is: </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#0B0C0C;background-color:auto;margin-left:1.05in;text-indent:-0.25in">(i)</num>
+	  <content>
+	    <p style="text-align:left;margin-left:1.05in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">a relevant EEA citizen; or </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#0B0C0C;background-color:auto;margin-left:1.05in;text-indent:-0.25in">(ii)</num>
+	  <content>
+	    <p style="text-align:left;margin-left:1.05in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">a family member of a relevant EEA citizen; or </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#0B0C0C;background-color:auto;margin-left:1.05in;text-indent:-0.25in">(iii)</num>
+	  <content>
+	    <p style="text-align:left;margin-left:1.05in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">a family member who has retained the right of residence by virtue of a relationship with a relevant EEA citizen; or (iv) a person with a derivative right to reside; or </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.81in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">(v) a person with a Zambrano right to reside; and </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.81in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">(b) The applicant is not eligible for indefinite leave to enter or remain under this </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.81in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">Appendix solely because they have completed a continuous qualifying period of less </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.01in;margin-right:-0.17in;text-indent:0.00in"/>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	      <span style="font-weight:bold;color:#0B0C0C">Condition Is met where: </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:-0.17in;text-indent:0.00in"/>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#0B0C0C;background-color:auto;margin-left:0.82in;text-indent:-0.82in">2.</num>
+	  <content>
+	    <p style="text-align:left;margin-left:0.82in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">(a) The applicant is: </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#0B0C0C;background-color:auto;margin-left:1.05in;text-indent:-0.25in">(i)</num>
+	  <content>
+	    <p style="text-align:left;margin-left:1.05in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">a family member of a qualifying British citizen; or </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#0B0C0C;background-color:auto;margin-left:1.05in;text-indent:-0.25in">(ii)</num>
+	  <content>
+	    <p style="text-align:left;margin-left:1.05in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">a family member who has retained the right of residence by virtue of a relationship with a qualifying British citizen; and </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#0B0C0C;background-color:auto;margin-left:1.03in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="text-align:left;margin-left:1.03in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">The applicant was, for any period in which they were present in the UK as a family member of a qualifying British citizen relied upon under sub-paragraph (c), lawfully resident by virtue of regulation 9(1) to (6) of the EEA Regulations </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.81in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">(regardless of whether in the UK the qualifying British citizen was a qualified person under regulation 6 of the EEA Regulations); and </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#0B0C0C;background-color:auto;margin-left:1.03in;text-indent:-0.23in">(c)</num>
+	  <content>
+	    <p style="text-align:left;margin-left:1.03in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">The applicant is not eligible for indefinite leave to enter or remain under this </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.81in;margin-right:0.00in">
+	      <span style="color:#0B0C0C">Appendix solely because they have completed a continuous qualifying period in the UK of less than five years </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.01in;margin-right:-0.17in;text-indent:0.00in"/>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

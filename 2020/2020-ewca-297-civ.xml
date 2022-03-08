@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/297"/>
+	  <FRBRuri value="ewca/civ/2020/297"/>
+	  <FRBRdate date="2020-03-03" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="297"/>
+	  <FRBRname value="Kingsley &amp; Ors v Kingsley"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/297/eng"/>
+	  <FRBRuri value="ewca/civ/2020/297/eng"/>
+	  <FRBRdate date="2020-03-03" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/297/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/297/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:30:20" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="judge-lord-justice-patten" href="/judge-lord-justice-patten" showAs="LORD JUSTICE PATTEN"/>
+	<TLCPerson eId="judge-lord-justice-moylan" href="/judge-lord-justice-moylan" showAs="LORD JUSTICE MOYLAN"/>
+	<TLCPerson eId="judge-mr-justice-mann" href="/judge-mr-justice-mann" showAs="MR JUSTICE MANN"/>
+      </references>
+      <proprietary source="ewca/civ/2020/297/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>297</uk:number>
+	<uk:cite>[2020] EWCA Civ 297</uk:cite>
+	<uk:hash>3f5a05de4cfed5ac787b1eab8b0b1d866c54a2baa3d152605dfce6007c147581</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/297/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.01in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; margin-right: 0.04in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image0.jpg" style="width:33397;height:91"/>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>A3/2019/1710</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">IN THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<courtType style="font-weight:bold;text-decoration:underline">COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE JUDGMENT OF</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">LANCE ASHWORTH QC</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">(SITTING AS A DEPUTY HIGH COURT JUDGE)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">Lower court NCN: [2019] EWHC 1073 (Ch)</span>
+      </p>
+      <p style="text-align:right;margin-right:0.03in">
+	<span style="text-decoration:underline">Royal Courts of Justice</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Date: <docDate date="2020-03-03">03/03/2020</docDate></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in">
+	<span style="font-weight:bold;text-decoration:underline">IN THE ESTATE OF ROGER JOHN KINGSLEY</span>
+      </p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.05in"><span style="font-weight:bold">Before</span> : </p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.06in">
+	<judge refersTo="#judge-lord-justice-patten" style="font-weight:bold">LORD JUSTICE PATTEN </judge>
+      </p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.06in">
+	<judge refersTo="#judge-lord-justice-moylan" style="font-weight:bold">LORD JUSTICE MOYLAN  </judge>
+      </p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.06in">
+	<span style="font-weight:bold">and  </span>
+      </p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.06in">
+	<judge refersTo="#judge-mr-justice-mann" style="font-weight:bold">MR JUSTICE MANN</judge>
+      </p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.05in">
+	<span style="font-weight:bold">Between : </span>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">(1) Karim Sophie Kingsley </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">Appellants</span>
+      </p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.06in">
+	<span style="font-weight:bold">(2) Aaron Richard Playle </span>
+      </p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.06in">
+	<span style="font-weight:bold">(As Executors of the Estate of Roger John Kingsley) </span>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:0.05in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:none"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">- and - </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">  </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">Sally Margaret Kingsley </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">Respondent</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:left;margin-left:1.18in;margin-right:1.11in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.01in"><span style="font-weight:bold">Clifford Darton QC </span>and <span style="font-weight:bold">Christopher Burrows </span>(instructed by<span style="font-weight:bold"> Edward Harte (Brighton) Ltd</span>) for the <span style="font-weight:bold">Appellants </span></p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.05in"><span style="font-weight:bold">Caroline Shea QC </span>and <span style="font-weight:bold">Catherine Taskis</span> (instructed by <span style="font-weight:bold">Pellys</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center;margin-right:0.04in">Hearing date: Tuesday, 11<span style="vertical-align:super;font-size:smaller">th</span> February 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:left;margin-left:1.18in;margin-right:1.11in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.25in;margin-right:0.00in">
+	      <span style="font-weight:bold">Mr Justice Mann:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;margin-right:0.00in;text-indent:-0.01in">Introduction </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Until his death on 27<span style="vertical-align:super;font-size:smaller">th</span> June 2015 Roger and Sally Kingsley (who were brother and sister) farmed land at Lodge Farm, Cottered, Nr Buntingford, Hertfordshire in partnership.  The principal land on which they farmed (which is the land in relation to which this appeal arises) was owned by them beneficially in equal shares, but it was not held as a partnership asset.  The partnership was allowed to trade from this land.  The profits were shared two-thirds to Roger and one-third to Sally.  No rent was treated as payable by the partnership to the landowners, whether in the partnership accounts or otherwise.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Members of the family had farmed this land since the 19<span style="vertical-align:super;font-size:smaller">th</span> century and Roger and Sally succeeded other members of the family in farming it.  When Roger died in June 2015 his wife Karim and the second claimant (Mr Playle) became executors of his will.  Sally remained in occupation of the land, continuing a farming business (there is a dispute as to whose business it was – hers or the partnership’s).  They commenced this action against Sally claiming the dissolution of the partnership and an order for sale of the land under the Trusts of Land and Appointment of Trustees Act 1996 (“TOLATA”).   The trial of that matter was heard by Mr Lance Ashworth QC, sitting as a Deputy High Court judge and he delivered judgment on 1<span style="vertical-align:super;font-size:smaller">st</span> May 2019 ([2019] EWHC 1073 (Ch)).  He determined that there should be a sale (the basic principle of a sale was not in dispute) and that Sally should have the opportunity of purchasing it at what he determined to be the value of the estate’s share based on a market value of the land which he fixed, without the land being exposed to an open market sale.  The executors appealed that decision, and the principal point raised in this appeal is whether he was right to do that or whether, as the executors/appellants contend, he should have made an order for a sale in the open market, in order to get a price for the land determined by the market, while giving Sally the right to bid with others.  There is also a question as to whether Sally should pay an occupation rent in respect of her occupation since the death. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">There is one conveyancing oddity in all this.  The findings of the judge suggest that Roger and Sally were the joint legal owners of the farm.  If that is right then on Roger’s death Sally would have become the sole legal owner, holding the farm on trust for herself and her brother.  However, the order made in this case, and probably the reasoning of the judge, seems to suggest that the claimants were also trustees.  That may be because Sally admitted that that was the case in her Defence (see paragraph 26, admitting an alternative averment to that effect).   Whether or not that is the case, the matter seems to have proceeded on the assumption that they were all trustees, and this court has done the same. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Mr Clifford Darton QC led for the appellants; Ms Caroline Shea QC led for Sally.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">The second defendant in the action (Mr Bayles) is Sally’s husband.  He was joined as </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.75in;margin-right:-0.01in">a result of some confusion as to the whereabouts of the legal estate of some of the land, but he played no part in the action and it will be unnecessary to refer to him further. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;margin-right:0.00in;text-indent:-0.01in">What the judge decided </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The principal (but not the only) witnesses whom the judge heard were Karim, Sally and expert valuers for the two sides (Mr Alexander for Sally and Mr Gooderham for the executors).    He found the experts each to have presented their honest professional expert opinions and did not criticise either of them over their differences.  Sally and Karim fared less well in his assessments and he found Sally to be “far from convincing” as to her intentions (or otherwise) as to the redevelopment of part of the land (para 92).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">So far as principles are concerned, the judge referred to the relevant provisions of TOLATA and to the authority which lies at the heart of the main matter on this appeal, namely <span style="font-style:italic">Bagum v Hafiz</span> [2016] Ch 241 and the submission that the matter before him should be dealt with as if it were a partnership matter arising under section 39 of the Partnership Act 1890 which meant that a sale on the open market should be preferred to a sale to Sally at a market price, which is what Sally proposed.  When it came to how he should address the risk of a court valuation being less than might be realised on an open market sale he expressed the following conclusions: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“50.   In my judgment, in deciding what order to make under section 14 TOLATA in this case, one of the key matters to take into account is the degree of certainty I can have as to the price I might set for the Farm Land to be bought by Sally being the "true" value of the land. That is to say I must consider how great the risk is that any price I set might turn out to be too low with the result that Karim will receive less than she would do on an open market sale. If I set the price too high, there is no risk to Karim: either Sally will purchase at that price and Karim will have received more than she would on an open market sale or Sally will decline to purchase and the open market sale price will be achieved. As I say this is a key matter, however, I accept the submission of Ms Taskis that it is not a threshold matter that is to say I do not have to be satisfied that there is no risk to Karim that she will not receive full value before I could make an order permitting Sally to purchase at a particular price. That would be to impose on myself an obligation to make an order to obtain the best price for the beneficiaries as a whole, which is a constraint that I am not under in contrast to the position of the trustees.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">51.  One way to reduce the risk would be simply to adopt the higher of the 2 valuations for the Farm Land, being that given by Mr Gooderham on behalf of Karim, and provide that Sally could purchase at that price. However, in my judgment that is not appropriate. It is necessary to consider the reason for the differences in valuation between Mr Gooderham and Mr Alexander. If, as is the case in respect of some items, the experts each hold entirely justifiable but different views on certain elements of the valuation, in particular those items which are a matter of professional judgment but which are not clearly capable of mathematical or scientific support, in my judgment I should err on the side which results in higher figures for the value as that reduces the risks involved.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">He then considered the expert evidence as to valuation and resolved such differences as there were between the two experts.  Mr Gooderham (for the executors) valued the farm at £3,453,000, and Mr Alexander (for Sally) valued it at £3,118,000), a roughly 10% difference.  On the main points in dispute he preferred Mr Alexander’s figure for one particular block of land on the footing that Mr Gooderham had not allowed for access difficulties (which Mr Gooderham accepted would have a depressing effect on his figure) and had not explained why a given comparable, in respect of which the valuers had agreed a figure, was not the best comparable for those purposes.  This was the sort of assessment of value that courts carry out on a daily basis.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">He then turned to the other area of dispute, namely hope value attributable to certain buildings on the land.  The experts accepted that some hope value should be attributed to the land to reflect the possibility of future development.  Both experts had provided figures for that value.  Neither had said that the only way to sell the land was to sell at a base value plus some overage to recoup any further development benefits.  The desirability of such a sale is a material aspect of Mr Darton’s case.  The judge went through the various disputed elements and decided them variously in favour of one or other of the parties.  In relation to some he expressly carried out his previously expressed intention to err in favour of the sellers in the case of differences.  In others he preferred Mr Alexander’s approach on the basis of the sort of assessment with which the courts are well familiar.  Having then considered other discretionary factors he summarised his conclusions as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:0.56in">“100.   In exercising my discretion as to what order should be made, I therefore take into account the following:  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">I am being asked to make an "unusual" order; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">only a sale on the open market will provide the definitive test as to what the Farm Land is actually worth; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">however, in my judgment, the correct price for the Farm Land to be purchased by Sally if she is to have the opportunity to purchase first before the Farm Land is put on the open market can be determined with sufficient accuracy to reduce the risks of Karim not receiving proper value for her interest in the Farm Land; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">that price is £3,245,000; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(e)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">neither expert expressed the opinion that selling the Farm Land on the basis of a hope value rather than on the basis of no hope value but overage would be an incorrect way to go about the sale, indeed both were instructed to value without it being suggested that they should go down the hope value route. Mr Gooderham elected to do so and Mr Alexander followed; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(f)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">the purpose of the trust was so that the Farm Land could be farmed by members of the Kingsley family; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(g)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">a sale to Sally will allow the Farm Land to continue to be farmed by a member of the Kingsley family and will allow her to preserve her livelihood; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(h)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">Karim's interest is now purely financial; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(i)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">Roger's 2 apparent concerns as to the continuation of the farming business by members of the family and financial security for his wife and daughter would be met by a sale to Sally; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(j)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">I do not think that Sally's alleged bad conduct in the early days following Roger's death is a factor which I ought to take into account, even if (which I have not) I had determined that she had been guilty of the same; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(k)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">I do take into account that Sally made an offer very close to the "right" price in September 2018 which was backed by proof of funding from Barclays; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(l)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">I cannot be certain that if Sally purchased the Farm Land she would definitely farm it as it is and would not seek to develop it or sell part of it for development, but there is no evidence of her having any actual deal in mind for the Farm Land or that there is a deal which will result in her benefitting at the expense of the other beneficiary, effectively Karim; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.23in">(m)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:1.00in">I am left uncertain about how the funding of Sally's proposed purchase is actually going to work and cannot be certain that she will not have to enter into some arrangement (if she has not already) with some third party to complete the purchase which arrangement might include a sub-sale of some part of the Farm Land or some deal to develop some part of it.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.76in">101</num>
+	  <content>
+	    <p style="margin-left:1.76in;margin-right:1.00in;text-indent:0.5in">…  in the exercise of my discretion, I am prepared to make an order permitting Sally a period of 2 months to complete the purchase of the Farm Land based on the price of £3,245,000. I limit it to this period on the basis that this will allow sufficient time for such a purchase to complete given that, in order to raise the funding which will be necessary, Sally is going to have to undertake the usual searches even though she personally knows all about the Farm Land.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.76in">102</num>
+	  <content>
+	    <p style="margin-left:1.76in;margin-right:1.00in;text-indent:0.5in">If at the end of that 2-month period, the sale has not completed, the Farm Land will have to be put up for sale on the open market. Both Sally and Karim will be entitled to bid for the Farm Land or any part of it, as it appears that it might well be appropriate to sell it in lots if it is going to be sold on the open market. Given the level of distrust that there is between Karim and Sally, it would seem appropriate that the sale on the open market should be conducted under the supervision of a court appointed receiver, but I will hear further submissions on this before making any direction to that effect.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Thus he gave Sally the first opportunity to purchase the land at a cost based on the specified market value.  The mechanism he ordered was one which allowed her to acquire the farm on paying half that sum to the executors, making allowances for certain other matters which are not material.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">So far as the occupation rent is concerned, the judge decided that Sally was not and had not since the death been in personal occupation of the farm.  She occupied qua partner for the purposes of winding up the partnership.  He allowed a sum in the partnership accounts reflecting a rent paid or to be paid by the partnership for the winding up period. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Arising from this, the Grounds of Appeal were as follows. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;margin-right:0.00in;text-indent:-0.01in">Ground 1  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">This ground goes to the form and nature of the order made by the judge below as to the sale of the farm to Sally.  The order made was in the following terms (so far as relevant): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:0.00in">“IT IS ORDERED THAT: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.25in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="text-decoration:underline">Order for sale</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:0.76in">1.  The Trustees [defined as the executors and Sally] shall sell the Properties to the First Defendant on the terms set out below. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.50in;text-indent:-0.25in">1.1</num>
+	  <content>
+	    <p style="margin-left:1.50in;margin-right:1.00in">The value of the Properties for this purpose is £3,245,000.  The value of the Claimants’ beneficial interests in the Properties is accordingly £1,622,500. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.50in;text-indent:-0.25in">1.2</num>
+	  <content>
+	    <p style="margin-left:1.50in;margin-right:1.00in">The sum which the First Defendant is to pay over to the Trustees from which the Trustees will discharge the interests of the Claimants in the Properties (“the Price”) is the value of their interests, above, net of [certain immaterial payments].  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.50in;text-indent:-0.25in">1.3</num>
+	  <content>
+	    <p style="margin-left:1.50in;margin-right:1.00in">[Completion date to be 31 August 2019] </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.50in;text-indent:-0.25in">1.4</num>
+	  <content>
+	    <p style="margin-left:1.50in;margin-right:1.00in">Upon receipt of payment by the First Defendant in accordance with paragraph 1.3 above the Trustees will execute all those documents and take all such steps as the First Defendant may reasonably require for the purpose of transferring those interests to herself. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.50in;text-indent:-0.25in">1.5</num>
+	  <content>
+	    <p style="margin-left:1.50in;margin-right:1.00in">If the Claimants failed to execute the necessary documents, the court will execute those documents on their behalf.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Paragraphs 2, 3 and 4 provide for a sale in the open market, with the sellers having liberty to bid, in the event of Sally not acquiring the properties pursuant to paragraph 1. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">It is common ground that under TOLATA the court cannot make an order that one beneficiary sells his or her beneficial interest to another – see <span style="font-style:italic">Bagum v Hafiz, </span>supra.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.00in">Mr Darton’s submission on this order is that it is an order which that principle bars because it cannot be made under the Act. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In my view there is nothing in this point.  The order made might at the end of the day have the effect that Sally is entitled, in substance, to acquire the beneficial interest of the executors in the farmland, but that is the effect, not the legal reality of the order.  Paragraph 1 of the order makes it quite clear that the Properties as a whole are to be sold to the first defendant (Sally).  That is an order for sale of the whole legal and beneficial interest, which is certainly within the court’s powers to order under TOLATA.  What then follows is a mechanism under which Sally discharges the price by paying only half of it to the executors.  That does not make it any less a sale of the legal estate carrying the beneficial interest.  As a matter of conveyancing, the order technically, and in substance, is an order for the sale of the properties and not for a sale of the executors’ beneficial interest in the properties.  The economic effect of the order does not affect that conclusion.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">This view is borne out by the judgment of Briggs LJ in <span style="font-style:italic">Bagum</span>: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“20.  … I acknowledge that, save perhaps for certain tax consequences, a sale by trustees of the trust property to beneficiaries A and B has much the same economic effect as a compulsory transfer of beneficiary C's interest to beneficiaries A and B, in exchange for money. But it does not follow from the fact that one type of transaction lies outside the functions of a trustee that another type of transaction must do so as well, merely because it has broadly the same economic effect. A sale of the trust property to particular beneficiaries is merely one example of the trustees' undoubted power of sale. It occurs, for example, wherever trustees sell in the open market, and a beneficiary is the successful bidder.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">On its true construction the judge’s order is one for the sale by the trustees of trust property.  That is enough.  Ground 1 therefore fails. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;margin-right:0.00in;text-indent:-0.01in">Ground 2 </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Ground 2 acquired a slightly shifting character during the course of this appeal.  Ground 2 in the Grounds of Appeal proceeds from the decision in <span style="font-style:italic">Bagum</span> and is predicated on the assumption that an order under TOLATA which provided for a sale to a beneficiary at a court-assessed price, as opposed to an open market sale with liberty to bid, could only be justified if the risk that the assessed price might be lower </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.00in">than a market sale price was “low”.  It was said that the judge erred in holding that that point (implicitly dealt with in paragraph 100(c)) was merely one of the discretionary factors which had to be weighed in the balance in deciding whether to make such an order.  It goes on to aver that on the evidence the risk was far from “low”, and in the circumstances the court was not entitled to go on to consider discretionary factors. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">At times at the hearing of the appeal Mr Darton put his case even higher.  He said that the court could not move on to consider other discretionary matters if there was an “appreciable” risk that the price paid was not what would be achieved by an open market sale. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">On both ways of putting the case the point had the quality of a threshold point.  It was of the essence of Mr Darton’s case that unless that threshold was crossed, the court simply could not order a sale to a beneficiary and assess the price.  His case was that the absence of a “low risk” assessment, or of a “no perceptible risk” assessment trumped all other considerations.  He based this proposition on <span style="font-style:italic">Bagum</span> and on Article 1 Protocol 1 of the European Convention on Human Rights as enacted by the Human Rights Act 1998.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">It is as well to start with what TOLATA says.  Sections 14 and 15 provide: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.01in">“14.  (1) Any person who is a trustee of land or has an interest in property subject to a trust of land may make an application to the court for an order under this section.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.01in">(2) On an application for an order under this section the court may make any such order— (a) relating to the exercise by the trustees of any of their functions (including an order relieving them of any obligation to obtain the consent of, or to consult, any person in connection with the exercise of any of their functions), or (b) declaring the nature or extent of a person's interest in property subject to the trust, as the court thinks fit. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">15.  (1) The matters to which the court is to have regard in determining an application for an order under section 14 include— (a) the intentions of the person or persons (if any) who created the trust, (b) the purposes for which the property subject to the trust is held, (c) the welfare of any minor who occupies or might reasonably be expected to occupy any land subject to the trust as his home, and (d) the interests of any secured creditor of any beneficiary." </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">"(3) … the matters to which the court is to have regard also include the circumstances and wishes of any beneficiaries of full age and entitled to an interest in possession in property subject to the trust (or in the case of a dispute) of the majority (according to the value of their combined interests).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">One of the orders a court can make under section 14 is an order for sale of the trust property. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In <span style="font-style:italic">Bagum</span> the Court of Appeal considered a similar situation to that in the present case save that the property was a house in Islington and not a farm.  One of three coowners (A, B and C) sought an order from the court that C (who had moved out) should sell his interest to B.  At first instance it was held that such an order could not be made under TOLATA, but the court indicated that B could have the opportunity to purchase the whole property at a price to be determined by the court, in default of which there should be sale of the property on the open market.  The Court of Appeal upheld both determinations.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In his judgment, with which the other members of the court agreed, Briggs LJ considered the width of the discretion given to the court under section 15 and observed that it allowed the court to permit the trustees to do things that, as trustees without the court’s blessing, they could not do.  One of those things was to effect a transaction which might not necessarily get the best price, because he repudiated the notion that such a duty always prevailed.  At paragraph 19 he records the submissions of counsel to the effect that the court had “no power” to direct a sale to a beneficiary which would be contrary to what counsel said was a well-established rule of equity that the trustees had to get the best price for the land, and that the interests of one beneficiary should not be advanced over another.  This submission presumably invoked section 6(6) of TOLATA which provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.01in">“(6)  The powers conferred by this section shall not be exercised in contravention of, or of any order made in pursuance of, any other enactment or any rule of law or equity.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Briggs LJ rejected that submission.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“21.  As for the second and third submissions, I shall assume for the purposes of argument rather than by way of decision that the two principles relied upon by Mr. Woodhouse may constitute what are referred to in section 6(6) as rules of equity although, with respect to the parliamentary draftsman, I would regard equity as laying down principles rather than rigid rules. But the purpose of section 6(6) is not to define the extent of the trustees' powers or even functions, but rather to prohibit the trustees from exercising them in certain ways. It is in marked contrast with the effect of section 14(2), by which the court is given the widest discretion to make orders relating to the exercise by the trustees of any of their functions, having regard in particular to the non-exclusive list of the matters to which the court is to have regard, set out in section 15(1) and (3). If, for example, it was intended that the court should be constrained by an overriding requirement that the trustees obtain the best price for the land, it might be thought surprising that this requirement was not included in section 15(1) or (3), even as a relevant rather than decisive matter.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-right:0.65in">He dealt with the width of the discretion in paragraphs 23 and 24: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“23.  More generally, I consider that the clear object and effect of sections 14 and 15 is to confer upon the court a substantially wider discretion, exercised upon the basis of wider considerations, than might be enjoyed by the trustees themselves, acting without either the consent of their beneficiaries or an order of the court. For example, section 15(1)(c) requires the court to consider the welfare of a minor in occupation of the trust property as his home, whether or not that minor is a beneficiary of the trust. Section 15(1)(d) requires the court to have regard to the interests of secured creditors (rather than merely to respect their strict legal rights). As I have illustrated, section 15(1)(a) may bring into play the intention of the person who created the trust that benefits be conferred upon particular beneficiaries. All this departs from the general rule of equity which requires the trustees singlemindedly to advance the interests of the beneficiaries as a class, without preferring some of them over others.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:0.00in">……. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">24.  None of this means, of course, that the court will act unfairly, unjustly or capriciously as between beneficiaries in giving directions to trustees under section 14(2). It simply demonstrates that, in exercising its powers in circumstances where, necessarily, the beneficiaries will be in dispute with each other about what should be done with the trust property, the court is not rigidly constrained by those rules of equity which may, pursuant to section 6(6), constrain the trustees themselves.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Those paragraphs are plainly inconsistent with any sort of threshold of the kind propounded by Mr Darton.  A rejection of the notion that the court has “no power” to order a sale which does not necessarily get the best price (which is plainly what Briggs LJ does) is logically inconsistent with a threshold whether based on a “low” or “appreciable” risk.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The idea that a “low risk” is significant probably comes from what Briggs LJ said in paragraph 32: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“32.  It is plain that the Judge recognised that Mr. Hai did not wish to be bought out by his mother and his brother, and she took into account his concern about the risk that a sale to Mr. Hafiz at a valuation by the court might not achieve the highest price. Nonetheless, she was entitled to conclude that the fact that the Property was one of a number of similar properties in Copenhagen Street, Islington, meant that the risk of an undervaluation by an expert was low, due to the large number of available comparables: see paragraph 24.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.00in">That reference does not connote some sort of threshold.  It reflects the fact that the existence of a “low risk” of undervalue was significant in considering the discretionary factors that have to be borne in mind.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Accordingly, the case of <span style="font-style:italic">Bagum</span> is not authority for the proposition that there is some sort of valuation threshold to be overcome.  On the contrary, it is authority for the proposition that valuation, and the risk that the court-assessed value would not necessarily be the same as the price in an open market sale, was clearly found to be a discretionary matter.  That is what the judge below had found, and Briggs LJ says that her approach to the exercise of the discretion was entirely appropriate. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Mr Darton had another string to his bow in support of his threshold point.  He relied on Article 1 of Protocol 1 of the Human Rights Convention (“A1P1”), which he said made it obligatory to remove the risk of an undervalue in a court value assessment.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.00in">A1P1 reads: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:0.26in">“Every natural or legal person is entitled to the peaceful enjoyment of his possessions.  No one shall be deprived of his possessions except in the public interest and subject to the conditions provided for by law and by the general principles of international law.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.00in">Mr Darton said this Article was engaged where there was a prospect of taking away a beneficial interest in property, and was contravened where there was a perceptible risk of an undervalue.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Ms Shea for Sally accepted that Article 1 was engaged by the processes of section 14 and 15 of TOLATA – see <span style="font-style:italic">National Westminster Bank v Rushmer </span>[2010] 2 FLR 362.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.00in">We agree that that is capable of being the case, though in some instances, where an order merely substitutes money for property at full value it is hard to see how there is any deprivation as opposed to a transposition of an interest in one property (land) to another (money).  However, where it is engaged then by and large compliance with section 15 will satisfy the Article (see <span style="font-style:italic">Natwest v Rushmer </span>at<span style="font-style:italic"> </span>para 50).  In this case there is, on the judge’s findings, no breach because there is no deprivation of the executors’ property.  They will receive value as determined by the court in a proper and fair manner.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In <span style="font-style:italic">James v United Kingdom </span>(1986) 8 EHRR 123 the ECHR measured the propriety of the Leasehold Reform Act 1967, which provided for the compulsory acquisition of freeholds at the behest of tenants, as against the provisions of A1P1.  That is some distance removed in its subject matter from the present case.  However, it has generally applicable remarks.  In particular, the court did not state that there is an infringement if there is any prospect of non-receipt of full value in any given case.  What the Court said there was:   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“54 … The Court further accepts the Commission’s conclusion as to the standard of compensation: the taking of property without payment of an <span style="font-style:italic">amount</span><span> </span><span style="font-style:italic">reasonably related to its value</span> would normally constitute a disproportionate interference which could not be considered justifiable under Article 1 (P11). Article 1 (P1-1) does not, however, guarantee a right to full compensation in all circumstances. Legitimate objectives of "public interest", such as pursued in measures of economic reform or measures designed to achieve greater social justice, may call for less than reimbursement of the full market value. Furthermore, the Court’s power of review is limited to ascertaining whether the choice of compensation terms falls outside the State’s wide margin of appreciation in this domain.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The emphasis is mine.  Those words do not connote an absolutist approach to questions of value which would require testing the market in all cases of sale.  They are consistent with a proportionate approach to valuation which entitles states to put in place a system for providing proper value short of full market testing.  There is nothing in A1P1 which drives the court to require full market testing in cases where the discretion under section 15 is being exercised, or requires that any exercise of discretion has indisputably to preserve full value, which is what Mr Darton’s submissions would require.  If he were right then (to take another example) the trustees would not be permitted to allow a minor beneficiary (or indeed a minor nonbeneficiary such as a child of a beneficiary) to continue to reside in the property (something apparently contemplated by section 15)  if there was a risk that the property would be worth less on an ultimate sale than it is worth at the time of the exercise of the discretion.  I do not consider that such an exercise of discretion would be inconsistent with A1P1, which demonstrates that there is no such absolute requirement of the kind which underpins Mr Darton’s threshold point. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Mr Darton sought to support his threshold argument by saying that it would remove the prospect of litigation in the cases to which it applied.  If his threshold did not exist then one would be trapped in a trial (to use his terminology) with all the other factors which are said to come into play.  For my part I do not see how this point helps him.  It is true that if one introduces an absolute requirement before a discretion can be exercised then some trials will be shorter where the requirement is not fulfilled, but that truism is no justification for imposing the absolute requirement in the first place.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In the light of the foregoing Ground 2 also fails. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;margin-right:0.00in;text-indent:-0.01in">Ground 3</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">This ground attacks the exercise of the judge’s discretion on the basis that the judge took irrelevant matters into account and left relevant matters out of account, and ended up being plainly wrong. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Mr Darton’s skeleton argument listed a number of errors and he did not develop them all in argument.  Some of them were standalone criticisms of some of his specific findings in paragraph 100, and some of them had that quality but also went to a different way of putting his valuation point as a discretionary point.  I will take the latter points first before turning to the former. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Under this head the risk that a court assessment might not reflect a proper markettested price resurfaces as one of the factors that the judge has to take into account in deciding whether to order a sale giving a beneficiary a chance to purchase at a courtassessed market price.   It is correct that the court must bear this factor in mind as one of the discretionary factors that have to be considered.  It was the fact that this risk was considered to be low in <span style="font-style:italic">Bagum</span> that contributed to the decision to give the beneficiary an opportunity to purchase in that case.  As appears above, that was a </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in;text-indent:-0.50in">discretionary matter, not a threshold matter.   The judge apparently treated the matter that way – see his paragraph 100(c). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Mr Darton criticised the judge’s findings as failing to quantify the risk of an undervaluation, or that Sally might make a profit from redevelopment of the farm, and so he could not properly weigh those factors.  It is true that the judge did not quantify the risk of an undervalue in something like percentage terms, or in categories such as low/medium/high.  However, he was aware of what was said in <span style="font-style:italic">Bagum</span> because he cites extensively from it.  Paragraph 50 of his judgment demonstrates that he was plainly aware of the risk question, and regarded it as a “key matter”, and paragraph 51 demonstrates one of the techniques that he proposed to adopt to reduce that risk (erring in favour of the executors’ expert’s figures).  He was satisfied that valuing on a hope value basis was an appropriate way of approaching the question and arriving at a proper figure, noting that neither expert suggested otherwise or suggested that a sale at a base price with an overage was the proper way of proceeding (paragraphs 33 and 61), and recording the evidence of Sally’s expert Mr Alexander that including an overage clause into a sale could make a sale more difficult.  At paragraph 62 he recorded: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“62.   In my judgment, in light of the evidence that I have heard, it is an entirely appropriate approach to take to value this land on the basis of it having hope value. The alternative approach that overage should be sought would not be inappropriate, but that was not advanced by either expert as the correct or only way forward.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">It is therefore apparent that the judge had all the relevant factors in mind and came to his conclusion that he could “arrive at a price with sufficient accuracy to reduce the risks of Karim not receiving proper value for her interest in the Farm Land” (paragraph 100(c)).  He is effectively saying that the risks were not great enough to make the exercise ostensibly unfair.  He did not have to assess them in percentage or other terms; his conclusion, in its context, is clear enough.  He was confident that he could get close enough so as not to cause injustice. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">That is a conclusion that he was entitled to reach on the basis of the other terms of his judgment and there is no basis for challenging it in this court.   It matters not that his valuation exercise might have been more complex than that in <span style="font-style:italic">Bagum</span>.  He apparently took the view that it was not so complex as to be unreliable, and he was entitled to do </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:0.00in">so, particularly bearing in mind his erring in favour of the executors on certain disputed matters (which Mr Darton told us he would not quibble with as an approach). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Mr Darton then advanced a series of other criticisms.  Before us (though not in his skeleton argument) he argued that the judge did not follow his own guidance in preferring the executors’ expert where there were matters of assessment.  The guidance was that set out in paragraph 51. The main complaint was that the judge preferred Mr Alexander’s evidence on one particular point.  As part of the hope value the valuers provided for sums that a developer would be likely to allow for as the cost of providing a water supply to the limited buildings which might be made available for development.  Mr Gooderham, the executors’ valuer, provided a figure of £20,000 on the basis that a borehole would suffice.  Mr Alexander for Sally allowed for £75,000 for a mains supply.  That had the effect of reducing the hope value.  The judge expressed himself as preferring the latter. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Mr Darton’s point was that that was a matter of assessment and fell within the area where the judge had said he would err in favour of the executors.  In my view that is not necessarily the case.  There was no dispute as to the estimated cost of the works (whichever set was to be undertaken).  The dispute is as to what a developer would be likely to require.  That is in not quite the same category as the actual valuation element of the calculation.  It requires a factual assessment of what a builder is likely to require, albeit no doubt influenced by the opinions of the valuers.  If the judge came to the conclusion that he simply did not think a developer would be content with a borehole and would want to pay as little as possible (which the judge found) then even within his own guidelines he was entitled to make that finding and calculate value accordingly.  I do not consider that this feature amounts to an internal inconsistency.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In relation to most of the other valuation disputes the judge followed his own guidance.  He preferred Mr Alexander’s evidence based on a particular comparable (paragraph 58), but that is because Mr Gooderham did not really explain why the comparable, in the same village, was not a good one and he had not addressed access issues in relation to the part of the land in question. That does not contravene his own guidance either.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In the circumstances this challenge to the exercise of the discretion fails. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The bulk of the rest of the criticism takes us back to the findings about Sally’s intentions and funding plans, which have her intention to develop as the linking factor.   He draws attention to the express findings as to her incomplete evidence at paragraphs 100(l) and (m) and says that in those circumstances the judge could not rationally have come to the conclusion that he did in sub-paragraph (g) about Sally’s continuing to farm the land.   This “nagging doubt” was an important factor which pointed against there being a sale to Sally at a court-determined price, and further it fed through into the valuation in the manner I have described in paragraph 38 above.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The “nagging doubt” was not quite what Mr Darton wanted it to be.  The judge’s determination in sub-paragraph (l) relates to farming the land “as it is”.  That is doubtless a reference to the development which was considered by the valuers, which was a development of only some buildings on the land.  See also paragraph 95: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“I agree that there is at least some doubt raised as to whether Sally really intends to carry on farming the Farm Land <span style="text-decoration:underline">as it</span><span> </span><span style="text-decoration:underline">currently is.”</span> (my emphasis) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">There was, as I understand it, no question of the whole of the land being developed. There would still be land to be farmed after the development.  The judge was referring to doubt as to whether she would farm the whole of the land, as opposed to part of it, and this does not create any inconsistency with sub-paragraph (g).   The funding point in sub-paragraph (m) is related.  The judge was considering the possibility that Sally might need to sell or develop <span style="text-decoration:underline">part</span> of the land to repay the bank which was, on Sally’s evidence, providing the purchase funds.  For the same reasons as those just given, that is not inconsistent with sub-paragraph (g) either.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The conclusion which one reaches as to the “nagging doubt” factors is that the point was taken into account by the judge in his overall assessment, and without inconsistency.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Next Mr Darton sought to invoke section 39 of the Partnership Act 1890, which he said had the effect that there was a presumption in favour of a sale in the open market in relation to partnership property (<span style="font-style:italic">Benge v Benge </span>[2017] EWHC 2124 (Ch)), and said that since a sale of partnership property will usually be the subject of the exercise of the TOLATA jurisdiction in the event of the court’s jurisdiction to order a sale being invoked, it would strange if the same test did not apply under the latter statute.  The judge rejected this proposition, saying that while the section 39 position might be analogous, it was no more than that and its provisions were very different from those of TOLATA.  In my view the judge was quite right not to apply the partnership provisions by analogy.  The factors to be taken into account under section 15 are very different, and in any event the land was not partnership property. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The other points of detail in Mr Darton’s skeleton argument were not developed by him in his oral argument and, having considered them for myself, I do not consider that there is anything in them so far as the attack on the discretion is concerned. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The conclusion which arises out of this is that Ground 3 fails.  The judge did not err in any of the ways which would allow Mr Darton to impeach the exercise of the discretion.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;margin-right:0.00in;text-indent:-0.01in">Ground 4 – occupation rent </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">This is an issue which has been allowed to get unnecessarily difficult.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">In the course of dealing with issues which arose on the partnership accounts the judge dealt with a claim to occupation rent which the executors said was payable to them by Sally in respect of her occupation of the farm since the death.   During the proceedings the executors applied for an interim payment and after agreement had been reached on an appropriate rental Sally tendered a sum of over £65,000 for (among other things) occupation until September 2018 (judgment paragraph 123).  On 11<span style="vertical-align:super;font-size:smaller">th</span> October 2018 Deputy Master Kaye ordered Sally to pay interest on the sum paid for occupation rent for the period to 30<span style="vertical-align:super;font-size:smaller">th</span> September 2018, namely £58,297.79, and £1,495 “by way of an interim occupation rent for [Sally’s] use and occupation of the farm land”.  Those sums were calculated as 50% of the monthly rental minus mortgage repayments.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The executors’ case was that Sally was obliged to pay them an occupation rent by virtue of an exclusion, or deemed exclusion, by Sally (judgment paragraph 130).  The judgment then records that in final submissions Sally contended that the occupation was by the partnership so the rent ought to be included in the partnership accounts.  Mr Darton disputed that.  Further written submissions were then invited, in the course of which Sally’s counsel (Miss Taskis) relied on <span style="font-style:italic">Lie v Mohile </span>[2014] EWHC 3709 as establishing that after a dissolution a partnership had an implied licence to continue to occupy the land under the implied licence which it had had pre-dissolution until it was wound up or a receiver was appointed.  She maintained that Sally was occupying on behalf of the partnership with the result that she was entitled to an equal rent to that which she had paid, so that twice the lump sum paid to the executors plus twice the periodic payment should be shown in the post-dissolution partnership accounts.  Mr Darton responded with submissions which resisted the attribution of an occupation rent to the partnership accounts. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The judge decided </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“130. In my judgment, Mr Darton is wrong to view this as a case of an occupation rent being ordered to be paid by one coowner in possession of a property to the other co-owner on the basis of Sally having excluded the Estate from occupation of the Farm Land. Rather, in accordance with the principle set out in <span style="font-style:italic">Lie v. Mohile</span> (supra), the occupation was by the Partnership for the purposes of the Partnership and it was a right to occupy as against both of the co-owners of the Farm Land.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">That may or may not involve a finding of fact as to the character of Sally’s occupation.  It is not clear whether the judge is saying that on the facts Sally was still occupying in right of the partnership, under the <span style="font-style:italic">Lie v Mohile</span> implied licence, or whether he is saying that because there was an implied licence available in law for the period after the termination, therefore she was occupying qua former partner under that licence.   In the light of what the judge went on to say in paragraph 137 (as to which see below) it seems to me that he was adopting the latter view.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Puzzlingly, the judge then turned to consider the effect of the Deputy Master’s order, and held that in the circumstances it must, on it true construction, be construed as being one ordering her to pay “for her occupation as carrying on the Partnership.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“131.   In my judgment, the difficulty that arises in this case stems from the order of Deputy Master Kaye. I have not seen any judgment setting out the basis on which she made this order. I make no criticism of the Deputy Master as it appears that matters were presented to her by both sides on the basis that the Estate was entitled to an occupation rent. She does not appear to have had the decision in <span style="font-style:italic">Lie v. Mohile </span>(supra) drawn to her attention. Had she done so, it seems likely to me that she would have concluded that until a receiver was appointed or the Partnership was finally wound up, the Partnership was entitled to continue to occupy the Farm Land on the terms of the previous implied licence. Those terms did not include the payment of any rent or licence fee (the rent figure appearing in the accounts relating to land which was not owned by the partners). She would therefore have been likely to have declined to make an order requiring payment of an "<span style="font-style:italic">interim occupation rent</span>" by Sally.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.01in">132.  However, there has been no appeal against Deputy Master Kaye's order, rather its terms have been complied with. In my judgment on the true interpretation of that order, construed against the background facts, the order being made for Sally to pay the interim occupation for her "<span style="font-style:italic">use and occupation of the Properties</span>" was for her occupation as carrying on the Partnership. It was not for her personal occupation as one coowner as against another co-owner. The Deputy Master was, in effect, setting a rent that ought to be paid by the Partnership, one half of which was to be physically paid across to the Estate. The rent that she was setting was £2,990 per month.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">He then held that it followed that the rent paid to the estate should be included as a cost to the partnership in the partnership dissolution accounts, and it did not matter that hitherto no such matter had appeared in the partnership accounts.  He further went on to hold that it would not be equitable for Sally, as co-owner of the land, not to receive the same sum as the executors had received, so a further equivalent sum (£2,990 per month) should also be included in the partnership accounts.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Then he considered an alternative interpretation of the Deputy Master’s order, namely that when she was ordering “an interim occupation rent” to be payable “until the trial of the action or further order”, she was merely saying that the sums were payable for the time being, and the issue of any occupation rent was for the trial judge.  He observed that if that was the correct interpretation (as to which he had received no submissions) then it would follow that if the trial judge decided that no occupation rent was payable then that interim payment would be repayable.   He went on: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“137.  If this interpretation of Deputy Master Kaye's order was open to me (and I make no finding on this in light of the lack of any submissions), given the decision of David Richards J in <span style="font-style:italic">Lie v. Mohile</span> (supra), I would have found that the Partnership was under no liability for rent for the Farm Land, as the terms of the implied licence would continue until the winding up of the Partnership and those terms did not include the payment of any rent or licence fee for occupation of the Farm Land. The net effect of this would be that there would be no adjustment to the post dissolution accounts in respect of rent, but that the Estate would be required to give credit for the sums received (both the lump sum and the ongoing monthly sums) under the terms of Deputy Master Kaye's order.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">When the order came to be made after the trial, the executors accepted that the alternative view of the Deputy Master’s order should be adopted and as a result paragraph 13 of the order required the estate to repay the interim payments it had received, together with interest on them.   The order required dissolution accounts (not described as such, but that is what they must have been) to be drawn for the period ending with “the winding up of the Partnership business on 31<span style="vertical-align:super;font-size:smaller">st</span> August 2019” (paragraph 10).  Mr Darton told us, and I for my part accept, that the accounts provision was included because it implemented what the judge’s findings seemed to be, and not by way of an acknowledgment by the executors that Sally’s continued occupation had at all times been as a former partner winding up the business.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Mr Darton’s case is that the trial judge erred in his conclusion that an occupation rent was not payable by Sally.  His case was that the judge took <span style="font-style:italic">Lie v Mohile </span>too far as determining the character of Sally’s occupation and that it was actually Sally’s pleaded case that she owed an occupation rent.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">I consider that the analysis contained in the judgment betrays various errors.  The root error is a failure to consider the real question, which was a question of fact – in what right was Sally occupying the farm?  Whether or not she was occupying in order to wind up the partnership, or whether she was occupying in her own right is a question of fact.  <span style="font-style:italic">Lie v Mohile</span> is authority for the proposition that an implied licence is available to one co-owner as against another when the former is winding up the affairs of the partnership.  It does not follow from this authority that the availability of a licence means that Sally was inevitably occupying under such a licence contrary to the apparent finding of the judge.  It would be surprising if winding up the partnership took several years.  There is no indication that the judge considered that question of fact, and indeed no indication that any particular evidence was directed to it.   Mr Darton told us that there was no cross-examination on the point.  This may well be explicable on the basis of the pleaded case, to which I shall come.   Paragraph 130 of his judgment, coupled with paragraph 137,  suggests that he over-emphasised the significance of <span style="font-style:italic">Lie v Mohile</span> and therefore did not investigate the facts.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The next error was to suggest that the Deputy Master’s order posed some sort of difficulty.  It was an order made on an application for an interim payment.  No final findings would be made on that order, and in any event since the judge did not have a judgment from the Deputy Master he did not know what findings were made.  In fact, since there seems to have been little dispute on the occupation rent question it is highly unlikely that the Deputy Master delivered any meaningful judgment on the point anyway.  Furthermore, if the judge’s attention had been drawn to the material available for that hearing he would have been able to reach a different conclusion on the overall question.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">The answer to the occupation rent question seems to me to be relatively straightforward.  It starts with the pleaded case, which contains a straightforward admission of liability.  In paragraph 33 of the Particulars of Claim the executors pleaded: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.26in;margin-right:1.00in">“33.  Since 27 June 2015 the First Defendant has occupied the Farm to the exclusion of the Claimants and is thereby liable to pay mesne profits or an occupation rent in respect of this use.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.65in;margin-right:0.00in">That paragraph was admitted in paragraph 29 of the Defence, with a qualification as to the claimed allowability of certain immaterial deductions. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">That is capable of being an end of the matter.  There is no pleaded qualification about the occupation being for the purposes of the winding up of the partnership.  However, that that was Sally’s position is reinforced by her case put forward on the application for an interim occupation rent, most of which I suspect was not drawn to the attention of the judge.    The witness statement of Karim (available on the court file, but not in our bundles) supporting the application for an interim payment indicates that it seeks payment “in respect of [Sally’s] sole use and occupation of the Farm Land since Roger’s death”.  In her witness statement in answer  (which was in our bundles but was not cited to us), Sally said (at paragraph 20):  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.88in;margin-right:1.01in">“Furthermore, I accept the principle that Karim is also entitled to receive interest on [Roger’s partnership share] at the rate of 5% per annum by virtue of Section 42(1) Partnership Act 1890 <span style="text-decoration:underline">and an</span><span> </span><span style="text-decoration:underline">occupation rent in respect of my use and occupation of the Farm</span><span> </span><span style="text-decoration:underline">Land to the extent of her beneficial interest</span>.” (my emphasis) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Paragraph 5 of the claimant’s skeleton argument for that hearing (again available on the court file) refers to an open offer  by Sally to make an interim payment made in an identifiable letter.  Paragraph 5 of Sally’s skeleton argument refers to the fact that she had paid a substantial sum which “was inclusive of an occupation rent for the entirety of the period from the death of Roger Kingsley 30 September 2018”; and paragraph 6 complains about an error in the claimants’ draft order: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.88in;margin-right:1.01in">“Paragraph 5 contains an error in that the use and occupation of the Properties is that of the First, <span style="text-decoration:underline">not</span> the Second Defendant.” (Sally’s emphasis) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">Sally had made an open offer (which was in our papers, though we were not taken to it) dated 10<span style="vertical-align:super;font-size:smaller">th</span> September 2018.  The offer made in it was to settle the whole dispute, but parts were said to be open to separate acceptance.  One of the stated predicates of the offer was that the rent of Lodge Farm was £55,000 per annum, and another was: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.88in;margin-right:1.01in">“(8)  On the basis of Sally having traded at a loss since the date of Roger’s death, Karim is entitled to exercise her option under section 42(1) Partnership Act 1890 to receive interest at the rate of 5% per annum on the payment of the net amount.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.25in;margin-right:0.00in">The first element of the offer was: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.88in;margin-right:0.00in">“Re: the Farm Land </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.88in;margin-right:0.00in">Occupation rent - £55,000/2x3.25 years …” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-right:0.00in">That seems to me to be yet another acknowledgment that she was occupying personally and liable to pay an occupation rent.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">All that material seems to me to make it quite clear that Sally was not disputing her occupation for her own benefit since the death of Roger.  It may explain why there was apparently no particular evidence on the matter and makes it inappropriate and unnecessary to consider <span style="font-style:italic">Lie v Mohile</span>.  There is in my view no possibility of viewing her admissions as being admissions that an occupation rent was payable as a partnership debt. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">It follows from all this that in my view the Deputy Judge’s determination in relation to an occupation rent cannot stand, though to be fair to him it seems unlikely that he had all the material drawn to his attention.   On the material available to us it seems plain enough that Sally was occupying the land in her own right in circumstances under which she was obliged to pay an occupation rent as she herself admitted and pleaded.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">It therefore becomes necessary to consider what order should be substituted.  In other circumstances it might have been necessary to consider whether and from what period Sally was excluding the co-owners, and whether and to what extent she was actually winding up the affairs of the partnership so as to be entitled not to have to pay for that period.  However, in this matter we have the pleaded case.  Sally has accepted a liability to pay an occupation rent, and she should be held to that admission. It would seem to be a concession covering the period since Roger’s death.   Not only is it in the pleadings, it is reinforced by the open offer and the material deployed on the hearing before the Deputy Master.  The appropriate rate should be the rate underpinning the judge’s findings, which is not explicit but I suspect it is the rate proposed by Sally in her offer.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">I accept that this decision means that theoretically some of the accounts which have been prepared may have to be re-drawn, because they seem to be drawn on the footing that the partnership was continuing for the purpose of winding it up for the entire period up to the autumn of 2019, whereas Sally was not conducting partnership business for that period.  If there is a dispute as to that then that will be referred back to a Master. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.74in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in">I would therefore allow the appeal on Ground 4. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.25in;margin-right:0.00in;text-indent:-0.01in">Disposition </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.74in;margin-right:0.00in;text-indent:-0.50in">73.<span style="font-family:Arial"> </span>It follows from the above that I would dismiss the appeal on Grounds 1 to 3 and allow it on Ground 4.    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/>Moylan LJ.  <marker name="tab"/><span style="font-weight:normal">I agree </span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/><span style="font-weight:bold">Patten LJ.  </span><marker name="tab"/>I also agree </p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

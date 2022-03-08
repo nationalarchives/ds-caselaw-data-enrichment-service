@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1673"/>
+	  <FRBRuri value="ewca/civ/2020/1673"/>
+	  <FRBRdate date="2020-12-10" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1673"/>
+	  <FRBRname value="B (A Child)(Designated Local Authority)"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1673/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1673/eng"/>
+	  <FRBRdate date="2020-12-10" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1673/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1673/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:24:48" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1673/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1673</uk:number>
+	<uk:cite>[2020] EWCA Civ 1673</uk:cite>
+	<uk:hash>b719ef852ef90453f0e70f38359f60492b06b6f673faf477e28b6f05be0dd029</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1673/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.50in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1673</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>B4/2020/0507</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE FAMILY COURT SITTING IN MANCHESTER</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">HHJ Jordan</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">MA19C00910</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 10/12/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE KING</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE ASPLIN</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE LEWIS</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">B (A CHILD)(Designated Local Authority) </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Nick Goodwin QC and Shaun Spencer</span> (instructed by <span style="font-weight:bold">Salford City Council</span>) for the </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Appellant</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Brendan Roche QC and Fiona Holloran </span>(instructed by<span style="font-weight:bold"> Lincolnshire Council</span>) for the <span style="font-weight:bold">3</span><span style="font-weight:bold;vertical-align:super;font-size:smaller">rd</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Respondent </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Frances Heaton QC and Kerry Holt </span>(instructed by<span style="font-weight:bold"> Cheshire East Council</span>) for the <span style="font-weight:bold">4</span><span style="font-weight:bold;vertical-align:super;font-size:smaller">th</span><span style="font-weight:bold"> Respondent</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing date: 28th October 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-size:10pt">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties or their representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website. The date and time for hand-down is deemed to be</span>
+	<span style="font-weight:bold;font-size:10pt"> Thursday, 10 December 2020 at 10:30am.</span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.70in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lady Justice King:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This is an appeal from an order made by HHJ Jordan at the Manchester Civil Justice </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Centre on 20 February 2020, by which Salford City Council (‘Salford’) was designated as the local authority in respect of a care order which was made the same day in relation to a girl (‘J’) who was then 15 years old. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Each time a care order is made pursuant to Section 31 Children Act 1989 (CA 1989), the court must designate the local authority in whose care the child, or children, in question will be placed. The designated local authority is thereafter not only subject to various statutory duties in relation to the child in question, but also bears the consequent financial responsibility for him or her. At one end of the scale this may mean low key support for the parents of a child living at home who is in need of some local authority assistance, and at the other, as here, secure accommodation for a child who has become a danger to herself or others at considerable cost. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 31(8) CA 1989 provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in;text-indent:0.00in">The local authority designated in a care order must be: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">a)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:-0.00in">The local authority within whose area the child is ordinarily resident; or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">b)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:-0.00in">Where the child does not ordinarily reside in the area of a local authority, the authority within whose area any circumstances arose in consequence of which order is being made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 31(8) CA 1989 is qualified by section 105(6) CA1989 which provides that when determining the ordinary residence of a child, any period in which he or she is being provided with accommodation by, or on behalf of, a local authority shall be disregarded. (Section 105(6)(c)) (‘the disregard’) </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This case turns on whether J was accommodated by Lincolnshire City Council (“Lincolnshire”) for the purposes of the disregard provision. It is common ground that during the course of 2018-2019 J lived, first in Lincolnshire with her adoptive father (“the father”), then in Cheshire East with her birth brother (“DB”) and finally in Salford with her birth mother (“the mother”). The appeal centres upon a dispute between these three local authorities as to whether those periods of time when J lived with DB and with her mother should be disregarded for the purposes of determining her ordinary residence and therefore in designating the appropriate local authority.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge held that the appellant, Salford City Council (“Salford”), the authority which made the ultimate application for a care order, should be the designated local authority. Salford now appeals following permission having been granted by Peter Jackson LJ. Salford submits that the local authority which should properly have been designated by the judge was Lincolnshire where J spent ten years of her life and where her father, the only person having parental responsibility, continues to live.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In determining how, if at all, the s105(6) disregard provision bites in the present case it is necessary to consider: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Whether J had become an accommodated child pursuant to s20 CA 1989 and if so, when? That in turn requires the court to decide: (a) when J left Lincolnshire </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in;text-indent:0.00in">upon the breakdown of her relationship with her father and moved to stay with DB in the Cheshire East area, did she become an accommodated child under Section 20(1) CA 1989, notwithstanding that there had been a failure on the part of Lincolnshire to complete the relevant formalities; and (b) if so, when she thereafter moved to live with the mother in the Salford local authority area did that remain the case? </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:0.00in">If J was not an accommodated child when living with DB (and therefore not accommodated when living with the mother): </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Did J live with either DB or her mother under a private <span style="text-decoration:underline">fostering </span>arrangement pursuant to S66 CA 1989? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Alternatively, were either, or both, of the placements private <span style="text-decoration:underline">family</span> arrangements? </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in;text-indent:0.00in">(my underlining) </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-style:italic">A rapid and not over sophisticated review? </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Before turning to the merits of the appeal, I intend to deal with a case management issue raised by Lincolnshire. Mr Roche QC on behalf of Lincolnshire submits that, even if it could be said that the judgment lacked detailed analysis, the authorities require the court to conduct only a rapid and not oversophisticated review when faced with a dispute as to the designation of a local authority. This, he said, the judge had done and this court should not now go behind the judge’s decision. In support of this submission, Mr Roche raises an important matter, namely the need to prevent a repeat of what has happened in this case, that is to say, the expenditure of significant time, effort and cost by each of the three hard-pressed and cash-strapped local authorities incurred in the resolution of this dispute. I would add to that, the need to avoid a disproportionate amount of court and judicial time being spent on resolving such an issue. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Y (a Child)</span> [2019] EWCA Civ 2209, I said as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“4. Such disputes between local authorities consume both time and scarce financial resources, which are better spent on the child(ren) at the centre of the argument.  Designation disputes are now only rarely brought before the courts following Thorpe LJ having said in strong terms in <span style="font-style:italic">Northampton CC v Islington Council</span> [1999] EWCA Civ 3031 that:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.01in;text-indent:0.00in">‘In my opinion the judge's function is to carry out a rapid and not over sophisticated review of the history to make a purely factual determination. It is a question of fact and not of discretion.’ </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.79in;text-indent:0.00in">5. This was a sentiment rehearsed by Ward LJ 12 years later in <span style="font-style:italic">Re D (a child) </span>[2012] EWCA Civ 627:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.21in;text-indent:0.00in">‘The other aspect of the purpose to be served which I highlighted in the judgment of Thorpe L.J. at [18] above is that the sections must provide a simple mechanism to determine a question of administration. The enquiry outlined above is simple enough. The budgets of the Social Services departments are already stretched enough by meeting the cost of care that they should not be further depleted by squabbles of this kind: better remember that there are swings and roundabouts and you may win one today but you will certainly lose another tomorrow.’”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Goodwin QC on behalf of Salford emphasised that the local authority he represents is well aware that such disputes are costly, distracting and run contrary to established authority. Further, he accepted that the financial implications for Salford as a local authority have no legal relevance in deciding the outcome of a designation dispute. Mr Goodwin explained that, notwithstanding that being the case, given the implications for Salford, the authority had felt unable to accept the judge’s decision on the pragmatic ‘swings and roundabouts’ approach endorsed by Ward LJ. Mr Goodwin told the court that before the crisis in J’s life which had precipitated applications for care, secure accommodation and deprivation of liberty orders, she was a child who had spent just 3 months of her 16 years in their local authority area. The financial consequence of Salford becoming the designated local authority for J in financial terms was, at the point the appeal was lodged, estimated to be in the region of £550,000 including the cost of £30,000 per month to cover the cost of her placement at a secure unit. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Far from there having been a “rapid and not overly sophisticated review of the history to make a purely factual determination”, both the judge at first instance and this court have been presented with highly technical skeleton arguments relating to Section 20 Accommodation, Private Fostering Arrangements and Family Arrangements. In addition, sheaves of case notes and social work records have been filed which each side prays in aid in support of their respective submissions as to whether J was (or was not) accommodated by Lincolnshire during the months she lived in the Cheshire East and then Salford local authority areas. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As compared with the 1990s there has been a loosening of the hitherto tight regulation of social work records. Previously access to social work records was permitted only following a public interest immunity hearing (see <span style="font-style:italic">Durham County Council v Dunn </span>[2012] EWCA Civ 1654)<span style="font-style:italic">. </span> This change in approach does not mean, however, that it should now become the judge’s function to wade through reams of records from three different authorities, which records, by their very nature, combine opinion mixed with factual information.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge should have had the benefit of a single, agreed, objective chronology to work from, supported by statements addressing the test where appropriate. The history in this case was unusually complicated and it was clear that the decision as to designation would turn on the application of the disregard provision. In those circumstances it would have been prudent, once each of the local authorities had had an opportunity to consider each other’s case notes, for they or their representatives to make a concerted attempt to agree a chronology, or failing that, to produce a single chronology highlighting areas of disagreement where relevant. Instead the court was presented with three separate chronologies. These chronologies most closely resemble a pick-and-mix of facts and opinion seemingly designed solely to assist the case of the party producing the document. Chronologies should not be interwoven with opinion, nor should it be the judge’s job to cross-check them in order to establish what is, and what is not, agreed by the parties.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This judge was put in an impossible position in trying to tease out the true course of events. By way of example only: the manner of J’s movement from the father to the home of DB in February 2019 was a critical issue in determining whether, on the one hand, J was accommodated by Lincolnshire or, on the other, the move was a private fostering or private family arrangement as between the father and DB which had been merely facilitated by Lincolnshire. The chronologies filed by Salford and Lincolnshire contradicted each other as to who it was that made arrangements for J to move to DB’s care, meaning that it became necessary for the court to go to the source material.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I am only too aware of the pressure under which local authorities work. However, when chronologies like these are produced, judicial time is wasted in trying to discern precisely the facts from which the court should work. I would remind all parties that chronologies must be concise, non-partisan and purely factual. Whilst the judge reserved judgment precisely because of the volume of paper he had been given, he cannot have been expected to have read and cross referenced all the material, and in my judgment it is little wonder that errors crept in. It is just unfortunate that one, namely Lincolnshire’s state of knowledge when J moved from the home of DB to that of her mother, was a matter of considerable significance. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Background </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">J was removed from the care of her birth family in 2007, aged 3.  She was one of 8 children to have been removed from the care of her mother, of whom DB was another.  The following year, in 2008, J was adopted. J lived with her adopted parents in Lincolnshire. This, the only truly settled period in this unhappy young woman’s life, came to an abrupt end in 2010 when J’s adoptive mother died.  Thereafter, J lived with her father. Things were not easy, J suffers from severe attachment disorder and as she approached adolescence, her relationship with her father came under increasing pressure notwithstanding support from both sets of grandparents. In 2015, J became subject to a Team Around the Child plan and was undoubtedly a ‘child in need’ pursuant to s17(1) CA 1989.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Between March 2017 and the end of 2018, J had several periods with foster carers as an accommodated child under Section 20 CA 1989. The case notes catalogue not only the challenges that J presented to her father, but also his determination time and time again not to give up on her. Almost inevitably, by February 2019 J’s profoundly disturbed behaviour was having a significant impact upon the father’s own mental health.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Notwithstanding support from her social worker CM and CAMHS, J’s distress manifested itself by aggression, violence, running away and self-harm, all of which led to a final crisis in early 2019.  The father, at the end of his tether, was desperate for respite care. Lincolnshire fully accepted the urgent need to find a placement for J, but the challenging nature of her behaviour in her recent Section 20 respite placements had made it impossible to identify a foster carer who would agree to take her. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On 11 February 2019, CM sent a message to the colleague who was looking for a foster placement for J, saying: “dad is desperate for respite at the moment, his mental health is declining he is now on medication. Can you please keep looking?”.  An hour later it is recorded that the father was on the phone in tears as he had arrived home to find that the safe at the family home had been broken open, J had stolen money and was now missing. The father told CM that he no longer wished J to live in his home. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Doing the best I can, it would seem that the following morning (12 February) J called her father.  Following the call, the father told CM that he would not allow J back into the house and that he was afraid of her. Later, CM informed the father that J and her two friends were on their way back to his home. The father made it clear that he would not have her back. Somewhere therefore had to be found for this child to stay given that she could not return to her father and no foster carers were available.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">J had remained in contact with DB following her adoption. The father, it would seem, having spoken by telephone to DB, suggested to CM that J could stay with DB. That afternoon, DB called CM and said that he would like J to go to live with him and his family in the Cheshire East area. DB agreed for PNC (Police National Computer) checks to be completed. CM stopped J from going home, arranging instead for her to go to a local family centre. There DB met up with CM, collected J and took her to his home in Cheshire East. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On the papers there is a dispute as to “who said what” during the hectic and distressing 24 hours over 11/12 February 2019.  Lincolnshire say that the father suggested that J should go live with DB. This, they submit, means that the placement was therefore some sort of private family arrangement which relieved them of all their responsibility for J, not only at this critical time but for the rest of her childhood. Put simply, Lincolnshire’s case is that they merely facilitated the move to DB and J, thereafter, became ordinarily resident in Cheshire East.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">It is clear from the social work records, that following J’s move to DB, whilst it was in both Lincolnshire and Cheshire East’s minds that the case may in due course be transferred to Cheshire East, that was, rightly, not regarded as appropriate whilst the placement was untried.  A note of 21 February 2019 reads: “J has only been living with her brother for little over a week and it is unclear whether this will become permanent or not.  The case may have to be transferred over under child [sic] in future but at the moment Lincolnshire council are just asking for a welfare visit to be carried out”.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The skeleton argument filed by Cheshire East for the designation hearing and drawn from the contemporaneous records, sets out in detail Lincolnshire’s continuing direct involvement between February and April 2019. J had the benefit of weekly supportive telephone calls with CM and a home visit from her on 26 April 2019. The Lincolnshire case notes show active engagement by Lincolnshire with J on 10 May 2019, a few days after that visit. It was to CM that DB turned when things were difficult, raising concerns about J and wondering if CAMHS should be involved. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Significantly, DB was not advised by CM to contact Cheshire East for help. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Unsurprisingly, given J’s difficulties, the honeymoon period of J living with DB was short-lived. A Lincolnshire case note dated 21 May 2019 records that by arrangement, CM had tried to call J on Friday 18 May, but J had not answered the phone. J however sent CM a text on 20 May.  In the text J told CM that she was “visiting her mum” for the weekend. A phone call followed the text during which J said that she wanted to stay with her mother and (untruthfully) told CM that the father and DB were happy for her to be in the care of her mother. The mother then came onto the telephone and said to CM that she wished J to live with her.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">It should be noted that it was CM, from Lincolnshire, who was in direct contact with J at this time and that it was CM who thereafter contacted Salford (where the birth mother lives) to let them know that J was there. CM expressed her inevitable concern to Salford about J being returned to her mother’s care, and at CM’s request, the following day Salford conducted a home visit. CM was then contacted by Salford and told that at that early stage, all seemed well. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Lincolnshire submit that J’s move to the home of her birth mother was a move for which it bore no responsibility and that either Cheshire East or Salford should be the designated local authority. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The move to Salford </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">No matter how happy J and her mother were to be reunited, it was inevitable that J’s move to live with her mother would not be a success. Without exaggeration, her time with her mother can only be described as a disaster for J.  Less than three months after the move J had attempted suicide twice and on 20 August 2019, she was placed in a residential placement by Salford with her father’s consent.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On 22 August 2019, Salford notified Lincolnshire that they regarded J as their, Lincolnshire’s, responsibility. Salford offered support and help but said that it was for Lincolnshire to take the lead. Salford said that they would look for short term accommodation for J, but they would be looking to Lincolnshire for financial remuneration. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">No agreement was reached and Salford, acting it may be thought entirely responsibly and in J’s best interests, applied for a care order on 18 October 2019. This was granted on 22 October 2019 together with authorisation for the deprivation of J’s liberty. By November, J was in secure accommodation. During the hearing of the appeal, Lincolnshire were unable to tell the court of J’s current position as “they had not asked”. Salford told the court that J is currently out of secure accommodation and living in some form of halfway house. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Judgment </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge identified the issue as being a “determination of at what point J began to be provided with accommodation by a local authority”.  In deciding this, he said it was necessary to refer to two issues; namely “Section 20 Accommodation and Private Fostering”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge in a section of his brief judgment headed ‘Relevant Law’ set out his approach as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:1.00in;text-indent:1.00in">“Section 20 of the Children Act is permissive and allows the local authority to accommodate any child in need. There are conditions which have to be met and it is designed to deal with a situation where a carer cannot accommodate the child. The child can be removed by any person with parental responsibility at any time. Accordingly, a local authority can provide accommodation to a child in need which can be away from the family under section 20 of the Children Act 1989. Clearly a Local Authority accommodating a child under s20 would need to know about it.” 33.<span style="font-family:Arial"> </span> And a little further on: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.13in;text-indent:0.00in">“In contrast to section 20 accommodation a private fostering arrangement may occur but it is a question of fact…  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">A privately fostered child is defined in section 66 in part IX of the Children Act and relates to a child who is under 16 who is cared for and provided with accommodation in their own home by someone other than a parent, has parental responsibility or is a relative.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge as his source for the factual backdrop quotes extensively from the statement of a social worker, JG dated 18 October 2019. The judge relied heavily upon this statement rather than on any contemporaneous documents. It is accepted by all parties that JG was a social worker with no direct knowledge of the case, she had not been involved with J or any of the moves with which the court was concerned. Her statement is a narrative statement drawn from an incomplete picture made by her as a non-lawyer and dated 8 months after J’s move to the home of DB. In my judgment, the statement simply could not bear the weight placed upon it by the judge.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge said the statement was the “clearest account proximate to the events to assist me determining the issue of designation”. With respect to the judge, the account given by JG which was, no doubt, done to the best of her ability, cannot on any basis be described as providing the “clearest account proximate to the events”. That was to be found in the source material to which the judge made no reference.  Whilst fully understanding the burden this case placed on a busy circuit judge, that omission was unfortunate and only serves to underline the importance of an agreed objective chronology as referred to above.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">An analysis of the source material which this court has now had an opportunity of reading, demonstrates, not only a very different picture from that painted by the judge, but also significant factual inaccuracies within the body of the judgment. In particular, and critically, the judge, it is agreed by all parties, was in error in holding that Lincolnshire only became aware of J’s move to her mother “sometime after the event”. As outlined above, Lincolnshire was the first to know, and it was Lincolnshire which told the other local authorities what had happened. It was in substantial reliance upon this error that the judge rested his determinative finding that the move to the mother was a family arrangement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">It was against this approach that the judge held Salford to be the designated local authority saying: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“…I find there was a private arrangement reached, with the knowledge of Lincolnshire, for [J] to go and live with [DB] in Cheshire East area and from there to live with her mother in Salford. Neither of these were placements pursuant to s.20. The timing is such that they were clearly private arrangements.” “…I do not find that either of these moves constituted a placement by a local authority under section 20. Any such placement would require both knowledge of the relevant Local Authority and completion of certain formalities. Lincolnshire facilitated the move to [DB] but no more. The timing is clear and to ascribe approval to the Local Authority as meeting retrospectively the requirements is going too far.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge made no further reference to a private fostering arrangement but rather held that there had been a “private arrangement reached”. When clarification was sought by Salford, the judge said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“In my judgement dated 17 February 2020 I did not state that the move from DB to the mother was a private fostering arrangement.  I said that it was a private arrangement not a private fostering arrangement and that the move in May to M was consequent upon that private arrangement accordingly s100 [sic] does not arise.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Discussion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 17 CA 1989 provides that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.70in;text-indent:-0.01in">“<span style="font-weight:bold">Provision of services for children in need, their families and others</span>. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.42in;text-indent:0.00in">(1) It shall be the general duty of every local authority (in addition to the other duties imposed on them by this Part)— </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.45in;text-indent:0.50in">to safeguard and promote the welfare of children within their area who are in need; and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.45in;text-indent:0.50in">so far as is consistent with that duty, to promote the upbringing of such children by their families, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.30in;text-indent:0.00in">by providing a range and level of services appropriate to those children’s needs”. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">J had been a child in need from at least 2015 and had therefore had the benefit of various services provided to her, and to her father for her benefit, under s17 CA 1989. J had also been provided with accommodation with foster carers under s20(4) CA 1989 from time to time when she and her father were struggling to cope. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 20 provides, insofar as it is relevant, as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.00in">(1)<span style="font-family:Arial"> </span>Every local authority shall provide accommodation for any child in need within their area who appears to them to require accommodation as a result of- </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">a)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">… </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">b)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">… </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">c)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The person who has been caring for him being prevented (whether or not permanently, and for whatever reason) from providing him with suitable accommodation or care. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.00in;text-indent:0.00in">   (2)… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.00in;text-indent:0.00in">   (3)… </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.37in">(4)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:1.00in">A local authority may provide accommodation for any child within      their area (even though a person who has parental responsibility for him is able to provide him with accommodation) if they consider that to do so would safeguard or promote the child’s welfare. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.76in;text-indent:-0.37in">(5)</num>
+	  <content>
+	    <p style="margin-left:0.76in;margin-right:1.00in">A local authority may provide accommodation for any person who has reached the age of sixteen but is under twenty-one in any community home which takes children who have reached the age of sixteen if they consider that to do so would safeguard or promote his welfare.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Salford’s case on this appeal is that when the placement with her father finally broke down in February 2019, J was once again accommodated by Lincolnshire now (I would assume) under s20(1) rather than s20(4) as the father was now prevented from providing J with suitable accommodation (s20(1)(c)). That must mean Mr Goodwin submits, that Lincolnshire is the designated local authority. From 12 February at the latest, Mr Goodwin says, J was accommodated by Lincolnshire and the periods of time when she lived with DB and then her mother should be disregarded. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ms Cavanagh QC on behalf of J’s Guardian, filed a skeleton argument in support of the appeal, but did not attend the hearing of the appeal in order to avoid the proliferation of the same arguments. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The section 105(6) ‘disregard’ provision says: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“(6) In determining the ‘ordinary residence’ of a child for any purpose of this Act, there shall be disregarded any period in which he lives in any place— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.00in;text-indent:0.00in">(c) while he is being provided with accommodation by or on behalf of a local authority.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In testing Mr Goodwin’s submission and deciding whether the disregard provision arises as he suggests, the court has of necessity to decide the legal nature of the arrangement which led to J living with DB. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is not necessary for the purposes of this appeal to set out or to consider the requirements of best practice which apply upon a child being accommodated under s20 CA 1989. It is common ground that if this is s20(1) accommodation, it was effected without any of the proper formalities.  It is very properly accepted by Mr Roche that the fact that, contrary to good practice, the formalities were never completed, whilst pointing away from a s20(1) CA 1989 accommodation placement, does not mean that J could not be held to have been accommodated under s20(1) CA 1989. Whether this was or was not s20(1) CA 1989 accommodation Mr Roche accepts is an issue that turns on the facts. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge held that s20 CA 1989 is a ‘permissive power’. A local authority <span style="text-decoration:underline">may</span> provide accommodation in the circumstances set out in s20(4) CA 1989 where the person with parental responsibility is able to provide the child in question with accommodation. However, s 20(1) CA 1989 (the subsection which bites in this case) provides that a local authority <span style="text-decoration:underline">shall</span> provide accommodation for a child where, as is accepted, the father who had been caring for J was now “prevented from providing him, or her, with suitable accommodation”. (s20(1)(c) CA 1989). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Roche, whist accepting that s20(1)(c) 1989 was satisfied, submits that, nonetheless, on the facts of the case, the duty to accommodate J under s20(1)CA 1989 never arose. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The question is therefore whether the s20(1) CA 1989 duty for Lincolnshire to provide J with accommodation arose and, if so, when?  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.51in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-style:italic">Did a duty arise and if so when? </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, there can be no doubt that such a duty did arise. I agree with the judge that it is all about timing, but with respect to him, my analysis of the timing differs from his.  J had, from time to time, received respite care under s20 CA 1989.  The case notes disclose that in the days before J moved to live with DB, her placement with her father had reached crisis point.  A supervision meeting dated 8 February 2019 between CM and her line manager, records that J was not attending school, that the father was struggling with depression and feeling suicidal and that the father had discovered that J had set out to meet up with a 40-year-old man she had met online. The case note goes on to record that respite care had been requested by </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.01in;margin-right:-0.00in;text-indent:-0.01in">CM, more than once, but not only had no one been identified, but previous carers who </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">had been approached would not have J back due to her behaviour. The challenges presented by J are summed up in the supervision as follows: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The family are to continue to be supported this is an ongoing case where the needs are high and can escalate with minimal notice SW (CM) find the case exhausting but is committed to supporting J being aware of her life experience and diagnosis of attachment disorder continuing involvement required.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Three days later, at 15:57, one finds the case note, to which reference has already been made, that “dad is desperate for respite care”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Things moved quickly thereafter, as it was at 17:53 the same day that the father rang CM following J having broken into the safe and run away. J has never returned to live with her father and the following day J moved to live with DB. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is against this backdrop that Lincolnshire submits that no duty arose under s20 CA 1989 and that the move to DB was a private family arrangement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, it is strongly arguable that by 8 February 2019 the local authority had a duty to provide accommodation for J pursuant to s20(1) CA 1989. I accept that there may be a respectable argument (although not put forward by Mr Roche) that as of 8 February, all that was contemplated was a s20(4) provision of respite care on the basis that the father had always had J back in the past.  However even if that is the case, in my judgment the very latest the duty could have been said to arise was on 11 February when the father rang CM in tears saying J had run away and that he would not have her back. The fact that the local authority was not able to comply with that duty by providing accommodation either: (i) between 8 February and 11 February because they were unable to find anyone willing to have care for J; or (ii) overnight on 11/12 February because J had gone missing, does not, in my judgment, contrary to the submission of Mr Roche, mean that the duty had not arisen.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Although Mr Roche accepts that as of 11 February 2019 the father was now “prevented from providing him, or her, with suitable accommodation”. (s20(1)(c) CA 1989) a duty had still not arisen, he submitted, under s20(1) CA 1989 as J had run away. She was in Blackpool the night of 11/12 February and she was not therefore he suggested “within their (Lincolnshire’s) area” for the purposes of Section 20(1).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The final limb of Lincolnshire’s argument that no duty arose was that in any event J did not “require accommodation” on the night of 11 February as she had run away. By the time J came back to Lincolnshire the following day, Mr Roche’s argument goes, arrangements had been made between the father and DB for J to go and live with DB.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Lincolnshire’s role was merely to facilitate that move and as a consequence, Lincolnshire had never been under a duty to provide accommodation. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Creative though Mr Roche’s proposed interpretation of s20 CA 1989 may be, in my judgment not only can the wording of the statute not withstand such a strained interpretation, but such an approach to a local authority’s duty would run wholly contrary to the public policy imperative which is to ensure that children have somewhere safe to stay and a roof over their head at any time of crisis in their lives.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">More specifically, in my judgment J was undoubtedly “a child in need within Lincolnshire’s area”. The fact that she had gone missing for one night to Blackpool, did not mean that upon crossing the county line she had ceased to be a child in their area or that she did not require accommodation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I should briefly deal with the question of whether s22 CA 1989 has any impact upon my analysis and my view that Lincolnshire were under a duty to accommodate J, by the latest on 11 February 2019. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 22 CA 1989 provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.51in;text-indent:0.00in">“22. General duty of local authority in relation to children looked after by them. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.90in;text-indent:0.50in">In this section, any reference to a child who is looked after by a local authority is a reference to a child who is— </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.00in;text-indent:0.00in">(a)in their care; or </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.00in;text-indent:0.00in">(b)provided with accommodation by the authority in the exercise of any functions (in particular those under this Act) which are social services functions within the meaning of the Local Authority Social Services Act 1970, apart from functions under sections 23B and 24B. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.90in;text-indent:0.50in">In subsection (1) “accommodation” means accommodation which is provided for a continuous period of more than 24 hours. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">London Borough of Southwark v D </span>[2007] EWCA Civ 182, the Court of Appeal considered s23 CA 1989 (now s22(2) CA 1989) which contains the definition of accommodation. Lady Justice Smith giving the judgment, concluded that a child becomes a ‘looked after child’ as soon as the s20(1) CA 1989 duty arises. It is not necessary, they held, that the child should have been accommodated for 24 hours before he or she becomes a ‘looked after child’. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Roche helpfully drew the attention of the court to <span style="font-style:italic">R (GE (Eritrea)) v SSHD</span> [2016] EWCA Civ 1490 [2015] 1 WLR 4123. That case also involved a dispute as to whether a child was subject to accommodation or to a private fostering arrangement. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Christopher Clarke LJ did not agree with Smith LJ’s analysis in that part of <span style="font-style:italic">LB Southwark v D</span> where she had said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“55…..In our judgment, the child is being looked after by the local authority as soon as the section 20 (1) duty arises. It is not necessary that the child should have been accommodated for 24 hours before s/he is being looked after. We accept Mr O'Brien's submission that the child becomes looked-after when it appears to the local authority that (for one of the reasons set out in that section) the child appears to require accommodation for more than 24 hours. If that condition is satisfied, as it was here, the section 20 (1) duty arises immediately and the authority must take steps to ensure that accommodation is provided. Either it can provide it itself by making a section 23 (2) placement or it can make arrangements for the child to live with a relative, friend or connection, pursuant to section 23 (6)” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Christopher Clarke LJ said in this regard: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“38. I respectfully disagree with this passage. Firstly, the proposition that a child becomes looked after when it appears that the child needs accommodation for more than 24 hours seem to me to ignore the clear wording of the definition of a child who is looked after by a local authority in section 23. That requires him/her to be either in care or provided with accommodation by the authority. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">39.Secondly the proposition appears to me to be unnecessary. The section 20 duty to provide accommodation arises when it appears to the local authority that the child requires accommodation as result of the matters specified in section 20. That duty is imposed on a local authority in respect of children in need "within their area". It makes no reference to a 24 hour period.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is not necessary for me to express a view as to which analysis is the correct one, it being irrelevant for the purposes of this appeal. I would however, with respect, wholly endorse the view of Christopher Clarke LJ that the s 20 CA 1989 duty to provide accommodation arises when it appears to the local authority that the child requires accommodation as a consequence of the matters specified in section 20. It does not, therefore, matter when J became a looked after child, because the duty arose to accommodate her by virtue of the application of the factors in s20 CA 1989 which arose on 11 February at the latest and not on 12 February when the father telephoned DB. Thereafter Lincolnshire could no more ‘sidestep’ that duty by facilitating the move to DB, than they could have finessed it away under the pretext of acting under their general s17 CA 1989 duty (<span style="font-style:italic">H, Barhanu &amp; B v. L.B. Wandsworth [2007] 2 FLR 822</span>). As Christopher Clarke LJ said at [41] “… in respect of a child in need who requires accommodation there is no period when no duty arises.”  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The fact that it was the father who contacted DB in the first instance makes no difference to the duty to accommodate J. Whenever a child is taken into care, the local authority always looks to place the child with a friend or relative. Indeed, pursuant to s22(6)(a) and (7)(a) CA 1989, when determining the most appropriate placement for a looked after child, the local authority “must” give preference to such a placement. But even before a child formally becomes a looked after child pursuant to s22(2) CA 1989, when the duty to accommodate a child under s20(1) CA 1989 first arises, parents are always asked to put forward the names of possible alternative carers in the same way as they do in care proceedings. With respect to the arguments put forward by Mr Roche, he is seeking to build bricks without straw in submitting that when the local authority was unable to find a foster carer for J, the father had, in some way, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">made a private family arrangement by virtue of having rung up DB to see if he might be willing to take J to live with him.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">LB Southwark v D </span>(above) the Court of Appeal considered at [49] circumstances in which a private fostering arrangement might become available in such a way as to “permit a local authority which is on the verge of having to provide accommodation for a child to ‘side step’ that duty by helping to make a private fostering arrangement”.  Smith LJ went on: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“We accept that there may be cases in which a local authority plays a part in bringing about such an arrangement. However, where a local authority takes a major role in making arrangements for a child to be fostered, it is more likely to be concluded that, in doing so, it is exercising its powers and duties as a public authority pursuant to section 20 and 23. If an authority wishes to play some role in making a private arrangement, it must make the nature of the arrangement plain to those involved.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I fully accept that on the face of it the absence of any formalities other than the PNC check on DB would seem to point away from the placement with DB being a s20(1) accommodation. However, in my judgment, the placement with DB was, notwithstanding the failure properly to carry out any of the requirements which good practice demands, still unequivocally a placement pursuant to 20(1) CA 1989, the local authority’s duty to provide accommodation having arisen prior to the move to DB. I would add in this regard that no criticism can or should be made of the direct social work and the support that J received from both CM and her Early Help Worker. From my review of the case notes it is clear that they did all in their power to support J, but, as was noted in CM’s supervision, the challenges presented by J were simply too great to be managed and for J to remain at home became unsustainable. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I have considered with care whether the move from DB to the home of the mother is a continuation of the s20(1) accommodation placement with DB. It is easy to fall into the trap of concluding that it could not be so, given the manner in which it occurred. However, in my judgment J remained accommodated by Lincolnshire until such time as Salford formalised matters in November 2019 when J left her mother’s home. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.01in;margin-right:-0.00in;text-indent:-0.01in">Lincolnshire rightly retained active management of J’s case throughout her stay with </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">DB.  J and DB’s contact was with CM and Cheshire East’s very limited involvement was on instruction/request by Lincolnshire. Lincolnshire in my judgment subsequently acquiesced in the move to the home of the mother even whilst harbouring doubts as to its wisdom. It was Lincolnshire which informed the other local authorities (that is to say the local authority where J was living and the local authority to which she had moved) and it was at the request of Lincolnshire that Salford made a home visit to see that all was well. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, the fact that Lincolnshire failed to step in at that point, although it knew the history of the mother and the vulnerability of J with her attachment disorder, did not mean that J had, overnight, ceased to be an accommodated child or that without the knowledge or consent of the father, some sort of legally unspecified family arrangement took its place. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-style:italic">Could the placements have been Private Family Arrangements or Private Fostering Arrangements?</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Roche by his submissions implicitly accepted that if Lincolnshire says it was only acting as an agent for the father, it is for it to establish the legal status of each of the two moves. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge briefly contrasted s20 CA 1989 with a private fostering arrangement pursuant to s66 CA 1989. However, in the discussion part of his judgment he held not that either of the two placements were private fostering arrangements, but that “there was a private arrangement reached”. When asked to clarify, the judge confirmed that his finding was of a private arrangement not a private fostering arrangement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Notwithstanding what is in my view clear and the unequivocal clarification from the judge that both placements were ‘private arrangements’, Mr Roche tried to persuade the court otherwise, saying that at the very least the placement with the mother was a private fostering arrangement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge’s finding that each of the placements was a ‘private arrangement’<span style="text-decoration:underline"> </span>translates in legal terms as follows: The father is the only person with parental authority. By 2(9) CA 1989 the father cannot surrender or transfer any part of that parental responsibility but he “may arrange for some or all of it to be met by one or more persons acting on his behalf”. The father can, therefore, delegate parental responsibility; in the case of s20 accommodation that will be to the local authority (see <span style="font-style:italic">Williams &amp; Anor v Hackney LBC</span> [2019] 1 FLR 310). It follows that if the facts supported the proposition, the father could legally have reached a private arrangement with DB by delegating to him his parental responsibility. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Whilst that is of assistance to the position of Lincolnshire in relation to the move to DB, it is on Mr Roche’s own admission no help in relation to the subsequent move to the birth mother. DB’s delegated parental responsibility did not extend to him being able to agree to J moving to live elsewhere, and it is common ground that the father did not know of the move to the birth mother until after the event. The father had therefore neither given consent to the move nor delegated his parental responsibility to the mother. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is for that reason that Mr Roche was driven, contrary in my view to the judge’s finding, to submit that these were private fostering arrangements. Section 66 CA 1989 (‘Privately Fostered Children’) deals with a situation where a child is living with someone who is not a relative and does not have parental responsibility. (For these purposes I set aside for a moment that, by Schedule 8 para.1 CA 1989, a child is not a privately fostered child while she is being looked after by the local authority and my finding that J had been a looked after child for many months.) All other things being equal, the placements with both DB and the mother had the potential to be private fostering arrangements as they had each ceased to be relatives of J upon the making of the adoption order. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Roche is however once again faced with what might seem to be an unsurmountable hurdle in respect of the move to the birth mother: by Reg 3 Disqualification from Caring for Children (England) Regs 2002 SI 2002/635 the birth </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">mother is disqualified from fostering a child as a care order had been made to remove J from her care. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 68(1) CA 1989 provides a potential exception, stating that a person cannot privately foster a child if they are disqualified under the regulations <span style="text-decoration:underline">unless</span> that person has disclosed the fact to the local authority and obtained written consent to the fostering arrangement. No such disclosure was made or permission given in this case.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Mr Roche submitted that whilst Regulation 3 meant that the birth mother could not be formally approved as a foster carer and had, absent consent to the placement by the local authority committed an offence under s70(1)(d) CA 1989 (in contravention of s68(1) CA 1989), the fact that the mother was committing an offence and a local authority had not approved the placement did not change the nature of the placement which remained he said, a private fostering placement. I cannot agree. In my judgment someone who is disqualified from fostering a child and who would be committing a criminal offence if they did so, cannot, absent the written consent of the local authority be a private foster carer or indeed any other type of foster carer and thus the placement cannot be termed a private foster placement.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Conclusion</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For all these reasons, I would hold that during the period between her departure from her father and her arrival with her birth mother, J was accommodated by Lincolnshire.  In consequence of s31(8) CA 1989 as qualified by s105(6) CA 1989 that period is to be disregarded when identifying the designated local authority.  It follows that if my Lord and my Lady agree, this appeal should be allowed and Salford substituted by Lincolnshire as the designated local authority in relation to the care order which was made in respect of J. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This judgment by its very length flies in the face of Thorpe LJ’s exhortation that determining the appropriate local authority to be designated should be a ‘rapid and not over sophisticated’ process. I would hope that a case such as this will prove to be wholly exceptional and local authorities will continue to do all in their power to reach agreement between themselves as to designation in respect of the few cases which throw up the sort of difficulties encountered in this appeal.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.70in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lady Justice Asplin: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.70in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Lewis: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/739"/>
+	  <FRBRuri value="ewca/civ/2020/739"/>
+	  <FRBRdate date="2020-01-22" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="739"/>
+	  <FRBRname value="Thompson v Greater Manchester Police (Rev 1)"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/739/eng"/>
+	  <FRBRuri value="ewca/civ/2020/739/eng"/>
+	  <FRBRdate date="2020-01-22" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/739/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/739/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:40:55" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="judge-lord-justice-underhill" href="/judge-lord-justice-underhill" showAs="LORD JUSTICE UNDERHILL"/>
+      </references>
+      <proprietary source="ewca/civ/2020/739/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>739</uk:number>
+	<uk:cite>[2020] EWCA Civ 739</uk:cite>
+	<uk:hash>8a89fe75c861c8202aeb6c9921922d55e9b229cdca64b871bbd5ae9b594b4698</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/739/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.01in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0625in;height:1.0520833333333333in;"/>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:0.01in;text-indent:-0.01in">Neutral Citation Number: <neutralCitation>[2020] EWCA Civ 739</neutralCitation></p>
+      <p style="margin-left:-0.01in;margin-right:0.03in;text-indent:4.66in">
+	<span style="text-decoration:underline">Case No: B3/2019/0426</span>
+	<span style="font-weight:bold"> </span>
+	<span style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</span>
+	<span style="font-weight:bold"> </span>
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM:</span>
+      </p>
+      <p style="margin-left:-0.00in;margin-right:0.03in">
+	<span style="font-weight:bold;text-decoration:underline">THE HIGH COURT OF JUSTICE, QUEEN’S BENCH DIVISION</span>
+      </p>
+      <p style="margin-left:-0.00in;margin-right:0.03in">
+	<span style="font-weight:bold;text-decoration:underline">MANCHESTER DISTRICT REGISTRY</span>
+      </p>
+      <p style="margin-left:-0.00in;margin-right:0.03in">
+	<span style="font-weight:bold;text-decoration:underline">Mr David Allan QC, sitting as a Deputy High Court judge</span>
+      </p>
+      <p style="text-align:right;margin-right:0.03in">
+	<span style="text-decoration:underline">The Royal Courts of Justice</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <blockContainer>
+	<num>22</num>
+	<p class="Heading1" style="margin-left:0.21in;margin-right:0.03in">January 2020</p>
+      </blockContainer>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">Before:</span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<judge refersTo="#judge-lord-justice-underhill" style="font-weight:bold;text-decoration:underline">LORD JUSTICE UNDERHILL</judge>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">(Vice-President, Court of Appeal (Civil Division))</span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE SIMLER</span>
+      </p>
+      <p style="text-align:center;margin-right:0.04in">
+	<span style="font-weight:bold;text-decoration:underline">SIR JACK BEATSON</span>
+      </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">SIMON THOMPSON </span>
+      </p>
+      <p style="text-align:right;margin-right:0.22in">
+	<span style="font-weight:bold">Appellant </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">- and - </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">CHIEF CONSTABLE OF  </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">GREATER MANCHESTER POLICE </span>
+      </p>
+      <p style="text-align:right;margin-right:0.14in">
+	<span style="font-weight:bold">Respondent </span>
+      </p>
+      <p style="text-align:center;margin-left:0.07in">
+	<span style="font-size:10pt">Transcript of Epiq Europe Ltd, Lower Ground, 18-22 Furnival Street, London EC4A 1JS </span>
+      </p>
+      <p style="text-align:center;margin-left:0.07in;margin-right:0.00in">
+	<span style="font-size:10pt">Tel No: 020 7404 1400  Email: </span>
+	<span style="text-decoration:underline;font-size:10pt;color:#0000FF">civil@epiqglobal.co.uk</span>
+	<span style="font-size:10pt">  (Official Shorthand Writers to the Court) </span>
+      </p>
+      <p style="text-align:left;margin-left:0.88in;text-indent:-0.68in">
+	<span style="font-style:italic;font-size:10pt">This transcript is Crown Copyright.  It may not be reproduced in whole or in part other than in accordance with relevant licence or with the express consent of the Authority.  All rights are reserved. </span>
+      </p>
+      <p style="margin-left:-0.00in;margin-right:0.04in"><span style="font-weight:bold">MISS H WILLIAMS QC and MR J BUNTING</span> (instructed by Bhatt Murphy Limited) </p>
+      <p style="margin-left:0.40in;margin-right:0.04in">appeared on behalf of the <span style="font-weight:bold">Appellant</span></p>
+      <p style="margin-left:0.38in;margin-right:0.04in;text-indent:-0.39in"><span style="font-weight:bold">MR G WELLS </span>(instructed by Greater Manchester Police Legal Department) appeared on behalf of the <span style="font-weight:bold">Respondent </span></p>
+      <p class="Heading1" style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;font-size:10pt">Crown Copyright©</span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in">
+	      <span style="font-weight:bold">LORD JUSTICE UNDERHILL: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">1.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">The claimant in these proceedings, who is the appellant before us, is a Manchester City supporter.  On 25 November 2014 he attended a match at the Etihad Stadium.  As a result of an incident between himself and the match stewards, police officers on duty at the match arrested him.  In the course of the arrest he suffered a bad fracture of his left arm.  He brought proceedings against the Chief Constable of the Greater Manchester Police for false imprisonment, assault and battery and negligence.  The claim was tried in the High Court in Manchester over five days.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">2.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">By a reserved judgment, handed down on 4 February 2019, Mr David Allan QC, sitting as a Deputy High Court judge, dismissed all three claims.  The claimant appeals with the permission of Leggatt LJ against the dismissal of the claims of assault and battery and of negligence.  He has been represented by Ms Heather Williams QC and Mr Jude Bunting: Mr Bunting, but not Ms Williams, appeared below.  The respondent was represented by Mr Graham Wells of counsel, though in the event we have not found it necessary to call on him.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">3.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">Although there was at the trial some dispute about the circumstances leading up to the arrest, the judge made clear and thorough findings of primary fact which are not now challenged.  I can summarise them very briefly.  I should say that the entire incident was captured on CCTV; but, as is very often the case, the footage does not show everything, and the judge made his findings on the basis both of the CCTV pictures and of the oral evidence which he heard from several witnesses. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">4.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">The incident started when, in course of the second half of the match, the claimant was asked by a steward to stop smoking an e-cigarette, which was contrary to club rules.  He refused and was belligerent and abusive towards her.  The judge found that his conduct was influenced by alcohol.  The stewards decided that he should be ejected.  He was asked by police officers to accompany them to a concourse in another part of the stadium, which he did.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">5.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">Once in the concourse, the claimant became aware from his conversation with a steward called Barbara Leonard not only that was he going to be ejected but that he was likely to face a ban from attending matches at the Etihad: this was not the first time that he had been banned for disregarding the prohibition on smoking.  At that point he became very angry.  Two police officers, PS Fenton and PC Wood, reasonably believed that he was going to attack Ms Leonard and decided that they needed to intervene and arrest him.  PS Fenton took hold of his right arm.  PC Wood took hold of his left arm, intending to immobilise him using a well-established technique called an “entangled armlock and take-down”.  The judge described this manoeuvre, in which PC Wood had received training, at para. 33 of his judgment as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.41in">"The standard entangled armlock involves an officer holding an offender's wrist with one hand and with his other hand creating a bend in the offender's elbow and bringing the arm behind the offender's back.  In the take-down manoeuvre, an officer applies continuous downward pressure to the offender's elbow and shoulder.  Throughout the manoeuvre, in bringing the offender to the ground, the offender's elbow is kept bent."  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.04in">The last point is of particular importance in the circumstances of what happened in this case. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">6.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">The judge's finding about what happened next and how the claimant's injury was sustained is found at paragraph 26 of his judgment.  The relevant part reads as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.89in;margin-right:0.41in">"Initially, the claimant's left arm was bent at the elbow as should be the case with the application of the entangled armlock but the claimant was moving forwards and turning towards PC Fenton.  PC Fenton was attempting to pull the claimant away from Barbara Leonard.  In this melee, the claimant's left arm straightened at the point when PC Wood has decided to take the claimant to the ground.  The result was that PC Wood forced the claimant to the ground when the claimant's left arm was straight and being rotated.  This meant that considerable force was applied to the arm in the hyper-extended position, resulting in the severe fractures to the left humerus."  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.04in">(It seems likely that the word "has" in the third sentence from this passage is a slip for "had".) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">7.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">The judge gave himself what it is common ground were correct directions in law as regards both the assault and battery claim and negligence claims.  As regards the former, he noted that it was for the defendant to prove that PC Wood had used force which was reasonable and not excessive.  As regards the latter, he directed himself that the duty on PC Wood was to take such care as was reasonable in the circumstances to avoid injuring the claimant. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">8.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">On the basis of his primary findings the judge addressed the claims of assault and battery and of negligence at paragraphs 49 and 50 of his judgment, as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.60in;text-indent:-0.10in">   “49.  When considering the allegation of assault and battery, it is important to focus on the force actually used rather than the outcome.  There is no doubt that the outcome for the Claimant was very serious.  I conclude that the intention of PC Wood was to apply the entangled arm lock and to bring the Claimant to the ground using that hold.  That clearly did not happen.  The Claimant was brought to the ground with his left arm in a hyperextended position at the elbow.  PC Wood was obliged to admit in cross-examination that the gold standard in terms of technique had not been used.  One has to remember this was a fast moving incident.  The Claimant had already demonstrated by his behaviour that he was obstructive and abusive.  The reason the Claimant’s arm went into the hyperextended position was that he was moving and swinging around towards PS Shenton as PC Wood was attempting to bring him to the ground.  PC Wood’s decision to take the Claimant to the ground was a reasonable one.  The manoeuvre he intended went wrong largely because of the reaction of the Claimant.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.60in">The Claimant’s resistance to his arrest and his swinging round towards PS Shenton resulted in the injury.  I find that the force used was reasonable in all the circumstances.  This includes the decision to assist the Claimant to his feet.   </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.60in">50.  The allegation of negligence must be considered separately.  The Claimant alleges a breach of duty in failing to use an approved technique to bring the Claimant to the ground.  Further, it is alleged there was a breach of duty in holding the Claimant’s arm in an extended position while bringing him to the ground.  I have found that PC Wood intended to bring the Claimant to the ground using an entangled arm lock and that was a reasonable decision to take.  Once the Claimant’s arm went into the extended position, should PC Wood have stopped trying to bring the Claimant to the ground?  One has to bear in mind that the incident has rapidly escalated and events are moving very quickly.  With the benefit of hindsight PC Wood might have decided to leave the Claimant on his feet given that he was not able to apply the gold standard of the entangled arm lock to bring the Claimant to the ground.  However, having reasonably decided to bring the Claimant to the ground and in the heat of the moment, with a split second for decision making it was not negligent to continue with bringing the Claimant to the ground.  I therefore find that the allegation of breach of duty is not made out.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">9.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">The judge's conclusion at paragraph 51 of his judgment reads as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.60in">“Given the severity of the Claimant’s injury and the considerable suffering that followed such an injury, one has considerable sympathy for the Claimant.  However, I have found that the injury was very much the result of his own behaviour on the evening in question and that the allegations he makes have not been made out.  In these circumstances his action must be dismissed.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">10.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">The claimant's grounds of appeal read:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.04in">"2.  In dismissing the claim in negligence, the Recorder erred in law because:  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.50in">2.1.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.26in">The Recorder failed to properly apply the test for breach of duty of care and/or applied an incorrect test.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.50in">2.2.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.26in">The Recorder failed to give adequate reasons for his conclusion that the defendant was not negligent.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.50in">2.3.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.26in">The Recorder's conclusion that there was no breach of duty of care was irrational and wrong in law on the Recorder's own findings of fact. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.61in">3. Further, or in the alternative, the Recorder erred in law in dismissing the claim in assault and battery.  His conclusion that the force used against the appellant was reasonable in the circumstances was irrational and wrong in law on the Recorder's own findings of fact." </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.05in;text-indent:0.00in">(I should say in passing that the judge is wrongly referred to there as "the Recorder".  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.04in">He was sitting as a Deputy High Court judge.) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">11.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">I should quote from the reasons given by Leggatt LJ when giving permission to appeal.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.04in">He said in particular:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.60in">"It seems to me reasonably arguable that, after finding (at the end of paragraph 50 of the judgment) that it was not negligent to continue with bringing the appellant to the ground after his arm went into the extended position, the judge should not have concluded that the allegation of breach of duty was 'therefore' not made out without considering whether the <span style="text-decoration:underline">manner</span> in which the constable continued with the manoeuvre was negligent [emphasis in original].  In particular, was it negligent to bring the appellant to the ground without using an arm strike or taking any other action to try to obtain control and create a bend in the appellant's elbow?  In circumstances where this question has not been addressed, it cannot be said that an appeal no real prospect of success." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">12.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">In the helpful skeleton argument of Ms Williams and Mr Bunting the grounds of appeal are re-numbered - with 2.1 to 2.3 becoming grounds 1 to 3 and ground 3 becoming ground 4 - and clearly and succinctly elaborated.  I take them in turn.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">13.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">As Miss Williams acknowledged, grounds 1 and 2 are closely related and I can take them together.  The judge, as we have seen, found that when PC Wood started to execute the entanglement armlock and take-down manoeuvre that constituted reasonable force and involved no breach of a duty of care owed to the claimant.  He also found that initially the claimant's arm was, as it should be, bent at the elbow.  Ms Williams does not challenge any of that.  What she says, however, is that everything changed at the point when, as the judge found, the claimant's arm straightened, and thus escaped from the armlock, because that meant, as was common ground, that he could not then be safely taken down as he could have been had the lock been maintained.  The crucial question in the case, as she illustrated by reference both to the pleaded particulars of negligence and to the transcript of the claimant's cross-examination by Mr Bunting, was whether it was unreasonable for PC Wood not at that point to abandon the take-down attempt or to try to execute it in some alternative way, for example by performing an "arm strike" to re-bend the elbow and restore the armlock.  In her oral submissions she described this as the heart of the case.  It is her submission that, given the importance of that issue, it was necessary for the judge to address it expressly and that in the crucial paragraphs 49-50 of his judgment he failed to </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.04in">do so.  That was all the more necessary because the respondent's pleaded case was that the entanglement armlock procedure had been properly followed and because PC Wood, while acknowledging in cross-examination that he had been unable to perform the manoeuvre to what he called "the gold standard", nevertheless persisted in asserting that the claimant's arm had been at least partially bent throughout the manoeuvre, evidence which the judge did not accept.  The judge's failure to address this point, she submits, meant that he had failed to apply his own self-direction (ground 1), and/or that he had failed to give adequate reasons for his decision (ground 2). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">14.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">Persuasively though Ms Williams advanced those submissions, I cannot accept them.  In my opinion, it is clear what the judge's reasoning was and, more particularly, why he did not accept that the straightening of the claimant's arm required a change of approach on PC Wood's part, notwithstanding the acknowledged risk of taking someone down with an extended arm.  His finding was that things simply happened too quickly to expect PC Wood to take that course.  He had, on the judge's primary findings, embarked on the correct manoeuvre, but the claimant's arm had straightened "at the point" that he had decided to take him down (paragraph 46).  In paragraph 49 he found that the claimant's arm went into the hyper-extended position "as PC Wood was attempting to bring him to the ground".  At paragraph 50, the judge asked himself specifically:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.15in">"Once the claimant's arm went into the extended position, should PC Wood have stopped trying to bring the claimant to the ground?"  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.04in">He answers that question in the passage that follows, which I need not read out again, but the gist of which is that he had to make a split-second decision responding to the claimant's own conduct and that that explained and justified his not taking what "with the benefit of hindsight" might have been a safer course. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">15.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">Ms Williams submits that the question the judge asked himself was incomplete and that he needed to ask also why, if he was going to continue to take the claimant down, PC Wood did not try to do so in a different way, for example, by administering an arm strike which would re-bend the arm.  This was, as she pointed out, the point focused on </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.40in;margin-right:0.04in">by Leggatt LJ in giving permission to appeal.  That is, in my view, an unreasonably narrow interpretation of the question which the judge asked himself.  Clearly, what he was asking was whether it was reasonable for PC Wood to continue taking the claimant to the ground there and then, i.e. without doing something else first to regain control of the claimant's arm.  If, as he found, the immediate circumstances in which he had to take his split-second decision made it reasonable for him to continue with the course that he had embarked on, that necessarily answers the question why he did not take one of the possible alternative courses.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">16.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">One way in which Ms Williams developed her submission as to the inadequacy of the judge's reasoning was by pointing out that he made no finding as to whether PC Wood failed to appreciate at the crucial moment that the claimant's arm had straightened or did appreciate it but decided to proceed nonetheless.  That criticism seems to me to ignore the essence of the judge's reasoning.  His whole point is that in a melee of the kind which he found was occurring it is unreasonable to expect perfect decisionmaking, not least because it is impossible for a participant to appreciate immediately everything that is going on or to make a measured assessment of his options.  Still less would it be realistic for a judge to make a nicely calibrated finding of fact as to the participant's thought-processes and choices. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">17.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">I cannot, therefore, accept that the judge does not address the crucial question in the case or that he failed to apply his own self-direction as to the nature of the assessment required in deciding whether there had been a breach of duty.  On the contrary, he addressed the right question, namely whether PC Wood had taken reasonable care to avoid injuring the claimant <span style="text-decoration:underline">in the circumstances</span>, and he identified the circumstances that he believed were decisive. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">18.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">Ms Williams in her oral submissions emphasised, as I have said, that the judge's findings of primary fact involved him rejecting some aspects of PC Wood's evidence, in particular his evidence that the claimant's arm was bent at the time of take down, albeit not fully under control.  She made the related point that PC Wood himself never sought to defend his conduct on the basis that his decision may have been wrong with hindsight but that it was made in the heat of the moment.  However, the judge was not constrained to accept wholesale the evidence of either one party or the other.  There is nothing surprising or indeed reprehensible about a police officer or any other person accused of negligence giving in good faith an account of events which is unduly favourable to their case.  But it is the job of the judge to make findings to the civil standard about what happened and to determine the issues on the basis of those findings.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">19.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">I would therefore dismiss grounds 1 and 2.  I can take grounds 3 and 4, on which Ms Williams did not advance detailed oral submissions, more shortly.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">20.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">The essential point made, in various iterations, in her skeleton argument is that the judge was wrong and/or irrational to find that it was reasonable for PC Wood not to abandon the attempt to take the claimant down, or in any event to resort to some different technique, once it became clear that he could not perform an entanglement armlock to take down in the proper manner, i.e. with the claimant's arm bent.  He had acknowledged in cross-examination that he knew that a take-down with an extended arm involved a real risk of injury, the risk which the claimant posed to Ms Leonard was not acute, and there were other officers and stewards nearby who could have assisted in restraining the claimant in some other way. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">21.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">Those may be reasonable points in the abstract, but they have to be considered in the light of the judge's finding that PC Wood had embarked on a safe and appropriate manoeuvre which had been frustrated by the claimant's own resistance, which created the situation in which PC Wood had to take a split-second decision.  I can see nothing wrong, still less irrational, in the judge's conclusion that in those circumstances PC Wood could not be said to have failed to take reasonable care to prevent the claimant being injured and that force which he had used was not excessive. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">22.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">I would accordingly dismiss this appeal.  Like the judge, I have sympathy for the claimant, but, also like him, I have to say that it was he who created the circumstances in which he suffered the nasty injury that he did. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in"><span style="font-weight:bold">Lady Justice Simler</span>:   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">23.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">I agree.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in">
+	      <span style="font-weight:bold">Sir Jack Beatson: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.39in;text-indent:-0.39in">24.</num>
+	  <content>
+	    <p style="margin-left:0.39in;margin-right:0.04in">I also agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.04in"><span style="font-weight:bold">Epiq Europe Ltd</span> hereby certify that the above is an accurate and complete record of the proceedings or part thereof. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.04in">Lower Ground, 18-22 Furnival Street, London EC4A 1JS </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.04in">Tel No: 020 7404 1400 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.00in;margin-right:0.04in">Email: civil@epiqglobal.co.uk </p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

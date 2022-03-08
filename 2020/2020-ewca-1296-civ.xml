@@ -1,0 +1,860 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1296"/>
+	  <FRBRuri value="ewca/civ/2020/1296"/>
+	  <FRBRdate date="2020-10-09" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1296"/>
+	  <FRBRname value="AA (Nigeria) v FOR THE HOME DEPARTMENT"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1296/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1296/eng"/>
+	  <FRBRdate date="2020-10-09" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1296/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1296/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:17:00" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="aa-nigeria" href="" showAs="AA (Nigeria)"/>
+	<TLCPerson eId="for-the-home-department" href="" showAs="FOR THE HOME DEPARTMENT"/>
+	<TLCRole eId="appellant" href="" showAs="Appellant"/>
+	<TLCRole eId="respondent" href="" showAs="Respondent"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1296/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1296</uk:number>
+	<uk:cite>[2020] EWCA Civ 1296</uk:cite>
+	<uk:hash>d8e96483de08c624fb8730095540d63010ea7546e61ad14aba208d2f270be207</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1296/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 2.65in; margin-right: 2.15in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:0.00in;text-indent:0.00in">Neutral Citation Number: <neutralCitation>[2020] EWCA Civ 1296</neutralCitation><span style="text-decoration:none"> </span>Case No: C5/2019/1558</p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM FROM THE UPPER TRIBUNAL</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">(IMMIGRATION AND ASYLUM CHAMBER)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD BECKETT (sitting as an Upper Tribunal Judge) and</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">UPPER TRIBUNAL JUDGE SMITH</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">HU/07428/2017</span>
+      </p>
+      <p style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Royal Courts of Justice,</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Date: <docDate date="2020-10-09">09/10/2020</docDate></p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:1.16in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">Before : </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.20in;margin-right:0.00in;text-indent:0.00in">
+	      <span> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.14in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LORD JUSTICE MOYLAN</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.22in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LORD JUSTICE BAKER</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.16in;margin-right:0.00in;text-indent:0.00in">and<span style="font-weight:bold"> </span></p>
+	    <p style="text-align:left;margin-left:1.95in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LORD JUSTICE POPPLEWELL</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.18in;margin-right:0.00in;text-indent:0.00in">- - - - - - - - - - - - - - - - - - - - - </p>
+	    <p style="text-align:center;margin-left:1.17in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">Between : </span>
+	    </p>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#aa-nigeria" as="#appellant" style="font-weight:bold">AA (Nigeria) </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.11in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:center;margin-left:0.07in;margin-right:0.00in;text-indent:0.00in">
+	      <role refersTo="#appellant">
+		<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+		<span style="font-weight:bold"> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">- and - </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">SECRETARY OF STATE </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#for-the-home-department" as="#respondent" style="font-weight:bold">FOR THE HOME DEPARTMENT </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.10in;text-indent:0.00in">
+	      <role refersTo="#respondent">
+		<span style="font-weight:bold;text-decoration:underline">Respondent</span>
+		<span style="font-weight:bold"> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">David Lemer</span> (instructed by <span style="font-weight:bold">Duncan Lewis Solicitors</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Zane Malik </span>(instructed by<span style="font-weight:bold"> Government Legal Department</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing dates : 21 July 2020 </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Further written submissions: 23 and 24 September 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.05in;margin-right:0.09in;text-indent:0.19in">
+	<span style="font-weight:bold;font-size:11pt">Covid-19 Protocol: This judgment was handed down remotely by circulation to the parties’ representatives by email, released to BAILII and publication on the Courts and Tribunal Judiciary website (press.enquiries@judiciary.uk).  The date and time for hand-down is deemed to be 10:30am on Friday, 9 October 2020. </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Popplewell :</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Introduction </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.13in">1.<span style="font-family:Arial"> </span>The appellant is a 32 year old citizen of Nigeria with no right to remain in this country.  On 29 November 2013 he was convicted of supplying Class A drugs and sentenced to 4 ½ years imprisonment.  Following his release the respondent made a deportation order and rejected his human rights claim.  He appealed to the First-tier </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.00in">Tribunal (“FTT”).   In a decision dated 15 October 2018 (“the FTT decision”),  FTT Judge Swaney allowed his appeal on the grounds that his deportation would disproportionately interfere with the rights of his partner and two children under article 8 of the European Convention on Human Rights (“ECHR”).  On an appeal to the Upper Tribunal by the respondent, Lord Beckett and UT Judge Smith determined that the FTT decision involved an error of law, in a decision dated 12 February 2019 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.00in">(“the UT Error of Law decision”).  The Upper Tribunal gave directions for a further hearing for the purposes of the decision being remade by UT Judge Smith.  Following a further hearing, she dismissed the appellant’s appeal against his deportation order in a decision dated 17 May 2019 (“the UT Remade decision”).  The appellant now appeals to this court, with leave, against the UT Error of Law decision and the UT Remade decision. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Chronology </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The appellant was born in Nigeria on 2 January 1988.  He came to this country with his mother when he was 11.  It is not clear whether or not they initially had a temporary right to remain but the FTT Judge held that if so, it would have been for no more than 6 months, after which they overstayed.  His mother abandoned him and he went to live with his aunt.   In April 2006 his daughter K was born.  She is now 14.  She is a British citizen by virtue of the British citizenship of her mother, the appellant’s partner at the time.  They separated and in May 2009 the appellant married a Portuguese national, as a result of which on 7 July 2009 he was granted a residence card valid for 5 years.  The marriage broke down and he had no contact with his wife after about 2011.  On 16 August 2011 he was convicted of driving whilst disqualified and without insurance and given a community sentence with a 180 hour work requirement.  On 29 November 2013 he was convicted, following a trial, of conspiracy to supply heroin and cocaine and sentenced to 4 ½ years imprisonment.  The sentencing remarks, which were before UT Judge Smith when coming to her UT Remade decision, but not before FTT Judge Swaney at the first hearing, revealed that he had been a willing drug runner for “MO” assisting him for financial gain in what he knew to be a substantial business, although it was in fact more substantial than he appreciated.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">By the time of his sentence he had met his current partner C.  Their son, A, was born in February 2014 whilst the appellant was in prison.  A is now 6.  He too is a British citizen by virtue of C’s British citizenship.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The appellant made an application for a permanent residence card on the basis of retained rights of residence, which was refused.  An appeal was allowed in part, but the respondent refused to implement it because the person purporting to be the appellant at the hearing must have been an imposter, the appellant still being in prison </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.00in">at the time.  FTT Judge Swaney found that the appellant had not known of, or been complicit in, this deception and it does not affect the issues which arise on the appeal.    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The appellant was released from prison in August 2015.  He continued to live with C and their son A.  His daughter K lived with her mother, but would spend time with the appellant and C and A, resulting in a bond between the two half siblings.  On 21 April </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.00in">2017 the appellant was served with notice of the respondent’s deportation order.  The grounds of deportation were that he was a foreign criminal by virtue of the trigger conviction for the supply of drugs.   He made a human rights claim to the respondent relying both on his own Article 8 right to private life and on the rights to family life of his partner C and two children, K and A.  It was rejected by the respondent on 16 June 2017. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The legal framework </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">The relevant statutory framework is well known to Judges in the Immigration and Asylum Chamber tribunals and to practitioners in this area.  Section 32 of the UK </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.00in">Borders Act 2007 (“the 2007 Act”) provides in relevant respects that the respondent must make an order deporting a foreign criminal, that is to say a non UK citizen sentenced to a period of imprisonment of at least 12 months, unless it would breach a person’s ECHR rights.  When considering whether deportation is justified as an interference with a person’s right to respect for private and family life under article 8(2) of the Convention, section 117A(2) of the Nationality Immigration and Asylum </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.00in">Act 2002 (“the 2002 Act”) requires judicial decision makers to have regard in all cases to the considerations listed in section 117B, and in cases concerning the deportation of foreign criminals to the considerations listed in section 117C.  Those sections were introduced by the Immigration Act 2014. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">Section 117C of the 2002 Act, so far as relevant, provides:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.13in;text-indent:0.00in">“(1) The deportation of foreign criminals is in the public interest.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.00in;text-indent:0.50in">The more serious the offence committed by a foreign criminal, the greater is the public interest in deportation of the criminal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.00in;text-indent:0.50in">In the case of a foreign criminal (“C”) who has not been sentenced to a period of imprisonment of four years or more, the public interest requires C's deportation unless Exception 1 or Exception 2 applies. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.13in;text-indent:0.00in">… </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in">(5)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.00in;text-indent:0.50in">Exception 2 applies where C has a genuine and subsisting relationship with a qualifying partner, or a genuine and subsisting parental relationship with a qualifying child, and the effect of C's deportation on the partner or child would be unduly harsh. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in">(6)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.00in;text-indent:0.50in">In the case of a foreign criminal who has been sentenced to a period of imprisonment of at least four years, the public interest requires deportation unless there are very compelling circumstances, over and above those described in Exceptions 1 and 2.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.13in;text-indent:0.00in">…” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">Paragraphs 398 and 399 of the Immigration Rules faithfully replicate the primary legislation.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">There has been a proliferation of case law on the application of the “unduly harsh” test in section 117C(5) of the 2002 Act, and the “very compelling circumstances” test in section 117C(6).  That is the result of the many different factual circumstances in which they regularly have to be applied by first instance judges of the Immigration and Asylum Chamber.  That does not mean, however, that there is a need to refer extensively to authority for the meaning or application of these two statutory tests.  It should usually be unnecessary to refer to anything outside the four authorities identified below, namely <span style="font-style:italic">KO (Nigeria) v Secretary of State for the Home Department</span> [2018] 1 WLR 5273; <span style="font-style:italic">R (on the application of Byndloss) v Secretary of State for the Home Department</span> [2017] 1 WLR 2380; <span style="font-style:italic">NA (Pakistan) v Secretary of State for the Home Department</span> [2017] 1WLR 207; <span style="font-style:italic">HA (Iraq) v Secretary of State for the Home Department</span> [2020] EWCA Civ 117.  It will usually be unhelpful to refer first instance judges to other examples of their application to the particular facts of other cases and seek to draw factual comparisons by way of similarities or differences.   Decisions in this area will involve an examination of the many circumstances making up private or family life, which are infinitely variable, and will require a close focus on the particular individual private and family lives in question, judged cumulatively on their own terms.   Nor will it be necessary for first instance judges to cite extensively from these or other authorities, provided that they identify that they are seeking to apply the relevant principles.  I would associate myself with what Coulson LJ said at paragraph [37] of <span style="font-style:italic">UT (Sri Lanka) v Secretary of State for the Home Department</span> [2019] EWCA Civ 1095, that it is an impediment to the efficient working of the tribunal system in this area for judges to have numerous cases cited to them or to feel the need to set out extensive quotation from them, rather than focussing primarily on their application to the factual circumstances of the particular case before them.  Judges who are experienced in these specialised courts should be assumed by any appellate court or tribunal to be well familiar with the principles, and to be applying them, without the need for extensive citation, unless it is clear from what they say that they have not done so.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">In relation to what is meant by “unduly harsh” in section 117C(5), the authoritative guidance is now that given by Lord Carnwath JSC in <span style="font-style:italic">KO (Nigeria) </span>and<span style="font-style:italic"> </span> by this court in <span style="font-style:italic">HA (Iraq)</span>.  The former addressed this issue notwithstanding that the main question in that case was not the meaning of “unduly harsh” but whether it involved consideration of the seriousness of the offence.   At [23] he said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.13in;text-indent:0.00in">“23. On the other hand the expression “unduly harsh” seems clearly intended to introduce a higher hurdle than that of “reasonableness” under section 117B(6) , taking account of the public interest in the deportation of foreign criminals. Further the word “unduly” implies an element of comparison. It assumes that there is a “due” level of “harshness”, that is a level which may be acceptable or justifiable in the relevant context. “Unduly” implies something going beyond that level. The relevant context is that set by section 117C(1) , that is the public interest in the deportation of foreign criminals. One is looking for a degree of harshness going beyond what would necessarily be involved for any child faced with the deportation of a parent. What it does not require in my view (and subject to the discussion of the cases in the next section) is a balancing of relative levels of severity of the parent's offence, other than is inherent in the distinction drawn by the section itself by reference to length of sentence. Nor (contrary to the view of the Court of Appeal in IT (Jamaica) v Secretary of State for the Home Department [2017] 1 WLR 240 , paras 55 and 64) can it be equated with a requirement to show “very compelling reasons”. That would be in effect to replicate the additional test applied by section 117C(6) with respect to sentences of four years or more.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">At paragraph [27] he said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.13in;text-indent:0.00in">“27.  Authoritative guidance as to the meaning of “unduly harsh” in this context was given by the Upper Tribunal (McCloskey J President and Upper Tribunal Judge Perkins) in <span style="font-style:italic">MK (Sierra Leone) v Secretary of State for the Home Department</span> [2015] INLR 563 , para 46, a decision given on 15 April 2015. They referred to the “evaluative assessment” required of the tribunal:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.13in;text-indent:0.00in">“By way of self-direction, we are mindful that ‘unduly harsh’ does not equate with uncomfortable, inconvenient, undesirable or merely difficult. Rather, it poses a considerably more elevated threshold. ‘Harsh’ in this context, denotes something severe, or bleak. It is the antithesis of pleasant or comfortable. Furthermore, the addition of the adverb ‘unduly’ raises an already elevated standard still higher.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">As explained in <span style="font-style:italic">HA (Iraq) </span>at [44] and  [50] to [53], this does not posit some objectively measurable standard of harshness which is acceptable, but sets a bar which is more elevated than mere undesirability but not as high as the “very compelling circumstances” test in s.117C(6).  Beyond that, further exposition of the phrase “unduly harsh” is of limited value.  Moreover, as made clear at [56]-[57], it is potentially misleading and dangerous to seek to identify some “ordinary” level of harshness as an acceptable level by reference to what may be commonly encountered circumstances: there is no reason in principle why cases of undue hardship may not occur quite commonly; and how a child will be affected by a parent’s deportation will depend upon an almost infinitely variable range of circumstances.  It is not possible to identify a baseline of “ordinariness”.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">In relation to what is meant by “very compelling circumstances”, in <span style="font-style:italic">Byndloss</span> Lord Wilson JSC said at [33]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.00in">“33. The deportation of a foreign criminal is conducive to the public good. So said Parliament in enacting section 32(4) of the 2007 Act: see para 11 above. Parliament's unusual statement of fact was expressed to be for the purpose of section 3(5)(a) of the 1971 Act so its consequence was that every foreign criminal became automatically liable to deportation. Parliament's statement exemplifies the “strong public interest in the deportation of foreign nationals who have committed serious offences”: <span style="font-style:italic">Ali v Secretary of State for the Home Department</span> [2016] 1 WLR 4799, para 14, per Lord Reed JSC. In the <span style="font-style:italic">Ali</span> case the court was required to identify the criterion by reference to which the tribunal should determine an appeal of a foreign criminal on human rights grounds against a deportation order. The decision was that the public interest in his deportation was of such weight that only very compelling reasons would outweigh it: see paras 37 and 38, per Lord Reed JSC. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.00in">……….. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.00in">55. The third [feature of the background] is that, particularly in the light of this court's decision in the <span style="font-style:italic">Ali</span> case, every foreign criminal who appeals against a deportation order by reference to his human rights must negotiate a formidable hurdle before his appeal will succeed: see para 33 above. He needs to be in a position to assemble and present powerful evidence. I must not be taken to be prescriptive in suggesting that the very compelling reasons which the tribunal must find before it allows an appeal are likely to relate in particular to some or all of the following matters: (a) the depth of the claimant's integration in United Kingdom society in terms of family, employment and otherwise; (b) the quality of his relationship with any child, partner or other family member in the United Kingdom; (c) the extent to which any relationship with family members might reasonably be sustained even after deportation, whether by their joining him abroad or otherwise; (d) the impact of his deportation on the need to safeguard and promote the welfare of any child in the United Kingdom; (e) the likely strength of the obstacles to his integration in the society of the country of his nationality; and, surely in every case; (f) any significant risk of his reoffending in the United Kingdom, judged, no doubt with difficulty, in the light of his criminal record set against the credibility of his probable assertions of remorse and reform.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">The interrelationship between these principles and the Exceptions in Section 117C(3)(5), both in relation to medium term offenders (with sentences of one to four years) and serious offenders (with sentences of four years or more), was authoritatively set out by Jackson LJ in <span style="font-style:italic">NA (Pakistan) </span>at paragraphs [28]-[39], of which the following are of particular relevance in this case: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.00in">“29. In our view, the reasoning of the Court of Appeal in the <span style="font-style:italic">JZ (Zambia)</span> case   [2016] Imm AR 781 applies to those provisions. The phrase used in section 117C(6) , in paragraph 398 of the 2014 rules and which we have held is to be read into section 117C(3) does not mean that a foreign criminal facing deportation is altogether disentitled from seeking to rely on matters falling within the scope of the circumstances described in Exceptions 1 and 2 when seeking to contend that “there are very compelling circumstances, over and above those described in Exceptions 1 and 2”. As we have indicated above, a foreign criminal is entitled to rely upon such matters, but he would need to be able to point to features of his case of a kind mentioned in Exceptions 1 and 2 (and in paragraphs 399 or 399A of the 2014 rules), or features falling outside the circumstances described in those exceptions and those paragraphs, which made his claim based on article 8 especially strong.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.00in">30. In the case of a serious offender who could point to circumstances in his own case which could be said to correspond to the circumstances described in Exceptions 1 and 2, but where he could only just succeed in such an argument, it would not be possible to describe his situation as involving very compelling circumstances, over and above those described in Exceptions 1 and 2. One might describe that as a bare case of the kind described in Exceptions 1 or 2. On the other hand, if he could point to factors identified in the descriptions of Exceptions 1 and 2 of an especially compelling kind in support of an article 8 claim, going well beyond what would be necessary to make out a bare case of the kind described in Exceptions 1 and 2, they could in principle constitute “very compelling circumstances, over and above those described in Exceptions 1 and 2”, whether taken by themselves or in conjunction with other factors relevant to application of article 8. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.00in">….. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.08in">33.</num>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.50in">Although there is no “exceptionality” requirement, it inexorably follows from the statutory scheme that the cases in which circumstances are sufficiently compelling to outweigh the high public interest in deportation will be rare. The commonplace incidents of family life, such as ageing parents in poor health or the natural love between parents and children, will not be sufficient. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.08in">34.</num>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.50in">The best interests of children certainly carry great weight, as identified by </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.00in">Lord Kerr of Tonaghmore JSC in <span style="font-style:italic">H (H) v Deputy Prosecutor of the Italian Republic, Genoa (Official Solicitor intervening)</span> [2013] 1 AC 338 , para 145. Nevertheless, it is a consequence of criminal conduct that offenders may be separated from their children for many years, contrary to the best interests of those children. The desirability of children being with both parents is a commonplace of family life. That is not usually a sufficiently compelling circumstance to outweigh the high public interest in deporting foreign criminals. As Rafferty LJ observed in <span style="font-style:italic">CT (Vietnam) v Secretary of State for the Home Department</span> [2016] EWCA Civ 488 at [38]: “Neither the British nationality of the respondent's children nor their likely separation from their father for a long time are exceptional circumstances which outweigh the public interest in his deportation.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.00in">….. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.08in">37.</num>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.50in">In relation to a serious offender, it will often be sensible first to see whether his case involves circumstances of the kind described in Exceptions 1 and 2, both because the circumstances so described set out particularly significant factors bearing upon respect for private life (Exception 1) and respect for family life (Exception 2) and because that may provide a helpful basis on which an assessment can be made whether there are “very compelling circumstances, over and above those described in Exceptions 1 and 2” as is required under section 117C(6). It will then be necessary to look to see whether any of the factors falling within Exceptions 1 and 2 are of such force, whether by themselves or taken in conjunction with any other relevant factors not covered by the circumstances described in Exceptions 1 and 2, as to satisfy the test in section 117C(6). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.08in">38.</num>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.50in">Against that background, one may ask what is the role of the Strasbourg jurisprudence? In particular, how does one take into account important decisions such as <span style="font-style:italic">Üner v The Netherlands</span> (2006) 45 EHRR 14 and <span style="font-style:italic">Maslov v Austria</span> [2009] INLR 47? Mr Southey QC, who represents KJ and WM, rightly submits that the Strasbourg authorities have an important role to play. Mr Tam rightly accepted that this is correct. The answer is that the Secretary of State and the tribunals and courts will have regard to the Strasbourg jurisprudence when applying the tests set out in our domestic legislation. For example, a tribunal may be considering whether it would be “unduly harsh” for a child to remain in England without the deportee; or it may be considering whether certain circumstances are sufficiently “compelling” to outweigh the high public interest in deportation of foreign criminals. Anyone applying these tests (as required by our own rules and legislation) should heed the guidance contained in the Strasbourg authorities……. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The FTT decision </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The appellant and C provided written witness statements before FTT Judge Swaney.  The appellant also gave oral evidence and was cross-examined.  C was not crossexamined on her statement.  The Judge accepted the appellant’s evidence that he had suffered physical abuse at the hands of his uncle and serious sexual abuse by his football coach.  The Judge also received in evidence a number of documents, including a report from an independent social worker, Ms Meeks, who had conducted a number of telephone interviews and two home visits;  and probation and prison reports dealing with the appellant’s rehabilitation before and since his release. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The FTT Judge set out the law at paragraphs [39]-[43] of the FTT decision, correctly identifying the applicable provisions as s. 32 of the 2007 Act, sections 117B and 117C of the 2002 Act  and paragraphs 398, 399 and 399A of the Immigration Rules.  She set out paragraph 399 which identifies the two Exceptions in s. 117C(4) and (5) of the 2002 Act, and in particular Exception 2 applicable in the circumstances of the present case where the article 8 rights primarily relied on are the private and family rights of a partner or child.  The paragraph in the Immigration Rules replicates the statutory test in s. 117C(5), including the test that the consequences of deportation would be unduly harsh on the partner or child concerned.  She went on to record that it was for the appellant to show on the balance of probabilities that there are very compelling circumstances over and above this exception, thereby reflecting the requirement in s. 117C(6).  She referred at [60] to the decision of this court in <span style="font-style:italic">NA (Pakistan) v SSHD</span>.   It is not suggested that identifying the statutory framework in these terms itself contained any error. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">She recorded that it was not in dispute that it would be unduly harsh to expect the appellant’s children and partner to accompany him to Nigeria.  That has remained common ground throughout the appellate process. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">Her critical findings supporting her conclusion that it would be unduly harsh for them to remain in the UK without him were clearly set out at paragraphs [70] to [76] of the decision. They were, in summary, the following: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The appellant’s daughter K, at the age of 12, was at a key stage of her physical and educational development as she moved into adolescence; the Judge accepted the evidence of Ms Meeks, as someone appropriately qualified, that the absence of a father has an adverse impact on the sexual and educational development of girls at this age.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">K had been particularly adversely affected by her father’s absence while he was in prison.  She became withdrawn and struggled with her studies, whereas previously she had been a confident child with excellent self-esteem. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The absence of the appellant would have a negative impact on the socioemotional development of the appellant’s son A, for whom the appellant was the primary carer as a result of his partner C working full time; the effect of separation from a parent on those in early childhood is more pronounced in boys. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(4)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The appellant’s absence would have an adverse impact on the relationship between the two half siblings, K and A.  The children spent time together with the appellant, but their respective mothers did not have a relationship and would not, in his absence, prioritise contact between the children.  The best interests of the children in continuing to enjoy their relationship with each other, and for K in developing a relationship with her new half sibling (D, at that stage enceinte) would be damaged by the appellant’s absence.  The Judge described this as a factor to which she attached significant weight. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(5)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The appellant’s absence would have a significant impact on C’s ability to continue to work full time as a nurse and support the family through her income, given the appellant’s role in caring for the children and taking A to and from school. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(6)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The appellant’s absence would have an adverse impact on A as a result of the appellant’s contribution to his son’s learning.  There was evidence that A was to be assessed as he was suspected of having Autism Spectrum Disorder, although the outcome of the test was not before the Judge.  She concluded, however, that he at least had some special educational needs, drawing this inference from his attendance at a specialist learning centre which supports children with suspected or diagnosed special educational needs.  The appellant’s absence was likely to have a negative impact on his son’s ability to participate in these activities as well as after school activities such as football and swimming. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(7)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">C’s medical conditions caused her to suffer physical symptoms which could be debilitating and affect her ability to care for her son, and the new baby when it arrived.  The appellant had played an increased role in caring for the son as a result of these symptoms.  The medical conditions were Irritable Bowel Syndrome and Adenomyosis, although the Judge did not identify them in the decision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(8)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The appellant’s absence would have an adverse impact on C’s emotional stability, she having exhibited low mood when he was in prison and in contemplation of his deportation.  Although there was no formal mental health diagnosis, emotional instability on her part would likely have an adverse impact on their son’s emotional well-being because it might affect her ability both to recognise, and to meet, his need for emotional support which would be substantial as a result of the appellant’s absence, particularly as he was at least suspected of having special educational needs.  This supported a finding that it </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in;text-indent:0.00in">would be unduly harsh on C, as well as the children, to remain in the UK without the appellant. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">These findings were based on the evidence before the FTT Judge, in particular from the appellant and his partner and Ms Meeks. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The FTT Judge further addressed whether there were very compelling circumstances outweighing the public interest in deportation of foreign criminals.  She expressly recognised the strength of that public interest, observing that the drug dealing involved crack cocaine and heroin, which causes significant harm in society, and that the sentence was a substantial one putting him in the category of the most serious offenders in the s. 117C structure. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">Against this she balanced the unduly harsh effects of the appellant’s absence on C and the children and the following additional features: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The appellant had a private and family life having resided here for 19 years since the age of 11.  The Judge recognised that apart from the 5 year period of his marriage to an EEA national, and possibly the first six months, he was not here lawfully, such that his private and family life was developed almost entirely while his status in this country was unlawful or precarious.  This language reflects s. 117B(4) and (5) of the 2002 Act and therefore the Judge is to be taken as having accorded it little weight as required by those sections.  The respondent did not suggest otherwise. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The abandonment by his mother in childhood, the physical abuse from his uncle and the sexual abuse by his football coach, had had a huge impact on the appellant. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The Judge made a finding that it was most unlikely that the appellant would reoffend in the future.  This was based in part upon the appellant’s own evidence about his offending and rehabilitation, but also on the circumstances of his offending and his subsequent conduct and in particular: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.13in">his vulnerability at the time of his offending which limited his ability to resist the influences of MO, with whom he was living, contrasted with his very different and stable current family circumstances; and  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.13in">his conduct not only in prison but also following release demonstrating a desire to address his offending behaviour and obtain skills he could use in the community in order to reduce the risk of reoffending. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The Judge’s conclusion was that the unduly harsh consequences of deportation for the appellant’s partner and family and these additional factors provided very compelling reasons why the significant public interest in his deportation was outweighed.    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The UT Error of Law decision </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">Various of the respondent’s grounds of appeal to the Upper Tribunal were rejected.  On what was described as ground 2, the Upper Tribunal rejected the submission on behalf of the respondent that the FTT Judge had failed to have due regard to the weight of the public interest in the appellant’s deportation.  The Upper Tribunal identified that within ground 2 there was said to have been an error of law by the FTT in determining that the unduly harsh test was met.  At paragraph [37] it acknowledged the force of the submission on behalf of the appellant that the respondent’s argument was in effect that the decision reached was one which could not reasonably have been reached on the facts.  At paragraph [41] the Upper Tribunal purported to summarise the circumstances relied on by the FTT Judge for concluding that the unduly harsh test was met “taken at their highest”.  The conclusion that there had been an error of law was contained in paragraph 50 in the following terms: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.13in;text-indent:0.00in">“50.  The deportation of the claimant would certainly be difficult, inconvenient, undesirable and perhaps harsh for his partner and children and it would not be in the children’s best interests.  We recognise that to the extent it was necessary to determine it, the judgement of whether the situation met the standard of being unduly harsh was primarily a matter for the FtTJ to determine, and she did so before the correct approach to s 117C(5) was clarified by the Supreme Court in <span style="font-style:italic">KO (Nigeria)</span>.  However having considered all of the circumstances considered by the FtTJ, we are unable to identify a basis on which it could be said that the circumstances which the FtTJ determined would pertain if the claimant is deported can be said to be unduly harsh for the children or C.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">This was held by the Upper Tribunal to be sufficient for there to be an error of law in the FTT Judge’s conclusion that there were very compelling circumstances, because the unduly harsh determination was material to her conclusion on very compelling circumstances; and, in the opinion of the Upper Tribunal, it was not open to the FTT Judge to find very compelling circumstances without finding Exception 2 was met, although it was recognised that the Judge was entitled to take into account rehabilitation and the absence of offending since release. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The UT Remade decision </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">At the hearing before UT Judge Smith the evidence was not the same as that before FTT Judge Swaney.  In particular there was evidence from K’s mother which led the UT Judge to conclude that there would not be the detrimental impact to the sibling relationship between K and A which had carried significant weight with FTT Judge Swaney.  She also made a number of findings on the contents and effect of Ms Meeks’ report which were more adverse to the appellant.  On the basis of her own findings, she determined that neither the unduly harsh nor the very compelling circumstances test was met.  In relation to the former her conclusions were expressed in this way in paragraph 87: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.13in;text-indent:0.00in">“87.  Taking all of the above factors together, and taking into account my findings on what is in the best interests of the children, I am not satisfied that there is sufficient evidence that the effect of the Appellant’s deportation will be unduly harsh.  The children will remain in the UK with their respective mothers.  Their separation from the Appellant will undoubtedly be harsh.  It may even be very harsh.  However, the factors relied upon are no more than those which would be involved for any child faced with deportation of a parent.  I do not accept that the evidence shows that the very high threshold which applies is met (see <span style="font-style:italic">KO (Nigeria)</span>).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">In two later paragraphs she referred to that finding as having accepted that the effect on the children would be “harsh, even very harsh”. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The arguments on this appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">On ground 1 of the appeal, the appellant challenges the UT Error of Law decision.  On his behalf Mr Lemer submitted that the Upper Tribunal failed to identify any error of law or misdirection, and there was none.  Accordingly the only basis for such a decision would be one of irrationality or perversity, that is to say that it was a conclusion which no reasonable tribunal properly directing itself as to the law could reach on the evidence.  On the FTT Judge’s findings of fact, a conclusion of undue harshness, within the meaning of that term identified in <span style="font-style:italic">KO (Nigeria)</span>, was reasonably open to her.  At  the oral hearing of the appeal, before the decision in <span style="font-style:italic">HA (Iraq)</span> was handed down, Mr Lemer focussed on the words of Lord Carnwath JSC in paragraph [23] of <span style="font-style:italic">KO (Nigeria)</span> and submitted that there were a number of features of her findings which were specific to C and the children’s family circumstances and which did go “beyond what would necessarily be involved for any child faced with the deportation of a parent”.  In subsequent written submissions following the handing down of the decision of this court in <span style="font-style:italic">HA (Iraq)</span>, Mr Lemer emphasised the aspects of that decision (which I have referred to above) in its explanation of the unduly harsh test in <span style="font-style:italic">KO (Nigeria).</span></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">On ground 2 the appellant challenges the UT Remade decision, if he fails on ground 1.  On this ground, Mr Lemer argued that the Upper Tribunal had concluded that the effect of deportation would be very harsh; and that any heightened degree of harshness above merely harsh meant that the unduly harsh criterion was met.  There was no intermediate degree of harshness which could be categorised as more than harsh but less than what was meant by unduly harsh for the purposes of Exception 2. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">On behalf of the respondent, Mr Malik argued on ground 1 that there was an error of law in the FTT decision in three respects: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The FTT Judge had not appreciated or applied the high threshold involved in the unduly harsh test, which had been identified in <span style="font-style:italic">KO (Nigeria)</span> subsequent to her decision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The FTT Judge’s conclusion on undue harshness was one which no properly directed tribunal could reach on the evidence. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in">The Upper Tribunal’s decision should be upheld on the additional or alternative basis that the FTT Judge took into account an immaterial factor when reaching her conclusion that there were very compelling circumstances, namely the appellant’s rehabilitation.  This was a point made by way of a Respondent’s Notice; it was not a basis on which the Error of Law decision was made.  The Upper Tribunal on that occasion treated it as a relevant factor.  At the hearing of the appeal Mr Malik submitted that rehabilitation was a consideration which could not be of any or any significant weight.    In written submissions following the handing down of this court’s decision <span style="font-style:italic">in HA (Iraq)</span>, Mr Malik accepted that rehabilitation was potentially capable of being a factor, but argued that the FTT Judge failed to take account of the caution which </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.14in;text-indent:0.00in">Underhill LJ urged at [141] of that decision in tribunals feeling able to reach a </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.13in;text-indent:0.00in">conclusion that a criminal was unlikely to reoffend; and that accordingly the FTT Judge had erred in attaching significant weight to this factor.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">On ground 2 Mr Malik  disputed that there had been any misdirection of law in relation to the unduly harsh test in the UT Remade decision and submitted that it was an unimpeachable decision on the facts found. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Ground 1 </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">I would reject Mr Malik’s first argument, namely that the UT Error of Law decision can be supported on the basis of a misdirection of law by the FTT Judge.  That was not the basis of the decision.  No such misdirection is identified in the Error of Law decision. The critical conclusion at paragraph [50] is fairly to be read, in the light of paragraph [37], as treating the relevant error of law as being perversity; the UT had set out the evidence the FTT Judge had relied on as giving rise to undue harshness and purported to summarise it at its highest.  In saying that it could not identify a basis on which it could be said that those circumstances were unduly harsh, it can only have meant that such circumstances were not capable of forming a basis for such a conclusion.  It had observed at paragraph [37] that there was considerable force in the suggestion that the  respondent’s argument was that no reasonable tribunal could have reached such conclusion, and it was that argument which was being accepted. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The observations of this Court in <span style="font-style:italic">UT (Sri Lanka) v Secretary of State for the Home Department</span> [2019] EWCA Civ 1095 are apposite. Floyd LJ said at paragraph 19: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.13in;text-indent:0.00in">“19. I start with two preliminary observations about the nature of, and approach to, an appeal to the UT. First, the right of appeal to the UT is "on any point of law arising from a decision made by the [FTT] other than an excluded decision": Tribunals, Courts and Enforcement Act 2007 ("the 2007 Act"), section 11(1) and (2) . If the UT finds an error of law, the UT may set aside the decision of the FTT and remake the decision: section 12(1) and (2) of the 2007 Act. If there is no error of law in the FTT's decision, the decision will stand. Secondly, although "error of law" is widely defined, it is not the case that the UT is entitled to remake the decision of the FTT simply because it does not agree with it, or because it thinks it can produce a better one. Thus, the reasons given for considering there to be an error of law really matter. Baroness Hale put it in this way in <span style="font-style:italic">AH (Sudan) v Secretary of State for the Home Department</span> at [30]:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.58in;margin-right:0.13in;text-indent:0.00in">"Appellate courts should not rush to find such misdirections simply because they might have reached a different conclusion on the facts or expressed themselves differently." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The reasons given for there being an error of law really matter, and the only error of law which the Upper Tribunal identified in this case is one of perversity. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">Mr Malik sought to support his argument that there was a misdirection as to the unduly harsh test on the grounds that the FTT Judge’s decision was made prior to the decision of the Supreme Court in <span style="font-style:italic">KO (Nigeria)</span> and without her having referred to the Upper Tribunal decision in <span style="font-style:italic">MK (Sierra Leone) v Secretary of State for the Home Department</span> [2015] UKUT 223 (IAC), approved by Lord Carnwath JSC at paragraph </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.00in">27 of <span style="font-style:italic">KO (Nigeria)</span>.  Neither point provides any support for the argument that the FTT Judge failed to appreciate or seek to apply the proper test.  The fact that she did not make express reference to <span style="font-style:italic">MK (Sierra Leone)</span> is no indication that she was unaware of it or failed to seek to apply it.  Experienced judges in this specialised tribunal are to be taken to be aware of the relevant authorities and to be seeking to apply them without needing to refer to them specifically, unless it is clear from their language that they have failed to do so.  There is nothing in this FTT decision to suggest that the judge was unaware of what was said in <span style="font-style:italic">MK (Sierra Leone) </span>or was applying some different criteria.  On the contrary she referred in her decision to the fact that she had considered the written skeleton for the appellant, which had itself referred to and set out a relevant passage from the headnote in <span style="font-style:italic">Secretary of State for the Home Department v MAB</span> [2015] UKUT 435 (IAC), which in turn replicated the relevant criteria identified in <span style="font-style:italic">MK (Sierra Leone)</span>. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">In any event, I would suggest that guidance on the unduly harsh test can now be confined to <span style="font-style:italic">KO (Nigeria)</span> and HA (Iraq).  The latter is a necessary adjunct to the former both because it explains aspects of Lord Carnwath’s observations and because it provides additional guidance on the application of the unduly harsh test.  There is no justifiable basis in the language used in the FTT decision for suggesting that the FTT Judge failed to apply the correct test as expounded in these two subsequent cases.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">Moreover it would not in any event be an error of law had the Judge reached an arguably more generous conclusion on the facts based on the law prior to <span style="font-style:italic">KO (Nigeria)</span>.  As Lord Carnwath JSC observed in that case at paragraph [43]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.29in;margin-right:0.13in">“43. It is to be noted that the decisions of both tribunals were made before the guidance given in <span style="font-style:italic">MK</span> [2015] INLR 563 and later cases as to the high hurdle set by the “unduly harsh” test. It may be that with the benefit of that guidance they would have assessed the facts in a different way. However, I do not consider that the decisions can be challenged for that reason alone. If the tribunals applied the correct test, and, if that may have resulted in an arguably generous conclusion, it does not mean that it was erroneous in law: see <span style="font-style:italic">R (MM (Lebanon)) v Secretary of State for the Home Department (Children's Comr intervening)</span> [2017] 1 WLR 771, para 107.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.00in">The same point was made in this court by Baker LJ in <span style="font-style:italic">KF (Nigeria) v Secretary of State for the Home Department</span> [2019] EWCA Civ 2051 at [27]. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">I would therefore conclude that the UT Error of Law decision can only be upheld on the basis of the error it identified.  The question is whether the Upper Tribunal was right to conclude that the FTT Judge’s decision was perverse. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">On that question the Upper Tribunal’s conclusion is in my view unsustainable.  When purporting to summarise the FTT Judge’s factual findings which were relevant to her assessment of harshness, the UT Error of Law decision did not do so accurately or fairly.  It did not include all of the FTT Judge’s factors, omitting, for example, any reference to the adverse impact of the appellant’s absence on the relationship between the two children, to which the FTT Judge attached significant weight.  It mischaracterised others so as to diminish their significance, with the result that it was </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.00in">not a summary which took them at their highest, despite purporting to do so. The factors which the FTT Judge identified were capable of supporting the conclusion that the effect on C and the children of remaining in the UK without the appellant met the elevated unduly harsh test.  That was an evaluative judgement for the FTT Judge on the basis of the full evidence before her, including cross-examined oral evidence and the report from Ms Meeks, the nuances of which will not be apparent to an appellate tribunal.  Her findings of fact are such that a conclusion of undue harshness was open to her.  Different tribunals might have reached a different conclusion, but it is inherent in the evaluative exercise involved in these fact sensitive decisions that there is a range of reasonable conclusions which a judge might reach, and the error of law here under consideration is only made out if the FTT Judge’s conclusion is outside that range.  In my view it was within the range in this case. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The remaining point on ground 1 is Mr Malik’s submission that rehabilitation can never be a factor of any significant weight in considering very compelling circumstances.  That issue has now been fully addressed in <span style="font-style:italic">HA (Iraq)</span> at paragraphs [132]-[142] where the previous authorities are analysed.  As the court stated at [140] and [141], tribunals will properly remain cautious about their ability to make findings on the risk of reoffending, but where a tribunal is able to make an assessment that the foreign criminal is unlikely to reoffend, that is a factor which can carry some weight in the balance when considering very compelling circumstances, although not one which will carry great weight on its own. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">The factual findings of the FTT Judge in this case, based as they were on the circumstances of the appellant when offending, his steps after release to rehabilitate himself, his changed family circumstances, and his own evidence of his current attitude towards his offending, entitled the Judge to conclude that he was most unlikely to reoffend and to treat that as having some weight in the assessment of whether there were very compelling circumstances outweighing the public interest in his deportation.   Mr Malik’s submissions mischaracterised rehabilitation as merely the absence of further offending.  Rehabilitation is not limited to the mere fact that there has been no further offending.  What is also relevant is the risk of further offending.  The fact that the criminal has not reoffended may inform that assessment, but may not of itself provide much if any basis for concluding that the risk of reoffending is significantly reduced, especially if it is for a relatively short period.   However rehabilitation, in the sense of a reduced risk of reoffending, is to be assessed by reference to a multitude of factors other than merely the absence of further offending.  It is the common task of the probation service daily to make such an assessment in the preparation of pre-sentence reports for sentencing judges, and they perform that assessment by reference to factors some of which are offence specific, but many of which are specific to the offender.  It is well recognised, for example, that a change of personal circumstances since the offending is capable of reducing the risk of further offending and may in some cases be of sufficient weight to render it unlikely.  It does not need the specialist experience of probation officers to reach such a conclusion, which may be apparent to an immigration judge depending on the particular personal circumstances in which the offender came to offend, how influential they were on the offending and how the change of circumstances affects the risk of further offending.  The FTT Judge in this case performed that evaluative exercise in concluding that the appellant was most unlikely to reoffend given the vulnerable circumstances in which he offended, his positive steps to reduce his risk of reoffending and the more stable family circumstances of his years since the offending.  Of course they cannot be said to eliminate any risk of reoffending.  But taken with the appellant’s own evidence as to his current attitude to his offending, they can properly support the Judge’s conclusion that the risk of reoffending was reduced to the level of most unlikely. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in;text-indent:0.5in">It follows that the Respondent’s Notice point on ground 1 fails, and that ground 1 is sufficient to dispose of the appeal in the appellant’s favour.  This appears to me to be a case in which the Upper Tribunal has interfered merely on the grounds that its members would themselves have reached a different conclusion.  That is impermissible.  I appreciate that under the tribunal system, established by the Tribunals Courts and Enforcement Act 2007 Act, the Upper Tribunal is itself a specialist tribunal, with the function of ensuring that First-tier Tribunals adopt a consistent approach to the determination of questions of principle which arise under the particular statutory scheme in question by giving guidance on those questions of principle: see per Lord Carnwath JSC in the tax context in <span style="font-style:italic">HMRC v Pendragon Ltd</span> [2015] UKSC 37 at [48] and Baroness Hale PSC in the immigration context in <span style="font-style:italic">MM (Lebanon) v Secretary of State for the Home Department </span>[2017] 1 WLR 771 at [69] to [74].    However it is no part of such function to seek to restrict the range of reasonable views which may be reached by FTT Judges in the value judgments applied to the many different private and family life circumstances which make almost all cases in this area different from each other.  It is emphatically not part of their function to seek conformity by substituting their own views as to what the outcome should be for those of first instance judges hearing the evidence.  As Baroness Hale PSC observed in the latter case at [107]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.13in;text-indent:0.00in">“107. It is no doubt desirable that there should be a consistent approach to issues of this kind at tribunal level, but as we have explained there are means to achieve this within the tribunal system. As was said in <span style="font-style:italic">Mukarkar v Secretary of State for the Home Department </span>[2007] Imm AR 57 , para 40 (per Carnwath LJ):  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.13in;text-indent:0.00in">“It is of the nature of such judgments that different tribunals, without illegality or irrationality, may reach different conclusions on the same case … The mere fact that one tribunal has reached what may seem an unusually generous view of the facts of a particular case does not mean that it has made an error of law … Nor does it create any precedent, so as to limit the Secretary of State's right to argue for a more restrictive approach on a similar case in the future. However, on the facts of the particular case, the decision of the specialist tribunal should be respected.”” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Ground 2 </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.13in">42.<span style="font-family:Arial"> </span>It follows that ground 2 does not fall for consideration because the FTT Decision should not have been remade.  However I would wish to say something very briefly about it.  On a proper and fair reading of the UT Remade Decision I would not treat UT Judge Smith as having found that the consequences would be any more than harsh.  However her  reference to the fact that they “may be very harsh” was unhelpful.   Tribunal judges should not seek to express their decisions by categorisations of degrees of harshness, which is to complicate what is a single and straightforward statutory test.  They should identify the factors which are relied on as making the consequences of deportation unduly harsh and evaluate whether cumulatively they do so, bearing in mind that it is an elevated threshold, and that, as <span style="font-style:italic">HA (Iraq)</span> explains, it  is undesirable to approach the issue by trying to identify what is “the norm” and what in the individual case goes beyond that: almost all cases are different, involving a multitude of individual factors, and it is impossible to measure objectively a norm or baseline as the comparator against which the individual case is to be judged.   </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Conclusion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">I would allow the appeal and restore the decision of the FTT Judge. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Baker :</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Moylan :</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.13in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

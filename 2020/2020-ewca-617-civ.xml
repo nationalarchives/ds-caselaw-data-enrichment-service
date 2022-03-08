@@ -1,0 +1,1498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/617"/>
+	  <FRBRuri value="ewca/civ/2020/617"/>
+	  <FRBRdate date="2020-05-12" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="617"/>
+	  <FRBRname value="Competition and Markets Authority v Flynn Pharma Ltd &amp; Ors"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/617/eng"/>
+	  <FRBRuri value="ewca/civ/2020/617/eng"/>
+	  <FRBRdate date="2020-05-12" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/617/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/617/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:38:26" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/617/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>617</uk:number>
+	<uk:cite>[2020] EWCA Civ 617</uk:cite>
+	<uk:hash>1d266290df730a2ac2515de8597cde541ddcae6cd1c198ebf9c3318bfbca840d</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/617/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.50in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0604166666666666in;height:1.051388888888889in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 617</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>C3/2019/1293</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE COMPETITION APPEAL TRIBUNAL</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">(PETER FREEMAN QC, PAUL LOMAS, PROFESSOR MICHAEL WATERSON)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">[2019] CAT 9</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.86in;margin-right:0.00in;text-indent:2.03in">
+	<span style="text-decoration:underline">Date: 12</span>
+	<span style="vertical-align:super;font-size:smaller">th</span>
+	<span style="text-decoration:underline"> May 2020</span>
+	<span style="font-weight:bold"> Before : </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE LEWISON</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE FLOYD</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE ARNOLD</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.10in;margin-right:0.08in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between : </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">COMPETITION AND MARKETS AUTHORITY </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.10in;margin-right:0.08in">
+	  <span style="font-weight:bold">and - </span>
+	</p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">FLYNN PHARMA LIMITED </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">FLYNN PHARMA HOLDINGS LIMITED </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline;font-size:11pt">Respondents</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.13in;text-indent:-0.01in">
+	<span style="font-weight:bold">PFIZER INC </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.13in;text-indent:-0.01in">
+	<span style="font-weight:bold">PFIZER LIMITED </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Sir James Eadie QC, Rob Williams QC, and David Bailey</span> (instructed by <span style="font-weight:bold">The Competition and Markets Authority</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Kelyn Bacon QC, Dan Stacey and Tom Pascoe </span>(instructed by<span style="font-weight:bold"> Macfarlanes LLP</span>) for the <span style="font-weight:bold">First and Second Respondents </span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Mark Brealey QC, Tim Johnston and Clare Reffin </span>(instructed by <span style="font-weight:bold">Clifford Chance LLP</span>) for the Third and Fourth Respondents </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing dates: 29 and 30 April 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold;font-size:11pt">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website.  The date and time for hand-down is deemed to be 10:30am on Tuesday 12</span>
+	<span style="font-weight:bold;vertical-align:super;font-size:11pt">h</span>
+	<span style="font-weight:bold;font-size:11pt"> May 2020. </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Lewison:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Introduction</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Rule 104 of the Competition Appeal Tribunal Rules 2015 (“the CAT rules”) provides that the Competition Appeals Tribunal (“the CAT”) may “at its discretion … make any order it thinks fit in relation to the payment of costs in respect of the whole or part of the proceedings”. It is common ground that this rule confers a discretion on the CAT. The question on this appeal is whether there is a starting point for the exercise of that discretion; and, if so, what it is.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The proceedings with which we are concerned arose out of an investigation by the Competition and Markets Authority (“the CMA”) into the pricing of an epilepsy drug called phenytoin sodium. By its decision of 7 December 2016, after an investigation lasting over three years, it found that Flynn and Pfizer had abused their dominant positions in the UK market for phenytoin sodium capsules under both domestic and EU competition law by charging excessive prices. It imposed a fine of £84.2 million on Pfizer and £5.2 million on Flynn.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Both Flynn and Pfizer appealed to the CAT. The CAT recognised in its substantive decision the “importance of this case for the public interest”: [2018] CAT 11 at [5]. After a four week trial, the CAT found that although Flynn and Pfizer held dominant positions in the market in question, the CMA had made errors in deciding that they had abused their positions. The CAT therefore set aside the penalties and remitted the question of abuse to the CMA for redetermination. The CMA’s subsequent appeal to this court in large part failed; but that court also recognised that the issues “were of considerable public importance”: [2020] EWCA Civ 339 at [15]. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Following its decision on the substantive appeal, the CAT considered the question of costs. In its ruling of 29 March 2019 ([2019] CAT 9) it held that the established practice of the CAT in appeals of this nature was that the starting point for the exercise of discretion was that the unsuccessful party should pay the successful party’s costs. I refer to this starting point as “costs follow the event”. It considered the decision of this court in <span style="font-style:italic">British Telecommunications plc v Office of Communications</span> (“<span style="font-style:italic">BT v Ofcom</span>”) [2018] EWCA Civ 2542, [2019] Bus LR 592, but decided that the decision in that case did not require a different starting point. From that starting point the CAT considered who had won and who had lost on the various main issues. Its ultimate ruling was that the CMA should pay a proportion of the costs of both Flynn and Pfizer. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The CMA challenge that conclusion. In the skeleton argument filed on their behalf, it was argued that  the starting point is that no order for costs should be made against a public body performing its functions in the public interest unless it has acted unreasonably. They described this as “the Principle” (with a capital P). The Principle may be displaced where rules of court or equivalent lay down a different starting point (such as the general rule in CPR Part 44.2 (2) (a) that the unsuccessful party pays the successful party’s costs). But there is nothing in the CAT rules which displaces the Principle. In the oral submissions presented by Sir James Eadie QC, the CMA adopted a more nuanced position. The principle for which the CMA now argues is </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">that in proceedings by or against a regulator in the exercise of its statutory functions, the default position (or starting point) is that no order for costs should be made against the regulator, except for good reason. The mere fact of an outcome adverse to the regulator is not, of itself, a good reason. But a good reason would include unreasonable conduct by or on behalf of the regulator, or financial hardship likely to be suffered by a successful party if no costs order is made. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Flynn and Pfizer, on the other hand, say that it was open to the CAT to adopt “costs follow the event” as its starting point; and that, as the CAT held, the decision of this court in <span style="font-style:italic">BT v Ofcom </span>does not require a different approach. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The legal framework </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The CMA was established by section 25 of the Enterprise and Regulatory Reform Act 2013. Section 25 (3) provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.48in;text-indent:0.00in">“The CMA must seek to promote competition, both within and outside the United Kingdom, for the benefit of consumers.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In very broad terms, the CMA has succeeded to the powers and duties of the Office of Fair Trading (and before that the Director General of Fair Trading) in investigating and dealing with anti-competitive practices.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The CMA has a range of powers which enable it to carry out an investigation where it has reasonable grounds to suspect an infringement of competition law. As Mr Brealey QC pointed out on behalf of Pfizer, those powers are extensive. They include power to enter business premises without a warrant, power to require the provision of documents or information, and power to interview persons. An investigation by the CMA into a suspected breach of competition law may be, and often is, protracted. As mentioned, in the present case the investigation took over three years. If, as a result of its investigations, the CMA is minded to find a breach of competition law, it must give notice to the persons likely to be affected, and give them an opportunity to make representations. Those representations may be (and usually are) followed up by a hearing which, Mr Brealey said, is to all intents and purposes akin to a trial (although this latter point was disputed by Sir James). This stage (referred to as the administrative phase) can be very expensive for the subjects of the investigation, requiring the engagement of both lawyers and expert economists, as well as the expenditure of management time; and any expenses they incur in the administrative phase cannot be recouped from the CMA, whatever the outcome of the investigation or an appeal to the CAT. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Once the CMA has decided that there has been a breach of competition law, it has a range of powers open to it. These include the making of directions designed to bring the anti-competitive conduct to an end. The CMA has power to apply to the court to enforce such directions. Section 36 of the Competition Act 1998 enables the CMA to impose financial penalties on undertakings if it is satisfied that the infringement of competition law has been committed intentionally or negligently by the undertaking. A decision by the CMA to this effect is an appealable decision, giving rise to a right of appeal to the CAT: Competition Act 1998 s 46. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The CAT must determine the appeal on the merits by reference to the grounds of appeal set out in the notice of appeal: Competition Act 1998 Sched 8 para 3 (1). Because the appeal is an appeal “on the merits” rather than akin to judicial review, the CAT will often hear detailed evidence, both factual and expert. This may in some cases include evidence that was not considered by the CMA in arriving at its contested decision. The CAT may confirm or set aside the decision which is the subject of the appeal, or any part of it, and may: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.69in;text-indent:-0.44in">(a)</num>
+	  <content>
+	    <p style="margin-left:0.69in;margin-right:0.00in">remit the matter to the CMA;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.69in;text-indent:-0.44in">(b)</num>
+	  <content>
+	    <p style="margin-left:0.69in;margin-right:0.00in">impose or revoke, or vary the amount of, a penalty;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.69in;text-indent:-0.44in">(c)</num>
+	  <content>
+	    <p style="margin-left:0.69in;margin-right:0.00in">give such directions, or take such other steps, as the CMA could itself have given or taken; or  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.69in;text-indent:-0.44in">(d)</num>
+	  <content>
+	    <p style="margin-left:0.69in;margin-right:0.00in">make any other decision which the CMA could itself have made.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The CMA is not the only body with power to enforce competition law. The same scheme applies to regulators in the communications and postal services, electricity, gas, water and sewerage, railways, air traffic and air operation services, payment systems, healthcare services in England and financial services sectors. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In addition to dealing with appeals against infringement decisions, the CAT also deals with challenges to decisions of the CMA or the Secretary of State in connection with a market investigations or merger situations. In that kind of case, the appeal is not an appeal on the merits, but the CAT applies the principles of judicial review. The principles of judicial review have applied to an appeal to the CAT against a decision of Ofcom under the Communications Act 2003 since July 2017 (when s.194A of the Act was enacted). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Rule 4 of the CAT rules is headed “Governing principles”. It provides, so far as relevant: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.67in;text-indent:0.00in">“(1) The Tribunal shall seek to ensure that each case is dealt with justly and at proportionate cost.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.37in;text-indent:0.00in">(2) Dealing with a case justly and at proportionate cost includes, so far as is practicable—  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">(a) ensuring that the parties are on an equal footing;” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As noted, rule 104 of the CAT rules gives the CAT the power to make such costs order as it thinks fit. Rule 104 (4) lists a number of factors that the CAT may take into account in making an order. They are: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“(a)  the conduct of all parties in relation to the proceedings; (b) any schedule of incurred or estimated costs filed by the parties; (c) whether a party has succeeded on part of its case, even if that party has not been wholly successful; (d) any admissible offer to settle made by a party which is drawn to the tribunal's attention, and which is not a rule 45 offer to which costs consequences under rules 48 and 49 apply; (e) whether costs were proportionately and reasonably incurred; and (f) whether costs are proportionate and reasonable in amount.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">These factors are similar to those in the CPR; but there is no equivalent to the general rule under the CPR that “the unsuccessful party will be ordered to pay the costs of the successful party”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Rule 104 (5) provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The Tribunal may assess the sum to be paid under any order under paragraph (2) or may direct that it be— (a) assessed by the President, a chairman or the Registrar; or (b) dealt with by the detailed assessment of a costs officer of the Senior Courts of England and Wales or a taxing officer of the Court of Judicature of Northern Ireland or by the Auditor of the Court of Session, as appropriate.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Rule 104 (5) does not prescribe the basis on which costs will be assessed; unlike CPR Part 44.3 which states that the court “will” assess costs either on the standard basis or the indemnity basis. But it is to be expected that where the CAT refers the assessment of costs to a costs officer of the Senior Court that officer will apply one or other of the two bases for which the CPR provides. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Cases before BT v Ofcom </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The main building blocks in the CMA’s argument are four decided cases: <span style="font-style:italic">Bradford MDC v Booth</span> (2000) 164 JP 485; <span style="font-style:italic">Baxendale-Walker v Law  Society</span> [2007] EWCA </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Civ 233, [2008] 1 WLR 426; <span style="font-style:italic">R (Perinpanathan) v City of Westminster Magistrates’ Court</span> [2010] EWCA Civ 40, [2010] 1 WLR 1508; and <span style="font-style:italic">BT v Ofcom</span>.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in"><span style="font-style:italic">Bradford</span> is a decision of the Divisional Court, presided over by Lord Bingham CJ. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">The Council had refused to renew Mr Booth’s private hire licence on the ground that he was in breach of condition. He exercised his right of appeal to the magistrates’ court, who upheld his appeal and renewed his licence. The reason why Mr Booth’s appeal succeeded was that the magistrates disagreed with the Council that Mr Booth had broken a condition of his licence. The magistrates had statutory power to make such order for costs as they thought “just and reasonable”. Mr Booth successfully argued before the magistrates that costs should follow the event; although he accepted that the Council was exercising an administrative function and that it had not acted unreasonably. The question the magistrates posed for the court on an appeal by the Council by way of case stated was: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“Were we correct in law in finding that the principle that ‘costs follow the event’ apply against Local Authorities who make decisions on licensing functions which they are required to perform?” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The argument for the Council on appeal, recorded at [10], was that “it can never be just and reasonable to order a local authority to pay costs in the absence of bad faith or unreasonable behaviour.” At [22] Lord Bingham rejected that submission, because </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">it would deprive the magistrates of their discretion to view matters in the round. He described the proper approach as follows: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“1. Section 64(1) confers a discretion upon a magistrates' court to make such order as to costs as it thinks just and reasonable. That provision applies both to the quantum of the costs (if any) to be paid, but also as to the party (if any) which should pay them. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">2.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">What the court will think just and reasonable will depend on all the relevant facts and circumstances of the case before the court. The court may think it just and reasonable that costs should follow the event, but need not think so in all cases covered by the subsection. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">3.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">Where a complainant has successfully challenged before justices an administrative decision made by a police or regulatory authority acting honestly, reasonably, properly and on grounds that reasonably appeared to be sound, in exercise of its public duty, the court should consider, in addition to any other relevant fact or circumstances, both (i) the financial prejudice to the particular complainant in the particular circumstances if an order for costs is not made in his favour; and (ii) the need to encourage public authorities to make and stand by honest, reasonable and apparently sound administrative decisions made in the public interest without fear of exposure to undue financial prejudice if the decision is successfully challenged.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This case, therefore, does not explicitly support the proposition that the starting point is that no order for costs should be made. The need to encourage public authorities to make and stand by decisions is no more than a factor to be considered. Sir James submitted, however, that subsequent decisions of this court have indeed elevated that factor into a starting point or default position. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Baxendale-Walker </span>the Law Society instigated disciplinary proceedings against a solicitor in the Solicitors Disciplinary Tribunal (“the SDT”).  One of the two allegations of conduct unbefitting a solicitor was not proved, but the second was admitted and the Tribunal found the solicitor guilty of unbefitting conduct and suspended him from practice for three years. The SDT ordered the Law Society to pay 30 per cent of the solicitor’s costs. The Law Society’s appeal to the Divisional Court succeeded; and this court dismissed the solicitor’s appeal against the decision of the Divisional Court. The SDT had statutory power “to make such order as it may think fit, and any such order may in particular include provision for any of the following matters … the payment by any party of costs or a contribution towards costs.”  In the Divisional Court Moses LJ referred to <span style="font-style:italic">Bradford</span> and said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Absent dishonesty or a lack of good faith, a costs order should not be made against such a regulator unless there is good reason to do so. That reason must be more than that the other party had succeeded. In considering an award of costs against a public regulator the court must consider on the one hand the financial prejudice to the particular complainant, weighed against the need to encourage public bodies to exercise their public function of making reasonable and sound decisions without fear of exposure to undue financial prejudice, if the decision is successfully challenged.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">But in another case (<span style="font-style:italic">Law Society v Adcock</span> [2007] 1 WLR 1096) Waller LJ had said that Moses LJ had put the matter too highly in favour of a regulator. He said that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Lord Bingham of Cornhill CJ does not, as I understand him, suggest that there should be a presumption, one way or another; he simply makes clear that there are particular circumstances to bear in mind where a public body or a regulator is concerned.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In this court in <span style="font-style:italic">Baxendale-Walker </span>Sir Igor Judge PQBD said that the apparent difference of opinion needed to be resolved. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He went on to say at [34]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Our analysis must begin with the Solicitors Disciplinary Tribunal itself. This statutory tribunal is entrusted with wide and important disciplinary responsibilities for the profession, and when deciding any application or complaint made to it, section 47(2) of the Solicitors Act 1974 undoubtedly vests it with a very wide costs discretion. An order that the Law Society itself should pay the costs of another party to disciplinary proceedings is neither prohibited nor expressly discouraged by section 47(2)(i). That said, however, it is selfevident that when the Law Society is addressing the question whether to investigate possible professional misconduct, or whether there is sufficient evidence to justify a formal complaint to the tribunal, the ambit of its responsibility is far greater than it would be for a litigant deciding whether to bring civil proceedings. Disciplinary proceedings supervise the proper discharge by solicitors of their professional obligations, and guard the public interest,… by ensuring that high professional standards are maintained, and, when necessary, vindicated. Although… it is true that the Law Society is not obliged to bring disciplinary proceedings, if it is to perform these functions and safeguard standards, the tribunal is dependent on the Law Society to bring properly justified complaints of professional misconduct to its attention. Accordingly, the Law Society has an independent obligation of its own to ensure that the tribunal is enabled to fulfil its statutory responsibilities. The exercise of this regulatory function places the Law Society in a wholly different position to that of a party to ordinary civil litigation. The normal approach to costs decisions in such litigation—dealing with it very broadly, that properly incurred costs should follow the </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">“event” and be paid by the unsuccessful party—would appear </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.89in;text-indent:0.00in">to have no direct application to disciplinary proceedings against a solicitor.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He concluded at [40]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“… when the Law Society is discharging its responsibilities as a regulator of the profession, <span style="font-style:italic">an order for costs should not ordinarily be made against it on the basis that costs follow the event. The “event” is simply one factor for consideration. It is not a starting point.</span> There is no assumption that an order for costs in favour of a solicitor who has successfully defeated an allegation of professional misconduct will automatically follow. One crucial feature which should inform the tribunal's costs decision is that <span style="font-style:italic">the proceedings were brought by the Law Society in exercise of its regulatory responsibility, in the public interest and the maintenance of proper professional standards.</span> For the Law Society to be exposed to the risk of an adverse costs order simply because properly brought proceedings were unsuccessful might have a chilling effect on the exercise of its regulatory obligations, to the public disadvantage. <span style="font-style:italic">Accordingly, Moses LJ’s approach to this issue did not go further than the principles described in this judgment</span>.” (Emphasis added) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I take this last sentence to be explicit approval of what Moses LJ had said. Thus the difference of opinion between Moses LJ and Waller LJ was resolved in favour of the former. I find it difficult to see this as anything other than approval of a starting point or default position. I note, also, that Sir Igor described the bringing of disciplinary proceedings as the Law Society’s “exercise of … regulatory responsibility” rather than a regulatory obligation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Perinpanathan </span>Mrs Perinpanathan's daughter, who was 15, was stopped at Heathrow Airport. She was carrying some £150,000 in cash. The cash was detained by the police on the basis that there were reasonable grounds to suspect it was intended for use in unlawful conduct, namely terrorism. On 13th December 2007, following a two-day hearing at Westminster Magistrates' Court, the justices declined to order forfeiture of the cash. The police had failed to prove, on the balance of probabilities, that the intention was to use the cash for unlawful purposes. The magistrates refused to make an order for costs against the police. It was common ground in this court that when they seized the cash the police had reasonable grounds for their suspicion that it had been intended for use in unlawful conduct; and that they had reasonable grounds to believe that the cash had been intended for such use when they made their application for its forfeiture. The power to order costs in that case was the same power that the Divisional Court had considered in <span style="font-style:italic">Bradford</span>. Stanley Burnton LJ said at [19]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The only statutory restriction on the power of the magistrates is that they cannot make an order for costs against a successful party. This restriction explains its wording. It does not provide any “steer” or indication to the court that costs should follow the event, although in cases between private individuals that is likely to be the order failing good reason to deprive a successful party of some or all of his costs.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Among the many cases that Stanley Burnton LJ considered was the decision of the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">CAT in <span style="font-style:italic">British Telecommunications plc v Office of Communications</span> [2005] CAT 20 (referred to in subsequent cases as <span style="font-style:italic">RBS Backhaul</span>). That was a case in which Ofcom had resolved a dispute between Vodafone and BT by a decision which BT successfully challenged. Nevertheless, the CAT declined to make an order for costs against Ofcom. In the course of its ruling it said that there were complex issues; that Ofcom took into account the public interest in making its decision; that defending its position had brought BT substantial commercial benefits; and that there was a constant and expensive regulatory dialogue. None of the parties had said that they would suffer financial hardship if no costs order were made. At [63] it said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“We do not accept that, in those circumstances, our view as to costs would have a ‘chilling effect’ on the bringing of appeals by companies in the position of BT. On the contrary, we have some concern at this early stage of the tribunal's jurisdiction under the 2003 Act that an order against OFCOM would have a </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">‘chilling effect’ in the opposite direction by making OFCOM less resolved to defend its decisions, or more ready to compromise, when faced with claimants with market power and large financial resources. Any such pressure on OFCOM would not be in the public interest.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Commenting on that decision, Stanley Burnton LJ said at [31]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.01in;text-indent:-0.01in">“As is clear from the judgment, the context of the proceedings before the Competition Appeal Tribunal was very different from the present. <span style="font-style:italic">What is relevant to the present case is the decision that a public authority carrying out a public duty and acting reasonably was not to be required to pay the costs of its successful opponent in litigation</span>.” (Emphasis added) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He summarised his conclusions as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“[40] I derive the following propositions from the authorities to which I have referred. (1) As a result of the decision of the Court of Appeal in <span style="font-style:italic">Baxendale-Walker v Law Society</span>, the principle in the <span style="font-style:italic">Bradford</span> case is binding on this court. Quite apart from authority, however, for the reasons given by Lord Bingham CJ I would respectfully endorse its application in licensing proceedings in the magistrates' court and the Crown Court. (2) For the same reasons, the principle is applicable to disciplinary proceedings before tribunals at first instance brought by public authorities acting in the public interest: see <span style="font-style:italic">Baxendale-Walker v Law Society</span>. (3) Whether the principle should be applied in other contexts will depend on the substantive legislative framework and the applicable procedural provisions. (4) The principle does not apply in proceedings to which the CPR apply. (5) <span style="font-style:italic">Where the principle applies, and the party opposing the order sought by the public authority has been successful, in relation to costs the starting point and default position is that no order should be made.</span> (6) A successful private party to proceedings to which the principle applies may none the less be awarded all or part of his costs if the conduct of the public authority in question justifies it. (7) Other facts relevant to the exercise of the discretion conferred by the applicable procedural rules may also justify an order for costs. It would not be sensible to try exhaustively to define such matters, and I do not propose to do so. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">[41] Lord Bingham CJ stated that financial prejudice to the private party may justify an order for costs in his favour. <span style="font-style:italic">I think it clear that the financial prejudice necessarily involved in litigation would not normally justify an order.</span> If that were not so, an order would be made in every case in which the successful private party incurred legal costs. Lord Bingham CJ had in mind a case in which the successful private party would suffer <span style="font-style:italic">substantial hardship</span> if no order for costs was made in his favour.” (Emphasis added)</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This, too, is clear recognition that where the principle applies it is the starting point or default position. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Lord Neuberger MR said at [59]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The fact that section 64 contains no fetter on the magistrates' discretion as to whether, and if so to what extent, to award costs in favour of a successful party does not mean that a court of record cannot lay down guidance, or indeed rules, which should apply, at least in the absence of special circumstances. It is clearly desirable that there are general guidelines, but it is equally important that any such guidelines are not too rigid. There is a difficult, if not unfamiliar, balance to be struck, namely between flexibility, so a court can make the order which is most appropriate to the facts of the particular case and the circumstances and behaviour of the particular parties, and certainty, so that parties can know where they are likely to stand in advance, and inconsistency between different courts is kept to a minimum.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He went on at [65] to say that the principles formulated by Lord Bingham in <span style="font-style:italic">Bradford </span>applied not just to licensing cases, but to: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“…any case where the police or a regulatory authority was carrying through what was essentially an “administrative decision”, which I understand to mean the performance of one of its regulatory functions, and where the question of costs was governed by section 64.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At [73] he said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Lord Bingham CJ's three principles should apply where a regulatory body is reasonably carrying out its functions in court proceedings, at least where the rules of that court contain no presumption or principle that costs follow the event. The effect of the reasoning is that, just because a disciplinary body's functions have to be carried out before a tribunal with a power to order costs, it does not follow that there is a presumption that the tribunal ought to order the disciplinary body to pay the costs if it is unsuccessful, and that, when deciding what order to make, the tribunal should approach the question by reference to Lord Bingham CJ's three principles. It is hard to see why a different approach should apply to a regulatory or similar body carrying out its functions before a court—unless the rules of that court have any presumptive principle inconsistent with those principles, such as CPR r 44.3(2)(a).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree with Sir James that Lord Neuberger’s choice of the word “functions” means that the principle is not confined to the performance of specific duties. That echoes Sir Igor Judge’s phrase “regulatory responsibility”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At [75] Lord Neuberger recognised that there were respectable arguments (a) for a presumption that the successful party should recover its costs and (b) for saying that there is no such presumption and that, absent other factors, a successful party should only be able to recover costs where the actions of the police were unreasonable or otherwise open to criticism. Again, I agree with Sir James that, in so formulating the rival arguments, Lord Neuberger was approaching the question not merely as a question of authority but also as a question of principle. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At [76] he reiterated: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“The principles appear to me to be well founded, as one would expect bearing in mind their source. In a case where regulatory or disciplinary bodies, or the police, carrying out regulatory functions, have acted reasonably in opposing the grant of relief, or in pursuing a claim, it seems appropriate that there should not be a presumption that they should pay the other party's costs.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He expressed his conclusion at [77]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The effect of our decision is that a person in the position of the claimant, who has done nothing wrong, may normally not be able to recover the costs of vindicating her rights against the police in proceedings under section 298 of the 2002 Act, where the police have behaved reasonably.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Maurice Kay LJ agreed with both judgments. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Scotland </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The CAT has a UK-wide jurisdiction. It is therefore necessary to look beyond the practice of the courts of England and Wales: <span style="font-style:italic">BPP Holdings Ltd v HMRC</span> [2017] UKSC 55, [2017] 1 WLR 2945 at [23]. We were referred to the decision of Lord Ericht, sitting in the Outer House, in <span style="font-style:italic">Ahmed-Sheikh v Scottish Solicitors Discipline Tribunal</span> [2019] CSOH 104, 2020 SLT 1. Ms Ahmed-Sheikh had been found guilty of professional misconduct. The Scottish Solicitors Discipline<span style="font-style:italic"> </span>Tribunal awarded expenses (i.e. costs) against her on the agent and client basis (which I understand to be the equivalent of what used to be called solicitor and client basis under the RSC). The argument was not about whether the Tribunal was wrong in making a costs order at all: the argument turned on the scale of costs that had been awarded. The solicitor contended that costs should have been awarded on a party and party basis. The decision in that case was that the Tribunal was entitled to make the order for costs that it did. In the course of his judgment Lord Ericht drew attention to a number of differences between the practice in Scotland and the practice in England and Wales. Having referred to <span style="font-style:italic">Baxendale-Walker</span> Lord Ericht continued at [50]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“In Scotland things are looked at differently. The Scottish tribunal does make awards against the Law Society of Scotland, and does so on an agent and client basis.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">He also noted that he had been referred to 20 cases dating from between 1999 and 2017 in four of which expenses had been awarded against the Law Society. It is not apparent from the judgment whether the principles in <span style="font-style:italic">Baxendale Walker</span> have been considered and rejected by the Tribunal in Scotland (and, if so, why); or whether they have simply been overlooked. Nor did Lord Ericht himself comment on the practice of the disciplinary tribunal in Scotland: he merely noted that it did not apply <span style="font-style:italic">Baxendale-Walker</span>. Moreover, the <span style="font-style:italic">obiter</span> observations of the Outer House in <span style="font-style:italic">AhmedSheikh</span> cannot detract from the binding precedent of <span style="font-style:italic">BT v Ofcom</span> (in which <span style="font-style:italic">BPP</span> was quoted at [65]) which holds that those principles apply to at least some proceedings in the CAT. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The practice of the CAT </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The practice of the CAT, which I have summarised above, was not developed in ignorance of the principles formulated by Lord Bingham in <span style="font-style:italic">Bradford</span>. In the early days of the CAT Sir Christopher Bellamy QC delivered an influential costs ruling in </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.01in;text-indent:0.00in">
+	      <span style="font-style:italic">The Institute of Independent Insurance Brokers v Director General of Fair Trading</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">(29 January 2002) [2002] CAT 2 (generally known as “<span style="font-style:italic">GISC</span>”). The main argument for the Director was that the CAT should not adopt the principle that costs follow the event, but that it should only award costs against an unsuccessful party if that party had adopted an unreasonable position, or had committed a manifest error or had conducted proceedings inappropriately. The CAT reasoned as follows: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The rules then current did not contain a general rule that costs should follow the event. Nor did they contain a general rule to the effect that costs will be awarded against a losing party only if that party has behaved unreasonably, frivolously or vexatiously. Rules in other tribunals did contain a rule of the latter kind but they reflected a specific policy decision on the part of Parliament that the particular objectives of the legislation in question could best be met by restricting the circumstances in which costs may be awarded. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The CAT referred to Lord Bingham’s judgment in <span style="font-style:italic">Bradford</span> (which had not been cited to it) and also to the practice of the European Court of First Instance, now the General Court (although it noted that the rules of that court did provide for the normal rule that costs should follow the event). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">It disavowed seeking to formulate rigid rules but stated that the CAT should proceed on a case-by-case basis, retaining flexibility to meet circumstances as they arise.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">It then went onto consider what factors were relevant to the exercise of its discretion. They were: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">a)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The financial prejudice, by way of costs, that the successful appellant had suffered as a result of having brought the case.  The fact that a successful appellant had been put to expense in exercising his rights was a factor relevant to the exercise of the discretion, even though it was not necessarily a decisive factor. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">b)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">In many cases it would not be possible to identify a winner, in which case costs should lie where they fall. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">c)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">A party who has succeeded in part might be awarded only part of his costs. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">d)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">Different circumstances were likely to apply to different kinds of cases. Cases involving penalties would require particular consideration, and </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in;text-indent:0.00in">“we do not deal with such cases here.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">e)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">Any analogy there might be with the rule in civil litigation that the losing party should pay the winning party’s costs, should be displaced, in the exercise of discretion, where the CAT was satisfied that such a rule would frustrate the objects of the Act. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">f)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">There was force in the contention that a general or rigid rule to the effect that losing appellants should normally be liable for the Director’s costs, as well as their own, could tend to deter appeals. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">g)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">As far as cases where it was the Director who is unsuccessful, the principal policy argument was that it would bear unduly heavily on the public purse if the Director was regularly faced with large bills of costs from successful appellants. The Tribunal noted Lord Bingham’s statement that there was a public interest in encouraging public authorities to make and stand by honest, reasonable and apparently sound administrative decisions made in the public interest without fear of exposure to undue financial prejudice if the decision is successfully challenged. On this point it stated that “we accept that the factors urged on us by the Director are potentially relevant to the exercise of our discretion” but they were not decisive. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">h)</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">Considerations of public expenditure could not be decisive in cases where considerations of fairness point in the opposite direction. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The CAT thus concluded: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“[58] We think, therefore, it would not be proper, certainly at this early stage, to fetter our discretion under Rule 26(2) by adopting a general principle to the effect that, if the Director loses, he should be liable to pay costs to a private party only if he has been guilty of a manifest error or unreasonable behaviour. <span style="font-style:italic">Booth</span>’s case indicates that such a rule is not, as a matter of law, required. To introduce such a rule in the context of this Tribunal could, in itself, be a disincentive to exercising the right to appeal, with possible detriment to the competitive process in the market.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">[59] In our view, the Director’s concerns over costs are better addressed by other means. The aim of the Tribunal’s case management procedures is to focus as early as possible on what the main issues are so as to avoid unnecessary escalation of costs. That aim is supported by the use of written procedure, sanctions against prolixity, control over the presentation of expert evidence, limits on oral hearings, and strict timetabling. Disclosure of documents, which is a major source of cost in traditional litigation, is minimised before the Tribunal. While it is, perhaps, inevitable that some cases before the Tribunal will be expensive, the Tribunal’s procedures are designed to save costs wherever possible. The Director did not have the advantage of that system under the former Restrictive Trade Practices Acts.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As I read this, the CAT rejected the argument based on <span style="font-style:italic">Bradford</span> (i.e. <span style="font-style:italic">Booth</span>’s case) that the public interest element bore on the question whether to make a costs order at all. Rather, the concerns could be dealt with by controlling the level of costs. It is also fair to say that <span style="font-style:italic">GISC</span> was decided before it was appreciated that Lord Bingham’s principles had been extended into other areas of litigation, and before they had been characterised by later decisions of this court as a starting point or default position, rather than being no more than a factor to be taken into account. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">GISC</span> the CAT then went onto consider the facts of the particular case. Of particular note is the CAT’s reasoning at [67] where it said that it was doubtful that the decisions were taken on grounds that reasonably appeared to be sound; and that even on the Director’s submission that costs should only be awarded in cases of manifest error, such an error had been made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in"><span style="font-style:italic">GISC</span> was followed by the CAT (Rimer J presiding) in <span style="font-style:italic">The Racecourse Association v Office of Fair Trading</span> [2006] CAT 1. Having referred to the first of the factors mentioned by the CAT in GISC, the CAT went on to say at [8]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.84in;text-indent:0.00in">“We interpret this (taken with all else that we regard as implicit in the <span style="font-style:italic">GISC</span> decision) as reflecting a starting point for the exercise of the discretion that a successful appellant ought, subject to all other relevant considerations, to be entitled to be compensated for the costs he has incurred in vindicating his rights.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At [10] it repeated that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“… the starting point is that a successful appellant who can fairly be identified as a “winner” is entitled to recover his costs.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the same paragraph it confirmed that the effect of <span style="font-style:italic">GISC</span> was that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“… the OFT is not entitled to any special protection from vulnerability to costs orders in favour of successful appellants save such protection as it may obtain by appropriate case management of the appeal directed at ensuring that the costs of the appeal are kept within proportionate bounds.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The difference between<span style="font-style:italic"> GISC</span> and <span style="font-style:italic">The Racecourse Association</span>, as I see it, is that whereas in <span style="font-style:italic">GISC</span> the fact that a successful appellant had been put to expense in exercising his rights was no more than a factor relevant to the exercise of the discretion; in <span style="font-style:italic">The Racecourse Association</span> it was elevated to a starting point. The difference between the two, in practical terms, is that the starting point is the default position. That must mean that there is some sort of burden cast on the unsuccessful party to move the CAT away from that starting point. Lord Bingham’s principle, in so far as it relates to the making of a costs order at all, has got lost. Subsequent cases in the CAT have also rejected the application of Lord Bingham’s principle in this category of case, and have adopted “costs follow the event” as a starting point. It is also pertinent, in my judgment, to observe that the suggested meeting of the regulator’s concerns by control of costs takes place (for the most part) as a matter of case management, which necessarily takes place before the outcome of the appeal is known. Costs control at that stage (which is now a feature of all litigation) is evenhanded as between the parties. It is difficult to see how that bears on the subsequent decision whether or not to make a costs order once the outcome of the appeal is known. In addition, the subsequent adoption by the CAT of “costs follow the event” as a starting point loses sight of Sir Christopher Bellamy’s observation that a general rule to the effect that losing appellants should normally be liable for the regulator’s costs, as well as their own, could tend to deter appeals. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Tesco plc v Competition Commission</span> [2009] CAT 26 the CAT (presided over by Barling J) distinguished between two types of case. Having referred to <span style="font-style:italic">Bradford</span>, the CAT went on to say at [32]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Such licensing cases are different in nature from an application for judicial review, which concerns the lawfulness or validity of the decision being challenged, and which does not constitute a merits appeal by way of re-hearing. It is perhaps worth noting that where there is an application for costs in a judicial review in the Administrative Court the “loser pays” principle enshrined in CPR Rule 44.3(2)(a) applies as a general rule, although it is liable to be displaced in the light of the circumstances of specific cases.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It concluded at [34]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Tesco has established that the Commission’s decision to recommend the adoption of the competition test is invalid, and has done so in the face of a vigorous defence of its position on the part of the Commission. The decision in question has been quashed and has been referred back to the Commission for reconsideration and a new decision. We therefore start from the position that an award of costs in favour of Tesco is likely to be appropriate.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Eden Brown Ltd v Office of Fair Trading</span> [2011] CAT 29 the CAT (presided over by Roth J) again pointed out that it had adopted different starting points for different types of case. Where a regulator had determined a dispute between undertakings, and defended its decision, the starting point was that if unsuccessful it should not be liable to pay costs. On the other hand, where the contested decision was a finding of infringement, or the imposition of a penalty, the starting point was that costs would follow the event.  That was the position established in <span style="font-style:italic">The Racecourse Association</span> and followed in subsequent cases. Delivering its ruling Roth J said at [10]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Furthermore, we do not consider that having this principle as the starting point should deter the OFT from imposing appropriate penalties. The OFT does not contend that its potential liability for the costs of a successful appeal deters it from taking decisions finding infringements of the 1998 Act and Articles 101 and 102 TFEU. So far as we are aware, it has never been suggested that the European Commission’s liability for costs of successful appeals against its decisions in the General Court, where the costs rule is the same for penalty-only appeals as for appeals against liability, has deterred it from imposing what can be very substantial penalties on undertakings found to violate the EU competition rules, and we consider that the OFT should be able to fulfil its role as the primary enforcer of competition law in the United Kingdom with equal vigour.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Having referred to <span style="font-style:italic">Bradford</span>, <span style="font-style:italic">Baxendale-Walker</span> and <span style="font-style:italic">Perinpanathan</span>, he continued at [16]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The imposition of sanctions for breach of the Chapter I or Chapter II prohibition under the 1998 Act, which constitute criminal penalties for the purpose of Article 6 of the European Convention on Human Rights, cannot be regarded as remotely comparable to licensing decisions of a more administrative nature. And although the OFT is a competition authority acting in the public interest, under the regime of the 1998 and 2002 Acts it does not bring proceedings before this Tribunal in order to obtain the imposition of a sanction. The OFT puts the allegations of infringement to the parties involved, receives submissions from them in response and then itself takes a decision as to whether an infringement occurred and, if so, whether to impose a penalty and what the amount of that penalty should be. Hays and Eden Brown are not entitled to recover, nor have they claimed, any of the no doubt significant costs of contesting these issues before the OFT at that administrative stage. In our judgment, the approach set out in the <span style="font-style:italic">City of Bradford</span> case, as considered and explained by the Court of Appeal in <span style="font-style:italic">Perinpanathan</span>, should have <span style="font-style:italic">no application </span>to an appeal before this Tribunal against a decision of the OFT finding infringement and imposing a penalty with regard to the Chapter I or Chapter II prohibitions (and/or Articles 101 and 102 TFEU), irrespective of whether or not that appeal concerns only the question of the penalty.” (Emphasis added) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in"><span style="font-style:italic">Eden Brown</span> has been followed in a number of cases in the CAT, to which Ms Bacon QC, on behalf of Flynn Pharma, referred us. I do not think that it is necessary to refer to them. Suffice it to say that on each occasion the CAT agreed with the analysis in <span style="font-style:italic">Eden Brown</span>. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The CAT considered these cases (including <span style="font-style:italic">Eden Brown</span>) again in <span style="font-style:italic">British Sky Broadcasting Ltd v Office of Communications</span> [2013] CAT 9 (commonly known as </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">“<span style="font-style:italic">Pay TV</span>”). In that case the CAT (presided over by Barling J) again drew the distinction between the resolution of disputes by Ofcom (where the starting point was no order for costs) and other types of case (where the starting point was that costs follow the event). At [47] the CAT rejected the submission that it had adopted a general starting point that no order for costs should be made against Ofcom unless it had acted unreasonably. At [50] the CAT said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“… the position and duties of Ofcom as a sectoral regulator, although clearly a relevant factor, do not justify “applying … as a matter of principle (as opposed to on the specific facts of a particular case) a distinct and more indulgent approach to the award of costs against the decision-maker.” In order to provide the balance, referred to by Lord Neuberger, between sufficient flexibility to enable the Tribunal to do what is just in a particular case, and an appropriate degree of predictability, we consider that the starting point in cases such as the present should be that costs follow the event, even where Ofcom is the loser in the appeal. This approach aligns the present case with the starting point adopted by the Tribunal in most categories of case with which it deals, is consistent with the approach generally found in civil litigation, including, in particular, other public law cases, and provides ample flexibility to reach a just conclusion in each case. Using this starting point is justified in such cases as the present given that regulatory decisions of this kind often have very significant effects on the commercial interests of the regulated entity and sometimes also on the vital interests of other parties (as, for example, claimed by FAPL in the present case). The appeal route is the only recourse available to those affected by a decision which they consider to be erroneous or invalid.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In deciding as it did in <span style="font-style:italic">Pay TV</span> the CAT distinguished the cases to which I have referred, following its previous decision in <span style="font-style:italic">Tesco plc v Competition Commission</span> [2009] CAT 26. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Finally, in this review of the cases, I must refer to the decision of this court in <span style="font-style:italic">Quarmby Construction Co Ltd v Office of Fair Trading</span> [2012] EWCA Civ 1552. The OFT had found that Quarmby had infringed the Chapter l prohibition by rigging bids for tenders in the construction industry; and imposed a substantial penalty. Quarmby appealed to the CAT. The appeal failed as regards the infringement; but the CAT reduced the penalty. It made no order as to costs. Quarmby’s appeal to this court failed. It argued that the CAT should adopt the general principle that costs follow the event; and referred to previous decisions of the CAT which supported that approach. At [23] Lloyd LJ said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“I would reject unhesitatingly [Quarmby’s] contention that the tribunal ought to adopt, in a more structured and formal way, the general rule under the CPR of costs following the event as the primary guide in relation to costs. It seems to me that the approach taken by the tribunal in general, both in the earlier cases that we have been shown and in some more recent cases we have been shown, is prudent and sensible and allows proper regard to be had to the considerable variety of the types of dispute that come before the tribunal, almost all of them by way of appeal from one regulator or another.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At [31] he said that there was much to be said for the CAT’s view that neither side was the winner. He said that the CAT’s balance between success on the penalty issue but loss on the infringement issue was a view that the CAT were entitled to take. At [32] he concluded: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Taking all those considerations together with the appellant's reliance on a number of arguments on penalty that failed, it seems to me that there was no error of principle, nor any misdirection in the tribunal's approach to the issue of costs and the appeal to it. To the contrary, it addressed the issues relevant to its discretion under Rule 55(2) in a proper way and came to a conclusion which cannot be said to be outside the scope of reasonable decisions in the case.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Lloyd LJ’s judgment does not record what was argued on behalf of the OFT. Significantly, for present purposes, none of the authorities on which the CMA relies in our case appears to have been cited in <span style="font-style:italic">Quarmby</span>. And the outcome of the case itself, i.e. no order for costs, is consistent with the outcome for which the CMA argues. Moreover, <span style="font-style:italic">Quarmby</span> was considered and applied in the decision under appeal in <span style="font-style:italic">BT v </span></p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in"><span style="font-style:italic">Ofcom</span>; yet that decision was reversed by this court. I do not, with respect, consider that <span style="font-style:italic">Quarmby</span> takes the matter any further. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">BT v Ofcom </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in"><span style="font-style:italic">BT v Ofcom</span> involved a market review under which Ofcom was required (a) to identify the relevant product and geographic market(s) in accordance with EU law and guidelines; (b) to carry out an analysis as to whether there was a lack of effective competition in the defined market by reason of an entity's dominance; and (c) to decide what remedies to impose. BT appealed to the CAT which quashed certain determinations made by Ofcom concerning market definition in its Final Statement. The appeal was brought under section 192 of the Communications Act 2003. At that time section 195(2) of that Act provided that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“The Tribunal shall decide the appeal on the merits and by reference to the grounds of appeal set out in the notice of appeal.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The CAT followed its own previous decisions in drawing a distinction between different types of appeal. It said that, although there was no express starting point in rule 104, for certain categories of case the CAT had an established practice in relation to costs. It gave an appeal against Ofcom's decision resolving a price dispute under as an example of a case where the starting point was that there should be no order for costs against Ofcom if it had acted reasonably and in good faith. It said, however, that in the case of infringement decisions and applications for judicial review of merger decisions and market investigations the CAT had taken the view that the starting point should be that costs should follow the event. In the decision under appeal in that case, the CAT described the practice which had grown up (summarised in this court at [16]): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The CAT then said that “[although] there is no express starting point in rule 104, for certain categories of case the [CAT] now has an established practice in relation to costs”. It gave an appeal against Ofcom's decision resolving a price dispute under section 185 of the 2003 Act as an example of a case where the starting point was that there should be no order for costs against Ofcom if it had acted reasonably and in good… It said, however, that in the case of infringement decisions and applications for judicial review of merger decisions and market investigations under sections 120 and 179 of the Enterprise Act 2002, the CAT had taken the view that the starting point should be that costs should follow the event, citing the CAT's decision in <span style="font-style:italic">Tesco plc v Competition Commission</span> [2009] Comp AR 429 (“ <span style="font-style:italic">Tesco</span> ”). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The question for this court was whether that was correct. It is to be particularly noted that the practice as described included “infringement decisions”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In its submissions to this court BT emphasised the “important distinction” between dispute resolution appeals and regulatory appeals. In deciding a dispute resolution appeal, Ofcom was performing a unique quasi-judicial role. In the case under consideration Ofcom was imposing conditions on BT. In voluntarily defending a decision it had made pursuant to its public functions, it must face the possibility of an adverse costs order just as any other public authority defending an appeal or judicial </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">review of its decision. BT argued that the authorities relied upon by Ofcom were all explicable by the distinction between Ofcom acting in its dispute resolution capacity and in its regulatory capacity. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This court considered all the English cases to which I have referred with the exception of <span style="font-style:italic">Eden Brown</span>. But since <span style="font-style:italic">Eden Brown</span> was quoted in <span style="font-style:italic">Pay TV</span>, I do not regard that omission as significant. At [66] the court said of <span style="font-style:italic">Bradford</span>, <span style="font-style:italic">Baxendale-Walker</span> and <span style="font-style:italic">Perinpanathan</span>: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The language … is in very general terms that is capable of direct, if analogous, application to the circumstances of the present case. We are not sure that there is much value in the detailed semantic analysis of the judgments in these cases that the parties undertook. It is enough to say that in each of these authorities, the courts contemplated that the principles they were enunciating would be of significance and application in other areas.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At [69] it noted that in <span style="font-style:italic">Perinpanathan</span> Lord Neuberger MR had “expressed himself in terms wide enough to be of relevance to the competition arena.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The court concluded as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“[71]  We have, therefore, concluded that the principles stated in <span style="font-style:italic">Perinpanathan</span>, applying the same approach enunciated in Lord Bingham CJ's three propositions in <span style="font-style:italic">Bradford</span>, and the decision in <span style="font-style:italic">Baxendale-Walker</span>, were relevant, if not directly applicable, to the situation with which the CAT was faced in each of <span style="font-style:italic">Tesco</span>, <span style="font-style:italic">PayTV</span>, and the Costs Decision. In so far as the CAT decided in those cases that the principles were of no relevance, they were wrong. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">[72]  Finally, we should say in this connection, that we do not find the distinctions drawn as to the precise route of the appeal of any great assistance by themselves. <span style="font-style:italic">Baxendale-Walker</span> was an appeal from a tribunal set up to decide disciplinary matters between the regulator and the solicitor. <span style="font-style:italic">Bradford</span> was an appeal from justices determining a licensing question where their decision had to be made de novo, and <span style="font-style:italic">Perinpanathan</span> was an appeal from a decision made by justices on the application of the police. <span style="font-style:italic">But in each case, the police or the regulators were acting solely in pursuit of their public duty and in the public interest in “carrying out regulatory functions”.</span> The question, as it seems to us, that the CATs faced with these decisions ought to have been asking, was not whether they were relevant. They plainly were. The question was whether there were specific circumstances of the costs regime in the particular kind of appeal before the CAT that made inapplicable the principles enunciated by the Court of Appeal as to the correct starting point in an application for costs against a regulator acting reasonably and in good faith. The CAT did not approach the matter in that way in either <span style="font-style:italic">PayTV</span> or the Costs Decision, and in so far as they failed to do so, in our judgment they made an error of law.” (Emphasis added) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Turning to the previous practice of the CAT, the court said at [74]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“First, we do not think that fine distinctions between dispute resolution appeals, regulatory appeals, and so called “merits appeals” are particularly helpful. <span style="font-style:italic">In so far as the regulator is acting in that capacity in bringing or resisting proceedings, that is an important consideration.</span>” (Emphasis added) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Since the CAT’s description of its established practice had expressly included infringement decisions, it seems to me that this court’s reference to “merits appeals” must at least have included infringement decisions. The court went on to say at [75] that, although there are distinctions between different kinds of decision, in many cases “this may be a distinction without a difference”: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“… fine distinctions as to the way in which a regulator appears before a court or tribunal does not seem to us much to assist the debate. It is the substantive nature of the proceedings which matters.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At [78] the court said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“In general terms, in our judgment, the CAT costs authorities that wholly disregarded the Court of Appeal authorities in similar regulatory situations were in error, and those which took the authorities into account and then decided whether the specific situation, in which the CAT was expert, demanded a different procedural approach, were entitled to act as they did.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At [81] the court “particularly” endorsed the statement of the CAT in <span style="font-style:italic">Number (UK) Ltd v Office of Communications (Costs)</span> [2009] CAT 5 that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“It would … be unsatisfactory if different tribunals placed radically different weight … on Ofcom's unique position as regulator. It seems to us that if any significant weight is to be given to this factor, it must follow that the starting point will, in effect, be that Ofcom should not in an ordinary case be met with an adverse costs order if it has acted reasonably and in good faith.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It concluded at [83]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“In conclusion, then, on this issue, we need only reiterate the importance of the fact that the regulator is acting in that capacity in bringing or resisting proceedings. Thus, <span style="font-style:italic">if Ofcom has acted purely in its regulatory capacity in prosecuting or resisting a claim before the CAT and its actions are reasonable and in the public interest,</span> it is hard to see why one would start with a predisposition to award costs against it, even if it were unsuccessful.” (Emphasis added) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, it is clear from [74] that the court intended its decision to apply to “merits appeals” such as the case with which we are concerned. The case before it was, indeed, a “merits appeal”. It is all of a piece with its evaluation at [66] of the trilogy of <span style="font-style:italic">Bradford</span>, <span style="font-style:italic">Baxendale-Walker</span> and <span style="font-style:italic">Perinpanathan</span> where the observations were intended to be widely applied. That is reinforced by the entirely general statement at [83], which deals compendiously with “a claim before the CAT” in which Ofcom (or the CMA) is acting purely in its regulatory capacity. The court had explained what it meant by “in its regulatory capacity” at [72]; namely that the regulator was acting solely in pursuit of its public duty and in the public interest. In other words, it was not acting in its own commercial interest. Both <span style="font-style:italic">Tesco</span> and <span style="font-style:italic">Pay TV</span>, which followed <span style="font-style:italic">Eden Brown</span> in distinguishing different kinds of case brought before the CAT, were specifically disapproved. Even in <span style="font-style:italic">GISC </span>the CAT held that the Director’s concerns were best addressed by control over the <span style="font-style:italic">level </span>of costs, rather than the prior question whether costs should be awarded at all. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment, therefore, this court has comprehensively rejected the proposition that the starting point, even in a merits or judicial review appeal in the CAT, is that costs follow the event. It is true that in <span style="font-style:italic">BT v Ofcom</span> this court does not appear to have been referred to the practice in disciplinary proceedings in Scotland, where the <span style="font-style:italic">Baxendale-Walker</span> principle is apparently not applied. But, as I have said, I do not consider that that detracts from the authority of <span style="font-style:italic">BT v Ofcom</span>. It could, of course, be said that the case before the court in <span style="font-style:italic">BT v Ofcom</span> was not an infringement appeal or an appeal under the Competition Act 1998, with the consequence that what it said on that topic was, strictly speaking, <span style="font-style:italic">obiter</span>. But that, to my mind, is an over-technical approach. In a previous dispute between BT and Ofcom this court had noted that the Tribunal’s function under both the Competition Act 1998 and the Communications Act 2003 was similar: <span style="font-style:italic">British Telecommunications plc v Office of Communications</span> [2011] EWCA Civ 245, [2011] 4 All ER 372 at [63]. The judgment in <span style="font-style:italic">BT v Ofcom</span> was a judgment of the court which is intended to carry special authority. It was designed to give general guidance to the CAT, especially in view of the court’s observations at [74] and [78]. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Accordingly, I consider that even if we are not technically bound by <span style="font-style:italic">BT v Ofcom</span> we ought to follow it. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Nevertheless, although the court rejected “costs follow the event” as the starting point, I do not consider that it unequivocally endorsed “the Principle” as originally framed by the CMA. That, I think, emerges from the final paragraphs of the judgment in <span style="font-style:italic">BT v Ofcom</span> in which the court said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“85.  That does not mean that it would not have been open to the CAT, to explain why in this case, for good reasons, the principles in the Court of Appeal cases we have mentioned were inapplicable. The CAT is best placed to understand its own specific regulatory context, and will want, as was said in <span style="font-style:italic">The Number</span> [2009] CAT 5, to reach a consistent position. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">86.  In our judgment, the appropriate course is for this court to remit the Costs Decision to the CAT to decide the matter afresh on the correct legal principles adumbrated in this judgment. The CAT will itself be best placed to consider in detail the arguments on the “chilling effect” advanced by both sides before us. It will need also to be astute to ensure that it is adopting a consistent and sustainable approach, based not on fine distinctions between the routes by which cases reach the CAT, but on applicable legal principle, the specific industry position best understood by the CAT itself, and its own procedural rules.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Although in these paragraphs this court recognised that the CAT could develop its own guidelines, that was subject to the proviso that they were based on “applicable legal principle”. In <span style="font-style:italic">Perinpanathan</span> Lord Neuberger MR stressed the need for consistency of approach; and in particular the need to avoid inconsistency “in the approach to the question of costs in regulatory matters”: see [74]. That justifies the adoption of the same principles in cases involving competition regulators. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The applicable legal principles to be derived from these cases are, in my judgment, as follows: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Where a power to make an order about costs does not include an express general rule or default position, an important factor in the exercise of discretion is the fact that one of the parties is a regulator exercising functions in the public interest. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">That leads to the conclusion that in such cases the starting point or default position is that no order for costs should be made against a regulator who has brought or defended proceedings in the CAT acting purely in its regulatory capacity. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The default position may be departed from for good reason. iv)<span style="font-family:Arial"> </span>The mere fact that the regulator has been unsuccessful is not, without more, a good reason. I do not consider that it is necessary to find “exceptional circumstances” as opposed to a good reason. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">A good reason will include unreasonable conduct on the part of the regulator, or substantial financial hardship likely to be suffered by the successful party if a costs order is not made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">vi)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">There may be additional factors, specific to a particular case, which might also permit a departure from the starting point. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is not entirely clear why the court remitted the question of costs to the CAT; but as </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Arnold LJ suggested in argument it may be that there was some special feature of “this case” (as mentioned at [85]) which the court had in mind. Or it may be, as Sir James suggested, that the fact that the parties had adduced evidence of the “chilling effect” (as mentioned at [86]) was the driver. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The CAT’s ruling in our case </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">81.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In our case the CAT considered the decision of this court in <span style="font-style:italic">BT v Ofcom</span>. The question that the CAT posed for itself was as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The specific issue is whether a competition infringement case decided by the CMA is a "similar regulatory situation" to that in which Ofcom was discharging its regulatory functions in the manner considered by the Court of Appeal in <span style="font-style:italic">BT v Ofcom</span>. That issue has two parts; first whether this is a regulatory situation at all; and second, if it is, whether it is sufficiently similar to that considered by the Court of Appeal. If it is such a similar regulatory situation, then there should be no starting point, or default point, of an order for costs against the CMA and we would only so order if there were particular circumstances in this case that would justify doing so under Rule 104 . If it is not, then the present case falls outside the scope of <span style="font-style:italic">BT v Ofcom</span> and we are not bound by the decision, although we are free to apply its reasoning if we think it appropriate to do so.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">82.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">At [33] it said that it was not clear whether the court had questions of the wider competition enforcement regime in mind. At [34] it said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Some of the more general statements in <span style="font-style:italic">BT v Ofcom</span> are, in literal terms, capable of applying in the context of competition enforcement. An example would be the broad terms in which it refers to a public authority carrying out its functions in the public interest. However, those statements were not applied to competition enforcement and, had the Court of Appeal intended its decision to apply also to that specific field, we would perhaps have expected a much clearer conclusion to that effect following a more detailed consideration of the issues.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">83.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I respectfully disagree. The categorisation of decisions described in the ruling under appeal in that case distinguished between two types of case, one of which included infringement decisions. Rather than expecting the court to have expressly included infringement decisions in the scope of its general remarks, I would have expected the court to have expressly excluded them if that is what it meant. In short, I consider that the CAT was looking at <span style="font-style:italic">BT v Ofcom</span> through the wrong end of the telescope. It should have started with the principles as developed in the case law to which I have referred. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">84.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The CAT went on to cite extensively from <span style="font-style:italic">Eden Brown</span> (which had of course been cited in <span style="font-style:italic">Pay TV</span>). At [39] it said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The present case is not a penalty only appeal, but is also against the substance of the CMA's decision. In addition, the OFT has been succeeded by the CMA. However, the overall legal context and the authority's and the Tribunal's role have not changed. It is far from clear that the judgment of the Court of Appeal in <span style="font-style:italic">BT v Ofcom</span>, which did not, as discussed above, consider the situation of competition enforcement, provides a basis on which we should depart from the established practice of this Tribunal as set out clearly in <span style="font-style:italic">Eden Brown</span>.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">85.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Next the CAT considered particular features of competition infringement cases. It noted that: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">In a regulatory situation, the authority is obliged by its regulatory duties to take action against a particular person and, if it cannot itself impose any sanction, to apply to a further body, whether a court or a tribunal, to obtain that sanction. In the present case, by contrast, the CMA has a discretion whether to take action against a particular company, and is not obliged to do so in any particular case. Although the CAT did not expressly say so, it appears to have regarded this factor as preventing the case from being a regulatory situation at all. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The CMA's powers are extensive, as shown by the imposition in this case of a very substantial financial penalty of a quasi-criminal nature. These powers are exercised by the CMA through an administrative procedure in which objections are put to the parties accused of infringement, their responses considered, and a decision taken. The parties bear the entire cost of their participation in that process, whatever its outcome. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The appeal to the CAT is the parties' first opportunity to put their case to an independent and impartial appeal body and for the CMA to defend its decision. It is an appeal “on the merits”. It is thus an essential part of the system by which competition authorities, in return for receiving extensive enforcement powers, are held to account by the courts. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">86.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Having identified these features of competition infringement cases, the CAT concluded at [46]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Our conclusion is that although the Court of Appeal phrased its decision in <span style="font-style:italic">BT v Ofcom</span> widely (such that it could apply to all cases in which a public authority defends its decision in the Tribunal), it certainly did not expressly extend its reasoning to competition infringement cases. Such cases appear to us to be different in significant respects from purely regulatory decisions: they were not considered by the Court of Appeal, there was no detailed consideration of the relevant features of the competition enforcement regime and no examination of the respective roles of the CMA and the Tribunal within it. Accordingly, we do not feel that it is appropriate for us, in the current state of the development of the law, to depart from the established jurisprudence of the Tribunal in this area, as summarised in <span style="font-style:italic">Eden Brown</span>, and to reject the starting point that costs should follow the event.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">87.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in"><span style="font-style:italic">Eden Brown</span>, it will be recalled, held that the principles established in <span style="font-style:italic">Bradford</span>, <span style="font-style:italic">Baxendale-Walker</span> and <span style="font-style:italic">Perinpanathan</span> had “<span style="font-style:italic">no </span>application” in infringement cases.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">88.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I do not consider that the fact that the CMA has a discretion whether or not to adopt an infringement decision or to impose penalties is of critical importance. Ms Bacon placed particular reliance on paragraph [75] of <span style="font-style:italic">BT v Ofcom</span> in which the court discussed “obligations”. But it is clear that the court was using the word “obligation” in a very loose sense. As Sir Igor Judge PQBD pointed out in <span style="font-style:italic">Baxendale-Walker</span> at </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">[34], the Law Society is not obliged to bring disciplinary proceedings; but “costs follow the event” is not the starting point. Likewise, the police have considerable discretion whether to investigate a possible crime, whether to make an arrest, or whether or not to impound cash: <span style="font-style:italic">R v Commissioner of Metropolitan Police ex p Blackburn</span> [1968] 2 QB 116. The key point, as <span style="font-style:italic">BT v Ofcom</span> made clear (if it was not already clear), is that the regulator is acting purely in its regulatory capacity. In this case the CMA was undoubtedly acting in performance (or attempted performance) of its statutory duty (or obligation) under section 25 (3) of the Enterprise and Regulatory Reform Act. The fact that it has a large measure of operational freedom whether or not to pursue an investigation; and whether to impose a penalty (and if so how much) is not a relevant distinction.  Sir Igor Judge in <span style="font-style:italic">Baxendale </span>referred to “regulatory responsibilities”; and Lord Neuberger MR in <span style="font-style:italic">Perinpanathan </span>to “regulatory functions”. These are not confined to specific obligations. As Lord Sumption put it in <span style="font-style:italic">R (Gallaher Group) v CMA</span> [2018] UKSC 25, [2018] 2 WLR 1583 at [46]: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.55in;text-indent:0.00in">“A competition authority is not an ordinary litigant, but a public authority charged with enforcing the law.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">89.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">It is true that the CMA’s powers are extensive. The imposition of a financial penalty is a serious matter for an undertaking, as is the reputational damage likely to be occasioned by a finding of infringement. But I question whether, in context, that is of greater significance than the loss to a sole trader of a licence to carry on a trade at all, such as the refusal of the private hire licence to Mr Booth in <span style="font-style:italic">Bradford</span>. That, too, is a decision or sanction imposed by the regulator itself which must be challenged by the person aggrieved by the sanction. The SDT, which was under consideration in <span style="font-style:italic">Baxendale-Walker</span>, has power to strike a solicitor’s name from the roll and thereby permanently to deprive him or her of their professional livelihood. In that situation the sanction is imposed by the tribunal rather than the Law Society, which acts as prosecutor; but I cannot see that that is relevant distinction. I accept that an infringement of competition law is treated for many purposes as a breach of the criminal law, as this court held in the appeal against the CAT’s substantive decision: [2020] EWCA Civ 339 at [136]. But that, in my judgment, is only of tangential relevance to the question of costs.  It must not be forgotten that a corporate defendant (unlike an individual defendant) has no entitlement to costs in successfully defending a prosecution in the criminal courts: see Prosecution of Offences Act 1985 s 16A which limits the making of a defendant’s costs order to cases in which the defendant is an individual. So I do not find the quasi-criminal nature of a penalty a compelling analogy. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">90.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">As far as the CAT being the first opportunity the undertaking has to put its case to an independent tribunal is concerned, I do not consider that that is very different to <span style="font-style:italic">Bradford</span>, in which Mr Booth’s first opportunity to put his case to an independent tribunal was his complaint to the magistrates. That, too, was an appeal on the merits. Nor is it any different to <span style="font-style:italic">Baxendale-Walker</span> where the SDT hearing was Mr Baxendale-Walker’s first opportunity to defend himself. So too was <span style="font-style:italic">Perinpanathan</span>, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">where Mrs Perinpanathan’s first opportunity to explain to an independent tribunal why the cash her daughter was carrying was legitimate was in front of the magistrates. The magistrates decided the case on the evidence brought before them. Neither of these cases was simply a review of the original decision. In addition, the appeal considered in <span style="font-style:italic">BT v Ofcom</span> was itself a “merits appeal”; so that cannot be a valid ground of distinction. Moreover, as this court explained in dealing with the substantive appeal, one of the reasons why an appeal to the CAT is a “merits appeal” is that the imposition of a penalty by an <span style="font-style:italic">administrative</span> body (such as the CMA) is only compliant with article 6 of the ECHR if an appellate tribunal has full jurisdiction to examine all questions of fact and law: [2020] EWCA Civ 339 at [137] and [140]. In those circumstances, it is entirely appropriate to describe the CMA’s role in the CAT as defending a regulatory or administrative decision. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">91.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In short, therefore, I consider (a) that the CAT misinterpreted the decision of this court in <span style="font-style:italic">BT v Ofcom</span> and (b) that the reasons given for singling out competition infringement cases are not compelling. What is lacking in the present ruling is that the CAT appears to me to have given no weight at all to the position of the CMA as a public authority carrying out its functions in the public interest. As Stanley Burnton LJ said in <span style="font-style:italic">Perinpanathan</span>, commenting on <span style="font-style:italic">British Telecommunications plc v Office of Communications</span>, that is the feature that is relevant in considering what (if any) order for costs should be made. It was not the nature of the dispute. The costs ruling in our case contains the same flaw as caused this court to set aside the ruling in <span style="font-style:italic">BT v Ofcom</span>. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">92.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">That is not to say that success or failure (either overall or on discrete issues) is irrelevant. As Sir Igor Judge PQBD said in <span style="font-style:italic">Baxendale-Walker</span> it is a factor to be considered; and in any event success or failure is expressly referred to in rule 104. Also relevant is any financial hardship which might be caused to the successful appellant (although none was alleged in this particular case).  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Other arguments </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">93.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Pfizer and Flynn drew attention to other features of an infringement decision by the CMA. In short they are: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The potential impact of penalties on the profitability and viability of the business of an undertaking. But the withdrawal or non-renewal of a licence to trade may have similar effect. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">An infringement decision may lead to the disqualification of a director; and thus the CAT’s supervisory role over the CMA protects individuals against flawed decisions. That is undoubtedly so, although the court would still have to consider the critical issue of whether the person in question is unfit to be a director. In addition, an infringement decision will be addressed to an undertaking, rather than to an individual director; and any appeal would be made by the undertaking rather than by the director. But if a director were to be a party to an appeal, the CAT would, in my judgment, be entitled to take this into account in considering what order for costs to make in any particular case, particularly where the director concerned would suffer financial hardship if no costs order were made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">An infringement decision may lead to findings of fact binding on other courts or tribunals if follow-on proceedings for damages are brought. Accordingly, in order to defend itself against potential liability in civil proceedings, an undertaking may be compelled to appeal to the CAT. There is, therefore, a </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.00in">degree of linkage between proceedings in the CAT and civil proceedings (governed by the CPR) in which a successful party could expect to recover its costs. I do not consider that the ramifications of an infringement decision in private law proceedings governed by the CPR is a cogent enough reason to displace the starting point in regulatory proceedings in the CAT between the regulator and an undertaking.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Parties are required to incur considerable costs in the administrative stage of an investigation. Those costs are irrecoverable. It would be doubly unfair for a party to have to bear its own costs both in the administrative stage and in the CAT in a case in which it turns out that the CMA made a flawed decision. This seems to me to be a feature of many forms of regulatory processes. I note that in <span style="font-style:italic">RBS Backhaul</span> at [60] the CAT referred to the “constant regulatory dialogue” and to the “costs of maintaining specialised regulatory and compliance departments, and taking specialised advice, [which] will not ordinarily be recoverable prior to proceedings.” Yet even so, the CAT’s approach in that case was that no order for costs should be made. Ms Bacon pointed out that those remarks were directed to a case involving a regulated industry. Competition infringement cases, by contrast, do not (or do not necessarily) involve regulated industries; and undertakings operating in unregulated industries (such as the construction industry) are not in such dialogue and do not maintain specialised regulatory departments. That is a fair point, as far as it goes; but it is accommodated by the possibility of departure from the starting point in cases of financial hardship. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">If an infringement case is brought in the EU context against a decision of the European Commission, the Commission is required to pay the costs of a successful appellant if its decision is annulled. This is a red herring. Article 134 of the Rules of Procedure of the General Court provides that “The unsuccessful party shall be ordered to pay the costs if they have been applied for in the successful party's pleadings”. There is, therefore, a starting point mandated by the rules (although there are some exceptions). That is not the case under rule 104. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">94.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Pfizer and Flynn also emphasised that a starting point that “costs follow the event” is no more than that: the CAT may make a different order. I do not regard this as a weighty argument. CPR Part 44.2 says much the same: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">“(1) The court has discretion as to— </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.00in">whether costs are payable by one party to another; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.00in">the amount of those costs; and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.23in;text-indent:-0.23in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.23in;margin-right:0.00in">when they are to be paid. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">(2) If the court decides to make an order about costs— </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.23in;text-indent:0.50in">the general rule is that the unsuccessful party will be ordered to pay the costs of the successful party; but </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.23in;text-indent:0.50in">the court may make a different order.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">95.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Yet in <span style="font-style:italic">Quarmby</span> this court rejected the application by analogy of the approach under the CPR. In addition, in <span style="font-style:italic">BT v Ofcom</span> this court disapproved <span style="font-style:italic">PayTV</span> which had also sought to draw an analogy between proceedings in the CAT and civil litigation governed either by the CPR or by the former Rules of the Supreme Court which contained the same general rule (RSC Order 62 rule 3 (3)). For the same reason I do not consider that analogies with litigation conducted under the CPR (whether judicial review or otherwise) are helpful. To the contrary, the general rule in the tribunal system (which is not governed by the CPR) is that in the first tier tribunal each party bears its own costs, absent unreasonable conduct: see, for example Tribunal Procedure (First-tier Tribunal) (Property Chamber) Rules 2013 rule 13. That is so even in the First Tier Tax Tribunal: Tribunal Procedure (First-tier Tribunal) (Tax </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Chamber) Rules 2009 rule 10. Even where a tax case has been designated as “complex” the taxpayer may choose to retain the general rule: rule 10 (1)(c). Even before the establishment of the current tribunal system Lord Woolf MR pointed out in <span style="font-style:italic">AEI Rediffusion Music Ltd v Phonographic Performance Ltd</span> [1999] 1 WLR 1507 (a case that involved a substantial commercial dispute over licence fees): </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“… in general tribunals adopt a more restrictive approach to making orders for costs than courts because they are concerned not to impede access to the tribunal by those who might be deterred if the risk of being made to pay costs is too great.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">96.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Likewise in the case of a planning inquiry, which may equally involve complex evidence both factual and expert, the general rule is that the parties bear their own costs. So the mere fact that two well-resourced parties have a dispute which is judicially or quasi-judicially resolved does not necessarily engage “costs follow the event” as the starting point.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">97.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Nor do I find persuasive the point that in previous cases before the CAT the CMA (or its predecessor the OFT) either accepted or in some cases positively relied upon the principle that “costs follow the event”. Until the law was clarified by <span style="font-style:italic">BT v Ofcom</span>, there was no reason for them not to fall in line with the established practice of the CAT.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">98.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Pfizer and Flynn also emphasised the contribution of “costs follow the event” to discipline in litigation. Mr Brealey in particular emphasised that the CAT applied the “costs follow the event” principle on an issue by issue basis. If the starting point or default position were to be that no order for costs should be made against a regulator without good reason, the regulator would be encouraged to take every conceivable point: what was referred to as “kitchen sink” litigation. There is no doubt that the encouragement of discipline justifies “costs follow the event” as a starting point or general rule. Many distinguished judges have said so. But that applies to all forms of litigation, including litigation in which the starting point is that no order for costs should be made against a regulator. To the extent that the courts have balanced the twin objectives of discipline in litigation on the one hand, and the public interest in encouraging regulators to make and stand by reasonable and sound decisions without </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">fear of exposure to undue financial prejudice on the other, they have, as a matter of policy, preferred the latter to the former. In addition, if a regulator does indulge in “kitchen sink” litigation, a court or tribunal may well take the view that that, of itself, is unreasonable conduct. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">99.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Both sides also raised arguments before us on the potential “chilling effect” of adopting a particular starting point. In the ruling under appeal the CAT did not find it necessary to consider that question. Mr Brealey in particular drew attention to the statement in <span style="font-style:italic">Eden Brown</span> that the OFT (as predecessor of the CMA) did not assert that a potential liability for costs was a deterrent to the taking of robust decisions. He also drew attention to the fact that (as revealed in its accounts) the CMA was able to use monies collected by way of penalties in offsetting its legal costs. On the other hand, in <span style="font-style:italic">RBS Backhaul</span> at [63] the CAT said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“… we have some concern at this early stage of the tribunal’s jurisdiction under the 2003 Act that an order against OFCOM would have a “chilling effect” in the opposite direction by making OFCOM less resolved to defend its decisions, or more ready to compromise, when faced with claimants with market power and large financial resources. Any such pressure on OFCOM would not be in the public interest.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">100.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I would not regard the “chilling effect” on the CMA as self-evident. But in so far as it has potential to exist, I consider that it is already accommodated within the principles developed by the cases in this court.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">101.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Brealey also relied on rule 4, and in particular on rule 4 (1)(a) which, he said, militated against the asymmetric approach for which the CMA contended. In the first place it is not at all clear that the CMA was contending for an asymmetric position. In its supplemental skeleton argument the CMA stated: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.73in;text-indent:0.00in">“… the issue on this appeal does not concern whether the CMA can recover its costs when it succeeds.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">102.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">It did not advocate an asymmetric approach in <span style="font-style:italic">GISC</span> (see paragraph [25]) or in<span style="font-style:italic"> Eden Brown</span> (see paragraph [8]). All we are asked to decide is whether, on the one hand, the starting point is that an order for costs should be made against an unsuccessful regulator, or on the other, the starting point is that no order should be made against an unsuccessful regulator except for a good reason. Accordingly, the effect of our decision in this case does not preclude the CAT from adopting a symmetric approach, if it chooses to. In deciding whether or not to do so, it will no doubt consider whether the potential exposure to a liability for costs would deter appeals by some or all undertakings. Secondly, the existence of rule 4 did not deter this court in <span style="font-style:italic">BT v Ofcom</span> from ruling as it did. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Appeals </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in">103.<span style="font-family:Arial"> </span>Finally, I should make it clear that we are only concerned with orders for costs in proceedings before the CAT at first instance. Even in tribunals whose practice is not to order costs at first instance, different considerations may apply to an appeal against a first instance decision. One example to which we were referred was the decision of </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:-0.01in;text-indent:-0.01in">the Privy Council in <span style="font-style:italic">Walker v The Royal College of Veterinary Surgeons</span> [2007] UKPC 20. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Conclusion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">104.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">As I have said, although “costs follow the event” is not the starting point in an infringement appeal at first instance, I do not consider that <span style="font-style:italic">BT v Ofcom</span> endorses the Principle as originally formulated by the CMA. It is not the case that the only circumstances in which an order for costs can be made against the CMA is a case in which it has acted unreasonably or in bad faith. That proposition was expressly rejected in <span style="font-style:italic">Bradford</span>; and none of the later decisions have overruled it in that respect.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">105.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Rather, in my judgment, the starting point or default position is that no order for costs should be made against a regulator who has brought or defended proceedings in the CAT acting purely in its regulatory capacity. That starting point may be departed from for good reason; but the mere fact that the regulator has been unsuccessful is not enough. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">106.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">As this court recognised in <span style="font-style:italic">BT v Ofcom</span> at [86], it is for the CAT to develop its own approach to an award of costs. That approach can, no doubt, include the degree of success or failure achieved by a party as one of the relevant factors as envisaged by rule 104 itself. It may also include consideration of what (if any) hardship would be suffered by a successful appellant if an order for costs was not made (which would not be a relevant consideration under the CPR). In considering hardship, the CAT could take into account, in an appropriate case, the level of irrecoverable costs that the successful party had borne in the administrative stage of the investigation. The conduct of the parties would also be a relevant consideration as the rule again envisages. It may be that if the CMA were to pursue a small or medium-sized enterprise as a test case, that would justify a departure from the starting point. But whatever approach is adopted the CAT must also put into the scales the fact that the CMA is a public body carrying out functions in the public interest; and that there is a public interest in encouraging public bodies to exercise their public function of making reasonable and sound decisions without fear of exposure to undue financial prejudice, if the decision is successfully challenged.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">107.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In <span style="font-style:italic">BT v Ofcom</span> this court remitted the question of costs to the CAT. The question arose whether we should do the same. But in our case the CAT considered a number of reasons for not adopting the starting point which I consider to be correct; and I have concluded that those reasons are inadequate. I have also considered the further considerations urged by both Mr Brealey and Ms Bacon; and I consider that they, too, are inadequate. The CAT found that the CMA had not acted unreasonably and could not be criticised for not accepting points made by Pfizer and Flynn. It also found that neither Pfizer nor Flynn had suffered financial hardship. In those circumstances I do not consider that any useful purpose would be served by remitting the case to the CAT. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Result </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">108.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For these reasons, I would allow the appeal and make no order for the costs of the proceedings before the CAT. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Floyd: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">109.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Arnold: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">110.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree that this appeal should be allowed for the reasons given by Lewison LJ. As he notes at [38], Lord Neuberger MR recognised in <span style="font-style:italic">Perinpanathan </span>at [75] that there were respectable arguments (a) for a presumption that the successful party should recover costs and (b) for saying that there is no such presumption and that, absent other factors, a successful party should only be able to recover costs where the actions of the public body (in that case, the police) were unreasonable or otherwise open to criticism. The courts of England and Wales have resolved this dilemma by the classic common law method of making a series of decisions, initially on a case-by-case basis, which have come to be recognised as establishing a general principle. Even if that process was not already complete by the time of <span style="font-style:italic">Perinpanathan</span>, the generality of the principle was clearly established by <span style="font-style:italic">BT v Ofcom</span>; and our decision reinforces it. In proceeding in this way, the courts have relied, as the common law always does, upon the experience and judgment of the judges involved, some of whom were very distinguished. It is fair to say, however, that the decisions have not been evidencebased, nor have the courts been able to take into account any wider considerations of policy than those discussed in the cases. In those circumstances there may be merit in the issue being considered by the Law Commission.   </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

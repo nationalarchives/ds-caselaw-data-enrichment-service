@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/584"/>
+	  <FRBRuri value="ewca/civ/2020/584"/>
+	  <FRBRdate date="2020-04-30" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="584"/>
+	  <FRBRname value="B (Children)(Remote Hearing: Interim Care Order)"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/584/eng"/>
+	  <FRBRuri value="ewca/civ/2020/584/eng"/>
+	  <FRBRdate date="2020-04-30" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/584/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/584/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:37:39" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/584/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>584</uk:number>
+	<uk:cite>[2020] EWCA Civ 584</uk:cite>
+	<uk:hash>88d19a0ae494b38596cdc419f82ae5b046687b8b0ed20a78400b3bede6ddfc1e</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/584/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.51in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.11in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 584</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>B4/2020/0618</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE WEST LONDON FAMILY COURT</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Recorder McCarthy QC</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ZW20C00148</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.86in;margin-right:0.00in;text-indent:2.07in">
+	<span style="text-decoration:underline">Date: 30 April 2020</span>
+	<span style="font-weight:bold"> Before : </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">THE PRESIDENT OF THE FAMILY DIVISION</span>
+      </p>
+      <p style="text-align:center;margin-left:1.70in;margin-right:1.70in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PETER JACKSON</span>
+	<span style="font-weight:bold"> and </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE NICOLA DAVIES</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.17in;margin-right:0.12in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">Re B (Children)(Remote Hearing: Interim Care Order) </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.17in;margin-right:0.12in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:left;margin-left:-0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:none">Stephen Lue</span>
+	<span style="text-decoration:none"> (instructed by </span>
+	<span style="font-weight:bold;text-decoration:none">Jung &amp; Co Solicitors</span>
+	<span style="text-decoration:none">) for the </span>
+	<span style="font-weight:bold;text-decoration:none">Appellant Maternal Grandmother </span>
+      </p>
+      <p style="text-align:center;margin-left:0.02in;margin-right:0.02in;text-indent:0.00in"><span style="font-weight:bold">Max Melsa</span> (instructed by <span style="font-weight:bold">London Borough of Ealing</span>) for the <span style="font-weight:bold">Respondent Local Authority Philip Squire</span> (instructed by <span style="font-weight:bold">Thompson &amp; Co Solicitors Ltd</span>) for the <span style="font-weight:bold">Respondent Children by their Children’s Guardian </span></p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">Hearing date: 23 April 2020 </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.09in;text-indent:-0.01in">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website.  The date and time for hand-down is deemed to be at 10:30am on Thursday, 30 April 2020. </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Sir Andrew McFarlane P:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">1.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">This is the judgment of the court to which all three members have contributed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">2.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">This case, which concerns an interim order, is the second appeal in a case relating to the welfare of children to reach the Court of Appeal on the issue of remote hearings during the COVID 19 pandemic.  The appeal was heard on 23 April 2020.  On the previous day the same constitution heard the first such appeal: <span style="font-style:italic">Re A (Children)(Remote Hearing: Care and Placement Orders) </span>[2020] EWCA Civ 583.  In that judgment we summarised current guidance and set out a number of cardinal points and relevant factors with a view to assisting courts to make appropriate decisions in this changing landscape.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">3.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">At the end of the hearing of this appeal, we informed the parties that the appeal would be allowed and that an interim care order made at a telephone hearing in the family court on 3 April would be set aside.  The appeal concerned a 9-year-old boy, Sam (not his real name).  As a result of the order he had been removed from the care of his grandmother and placed in foster care.  The order should not have been made and Sam has now returned home.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">4.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">In the present abnormal circumstances, the fundamental principles of substantive law and procedural fairness are unchanged.  Alongside other courts and tribunals, the Family Court continues to discharge its duties, particularly in urgent child protection cases.  The effective use of communication technology is indispensable to this ability to continue to deliver justice.  A remote hearing, where it is appropriate, can replicate some but not all of the characteristics of a fully attended hearing.  Provided good practice is followed, it will be a fair hearing, but we must be alert to ensure that the dynamics and demands of the remote process do not impinge upon the fundamental principles.  In particular, experience shows that remote hearings place additional, and in some cases, considerable burdens on the participants.  The court must therefore seek to ensure that it does not become overloaded and must make a hard-headed distinction between those decisions that must be prioritised and those that must unfortunately wait until proper time is available.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">5.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">In our judgement, the events in the present case illustrate why this approach is necessary.  The problems here arose because the local authority changed its care plan in the middle of a remote hearing and because an application that was not urgent was treated as if it was.  We will briefly summarise the background, and then describe the course of the proceedings in more detail.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">6.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Sam has an 11-year-old sister, whom we will call Samantha.  Their mother is a drug user with a criminal record and their father, who died in 2019, was also a prolific drug user.  When they were young, the local authority took care proceedings and in July 2013, their maternal grandmother, who is now aged 65, became their special guardian.  The children were then aged 5 and 2, and she had been their primary carer for a long time, indeed for all of Sam’s life.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">7.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">It has not been plain sailing since then.  The local authority has continued to be involved and has provided a range of support to the family.  There have nonetheless been concerns about the stability of the placement, the grandmother’s ability to cope, interventions by the children’s mother, and the actions of a maternal aunt and uncle.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">The aunt lives with the grandmother.  The uncle lives nearby.  He is also a drug user and has on a number of occasions behaved in a highly inappropriate way towards the children.  Allegations have from time to time been made by Samantha of physical abuse by the uncle and the aunt.  The grandmother did not support these allegations.  In September 2019, the children were placed on child protection plans, particularly because of the risk posed by the uncle to their physical and emotional wellbeing.  The grandmother continued to work with the local authority, including successfully attending a course on attachment in January/February 2020.  In February, she reported that Samantha’s behaviour was deteriorating and that she was struggling to manage it.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">8.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Up to this point, the picture is one of a family under some strain, with Samantha’s situation causing more concern than Sam’s.  Although there had been allegations of physical abuse, the local authority’s main concern was for the children’s emotional well-being.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">9.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">The catalyst for the proceedings was an incident on 20 March, when police were called to the home, where Samantha was outside, screaming.  She said that she had been hit by her aunt; the grandmother and aunt denied it and described Samantha’s behaviour as having been particularly challenging since the family had been in confinement.  Samantha was taken into police protection and placed in foster care.  Sam was not directly involved in the incident and he remained with his grandmother.  On 23 March, she signed a section 20 agreement for Samantha.  However, on 27 March, she told social services that she would like Samantha back at some stage.  On Wednesday 1 April, she said she wanted her to return by Friday 3 April. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">10.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">The local authority at that point did not consider that Samantha should return home, nor that Sam should leave.  On 2 April, it acted decisively by issuing proceedings for an interim care order in Samantha’s case and an interim supervision order in Sam’s.  Its application drew attention to the grandmother’s request for Samantha’s return the following day and asked for a hearing within 24 hours.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">11.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Accompanying the application was a substantial amount of documentation arising from the local authority’s knowledge of the family down the years, including a fully pleaded interim threshold document, a comprehensive chronology (16 pages) and a thorough template statement from the children’s social worker (34 pages).  Of note, this described a close relationship between the children and their grandmother, with plenty of mutual love and affection being shown.  Given the local authority’s position, the removal of Sam from home did not even feature in the social work analysis as a realistic option, let alone a preferred one.  The case for an interim supervision order was put in this way:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Whilst [Sam] is not considered to be at immediate risk of physical harm, there have been historical allegations against his Maternal Uncle… who is known to still to be attending the home despite being prohibited by written agreements in place. [Sam] has suffered and remains at risk of suffering emotional harm due to the concerns [about] treatment of him by Maternal </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">Uncle… and Maternal Grandmother.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">The reference to the uncle attending the home was particularly directed at the incident on 20 March, when it is said by the grandmother that he came from his own home to assist when the police were called, but she asserts that he did not enter the property. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">12.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">We will now describe the events on Thursday 2 and Friday 3 April in some detail.  In doing so we will make <span style="font-weight:bold">observations</span> from time to time. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/>13.00  <marker name="tab"/>The local authority sends the papers to the court by email for issuing. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.00in;text-indent:-0.59in">15.52 An order is made listing a hearing for the following day at 12.00, appointing a Children’s Guardian, and reducing the time for service on the grandmother. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/>16.02 <marker name="tab"/>A Cafcass Guardian is appointed. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/>16.40 <marker name="tab"/>The Guardian appoints a solicitor.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/>16.58 <marker name="tab"/>The children’s solicitor is granted access to the electronic file. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.08in;margin-right:0.00in;text-indent:-0.59in">17.20 <marker name="tab"/>The paper bundle (152 pages) is served on the grandmother.  She instructs a solicitor. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/>18.05 <marker name="tab"/>The solicitor instructs counsel, Mr Stephen Lue, for the following day. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/>23.39 <marker name="tab"/>The solicitor for the grandmother obtains access to the electronic file. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">13.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">We have also been provided with a chronology from the perspective of Recorder McCarthy QC, who came to hear the application on 3 April.  This shows that he was notified of his list of three cases at 17.25 on 2 April and received the files in a variety of electronic formats at around 18.00.  None of these contained any position statements or case summaries. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">14.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Pausing at the end of the first day of the proceedings, it can be seen that the system has the ability to respond very quickly.  That is critical in a case of genuine urgency, but it does place considerable pressure on the parties.  None of the normal preproceedings stages, whereby a family has access to legal advice, can happen.  No evidence in response can realistically be filed.  Here, as we shall show, the request for an urgent hearing, designed to meet the situation that had then arisen regarding Samantha, came to have unexpected consequences for Sam.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">15.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">The local authority was acting responsibly in taking steps to regularise Samantha’s position.  Under s.20(8) the grandmother, as a special guardian, was entitled to withdraw her consent to Samantha’s accommodation and to remove her at any time.  The situation was that described by Baroness Hale in <span style="font-style:italic">Williams v London Borough of Hackney </span>[2018] UKSC 37 at [44-45]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“44.  Sixthly, subsection (8) makes it absolutely clear that a parent with parental responsibility may remove the child from accommodation provided or arranged by a local authority at any time. There is no need to give notice, in writing or otherwise. The only caveat, as Munby J said in R (G) v Nottingham City Council (para 22 above), is the right of anyone to take necessary steps to protect a person, including a child, from being physically harmed by another: for example, if a parent turned up drunk demanding to drive the child home. In such circumstances the people caring for the child would have the power (under section 3(5) of the 1989 Act) to do what is reasonable in all the circumstances for the purpose of safeguarding or promoting the child’s welfare (see para 18 above).  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">45.  It follows that, if a parent unequivocally requires the return of the child, the local authority have neither the power nor the duty to continue to accommodate the child and must either return the child in accordance with that requirement or obtain the power to continue to look after the child, either by way of police protection or an emergency protection order. These can, of course, only be obtained if there is reasonable cause to believe that the child will otherwise suffer significant harm.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">16.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Our first <span style="font-weight:bold">observation</span> is that, once the local authority became aware that the grandmother was withdrawing her consent, it would have been desirable for an attempt to have been made to agree a suitable timetable with the grandmother ahead of the service of proceedings upon her.  That would have allowed her to take advice and, if proceedings were necessary, to file some evidence.  As it happened (see below) she had by the time of the main hearing the next day come to the position that she did not oppose the making of an interim care order for Samantha.  But by then the proceedings had developed a momentum of their own. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">17.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">We resume the events of Friday 3 April from the point of view of the court.  By the time the Recorder started to hear his first case, he had already been working for at least three hours.  The hearings took place by telephone, as was then the practice in that court, with the Recorder at his home address and the other participants at various locations elsewhere.  He was able to contact a member of the court staff by phone or text to coordinate the start and finish of hearings.  The first case was heard between 10.21 and 11.43.  During the course of the morning the Recorder received a continuous stream of bundles, documents and position statements in the other two cases.  These included the Guardian’s position statement in the present case at 11.01.  The significance of that document was that it led to a change in the local authority’s care plan in respect of Sam, which it announced to the other parties at around 11.30.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">18.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">The present case, the second in the list, was first called on at 12.31 and at 12.49 it was adjourned until later in the afternoon.  During that hearing Mr Lue asked for an adjournment to another day so that he could take instructions about the change in the local authority’s case.  The Recorder said he would consider that when the hearing resumed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">19.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">At 14.05 the Recorder received the local authority’s revised position statement in this case.  At 14.06 the hearing in the third case began.  It ended at 16.02.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">20.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">At 16.22 the present case restarted.  Submissions lasting one hour were made, during the course of which the Recorder was sent the local authority’s original position statement.  Between 17.20 and 17.41 he gave an extempore judgment.  At 17.52 he refused Mr Lue’s application for permission to appeal and scheduled a further hearing </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">for 21 April.  At 17.57 the hearing concluded.  By that time the Recorder had been working, almost continuously and mainly on the telephone, for 10½ hours.  Our <span style="font-weight:bold">observation</span> is that, although we have found the decision in this case to have been unquestionably wrong, the nature of the workload faced by the Recorder, experienced as he is, was surely a contributory factor.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">21.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">We next mention the position of the Children’s Guardian.  Her solicitor, having evidently carried out a lot of work in a short time, filed a six-page position statement at 10.49 that morning.  We quote the concluding paragraphs in full because, as Mr Squire, who did not appear below, frankly asserted, “the Guardian has driven this in terms of immediacy” and because they represent the whole reason why an interim care order was made for Sam.    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:1.01in;text-indent:-0.01in"><span style="font-weight:normal">“</span>Guardian’s Position</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">25.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Guardian is very concerned with respect to the safety of both children given their cumulative previous experiences and the lack of emotional stability that they seemed to have experienced under a Special Guardianship Order. She is concerned that the maternal grandmother is prioritising the needs of the maternal uncle and aunt over that of the children, or is at least unable to protect them from abusive situations. Most concerningly, the children seem to be blamed when their behaviours are likely to be expression of the experiences they had, and/or additional needs that their care giver/s should be attuned to identify and respond to; [Samantha] being compared to her mother in derogatory manner and [Sam] being called names are particularly emotionally abusive behaviours in the context of the children’s own experiences.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">26.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">There are concerns that maternal grandmother does not appear to be working openly and honestly with professionals since 2014 and it is noted that the written agreements have been breached on a number of occasions and allegedly the uncle reported that he was prompted by the grandmother to breach or ignore such agreements, and not talk to professionals. It appears as if the maternal uncle continues to be a frequent visitor to the family home and is reported to have been involved with the police 3 times this year in relation to drug offences [C25]. It is also not clear where the Mother is presently residing since her release from prison; the local authority statement refers to the children having had unsupervised contact with her.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">27.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Guardian is concerned that both children are at risk of ongoing physical and emotional abuse. She is very concerned with the proposal by the Local Authority that [Sam] remain in the family home under an interim supervision order under the current circumstances, when there are severe limitations in what visits and intervention can be provided and uncertainty around how long pandemic-related measures will need to continue. It is not clear how his safety will be monitored as there are very little, if any, direct social work visits being undertaken at present; the presenting concerns cannot be effectively monitored via virtual visits. Schools often provide an oversight into a child’s wellbeing - however the schools are now closed and it is not known when they will re-open; they also often provide an outlet for both children and carers; being constantly at home can greatly escalate the current risks for [Sam], and limits his ability to reach out to professionals or safe adults outside the house for help. The Guardian is concerned that given these exceptional times it will be very difficult to monitor [Sam]’s safety.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">28.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">It may be that [Sam] will be placed at more risk of emotional and physical harm if he is left alone in the family home.  [Sam] has already stated that his family matters are confidential and it is therefore not clear whether he will actually disclose any concerns should they arise at the home; [Sam] may also internalise that violence is acceptable and risk perpetrating violence himself, or take matters in his own hands to protect himself or others, such as, for example, his grandmother if she is also subject to abuse from the uncle. The Guardian believes that both children need to be placed in a place of safety whilst assessments are ongoing. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">29.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Guardian therefore supports interim care orders for both children. If the Court agrees that an interim care order is appropriate for both children, the Guardian would strongly prefer for both children to be placed in the same foster placement, if possible. A together and apart assessment to look at the sibling relationship and potential split arrangements for them in the longer term needs to be considered. There are also indication of severely distressed behaviours from the children, emotional regulation and ongoing attachment difficulties, which may require psychological assessment to ensure that the parenting they need to meet their individual needs is fully considered in care planning.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Once a Children’s Guardian has been appointed, he or she is obliged to exercise professional judgment, whatever the circumstances of the appointment.  The court relies on Guardians to be independent in promoting and protecting the interests of the children in the litigation, and they may take, and not infrequently do take, a different position to that of the local authority.  We acknowledge that, as commonly happens when an interim application is made at the outset of proceedings, this Guardian was having to absorb a mass of information at very short notice.  She had no time to make inquiries, beyond reading the papers and having one conversation with the social worker at about 9 am.  In cases of real urgency that may be unavoidable, but in this case it is, to put it at its lowest, surprising that she and the children’s solicitor felt it appropriate to make such a bold recommendation from such a low knowledge base.  Neither of them had met or spoken to Sam or to his grandmother or his grandmother’s solicitor, nor did they have any information at all coming from that quarter.  We also note that the Guardian was not available for the hearing in the afternoon.  Her solicitor was said to be fully instructed, but the Guardian’s absence left her unaware of such arguments as Mr Lue was able to put to the court in response to her recommendation and deprived her of the opportunity to reflect.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">We are also troubled by the lack of any balanced analysis in the case for removal that was put by the Guardian, and also by the local authority.  There is no reference to the emotional detriment to Sam in being removed from his only parental figure without notice or preparation.  There was no reference to Sam’s wishes and feelings about immediate removal, nor any reminder to the court that these were not known.  There was no credible explanation for why there had to be an emergency decision.  Mr Squire fairly accepted at no less than three points in his appeal skeleton argument that the outcome was “harsh”, though he defended it as not being unfair or unjust.  When we asked him about the above matters he described them as a consequence of this being “an emergency application” in which child protection imperatives had to prevail.  We reject that argument.  The pressured way in which the proceedings developed may have felt like an emergency to the professionals, but it was not an emergency for Sam.  We also firmly dismiss the proposition that the current ‘lockdown’ provides a reason for the removal of a child where none would otherwise exist.  It is possible to envisage a case at the margins where face-to-face supervision is so important that a child would not be safe without it, but this case and most others like it fall nowhere near that category.  Our overall <span style="font-weight:bold">observation</span> in this respect is that unfortunately Sam’s voice was not heard at a critical moment in the proceedings and his interests were not protected by his Guardian, whose recommendation set in train the sequence of events that followed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The local authority had in our view taken a sensible position in seeking an interim supervision order, as reflected in its position statement at 10.37.  Yet within the hour it had moved to seeking Sam’s immediate removal.  Nothing relevant had happened to </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Sam in the fortnight between Samantha’s departure and the hearing.  The only basis for the volte-face was the intervention of the Guardian.  We asked Mr Melsa, for the local authority, about the process leading to the changed decision, which came to him in an email instruction when he was in the middle of an advocates’ meeting.  We learned that the decision was undocumented and the change of plan unreasoned.  There was no evidence about it and no care plan to underpin it.  Not surprisingly that led to confusion.  At 12.48 the other parties were informed that removal would not take place until Monday 6 April because Sam had a cough that might be virus-related.  The social workers then tried to investigate testing, but were unsuccessful.  Despite that, at 13.43 the local authority announced that its plan was again one for immediate removal.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Our <span style="font-weight:bold">observation</span> is that it is hard to describe this process as anything other than arbitrary.  A local authority must always be responsive to the stance of a Children’s Guardian, but there was no good reason for the plan to have been changed in this case.  The consequence was to wrong-foot the grandmother, with whom it was going to share parental responsibility for Samantha, at least in the short term, without any discussion with her.  Mr Lue was, as he put it, unable to understand the decisionmaking process and was having to take instructions by telephone on a constantly moving picture.  He gave us examples of matters concerning Sam in the social work statement and the Guardian’s position statement that he has since the hearing been able to establish that the grandmother simply did not accept (for example concerning the arrival of the uncle on 20 March).  We were entirely convinced by his account of feeling, in his words, hopelessly unable to represent his client in the way he would normally be able to do.  It says a lot that throughout the whole process not one page emanating from the grandmother could be placed before the court.  She had no opportunity to file evidence in relation to this serious matter, nor was Mr Lue in a position to marshal a position statement.  In cases of exceptional urgency that may be unavoidable, but here it was unfair. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Turning to the court hearing itself, we have read a transcript.  The hearing began promisingly, with the Recorder pressing Mr Melsa to point to evidence justifying Sam’s immediate removal.  Mr Lue then made submissions referring to his application for an adjournment, to the shifting sands of the local authority’s case and to the inadequacy of the evidence as a justification for immediate removal.  He was asked by the Recorder whether the grandmother would be prepared to remove the aunt from the home, to which the reply was that this could and should be investigated, but that he had not been asked and had no instructions.  Mr Lue argued that Sam was in no danger.  The grandmother had been his primary carer for his whole life and removal would have a serious impact on him.  His position was distinct from Samantha’s.  The Guardian’s emphasis on the health crisis was misconceived.  We consider those submissions to have been well-made. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Guardian’s solicitor then urged removal, pointing to evidence of marks on Sam that were said to have been caused by the uncle in 2018.  She relied on the uncle attending the property when Samantha was removed.  She speculated that Sam may be reluctant to disclose information now that Samantha was out of the house.  She expressed concern that the grandmother has not been open and honest.  The Guardian believed that both the children needed to be in a place of safety while assessments were ongoing.  Mr Lue was allowed to respond, making clear that there had been no recent contact with the uncle and that the grandmother accepted that he represented a risk. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Giving judgment, the Recorder described the “re-evaluation” of the local authority’s position as curious but said that:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“5.  The difficulty I have about giving any significant weight to that particular point is that I am not required to assess the adequacy of the local authority’s decision-making process.  If I was then I would not really be carrying out the interim care order exercise at all.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">He had referred to the issue of adjournment in this way </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“4.  One of the things I have been asked to do on the grandmother’s behalf mentioned earlier on today and indirectly mentioned by Mr Lue this afternoon, is to adjourn the case for further consideration. This given the limited amount of time that he and his client have had to go through the material. Obviously, as a matter of professional courtesy, I am responsive to that because justice features very largely in these cases brought on at short notice where only one side has had the chance to submit evidence.  But the law is the law and the law requires judges make decisions about whether the threshold is established on an interim basis on the basis of reasonable grounds for believing.  The judge therefore is not at this stage required to have a refined view of what the evidence would ultimately prove later on in the proceedings.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">However, the Recorder did not then address the proposal for an adjournment, instead proceeding to the facts and the threshold for intervention: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“5.  I recognise that Mr Lue doing the best he can in very difficult circumstances, has made some comments on the contested facts…  I recognise that it is a point that has to be made on behalf of someone in the grandmother’s position when there has been so little time to call on the details of what could possibly arguably be disproved and what possibly is wrong. But the reality of the situation is that there is an overwhelming body of information available to me in the local authority’s evidence (which I have not been able to spend several days reading).  When I put that against what have been the contested issues in the debate in the past, it leads me to the conclusion that as of the time this application was mounted there were very substantial grounds for believing that these children and each of them would be at risk of significant harm if they were to remain in the care of the maternal grandmother.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“6 … after the end of hearing all of the submissions and looking at all of the evidence, … the truth is the overall picture of how the grandmother has conducted her role as a special guardian and the overall experience of the children in responding to that is something that is relevant to both of them.  It may be that the consequences are more serious for one child than another but all I am required to do is to consider whether there are reasonable grounds for believing that the section 31 grounds would be established.”  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">…  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“9… Obviously, some years ago she was able to cross the quite high threshold for being approved as a special guardian and appointed as a special guardian.  I am afraid in the evidence that has been put before me, (and I am making allowance for what Mr Lue was able to suggest to me would be contradicted or challenged), there is an overwhelming case for concluding there are reasonable grounds for believing that her parenting and her protective role in relation to these children has been deficient on multiple occasions. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.82in;text-indent:0.00in">10.  Clearly, [Samantha] has been far more on the receiving end of the consequences of that.  She is obviously a different personality to  [Sam].  There are a number of things though about the overall conduct of the grandmother and those of her children who have been at home to make me believe that the grandmother on the face of what I have seen so far has lacked and lacks a certain amount of grip in supervising young children of this age and, in the circumstances as they have built up over time, I am satisfied that there are more than reasonable grounds for believing that the section 38 test is satisfied.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">We make the <span style="font-weight:bold">observation</span> that the Recorder was clearly entitled to find that the threshold for an interim order was crossed in Sam’s case, and the contrary has not been suggested to us.  He then turned to the welfare decision and directed himself in this way: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“12.  In deciding whether to make an order, each of the children’s individual welfare is the paramount consideration.  I have to proceed on the basis that delay in resolving the need for protection by virtue of an order or a decision one way or another would be likely to prejudice the children’s welfare.  I have to apply the individual welfare factors of the welfare checklist and I have to make sure I do not make any order unless satisfied it is better to do so than to make no order.  The key question for me, whichever of the many dozens of cases that have outlined the test on interim care orders, is whether the children’s individual welfare, (and I do not deal with them as a package deal), demands that they be held back from or removed from the grandmother’s care? Does each of their welfare individually demand that that decision is made straight away to protect them?   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">13.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">In evaluating the issues I am very conscious of the fact that decisions to make interim care orders impinge very significantly on the children’s Art.6 and 8 rights and also, of course, on the grandmother’s Art.6 and 8 rights. As I have already said, I am very conscious of the fact that this certainly puts the grandmother at a disadvantage that she has not had the time to gather in whatever evidence is available or might be available to deny that certain things were accurately set out and I appreciate Mr Lue did not have a great deal of information to work with but I gave a little bit of time earlier on today for this matter to come back...  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">14.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">What I have to do in making the decision is to balance in [Samantha]’s case the risk of being kept away and in [Sam]’s case the risk of being taken away against the risk of them both being in the grandmother’s care.  I have to decide whether the consequences of an interim care order on the basis of the local authority’s interim plan is proportionate to the risk of them being at or staying at home.  So I have to balance the harm that may occur on either side and I ask myself the questions: is removal or being held back in relation to these children strictly necessary; is it necessary; is it proportionate; does their physical safety and their emotional welfare demand that an interim care order be made straight away in relation to both their cases?” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Recorder then expressed his decision in this way:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“15.  In considering this I have listened to what everyone said to me.  I have paid very careful attention to the position statements that have been put in front of me.  I found the children’s guardian’s analysis of this to be particularly helpful.  She is not part of the team on the local authority’s side.  She has looked at it independently.  I am not bound to accept her analysis and I think there are certain respects in which I would have expressed myself slightly differently. She says at para.25 she is very concerned with respect to the safety of both children given their cumulative experiences and the lack of emotional stability they seem to have experienced under a special guardianship order. If I had not seen that phrase in a position statement I might very well have been using those words myself.  I think the concerns as she puts them are well phrased… So that will help anyone who is wondering about this afterwards to understand what the level of my concern is. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">16.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">In these circumstances, I am satisfied that it is strictly necessary for an interim care order to be made now both in relation to [Samantha] and in relation to [Sam].  I repeat what I said earlier on.  I do not consider them as a package unit.  The fact that the need for an ICO was proved in relation to one child does not mean that it is proved in relation to the other child.  I have borne in mind the differences between some of what has happened to [Samantha]  and what has happened about [Sam].  But I have to bear in mind that what has happened in relation to both [Sam] and his sister, [Samantha], is relevant to the type of parental operative or the type of parental figure that the grandmother is.  It cannot be expected that, in making a decision about individual children, a judge would ignore how that person behaves in relation to two children who are only separated in age by about two years.  Her lack of sufficient parenting, if I can put it neutrally, in relation to [Samantha] is relevant to [Sam] and vice versa.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">17.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">I am not going to say any more.  The more one says, the more one can go round full circle.  In those circumstances, expressed in very unstructured terms, for those reasons I have decided to make an interim care order both in relation to [Samantha] and in relation to [Sam] and that is all I propose to say.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Lue asked for permission to appeal, but this was refused.  He did not seek a stay, as he might have done, pending an appeal to this court.  Sam was removed from his grandmother’s home at 7 pm that evening.  The Appellant’s Notice was filed on 9 April and on 17 April permission to appeal was granted.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">We have already indicated our view of the inadequacy of the evidence in this case to justify the removal of a child from his home.  The law, accurately cited in the Guardian’s position statement for the hearing itself, emphasises that removal of a child from a parent at an interim stage of proceedings is a particularly sharp interference with their right to respect for family life, and that a plan for immediate separation is therefore only to be sanctioned by the court where the child's physical safety or psychological or emotional welfare makes it necessary and where the length and likely consequences of the separation are a proportionate response to the risks that would arise if it did not occur: see e.g. <span style="font-style:italic">C (A Child) (Interim Separation)</span> [2019] EWCA Civ 1998.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Recorder made some reference to these principles but he did not apply them.  Our <span style="font-weight:bold">observation</span> is that this was a case where the central concern related to emotional harm stretching back for years.  On the information then before the court it could not in our view be plausibly argued that something had now happened to make Sam's removal that evening necessary.  The circumstances in which Samantha had been taken into foster care showed the need for Sam's situation to be carefully assessed. The evidence did not remotely justify his peremptory removal and there is nothing in the judgment that is capable of persuading us that it did.  Our further <span style="font-weight:bold">observation </span>is that, no doubt partly because of the exigencies of the remote process, there was a loss of perspective in relation to the need for an immediate decision about Sam.  This was a classic case for an adjournment so that a considered decision could be taken about removal, if indeed that option was going to be pursued after reflection.  An adjournment would have enabled the parties and the court to have all the necessary information.   As it was, crucial information was lacking and its absence was overlooked by the court. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There is a qualitative difference between a remote hearing conducted over the telephone and one undertaken via a video platform.  If the application for an interim care order for Sam had been adjourned, it may well have been possible for the adjourned hearing to have been conducted over a video link and that single factor might, of itself, have justified an adjournment in a case which, in our view, plainly was not so urgent that it needed to be determined on 3 April.  Whilst it may have been the case that the provision of video facilities was limited at the particular court at the time of the hearing, it is now the case that the option of using a video link is much more widely available.  Where that is the case, a video link is likely at this time to be the default option in urgent cases.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Finally, what of the grandmother and Sam themselves?  They were at home, with the grandmother giving instructions to Mr Lue as best she could.  She speaks English but it is not her first language.  They were ‘meeting’ for the first time, and only by telephone.  She had expected that the hearing would concern Samantha, only to find during the course of the day that it had turned into a hearing about Sam.  She had no opportunity to file any evidence or even to properly consider the evidence filed by others.  At 6 pm she was faced with an order that she had no chance of challenging and within an hour Sam was taken into foster care.  It must have been utterly bewildering for them both.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">To complete this lamentable story, the children’s foster carers gave notice on 8 April because of Samantha’s behaviour and the children were moved on 15 April.  Because there was no available foster home for them both, they were placed apart.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Now that Sam has returned to the care of his grandmother, the course of the proceedings has been reset.  If it is considered that different interim orders are required for either child, an application can be made and it will be considered in the normal way and given whatever priority is considered appropriate.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In explaining why the appeal was allowed, we express our appreciation and understanding of the highly pressured circumstances in which all the participants were working.  Those circumstances led to a chain reaction in the course of which fundamental legal and procedural principles came to be compromised despite the best intentions of a range of dedicated professionals.  These days we are all learning from experience and we hope that the observations in this judgment will assist others who find themselves in a similar position. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.09in;margin-right:0.08in;text-indent:-0.01in">______________ </p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

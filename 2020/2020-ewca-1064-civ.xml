@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1064"/>
+	  <FRBRuri value="ewca/civ/2020/1064"/>
+	  <FRBRdate date="2020-08-14" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1064"/>
+	  <FRBRname value="CFH Clearing Ltd v Merrill Lynch International"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1064/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1064/eng"/>
+	  <FRBRdate date="2020-08-14" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1064/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1064/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:13:25" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="judge-lord-justice-mccombe" href="/judge-lord-justice-mccombe" showAs="LORD JUSTICE McCOMBE"/>
+	<TLCPerson eId="judge-lord-justice-holroyde" href="/judge-lord-justice-holroyde" showAs="LORD JUSTICE HOLROYDE"/>
+	<TLCPerson eId="judge-lord-justice-phillips" href="/judge-lord-justice-phillips" showAs="LORD JUSTICE PHILLIPS"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1064/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1064</uk:number>
+	<uk:cite>[2020] EWCA Civ 1064</uk:cite>
+	<uk:hash>b6b8d25723281ba202af2e6723255db8b4cccc7f99193a5e509cb94e9b6c8483</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1064/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.50in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading3 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading3Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:0.00in;text-indent:0.00in">Neutral Citation Number: <neutralCitation>[2020] EWCA Civ 1064</neutralCitation><span style="text-decoration:none"> </span>Case No: A4/2019/1412</p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">BUSINESS AND PROPERTY COURTS OF ENGLAND AND WALES</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">COMMERICAL COURT (QBD)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">MRS JUSTICE MOULDER</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<neutralCitation style="font-weight:bold;text-decoration:underline">[2019] EWHC 963 (Comm)</neutralCitation>
+      </p>
+      <p style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Royal Courts of Justice</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Date:  <docDate date="2020-08-14">14 August 2020</docDate></p>
+      <p style="text-align:center;margin-left:0.35in;margin-right:0.38in;text-indent:-0.01in">
+	<span style="font-weight:bold">Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<judge refersTo="#judge-lord-justice-mccombe" style="font-weight:bold;text-decoration:underline">LORD JUSTICE McCOMBE</judge>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<judge refersTo="#judge-lord-justice-holroyde" style="font-weight:bold;text-decoration:underline">LORD JUSTICE HOLROYDE</judge>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<judge refersTo="#judge-lord-justice-phillips" style="font-weight:bold;text-decoration:underline">LORD JUSTICE PHILLIPS</judge>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.35in;margin-right:0.38in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">CFH CLEARING LIMITED </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.11in;margin-right:0.00in;text-indent:-0.04in">
+	      <span style="font-weight:bold;text-decoration:underline">Appellant/</span>
+	      <span style="font-weight:bold"> </span>
+	      <span style="font-weight:bold;text-decoration:underline">Claimant</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">- and - </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">MERRILL LYNCH INTERNATIONAL </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.07in;margin-right:0.00in;text-indent:-0.07in">
+	      <span style="font-weight:bold;text-decoration:underline">Respondent/ Defendant</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.76in;margin-right:0.72in;text-indent:-0.01in"><span style="font-weight:bold">Stephen Auld QC </span>and<span style="font-weight:bold"> Michael d’Arcy</span> (instructed by <span style="font-weight:bold">Withers LLP</span>)  for the <span style="font-weight:bold">Appellant/Claimant</span></p>
+      <p style="text-align:center;margin-left:0.35in;margin-right:0.30in;text-indent:-0.01in"><span style="font-weight:bold">Andrew Twigger QC </span>and<span style="font-weight:bold"> Pia Dutton </span>(instructed by<span style="font-weight:bold"> Stephenson Harwood LLP</span>)  for the <span style="font-weight:bold">Respondent/Defendant</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing date:  4 February 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:left;margin-left:-0.01in;margin-right:0.00in;text-indent:0.00in">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website.  The date and time for hand-down is deemed to be on Friday 14 August 2020 at 10.30 am. </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level class="author">
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Phillips:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <level>
+	    <content>
+	      <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Introduction  </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">1.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">At about 9.30am CET on 15 January 2015 the Swiss Franc was “de-pegged” from the Euro (having been pegged at the rate of 1.2 CHF to 1 Euro), resulting in a short period of extreme volatility in the exchange rate between those currencies. At 9.47am the appellant (“CFH”), through its automated clearing system, placed 27 electronic market orders directly with the respondent (“MLI”) to trade a total of €20,479,000 for Swiss Francs at the next available price. MLI’s automated system filled the orders almost instantaneously at an average rate of 0.1821969 CHF and executed the trades. On the main platform for EUR/CHF trading (“the EBS platform”), the “official low” was declared at 0.85 CHF. Later the same day the rate on the EBS platform stabilised at about 1.000 CHF.  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">2.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The issue on this appeal is whether it is arguable, as CFH contended, that the effect of MLI’s Terms and Conditions of Business (“MLI’s Terms”) is to import into the transactions a contractual obligation to comply with “market practice”, so as to require MLI to re-price the 27 transactions at 0.85 CHF, the “official low” of the EBS authenticated market range, or otherwise to cancel them. As MLI had offered to reprice the transactions at 0.75 CHF, an offer CFH accepted under protest, CFH’s principal claim is for damages of 0.10 CHF per Euro, amounting to 2,047,900 CHF.  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">3.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">In a reserved judgment dated 9 April 2019 Moulder J rejected CFH’s contention, together with other arguments based on implied terms and alleged duties in tort, and therefore dismissed CFH’s claim against MLI on a summary basis pursuant to CPR </p>
+	    </content>
+	  </paragraph>
+	</level>
+	<level>
+	  <heading style="margin-right:0.04in;text-indent:0.00in">24.2.</heading>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">4.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">CFH now appeals that decision, permission to appeal being limited to the issue identified above.   </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The facts </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The parties and their contractual relationship </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">5.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">CFH was in the business of providing clients with foreign exchange (“FX”) liquidity from major FX market participants such as investment banks, including MLI, part of the Bank of America Merrill Lynch group. </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">6.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">One route by which CFH provided liquidity was by entering bilateral electronic FX spot transactions on its own account with a liquidity provider, back to back with orders placed with CFH by its own clients. CFH was a “straight through processing venue”, meaning that the processes by which CFH received orders from its clients and placed corresponding orders with liquidity providers were largely automated.    </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">7.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">CFH’s relationship with MLI was governed by a number of agreements, the relevant contracts for present purposes being: </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:0.99in;margin-right:0.04in">i)<span style="font-family:Arial"> </span>an ISDA 2002 Master Agreement dated 27 June 2013, subsequently amended by a written agreement dated 4 December 2013 (“the ISDA Master </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="text-align:left;margin-left:0.49in;margin-right:0.92in;text-indent:0.49in">Agreement”); ii)<span style="font-family:Arial"> </span><marker name="tab"/>a Foreign Exchange Confirmation Agreement dated 10 July 2013;  iii)<span style="font-family:Arial"> </span><marker name="tab"/>MLI’s Terms, emailed to CFH on 14 November 2013. </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">8.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The ISDA Master Agreement comprised the standard 2002 terms and a schedule (“the Schedule”). The preamble to the standard terms recorded that the parties “have entered and/or anticipate entering into one or more transactions (each a “Transaction”) that are or will be governed by this 2002 Master Agreement, which includes [the Schedule] and the documents and other confirming evidence (each a “Confirmation”) exchanged between the parties …”.  The standard terms also included the following: </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.55in;text-indent:0.00in">“1(c)  <span style="font-style:italic">Single Agreement</span> All Transactions are entered into in reliance on the fact that this Master Agreement and all Confirmations form a single agreement  between the parties.. and the parties would not otherwise enter into any Transactions. </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.04in;text-indent:0.00in">…….. </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">4(c) <span style="font-style:italic">Comply with Laws </span>[Each party] will comply in all material respects with all applicable laws and orders to which it may be subject if failure to so comply would materially impair its ability to perform its obligations under this Agreement … </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.04in;text-indent:0.00in">…….. </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.26in;text-indent:0.00in">9(a) <span style="font-style:italic">Entire Agreement </span>This Agreement constitutes the entire agreement and understanding of the parties with respect to its subject matter... </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.04in;text-indent:0.00in">……. </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="Heading3" style="margin-left:1.01in;text-indent:-0.01in"><span style="font-style:normal">9(e)  </span>Counterparts and Confirmations </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/><span> </span><marker name="tab"/>….. </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in"> (ii) The parties intend that they are legally bound by the terms of each Transaction from the moment they agree those terms (whether orally or otherwise). A Confirmation will be entered as soon as practicable and may be…created...by an exchange of electronic messages on an electronic messaging system …, which in each case will be sufficient for all purposes to evidence a binding supplement to this Agreement. The parties will specify therein or through another effective means that any such…electronic message...constitutes a Confirmation. </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">9.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The Schedule expressly incorporated the 1998 FX and Currency Option Definitions </p>
+	    </content>
+	  </paragraph>
+	</level>
+	<level>
+	  <heading style="margin-right:0.04in;text-indent:0.00in">(“the 1998 FX Definitions”) in respect of FX transactions between the parties. Part 6(b) further provided that, unless otherwise agreed in writing, each FX Transaction entered between them would be a Transaction under the ISDA Master Agreement and would be part of and subject to it. It was further agreed that electronic messages or other confirming evidence exchanged between the parties confirming such Transaction would constitute Confirmations for the purpose of the ISDA Master Agreement.  </heading>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">10.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">By the Foreign Exchange Confirmation Agreement the parties further agreed that, instead of written confirmations being prepared and sent, FX transactions between them would be confirmed for the purpose of the ISDA Master Agreement by electronic exchange.   </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">11.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The preamble to MLI’s Terms stated that they applied to all investment and connected business which MLI might carry on with CFH, but subject to any documentation relating to a specific transaction or transactions between MLI and CFH. Clause 2 provided that the FSA Rules were not incorporated into  MLI’s Terms. Clause 7, which forms the central plank of CFH’s claim in these proceedings, includes the following: </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">“…We may take or omit to take any action we think appropriate to ensure compliance with applicable rules and we shall not be required to do anything which would in our opinion infringe any such applicable rule… </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">All transactions are subject to all applicable laws, rules, regulations howsoever applying and, where relevant, the market practice of any exchange, market, trading venue and/or any clearing house and including the FSA Rules (together the “applicable rules”). In the event of any conflict between these Terms and any applicable rules, the applicable rules shall prevail…”    </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The events leading to CFH’s losses on the 27 transactions </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">12.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">In 2011 the Swiss National Bank sought to resist upward pressure on the Swiss Franc by declaring a lowest acceptable limit on the EUR/CHF exchange rate at 1.2 CHF, thereafter intervening in the market to buy unlimited amounts of EUR at that rate to maintain that floor.  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">13.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">When that floor was unexpectedly removed at 9.30 CET on 15 January 2015, there was an immediate and massive strengthening of the Swiss Franc against the Euro, causing severe fluctuations in the foreign exchange market for about 40 minutes.   </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">14.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">By 9.47am CET the extreme rates being quoted had triggered the automatic liquidation of certain positions of CFH’s clients, which in turn caused CFH to send 348 orders to liquidity providers during the period of market turbulence, including the 27 market orders to MLI. MLI was at that time streaming prices for EUR/CFH at very low levels, but CFH’s automated orders were not subject to any price limitation (as </p>
+	    </content>
+	  </paragraph>
+	</level>
+	<level>
+	  <heading style="margin-right:0.04in;text-indent:0.00in">they could have been) and were filled and executed by MLI at rates between 0.14668 and 0.20111.      </heading>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">15.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">CFH’s case was that, later on 15 January 2015, Barclays, UBS and JP Morgan each confirmed that any trade they had executed with CFH below 0.85 CHF would be rebooked at that rate to reflect the official low.   </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">16.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">MLI, however, did not agree to adjust the rate for the 27 transactions to 0.85 CHF, but on 16 January 2015 offered to change the rate to 0.75 CHF after first making a margin call based on the average rate of 0.1821969. Later the same day MLI further notified CFH that MLI was terminating its prime brokerage relationship with CFH, with the effect that MLI had to agree a final settlement with MLI so that it could transfer its remaining balance to another prime broker. On 19 January 2015 CFH, under protest, accepted the adjustment of the rate for the 27 transactions to 0.75 CHF.   </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The issue   </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">17.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">On 19 September 2018 CFH commenced these proceedings, contending (among other arguments) that: </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	    <content>
+	      <p style="margin-left:0.98in;margin-right:0.04in">the effect of clause 7 of MLI’s Terms, providing that all transactions were “subject to … market practice of any exchange, market, trading venue and/or any clearing house” was to incorporate relevant “market practice” into the contract between CFH and MLI; </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	    <content>
+	      <p style="margin-left:0.98in;margin-right:0.04in">the market practice so incorporated was not limited to the practice of specific markets or exchanges, but extended to the practices of “markets” more generally, such as to the “foreign exchange market”; </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	    <content>
+	      <p style="margin-left:0.98in;margin-right:0.04in">therefore, in entering the 27 FX transactions in question, CFH and MLI agreed to comply with market practice, even though the transactions were made overthe-counter and not through an exchange.    </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">18.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">CFH further claimed that there was a recognised practice in the foreign exchange market, in the case of extreme events where deals took place outside the authenticated market range, immediately to adjust the deal within the range or to cancel it. CFH asserted that this market practice was evidenced by provisions in various codes of conduct, referring in particular to the November 2013 edition of The Model Code – The International Code of Conduct and Practice for the Financial Markets, published by ACI – The Financial Markets Association (“the Model Code”). The Model Code states that it provides a globally accepted minimum standard for over-the-counter professional product markets. CFH relied in particular on the following: “68.18 <span style="font-style:italic">Trading and Broking Ethics Through the Use of Technology </span></p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/><span style="font-style:italic"> </span><marker name="tab"/>……. </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.74in;text-indent:-0.25in">-</num>
+	    <content>
+	      <p style="margin-left:1.74in;margin-right:0.54in">The practice on the part of dealers inputting bids and offers well out of range of the current market spread or seeking profitable off-market deals by exploiting ‘big figure’ decimal error in the confusion of sudden volatility is abuses [sic] of the system and not good practice. </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.74in;text-indent:-0.25in">-</num>
+	    <content>
+	      <p style="margin-left:1.74in;margin-right:0.54in">Trades which occur at off-market rates should, by agreement between the two counterparts and as soon as practically possible, either be cancelled or have their rate modified to be at an appropriate market rate….” </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">19.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">CFH further pointed to their contention that other liquidity providers had readily agreed to adjust the rate to 0.85 CHF as evidencing the market practice in operation. CFH’s case was that MLI was contractually bound to follow the same practice in relation to the 27 trades.  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">20.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">By application notice dated 18 December 2018, MLI applied for the summary dismissal of CFH’s case, arguing that: </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	    <content>
+	      <p style="margin-left:0.98in;margin-right:0.04in">the wording “subject to” all applicable laws, rules and regulations in clause 7 of MLI’s terms did not mean that all those matters were incorporated into the transactions, but rather that neither party was obliged to act in a way which breached any laws, rules or regulations and to that extent would be relieved of its contractual obligations. MLI relied upon a previous decision of Moulder J (then sitting as a deputy High Court Judge) to similar effect in <span style="font-style:italic">Thornbridge v Barclays Bank plc </span>[2015] EWHC 3430 at paragraph 134; </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	    <content>
+	      <p style="margin-left:0.98in;margin-right:0.04in">the inclusion of the FSA rules in the list of matters to which transactions were “subject”, combined with the express provision in clause 2 of the MLI Terms that the FSA Rules “shall not be incorporated into these terms”, demonstrated that the matters listed, such as “market practice”, were not intended to be incorporated; </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	    <content>
+	      <p style="margin-left:0.98in;margin-right:0.04in">the reference to “market practice” entailed that parties were excused from contractual performance if a practice of a particular venue precluded it, but “market practice” more generally was too uncertain to be enforced and could not be incorporated into every transaction.     </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">21.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">It was common ground that the burden of establishing, for the purposes of CPR 24.2, that CFH had no real prospect of succeeding on its claim (and that there was no other compelling reason why the case should be disposed of at a trial) was on MLI. There was also no dispute that the relevant principles on applications by defendants were as set out by Lewison J in <span style="font-style:italic">Easyair Ltd v Opal Telecom Ltd</span> [2009] EWHC 339 (Ch) at [15] and approved by the Court of Appeal in <span style="font-style:italic">AC Ward &amp; Sons Ltd v Catlin (Five) Ltd</span> [2009] EWCA Civ 1098 as follows:  </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">“i) The court must consider whether the claimant has a “realistic” as opposed to a “fanciful” prospect of success: <span style="font-style:italic">Swain v Hillman</span> [2001] 2 All ER 91;  ii) A “realistic” claim is one that carries some degree of conviction. This means a claim that is more than merely arguable: <span style="font-style:italic">ED &amp; F Man Liquid Products v Patel</span> [2003] EWCA Civ 472 at [8];  iii) In reaching its conclusion the court must not conduct a “mini-trial”: </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="Heading3" style="margin-left:1.01in;text-indent:-0.01in">Swain v Hillman<span style="font-style:normal">;  </span></p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">iv)</num>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.50in">This does not mean that the court must take at face value and without analysis everything that a claimant says in his statements before the court. In some cases it may be clear that there is no real substance in factual assertions made, particularly if contradicted by contemporaneous documents: <span style="font-style:italic">ED &amp; F Man Liquid Products v Patel</span> at </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.04in;text-indent:0.00in">[10];  </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">v)</num>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.50in">However, in reaching its conclusion the court must take into account not only the evidence actually placed before it on the application for summary judgment, but also the evidence that can reasonably be expected to be available at trial: <span style="font-style:italic">Royal Brompton Hospital NHS Trust v Hammond (No 5)</span> [2001] EWCA Civ 550;  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">vi)</num>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.50in">Although a case may turn out at trial not to be really complicated, it does not follow that it should be decided without the fuller investigation into the facts at trial than is possible or permissible on summary judgment. Thus the court should hesitate about making a final decision without a trial, even where there is no obvious conflict of fact at the time of the application, where reasonable grounds exist for believing that a fuller investigation into the facts of the case would add to or alter the evidence available to a trial judge and so affect the outcome of the case: <span style="font-style:italic">Doncaster Pharmaceuticals Group Ltd v Bolton Pharmaceutical Co 100 Ltd</span> [2007] FSR 63;  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">vii)</num>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.50in">On the other hand it is not uncommon for an application under Part 24 to give rise to a short point of law or construction and, if the court is satisfied that it has before it all the evidence necessary for the proper determination of the question and that the parties have had an adequate opportunity to address it in argument, it should grasp the nettle and decide it. The reason is quite simple: if the respondent's case is bad in law, he will in truth have no real prospect of succeeding on his claim or successfully defending the claim against him, as the case may be. Similarly, if the applicant's case is bad in law, the sooner that is determined, the better. If it is possible to show by evidence that although material in the form of documents or oral evidence that would put the documents in another light is not currently before the court, such material is likely to exist and can be expected to be available at trial, it would be wrong to give summary judgment because there would be a real, as opposed to a fanciful, prospect of success. However, it is not enough simply to argue that the case should be allowed to go to trial because something may turn up which would have a bearing on the question of construction: <span style="font-style:italic">ICI Chemicals &amp; Polymers Ltd v TTE Training Ltd</span> [2007] EWCA Civ 725.”  </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The judgment of Moulder J </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">22.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The Judge considered that, as a matter of construction, the words “subject to” in clause 7 of MLI’s Terms could not be read as incorporating all applicable laws, rules, regulations and market practices into the parties’ contract, as that “would result in a contract where the parties were uncertain as to the terms of their contractual relationship to a degree that would be unworkable” [31]. The Judge referred in this </p>
+	    </content>
+	  </paragraph>
+	</level>
+	<level>
+	  <heading style="margin-right:0.04in;text-indent:0.00in">regard to her previous decision in <span style="font-style:italic">Thornbridge</span>. The Judge further considered that “market practice” obligations would be inherently uncertain [37].  </heading>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">23.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">By contrast, the clause would be workable if the language meant that obligations were constrained by relevant market practice. The Judge gave the example of an order which could not be fulfilled because the size of the order was not one traded on the particular exchange. Clause 7 would operate to relieve the party of its contractual obligation [32].    </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">24.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Further, as clause 2 of the MLI Terms expressly provided that the FSA Rules were not incorporated, their inclusion in the list of matters to which transactions were “subject” demonstrated that those matters were not intended to be incorporated [33].          </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">25.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The Judge also considered that the term “market”, in the context of the phrase “any exchange, market, trading venue and/or any clearing house”, was to be read <span style="font-style:italic">ejusdem generis</span>, the phrase referring to an identifiable class of venues where trading takes place. Accordingly the clause referred to market practices of those venues and would not in any event apply to transactions, such as the 27 transactions in issue, which were undertaken in the FX market in the broad sense, but not on a particular exchange or trading venue [35].  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">26.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The Judge further considered that, as the 27 transactions were effected pursuant to specific documentation, namely, the ISDA Market Agreement and associated Confirmations, the preamble to the MLI Terms had the effect that such documentation would prevail. That documentation did not incorporate “market practice” [38]. Neither did the parties, despite incorporating the 1998 FX and Currency Option Definitions, adopt any of the options for dealing with market disruption [38].        </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">27.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Finally, the Judge highlighted that the alleged market practice provided for either adjustment of the price or cancellation which were “two very different alternatives”, an outcome which would give rise to further contractual uncertainty and would be contrary to business common sense. To the extent the practice was reflected in paragraph 68.18 of the Model Code, the requirement was that the parties agree on which of those two very different routes should be taken [45].  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">28.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The Judge concluded at [47] that the objective meaning of clause 7 was that: </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">“…. market practice was not imported into the contract as an express term of the contract giving rise to contractual obligations but was intended to relieve a party of contractual obligations that would otherwise place it in breach of its contract where it was unable to perform its obligations by reason of relevant market practice”.  </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">29.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The Judge accordingly found that CFH had no real prospect of success on the issue.   </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The submissions on appeal </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">30.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Mr Auld QC for CFH argued that clause 7 of MLI’s Terms constituted an express recognition that there might be a conflict between the terms of transactions between MLI and CFH on the one hand and market practice on the other. In that context, the clear intention of the phrase “subject to” in clause 7 was that market practice would </p>
+	    </content>
+	  </paragraph>
+	</level>
+	<level>
+	  <heading style="margin-right:0.04in;text-indent:0.00in">be binding. Market practice was therefore incorporated into the transactions (amending the contract constituted by the ISDA Master Agreement and the Confirmations) and was not merely a “get out” clause.    </heading>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">31.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Mr Auld further argued that the above construction of clause 7 was supported by <span style="font-style:italic">Brandeis (Brokers) Ltd v Black</span> [2001] 2 All E.R. (Comm) 980, a decision to which the Judge did not refer in her judgment, although it was cited to her. In that case the terms of business of the claimant, brokers on the London Metal Exchange, provided that they were “subject to SFA Rules”.  Toulson J accepted that the parties cannot have intended to incorporate the SFA Rules in their entirety, but at [19] held that: </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">“…I would expect that a businessman reading such a letter, which stipulated at the beginning that "These terms and all agreements and arrangements relating to the subject matter of these Terms are subject to the SFA Rules" and then proceeded to set out the services to be provided, would understand it as meaning that both parties would be bound by the SFA Rules insofar as they affected the services which were to be provided under the agreement. I consider that the arbitrators were therefore right in their conclusion that the relevant contracts incorporated the SFA Rules which they identified.”    </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">32.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Mr Auld further pointed out that in <span style="font-style:italic">NRAM plc v Jeffrey Patrick McAdam</span> [2015] EWCA Civ 751 the Court of Appeal distinguished the decision in <span style="font-style:italic">Brandeis</span>, Gloster </p>
+	    </content>
+	  </paragraph>
+	</level>
+	<level>
+	  <heading style="margin-right:0.04in;text-indent:0.00in">LJ stating that in that case “the terms of the contract were provided to be “subject to SFA Rules” which were…clear words of incorporation”. </heading>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">33.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">As for clause 2 of the MLI Terms, Mr Auld submitted that the express provision that the FSA Rules should not be incorporated was a clear indication that the other matters listed, including market practice, were to be incorporated.  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">34.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">In relation to the meaning of “market practice”, Mr Auld contended that “market” was a broad term that should be understood as referring to any market in which the transaction in question took place.  In the present case there was no difficulty in recognising and giving effect to a perfectly straightforward practice relating to an extreme or “Black Swan” situation, that practice being clearly and precisely reflected in the Model Code. Further, he submitted, all other liquidity providers had had no difficulty in recognising and complying with that practice on 15 January 2015. </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">35.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Whilst Mr Auld’s primary contention was that incorporation of market practice and breach of that practice were clear cut, he argued that in any event there was at least a real prospect that such matters would be established at trial when the full factual context could be examined: the Judge was wrong in this case to “grasp the nettle” and decide that the claim was not arguable.  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">36.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Mr Twigger QC for MLI accepted that it was arguable that MLI’s Terms applied to the 27 transactions as those terms obviously did apply to the parties’ relationship more generally, including (for example) provisions concerning Data Protection. However, he maintained the contentions set out in paragraph 20 above, in particular submitting that: </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	    <content>
+	      <p style="margin-left:0.98in;margin-right:0.04in">the words “subject to” related to conflict between provisions and did not necessarily mean incorporation. <span style="font-style:italic">Brandeis </span>was not authority for the proposition that those words always meant incorporation, and the passing reference in <span style="font-style:italic">NRAM </span>merely summarised <span style="font-style:italic">Brandeis</span>. In the case of clause 7 it was clear that incorporation was not intended, both because clause 2 expressly so stated in relation to one element of the matters encompassed within “subject to” and because the incorporation of such a wide range of matters would lead to huge uncertainty, the point made in <span style="font-style:italic">Thornbridge</span>; </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	    <content>
+	      <p style="margin-left:0.98in;margin-right:0.04in">the term “market” could be “sliced in different ways”. In the midst of a list referring to any exchange, trading venue and/or clearing house, the Judge was right to construe “market” as referring to a specific market or venue with its own set of rules and practices; </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	    <content>
+	      <p style="margin-left:0.98in;margin-right:0.04in">the alleged market practice was in any event far too uncertain, both as to its terms and application. The Model Code was “aspirational” and in any event itself recognised at paragraph 61.10, dealing with “legal aspects”, that market practice and exceptional events were matters for a Master Agreement as follows: </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">“For bilateral legal clarity, both counterparties should sign a Master Agreement. This agreement should contain the broadest range of products, conventions, market practices and provisions in order to facilitate and document the activity between both parties.  </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">Whenever a Master Agreement exists between two parties, the confirmation should conform to the standards, provisions and content of the market or product. If there is no standard, the confirmation should make reference to the Master Agreement. </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">The use of a Master Agreement allows the trading parties to establish legal comfort and certainty for any executed trades, minimising the legal risk of those transactions. It will govern all the trades that explicitly refer to the Master Agreement. Bilateral trading should be executed within a legal framework known to both sides. </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">All terms and exceptional provisions will be according to the Master Agreement which ensures both counterparties acknowledge the trade and any and all exceptional situations that may occur during the life of the trade.”          </p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Discussion </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">37.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">In my judgment the starting point for the contractual analysis in this case is that the parties had agreed that their FX transactions would be governed by a standard ISDA 2002 Master Agreement, had negotiated the specific terms of the Schedule and had incorporated the 1998 FX Definitions, which would have permitted them to provide for market disruption. The contractual documentation extended to 42 pages of detailed provisions, including at clause 5(b) in relation to illegality and <span style="font-style:italic">force majeure events</span> (the latter subject to any specific agreement as to fallback, disruption or remedy).  The 27 transactions were evidenced by Confirmations as required by that contractual relationship and thereby formed part of the “single agreement” specified in clause 1(c) of the ISDA Master Agreement.   </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">38.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Briggs J stated in <span style="font-style:italic">Lomas &amp; Ors v JFB Firth Rixson Inc &amp; Ors </span>[2010] EWHC 3372 at para 53: </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.54in;text-indent:0.00in">“The ISDA Master Agreement is one of the most widely used forms of agreement in the world. It is probably the most important standard market agreement used in the financial world … It is axiomatic that it should as far as possible, be interpreted in a way that serves the objectives of clarity, certainty and predictability, so that the very large number of parties using it should know where they stand.” </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">39.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">The introduction to the 1998 FX Definitions, expressly incorporated by the parties, explains that they were: </p>
+	    </content>
+	  </paragraph>
+	  <level>
+	    <content>
+	      <p style="margin-left:1.00in;margin-right:0.55in;text-indent:0.00in">“…developed by the working group based, in large part, on market practice. Inevitably, in certain areas market practice has not been uniform or has otherwise not provided definitive guidance.” </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">40.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">It follows that the 27 transactions were governed by a detailed contract which was on industry standard terms, reflected market practice (as further recognised by paragraph 61.10 of the Model Code) and was tailored by the parties for their specific business relationship.   </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">41.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Therefore, whilst it was certainly open for the parties to agree to vary, amend or supplement the ISDA Master Agreement, any alleged agreement to such effect must be considered in the context that the parties had adopted a detailed contractual regime, incorporating industry norms and practices and intended to be a single comprehensive contract for all subsequent transactions. The suggestion that the parties had agreed to incorporate “market practice” generally, even though not reflected in the ISDA Master Agreement and, indeed, overriding its provisions, must be treated with considerable caution. Such a result would undermine the objectives of clarity, certainty and predictability identified by Briggs J. </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">42.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">In the present case, however, there is no arguable basis for finding that such an agreement had been made by the parties. First and foremost, MLI’s Terms stated at the very outset that their application was “subject to … documentation relating to a specific transaction or transactions”. In my judgment, the meaning of that clause could not be clearer in the present context: notwithstanding anything in MLI’s Terms, the 27 transactions remained governed by the terms of the ISDA Master Agreement. MLI’s Terms would apply to the broader aspects of the relationship with CFH and to any transactions which were not covered by the terms of transaction-specific documentation, but to the extent that MLI’s Terms purported to apply to FX transactions or otherwise were in conflict with the ISDA Master Agreement, the latter would prevail.  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">43.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">It follows, in my judgment, that CFH’s contention that “market practice” was incorporated into the 27 transactions, overriding the express pricing and settlement provisions of the ISDA Master Agreement, fails on the basis of the express scope of MLI’s Terms as set out in their preamble.  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">44.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Further, and supporting that conclusion, I consider that the wording of clause 7 of MLI’s Terms, particularly when read with clause 2, did not give rise to an arguable case of incorporation, for the reasons set out below.    </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">45.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">First, I do not accept that Toulson J in <span style="font-style:italic">Brandeis </span>intended to suggest that the words </p>
+	    </content>
+	  </paragraph>
+	</level>
+	<level>
+	  <heading style="margin-right:0.04in;text-indent:0.00in">“subject to” necessarily result in incorporation, still less that Gloster LJ so intended in her passing reference in <span style="font-style:italic">NRAM. </span>Each clause containing such words plainly must be considered in its specific context. Indeed, in <span style="font-style:italic">Brandeis </span>the suggestion that the entirety of the SFA Rules was incorporated was rejected, despite the relevant phrase being “subject to the SFA Rules”. In the present case the list of matters to which transactions were subject was lengthy and diverse, such that incorporation of them all would have given rise to huge uncertainty and rendered transactions unworkable, as the Judge held in <span style="font-style:italic">Thornbridge</span> and repeated in her judgment in this case. Mr Auld’s criticism of the Judge for ignoring <span style="font-style:italic">Brandeis </span>in analysing clause 7 is unjustified as she analysed both that decision and <span style="font-style:italic">NRAM </span>in her detailed reasoning in <span style="font-style:italic">Thornbridge</span>, reaching the same conclusion as I have set out above.  </heading>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">46.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Second, the phrase “subject to” in clause 7 related to matters which were collectively defined as “applicable rules”, including market practice and the FSA Rules. However, as clause 2 of MLI’s Terms expressly provided that the FSA Rules “shall not be incorporated”, it is clear that at least some of the “applicable rules” were not incorporated, undermining the argument that the intention of the words “subject to” was to effect incorporation. CFH’s argument that clause 2 indicated that everything other than the FSA Rules was incorporated ignored the structure and wording of clause 7 and failed to read the two clauses together.   </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">47.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Third, I agree with the Judge that clause 7 could not on any basis be read as incorporating general market practice into transactions. The clause could simply have provided that “market practice” was incorporated, but that term was qualified by reference to exchanges, markets, trading venues and/or clearing houses. The inclusion of the word “market” in that list was plainly intended to cover specific markets, such as the EBS platform, and not to include markets, such as the FX market, in the broadest sense.</p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">48.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Fourth, it is difficult to see how a market practice overriding the ISDA Master Agreement standard terms could be derived from the Model Code when that Code itself recognised that Master Agreements should be entered into to reflect market practices and to provide for exceptional circumstances. In my judgment, CFH focused on one provision of the Model Code whilst ignoring the more fundamental recognition in the Code that legal certainty, including as to market practices and exceptional circumstances, should be ensured by adopting a Master Agreement. Read as a whole, I do not consider that the Code suggests that the “ethics” referred to in paragraph 68.18 would contractually override a Master Agreement entered as part of the “Legal Aspects” recognised in paragraph 61.10.     </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">49.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Fifth, and again in agreement with the Judge, I consider that the alleged market practice was far too vague and uncertain to be incorporated as a contract term. It is not clear precisely what obligation is said to have arisen with regard to re-pricing (there being no reference in the Model Code to “the authenticated market price” or “the official low”), and when a party must re-price and when it must cancel: the inclusion of those two very different routes would give rise, at best, to an unenforceable agreement to agree. CFH points to its contention that other liquidity providers readily </p>
+	    </content>
+	  </paragraph>
+	</level>
+	<level>
+	  <heading style="margin-right:0.04in;text-indent:0.00in">“complied” with the alleged practice, but that is rationalisation after the event, in circumstances where the terms of the relevant contracts are unknown.         </heading>
+	  <level>
+	    <content>
+	      <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Conclusion   </p>
+	    </content>
+	  </level>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">50.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">I therefore conclude, for reasons which largely echo those given by the Judge, that CFH’s contention has no real prospects of success. Like the Judge, I see no prospect of matters emerging at a trial which would change that conclusion.  </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">51.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">Mr Auld also argued that the unusual circumstances of this case, the context of which was an important market event, gave rise to a compelling reason why the case should go to trial. It is my understanding that CFH had been refused permission to argue that ground of appeal, but in any event it has no merit. CFH is a sophisticated commercial party which entered automated transactions at the next available price without specifying a limit. It was bound by the terms of those transactions according to the ISDA Master Agreement it had negotiated and agreed with MLI, an agreement which could have made, but did not make, provision for market disruption. I see no reason why CFH should not be held to its bargain.      </p>
+	    </content>
+	  </paragraph>
+	  <paragraph>
+	    <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">52.</num>
+	    <content>
+	      <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">I would dismiss the appeal.  </p>
+	    </content>
+	  </paragraph>
+	</level>
+      </decision>
+      <decision>
+	<level class="author">
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Holroyde: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice McCombe: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.5in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

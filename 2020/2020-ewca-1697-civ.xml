@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1697"/>
+	  <FRBRuri value="ewca/civ/2020/1697"/>
+	  <FRBRdate date="2020-12-15" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1697"/>
+	  <FRBRname value="Flores, R (on the application of) v London Borough of Southwark"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1697/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1697/eng"/>
+	  <FRBRdate date="2020-12-15" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1697/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1697/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:25:17" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1697/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1697</uk:number>
+	<uk:cite>[2020] EWCA Civ 1697</uk:cite>
+	<uk:hash>d8f7513f5f35bc702f4a57e7d55c369f958e99d1b211edded630275a9304d49e</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1697/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.51in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1697</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>C1/2020/0957</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:2.65in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">QUEEN’S BENCH DIVISION</span>
+	<span style="font-weight:bold"> </span>
+	<span style="font-weight:bold;text-decoration:underline">ADMINISTRATIVE COURT</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Mr Justice Martin Spencer</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<neutralCitation style="font-weight:bold;text-decoration:underline">[2020] EWHC 1279 (Admin)</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 15/12/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:2.11in;margin-right:2.15in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE FLOYD</span>
+      </p>
+      <p style="text-align:center;margin-left:2.11in;margin-right:2.11in;text-indent:-0.01in"><span style="font-weight:bold;text-decoration:underline">LORD JUSTICE BAKER</span><span style="font-weight:bold"> </span>and</p>
+      <p style="text-align:center;margin-left:2.11in;margin-right:2.15in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE MALES</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:1.48in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:2.47in;margin-right:0.00in;text-indent:-2.29in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">THE QUEEN ON THE APPLICATION OF FAVIO </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+	<span style="font-weight:bold"> ORTEGA FLORES </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:1.48in">
+	  <span style="font-weight:bold">and - </span>
+	</p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:left;margin-left:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:none">LONDON BOROUGH OF SOUTHWARK </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">Respondent</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Edward J. Fitzpatrick </span>(instructed by <span style="font-weight:bold">Osbornes Solicitors LLP</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:right;margin-left:0.01in;margin-right:0.05in;text-indent:-0.01in"><span style="font-weight:bold">Christopher Baker </span>(instructed by<span style="font-weight:bold"> London Borough of Southwark</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing date: <date date="2020-12-10">10<span style="vertical-align:super;font-size:smaller">th</span> December 2020</date><span> </span></p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.17in;margin-right:1.10in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">Judiciary website.  The date and time for hand-down is deemed to be on Tuesday 15<span style="vertical-align:super;font-size:smaller">th</span> December 2020 at 10.30 a.m. </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Males:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">1.<span style="font-family:Arial"> </span>The issue in this appeal is whether the appellant, who lives with his partner and their two children in a one bedroom flat where they are “statutorily overcrowded”, is entitled to be included within Band 1 of Southwark Council’s Housing Allocation Scheme. The council decided that he was not, because he had caused the overcrowding by his own deliberate act in moving into the property in the first place. The appellant’s challenge to that decision was dismissed by Martin Spencer J. He now appeals to this court. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Factual background </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant’s family consists of himself, his partner and their two children, Ronaldo (born on 19<span style="vertical-align:super;font-size:smaller">th</span> February 2006) and Steven (born on 23<span style="vertical-align:super;font-size:smaller">rd</span> December 2008). The appellant and his partner were born in Brazil but their first language is Spanish.  In 2004 they moved to Spain, where they lived together until 2013 (when the appellant acquired Spanish nationality) and where their children were born. The appellant was employed in a factory making belts, but lost his job in 2013. He was unable to find work in Spain and travelled to the United Kingdom to look for work in November 2013, intending to save enough for his family to join him. He found a shared room in the Elephant and Castle area of London, where there is a large Latin American community.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Eventually the appellant found work as a kitchen assistant in a restaurant, where he has worked since 2014. His partner and children arrived in the United Kingdom in June 2014 and a friend helped them to secure a room in a house in Gordon Road, London SE15. They shared one room for a period of about a month. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant and his partner looked for a flat to rent, but struggled to find accommodation that they could afford. It was made clear to them by estate agents that they would not be able to afford a two bedroom flat. Eventually they obtained a tenancy of a privately rented flat in the Peckham area. This consisted of one bedroom, with an open plan living room and kitchen area. The family moved in on 27<span style="vertical-align:super;font-size:smaller">th</span> July 2014, paying a monthly rent of £1,000 which included bills. The appellant’s partner was the carer for their children, but from 2017 she worked part time in the borough as a cleaner at a local school. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At the time when they moved into their current accommodation, the appellant and his partner did not know that they could approach their local council for housing assistance. They learned of this possibility in September 2018 and, with the help of the Housing Action Southwark and Lambeth Group, applied on 22<span style="vertical-align:super;font-size:smaller">nd</span> October 2018 to be placed on the council’s housing register. That application was refused on 7<span style="vertical-align:super;font-size:smaller">th</span> March 2019 because the household did not satisfy the local connection test under the council’s Housing Allocation Scheme.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">After some further correspondence which it is unnecessary to set out, the council accepted that the household met the statutory criteria for overcrowding under Part X of the Housing Act 1985 from 23<span style="vertical-align:super;font-size:smaller">rd</span> December 2018 and that the local connection test would be satisfied (on the basis of five years’ residence in the borough) from 27<span style="vertical-align:super;font-size:smaller">th</span> July 2019. By letter dated 27<span style="vertical-align:super;font-size:smaller">th</span> June 2019 the council advised the appellant to make contact after that date to join the housing register. Even before this local connection test was satisfied, however, on 17<span style="vertical-align:super;font-size:smaller">th</span> May 2019 the council agreed to place the applicant in Band </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">4 of its allocation scheme (a “Reduced Priority” Band) on the ground of overcrowding pursuant to a paragraph of the scheme which enables the council to disapply the local connection test in appropriate cases.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The reason why the household was accepted as meeting the statutory criteria for overcrowding from 23<span style="vertical-align:super;font-size:smaller">rd</span> December 2018 was that this was the date when the appellant’s younger son attained the age of 10 years. Pursuant to section 326 of the 1985 Act the maximum capacity for a two roomed flat such as the appellant and his family occupied is three “units”. An adult or a child over the age of 10 counts as one unit, while a child between the ages of one and 10 counts as half a unit. Once the appellant’s younger son attained the age of 10 years, the household was assessed as having four units. Strictly speaking, the household was statutorily overcrowded from 19<span style="vertical-align:super;font-size:smaller">th</span> February 2016, the 10<span style="vertical-align:super;font-size:smaller">th</span> birthday of the appellant’s elder son, when the household counted as 3 ½ units, but this does not matter for the purpose of this appeal. “Statutory overcrowding” is a term used in this technical sense, although the council also uses the term “overcrowding” (albeit not “statutory overcrowding”) in a looser sense. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant did make a further application to be placed on a higher band and, by letter dated 11<span style="vertical-align:super;font-size:smaller">th</span> October 2019, the council notified him of its final decision. This was that the appellant would be placed in Band 3. It is this decision which is the subject of the appellant’s claim for judicial review. The relevant parts of the council’s decision letter read as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“I can confirm that as at 27/07/2019 you met the residential local connection criteria. I have assessed whether your application can be assessed in priority band 3 for overcrowding, and I am pleased to inform you that it can. I have set out below the reasons for my decision. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">We have reached this decision because it is considered that despite being overcrowded in your accommodation at the outset, you had not exceeded the maximum unit capacity for the property when you moved into [the current address] (nor had you done so very soon thereafter) and it was therefore considered to be reasonable for you to occupy with your family. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">The council acknowledge that as a result of both of your children exceeding 10 years old you are now considered to be statutory overcrowded (maximum capacity for a 1 bedroom property with 2 rooms for sleeping is 3 units, and you are now assessed as 4 units). However as natural increase has not occurred, whereby you had moved into overcrowded accommodation at the outset you do not meet the criteria to be awarded statutory overcrowded priority on the council’s Homesearch Bidding Scheme, nor do you meet the criteria to be awarded any associated priority star, in accordance with the allocations policy. … </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">Having considered all of the information above, in accordance with our current Allocations scheme I confirm that your applicant has now been reassessed into priority band 3 for overcrowding. You are able to bid for two bedroom properties on account of your household composition. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.39in;text-indent:0.00in">Please note that this decision is final and not open to further review.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In fact the appellant had only asked to be included in Band 3 so this decision gave him most of what he had been seeking (he had also asked for a priority star within Band 3). However, after consulting a local law centre, the appellant contended that if the council had applied its Housing Allocation Scheme correctly, he ought to have been placed in Band 1. That claim was first put forward in a pre-action protocol letter dated 18<span style="vertical-align:super;font-size:smaller">th</span> December 2019 and is the claim now advanced in these proceedings. The judge held that even though the appellant had not requested to be placed in Band 1, the council had considered whether he ought to be and had been right to do so, and accordingly gave permission for the judicial review claim to be advanced. There is no challenge to that decision on appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The council’s decision maker, and the signatory of the letter dated 11<span style="vertical-align:super;font-size:smaller">th</span> October 2019, was Ms Quesha Tait, the council’s Rehousing Manager. In her witness statement dated 17<span style="vertical-align:super;font-size:smaller">th</span> March 2020 she explained her reasoning as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“14. By this time, it was apparent that circumstances had changed because, on the information provided by the [appellant], he had satisfied the 5-year residential local connection criteria as from 27 July 2019. Accordingly, the [appellant] was qualified to join the housing register without more, and it was therefore no longer a case of admitting him to the register with band 4 priority under paragraph 5.23.5(a) of the Scheme. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">15.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">In other respects, however, the circumstances had not changed and the earlier decision letters, particularly mine dated 17 May 2019, explained why band 1 priority had not been awarded. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">16.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The main point in my view was to consider how the overcrowding had come about and had later become statutory overcrowding. The overcrowding had started from when the [appellant] initially moved his family of four into the current 1bedroom flat. There was nothing to indicate this was anything other than a voluntary act. The [appellant] never suggested otherwise and I considered it to have been a deliberate act. The flat was overcrowded from the outset by reference to the bedroom standard set out at Appendix B in the Scheme which required two bedrooms. This was therefore different from the situation where a family’s current accommodation had once met the family’s needs but those needs had naturally increased as a result of the birth or adoption of children so that the accommodation no longer met their needs. In the present case, given the size of the household, this accommodation was never going to be suitable for the [appellant’s] family in the long or medium term. The statutory overcrowding then came about simply because, as mentioned above, the [appellant’s] younger son reached the age of 10 years, which meant that the space standard under s326 Housing Act 1985 was contravened. Again, this was not a case of natural increase in the size of the household and there was no other change of circumstances to break the chain of causation which led back to the [appellant’s] action in moving his family into the accommodation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">17.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">I also noted that, in the correspondence, the [appellant] had specifically stated that he was not seeking band 1 priority but was seeking band 3 priority. This was despite the fact that he used the description ‘statutorily overcrowded’ and sought a priority star on that ground. This seemed to me to be a recognition that the criteria for band 1 were not met. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">18.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">It was therefore my view that band 1 did not apply, because the [appellant] had caused the statutory overcrowding by a deliberate act. On re-reading my letter dated 11 October 2019, I </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">see that I did not use the phrase ‘deliberate act’ or refer specifically to paragraph 6.2 of the Scheme, but it was those provisions which I had in mind. … I had to consider, however, which priority band was appropriate in this case. Band 2 is not concerned with overcrowding; but band 3 includes, among other people, those who are overcrowded but not statutorily overcrowded. Band 4 includes all residual applicants. I considered that band 3 was the most appropriate in the circumstances. It was the closest match to the housing conditions being experienced by the [appellant’s] family and it was the band which the [appellant] himself had asked to be placed into. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">19.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">I did not consider that the [appellant] was aware, in 2014, of the space standards under the 1985 Housing Act or deliberately contrived to worsen the family’s circumstances so as to meet the criteria for statutory overcrowding and achieve higher priority on the housing register. I therefore did not apply the provisions at paragraph 5.24.1 of the Scheme. Indeed, it was not open to me to do so because that power is reserved to the Group Services Manager of the Homelessness and Housing Operations Service, which reflects the relative seriousness and rarity of such cases.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The Housing Act 1996 </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Leaving aside homelessness assistance under Part VII of the Housing Act 1996, local authorities do not have a duty to provide social housing within their areas, but they do have duties under Part VI of the Act as subsequently amended. In particular they are required by section 166A(1) of the Act to have a scheme for determining priorities, and as to the procedure to be followed, in allocating such housing accommodation as they do control or to which they are able to nominate tenants. Subject to some very general requirements, which include that the scheme shall be framed so as to secure that “reasonable preference” is given to certain categories of people, one of which is those “occupying insanitary or overcrowded housing or otherwise living in unsatisfactory housing conditions”, local authorities have a wide discretion as to the principles on which their scheme should be framed and the way in which housing accommodation should be allocated (see sections 159(7) and 166A(5) and (11)). Statutory guidance </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">issued in 2012 explains that this flexibility is intended to enable local authorities “to tailor their allocation priorities to meet local needs and local circumstances”.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The width of this discretion was recognised by the House of Lords in <span style="font-style:italic">R (Ahmad) v Newham LBC</span> [2009] UKHL 14, [2009] PTSR 632. Lord Neuberger emphasised at [46] and [55] that housing allocation policy is a difficult exercise which requires not only social and political sensitivity and judgment, but also local expertise and knowledge, and that the courts should be slow to interfere on the ground of irrationality with a scheme which complies with the statutory requirements.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">However, once a scheme is established, it must be followed. Section 166A(14) provides that:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.53in;text-indent:0.00in">“A local authority shall not allocate housing accommodation except in accordance with their allocations scheme.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Christopher Baker for the respondent council submitted that “allocation” in this subsection refers only to the selection or nomination of a person to be the tenant of a particular property. He pointed to section 159(2) of the 1996 Act which explains that this is the sense in which “allocation” is used in Part VI of the Act. But it would make no sense if a local authority had an obligation to formulate an allocation scheme, but no obligation to follow that scheme when deciding what priority should be accorded to applicants for housing. Section 166A(14) requires a local authority to comply with the scheme which it has established, not only when deciding which applicant should be selected or nominated for a particular property, but also when deciding where on the waiting list an applicant should be placed. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The Southwark Scheme </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In Southwark, as in other London boroughs, the demand for social housing is acute, massively exceeding the available supply. Being included on the register is very far from guaranteeing that suitable accommodation will be available, even in the case of an applicant whose current accommodation is statutorily overcrowded. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Southwark Housing Allocation Scheme is dated November 2013. It sets out in section 6 a four tier banding system, by which priority is allocated to applicants for housing. This is described as “a needs-based banding system”, with the order of the bands arranged to reflect housing priority. Within each band applicants are first ranked according to any “priority star” which they may have been awarded and then in date order. The bands are explained in paragraph 6.2. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Within Band 1 there are six categories, the fourth of which is: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Applicants who are statutorily overcrowded as defined by Part X of the Housing Act 1985, and have not caused this statutory overcrowding by a deliberate act.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It was this category to which Ms Tait applied her mind when considering the appellant’s application. She concluded that the appellant had caused his statutory overcrowding by his deliberate act in moving his family into their existing accommodation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Band 2 is primarily concerned with applicants with a medical or welfare need for housing. It is not relevant in this appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Band 3 contains four categories, of which the third is: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.70in;text-indent:0.00in">“Overcrowded but not statutorily overcrowded as defined by Part X of the 1985 Housing Act.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This was the category in which, paradoxically as it refers to those who are “not statutorily overcrowded” when it is common ground that the appellant is “statutorily overcrowded”, Ms Tait placed the appellant. She did so on the ground that she thought this was “the closest match” to his circumstances. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Finally, Band 4 contains two categories, the first of which consists of applicants who are homeless, but to whom the council does not owe a duty under Part VII of the 1996, for example because they are intentionally homeless or without a priority need. The second category consists of “All other applicants.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The critical question in this appeal is whether the appellant comes within the fourth category in paragraph 6.2 of the Scheme. That will depend on whether he caused the statutory overcrowding which his family is now experiencing by a deliberate act. It is necessary, however, to refer to some of the other provisions of the scheme which have featured in the parties’ submissions. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant relies on paragraph 1.1.9, which provides that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“1.1.9 The individual circumstances of each applicant are considered in every case using the information provided by the applicant on their Housing Registration Form and subsequently upon any requests for additional information that may result from the answers that the applicant gives.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant emphasises the need for consideration of the individual circumstances of each applicant. The council points out that such consideration is to be based on the information provided by the applicant on the application form. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 3 explains who is qualified to join the housing register. In short, there are requirements concerning age, the need for a local connection (with an exception for Armed Forces personnel), and the absence of “unacceptable behaviour”. The local connection requirement can be satisfied in various ways, one of which (and the one which the appellant eventually satisfied) is to have lived in Southwark for the last five years. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Paragraph 3.5.20 provides that an applicant will not qualify to join the housing register if they have deliberately worsened their circumstances in order to qualify to join. I need not set this out as it is repeated in almost the same terms as paragraph 5.24.1 (see below). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Paragraph 5.2.2 explains the priority star system. It explains that within each band, applicants are prioritised, first, by a priority star system. There are six ways in which such a star may be awarded, one of which is for: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“2. People occupying unsanitary or statutory overcrowded housing (as defined by Part X of the Housing Act1985) or otherwise living in unsatisfactory housing conditions in accordance with hazards identified through the Housing Health Safety Rating Scheme as confirmed by the London Borough of Southwark.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Thus an applicant who is placed in Band 1 by reason of occupying statutorily overcrowded housing, as distinct from any of the other categories which entitle an applicant to be placed in Band 1, is also entitled to a priority star which will give them priority over others in the band who do not qualify for such a star. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Finally, paragraph 5.24.1 returns to the issue of applicants who deliberately worsen their housing circumstances in order to achieve higher priority on the register. As already noted, it is in almost the same terms as paragraph 3.5.20. It provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“5.24.1 Where there is clear evidence and a conclusion can properly be drawn that an applicant has deliberately made worse their circumstances in order to achieve higher priority on the register or (in the case of an applicant who has not been disqualified for this reason) to qualify to join the housing register, then reduced priority will be given. The Group Services Manager of the Homelessness and Housing Options service will make this decision. Examples of this include:</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.52in;text-indent:0.50in">Selling a property that is affordable and suitable for an applicant’s needs.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.52in;text-indent:0.50in">Moving from a secure tenancy or settled accommodation to insecure or less settled or overcrowded accommodation.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">c)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.52in;text-indent:0.50in">Requesting or colluding with a landlord or family member to issue them with a Notice to Quit.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">d)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.52in;text-indent:0.50in">Deliberately overcrowding property by moving in friends and/or other family members who have never lived together previously and/or have not lived together for a long time, then requesting re-housing to larger accommodation.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">The above list is not exhaustive. This will ensure that households will not be treated as occupying overcrowded accommodation unless the overcrowding has come about by natural increases due to birth/adoption of a child or the addition of other persons to the household with the written consent of the London Borough of Southwark.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The final sentence of this paragraph is not happily drafted, although its general thrust appears to be to the effect that overcrowding which comes about by natural increases due to the birth or adoption of a child or the addition of other persons to the household with the council’s consent will not be treated as a deliberate worsening of an applicant’s housing circumstances for the purpose of paragraph 5.24.1.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Ms Tait’s witness statement makes clear that she did not apply this paragraph in deciding that the appellant should not be placed in Band 1 and that it would not have been open to her to do so as such a decision is reserved to the Group Services Manager, a more senior officer. Nevertheless, it may be that she had in mind some of the thinking which underlies this paragraph, as indicated by the statement in her decision letter that the appellant’s children attaining the age of 10 did not amount to a “natural increase”, together with the distinction which she draws in her witness statement between that situation and a “natural increase” due to the birth or adoption of a child. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The judgment </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge dismissed the appellant’s claim. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">An important premise for the appellant’s argument before the judge was that in order to amount to "a deliberate act" within the meaning of paragraph 6.2 of the Southwark Scheme, an act has to be culpable in the sense that it is deliberately intended to promote the interests of the applicant in relation to the borough's housing allocations policy. The judge rejected this submission. He held that it was sufficient that the appellant had voluntarily entered into the tenancy in question when it was inevitable that there would be statutory overcrowding once his elder son attained the age of 10, and that it made no difference whether the appellant was aware of the terms of the statute or of the Scheme: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“30. … Here, the applicant entered into a tenancy for a onebedroomed flat in the knowledge that he would be occupying the flat with his partner and their two children, four people thus occupying a one-bedroomed property. In my judgment that is sufficient for the [council] to conclude that this was a deliberate act within the meaning of its policy whereby the [appellant] does not come within band 1.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge went on to say that Ms Tait was right to contrast this situation with a case where a family moves into accommodation which is appropriate for the number of family members at the time, but where the accommodation then becomes overcrowded because the family increases in size; and that she was right also to characterise the appellant, whose accommodation was effectively unsuitable from the start, as seeking to “jump the queue” over other families on the waiting list. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:-0.25in">32.<span style="font-family:Arial"> </span>Finally, the judge concluded that the council was under no obligation to carry out any further investigation of the appellant’s circumstances.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">The submissions on appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For the appellant Mr Edward Fitzpatrick submitted, in outline, that the judge’s approach to the issue whether the appellant had caused the statutory overcrowding by a deliberate act was wrong. He submitted that it was necessary to consider the appellant’s individual circumstances at the time when the family moved into the accommodation which eventually became statutorily overcrowded, and that in the context of the Scheme “a deliberate act” required some planned or intentional act which created the overcrowding. Here the overcrowding was caused, not by moving into the accommodation in the first place, but by the natural event of the children growing older. He supported this submission by reference to the paragraphs of the Scheme dealing </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">with “deliberately worsening housing circumstances”, submitting that this indicates that “deliberately” is directed at conduct which is in some way culpable. It was wrong in those circumstances to treat ordinary family growth as the result of a deliberate act, and in particular to distinguish between such family growth and the addition of another child to the family. He pointed out that it was anomalous to place the appellant in Band 3 which was for those (unlike the appellant) who are “not statutorily overcrowded” and submitted that it was unfair to regard the appellant as seeking to jump the queue.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For the council Mr Christopher Baker submitted, again in outline, that local authorities have a wide discretion as to the content of their housing allocation schemes and that such schemes should be interpreted in a common sense and practical, not legalistic, manner. Such schemes should also be implemented in a flexible manner, with the courts slow to interfere in the absence of irrationality. Here the judge had given the words of paragraph 6.2 of the Southwark Scheme an ordinary meaning which was flexible and not restrictive. The paragraphs of the Scheme dealing with “deliberately worsening housing circumstances” were directed to exceptional situations, which were not applicable here, and should not be used to import concepts of culpability into the banding scheme in paragraph 6.2. There was a distinction between statutory overcrowding arising from children growing older and the addition of a child to the family by birth or adoption. There was no obligation on the council to investigate the appellant’s circumstances further. The onus was on him to provide any relevant information to the council. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Discussion </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There is no challenge in these proceedings to the lawfulness of the Southwark Scheme. Moreover, it is common ground that the appellant’s existing accommodation is statutorily overcrowded, that all other relevant criteria (for example, the need for a local connection) are now satisfied, and that this is not a case where the appellant “deliberately made worse [his] circumstances in order to achieve higher priority on the register”. Accordingly, the only question arising in these proceedings is whether the appellant “caused this statutory overcrowding by a deliberate act” within the meaning of paragraph 6.2. Although Mr Fitzpatrick put the appellant’s case in a variety of ways, in my view this is the single issue which needs to be addressed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The meaning of a housing allocation scheme, like that of any other comparable policy document, is for the court to determine (cf. in a planning context, the well-known passage from Lord Reed’s judgment in <span style="font-style:italic">Tesco Stores Ltd v Dundee City Council </span>[2012] UKSC 13, [2012] PTSR 983 at [18] and [19]), but the court’s approach to its interpretation should be in accordance with the guidance given by this court in <span style="font-style:italic">R (Ariemuguvbe) v Islington LBC</span> [2009] EWCA Civ 1308, [2010] HLR 14. Sullivan LJ said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“24. … since this is a local authority housing allocation scheme and not an enactment, it has to be read in a practical, common sense, and not in a legalistic way.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Lord Neuberger MR added: “31. … While any document prepared for public consumption should be as clear, short and simple as possible, it is particularly </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">true of housing allocation schemes required to be prepared under [what was then] Section 167, and published under Section 168, of the Housing Act 1996. They are intended to be read by, and administered for, the benefit of people who require public housing and their families, and they are intended to be applied in multifarious different circumstances in which great difficulties can often arise. … It is plainly right for the court to apply a common sense and a practical approach to the interpretation of the scheme, and indeed an interpretation which allows a sensible degree of flexibility when it comes to dealing with individual cases. That this approach is appropriate is reinforced by the wide discretion given to local housing authorities …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Adopting this approach, it seems to me that the relevant terms of paragraph 6.2 of the Southwark Scheme are clear. “Deliberate” is an ordinary English word which requires no explanation or glossing. An act is deliberate if it is something which the person who does it intends to do. It need not be culpable or planned. Accordingly, in agreement with the judge, I see no reason to interpret paragraph 6.2 as involving concepts of culpability. That is an unnecessary complication, apparently derived from paragraph 5.24 which, it is agreed, does not apply in this case. The applicant for public housing for whom the Scheme is primarily intended should not have to comb through this 60 page document, in the way that a lawyer might, to see whether the clear terms of paragraph 6.2 require qualification as a result of other provisions dealing with situations which do not apply to his case.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The relevant paragraph of the Scheme requires the council to focus on the cause of the statutory overcrowding and, having identified that cause, to ask itself whether the cause was a deliberate act by the applicant. The cause must necessarily be ascertained from the information which the applicant has provided. The council is not required to carry out extensive investigations and it would not be a good use of its limited resources to insist that it do so. But in the present case the facts are clear and not disputed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">What then was the cause of the statutory overcrowding in this case? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgment it is artificial on the undisputed facts to regard the cause of the overcrowding as the appellant’s decision, some five years before his application to the council to be placed on the housing register, to take a tenancy of his existing accommodation. At that time he obtained for himself and his family the best accommodation which he could afford. He did not take it with any thought of improving his position on the register, a possibility of which at the time he had no knowledge. As Ms Tait expressly and rightly accepted in the decision letter, this was accommodation which it was reasonable for him to occupy with his family. One might ask, what else was he to do? As he could not have afforded any more spacious accommodation, either in Southwark or in any other central London borough, the only “choice” available to him was to continue living in the one room in Gordon Road or to leave his job and move his family elsewhere, to seek other employment and accommodation, either within the United Kingdom or abroad. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The accommodation which the appellant reasonably decided to take only became statutorily overcrowded as a result of his children growing, as they inevitably would. That, in my judgment, was the cause of the overcrowding in this case. It cannot on any sensible understanding of paragraph 6.2 of the Scheme be regarded as a deliberate act on the part of the appellant. With respect, for the council to have decided otherwise exceeds the bounds of any flexibility which may be accorded to it in the implementation of its Scheme. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This is enough in my judgment to decide this appeal. However, in view of the submissions addressed to us, I would add three observations. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">First, in my view the supposed distinction between overcrowding as a result of children growing older and overcrowding as a result of an addition to the family by birth or adoption is misconceived. It is not actually a distinction contained in the Scheme, which merely states that a natural increase in family size due to birth or adoption is not to be regarded as a deliberate worsening of an applicant’s housing circumstances. It says nothing about the natural growth of children. Indeed, birth and adoption are much more likely to be caused by a deliberate act than the natural and inevitable growth of existing children. So even if it were relevant to interpret paragraph 6.2 of the Scheme by reference to paragraph 5.24.1, the result would be the same. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Second, I cannot see any valid basis on which the appellant could be placed in Band 3. That expressly excludes applicants who are statutorily overcrowded. Given that, as is common ground, Band 2 is not relevant in this case, the appellant should either have been placed in Band 1 (if the statutory overcrowding was not caused by his deliberate act) or in Band 4 (if it was). That gives coherence to the Scheme as it makes sense for an applicant whose deliberate act is the cause of his own problem to be given reduced priority. The fact that Ms Tait considered Band 3 to be the closest fit for the appellant’s circumstances ought to have alerted her to the fact that something had gone wrong in her decision-making. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Third, the council’s approach leads to some odd, or even perverse, consequences. It means that an applicant who acts reasonably in taking the most suitable accommodation for his family that he can afford disqualifies himself from priority once his children grow to an age which renders that accommodation statutorily overcrowded. An interpretation of the Scheme which has that consequence, or which incentivises an applicant to refuse accommodation which is suitable for his current needs because of the consequences which will ensue when his children reach the age of 10, is to say the least counter-intuitive and requires careful scrutiny. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">Disposal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I would allow this appeal and make a declaration that the appellant is entitled to be placed in Band 1 of the Southwark Housing Allocation Scheme, and to be treated as having been so placed with effect from 11<span style="vertical-align:super;font-size:smaller">th</span> October 2019, the date of the decision letter.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Based on the information available to us, it appears that the appellant is also entitled to a priority star. However, a claim for a priority star did not form part of the appellant’s claim for judicial review. I would therefore make no declaration to this effect, but would leave the council to consider in the light of this judgment whether there is any reason why such a star should not be awarded. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This may be regarded by some as “jumping the queue”. It means, inevitably, that the appellant will move ahead of others who are currently ahead of him. But that is merely </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">the consequence of applying the council’s allocation scheme, which is designed by the council to determine which applicants within the borough of Southwark should have priority over others, in a practical and common sense way.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Baker: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Floyd: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

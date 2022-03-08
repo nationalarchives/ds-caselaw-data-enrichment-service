@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1230"/>
+	  <FRBRuri value="ewca/civ/2020/1230"/>
+	  <FRBRdate date="2020-09-22" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1230"/>
+	  <FRBRname value="A (A Child) (Rev 1)"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1230/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1230/eng"/>
+	  <FRBRdate date="2020-09-22" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1230/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1230/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:16:09" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1230/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1230</uk:number>
+	<uk:cite>[2020] EWCA Civ 1230</uk:cite>
+	<uk:hash>ac48dcf46d5afb8364a0f8e7261fc7821ef86240e36c3252c2b83dc363b2ae17</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1230/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.50in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1230</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case Nos: B4/2020/0689,0702 &amp; 0703</p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE FAMILY COURT</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">SITTING AT WEST LONDON</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">HER HONOUR JUDGE JACKLIN QC</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ZW18P00161</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 22/09/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE KING</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE NICOLA DAVIES</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PHILIPS</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.15in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">A (A CHILD) </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.15in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Will Tyler QC and Joanne Ecob</span> (instructed by <span style="font-weight:bold">Delphine Philip Law LTD</span>) for the <span style="font-weight:bold">Appellant</span><span> </span><span style="font-weight:bold">Samantha King QC </span>(instructed by<span style="font-weight:bold"> Bross Bennet LLP</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing dates: <date date="2020-07-28">28<span style="vertical-align:super;font-size:smaller">th</span> July 2020</date><span> </span></p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.15in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lady Justice King:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">This is an appeal against an order made on 6 January 2020 by Her Honour Judge Jacklin QC at the conclusion of a fact-finding hearing that was conducted within private law proceedings. The Appellant (“father”) sought contact with his child, A, who was born in 2011 and is now aged 9 years.  The Respondent (“mother”) opposed all forms of contact consequent upon, what she described as, the father’s “abhorrent behaviour” during the latter part of their relationship.  The judge heard evidence over 4 days, including oral evidence from both the mother and father.  At the conclusion of the case, the judge made the following findings: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The maternal grandfather died from thallium poisoning; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The thallium that caused the death was administered deliberately by [the father] on 11 September 2012; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The maternal grandmother and mother were seriously unwell in September and October 2012 as a result of thallium poising; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The thallium that caused their illness was administered deliberately by [the father] on 11 September 2012; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">[The father] was aware that he had administered the thallium and [was] therefore aware of the cause of the mother’s illness in September/October 2012; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">vi)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Being so aware, [the father] failed to inform the medics who saw the mother in the various hospitals she visited and failed to pursue appropriate medical treatment with the necessary urgency. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In summary, therefore, the judge found that the father had poisoned each of: his partner’s father (“the grandfather”); his partner’s mother (“the grandmother”); and his partner (“the mother”) with thallium, resulting in the death of the grandfather and the grandmother and the mother becoming very seriously ill. Thallium is a highly toxic, odourless and tasteless heavy metal which, until banned some years ago, was used in rat poison.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The appeal before the court is what is known within the profession as a ‘reasons appeal’. It is being submitted by Mr Tyler QC, on behalf of the father, that the judge failed properly to analyse certain critical evidence and this failure went to the heart of the conclusions she reached, rendering the judge’s findings unsafe. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Before moving on to consider the background, counsels’ submissions and our conclusions, I indicate immediately that it is the court’s intention to allow the appeal and to remit the matter for rehearing before a High Court Judge.  In those circumstances, and in order to avoid any risk of prejudicing the retrial, it is not my intention within this judgment to give significant detail of the evidence which was before the judge beyond that which is strictly necessary to demonstrate how I have reached my conclusion that the judge’s order cannot stand. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Background  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Both parents were born and brought up in Bulgaria. The mother has lived in England for many years and is now a British citizen. The father is doctor who qualified in Bulgaria, but came to work in the UK in a number of years ago after the parents had met whilst the mother was visiting her parents in Bulgaria.  The parents lived together in a property bought with the help of the maternal grandparents, and A was born in 2011.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">There were difficulties in the relationship between the parents even at this early stage. The father and the grandmother did not get on, although the grandmother stayed with the couple between December 2010 and January 2011 to help to renovate the house, and then again from October 2011 to April 2012. Between May and July 2012, A stayed with his grandparents in Bulgaria whilst the parents remained in England and had couples counselling.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In August the couple travelled to Bulgaria by car. This marked a change of pattern as previously all trips had been by air and the routine had been that, upon their arrival in Bulgaria, the grandfather would lend the family his car to enable them to visit the paternal family in another part of the country. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On this occasion, the parents stayed one night with the maternal grandparents where they collected A before going on to visit the paternal family. They   returned to the maternal grandparents’ summer home on 8 September 2012.  At that time, the intention was that the family would leave on the morning of 12 September, stay overnight in Vienna on the first night, and Calais the next (13 September) prior to catching a ferry home the following day. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">It was the events of the 11 September 2012 upon which the finding of fact hearing largely focused. It was the custom of the grandparents to get up at about 6:00am to work in their garden. They were in the habit of making coffee first thing and drinking it on the veranda in a leisurely way during the course of the morning. On this particular morning, the mother called to the grandmother from her bedroom saying that she did not want coffee and would stay in bed for a while. The father, in contrast, did not usually get up before 10:00am. On this morning he got up at about 7:30am after the grandmother had prepared the coffee and poured it out for herself and her husband. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The mother, finding that she could not get back to sleep, came on to the veranda, lit a cigarette and sat down on a swing seat with the father.  Seeing her mother’s coffee, the mother changed her mind about wanting a drink and picked up her mother’s mug of coffee and drank about half of it. During the course of the morning, the grandmother drank the other half of her coffee and the grandfather, as was his habit, sipped his from time to time until he had finished his drink. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The mother’s case at trial was that when she had come on to the veranda, the father had his back to her and she could see he was ‘leaning over’ the table where the two cups of coffee were placed.  He did not turn to greet her but remained where he was for some moments before turning around. In so far as this evidence was concerned, the judge made the following findings: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“72. I do not accept that the mother concocted this evidence.  She was thoroughly cross-examined on this evidence and it was clear to me that she was recounting an event that she recalled.  She was a truthful witness and I accept her account.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Returning to the undisputed events of 11 September, the family had dinner at about 7:00pm that evening. This was a meal at which, as was their custom, they ate food set out on the table, although each person may have chosen different things to eat from the various dishes.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">By this time, the early evening of 11 September, the grandfather was becoming ill. The mother was also feeling unwell but believed that she had caught a viral infection from A.  The judge found that, due to the father’s insistence, the family set off on the long journey back to the UK that night rather than the following morning as planned. The mother, father and A therefore left at approximately 10:00pm, notwithstanding that no accommodation had been booked until the following night. The father’s case was that the car was overloaded and he wished to give himself plenty of time for the journey. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The grandfather’s health deteriorated overnight and he was admitted to hospital in the early hours of the morning. He died at 9:15pm on 13 September.  The cause of death was given as an ischemic stroke causing heart failure. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Meanwhile, both the mother and grandmother’s conditions deteriorated.  Neither the grandmother nor the mother told each other how unwell they felt, not wishing to cause additional anxiety to the other on top of the shock and distress caused by the unexpected death of the grandfather.  The mother felt so unwell that she went to Central Middlesex Hospital immediately upon returning to the UK where she remained for a week undergoing tests.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">After discharge, the mother’s condition continued to deteriorate. On 23 September, the mother attended the Royal Free Hospital where the suggested diagnosis was acute stress reaction arising from the sudden loss of her father.  The mother was discharged from the Royal Free on 26 September.  The following day, the mother noticed that her hair was falling out.  She returned to the Royal Free raising the possibility that she had been poisoned.  She was sent away with a similar diagnosis, namely that this was stress related.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">By this time, however, the grandmother was also experiencing the same symptoms including hair loss.  Fortunately, a medical neighbour of the grandmother’s, having seen the condition she was in, including the hair loss, became worried that she may have been poisoned. The neighbour contacted, and then described the symptoms to, the head of forensic medicine at the University Hospital in Star Zagora. The advice received was that the grandmother should go immediately to the Military Medical Academy in Sofia where they would be able to test for serious poisoning.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Meanwhile in England on 29 September, the mother contacted a friend (IS) telling him she feared that she had been poisoned but felt too unwell to research her symptoms.  Her friend came back telling her that his research indicated that she may have been poisoned by thallium. The mother herself then looked on the internet where the possibility was confirmed, and “Prussian Blue” (potassium ferric hexacyanoferrate) was identified as the antidote. The mother then went to Charing Cross Hospital where there is a toxicology laboratory and tests were taken for poisoning. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">At the request of the mother, the father contacted a former colleague in Bulgaria who was a specialist in anaesthesiology and intensive care as well as toxicology. This colleague suggested that thallium poisoning was the most likely diagnosis and he also said that the best toxicology department in Bulgaria was at the National Emergency Medical Centre in Sofia.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On 2 October, the grandmother called the mother to tell her that a high level of thallium had been detected in her blood. The mother spoke to the grandmother’s treating physician who said that the grandmother had been severely poisoned and required immediate treatment. He suggested that the mother go to Bulgaria immediately if she was not being treated in London.  By the following day, the mother’s condition had deteriorated further. At the request of the mother, the father took her to King’s College Hospital where she asked for Prussian Blue, but the doctors said they were unable to give it to her without the grandmother’s test results.  At this point, the mother decided to go to Sofia to get treatment at the same hospital as the grandmother.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Notwithstanding their strained relationship, the mother asked the father to accompany her as she felt insufficiently well to cope with the journey on her own with A. The mother was admitted to hospital the following day where she was tested positive for thallium. After some considerable difficulties, Prussian Blue was sourced from Germany and administered to the mother and grandmother. They were discharged from hospital on 19 October to continue their recovery.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The hospital in Sofia contacted the police who spoke to the mother for the first time on 4 October 2012 whilst she was ill in hospital. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">As part of the police investigation, the body of the grandfather was exhumed. It was found that he had died from thallium poising. The Bulgarian police investigated the matter as a criminal case between October 2012 and April 2014 when the district prosecutor suspended the investigation. That decision was successfully appealed by the mother.  The investigation continued but was once again suspended in October 2014.  Again, the mother successfully appealed that decision only for the investigation once again to be suspended in April 2016. It was said at that time that all the evidence gathered implicating the father appeared “indirect”. The court has been informed that the mother has, once again, appealed and that, once again, the investigation has been reinstated.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Scientific Evidence  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">For the purposes of this appeal, it is unnecessary to go into the detail of the evidence of the jointly instructed forensic science and toxicology expert, Dr John Douse. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">There is no challenge to the diagnosis, namely that each of the mother and the grandparents suffered from severe thallium poisoning which had been ingested.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-right:0.00in;text-indent:0.00in">Further, it is uncontroversial that thallium poisoning is very hard to diagnose and is often misdiagnosed, leading to a delay in treatment, as was the case in relation to the mother. The poison is tasteless and odourless and is “readily available to anyone who has a mind to obtain it” [41]. It can be illegally obtained over the internet, and in 2011/2012 thallium salts were readily available from chemical supply companies for use as a rodenticide. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In her judgment, the judge ruled out contamination of water from any source as an alternative to the poison having been put in the coffee. Mr Tyler accepts that, in relation to the tap water or the spring water used at the house, that finding is incontrovertible. He submits, however, that in the event of a retrial he would seek to have tests carried out at the pump in the garden which was used to water the fruit and vegetables. He submits that the judge wrongly characterised this potential source of contamination as ‘too fantastical to present a realistic possibility’ [97]. It will be a matter for the trial judge to decide whether, given all the circumstances, including that the whole family ate the fruit and vegetables watered from the pump, further evidence in this regard is proportionate. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Grounds of Appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The grounds of appeal are somewhat discursive. In oral argument, Mr Tyler refined his submissions to two key issues, although he does not resile from the other matters identified in the grounds of appeal and expanded upon in his skeleton argument. Mr Tyler submits that either of these two key issues would, in themselves, be enough to undermine the court’s findings. This is on the basis that the court’s process of reasoning had been insufficient and the judge had consequently fallen into the trap of reaching factual conclusions based on impression, rather than upon a careful analysis of all the evidence, thereby rendering her conclusions unsafe.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The two issues are: (i) the judge’s finding that the father had been seen by the mother ‘leaning over’ the coffee cups in which the poison had been administered at the critical time (the “‘leaning over’” evidence); and (ii) the judge’s findings as to the father’s motive. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The “‘leaning over’” evidence </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Judges are well used to conducting finding of fact hearings in which arriving at findings substantially relies upon the judge piecing together strands of evidence, both expert and lay, direct and circumstantial. By way of example, only rarely will there be a witness to a baby being shaken. That does not, however, mean that at the conclusion of a trial, having considered all the evidence, a judge is prevented from making findings on the balance of probabilities, that the cause of death was shaking, and to identify the unseen perpetrator. In reaching such conclusions, a judge will rightly have looked at all the evidence, contemporary, written and oral.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Inevitably in such cases, the oral evidence of the key protagonists, most often the mother and her partner, is highly significant. The case law has developed in a way designed to ensure that, whilst there is recognition of the fact that the oral evidence of lay parties is often critical, it also has its limitations; there are dangers in an over reliance by the judge on either demeanour, or upon the fact that a witness has told demonstrable lies. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The case of <span style="font-style:italic">R v Lucas </span>[1981] QB 720 is routinely quoted, as it was here at [15] of the judge’s judgment, as a reminder to the court that people lie for all sorts of reasons; the fact that a person lies about one specific thing does not necessarily mean that they have lied about another matter. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I have in mind the guidance given by Baker J (as he then was) in <span style="font-style:italic"> Gloucestershire CC v RH and others </span>[2012] EWHC 1370 (Fam) and in particular at [42] his point 7: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“Seventh, the evidence of the parents and any other carers is of the utmost importance. It is essential that the court forms a clear assessment of their credibility and reliability. They must have the fullest opportunity to take part in the hearing and the court is likely to place considerable weight on the evidence and the impression it forms of them (see <span style="font-style:italic">Re W and another (Nonaccidental injury)</span> [2003] FCR 346).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The reasoning of Baker J in <span style="font-style:italic">Gloucestershire CC v RH and others</span> [2012] EWHC 1370 (Fam) was approved by the President in <span style="font-style:italic">Re M (Fact-Finding Hearing: Injuries to Skull) </span>[2013] 2 FLR 322, [2012] EWCA Civ 1710 at [30]. More recently, the courts have looked at the issue of what can, in broad terms, be identified as the fallibility of oral evidence. The issue of the extent to which a court should rely on the recollection of witnesses and the fallibility of human memory first arose in a commercial setting through observations made by Leggatt J (as he then was) in<span style="font-style:italic"> Gestmin SGPS SA v Credit Suisse (UK) Ltd and Another </span>[2013] EWHC 3560 (Comm) <span style="font-style:italic">(‘Gestmin’) </span>at [15] – [22], and more recently in<span style="font-style:italic"> Blue v Ashley </span>[2017] EWHC 1928 (Comm) at [68] – </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-right:0.00in;text-indent:0.00in">[69].   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In the <span style="font-style:italic">Gestmin </span>case, at [22], Leggatt J expressed the view that the best approach for a judge to adopt in a commercial trial was to place little, if any, reliance on a witness’s recollection of what was said in meetings and conversations; rather factual findings were to be based on inferences drawn from documentary evidence and known or probable facts. This was followed in <span style="font-style:italic">Blue v Ashley,</span> where Leggatt J at [70], having rehearsed his own earlier observations in <span style="font-style:italic">Gestmin, </span>approached evidence of a crucial conversation in a way that was “[m]indful of the weaknesses of evidence based on recollection”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The Court of Appeal considered both of these cases in <span style="font-style:italic">Kogan v Martin and Others </span>[2019] EWCA Civ 1645 <span style="font-style:italic">(‘Kogan’). </span>This was a case where the judge at first instance had wrongly regarded Leggatt J’s statements in <span style="font-style:italic">Gestmin </span>and <span style="font-style:italic">Blue v Ashley </span>as an “admonition” against placing any reliance at all on the recollections of witnesses.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The Court of Appeal in <span style="font-style:italic">Kogan</span> emphasised the need for a balanced approach to the significance of oral evidence regardless of jurisdiction. Although it was a copyright dispute between former partners, the judgment was a judgment of the court with wider implications.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In relation to the treatment of the evidence of the Claimant, the Court in <span style="font-style:italic">Kogan </span>said:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.26in;text-indent:0.00in">“88…. We start by recalling that the judge read Leggatt J's statements in <span style="font-style:italic">Gestmin v Credit Suisse</span> and <span style="font-style:italic">Blue v Ashley</span> as an </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.01in;margin-right:0.01in;text-indent:-0.01in">"admonition" against placing any reliance at all on the </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">recollections of witnesses. We consider that to have been a serious error in the present case for a number of reasons. First, as has very recently been noted by HHJ Gore QC in <span style="font-style:italic">CBX v North West Anglia NHS Trust</span> [2019] 7 WLUK 57, <span style="font-style:italic">Gestmin</span> is not to be taken as laying down any general principle for the assessment of evidence. It is one of a line of distinguished judicial observations that emphasise the fallibility of human memory and the need to assess witness evidence in its proper place alongside contemporaneous documentary evidence and evidence upon which undoubted or probable reliance can be placed. Earlier statements of this kind are discussed by Lord Bingham in his well-known essay <span style="font-style:italic">The Judge as Juror: The Judicial Determination of Factual Issues</span> (from The Business of Judging, Oxford 2000). But a proper awareness of the fallibility of memory does not relieve judges of the task of making findings of fact based upon <span style="font-style:italic">all</span> of the evidence. Heuristics or mental short cuts are no substitute for this essential judicial function. In particular, where a party's sworn evidence is disbelieved, the court must say why that is; it cannot simply ignore the evidence. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">89.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">Secondly, the judge in the present case did not remark that the observations in <span style="font-style:italic">Gestmin</span> were expressly addressed to commercial cases. For a paradigm example of such a case, in which a careful examination of the abundant documentation ought to have been at the heart of an inquiry into commercial fraud, see <span style="font-style:italic">Simetra Global Assets Ltd &amp; Anor v Ikon Finance Ltd &amp; Ors</span><a href="https://www.bailii.org/ew/cases/EWCA/Civ/2019/1413.html">
+		<span> </span>
+	      </a><a href="https://www.bailii.org/ew/cases/EWCA/Civ/2019/1413.html">
+		<span style="text-decoration:underline">[2019] EWCA Civ 1413</span>
+	      </a><a href="https://www.bailii.org/ew/cases/EWCA/Civ/2019/1413.html">
+		<span> </span>
+	      </a>and the apposite remarks of Males LJ at paras. 48-49. Here, by contrast, the two parties were private individuals living together for much of the relevant time. That fact made it inherently improbable that details of all their interactions over the creation of the screenplay would be fully recorded in documents. Ms Kogan's case was that they were bouncing ideas off each other at speed, whereas Mr Martin regarded their interactions as his use of Ms Kogan as a sounding board. Which of these was, objectively, a correct description of their interaction was not likely to be resolved by documents alone, but was a fundamental issue which required to be resolved. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">90.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">Thirdly, having decided to follow the <span style="font-style:italic">Gestmin</span>/ <span style="font-style:italic">Blue</span> approach, the judge did not apply it to documents which greatly assisted Ms Kogan's case. The two documents to which the judge referred at [79] strongly supported an inference that the parties were collaborating on the screenplay at the outset, but the judge declined to draw any inference from them, instead observing that this was early in the project and that the affectionate language used gave little idea of how the parties planned to work together on the subsequent drafts. It was, however, important for the judge to come to a conclusion as to the basis on which the original outline was created. He was tasked with deciding, in the words of Keating J, whether Ms Kogan and Mr Martin had "undertaken jointly to write a [screen]play, agreeing in the general outline and design, and sharing the labour of working it out". Their approach at the outset was highly relevant.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The present case presents the reverse problem. Here, it is argued by Mr Tyler that the judge failed to have any proper awareness of the fallibility of memory. This, he said, coupled with a failure to properly analyse all the surrounding facts - by reference to the documentary evidence in the form of contemporary or near contemporary statements - and known or probable facts, had resulted in the judge having made a wholly unsafe finding that the father was ‘leaning over’ the coffee cups when the mother came onto the veranda. The judge, Mr Tyler submits, relied too heavily on the impression given by the mother in the witness box, as is demonstrated by her having found (as set out at [11] above but repeated here for convenience): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“72. I do not accept that the mother concocted this evidence. She was thoroughly cross-examined on this evidence and it was clear to me that she was recounting an event that she recalled. She was a truthful witness and I accept her account.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">That this evidence went to the heart of the case is demonstrated towards the end of the judgment. The judge, having found that the coffee had been poisoned and having discounted any possible contamination via a water source, said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“115. The father got up early on the morning of 11 September 2012, something he had not done before when on holiday. The mother had called out that she was staying in bed. He knew the grandparents’ habits. He was behaving in a restless manner hanging around the verandah and when the mother unexpectedly joined him in her pyjamas, he was hovering over the coffee cups and did not respond to her for some seconds. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">116. In my judgment, that evidence, taken together with the scientific evidence, is sufficient for me to be satisfied on the balance of probabilities that it was the father who deliberately administered the thallium to the coffee cups.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I do not seek in any way to undermine the importance of oral evidence in family cases, or the long-held view that judges at first instance have a significant advantage over the judges on appeal in having seen and heard the witnesses give evidence and be subjected to cross-examination (<span style="font-style:italic">Piglowska v Piglowski </span>[1999] WL 477307, [1999] 2 FLR 763 at 784). As Baker J said in in <span style="font-style:italic">Gloucestershire CC v RH and others</span> at [42]<span style="font-style:italic">,</span> it is essential that the judge forms a view as to the credibility of each of the witnesses, to which end oral evidence will be of great importance in enabling the court to discover what occurred, and in assessing the reliability of the witness. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The court must, however, be mindful of the fallibility of memory and the pressures of giving evidence. The relative significance of oral and contemporaneous evidence will vary from case to case. What is important, as was highlighted in <span style="font-style:italic">Kogan, </span>is that the court assesses all the evidence in a manner suited to the case before it and does not inappropriately elevate one kind of evidence over another. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In the present case, the mother was giving evidence about an incident which had lasted only a few seconds seven years before, in circumstances where her recollection was taking place in the aftermath of unimaginably traumatic events. Those features alone would highlight the need for this critical evidence to be assessed in its proper place, alongside contemporaneous documentary evidence, and any evidence upon which undoubted, or probable, reliance could be placed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge’s analysis of the evidence, which led to the finding that the father was ‘leaning over’ the coffee cups when the mother came out and did not immediately stand up and turn around, was dealt with by the judge as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“69. The mother says that the father got up about 7.30am. She could not sleep and so she got up and appeared on the veranda a short while after the grandparents had gone into the garden. She was in her pyjamas. The father had his back to her and she could see that he was leaning over the table where the two cups of coffee were. He denies this. Unusually, he did not greet her for a few seconds but then turned around and lit a cigarette. She also lit one and they sat down together on the swing seat. She changed her mind about drinking coffee and picked up her mother’s mug of coffee and drank about half of it. She saw her mother drink the other half during the morning and her father sipped his from time to time until it was all gone. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">70.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">Ms Ecob submitted that this piece of evidence about seeing the father standing over the coffee cups was a fabrication by the mother in order to improve the evidence against him. She relied on the fact that in the prosecutor’s report dated 9 November 2012 there is no reference to this information being provided by the mother, when she was interrogated by the police officer. Ms. Ecob asserts that such an important piece of information would have been communicated to the police. When crossexamined about that the mother said the police came to the hospital on 4 October when her condition was terrible and she could hardly sleep or walk. She had not reported the matter to the police, the medics at the hospital had done so when thallium poisoning was confirmed. The mother could not say if she had given that detail, but she said she could not be responsible for the way the officers reported what she had said. No statement was taken from the mother at that time and the progress report contains a precis of what she said. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">71.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">I note that in the detailed statement given by the grandmother on 24 July 2014, she told the police that her daughter had told her that when she came out of the house on the morning of 11 September, the father had his back to her and was facing the table, bending over it. On her greeting he did not turn immediately and did not answer but stayed for a few seconds with his back to her while at the same time posing, as if lighting a cigarette, and facing the coffee cups.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Tyler submits that this was a superficial analysis, which amounted to a finding that the father had been putting poison into the coffee when the mother came out onto the veranda. The judge in making this profoundly serious finding had, Mr Tyler submits, accepted the reliability of the mother’s evidence on the basis that it was “clear to [the judge] that she was recounting an event that she recalled”. The judge had failed, he submits, to consider the impression given by the mother in the witness box against the totality of the chronology, or to place the emergence of the ‘leaning over’ evidence against the backdrop of events that occurred at, and immediately after, the death of the grandfather and the illness of the grandmother and mother. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Tyler highlighted that the first time the mother had suggested that the father had been ‘leaning over’ the table where the coffee was sitting, was in a written statement prepared on her behalf 18 months after the death of the grandfather, in April 2014. This was a document which had been drafted in support of her appeal against the Bulgarian Prosecutor’s decision to halt the potential criminal proceedings against the father. The grandmother’s evidence, in her statement of July 2014, was that the mother had first told her that she had seen the father ‘leaning over’ later. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Tyler sensibly accepted that an absence of any reference by the mother to the father ‘leaning over’ in an interview conducted by the police whilst the mother was in hospital on 4 October 2012 and recorded only in precis form, could not, without more, support his submission that the judge had insufficient evidence upon which to conclude that the father had been ‘leaning over’ the table when the mother came onto the veranda. The judge, he submits, had however fallen into error in failing to take into account that: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">On 17 September 2012 (6 days after they had been poisoned), during a telephone call the grandmother suggested to the mother that they had been poisoned, and that the only person who could have done it would have been the father. The mother, on her own account, said (in her statement filed in these proceedings) that this had ‘planted a seed in her mind’ and she commented in that statement upon the father’s poor relationship with her parents; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">On 19 September 2012, the mother spoke to a close friend (GA) with whom she shared the grandmother’s suspicions, saying that she (the mother) thought that the father’s mother may be responsible. She asked the friend to do some research into poisoning. This she did, and having done so, she sent the mother a text message saying that her research suggested a heavy metal and suggested arsenic or thallium. At this stage the mother asked the hospital to test her for traces of heavy metal; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">On 20 September 2012, and again on 29 September, the mother, according to the same statement of 15 May 2018, said that she had directly confronted the father.  She records saying to him in terms: “so you have poisoned us with thallium. Did your mum give you the rat poison so you poisoned us as one would usually kill a rat?”; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">GA filed a statement for the police dated 16 October 2012. She described how in their talks on 5/6 October 2012 the mother had expressed the strong conviction that the father was the perpetrator because the mother had said that for the short time of their visit no outsiders came to the house, and the father was the only adult unharmed; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">On 10 December 2012, the mother and grandmother were asked to take part in a reconstruction at the villa. The father was questioned the same afternoon; the resulting statement5 from the father’s interview does not mention any of the events that allegedly took place and are in dispute. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Tyler submits that all of these extracts and documents were before the judge. It is, he says, inconceivable that the mother would have failed emphatically to have described to her mother and her friend how she had seen the father ‘leaning over’ the coffee cups at the critical time. Equally, Mr Tyler says it is simply implausible to suggest that when the mother confronted the father on two occasions in the weeks after the poisoning, she would not have spoken of the ‘leaning over’ in support of her accusations had such an incident taken place. The analysis in the judge’s judgment at [69] – [71] and set out at [40] above is, Mr Tyler says, inadequate in the context of a finding of deliberate killing, seven years after the event. It matters not, he submits, whether the account of ‘leaning over’ was innocent ‘story creep’ or deliberate falsehood, the finding is equally damning. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Ms King QC emphasised the importance of the court having in mind that only rarely should a finding of fact be undermined. The judge, she submits, looked at the broad canvas and came to a conclusion wholly supported on the evidence. The issue of ‘leaning over’ was, she says, a pure issue of fact and the judge was entitled to reach the conclusion she did having seen the parties give evidence and having concluded that the mother was a witness of truth. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I agree with the submission of Mr Tyler, that such an important finding of fact required an analysis of all the relevant evidence found in the statements and contemporaneous evidence, as well as caution on the part of the judge when considering the reliability of the detail within an account of events which had taken place 7 years ago.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In my judgment, the judge clearly regarded the ‘leaning over’ finding to be, if not the lynch pin, certainly central to her conclusion that the father had killed the grandfather and tried to kill the grandmother. These are findings of the utmost seriousness made in relation to anyone, but particularly shocking when made in relation to a doctor. Fairness required a rigorous analysis of all the evidence relevant to the ‘leaning over’ issue. In my judgment, the judge inappropriately favoured an aspect of the oral evidence of the mother over a significant amount of contemporaneous and written evidence, without reference to that evidence, or sufficiently explaining why she had done this.  This omission, in my view, inevitably serves to undermine the findings made against the father </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Motive</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Tyler submits that the judge’s findings as to motive were made as an afterthought in her judgment in an effort to tie up various loose ends. It does appear that the judge in this part of her judgment [105] – [123] was, on the one hand, making a number of additional findings of facts - in particular in relation to the father’s reaction to the mother’s illness [109] – [113] and the findings referred to above in relation to ‘leaning over’ – whilst, on the other hand, considering motivation as a separate issue. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Ms King reminds the Court that it was not necessary for the judge to make any findings as to motive. That is of course right (see <span style="font-style:italic">Re A (No 2)(Children: Findings of Fact)</span> [2019] EWCA Civ 1947 at [116]). The judge, however, chose at [106] onwards to embark upon that exercise saying: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“106. The grandmother was obviously against him and she was a threat to his happiness in a family unit with the mother and [A]. He disliked her but liked the grandfather, yet he could not dispose of one without the other. Such was her relationship with her parents that the mother would feel obliged to return to Bulgaria to care for her father, or worse from the father’s perspective, he would come and live with them in England. I do not accept that the father had no motive to administer thallium to the grandparents.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-right:0.00in;text-indent:0.00in">The judge concluded at [121]: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“ I find that the father was motivated to remove the grandparents as they were obstacle to a continuing relationship with the mother and close involvement in the life of his son. Anything short of their demise was unlikely to achieve that.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Ms King says that, as it had been submitted in closing on the father’s behalf that there was no motive for him to kill the grandparents, it was open to the judge to respond to that submission in her judgment. The judge’s conclusion was not, said Ms King, “entirely speculative.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Ms Ecob, who represented the father at the trial, had highlighted in her closing submissions the fact that, on that fateful morning the father had sat on the swing seat with the mother and watched her pick up the grandmother’s coffee and drink half of it. Ms Ecob submitted that, had the father known there was poison in the cup, he could have ‘accidentally’ knocked the mug over or taken some other action to prevent her from drinking the poisoned coffee. That he did nothing, Ms Ecob submitted, supported a conclusion that the father did not know there was thallium in the cup, particularly if his motive for killing the grandparents was in order for him to have the mother to himself without interference from the grandmother. The judge rejected this submission at [107] by simply saying: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“… On the other hand, if he had administered the thallium to the coffee any action to stop the mother would have deprived him of the opportunity to poison the grandmother and risked giving himself away.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">With respect to the judge, who was hearing a peculiarly difficult and complex case, she was on any view in error in reaching the conclusion she did in respect of motive in circumstances where that alleged motive had not been put to the father in cross examination. The finding reached by the judge was arrived at without her having pulled together and analysed all the available evidence as to the relationship between the father and the mother and, separately, the father and the grandparents, both historically and over the few days before the poisoning. With great respect to the judge, a finding that the father ‘disliked’ the grandmother is insufficient without more to underpin a finding of a motive on the father’s part for setting out deliberately to kill two people; an action which would have required some planning, not least the acquisition of the poison. Without careful forensic scrutiny of all the relevant evidence, the finding by the judge that the father’s motive was to kill the grandparents as a means to get them out of his and his partner’s life, whilst at the same time he sat by and watched that same partner drink poisoned coffee, amounted, in my judgment, to speculation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Even though a finding of motive was not a necessary component in order for the judge to find that the father deliberately administered thallium to the grandparents’ coffee with the intention of killing them, the judge’s approach to the issue of motive, in my view, serves further to undermine the judgment as a whole, providing a further example of findings being made which were not based on a rigorous analysis of the evidence. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Outcome</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">As indicated at [4] above, I do not intend in this judgment to deal with each individual sub paragraph of the grounds of appeal, or even each specific ground of appeal. If my Lady and my Lord agree, I would simply allow the appeal on Ground 1 (e), the “‘leaning over’” ground, and Ground 4, “speculation as to motive”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Tyler submits that the appeal should be allowed, that there should be no retrial, and the father’s application for contact with A should now proceed on the basis that there are no contraindications to contact. Contact to A should now, he says, be reintroduced. There is, Mr Tyler suggests, no evidence upon which a judge could properly find that the father set out deliberately to kill the grandparents by administering thallium to their coffee. I disagree. The father accepts that the grandfather’s death and the illness of the grandmother and mother were caused by thallium poisoning. He accepts that it is a possibility that the poison was administered as the result of a deliberate act, he does not rule out coffee as the vehicle for the poison, (although says that inadequate consideration was given to the water in the pump in the garden). In those circumstances, it seems to me that the matter must be remitted for a retrial before a High Court Judge in order for the court to determine if the poison was administered deliberately into the grandparents’ coffee, and if that is the case then, if possible, to identify the perpetrator. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The appeal will therefore be allowed and the matter remitted for directions before Mr Justice Keehan for directions and allocation on a date to be agreed through his clerk. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lady Justice Nicola Davies: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I agree </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Philips: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I also agree </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

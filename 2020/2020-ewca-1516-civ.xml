@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1516"/>
+	  <FRBRuri value="ewca/civ/2020/1516"/>
+	  <FRBRdate date="2020-11-13" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1516"/>
+	  <FRBRname value="Morris Homes Ltd &amp; Anor v Cheshire West And Chester Council"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1516/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1516/eng"/>
+	  <FRBRdate date="2020-11-13" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1516/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1516/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:21:10" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1516/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1516</uk:number>
+	<uk:cite>[2020] EWCA Civ 1516</uk:cite>
+	<uk:hash>6bec8957ed46d00a27cdcc68e50db7dc10ca71c2ce06d26abbad6c260ad2cdde</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1516/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.50in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: center; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0631944444444446in;height:1.054861111111111in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1516</neutralCitation>
+      </p>
+      <p style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Case No: </span>
+	<docketNumber style="text-decoration:underline">A3/2019/2897</docketNumber>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline;font-size:12pt">IN THE COURT OF APPEAL (CIVIL DIVISION)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">BUSINESS AND PROPERTY COURTS IN MANCHESTER</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">BUSINESS LIST (ChD)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">HHJ PEARCE (sitting as a judge of the High Court)</span>
+      </p>
+      <p class="Heading2" style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="font-weight:normal">Royal Courts of Justice</span>
+	<span style="font-weight:normal;text-decoration:none"> </span>
+	<span style="font-weight:normal">Strand, London, WC2A 2LL</span>
+      </p>
+      <p style="text-align:left;margin-left:2.86in;margin-right:0.00in;text-indent:2.25in">
+	<span style="text-decoration:underline">Date: 13/11/2020</span>
+	<span style="font-weight:bold"> Before : </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE SINGH</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE BAKER</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LADY JUSTICE SIMLER</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.02in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between : </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">MORRIS HOMES LIMITED AND ANOTHER </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.02in">
+	  <span style="font-weight:bold">and - </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">CHESHIRE WEST AND CHESTER COUNCIL </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Respondent</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.02in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Mr Wilson Horne</span> (instructed by <span style="font-weight:bold">Gateley Legal</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Mr Jonathan Wright </span>(instructed by<span style="font-weight:bold"> Cheshire West and Chester Council</span>) for the </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Respondent</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing date: 27 October 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.02in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1">Approved Judgment </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold;font-size:11pt">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website.  The date and time for hand-down is deemed to be 2 p.m. on Friday, 13 November 2020. </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Singh :</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Introduction</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">This is an appeal against the decision of HHJ Pearce dated 8 November 2019, by which he dismissed the appellants’ claim under CPR Part 8, in which they sought a declaration that the decision of an independent expert dated 8 October 2018 was not conclusive and binding on the parties. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Permission to appeal to this Court was granted by Lewison LJ on 8 January 2020. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">At the hearing before us we had submissions from Mr Wilson Horne for the appellants and Mr Jonathan Wright for the respondent.  We are grateful to them both. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Factual Background</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The appellants are a consortium of construction companies.  The respondent is the local planning authority. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On 18 August 2008, the respondent granted outline planning permission for the development of a residential housing project known as Winnington Urban Village.  Winnington Urban Village is intended to comprise up to 1,200 residential units.  The units comprise both flats and dwelling houses.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On the same date the parties also entered into an agreement under section 106 of the Town and Country Planning Act 1990 (“the 1990 Act”).  Under section 106 of the 1990 Act any person interested in land in the area of a local planning authority may, by agreement or otherwise, enter into an obligation of the types listed there, for example to pay a sum or sums to the authority: see section 106(1)(d).  This created what section 106 describes as a “planning obligation” and so I will refer to it as either “the section 106 agreement” or “the planning obligation.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In 2011 the appellants reviewed their position and took the view that the planning obligation was too burdensome.  Negotiations took place which led to a revised section 106 agreement being made by deed on 16 April 2013 (“the April 2013 agreement”). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The April 2013 agreement contains a schedule (Schedule 5) headed “Affordable Housing Contribution, Northwich Vision Contribution and Education Contribution.”  I will return to that schedule in detail later, because the central issue in this appeal turns on the correct construction of it, but, in outline, it sets out a formula for assessing the amount of those contributions which are to be paid to the respondent.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On 7 October 2016, the legal completion of the sale of the 300<span style="vertical-align:super;font-size:smaller">th</span> unit occurred.  On 24 July 2017, in accordance with the April 2013 agreement, the appellants submitted information to the respondent relating to the calculation of the contributions required under Schedule 5 to that agreement.  On 10 August 2017 the respondent confirmed that it was not satisfied with the information provided by the appellants. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The dispute between the parties was referred to an expert pursuant to clause 10 of the April 2013 agreement.  On 7 March 2018, Ms Victoria Critchley was formally appointed to be the relevant expert.  She is a Fellow of the Royal Institute of Chartered Surveyors.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">A Statement of Agreed Facts was prepared by the parties dated 28 March 2018.  That statement identified three points of dispute: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">How incentives were to be treated. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">The relevance of Land Registry sale price information. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">The relevance of ground rents. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The first two of those issues are not relevant to the present legal proceedings.  The relevant issue is the third, concerning ground rents. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Ms Critchley produced her determination on 8 October 2018.  The relevant part of her determination was set out at paras. 2.65 – 2.67, where she said the following: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“2.65 I consider that as the freeholds have been sold then it clearly reflects the market to include [capitalised ground rent] within actual sales revenues. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">2.66</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The wider definition states ‘SR is the actual sales revenue per square foot received from the disposal of the Units in that Phase.’  The investment sales to Avivia and Adriatic clearly constitute a disposal and therefore the capitalised ground rent should be included within SR. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">2.67</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">I hereby determine that ground rents should be capitalised and form part of actual sales revenue for the purposes of Schedule 5.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Since the appellants were dissatisfied with the expert’s determination, they issued this claim in the High Court on 24 January 2019.  They sought a declaration that the determination was not conclusive and binding on the parties on the ground that the expert had made an error of law. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The hearing before HHJ Pearce (sitting as a judge of the High Court) took place in the Business and Property Courts in Manchester on 16 and 17 October 2019.  He had six witness statements before him but no oral evidence was required.  He gave judgment at the end of the hearing. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The judgment of the High Court</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">HHJ Pearce rejected the respondent’s contention that, by reason of the doctrine of estoppel by convention, the appellants were precluded from denying that the expert’s decision was binding on the parties. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge also held, however, that the expert had made no error of law in her determination and, therefore, it was conclusive and binding upon the parties in accordance with clause 10.4 of the April 2013 agreement. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Schedule 5 to the April 2013 agreement</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Since the terms of Schedule 5 to the April 2013 agreement lie at the heart of this appeal, it is necessary to set them out in full.  The schedule is headed:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">“Affordable Housing Contribution </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">Northwich Vision Contribution and Education Contribution” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The schedule then provides as follows, in five paragraphs: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“1. Within 20 working days of the legal completion of the sale of each of the 300<span style="vertical-align:super;font-size:smaller">th</span>, 600<span style="vertical-align:super;font-size:smaller">th</span>, 900<span style="vertical-align:super;font-size:smaller">th</span> and 1200<span style="vertical-align:super;font-size:smaller">th</span> Unit on the Property the Owners shall submit to the Council details of the total sales revenue received from the disposal of the Units in that Development Phase together with details of the total square footage of the Units constructed within that Development Phase and details of the percentage increase in the Index from July 2011 to the date of legal completion of the sale of the last Unit to be sold in that Development Phase. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">2.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The total amount payable (if any) of the Affordable Housing Contribution, Northwich Vision Contribution and Education Contribution payable following completion of each Development Phase shall be calculated on the following basis </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">P = ((SR – BC – 103.71 x (SQ <span style="font-weight:bold">÷ </span>2)) </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">Where </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">P shall not exceed one quarter of maximum potential payment due to the Council in respect of the Affordable Housing Contribution, the Northwich Vision Contribution and the Education Contribution </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.42in;text-indent:0.00in">SR is the actual sales revenue per square foot received from the disposal of the Units in that Phase </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">BC is the house build cost per square foot of the Units within the relevant Development Phase based on £65.81 per square foot increased by the Index from July 2011 to the date of the last legal completion of the sale of a Unit in that Phase. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.71in;text-indent:0.00in">SQ is the actual total square footage of the Units constructed in that Phase </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">The sum of £103.71 shall be subject to Indexation. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">3.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">If the Council does not agree the calculation provided to it by the Owners within 20 working days after receipt by the Council of the calculation then the dispute can be referred by either party to an independent expert in accordance with clause 10 hereof. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">4.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The sum found to be due shall be paid by the Owners of 40 Working Days from the date of completion of the sale of the last Unit to be sold within the relevant Phase or on the date on which any dispute between the parties about the amount so payable is resolved, whichever shall be the later. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">5.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">Once assessed the sum shall be divided in the following proportions. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in;text-indent:-0.18in">-</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.00in">Educational contribution <marker name="tab"/><span> </span><marker name="tab"/>23% </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in;text-indent:-0.18in">-</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.00in">Northwich Vision Contribution <marker name="tab"/>18.5% </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in;text-indent:-0.18in">-</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.00in">Affordable Housing Contribution 58.5% </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">Provided always that the Council shall have the right, acting reasonably, to assess the local demand for Affordable Housing, Northwich Vision, or local education requirements and, to utilise such contributions in different proportions from time to time, as the Council shall notify in advance to the Owners; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">Provided Further always that the maximum total amount payable to the Council shall not exceed £12,828,000 (subject to Indexation) of the components of it and the maximum total amount payable in respect of each of the Education Contribution, Northwich Vision Contribution and Affordable Housing Contribution shall be the amount specified in the Definition of that item.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Grounds of Appeal and the Respondent’s Notice</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On behalf of the appellants Mr Horne advances the following three grounds of appeal: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.79in;text-indent:-0.29in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.00in">Ground 1: The judge erred in law in holding that three documents relating to the variation of the previous planning obligation of 2008 were admissible background material when interpreting the April 2013 agreement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.79in;text-indent:-0.29in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.00in">Ground 2: the judge erred in law in holding that the true interpretation of “sales revenue” in Schedule 5, para. 2, was that it includes (a) ground rent receipts to be taken into account after the legal completion of the sale of the 300<span style="vertical-align:super;font-size:smaller">th</span> Unit; and/or (b) the values of retained freehold reversionary interests in dwelling houses at that time; and/or (c) the sales proceeds from the subsequent sale of those reversionary interests.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.79in;text-indent:-0.29in">(3)</num>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.00in">Ground 3: the judge erred in law in holding that the determination of the expert was final and binding upon the parties. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The respondent has filed a Respondent’s Notice in which it raises again the contention which failed before the judge, that the appellants are precluded from denying that the expert’s determination is binding by reason of the doctrine of estoppel by convention. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Submissions of the Parties</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-style:italic">The Appellants’ Submissions </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Horne submits that the judge wrongly relied upon documents relating to the written application made by the appellants to the respondent when they sought to vary the terms of the previous planning obligation of 2008.  These documents were: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:1.01in;text-indent:0.00in">i)<span style="font-family:Arial"> </span><marker name="tab"/>‘Financial Appraisal Second Review’ dated September 2011; ii)<span style="font-family:Arial"> </span><marker name="tab"/>‘Revised Viability Assessment (DTZ)’ dated 14 July 2011; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.99in;margin-right:0.00in">iii)<span style="font-family:Arial"> </span>An undated document called ‘Clawback Explanation’.  This appears to have been an internal document produced by the respondent. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">These documents, the appellants submit, were not relevant to the drafting of the April 2013 agreement but concerned whether the previous planning obligation should be replaced.  The documents were inadmissible on the question of construction as they do not properly fit within the description of what is “background” to the April 2013 agreement.  These documents contain subjective expressions of opinion whereas the planning obligation, which is in law a contract, must be interpreted objectively.  This is a fundamental principle of contract law and was made clear, for example, by Lord Steyn in <span style="font-style:italic">Mannai Investments Co Ltd v Eagle Star Life Assurance Co Ltd</span> [1997] AC 749, at 768. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Horne submits that the documents should be excluded as they amount to no more than inadmissible evidence of pre-contractual negotiations: see <span style="font-style:italic">Chartbrook Ltd v Persimmon Homes Ltd </span>[2009] UKHL 38; [2009] 1 AC 1101.  He also submits that the documents do not assist in any event because they do not concern the terms of the April 2013 agreement, which did not exist at the time of the creation of those documents. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">He also submits that the words in the April 2013 agreement should be given their natural meaning.  No documents should therefore be used to give a meaning to the words in a contract that they would not naturally bear. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The appellants submit that there is no room within Schedule 5 for (a) ground rent receipts to be taken into account after the legal completion of the sale of the 300<span style="vertical-align:super;font-size:smaller">th</span> Unit; and/or (b) the values of retained freehold reversionary interests in dwelling houses at that time; and/or (c) the sales proceeds from the subsequent sale of those reversionary interests.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Horne submits that the crucial question is the correct interpretation of the term “sales revenue” in para. 2 of Schedule 5 to the April 2013 agreement where it is defined as “the actual sales revenue per square foot received from the disposal of the Units in that Phase”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge interpreted that term as including ground rents.  Mr Horne submits that to do so would throw the workings of Schedule 5 into chaos. The judge himself acknowledged that interpreting the term in this way would require more calculations to be made, on more than one occasion, than was expressly contemplated by para. 1 of Schedule 5.  Schedule 5, para. 1, contains an express time limit of 20 working days from the legal completion of the sale of the 300<span style="vertical-align:super;font-size:smaller">th</span> Unit.  This time limit has been specified so that the sales revenue may be calculated with certainty.  It is one fixed point in time.  Therefore, it only takes place at the time of the disposal of the legal interest, which would be a disposition of a freehold interest or a leasehold interest of more than seven years (as per section 27(2)(b) of the Land Registration Act 2002).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Horne submits that the term “sales revenue” in the planning obligation does not include the retention of reversionary freehold interest by the appellants in a dwelling house or the subsequent receipt of a ground rent outside the time limits in Schedule 5.  He points out that the planning permission granted in 2008 included permission for the development of flats.  As it would have been unlikely that the flats would have been disposed of by “flying freeholds”, it should have been clear that they would have been disposed of by long leasehold.  Therefore, this manner of disposal was contemplated by the express language of the planning obligation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In relation to the Respondent’s Notice, the appellants submit that the expert’s determination is not binding by reason of the doctrine of estoppel by convention.  The expert determination was not entered into by choice, but by reason of clause 10.4 of the April 2013 agreement.  That clause states that “any dispute or difference between the parties shall be submitted for the determination of an expert”.  The appellants submit that they were bound to submit all disputes for the determination of an expert.  As this dispute was not submitted from choice, it would not be unconscionable for the appellants to challenge the decision of the expert in court on the ground that it is erroneous in law.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-style:italic">The Respondent’s Submissions </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">For the respondent Mr Wright submits that the interpretation of “sales revenue” depends upon the definition of a “unit” in the April 2013 agreement.  The respondent submitted to the judge that the natural meaning of “house or flat” is wide enough to mean either its freehold title, or a long lease carved out of that freehold or both at the same time.  To determine otherwise would require the parties to have agreed upon a different meaning. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The respondent submits that the agreement has clearly been entered into to allow the developers to achieve a minimum level of net profit and for all profits above that level to be shared with the council.  Although there may be what Mr Wright called “a gap” between Schedule 5, paras. 1 and 2, he submits that there is no inconsistency or contradiction between those two paragraphs.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">So far as Ground 1 is concerned, Mr Wright submits that it is not appropriate for the appellants to challenge the admissibility of evidence on this appeal when this was not raised at first instance.  In any event, he submits, the documents played no material role in the judge’s reasoning when it came to the interpretation of the April 2013 agreement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The respondent has filed a Respondent’s Notice, raising an issue that was decided against it by the judge below, on the question of estoppel by convention.  Mr Wright submits that the appellants entered into the expert determination process by choice, as the planning obligation did not require them to submit a matter of law to the expert for determination.  The entering into of the determination and the communication between the appellants and the expert created a common assumption that the determination of the expert would be final and binding upon the parties.  Estoppel by convention therefore prevents the appellants from now treating the determination of the expert as merely advisory. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Analysis of the Grounds of Appeal</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">At the hearing before us Mr Horne acknowledged that Ground 3 in this appeal, that the judge erred in law in holding that the determination of the expert was final and binding upon the parties, is no more than a conclusion which would follow if his appeal succeeds otherwise.  I need say no more about it separately for that reason. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Ground 1 is that the judge erred in law in holding that three documents were admissible background material on the issue of interpretation of the planning obligation.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The fundamental difficulty with that submission is that, on a fair reading of the judgment as a whole, I do not consider that the judge regarded these documents as having any material bearing on the issue of interpretation of the agreement which was before him.  True it is that he referred to these documents but he did so without objection from the parties before him and, as I read his judgment, simply as part of his summary of the evidence: see e.g. paras. 28-29.  When pressed at the hearing before us Mr Horne was unable to draw our attention to any specific passage in the judgment where the judge had regard to the three documents about which complaint is now made as part of his reasoning as to the correct interpretation of the April 2013 agreement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In my view, the judge did not fall into the error of having regard to pre-contractual negotiations in order to interpret an agreement, as suggested by Mr Horne.  It is common ground that that would be impermissible in accordance with the decision of the House of Lords in <span style="font-style:italic">Chartbrook</span>, confirming the earlier decision of the House of Lords in <span style="font-style:italic">Prenn v Simmonds</span> [1971] 1 WLR 1381.  That is not, however, what in fact occurred in the present case.  I therefore reject Ground 1 in this appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The crux of the appeal therefore turns on Ground 2, which is that the judge erred in law in holding that the true interpretation of “sales revenue” in para. 2 of Schedule 5 to the April 2013 agreement was that it includes (a) ground rent receipts to be taken into account after the legal completion of the sale of the 300<span style="vertical-align:super;font-size:smaller">th</span> Unit; and/or (b) the values of retained freehold reversionary interests in dwelling houses at that time; and/or (c) the sales proceeds from the subsequent sale of those reversionary interests. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Although various criticisms were made of the judgment under this ground, ultimately this is a question of law and this Court must arrive at its own conclusion as to the correct interpretation of the April 2013 agreement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The principles of law which govern the interpretation of contracts are not in dispute in the present case.  They were summarised by Lord Neuberger PSC in <span style="font-style:italic">Arnold v Britton and Ors</span> [2015] UKSC 36; [2015] AC 1619, at paras. 14-23.  By way of overall summary, Lord Neuberger said at para. 15: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“When interpreting a written contract, the court is concerned to identify the intention of the parties by reference to ‘what a reasonable person having all the background knowledge which would have been available to the parties would have understood them to be using the language in the contract to mean’ …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">At paras. 16-23 Lord Neuberger emphasised seven factors in performing that exercise of interpretation.  It is unnecessary to set them all out here again.  They are wellknown and were familiar to the judge in the present case, as is clear from his thorough judgment, at paras. 60-64 and 72-77.  In the light of the submissions made before us, however, it is important to note the following points which arise from <span style="font-style:italic">Arnold</span>. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The first point that Lord Neuberger made, at para. 17, was that the reliance placed in some cases on “commercial common sense and surrounding circumstances” should not be invoked to undervalue the importance of the language of the provision which is to be construed.  The third point he made, at para. 19, was that commercial common sense is not to be invoked retrospectively:   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The mere fact that a contractual arrangement, if interpreted according to its natural language, has worked out badly, or even disastrously, for one of the parties is not a reason for departing from the natural language.  Commercial common sense is only relevant to the extent of how matters would or could have been perceived by the parties, or by reasonable people in the position of the parties, as at the date that the contract was made. …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The fourth point that Lord Neuberger made, at para. 20, was that, while commercial common sense is a very important factor to take into account when interpreting a contract, a court should be very slow to reject the natural meaning of a provision as correct simply because it appears to be “a very imprudent term” for one of the parties to have agreed, even ignoring the benefit of the wisdom of hindsight.  As he put it: “The purpose of interpretation is to identify what the parties have agreed, not what the court thinks that they should have agreed. …” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In the present case the issue of interpretation turns on the correct meaning of Schedule 5 to the April 2013 agreement.  I have set out the terms of that schedule in full above. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Although Mr Horne is right to submit that the April 2013 agreement must be read as a whole, giving full effect to each of its terms, including para. 1 of Schedule 5, this must not detract from the natural meaning of each of those terms.  In particular, the natural meaning of para. 2 of Schedule 5 is, in my view, that that is the provision which imposes an obligation on how much is to be payable by way of the Affordable Housing Contribution etc. following completion of each development phase.  That paragraph uses the phrase “the total amount payable (if any)” of those contributions.  It also sets out a mathematical formula.  True it is, as Mr Horne reminded us at the hearing, that there is a cap imposed but that does not detract from the fact that there is to be an equal share in principle (subject to that cap) of the profits which the developer makes from disposal of the units in each phase above a fixed baseline.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Exactly what that baseline is does not matter for present purposes.  At the hearing before us Mr Wright submitted that it could be seen from the background documents that in fact the baseline figure was 18%, in other words that was the minimum profit to which the developer was entitled before any profits above that had to be shared with the local planning authority.  As I have said, the exact baseline figure does not matter.  What does matter is that the parties agreed that there should be a baseline figure and that, above that figure, the profits should be shared between them, subject to a cap. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Furthermore, para. 2 of Schedule 5 itself used the phrase: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.42in;text-indent:0.00in">“the actual sales revenue per square foot received from the disposal of the Units in that Phase.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In my view, the importance of the word “actual” is to focus attention on the reality of the situation, so that no artificial restriction should be placed on the full sales revenue received.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Horne emphasised that the word “received” is in the past tense.  So in one sense it is but, as the judge observed, that does not prevent something from being “received” at some date in the future.  By the time the calculation has to be done it will have been “received” at some point which will have occurred by then and so will be in the past. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In my view, on a fair reading of the April 2013 agreement as a whole, what is said at para. 1 of Schedule 5 does not limit the natural meaning of para. 2.  Rather para. 1 is a term concerned with the provision of information.  That information has to be provided within 20 working days of the legal completion of the sale of the 300<span style="vertical-align:super;font-size:smaller">th </span>unit, the 600<span style="vertical-align:super;font-size:smaller">th</span> unit etc.  That term is not a contradiction of, nor is it inconsistent with, para. 2.  At most it supplements that provision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In any event, if necessary, as the judge observed, para. 1 can be interpreted so that it may operate more than once.  If it turns out that there is a sale of the reversionary interest at a future date, there having been a disposal of the leasehold interest in the unit at an earlier date, the obligation to provide information may well arise more than once.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Returning to the natural meaning of the words used by the parties, I have come to the clear conclusion that the phrase “the disposal” is a broad one as a matter of ordinary language.  It is not confined to the disposal of any particular interest in property.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Furthermore, I accept the submission made by Mr Wright, that this was a legal agreement drafted on professional advice.  It is not to be read simply by reference to a layperson’s understanding of the English language.  It is to be read by reference to fundamental legal concepts, in particular concepts of the law of property.  As lawyers know, but lay people may not necessarily know, legal completion and sales of property are not actually of physical bricks and mortar.  What is sold and conveyed is a legal interest in property.  There can be different types of legal interest, for example a freehold or a leasehold.  If only the leasehold is disposed of, the freehold reversionary interest will remain in another person.  It is also well-known that there can be a market in the sale of freehold reversionary interests and in ground rents.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Nor, in my view, is it of any real significance that the parties would have known that some at least of the properties would be sold by way of leasehold, since they could have hardly envisaged “flying freeholds” in the sale of flats.  Equally, the parties would have been aware that some of the properties to be sold were going to be houses and not flats.  It would be very common for the disposal of a house to be way of a sale of the freehold interest, so the parties can reasonably be taken to have had that in contemplation as well.  If in the event some or all of the houses were sold by way of leasehold the parties can reasonably be taken to have contemplated the possible sale in the future of the freehold reversionary interests. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Finally, sight must not be lost of the underlying purpose of Schedule 5.  Although it is convenient to use the phrase “commercial common sense”, that is because most of the authorities on this subject have concerned commercial transactions.  It is important to note in the present context that this was not a commercial transaction in the traditional sense.  This was a planning obligation pursuant to the statutory functions of a local planning authority.  A local authority has obligations not only to its council taxpayers generally but to members of the public who may be affected by proposed developments.  Schedule 5 was expressly designed to achieve certain contributions towards affordable housing, education etc. in the local community.  If the appellants’ interpretation were correct, it seems to me that full effect would not be given to that underlying purpose of Schedule 5.  This is because members of the public would not in fact receive a 50% share of their entitlement to the profits concerned.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">No good commercial reason for excluding that element of the full profits was given on behalf of the appellants.  Mr Horne submitted that it was unnecessary for him to do so.  In my view, the fact that the developers are unable to provide any sound commercial reason for excluding what would otherwise naturally be regarded as part of the true profits of the scheme is a relevant factor in arriving at the correct interpretation of the April 2013 agreement.  As Lord Neuberger said in <span style="font-style:italic">Arnold</span>, that must not detract from the natural meaning of the language the parties have used.  It is nevertheless a factor which is relevant to arriving at the true meaning of the terms which the parties have used. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I therefore reject Ground 2 in this appeal as well. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I conclude that the judge was right to hold that the determination of the expert was not wrong in law and that therefore it was conclusive and binding on the parties. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Respondent’s Notice</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In view of the conclusion which I have reached on the grounds of appeal in this case, it is strictly unnecessary for this Court to address the Respondent’s Notice.  Nevertheless, since we heard full argument on the issue raised by that notice, I will address it briefly. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In the Respondent’s Notice it is submitted that the judgment should be upheld for the following different or additional reason: that the appellants were estopped by convention from challenging the expert’s determination.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Again, the relevant legal principles were not in dispute before us.  They were conveniently set out by Carnwath LJ in <span style="font-style:italic">ING Bank NV v Ros Roca SA</span> [2011] EWCA Civ 353; [2012] 1 WLR 472, at paras. 55-60, in particular by reference to the speech of Lord Steyn in <span style="font-style:italic">Republic of India v India Steamship Co Ltd (The Indian Endurance and the Indian Grace) (No. 2)</span> [1998] AC 878, at 913-914.  As Lord Steyn said, at page 913: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“It is settled that an estoppel by convention may arise where parties to a transaction act on an assumed state of facts or law, the assumption being either shared by them both or made by one and acquiesced in by the other.  The effect of an estoppel by convention is to preclude a party from denying the assumed facts or law if it would be unjust to allow him to go back on the assumption …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Wright submits in essence that the combined decision of the parties to refer the point in dispute between them to the expert for determination was a waste of time and resources, since (on the appellants’ contention) that determination could never have been binding on them.  This is because the point was inherently a point of law.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">For the appellants Mr Horne submits that none of the elements of the doctrine of estoppel by convention were present on the facts of the present case.  It is unnecessary to rehearse all of the submissions for the simple reason that I have come to the conclusion that the respondent’s contention founders on two fundamental features of this case.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The first is the Statement of Agreed Facts, which the parties submitted to the expert as the basis for her determination.  That made it clear, at para. 14, that the matter was being referred to the expert pursuant to clause 10 of the April 2013 agreement.   As Mr Horne submitted before us, there can be no room for an estoppel by convention to arise in this case outside the agreement, for the simple reason that the parties were not acting outside the agreement at all but were acting pursuant to that agreement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The second, and even more fundamental, reason why the respondent’s contention must fail is to be found in the terms of the April 2013 agreement itself.  Clause 10, which had the heading “Dispute Resolution” started with this: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Any dispute or difference between the parties as to any matter under or in connection with this Obligation shall be submitted for the determination of an expert …” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-right:0.00in;text-indent:0.00in">That is in plain terms a duty.  The parties had no choice in the matter.  The dispute had to be submitted to the determination of an expert.   True it is that the ensuing determination was not to be conclusive and binding on the parties in all circumstances.  Clause 10.4 provides: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.76in;text-indent:0.00in">“The expert’s determination is to be conclusive and binding on the parties except: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">10.4.1 where there is a manifest error; and/or </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">10.4.1 [that must be a typographical error and should read </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">10.4.2] on a matter of law.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Wright submitted before us that, when the provisions of clause 10 are read together and as a whole, there would be no obligation to refer a dispute to an expert if it is on a matter of law.  I do not accept that interpretation of clause 10.  In my view, it plainly has the effect that all disputes must be referred to an expert but that the ensuing determination is not necessarily conclusive and binding.  It will be so except where there is a manifest error or there is an error of law.  It was common ground between the parties before us that the phrase “on a matter of law” must mean in this context where there has been an error of law by the expert.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">This did not lead, as Mr Wright submitted, to the status of the determination of the expert being reduced to that of merely an advisory opinion.  There can be many reasons why parties may agree that they will be under an obligation to refer a dispute to an expert rather than going immediately to court.  They may consider that it would be in their interests for reasons of cost, timing or convenience.  They may also agree that, ultimately, if it is necessary to do so, they should be able to refer a question of law to the ordinary courts for authoritative resolution.  There is nothing inconsistent between those two positions being taken by the parties.  If that is what they have agreed, the court’s duty is to give effect to their agreement, not to rewrite it. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I have come to the conclusion that the Respondent’s Notice must also be dismissed. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Conclusion</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">For the reasons I have given I would dismiss this appeal and would also dismiss the Respondent’s Notice. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Baker : </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lady Justice Simler : </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

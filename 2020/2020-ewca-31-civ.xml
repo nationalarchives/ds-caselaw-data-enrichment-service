@@ -1,0 +1,1151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/31"/>
+	  <FRBRuri value="ewca/civ/2020/31"/>
+	  <FRBRdate date="2020-01-24" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="31"/>
+	  <FRBRname value="AIG Financial Products Corp &amp; Ors v Gruber &amp; Ors"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/31/eng"/>
+	  <FRBRuri value="ewca/civ/2020/31/eng"/>
+	  <FRBRdate date="2020-01-24" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/31/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/31/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:30:47" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="tobias-gruber-and-22-others" href="" showAs="TOBIAS GRUBER AND 22 OTHERS"/>
+	<TLCRole eId="respondent" href="" showAs="Respondent"/>
+      </references>
+      <proprietary source="ewca/civ/2020/31/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>31</uk:number>
+	<uk:cite>[2020] EWCA Civ 31</uk:cite>
+	<uk:hash>3b516edecf8af1b9e50d6d908bef8813065213badb56653db9e5226d304d01ad</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/31/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.51in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="margin-left:0.00in;margin-right:0.01in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:underline;font-size:8pt">Judgment Approved by the court for handing down.</span>
+	<span style="font-weight:bold;font-size:8pt"> </span>
+	<span style="font-size:8pt">Tobias Gruber &amp; AIG </span>
+      </p>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 31</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>A4/2018/3020</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">BUSINESS &amp; PROPERTY COURTS OF ENGLAND AND WALES</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">MR JUSTICE ANDREW BAKER</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">2014-Folio-1226</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 24/01/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE PATTEN</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE DAVID RICHARDS</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE FLAUX</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">(2) AIG FINANCIAL PRODUCTS CORP. </span>
+	    </p>
+	    <p style="text-align:left;margin-left:1.56in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">(1) AIG MANAGEMENT FRANCE, SA. </span>
+	    </p>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.20in;text-indent:0.00in">
+	      <span style="font-weight:bold">(7) AMERICAN INTERNATIONAL GROUP, INC. </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.33in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline;font-size:11pt">Appellant</span>
+	      <span style="font-weight:bold;font-size:11pt"> </span>
+	    </p>
+	    <p style="text-align:center;margin-left:0.22in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.11in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline;font-size:11pt">Defendants</span>
+	      <span style="font-weight:bold;font-size:11pt"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">- and - </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#tobias-gruber-and-22-others" as="#respondent" style="font-weight:bold">TOBIAS GRUBER AND 22 OTHERS </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.06in;text-indent:0.00in">
+	      <role refersTo="#respondent">
+		<span style="font-weight:bold;text-decoration:underline;font-size:11pt">Respondents</span>
+		<span style="font-weight:bold;font-size:11pt"> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Lord Goldsmith QC, Mr Andrew Hunter QC</span><span> </span><span style="font-weight:bold">and</span><span> </span><span style="font-weight:bold">Mr Peter Head </span>(instructed by  </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in"><span style="font-weight:bold">Paul Hastings (Europe</span>) <span style="font-weight:bold">LLP</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Mr Daniel Oudkerk QC, Mr James Sheehan and Mr Jamie Susskind </span>(instructed by</p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in"><span style="font-weight:bold">Stephenson Harwood LLP</span>) for the <span style="font-weight:bold">Respondents</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">Hearing dates: 25, 26 and 27 November 2019 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:0.09in;margin-right:0.04in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level class="author">
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:4.58in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Flaux: </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:0.04in;text-indent:0.00in">Introduction </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">This appeal by the second defendant (to which I will refer as “AIGFP”) against the order of Andrew Baker J dated 9 November 2018 concerns two deferred compensation plans operated by AIGFP which were designed to allow its employees to share with the seventh defendant (“AIG”), as the shareholder of AIGFP, in the “risks and rewards” of AIGFP’s business by means of deferred compensation accounts to which part of its distributable profits would be credited if AIGFP was profitable but which would provide auxiliary base capital to absorb losses if the company was loss-making. The claimants (respondents to the appeal) were 23 individuals who were employees of AIGFP in London.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The central issue in the trial before the judge was whether the plans required AIGFP to restore deferred account balances which were wiped out by massive losses suffered by AIGFP during the 2008 financial crisis. AIGFP had been engaged in derivatives trading, specifically in so-called credit default swaps (“CDSs”). At the time of the financial crisis, AIG faced a short term liquidity crisis as a result of its exposure to losses via AIGFP’s CDS book and its securities lending business, all of which nearly caused the collapse of AIG. Unlike Lehman Brothers, AIG was considered by the US Government as “too big to fail” and it was bailed out by a loan from the US Government of US$85 billion. That sum has since been repaid. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">AIG in turn advanced a US$65 billion facility to AIGFP to enable it to close out its worst loss-making open derivatives positions. Under the plans, AIGFP applied a proportion of the losses to the plan participants’ account balances, the scale of those losses wiping out the balances. Since late 2008 AIGFP has ceased trading for profit and has engaged in an orderly wind-down of its business. AIGFP has made a net loss in every year since 2008. Notwithstanding this, it has been kept afloat by AIG as a </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">going concern (albeit not profit-making), because if it were to enter a formal insolvency process, that would trigger a default on all its derivatives and other financial instruments, inflating losses which would impact AIG itself. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The respondents’ case at trial was that the restoration provisions in the deferred compensation plans required AIGFP to restore their account balances to the prefinancial crisis level and pay them the balances in full. AIGFP’s case was that the plans did not require this and the balances were wiped out unless and until AIGFP stopped being loss-making and once more had positive Distributable Income from which to make the restoration. By his judgment the judge held that, applying Connecticut law, which governed the plans, there was an obligation on AIGFP to restore the balances and repay them to the respondents by the end of 2013, notwithstanding that AIGFP remained loss-making. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">AIGFP now appeals against that judgment with the permission of Gross LJ granted in respect of grounds 2 to 4 by his order dated 9 April 2019. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:0.04in;text-indent:0.00in">Factual background  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The respondents were employed in London by the first defendant (Banque AIG) which was a 90% owned subsidiary of AIGFP or by AIGFP itself for various periods between 1998 and 2011. In common with many others employed in the financial services sector at the time, their basic pay was relatively modest but they received large bonuses which were paid out of AIGFP’s Distributable Income as defined. Prior to 1995, Distributable Income was paid out in full each year to AIG (AIGFP’s 100% shareholder) and to AIGFP’s employees on a 70%/30% basis. In 1995, the first plan, the Deferred Compensation Plan (“DCP”), with which this appeal is principally concerned, was introduced. It has been amended on a number of subsequent occasions, most recently, for present purposes, in December 2008.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Under the DCP, a proportion of Distributable Income was, by agreement between the Plan participants, retained by AIGFP to supplement its base capital. The retained sums were allocated to deferred compensation accounts held by AIG and the employees (again on a 70/30 basis). As stated in the preamble to the DCP:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“The Plan provides the Plan participants a sharing of the risks and rewards of AIGFP’s business and reflects the participants’ commitment to the long term integrity of AIGFP. The Plan objectives are:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.05in;text-indent:0.00in">1.    To promote the formation of capital in AIGFP;   2.    To ensure that the interests of AIGFP Executives and AIG are aligned to promote the long term success of AIGFP; …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The preamble continues that the retained amounts: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“…will form part of the capital base of AIGFP and, absent losses which exhaust current revenues and reserves, will be paid subsequently to participants according to a schedule tied to the duration of AIGFP’s business.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Section 3.05(b) made it clear that such amounts were to be paid to AIG and the employees annually in arrears in instalments corresponding to the approximate average life of AIGFP’s swap transaction portfolio.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Distributable Income is defined in Section 1.08 of the DCP as follows: “…with respect to any financial year of AIGFP, revenues, less expenses and credit and market reserves taken for that year, as the same shall be determined by the Board from time to time”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">This appeal is concerned principally with Section 4.01 of the DCP, headed “AIGFP’s Liability”. Section 4.01(a) provided so far as relevant:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“The benefits payable hereunder shall constitute an unsecured debt of [AIG-FP] to the Participants … and to AIG and shall not have the benefit of any guarantee by AIG of payment obligations of [AIG-FP]. For the avoidance of doubt,  and notwithstanding anything else contained herein to the contrary, (i) the payment of benefits payable hereunder to each of the Participants … and to AIG shall be made only from the general funds of [AIG-FP], (ii) [AIG-FP] shall not segregate or earmark any of its assets nor hold any assets in trust or in any special account for this purpose, and (iii) none of the Participants … or AIG shall have any legal or equitable interest in, lien on, or claim to, any particular asset of [AIG-FP] by virtue of this Deferred Compensation Plan. If [AIG-FP] shall become the subject of any bankruptcy or insolvency case or proceeding, or shall make an assignment for the benefit of creditors, or shall become the subject of a reorganisation whether or not pursuant to bankruptcy laws, or if any other relief should be granted to [AIG-FP] generally from the rights of creditors, then in any such event <span style="text-decoration:underline">(a “Bankruptcy/Insolvency Event”) </span>the obligations under this Deferred Compensation Plan to Participants … and to AIG shall be subordinate and junior in right of payment and otherwise, to the prior payment in full of all of the other obligations of [AIG-FP], whether now existing or hereafter incurred, except to the extent payment of any such obligations is expressly made subordinate to or <span style="font-style:italic">pari passu </span>with the payment obligations hereunder…” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Section 4.01(b) then provided:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in"><span style="font-weight:bold">“[1] </span>The outstanding balance credited to the Deferred Compensation Accounts of each Participant and of AIG shall be subject to reduction, from time to time, to the extent of any losses incurred (i) by AIGFP (excluding AIGTG) or (ii) by AIGTG resulting from transactions entered into on or after January 1, 2003, which losses in the case of (i) and (ii) for any year in the aggregate exceed the outstanding market and credit reserves and current year income of AIGFP (excluding outstanding market and credit reserves relating to transactions entered into by AIGTG before January 1, 2003), but before base capital of AIGFP (for the avoidance of doubt including AIGTG, and consisting of equity, retained earnings, if any, and subordinated debt). <span style="font-weight:bold">[2] </span>Such reductions shall be made among the Participants … and AIG on a pro rata basis. <span style="font-weight:bold">[3] </span>[AIG-FP] shall be obligated subsequently to restore amounts so deducted from Participants’ and AIG’s account balances, plus accrued interest thereon at the interest rate determined in accordance with Section 3.03 and, <span style="font-weight:bold">[4] </span>in connection therewith, the Board shall adopt a plan (which shall not be subject to the approval of AIG or the Participants) setting forth a schedule under which [AIG-FP] shall restore amounts deducted from Participants’ and AIG’s account balances (plus accrued interest thereon). <span style="font-weight:bold;text-decoration:underline">[5]</span><span style="font-weight:bold"> </span><span style="text-decoration:underline">Any such restoration plan shall provide that any restored</span><span> </span><span style="text-decoration:underline">amounts shall be paid in 2013; </span><span style="font-weight:bold;text-decoration:underline">[6] </span><span style="text-decoration:underline">to the extent amounts have</span><span> </span><span style="text-decoration:underline">not been restored by December 31, 2013, all restoration rights</span><span> </span><span style="text-decoration:underline">shall permanently lapse except to the extent [AIG-FP]</span><span> </span><span style="text-decoration:underline">determines that it may amend the Plan to provide for payment</span><span> </span><span style="text-decoration:underline">of restored amounts without violating Internal Revenue Code</span><span> </span><span style="text-decoration:underline">Section 409A. </span><span style="font-weight:bold">[7] </span>Notwithstanding the terms of any such plan, in a bankruptcy or insolvency of [AIG-FP] each Participant … and AIG shall have an unsecured claim, subordinated and junior in payment and subject to the limitation on rights and interests to the extent provided in [<span style="font-style:italic">Section 4.01(a)</span>], against [AIG-FP] for the amount, if any, by which the balance credited to their Deferred Compensation Account were reduced and not subsequently restored (plus credit for accrued interest thereon), in addition to such claims as are described in [<span style="font-style:italic">Section 4.01(a)</span>]. <span style="font-weight:bold">[8] </span>For the avoidance of doubt, if [AIG-FP] consolidates or amalgamates with, or merges with or into, or transfers all or substantially all of its assets to, another entity, then the resulting, surviving or transferee entity shall assume all of the obligations of [AIG-FP] hereunder.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The underlined passages in the quotations in the two previous paragraphs are amendments made to these provisions in December 2008. The numbers in bold in square brackets were included by the judge for ease of cross-reference on issues of construction. They are helpful, provided that one keeps in mind that both <span style="font-weight:bold">[3] </span>and<span style="font-weight:bold"> [4] </span>and<span style="font-weight:bold"> [5] </span>and<span style="font-weight:bold"> [6] </span>are in each case one sentence.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Prior to 2007, AIGFP did not mark its swaps portfolio to market so that the trades as kept on its books were valued at par and only realised losses were ever booked. In 2007, it was required to book unrealised losses derived from a mark-to-market revaluation of the portfolio. This requirement coincided with intensification of the credit crunch, so that the mark-to-market value of the credit derivative portfolio fell sharply and substantial unrealised losses were sustained. As a consequence, in the 2007 compensation year there was significantly reduced Distributable Income under the DCP. In response AIGFP introduced the Special Incentive Plan (“SIP”) whose purpose was to mitigate the shortfall on sums that would have otherwise been paid or deferred by way of Distributable Income but for the unrealised losses. It did this by crediting sums equivalent to the shortfall to new “SIP” accounts. These were due to be paid in January 2013. The SIP contained materially the same reduction/restoration provision as Section 4.01(b) of the DCP, so that if “any losses” were incurred in excess of reserves and current year income, SIP credits would fall to be reduced as with balances under the DCP. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">By March 2008 the scale of the problems confronting AIGFP was becoming more apparent and it had become clear further incentives would be needed to retain senior executives and employees which the company needed to see out the crisis. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">Accordingly AIGFP instituted the Employee Retention Plan (“ERP”) effective from 1 December 2007, which provided for “Guaranteed Retention Awards”. Part of these was to be paid without regard to AIGFP’s 2008 financial performance, with payment being guaranteed by AIG itself, unlike under the DCP and SIP. The remainder of the awards were agreed by the participants to be deferred into the DCP, where they were subject to the reduction/restoration provision.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">One of the objectives of the ERP, as stated in the preamble was: “To recognize the uncertainty that the unrealized market valuation losses in AIG-FP’s super senior credit derivative and originally-rated AAA cash CDO portfolios have created for AIG-FP’s employees and consultants.” Accordingly, the ERP also included an express provision at Section 3.06(a) excluding from the calculation of any sums to be distributed to employees unrealised losses or gains on the CDO Portfolio or on super senior credit derivative transactions:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“The Bonus Pool for any Compensation Year beginning with the 2008 Compensation Year will not be affected by the incurrence of any mark-to-market losses (or gains) or impairment charges (or reversals thereof) arising from (i) the CDO Portfolio or (ii) super senior credit derivative transactions that are not part of the CDO Portfolio.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In contrast, Section 3.06(b) provided in relation to realised losses: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“The Bonus Pool for any Compensation Year beginning with the 2008 Compensation Year will be affected by the incurrence of any Realized Losses (or gains) arising from any source, subject to the limitations set forth in Section 3.07.”   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Section 3.07(a) then provided a cap for any compensation year beginning with 2008 of US$67.5 million per compensation year on the extent to which the Bonus Pool could be reduced in the aggregate as a result of Realized Losses arising from the CDO Portfolio. This was to incentivise existing employees to stay with the company because the Bonus Pool would otherwise have been wiped out.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Section  3.07(b) of the ERP then made it clear that this provision in Section 3.07(a) did not have any effect on the reduction of current and future balances under the DCP:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.01in;margin-right:0.05in;text-indent:-0.01in">“Current and future balances under the [DCP] … and SIP </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">(including the deferred component of 2008 and 2009 Total Awards …) will remain subject to reduction as a result of Realized Losses from the CDO Portfolio or otherwise in accordance with the terms of the [DCP] … and SIP (without reference to any annual limits, which will relate solely to the determination of the Distributable Income for Bonus Pool calculation purposes in the 2008 and subsequent Compensation Years).” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">As the judge recorded at [46] of his judgment, by the end of the trial, it was common ground that unrealised losses (or gains) in the CDO Portfolio or super senior credit derivative transactions not part of that Portfolio were excluded by Section 3.07(b) of the ERP from any calculation of “losses incurred” under Section 4.01(b) of the DCP or SIP.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">As already stated in the Introduction above, to avoid the collapse of AIG, on 22 September 2008 the US Government agreed to loan up to US$85 billion, and AIG used these funds in turn to advance a US$65 billion facility to AIGFP. To stabilise its financial position, in November and December 2008, a substantial proportion of the unrealised losses of AIGFP on its CDS portfolio were crystallised in a series of transactions known as “Maiden Lane III”. The CDS contracts were terminated allowing the counterparties to retain collateral posted by AIGFP, leading to realised losses of about US$30 billion in November and about US$10 billion in December 2008.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Those realised losses eliminated AIGFP’s credit and market reserves and resulted in a debt of more than US$30 billion under the loan facility. When those realised losses were applied to the deferred compensation accounts, they reduced those accounts to nil. In fact AIGFP recorded that the losses reduced the balances below nil. The judge held that it was impermissible to apply negative balances and there is no appeal against that finding. AIGFP has had no positive Distributable Income since, but has made a loss every year (after excluding unrealised gains) principally because the interest due on the loan has exceeded any residual revenues from realising gains on unwinding remaining transactions.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:0.04in;text-indent:0.00in">Connecticut law </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">All three of the plans were governed by Connecticut law. The applicable principles were essentially common ground between the expert witnesses at trial and are recorded by the judge at [71] of the judgment in these terms: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.05in;text-indent:0.00in">“i) The contractual intent of the parties is to be determined from the language of their contract and the circumstances connected with their transaction. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">ii)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">A written contract is to be construed primarily by analysing its text.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">iii)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">In that regard, the contract is to be construed as a whole and all relevant provisions are considered.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">iv)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">The parties will not be relieved from anticipated or actual difficulties created by the language of a valid contract, applied to circumstances that arise.  “<span style="font-style:italic">Courts do not unmake bargains unwisely made”</span> (<span style="font-style:italic">Geysen v Securitas Sec. Servs. USA Inc </span>322 Con 385).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">v)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">A contract is regarded as unambiguous when its language is clear and conveys a definite, precise intent. An unambiguous intent conveyed by the language of the contract is to be given effect. In that regard, (a) the fact that parties advance different interpretations of the language does not necessitate a conclusion that the language is ambiguous, and (b) any ambiguity must stem from the words in the contract itself – the language itself must be unclear.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">vi)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">If the language of the contract is fairly susceptible of two or more interpretations, the more (or most) equitable, reasonable and rational meaning is to be preferred.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">vii)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">Extrinsic evidence may be used to resolve an ambiguity, failing which (as a construction aid of last resort) contracts should be construed <span style="font-style:italic">contra proferentem </span>which in the present case would mean adopting the meaning less favourable to AIGFP and more favourable to the Participants.”  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">It will be apparent that there is little, if any, difference between the applicable principles of contractual construction under Connecticut law and those applicable under English law. Connecticut law appears to have a somewhat more generous approach to the admission of extrinsic evidence to resolve an ambiguity than the parol evidence rule under English law. As the appeal was ultimately argued orally, only limited reliance was placed by either party on extrinsic evidence. Nonetheless, to the extent that both parties invited this Court to consider evidence from witnesses who were not involved in the negotiation of the plans about what they thought the plans meant or how they applied them in practice, it seems to me that such evidence was inadmissible, even under the more generous approach of Connecticut law, in construing the plans.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:0.04in;text-indent:0.00in">The judgment below </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The issues on the appeal are in a fairly narrow compass and essentially concern the construction placed by the judge on the reduction and restoration provision in Section 4.01(b) of the DCP. In the circumstances, it is only really necessary in this judgment to summarise those parts of the judge’s judgment which bear directly on those issues of construction.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The judge stated at [75] that the reduction and restoration scheme was an integral part of the executive bonus scheme of AIGFP as a thriving concern, profit seeking for the shorter and longer term. Accordingly, the unexpected way in which AIGFP has incurred catastrophic losses yet survived as a going concern albeit not profit-seeking, rather than being put into insolvency, should not influence the proper construction of the contract. At [76] he said that most of Section 4.01(a) was of no relevance to the construction of Section 4.01(b). However, at [77] he said that the first sentence was important, recording as it did that the balance in favour of an employee or AIG represented a debt owed by AIGFP.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In considering what “losses” generate reductions, the judge said at [81] that the meaning of “losses” was not immediately clear. He then noted that the provision for AIGTG to be treated as part of AIGFP, but only as from January 2003, was introduced by amendment to the original DCP. Ignoring that amendment the wording being considered was that a reduction was to be made: “<span style="font-style:italic">from time to time to the extent of losses incurred …, which losses … for any year … exceed the outstanding market and credit reserves and current-year income …, but before base capital … (… consisting of equity, retained earnings, if any, and subordinated debt).</span>” This indicated that Deferred Compensation Accounts (DCAs) were to be used to help AIGFP absorb losses only when reserves and current year income at the time do not do so in full, so reserves and current year income are hit first. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [87] the judge addressed the argument by Mr Andrew Hunter QC for AIGFP that when reserves are nil, the excess loss generating reduction in balances is in effect negative Distributable Income. He said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“That brings me to the meaning, or content, of “ <span style="font-style:italic">losses </span>” for these purposes, and the related submission by Mr Hunter QC that where reserves are nil, the excess loss generating DCA balance reductions is, in effect, just negative Distributable Income. He submitted, in other words, that if reserves are nil and no new annual reserves are taken, then under the DCP, annual revenues less expenses, if positive, is Distributable Income capable of generating <span style="font-style:italic">inter alia </span>new DCA credits; and the same, if negative, is the excess loss to be absorbed by the outstanding balance remaining of old DCA credits (to the extent it can absorb it, as I would add). There is thus a complete symmetry, on Mr Hunter’s argument, between the (positive) Distributable Income that generates DCP bonus amounts and the “ <span style="font-style:italic">losses </span>” to be absorbed by deferred bonus amounts. But there is no <span style="font-style:italic">a priori </span>need for such symmetry; and the most obvious way to create it, if that were the intention, has not been used, namely drafting Section 4.01(b)[1] by reference to Distributable Income as a defined term. The question is what the language actually used means, with no assumption or presumption as to whether the symmetry proposed by Mr Hunter’s argument was intended. Thus, Mr Hunter’s particular submission that the defendants must be right about restoration because “ <span style="font-style:italic">the [Plan] accounts are in essence retained earnings accounts [that] can and should only be restored from future net earnings </span>” to my mind just begged the question.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [88] he noted that, in terms of the language of Section 4.01(b), “losses” was distinct from “current year income”, matters for which reserves might have been set aside, and negative financial outcomes for AIGTG. He then stated that:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“…the DCP relates generally to the business of AIGFP, typified by [credit default] transactions…and more specifically to the deferral of bonus payments so that they will fall to be paid (subject to the impact of this reduction / restoration regime) over a period related to the profile of the credit default book as it stood when the deferred bonus amounts were awarded.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [89] he concluded that, in consequence, the respondents were correct that “losses” in Section 4.01(b) meant: “losses, i.e. capital losses, incurred under the financial product transactions entered into by AIGFP and making up its book or portfolio of business from time to time.” He held that losses were explicitly contrasted with “current year income” and so could not be included within it. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The judge said at [90] that, in his judgment, the provision was only ever referring to realised losses, although that did not matter given the common ground as to the effect of section 3.07(b) of the ERP. He continued:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“If there might have been room to debate exactly what counted as a realised loss for these purposes prior to the ERP (not something the parties addressed at trial), in my judgment that was resolved by the clear and detailed definition of Realized Losses set out in Schedule 2 to the ERP.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [91] he concluded that “current year income” must mean net income i.e. revenue less expenses, including the interest incurred under the loan facility. Those interest obligations were properly accounted for as expenses but were not “losses”. He appears to have thought that Mr Hunter QC had submitted that “current year income” meant net income, but this is incorrect. In their written and oral closing submissions, AIGFP had made it clear that “current year income” meant gross income i.e. gross profits ignoring trading losses or expenses.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The judge went on to consider the restoration obligation under section 4.01(b): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">“[AIG-FP] shall be obligated subsequently to restore amounts so deducted from Participants’ and AIG’s account balances, plus accrued interest thereon at the interest rate determined in accordance with Section 3.03 and, in connection therewith, the Board shall adopt a plan (which shall not be subject to the approval of AIG or the Participants) setting forth a schedule under which [AIG-FP] shall restore amounts deducted from Participants’ and AIG’s account balances (plus accrued interest thereon).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [94], applying his narrow construction of “any losses” he rejected the argument by </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">Mr Hunter QC that the restoration obligation was itself a “loss” within the meaning of “any losses” so that, in the judge’s words, the restoration obligation did not “eat itself”. At [96] the judge accepted the submission of Mr Daniel Oudkerk QC for the respondents that, whilst AIGFP continued in existence, it must meet its obligations as they fell due, including the restoration obligation, even if that meant that the obligation was entirely met by AIG through further borrowing under the loan facility that would not be repaid. The oddity of AIG having to fund these historic employee bonus amounts (unless it chooses to put AIGFP into insolvency) is: “a by-product of the denuded state in which AIG-FP now exists, at AIG’s instance”. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [97] the judge held that “subsequently” did not convey that there was some precondition to restoration beyond that there had first been a reduction. He was prepared to accept that “subsequently” might be surplusage, that in effect it was the same as saying “if we reduce your balances we shall restore them afterwards”, in which “afterwards” was unnecessary. At [98] he disagreed with the submission of Mr Hunter QC that “subsequently” meant that there was no obligation to restore until after a time when any restored balances would be immediately wiped out by further losses.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [99] he concluded that there was no reason as a matter of language or logic why the adoption by AIGFP of a plan and a schedule under it for restoration of balances deducted had to come after the first date when any restoration might be made. On the contrary the language of the provision conveyed that the adoption of a plan for restoration was part and parcel of making deductions. At [100] he noted that there was no time limit for effecting restoration, so that there was a difficulty of construction (or possibly a need for implication). He concluded: “Subject to that, the meaning I think is clear – an unqualified contractual obligation to restore in full amounts deducted, for which the Board must adopt a plan setting a schedule.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [101] he said that the amendment made to the provision in December 2008 (what the judge labelled as <span style="font-weight:bold">[5]</span> and<span style="font-weight:bold"> [6]</span>) resolved that difficulty of construction or need for implication, as it provided that the restoration plan must provide for restored amounts to be paid in 2013. He rejected Mr Hunter QC’s submission that “<span style="font-style:italic;text-decoration:underline">any</span><span> </span><span style="font-style:italic">restored amounts</span>” meant that the schedule could provide for something other than full restoration. The words conveyed: “‘the amounts required by Section 4.01(b)<span style="font-weight:bold">[3] </span>to be restored, whenever a restoration plan is called for by Section 4.01(b)<span style="font-weight:bold">[4]</span>’, not ‘such amounts as AIG-FP chooses to plan to restore’”. The judge considered that these specific points and his general conclusion as to the unqualified tenor of the obligation to restore were supported by the Plan Participants’ entitlement under <span style="font-weight:bold">[7]</span>  to claim in an insolvency for the full amount of the reductions not restored by the time the insolvency commences. This treated their entitlement to restoration as unqualified.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In relation to the words: <span style="font-style:italic">“to the extent amounts have not been restored by December 31, 2013, all restoration rights shall permanently lapse except to the extent [AIG-FP] determines it may amend the [DCP] to provide for payment of restored amounts without violating Internal Revenue Code Section 409A </span>” the judge said at [103]:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“Making provision for the possibility that to at least some extent amounts deducted may not in fact be restored by a certain date does not imply entitlement in AIGFP not to effect full restoration, or not to do so by that date. It merely means that (absent further amendment of the DCP) matters will finally crystallise at the stated date.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The judge went on to consider Section 409A of the Internal Revenue Code. He set out at [105] what was common ground in AIGFP’s written closing submissions:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.04in;text-indent:0.00in">“23.     Section 409A was an amendment to the Internal </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">Revenue Code (“<span style="font-weight:bold">IRC</span>”) introduced by section 885 of the American Jobs Creation Act 2004. It provides, at section 409A(a)(1)(A)(i), that if at any time during a taxable year a ‘non-qualified deferred compensation plan’ fails to meet certain requirements, or is not operated in accordance with such requirements, a ‘plan failure’ will occur, namely:  “… all compensation deferred under the plan for the taxable year and all preceding taxable years shall be includible in gross income for the taxable year to the extent not subject to a substantial risk of forfeiture and not previously included in gross income.”  24.       ‘Non-qualified deferred compensation plan’ is defined under section 409A(d)(1) as “any plan that provides for the deferral of compensation, other than a qualified employer plan, and any bone fide vacation leave, sick leave, compensatory time, disability pay, or death benefit plan.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">25.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">In the event of a plan failure, the tax imposed on an individual participant who is a US taxpayer is increased by an amount of interest set out under section 409A(a)(1)(B)(ii) and an amount equal to 20% of the compensation which was </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.04in;text-indent:0.00in">required to be included in gross income. …  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">26.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">One of the requirements with which affected plans must comply is that compensation deferred under the plan may not be distributed earlier than “a specified time (or pursuant to a fixed schedule) specified under the plan at the date of the deferral of such compensation” (section 409A(a)(2)(A)(iv)).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">27.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">Proposed regulations under Section 409A produced by the Internal Revenue Service (“<span style="font-weight:bold">IRS</span>”) and the Treasury Department were published on 4 October 2005 providing for a proposed effective date for Section 409A of 1 January 2007. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">However,  …transitional relief was provided by, inter alia, announcing that the final regulation would not become effective until 1 January 2008. That transitional relief was in turn extended further … until 31 December 2008.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">28.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">Accordingly, AIGFP had a long stop date of 31 December 2008 by which to ensure that the DCP and SIP complied with Section 409A for US taxpayers … . … the DCP and SIP provide[d] for reductions in the event of losses but require[d] AIGFP … to adopt restoration plans with respect to such reductions. However the Plans did not, prior to the amendments of 29 December 2008, specify any fixed time for making restoration plan payments if a restoration plan were adopted. Mr Dooley [of AIG] [stated in a Memorandum to Plan Participants dated 29 December 2008] that: “[t]his lack of a fixed payment date would, if not corrected by an amendment, likely cause the plans to violate 409A”. ”  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Having expressed concerns as to whether the December 2008 amendments would in fact avoid problems with acceleration of payment, the judge held at [106(v)]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“Be all that as it may, the defence asserting that claims pursued in these proceedings fail because restoration rights ‘permanently lapsed’ at the end of 2013 cannot succeed. Pursuant to the amendment mechanism of the DCP, the reduction / restoration scheme provisions could be amended to comply with the non-acceleration requirement. The defendants therefore have not persuaded me that any rights lapsed by operation of Section 4.01(b)[6]. The defendants argued that the reference to the possibility of amending the DCP further was included in case Section 409A was amended. But that is simply not what the provision says.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [108] the judge summarised his conclusions, which so far as relevant to this appeal, were as follows:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“iv) The “<span style="font-style:italic">losses</span>” falling within Section 4.01(b)[1], and therefore the subject matter of the reduction / restoration scheme, were realised losses in the AIGFP transaction book (but limited to transactions entered into on or after 1 January 2003 in respect of AIGTG business). They are not to be equated to (negative) Distributable Income plus reserves taken in the year, as contended by the defendants. Though not more precisely defined prior to the ERP, as from 1 December 2007 (the effective date of the ERP), upon the proper construction of the DCP and SIP the “<span style="font-style:italic">losses</span>” falling with Section 4.01(b)[1] were Realized Losses as defined by Schedule 2 to the ERP. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.04in;text-indent:0.00in">… </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">ii)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">Acting by the Board, AIG-FP was obliged by Section 4.01(b)[4]-[6] to adopt a restoration plan providing a schedule for the restoration in full of amounts deducted (plus interest) and for payment of restored amounts in 2013, and to do so when reductions were applied to balances under Section 4.01(b)[1]. The purpose of doing so was to plan the performance of AIG-FP’s obligation under Section 4.01(b)[3]/[5], which was an obligation to restore in full (and with interest) amounts deducted under Section 4.01(b)[1].  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">iii)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.50in">Any rights the Participants had to have balances restored, upon the foregoing interpretation of Section 4.01(b) applied to the facts, did not permanently lapse after 31 December 2013 under Section 4.01(b)[6]. Even if any such rights did then lapse, Participants would still be entitled in principle to claim damages for deductions wrongfully made or for failure to adopt a restoration plan when deductions were made.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:0.04in;text-indent:0.00in">The grounds of appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The three grounds of appeal on which AIGFP was given permission to appeal are as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in"><span style="text-decoration:underline">Ground 2</span>  The judge erred in placing the narrow construction he did on <span style="font-style:italic">“any losses”</span> in Section 4.01(b) of the DCP. He should have concluded that it comprised not just realised transactional losses of AIGFP but any losses of AIGFP (other than unrealised credit-related losses) and that, accordingly, when AIGFP’s reserves were reduced to nil, the calculation of losses in excess of current year income under section 4.01(b) was the same as the calculation of Distributable Income under Section 1.08.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in"><span style="text-decoration:underline">Ground 3</span> The judge erred in finding that the requirement for restoration (a) was unqualified; (b) arose immediately upon deductions being made; (c) arose even if losses were continuing and (d) arose even if there was no Distributable Income. He should have held that: (1) there was no obligation to restore balances while losses were continuing and/or in the absence of Distributable Income; (2) payment of restored sums to AIG other than from Distributable Income would be an unlawful distribution to a shareholder; (3) on the proper construction of Section 4.01(b) restoration was only to be made if and when AIGFP once again had Distributable Income which has not occurred; (4) AIGFP was under no obligation to restore sums deducted or to adopt a restoration plan.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in"><span style="text-decoration:underline">Ground 4</span> The judge erred in finding that the 2008 amendment to Section 4.01(b) required AIGFP to restore and pay all sums deducted from Plan balances by 31 December 2013. He should have found that the amendment merely required sums which had been restored by 2013 to be paid by the end of 2013, with any right to further restoration lapsing.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:0.04in;text-indent:0.00in">Summary of the parties’ submissions </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In general submissions at the outset of his oral submissions on behalf of AIGFP, Lord Goldsmith QC submitted that the judge’s construction of Section 4.01(b) ignored the statements of the purpose of the Plans in the Plans themselves, specifically in the preamble to the DCP, the sharing of the risks and rewards of AIGFP’s business. On the judge’s construction, there was no sharing of risks and rewards, but the executive and employee participants will have been paid in full through funding by the other participant AIG, the 100% shareholder, even though Section 4.01(a) provides explicitly that there is no guarantee from AIG of AIGFP’s obligations. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">He submitted that there were a number of errors in the judge’s approach. The first was in the construction he gave to “<span style="font-style:italic">losses</span>”. Whilst it was not disputed that losses were limited to realised losses (in the light of Section 3.07(b) of the ERP) there was no justification whatsoever for the judge’s conclusion (in [90] and [108(iv)]) that, after 1 December 2007, “losses” meant only “realized losses as defined by Schedule 2 to the ERP”. There was nothing in either the ERP or the DCP which limited realised losses in this way. Section 3.07(b) referred to “Realized Losses from the CDO Portfolio or otherwise” and made no mention of realised losses being limited to those set out in Schedule 2. The words: “or otherwise” were general, not transactional, let alone referring only to losses on transactions set out in Schedule 2.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In this context Section 4.06 was of some importance. That is headed: “Effect of this Plan on the Deferred Compensation Plan” and provides: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“The terms and operation of the Deferred Compensation Plan are not affected by this Plan; provided that to the extent there is any inconsistency between the terms of this Plan and the terms of the Deferred Compensation Plan with respect to the treatment of Guaranteed Retention Awards, the determination of Distributable Income or the Bonus Pool, or the application of the terms of that plan to Stock-Indexed Deferrals, the terms of this Plan shall govern.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">Lord Goldsmith QC submitted that, if the intention had been that “losses” in Section 4.01(b) should be limited not just to realised losses but realised losses as set out in Schedule 2 to the ERP, then that would have been included in the proviso to Section 4.06. On the contrary, save as set out in the proviso, which did not touch on this point, the opening words of the provision made it clear the terms of the DCP were not affected by the ERP.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The realised losses referred to in Schedule 2 were in three different categories: (i) losses from the termination or unwind of a derivative transaction or the sale of a cash bond position; (ii) losses from a payment default on a cash bond position; and (iii) losses resulting from a payment default on a reference obligation underlying a credit </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">default swap transaction. However, Lord Goldsmith QC submitted that this was only a subset of the losses which could be suffered by AIGFP and indeed only a subset of the transactional losses which it could suffer. The business of AIGFP covered a large number of other financial products and activities than CDSs, such as transactions in equities, fixed income, foreign exchange, credit commodities, capital relief for Nordic banks and investment in solar projects. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The words added to Section 4.01(b) in reference to AIG Trading: “losses incurred…by AIGTG resulting from transactions entered into on or after January 1, 2003” were relied upon by the judge in support of his construction, but Lord Goldsmith QC submitted that, on the contrary, they demonstrated that if it was wanted to qualify what was meant by “losses” the draftsman could and did use express words.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Lord Goldsmith QC submitted that the calculation of losses had to take account of all items of loss and expense, including the interest on the bail-out loan facility from AIG. If losses were limited in the way which the judge held, the executives and employees would be getting the benefits of the company’s trading without the costs and would not be sharing in the “risks and rewards of AIGFP’s business”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">He submitted that the second error in the judge’s approach was in relation to what is meant by “current year income” which in [91] he said meant net income, in other words net of the interest on the bail-out facility. I have already mentioned above that the judge was mistaken in saying that Mr Hunter QC had submitted that it meant net income, when in fact he had submitted that it meant gross income. Lord Goldsmith QC submitted that this had in fact been common ground before the judge, referring us to a passage in the oral closing submissions of Mr Oudkerk QC where he said “‘current year income’ must mean current year income, not income less expenses”. Mr Oudkerk QC sought to contend in his submissions before this Court that Mr Hunter QC had abandoned in oral submissions what he had said at [87] of the written closing submissions, but this is a false point. The passage in the transcript to which he referred us was one where Mr Hunter QC was making the alternative submission set out in footnote 33 to [87] of the written closing submissions, that if one took the view that “losses” was confined to losses arising from transactions (which was the respondents’ rather than AIGFP’s case) then the only tenable construction of “current year income” would be profits arising from transactions less expenses because this would lead to the same result as that for which Mr Hunter QC was contending as his primary case.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In any event, leaving aside whether this was common ground at trial, Lord Goldsmith </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">QC submitted that the judge had been wrong to say “current year income” meant net income, for two reasons. First, where it was intended by the DCP to qualify “income” as meaning net income rather than gross income, the draftsman said so, as in the definition of “Distributable Income”. Second, the effect of the judge’s analysis was that, since he concluded that “losses” meant only realised losses on transactions as set out in Schedule 2 to the ERP and that “current year income” was in effect capped at zero (which seems to be what the judge was saying at [93]), he left out of account items of expense or “loss” such as interest on the bail-out facility, which in profit and loss terms produced a substantial loss. Lord Goldsmith QC submitted that such expenses have to be brought into account somehow: if they are not within losses because those are limited to transactional realised losses, they must come into the equation on the income side, reducing the net income to a negative figure. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Lord Goldsmith QC submitted that the third error in the judge’s approach was his rejection at [94] of his judgment of AIGFP’s circularity argument, that the obligation to restore would create a further “loss” which would wipe out current year income and reserves and thus lead to fresh deductions under Section 4.01(b). The judge accepted that the restoration of a DCA balance would create a fresh DCP debt, but held that that did not create a loss. Lord Goldsmith QC pointed out that the forensic accounting experts at trial had accepted that the obligation to restore balances would generate a loss to AIGFP.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">He submitted that if AIGFP were correct on ground 2, then the appeal would succeed because there was no possibility of restoration while losses were ongoing, the circularity point that there is no Distributable Income so that the cost of restoration immediately reduces the balance restored. This approach was supported by ground 3, with which Ground 2 was closely connected.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">AIGFP’s case was that the obligation to restore was qualified, both by the preamble to the DCP, which made it clear that restoration would only take place “absent losses which exhaust reserves and income” and by the word “subsequently”. Lord Goldsmith QC submitted that, contrary to what the judge said at [97], the word must be given a meaning. In Connecticut law, as in English law, there is a presumption against surplusage. He submitted that “subsequently” meant “subsequently to losses ceasing”, not necessarily by reading in words, but because that was the natural meaning of the word in its context in the DCP as a whole and in Section 4.01(b). In other words, it was “subsequent” to when losses have ceased exhausting reserves and income.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The whole sentence: “[AIG-FP] shall be obligated subsequently to restore amounts so deducted from Participants’ and AIG’s account balances, plus accrued interest thereon at the interest rate determined in accordance with Section 3.03 and, in connection therewith, the Board shall adopt a plan (which shall not be subject to the approval of AIG or the Participants) setting forth a schedule under which [AIG-FP] shall restore amounts deducted from Participants’ and AIG’s account balances (plus accrued interest thereon)” points away from the obligation to adopt a plan arising at the moment of reduction from balances as the judge held at [108(viii)]. Lord Goldsmith QC submitted that there was no obligation to adopt a plan until losses had ceased.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Lord Goldsmith QC also submitted that AIGFP’s approach, that there was no obligation to restore balances or pay them unless and until AIGFP was profitable again, was supported by the fact that the obligation was owed not just to the “Participants” (executives and employees covered by the DCP) but to AIG as 100% shareholder. If, as the judge found, the obligation arose notwithstanding that there was no Distributable Income, then this would be an unlawful distribution of capital or an unlawful dividend prohibited  under general principles of company law. Whilst restoration of balances to the Participants would not be illegal, the effect of this on the judge’s construction was that whilst restoration and payment could be made to the Participants, it could not be made to AIG, which was hardly sharing in the risks and rewards. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">He submitted that the judge had missed the point when he dealt with this at [56] of his judgment, where he said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“I also reject a somewhat sophisticated, specific variant of the argument advanced by the defendants. That argument was this: AIG Inc also participates, so any restoration and payment of previously reduced balances should apply to AIG Inc’s balances as well as to Participants’ balances; restoration and payment of AIG Inc’s previously reduced balances would be an unlawful distribution to the shareholder by an insolvent company; it cannot have been the intention to require that; therefore, it cannot have been the intention to require restoration of Participants’ balances. In my judgment, no question arises of an unlawful distribution to AIG Inc. The recognition of Plan debts to Participants, by restoring balances, would carry with it the recognition of a corresponding Plan debt to AIG Inc. Discharging that Plan debt to AIG Inc by drawing on the AIG-FP facility would leave AIG-FP’s position neutral, the Plan debt to AIG Inc simply being re-constituted as increased indebtedness under the facility. If the Plans otherwise required restoration and payment of Participant balances previously reduced, then it would be no more improper for AIG-FP to discharge those obligations than for it to discharge, as it continues to do, all its other ongoing obligations, e.g. to employees or otherwise by way of overheads and to trade creditors, all with the support of AIG Inc (if required) via the bail-out facility.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">This passage simply did not address the point that, where a company created a debt to pay a proportion of the funds generated to its shareholder, that would be a distribution and that the return of paid-up capital by an insolvent company to its shareholders was an unlawful distribution, as David Richards LJ pointed out during the course of argument in relation to this paragraph in the judgment. Although AIGFP was a Delaware corporation and there was no evidence before the Court of Delaware law on this issue, Lord Goldsmith QC relied upon the common law rule that a company cannot pay dividends out of capital as a universal principle of company law. He relied upon [71] of the judgment of Peter Gibson LJ in <span style="font-style:italic">Shaker v Al-Bedrawi</span> [2002] EWCA Civ 1452; [2003] Ch 350 to which David Richards LJ had referred the parties during the course of argument.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Lord Goldsmith QC submitted that the amendment to Section 4.01(b) in December 2008 made clear that there might not be full restoration by the cut-off date of the end of 2013 and that to the extent that there had not been restoration by that date, restoration rights would lapse, was inconsistent with there being an absolute unqualified obligation to restore notwithstanding that AIGFP continued to be lossmaking.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At [101] of the judgment, the judge had drawn comfort for his conclusion that the amendment did not alter the unqualified nature of the obligation from the right to claim the full amount of the reductions in an insolvency under <span style="font-weight:bold">[7]</span>. Lord Goldsmith QC submitted that this is a false point since any claim that the Participants had was “subordinated and junior in payment” so that it would always be subordinated to </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">AIG’s claim as a creditor under the bail-out facility, by which any rights of the Participants would be wiped out. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In relation to Section 409A of the Internal Revenue Code, Lord Goldsmith QC submitted that the important point to note was that, in the event of plan failure, all the sums would fall into tax and penalties would be incurred and it was to avoid that eventuality that AIGFP had been given a discretion by the closing words of <span style="font-weight:bold">[6]</span> to amend the DCP. It had not exercised that discretion. The judge’s conclusion at [106(v)] that because that discretion to amend without violating Section 409A was given, the restoration rights did not permanently lapse was a strange one and wrong. In any event, since AIGFP had not amended the DCP in accordance with the discretion, all restoration rights had permanently lapsed.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In a general overview at the outset of his submissions on behalf of the respondents, Mr Daniel Oudkerk QC submitted that the position was more nuanced than was being suggested. The subject-matter of the appeal was remuneration of his clients paid into the DCAs between 2002 and 2008. 90% of their remuneration came through the Bonus Pool. Under the DCP, deferral of part of the bonus was mandatory, but certain employees also invested their own monies in the scheme.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">He submitted that at the heart of the case at trial was the fundamental point that the plans did not permit negative balances. The judge rejected AIGFP’s argument that losses could be carried forward, imposing massive negative balances on the Participants and that part of his judgment was not under appeal. It was important because it demonstrated that there was not an equal sharing of risk and reward between the respondents and AIG/AIGFP.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Mr Oudkerk QC submitted that Section 4.01(b) imposed a mandatory obligation on AIGFP to restore balances irrespective of no profitability. He postulated what the position was in, say, 2010, when there were two possibilities: (i) the business continued in a profit-seeking way; or (ii) it went into insolvency, in which case his clients would take their chances in the “insolvency waterfall”. However, AIG had chosen to keep AIGFP going because that suited the purposes of the broader AIG group. He was not suggesting that that was not a legitimate business exercise, but the difficulty is that all AIGFP’s other obligations continue, to pay rent, employees’ salaries etc. which it does out of its general funds. Effectively, by refusing to honour its mandatory obligation to restore reduced balances, AIGFP was cherry-picking which obligations to perform.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">He submitted that the restoration provision in Section 4.01(b) comprised an unqualified obligation to put in place a plan (which contained a schedule providing for payment in 2013) and then to make restoration and payment by 31 December 2013, so that failure to do so was a breach of the DCP. The backstop date and the provision about rights permanently lapsing were included to address the issues of Section 409A of the Internal Revenue Code as without those provisions, the plan would have failed.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In relation to Ground 2, Mr Oudkerk QC submitted that the judge had engaged in a detailed analysis of how the DCP operated which was entirely correct. In relation to the critical paragraphs from [87] of the judgment onwards, he submitted that the judge had been right to say at [88] that the bonus payments were deferred over the period of AIGFP’s CDS book. This was borne out by the reference in the preamble to the subsequent payment of retained amounts: “according to a schedule tied to the duration of AIGFP’s business”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">It was also borne out by Article 3.05(b) of the DCP headed “Installment Payments” which provided:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“<span style="text-decoration:underline">Installment Payments</span>. Except as provided below, amounts in the Participant’s Deferred Compensation Account attributable to Deferred Compensation contributions shall be paid to such Participant and to AIG annually in arrears on the Interest Payment Date for the Interest Period beginning in October of each year in equal pro rata installments (“Installment Payments”) over a period of time (the “Distribution Period”) corresponding to the <span style="text-decoration:underline">approximate</span> average life of AIGFP’s swap transaction portfolio, <span style="text-decoration:underline">as last determined by the Board</span><span> </span><span style="text-decoration:underline">before the beginning of the calendar year preceding</span> the date of the Deferred Compensation contribution. <span style="text-decoration:underline">However, for</span><span> </span><span style="text-decoration:underline">calendar year 2009 and 2010, the period of time that shall be</span><span> </span><span style="text-decoration:underline">used is six years</span>…. The Distribution Period for a Deferred Compensation contribution shall commence on the Interest Reset Date in January of the calendar year next succeeding the calendar year in respect of which the Deferred Compensation contribution was made, with the first Installment Payment therefore being distributed on the Interest Payment Date for the Interest Period beginning in October of the calendar year in which the Distribution Period commences.…. ” [the underlined passages were added by amendment in December 2008]. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">Mr Oudkerk QC submitted that the words: “corresponding to the approximate average life of AIGFP’s swap transaction portfolio” made it clear that the DCP related generally to the CDS book as the judge had found. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">He submitted that the references added to Section 4.01(b) by amendment in 2003 to cover AIGTG also supported the judge’s analysis. The draftsman had referred specifically to “losses incurred… by AIGTG resulting from transactions entered into on or after January 1, 2003” because of the need for a cut-off point in relation to AIGTG. That was why the draftsman referred to transactions, because the cut-off date had to be in relation to AIGTG transactions. The draftsman did not need to add in a reference to transactions in relation to losses incurred by AIGFP because he knew that this provision was all about losses incurred on transactions. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Mr Oudkerk QC placed particular emphasis on Sections 3.06 and 3.07 of the ERP as part of his case that the judge’s conclusion that “losses” are limited to realised losses on transactions as set out in Schedule 2 to the ERP was justified. When pressed by the Court as to whether he was contending that the ERP amended the DCP, he submitted that the ERP was “an aid to the commercial and employment plans” but he was not able, quite rightly, to say that the ERP amended the DCP.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">As part of his critique of AIGFP’s construction of Section 4.01(b) Mr Oudkerk QC produced a redline version of the provision setting out what he contended had to be </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">deleted and written into the provision if AIGFP was correct. As I said in the course of argument, this was all very ingenious, but did not really address AIGFP’s case that “losses” in the provision was not limited in the way in which the judge found.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In relation to the meaning of “current year income”, Mr Oudkerk QC submitted that in accordance with US accounting practice, it meant net income, not gross. I have already referred to the false point he took that AIGFP had abandoned its case that it meant gross income. In support of his case that it meant net income, Mr Oudkerk QC relied upon the Form 10K financial statement of AIG and its subsidiaries to the Securities and Exchange Commission and, in particular, the Consolidated Statement of Income (Loss). I should say at once that I found that document of no assistance on this issue, since it refers expressly in a number of places to “net income”, but does not use the phrase “current year income.” It was also part of Mr Oudkerk QC’s case that, although “current year income” was net, so that for example it would be net of rent on premises or even an extraordinary expense like payment to a whistleblower, it was not net of transactional losses.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In relation to ground 3, Mr Oudkerk QC submitted to this Court, as he had before the judge, that AIGFP’s construction of the restoration obligation as only arising when the company had returned to profitability, required reading into Section 4.01(b), at the end of <span style="font-weight:bold">[3]</span>, words such as “if and to the extent that AIFP is profitable and/or there is sufficient Distributable Income to fund such payments.” This wording was nowhere to be found and could not be read into “subsequently” so that the judge’s conclusion in [97] was correct. This was also borne out by the second “subsequently” in <span style="font-weight:bold">[7]</span> which clearly meant no more than “afterwards”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Mr Oudkerk QC submitted that the wording of <span style="font-weight:bold">[4]</span> imposed a mandatory obligation to adopt a plan setting out a schedule. By the 2008 amendment the plan had to provide for the restored amounts to be paid in 2013, again a mandatory obligation. He submitted that his case that there was a mandatory obligation to restore, irrespective of whether there was a return to profitability was borne out by <span style="font-weight:bold">[7] </span>which contemplated<span style="font-weight:bold"> </span>that if, notwithstanding the terms of the plan adopted, bankruptcy or insolvency intervened, the respondents would have a claim in the bankruptcy or insolvency for the full amount of any sums not restored. Where such bankruptcy or insolvency was contemplated, it made no sense for the obligation to restore to be contingent on a return to profitability.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In relation to Lord Goldsmith QC’s submission that any restoration and payment to AIG in circumstances where AIGFP continued to be loss-making would be an unlawful distribution of capital, Mr Oudkerk QC submitted that when AIG had paid its share of the deferred compensation amounts into the plan, AIGFP had been profitmaking. All that would be happening if there were a payment out to AIG would be the return of an investment in the plan or the exercise of a contractual right which had nothing to do with AIG being a shareholder, so that, looking at the true purpose and substance of the transaction (relying on Lord Walker in <span style="font-style:italic">Progress Property v Moore</span> [2010] UKSC 55; [2011] 1 WLR 1 at [27]) there was no question of an unlawful distribution.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">He submitted that since AIGFP was a Delaware corporation, the question whether payment to AIG was an unlawful distribution was a question of Delaware law, but this had been neither pleaded nor proved by AIGFP. The point first came up in AIGFP’s written opening at trial where it was said to be unlawful under Connecticut law for a company to make a distribution whilst balance sheet insolvent. There was no alternative case put forward on the basis of either Delaware law or some universal principle of the common law. In cross-examination, AIGFP’s Connecticut law expert accepted that the relevant law only prohibited dividend payments to a shareholder qua shareholder and did not prohibit a payment of a debt.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Mr Oudkerk QC submitted that it was not open to AIGFP to rely upon the default position under English law or some universal principle of the common law, in circumstances where the parties had adduced evidence of Delaware law on certain issues, but not on this issue. He relied upon the judgment of Cooke J in <span style="font-style:italic">Tamil Nadu Electricity Board v ST-CMS Electric Company Pte Ltd</span> [2007] EWHC 1713 Comm); </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">[2008]</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.50in">1 Lloyd’s Rep 93 at [98]-[101], where the judge refused to allow the claimant to rely upon English law by default given that it had not called expert evidence of Indian law on the particular issue, notwithstanding that expert evidence of Indian law had been called on other issues. Mr Oudkerk QC submitted that the present case was on all fours with <span style="font-style:italic">Tamil Nadu</span>.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In relation to ground 4, Mr Oudkerk QC submitted that the lapsing provision was inserted to deal with the tax problem presented by Section 409A of the Internal Revenue Code. Without an end date, there would be a risk of plan failure. Following as it did from the mandatory provisions on which he had relied, <span style="font-weight:bold">[6]</span> was no more than a provision for the avoidance of doubt. AIGFP’s construction made a nonsense of the mandatory language earlier in Section 4.01(b). He submitted that the effect of the provision was that whilst there could not be specific performance of the rights of restoration, the respondents could still sue for damages for a prior breach of the obligation to restore.     </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:-0.01in;margin-right:0.04in;text-indent:0.00in">Analysis and conclusions </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In my judgment, the judge’s conclusion that “losses” in Section 4.01(b) was restricted to realised losses on transactions in the AIGFP transaction book as set out in Schedule 2 of the ERP, simply cannot be justified, upon the true construction of the DCP, for a number of reasons. First, there is nothing in the wording of the DCP or the ERP which suggests such a limitation or which suggests that the DCP was amended by the ERP. On the contrary, the wording of Section 4.06 of the ERP makes it clear that, apart from the exceptions in the proviso (which do not include any reference to Section 4.01(b) of the DCP), the terms and operation of the DCP were not affected by the ERP. If it had been intended to limit “losses” in Section 4.01(b) of the DCP to Realized Losses as set out in Schedule 2 of the ERP then the proviso to Section 4.06 of the ERP would have been the obvious place to say so. There is no hint of such an intention which is, in any event, negatived by the clear opening words of Section 4.06. The judge appears to have proceeded on the false premise (see [74] of the judgment) that the DCP was amended by the ERP, but that is contradicted by Section 4.06 of the ERP. The judge’s conclusion at [90] cannot be justified. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Second, contrary to Mr Oudkerk QC’s submissions, the judge’s conclusion is not supported by the wording of Sections 3.06 and 3.07 of the ERP or by the common ground to which he referred in [46] of the judgment. The common ground was limited to the exclusion by those provisions of the ERP of unrealised transactional losses from “losses incurred” in Section 4.01(b) of the DCP. It said nothing at all about other </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">losses that could have been incurred by AIGFP, which as a matter of ordinary language could include losses arising because of interest liabilities to AIG under the bail-out facility and losses arising because any restoration obligations to Participants and AIG under the scheme amounted to a fresh debt in each case.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Third, that these Sections of the ERP did not have the limiting effect on the meaning of “losses” beyond excluding unrealised losses, is borne out by the words in Section 3.07(b) of the ERP: “will remain subject to reduction as a result of Realized Losses from the CDO Portfolio or otherwise in accordance with the terms of the [DCP]”. The words “or otherwise” are quite general and cannot be confined to realised transactional losses on business other than that in the CDO Portfolio. In any event, even if “or otherwise” were limited to other realised transactional losses than those on the CDO Portfolio, there is nothing in Section 3.06 or Section 3.07 to suggest that the only losses which can be brought into account under Section 4.01(b) of the DCP are realised transactional losses. The ERP is completely silent on that point.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Fourth, the reference to “any losses incurred” is a pointer to this being a wide definition, not a narrow one limited to transactional losses as found by the judge. Just as Distributable Income is revenues less expenses and reserves, so there is no reason not to take the same matters into account in assessing what losses have been incurred, rather than artificially limiting the word “losses” in the way which the judge’s construction does.  If it had been intended to limit “any losses incurred” to transactional losses, it would have been very straightforward to say so in terms. In any event, even if the phrase was intended to be limited to realised transactional losses, there was no justification for limiting it further to what Lord Goldsmith QC described as the sub-set of transactional losses set out in Schedule 2 to the ERP, given the wide range of other types of business and transactions in which AIGFP engaged (see [44] above).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Fifth, in my judgment the judge placed too much emphasis on the fact that the deferred bonus payments were to be repaid in instalments over a period related to the profile of the CDS book. He referred to this at [88] of the judgment and it appears to have been critical to his conclusion, at the beginning of [89], that “losses” were limited to losses incurred under the financial product transactions entered in that book or portfolio. Contrary to the submissions of Mr Oudkerk QC, I do not consider that Section 3.05(b) relating to instalment payments of deferred compensation, with its reference to instalments being payable on a pro-rata annual basis over the approximate life of the CDS portfolio, provides the answer to what is meant by “losses” in Section 4.01(b). Section 4.01(b) is dealing with the different issue of reductions from DCAs by reason of losses and there is no reason to limit such losses to only one aspect of AIGFP’s business, namely the CDS transactions, however important a part of the business they were. Furthermore, and in any event, as the amendment to Section 3.05(b) makes clear, in the years after 2008, the instalment payments were no longer made by reference to the approximate life of the CDS portfolio, but over a period of six years, no doubt because AIGFP had stopped entering such transactions. This also suggests that the linkage which the judge found between “losses” and the CDS portfolio was not there.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Sixth, contrary to Mr Oudkerk QC’s submissions, I do not consider that the words relating to losses incurred by AIGTG: “by AIGTG resulting from transactions entered into on or after January 1, 2003” support the judge’s analysis that it follows that </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">“losses incurred” by AIGFP were limited to losses on the AIGFP transaction book. It seems to me that if the intention was to limit all these losses to losses on transactions, it would have been very easy to say so in terms at the time the AIGTG amendment was made in 2003. At best the words of the amendment are neutral. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Seventh, even if the judge were right that “losses” is somehow limited to transactional losses, it does not follow that the losses which AIGFP says are covered by this provision were not “transactional losses”. Thus, the interest liabilities of AIGFP to AIG have come about because the decision to close out all the transactions in Maiden Lane III leading to massive losses necessitated the bail-out facility so that, in a broad sense, the interest liabilities are transactional losses. Likewise the deductions from the DCA balances were made because of the massive losses on the transactions so that, in a broad sense again, any restoration obligation is also a transactional loss. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">83.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">At various stages of the hearing, all the members of the Court asked about the meaning of “market and credit reserves” but no detailed submissions were made by either side. We were told by Mr Oudkerk QC that there was no relevant expert evidence at trial, but he referred us to a passage in the witness statement of Mr Mark Balfan, the chief financial officer of AIGFP, from which it emerged that AIGFP had two lines of business, credit business which was mainly CDSs and market business which was non-credit derivatives and other financial transactions, including interest rate, foreign exchange and equity products. This demonstrates that the reserves being referred to in Section 4.01(b) related to all of AIGFP’s business not just its CDSs or the CDO Portfolio. That suggests that whatever else “losses” means, it is not limited to losses on credit derivatives as set out in Schedule 2 to the ERP.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">84.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In reaching the conclusion I have as to the meaning of losses, I have not considered it necessary to determine whether “current year income” is intended to be gross or net. However, if it were necessary to determine that issue, I prefer Lord Goldsmith QC’s submission that it is a gross figure. One of the difficulties with the contrary case that it is net is that, whilst Mr Oudkerk QC accepted that items such as rent and interest payments on loans would be deducted from gross income to arrive at the net figure, he of necessity (given the meaning of “losses” for which he contends) has to say that transactional losses are not deducted from the gross income. However, in accounting terms, if one were assessing the annual income of a company on a net basis, one of the debit items one would always deduct from gross income to arrive at net income would be trading or realised transactional losses. It follows that the respondents’ net “current year income” is a hybrid, not entirely net, which is an unlikely interpretation, suggesting that it is more likely to be assessed on a gross basis. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">85.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Accordingly, in my judgment Ground 2 of the appeal should be allowed. As Lord Goldsmith QC submitted, on that basis, the whole appeal succeeds since the respondents’ claim must fail for circuity, since the moment it is contended that a balance has to be restored, a new debt is created and the cost of restoration is itself a “loss” which, unless the company was in profit would lead to a further deduction. It follows that it is only when AIGFP has Distributable Income and is in profit again that there can be any obligation to make restoration.          </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">86.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Grounds 3 and 4 concern the restoration obligation in Section 4.01(b) and can really be considered together. In my judgment, it is important to have in mind that the amendment to bring in what the judge labelled as <span style="font-weight:bold">[5] </span>and <span style="font-weight:bold">[6] </span>was made in December </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">[2008]</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.50in">at a time when AIGFP had suffered massive losses and it was contemplated that it might take some years before the company was profitable again, if ever. It may be that, as Mr Oudkerk QC contended, the backstop date was included because without it the plan would have failed, with serious tax consequences under Section 409A of the Internal Revenue Code, but this does not affect what the amendment means on its correct construction. If, as the respondents contend, there was an unqualified obligation to restore the deducted balances irrespective of profitability, it is difficult to see why the backstop date would have needed to be set at five years distance rather than on, say, 31 December 2008. In my judgment, the correct construction of the amendment is that the company would have five years in which to turn itself around, but if, by 31 December 2013, it had not been possible to restore the balances because the company had not returned to profitability, any restoration rights permanently lapsed and that was an end of the matter. This is all wholly inconsistent with there being an unqualified obligation on AIGFP to make restoration notwithstanding that losses were continuing or to devise a plan with a schedule for repayment the moment the deduction was made, which is the construction the judge placed upon the provision. If that construction were correct, the amendment would make no sense, since the obligation to restore and to pay would have arisen when the deduction from balances was made in 2008 in the light of the massive losses and, on the judge’s construction would be an unqualified obligation, presumably to pay long before the end of 2013. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">87.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Furthermore, the fact that the provision contemplated that a plan should be adopted with a schedule which presumably, even before the 2008 amendment, would have set out dates for restoration and payment, seems to me to be inconsistent with the judge’s conclusion that there was an absolute obligation to make restoration and payment irrespective of whether the company had returned to profitability. If there was such an absolute obligation, why was it necessary to have a schedule at all? The provision for a schedule is far more consistent with AIGFP’s case, in other words it contemplates the plan setting out a schedule of when it is expected that restoration and, in turn, payment can be made, which is surely linked to when it is expected that the company will return to profitability in order to make restoration and payment. I am not sure Mr Oudkerk QC really had a satisfactory answer to this point when it was raised during the course of argument. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">88.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The words of the 2008 amendment: “Any such restoration plan shall provide that any restored amounts shall be paid in 2013” seem to me to contemplate first that there may not be a plan at all and second that there may not have been any amounts restored by the end of 2013. That latter point is borne out by the next phrase: “to the extent amounts have not been restored by December 31, 2013 all restoration rights shall permanently lapse” which contemplates that balances may not have been restored by 31 December 2013 and that, if they have not been, all restoration rights permanently lapse. There is no suggestion in any of this wording that failure to restore by 31 December 2013 was a breach by AIGFP of its unqualified obligation to restore and pay balances even though it remained loss-making, which would be the case if the judge’s construction were correct. It would be odd, to say the least, if AIGFP was in breach of contract for not having restored and paid balances by 31 December 2013, for the amendment not to say so in terms and even odder if, by reason of that breach, restoration had not occurred by that date but <span style="text-decoration:underline">all</span> restoration rights (my emphasis) permanently lapsed. The word “all” points to the rights that lapse being not just future rights but any accrued ones. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">89.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The judge’s analysis of the words: “to the extent amounts have not been restored by December 31, 2013 all restoration rights shall permanently lapse” at [103] of his judgment was that they “merely mean[s] that (absent further amendment of the DCP) matters will finally crystallise at the stated date.” However, that gives no weight at all to the clear reference not to rights crystallising but permanently lapsing.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">90.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Likewise, at [108(ix)] the judge said: “Any rights the Participants had to have balances restored, upon the foregoing interpretation of Section 4.01(b) applied to the facts, did not permanently lapse after 31 December 2013 under Section 4.01(b)[6]. Even if any such rights did then lapse, Participants would still be entitled in principle to claim damages for deductions wrongfully made or for failure to adopt a restoration plan when deductions were made.” The first sentence of that sub-paragraph of the judgment is simply flatly contrary to the clear words: “all restoration rights shall permanently lapse”. The suggestion, in the second sentence of that passage in the judgment, that a right would subsist to claim damages for deductions wrongfully made (by which the judge presumably means deductions made but not restored by 31 December 2013) is also inconsistent with <span style="text-decoration:underline">all</span> restoration rights permanently lapsing. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">On the judge’s analysis, restoration rights which had accrued before the cut-off date would continue to exist and not lapse, otherwise there would be nothing on which a right to claim damages could bite. Similarly, a right to claim damages for failure to adopt a restoration plan at the time when the deductions were made such as the judge contemplates would be inconsistent with the restoration rights having permanently lapsed, since if they had permanently lapsed, any claim could only be for nominal damages. The reality is that, for the reasons I have given, the wording of the 2008 amendment is inconsistent with the judge’s construction that a plan has to be drawn up when deductions are made (i.e. in 2008) and that balances deducted have to be actually restored and paid by 31 December 2013 at the latest. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">91.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In my judgment, the strength and finality of the provision that all restoration rights permanently lapsed to the extent that deducted amounts had not been restored by 31 December 2013, are not reduced by the point about Section 409A of the Internal Revenue Code. The fact that AIGFP had a discretion to amend the Plan for tax reasons which it did not exercise cannot detract from the finality of a permanent lapsing of restoration rights when the discretion has not been exercised. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">92.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">Contrary to Mr Oudkerk QC’s submissions, I do not consider that the part of the provision at <span style="font-weight:bold">[7] </span>dealing with what would happen in an insolvency helps his case. If, as he submitted, there were an absolute unqualified obligation to make restoration and payment irrespective of the fact that the company remained loss-making, then prior to any insolvency, on that case the respondents ranked at the same level as the unsubordinated creditors, and yet, if an insolvency occurred before any restoration and payment took place, the respondents would have an unsecured claim to recover the unrestored balances, but that claim is subordinated and junior to all other claims, it comes at the bottom of the queue. As David Richards LJ pointed out in the course of argument, if the judge is right, there is a mismatch in that normally a subordinated debt will remain subordinated whether the company is a going concern or in liquidation. If it is subordinated after the insolvency intervenes, that would suggest that it did not have some greater status prior to insolvency, which supports AIGFP’s analysis. The judge failed to deal with this issue of mismatch in [101] where he found that <span style="font-weight:bold">[7]</span> supported the respondents’ case.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">93.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">I can deal with the issue whether restoration of balances to AIG would be an unlawful distribution relatively shortly. I consider that Mr Oudkerk QC is correct that AIGFP should not be entitled to rely upon English law or some universal principle of the common law by default, in circumstances where the issue is clearly one governed by Delaware law since AIGFP is a Delaware corporation, but AIGFP chose not to adduce expert evidence of Delaware law on that issue, notwithstanding that it did on other issues. In <span style="font-style:italic">Tamil Nadu</span>, Cooke J summarised the principles (which he approved and applied) to be derived from <span style="font-style:italic">Fentiman: Foreign Law in English Courts. </span>At [99]-[100], Cooke J said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.04in;text-indent:0.00in">“99. It would not be right to allow this issue to be determined in the way that TNEB submits. The Order of Simon J referred to an agreed list of issues, of which this issue did not form part. The whole purpose of the list of issues, and of the order for expert evidence on Indian law, was for the parties to set out and prove their respective cases on Indian law on the defined issues. It would be wrong to subvert that, by allowing reliance on the presumption of similarity in law, when, as a result of its own actions or inactions, the Indian law evidence provided by TNEB, in accordance with the Court's case management order, did not cover the issue now sought to be raised. I was referred to Foreign Law in English Courts, by Richard Fentiman, at pages 60-64 and 143-153, from which the following propositions can, accurately, in my judgment, be garnered:  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">i)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.04in;text-indent:0.50in">There is no adequate support in the decided authorities for the principle that English law should govern by default, where foreign law is relied on by a party, who declines to, or is unable, to prove it. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">ii)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.04in;text-indent:0.50in">It would be wrong to allow the presumption to be used by a party where he pleads or wishes to rely on foreign law but declines to prove it. That would reward a person who alleges foreign law without proving it. The presumption is aimed at the situation where foreign law is neither pleaded nor proved and the parties and the court are to be taken as content to proceed on the basis of the presumption, since no one has sought to establish that there is any relevant difference.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">iii)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.04in;text-indent:0.50in">If the failure to prove foreign law by a party is the result of a tactical decision, after seeking to rely on it, reliance by that party may amount to an abuse of process, depending on the circumstances. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.05in;text-indent:0.00in">100. Here, TNEB has, by its own default failed to adduce evidence of Indian law on a point upon which it now wishes to rely. There can in those circumstances be no basis for relying on fresh Indian law evidence, nor putting in an Indian law statute as representing Indian law, whether in order directly to rely on it or in order to use it to show that the presumption is not invalid, and then to rely on the presumption that English law is the same. The mischief is obvious.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">94.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">In my judgment, those principles are equally applicable here. Since it is not open to AIGFP to contend that English law or some universal principle of the common law should apply to this issue and there is no evidence of Delaware law on it, I propose to say no more about the issue of unlawful distribution. Given my conclusion on other issues, it would not in any event have been determinative of the appeal.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">95.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The relevant provisions of the DCP have to be read together. They are: (i) the words of the preamble quoted at [7] and [8] above; (ii) the deduction provision: “reduction, from time to time, to the extent of any losses incurred… which losses… for any year in the aggregate exceed the outstanding market and credit reserves and current year income of AIGFP” where “losses” for the reasons I have set out above is not limited in the way which the judge considered; (iii) the words in <span style="font-weight:bold">[3] </span>and <span style="font-weight:bold">[4]</span> including the word “subsequently” and (iv) the 2008 amendment which I have just been considering. In my judgment, when these provisions are read together they provide a coherent scheme. There will only be an obligation to restore balances deducted because of losses if and when the company is once again profit-making so that there is Distributable Income from which to restore balances. The 2008 amendment, made at a time when the company had suffered massive losses, contemplated a five year period in which it was hoped that its fortunes would turn around enabling deductions to be restored, but if the company did not make any Distributable Income in that five year period and remained loss-making, there would be no restoration and any rights to restoration permanently lapsed at 31 December 2013. Contrary to Mr Oudkerk QC’s submissions, none of that analysis requires any reading of words into the DCP. It is the appropriate interpretation of the express provisions to which I have referred when they are read together.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">96.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">As noted above, Lord Goldsmith QC argued that the obligation to adopt a plan did not itself arise until the company was once again profit-making, so that in the present case, the obligation to adopt a plan never arose at all. The only possible interpretation of <span style="font-weight:bold">[4]</span> (as Lord Goldsmith QC accepted) is that AIGFP was under an obligation to adopt a forward-looking plan with a schedule for when it was anticipated restoration could be made which also provided that it was anticipated that payments would be made in 2013 and that it was under the obligation to adopt such a forward-looking plan, even though the company remained loss-making at the time the plan was adopted. Of course the board of AIGFP did not do this. However, it is not necessary to decide this point, because even if AIGFP had adopted some forward-looking plan setting out when it hoped to make restoration and payment, it could not be under any obligation actually to make restoration, let alone payment, unless it had returned to profitability in the relevant Compensation Year. Since it never did so, the failure to adopt a plan or a schedule cannot be said to have caused the respondents any loss and damage. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">97.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">The conclusion that, on the true construction of the DCP, there would only be an obligation to restore balances deducted because of losses if and when the company is once again profit-making so that there is Distributable Income from which to restore balances, is unaffected by the judge’s rejection of AIGFP’s case at trial that losses </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in;text-indent:0.00in">could be carried forward in the sense of imposing massive negative balances on the Participants. Contrary to Mr Oudkerk QC’s submission, this is not a fundamental point. As Patten LJ and I pointed out during the course of argument, a massive loss was suffered during the course of 2008 which wiped out the existing bonus entitlement and, although the judge had held AIGFP could not go below zero and say that there were negative balances on the Bonus Pool going forward, the fact remains that, in every subsequent year, (irrespective of any carrying forward of negative balances) there were no profits whatsoever in that particular year which would have created any bonus entitlement or which could have given rise to any obligation to restore balances. Mr Oudkerk QC sought to say the position was more nuanced because in subsequent years, at least US$6 million was paid out under the plans. This was a false point. The payments made were of interest on accrued balances, not in any sense restoration of balances deducted and there were no profits in subsequent years such as could have given rise to an obligation to restore.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">98.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">For all these reasons, I consider that the appeal succeeds on Grounds 3 and 4 as well as Ground 2 and should thus be allowed overall. <span style="font-weight:bold">Lord Justice David Richards </span></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">99.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.04in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:4.58in;text-indent:-0.01in"><span style="font-weight:bold">Lord Justice Patten </span>100.<span style="font-family:Arial"> </span><marker name="tab"/>I also agree.  </p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

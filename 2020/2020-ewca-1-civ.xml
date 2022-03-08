@@ -1,0 +1,1677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1"/>
+	  <FRBRuri value="ewca/civ/2020/1"/>
+	  <FRBRdate date="2020-01-21" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1"/>
+	  <FRBRname value="British Telecommunications PLC, R (On the Application Of) v Treasury"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1/eng"/>
+	  <FRBRdate date="2020-01-21" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:11:34" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="r-on-the-application-of-british" href="" showAs="R (on the application of BRITISH"/>
+	<TLCPerson eId="telecommunications-plc" href="" showAs="TELECOMMUNICATIONS PLC)"/>
+	<TLCRole eId="appellant" href="" showAs="Appellant"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1</uk:number>
+	<uk:cite>[2020] EWCA Civ 1</uk:cite>
+	<uk:hash>64f519b51f268aa5e067ee53aaa26c23ae0b1da217ff2d76c233e9a15ceb0bb9</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 2.65in; margin-right: 2.15in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading3 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading3Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case No: <docketNumber>C1/2018/2925</docketNumber></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">QUEEN’S BENCH DIVISION</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Administrative Court</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Hamblen LJ and Whipple J</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<neutralCitation style="font-weight:bold;text-decoration:underline">[2018] EWHC 3251 (Admin)</neutralCitation>
+      </p>
+      <p style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Royal Courts of Justice</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Date: <docDate date="2020-01-21">21/01/2020</docDate></p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:1.16in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">Before : </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.20in;margin-right:0.00in;text-indent:0.00in">
+	      <span> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:1.97in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">THE MASTER OF THE ROLLS</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LORD JUSTICE HENDERSON</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.16in;margin-right:0.00in;text-indent:0.00in">and<span style="font-weight:bold"> </span></p>
+	    <p style="text-align:left;margin-left:1.68in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LADY JUSTICE NICOLA DAVIES DBE</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.18in;margin-right:0.00in;text-indent:0.00in">- - - - - - - - - - - - - - - - - - - - - </p>
+	    <p style="text-align:center;margin-left:1.17in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">Between : </span>
+	    </p>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#r-on-the-application-of-british" as="#appellant" style="font-weight:bold">R (on the application of BRITISH </party>
+	    </p>
+	    <p style="text-align:left;margin-left:1.86in;margin-right:0.00in;text-indent:0.00in">
+	      <party refersTo="#telecommunications-plc" as="#appellant" style="font-weight:bold">TELECOMMUNICATIONS PLC) </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.30in;margin-right:0.00in;text-indent:0.00in">
+	      <role refersTo="#appellant">
+		<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+		<span style="font-weight:bold"> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">- and - </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">HER MAJESTY’S TREASURY </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.08in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">-and- </span>
+	    </p>
+	    <p style="text-align:left;margin-left:1.39in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">BT PENSION SCHEME TRUSTEES LIMITED </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.05in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">Respondent</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:center;margin-left:0.21in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.09in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">Intervener</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.27in;margin-right:1.20in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Dinah Rose QC</span>, <span style="font-weight:bold">Fraser Campbell</span> and <span style="font-weight:bold">Celia Rooney</span> (instructed by <span style="font-weight:bold">CMS Cameron </span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">McKenna Nabarro Olswang LLP</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Marie Demetriou QC</span>, <span style="font-weight:bold">Tim Johnston</span> and <span style="font-weight:bold">Patrick Halliday </span>(instructed by<span style="font-weight:bold"> the Government Legal Department</span>) for the <span style="font-weight:bold">Respondent </span></p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Jonathan Hilliard QC</span> and <span style="font-weight:bold">Iain Steele</span> (instructed by <span style="font-weight:bold">Allen &amp; Overy LLP</span>) for the <span style="font-weight:bold">Intervener </span></p>
+      <p style="text-align:center;margin-left:0.21in;margin-right:0.24in;text-indent:-0.01in">Hearing dates : 11 &amp; 12 December 2019 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.27in;margin-right:1.20in">- - - - - - - - - - - - - - - - - - - -</p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Judgment Approved</span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Sir Terence Etherton MR, Lord Justice Henderson and Lady Justice Nicola Davies DBE : </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">1.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">This is an appeal by British Telecommunications plc (“BT”) from the order dated 28 November 2018 of Hamblen LJ (as he then was) and Whipple J, sitting as a </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:0.00in">Divisional Court of the Queen’s Bench Division (“the Divisional Court”), dismissing BT’s claim for judicial review of the decision of Her Majesty’s Treasury to implement full indexation of the guaranteed minimum pension (“GMP”) payable to members of public service pension schemes (including the Principal Civil Service Pension Scheme (“the PCSPS”)) who reach State pension age between December 2018 and April 2021. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">2.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The decision was given effect by a direction under section 59A of the Social Security Pensions Act 1975 (“SSPA 1975”). The effect of rule 10.2 of Section B of the BT Pension Scheme (“the BTPS”), which is the largest private sector funded occupational scheme in the country, was that the indexation for relevant members of the PCSPS (a pension scheme for civil servants) was carried across to relevant members of Section B of the BTPS (a private occupational pension scheme). The origins of rule 10.2 can be traced back to the separation of the Post Office from the rest of the civil service, well before the telecommunications business of the Post Office was moved to a new statutory corporation, British Telecommunications, whose business was privatised in 1984, when its assets and liabilities were transferred to BT. BT says that the Treasury’s decision for public service pensions will increase BT’s liabilities under the BTPS by approximately £120 million, unlike any of its competitors, even though that was not the intention behind the direction under section 59A. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">3.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">BT’s complaint is that the Treasury could and should have implemented indexation for members of the PCSPS in a way that would have avoided the knock-on effect of benefiting members of the BTPS under rule 10.2 of Section B of the BTPS. BT says that could have been done in one of various ways that had been suggested to the Treasury by BT. BT further contends that the reasons why the Treasury rejected BT’s suggestions were based on misunderstandings of the law, both in relation to the vires of the Government to do what BT suggested and as to whether the BTPS Section B members have a legitimate expectation, amounting to a property right protected by Article 1 of the First Protocol to the European Convention for the Protection of Human Rights and Fundamental Freedoms (“A1P1”), that they will enjoy the same pension increases as are granted in the public sector under the various statutory provisions mentioned in rule 10.2, namely the Pensions (Increase) Act 1971 (“PIA 1971”) and SSPA 1975 sections 59 and 59A (together “the Increases Legislation”). </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Statutory and factual background </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">4.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">As will be seen from the Discussion section of this judgment, the outcome of this appeal turns on the validity of two findings of fact made by the Divisional Court. For the reasons we set out there, we conclude that the Divisional Court was entitled to make those findings of fact and, accordingly, the appeal is dismissed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">5.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The judgment of the Divisional Court sets out the statutory and factual background in very great detail over 85 paragraphs and 28 pages. In view of our decision on the two issues of fact, we do not consider it is necessary or appropriate for us to set out the background in the same extensive way. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">6.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Divisional Court explained the statutory background to the GMP, increases to GMPs, statutory increases to public service pensions, the abolition of the additional State pension and the statutory framework for the PCSPS in [7]-[26] of their judgment, based upon a note agreed by the parties. That part of the Divisional Court’s judgment is reproduced in the annex to our judgment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">7.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">By virtue of rule 10.2 of Section B of the BTPS the effect of the decision of the Treasury was to increase pre-May 1988 GMP of BTPS Section B members. So far as concerns their post-April 1988 GMP, any future increases under the Increases Legislation providing for indexation above the 3% required by section 109 of the Pension Schemes Act 1993 will also carry across to BTPS Section B members. Rule 10.2 is the only provision in Section B of the BTPS providing for increases in GMP. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">8.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">So far as concerns the factual background, this was set out by the Divisional Court in [27] – [86] of their judgment. Reference should be made to that part of the Divisional Court’s judgment for a full account of the facts which lie behind this litigation.  We shall confine ourselves to the following very brief account, some of which we gratefully take directly from the Divisional Court’s judgment. Some of the documents to which we refer are addressed, summarised and quoted in greater detail in the Discussion section below. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">9.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">Following the abolition of the additional pension and the introduction of the new State pension, on 4 September 2015 there was a ministerial submission which proposed an interim solution providing all public service pensioners reaching State pension age between April 2016 and November 2018 with full indexation of the GMP portion of their pension.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">10.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">Around that time BT raised its concerns about the potential read across impact on the BTPS.  Following initial correspondence there was a meeting on 3 February 2016.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">On 11 February 2016 BT’s Pensions Risk Director, Mr Paul Rogers, wrote to the Treasury setting out the impact that any ministerial direction would have in respect of the BTPS.  The letter proposed alternatives to such a direction, such as the State continuing to meet GMP increases for public sector scheme members outside of the PCSPS framework or introducing a statutory override for private sector schemes.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">11.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">On 1 March 2016 the Government announced the interim solution of fully indexing the GMP of public sector workers reaching State pension age on or after 6 April 2016 and before 6 December 2018.  The Government said that it expected to launch a consultation on how best to address the implications of changes resulting from the introduction of the new State pension. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">12.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">On 8 March 2016 the then chairman of the BT Group, Sir Michael Rake, wrote to the Treasury regarding that announcement. He explained that, if implemented by way of a ministerial direction (under section 59A), this would substantially increase BT’s liabilities in respect of the BTPS.  He requested the Treasury to consider making the change not by ministerial direction, but by another way such as a change to the rules of the PCSPS or the State continuing to pay the increases directly.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">13.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">On 17 March 2016 there was a submission by Officials to the Chief Secretary in relation to BT’s proposals. On 21 March 2016 there was a meeting between the Treasury and BT. Following the meeting the Treasury sent an email to BT explaining </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">why the Treasury considered that the option of amending the rules of the PCSPS was not feasible. Following further emails from BT, on 24 March 2016 the Chief Secretary and the Minister for Pensions replied to Sir Michael Rake’s letter of 8 March 2016. The letter stated that Treasury officials had given BT reasons why the proposals in the letter could not be taken forward. It also stated that an option would be for the issue of the impact on schemes like that of BT to be included in the government’s consultation on the long-term solution to GMP indexation and equalisation for public servants. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">14.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The interim solution announced by the Government on 1 March 2016 was achieved by issuing a direction on 6 April 2016 under SSPA 1975 s.59A to ‘switch back on’ the indexation otherwise ‘switched off’ by section 59(5). BT says that, by virtue of rule 10.2 of Section B of the BTPS, the effect of the direction was to increase BT’s liabilities by around £200 million. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">15.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">On 28 November 2016 the Treasury published its consultation, inviting responses on the question of whether public service pension schemes should pay full indexation on GMP, earned while a member of a public service pension scheme, for someone who reaches State pension age after 5 December 2018. Three specific options being considered, upon which the Treasury sought responses, were: (1) full indexation; (2) a case-by-case option, under which consideration of the need for “top up” indexation for public sector pensioners would be considered on a case by case basis; and (3) a conversion option, under which the GMP elements of a public sector pension would be converted into ordinary scheme benefits.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">16.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The consultation made clear that the Government would be interested in views on solutions other than the three identified options. The consultation also said it was keen to hear from those private sector organisations whose pension schemes would be impacted by any of those policy options, as well as from representatives of their scheme members and from their pension fund trustees. It invited responses from them as to what specific actions they felt the Government could take to avoid direct implications for their pension schemes. The consultation set out five questions on those matters. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">17.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">BT responded to the consultation on 20 February 2017. BT’s response put forward three steps which the Government could take to avoid the “unintended consequences” for BT. They were expressed to be: (1) the introduction into legislation of a “statutory override”, being a unilateral employer statutory modification power to address additional GMP increases; and either (2) full indexation through (i) an Act of Parliament, other than the Increases Legislation, or (ii) an amendment of the rules of, specifically,  the PCSPS; or (3) converting GMPs into “normal” scheme pension and revoking the ministerial direction which had been used to implement full indexation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">18.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">There was a submission by Officials to the Chief Secretary on 19 October 2017 recommending that it be agreed in principle to respond to the consultation by extending the interim solution for a further two years and use the intervening time to investigate the Treasury’s preferred option of conversion in more detail. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">19.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">By an email dated 27 October 2017 Officials confirmed that the Chief Secretary agreed with the recommendation in the October submission. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">20.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">In a further submission by Officials to the Chief Secretary dated 23 November 2017 it was recommended that there be confirmation of the intention to extend the interim solution for a further two years. BT’s position was considered but Officials recommended against exempting BT or any other scheme. In an email of 27 November 2017 the Chief Secretary agreed to the recommendations and specifically not to legislate to change the rules of some affected private sector schemes by removing or enabling the removal of their obligations to index pensions in accordance with the Increases Legislation.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">21.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Chief Secretary then sought clearance from the Chancellor. The Chancellor’s private office requested a short summary of the decision taken by the Chief Secretary. An email summary was provided to the Chancellor on 8 December 2017. Part of that email was initially redacted in this litigation on the grounds of legal professional privilege. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">22.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">On 12 December 2017 the Chancellor’s private office indicated that he was content with the approach.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">23.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Treasury’s formal response to the consultation was published in January 2018. In it the Treasury announced its decision to extend the interim solution to cover persons in public service pension schemes reaching State pension age between 6 December 2018 and 5 April 2021. The Executive Summary stated that the outcome of the consultation was that the interim solution would be extended for a further two years and four months and that during that period the Government would investigate the possibility of conversion as an alternative, long-term methodology. BT’s position was considered. The consultation response said that the Government believed that it would not be appropriate to act in a way that would deprive members of indexation, to which they would otherwise be entitled. It said that acting to do so would also raise legal questions, including whether there was a legitimate aim to justify such an interference in the property rights of scheme members; and, in addition, some of the mechanisms suggested by BT to avoid the read across from public service schemes to BT’s private sector scheme were outside the scope of the Government’s statutory powers.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">24.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">On 31 January 2018 BT emailed the Treasury seeking further explanation of the reasons for its conclusion that it should not adopt BT’s request. The Treasury replied by letter dated 14 February 2018. It said that all BT’s proposals would involve the Government acting against scheme members’ interests and that the Government believed that it would not be appropriate to act in a way that would deprive members of indexation to which they would otherwise be entitled. It added that there would, in addition, be legal issues as to whether the high legal bar to removing property rights of members was met and that there would be a significant risk of a legal challenge were the Government to craft a policy which interfered with members’ rights. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">The proceedings </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">25.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">BT issued its claim form in these proceedings on 19 April 2018. The claim, as issued, was expressed to be for judicial review of the Treasury’s “decision to implement an extension of the provision of full indexation of GMP benefits in public sector schemes, for those who reach State pension age between 06/12/18 and 05/04/21, by ministerial direction under s.59A SSPA 1975, and s.59A SSPA 1975.”  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">26.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">On 8 May 2018 Ouseley J adjourned BT’s application to be listed as a rolled-up hearing. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">27.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">Shortly before that hearing the redaction was removed from the 8 December 2017 email summary for the Chancellor. The Treasury accepted that the previously redacted part contained an inaccurate summary of the legal advice before the Chief Secretary. It was decided that the inaccuracy should be drawn to the attention of the Chancellor and that he should be asked if he still agreed with the decision. Following a submission by Officials for the Chancellor, the Chancellor’s private office communicated on 1 November 2018 that he maintained the decision. BT then amended its claim grounds so as to contend that the 1 November 2018 decision was unlawful on the same grounds as the earlier decision and for additional reasons. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">28.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The claim grounds, as amended, were: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">Ground 1: The supposed property rights of BTPS members. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.84in;text-indent:0.00in">Ground 1A: Implementing indexation by way of an amendment to the PCSPS would not have been <span style="font-style:italic">ultra vires</span>. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">Ground <marker name="tab"/>2: <marker name="tab"/>Irrationality <marker name="tab"/>and <marker name="tab"/>disproportionality <marker name="tab"/>- <marker name="tab"/>the rejection/postponement of the conversion option. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">Ground <marker name="tab"/>3: <marker name="tab"/>Irrationality <marker name="tab"/>and <marker name="tab"/>disproportionality <marker name="tab"/>- <marker name="tab"/>the rejection/postponement of the case-by-case option. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">Ground 4: The November 2018 decision. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">29.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">BT Pension Scheme Trustees Limited, the trustee of the BTPS, was joined to the proceedings as an intervener. It was agreed that the trustee would take a wholly neutral position in the proceedings and would simply provide neutral assistance to the Court.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">30.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">It was also agreed that the question whether or not, as a matter of the proper interpretation of the Section B rules of the BTPS, indexation paid on PCSPS pensions otherwise than pursuant to the Increases Legislation (for example, if indexation was prescribed by amended rules of the PCSPS itself) would have a read across impact to Section B members of the BTPS, would not be resolved in these proceedings, in the absence of participation by BTPS members. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">31.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">In addition to the documents there were various witness statements. For BT there were two statements from Mr Paul Rogers, BT’s Director of Pension Risk; for the Treasury, there were four statements from Mr Paul Kirk, Head of the Treasury’s Public Service Pensions Branch, and one statement from Mr Peter Spain, the Head of the Civil Service Pensions Technical team in the Cabinet Office; and for BTPS, there was one statement from Mr Paul Spencer, chairman of the trustee of the BTPS. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">The Divisional Court’s judgment </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">32.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Divisional Court handed down its judgment on 28 November 2018. The judgment is lengthy, comprehensive, detailed and meticulous. With no disrespect intended to the Divisional Court, it is sufficient for us to refer to its analysis and conclusions only very briefly. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">33.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">Permission to apply for judicial review was granted on Grounds 1 and 1A only.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">34.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">In the light of the grounds of appeal and the way the matter was argued before us, it is not necessary for us to recount the Divisional Court’s analysis in relation to Grounds 2, 3 and 4. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">35.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Divisional Court took Grounds 1 and 1A together. The court described (at [109]) </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">BT’s core case on those two grounds, as developed orally at the hearing, as being that the PCSPS amendment route (which the Divisional Court called the PCSPS workaround) provided a free-standing and workable option, which did not interfere with BTPS members’ property rights and which was capable of being implemented by the Treasury, and that in failing to recognise it as such, the Treasury erred in law and/or acted irrationally and/or discriminated against BT, such that the decision should be set aside and re-taken adopting a legally correct approach to the PCSPS workaround. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">36.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Divisional Court found (at [118]) that it was clear from BT’s consultation submission, considered a whole, that the statutory override was put forward as a necessary element of BT’s alternative options, and (at [119]) that amending the PCSPS as a stand-alone option was never put forward, expressly or impliedly. The Divisional Court further found (at [120]) that the PCSPS workaround was put forward by BT as a stand-alone option (without the necessity of the accompanying statutory override) for the first time in BT’s pre-action protocol letter, by which time the decision under challenge had already been taken. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">37.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Divisional Court rejected (at [121]-[123]) BT’s submission that, irrespective of what BT had said in its consultation response, the Treasury did in fact understand that BT was putting forward the PCSPS workaround as a free-standing alternative. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">38.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Divisional Court also accepted the Treasury’s case that BT’s proposals were rejected on policy grounds, regardless of the legal issues raised. The Court said (at [129]) that, giving a fair reading to the Treasury’s consultation response and the November 2017 submission which led to it, with which the Chief Secretary agreed, the policy reasons for refusing to implement the PCSPS workaround were both separate from the concerns about interference with legal rights of BTPS members and provided the central plank in the Treasury’s rejection of the PCSPS workaround.  The other points made, about interference with rights and acting outside the scope of the Treasury’s powers, were additional. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">39.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Divisional Court said (at [130]) that the following very obvious policy issues were facing the Government regardless of whether BTPS members’ property rights were involved, and those were a free-standing basis for the decision reached.  Whether or not there was a need to legislate, BT was asking the Government to “craft” a solution to suit its private interests.  If the Government did so, the consequence would be that Section B members would not get the pension benefits which they would otherwise obtain.  The savings in pension payments which BT would achieve through crafting a solution to suit BT would necessarily be matched by the loss to Section B members of an equivalent amount in pension benefits. There was </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">a clear risk that the Government would be seen as preferring the interests of BT over its Section B members, a risk which would be liable to give rise to questions by Section B Scheme members, unions, Parliament, press and the public. The Divisional Court said (at [131]) that those policy concerns were reflected in the consultation itself. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">40.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">Further, the Divisional Court held (at [156]) that there is no legal power under the Superannuation Act 1972 (“SAA 1972”), which conferred a general power to establish public service pension schemes and to make rules by which they are governed, to amend the PCSPS rules to provide indexation increases for which special, bespoke powers were conferred by the Increases Legislation, particularly SSPA 1975 ss. 59 and 59A. The Divisional Court said (at [156(6)]) that the obvious intent of Parliament was that it was the Increases Legislation, and that legislation only, that should be used for increases to official pensions to allow for inflation. They said that it was not necessary to resort to canons of construction to arrive at that conclusion. It was, however, further supported by the principle of <span style="font-style:italic;color:#00000A">generalia specialibus non derogant</span><span style="font-family:'Courier New';color:#00000A">, </span><span style="color:#00000A">which was summarised by </span><span style="font-style:italic;color:#00000A">Bennion on Statutory Interpretation </span><span style="color:#00000A">(6</span><span style="vertical-align:super;font-size:smaller;color:#00000A">th</span><span style="color:#00000A"> ed.) at Section 88, where the following passage is cited from the judgment of the Earl of Selborne LC in </span><span style="font-style:italic;color:#00000A">The Vera Cruz </span><span style="color:#00000A">(1884) 10 App Cas 59 at p. 68:</span></p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">
+	      <span style="color:#00000A">"Where there are general words in a later Act</span>
+	      <span> </span>
+	      <span style="color:#00000A">capable of reasonable and sensible application, without extending them to subjects specifically dealt with by</span>
+	      <span>  </span>
+	      <span style="color:#00000A">earlier legislation, you are not to hold that earlier</span>
+	      <span> </span>
+	      <span style="color:#00000A">and special legislation indirectly repealed, altered or</span>
+	      <span> </span>
+	      <span style="color:#00000A">derogated from merely by force of such general words</span>
+	      <span> </span>
+	      <span style="color:#00000A">without any indication of a particular intention to do</span>
+	      <span> </span>
+	      <span style="color:#00000A">so." </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">41.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">The Divisional Court also accepted (at [168]) the Treasury’s submission that there was no legal power under SAA 1972 to amend the PCSPS rules to provide indexation because that would be using statutory powers for a private, collateral purpose. The Court referred (at [158] – [161]) to the well established principle that statutory powers can only be used for the purpose for which they were conferred and not for some other purpose, including conferring private, collateral benefits upon third parties. The court said (at [163]) that in the present case BT was seeking the exercise of the general powers under SAA 1972 (to make and administer public service pension schemes) in order to pay indexation on GMP otherwise than by means of the Increases Legislation, not in the interests of civil service pensioners, but in the interests of BT in order to avoid it incurring a pension liability to its Section B members; and so compliance with BT’s request would entail using public powers conferred in relation to public service pension schemes in order to affect the provision of benefits under private pension schemes, and to do so to serve the financial interests of BT, in short to save BT money. They said that would appear to be a clear example of using statutory powers for a collateral purpose. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">42.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">Finally, the Divisional Court accepted the Treasury’s fifth answer to BT’s case on Grounds 1 and 1A, namely that the PCSPS workaround would have interfered with Section B members’ property rights protected by A1P1, even if there was no statutory override. The basis for that conclusion was, firstly (as stated at [178]), that the obvious assumption underlying rule 10.2 is that indexation would be effected using the Increases Legislation and that in that way the Section B members would benefit </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">“as if” their pension was payable under the PCSPS; and, secondly (as stated at [179]), that the invariable administrative practice had been to use the Increases Legislation for indexation increases. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">43.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">For all those reasons, as well as rejecting (at [186]-[188]) BT’s arguments that the decision to impose the interim solution was arbitrary, discriminatory, disproportionate, irrational or inadequately reasoned, the Divisional Court concluded (at [189]) that Grounds 1 and 1A failed.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">The appeal </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.54in;text-indent:-0.54in">44.</num>
+	  <content>
+	    <p style="margin-left:0.54in;margin-right:0.00in">BT was granted permission to appeal on the following five grounds. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">1.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Divisional Court erred in finding that BT had not presented the PCSPS amendment route as a stand-alone option, in responding to the consultation, but had presented the statutory override as a “necessary element” of each of its proposals; and that Treasury Officials had reasonably understood this to be the case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">2.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Divisional Court erred in finding that the Treasury had rejected the PCSPS amendment route for policy reasons that were separate and severable from its concerns about property rights, and were the central reason for the January 2018 decision, and were sufficient to support a lawful decision whether or not there was in fact any interference with property rights. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">3.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Divisional Court erred in law in concluding that there was no power under SAA 1972 ss. 1 and 2 to amend the PCSPS so as to provide for increases in pensions in payment to uprate them for inflation, and that the Increases Legislation contain the exclusive regime for increases on public sector pensions.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">4.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Divisional Court erred in law in finding that it would have been improper and accordingly unlawful for the Treasury to adopt the PCSPS amendment route because this would have involved a use of a power for a collateral purpose, namely the use of public powers conferred in public service pension schemes to serve the financial interests of BT. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">5.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Divisional Court erred in law in finding that the adoption of the PCSPS amendment route would interfere with the property rights of Section B members of the BTPS under A1P1. In particular, the Court erred in law in concluding, based solely on what it asserted to be invariable prior administrative practice, that such members had a legitimate expectation that any indexation of the PCSPS would be given effect through the Increases Legislation. The Court further erred in rejecting BT’s submission that, in any event, the effect of the 2016 direction and the consultation process was to destroy any prior legitimate expectation. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.30in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Discussion </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="text-align:center;margin-left:0.27in;text-indent:0.00in">Appeal Ground 1: The PCSPS amendment route as a stand-alone proposal</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">The conclusion of the Divisional Court that the statutory override was put forward as a necessary element of BT’s alternative options, and that BT did not put forward the PCSPS amendment route as a stand-alone option until BT’s preaction protocol letter, were findings of fact. We can only overturn a finding of fact if we conclude that it was wrong: CPR 52.21(3). As is normally the position, this appeal is a review and not a re-hearing: CPR 52.21(1). The meaning of “wrong” in this context has been expressed in different ways.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">In <span style="font-style:italic">Henderson v Foxworth Investments Ltd</span> [2014] UKSC 41, [2014] 1 WLR 2600, the test was said (at [62]) to be whether the decision under appeal was one that no reasonable judge could have reached, and (at [66]) whether the decision of the judge cannot reasonably be explained or justified. In <span style="font-style:italic">Volcafe Ltd v Cia Sud America de Vapores SA</span> [2018] UKSC 61, [2019] AC 358, (at [41]) it was said to be whether the trial judge fundamentally misunderstood the issue or the evidence, or plainly failed to take the evidence into account, or arrived at a conclusion which the evidence could not on any view support. In <span style="font-style:italic">Smech Properties Ltd v Runnymede Borough Council</span> [2016] EWCA Civ 42, on an appeal in judicial review proceedings, Sales LJ (as he then was), with whom the two other members of the Court of Appeal agreed, said (at [27]) that the question was whether the first instance judge had legitimate and proper grounds for reaching the decision she did. He said (at [29]) that, where an appeal proceeds by way of review rather than a re-hearing, it will often be appropriate for the Court of Appeal to give weight to the assessments of the facts made by the judge below, even where that assessment has been made on the basis of written evidence which is also available on the appeal; and that, even if the Court of Appeal might disagree if it approached the matter afresh for itself on a re-hearing, it did not follow that the judge lacked legitimate and proper grounds for making her own assessment and hence it did not follow that it could be said that her decision was “wrong”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">We consider that there is no difference of substance between those different ways of explaining the approach of an appeal court in deciding whether or not a finding of fact by a trial judge was “wrong” for the purposes of CPR 52.21(3)(a) on a review. We consider it is convenient to use Sales LJ’s approach of asking whether the Divisional Court had legitimate and proper grounds for reaching the findings of fact which are challenged on this appeal under Appeal Ground 1 and Appeal Ground 2. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Ms Rose submitted that (1) the only permissible conclusion on the evidence is that BT was suggesting the PCSPS amendment route should be adopted whether or not the statutory override was also adopted; (2) in any event, the Government understood that is what BT was proposing. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">As to (1), she emphasised the following evidential material. In his letter dated 8 </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">March 2016 to the Chief Secretary to the Treasury and the Pensions Minister, Sir Mike Rake, the chairman of BT, said that government policy was to change the way increases to GMP were currently working, confining the increase to public sector schemes, and ceasing arrangements whereby government supported such increases for private sector schemes. He requested that the recipients of the letter consider making a change to the rules of the PCSPS. There was no mention in that letter of a statutory override. As it happened, the interim decision had already been made. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">An email from BT to the Treasury on 9 March 2016 attached a note of a consultation between BT’s solicitors and leading counsel. The final paragraph of that note said that it was understood that the Treasury’s policy objective was to require additional GMP increases to be paid under the PCSPS (and on other official pensions) but that private sector schemes would not be required to provide those pension increases. The note recorded that, in counsel’s view, the only way of achieving that objective “before the 6 April ‘deadline’” would be to amend the rules of the PCSPS directly, rather than by changing the Increases Legislation or issuing a further ministerial direction under section 59A. Again, there was no reference in the email or the note to a statutory override. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">An email from BT to the Treasury dated 22 March 2016 said that BT had considered the amendment option further with its solicitors, Freshfields Bruckhaus Deringer LLP (“Freshfields”) and that BT remained of the view that the option was feasible from a legal perspective. There was no reference to a statutory override. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">The Government’s consultation on indexation and equalisation of GMP in public service pension schemes was published on 28 November 2016. In paragraph 4.2 it was stated that “the government recognises that, for some private sector organisations and wider public sector organisations, the way any [of the Government’s] policy options are implemented is relevant in determining whether it would impact on their pension scheme”. It said that the Government was keen to hear from such organisations and representatives of their scheme members and pension fund trustees, and that it wished to understand how their rules aligned to those of the public service pension schemes; whether the Government should take action to avoid a read across, and if so what specific actions they felt the Government could take to avoid direct implications for their pension schemes, including which policy options would be expected to directly require changes to such schemes. There then followed five specific questions relating to those issues, as follows: Question 12: “How could the delivery of any of the policies in the consultation impact wider public sector or private sector schemes who are not ‘official pensions’ under the PIA 1971”; Question 13: “If wider public sector or private sector schemes who are not ‘official pensions’ are impacted by any policy set out in the consultation, why were the pensions designed to mirror official pensions originally”; Question 14: “Should the government take action to avoid any read across between private sector schemes and any policy announced”; Question 15: “Are there actions the government could take to restrict the impact on wider public sector or private sector pension schemes who are not ‘official pensions’ under the PIA”; Question 16: “Why </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">should government allow for members of schemes whose rules mimic/mirror those in the public services, to be deprived of the benefit of those rules?” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">BT’s response to the consultation was contained in a lengthy and very detailed letter dated 20 February 2017, the annex to which was prepared by Freshfields. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">Paragraph 1.11 was as follows; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in"> “1.11 In order to prevent substantial, unnecessary and unjustified costs arising in respect of private sector employers, we request that HMT makes certain adjustments to its proposals:  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.57in;text-indent:-0.57in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.57in;margin-right:0.74in">introducing into legislation a unilateral employer statutory modification power, which is subject to an employer consultation requirement, to address additional GMP increases (a “Statutory Override”) (see paragraphs 3.2(c)-(d) below, and either  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.57in;text-indent:-0.57in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.57in;margin-right:0.74in">implementing full indexation (or the case by case option) through:  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.92in;text-indent:-0.39in">(i)</num>
+	  <content>
+	    <p style="margin-left:1.92in;margin-right:0.00in">an Act of Parliament other than the Increases Legislation (as defined in paragraph 2.8 below); or    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.92in;text-indent:-0.39in">(ii)</num>
+	  <content>
+	    <p style="margin-left:1.92in;margin-right:0.00in">an amendment to the rules of, specifically, the Principal Civil </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.97in;margin-right:0.00in;text-indent:0.00in">Service Pension Scheme (“PCSPS”) (see paragraph 3.2(b) below); or  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.58in;margin-right:1.01in;text-indent:-0.39in">(c) converting GMPs into ‘normal’ scheme pension and revoking the ministerial direction which has been used to implement a full indexation requirement (see paragraph 3.3 below).”   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">There then followed specific responses to Questions 12-16 in the consultation. In response to Question 12, BT said at paragraph 3.2(b) that, if continued full indexation was implemented through an Act of Parliament other than the Increases Legislation, its view was that the BTPS Section B pensions increase rule would not be triggered and, in a similar vein, implementing continued full indexation through a PCSPS rule amendment, rather than via legislation, would also avoid the unintended BTPS Section B impact. Paragraph 3.2(c) then said as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“(c) That said, the legal analysis is likely to be complex and there could be differing views on how the Section B pension increase rule should be interpreted (with the potential need for clarificatory Court proceedings).  This approach may also not ‘work’ for other affected private sector schemes, depending on their scheme rules.  Given this legal uncertainty, we would urge Government to also introduce into legislation a Statutory </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">Override.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">The statutory override was explained and described in paragraph 3.2(d) as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“(d) The Statutory Override would enable affected private sector employers to make amendments to pension scheme rules unilaterally to remove any additional GMP increases payable as a result of the abolition of defined benefit contracting-out.  It would override certain restrictions contained in section 67 of the Pensions Act 1995 … and the Rules themselves.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">BT said that it enclosed as an annex advice received from Freshfields (shared previously with the Treasury and the Department for Work and Pensions) “setting out the clear public interest basis for introducing a Statutory Override”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">In response to Question 15, BT said (with a cross reference to paragraphs 3.2(c)(d) and paragraph 3.14 of its response) that, by way of adjustment to the </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">Treasury’s proposals to avoid the unintended consequence of increasing the BTPS Section B liabilities, there could be introduced a statutory override.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Paragraph 3.14 was as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Given potential interpretation uncertainty concerning the Section B pension increase rule (see paragraph 3.2(c) above) and the fact that we do not know if implementation methods alone would ‘work’ for other private sector schemes, we would urge Government to also introduce a Statutory Override into legislation. Please see the Annex for the detail but, in summary, we suggest that primary legislation is enacted (either by an order made under section 54 of the Pensions Act 2014 or otherwise) to provide that:</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.22in;text-indent:0.50in">a sponsoring employer of a private sector occupational pension scheme;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.22in;text-indent:0.50in">may unilaterally modify the rules of its pension scheme;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.22in;text-indent:0.50in">in relation to all or part of the members’ subsisting rights;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.22in;text-indent:0.50in">in order to disapply the requirement to pay a higher amount of increases pursuant to an order under section 59A of the Social Security Pensions Act 1975, or any new legislative requirements that apply to official pensions.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Advice by Freshfields to BT on the statutory override and its legal justification was annexed to BT’s consultation response. That advice was a lengthy and detailed document which explained how a statutory power could be introduced to modify the rules of affected private sector schemes, such as the BTPS, so as to change the requirements to provide increases on GMPs, overriding restrictions contained in section 67 of the Pensions Act 1995. The effect of that section is to prevent a power in a private occupational pension scheme being exercised by any person to modify the scheme in a manner that would or might affect any entitlement, or accrued right, of any member of the scheme save in certain specified circumstances. In the document Freshfields said that they considered that the pension benefits protected by section 67 would amount to a property right protected by A1P1 but that such interference could be legally justified as being in the public interest and proportionate. The document set out the basis for that view. In the course of Freshfields’ detailed explanation of those matters it was asserted (in paragraph 3.1) that “in order to ‘decouple’ the BTPS from the practices of the PCSPS in relation to the payment of increases on GMPs, it would be necessary to amend the relevant increases rules of the BTPS”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">On the face of it, BT’s consultation response was a clear and unequivocal statement, carefully crafted by it and its lawyers, that, if the Government adopted the PCSPS amendment option, the Government would also have to introduce a statutory override. The reason, also clearly articulated by BT’s lawyers, was that, if the PCSPS amendment stood alone, it would still be a complex legal question whether or not pension increases under the PCSPS would be read across to Section B members of the BTPS. Although not elaborated in BT’s consultation response, it seems likely, as Ms Demetriou explained, that the doubt and the complexity would arise from a variety of facts, including in particular the following. The pension increase rule (rule 13.2) in Section A of the BTPS is identical to the material part of rule 10.2 in Section B, and it is accepted by BT that a stand-alone amendment of the PCSPS would not prevent a read-across of increases to Section A of full indexation, albeit because (BT says) of the particular wording of rule 1 of Section A (which is not mirrored in Section B) that members would be paid the like superannuation benefits as the maximum benefits which could be paid to or in respect of such member under the enactments and instruments relating to superannuation in the Civil Service as varied from time to time. A number of former members of Section A have moved to Section B on the assurance, or at the least the understanding, that they would be in no worse a position and that in fact the move would be to their financial advantage. Further, some of those members would have been, or might have been, not merely employees of the Post Office, who received assurances about indexation of pensions at the time Section A was created in 1971 but also former civil servants, who received assurances about indexation of their pensions before the establishment of the Post Office in 1969.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Ms Rose submitted that, when assessing whether BT was always proposing to the Treasury the PCSPS amendment route as a stand-alone option, BT’s consultation response must not be read in isolation but rather must be seen in the context of, and as following on from, the previous engagement between BT and the Treasury. She submitted that the Divisional Court was wrong not to have done so. That, however, is to underplay significantly the fact that BT’s consultation response was BT’s formal response to the Government's request to private sector pension schemes to inform the Government of their views on the various options put forward in the consultation and, in particular, to Questions 12-16 in the consultation, and the fact that it was a lengthy, detailed analysis prepared with obvious care by BT and its lawyers.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">BT sought before us, as it had before the Divisional Court, to support its case that it had always put forward the PCSPS amendment route as a stand-alone option by </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">a further submission that the Treasury always understood BT was advancing such an option. In that connection, Ms Rose relied upon various documents which came into existence before as well as after BT’s consultation response, including in particular the following.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">The Secretary to the Treasury and the Pensions Minister replied to Sir Michael Rake’s pre-consultation letter of 8 March 2016 by a letter dated 24 March 2016. This stated, among other things, that one option would be for the Government’s consultation on the long-term solution to GMP indexation and equalisation for public servants to include how the Government could support schemes like BT which decided no longer to follow the indexation provisions of the public service pension schemes. There was no reference to any statutory override. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Following the consultation and consideration of the responses to it, the submission of Officials to the Chief Secretary dated 19 October 2017 recommended that the “current policy solution” be extended for a further two years and there be a review for a longer term solution during that period. Paragraph 15 of that document said the following in relation to BT: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in"> “BT has estimated that either conversion or full extension of the current solution would add an additional £c600m to their total scheme liabilities, a figure that we question.  To prevent this cost to scheme, BT has requested that we consider a statutory override of scheme rules, an Act of Parliament <span style="text-decoration:underline">or</span> an amendment to Civil Service Pension Scheme rules (which BT mirror).  BT has stated it believes “case-by-case” would be a more appropriate methodology on the grounds of reduced cost, although we do not believe this is a deliverable methodology.” (underlining added) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Ms Rose emphasised the underlined word “or”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">In paragraph 11 of the further submission to the Chief Secretary dated 23 November 2017 Officials stated that the decision to extend the current policy forward a further two years would mean that BT would have to fund fully indexed GMP benefits for its scheme members who reached State pension age by the end of 2020. Paragraph 12 of the submission then said the following, among other things:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“BT have suggested a number of solutions for this: (i) a new Act; (ii) amending the 1974 civil service scheme; or (iii) providing a statutory override.  TLA [Treasury Legal Advisers] advise that in each case there would need to be a policy justification for preferring the interests of BT to the interests of the scheme members.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Ms Rose emphasised the word “or” and the words “in each case” in that passage. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">The Government’s formal response to the consultation was published in January 2018. Ms Rose relied on paragraph 3.19, which was as follows (substituting “BT” where appropriate”): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“[BT] requested that the government should craft its response in such a way as to avoid the read across from public service schemes to their private sector scheme.  However, the government believes that it would not be appropriate to act in a way that would deprive members of indexation, to which they would otherwise be entitled. Acting to do so would raise legal questions, including whether there was a legitimate aim to justify such an interference in the property rights of scheme members. In addition, some of the mechanisms suggested by [BT] to avoid this impact are outside the scope of the government’s statutory powers.”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Ms Rose emphasised that there was no reference to a statutory override in that paragraph. She further submitted that the last sentence of the paragraph was referring to the PCSPS amendment route. She referred us to the first witness statement of Paul Kirk, who at the time of the witness statement was the head of the Public Service Pensions Branch of Workforce, Pay &amp; Pensions within the Public Spending Group at the Treasury and was the policy official responsible for UK public service pensions policy. He said (at paragraph 108) that paragraph </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">3.19 of the Government’s formal response to the consultation “captured [the Treasury’s] main thinking in a condensed form, and reflected the policy decision taken by Ministers”. Elaborating on that point, he said that at least some of BT’s proposals were positively unlawful, in the sense that Government would be acting outside its powers if it took them forward; adding, by way of example, that “the Government lacked the power to take forwards the proposed PCSPS Workaround”.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Ms Rose then referred us to the letter from the Treasury to BT dated 14 February </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">2018, which sought to explain the Government’s response to the consultation. The letter contained the following observations about BT’s contribution to the consultation: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“In considering its response to this consultation the government has sought to balance the interests of scheme members, public service schemes and departments, those private sector schemes affected by this policy as well as the taxpayer.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">You have noted in the government response that we did not consider it appropriate to attempt to craft a policy which removed from private sector scheme members, including members of BT Pension Scheme, the indexation to which they would otherwise be entitled. I know that my colleagues have conveyed to you that we undertook a detailed analysis of your proposals. We consulted closely with DWP on your consultation response, and sought legal advice. The specific position we arrived at in relation to your proposals was agreed with Treasury ministers. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">We believe that removing the existing obligation of the BT </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.47in;text-indent:0.00in">Pension Scheme to index in line with the Principal Civil Service Pension Scheme 1974 would be to act against the interests of members. As you have recognised, these members have a property right to indexation. The bar for removing these rights is high. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">You put forward several proposals as to how government could deliver its policy objectives to equalise and index the public service GMP but avoid the impact on the BT Pension Scheme. One would involve primary legislation providing for a statutory override, another would be to make changes to the Principal Civil Service Pensions Scheme 1974 rules to provide for indexation outside of the existing statutory framework governing pension increases in public service pension schemes. All such proposals would involve the government acting against members’ interests, and as the consultation response says the government believes that it would not be appropriate to act in a way that would deprive members of indexation to which they would otherwise be entitled. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">There would in addition be legal issues as to whether the high legal bar to removing property rights was met. Our view is that there would be a significant risk of a legal challenge being brought were the government to craft a policy which interfered with members’ rights.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">71.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Ms Rose submitted that the letter shows that the Government was plainly treating the PCSPS amendment route as a separate option. She was particularly critical of the absence of any reference to the letter by the Divisional Court.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">72.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Ms Rose referred to the following passage in the second witness statement of Mr </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">Kirk as confirming that the Treasury’s own understanding was that BT had been putting forward the PCSPS amendment route as a stand-alone option:   </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“6. As I explained in my first witness statement, in 2016 HMT officials had explained to BT their view that it was not legally possible to adapt the PCSPS rules in the way BT suggested. BT nevertheless put this suggestion forward again (along with others) in the context of the Consultation.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">7. Mr Rogers contends that the PCSPS Workaround was never properly put to Ministers in 2017. This is wrong. It was clearly put forward to Ministers on the face of both the October and the November Submissions. Neither of the Submissions rules this proposal out. Following the policy ‘steer’ provided by the Chief Secretary, HMT had no cause to advise on the feasibility of the PCSPS Workaround because Ministers did not wish to do anything actively to avoid the BTPS Read-Across. Were Ministers minded to offer BT a carve-out, HMT would have reviewed the PCSPS Workaround further (together with BT’s other proposals, and any other options which may have come to light).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">73.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Despite Ms Rose’s powerful submissions, we cannot see that, viewed in the round, the evidence supports the case that the Treasury was always under the impression that BT was advancing the amendment route as a stand-alone option.           </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">74.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">The pre-consultation material does not assist. While BT is correct that there is nothing in the pre-consultation material which indicates that BT was advancing the PCSPS amendment route only in conjunction with a statutory override, BT’s consultation response was, as we have said, based upon advice from and indeed in part written by BT’s lawyers and represented BT’s considered answer to the Government’s questions. The ordinary and natural meaning of BT’s consultation response is that it was putting forward the PCSPS amendment route in conjunction with a statutory override and not as a stand-alone option. The question currently under consideration is whether, in view of the postconsultation material as to the Treasury’s understanding of BT’s position, BT’s consultation response should not be interpreted in that way but rather in a way that aligns with BT’s current litigation stance that it always put forward the PCSPS amendment route as a stand-alone option. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">75.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">We consider that Ms Rose placed too much weight on the disjunctive “or” in paragraph 15 of the submission of Officials to the Chief Secretary dated 19 October 2017. This was not a lawyer’s document and it would be perfectly reasonable to read the paragraph as simply setting out the different elements of BT’s proposals or even as a request by BT for a statutory override plus one or other of a new pensions increase statute or an amendment to the PCSPS. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">76.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Again, we consider that Ms Rose sought to gain too much from the word “or” and the phrase “in each case” in paragraph 12 of the submission of Officials to the Chief Secretary dated 23 November 2017. They are not inconsistent with the view, which is a reasonable one, that paragraph 12 is simply setting out the different elements of the options presented by BT.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">77.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Moreover, read as a whole, the Officials’ submission is more consistent with the conclusion that the Officials were acting on the basis that the PCSPS amendment route was put forward by BT in conjunction with a statutory override and not as a stand-alone option. The “summary” on the first page of the submission stated that </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">“BT … has asked that we consider a legislative carve-out for their scheme.” It did not mention the PCSPS amendment route as a stand-alone option. Similarly, paragraph 9 of the submission stated that “BT has asked us to legislate to exclude section B members … from the obligation in BTPS rules to index pensions in accordance with the legislation governing public service schemes so that extending the interim solution does not impose additional costs upon them.” The recommendation of Officials was expressed on the same footing, saying that: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“you confirm the intention <span style="text-decoration:underline">to extend the current GMP policy</span><span> </span><span style="text-decoration:underline">solution for a further two years</span> while we review a longer-term solution; and <span style="text-decoration:underline">agree not to legislate to change the rules of some</span><span> </span><span style="text-decoration:underline">affected private sector schemes</span> (by removing or enabling the removal of their obligations to index pensions in accordance with the legislation governing public service schemes).” (underlining in the original) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">78.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">The question posed for the Chief Secretary at paragraph 18 of the 23 November 2017 submission reflected that recommendation.  It said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">“Do you (i) agree that we should extend the Government’s </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“interim” GMP equalisation and indexation policy forward to cover those reaching their SPas until 4 April 2021, to meet legal obligations to public service pensioners?  Do you (ii) also agree to rejecting BT’s request for the Government to legislate to remove or enable the removal of their obligations under the BTPS rules?  If not agreeing (ii), should we work further with DWP on the possibility and implications of a carve out for BT and seek Counsel’s opinion?”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">79.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">An internal Treasury email of 27 November 2017 accepted the Officials’ recommendation. It stated that the Chief Secretary agreed: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.62in;text-indent:0.00in">“[to] extend the current GMP policy solution for a further two years while we review a longer-term solution;  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">not to legislate to change the rules of some affected private sector schemes (by removing or enabling the removal of their obligations to index pensions in accordance with the legislation governing public service schemes).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">80.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Contrary to Ms Rose’s submission we consider that the Government’s January 2018 response confirms, rather than undermines, the Treasury’s case that it understood BT to be proposing the PCSPS amendment route in conjunction with a statutory override rather than as a stand-alone option. The third sentence of paragraph 3.19 of the Government’s January 2018 response, which is set out in [68] above, was referring to the legal questions raised by, among other things, a statutory override. The final sentence was a reference to the PCSPS amendment route but that was mentioned as giving rise to an additional concern.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">81.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">As Ms Demetriou observed, the email from BT to the Treasury on 31 January 2018 shows that this was also BT’s understanding. The email asked the Treasury, with reference to the third sentence of paragraph 3.19 of the Government’s formal response to the consultation, to set out its reasons for the Government’s rejection of Freshfield’s arguments in the annex to BT’s formal consultation response explaining why there was a legitimate aim for a statutory override which would interfere with scheme members’ property rights. There was no complaint in that email that there was no need to worry about “legal questions”, as mentioned in the third sentence of paragraph 3.19, as the PCSPS amendment route was a stand-alone option. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">82.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">We do not agree with Ms Rose’s submission that the letter from the Treasury to BT dated 14 February 2018, the material part of which is set out in [70] above, plainly shows that the Government was treating the PCSPS amendment route as a stand-alone option. The structure of the letter is awkward and confusing. It is quite true, as Ms Rose observed, that on the face of it the paragraph beginning - </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">“You put forward several proposals” - expressed the PCSPS amendment route as a separate proposal from the statutory override. On the other hand, both the preceding paragraph and the subsequent paragraph are addressing what was regarded as a fundamental policy objection as well as an inevitable legal complexity, namely the interference with the BTPS members’ property rights caused by a statutory override. That perceived inevitability of legal complexity is made clear by the words – “There would in addition be legal issues” – in the final paragraph of the extract from the letter quoted above. Viewed in that way, the wording of the letter relied upon by Ms Rose, like the wording in paragraph 15 of the submission to the Chief Secretary dated 19 October 2017 and the wording in paragraph 12 of the submission to the Chief Secretary dated 23 November 2017 also relied upon by Ms Rose, is best seen as an enumeration of the different elements of the options presented by BT. Read as a whole, the letter supports the Treasury’s case, rather than that of BT, on Appeal Ground 1. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">83.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">We accept Ms Demetriou’s submission that paragraphs 6 and 7 of Mr Kirk’s second witness statement do not show, as Ms Rose contended, that the Treasury understood that BT was putting forward the PCSPS amendment route as a standalone option. Mr Kirk states that it was clearly put forward to Ministers on the face of both the October and November 2017 submissions. He does not say that it was put forward as a stand-alone “option”; and, for the reasons we have given above, the 23 November 2017 submission is more consistent with the conclusion that Officials were acting on the basis that the PCSPS amendment route was put forward by BT in conjunction with a statutory override and not as a stand-alone option. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">84.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">That understanding by the Treasury of BT’s PCSPS amendment proposal was consistently maintained up to the commencement of these proceedings. In paragraph 16 of the Government Legal Department’s letter of 9 April 2018 to Freshfields, in response to Freshfields pre-action protocol letter, it was stated that, due to the legal uncertainty arising from the fact that amendment of the PCSPS would not necessarily result in BTPS Section B members having no entitlement to carry-across pension increases, BT considered that the statutory override was necessary. The same point was made in paragraph 91 of the Treasury’s detailed grounds for resisting the judicial review claim. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">85.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">As we have said above, it is sufficient for rejecting Appeal Ground 1 if the Divisional Court had legitimate and proper grounds for reaching its conclusions of fact that BT did not present the PCSPS amendment route as a stand-alone option in response to the Government’s consultation but presented the statutory override as a necessary element of the proposal and that Treasury officials understood that to be the case. For the reasons we have given, we consider it is plain that the Divisional Court did have legitimate and proper grounds for making those findings. Indeed, we consider that the Divisional Court was correct to reach those findings. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">86.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Finally, on Appeal Ground 1, we have recorded Ms Rose’s criticism that the Divisional Court did not make any reference to the letter from the Treasury to BT dated 14 February 2018. For the reasons we have given, that letter makes no difference to the analysis and does not undermine the findings of the Divisional Court. In any event, it is well established that it is not necessary for a trial judge to record in their judgment every argument advanced and every piece of evidence relied upon provided it is clear that the principal arguments and evidence have </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">been considered and the grounds for the conclusions of the judge are clear from the judgment. That was so in the present case. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="text-decoration:underline">Appeal Ground 2: Policy reasons inseparable from concerns about vires and</span>
+	      <span> </span>
+	      <span style="text-decoration:underline">property rights</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">87.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Ms Rose submitted that, contrary to the finding of the Divisional Court, it is clear that the Government’s decision to reject each of BT’s options was for the policy reasons that they were <span style="font-style:italic">ultra vires</span> and would interfere with the property rights of the BTPS Section B members. Those reasons were, she submitted, legally misconceived, and so the Government failed to balance fairly and reasonably the interest of the BTPS Section B members, on the one hand, and the interest of BT, on the other hand. That submission is, therefore, tied to success on Appeal Grounds 3, 4 and 5.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">88.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">BT’s difficulty with this ground of appeal is that its success is also dependent on success on Appeal Ground 1 as it is accepted by BT that BT’s proposed statutory override would indeed interfere with the BTPS Section B members’ rights under rule 10.2 and that those rights are property rights protected by A1P1. The property rights of such members which are the subject of Appeal Ground 5 are not the rights conferred by rule 10.2 but rights said to result from the alleged legitimate expectation of the members that any indexation of public sector GMP would be granted through, and only through, the legislation referred to in rule </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.80in;margin-right:0.00in;text-indent:0.00in">10.2. BT’s case is that there was no such legitimate expectation but rather a mere hope which fell short of a “possession” protected by A1P1. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">89.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">In view of our decision on Appeal Ground 1, and the acceptance by BT that the proposed statutory override would interfere with BTPS Section B members’ A1P1 rights, and would require justification, Appeal Ground 2 ceases to have any significance.  As it happens, even if we had found in favour of BT on Appeal Ground 1, we would have rejected Appeal Ground 2, and for that reason, as well as because the point was fully argued before us, we shall deal with its merits. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">90.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Ms Rose referred us to the following documents for the proposition that the Government’s decision was made for reasons which were legally unsound and not, as found by the Divisional Court, for policy reasons unrelated to the errors of law which are the basis for Appeal Grounds 3, 4 and 5. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">91.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">The ministerial submission of 17 March 2016 referred to the PCSPS amendment option and said that the Government did not have the legal powers to deliver that option, and, further, that it was possible that the Government or BT made commitments to the private sector employees at the point of privatisation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">92.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">An email from the Treasury to BT of 21 March 2016 stated that there was no power to amend the PCSPS rules so that indexation was payable under those rules rather than the Increases Legislation.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">93.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">The 23 November 2017 submission to the Chief Secretary contained the following statements: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“12. … The scheme rules have the result that members are entitled to benefit from an HMT direction in the same way as members of the 1974 civil service scheme and there would need to be a legally defensible justification for interfering with BT scheme members’ property rights. …”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“13. TLA advise that it may be possible to devise a mechanism to avoid impacting on schemes such as BT e.g. if the Secretary of State agreed to make negative resolution regulations under s. 67 of the Pensions Act 1995. However, that would require identifying a legally defensible justification for the interference in property rights, a justification which we would test with Counsel in the light of the difficulties outlined above. …” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“15. Legal risk is high. A judicial review brought by members or trade unions is likely and, unless we were able to develop a defensible justification for interfering in property rights, there is a high risk of the judicial review being successful.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">94.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Paragraph 3.19 of the Government’s formal response to the consultation is set out at [68] above. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">95.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">We accept, as is plain from those documents, that an important concern of the Government was undoubtedly that the PCSPS amendment route would interfere with what the Treasury considered were property rights of BTPS members. As we have said, in view of our decision on Appeal Ground 1, the Government was justified in being concerned about that matter as a statutory override was an integral part of that proposal, and it is common ground that a statutory override would indeed interfere with BTPS Section B members’ A1P1 rights. We consider, however, that, looking at the evidence as a whole, it is also clear that the Government’s decision was motivated by policy considerations which were divorced from <span style="font-style:italic">ultra vires</span> and A1P1 infringement concerns. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">96.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">In the Officials’ submission of 19 October 2017 to the Chief Secretary the Officials said that their initial view was that at privatisation in 1984 it was the policy intent that the rights of BT employees to future pension benefit indexation be protected, regardless of any future changes in the pension system.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">97.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">As mentioned above, paragraph 12 of the 23 November 2017 submission to the Chief Secretary said that Treasury Legal Advisers had advised that there would need to be a policy justification for preferring the interests of BT to the interests of the scheme members. Paragraph 14 said that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Since 2015, Treasury “New Fair Deal” policy ensures that members of public service schemes transferred compulsorily to the private sector retain their pension rights (and a similar policy was in place previously). A decision to carve BT out would seem to contradict this policy. If we decided to do so, the </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">Government could be seen as acting to remove BTPS obligations to index pension benefits in the same way as under the 1974 civil service scheme BT have requested this. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">Government could also be seen to be acting against members’ financial interests. It would be asked why it was preferring the interests of BT to those of BTPS members.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">98.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Importantly, as Ms Demetriou observed, the question put to the Chief Secretary in paragraph 18 of that submission for his decision, which is set out at [78] above, is structured so as to pose in (ii) the general policy issue (reflecting Officials’ policy concern in paragraph 14) in relation to BT’s request for a “carve out”; and only if the Chief Secretary was not deterred by that policy concern, to pose the question whether there should be further work, including seeking counsel’s advice, on the possibility and implications of a carve out.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">99.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">That policy concern, irrespective of any infringement of property rights, was carried through to the Government’s formal response to the consultation. Paragraph 3.19 of that document, which is set out in [68] above, stated that the Government believed that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“it would not be appropriate to act in a way that would deprive members of indexation, to which they would otherwise be entitled. Acting to do so would <span style="text-decoration:underline">also</span> raise legal questions …” (emphasis added) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">100.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">The word “also” highlights the distinction being made between, on the one hand, the general policy issue of  the Government being seen to prefer the private interest of BT over that of BTPS Section B members and, on the other hand, consequential legal issues in addition to the question of general policy. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">101.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">That same division was made in the letter of 14 February 2018 quoted above. The letter stated that, in considering its response to the consultation the Government sought to balance the interests of scheme members, public service schemes and departments, private sector schemes, as well as the taxpayer; and that BT’s proposals would involve the Government acting against members’ interests; and the Government believed that it would not be appropriate to act in a way that would deprive members of indexation to which they would otherwise be entitled. The letter then said that “there would in addition be legal issues as to whether the high legal bar to removing property rights was met”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">102.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">This interpretation of the documentary evidence is supported by the evidence of Mr Kirk, who said as follows in paragraph 5 of his second witness statement: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“ … as I described in my first witness statement, the decision not to adopt the PCSPS Workaround, or indeed any of BT’s proposed ‘solutions’, was a policy choice. It was not driven by the feasibility of the proposals presented by BT. We addressed a logically prior question first: did Ministers want to prefer the interests of BT over the interests of the BTPS members? If not, it was not necessary to determine the lawfulness of any of BT’s proposals. That approach was reflected in the November </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.38in;text-indent:0.00in">Submission. It sought the Chief Secretary’s answer to that logically anterior policy question. The Chief Secretary’s answer was that BT’s interests should not be preferred, in the manner they proposed. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">103.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">Consistently with the November 2017 submission to the Chief Secretary and that evidence of Mr Kirk, after the service of the claim form in these proceedings a submission was made by Officials to the Chancellor on 30 October 2018 which pointed out that the advice previously given to the Chancellor, on the basis of which the Chancellor decided against a carve out for private sector schemes in respect of continued indexation and equalisation of GMPs for public servants reaching State Pension age between 6 December 2018 and 5 April 2021, was incorrect. The advice had included an inaccurate summary of the legal advice before the Chief Secretary.  The submission set out what the summary of the legal advice should have been, and asked whether the Chancellor maintained his original decision.  The submission said that the summary should have said as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.01in;margin-right:1.00in;text-indent:-0.01in">“Were we to agree an exemption for BT, legal advice is that the risk of challenge is high and the chances of successfully defending such a challenge are low <span style="text-decoration:underline">unless we were able to</span><span> </span><span style="text-decoration:underline">develop a defensible justification for interfering in the property</span><span> </span><span style="text-decoration:underline">rights of pensioners. CST decided not to commission the</span><span> </span><span style="text-decoration:underline">further legal work necessary to test whether a legally defensible</span><span> </span><span style="text-decoration:underline">justification could be developed.</span>” (underlining in the original)</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">104.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">In other words, it was decided not to proceed with a legal justification because the decision was taken on general policy grounds and not on the basis that there was no proper legal basis for interfering with the BTPS Section B members’ rights. Ms Rose submitted that this was the first confirmation of a reason for the decision of the Government divorced from the issue of members’ property rights. We do not agree. The written evidence, to which we have referred in [96] – [103] above, makes it clear that the Government’s decision was based on general policy considerations in addition to, and unrelated to, any issues of vires or of infringement of  legally protected property rights of  BTPS Section B members. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.83in;text-indent:-0.54in">105.</num>
+	  <content>
+	    <p style="margin-left:0.83in;margin-right:0.00in">As in the case of Appeal Ground 1, what is in issue in Appeal Ground 2 is a factual finding of the Divisional Court. We consider that it is plain that the Divisional Court had legitimate and proper grounds for making its finding, and for that reason we reject this ground of Appeal. In any event, we also consider that the Divisional Court was right. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Appeal Ground 3 (vires of the PCSPS amendment route under SAA 1972);</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="text-decoration:underline">Appeal Ground 4 (vires of the PCSPS amendment route – improper purpose);</span>
+	      <span> </span>
+	      <span style="text-decoration:underline">Appeal Ground 5 (A1P1 property rights of BTPS Section B members)</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">106.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">In view of our rejection of Appeal Ground 1 and Appeal Ground 2, this appeal must be dismissed. Appeal Ground 5 does not arise, as it proceeds on the assumption that there was no statutory override and so, BT contends, there was no interference with any property right of BTPS Section B members. It is not necessary to address Appeal Ground 3 and Appeal Ground 4, which are different aspects of the Government’s vires, or lack of vires, to implement the PCSPS amendment route.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">107.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">Ms Rose urged us to consider and express a view on all the grounds of appeal, even if it is not strictly necessary to do so to determine the outcome of this appeal, as the Government is still considering a longer term solution. We do not consider, however, that we should do so as they raise issues of principle which have wider application than the dispute between the parties to this appeal, any decision of ours on them might give rise to uncertainty in terms of precedent, and, even though not strictly necessary or required by the Court below, a representative member of Section B of the BTPS has not been made a party. Our refusal to engage with the merits of Appeal Grounds 3, 4 and 5 in this judgment must plainly not be taken as implicitly approving or disapproving the decision of the Divisional Court on those issues.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.30in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Conclusion </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.78in;text-indent:-0.50in">108.</num>
+	  <content>
+	    <p style="margin-left:0.78in;margin-right:0.00in">For the reasons above, we dismiss this appeal. <br/></p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.29in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">ANNEX</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.80in;margin-right:0.00in;text-indent:-0.50in">
+	      <span style="font-weight:bold">Extract from </span>
+	      <span style="font-style:italic;font-weight:bold">R (British Telecommunications Plc) v HM Treasury &amp; anr</span>
+	      <span style="font-weight:bold"> [2018] EWHC 3251 (Admin) </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">‘Contracting out’ and GMPs </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">For many decades prior to 6 April 2016, state pensions consisted of two tiers: a basic state pension, and an additional state pension (“AP”) related to earnings. While anyone who paid National Insurance Contributions for a minimum number of years was entitled to the basic state pension, not everyone built up an AP. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Under the two-tier system an employer operating an occupational pension scheme could ‘contract out’ of the AP if their occupational pension scheme fulfilled certain requirements. Such contracting out reduced the National Insurance Contributions payable (and was governed originally by the National Insurance Act 1959, and then by Part III of the Social Security Pensions Act 1975 (“SSPA 1975”) and Part III of the Pension Schemes Act 1993 (“PSA 1993”)). One basic rationale of this ‘contracting out’ was that since members of a contracted out occupational pension scheme would receive benefits from their scheme largely equivalent to AP, there was no need for the members and the employer to pay National Insurance contributions so that the members received AP as well. By contracting out the employer and members received a rebate on their National Insurance contributions. In return the State paid a reduced AP once the individual became entitled to state pension payments.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">From 6 April 1978 to 5 April 1997, an employer could contract out of the AP if their occupational pension scheme provided a minimum level of guaranteed benefits, known as a ‘guaranteed minimum pension’ (“GMP”). Future accrual of GMP was abolished in 1997, but GMP entitlements which accrued before that time have been protected.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:0.49in;margin-right:4.30in;text-indent:-0.50in">Statutory Increases to GMPs </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Between 1978 and 1988 contracted-out pension schemes were not obliged to index their members’ GMP entitlement. The government department responsible for social security calculated how their AP would have been increased each year as if they were not contracted out and then made a deduction – the contracted-out deduction – of an amount basically equivalent to their GMP. The result was that the AP element of their state pension was increased each year by an amount equivalent to the indexation of their GMP. The statutory basis of the contracted out deduction in respect of the schemes which are relevant to this case is s.46 of the PSA 1993, under which each individual’s GMP entitlement is deducted from their AP, once their AP has been indexed.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">GMP that accrued between 1988 and 1997 was indexed on a different basis, under s.109 of the PSA 1993. That provision imposes obligations on all schemes that formerly participated in contracting-out (whether public service or private sector) in respect of GMP accrued between April 1988 and 1997. It provides as follows:    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.01in;margin-right:0.13in;text-indent:-0.01in">“<span style="font-weight:bold">109. – Annual increase of guaranteed minimum pensions.</span></p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Secretary of State shall in each tax year review the general level of prices in Great Britain for a period of 12 months commencing at the end of the period last reviewed under this section.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">Where it appears to the Secretary of State that that level has increased at the end of the period under review, he shall lay before Parliament the draft of an order specifying a percentage by which there is to be an increase of the rate of that part of guaranteed minimum pensions which is attributable to earnings factors for the tax year in the relevant period for– </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in;text-indent:0.29in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.00in;text-indent:0.79in">earners who have attained pensionable age; and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in;text-indent:0.29in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.00in;text-indent:0.79in">widows, widowers and surviving civil partners.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The percentage shall be –  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in;text-indent:0.29in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.00in;text-indent:0.79in">the percentage by which that level has increased at the end of the  relevant period under review; or  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in;text-indent:0.29in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:0.00in;text-indent:0.79in">by 3 per cent, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">whichever is less …” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The effect of an order under s.109 (a “s.109 Order”) is therefore, in respect of postApril 1988 GMP, to require schemes to pay GMP increases up to a maximum of 3%.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Where the increase in prices was above 3% – say 4% – the GMP would be increased by 3% by the employer under s.109. The State would apply a 4% increase to the AP but then (via the contracted-out deduction mentioned in paragraph 10 above) reduce the AP by the GMP as increased at 3%, so that the State would in effect increase the AP by 1%. The individual would effectively receive full indexation by the combination of these two mechanisms.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">Statutory Increases to Public Service Pensions </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Pensions (Increase) Act 1971 (“PIA 1971”) and the SSPA 1975 (“the Increases Legislation”) provide for the indexation of pensions payable under PSPS, including the PCSPS.  The PCSPS is an “official pension” for this purpose (PIA 1971, section 5 and Schedule 2, paragraph 4).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">“Official pensions” are increased at an annual rate specified in an order made under s.59(1) of the SSPA 1975 (a “s.59 Order”). This mechanism for increasing official pensions as against increases in prices is parasitic upon the mechanism for increasing certain social security benefits, including the AP, as against increases in prices under ss.150 and 151 of the Social Security Administration Act 1992 (the “Administration Act”). Section 150 of the Administration Act requires the Secretary of State annually to determine whether the benefits have retained their value in relation to the general level of prices. The Secretary of State may make a direction under s.151 of the Administration Act that the benefits are to be increased by a specified percentage.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Where the Secretary of State has so directed that the benefits are to be increased, s.59(1) SSPA 1975 requires the Treasury to make an order increasing official pensions on the basis of the same specified percentage.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 59(1) provides for the indexation of pensions that began before or during the previous 12 months (s<span style="color:#1F497D">.</span>59(1)(a) and (b)).  For the purposes of the Increases Legislation, a pension begins after service, often on the day following the last day in service (s<span style="color:#1F497D">.</span>8(2) PIA 1971).  Accordingly, only official pensions that are in payment or are preserved may be increased pursuant to a s.59 Order. An individual pensioner’s GMP entitlement will fall into one or other of these categories.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 59(1) provides as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.00in;text-indent:-0.01in">“<span style="font-weight:bold">59. – Increase of official pensions.</span></p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">Where by virtue of section 151 of the Administration Act a direction is given that the sums mentioned in section 150(1)(c) of that Act are to be increased by a specified percentage the Minister for the Civil Service shall by order provide that the annual rate of an official pension may, if a qualifying condition is satisfied or the pension is a derivative or substituted pension or a relevant injury pension, be increased in respect of any period beginning on or after the date on which the direction takes effect –  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.77in;text-indent:-0.38in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.77in;margin-right:0.75in">if the pension began before the beginning of the base period for that direction, by the same </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.21in;margin-right:0.00in;text-indent:-0.01in">percentage as that specified in the direction; </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.77in;text-indent:-0.38in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.77in;margin-right:0.75in">if the pension began during the base period, by that percentage multiplied by A / B where A is the number of complete months in the period between the beginning of the pension and the end of the base period and B is the number of complete months in the base period …”  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Section 59(5) then provides that a s.59 Order shall not apply in respect of the GMP element of an official pension. This is because the GMP element of a contracted-out pension is already effectively indexed via the mechanism outlined above (via the AP and the effect of any s.109 Order). Section 59(5) prevents ‘double indexation’ by reducing the amount of an official pension, to be increased under the s.59 Order, by the amount of any GMP of which it is comprised. Section 59(5) provides as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.00in;text-indent:-0.01in">“<span style="font-weight:bold">59. – Increase of official pensions.</span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">… </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">(5) The increases in the rate of a pension that may be provided for by an order under this section are to be calculated by reference to the basic rate of the pension as authorised to be increased by section 1 of the said Act of 1971 or by any order under section 2 of that Act or this section; but where— </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.39in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.39in;margin-right:0.81in;text-indent:0.50in">a person is entitled to a guaranteed minimum pension when an order under this section comes into force; and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.39in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.39in;margin-right:0.81in;text-indent:0.50in">entitlement to that guaranteed minimum pension arises from an employment from which (either directly or by virtue of the payment of a transfer credit) entitlement to the official pension also arises; </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">the amount by reference to which any increase authorised by that or any subsequent order is to be calculated shall be reduced by an amount equal to the rate of the guaranteed minimum pension.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There are various situations, however, in which it is not desirable for the GMP to be deducted from the official pension under s.59(5) such as to prevent indexation of GMP under a s.59 Order.  Section 59A SSPA 1975 therefore allows for a direction to be made (a “s.59A Direction”)<span style="font-style:italic;font-weight:bold"> </span>disapplying s.59(5) in specified cases.  It provides as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.00in;text-indent:-0.01in">“<span style="font-weight:bold">59A.— Modification of effect of section 59(5). </span></p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">This section applies where the amount by reference to which an increase in an official pension is to be calculated would, but for the provisions of this section, be reduced under section 59(5) of this Act by an amount equal to the rate of a guaranteed minimum pension. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">The Minister for the Civil Service may direct that in such cases or classes of case as may be specified in the direction— </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.77in;text-indent:-0.38in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.77in;margin-right:0.75in">no such reduction shall be made; or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.77in;text-indent:-0.38in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.77in;margin-right:0.75in">the reduction shall be of an amount less than the rate of the guaranteed minimum pension; </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">and in any case to which such a direction applies the increase shall, in respect of such period or periods as may be specified in the direction, be calculated in accordance with the direction, notwithstanding section 59(5).” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The effect of a s.59A Direction is therefore to ‘switch back on’ the indexation of public service pensioners’ GMP entitlement by the pension scheme: a s.59 Order will increase the full amount of an official pension, including the GMP element.<span style="vertical-align:super;font-size:smaller"> </span>However the indexation provided by the scheme as a result of a Direction will be reduced by the amount of any increase made as a result of a s.109 Order: s.59A(2A) SSPA 1975.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Sections 59 and 59A SSPA are treated as if they are contained in Part 1 of the PIA 1971: s.59(7) SSPA 1975. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The abolition of the additional state pension </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The Pensions Act 2014 introduced a new single-tier state pension for persons reaching SPa from 6 April 2016 onwards. It abolished the AP for them.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">As a result, the Pensions Act 2014 also abolished the mechanism by which the GMP entitlement of individuals receiving official pensions was in effect indexed (as described above). On 1 March 2016, the Government announced that it would continue to fully index (or price protect) the GMP of public service pensioners reaching the SPa after 5 April 2016 and before 6 December 2018. It did so by making a s.59A Direction, which applied (among others) to all public service pensioners reaching SPa between those dates.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In the Decision the Government announced its intention to make a further s.59A Direction and to add a further category of individuals to whom it would apply, namely: all those public service pensioners who reach SPa between 6 December 2018 and 5 April 2021.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">BT contends that, as an alternative to making a s.59A Direction, the Government could have secured full indexation of PCSPS pensions by amending the PCSPS itself.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading3" style="margin-left:-0.00in;text-indent:-0.01in">The PCSPS  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">26.<span style="font-family:Arial"> </span>The PCSPS was established under s.1(1) of the Superannuation Act 1972 (“SAA 1972”), set out below, and can be amended under s.2(9) thereof.   </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.00in;text-indent:-0.01in">“<span style="font-weight:bold">1.-Superannuation schemes as respects civil servants, etc </span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.69in;text-indent:0.00in">(1) The Minister for the Civil Service (in this Act referred to as “the Minister”) – </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.39in;margin-right:1.00in;text-indent:0.00in">(a) may make, maintain, and administer schemes (whether contributory or not) whereby provision is made with respect to the pensions, allowances or gratuities which, subject to the fulfilment of such requirements and conditions as may be prescribed by the scheme, are to be paid, or may be paid, by the Minister to or in respect of such of this persons to whom this section applies as he may determine; … </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">2.— Further provisions relating to schemes under s. 1. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">…  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(9)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">Any scheme under the said section 1 may amend or revoke any previous scheme made thereunder. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(10)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">Different schemes may be made under the said section 1 in relation to different classes of persons to whom that section applies, and in this section </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">“the principal civil service pension scheme” means the principal scheme so </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">made relating to persons serving in employment in the civil service of the State. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(11)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.50in">Before a scheme made under the said section 1, being the principal civil service scheme or a scheme amending or revoking that scheme, comes into operation the Minister shall lay a copy of the scheme before Parliament ….” </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

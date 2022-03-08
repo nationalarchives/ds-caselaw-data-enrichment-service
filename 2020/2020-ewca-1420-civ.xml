@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/1420"/>
+	  <FRBRuri value="ewca/civ/2020/1420"/>
+	  <FRBRdate date="2020-10-29" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1420"/>
+	  <FRBRname value="Smith v Castle Point Borough Council &amp; Anor"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/1420/eng"/>
+	  <FRBRuri value="ewca/civ/2020/1420/eng"/>
+	  <FRBRdate date="2020-10-29" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/1420/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/1420/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:19:08" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="glenn-patrick-smith" href="" showAs="GLENN PATRICK SMITH"/>
+	<TLCRole eId="appellant" href="" showAs="Appellant"/>
+      </references>
+      <proprietary source="ewca/civ/2020/1420/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>1420</uk:number>
+	<uk:cite>[2020] EWCA Civ 1420</uk:cite>
+	<uk:hash>485aa327fd4b703db1ad3eb5192f4611a20ff4cba2f5f448d7d27ace72f53c16</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/1420/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 2.66in; margin-right: 2.15in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: center; margin-right: 0.04in; font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { font-weight: bold; font-family: 'Times New Roman'; font-size: 18pt; color: #000000; }
+#judgment .Heading2Char { font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0631944444444446in;height:1.051388888888889in;"/>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 1420</neutralCitation>
+	<span> </span>
+	<span style="text-decoration:underline">Case No: C1/2019/2438</span>
+      </p>
+      <p class="Heading1" style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline;font-size:12pt">IN THE COURT OF APPEAL (CIVIL DIVISION)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">QUEEN’S BENCH DIVISON (PLANNING COURT)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">MR CMG OCKELTON (SITTING AS A JUDGE OF THE HIGH COURT)</span>
+	<span style="font-size:12pt"> </span>
+	<span style="text-decoration:underline;font-size:12pt">CO/5120/2018</span>
+      </p>
+      <p style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Royal Courts of Justice</span>
+	<span> </span>
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p class="Heading2" style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">
+	<span style="font-weight:normal">Date: </span>
+	<docDate date="2020-10-29" style="font-weight:normal">29/10/2020</docDate>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:1.26in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">Before : </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.30in;margin-right:0.00in;text-indent:0.00in">
+	      <span> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.26in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LORD JUSTICE DAVIS</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.14in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LORD JUSTICE MOYLAN</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.26in;margin-right:0.00in;text-indent:0.00in">and<span style="font-weight:bold"> </span></p>
+	    <p style="text-align:left;margin-left:2.01in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold;text-decoration:underline">LORD JUSTICE DINGEMANS</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	    <p style="text-align:left;margin-left:2.18in;margin-right:0.00in;text-indent:0.00in">- - - - - - - - - - - - - - - - - - - - - </p>
+	    <p style="text-align:center;margin-left:1.27in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">Between : </span>
+	    </p>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <party refersTo="#glenn-patrick-smith" as="#appellant" style="font-weight:bold">GLENN PATRICK SMITH </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.40in;margin-right:0.00in;text-indent:0.00in">
+	      <role refersTo="#appellant">
+		<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+		<span style="font-weight:bold"> </span>
+	      </role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">- and - </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold"> </span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold">CASTLE POINT BOROUGH COUNCIL </span>
+	    </p>
+	    <p style="text-align:center;margin-left:1.18in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">- and -   </span>
+	    </p>
+	    <p style="text-align:left;margin-left:1.98in;margin-right:0.00in;text-indent:0.00in">
+	      <span style="font-weight:bold">BENFLEET SCRAP LIMITED </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.33in">
+	      <span style="font-weight:bold;text-decoration:underline">Respondent</span>
+	      <span style="font-weight:bold"> </span>
+	      <span style="font-weight:bold;text-decoration:underline">Interested Party</span>
+	      <span style="font-weight:bold"> </span>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.21in;margin-right:1.14in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Mr Wayne Beglan </span>and <span style="font-weight:bold">Mr Alex Williams</span> (instructed by <span style="font-weight:bold">Holmes &amp; Hills LLP</span>) for the <span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:left;margin-left:0.16in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Mr Daniel Stedman Jones </span>and <span style="font-weight:bold">Mr</span><span> </span><span style="font-weight:bold">Tom van der Klugt </span>(instructed <span style="font-weight:bold">Castle Point Borough </span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Council Civic Governance and Law</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">Hearing date : 20<span style="vertical-align:super;font-size:smaller">th</span> October 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.21in;margin-right:1.14in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1">Approved Judgment </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">LORD JUSTICE DAVIS:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Introduction</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">This appeal, on ultimate analysis, involves considering the meaning and effect of a delegated planning decision dated 9 November 2018, read naturally and as a whole. Although it was suggested in the written argument provided in support of the appeal that the appeal raises issues of general application, as far as I can see it does nothing of the kind. The outcome is necessarily specific to the particular circumstances of this case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appeal is from a reserved decision of Mr CMG Ockleton, sitting as a Judge of the Queen’s Bench Division (Planning Court), handed down on 31 July 2019. Permission to appeal was refused by the judge but granted by Lewison LJ on 12 December 2019. Before us, the appellant, Mr Glenn Patrick Smith, was represented by Mr Wayne Beglan, leading Mr Alex Williams. The respondent, Castle Point Borough Council, was represented by Mr Daniel Stedman Jones, leading Mr Tom van der Klugt. Both Mr Beglan and Mr Stedman Jones had appeared in the court below. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Background</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Benfleet Scrap Limited (“Benfleet”) at all relevant times has operated a scrap metal and waste recovery yard on land at Unit 16, Brunel Road Manor Trading Estate, Thundersley, Benfleet, Essex. Various industrial units adjoin the site. However at its northern and eastern boundary is a large area of open land designated as green belt. The appellant is seeking to promote that land for mixed development. That would accord with the emerging local plan. There is envisaged a potential for up to 95 residential homes, as well as an employment mix. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The scrap yard site covers around 0.86 hectares. The eastern boundary itself is some 113 metres in length. For many years it appears that the southern and eastern boundary fencing was of a rather rough and ready assortment, including in places a chain link fence, not always well maintained, 2 metres in height.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Planning permission for use of the site as a scrap yard had been granted on 8 March 2002. Various conditions were imposed. Those conditions extended to use not being carried out in a manner causing nuisance to local occupiers by reason of noise, dust or fumes; restrictions on vehicle delivery and collection times; and a prohibition on incineration. No planning condition as to the height of permitted storage of waste was included. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">A Waste Disposal Licence under the then extant legislation had been issued on 26 March 1998. The various conditions scheduled to that Licence included one stated at paragraph 6.9: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“All controlled waste shall be stored in a safe manner in order to ensure public safety. No waste material shall be stored or stacked to a height greater than 5.0 metres.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">A further Waste Management Licence was issued on 21 May 2003. That also contained numerous conditions with regard to operations at the site. A change of use application made in 2010 for the adjoining unit 10, which became part of the overall site, indicated that up to 5,000 tonnes per year for ferrous and non-ferrous metals would be allowed by the relevant Environmental Permit. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It seems clear that over the years there had been instances of spillage of substances and intrusion of waste objects at and over the boundary, in particular at the eastern boundary. At all events, on 18 September 2018 a planning application was lodged by Benfleet seeking planning permission for a boundary wall on the southern and eastern boundary of the site. In fact such a wall (to a height of 5 metres) had already been constructed on the southern boundary and part of the eastern boundary: the application was therefore in part retrospective. In Box Number 6 of the application form, the answers to the questions whether there was involved “land which is known to be contaminated” and “land where contamination is suspected for all or part of the site” were each expressed as “No.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The application was accompanied by a Planning Statement prepared by Chartered Town Planners in September 2018. Among other things, it was explained that the proposed wall would be a 5 metre high concrete panel wall to replace the various “mixed structures” on the boundary. It was explained also that there would be a buffer zone (with access) between the new wall and the actual boundaries. It was said:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“The dual purpose of the wall is to provide an effective screen (being the same height as the open storage on the site) and to reinforce the security for the yard.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">The proposals were fully described. It was indicated that the proposed wall would be 3 metres in front of the boundary, with the buffer zone for which landscaping could be agreed. It was stated that the application proposed a “longer term robust and permanent structure” compared to the piecemeal nature of the previous fencing. The wall would be 150 metres from the nearest residential properties and, as well as acting as a screen, would also help to reduce noise from the yard, as it was said, as well as constituting a “significant improvement to the appearance” of the boundary and also strengthening security of the yard.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">One possibly might have thought that such a proposal would be welcomed by adjoining owners. But so far as the appellant was concerned it attracted a very lengthy Planning Objection prepared by consultants, Smart Planning, dated 30 October 2018. Amongst the very many other points raised (extending also to visual impact and Green Belt issues) were the following: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“(6) There is no indication anywhere within the application of the relationship between this proposal and the approved plan (CPT/16/02). This shows a concrete panel fence (2m in height) along the southern and part eastern boundary; and a sheet metal fence (3-4m in height) on the part eastern boundary. The proposal is for a 5m high concrete panel fence throughout, but without any reference to how the yard is used, or is intended to be used. The increase in height will implicitly allow a material intensification of the use which is not factored in to the application.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">(7) The planning support statement says that the storage of scrap metal is ‘permitted up to a height of 5 metres’ (para 2.2), though later says ‘it is understood that they (previous permissions) have included some restrictions on the use and height of open storage’. This is far from conclusive on what height of storage is allowed (under planning or EA licensing) and how this justifies the proposal to <span style="font-weight:bold">increase </span>the boundary enclosure by some <span style="font-weight:bold">3m </span>in height? The application should clarify exactly what the permitted height is, or if not, then what the intended height of storage, and how this is enabled by a 3m height increase in the wall. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.09in;margin-right:0.08in;text-indent:-0.01in">…. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">(9) The land is contaminated. This is proven in the attached Soil Contamination Assessment (11 October 2018). The samples were taken from land immediately beside the proposed boundary wall. The contamination is due to the operation of Benfleet Scrap. The extent of the contamination is now known. It is likely to have leached into and beneath the application site, however we do not need to speculate on this matter. The application involves building operations that will be in and on the contaminated land. Hence as a matter of law, the application must be supported by targeted contamination reports (Phase 1 Desk Top and Phase 2 Intrusive as a minimum) so that appropriate remediation can be considered within the context of the application. In the absence of such assessment, the planning application is fatally flawed and should not be determined.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Complaint was also made that on occasion scrap piles up to 8 metres high had been observed and that there had been “overtopping” at the boundary and also spillage of fluids over the boundary. It was said that increasing the height of the boundary would not solve such problems, and might exacerbate them. It was said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“On behalf of my clients, I submit that the proposed wall is nothing more than a stalking horse to allow Benfleet Scrap to store and process more metal than they do at the moment. There is a direct proportional relationship between the height of the boundary and the height of the metal stored/processed. We know from observation of recent history that Benfleet Scrap does not have the management protocols in place to handle these piles without literally spilling out. To allow more height would be to the detriment of the environment in a number of ways, visually, aurally, through the propagation and failure to remediate site generated contamination in the ground. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:1.00in;text-indent:0.50in">In principle, we support the need for a well-conceived boundary, but this proposal is not it….” And a little later on it was said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“It could be argued that the proposed wall will screen the scrap, however, the scrap is evidently stored too high at present, evidenced by excessive lateral forces, instability of the scrap piles, overtopping of the original walls and the escape of scrap into adjoining land. Excessive scrap storage also prevents the safe, efficient and amenable functioning of a boundary buffer strip. This situation is not sustainable, and the remedy is not to increase the height of the walls, but to reduce the height of the storage of scrap behind a properly engineered wall of more modest height. At the same time, a proper functioning and accessible bunded buffer strip (say 5m), from which escaped scrap can be retrieved would provide a fail-safe for the applicant’s errant scrap management regime.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">10.<span style="font-family:Arial"> </span>A Soil Contamination Report dated 11 October 2018 was also submitted. That focused on what was said to be contamination of the appellant’s land by the boundary and the need for a remediation strategy if subsequent residential planning applications for the appellant’s adjoining land were made. That Report did not suggest that the wall could not safely be built on the indicated location nor did it raise any issue as to intensification or contamination with regard to the scrap yard site.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Planning Context</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">We were referred, as had been the judge, to a variety of published Guidance and other materials. However it was not, and could not be, suggested that they of themselves provide an answer to the issues arising; and I think that I can deal with them, for present purposes, relatively shortly. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Thus the local Technical Guidance for Land Affected by Contamination issued by the Essex Contaminated Land Consortium contains detailed guidance. It is primarily directed at derelict sites intended to be brought back into use. Clause 2.2, for example, indicates that “for all proposed residential developments” in cases of contaminated land a minimum of a Phase 1 desk study was required, with a view to establishing a risk assessment. Pretty plainly, as I see it, such Guidance, read as a whole, is not really directed at a situation such as the present, involving as it did construction of a boundary wall. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Similarly, the section in the National Planning Policy Guidance relating to land affected by contamination is general in nature. However of some relevance is the reference (at paragraph 33-002) to the fact that the planning system works alongside a number of regimes, including the Environmental Protection Act and Environmental Permitting Regulations. In that regard, as to planning’s contribution it is among other things said at paragraph 33-003: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“To ensure a site is suitable for its new use and to prevent unacceptable risk from pollution, the implications of contamination for a new development would be considered by the local planning authority to the extent that it is not addressed by other regimes.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In the National Planning Policy Framework, it is stated that planning decisions should take account of ground conditions and any risks arising from contamination or pollution (paragraphs 178 and following). Paragraph 183 also provides as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The focus of planning policies and decisions should be on whether proposed development is an acceptable use of land, rather than the control of processes or emissions (where these are subject to separate pollution control regimes). Planning decisions should assume that these regimes will operate effectively. Equally, where a planning decision has been made on a particular development, the planning issues should not be revisited through the permitting regimes operated by pollution control authorities.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Planning Decision</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">The decision of the respondent was dated 9 November 2018. It granted permission for the proposed development in accordance with the plans there listed. The decision stated that the development was acceptable “for the reasons set out in the Officer’s Report”. It therefore is necessary to go to that Report (the matter having been dealt with as a delegated application) for those reasons. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:0.00in">The Report, itself dated 9 November 2018, among other things described the nature of the 5 metre wall proposed (with buffer zone). It referred to the planning history and to relevant policies. Under the heading “Consultation Responses” there was reference to potential noise issues. This was also said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Neighbour notification – A lengthy objection from a planning consultant has been received on behalf of the owner of the adjoining land to the north and east. The general thrust of this objection is that Benfleet Scrap is not run in a very satisfactory manner, causes pollution of the environment and that the wall will have a greater visual impact than existing boundary treatment, cutting out views from and to the Green Belt.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.09in;margin-right:0.00in;text-indent:-0.01in">The report went on, under the heading “Comments on Consultation Responses”: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">“The running of the scrap business is not a matter for consideration in the context of this application. The application before the local planning authority is for a boundary treatment and the considerations when dealing with this are the visual impact of the wall and its effect on any nearby residents. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">If the business is causing environmental pollution, then the adjoining landowner could report this to the Environment Agency.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There then followed a lengthy section by way of evaluation of the proposal. That section was prefaced by the statement: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“The main issues with this application are the visual impact of the proposed wall, taking into account its impact on the visual amenity of the Green Belt, and the impact on any nearby residents.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Under the sub-heading “Visual Impact” there is a lengthy description and discussion of the proposed boundary wall. It was noted to be higher, by between 1 and 3 metres, than the former boundary arrangements; but it was assessed that the visual impact would not be significantly greater and indeed, though the wall was taller, it might be a visual improvement, as well as serving better to screen the scrap. There then followed these two paragraphs: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“It is noted that the adjoining landowner fears that the provision of this wall may simply enable the scrapyard operator to store scrap to even greater heights, worsening the existing problem of scrap and pollutants escaping the site onto his land. However, there is no condition on the planning permission for use of the site for waste recycling and recovery and as a waste transfer station that limits the height to which scrap may be stored. While it may have been prudent to impose such a condition with the benefit of hindsight, the simple fact is that there is no planning mechanism to prevent the operator of the site storing scrap to the height he wishes, regardless of whether this application is approved. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">Taking all relevant factors and representations received into account, it is not considered that there may be an objection to the proposal on the basis of its visual impact.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">There then followed a section under the sub-heading “Impact on nearby residents”. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">The Report then went on: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“On the matter of whether any permission granted should be subject to conditions, it is not considered that any are necessary. While landscaping adjacent to the wall could be used to soften its visual impact, and indeed is suggested on the drawings and in the supporting statement, the local planning authority shares the view put forward in the representation on behalf of the adjoining landowner, that landscaping in this location would be unlikely to flourish. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">A condition requiring the development to be commenced within the statutory time limit is not necessary as it has already commenced (it is partially retrospective in nature). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.01in;text-indent:0.00in">I have taken all other matters raised by interested parties into consideration, particularly those raised in the letter from Smart Planning dated 30<span style="vertical-align:super;font-size:smaller">th</span> October 2018, but none are sufficient to outweigh the considerations that led to the following: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">My Recommendation is Approval </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:1.01in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Informatives </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.25in;margin-right:1.00in;text-indent:-0.25in">1.<span style="font-family:Arial"> </span>The Local Planning Authority has acted positively and proactively in determining this application by assessing the proposal against all material considerations, including planning policies and any representations that may have been received and subsequently determining to grant planning permission in accordance with the presumption in favour of sustainable development, as set out within the National Planning Policy Framework.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Judicial Review Proceedings</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The appellant was aggrieved at this decision. He commenced judicial review proceedings against the respondent by claim form issued on 20 December 2019. Benfleet was named as an interested party. Permission to apply was refused on the papers by Mr John Howell QC but was granted by Holgate J after an oral hearing on 26 February 2019. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The grounds pursued ranged far and wide. Put shortly, they were to the effect that the Report had left out of account the issue of contamination and had not even required there to have been a desk-top study. Further complaint was made that the issue of intensification (as raised in the Planning Objection) had not been addressed; that the planning history had been insufficiently addressed; and the Green Belt considerations were wrongly assessed and were the subject of a flawed approach. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">By his reserved decision of 31 July 2019 the judge would have none of it. He was clear and forthright in his rejection of all the points raised on behalf of the appellant. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As to the guidance given in the local Technical Guidance on land affected by contamination and in the Planning Practice Guidance the judge found that it was clear that that guidance did not require more detailed reports and assessments in the present case relating to a boundary wall. He assessed the position in some detail. As he pointed out, such guidance primarily focused on whether the use inherent in a proposed development such as a residential development might pose a risk arising from contamination. But that guidance did not obviously apply to incidental developments on a site with an established use. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As to intensification and planning history, the judge referred to the Planning Statement and Planning Objection at some length. He also referred at length to the Report. He roundly rejected criticisms that the Report had insufficiently investigated limitations on use, saying such criticisms involved “wholly unsustainable speculation”. He rejected arguments that the treatment of the planning history was insufficiently reasoned. A further criticism had been made – and it is the one that has featured most prominently in the appeal to this court – to the effect that there should have been considered (but had not been considered) the imposition of a condition directed to the operation of the site. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">As to that the judge’s reasoning was as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“34.  The power to impose a condition on an existing use, when there is a grant of permission relating to the site in question, is well established: see <span style="text-decoration:underline">Penwith DC v Secretary of State for the</span><span> </span><span style="text-decoration:underline">Environment</span> (1977) 34 P &amp; CR 268. The power is not at large, however: the condition imposed must be related to the development being permitted (ibid, and see also NPPF para 55). So the first question posed by Mr Beglan’s submission is this: in what way could a condition restricting the height of open storage be related to the construction of a wall? The answer provided by Mr Beglan is, he says, to be found in the claimant’s letter of objection: the wall was intended to enable intensification, and a suitable condition might prevent intensification occurring. But the assertion that the purpose of the wall was to enable intensification is merely a feature of the claimant’s rhetoric: there is no evidence at all to support it. Indeed, to an extent it is undermined by the claimant’s own evidence that even without the wall there has been storage over 5 m high. Nothing anywhere else in the material before the defendant is capable of raising this issue. This is wholly different from <span style="text-decoration:underline">Penwith</span>, where the avowed purpose of the development sought was to intensify use of the site and enable the existing development to be used more efficiently and for longer hours. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">35.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">Next, a condition could only be imposed if it were necessary (amongst the other factors set out in NPPF para 55). No suggestion of necessity is raised by Mr Beglan. Any general prohibition on intensification would not be necessary, because intensification amounting to a material change of use would require planning permission anyway. And a specific prohibition against storage over 5 m high would not be necessary in the present case because the prohibition is already in force as part of the licence. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">36.</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">One adds to this the factor that the letter of objection did not suggest the imposition of such a condition, and the result is that the defendant is being criticised for failing to consider whether to impose a condition that it would not in general have had power to impose, that would apparently not have been necessary, and which nobody had suggested. In my judgment the defendant had no obligation to consider this matter.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">He then proceeded also, at some length, to reject the criticisms of the Report on Green Belt issues. In the result, therefore, he rejected all the grounds advanced and accordingly dismissed the claim for judicial review.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The Legal Approach</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The principles to be applied in assessing a planning decision of the present kind are well-established. A convenient summary of many of them can be found in the decision of Hickinbottom J in the case of <span style="font-style:italic">R (Midcounties Co-operative Ltd) v Forest </span></p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in"><span style="font-style:italic">of Dean D.C </span>[2014] EWHC 3059 (Admin), [2015] JPL 288, at paragraph 5 of his judgment. There is a further helpful outline of relevant principles in assessing planning decisions to be found in paragraph 19 of the judgment of Lindblom J in <span style="font-style:italic">Bloor Homes Ltd v Secretary of State for Communities and Local Government</span> [2014] EWHC 754 (Admin), [2017] PTSR 1283. No further lengthy exegesis is needed here. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Given the arguments advanced, however, one well-established principle, for which the citation of authority is unnecessary, needs to be emphasised. Whether a matter is capable of being a material consideration is a matter of law. But the weight, if any, thereafter to be given to such a consideration is a matter of planning judgment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Given the emphasis placed in the arguments on the asserted failure of the Report to give any consideration to the imposition of a planning condition, it is necessary also to emphasise certain general legal principles applicable to the imposition of such a condition. First, it must be for a planning purpose and not for an ulterior purpose. Second, it must fairly and reasonably relate to the development permitted. Third, it must not be so unreasonable that no reasonable planning authority could have imposed it: see the discussion, and citation of authority, by Lord Sales at paragraphs 31 to 36 of his judgment (with which the other members of the Supreme Court agreed) in <span style="font-style:italic">R (Wright) v Forest of Dean DC </span>[2019] UKSC 53, [2019] 1 WLR 6562. As he there noted, there is an equation of the ambit of “material considerations” with the ambit of the power to impose planning conditions. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Finally, since the issue of intensification is so prominent on this appeal, it is necessary to refer to the decision in <span style="font-style:italic">Penwith DC v Secretary of State for the Environment </span>(1977) 34P &amp; CR 269, the case referred to by the judge below in paragraph 34 of his judgment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In <span style="font-style:italic">Penwith</span>, a company owned and operated a factory of about 900 square metres. The planning permission was unconditional. After a number of years, the company applied for permission to extend the factory by a further 512 square metres. It was accepted that the purpose of the extension was to enable the machines in the existing factory to be operated 24 hours a day. Planning permission was granted, but subject to conditions, applicable both to the original site and the extended site, as to the use of machinery between certain hours, as to limitations on noise levels at certain hours and as to the provision of remedial works to prevent emissions. The Secretary of State, on appeal, discharged two of the conditions and varied the third. On application to the High Court, that decision of the Secretary of State was quashed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The judge (Sir Douglas Frank QC) restated the proposition that there is no general principle of planning law which required a planning authority, when granting planning permission, to refrain from attaching conditions restricting existing use rights. The key question in that case thus became whether the conditions in question reasonably related to the development. Since the proposed development (the extension) was positively intended and designed to enable the machinery in the existing site to operate continuously, the proposed conditions, which extended to the existing site, did on the facts relate to the development. The Secretary of State’s concern, that the planning authority were in effect taking the opportunity of imposing conditions which they regretted not having imposed in the original permission, was rejected. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Submissions on this Appeal</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">No further challenge on this appeal is made with regard to the Green Belt issues. The written grounds are, with respect, still rather diffuse; but, as accepted by Mr Beglan in oral argument, they all in essence are based on the assertion of what is said to be a critical error in the Report, properly read and understood, with regard to the issue of intensification. It is said that the risk of contamination (by intensification) had been identified in the Planning Objection. However, the writer of the Report had erroneously failed to appreciate that (in accordance with the decision in <span style="font-style:italic">Penwith</span>) there was power to impose a condition restricting the existing operation of the entire scrap yard site, in particular as to the height and storage of scrap, notwithstanding that the original planning permission had contained no such restriction: and, to the contrary, had erroneously taken it that there was no such power. Thus the potential for restriction on the operation of the scrap yard, it was said, was a potentially material consideration which, by reason of the erroneous understanding of the legal position, had been left entirely out of account. The decision was accordingly flawed and was to be quashed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For the respondent, Mr Stedman Jones submitted that there was no proper basis for interfering with the judge’s decision. He submitted that it was completely wrong to say that the writer of the Report, on behalf of the respondent, had thought that there was no available power to consider intensification and whether there could be imposed a condition limiting the use of the scrap yard site. The appellant’s case in fact rested on a flawed and unevidenced assumption that the building of the proposed boundary wall would somehow facilitate intensification of the use of the site or otherwise contribute to potential contamination. Mr Stedman Jones accepted that intensification and contamination were, in law, capable of being material considerations. But it did not follow that they were material in every case: and here the Report, as a matter of planning judgment, had (reasonably) attached no weight to the assertions of intensification made in this particular case. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Disposal</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">35.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">I am in no doubt at all that this appeal should be dismissed. It seems to me to fail at every level of argument. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">36.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">To the extent that Mr Beglan rather faintly continued to rely on the planning history and Policy Guidance available I do not think that, on analysis, they advanced his argument at all. One must not forget that here the proposed development was to be a boundary wall (with buffer zone) – no more, no less. As is evident from their terms, the various guidance documents relied on were essentially (even if not exclusively) directed at a proposed user of land – for example, residential development – where contamination could pose a material risk to the proposed development. They are not really directed at a situation such as the present. The judge’s approach on this aspect was justified. Thus no further assessment, by way of desk-top study or otherwise, was needed, either. The guidance has, in my opinion, no other material part to play in this case to bolster the appellant’s case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">37.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">However, the guidance does make clear that it is appropriate to have regard to other regimes available, such as the Environmental Protection Legislation and Permitting </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">Regulations: see paragraphs 33-002 and 33-003 of the National Planning Policy Guidance and paragraph 183 of the National Planning Policy Framework. Thus the Report was justified in referring to the availability of the right to refer any complaint about pollution to the Environment Agency. That was a relevant matter; and any criticism to the effect that in this case planning considerations had in this respect been wholly subordinated to the powers of other agencies is unjustified. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">38.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Moving on from that, it was and remains wholly unclear, as I see it, just how the proposed development (the wall) would or might cause intensification of the use of the scrap yard site. Although that is asserted in the Planning Objection, quite how such “implication” arises is never actually really explained. It was said that in the past there have, for example, been occasions where scrap has been stacked more than 5 metres high (and photographs illustrating that were provided). Even if that is so, then there is no obvious reason why the boundary wall (5 metres high) of itself would facilitate further such use at the site. More recent photographs, taken since the date of the Report, do show materials in places leaning against or overtopping the wall above of a height of 5 metres. But that, though a regrettable breach of the Environmental Permit, does not begin to justify an assertion that there would be occasioned, by reason of the boundary wall, similar such use or other intensification over this 0.86 hectare site. Mr Beglan was entirely unable to give any kind of convincing answer when the point was put to him in argument and none can be gleaned, apart from bare assertion, from the Planning Objection.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">39.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">The position is thus, on the facts, wholly different from <span style="font-style:italic">Penwith</span>. There the development (the extension) was intended and designed to intensify the operations on the existing site. Accordingly the imposition of new conditions on the existing site operations in that case indeed related to the development (the extension) which was being permitted. But that is not the position in the present case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">40.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Mr Beglan nevertheless said that the judge’s trenchant findings at paragraph 34 of his judgment had involved him entering the arena as a fact finder and a maker of the planning judgment: whereas that was a task for the respondent, and respondent only. But in my view the judge was entitled to make findings as to the lack of any properly evidenced basis for the appellant’s assertions: which in turn bears directly on the issue of materiality. I am prepared to accept, for present purposes, that objectionable intensification may be capable of arising which falls short of constituting a material change of use (contrast paragraph 35 of the judgment). But, that said, that is not a material point in the present case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">41.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Turning, then, to the criticisms of the Report and the submission that the Report wrongly proceeded on the footing that there was no power to impose a condition restricting the operation of the existing site, my view is (on what is the crux of the appellant’s case) that such criticisms and submission involve a misreading of the Report. That, in itself, is fatal for this appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">42.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">In the Comments on Consultation Responses, the Planning Officer is <span style="font-style:italic">not</span>, as I see it,<span style="font-style:italic"> </span>saying that the running of the existing scrap business operation could <span style="font-style:italic">never </span>in law be a matter for consideration. What he is saying in terms is that it is not a matter for consideration “<span style="font-style:italic">in the context of this application</span>” (emphasis added). The immediately following sentence, to the effect that this was a “boundary treatment”, provides an entirely rational explanation for that exercise of planning judgment. Further, for the reasons given above, the next following sentence, referring to the potential availability hereafter of referral to the Environment Agency, was also a matter properly taken into account for this purpose. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">43.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Mr Beglan nevertheless complained that nowhere in the Report is there an express reference to intensification. That is an unjustified quibble. The officer had summarised the objection at the outset of the Report and further confirmed that he had taken it into account at the end of his Report. Besides, he had also in terms referred to the “fears” of the appellant that the wall may enable the scrapyard operator to store scrap to even greater heights, thereby worsening the problems – in short, the complaint about intensification (that he did so under the heading “Visual Impact”, as Mr Beglan had also noted, is another unjustified quibble). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">44.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Mr Beglan’s main argument in fact rested entirely on the sentence: “While it may have been prudent to impose such a condition with the benefit of hindsight, the simple fact is that there is no planning mechanism to prevent the operator of the site storing scrap to the height he wishes, regardless of whether this application is approved.” That, he said, shows that it was wrongly thought that there was no power to impose a condition at all restricting the operation of the existing site. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">45.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">I do not read the Report in that way. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">46.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">In that sentence the officer is addressing the position “regardless of whether this application is approved.” What he is indicating, in my view, is that the building of the wall, if approved, can have no <span style="font-style:italic">proper</span> bearing on the imposition of restrictions as to the height or intensity of storage of scrap. In other words, the building of the boundary wall did not provide a justification for or properly relate to a restriction. That was pre-eminently a matter of planning judgment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">47.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">That, as I see it, is also confirmed by other parts of the Report: which must, of course, be read as a whole. First, it is consistent with the approach taken (legitimately) in the Comments on Consultation Responses, mentioned above. Second, it is consistent with the express consideration of whether any permission should be granted subject to conditions and with the judgment that “it is not considered that any are necessary.” Third, the Planning Officer had not only summarised and referred to the Planning Objection but also had reiterated that he had taken all other matters raised by interested parties into consideration, “particularly those raised in the letter from Smart Planning dated 30 October 2018”; but none, as the Report said, outweighed the considerations leading to the Recommendation for Approval. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">48.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">Viewed overall, therefore, the Report is conveying that the objection as to intensification had been taken into account but, quite simply, weight was not accorded to it. That was a matter of planning judgment, rationally open to the Planning Officer preparing the Report. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">49.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">It is also, I might add, a point of comment that the Planning Objection had not even alluded to the imposition of a condition. The further attempts of Mr Beglan to formulate such a condition – what height, or what intensification, for example? – in discussion at the hearing (though his preferred solution in fact was that the respondent should have deferred a decision on the planning application pending further investigation and assessment) to my mind only tended to reinforce the difficulty of showing how a restriction on the existing use of the entire site in terms of the height </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">or intensification of scrap storage could properly be related to the proposed development in the form of the boundary wall. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.51in">50.</num>
+	  <content>
+	    <p style="margin-left:0.51in;margin-right:0.00in;text-indent:0.5in">This conclusion does not leave the appellant without remedy. Depending on the facts, he may have a private law claim in trespass or nuisance. Or he may raise complaints with the Environment Agency, with the possible sanction of a judicial review claim against that Agency in the event of unjustified inaction. But he cannot, in my opinion, achieve his objectives by way of planning process in the way advanced in this case. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Conclusion</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I can see no justification for interfering with the judge’s decision in this case. The appellant may disagree with the decision to grant planning permission but disagreement, in the absence of any identifiable legal error, cannot ground an appeal. I therefore would, for my part, unhesitatingly dismiss this appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Moylan: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Dingemans: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/514"/>
+	  <FRBRuri value="ewca/civ/2020/514"/>
+	  <FRBRdate date="2020-04-08" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="514"/>
+	  <FRBRname value="Runa v Secretary of State for the Home Department"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/514/eng"/>
+	  <FRBRuri value="ewca/civ/2020/514/eng"/>
+	  <FRBRdate date="2020-04-08" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/514/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/514/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:35:52" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/514/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>514</uk:number>
+	<uk:cite>[2020] EWCA Civ 514</uk:cite>
+	<uk:hash>e64ae0d68b7eb61144db054ad20c4382332aff8ced920e56842d984436e51313</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/514/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.50in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p class="Heading1" style="margin-left:-0.00in;text-indent:-0.01in">Neutral Citation Number: <neutralCitation>[2020] EWCA Civ 514</neutralCitation><span style="text-decoration:none;font-size:10pt"> </span>Case No: C5/2019/1497</p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE UPPER TRIBUNAL</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">(Immigration and Asylum Chamber)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">Deputy Upper Tribunal Judge Mandalia</span>
+      </p>
+      <p class="Heading1" style="text-align:right;margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.88in;margin-right:0.00in;text-indent:2.23in">
+	<span style="text-decoration:underline">Date: 08/04/2020</span>
+	<span style="font-weight:bold"> Before: </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE SINGH</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE BAKER</span>
+      </p>
+      <p style="text-align:center;margin-left:2.16in;margin-right:2.19in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">MR JUSTICE COBB</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between: </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">FAHMIDA KHANOM RUNA </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellant</span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">
+	  <span style="font-weight:bold">and - </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">SECRETARY OF STATE FOR THE HOME </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Respondent</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.13in;text-indent:-0.01in">
+	<span style="font-weight:bold">DEPARTMENT </span>
+      </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.00in;text-indent:-0.01in"><span style="font-weight:bold">Mr Michael Biggs and Mr Michael West</span> (instructed by <span style="font-weight:bold">Kalam Solicitors</span>) for the <span style="font-weight:bold">Appellant</span><span> </span><span style="font-weight:bold">Mr Jack Anderson </span>(instructed by<span style="font-weight:bold"> </span>the<span style="font-weight:bold"> Government Legal Department</span>) for the <span style="font-weight:bold">Respondent</span></p>
+      <p style="text-align:center;margin-left:2.16in;margin-right:2.19in;text-indent:-0.01in">Hearing date: 18 March 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:2.24in;margin-right:2.17in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Judgment Approved</span>
+      </p>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold;font-size:11pt">Covid-19 Protocol:  This judgment was handed down remotely by circulation to the parties’ representatives by email, release to BAILII and publication on the Courts and Tribunals Judiciary website.  The date and time for hand-down is deemed to be 10:30 a.m. on Wednesday, 8 April 2020. </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Singh:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Introduction</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in">1.<span style="font-family:Arial"> </span>By a decision dated 10 June 2015, the Respondent refused the Appellant’s application for leave to remain in the United Kingdom (“UK”) as the spouse of a person present and settled in the UK.  The Appellant’s appeal against that decision was allowed by the First-tier Tribunal (Immigration and Asylum Chamber) (“FTT”) but that decision was set aside by the Upper Tribunal (Immigration and Asylum Chamber) (“UT”), which allowed the Secretary of State’s appeal to it and dismissed the Appellant’s underlying appeal.  The Appellant now appeals, with the permission of this Court, against the decision of Deputy Upper Tribunal Judge Mandalia (the “DUTJ”), which was promulgated on 18 March 2019.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Factual Background</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Appellant is a national of Bangladesh and was born on 11 April 1992.  She was granted leave to enter the UK as a visitor from 21 May 2006 to 21 November 2006.  She arrived in the UK on 12 June 2006 and remained in the UK unlawfully when her leave to enter expired.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 12 June 2014, the Appellant married Mr Ali Hessan, a British citizen, and on 1 April 2015 made an application for leave to remain in the UK as the spouse of a person present and settled in the UK.  The application was refused by the Respondent in a decision dated 10 June 2015.  On 20 June 2015, the Appellant gave notice of her appeal to the FTT.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The Appellant’s first son was born on 6 October 2015.  He is a British citizen. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 18 August 2016, the FTT heard the Appellant’s appeal.  The evidence before the Tribunal was that the Appellant still had family in Bangladesh, consisting of her father, step-mother and one brother.  Mr Hessan was employed as a security guard in the UK.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In a decision dated 15 September 2016, the FTT allowed the Appellant’s appeal.  The Respondent’s application to the FTT for permission to appeal was refused on 11 January 2017.  On 25 January 2017, the Respondent applied to the UT for permission to appeal.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 3 October 2018, the Appellant’s second son was born.  He is also a British citizen.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 26 October 2018, the UT granted the Respondent’s application for permission to appeal on the basis that the FTT had erred in its approach to para. 276ADE and Appendix FM of the Immigration Rules, and failed to give adequate reasons for its decision.  In a decision promulgated on 18 March 2019, the UT allowed the Respondent’s appeal and dismissed the Appellant’s underlying appeal.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">On 29 March 2019, the Appellant applied to the UT for permission to appeal to the Court of Appeal.  That application was refused on 23 May 2019.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In an order dated 1 November 2019, I granted permission to appeal to the Court of Appeal (on Grounds 1 and 2 only).  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Decision under appeal</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">By the decision of 10 June 2015, the Respondent concluded that the Appellant was unable to satisfy the requirements of para. 276ADE(1)(vi) and Appendix FM of the Immigration Rules.  The Respondent considered the Appellant’s application by reference to the requirements for leave to remain as a partner under Appendix FM RLTRP.  As the Appellant could not meet all the requirements of Section E-LTRP, the Respondent considered the application by reference to the requirements of para. ELTRP 1.1(a), (b) and (d).  The Respondent was not satisfied that the requirements of paragraph EX.1 were met by the Appellant as: (i) there was no evidence of insurmountable obstacles preventing the Appellant and her partner from continuing their relationship in Bangladesh; and (ii) there were no exceptional circumstances which, consistent with the right to respect for private and family life contained in Article 8 of the European Convention on Human Rights (“the Convention”), might warrant the grant of leave to remain outside the requirements of the Immigration Rules.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">When the Appellant’s underlying appeal came before the UT, the DUTJ first considered whether the Appellant met the requirements of para. 276ADE and Appendix FM of the Immigration Rules.  As the Appellant had remained unlawfully in the UK, she could not satisfy the immigration status requirements set out in appendix FM of the Immigration Rules.  Therefore the DUTJ considered para. EX.1 and found that the Appellant was unable to establish that there were insurmountable obstacles to family life between the Appellant and her partner continuing outside the UK.  On the question whether it would be “reasonable” to expect the children to leave the UK, the DUTJ considered the test outlined in <span style="font-style:italic">KO (Nigeria) and Ors v Secretary of State for the Home Department </span>[2018] UKSC 53; [2018] 1 WLR 5273, at para. 19, citing <span style="font-style:italic">EV (Philippines) and Ors v Secretary of State for the Home Department </span>[2014] EWCA Civ 874, at para. 58, where it was said by Lewison LJ that a “real world” view must be taken.  The DUTJ concluded that, in this case, where there were no insurmountable obstacles to family life between the Appellant and her husband continuing outside the UK, the natural expectation would be that the children, aged 3 and 3 months respectively, would go with them and there was nothing in the evidence to suggest that this would not be reasonable. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">As to the human rights claim on Article 8 grounds, the DUTJ applied the approach set out by Lord Bingham of Cornhill in <span style="font-style:italic">R (Razgar) v Secretary of State for the Home Department </span>[2004] UKHL 27; [2004] 2 AC 368.  It was held that Article 8 was engaged and the DUTJ moved to consider whether the interference was in accordance with the law and necessary to protect the economic well-being of the country.  The primary issue was whether the interference was proportionate to the legitimate aim sought to be achieved.  As required by section 117A of the Nationality, Immigration and Asylum Act 2002 (“the 2002 Act”), as amended by the Immigration Act 2014, the DUTJ had regard to the considerations listed in section 117B.  Having taken all the evidence into account, it was held that the refusal of leave to remain was proportionate to the legitimate aim of enforcing immigration control. The Appellant’s appeal was therefore dismissed.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Grounds of Appeal</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In an order dated 1 November 2019, I granted permission to appeal on Grounds 1 and 2 only: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(1)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Ground 1: the DUTJ erred in the construction and application of section 117B(6) of the 2002 Act and the “reasonableness” test.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">(2)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Ground 2: the DUTJ erred with regard to proportionality under Article 8 outside the Immigration Rules.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Under Ground 1, the Appellant submits that the DUTJ incorrectly determined whether it was reasonable to expect her two British children to leave the UK. The test is stated as “…is it reasonable to expect the child to follow the parent with no right to remain in the country of origin?” (<span style="font-style:italic">EV (Philippines)</span>, at para. 58).  It is argued that the DUTJ fell into error in failing to establish the context in which to make the reasonableness assessment under section 117B(6).  In addition, the DUTJ erroneously contemplated the possibility that it would be reasonable for the British children to remain in the UK with their father only, contrary to the approach taken by this Court in <span style="font-style:italic">AB (Jamaica) &amp; AO (Nigeria) v Secretary of State for the Home Department</span> [2019] EWCA Civ 661; </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">[2019] 1 WLR 4541.  The Appellant further relies on the judgment of Elias LJ in <span style="font-style:italic">R (MA (Pakistan) and Ors) v Upper Tribunal (Immigration and Asylum Chamber) and Anor </span>[2016] EWCA Civ 705; [2016] 1 WLR 5093, at para. 35, where it was recorded that it had been conceded by counsel for the Secretary of State that it will be “relatively rare” for it to be reasonable to expect a British child to leave the UK.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Under Ground 2, the Appellant notes that, at paras. 31 and 32 of the DUTJ’s decision, public interest considerations, and the fact that the Appellant did not meet the rules (under Appendix FM, para. EX.1(b)), were both considered by the DUTJ alongside the question of “reasonableness” under section 117B(6). It is argued that the DUTJ was wrong to take into consideration those factors when assessing proportionality because wider public interest considerations are not relevant in making that assessment.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">At the hearing before us Mr Michael Biggs, who appeared with Mr Michael West, in substance ran the two grounds of appeal together.  We are grateful to them both, as we are to Mr Jack Anderson, who made helpful submissions on behalf of the Respondent. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Submissions for the Respondent</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Under Ground 1, the Respondent argues that <span style="font-style:italic">EV (Philippines)</span> is authority for the proposition that proportionality must be addressed on the basis of facts as they are in the “real world”.  On the facts of the present case, it is submitted that there was no evidence to support the existence of any serious impediment to the family relocating to Bangladesh.  In addition, the Respondent submits that the DUTJ was entitled to consider the possibility that the children could reasonably remain in the UK with their </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">father, as that may be relevant to the overall assessment of proportionality.  Nothing in <span style="font-style:italic">AB (Jamaica)</span> suggests the contrary.  The Respondent further notes that the Appellant’s reliance on the concession by counsel in <span style="font-style:italic">MA (Pakistan)</span>, at para. 35, does not amount to a threshold test.  In any event, it is argued that the evidence adduced by the Appellant was conspicuously weak in spite of the fact that, having set aside the FTT’s decision, the UT conducted a fresh hearing of the underlying appeal and gave the Appellant the opportunity to adduce such further evidence as she wished.   </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Under Ground 2, the Respondent submits that it was reasonable to expect the children to leave the UK, pursuant to section 117B(6) of the 2002 Act, based on a consideration of their circumstances without balancing the public interest in removal.  The DUTJ, however, was entitled to identify public interest considerations and undertake a balancing exercise when considering proportionality “at large” under Article 8.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Material Legislation</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.01in;margin-right:0.00in;text-indent:0.00in">20.<span style="font-family:Arial"> </span><marker name="tab"/>Section 117B of the 2002 Act provides: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">“Article 8: public interest considerations applicable in all cases </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.67in;text-indent:0.50in">The maintenance of effective immigration controls is in the public interest. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.67in;text-indent:0.50in">It is in the public interest, and in particular in the interests of the economic well-being of the United Kingdom, that persons who seek to enter or remain in the United Kingdom are able to speak English, because persons who can speak </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">English— </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.46in;text-indent:-0.28in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.46in;margin-right:0.00in">are less of a burden on taxpayers, and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.46in;text-indent:-0.28in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.46in;margin-right:0.00in">are better able to integrate into society. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.67in;text-indent:0.50in">It is in the public interest, and in particular in the interests of the economic well-being of the United Kingdom, that persons who seek to enter or remain in the United Kingdom are financially independent, because such persons— </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.46in;text-indent:-0.28in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.46in;margin-right:0.00in">are not a burden on taxpayers, and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.46in;text-indent:-0.28in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.46in;margin-right:0.00in">are better able to integrate into society. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(4)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.67in;text-indent:0.50in">Little weight should be given to— </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.46in;text-indent:-0.28in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.46in;margin-right:0.00in">a private life, or </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.46in;text-indent:-0.28in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.46in;margin-right:0.00in">a relationship formed with a qualifying partner, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.76in;text-indent:0.00in">that is established by a person at a time when the person is in the United Kingdom unlawfully. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(5)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.67in;text-indent:0.50in">Little weight should be given to a private life established by a person at a time when the person's immigration status is precarious. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(6)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.67in;text-indent:0.50in">In the case of a person who is not liable to deportation, the public interest does not require the person's removal where— </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in;text-indent:-0.20in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.47in">the person has a genuine and subsisting parental relationship with a qualifying child, and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.28in;text-indent:-0.20in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.28in;margin-right:0.47in">it would not be reasonable to expect the child to leave the United Kingdom.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Analysis</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The DUTJ examined the possibility of two scenarios arising:  (1)<span style="font-family:Arial"> </span><marker name="tab"/>the children remaining in the UK with their father;  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"><marker name="tab"/>(2)<span style="font-family:Arial"> </span><marker name="tab"/>the entire family unit relocating to Bangladesh.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.49in;margin-right:0.00in;text-indent:0.00in">Ultimately, he concluded that, in a context where there were no insurmountable obstacles to family life between the Appellant and her husband continuing outside the UK, the natural expectation would be that the children would go with them and there was nothing in the evidence to suggest that that would not be reasonable.  Mr Biggs submits that that reflected an erroneous approach to the only question posed by section 117B(6), which focusses on whether it would be reasonable to expect the children to leave the UK, not whether it would be reasonable to expect the whole family unit to do so. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Further, the DUTJ at times also appears to have contemplated that it would be reasonable for the children to remain in the UK with their father alone.  Mr Biggs submits that that too reflected an erroneous approach to the question posed by section 117B(6), which is whether or not it would be reasonable to expect the children to leave the UK. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">At the heart of this appeal lies the correct interpretation of section 117B(6).  For the relevant context and the case law interpreting that provision up to and including <span style="font-style:italic">KO (Nigeria) </span>I would refer to my judgment in <span style="font-style:italic">AB (Jamaica)</span>, at paras. 53-59. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On behalf of the Appellant Mr Biggs’s primary submission is that section 117B(6) should be interpreted as laying down what he called the “categorical” or “hypothetical” approach.  He submits that, in a case where one of the parents of the child concerned has the right to remain in the UK, for example where they are a British citizen as in the present case, it cannot be reasonable to expect the child to leave the UK with the other parent, who has no right to remain in the UK.  He submits that, in those circumstances, it will inevitably be the case that the family unit will be </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">split up.  It cannot be in the best interests of the child to be forced to leave this country, in particular where the child himself or herself is a British citizen and has the right to live in this country. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In the alternative Mr Biggs submits that the provision should be interpreted as requiring what he calls the “fact-finding” approach.  On this approach, the question which has to be addressed under section 117B(6) still focusses only on the child but must be answered against the background of the relevant facts.  Those facts will include the nationality or immigration status of the other parent and what is likely to happen to the family unit in the event that the Appellant is required to leave the UK.  Mr Biggs submits that, if such a factual inquiry is required, it did not take place in the present case before the Upper Tribunal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Biggs submits that his primary submission is either required or at least strongly supported by authority.  In that context he relies in particular on the decision of the Supreme Court in <span style="font-style:italic">KO (Nigeria)</span>, at paras. 17-19 in the judgment of Lord Carnwath JSC; the <span style="font-style:italic">obiter dicta</span> of Lewison LJ in <span style="font-style:italic">EV (Philippines)</span>, at para. 58; and the decision of this Court in <span style="font-style:italic">AB (Jamaica)</span>, at paras. 59-61; 71; 74-75 (Singh LJ); and para. 116 (Underhill LJ). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The first and foremost difficulty with Mr Biggs’s primary submission is that there is nothing in the wording of section 117B(6) to support it.  The submission amounts in effect to a rule of law, that, wherever one parent has the right to live in the UK and the other parent does not, it will be unreasonable to expect the child to leave the UK.  If Parliament had intended to enact such a rule of law, it could easily have said so.  Section 117B(6) does not enact a rule of law but rather calls for a question to be asked and answered on the facts of each particular case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The next difficulty with Mr Biggs’s primary submission is that none of the cases on which he relies concerned the precise issue which has arisen in the present appeal.  The relevant cases which were part of the appeal in <span style="font-style:italic">KO (Nigeria)</span> concerned the scenario where neither parent had the right to remain in the UK: see e.g. the facts of the <span style="font-style:italic">NS</span> case, at paras. 46-52 in the judgment of Lord Carnwath. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The facts of <span style="font-style:italic">EV (Philippines)</span> were also such that neither parent had the right to remain in the UK.  It is for that reason that the following passage in the judgment of Lewison LJ, at para. 58, was <span style="font-style:italic">obiter </span>in so far it referred to a factual scenario where one parent has the right to remain in the UK and the other does not: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.95in;text-indent:0.00in">“… the assessment of the best interests of the children must be made on the basis that the facts are as they are in the real world.  If one parent has no right to remain, but the other parent does, that is the background against which the assessment is conducted.  If neither parent has the right to remain, then that is the background against which the assessment is conducted.  Thus the ultimate question will be: is it reasonable to expect the child to follow the parent with no right to remain to the country of origin?”  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Furthermore, as Mr Anderson observed at the hearing before us, the last sentence of that passage is at least as consistent with the Respondent’s submissions as it is with the Appellant’s.  Lewison LJ appears to have contemplated that, even in a case where one parent has the right to remain in the UK and the other does not, the question posed by section 117B(6) is still one that has to be addressed.  Otherwise, he would simply have said that, in such a scenario, it will never be reasonable to expect the child to leave the UK. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In <span style="font-style:italic">AB (Jamaica)</span> the error into which the Secretary of State had fallen was not the one which is said to arise in the present appeal.  In that case the Secretary of State submitted that, in circumstances where it was not expected that a child would in fact leave the UK, there was no need to ask the question posed by section 117B(6).  This Court rejected that submission and held that the question is a single question which always has to be asked but that, in such circumstances, the answer would be No. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Biggs also placed reliance on the decision of this Court in <span style="font-style:italic">GM (Sri Lanka) v Secretary of State for the Home Department </span>[2019] EWCA Civ 1630, in particular at para. 34, where he submits this Court adopted a hypothetical approach.  However, in my view, it is important to appreciate that <span style="font-style:italic">GM</span> did not concern section 117B(6) at all.  That was a conventional case of a proportionality assessment under Article 8(2) itself.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In this context, we heard interesting submissions from the parties as to whether there is scope for Article 8 to play a part in cases where section 117B(6) arises.  Mr Anderson submitted on behalf of the Secretary of State that there is a residual scope for Article 8 to apply.  This is because he submits that, although section 117B(6) is a “freestanding” provision (see <span style="font-style:italic">KO</span>, at para. 17), that does not mean that it is exhaustive of the scope of Article 8.  He submits that section 117B(6) is to be regarded as a benevolent provision, which can only operate in one way, potentially in favour of an appellant but never adversely to an appellant.  I would accept Mr Anderson’s submission in this regard.  It seems to me both to be right in principle and also to be consistent with the analysis of section 117B(6) given by Elias LJ in <span style="font-style:italic">MA (Pakistan)</span>, at para. 17, where he said that that subsection “must be read as a self-contained provision in the sense that Parliament has stipulated that where the conditions specified in the subsection are satisfied, the public interest will not justify removal.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">This is important because a conventional Article 8(2) inquiry can take into account, as part of the overall proportionality exercise, other public interest considerations, including the conduct of the parent or parents.  Under section 117B(6) there is no room for such an inquiry to take account of the conduct of the parents: that is the effect of the decision of the Supreme Court in <span style="font-style:italic">KO (Nigeria)</span>, which overruled the earlier decision of this Court in <span style="font-style:italic">MM (Uganda) v Secretary of State for the Home Department </span>[2016] EWCA Civ 617; [2016] Imm AR 954 and in that respect approved what had been said by Elias LJ in <span style="font-style:italic">MA (Pakistan)</span> (as that case was known before it became <span style="font-style:italic">KO (Nigeria)</span> when it went to the Supreme Court), at para. 36.  Under section 117B(6) the only question is focussed on the child: would it be reasonable to expect the child to leave the UK?  If the answer to that is No, there is no need to go on to consider Article 8(2) more generally.  However, as a matter of principle, and as Mr Anderson rightly submitted, if the answer is Yes, there will still be a residual scope for Article 8(2) to be considered. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The next submission made by Mr Biggs in support of his “categorical” or “hypothetical” approach was that otherwise a tribunal would be compelled to undertake a very difficult factual analysis, which would be contrary to the underlying purpose of section 117B.  However, as Mr Anderson pointed out, in Article 8(2) cases more generally, such difficult questions can arise and tribunals do have to face up to them.  He reminded us in that context of what was said by Sedley LJ in <span style="font-style:italic">VW (Uganda) v Secretary of State for the Home Department </span>[2009] EWCA Civ 5, at para. 42.  As Baker LJ observed during the course of the hearing before us, similar questions can arise in family proceedings under the Hague Convention.  Although a provision such as section 117B(6) reduces the scope for judicial evaluation which may be necessary, it does not eradicate it completely.  Where necessary, and depending on the facts, judges can and do ask questions which may call for a difficult evaluation.  That could include asking the question what is going to happen to the family unit if one parent has the right to remain in the UK and the other does not.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Finally, in this context, Mr Biggs placed reliance on what was said by the Upper Tribunal in <span style="font-style:italic">Patel (British citizen child – deportation) </span>[2020] UKUT 45 (IAC).  I observe, however, that that was a decision on section 117C(5), a provision which was said by the Upper Tribunal to call for a hypothetical question to be answered: see para. 32 of the judgment.  In my respectful view, that does not assist the Court in determining the issue which arises on the present appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I would therefore reject Mr Biggs’s primary submission as to the interpretation of section 117B(6).  I would, however, accept his alternative submission, that the provision calls for a fact-finding exercise so that the full background facts must be established against which the only statutory question posed by that provision can then be addressed.  I would emphasise again, as the Supreme Court did in <span style="font-style:italic">KO (Nigeria) </span>and this Court did in <span style="font-style:italic">MA (Pakistan) </span>and <span style="font-style:italic">AB (Jamaica) </span>that, once all the relevant facts have been found, the only question which arises under section 117(6)(b) is whether or not it would be reasonable to expect the <span style="font-style:italic">child</span> to leave the UK.  The focus has to be on the child. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I would also accept Mr Biggs’s submission that the test under section 117B(6) is not whether there are “insurmountable obstacles” to the maintenance of family life outside the UK.  That would be so even in an ordinary Article 8 case: see <span style="font-style:italic">GM</span> at paras. 42-52, in particular paras. 43-44 (Green LJ).  That is all the more so in a case which is not a conventional Article 8(2) one but arises under section 117B(6). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Against that background of principle I turn to consider the judgment of the UT in the present case.  In fairness to the DUTJ I bear in mind that that judgment was given before the decision of this Court in <span style="font-style:italic">AB (Jamaica)</span>, which clarified the meaning of section 117B(6). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Anderson submitted that, applying the correct approach to that provision, the UT did not fall into error.  He submitted that, in substance, the UT had properly addressed the question which it had to in accordance with that provision and, on the basis of the limited evidence which the Appellant had chosen to place before it, despite the opportunity to adduce further evidence before the UT, the DUTJ was entitled to reach the conclusion which he did. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">I do not accept those submissions.  In my judgement, the UT did fall into error as a matter of approach.  This is illustrated in particular by what was said at paras. 26 and 27 of the judgment.  At para. 26 the DUTJ said that: “There is no evidence before me to suggest that the appellant’s partner would be unable to cope alone with the children, with the support of his family, if they chose to remain in the UK.”  At para. 27, he said: “… I should consider whether it is reasonable for the children to live in the UK with their father, or live with the appellant and her husband as a family unit.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In those passages the DUTJ appeared to contemplate the possibility of two alternatives arising on the facts.  The first was that the entire family unit would go overseas.  The other scenario, however, was that the children would remain in the UK only with their British citizen father and that the Appellant would leave the UK.  If those facts were to arise, there would inevitably be a disruption of the family unit.  This would be contrary to the best interests of the children.  The DUTJ appeared to ask the question whether it would be reasonable for the children to remain with their British citizen father in the UK.  This is why he asked such questions as whether he could cope with bringing them up, with the support of family here.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In my judgement, that was fundamentally the wrong approach under section 117B(6), which poses the question whether it would be reasonable to expect the children to leave the UK.  That is not, as Mr Biggs submitted, a hypothetical question but it is a normative question, not merely an exercise in prediction: see <span style="font-style:italic">AB (Jamaica)</span>, at paras. 73-75 (Singh LJ), approving what was said by UTJ Plimmer in <span style="font-style:italic">SR (Pakistan) v Secretary of State for the Home Department</span> [2018] UKUT 334 (IAC), at para. 51; and see also <span style="font-style:italic">AB (Jamaica)</span>,<span style="font-style:italic"> </span>at para. 116 (Underhill LJ). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Furthermore, I would accept Mr Biggs’s submission that the UT wrongly focussed on the question whether there would be “insurmountable obstacles” to the maintenance of the family unit outside the UK: see in particular para. 27 of the judgment.  This was contrary to what is required even in an ordinary Article 8(2) case as made clear by this Court in <span style="font-style:italic">GM</span>, drawing on long established Strasbourg caselaw.  That would be all the more the wrong approach in a case arising under section 117B(6). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">In this context, Mr Biggs made a number of submissions, in particular in his supplementary skeleton argument and at the oral hearing, to which objection was taken on procedural grounds by Mr Anderson.  Mr Anderson submitted that the grounds on which permission to appeal had been granted were limited and that this line of argument inadmissibly sought to widen those grounds.  In my view, that is not the case.  The reason why Mr Biggs drew attention to the fact that various facts were never found, such as what would happen to the family unit given that one of the parents is a British citizen and has lived all his life in the UK, is that it illustrated the fundamental error of approach which the UT adopted in this case.  It was not in itself a freestanding ground of appeal which Mr Biggs was seeking to raise despite having no permission to do so. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Conclusion</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For the reasons I have given I would allow this appeal against the decision of the UT.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In those circumstances Mr Biggs submitted that this Court should simply allow the underlying appeal by the Appellant against the decision of the Secretary of State of 10 June 2015.  Alternatively, he submitted that this Court should remit the appeal to the UT to be reconsidered after making appropriate findings of fact. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In my judgement, it would not be appropriate in this case for this Court simply to allow the underlying appeal.  This is because, for reasons I have explained, the approach which the UT took meant that it never made certain findings of fact which would be necessary in order to make the assessment required by section 117B(6).  In those circumstances, I would remit this case to the appropriate tribunal for reconsideration in accordance with the judgments of this Court.  The parties are agreed, in the circumstances which have arisen, that this case should be remitted to the FTT rather than the UT.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Baker: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Mr Justice Cobb: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

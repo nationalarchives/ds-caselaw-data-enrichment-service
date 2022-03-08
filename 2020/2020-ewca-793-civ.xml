@@ -1,0 +1,914 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/civ/2020/793"/>
+	  <FRBRuri value="ewca/civ/2020/793"/>
+	  <FRBRdate date="2020-06-24" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="793"/>
+	  <FRBRname value="Neurim Pharmaceuticals (1991) Ltd &amp; Anor v Generics UK Ltd (t/a Mylan) &amp; Anor"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/civ/2020/793/eng"/>
+	  <FRBRuri value="ewca/civ/2020/793/eng"/>
+	  <FRBRdate date="2020-06-24" name="judgment"/>
+	  <FRBRauthor href="#ewca-civil"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/civ/2020/793/eng/akn"/>
+	  <FRBRuri value="ewca/civ/2020/793/eng/akn"/>
+	  <FRBRdate date="2021-11-30T22:41:48" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-civil" href="https://www.gov.uk/courts-tribunals/court-of-appeal-civil-division" showAs="The Court of Appeal of England and Wales (Civil Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+      </references>
+      <proprietary source="ewca/civ/2020/793/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Civil</uk:court>
+	<uk:year>2020</uk:year>
+	<uk:number>793</uk:number>
+	<uk:cite>[2020] EWCA Civ 793</uk:cite>
+	<uk:hash>87603d0f04c438399f6ec9c73c25a968d3b67c91ba82f24539dabb19cbec85dc</uk:hash>
+      </proprietary>
+      <presentation source="ewca/civ/2020/793/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: 'Times New Roman'; color: #000000; }
+#judgment .Normal { text-align: justify; margin-left: 0.50in; margin-right: 0.04in; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading1 { text-align: right; margin-left: 0.01in; text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2 { margin-left: 0.01in; font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .footnotedescription { font-family: 'Times New Roman'; font-size: 10pt; color: #000000; }
+#judgment .Heading1Char { text-decoration: underline; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .Heading2Char { font-style: italic; font-family: 'Times New Roman'; font-size: 12pt; color: #000000; }
+#judgment .footnotedescriptionChar { font-family: 'Times New Roman'; font-size: 10pt; color: #000000; }
+#judgment .footnotemark { vertical-align: super; font-family: 'Times New Roman'; font-size: 10pt; color: #000000; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in"/>
+    </coverPage>
+    <header>
+      <p style="text-align:center;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<img src="image1.jpg" style="width:1.0597222222222222in;height:1.05in;"/>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="text-decoration:underline">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:underline">[2020] EWCA Civ 793</neutralCitation>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Case Nos: A3/2020/0808<span style="text-decoration:none"> </span>A3/2020/0809</p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<courtType style="font-weight:bold;text-decoration:underline">IN THE COURT OF APPEAL (CIVIL DIVISION)</courtType>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">ON APPEAL FROM THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">BUSINESS AND PROPERTY COURTS OF ENGLAND &amp; WALES</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">INTELLECTUAL PROPERTY LIST (ChD)</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">PATENTS COURT</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">The Hon Mr Justice Marcus Smith</span>
+      </p>
+      <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	<neutralCitation style="font-weight:bold">[2020] EWHC 1362 (Pat)</neutralCitation>
+	<span style="font-weight:bold"> </span>
+      </p>
+      <p class="Heading1" style="margin-left:0.01in;margin-right:0.03in;text-indent:-0.01in">Royal Courts of Justice<span style="text-decoration:none"> </span>Strand, London, WC2A 2LL</p>
+      <p style="text-align:left;margin-left:2.86in;margin-right:0.00in;text-indent:2.25in">
+	<span style="text-decoration:underline">Date: 24/06/2020</span>
+	<span style="font-weight:bold"> Before : </span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE FLOYD</span>
+      </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE MALES</span>
+      </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">and</p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold;text-decoration:underline">LORD JUSTICE ARNOLD</span>
+      </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">- - - - - - - - - - - - - - - - - - - - - </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Between : </span>
+      </p>
+      <blockContainer>
+	<num>(1)</num>
+	<p style="text-align:left;margin-left:1.32in;margin-right:0.00in">
+	  <span style="font-weight:bold">NEURIM PHARMACEUTICALS (1991) LIMITED </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">(a company incorporated under the laws of Israel) </span>
+      </p>
+      <blockContainer>
+	<num>(2)</num>
+	<p style="text-align:left;margin-left:1.32in;margin-right:0.00in">
+	  <span style="font-weight:bold">FLYNN PHARMA LIMITED </span>
+	</p>
+      </blockContainer>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">(a company incorporated under the laws of the </span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<marker name="tab"/>
+	<span style="font-weight:bold">Republic of Ireland) </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold;text-decoration:underline">Appellants</span>
+      </p>
+      <p style="text-align:left;margin-left:0.00in;margin-right:0.00in;text-indent:0.00in">
+	<span style="font-weight:bold"> </span>
+	<marker name="tab"/>
+	<span style="font-weight:bold">- and - </span>
+      </p>
+      <blockContainer>
+	<num>(1)</num>
+	<p style="text-align:left;margin-left:0.30in;margin-right:0.04in">
+	  <span style="font-weight:bold">GENERICS UK LIMITED (trading as Mylan) </span>
+	</p>
+      </blockContainer>
+      <blockContainer>
+	<num>(2)</num>
+	<p style="text-align:left;margin-left:0.30in;margin-right:0.04in">
+	  <span style="font-weight:bold">MYLAN UK HEALTHCARE LIMITED </span>
+	  <marker name="tab"/>
+	  <span style="font-weight:bold;text-decoration:underline">Respondents</span>
+	</p>
+      </blockContainer>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.21in;margin-right:1.14in">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Andrew Waugh QC</span> (instructed by <span style="font-weight:bold">Gowling WLG (UK)LLP</span>) for the <span style="font-weight:bold">First</span><span> </span><span style="font-weight:bold">Appellant</span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Andrew Waugh QC </span>(instructed by<span style="font-weight:bold"> Pinsent Masons LLP</span>) for the <span style="font-weight:bold">Second Appellant </span></p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in"><span style="font-weight:bold">Mark Vanhegan QC </span>and<span style="font-weight:bold"> Adam Gamsa </span>(instructed by <span style="font-weight:bold">Taylor Wessing LLP</span>) for the </p>
+      <p style="text-align:center;margin-left:0.01in;margin-right:0.04in;text-indent:-0.01in">
+	<span style="font-weight:bold">Respondents </span>
+      </p>
+      <p style="text-align:center;margin-left:0.09in;margin-right:0.12in;text-indent:-0.01in">Hearing date: 18 June 2020 </p>
+      <blockContainer>
+	<num>-</num>
+	<p style="text-align:center;margin-left:1.21in;margin-right:1.14in">- - - - - - - - - - - - - - - - - - - - </p>
+      </blockContainer>
+      <p class="Heading1" style="text-align:center;margin-left:0.00in;margin-right:0.04in;text-indent:0.00in">
+	<span style="font-weight:bold;text-decoration:none;font-size:18pt">Approved Judgment </span>
+      </p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Floyd:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:-0.00in">This is an appeal from the order of Marcus Smith J dated 3 June 2020 by which he refused the grant of an interim injunction in this pharmaceutical patent case.  The interim injunction was sought by the first claimant and appellant, Neurim Pharmaceuticals (1991) Limited (“Neurim”), and its registered exclusive licensee, the second claimant and appellant, Flynn Pharma Limited (“Flynn”).  Neurim and Flynn allege that the defendants and respondents, Generics UK Limited (trading as Mylan) and Mylan UK Healthcare Limited (together “Mylan”), threaten and intend to infringe Neurim’s patent, EP(UK) 1,441,702 B1 (“the patent”).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p style="text-align:left;margin-left:0.50in;margin-right:-0.00in">We heard this appeal on an expedited basis by remote video-conferencing on 18 June.  On 19 June we informed the parties by email that we dismissed the appeal and would give our reasons in writing at a later date.  In this judgment I set out the reasons why I joined in the decision to dismiss the appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">Background</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">3.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The patent is due to expire on 12 August 2022.  By a decision of the Opposition Division of the EPO dated 2 January 2020 the patent was held to be invalid, but that decision is subject to an appeal.  In the meantime, the effect of the Opposition’s Division’s decision is suspended, and the patent remains in force.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">4.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The patent claims the use of a prolonged release formulation of melatonin for improving the restorative quality of sleep in a patient suffering from primary insomnia.  Claim 1 is in the “Swiss” form, and reads as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">"Use of a prolonged release formulation comprising melatonin in unit dosage form, each unit dosage comprising 0.025 to 10mg of melatonin, in the manufacture of a medicament for improving the restorative quality of sleep in a patient suffering from primary insomnia characterised by non-restorative sleep, wherein the medicament comprises also at least one pharmaceutically acceptable diluent, preservative, antioxidant, solubilizer, emulsifiers, adjuvant or carrier." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">5.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The product marketed by Flynn under the protection of the patent is sold under the brand name Circadin.  More recently, Neurim has developed a version of the product for paediatric use which is sold as Slenyto.  The label for Circadin identifies the following therapeutic indication: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">"Circadin is indicated as monotherapy for the short-term treatment of primary insomnia characterised by poor quality of sleep in patients who are aged 55 or over." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">6.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The scope of this label is therefore narrower than the claims of the patent.  The judge identified three classes of medical use for Circadin: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.66in;text-indent:0.50in"><span style="font-style:italic">Medical Use 1: Use within the label and within the Patent.</span> This would be for the short-term treatment of primary insomnia characterised by poor quality of sleep in patients who are aged 55 or over. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.66in;text-indent:0.50in"><span style="font-style:italic">Medical Use 2: Use outside the label but within the Patent. </span>This would be for use in improving the restorative quality of sleep in a patient suffering from primary insomnia characterised by non-restorative sleep, where the patient's age is below 55. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.66in;text-indent:0.50in">
+	      <span style="font-style:italic">Medical Use 3: Use outside the label and outside the </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in"><span style="font-style:italic">Patent.</span> The range of use outside the label and outside the Patent would include – for example – prescriptions for childhood autism. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">7.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Until October 2018 Circadin was Neurim’s only marketed product, and it is now, with Slenyto, one of two such products.  The UK represents 45% of the European market for Circadin.  25% of Neurim’s global revenue comes from UK sales by Flynn.  Circadin is Flynn’s “flagship product” and one of 15 products that Flynn has in its portfolio.  The major proportion of Flynn’s profit comes from Circadin and the market for Circadin continues to grow. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">8.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Circadin is in Category C in the NHS Drug Tariff.  The significance of that categorisation is that the reimbursement price to pharmacists is set based on the branded product, i.e. Circadin. Category C lists drugs that are not readily available as a generic.  When generic competitors become available the drug can be re-categorised into Category A or M.  Category A is for drugs that are readily available, and the price is calculated from a basket of suppliers.  Category M lists drugs that are readily available and the price is calculated by the Department of Health and Social Care on the basis of information submitted by manufacturers.  A decision to move a drug from Category C to Category A or M is taken by the Secretary of State following a consultation process.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">9.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">According to the evidence some 53% of prescriptions for Circadin are written by brand rather than generically.  Those prescriptions can only be satisfied with the branded product even when a generic product becomes available.  Subject to any changes in prescribing behaviour, Neurim and Flynn have, to that extent, some protection against generic competition. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">10.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mylan wish to market a generic version of Circadin, for which they obtained a marketing authorisation in about December 2019.  The Mylan product will have the same label as Circadin.  The launch of the Mylan product is said to be imminent, but precise details of the launch are said to be confidential.  Neurim and Flynn did not contend on this appeal that such details were material. Mylan have given undertakings not to launch whilst these interim injunction proceedings have been pending. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">11.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Neurim and Flynn commenced this action on in February 2020 and subsequently filed a preliminary injunction application notice which was issued on 2 March.  That application came before the judge on 20 May and judgment was handed down on 3 June 2020.  By that stage, and very significantly, an expedited trial of the substantive proceedings had been ordered and fixed in a five-day window commencing on 26 October 2020. The interim injunction, if granted now, would therefore be for a period of just over 4 months. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">12.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The case advanced on the evidence by Neurim and Flynn was that the entry onto the market of Mylan’s product would cause them harm in two ways.  First, it would cause them to lose sales of Circadin and depress the price at which they could continue to make such sales as they were able to retain.  I will refer to this head as “pecuniary loss”.  Secondly, they said that the loss of revenue from sales of Circadin would cause consequential damage to their businesses in a variety of ways.  They said that the lost revenues would create a need to close down research and development (including clinical trials) and educational programmes, cause them to make redundancies, have an impact on the market for Slenyto and other fledgling products and harm their distribution networks. I will refer to this aspect of their damage as “consequential loss”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">13.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">A key part of the claim that Neurim and Flynn would suffer these heads of loss if Mylan were allowed to launch their product was that the launch would cause a downward spiral in the price which could be charged for Circadin.  This is a familiar point taken in interim injunction cases in this industry. Whilst it is recognised that the entry of a first generic competitor may be at a price not far below that of the branded product, much fiercer price competition can be contemplated where two or more generic manufacturers are competing with each other on price.  The price will accordingly be driven down faster and further.  Whether a price spiral will occur in the period until trial in any given case is intensely fact sensitive.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">14.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mylan denied that such a downward spiral would occur if they launched their product in the period between the interim injunction hearing and the trial, and that therefore the pecuniary loss was likely to be far smaller than that which Neurim and Flynn contended for.  Mylan also contended that such lost revenue as Neurim and Flynn would sustain would not result in any consequential loss, because Neurim and Flynn had cash reserves which could be deployed to maintain all the identified activities despite the loss in revenue.  By contrast, by losing the opportunity to launch a product in pursuance of their marketing authorisation in a period without other generic competitors, they would lose the valuable first mover advantage, when the price would be significantly higher than the price when multiple generic competitors had launched their competing products.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">15.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The court has the power to grant an interim injunction in any case where it is “just and convenient” to do so (Senior Courts Act 1981 section 37(1)).  That is not to say that it has an unfettered discretion: it is a discretion which is exercised according to settled principles.  Both parties and the judge analysed the case by reference to the approach laid down in the speech of Lord Diplock in <span style="font-style:italic">American Cyanamid v Ethicon</span> [1975] AC 396. The judge identified four stages in this approach: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">Stage 1: Is there a serious question to be tried? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">Stage 2: Are damages an adequate remedy for the claimant? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">Stage 3: If not, are damages (on the cross-undertaking in damages) an adequate remedy for the defendant? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:Arial;font-size:12pt;color:#000000;background-color:auto;margin-left:0.75in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p style="margin-left:0.75in;margin-right:0.00in">Stage 4: If damages are not an adequate remedy for either side, where does the balance of convenience lie? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">16.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">As the judge noted, when Lord Diplock spoke of damages being an “adequate” remedy, he was not suggesting that damages must provide a perfect remedy.  As the judge also observed, there comes a point where “damages as a remedy falls so far short of the perfect, that the remedy can no longer be described as adequate”.  I agree with this. The boundary between the adequate and the inadequate is not a precise one.  It is a matter for judicial evaluation on the evidence in any given case whether or not the boundary is crossed.  If it is not crossed in relation to the claimant’s loss then, normally, an injunction will not be granted. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">17.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Waugh QC drew our attention to <span style="font-style:italic">National Commercial Bank of Jamaica Ltd v Olint Corpn Ltd</span> [2009] UKPC 16 where Lord Hoffmann observed at [17] that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“In practice … it is often hard to tell whether either damages or the cross-undertaking will be an adequate remedy and the court has to engage in trying to predict whether granting or withholding an injunction is more or less likely to cause irremediable prejudice (and to what extent) if it turns out that the injunction should not have been granted or withheld, as the case may be” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Mr Waugh suggests that that passage indicates that the court should normally accept that damages are not an adequate remedy for the parties and should instead move on to the consider the balance of convenience. I disagree. Lord Hoffmann’s observation does not throw any doubt on the need to consider stages 1 and 2 of the <span style="font-style:italic">American Cyanamid</span> approach, as Lord Hoffmann himself recognised at [16]. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">18.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">It is well settled that in deciding stage 1 the court should not attempt a “mini-trial”, but confine itself to seeing whether there is a serious question to be tried on the substantive claim.  In tackling the questions which arise at stages 2-4, however, the court must do the best it can on the available written evidence.  The issues of fact which emerge on the evidence relevant to stages 2-4 are not issues which will in most cases fall to be resolved at a trial. It may, in the end, prove impossible to form a view on certain issues on the available evidence, but the court should not abandon the task at the outset.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The judgment of Marcus Smith J </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">19.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">At [20] and [21] of his judgment the judge considered the question of how he should approach disputed issues of fact when deciding the various issues which arose for decision under the <span style="font-style:italic">American Cyanamid </span>guidelines at stages 2-4. He directed himself that he should not attempt to resolve such issues.  Rather he should approach them all on the basis of whether there was a serious issue to be tried, as at stage 1.  For reasons I have just explained, I think he was wrong on this point.  It is difficult to see how the judge’s approach could work satisfactorily in practice, where both sides contend they have raised a serious question to be tried on a given factual issue.  Given that all the evidence was in writing, however, we are in as good a position as the judge to come to conclusions, where possible, on issues which he declined to decide.  So the point is not material. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">20.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On stage 1, the judge held that there was a serious issue to be tried, notwithstanding the decision of the Opposition Division of the EPO. There is no longer any challenge to that conclusion of the judge<authorialNote class="footnote" marker="1">
+		<p class="footnotedescription"> Before the judge there was a prospect of the appeal to the Technical Board of Appeal of the EPO not being determined until after the patent expires in August 2022.  Mr Waugh told us, without objection from Mr Vanhegan QC for Mylan, that the appeal from the Opposition Division’s decision has now been expedited to be heard in December 2020. Neither side suggested that this had an impact on what we had to decide. </p>
+	      </authorialNote>.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">21.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge next asked himself, therefore, whether damages were an adequate remedy for Neurim and Flynn.  He appreciated, rightly, that he needed to consider the likely damage in two periods<authorialNote class="footnote" marker="2">
+		<p class="footnotedescription"><span> </span>There was an attempt by Neurim and Flynn to contend that the damage would continue beyond expiry of the patent, but it does not appear that this was a point argued below.  In any event, as there would be free generic competition after expiry, and the injunction will have prevented generic competitors from establishing a “bridgehead” into the market, any additional damage beyond expiry is likely to be small.   </p>
+	      </authorialNote>.  The first, which he called Period 1, was the period between the hearing and the point at which Neurim and Flynn succeeded in excluding Mylan from the market by obtaining a permanent injunction after trial.  During this period Circadin and Slenyto would be exposed to generic competition.  The second period, which he called Period 2, was the period between that point and the expiry of the patent, during which period Neurim and Flynn argued that they would continue to suffer harm from the downward pressure on prices encountered in Period 1.  Mylan contended that in the 20 months or so between trial and the expiry of the patent Neurim and Flynn would be able to restore the <span style="font-style:italic">status quo ante</span>.  The judge accepted that Neurim would continue to suffer a combination of lower sales and lower prices for those sales for much if not all of Period 2. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">22.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge therefore considered the critical question to be whether that harm was capable of being adequately compensated in damages.   He first considered two points raised by Mylan.  These were (a) whether Flynn had standing to bring the claim; and (b) whether all the damage anticipated by Neurim and Flynn can be attributed to an infringement of the patent. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">23.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On the first point, Mylan’s contention was that Flynn, though registered as such, was not in fact the exclusive licensee of Neurim.  The judge found this point “by no means straightforward” and concluded that this was “an irrelevant factor”.  It is the subject of Mylan’s respondent’s notice on this appeal.  On the second point, Mylan’s contention was that sales of Circadin for its patented use accounted for only 2% of prescriptions. In the light of the conflicting evidence on this issue the judge concluded that he could not resolve the quantity of sales falling within each of the Medical Uses which he had identified (see paragraph 6 above).  He concluded that this point did not assist Mylan, in any event, because Neurim and Flynn could contend that the losses flowing from Mylan’s infringements in the case of Medical Uses 1 and 2 could arguably include Medical Use 3.  Neither side sought to criticise the judge’s approach to this question on this appeal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">24.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Having dealt with these two preliminary issues, the judge turned to the adequacy of damages for Neurim and Flynn.  He concluded that damages would prove to be an adequate remedy for Neurim and Flynn for six reasons which he set out in paragraph 71 of his judgment: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“(1) The general measure of damages in a patent infringement case is clearly stated. It is the standard tortious measure, the calculation of which was articulated in <span style="font-style:italic">Livingstone v. The Rawyards Coal Company</span>:  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.00in;text-indent:0.00in">"…where any injury is to be compensated by damages, in settling the sum of money to be given for reparation of damages you should as nearly as possible get at that sum of money which will put the party who has been injured, or who has suffered, in the same position as he would have been in if he had not sustained the wrong for which he is now getting his compensation or reparation…" </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">In the present case, I can see no reason why Neurim and/or Flynn's losses during both Period 1 and Period 2 cannot properly be calculated, whether it is necessary to calculate lost revenues by reference to all three Medical Uses or individually by reference to each particular Medical Use. Clearly, Neurim and Flynn will have records of their sales to date of Circadin and Slenyto, and they will continue to keep such records. Equally, there is no difficulty in Mylan maintaining and (for the purposes of trial) providing to Neurim and Flynn records of its sales of the Generic Product, differentiating as far as can be done between Medical Use, and providing information as to the price at which the Generic Product sold. (It should be clear that, to the extent necessary, I am minded to set out in the order consequential on this application the sort of information that Mylan must keep.) </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">Thus, in Period 1, Neurim and Flynn will have sales figures (including as to price) for the sale of Circadin and Slenyto as at the beginning of Period 1 and will be able to show how those figures vary over the course of Period 1. <span style="font-style:italic">Prima facie</span>, as it seems to me, Neurim and Flynn's loss will be calculated by reference to the difference between volume of sales and sales prices at the beginning of Period 1 and the lower volumes of sales, at lower prices, during the course of Period 1. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(4)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">It may be that during Period 1, but for the intervention into the market of Mylan, Neurim and Flynn were anticipating an increase in the volume of sales and/or an increase in the price of individual units sold. I can see no reason why evidence on such points cannot be adduced, and why such increases cannot inform the losses that Neurim and Flynn claim. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(5)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">All of these losses can – in my judgment – be calculated by reference to information that is or will be in the hands of Neurim and Flynn. But, as I say, it would be appropriate to ensure that proper figures were maintained and disclosed by Mylan for the purposes of the trial of these proceedings. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(6)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">I turn, then, to the adequacy of damages for any losses sustained by Neurim and Flynn during the course of Period 2. As <span style="font-style:italic">Terrell </span>notes, there have been a number of cases, superficially at least similar to the present, where an interim injunction has been granted in order to prevent unquantifiable damage to holder of the patent. For that reason, I have devoted particular thought as to whether Neurim and Flynn's losses during the course of Period 2 are such that damages would not be an adequate remedy. As to this: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(a)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">I am proceeding on the basis that the effect of Mylan's entry into the market during Period 1 has consequences that are not reversible by Neurim or Flynn – or, at least, not immediately so. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">That being the case, Neurim and Flynn's losses, commencing in Period 1, will continue into (and quite possibly throughout) Period 2. In short, I am prepared to accept that the damage done to Neurim and Flynn's market may be irretrievable.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">If, therefore, the avoidance of irretrievable harm to the market position of a patent-holder was the test for an interim injunction, this would be an appropriate case for the granting of such an injunction.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">But that is not the test. The question is whether that irretrievable harm to market position cannot be compensated for in damages. I can see no reason why the process of quantification of loss for Period 2 will not be very similar to that for Period 1. Indeed, the process of quantification of loss for Period 2 will be an extension of or extrapolation from the process undertaken in relation to Period 1. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(e)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.50in">As I have noted, Neurim and Flynn will have an absolutely clear idea of their present market position. It may well be that they have views as to how that market will develop between now and August 2022. Obviously, such projections will have to be proved on a loss of chance basis, but I see no reason why Neurim and Flynn cannot recover the difference between these projections and what they in fact make in the period between the end of November 2020 and August 2022 (Period 2). Period 2 is actually very limited in duration – Periods 1 and 2 <span style="text-decoration:underline">together</span> amount to just over two years – and, as I have noted, there will be considerable market data in the hands of Neurim, Flynn and Mylan to enable the losses in Periods 1 and 2 to be quantified.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">25.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">This did not, however, conclude the judge’s deliberations under this head.  He went on, under the heading “Two special cases” to consider two further points.  These were </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:right;margin-left:0.01in;margin-right:-0.00in;text-indent:-0.01in">(a) the fact that Mylan was unlikely to be the only generic entrant if no interim injunction were granted, and (b) Neurim and Flynn’s reliance on a number of other reasons why damages were not an adequate remedy (in effect, the consequential loss). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">26.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On the first of these points, the judge pointed out at [74] that other generic manufacturers would only have a limited time to enter the market during Period 1.  He went on to say at [75] that he “ought to proceed on the basis that, whilst Mylan <span style="text-decoration:underline">is</span> the first mover, the rest of the generic herd is not going to be far behind and that one effect or consequence of not granting an interim injunction against Mylan will be to open the door to other competitors <span style="text-decoration:underline">in addition to</span> Mylan.”  He said that he was provided with some evidence of this, but referred only to a settlement agreement between Neurim and Teva, and declined to express a view on whether the agreement precluded entry into the UK market by Teva. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">27.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge’s conclusion on the first of these “special cases” was that, although the entry of competitors other than Mylan into the market would cause additional complications to the damages claim, those additional complications were not sufficient to persuade him that damages were not an adequate remedy. In the course of reaching this conclusion the judge said this at [79]: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Were another competitor to enter the market in Period 1, then I anticipate that whilst Neurim/Flynn's volume of sales and sales prices would diminish to a similar extent as if there were only a single competitor (i.e., Mylan), the cause of Neurim/Flynn's losses would not (in this case) necessarily be attributable only to Mylan. Mylan might very well be able to argue that it was the actions of another competitor that caused loss to Neurim and Flynn. I say nothing about the merits of such an argument, but I can certainly see causation of loss in Period 1 as being an issue that may (depending on the facts) cause Neurim and/or Flynn additional difficulties in terms of the recovery of their losses. It goes without saying that the extent of these losses will be heavily fact dependant; and this is one reason why Mylan's own sales figures during Period 1 may be of importance.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">28.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">On the second of these special cases, the judge summarised Neurim’s case on consequential loss.  These were: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.10in;text-indent:0.00in">“(a) the impact on the Claimants' investment in research and development largely funded by Circadin; </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(b)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.34in;text-indent:0.50in">the impact on the market development of Slenyto;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(c)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.34in;text-indent:0.50in">the effect on Flynn's other fledgling products and comarketed products; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(d)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.34in;text-indent:0.50in">the impact on Neurim's manufacturing and distribution networks;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(e)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.34in;text-indent:0.50in">the potential loss of or reduction in medical educational programs that both Neurim and Flynn support;  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(f)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.34in;text-indent:0.50in">the risk to ongoing and planned clinical trials on several products; and  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.00in">(g)</num>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.34in;text-indent:0.50in">the prospect of redundancies in both Neurim and Flynn, which are debilitating to small companies and their futures." </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">29.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge rejected these points because “Neurim is obviously a company of some substance (albeit of at least an order of magnitude less in size than Mylan) and well able to fund these matters in the interim…” and because “these consequential losses were always going to arise in the relatively near future, on the expiry of the Patent in August 2022”.  In those circumstances, the refusal of an interim injunction merely caused those consequences to “vest early” and (if Neurim and Flynn succeeded at trial) for the limited period of Period 1.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">30.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Accordingly, Neurim’s application for an injunction failed at this stage.  The judge went on, however, to consider the further stages of the <span style="font-style:italic">American Cyanamid</span> test.  He held (at paragraphs 89-90): </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“89. At first sight, just as in the case of Neurim and Flynn, this appears to be simply a case where damages can adequately be assessed. Instead of calculating what Neurim and Flynn lose by reason of Mylan's competition, it is necessary in Mylan's case to calculate what Mylan has failed to gain in being deprived of this opportunity. That said, there are a number of factors that render this assessment of damages more difficult: </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(1)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.00in;text-indent:0.50in">Neurim and Flynn know the market in which they are selling. If Mylan compete with Neurim and Flynn through the Generic Product, and Neurim's and Flynn's volume of sales and unit price falls, the inference that this has been caused by the new entrant to the market will be an obvious one. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(2)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.00in;text-indent:0.50in">Whilst no doubt Mylan have plans as to how to enter the market, and have made forecasts as to what sales revenues they might hope to generate from the sale of the Generic Product, these will be projections of an altogether more uncertain nature compared to the assessment of Neurim's and Flynn's losses in Period 1. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.18in">(3)</num>
+	  <content>
+	    <p style="margin-left:1.18in;margin-right:1.00in;text-indent:0.50in">More to the point, if enjoined, Mylan will lose the advantage of the "first mover". As I have noted, Mylan's interest in the Circadin/Slenyto market is one that is likely to be replicated in other manufacturers of generic drugs. The effect of an interim injunction would be to remove or diminish Mylan's "first mover" advantage. Thus, were an interim injunction to be granted, but the Patent to be invalidated at trial, Mylan would lose its advantage and start on an equal footing with its rivals. The "first mover" advantage, Mylan contended, was impossible to quantify in damages. Although I do not accept that damages would be "impossible" to quantify, I have some sympathy with this submission. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">90. My conclusion is that it would be materially harder to assess Mylan's loss than that of Neurim or Flynn. I do not say that it could not be done, but the uncertainties inherent in the process would be formidable, and considerably more difficult in my judgment than would be the case with the losses sustained by Neurim and Flynn were the interim injunction not to be granted.” </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">31.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">This did not mean, however, that a damages remedy to Mylan would be <span style="font-weight:bold">in</span>adequate. An award of damages to Mylan would be materially more uncertain than an award to Neurim and Flynn.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">32.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The factors which the judge weighed in the balance of convenience were the following: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The greater difficulty of assessing Mylan’s damage as compared with Neurim’s and Flynn’s favoured Mylan.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The fact that Circadin and Slenyto were “flagship” products for Neurim and Flynn, but “just another product in a vast range of pharmaceuticals marketed by Mylan” favoured Neurim and Flynn. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The fact that Mylan had not cleared the way for the launch of the product by getting the patent revoked in good time for the launch favoured Neurim and Flynn. There was no proper reason why Mylan had not done this.  He said “In short, I consider that this point narrows the difference between Neurim and Flynn on the one hand, and Mylan on the other, in terms of how adequate damages would be as a remedy. However, since I have concluded that damages would be an adequate remedy for Neurim and Flynn, this point makes no difference to my decision”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">Although not a strong factor, the <span style="font-style:italic">status quo</span>, favoured Neurim and Flynn. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">33.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">The judge also considered third party interests. The judge had received a communication from the Secretary of State for Health writing on behalf of the National Health Service for England requesting that, in the event an injunction was granted, the cross undertaking in damages should extend to loss suffered by the NHS. The judge thought this might be a factor affecting whether an injunction should be granted at all and would have asked for further argument had it been material. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in">34.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.5in">Mr Vanhegan submitted that the judge had considered, albeit <span style="font-style:italic">obiter,</span> that the balance of convenience pointed away from the grant of the injunction.  I disagree.  The judge rested his decision squarely on the adequacy of the remedy in damages to Neurim and Flynn.  Although he listed a number of factors which would be relevant to the balancing exercise, he did not carry it out.  From his summary it is not possible to say which way he would have jumped.   The first, and critical issue for us in this appeal is therefore whether the judge was correct, or entitled, to hold that damages were an adequate remedy. If we consider he was wrong we will have to form our own assessment of the remaining stages of the analysis, respecting of course any conclusions of the judge where he has felt able to make them. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">The appeal </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Neurim and Flynn advance numerous grounds of appeal which I summarise as follows: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">1.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The judge failed to take any account of the consequential loss to Neurim and Flynn as a result of generic entry. He was wrong to dismiss these matters on the grounds that Neurim had available cash. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">2.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">In so doing the judge failed to have regard to Neurim and Flynn’s evidence, or alternatively had wrongly treated it as valueless. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">3.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The judge failed to appreciate the significance of the consequences of generic entry 2 years and 3 months before patent expiry. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">4.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The judge failed to appreciate the consequences of giving the green light to other generic competitors. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">5.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The judge was wrong to hold that Mylan’s losses were more readily quantifiable than Neurim’s and Flynn’s. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">6.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The judge overestimated the difficulties as to quantification of the defendant’s losses. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">7.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The judge failed to place weight on the fact that the disparity in economic size between the parties meant that the consequential hardship was greater to the smaller party. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">8.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The judge failed to appreciate the significance of Mylan failing to clear the way.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">9.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The judge failed to appreciate the significance of the status quo. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:1.48in;text-indent:-0.49in">10.</num>
+	  <content>
+	    <p style="margin-left:1.48in;margin-right:0.00in">The judge failed to follow “the case law” (on what amounts to irreparable harm). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I regret to say that I found this to be an extraordinarily unhelpful set of grounds of appeal.  As I have said, the critical issue for the judge, and the finding which he made which was fatal to the interim injunction application, was whether the remedy in damages was adequate for Neurim and Flynn, but no attempt is made to differentiate the grounds according to their relevance to the issues.  I agree with Mr Vanhegan QC for Mylan that grounds 1 to 4 are relevant to the adequacy of damages to Neurim and Flynn.  Grounds 5 to 9 appear to be an attack on the components of a finding which the judge did not make, namely that the balance of convenience favoured the refusal of the injunction.  Ground 10 appears to be potentially relevant to adequacy of damages as well. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Waugh argued that the judge had been wrong to put the consequential loss out of account.  He ought to have accepted the evidence of Neurim and Flynn as to this loss. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">The evidence was expressed in conclusory terms as to what would happen to the businesses of Neurim and Flynn, if they were to lose the revenues from Circadin.  Circadin was effectively Neurim’s sole source of revenue, and so it was entirely credible to suppose that large parts of its operation would be shut down if these revenues were lost. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I am unable to accept these submissions.  The judge was not bound to accept uncritically the evidence of Neurim and Flynn as to whether the consequential loss would occur.  I would go further and say that he was bound to examine the claims made in the evidence of Neurim and Flynn with a critical eye, given the very short period of generic competition which they would face in the light of the expedited trial.  Whether the consequential loss would occur would depend on (a) the scale of reduction in the revenue streams from Circadin and (b) whether that reduction in revenues could be sustained by Neurim and Flynn without cancelling the activities in question.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Vanhegan pointed out that even if the entirety of the revenue stream from Circadin was lost in the period to trial, then Neurim had more than adequate resources to continue the relevant activities.  He showed us confidential figures which demonstrated this more than adequately, and Mr Waugh did not mount a challenge to this analysis.  Mr Vanhegan went on to submit that this was, in any event, a most generous basis on which to assess whether the consequential losses would occur, as it was not realistic to suppose that the market for Circadin would collapse in the short period until trial. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">One difficulty for Neurim and Flynn on this aspect of the case is that the principal witness statements on which they relied in support of the consequential loss were served before the order was made for an expedited trial.  The deponents were therefore giving their evidence on the footing that, if no interim injunction were granted, there could be a lengthy period of generic competition, of the order of 1 to 2 years, before the trial of the action and the grant of a permanent injunction.  Such a period would indeed deprive Neurim and Flynn of a large part of the remaining monopoly under the patent.  Thus, by way of example only, Professor Nava Zisapel, the Chief Scientific Officer and Managing Director of Neurim (and the inventor of the patent in suit) gives evidence at paragraph 5.2 of her first witness statement that “If a generic were to launch now in the UK, the price of Circadin is expected to collapse, in which event Neurim will lose a very substantial portion of the UK income it has forecast over the next two and a half years.”   At the time she gave that evidence it must have been expected that a trial would be at some distance in the future, depriving Neurim of protection for a substantial part of the remaining life of the patent.  It cannot be assumed that a short period of generic competition followed by a final injunction would have the same effect.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Dr David Fakes, who is the CEO and a Director of Flynn , says in paragraph 74 of his first witness statement that “In the event that Mylan’s generic melatonin product … enters the market prior to patent expiry, Flynn Pharma will need to reduce or entirely cease investment in a number of key areas due to the substantially reduced returns that can be expected from Circadin sales”.  Again, this evidence is not given on the basis of a short period of generic competition followed by a final injunction. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">The different perspective given to the case by the expedited trial date brings into sharp focus the question of whether a price spiral would be likely to occur between now and the trial.  The judge did not attempt to decide this point.  I must therefore try and form my own view. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I start with the undisputed fact that the period from now to the trial is just over four months.  That is a very short timescale for the dramatic price effects foreseen by Flynn to take place.  53% of Flynn’s market is presently branded prescriptions which are protected from generic competition, and Flynn could be expected to retain a portion of the rest.  Circadin is in Category C in the NHS Drug Tariff which means that the list price will remain the same until it is moved to Category M.    But there was evidence from Dr Amanda Britton, Commercial Director of the second respondent, that the changes to the Drug Tariff Category are slow, with the consequence that Flynn can maintain its list price for some time.  On the basis of her experience, she did not think that Circadin would be moved to Category M before trial. That evidence chimes with the evidence about the process of re-categorisation on the Drug Tariff, which seems likely to involve some delay. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mylan’s evidence before the judge, also from Dr Britton, was that only Mylan, and possibly Teva, were ready to launch in the UK.  It was Neurim’s case before the judge that Teva could <span style="text-decoration:underline">not</span> launch before trial, because they had agreed as part of a settlement agreement with Neurim not to launch in the UK.  This was the subject of a witness statement from an Israeli lawyer, Gabriel Moyal-Maor, filed on behalf of both Neurim and Flynn.  In their skeleton argument before the judge Neurim and Flynn said: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“100. … Mylan’s evidence is based on the assumption that there <span style="text-decoration:underline">will</span> be other companies who will be ready to launch, if Mylan are injuncted whilst this action comes to trial (and any appeal).  This does not reflect the reality of the situation as matters stand.  The only other company who has a marketing authorisation for a generic Circadin product is Teva. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">101.  Contrary to what Mylan suggest … Teva is currently bound by a settlement agreement between it and [Neurim], <span style="text-decoration:underline">preventing</span> it from launching in the UK as long as [Neurim] take certain legal steps to prevent release of a generic product </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:0.00in;text-indent:0.00in">…  Neurim has taken those steps…”  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Teva is therefore precluded, on the available evidence, from launching before trial.  Mr Waugh sought now to suggest that there were other companies that might be in a position to launch if the “green light” were given by the refusal of an interim injunction against Mylan.  He referred us to paragraph 5.22 of Professor Zisapel’s first witness statement.  These mentioned: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">The fact that in Norway Neurim had defended revocation proceedings against <span style="font-weight:bold">Actavis</span>.  The decision in those proceedings, upholding the patent subject to amendment, is dated 4 July 2019, but there is no suggestion in that evidence that Actavis has a product ready to launch, either in Norway or the UK, before October 2020 . </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">In Australia Neurim is involved in Federal Court litigation against <span style="font-weight:bold">Generic Partners</span> and <span style="font-weight:bold">Apotex</span>, originally due for trial in March 2020.  No further details are given to suggest that either company has a product ready to launch, either in Australia or the UK, before October 2020. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in">In Sweden and Denmark Orifarm has launched a generic Circadin product.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.98in;margin-right:0.00in;text-indent:0.00in">Neurim commenced interim injunction proceedings (and was refused one in Sweden, but the decision there is subject to appeal).  Similar proceedings against Orifarm in Norway have been settled on confidential terms. More recently Orifarm has launched in Finland and Neurim are considering their position there. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Against that background, whilst the launch of a second generic in the period up to trial is a possibility, the evidence fell a long way short of establishing that it was likely.  Indeed, it was Flynn’s evidence, in the second witness statement of Dr Fakes which was produced after the expedited trial had been fixed, that it was unlikely: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;margin-right:1.00in;text-indent:0.00in">“Finally, I do not agree that a delay (and in this case a relatively short delay) caused by a preliminary injunction renders it ‘<span style="font-style:italic">inevitable</span>’ that more companies will be ready to launch. I believe, based on the information available, that the development timeline of potential competitors will in large part be driven by the August 2022 Patent expiry date. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Waugh clung to paragraph 75 of the judgment and the judge’s decision to “proceed on the basis that, whilst Mylan <span style="text-decoration:underline">is</span> the first mover, the rest of the generic herd is not going to be far behind, and that one effect or consequence of not granting an interim injunction against Mylan will be to open the door to competitors in addition to Mylan”.  I agree with Mr Vanhegan that this is not a finding that additional generic competitors will enter the market.  First, the statement appears to me to be a product of the judge’s erroneous “serious question to be tried” approach to these factual issues.  Secondly, the only evidence identified by the judge in favour of reaching a conclusion on this point is that in the next paragraph, relating to Teva.  As has been demonstrated to my satisfaction, however, Teva was precluded from entering the market before expiry.  The judge again declined to form a view on Teva’s ability to enter the market, when it was, to my mind, sufficient that it was part of the case advanced by Neurim and Flynn that they could not. Thirdly, against that background, </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in;text-indent:0.00in">Mylan’s evidence that entry by Teva was a possibility could not advance the case of Neurim and Flynn. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Waugh maintained that the consequential loss was nevertheless realistic because, once a product has become generic, there is no longer any point in investing in the type of activities which Neurim and Flynn support.  It would, as he put it, be flogging a dead horse in the sense that the investment would be being made for the benefit of the generic competitors.  I was wholly unpersuaded by this.  Firstly, the fact that Circadin has been exposed to a short period of competition from one generic company before the competitor is excluded from the market by injunction cannot be equated with Circadin “becoming generic”.  Secondly, that argument provides no rationale for not continuing to fund research into new products.  Thirdly, I see no reason why the investment in Circadin, if worthwhile for the two years remaining of the patent’s life, becomes pointless if the period of exclusivity is reduced by 4 months, and the reduction in expected revenue is replaced by an award of damages.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">In short, therefore, I do not think that case advanced by Neurim and Flynn based on the consequential loss was made out.  It is not realistic to suppose that the lost revenues would be on such a scale as to necessitate the drastic steps referred to by Neurim and Flynn (which were, in any event, put forward on different factual assumptions), or that they would not be able, and well advised, to replace those lost revenues using their existing reserves until the shortfall is recovered from Mylan.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">That brings me to the core question decided by the judge, namely whether the calculation of the damages to which Neurim and Flynn would be entitled, were they to succeed in obtaining a permanent injunction at trial, is of such complexity as to render their remedy in damages inadequate.  For this purpose, I put aside the consequential loss for the reasons I have given.  Further, for the reasons I have given, I do not think that I should treat this as a case of multiple generic entrants and a downward price spiral.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">It is true that in some, indeed many, pharmaceutical patent cases the courts have treated the patentee’s lost sales and loss due to price depression as giving rise to unquantifiable loss for the purpose of stage 2.  Comparisons with other cases for this purpose usually reveal differences on the facts which render them unhelpful.  A number of features of the present case, in my judgment, make the court’s task in assessing the loss to Neurim and Flynn relatively straightforward.  First, and most importantly, Neurim and Flynn have, and have provided to the court, reasonably detailed forecasts of their expected sales revenues in Periods 1 and 2.  These can form the basis of the court’s calculation of the position which Neurim and Flynn ought to have been in, but for Mylan’s infringement, for both Periods. The object of the  inquiry as to damages will be to restore their revenues to those levels.  Secondly, in respect of Period 1, the court will have Flynn’s and Mylan’s actual sales figures and the prices at which they have sold.  This can form the basis for the lost sales and price depression claim for Period 1, and I see no reason to suppose that this will be inadequate.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">At the start of Period 2 the price for Circadin may have been depressed by the period of generic competition in Period 1.  The court will, however, know what this price is.  During this period Circadin will not be exposed to generic competition, and to that extent the monopoly will be restored, albeit that it will no longer be possible to charge the monopoly price, because the court is likely to accept the evidence that it will not be possible to raise the Circadin price to its former levels without loss of customer goodwill.  I agree with the judge that the calculation for Period 2 will require an extrapolation to determine Flynn’s  likely sales and prices in Period 2, and to that extent it will be marginally less robust.  Damages are, however, to be “assessed liberally” without going so far as to punish the infringer: see <span style="font-style:italic">Pneumatic Tyre Co Ltd v Puncture Proof Pneumatic Tyre Co Ltd </span>(1899) 16 R.P.C. 209 at 215.  I therefore agree with the judge that damages will provide an adequate remedy for the loss in Period 2 as well. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I would, however, comment briefly on some points in the judge’s reasoning which were ventilated at the hearing but which are, in the event, immaterial.  First, in paragraph 79, he said that a second competitor would cause the sales and price of Circadin to diminish “to a similar extent as if there were only a single competitor”.  The evidence of Dr Fakes was that a first competitor might reduce the price by 3040% and a second competitor by 70-80%.  Read literally therefore, each competitor could be seen as contributing a similar extent of price depression.  As Dr Fakes went on to explain, however, the entry of a second or subsequent generic causes the price reduction to become “more rapid and unpredictable (often called a “price spiral”).”  In the light of my conclusion that this is not a price spiral case, this does not matter.  Secondly, in the same paragraph the judge goes on to discuss the contribution to the damages caused by different infringers.  This does not seem to me to have any bearing on the calculation of the total loss sustained by Neurim and Flynn, or render the computation of that sum more difficult in a relevant way.  To that extent I think that the judge may have over-estimated the complications of the assessment of damages. Thirdly, the judge’s point at [85] that the consequential loss was always going to arise in the relatively near future seems to me to be irrelevant.  The fact that a loss will in due course be sustained without the intervention of a tortfeasor has no bearing on whether that loss should count, or whether it is unquantifiable, when the tortfeasor does inflict it.  Again, however, given my conclusion about the consequential loss, that is not material either. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">Mr Waugh suggested that this decision would have grave consequences for the pharmaceutical industry generally.  I do not agree.  I have not decided any principle of general application.  I have explained why I do not think that the extremely unusual facts of this case give rise to such difficult questions of computation of damages as to trigger the exercise of the court’s discretion to grant an injunction.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">For the reasons I have given, on the specific facts of this case, damages are an adequate remedy for Neurim and Flynn.    It is not necessary, therefore, to consider where the balance of convenience lies, or either of the interesting issues raised by the respondents’ notice. That is why I concurred in the decision to dismiss the appeal. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Males:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I agree. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:left;margin-left:-0.00in;margin-right:0.00in;text-indent:-0.01in">
+	      <span style="font-weight:bold">Lord Justice Arnold: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:'Times New Roman';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p style="margin-left:0.50in;margin-right:0.00in">I also agree. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>
