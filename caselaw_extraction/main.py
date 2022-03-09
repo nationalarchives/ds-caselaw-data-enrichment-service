@@ -72,8 +72,8 @@ for subdir, dirs, files in os.walk(ROOTDIR):
         data_out.write(file_data)
 
 close_connection(db_conn)
-pie_malformed(WELL_FORMED, MALFORMED)
-bar_citation_types(MATCHED_RULE_TYPE)
-bar_citation_year(YEARS)
-bar_malformed_type(TYPE_MALFORMED)
-citations_hist(CITATIONS_PER_DOC)
+#pie_malformed(WELL_FORMED, MALFORMED)
+#bar_citation_types(MATCHED_RULE_TYPE)
+#bar_citation_year(YEARS)
+#bar_malformed_type(TYPE_MALFORMED)
+#citations_hist(CITATIONS_PER_DOC)
