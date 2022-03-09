@@ -1,3 +1,5 @@
+import numbers
+from numpy import number
 import pandas as pd
 import sqlite3
 from sqlite3 import Error
@@ -33,11 +35,14 @@ def get_matched_rule(conn, rule_id):
   :param rule_id: rule_id string, required
   :return: variables is_canonical, citation_type, canonical_form and rule_description for specified rule
   """
+
   matched_rule = get_manifest_row(conn, rule_id)
   is_canonical = matched_rule["isCanonical"].iloc[0]
   citation_type = matched_rule["citationType"].iloc[0]
   canonical_form = matched_rule["canonicalForm"].iloc[0]
   rule_description = matched_rule["description"].iloc[0]
+
+
   return is_canonical, citation_type, canonical_form, rule_description
 
 def close_connection(conn):
