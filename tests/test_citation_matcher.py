@@ -1,3 +1,4 @@
+from tokenize import String
 import unittest
 from numpy import number 
 from spacy.lang.en import English
@@ -62,18 +63,29 @@ class TestCitationProcessor(unittest.TestCase):
     def test_correct_citations(self): 
         text = "random text goes here [2022] 1 WLR 123 random text goes here"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-        print(is_canonical)
         assert is_canonical == True
 
         text = "random text goes here random text goes here [2022] UKUT 123 (TCC)"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-        print(is_canonical)
         assert is_canonical == True
 
         text = "random text [2004] AC 816 goes here  random text goes here "
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-        print(is_canonical)
         assert is_canonical == True
+
+    def test_corrected_citation(self):
+        text = "random text goes here (2022) UKUT 123 (IAC) random text goes here"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical == False
+        assert (type(canonical_form) is str)
+        assert canonical_form == "[dddd] UKUT d+ (IAC)"
+        assert citation_type == "NCitYearAbbrNumDiv"
+
+
+
+
+
+    #def test_extracted_year():
 
         # extra space in the citation - can't handle 
         """
@@ -81,12 +93,11 @@ class TestCitationProcessor(unittest.TestCase):
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
         print(is_canonical)
         assert is_canonical == True
+    
+    
         """
     def tearDown(self):
         close_connection(self.db_conn)
 
-    #def test_corrected_citation(self):
-       # text = "random text goes here [2004] 1 AC 816 random text goes here"
-
-    #def test_extracted_year():
+    
 

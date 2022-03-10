@@ -42,7 +42,6 @@ def get_matched_rule(conn, rule_id):
   canonical_form = matched_rule["canonicalForm"].iloc[0]
   rule_description = matched_rule["description"].iloc[0]
 
-
   return is_canonical, citation_type, canonical_form, rule_description
 
 def close_connection(conn):
