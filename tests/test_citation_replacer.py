@@ -53,7 +53,8 @@ class TestCitationMatcher(unittest.TestCase):
         assert is_canonical == True # Replaced citation should now be correct 
     
     def test_replaced_citation(self):
-        texts = ["random test goes here... [2022] 1 QB 123....", "random test goes here... [2022] F.S.R. 123....", "refer to the case in (2022) 74 EHRR 123.", "also seen in [2022] R.P.C. 123.."]
+        texts = ["random test goes here... [1892] 1 QB 123....", "random test goes here... [1345] F.S.R. 123....", "refer to the case in (5674) 74 EHRR 123.", "also seen in [2022] R.P.C. 123..", \
+            "see the judgment given in  (2045) UKFTT 143 (TC)"]
         for text in texts: 
             citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
             corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
