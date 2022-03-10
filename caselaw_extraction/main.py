@@ -19,6 +19,7 @@ load_patterns(db_conn)
 
 nlp = English()
 nlp.max_length = 1500000
+# Citation rules added to teh spacy pipeline
 citation_ruler = nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
 
 MATCHED_RULE_ID = []
@@ -30,20 +31,24 @@ TYPE_MALFORMED = []
 CITATIONS_PER_DOC = []
 
 for subdir, dirs, files in os.walk(ROOTDIR):
+  # TODO: This needs to be updated to just handle the file that is being passed to it
   for file in files:
     REPLACEMENTS = []
     file_path = os.path.join(subdir, file)
     with open(file_path, "r", encoding="utf-8") as file_in:
       print(file)
       file_data = file_in.read()
+      # Parse the XML into sentences
       judgment_content_text = parse_file(file_data)
+      # Run the spacy pipeline over the judgment
       doc = nlp(judgment_content_text)
       CITATIONS_PER_DOC.append(len(doc.ents))
+      # Ent = citation found by Spacy 
       for ent in doc.ents:
         rule_id = ent.ent_id_
-        citation_match = ent.text
+        citation_match = ent.text # This will only contain the citation 
         MATCHED_RULE_ID.append(rule_id)
-        is_canonical, citation_type, canonical_form, description = get_matched_rule(db_conn, rule_id)
+        is_canonical, citation_type, canonical_form, description = get_matched_rule(db_conn, rule_id) # Find the matched rule
         MATCHED_RULE_TYPE.append(description)
         if is_canonical == False:
           MALFORMED += 1
@@ -52,8 +57,9 @@ for subdir, dirs, files in os.walk(ROOTDIR):
           replacement_entry = (citation_match, corrected_citation, year)
           YEARS.append(year)
           TYPE_MALFORMED.append(description)
+        # Years collected for graph/analysis data
         else:
-          WELL_FORMED += 1
+          WELL_FORMED += 1 
           if 'Year' in citation_type:
             components = re.findall(r"\d+", citation_match)
             year = components[0]
@@ -62,7 +68,7 @@ for subdir, dirs, files in os.walk(ROOTDIR):
           replacement_entry = (citation_match, citation_match, year)
           YEARS.append(year)
         REPLACEMENTS.append(replacement_entry)
-    
+    # Actual replacement of malformed citations
     for replacement in REPLACEMENTS:
         file_data = replacer(file_data, replacement)
     

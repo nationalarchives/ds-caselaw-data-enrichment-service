@@ -106,8 +106,12 @@ class TestCitationProcessor(unittest.TestCase):
        # text = "random text goes here random text goes here [2022] UKUT 177  (TCC)"
        # citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
        # assert is_canonical == True
-    
-    
+    def test_unknown_citations(self):
+        
+        # Extra spaces
+        text = "random text goes here random text goes here [2022] UKUT 177  (TCC)"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical == True
         
     def tearDown(self):
         close_connection(self.db_conn)
