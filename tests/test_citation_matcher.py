@@ -11,7 +11,13 @@ import sqlite3
 from sqlite3 import Error
 import random
 
+
+"""
+    Testing the matching of the citations based on the data found in the rules. 
+"""
+
 DATABASE = "manifest.db"
+
 
 # create mock function for the db connection 
 # mock function to replicate the main file, without needing to use the xml files 
@@ -41,7 +47,6 @@ def get_rules_total(db_conn):
 
 
 class TestCitationProcessor(unittest.TestCase): 
-    # TODO: 
     """
     1. verify that citation types are returned as expected
     3. verify extraction of year 
@@ -55,7 +60,7 @@ class TestCitationProcessor(unittest.TestCase):
        
         self.nlp = English()
         self.nlp.max_length = 1500000
-        citation_ruler = self.nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
+        self.nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
 
         self.db_conn = create_connection(DATABASE)
         load_patterns(self.db_conn)
@@ -73,7 +78,7 @@ class TestCitationProcessor(unittest.TestCase):
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
         assert is_canonical == True
 
-    def test_corrected_citation(self):
+    def test_corrected_citations(self):
         text = "random text goes here (2022) UKUT 123 (IAC) random text goes here"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
         assert is_canonical == False
@@ -81,21 +86,29 @@ class TestCitationProcessor(unittest.TestCase):
         assert canonical_form == "[dddd] UKUT d+ (IAC)"
         assert citation_type == "NCitYearAbbrNumDiv"
 
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert year == "2022"
+        assert corrected_citation == "[2022] UKUT 123 (IAC)"
 
+        text = "[2057] A.C. 657 random text goes here"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical == False
+        assert (type(canonical_form) is str)
+        assert canonical_form == "[dddd] AC d+"
+        assert citation_type == "PubYearAbbrNum"
 
-
-
-    #def test_extracted_year():
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert year == "2057"
+        assert corrected_citation == "[2057] AC 657"
 
         # extra space in the citation - can't handle 
-        """
-        text = "random text goes here random text goes here [2022] UKUT 177  (TCC)"
-        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-        print(is_canonical)
-        assert is_canonical == True
+ 
+       # text = "random text goes here random text goes here [2022] UKUT 177  (TCC)"
+       # citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+       # assert is_canonical == True
     
     
-        """
+        
     def tearDown(self):
         close_connection(self.db_conn)
 
