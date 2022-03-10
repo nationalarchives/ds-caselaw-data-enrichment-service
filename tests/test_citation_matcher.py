@@ -37,11 +37,9 @@ def mock_return_citation(nlp, text, db_conn):
 # current number of rules in the database
 def get_rules_total(db_conn): 
     cursor = db_conn.cursor()
-
     number_of_rules = cursor.execute('''SELECT COUNT(*) FROM manifest''')
     number_of_rules = cursor.fetchone()
     number_of_rules = number_of_rules[0]  
-
 
     return number_of_rules
 
@@ -57,24 +55,81 @@ class TestCitationProcessor(unittest.TestCase):
     verify with dummy strings om the different methods
     """
     def setUp(self): 
-       
+        
         self.nlp = English()
         self.nlp.max_length = 1500000
         self.nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
 
         self.db_conn = create_connection(DATABASE)
         load_patterns(self.db_conn)
+    
+    def test_parsing(self):
+        text = "random text goes here random text goes here **[2022] UKUT 177 (TCC)"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical == True
+        assert citation_match is not None
+        assert citation_type is not None
+        assert canonical_form is not None
+        assert description is not None
+
+        text = "[2022] 1 Lloyd's Rep 123."
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical == True
+        assert citation_match is not None
+        assert citation_type is not None
+        assert canonical_form is not None
+        assert description is not None
+
+        text = "..........Case C-123/12........"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical == True
+        assert citation_match is not None
+        assert citation_type is not None
+        assert canonical_form is not None
+        assert description is not None
+
+        text = "!!!!!!!_________[2047] Costs LR 123_____"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical == True
+
+        text = "[2022] UKFTT 2020__0341 (GRC)"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical is None
 
     def test_correct_citations(self): 
         text = "random text goes here [2022] 1 WLR 123 random text goes here"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
         assert is_canonical == True
+        assert citation_match is not None
+        assert citation_type is not None
+        assert canonical_form is not None
+        assert description is not None
 
         text = "random text goes here random text goes here [2022] UKUT 123 (TCC)"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
         assert is_canonical == True
+        assert citation_match is not None
+        assert citation_type is not None
+        assert canonical_form is not None
+        assert description is not None
 
         text = "random text [2004] AC 816 goes here  random text goes here "
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical == True
+        assert citation_match is not None
+        assert citation_type is not None
+        assert canonical_form is not None
+        assert description is not None
+
+        text = "[2022] EWHC 123 (Pat)"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical == True
+        assert citation_match is not None
+        assert citation_type is not None
+        assert canonical_form is not None
+        assert description is not None
+
+        text = "......[2022] 1 QB 123......"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
         assert is_canonical == True
 
@@ -101,17 +156,21 @@ class TestCitationProcessor(unittest.TestCase):
         assert year == "2057"
         assert corrected_citation == "[2057] AC 657"
 
-        # extra space in the citation - can't handle 
- 
-       # text = "random text goes here random text goes here [2022] UKUT 177  (TCC)"
-       # citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-       # assert is_canonical == True
-    def test_unknown_citations(self):
         
+
+    def test_unknown_citations(self):
         # Extra spaces
         text = "random text goes here random text goes here [2022] UKUT 177  (TCC)"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-        assert is_canonical == True
+        assert is_canonical != True and is_canonical != False
+        
+        text = "gCase C-123/12"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+        assert is_canonical != True and is_canonical != False
+
+        # citations to add - double brackets + () brackets or vice versa and malformed text between 
+        
+
         
     def tearDown(self):
         close_connection(self.db_conn)

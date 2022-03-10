@@ -43,12 +43,28 @@ class TestCitationMatcher(unittest.TestCase):
         self.db_conn = create_connection(DATABASE)
         load_patterns(self.db_conn)
 
-    def test_replaced_citation(self):
+    def test_corrected_citation(self):
         text = "random text goes here (2022) UKUT 123 (IAC) random text goes here"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
         corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
         # check the strings to ensure they have actually been replaced here 
+        assert corrected_citation == "[2022] UKUT 123 (IAC)"
+        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, corrected_citation, self.db_conn)
+        assert is_canonical == True # Replaced citation should now be correct 
+    
+    def test_replaced_citation(self):
+        texts = ["random test goes here... [2022] 1 QB 123....", "random test goes here... [2022] F.S.R. 123....", "refer to the case in (2022) 74 EHRR 123.", "also seen in [2022] R.P.C. 123.."]
+        for text in texts: 
+            citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+            corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+            print(corrected_citation)
+            replacement_entry = (citation_match, corrected_citation, year)
+            replaced_entry = replacer(text, replacement_entry)
+            print(replaced_entry)
+            assert corrected_citation in replaced_entry
+            
         
+
     def tearDown(self):
         close_connection(self.db_conn)
 
