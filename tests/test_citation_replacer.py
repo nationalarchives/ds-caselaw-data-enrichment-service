@@ -58,10 +58,8 @@ class TestCitationMatcher(unittest.TestCase):
         for text in texts: 
             citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
             corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
-            print(corrected_citation)
             replacement_entry = (citation_match, corrected_citation, year)
             replaced_entry = replacer(text, replacement_entry)
-            print(replaced_entry)
             assert corrected_citation in replaced_entry
             
         

@@ -11,13 +11,11 @@ import sqlite3
 from sqlite3 import Error
 import random
 
-
 """
     Testing the matching of the citations based on the data found in the rules. 
 """
 
 DATABASE = "manifest.db"
-
 
 # create mock function for the db connection 
 # mock function to replicate the main file, without needing to use the xml files 
@@ -64,16 +62,15 @@ class TestCitationProcessor(unittest.TestCase):
         load_patterns(self.db_conn)
     
     def test_parsing(self):
-        correct_citations = ["random text goes here random text goes here **[2022] UKUT 177 (TCC)", "[2022] 1 Lloyd's Rep 123.", "..........Case C-123/12........" ]
-
+        correct_citations = ["random text goes here random text goes here **[2022] UKUT 177 (TCC)", "[2022] 1 Lloyd's Rep 123.", "..........Case C-123/12........", "[[2022] EWHC 123 (Mercantile) ", "[2022] EWHC 123 (TCC))"]
         for text in correct_citations: 
             citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+            print("Testing: " + citation_match)
             assert is_canonical == True
             assert citation_match is not None
             assert citation_type is not None
             assert canonical_form is not None
             assert description is not None
-
 
         text = "!!!!!!!_________[2047] Costs LR 123_____"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
@@ -94,8 +91,6 @@ class TestCitationProcessor(unittest.TestCase):
             assert citation_type is not None
             assert canonical_form is not None
             assert description is not None
-        
-       
 
     def test_corrected_citations(self):
         text = "random text goes here (2022) UKUT 123 (IAC) random text goes here"
@@ -119,23 +114,17 @@ class TestCitationProcessor(unittest.TestCase):
         corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert year == "2057"
         assert corrected_citation == "[2057] AC 657"
-
         
 
     def test_unknown_citations(self):
-        # Extra spaces
-        text = "random text goes here random text goes here [2022] UKUT 177  (TCC)"
-        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-        assert is_canonical != True and is_canonical != False
-        
-        text = "gCase C-123/12"
-        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-        assert is_canonical != True and is_canonical != False
+        unknown_citations = ["random text goes here random text goes here [2022] UKUT 177  (TCC)","gCase C-123/12",  "[2022]] UKUT 177 (TCC)"]
+        for text in unknown_citations: 
+            print("Testing: " + text)
+            citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
+            assert is_canonical != True and is_canonical != False
 
         # citations to add - double brackets + () brackets or vice versa and malformed text between 
 
-
-        
     def tearDown(self):
         close_connection(self.db_conn)
 
