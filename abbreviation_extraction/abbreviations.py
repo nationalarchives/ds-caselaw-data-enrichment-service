@@ -47,7 +47,6 @@ def find_abbreviation(
 
     long_index = len(long_form) - 1
     short_index = len(short_form) - 1
-
     while short_index >= 0:
         current_char = short_form[short_index].lower()
         # We don't check non alpha-numeric characters.
@@ -57,11 +56,11 @@ def find_abbreviation(
 
             # Does the character match at this position? ...
 
-        
         # ignoring dates that are part of the references to the legislation/legislation abbreviation 
         abrv_date = False
         if current_char.isnumeric():
             abrv_date = True
+           
 
         while (  
             (long_index >= 0 and long_form[long_index].lower() != current_char and abrv_date != True)
@@ -74,22 +73,39 @@ def find_abbreviation(
                 and long_form[long_index - 1].isalnum()
             )
         ):
+             
+            
             long_index -= 1
+            
             if long_index < 0:
 
                 return short_form_candidate, None
+
         long_index -= 1
         short_index -= 1
 
     # If we complete the string, we end up with -1 here,
     # but really we want all of the text.
+    
     long_index = max(long_index, 0)
+
 
     # Now we know the character index of the start of the character span,
     # here we just translate that to the first token beginning after that
     # value, so we can return a spaCy span instead.
-    word_lengths = 0
+    word_lengths = 0 
+    for char in str(short_form_candidate): 
+        if char.isdigit():
+            word_lengths += 1
+    
+ 
+        
+        
+   
     starting_index = None
+    
+    
+
     for i, word in enumerate(long_form_candidate):
         word_lengths += len(word)
         if word_lengths > long_index:
@@ -224,7 +240,7 @@ class AbbreviationDetector():
         already_seen_short: Set[str] = set()
         for (long_candidate, short_candidate) in filtered:
             short, long = find_abbreviation(long_candidate, short_candidate)
-            print("long candidate " + str(long_candidate))
+       
             # We need the long and short form definitions to be unique, because we need
             # to store them so we can look them up later. This is a bit of a
             # pathalogical case also, as it would mean an abbreviation had been

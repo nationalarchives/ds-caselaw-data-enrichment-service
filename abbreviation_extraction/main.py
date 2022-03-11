@@ -15,7 +15,7 @@ nlp.add_pipe("abbreviation_detector")
 
 # TODO: replace this to intake the different statements - this is where we'll integrate the pipeline
 # processin the document 
-doc = nlp('The European Court of Human Rights ("ECtHR 1959") is the court ultimately responsible for applying the European Convention on Human Rights ("ECHR")  it should apply to Human Rights Act 1998 (HRA 98) ')
+doc = nlp('Council of Europe 59 ("CoE") is the court ultimately responsible for applying European Convention on Human Rights 1972 (ECHR 72) and therefore it should apply to the Human Rights Act 1998 (HRA 98) ')
 
 # for testing purposes, see the results returned from the abbreviation detector - TODO: remove 
 print("Abbreviation", "\t", "Definition")
