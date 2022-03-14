@@ -1,0 +1,2151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewhc/admlty/2011/589"/>
+	  <FRBRuri value="ewhc/admlty/2011/589"/>
+	  <FRBRdate date="2011-03-16" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-admiralty"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="589"/>
+	  <FRBRname value="Tryggingarfelagio Foroyar P/F v CPT Empresas Maritimas S.A."/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewhc/admlty/2011/589/eng"/>
+	  <FRBRuri value="ewhc/admlty/2011/589/eng"/>
+	  <FRBRdate date="2011-03-16" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-admiralty"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewhc/admlty/2011/589/eng/akn"/>
+	  <FRBRuri value="ewhc/admlty/2011/589/eng/akn"/>
+	  <FRBRdate date="2021-12-01T10:25:21" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewhc-qbd-admiralty" href="https://www.gov.uk/courts-tribunals/admiralty-court" showAs="The Business and Property Courts (Admiralty Court)" shortForm="The Admiralty Court"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="tryggingarfelagio-foroyar-p/f" href="" showAs="Tryggingarfelagio Foroyar P/F"/>
+	<TLCPerson eId="cpt-empresas-maritimas-sa" href="" showAs="CPT Empresas Maritimas S.A."/>
+	<TLCRole eId="claimant" href="" showAs="Claimant"/>
+	<TLCRole eId="defendant" href="" showAs="Defendant"/>
+	<TLCPerson eId="judge-the-honourable-mr-justice-david-steel" href="/judge-the-honourable-mr-justice-david-steel" showAs="THE HONOURABLE MR JUSTICE DAVID STEEL"/>
+      </references>
+      <proprietary source="ewhc/admlty/2011/589/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWHC-QBD-Admiralty</uk:court>
+	<uk:year>2011</uk:year>
+	<uk:number>589</uk:number>
+	<uk:cite>[2011] EWHC 589 (Admlty)</uk:cite>
+	<uk:hash>1d3ac63b6436eca84c50f38568637c1a74e2590a1e65ebfe36f4eb0649c1c7b1</uk:hash>
+      </proprietary>
+      <presentation source="ewhc/admlty/2011/589/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { font-weight: bold; font-family: Arial; font-size: 16pt; }
+#judgment .Heading3 { font-weight: bold; font-family: Arial; font-size: 13pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .ParaHeading { font-size: 12pt; }
+#judgment .ParaLevel1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .ParaLevel2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .ParaLevel3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 1.00in; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .Heading { font-size: 12pt; }
+#judgment .Title { text-align: center; font-weight: bold; font-size: 10pt; }
+#judgment .ListParagraph { text-align: justify; margin-left: 0.50in; font-family: Arial; font-size: 11pt; }
+#judgment .eMailBlock { text-align: center; font-weight: bold; font-size: 13pt; }
+#judgment .FootnoteText { text-align: justify; font-family: Arial; font-size: 10pt; }
+#judgment .NormalWeb { font-size: 12pt; }
+#judgment .BalloonText { font-family: Tahoma; font-size: 8pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .Heading3Char { font-weight: bold; font-size: 13pt; }
+#judgment .QuoteChar { font-style: italic; font-size: 12pt; color: #404040; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .TitleChar { font-weight: bold; font-size: 16pt; }
+#judgment .FootnoteReference { vertical-align: super; }
+#judgment .FootnoteTextChar { font-family: Arial; }
+#judgment .BalloonTextChar { font-family: 'Segoe UI'; font-size: 9pt; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p class="CoverText">Case No: 2009 FOLIOS 1434 AND 1612</p>
+      <p class="CoverText" style="text-align:left">Neutral Citation Number: <neutralCitation>[2011] EWHC 589 (Admlty)</neutralCitation></p>
+      <p class="CoverMain">
+	<courtType>IN THE HIGH COURT OF JUSTICE</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">QUEEN'S BENCH DIVISION</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">ADMIRALTY COURT</courtType>
+      </p>
+      <p class="CoverText">Royal Courts of Justice</p>
+      <p class="CoverText">Strand, London, WC2A 2LL</p>
+      <p class="CoverText">Date: <docDate date="2011-03-16">16/03/2011</docDate></p>
+      <p style="text-align:center"><span style="font-weight:bold">Before</span> :</p>
+      <p class="CoverMain" style="text-align:center">
+	<judge refersTo="#judge-the-honourable-mr-justice-david-steel">THE HONOURABLE MR JUSTICE DAVID STEEL</judge>
+      </p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#tryggingarfelagio-foroyar-p/f" as="#claimant" style="font-weight:bold">Tryggingarfelagio Foroyar P/F</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#claimant">Claimant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#cpt-empresas-maritimas-sa" as="#defendant" style="font-weight:bold">CPT Empresas Maritimas S.A.</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Defendant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">M/V “Athena”</p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center"><span style="font-weight:bold">Nigel Jacobs QC and Michael McParland </span>(instructed by<span style="font-weight:bold"> Waltons and Morse</span>) for the <span style="font-weight:bold">Claimant</span></p>
+      <p style="text-align:center"><span style="font-weight:bold">Timothy Brenton QC and Robert Thomas</span> (instructed by <span style="font-weight:bold">Ince and Co</span>) for the <span style="font-weight:bold">Defendant</span></p>
+      <p style="text-align:center">Hearing dates: 17th to 20th January 2011</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:center">Judgment</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">The Honourable Mr Justice David Steel :</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This is a jurisdiction dispute.  The Claimants say they should be entitled to continue with proceedings which they have instituted in Chile.  The Defendants say that the parties have agreed to refer the issues that have arisen between them to arbitration in England and that thus the Chilean proceedings should be enjoined.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">The parties</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Thor Fisheries (“Thor”) is a Faroese company which owned a number of large factory trawlers including ATHENA, HERCULES and POSEIDON. In the early afternoon of 4 July 2007, a fire broke out on board ATHENA off the coast of Chile.  The vessel thereafter proceeded under her own power towards Talcahuano, escorted by POSEIDON.  The fire was not finally extinguished until 18 July 2007 by which time ATHENA was heavily damaged.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Claimant, Trygginfarfelagio Foroyar P/F (“TF”), were the hull and machinery underwriters of ATHENA.  As a result of a settlement agreement reached in November 2007, TF agreed to settle Thor’s insurance claim for repair costs in the sum of DKK 213, 122, 621 (US$ 37, 124, 886).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Ullerup &amp; Thalund APS (“U&amp;T”) is a Danish firm of brokers.  They were instructed by Thor to assist in obtaining outside assistance in fighting the fire.  They acted in a manner independent from their principals.  At all material times they were represented by Mr Ole Thalund.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">CPT Empresas Maritimas S.A. (“CPT”) are a towage and salvage company incorporated in Chile.  By an agreement dated May 2003, CPT and Wijsmuller Salvage BVM (later called Svitzer Wijsmuller Salvage BV) (“Svitzer”) had agreed to co-operate in the promotion of salvage related services in Chile, Peru, Ecuador and the West coast of Columbia.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">The background</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In July 2007 ATHENA (together with a sister vessel POSEIDON) was operating in international waters in the Pacific about 650 miles off the coast of Chile.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At about 1300 UTC hours on 4 July 2007 a fire broke out on the vessel.  Her crew managed to confine the fire and POSEIDON was able to render assistance.  Authorisation was granted by the Chilean Maritime Authority for the vessel to proceed to Chile.   Most of her crew were evacuated but the vessel was left with sufficient crew to proceed back towards Talcahuano, Chile, under her own power under escort by POSEIDON.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Following negotiations between Svitzer, on CPT’s behalf, and Thor, which were largely conducted by email and telephone through the offices of Mr Thalund, an agreement was made for the provision by CPT of salvage type services to ATHENA at daily rates.  Both the timing and terms of the agreement were the subject of vigorous dispute.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">These proceedings arise from the dismissal of CPT’s services by Thor on 11 July 2007 and their replacement by another Chilean salvage company, Ultragas.  Following the settlement of the insurance claim, TF made a claim against CPT on the grounds that the damage sustained by ATHENA post the engagement of CPT was caused by the negligence of CPT in facilitating the re-ignition and spread of the fire.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">To that end, TF commenced proceedings in Santiago, Chile in November 2008 giving rise to mandatory arbitration proceedings pursuant to Article 1203 of the Chilean Commercial Code (“the Code”).  The claim was in the amount of the entire repair costs.  These proceedings were formally served on CPT in August 2009.  In its written defence dated 9 October 2009, CPT contended that the services had been rendered under the terms of the BIMCO Wreckhire form which contained an English arbitration clause and that, accordingly, the Chilean arbitrator lacked jurisdiction to determine the claim.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On the same basis, CPT sought and obtained an interim anti-suit injunction from Beatson J in November 2009.  The application was originally commenced ex parte before Blair J.  It was adjourned and at a subsequent ex parte hearing on notice before Beatson J TF made provisional submissions without prejudice to its entitlement to seek to set aside the order in the light of any fresh evidence.  The Chilean proceedings have remained stayed thereafter.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Following the grant of the anti-suit injunction, CPT sought a declaratory award on jurisdiction from Mr Simon Kverndal QC being one of the panel of arbitrators appointed to hear arbitrations under Lloyd’s Open Form.  He had been purportedly nominated by CPT under the provisions of Clause 18 of the BIMCO Wreckhire standard form of contract.  Before the publication of Mr Kverndal’s award, TF commenced this action pursuant to section 72 (1) of the Arbitration Act 1996 raising the question whether there was a valid arbitration agreement.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This hearing is not concerned with the merits of TF’s claim to damages but solely with the question whether or not there is an arbitration agreement between the parties as contained in clause 18 of the BIMCO Wreckhire terms.  It is common ground that, if the services were rendered on those terms, CPT is entitled to an order for a final injunction.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">Witnesses</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">TF called one witness to give oral evidence of fact.  This was Mr Ole Thalund.  As already noted, he was at the relevant time a director of U&amp;T and acted as an intermediary broker in the negotiations between Svitzer and Thor.  Whilst due to receive commission for his services, he was essentially acting, as he put it, as a post box.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">TF also put in a number of statements.  These included two from persons within the management structure of Thor: first, Mr Jogvan Martin Joensen, Project Development Manager; second, Mr Per Gulklett, Marketing Director.  Neither statement was other than sketchy and neither witness was tendered for cross-examination despite a request to that effect.  No statement was provided from the Managing Director of Thor, Mr Gunnbjorn Joensen.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">TF also called its lawyer in the Chilean proceedings to give oral evidence relating to his experience of the terms upon which salvage type services were usually rendered in Chile.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As regards CPT, a number of witnesses of fact were called:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Mr Martin Hoogenstraaten, a commercial manager of Svitzer then based in Rio de Janeiro.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Mr Hendrik Land, a commercial manager of Svitzer based in Holland.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Mr Sjouke (John) De Vries, a contract/commercial manager in Svitzer based in Holland (who gave his evidence via video link).</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.39in">All three of these witnesses had given statements, in Mr Hoogenstraaten’s case no less than three.  (CPT also tendered a witness statement from Mr John Savignone, a member of CPT’s salvage department.) </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">CPT also called:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Mr Beltran Felipe Urenda, CPT’s lawyer in the Chilean proceedings.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Captain Klaas Reinigert, a salvage consultant.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">Both touched on the issue of the use of standard terms of contract in both Chile and worldwide.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I was satisfied that all the witnesses were seeking to assist the court to the best of their recollection.  In particular I reject the submission by TF that Mr Hoogenstraaten’s evidence was dishonest.  I also reject the submission by TF that the fact that Mr De Vries gave evidence by video link was unsatisfactory and had some bearing on the credibility of his evidence.  In any event, as will become apparent, the determination of the primary issue in this case is dependent in large part on the content of a number of telephone calls between Mr Thalund and those in Svitzer’s offices in Holland and Brazil on the one hand and those in Thor’s offices in the Faroe Islands on the other nearly four years ago.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is accordingly another paradigm case for applying the following dictum of Lord Goff<span style="font-family:Arial;font-size:10pt"> </span>in <span style="font-style:italic;font-weight:bold;text-decoration:underline">Grace Shipping v. Sharp &amp; Co</span><span style="font-style:italic;font-weight:bold"> [1987] 1 Lloyd's Law Rep. 207</span> at p. 215-6:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"And it is not to be forgotten that, in the present case, the Judge was faced with the task of assessing the evidence of witnesses about telephone conversations which had taken place over five years before. In such a case, memories may very well be unreliable; and it is of crucial importance for the Judge to have regard to the contemporary documents and to the overall probabilities. In this connection, their Lordships wish to endorse a passage from a judgment of one of their number in <span style="font-style:italic">Armagas Ltd v. Mundogas S.A. </span>(<span style="font-style:italic">The Ocean Frost</span>), [1985] 1 Lloyd's Rep. 1, when he said at p. 57:-</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">"Speaking from my own experience, I have found it essential in cases of fraud, when considering the credibility of witnesses, always to test their veracity by reference to the objective facts proved independently of their testimony, in particular by reference to the documents in the case, and also to pay particular regard to their motives and to the overall probabilities. It is frequently very difficult to tell whether a witness is telling the truth or not; and where there is a conflict of evidence such as there was in the present case, reference to the objective facts and documents, to the witnesses' motives, and to the overall probabilities, can be of very great assistance to a Judge in ascertaining the truth."</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in">That observation is, in their Lordships' opinion, equally apposite in a case where the evidence of the witnesses is likely to be unreliable; and it is to </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in">be remembered that in commercial cases, such as the present, there is usually a substantial body of contemporary documentary evidence.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">A proper appreciation of the overall probabilities and of the possible motives of the participants, sufficient to resolve the conflict of evidence in this case as to what was agreed, requires a quite detailed appreciation of the underlying background facts. It is therefore necessary for me to set out the detail of such contemporary material as is available at some length.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">Chronology</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There are various time zones in this case but the parties have helpfully agreed adjusted times to UTC.<authorialNote class="footnote" marker="1">
+		<p class="ParaLevel1">
+		  <span> </span>
+		  <span style="font-size:8pt">That said it is to be noted that the various relevant time zones were as follows: </span>
+		</p>
+		<p class="ParaLevel1">
+		  <span style="font-size:8pt">UTC + 2:</span>
+		  <marker name="tab"/>
+		  <span style="font-size:8pt">Denmark</span>
+		  <span style="font-size:8pt"> (</span>
+		  <span style="font-style:italic;font-size:8pt">Thalund</span>
+		  <span style="font-size:8pt">) &amp; </span>
+		  <span style="font-size:8pt">Holland</span>
+		  <span style="font-size:8pt"> (</span>
+		  <span style="font-style:italic;font-size:8pt">Svitzer/de Vries/Land</span>
+		  <span style="font-size:8pt">); </span>
+		</p>
+		<p class="ParaLevel1">
+		  <span style="font-size:8pt">UTC + 1:</span>
+		  <marker name="tab"/>
+		  <span style="font-size:8pt">Faroe Islands (</span>
+		  <span style="font-style:italic;font-size:8pt">Thor</span>
+		  <span style="font-size:8pt">) &amp; </span>
+		  <span style="font-size:8pt">United Kingdom</span>
+		  <span style="font-size:8pt"> (</span>
+		  <span style="font-style:italic;font-size:8pt">Marint</span>
+		  <span style="font-size:8pt">);</span>
+		</p>
+		<p>
+		  <span style="font-size:8pt">UTC – 3:</span>
+		  <marker name="tab"/>
+		  <span style="font-size:8pt">Rio</span>
+		  <span style="font-size:8pt">, </span>
+		  <span style="font-size:8pt">Brazil</span>
+		  <span style="font-size:8pt"> (</span>
+		  <span style="font-style:italic;font-size:8pt">Hoogenstraaten</span>
+		  <span style="font-size:8pt">);</span>
+		</p>
+		<p/>
+		<p>
+		  <span style="font-size:8pt">UTC – 4:</span>
+		  <marker name="tab"/>
+		  <span style="font-size:8pt">Talcahuano</span>
+		  <span style="font-size:8pt">, </span>
+		  <span style="font-size:8pt">Chile</span>
+		  <span style="font-size:8pt"> (</span>
+		  <span style="font-style:italic;font-size:8pt">CPT / Savignone</span>
+		  <span style="font-size:8pt">).</span>
+		</p>
+	      </authorialNote>  The following is largely taken from an agreed timetable (with some added comments in brackets).</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.70in;text-indent:0.29in">
+	      <span style="font-weight:bold">4 July 2007</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.98in;text-indent:-0.59in">
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1300</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">: </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">A fire broke out on board the vessel off the coast of Chile.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.98in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1600</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">: </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Partial evacuation of crew took place: vessel proceeds under its own power towards Talcahuano, Chile.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.98in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1750</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">: </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Marint, acting on behalf Ultragas, send a proposal to Mr Thalund of U&amp;T to provide tug assistance at US $20,000 per day (minimum 5 days) on BIMCO Towhire terms.  (The same tug, namely “Mocho”, had in fact previously performed services to one of ATHENA’s sister vessels which had caught fire earlier in the year.)</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.98in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1805</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">    </span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten and Svitzer are informed by CPT about problems on the “Athena”.  (This information came to CPT from their agents in Valparaiso.  In accordance with the cooperation agreement Svitzer were immediately informed.)</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.98in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">2151:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor approached CPT direct for an offer of assistance. Thor state that they </span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">“need a vessel to transport 4 teams of fire fighters, 2 persons on each team, full equipment for smoke diving including refill equipment of bottles, large amount of foam (300+ kilos)</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">.”  (It was common ground that at an early stage Thor made it plain that it would not accept services on LOF terms.  This e-mail asked for “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">reaction time and costs” </span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">and thus it seems likely that the rejection of LOF must have been made plain at or shortly before this stage.)</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.98in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">5 July 2007</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.02in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0308:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor contacted Mr Thalund. They send him an email stating </span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">“at this stage, we do not have the need for a tug boat because the Athena will be towed by one of our other ships. What we have need of is a boat that can transport fire fighters and equipment from Chile and out to the ship.”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.02in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0754:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">U&amp;T send an urgent request to Svitzer for a fire fighting team to go to ATHENA. They request advice as to what Svitzer have available and when any team could expect to be on location. They request a full quotation by return. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.02in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0830:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr De Vries spoke to Mr Thalund about the message and suggests that Svitzer follow matters up when the office opened.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.02in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0839:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">U&amp;T sent a further e-mail to Svitzer indicating that ATHENA was steaming at full speed on own power, the fire was still on-going, and the owners needed a fifi team of about 8  men to go to the trawler together with smoke equipment and foam.  (This was immediately passed on to CPT by Mr De Vries.)</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.98in;text-indent:0.02in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0855: </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">U&amp;T sent a General Arrangement Plan of the Vessel to Svitzer.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.02in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0956</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">: </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten tells Mr De Vries that CPT have agreed to provide Svitzer with </span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">“an offer asap (fifi experts of HAZMAT, fifi equipment, their salvage master, tug and ETA) on a daily rate or similar setup.  We can then take it up with Ole immediately”</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.02in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">(11.28:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten tells Mr De Vries that CPT prices would be based on those charged by Ultragus for the earlier services: </span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">“We must make sure we get this job”.)</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.02in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">11.59</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt"> </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">CPT provided Svitzer with details of their available tug, equipment and personnel, and rates, with tug rates based upon steaming/escorting or towage, with a departing time “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">today pm</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">”.  (The personnel could it is stated go out on the tug “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">if necessary</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">”.)</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.02in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">  </span>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1240:  </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Svitzer, on behalf of CPT, send the following email to U&amp;T:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">“The following can be forwarded on behalf of CPT. Given the extend </span>
+	      <span style="font-family:'Times New Roman'">[sic]</span>
+	      <span style="font-style:italic;font-family:'Times New Roman'"> of the fire and present situation; we are confident that our salvage partner is more than capable to handle the case without interference of us </span>
+	      <span style="font-family:'Times New Roman'">[sic].</span>
+	      <span style="font-style:italic;font-family:'Times New Roman'"> Of course we will always be there to assist when necessary.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Given this, unless owners require otherwise, we would like to suggest that owners sign directly with CPT.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:0.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">QT:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Dear Sirs,</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">We received information late yesterday that your vessel ATHENA had a fire onboard. Through our marine salvage partners SVITZER Salvage we now understand your vessel ATHENA sustained a fire onboard some 650 NM off the Chilean coast and is now sailing under own power towards the port of Talcahuano.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">We also understand that you are now requesting firefighting services and other services, if deemed necessary.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">We are CPT, a leading Chilean towage and salvage company and during salvage situations we work closely with our partner SVITZER Salvage, one of the leading worldwide operating marine salvage companies.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">As such we would like to offer our services to you.  We can make available a team of FIFI experts which can be in Talcahuano still today, joint by a salvage master.  In case you would prefer us to send the team out to the casualty we can also make available one of our tugs in Talcahuano.  The team and tug can still depart in the afternoon LT today.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Please find our following offer:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Tug TUMBUS (optional)</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">BHP 3.150</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">TED: 42</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">FIFI: 300m3/hr</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Foam onboard: 2m3</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">ETD from Talcahuano: today PM, LT</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:0.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Rate steaming and escorting: USD 12,000/day, including fuel and lubes </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:0.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Rate towing: USD 15,000/day, including fuel and lubes</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">FIFI Team:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:0.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">4 fifi experts with specialized equipment from Santiago</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:0.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Team can be in Talcahuano today at 15:00 PM, LT</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Rate: USD 6,000/day</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Salvage Master:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Available in Talcahuano today PM, LT</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Rate: USD 1,650/day.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">The above rates are offered excluding any expenses (such as but not limited to transportation, boarding and lodging etc). Those expenses will be charged at cost plus 10% handling fee.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">We would be pleased to receive your reply on our above offer.  Please do not hesitate to contact us in case you would have any questions.”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.61in;text-indent:0.39in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1351</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">: </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">CPT’s email was passed on by U&amp;T to Thor. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1416</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor’s internal email from Mr Gunnbjorn Joensen records “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">here is a possibility.</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1602</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor send an e-mail to Mr Thalund of U&amp;T stating that Thor would like to make use of CPT’s services </span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">“While at the same time involving the four experienced smoke divers from ASMAR … CPT must be ‘in charge’ so that we as the shipowner can have a contact person…”</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">.  </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">There was then a conversation between Mr Thalund and Mr de Vries.  (Mr De Vries’ contemporary note reads: “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">TC Ole Thalund – Accepted offer provided 4 firefighters from the shipyard can join the team”.)</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1608</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor sent an e-mail to Mr Thalund saying: </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.50in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">“</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">Asmar has just informed that their 4 smoke divers will not be available until 1 week’s time.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">We have received your offer and accept is</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt"> [sic] </span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">as it is.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">Please go ahead with all preparations as fast as possible</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">”.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.60in">
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1611</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt"> </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Thalund passed on Thor’s email timed at 1608 to Svitzer.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-1.00in">
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1626:</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt"> </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Svitzer passed on to CPT the “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">confirmation below</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">” and stated that they would “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">correspond some final matters and suggest to deciding when to depart</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">”.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-1.00in">
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1629:  </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">CPT responded to Svitzer:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:0.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">“We’ll wait for instructions and make all arrangements.”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:-0.61in">
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1631: </span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Inspection of the “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">TUMBUS</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">” commenced by Chilean Maritime Authority who provide authorisation to proceed.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.98in;text-indent:-0.59in">
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1651:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten sends email to U&amp;T:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.48in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">“We have received below confirmation in good order, for which thanks.  In order to start up the operation, we would like to mention the following as partly discussed earlier today between our offices:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:11pt;margin-left:1.75in;text-indent:-0.25in">-</num>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.75in;text-indent:0.5in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">SVITZER Salvage will correspond any and all relevant information and daily updates directly to you and understand you will transfer same to the owners. We intend to send a daily updating evening LT</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:11pt;margin-left:1.75in;text-indent:-0.25in">-</num>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.75in;text-indent:0.5in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">A BIMCO contract will be finalised tomorrow until which we assume below confirmation will be valid</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:11pt;margin-left:1.75in;text-indent:-0.25in">-</num>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.75in;text-indent:0.5in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">We also understand that the owners would like to have the tug sailing asap to meet with the casualty and start firefighting operations.  We will return asap with ETD of tug, fifi team, salvage master and fifi equipment </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:11pt;margin-left:1.75in;text-indent:-0.25in">-</num>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.75in;text-indent:0.5in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">- Can you please provide the contact details of the agent with whom CPT will locally correspond?</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:11pt;margin-left:1.75in;text-indent:-0.25in">-</num>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.75in;text-indent:0.5in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Can you please provide us with the email addresses of those who should be copied into our daily reports?</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:11pt;margin-left:1.75in;text-indent:-0.25in">-</num>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.75in;text-indent:0.5in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">Thank you in advance.”</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1702:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten requested information from Mr Thalund as to the vessel’s latest position, heading and speed.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1708</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Thalund forwarded Mr Hoogenstraaten’s e-mail timed at 1651 to Thor.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1709</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Thalund asked Thor to provide details of the vessel’s latest position, heading and speed.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1719:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor asked U&amp;T when the tug would sail and how many fire fighters and what equipment was on board.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1729:</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt"> </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Marint (on behalf of Ultragas) sent an e-mail to U&amp;T regarding proposed terms on Bimco Towhire.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="margin-left:0.71in;text-indent:0.29in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1726: </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt"> Email from Mr Hoogenstraaten to CPT:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="margin-left:1.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">“As discussed, we will prepare a BIMCO contract tomorrow.  Please keep in mind that a commission need to be paid to the Danish broker in the end as a % over the total as discussed”</span>
+	      <span style="font-family:'Times New Roman'">.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.39in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">6 July 2007</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.08in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0350:</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">The “TUMBUS” departed (at 2350 hours local time) from Talcahuano, having been delayed.  Her estimated time to rendezvous with the vessel was 12 hours.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.08in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0854</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Thalund forwarded an email from Thor to Svitzer, stating that Thor were “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">happy having started the cooperation with CPT</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">”. The email raised 2 “</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">important issues</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">” relating to reporting requirements and equipment. Thor also raised a query, at about the same time, regarding the departure of the tug.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.39in">
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">  1249:</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten sent an e-mail to Mr Thalund:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">“Regarding the BIMCO CP we think best is to prepare a BIMCO wreckhire for this.  Would you be in a position today to prepare a draft?”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.39in">
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">  1313 </span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Thalund responded to Mr Hoogenstraaten’s e-mail: </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">“No I will not be able to do this today.  Do you perhaps have a working copy in your office which some one could arrange for.”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.06in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1400- 1600</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">The “TUMBUS” arrived alongside the vessel (which was about 50 miles off the Chilean coast by that time). The salvage team completed boarding by 1100 hours (local time).  The salvage teams commenced fire fighting services.  The salvage master on board “ATHENA” reported that the fire was getting under control and requested four more hazmat persons to remove all the burned scrap.  The vessel might be required to anchor outside the port after arrival.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in;text-indent:-0.79in">
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">2135</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten sent an e-mail to Mr Thalund asking him to approach Thor for their view as to whether a further fire fighting team should be provided once the vessel arrived at Talcahuano. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.79in;text-indent:0.39in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">7 July 2007</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0015:</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor inform CPT that they agree to the addition of 4 more fire-fighters to extinguish the remaining fire onboard the vessel.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in;text-indent:0.00in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0000 – 0100:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">The vessel arrived at Talcahuano Bay.  The complete fire fighting team was on board and the plan was to continue to extinguish the fire and remove any burnt material.  The “TUMBUS” would remain alongside on standby. CPT continued to provide services to the casualty and Svitzer gave further details.   </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.50in;text-indent:-1.11in">
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">    0200</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">:</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten sent an e-mail to Mr Thalund that said:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">“ .... Also, since we have no contract in place yet could you get something in writing from the owners that we have agreed on the earlier confirmed offers and that this will be executed under a BIMCO wreckhire, suitable amended?  Just to make sure.”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">Later that day, the fire re-ignited.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1719:</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Thalund informed Svitzer by email that Thor have agreed that the fire-fighting team should be increased by a further 4 personnel.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.79in;text-indent:0.39in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">8 July 2007</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">Fire fighting services continued.  </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">CPT reported that if the fire was not completely extinguished by 1830 (local time) the authorities would require the vessel to be towed out to sea. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">Additional CPT tug “ANTILEN” on site providing fire-fighting assistance.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">The fire was reported to be out of control and the vessel was abandoned leaving the two tugs to continue fire-fighting. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">The authorities require the vessel to be towed twelve miles off shore.  </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">Additional CPT tug “LAUCA” on site providing fire fighting assistance.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1635:</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor request CPT to tow the vessel 12 miles away from Talcahuano</span>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">.</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt"> The vessel was to be towed by the “Tumbus”.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1638:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor request CPT to send </span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">“another 1 or 2 tugs out with the vessel and continue fire fighting efforst </span>
+	      <span style="font-family:'Times New Roman';font-size:12pt">(sic)</span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">”.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.79in;text-indent:0.39in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">9 July 2207</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">The vessel was towed 30 miles off shore and was attended to by three tugs (two cooling and one towing).  </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.00in;text-indent:0.18in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">The fire had increased. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.79in;text-indent:0.39in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">10 July 2007</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.29in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">The vessel and tugs were 27 miles from Talcahuano with “low white smoke” observed from forward.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.29in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten arrived on site and sought permission from Thor to adopt an inspection plan. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.89in;text-indent:0.29in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">11 July 2007</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0436:</span>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt"> </span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">CPT raised the issue of the identity of any underlying contractual terms with Svitzer :</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">“.... Our P&amp;I Advissor [</span>
+	      <span style="font-family:'Times New Roman'">sic</span>
+	      <span style="font-style:italic;font-family:'Times New Roman'">], ask us what kind of contract do we have signed?  He wants to have a copy of it, as soon as possible, because he wants to know the terms and conditions involved.  This just to be prepared in case of any adverse event in the future.”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">0439:</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Svitzer (Hendrik Land) responded to this email in the following terms:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.50in">
+	      <span style="font-style:italic;font-family:'Times New Roman'">“.... Item two: the services have been offered on the basis of a suitably amended BIMCO WRECKHIRE contract, see attached e-mail.  I think that it would be difficult to get it worked out and signed now, but on that basis the services were offered.”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.29in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Land’s email attached Mr Hoogenstraaten’s email dated 7</span>
+	      <span style="vertical-align:super;font-size:12pt;font-family:'Times New Roman'">th</span>
+	      <span style="font-family:'Times New Roman';font-size:12pt"> July.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.79in;text-indent:0.50in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">The vessel remained on fire.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1035:</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Mr Hoogenstraaten sent Thor a status report which includes: </span>
+	      <span style="font-style:italic;font-family:'Times New Roman';font-size:12pt">“Planning for today … continue with towing, escorting and fire-fighting activities until further notice from owners, as to the agreed BIMCO Wreckhire contract…”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">1231/1331:</span>
+	      <marker name="tab"/>
+	      <span style="font-family:'Times New Roman';font-size:12pt">Thor sent an e-mail terminating the contract with CPT.  (The precise timing of this e-mail is uncertain).</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in">CPT responded to the termination stating that they would assist in transferring the tow and continue to provide reports to Thor.   </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in">Thor disposed with the services of the tugboats except for the “TUMBUS” which continued to tow the casualty.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in;text-indent:0.39in">
+	      <span style="font-weight:bold">12 July 2007</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.18in">Discussions took place in relation to handover between CPT and Ultragas.  CPT’s Report noted that the intensity of the smoke seemed to be increasing. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.68in;text-indent:0.50in">The “TUMBUS” was towing the vessel to the agreed position.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.68in;text-indent:0.50in">Handover was effected at about 1030 (local time).  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:0.68in;text-indent:0.50in">The “Tumbus” arrived back in port at 1700 (local time). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:1.18in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">Ultragas were engaged by Thor, on the basis of an amended “Wreckhire 99” form (subject to Chilean law). </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.39in">
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:14pt"> </span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">18 July 2007</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ListParagraph" style="text-align:left;margin-left:0.68in;text-indent:0.50in">
+	      <span style="font-family:'Times New Roman';font-size:12pt">The fire was finally extinguished</span>
+	      <span style="font-weight:bold;font-family:'Times New Roman';font-size:12pt">.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">Applicable law</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There was some argument as to the relevant law for the purposes of determining the issues. In my judgment it is clear that the relevant law is provided for in Article 8 of the Rome Convention:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"> “1. The existence and validity of a contract, or any term of a contract, shall be determined by the law which would govern it under this Convention if the contract or term were valid.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">2. Nevertheless a party may rely upon the law of the country in which he has his habitual residence to establish that he did not consent if it appears from the circumstances that it would not be reasonable to determine the effect of his conduct in accordance with the law specified in the preceding paragraph.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was not suggested that sub-article 8(2) had any bearing on the present circumstances. Thus the applicable law is English law. In any event the only alternative (said by TF to arise in regard to the question whether the initial contract had been varied) was Chilean Law. But there was no submission (let alone pleaded case) that Chilean law was different in any material respect.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">Legal principles</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The general principles are accordingly to be found in the judgment of Lord Clarke JSC in <span style="font-style:italic;font-weight:bold">RTS Flexible Systems Ltd v. Molenski Alois Muller GMbH &amp; Co</span> [2010] UKSC 14:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“The general principles are not in doubt. Whether there is a binding contract between the parties and, if so, upon what terms depends upon what they have agreed. It depends not upon their subjective state of mind, but upon a consideration of what was communicated between them by words or conduct, and whether that leads objectively to a conclusion that they intended to create legal relations and had agreed upon all the terms which they regarded or the law requires as essential for the formation of legally binding relations. Even if certain terms of economic or other significance to the parties have not been finalised, an objective appraisal of their words and conduct may lead to the conclusion that they did not intend agreement of such terms to be a pre-condition to a concluded and legally binding agreement.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Specific approval was given in <span style="font-style:italic;font-weight:bold">RTS</span> to the decision in <span style="font-style:italic;font-weight:bold">Pagnan SPA v Feed Products Ltd</span><span style="font-style:italic"> </span>[1987] 2 Lloyd's Rep 601 where it was held that, although certain terms of economic significance to the parties were not agreed, neither party intended agreement of those terms to be a precondition to a concluded agreement. In his judgment in the Court of Appeal Lloyd LJ (with whom O'Connor and Stocker LJJ agreed) summarised the relevant principles at page 619: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ (1) In order to determine whether a contract has been concluded in the course of correspondence, one must first look to the correspondence as a whole...”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2)  Even if the parties have reached agreement on all the terms of the proposed contract, nevertheless they may intend that the contract shall not become binding until some further condition has been fulfilled. That is the ordinary 'subject to contract' case.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(3)  Alternatively, they may intend that the contract shall not become binding until some further term or terms have been agreed...</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(4)  Conversely, the parties may intend to be bound forthwith even though there are further terms still to be agreed or some further formality to be fulfilled...</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(5)  If the parties fail to reach agreement on such further terms, the existing contract is not invalidated unless the failure to reach agreement on such further terms renders the contract as a whole unworkable or void for uncertainty</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(6)  It is sometimes said that the parties must agree on the essential terms and it is only matters of detail which can be left over. This may be misleading, since the word 'essential' in that context is ambiguous. If by 'essential' one means a term without which the contract cannot be enforced then the statement is true: the law cannot enforce an incomplete contract. If by 'essential' one means a term which the parties have agreed to be essential for the formation of a binding contract, then the statement is tautologous. If by 'essential' one means only a term which the Court regards as important as opposed to a term which the Court regards as less important or a matter of detail, the statement is untrue. It is for the parties to decide whether they wish to be bound and if so, by what terms, whether important or unimportant. It is the parties who are, in the memorable phrase coined by the Judge [at page 611] 'the masters of their contractual fate'. Of course the more important the term is the less likely it is that the parties will have left it for future decision. But there is no legal obstacle which stands in the way of the parties agreeing to be bound now while deferring important matters to be agreed later. It happens every day when parties enter into so-called 'heads of agreement'.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The particular problem of standard terms was considered by Robert Goff J in <span style="font-style:italic;font-weight:bold">British Steel Corp v. Cleveland Bridge and Engineering Co Ltd</span> [1984] 1 All ER 504 where he concluded no binding contract had been reached.  In a passage expressly approved by the Court of Appeal (and later cited by Lord Clarke in <span style="font-style:italic;font-weight:bold">RTS)</span>, the judge had said:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"The real difficulty is to be found in the factual matrix of the transaction, and in particular the fact that the work was being done <span style="font-style:italic">pending </span>a formal sub-contract the terms of which were still in a state of negotiation. It is, of course, a notorious fact that, when a contract is made for the supply of goods on a scale and in circumstances such as the present, it will in all probability be subject to standard terms, usually the standard terms of the supplier. Such standard terms will frequently legislate, not only for the liability of the seller for defects, but also for the damages (if any) for which the seller will be liable in the event not only of defects in the goods but also of late delivery. It is a commonplace that a seller of goods may exclude liability for consequential loss, and may agree liquidated damages for delay. In the present case, an unresolved dispute broke out between the parties on the question whether CBE's or BSC's standard terms were to apply, the former providing no limit to the seller's liability for delay and the latter excluding such liability altogether. Accordingly, when, in a case such as the present, the parties are still in a state of negotiation, it is impossible to predicate what liability (if any) will be assumed by the seller for, eg defective goods or late delivery, if a formal contract should be entered into. In these circumstances, if the buyer asks the seller to commence work 'pending' the parties entering into a formal contract, it is difficult to infer from the [seller] acting on that request that he is assuming any responsibility for his performance, except such responsibility as will rest on him under the terms of the contract which both parties confidently anticipate they will shortly enter into. It would be an extraordinary result if, by acting on such a request in such circumstances, the [seller] were to assume an unlimited liability for his contractual performance, when he would never assume such liability under any contract which he entered into."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Lord Clarke also expressed approval of the decision in <span style="font-style:italic;font-weight:bold">Trentham (G. Percy) Ltd v. Archital Luxfer Ltd</span> [1993] 1 Lloyd’s Rep 25 where the case for Trentham (the main contractor) was that the sub-contracts came into existence, not simply from an exchange of contracts, but partly by reason of written exchanges, partly by oral discussions and partly by performance of the transactions.  Lord Clarke summarised the factors he felt had been rightly regarded by Lord Steyn as important as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“…. (1) English law generally adopts an objective theory of contract formation, ignoring the subjective expectations and the unexpressed mental reservations of the parties. Instead the governing criterion is the reasonable expectations of honest sensible businessmen. (2) Contracts may come into existence, not as a result of offer and acceptance, but during and as a result of performance. (3) The fact that the transaction is executed rather than executory can be very relevant. The fact that the transaction was performed on both sides will often make it unrealistic to argue that there was no intention to enter into legal relations and difficult to submit that the contract is void for vagueness or uncertainty. Specifically, the fact that the transaction is executed makes it easier to imply a term resolving any uncertainty, or, alternatively, it may make it possible to treat a matter not finalised in negotiations as inessential. This may be so in both fully executed and partly executed transactions. (4) If a contract only comes into existence during and as a result of performance it will frequently be possible to hold that the contract impliedly and retrospectively covers pre-contractual performance. ”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Three other authorities merit citation:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">In <span style="font-style:italic;font-weight:bold">Statoil ASA v. Louis Dreyfus Energy Services LP</span> [2008] EWHC 2257 (Comm): [2008] 2 Lloyd’s Rep 685 an issue arose as to the contract terms and in particular whether they contained a demurrage time bar clause.  The approach of Aikens J is set out as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">“Issue One: What were the contract terms: did they contain a demurrage time bar clause?</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">68. There is no dispute about the legal principles to be applied. The court has to review what the parties said and did and from that material infer the parties' objective intentions as to the terms, as expressed to each other: see <span style="font-style:italic">Pagnan SpA v Feed Products Ltd [1987] 2 Lloyd's Rep 601 at 610 and 614 per Bingham J. </span>and the cases there cited.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">69. In this case it is agreed that the relevant material constitutes the email exchanges between Statoil and L&amp;S and LD and L&amp;S, to which I have already referred above. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">70. It is also accepted by both sides that it is possible for parties to agree the principal terms of a contract, which will make it a binding contract, whilst leaving over other terms to be agreed at a later stage. See the <span style="font-style:italic">Pagnan case at 619, per Lloyd LJ. </span>If the principal terms have been agreed and the parties are, to use Bingham J's phrase in the <span style="font-style:italic">Pagnan case </span>"sorting out details against the background of a concluded contract", then the strict requirements of positive offer and positive acceptance are not necessarily appropriate. If one party makes a proposal for terms and the other does not object to it when asked if it has objections, that can, in appropriate circumstances, be taken as acceptance of that term: the <span style="font-style:italic">Pagnan case at 614 per Bingham J. </span></p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">In <span style="font-style:italic;font-weight:bold">Papas Olio JSC v. Grains &amp; Fourage SA </span>[2010] 2 Lloyd’s Rep 152 in the context of a dispute regarding a time bar in the rules of FOSFA, Toulson LJ stated:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.36in">“28. It is commonplace in commercial life, particularly in markets where the use of standard forms of contract is common, for parties to agree on all the essential terms necessary to bring about the conclusion of an oral contract and for the oral contract then to be followed by a written document, often described as a confirmation or recap, which will not only set out the essential terms but other terms common in the market. If there is no comeback from the other party, it may be easy to infer assent. The situation would be very different if there was no prior oral contract. Where the oral contract is followed by a written confirmation setting out fuller terms to which the other party is judged by the fact finder to have assented, it is of no practical importance whether the situation is analysed as the parties as having entered into a partly oral and partly written contract or as having entered into a written contract. Probably the better analysis is that the written document fulfils a dual function; it both confirms evidentially the making of the oral agreement but also supersedes the oral agreement in that it provides a document to which the parties thereafter look as the expression of their bargain.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">In <span style="font-style:italic;font-weight:bold">Poliskie Ratownictwo v. Rallo Vito</span> [2010] 1 Lloyd’s Rep  384 there was a dispute as to whether the provisions of the BIMCO Towhire terms had been incorporated in the contract.  The defendants’ case was the form had been discussed but not agreed.  The decision is dependent on its own special facts but Hamblen J in discussing the defendants’ case said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">“43. As the Claimant points out, the Defendants' case results in an unusual, uncommercial and indeed surprising agreement. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">44. It is unusual because one would reasonably expect any towage contract to be agreed by reference to standard terms, and indeed it is Mr Halfweeg's evidence that it is "<span style="font-style:italic">unheard of</span>" for this not to be done. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">45. It is uncommercial because it results in a contract which simply does not address a number of fundamental issues which need to be addressed in any towage contract, as reflected in the TOWHIRE form itself. These include who pays for additional charges and costs (clause 3); who provides and pays for towing gear (clause 10); who arranges and pays for permits and certificates (clause 11); the requisite toworthiness of the tow (clause 12); the requisite seaworthiness of the tug (clause 13); responsibility for third party liabilities (clause 18) etc. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">46. It is surprising because it results in a contract which does not address two major issues raised during the negotiations which were in the interests of the First Defendant, namely the need for a no salvage clause and the fact that the hire and refloating rates agreed included a significant element of address commission. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">47. Against this, it is said that the First Defendant is the owner of a fishing vessel and therefore cannot be expected to have any particular knowledge of towage industry terms and practice. However, the First Defendant was acting in concert with the Second Defendant, a very large insurance company which would be expected to have some such knowledge. Moreover, it was being advised by specialist brokers in the towage industry, CRS. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">48.  One would therefore reasonably expect the towage contract to address the question of standard terms or their equivalent and on the material before the Court I am satisfied to the requisite standard of proof that the parties did so and agreed a contract on the TOWHIRE form.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">The issue</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was common ground that during the course of the negotiations the parties entered into an agreement. It was also common ground that, although both parties intended the agreement to be reduced to writing in due course the agreement was not “subject” to that process. The focus of the dispute between the parties was whether the agreement provided for arbitration by incorporation of Clause 18 of the Bimco Wreckhire Standard Form of Contract, which provided as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.71in;text-indent:0.29in">“<span style="font-style:italic">18 Governing Law and Arbitration</span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in;text-indent:0.11in">
+	      <span style="font-style:italic">1. This agreement shall be governed by and construed in accordance with English law and any dispute arising out of this Agreement shall be referred to Arbitration in London in accordance with the Arbitration Act 1996 or any statutory modification or re-enactment thereof for the time being in force.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in">
+	      <span style="font-style:italic">Any dispute arising hereunder shall be referred to the arbitrament of a sole Arbitrator, to be selected by the first party claiming arbitration from the persons currently on the panel of Lloyd’s Salvage Arbitrators with a right of appeal from an award made by the Arbitrator to either party by notice in writing to the other within 28 days of the date of publication of the original Arbitrator’s Award.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in"><span style="font-style:italic">The Arbitrator on appeal shall be the person currently acting as Lloyd’s Appeal Arbitrator.</span>”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">Although it could be said that any agreement for arbitration is distinct and severable for the main agreement, the reality was that the issue turned on whether the entire form (suitably amended to reflect the other matters upon which the parties were agreed) was incorporated. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">Earlier hearing</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Following the adjournment by Blair J. of the ex-parte application by CPT for an anti-suit injunction pursuant to section 44 of the Arbitration Act 1996 to stay the proceedings initiated by TF against CPT in Chile in respect of the claim, there was an interim ex parte on notice hearing before Beatson J. This was attended by TF albeit prior to service of any evidence in reply and without prejudice to TF’s entitlement to challenge the application (and the associated issue of jurisdiction) at a full inter-parties hearing.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The criterion for granting such an injunction was of course the establishment of a good arguable case. The judge granted the injunction in reliance in particular on a statement of Mr Hoogenstraaten dated 2 October 2009 which stated in terms that “<span style="font-style:italic">It was agreed that the contract would be on the usual Bimco terms, that is Wreckhire 99.</span>” As the judge recorded, it was accepted by TF that it would not be open to it to reargue the case at the substantive inter-parties hearing absent a substantial change to the evidence before the Court.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In this regard evidence has now been filed by TF. Perhaps more importantly CPT has served further statements including two additional statements from Mr Hoogenstraaten the contents of which retreat somewhat from the simple assertion quoted above. In the circumstances it seems right that the court should review the matter <span style="font-style:italic">de novo</span>.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At first blush the remarkable level of costs incurred by the parties in the London proceedings alone (somewhere in the region of £1.5 million) might appear wholly disproportionate to the issue whether the dispute should be resolved in the Chilean Courts or in a London Arbitration. Indeed the quality and reputation of Chilean Courts in the minds of the parties can be inferred from the fact that it is the Chilean entity (CPT) which is seeking London Arbitration while it is the Faroese entity (TF) which is anxious to maintain Chilean jurisdiction.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The explanation is to be found in clause 14.2.2 of the Bimco Wreckhire Form:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="margin-left:0.79in">“<span style="font-style:italic"> 14.2.2 Neither the Contractor nor its servants nor agents shall have any liability to the Company  for loss or damage of whatsoever nature sustained by the Vessel, whether or not the same is due to breach of contract, negligence or any other fault on the part of the Contractor, its servants or agents.</span>”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">This, having regard to the eye watering quantum of the claim in the sum of the entire repair cost despite the fact that the outbreak of fire was 48 hours before fire fighting by CPT even began, allows the “jurisdiction” dispute to be put into context.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">The contract</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the briefest summary, TF’s case was as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">The contract was for fire fighting services was concluded at 1611 on 5 July by virtue of Thor’s acceptance of CPT’s offer received at 1350.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">The agreement did not incorporate the terms of BIMCO Wreckhire form (or any other form) but did (if necessary to fill any “gaps”) incorporate the relevant provisions contained in Articles 1128 to 1158 of the Chilean Code of Commerce (“the Code”) which relate to salvage and maritime assistance.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">There was no subsequent agreement to amend or vary the contract so as to incorporate the BIMCO Wreckhire form.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Likewise, in the briefest summary, CPT’s case was as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">The initial negotiations between the parties were not completed until about 0854 on 6 July when Thor expressed themselves as content “<span style="font-style:italic">having started the co-operation”</span>.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Having regard to the entirety of the communications between the parties, the agreement then concluded was on the terms of BIMCO Wreckhire.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In fact I am not persuaded that resolution of the issue as the precise time when a contract was initially concluded will be determinative of the application or otherwise of the BIMCO Wreckhire form.  I perceive the approach as urged by TF as something of a construct to try and introduce Chilean law (at some length and expense) both for the purposes of analysing the validity of any amendment or variation to the initial contract and also to cover the “gaps” that might be involved in relying only on the terms originally agreed.  As regards the former point, quite apart from the fact that I do not accept that the applicable law would thereby alter as suggested, there is in any event no pleaded difference.  As regards the latter point, as I confirm, below I do not accept that the salvage and marine assistance provisions in the Code are applicable.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Ironically I consider that if anything CPT’s prospects of establishing the incorporation of the BIMCO Wreckhire contract might be somewhat improved if it is to be accepted that there was a concluded contract at the earlier time. This is because as appears from the authorities cited above assent to supplementary terms may arise in circumstances where the strict imposition of the principles of offer and acceptance would not be satisfied.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">That all said I will seek to grapple with the point.  As already indicated, TF’s case centred on what was categorised as the “offer” contained in the email from Svitzer forwarded to Thor at 13:51 on 5 July and the “acceptance” in the email from Thor forwarded to Svitzer at 16:11 that same day.  This was said by TF to give rise to a concluded contract on the essential terms therein set out.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">CPT urged a number of difficulties with this analysis.  The primary ones were as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Thor had made it clear in their email timed at 03:08 on 5 July that there was no need for a tug to furnish towage assistance: just a boat for transporting the firefighters and their equipment.  Thus any offer of escorting services by a tug (let alone towage) would be speculative.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">In the result the “offer” set out in the email sent by Svitzer at 12:40 on 5 July was in effect a quotation for a range of services including not just a firefighting team but also a salvage master and a tug.  The tug was expressly described as “optional”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">The quote is silent on a number of potentially important matters including:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">a)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Any obligation or otherwise to exercise due care or otherwise in furnishing assistance.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">b)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">The period of time during which the services were to be provided.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">c)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">The entitlement or otherwise to terminate the provision of services.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Although it was suggested by TF that “gaps” would be filled by incorporation of the provisions of the Code dealing with “<span style="font-style:italic">Services rendered to a vessel … in danger</span>”, it was the evidence of CPT’s Chilean law expert, Dr Sandoval, that the Code was inapt to apply to the services quoted for.  In particular payment under the Code was by reference to the criteria contained in the Salvage Convention which led to a successful result not by reference to daily rates without regard to success.<authorialNote class="footnote" marker="2">
+		<p class="ParaLevel2" style="margin-left:0.49in">
+		  <span style="font-size:8pt"> It is true that Article 1138 makes provision for agreement to payments in the absence of success but only of any expenses incurred.</span>
+		</p>
+		<p class="ParaLevel2" style="margin-left:0.49in"/>
+	      </authorialNote></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">CPT also submitted that there were difficulties in categorising the response in the email timed 16:11 as an unqualified acceptance of any “offer” as set out in the earlier email.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">There had been further negotiations meanwhile relating to the provision by CPT of additional firefighters from a local shipyard under the control of CPT.  As Mr De Vries noted, Mr Thalund had called to make it clear that the “offer” was accepted but only on the condition that the additional firefighters joined the team.  This was categorised as a counter offer.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">In any event, the withdrawal of the firefighters led to Thor’s email to the effect:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.18in">
+	      <span style="font-style:italic">“We have received your offer and accept as it is.  Please go ahead with all preparations as fast as possible.”</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.98in">The terms of the acceptance, it was suggested, rather emphasise the absence of an offer open to acceptance.  The quote had been in respect of services “as necessary” but absent a decision as to the necessity of a tug or of a salvage master, the acceptance is not meaningful: it would have to be confined to those items later selected from the <span style="font-style:italic">a la carte</span> menu.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">However in my judgment any objective assessment of these negotiations leads to the conclusion that a completed contract was entered into in the fashion relied upon by TF.  Indeed in his email forwarded to Thor at 17:08 (i.e. an hour later), Mr Hoogenstraaten expressed thanks for the “confirmation”.  Notably this reflects what had been CPT’s pleaded case until the commencement of the hearing.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I appreciate that the issue is not straightforward.  As observed in Chitty on Contracts 30 Ed at para 2-029:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“<span style="font-style:italic">Businessmen do not, any more than the courts, find it easy to say precisely when they have reached agreement, and may continue to negotiate after they appear to have agreed to the same terms. The court will then look at the entire course of negotiations to decide whether an apparently unqualified acceptance did in fact conclude the agreement</span>”.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">But CPT’s offer of services contains in my judgment all the essential terms.  Put another way, although the parties expected the agreement to be reduced to writing and to be supplemented in the process by a number of additional detailed provisions by way of sorting out the details, nothing leads to the conclusion that the absence of such terms would render any agreement unworkable or wholly uncertain.  This conclusion is reinforced by the fact that CPT immediately commenced performance by tendering their tug for inspection by the Chilean authorities.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I would add, to the extent that it matters, that, as regards the Code, I prefer the evidence of Dr Sandoval to that of Mr Sahurie who was retained by TF and that accordingly in my judgment the agreement thus reached did not incorporate the salvage provisions of the Code.  This perhaps emphasises the unlikelihood of the agreement remaining thereafter unsupplemented by standard terms.  But nevertheless in my judgment CPT was from 1608 onwards committed to furnish such services as had been offered and then accepted.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">BIMCO form</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">But this conclusion does not as I have already indicated begin to resolve the principle issue in this case.  As regards BIMCO Wreckhire form, it is CPT’s case that it was either agreed as part of the initial contract or alternatively was incorporated in the course of sorting out the details for the purpose of preparing the contractual text.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As regards the former submission a considerable amount of the oral evidence was devoted to the question whether the BIMCO Wreckhire or Towhire form or some other set of standard terms was ever mentioned during the telephone conversations leading up to the offer.    I have already referred to the fact that Mr Hoogenstraaten’s evidence on the topic underwent something of a sea-change from the contents of his initial statement. Furthermore there is certainly is no reference to BIMCO or other forms in the correspondence or the offer itself.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Those involved in the initial negotiations Mr Thalund, Mr De Vries and at the periphery Mr Land had, not surprisingly, only the faintest recollection of any discussion not reflected in the contemporary correspondence.  But I am prepared to accept that it is probable that some mention was made by or on behalf of Svitzer of the need for “standard terms”.  I say that for these reasons:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">a)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">CPT had initially offered its services on the terms of a standard contract namely LOF.  Although those terms were not accepted, it seems likely that both parties were fully cognisant that some form of standard terms were appropriate in place of LOF.  Mr Thalund could not remember precisely what had been stated although in his oral evidence he remembered that Thor had wanted “commercial terms”.  Such would not have been remotely surprising and indeed would not have been particularly memorable.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">b)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Mr De Vries considered that it is probable that he would have mentioned at least standard terms since it is only on that basis that CPT provided assistance. Indeed it was requirement of the joint venture agreement between CPT and Svitzer.  Certainly mention of standard or usual terms was Mr Land’s understanding from Mr De Vries and, in turn, Mr Hoogenstraaten’s understanding from Mr Land.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">c)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">In any event I accept the evidence that any provision of services of this character by a “professional” salvor would be on a standard form of contract as a matter of almost invariable practice.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">These conclusions do not give rise to a finding that BIMCO Wreckhire as such was part of the initial contract.  But they provide the background to the subsequent negotiation of the detailed written terms.  Accordingly I turn now to take a broader view of all the material communications both before and after the “offer” and the “acceptance”.  In this respect it is necessary to remember that both parties were faced with an emergency in which the negotiation of detailed terms inevitably would take a back seat.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">From Thor’s perspective, although ATHENA was still capable of proceeding under her own power, there was a serious fire on board their vessel which was about 600 miles off the coast of Chile and had been abandoned by most of her crew.  Equally it was a situation calling for a quick response from any “salvor” such as CPT in assembling its resources.  CPT was also faced with strong competition from Ultragas who had rendered assistance to one of ATHENA’s sister vessels earlier in the year.  Indeed it was Ultragas that got in with the first offer of tug assistance to Thor at $20,000 a day (minimum 5 days) on BIMCO Towhire terms.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Thor approached CPT direct at 2151 on 4 July about 5 hours after receiving Ultragas’ offer.  Their request was for “a vessel” to transport fire-fighters and their equipment out to the casualty.  As already surmised, it must have been at about this stage that Thor made it plain that services would not be accepted on Lloyd’s Form.  Although this point was not investigated at any depth, it was probably CPT who sought LOF.  This was rejected by Thor who accordingly asked for an offer including “<span style="font-style:italic">reaction time and costs”</span>.  According to Mr Thalund all these early oral exchanges were with Mr Gunnbjorn Joensen.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Although the offer makes no reference to standard terms (in contrast to Ultragas’ offer) let alone a BIMCO form of agreement, Thor must have in any event contemplated (even absent express mention) that no assistance from any quarter would be forthcoming save on standard terms.  Ultragas were offering BIMCO Towhire (entitled “International Ocean Towage Agreement”).  Indeed, at the risk of repetition the evidence is overwhelming that the salvage industry will only undertake daily rate services on standard terms and Svitzer/CPT were no exception.  Such was the view of all the witnesses and in particular of Captain Reinigert a salvage consultant formerly with Smit Tak.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In this regard it is of note that earlier in the year both CPT and Ultragas had unsuccessfully offered services to ATHENA’s sister vessel on LOF.  Thereafter Ultragas were engaged on BIMCO Towhire terms.  Later following the arrival of that vessel in Chile additional services from Ultragas were taken on BIMCO Wreckhire terms (albeit with an amended law and arbitration clause).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In regard to ATHENA it is of some note that the evidence from Thor was very limited:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">a)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">There was no evidence from Mr Gunnbjorn Joenson, the Managing Director of Thor, who was directly involved in engaging assistance and was the supervisor of Mr Jogvan Joensen.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">b)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Mr Jogvan Joensen was not called.  His statement raised a number of questions.  For instance he states that the “offer” made no reference to any standard terms but claims: “<span style="font-style:italic">This did not strike me as strange at all because we were only asking for fire fighting assistance.”</span>  This however was somewhat difficult to reconcile with his comments as to the e-mail received from Mr Hoogenstraaten at 1708 on 5 July which was to the effect that he paid no attention to the reference to a BIMCO contract and was merely intending to wait until the contractual details were sent over.  He completes the passage by saying: “<span style="font-style:italic">At no stage did CPT mention BIMCO terms.”</span></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">c)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Mr Gulklett was also not called.  In his very short initial statement he explained that he had only discussed the fire and the services required with CPT.  In his later statement he explained that he was travelling to South America on 5 July 2007 and only later perused the correspondence.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is clear that CPT/Svitzer in referring to a BIMCO contract thought that the relevant form was Wreckhire.   This is confirmed in Mr Hoogenstraaten’s e-mails to Mr Thalund on 6 and 7 July 2007.  What form Thor were expecting in the draft being prepared by CPT remains obscure.  Whilst it is correct that BIMCO Towhire was the basis of the contract earlier made with and later offered by Ultragas, it is striking that no comment was made by Thor to the status report at 1035 on 11 July which referred to “the agreed BIMCO Wreckhire contract” bearing in mind that the precise identity of the form is fundamental in that the then Towhire form had a completely different dispute resolution clause i.e. English law and jurisdiction and no arbitration.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The situation as at 1708 on 5 July was as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">a)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">CPT had been engaged to provide fire-fighting assistance to ATHENA and not towage.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">b)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Both CPT and Thor anticipated that, although the agreement was not subject to contract, nonetheless the agreement would be reduced to writing.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">c)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">That written agreement would be on standard terms.  In reality, absent LOF, a BIMCO form of some kind was the only option.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">d)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">CPT had made it plain in the 1651 e-mail (described by both Mr Thalund and Mr Hoogenstraaten as a “recap”) that the “<span style="font-style:italic">finalised</span>” version would be a BIMCO contract “<span style="font-style:italic">as partly discussed earlier today</span>”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">e)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Thor were thereafter waiting for CPT’s draft.  There is no suggestion from Thor that if it had been forthcoming on BIMCO terms such would have been unacceptable.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">f)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">I reject TF’s submission that the reference to BIMCO was entirely unheralded and came out a clear blue sky.  To the contrary the absence of any request for an explanation strongly suggests that Thor regarded the reference to BIMCO as entirely appropriate. Their actual reaction was simply to ask for supplementary services from time to time.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the absence of any rejection of the proposal and given the immediate request by Thor for details of the time of departure and the fire-fighters on board, Thor’s assent to BIMCO terms can be inferred.  Indeed the following morning Thor expressed that it was “happy” with the “co-operation” and made further requests.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">But which BIMCO form?  In my judgment the relevant BIMCO form was Wreckhire</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">a)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Given the absence of a need for a tow but only fire-fighting, Towhire was not appropriate.  Although Ultragas had offered on Towhire terms, as Captain Reinegert explained <span style="font-style:italic">“in connection with salvage services not on LOF the commonly and most used contract is BIMCO Wreckhire”.</span></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">b)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Mr Thalund expressed no surprise when it was suggested by  Svitzer that when he prepared the BIMCO agreement it should be on the Wreckhire form.  He did not even bother to pass the message on to Thor.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">c)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Such an agreement was announced by CPT in their status report to Thor without reaction let alone complaint on 11 July 2007.  By then the fire had escalated and Thor must have been already contemplating terminating the contract.  Thus its terms would have been of particular interest.  Yet the only reaction was to ask for details about cooling operations.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.48in;text-indent:-0.49in">d)</num>
+	  <content>
+	    <p class="ParaLevel3" style="margin-left:1.48in;text-indent:0.5in">Once CPT were dismissed, Ultragas were immediately engaged to replace them on Wreckhire terms.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my judgment CPT has made out its case that Thor assented to the incorporation of the terms of BIMCO Wreckhire into the agreement.  This leads to reflection on the fact that TF’s primary witness Mr Thalund was simply an intermediary.  He was in one sense a surprising witness since he did not speak for, let alone negotiate on behalf of, Thor.  He was just a post box with little recollection of the oral exchanges. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In contrast no witness from the office of Thor was called and it was not seriously suggested that they were unwilling to do so (though Mr Jogvan Joensen was said to be “travelling” as he had also been at the time of the earlier trial date).  In particular there is no evidence (let alone the opportunity to challenge it) as to the expectations of Thor as regards the content of the agreement which was to be prepared and the lack of reaction to the reference to BIMCO terms.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was CPT’s case that if they succeeded in making out a prima facie case that the terms of BIMCO Wreckhire were adopted as part of the contract then it  could properly invite the court to conclude that, if called, any witness from the Thor camp would have had no answer to the prima facie case or none that would bear examination: see <span style="font-style:italic;font-weight:bold">Wizniewski v Central Manchester Health Authority[1998] Lloyd’s Rep. Med 223</span>. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The absence of both Joensons (and indeed the absence of even a statement from the managing director) are prayed in aid by CPT to support by way of adverse inference what they put forward as their prima facie case.  In my judgment they have made out more than a prima facie case but in any event this point is well made.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">Conclusion</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I have come to the conclusion that CPT has discharged the burden of proof resting on it to establish that the agreement incorporated the BIMCO Wreckhire form of arbitration clause and that accordingly CPT is entitled to a permanent anti-suit injunction.</p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

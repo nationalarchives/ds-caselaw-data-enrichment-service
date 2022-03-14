@@ -1,0 +1,1992 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewhc/costs/2012/90223"/>
+	  <FRBRuri value="ewhc/costs/2012/90223"/>
+	  <FRBRdate date="2012-10-26" name="judgment"/>
+	  <FRBRauthor href="#ewhc-seniorcourtscosts"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="90223"/>
+	  <FRBRname value="KANAT SHAIKHANOVICH ASSAUBAYEV v MICHAEL WILSON &amp; PARTNERS, LTD."/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewhc/costs/2012/90223/eng"/>
+	  <FRBRuri value="ewhc/costs/2012/90223/eng"/>
+	  <FRBRdate date="2012-10-26" name="judgment"/>
+	  <FRBRauthor href="#ewhc-seniorcourtscosts"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewhc/costs/2012/90223/eng/akn"/>
+	  <FRBRuri value="ewhc/costs/2012/90223/eng/akn"/>
+	  <FRBRdate date="2021-12-01T21:24:14" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewhc-seniorcourtscosts" href="https://www.gov.uk/courts-tribunals/senior-courts-costs-office" showAs="The England and Wales High Court (Senior Courts Costs Office)" shortForm="The Senior Courts Costs Office"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="kanat-shaikhanovich-assaubayev" href="" showAs="KANAT SHAIKHANOVICH ASSAUBAYEV"/>
+	<TLCPerson eId="marusya-maralovna-assaubayev" href="" showAs="MARUSYA MARALOVNA ASSAUBAYEV"/>
+	<TLCPerson eId="baurzhan-kanatovich-assaubayev" href="" showAs="BAURZHAN KANATOVICH ASSAUBAYEV"/>
+	<TLCPerson eId="aidar-kanatovich-assaubayev" href="" showAs="AIDAR KANATOVICH ASSAUBAYEV"/>
+	<TLCPerson eId="sanzhar-kanatovich-assaubayev" href="" showAs="SANZHAR KANATOVICH ASSAUBAYEV"/>
+	<TLCPerson eId="hawkinson-capital-inc" href="" showAs="HAWKINSON CAPITAL INC."/>
+	<TLCPerson eId="michael-wilson-&amp;-partners-ltd" href="" showAs="MICHAEL WILSON &amp; PARTNERS, LTD."/>
+	<TLCRole eId="claimant" href="" showAs="Claimant"/>
+	<TLCRole eId="defendant" href="" showAs="Defendant"/>
+      </references>
+      <proprietary source="ewhc/costs/2012/90223/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWHC-SeniorCourtsCosts</uk:court>
+	<uk:year>2012</uk:year>
+	<uk:number>90223</uk:number>
+	<uk:cite>[2012] EWHC 90223 (Costs)</uk:cite>
+	<uk:hash>6384dbc017c7eaaf773e43dc2a374d5851e6fda2eb1410f25afc86d648ae4fff</uk:hash>
+      </proprietary>
+      <presentation source="ewhc/costs/2012/90223/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { font-weight: bold; font-family: Arial; font-size: 16pt; }
+#judgment .Heading2 { font-family: Georgia; font-size: 19pt; color: #9B9B9B; }
+#judgment .Heading3 { font-weight: bold; font-family: Arial; font-size: 13pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .ParaHeading { font-size: 12pt; }
+#judgment .ParaLevel1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .ParaLevel2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .ParaLevel3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 1.00in; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .Heading { font-size: 12pt; }
+#judgment .Title { text-align: center; font-weight: bold; font-size: 10pt; }
+#judgment .eMailBlock { text-align: center; font-weight: bold; font-size: 13pt; }
+#judgment .BalloonText { font-family: Tahoma; font-size: 8pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .Heading2Char { font-style: italic; font-weight: bold; font-size: 14pt; }
+#judgment .Heading3Char { font-weight: bold; font-size: 13pt; }
+#judgment .QuoteChar { font-style: italic; font-size: 12pt; color: #000000; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .TitleChar { font-weight: bold; font-size: 16pt; }
+#judgment .Hyperlink { text-decoration: underline; color: #0000FF; }
+#judgment .legextentrestriction7 { font-weight: bold; font-size: 11pt; color: #FFFFFF; background-color: initial; }
+#judgment .BalloonTextChar { font-family: Tahoma; font-size: 8pt; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p class="CoverText" style="text-align:left">
+	<span style="text-decoration:none;font-size:10pt">Neutral Citation Number: </span>
+	<neutralCitation style="text-decoration:none;font-size:10pt">[2012] EWHC 90223 (Costs)</neutralCitation>
+      </p>
+      <p style="text-align:right">
+	<span style="text-decoration:underline">Case No: </span>
+	<docketNumber style="text-decoration:underline">1104228</docketNumber>
+      </p>
+      <p>
+	<span style="font-weight:bold;text-decoration:underline">IN THE HIGH COURT OF JUSTICE</span>
+      </p>
+      <p>
+	<span style="font-weight:bold;text-decoration:underline">SENIOR COURTS COSTS OFFICE</span>
+      </p>
+      <p style="text-align:right">
+	<span style="text-decoration:underline">Royal Courts of Justice</span>
+      </p>
+      <p style="text-align:right">
+	<span style="text-decoration:underline">Strand, London, WC2A 2LL</span>
+      </p>
+      <p style="text-align:right">
+	<span style="text-decoration:underline">Date: </span>
+	<docDate date="2012-10-26" style="text-decoration:underline">26 October 2012</docDate>
+      </p>
+      <p style="text-align:center"><span style="font-weight:bold">Before</span> :</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold;text-decoration:underline">MASTER CAMPBELL, COSTS JUDGE</span>
+      </p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#kanat-shaikhanovich-assaubayev" as="#claimant" style="font-weight:bold">(1)   KANAT SHAIKHANOVICH ASSAUBAYEV</party>
+	    </p>
+	    <p style="text-align:center">
+	      <party refersTo="#marusya-maralovna-assaubayev" as="#claimant" style="font-weight:bold">(2)   MARUSYA MARALOVNA ASSAUBAYEV </party>
+	    </p>
+	    <p style="text-align:center">
+	      <party refersTo="#baurzhan-kanatovich-assaubayev" as="#claimant" style="font-weight:bold">(3)  BAURZHAN KANATOVICH ASSAUBAYEV </party>
+	    </p>
+	    <p style="text-align:center">
+	      <party refersTo="#aidar-kanatovich-assaubayev" as="#claimant" style="font-weight:bold">(4)  AIDAR KANATOVICH ASSAUBAYEV</party>
+	    </p>
+	    <p style="text-align:center">
+	      <party refersTo="#sanzhar-kanatovich-assaubayev" as="#claimant" style="font-weight:bold">(5)   SANZHAR KANATOVICH ASSAUBAYEV</party>
+	    </p>
+	    <p style="text-align:center">
+	      <party refersTo="#hawkinson-capital-inc" as="#claimant" style="font-weight:bold">(6) HAWKINSON CAPITAL INC. </party>
+	    </p>
+	    <p style="text-align:center">
+	      <span style="font-weight:bold;font-size:10pt">(a company incorporated in the British Virgin islands )</span>
+	    </p>
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">(7)   JSC CREDIT ALTYN BANK (</span>
+	      <span style="font-weight:bold;font-size:10pt">in the management of the FMSC)</span>
+	      <span style="font-weight:bold">    </span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right"/>
+	    <p style="text-align:right"/>
+	    <p style="text-align:right"/>
+	    <p style="text-align:right"/>
+	    <p style="text-align:right"/>
+	    <p style="text-align:right"/>
+	    <p/>
+	    <p style="text-align:right">
+	      <role refersTo="#claimant" style="font-weight:bold;text-decoration:underline">Claimants</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#michael-wilson-&amp;-partners-ltd" as="#defendant" style="font-weight:bold">MICHAEL WILSON &amp; PARTNERS, LTD.     </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right">
+	      <role refersTo="#defendant" style="font-weight:bold;text-decoration:underline">Defendant</role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Mr Nicholas Bacon QC and Mr George McDonald </span>
+      </p>
+      <p style="text-align:center">(instructed by<span style="font-weight:bold"> Reed Smith</span>) for the  First to Sixth Clamiants</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Mr David Holland QC and Mr Paul Joseph</span>
+      </p>
+      <p style="text-align:center">(instructed under the Public Access Scheme) for the Defendant</p>
+      <p style="text-align:center">Hearing dates:  21<span style="vertical-align:super;font-size:smaller">st</span> and 24th June 2012</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p class="CoverDesc">Judgment</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">Master Campbell:</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This judgment addresses a further issue in these part 8 proceedings which the Claimants began on 16<span style="vertical-align:super;font-size:smaller">th</span> August 2011 under the Solicitors Act 1974 ("the Act"). On 27<span style="vertical-align:super;font-size:smaller">th</span> January 2012 the Defendant ("MWP") issued an application notice seeking an order in the following terms:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"Pursuant to section 9 of the Arbitration Act 1996 and/or inherent jurisdiction of the court, all further proceedings in this action be stayed". </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The hearing of MWP's application was listed for 3 hours on 21<span style="vertical-align:super;font-size:smaller">st</span> June 2012.  In the event it lasted until 4.30pm that day, resuming on 24<span style="vertical-align:super;font-size:smaller">th</span> June when it was concluded at 5.30pm. Prior to the hearing, the parties  lodged 4 ring binders of documents together with 2 further bundles of authorities. The bundles contained witness statements: for the Claimants, those by Patrick Beale (solicitor of Reed Smith)  dated 15 August 2011 ("Beale 1"), 15 August 2011 ("Beale 2"), 20 February 2012 ("Beale 4") , 6 March 2012 ("Beale 5") plus exhibits PB 1 to 5,  by the first to fifth claimants, all dated 17 February 2012 and  by Uatay Kablan ( Director of the 6<span style="vertical-align:super;font-size:smaller">th</span> Claimant) dated 1 June 2012. For MWP, by  Mr Michael Wilson, the Managing Director of MWP  dated 27 January 2012 ("Wilson 1"), 13 February 2012 ("Wilson 2"), 5 March 2012 ("Wilson 3"),  7 June 2012 ("Wilson 4") plus exhibits MEW 1 to 4. At the hearing, Mr Holland QC and Mr Joseph appeared for MWP and Mr Bacon QC and Mr McDonald represented the Claimants. Both sides lodged skeleton arguments. I reserved judgment but subsequently notified the parties of the outcome in writing, with full reasons to follow.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The background is set out in the judgment I handed down on 11<span style="vertical-align:super;font-size:smaller">th</span> May 2012 ("Campbell 1") paragraphs 3-4.  For convenience, I repeat it here:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"Michael Wilson contend that they are legal advisers. In that capacity, Michael Wilson advised<span style="color:#FF0000"> </span>all seven Claimants in significant disputes with various entities including OJSC Polyus Gold, Polygus International, Jenington International Inc, Kazakhgold Group Ltd and their various subsidiaries, related companies and affiliates. The Claimants are all residents in Kazakhstan and all were parties to an engagement letter dated 2 July 2010 which set out the terms on which Michael Wilson would be retained on their behalf. According to Mr Patrick Beale, Mr Bacon's instructing solicitor, Michael Wilson handled "a very major piece of commercial litigation" on the Claimants' behalf (see his first witness statement dated 15 August 2009), in respect of which the firm issued 26 invoices amounting to $8,605,030.03 for its work. The Claimants have objected to the invoices. In their view, the engagement letter (and a further separate letter of engagement dated 24 August 2010 between Michael Wilson and the Fourth Claimant) are unfair, unreasonable and should be set aside. The Claimants further assert that the fees charged by Michael Wilson are excessive and they wish to exercise their statutory rights under Section 61(1) and Section 61(2) Solicitors Act 1974, before they pay Michael Wilson any more money."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Concurrently, MWP have issued proceedings under the Arbitration Act 1996 ("the 1996 Act").  Thus, at the present time, there are the following proceedings –</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Arbitration proceedings initiated by MWP against all the Claimants and also against Gold Lion Holdings Limited ("GLH") under LCIA Arbitration number UN111913;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">These proceedings under the Act initiated by the Claimants for the relief set out in paragraph 4 of Campbell 1 namely :- (a) for an order pursuant to Section 61(2) of the Act that the letter of engagement (which they consider to be a contentious business agreement) dated 2 July 2012, be set aside as being unfair and unreasonable; (b) for an  order pursuant to Section 68 of the Solicitors Act 1974 that MWP deliver a bill of costs to the Claimants; and/or (c) for an order for the detailed assessment of MWP's bill (whether as delivered or of the invoices already issued by MWP). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Court has yet to decide whether the relief sought under the Act should be granted and it is important to stress at the outset of this judgment what the application it addresses is not. Although Mr Bacon has invited the court in paragraph 66 of his skeleton to make orders  reflecting the relief sought in paragraph 4 (ii) above, it is only MWP's application for a stay with which the court was seised on 21 and 24 June 2012. Indeed, thus far, the parties' attention has  been directed only at (i)  whether these proceedings should be transferred to the Commercial Court (in Campbell 1, I ruled that they should not) and (ii), this application. For that reason, whether there should or should not be an assessment under the Act is not within the scope of this judgment. Instead, it is limited to the relief sought in the application notice, namely    MWP's case that the proceedings under the Act should be stayed and that the arbitration should continue on the basis that there was a valid arbitration agreement incorporated into the retainer which existed between MWP and the Claimants.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">MORE BACKGROUND</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On 15<span style="vertical-align:super;font-size:smaller">th</span> September 2010 Vos J gave a judgment in the proceedings involving Jenington and the Claimants (excluding the 7<span style="vertical-align:super;font-size:smaller">th</span> Defendant ("JSC") but including GLH) which, as I have said, Mr Beale has described as a very major piece of litigation. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Somewhat confusingly, the Claimants in these proceedings were the Defendants in the Chancery action. Vos J began his judgment by saying the following:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">"1.<marker name="tab"/>In this action the Claimants make claims for recovery of what is alleged to be fraudulently obtained property and for damages amounting in total to over US$ 400 million. Peter Smith J granted a worldwide freezing order made against the Defendants on 23<span style="vertical-align:super;font-size:smaller">rd</span> June 2010 and at the same time ordered the Defendants to disclose the whereabouts and details of their assets in support of that freezing order….</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">4. <marker name="tab"/><marker name="tab"/>It would not be an exaggeration to say that the Claimants' applications have resulted thus far in a huge amount of litigation activity since 23<span style="vertical-align:super;font-size:smaller">rd</span> June 2010, including some fourteen hearing days, including today. Indeed Mr John Wardell QC, leading counsel for [Kanat, Marusya and Sanzhar Assaubayev] told me that his clients had already incurred more than GBP £1 million in legal costs in their efforts to comply with the court's orders."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At paragraph 2, Vos J continued:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"... The three individual defendants concerned are (1) the first defendant, Mr Kanat Shaikhanovich Assaubayev, whom I shall call "Kanat", (2) the second defendant Mrs Marusya Maralovna Assaubayev, whom I shall call "Marusya", Kanat's wife and  (3)<marker name="tab"/>the fourth defendant, Mr Sanzhar Kanatovich Assaubayev whom I shall call "Sanzhar", who is the son of Kanat and Marusya …"</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At paragraph 65, Vos J continued:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">"(2)<marker name="tab"/>The defendants have shown themselves keen, if not desperate, to obtain the return of their passports.  I make no complaint about that…"</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">According to Mr Holland's skeleton argument at paragraph 14, "It was in these circumstances that MWP was approached by C3 [Baurzhan Assaubayev ("Baurzhan")] and C4 [Aidar  Asssaubeyev ("Aidar")] in Kazakhstan to act on behalf of the family. This approach resulted in the engagement letter."</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">MWP subsequently went on the court record in the proceedings involving Jenington  on behalf of Aidar and Baurzhan. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The family is thus Kanat and his wife Maruysa, their son Sanzhar and their other sons (Sanzhar's brothers), Baurzhan and Aidar Assaubayev.  In paragraph 3, Vos J described the family as "close-knit". For convenience, I shall refer to each by their christian names  or collectively as "the Family".</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">To complete the story, I need to add that the proceedings in the Chancery Division and other proceedings worldwide were settled, with a Memorandum of Understanding being entered into on 18<span style="vertical-align:super;font-size:smaller">th</span> September 2010, a principal agreement being signed (in Moscow) on 8<span style="vertical-align:super;font-size:smaller">th</span> December 2010 and a final agreement (again signed in Moscow) on 7<span style="vertical-align:super;font-size:smaller">th</span> April 2011 which became unconditional on 7<span style="vertical-align:super;font-size:smaller">th</span> May 2011 (see Mr. Holland's skeleton at paragraph 18).</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE ENGAGEMENT LETTER AND SECOND ENGAGEMENT LETTER</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Holland's reference to the engagement letter is to the letter dated 2 July 2010, which  evidences the  terms upon which MWP were retained ("the engagement letter") ( bundle 2 page 441 to 445). Given its importance, the letter will be considered in some detail. In addition, there is a separate letter of engagement ("the second engagement letter") signed by Aidar bearing the date 24<span style="vertical-align:super;font-size:smaller">th</span> August 2010  (bundle 2 pages 567-579).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">MWP addressed  the engagement letter to  the Family, also to GLH, JSC Credit Altyn Bank ("JSC") and   Hawkinson Capital Inc ("Hawkinson"), a BVI registered company controlled by the  Family and the holder of  some of their assets (see Vos J's judgment at paragraph 29).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The engagement letter was signed by Kanat, Baurzhan, Marusya, Sanzhar and Aidar Assaubeyev (see exhibit PB4 pages 441 to 447). JSC and GLH were also signatories but nothing turns on that.   It was also signed on behalf of Hawkinson, although the validity of the signature is in dispute. At paragraph 51 of his skeleton, Mr Bacon submits that although Aidar's signature appears in the box marked  for Hawkinson, he had no actual or apparent authority to agree to the arbitration clause. As such, he contends that Hawkinson is not bound by the arbitration clause or, indeed, the engagement letter. That is also the thrust of Mr Kablan's evidence. He says that Aidar is not a director of Hawkinson and he had no authority to sign. Moreover, there is no record of MWP ever explaining discussing or negotiating the terms of the engagement letter. As for the others, the Family agrees for the purpose of MWP's application for a stay, that the engagement letter was signed (see Sanzhar 1 paragraph 5, adopted in their witness statements by Kanat, Maruysa, Baurzhan  and Aidar ), albeit that "...this is without prejudice to (and I reserve) my [Sanzhar's] position as to whether or not I did sign the engagement letter". </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Holland's case on signature is set out at paragraph 23 of his skeleton. He submits that were it to be correct that Aidar had no authority to sign on behalf of Hawkinson,  then it follows that he, Aidar "... is the sort of man who is quite prepared to sign formal documents on behalf of companies on whose behalf he has no authority to act; he has clearly been guilty of what under English law would be a breach of warranty of authority (although Kazakh law may technically apply); if (as appears to be the case) both GLH and Hawkinson are creatures of the family, then it is clear that, when it suits them, the family are quite prepared to stand behind legal technicality which obscures reality." Moreover, it is Mr Wilson's evidence that Aidar signed the second engagement in his presence on 12 July 2010, both on his own behalf and on behalf of Hawkinson and GLH (Wilson 3 paragraph 48- bundle 2 page 624).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The material parts of the engagement letter say this:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"Dear Madam and Sirs</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="text-decoration:underline">Letter of Engagement</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">This letter sets out the terms and conditions of our engagement.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="text-decoration:underline">1.</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="text-decoration:underline">Engagement of scope of work</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">We are pleased that all of the above persons and entities, acting jointly and severally and accepting joint and several liability for  all fees and costs, have selected Michael Wilson and Partners Limited (MWP) with effect from 2<span style="vertical-align:super;font-size:smaller">nd</span> July 2010, to provide you and your affiliates ("you") with legal services in relation to the Kazakhstani aspects of the issues in dispute that have arisen ……(collectively hereafter referred to as "Polyus") relating to and involving whether directly or indirectly, Kazakh Gold Plc and KazakhAltyn JS,  and its businesses, affairs assets and liabilities (the "Project"), together with such other services as you may request MWP to carry out, from time to time…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="text-decoration:underline">3.</span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="text-decoration:underline">Billing, Payment and Success fees.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Details of the basis of our fees and disbursements are set out in schedule 2 attached to this letter. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">MWP will issue bills at frequent intervals (usually monthly). MWP require our bills to be paid promptly and in any event within ten(10) days after they are issued….</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">We have also agreed that MWP will be entitled to bill, charge and be paid a success-fee equivalent to fifty percent (50%) of its professional fees, plus disbursements at 7.5% of such fees and VAT at 12% on such fees in the first, in the event of success being achieved for your (sic) in relation to the Project with such "success" being defined as any one or more of the following …</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="text-decoration:underline">8. </span>
+	      <marker name="tab"/>
+	      <marker name="tab"/>
+	      <span style="text-decoration:underline">Governing Law and Disputes.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">This letter shall be governed by and construed in accordance with the substantive laws of England and Wales, in force from time to time…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">At the absolute discretion of MWP, any dispute may be referred to mediation conducted under London Court of International Arbitration ("LCIA") Mediation Procedure then in force. The mediator shall be agreed by the Parties within fifteen (15) calendar days after the date of referral of the dispute to the LCIA, or, in default of agreement, shall be appointed by the LCIA. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">If the dispute is not settled by mediation within sixty (60) calendar days of the appointment of a mediator, or such further period as the parties shall agree in writing, or MWP does not wish to mediate the Dispute in any event, the Dispute shall be settled at MWP absolute discretion either by (i)The courts of Kazakhstan or (ii)<marker name="tab"/>The courts of the country where your registered office or principal place of business is situated (or the country of your domicile or residence if you are individual) or (iii)<marker name="tab"/>arbitration before the London Court of International Arbitration…..If MWP chooses arbitration then at the election of MWP there shall either be a sole (1) arbitrator or three (3) arbitrators…..</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">The place of mediation or arbitration shall be London, England, the English language shall be used throughout the mediation or arbitration proceedings and the mediator and arbitrator(s) must be fluent in the English language....</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="text-align:center;margin-left:1.00in">
+	      <span style="font-weight:bold;text-decoration:underline">Schedule 1</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="text-align:center;margin-left:1.00in">Summary of Key Personnel</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Michael E Wilson</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Managing Director</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Michael is the founding partner of an international law firm with a large presence in CIS and has been  permanently resident in Kazakhstan since 1995….Education: Manchester University,UK,1980, Chester Law School, UK, 1981..Business Associates ..Member of the Law Society of England and Wales…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Richard A Chudzynski</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Associate</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Native English speaker….admitted as a solicitor in England and Wales in 2005….</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="text-align:center;margin-left:1.00in">
+	      <span style="font-weight:bold">Schedule 2</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="text-align:center;margin-left:1.00in">Schedule of fees and charges</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="text-decoration:underline">Payment Details  </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">5.    Payment by wire transfer in US dollars Please remit to  the following account: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Account Name:        Michael Wilson Partners... </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Bank Address     PO Box 181, 27-32 Poultry London   EC2P 2BX…."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The second engagement letter dated 24<span style="vertical-align:super;font-size:smaller">th</span> August 2010 was addressed to Aidar alone. The material parts say this:- </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"Dear Sir</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="text-decoration:underline">Letter of Engagement</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">This letter sets out the terms and conditions of our engagement.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="text-decoration:underline">Engagement and Scope of Work</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">We are pleased that you have selected MWP to act for you personally ("you") with effect from 24<span style="vertical-align:super;font-size:smaller">th</span> August 2010 with respect to your involvement as a Defendant in claim No: HC10C02125 before the Chancery Division of the English High Court in relation to the issues and dispute that have arisen with and involving Jenington International Inc, Kazakh Gold PLC and KazakhAltyn MMC JSC (the "Project") together with such other services that you may request MWP to carry out from time to time....</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="text-decoration:underline">8.  Governing Law and Disputes</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">This letter shall be governed by and construed in accordance with the substantive laws of England and Wales, in force from time to time…[the same  clause relating to mediation and arbitration  in the engagement letter is then set out]"</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">MWP rendered 10 bills to Aidar under the terms of the second engagement letter for work including (inter alia) acting for him and going  on the court record on his behalf  in the Jenington<span style="font-style:italic"> </span>litigation.  MWP also went on the court record for Baurzhan but according to Mr Bacon's skeleton, MWP does not assert that it entered into a separate letter of engagement with him (skeleton paragraph 7). All  10 bills were  originally included by MWP in the arbitration but were later   excluded. The reason for this, according to Mr Wilson (Wilson 1 paragraph 30), was that those invoices were included by MWP:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"....by mistake and have since been removed from it. MWP's Request for Arbitration referred only to MWP's claims against all the Claimants and GLH under the Engagement Letter, and not to any claims it may have against Third Claimant [Aidar], pursuant to the Separate Engagement Letter concluded with him alone".  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Holland emphasises that this is not an acceptance that the 10 bills can be assessed under the Act because MWP has not submitted to the jurisdiction of this court; however no stay of the proceedings under the Act is sought in relation to these invoices   because the second engagement letter is not subject to the arbitration.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Claimants contend that they retained MWP from 2 July 2010 until 9<span style="vertical-align:super;font-size:smaller">th</span> April 2011. MWP says that the letter of engagement was terminated at a later date. For their work, it is agreed that MWP has rendered invoices totalling US dollars 8,605,030.03.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">LAW</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The  principal statutes which concern the issues arising in this judgment are  the<span style="color:#FF0000"> </span>Arbitration<span style="color:#FF0000">  </span> Act 1996 and  the Act, including, in particular, Part III which covers sections 50 onwards.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The relevant parts  of the 1996 Act are the following:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"9.- <marker name="tab"/>Stay of legal proceedings</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(1) <marker name="tab"/>A party to an arbitration agreement against whom legal proceedings are brought (whether by way of claim or counterclaim) in respect of a matter which under the agreement is to be referred to arbitration may (upon notice to the other parties in the proceedings) apply to the court in which the proceedings have been brought to stay the proceedings so far as they concern that matter.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(4) <marker name="tab"/>On an application under this section the court shall grant a stay unless satisfied that the arbitration agreement is null and void, inoperative or incapable of being performed."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The  parts of the Act relevant to the issues I have to decide are the following:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"1. <marker name="tab"/>Qualifications for practising as solicitor.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"><span style="font-weight:bold;font-size:10.5pt;color:#FFFFFF" class="hidden"/>No person shall be qualified to act as a solicitor unless— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(a)<marker name="tab"/>he has been admitted as a solicitor, and </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(b)<marker name="tab"/>his name is on the roll, and </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(c)<marker name="tab"/>he has in force a certificate issued by the Society in accordance with the provisions of this Part authorising him to practise as a solicitor (in this Act referred to as a "practising certificate") ...</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">20 <marker name="tab"/>Unqualified person not to act as solicitor</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(1)<marker name="tab"/>No unqualified person is to act as a solicitor. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2)<marker name="tab"/>Any person who contravenes subsection (1) is guilty of an offence and liable on conviction on indictment to imprisonment for not more than 2 years or to a fine, or to both....</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">21 <marker name="tab"/>Unqualified person not to pretend to be a solicitor.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Any unqualified person who wilfully pretends to be, or takes or uses any name, title, addition or description implying that he is, qualified or recognised by law as qualified to act as a solicitor shall be guilty of an offence and liable on summary conviction to a fine not exceeding the fourth level on the standard scale ...</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">24 <marker name="tab"/>Application of penal provisions to body corporate.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(1)<marker name="tab"/>If any act is done by a body corporate, or by any director, officer or servant of a body corporate, and is of such a nature or is done in such a manner as to be calculated to imply that the body corporate is qualified or recognised by law as qualified to act as a solicitor— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(a)<marker name="tab"/>the body corporate shall be guilty of an offence and liable on summary conviction to a fine not exceeding the fourth level on the standard scale, and </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(b)<marker name="tab"/>in the case of an act done by a director, officer or servant of the body corporate, he also shall be guilty of an offence and liable on summary conviction to a fine not exceeding the fourth level on the standard scale.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2)<marker name="tab"/>For the avoidance of doubt it is hereby declared that in section 20 the reference to an unqualified person and the reference to a person both include a reference to a body corporate.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">25 <marker name="tab"/>Costs where unqualified person acts as solicitor.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(1)<marker name="tab"/>No costs in respect of anything done by any unqualified person acting as a solicitor shall be recoverable by him, or by any other person, in any action, suit or matter. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2)<marker name="tab"/>Nothing in subsection (1) shall prevent the recovery of money paid or to be paid by a solicitor on behalf of a client in respect of anything done by the solicitor while acting for the client without holding a practising certificate in force if that money would have been recoverable if he had held such a certificate when so acting.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">50. <marker name="tab"/>Jurisdiction of Senior Courts<span style="font-size:16pt"> </span>over solicitors.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"><span style="font-weight:bold;font-size:10.5pt;color:#FFFFFF" class="hidden"/>(1)<marker name="tab"/>Any person duly admitted as a solicitor shall be an officer of the Senior Courts:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2)<marker name="tab"/>Subject to the provisions of this Act, the High Court, the Crown Court and the Court of Appeal respectively, or any division or judge of those courts, may exercise the same jurisdiction in respect of solicitors as any one of the superior courts of law or equity from which the Senior Courts were constituted might have exercised immediately before the passing of the Supreme Court of Judicature Act 1873 in respect of any solicitor, attorney or proctor admitted to practise there.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">57 <marker name="tab"/>Non–contentious business agreements.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"><span style="font-weight:bold;font-size:10.5pt;color:#FFFFFF" class="hidden"/>(1)<marker name="tab"/>Whether or not any order is in force under section 56, a solicitor and his client may, before or after or in the course of the transaction of any non–contentious business by the solicitor, make an agreement as to his remuneration in respect of that business...</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(3)<marker name="tab"/>The agreement shall be in writing and signed by the person to be bound by it or his agent in that behalf.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">59 <marker name="tab"/>Contentious business agreements</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(1)<marker name="tab"/>Subject to subsection (2) a solicitor may make an agreement in writing with his client as to his remuneration in respect of any contentious business done or to be done by him (in this Act referred to as a "contentious business agreement") providing that he shall be remunerated by a gross sum (or by reference to an hourly rate) or by a salary or by otherwise and whether at a higher or lower rate than that which he would otherwise have been entitled to be remunerated...</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">[the matters referred to in subsection (2) are not relevant here].</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">60<marker name="tab"/><marker name="tab"/>Effect of contentious business agreements.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"><span style="font-weight:bold;font-size:10.5pt;color:#FFFFFF" class="hidden"/>(1)<marker name="tab"/>Subject to the provisions of this section and to sections 61 to 63, the costs of a solicitor in any case where a contentious business agreement has been made shall not be subject to taxation or (except in the case of an agreement which provides for the solicitor to be remunerated by reference to an hourly rate) to the provisions of section 69. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2)<marker name="tab"/>Subject to subsection (3), a contentious business agreement shall not affect the amount of, or any rights or remedies for the recovery of, any costs payable by the client to, or to the client by, any person other than the solicitor, and that person may, unless he has otherwise agreed, require any such costs to be taxed according to the rules for their taxation for the time being in force. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(3)<marker name="tab"/>A client shall not be entitled to recover from any other person under an order for the payment of any costs to which a contentious business agreement relates more than the amount payable by him to his solicitor in respect of those costs under the agreement. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(4)<marker name="tab"/>A contentious business agreement shall be deemed to exclude any claim by the solicitor in respect of the business to which it relates other than— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(a)<marker name="tab"/>a claim for the agreed costs; or </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(b)<marker name="tab"/>a claim for such costs as are expressly excepted from the agreement. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(5)<marker name="tab"/>A provision in a contentious business agreement that the solicitor shall not be liable for his negligence, or that of any employee of his, shall be void if the client is a natural person who, in entering that agreement, is acting for purposes which are outside his trade, business or profession.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(6)<marker name="tab"/>A provision in a contentious business agreement that the solicitor shall be relieved from any responsibility to which he would otherwise be subject as a solicitor shall be void.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">61 <marker name="tab"/>Enforcement of contentious business agreements</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(1) <marker name="tab"/>no action shall be brought on any contentious business agreement, but on the application of any person who – (a) is a party to the agreement or the representative of such a party: or (b) is or is alleged to be liable to pay, or is or claims to be entitled to be paid, the costs due or alleged to be due in respect of the business to which the agreement relates, the court may enforce or set aside the agreement and determine every question as to its validity or effect.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2) <marker name="tab"/>On any application under subsection (1) the court-(a) if it is of the opinion that the agreement is in all respects fair and reasonable, may enforce it (b) if it is of the opinion the agreement is in any respect unfair or unreasonable, may set it aside and order the costs covered by it to be assessed as if it had never been made; (c) in any case, may make such order as to costs of the application as it thinks fit....</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">68 <marker name="tab"/>Power of the court to order a solicitor to deliver bill etc</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(1) <marker name="tab"/>The jurisdiction of the High Court to make orders for the delivery by a solicitor of a bill of costs and for the delivery up  or otherwise in relation to, any documents in his possession, custody or power, is hereby declared to extend to cases in which no business has been done by him in the High Court….</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">69 <marker name="tab"/>Action to recover solicitor's costs.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"><span style="font-weight:bold;font-size:10.5pt;color:#FFFFFF" class="hidden"/>(1)<marker name="tab"/>Subject to the provisions of this Act, no action shall be brought to recover any costs due to a solicitor before the expiration of one month from the date on which a bill of those costs is delivered in accordance with the requirements mentioned in subsection (2); but if there is probable cause for believing that the party chargeable with the costs— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(a)<marker name="tab"/>is about to quit England and Wales, to become bankrupt or to compound with his creditors, or </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(b)<marker name="tab"/>is about to do any other act which would tend to prevent or delay the solicitor obtaining payment, </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">the High Court may, notwithstanding that one month has not expired from the delivery of the bill, order that the solicitor be at liberty to commence an action to recover his costs and may order that those costs be taxed. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2)<marker name="tab"/>The requirements referred to in subsection (1) are that the bill must be—</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(a)<marker name="tab"/>signed in accordance with subsection (2A), and</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(b)<marker name="tab"/>delivered in accordance with subsection (2C).</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2A)<marker name="tab"/>A bill is signed in accordance with this subsection if it is—</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(a)<marker name="tab"/>signed by the solicitor or on his behalf by an employee of the solicitor authorised by him to sign, or</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(b)<marker name="tab"/>enclosed in, or accompanied by, a letter which is signed as mentioned in paragraph (a) and refers to the bill.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">70<span style="font-weight:bold;font-size:16pt"> </span><marker name="tab"/>Assessment on application of party chargeable or solicitor.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"><span style="font-weight:bold;font-size:10.5pt;color:#FFFFFF" class="hidden"/>(1)<marker name="tab"/>Where before the expiration of one month from the delivery of a solicitor's bill an application is made by the party chargeable with the bill, the High Court shall, without requiring any sum to be paid into court, order that the bill be assessed and that no action be commenced on the bill until the assessment<span style="font-weight:bold;font-size:12.5pt"> </span>is completed. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2)<marker name="tab"/>Where no such application is made before the expiration of the period mentioned in subsection (1), then, on an application being made by the solicitor or, subject to subsections (3) and (4), by the party chargeable with the bill, the court may on such terms, if any, as it thinks fit (not being terms as to the costs of the assessment), order— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(a)<marker name="tab"/>that the bill be assessed; and </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(b)<marker name="tab"/>that no action be commenced on the bill, and that any action already commenced be stayed, until the assessment<span style="font-weight:bold;font-size:12.5pt"> </span>is completed. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(3)<marker name="tab"/>Where an application under subsection (2) is made by the party chargeable with the bill— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(a)<marker name="tab"/>after the expiration of 12 months from the delivery of the bill, or </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(b)<marker name="tab"/>after a judgment has been obtained for the recovery of the costs covered by the bill, or </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(c)<marker name="tab"/>after the bill has been paid, but before the expiration of 12 months from the payment of the bill. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">no order shall be made except in special circumstances and, if an order is made, it may contain such terms as regards the costs of the assessment as the court may think fit. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">87 <marker name="tab"/>Interpretation.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"><span style="font-weight:bold;font-size:10.5pt;color:#FFFFFF" class="hidden"/>(1)<marker name="tab"/>In this Act, except where the context otherwise requires,— </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:Symbol;font-size:12pt;margin-left:1.50in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in;text-indent:0.5in">"contentious business" means business done, whether as solicitor or advocate, in or for the purposes of proceedings begun before a court or before an arbitrator . ., not being business which falls within the definition of non–contentious or common form probate business contained in section 128 of the Senior Courts Act 1981</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:Symbol;font-size:12pt;margin-left:1.50in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in;text-indent:0.5in">"contentious business agreement" means an agreement made in pursuance of section 59;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:Symbol;font-size:12pt;margin-left:1.50in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in;text-indent:0.5in">"non–contentious business" means any business done as a solicitor which is not contentious business as defined by this subsection;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:Symbol;font-size:12pt;margin-left:1.50in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in;text-indent:0.5in">"the roll" means the list of solicitors of the Senior Courts kept by the Society under section 6;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:Symbol;font-size:12pt;margin-left:1.50in;text-indent:-0.25in">•</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in;text-indent:0.5in">"solicitor" means solicitor of the Senior Courts;"</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.88in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.88in;text-indent:0.5in">I was also referred to the following sections of the  Legal Services Act 2007:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"12.<marker name="tab"/>Meaning of "reserved legal activity" and "legal activity"</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"> (1)<marker name="tab"/>In this Act "reserved legal activity" means— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(a)<marker name="tab"/>the exercise of a right of audience; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(b)<marker name="tab"/>the conduct of litigation; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(c)<marker name="tab"/>reserved instrument activities;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(d)<marker name="tab"/>probate activities; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(e)<marker name="tab"/>notarial activities;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(f)<marker name="tab"/><marker name="tab"/>the administration of oaths. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2)<marker name="tab"/>Schedule 2 makes provision about what constitutes each of those activities. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(3)<marker name="tab"/>In this Act "legal activity" means— </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(a)<marker name="tab"/>an activity which is a reserved legal activity within the meaning of this Act as originally enacted, and </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(b)<marker name="tab"/>any other activity which consists of one or both of the following—</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.97in;text-indent:-0.40in">(i)<marker name="tab"/>the provision of legal advice or assistance in connection with the application of the law or with any form of resolution of legal disputes; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.97in;text-indent:-0.40in">(ii)<marker name="tab"/>the provision of representation in connection with any matter concerning the application of the law or any form of resolution of legal disputes…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">18.<marker name="tab"/>Authorised persons</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"> (1)<marker name="tab"/>For the purposes of this Act "authorised person", in relation to an activity ("the relevant activity") which is a reserved legal activity, means — </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(a)<marker name="tab"/>a person who is authorised to carry on the relevant activity by a relevant approved regulator in relation to the relevant activity (other than by virtue of a licence under Part 5), or </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(b)<marker name="tab"/>a licensable body which, by virtue of such a licence, is authorised to carry on the relevant activity by a licensing authority in relation to the reserved legal activity."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.88in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.88in;text-indent:0.5in">
+	      <span class="legdslegrhslegp3text" style="color:#000000">I was also referred to the Solicitors Code of Conduct 2007 as amended ("the Code").  Where they are relevant, I shall mention the sections when it is appropriate to do so.</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p>
+	      <span class="ennote hidden" style="font-family:Arial;font-size:11.5pt;color:#000000"/>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p>
+	      <span class="ennote hidden" style="font-family:Arial;font-size:11.5pt;color:#000000"/>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE COURT'S POWERS ON THIS APPLICATION</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">MWP's application for a stay is made pursuant to section 9 of the 1996 Act, alternatively under the inherent jurisdiction of the court (see Mr Holland's skeleton paragraph 1). The Claimants accept that the court has jurisdiction to order a stay both under its inherent jurisdiction and under the 1996 Act provided that the requirements of section 9 are met (Mr Bacon's skeleton   paragraphs 16 and 19). It is further agreed that the burden is on the applicant (here MWP) to show that there has been a concluded arbitration agreement and that the issues in the proceedings are within its scope (see skeletons Mr Holland at 26 and Mr Bacon at 19).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">Albon v Naza Motor Trading</span>  (2007) EWHC 665 (Ch) is cited in both parties' bundles of authorities. At paragraph 14, Lightman J said this</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"In my judgment the language of Section 9 (1) plainly establishes two threshold requirements. The first is that there has been a concluded arbitration agreement and the second is that the issue in the proceedings is a matter which under the arbitration agreement is to be referred to  arbitration. The first condition is as to the conclusion and the second is as to the scope of the arbitration agreement. Accordingly unless and until the court is satisfied that both these conditions are satisfied the court cannot grant a stay under section 9."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Once both conditions are shown, the court must grant a stay under section 9 (4) unless it is satisfied that the arbitration clause is null and void, inoperative or incapable of being performed (skeletons Mr Holland at 26 (3), Mr Bacon at 20). In this context, at paragraph 18 of <span style="font-style:italic">Albon</span>, Lightman J said this:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"…..section 9 (4) assumes that an arbitration agreement has been concluded and provides for situations where issues arise whether that concluded agreement is or may be in law "null and void, inoperative or incapable of being performed." In this context "null and void" means "devoid of legal effect"".</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It follows that on this application, the onus is on the Family as respondents to it, to show that the agreement to arbitrate is null and void. If it is merely arguable that the agreement may or may not be null and void, then a stay must be granted.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE SUBMISSIONS FOR MWP</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Holland submits that all MWP needs to prove is that there is a concluded arbitration agreement in writing and that the dispute before the court is clearly within the scope of its terms.  He relies on <span style="font-style:italic">JSC BTA Bank v Mukhtar</span><span> </span><span style="font-style:italic">Ablyazov </span>(2011) EWHC 587 (Comm) in which Christopher Clarke J  said this:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">"31.<marker name="tab"/>The [1996] Act requires the court first to examine whether or not there is a written arbitration agreement...which covers the subject matter of the action. If there is such an agreement, a stay is mandatory unless the court is "<span style="font-style:italic">satisfied that the arbitration agreement is null and void, inoperative, or incapable of being performed</span>". The onus of satisfying the court lies on the party resisting a stay...</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">46. <marker name="tab"/>As to the burden of proof, it is submitted that where, as here, the applicant can raise an arguable case in its favour of the validity of the arbitration clause, a stay should be granted: see Merkin, <span style="font-style:italic">Arbitration Law</span> at paragraph 8-33 citing <span style="font-style:italic">Downing v</span> Al <span style="font-style:italic">Tameer Establishment</span> (2002) 2 All ER  (Comm). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">47. <marker name="tab"/>The Bank contends that the case comes within the last sentence of para  17 of Lord Hoffman's speech, namely that the agreements, including the arbitration agreement was made without authority. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">48. <marker name="tab"/>As to that it seems to me, firstly, that in the light of Mr Vataev's evidence it could be said that the agreements, including the arbitration agreement, were entered into without authority, but that it is not said that no agreement and no arbitration agreement with the bank came into existence; only that they are <span style="font-style:italic">voidable</span> by the court. They are not said to have been avoided by the bank.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">49. <marker name="tab"/>In those circumstances the applicants have shown that an arbitration agreement was concluded but the Bank has not shown that it is null and void or inoperative or incapable of being performed. It may be that the bank will later establish one or more of these propositions but they have not done so yet. In these circumstances, Tekhinvest has established that there is an arbitration agreement and the Bank has not satisfied me that it is null and void, inoperative or incapable of being performed. That should ordinarily lead to a stay and in this case should do so."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In Mr Holland's submission, there is here a concluded arbitration agreement which is evidenced in the engagement letter and in respect of which the dispute  is clearly within the scope of the arbitration terms. The definition of "dispute" is expressed   widely- "any dispute controversy or claim between [the parties] arising out of or relating to this letter, or the breach termination or invalidity of thereof."</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the present case, it is Mr Holland's contention that the points raised by the Claimants are virtually identical to those advanced before the arbitrator in the Statement of Defence and Counterclaim in the arbitration proceedings. That, he submits, is conclusive on scope. Were that not to be the case, the court should lean towards a wide and purposive interpretation - see <span style="font-style:italic">Fili Shipping Co. Limited v Premium Nafta Products Ltd. </span>[2007] UKHL 40 in which Lord Hoffman in his speech at paragraph 8 said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"A proper approach to construction therefore requires the court to give effect, so far as the language used by the parties will permit, to the commercial purpose of the arbitration clause….</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">13. In my opinion the construction of an arbitration clause should start from the assumption that the parties, as rational businessmen, are likely to have intended any dispute arising out of the relationship into which they have entered or purported to enter to be decided by the same tribunal. The clause should be construed in accordance with this presumption unless the language makes it clear that certain questions were intended to be excluded from the arbitrator's jurisdiction. As Longmore LJ remarked at paragraph 17 "if any business man did want to exclude disputes about the validity of a contract, it would be comparatively easy to say so."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Here, the Claimants have not disputed that the threshold requirements of section 9 (1) have been fulfilled : there is a concluded agreement, the engagement letter having been signed by the Family and by the other entities which were parties to it.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Holland submits that further support for this proposition can be drawn from the application  for leave to serve the CPR Part 8 claim in these proceedings on MWP out of the jurisdiction. To do so, the Claimants first needed to satisfy the court that the requirements of CPR 3.1(6) (c) PD 6B  had been met. They provide that a claim form may be served out of a jurisdiction if:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"A claim is made in respect of a contract where the contract:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(c) is governed by English law."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">From that it is clear, Mr Holland submits, that the whole basis of the claim issued under CPR Part 8 and   the application to serve out of the jurisdiction was founded upon a written contract, namely the engagement letter which contained the arbitration clause. For that reason the Claimants themselves have accepted that there is a concluded agreement.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Holland also makes the following points. First, the principle of "kompetenz–kompetenz" is expressly recognised in section 30 of 1996 Act whereby  the court shows respect for  party autonomy and for  the maximisation of the arbitrators' opportunity to determine their own jurisdiction (<span style="font-style:italic">A v B</span>  (2006) EWHC 2006 (Comm).  For their part, the Claimants accept that the arbitrator can determine his own jurisdiction. This is plain from Beale 4      when Mr Beale said this:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">"34.<marker name="tab"/>The Claimants do not dispute that the arbitrator would have power to determine his own jurisdiction (pursuant to section 30 of the Arbitration Act) but consider that the court should determine the issue....</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">37.<marker name="tab"/>The Claimants do not dispute the arbitrator may be capable of determining the validity of the arbitration clause…."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Next, Mr. Holland points out that the fact that  whilst this court may have the jurisdiction and  expertise to deal with detailed assessments of solicitors' bills and to administer  statutory remedies,  that does not preclude  parties from agreeing themselves that an issue may be arbitrated -see <span style="font-style:italic">Fulham Football Club [1987] Limited v</span><span> </span><span style="font-style:italic">Richards </span>[2011] EWCA Civ 855.  In Mr Holland's submission, whilst a lot has been made by the Claimants about the deprivation of statutory remedies they would suffer if a stay is granted, in fact the only remedies that can be given by this Court are under the Act.  It follows that merely because the Act gives the Court power to apply statutory remedies,   does not mean<span style="color:#FF0000"> </span>that any issue arising between the parties should not or cannot be referred to arbitration simply because the arbitrator does not have the same powers as the court to give statutory remedies. Moreover, even if the Claimants were not to be entitled to the relief sought under the  Act, they are nonetheless able to seek remedies under the common law. Thus in <span style="font-style:italic">Turner v Palomo</span> [1999] 4 AER 353, the fact the client was out of time in applying for detailed assessment under the Act did not prevent an assessment of his costs proceeding under the common law as a quantum meruit, nor would it prevent an argument over reasonableness being raised (<span style="font-style:italic">Thomas Watts v Smith </span>(1998) 2 Costs LR 59). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Next and in so far as  MWP had come on the court record for Aidar and Baurzhan in the Jenington litigation is concerned, Mr Holland submits  that MWP is not and never has been an entity authorised to conduct litigation in England and Wales and  the act of doing so cannot confer on the court a statutory jurisdiction which otherwise it would not have.   This is because it  is trite law that a party cannot estop himself into a statutory jurisdiction which the court does not possess- (see <span style="font-style:italic">J &amp; F Stone Lighting and Radio Limited v</span><span> </span><span style="font-style:italic">Levitt </span>(1947)) AC 209.  Nor is  it possible by agreement  or estoppel to confer upon a court or tribunal a jurisdiction it does not have (see <span style="font-style:italic">Contour Homes  v Rowan</span> (2007) EWCA CIV 842). Therefore, if, in going on the court record, MWP was seen to be holding  itself out as having a right to conduct litigation and even if all the other elements of estoppel were made out (eg reliance, acting to  detriment etc),  that could not give the Senior Courts Costs Office  a jurisdiction under the  Act which it did not otherwise possess: see  <span style="font-style:italic">Daejan Properties v Mahoney</span> (1996) 28 HLR 498 in which Lord Bingham said this at page 7:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"It is, I think, true that a party cannot achieve by estoppel what it could not achieve by express agreement to the same effect."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In other words, if Mr Wilson is not a solicitor, he cannot be made a solicitor simply by going on the court record. Likewise MWP.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Even if it were possible for the Claimants to say that MWP <span style="font-style:italic">is</span> estopped from denying that the Act applies, Mr Holland submits that they would have to show that there had been  a clear representation upon which reliance was placed and that the Family had changed their position, such that it would be unjust for MWP to deny the representation. Here, in fact, the Family had actually  complained there had been  <span style="font-style:italic">no</span> discussion or explanation about the existence of the Act when the engagement letter was signed. It followed that there was no representation upon which the Family had relied and any argument they advanced based on estoppel is flawed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Holland further places emphasis on the fact that MWP is not a solicitor of the Senior Courts as defined in the Act (see s.1 <span style="font-style:italic">supra </span>paragraph 26) and could never be,  given that MWP is a BVI registered company. For the same reason, MWP cannot ever have been a firm of solicitors or a partnership of which at least one partner was a solicitor. Nor could MWP be said to be a recognised body under s.9 Administration of Justice Act 1985 ("AJA"), which permits the Law Society to make rules regulating the conduct of the affairs of incorporated practices of solicitors. Nor indeed, being neither incorporated in England and Wales and without a practising address therein, could MWP comply with Rule 14.03 of the Code which provides under (2) (a) that a recognised body which is a partnership may be formed under the law of any country and may be a legal person: (b) a recognised body which is an LLP must be incorporated and registered in England and Wales or in Scotland under the Limited Liability Partnerships Act 2000: (c) a recognised body which is a company must be (i) incorporated and registered in England and Wales or in Scotland  or in Scotland under part 1 of the Companies Act 1985 (ii) incorporated in an Establishment Directive state and registered as an overseas company under Part 1 of the Companies Act 1985; or (ii)incorporated and registered in an Establishment Directive state as <span style="font-style:italic">societas Europaea</span>: and under (2) "Practising address in England and Wales", a recognised body must have at least one practising address in England and Wales. None of these could nor did apply to MWP.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Wilson  has further pointed out  that whilst MWP is not and has never been a firm of English solicitors, the Law Society for their own reasons and in accordance with its own practices, had drafted and  put onto its website, information about MWP without his  knowledge or approval (Wilson 3 paragraph 6). That had now been corrected. So far as having qualified in England, both Mr Wilson and Mr Chudzynski had simply maintained their practising certificates, out of convenience "just in case one day we decide to return to live and work in England".  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">For these reasons, Mr Holland submits that MWP is not and has never been at any relevant time either a recognised body under section 9 of the AJA or an authorised person under section 18 of the Legal Services Act 2007. In these circumstances MWP was not and could not have been a solicitor within the meaning of the  Act, nor was it nor could it have been regulated either by the Law Society or the Solicitors Regulation Authority ("SRA"). Given that MWP is a BVI registered company which carries on business in Kazakhstan, that is entirely to be expected. Nothing in the terms of the engagement letter could possibly have led  anyone to suppose that MWP was so regulated. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Holland further contends that the fact that the engagement letter states that it is governed in accordance with the substantive laws of England and Wales, cannot possibly make MWP subject to the terms of the Act. Quite simply, English law was chosen to govern the interpretation and validity of the contract, the mode of performance and the consequences of any breaches. There is a difference between the substance of the obligation to perform (governed by English law) and the mode and manner of performance (governed by the law and the place of performance- Kazakhstan). The fact that because the parties chose English law as the proper law does not mean that the retainer thereby became a contract by a solicitor within the definition of the Act for the provision of legal services in England. It remained a contract by a BVI company to provide both legal and business services to the Claimants in Kazakhstan.  As to the Code, even  if it applied  (for the reasons given Mr   Holland submits that it does not), it could only do so in respect of  the two English qualified solicitors,  Mr Wilson and Mr Chudzynksi.  Whilst a breach of the Code might have consequences for them  personally (were they to be English solicitors), it could not bring the terms of the engagement letter and the invoices within the terms of the Act ( see judgment of Arden LJ in <span style="font-style:italic">Garbutt v Edwards</span> [2006] 1 WLR 2907 at paragraph 37).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">For these reasons Mr Holland submits that there should be a stay of these proceedings on the grounds that (1) that there is a concluded arbitration agreement (2) the Claimants have not proved that the agreement is null and void, inoperative or incapable of being performed.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE SUBMISSIONS FOR THE CLAIMANTS </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Bacon submits that no concluded applicable arbitration agreement exists. Accordingly no stay of the proceedings under the 1996 Act should be granted. If that submission be wrong, the arbitration clause is null and void, inoperative or incapable of being performed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The starting point is that MWP is not entitled to contract out of the Solicitors Act and the arbitration clause cannot exclude a client's right to a detailed assessment. The provisions of the Act are mandatory and enshrined in statute. In this context Mr Bacon relies on <span style="font-style:italic">Scougall v Campbell</span> 28 ER 679, (1826) Russ. 545. At [550] Eldon LC said this:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"In reference to a topic which has been alluded to in the argument, I will say that, if any solicitor tells a client before hand, that he will not undertake his business, if his bill is to be taxed; or if any solicitor, in the progress of a cause, gives his client to understand, that he will go on with it or not go on with it, according as his bills are to be taxed or not to be taxed, I think it my duty to say, that judges of the land will not permit him to be a solicitor in any other cause. I do not believe that any judge would allow a solicitor, who had so acted, to continue on the rolls: and I will not permit it to be intimated, that a solicitor will act, if his bills are not to be taxed, but will not act, if his bills are to be taxed. "</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Bacon submits that the Act has supremacy over the contents of a retainer between solicitor and client. This is illustrated by the fact that the court has power to strike down the retainer. The protection afforded by the Act is of public importance. The Act exists to protect clients against solicitors creating unfair retainers. Here, MWP were solicitors going on the court record to enable MWP  to conduct litigation in London, whilst based in Kazakhstan, in order to avoid the application of the Act. That it is not possible to contract out of statutory regulation, is plain, Mr Bacon submits, from the speech of Lord Simon in <span style="font-style:italic">Johnson v Morton</span> (1980) A.C. 37. On page 69 at F, he said this:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"The principle which, in my view, emerges from this line of authority is as follows. Where it appears that the mischief that Parliament is seeking to remedy is that a situation exists in which the relations of parties cannot properly be left to private contractual regulation, and Parliament therefore provides for statutory regulation, a party cannot contract out of such statutory regulation (albeit exclusively in his own favour), because so to permit would be to reinstate the mischief which the statute was designed to remedy and to render the statutory provision a dead letter."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Bacon further relies on <span style="font-style:italic">Re</span><span> </span><span style="font-style:italic">Wynn, Public Trustee v Newborough</span> (1952) Ch 271.  At 276 Danck-werts J said this:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"One's mind naturally turns to provisions which are often found in contracts providing for a decision of disputes by an arbitrator, the common arbitration clause. After considerable doubt, the position of an arbitration clause appears to have been settled by <span style="font-style:italic">Scott v Avery</span> [(1856) 5 H.L.C. 811] as  being valid, provided that it merely requires as a condition precedent to the bringing of legal proceedings upon the contract that there shall have been an arbitration fixing the amounts to which the parties are entitled; and, on the other hand, that anything which goes beyond that, and attempts to deprive the parties of their right to bring an action is unlawful as an attempt to oust the jurisdiction of the court."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In Mr. Bacon's submission, the arbitration clause and, indeed, other dispute resolution clauses in the engagement letter, purport to oust the jurisdiction of the court. For that reason, the arbitration clause (and the other dispute resolution clauses)  are contrary to public policy and illegal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Bacon contends that the arbitration clause is, in any event, onerous and unusual. MWP is said to have an absolute discretion as to how disputes are to be resolved. MWP has complete control over and the Claimants cannot choose, whether a dispute can be referred to mediation or settled through legal proceedings or arbitration or, indeed, where any such legal proceedings are to be  commenced. As such, the arbitration clause prevents the Claimants from instigating any proceedings to pursue their legal rights. If a dispute arises, the wording of the arbitration clause precludes the Claimants from taking any legal action against MWP if  MWP  does not itself elect a mediator or bring proceedings (whether via arbitration or litigation). In these circumstances,  the arbitration clause, if permitted to operate, would do so as an exclusion of liability and/or an ouster of the court's and the arbitrator's jurisdiction. This the law does not permit (see <span style="font-style:italic">Johnson v Morton</span> and <span style="font-style:italic">re Wynn</span> supra). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Even if MWP were to be entitled to rely on the arbitration clause, Mr Bacon submits that MWP and Mr Wilson would thereby benefit from their own wrong doing. That would be wholly  contrary to the well established principle  in <span style="font-style:italic">Alghussein Establishment v Eton College</span> (1988) 1WLR 587 HL in which   Lord Jauncey said this (page 951 at D):-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"My Lords, it is well established by a long line of authority that a contracting party will not in normal circumstances, be entitled to take advantage of his own breach as against the other party. In <span style="font-style:italic">Rede v Farr</span>, (1817) 6 M. &amp; S. 121, Lord Ellenborough C.J. said, at pp.124-125:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"In this case, as to this proviso, it would be contrary to an universal principle of law, that a party shall never take advantage of his own wrong, if we were to hold that a lease, which in terms is a lease for twelve years, should be a lease determinable at the will and pleasure of the lessee: and that a lessee by not paying his rent should be at liberty to say that the lease is void. On this principle, even if it were not borne out so strongly as it is by the current of authorities, it would be sufficient to hold that the lease was only void as against the lessee, not against the lessor."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Here MWP was attempting to do just that. The arbitration clause was one sided in MWP's favour and no explanation about its effect had been given to the Claimants when the engagement letter was signed: (for this purpose, Mr Bacon accepts that the Claimants signed the engagement letter but he disputes how they came to do so given that Mr Wilson did not provide them with any information about their rights. That said, Mr Bacon asks me to proceed on the basis that "they have signed").  In addition, MWP had misled the court, the other parties to the Jenington litigation and the Claimants themselves. In particular, MWP had failed to comply with its obligations under the Code.  Having behaved in this way, MWP should not be permitted to rely on the arbitration clause in order to take advantage of its own wrongdoing. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the context of a party relying upon an onerous clause, Mr Bacon also takes a point on notification. He relies on <span style="font-style:italic">Ocean Chemical Transport</span><span> </span><span style="font-style:italic">Inc. v Exmor Craggs Ltd.</span> (2000) 1 All ER (Comm) 519. At paragraph 26, Evans LJ quoted the following from <span style="font-style:italic">Chitty on Contracts</span> paragraph 12/015 28<span style="vertical-align:super;font-size:smaller">th</span> Edition as follows:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"Onerous or unusual terms. Although the party receiving the document knows it contains conditions, if the particular conditions relied on is one which is a particularly onerous or unusual term, or is one which involves the abrogation of a right given by statute, the party tendering the document must show that it has been brought anything fairly and reasonably to the other's attention. "Some clauses which I have seen," said Denning LJ, "would need to printed in red ink on the face of the document with a red hand pointing to it before the notice could be held to be sufficient."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 48,  Evans LJ continued:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">"I would prefer to put the matter more broadly and to say that the question is whether the defendants have discharged the duty which lies upon them of bringing the existence of the clause upon which they rely (and if Mr Charkham is right, of the effect of that particular clause) to the notice of the other party in the circumstances of the particular case.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">49. As I have indicated, in some extreme circumstances, even a signature might not be enough. On the other hand, in the present case there was an expressed acknowledgement. It seems to me given the nature of this term and condition and its effect, as relied on by the respondents, it cannot be said that the respondents failed in their duty to bring the existence of that term to the notice of the buyer …"</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Here, Mr Bacon invites me to find that the Claimants fall within the exceptions envisaged by the Court of Appeal namely (a) that the arbitration clause was onerous and unusual and (b) in order to rely on it, MWP needed to discharge its duty of bringing it sufficiently to the notice of the Claimants as their clients which Mr Wilson failed to do. Accordingly, the clause cannot be relied on by MWP against the Claimants.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In any event, Mr Bacon submits that  the court, including the SCCO, can and does exercise a supervisory jurisdiction over solicitors which  is not capable of being made subject to a private arrangement between a solicitor and his client under an arbitration clause. Here, Mr Wilson, a solicitor, contends that he is not bound by the Act in respect of his or MWP's remuneration. If he be right, this means that Mr Wilson can be on the roll as required by the Act, carry on as a solicitor through MWP, but not be bound by Part III of the Act which concerns his remuneration and what he can charge. Thus he can avoid the Act's supervisory jurisdiction by contracting out of it under the arbitration clause, thereby  leaving him untouchable. In Mr Bacon's submission, that cannot not right. He argues that  Mr. Wilson, as a solicitor, is bound by the Act like anybody else. He cannot escape  the Act or his obligations under the Code by "setting up shop" in an offshore haven and  hiding behind a corporate veil. "Acting as a solicitor" has a special meaning. It does not mean just doing things as a qualified solicitor. It also covers such things that only a solicitor can do, for example   coming onto the court record in English litigation just as MWP had done.     Thus in the Jenington<span style="font-style:italic"> </span>action, having  represented Aidar and Baurzhan, in doing so, both MWP and Mr Wilson thereby made themselves subject to the inherent jurisdiction of the court and to the provisions of the Act.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In this respect, Mr Bacon points out that MWP has  accepted that it went on the court record on behalf of Aidar and Baurzhan (see paragraphs 11-30 of Wilson 3). Under section 12 of schedule 2 of the Legal Services Act 2007, "conduct of litigation", is a "reserved legal activity." In order to perform a reserved legal activity such as going on the court record, MWP needed to be a person authorised to do so by an approved regulator such as the Law Society. Under section 20 of the Act, no unqualified person is to act as a solicitor and any person who does so is guilty of an offence and liable to imprisonment upon conviction on indictment. Here MWP  held itself out as a solicitor/recognised body under section 24 of the Act by acknowledging service (PB4 page 456) and doing  acts such as   issuing an application notice  (PB4 page 458) and signing consent orders (PB4 page 563). <marker name="tab"/> MWP also gave an address for service (which must be the business address of the solicitor on the record as required by CPR 6.23) at Michael Wilson and Partners 25 Grove Road, London NW13. In doing so, MWP held itself out as a solicitor/recognised body with an office in England and Wales which was conducting litigation on behalf of Aidar and Baurzhan. As such MWP was and  is subject to the  Act (and other regulatory requirements such as the Code) and to  the court's inherent jurisdiction over the solicitors. In these circumstances the court can assess MWP's fees under Part III of the Act.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In any event, the  Court has an assumed jurisdiction: Mr Bacon submits that this arises because MWP, although a company registered in the British Virgin Islands and a  provider of  legal services in Kazakhstan,  is also registered with the Law Society with the SRA under number 288640.  Mr  Wilson is described on MWP's  website as the "Director and Managing partner" of MWP but he is also a solicitor of the Senior Courts of England and Wales with SRA number 129848, having been admitted on 1<span style="vertical-align:super;font-size:smaller">st</span> November 1984. Consequently and  notwithstanding that MWP and Mr Wilson practice overseas, pursuant to Rule 15.01(2)(a) of the Code, he is also subject to the rules of the Code which are specified in rule 15 as being applicable to overseas practices- they apply in relation to practice from an office outside the UK "(i) to a solicitor as an individual whether or not the solicitor's firm or employer is subject to these rules". Furthermore, pursuant to section 50 of the Act, Mr Wilson as a solicitor of the Senior Courts is subject to the provisions of the Act and  the jurisdiction of the English High Court over solicitors.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In spite of all this, Mr Bacon points out that Mr Wilson has  nonetheless stated  in correspondence to the Law Society dated 22<span style="vertical-align:super;font-size:smaller">nd</span> January 2012 (MEW3  page 646) that  "MWP does not have and has never had a UK office. MWP is not a firm of solicitors and does not hold itself out as such". Yet the reality is that far from not conducting any business as a solicitor in England, by going on the court record in a High Court action in the Chancery Division involving millions of pounds on behalf of two of the Defendants in that claim, MWP and Mr Wilson had done just that.  Accordingly, when Mr Wilson had told the Law Society that MWP "do not work as English solicitors" that was false.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Bacon further submits that all of this is inconsistent with MWP's position when the engagement letter was signed. At paragraph 44 of Wilson 3, Mr Wilson  asserts that the letter of engagement was not concluded on MWP's standard terms. Those standard terms included the following under paragraph 6-"MWP is not, and has never been a firm of Solicitors and the requirements of the Solicitors Act1974 and Solicitors Code of Conduct have no relevance or applications to MWP or any of its employees,consultants,contractors and sub-contractors". However, that passage had been removed entirely from the engagement letter that was signed. Not only that, but significant additions were made to it which did not appear in the standard terms, namely the addition in respect of Mr Wilson's <span style="font-style:italic">cv </span>of "Business Associations: Member of <span style="font-style:italic">Law Society of England and Wales</span>" and for Mr Chudzynski, following "Education", "<span style="font-style:italic">admitted as a solicitor in England and Wales 2005".</span> These amendments and additions, Mr Bacon submits, make it plain that Mr Wilson intended both the Act and the Code to apply.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In summary,  Mr Bacon says that all of this is inadequate. He  submits that  MWP went onto  the court record simply because Mr Wilson  could charge fees for doing so. Accordingly, if he were not a solicitor, Mr Wilson's position must be that:-</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">he has misled the court.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">he has carried out reserved activities in breach of section 20.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">he has given an address for services which is not a business address.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">as an officer of the court, the court is entitled to exercise jurisdiction over him.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Given all these factors, it would be absurd if the Act did not apply to MWP: having held itself out as  solicitors with an office in England and Wales by purporting to be a solicitor on the court record, Mr Bacon submits that MWP's personality cannot change half way through a case, so that the Act is of no application when it suits MWP. On the contrary, both Mr Wilson and MWP fall within the Act  in terms of their conduct, either under section 20 or section 24. Put another way, through MWP and Mr Wilson's conduct, both have agreed, as a matter of contract, that the Act applies. It follows, therefore, that under section 70, all bills can be assessed.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> As to the second engagement letter, this contains the same arbitration clause as the engagement letter, albeit that of the Family, only Aidar was a party to it. There is no separate letter dealing with Baurzhan although MWP also went on  the court record on his behalf. No other retainer letters have been disclosed. Mr Bacon submits that Mr Wilson cannot be entitled to aver that MWP can go on the court record for one client and simultaneously maintain a submission that he is not a solicitor.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Were his submissions on incorporation and notice not to find favour, Mr Bacon has a subsidiary argument.   He contends that the terms of the engagement letter and in particular the arbitration clause, would  be unenforceable under the Unfair Terms Consumer Contract Regulations 1999 ("UTTCR") and the Unfair Contract Terms Act ("UCTA") 1977. But he submits that it is not necessary for the court to go that far.   MWP cannot establish that there is a valid concluded applicable arbitration agreement pursuant to section 9 (1) of the Arbitration Act because the arbitration clause is unenforceable and/or otherwise illegal. That being so, it follows automatically that the Claimants satisfy section 9 (4) since if the clause is unenforceable and/or otherwise illegal, it must also be devoid of legal effect for the purpose of section 9 (4). For these reasons the application for a stay should be dismissed.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">DECISION </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The only issues for decision are these: should the proceedings under the Act be stayed (a) pursuant to section 9 of the 1996 Act or (b) under the inherent jurisdiction of the court?</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I remind myself that <marker name="tab"/>before a stay can be ordered, the court must be satisfied that there is a concluded arbitration agreement and that the issues in the 1996 Act proceedings are within its scope. If so satisfied, the court <span style="font-style:italic">must</span> grant a stay unless it finds that the arbitration clause is null and void, inoperative or incapable of being performed under section 9(4) of the 1996 Act.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The parties do not suggest that there is any document in which the arbitration agreement could be embodied save for the engagement letter.  Mr Holland submits that it evidences a concluded arbitration agreement for the purposes of section 9 (1) of the 1996 Act and is not null and void within section 9(4). Mr Bacon contends for the opposite. He argues that there are deficiencies in terms of signature, notice and incorporation.  Even if the engagement letter <span style="font-style:italic">did </span>evidence such an agreement, it would nonetheless fall foul of section 9 (4) on the grounds that it has attempted to oust the jurisdiction of the court under the Act and its inherent jurisdiction. If that be not right, the clause is unenforceable under UCTA and/or UTCCR.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">To reach a concluded view on these issues, it will be necessary to examine the engagement letter in more detail.  First, the common ground.  The Claimants <span style="font-style:italic">in toto</span> accept that MWP provided legal services and advice pursuant to the engagement letter (Beale 1 paragraph 8). On their case, the retainer continued until Baurzhan wrote on 9<span style="vertical-align:super;font-size:smaller">th</span> April 2011 that  "MWP are no longer representing any of the Assaubayev family or their interests in this matter." (PB1 pages 61-63). Those instructions were challenged by MWP. Mr Wilson's response (PB1 page 62) also dated 9 April 2011 said this : "MWP confirms it continues to be engaged by and acts for all of the five individual family members CAB, AGK and all of the other relevant entities involved in these transactions...". However, it is now agreed that the retainer was terminated even if the date of termination is not.  The Claimants also accept that they were responsible for the payment of MWP's fees under the engagement letter (Beale 1 paragraph 13), it making no difference that  the  charges paid so far,   have been   met by the Trustees of various family trusts through  loans to the Family for that purpose.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> Against the background of this measure of agreement, the first issue for decision is whether  the engagement letter is or is not, a concluded arbitration agreement for the purposes of s.9.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I have set out the parties' submissions on signature  at paragraphs 14 to 16. Mr Holland submits that the Claimants cannot have it both ways and say that the argument was signed when it helps their case, but reserving the right to argue it was not signed when it does not. I agree. First, and given that in order to obtain the order for service  out of the jurisdiction, the Claimants were required to depose that there was a contract governed by English law, in my view it would be inconsistent for those same Claimants now to assert  that the engagement letter may be invalid for want of properly given  signatures.  Second, a contentious business agreement must be in writing (Act s.59(1). Since the Claimants are seeking an order pursuant to s.61(2) that "the letter of engagement (which they consider to be a contentious business agreement)  dated 2 July 2010 be set aside as being unfair and unreasonable…", it is difficult to see how the court could grant this relief if there was no signed agreement  to  set aside.  Third, it is accepted that the Family <span style="font-style:italic">did</span> sign; the only issues are the circumstances in which those signatures were given and the authority of Aidar  to sign on behalf of Hawkinson. In my view, the issues on signature <span style="font-style:italic">per se</span> do not render the engagement letter unenforceable for these three reasons.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> I am also against Mr Bacon in relation to his submission about notice (there is clearly a conflict of evidence on this point which I have not been able to resolve by hearing oral evidence as there was no cross-examination on the witness statements). For the Family, it is said that the terms of the engagement letter, including the arbitration clause, were not negotiated, nor did MWP provide advice on its contents (Sanzhar paragraphs 4-5). For that reason, on Mr Bacon's case, the Family was not given adequate notice of what he has described as "this onerous and unfair clause". </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Wilson's recollection is different. He says that Sanzhar's assertion at paragraph 5 is "blatantly unfair and false" and that "all of the Claimants' witness statements are materially false, incorrect and misleading". He  gives his reasons (Wilson 3 paragraphs 46-49). He submits that meetings were held at which the engagement letter was negotiated, drafted and finally signed. Essentially, the Family was fully advised so that, even if the clause was "onerous and unfair" as Mr Bacon has submitted, its contents were  explained in detail so the point goes nowhere.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> I am in not in a  position  make a finding about the accuracy of the Family's evidence because, as I have said, there was no cross-examination. What I am able to say is that on the untested material deployed before me, I prefer Mr Wilson's evidence on this point.  This was not a situation in which the Claimants were simply given a pen and told "sign here". One reason for that is that Kanat, Masusya and Sanzhar were stranded, passport-less, in England. But Baurzhan and Aidar were not and I am satisfied on Mr Wilson's evidence  which is  backed by  a detailed chronology at pages 623 to 626,   that they, together with other advisers to the Family, were looking after their interests in terms of obtaining representation and in addressing the problems thrown up by the disputes in which the Family had become embroiled. In particular, it is said  that there were 5 face to face meetings and a number of telephone conferences before the letter was signed. In my view, the case for finding that the arbitration clause is unenforceable for want of   proper notice is not made out.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I do not agree with Mr Bacon either that the arbitration clause was not incorporated into the retainer.  It may be an unreasonable term (in this context, Mr Bacon also argues, for example, that the hourly expense rate charged by Mr Wilson is too high), but that is a different proposition from saying that it was not incorporated.  The clause is drafted in terms that are wide and in my judgment, broad enough to encompass a dispute between the parties about fees. Moreover it is plain that the points raised in these proceedings under the Act bear striking similarities to those that appear in the Statement of Defence and Counterclaim  in the arbitration proceedings (bundle 3 pages 231-257).  I am also satisfied that I should lean towards a purposive interpretation by following <span style="font-style:italic">Fili Shipping</span> as Mr Holland urges me that I should do.  For these reasons, I reject the submission  that the arbitration clause has not been  incorporated into the retainer.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">These factors also assist me in finding that the point under  "scope" (that the issues in the proceedings are within the scope of the arbitration agreement) is met too. It follows that I am against Mr Bacon in respect of his submissions on signature, notice and incorporation and I find  for the purposes of s.9, that there is a concluded arbitration agreement.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In view of this finding,   I must order a stay under section 9 (1) unless Mr Bacon can satisfy me that the arbitration agreement falls foul of section 9 (4). To be so satisfied, Mr Bacon  must prevail in his submissions that the agreement is  void, inoperative or incapable of being performed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As I have said, the engagement letter is the contract of retainer  (in Aidar's case there is also the second engagement letter).  Under their terms, the parties have agreed that the law of England and Wales is to apply. They could instead have made the agreements subject to the law of Kazakhstan if, as Mr Holland has put MWP's case, the disputes principally concerned issues arising not in England and Wales but in Kazakhstan. But that was not what was done. On the contrary, in order to avail itself of the ability to enforce an arbitration award in Kazakhstan (because that country is a signatory to the 1958 New York convention on the Recognition and Enforcement of Foreign Arbital Awards (Wilson 1 paragraphs 27- 28)), MWP made a reasoned decision to make the engagement letter subject to English law. In  Mr Wilson's mind was  the fact that an arbitration award would be enforceable in Kazakhstan whereas  "any judgment or order made in MWP's favour in these proceedings [under the  Act] would be of almost no practical benefit to MWP <span style="font-style:italic">vis a vis</span> all but the 6<span style="vertical-align:super;font-size:smaller">th</span> Claimant, which I believe to be an empty-shell BVI company. I believe that the Claimants know this, and that their stance (and that of GLH) in the arbitration and in these proceedings is taken because they will know that they will not be required to meet any judgment MWP might obtain in the English Courts".</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Irrespective of whether that be  right or wrong, it is agreed that the laws of England and Wales apply. Accordingly, for the purposes of this judgment, I need to be satisfied that the parties have complied with those laws in so far as they impact upon their obligations under  the engagement letter.  If there have been breaches, as Mr Bacon contends that there have by MWP,  I shall need to consider what  consequences flow from  any  that he satisfies me have occurred. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The key issue, in my judgment, is whether MWP can rely on the arbitration clause in the engagement letter (Mr Holland's case) or whether  something  has happened which has  rendered the agreement to arbitrate  null and void, inoperative or incapable of being performed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">83.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The substance of the arbitration clause is directed at how disputes between MWP and the Claimants are to be resolved, including (this is common ground) those relating to MWP's remuneration. How that remuneration was earned will depend upon the type of work which MWP was undertaking on the Claimants' behalf.  On Mr Wilson's case, MWP was not and has never been an English firm of solicitors, either practising in England and Wales or with an office within the jurisdiction. From that, taken at face value, it must follow that MWP could not and did not undertake any work on behalf of the Family which only an English firm of solicitors could do and therefore that only such a firm could charge for.  If Mr Wilson is right, it would not be expected, therefore, that there would be any reference in the invoices to charges made for work that only an English solicitor could undertake, or, indeed for legal services provided in England. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">84.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In fact, that is not the position and it is plain from the narrative attached to the invoices that MWP has charged for doing work that only an English solicitor would be expected to carry out.  For example, at the time that MWP went onto the court record on 31 August 2010, invoice APD001/02 addressed to the Family, GLC, Hawkinson and JSC, makes a charge on that date for work undertaken by Mr Chudzynski  with regard to  "preparation of Acknowledgment of Service-Conference with Michael regarding the same-discussion with Michael regarding witness statement". The next day he has an entry "Meeting with M. Wilson and Mr A K Assaubayev as to his affidavit to High Court. Review files received from Allen and Overy [A&amp;O] re the hearing…," which can only  be a reference to an application MWP issued on 3 September 2010 on Aidar's behalf for relief from sanctions under CPR 3.9 (bundle 2 page 458). Subsequent invoices refer to charges being made for dealing with consent orders (see eg. Mr Wilson on 17 September 2010 and Mr Chudzyski on 8 November 2010). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">85.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">So far as Aidar is concerned, he has been charged in invoice AKA-UK001/02 for 10.6 hours work on 7 September 2010 by Marko Radosavljeciv for a "review of documents at High Court of Justice in UK proceedings", subsequently on 9 September 2010 for "attendance at court hearing: peruse bundle of documents for the hearing, liaising with the barrister's clerk, telephone conferences with M. Wilson with updates on the situation in the court, peruse the new application from claimants re e mails and 10<span style="vertical-align:super;font-size:smaller">th</span> witness statement of Trevor Mascareshas, e mail exchange with M Wilson re same- 10.6 hours". </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">86.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">These examples are illustrative and not exhaustive. In my view they do not convey the impression that in Kazakhstan, MWP was involved in a peripheral way in  the Jenington litigation, or perhaps only as an agent for a London firm of solicitors such as A&amp;O. On the contrary, in my opinion, these narrative entries indicate that MWP was acting as a principal and that they support Mr Bacon's submission that MWP was undertaking work for reward that only an English solicitor is permitted to do. As such and, in doing so, it appears to me,  firstly that MWP was holding  itself out as being a firm of solicitors authorised to conduct litigation in England and Wales,  secondly   that it has charged  the Claimants for carrying out  work in that capacity and thirdly, on the face of it, <span style="font-style:italic">all</span> the Claimants are liable to pay those charges because the obligations they have under the engagement letter are joint and several.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">87.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Additional  support for the proposition that  MWP was involved  in this way is evident from   other evidence deployed before the court. I have already said that Mr Holland accepts that MWP came onto  the court  record for Aidar in the Jenington proceedings. Mr Wilson, in contending  that MWP has never been an English firm of solicitors and that his name has only been kept on the roll in case he wished to practise again in this country,   says that the decision to go onto the record was made only  after continual requests and pressure from A&amp;O, the Claimants, CGSH (other lawyers retained by the Family) and GLH that the firm should do so (Wilson 3 paragraph 22).  Whilst I recognise there was no cross examination of Mr Wilson on this material, I consider his account to be wholly implausible.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">88.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Bacon reminds me that the conduct of litigation is a "reserved legal activity" (see s.12 (b) LSA 2007 <span style="font-style:italic">supra</span> paragraph 26) and for anyone to come onto the court record, the following applies under the practice direction to CPR 10. Section 2 provides that a defendant who wishes to acknowledge service of a claim should do so by using Form N 9. Section 3.1 requires the defendant to include  an address for service of documents. Section 3.2 states that where the defendant is represented by a legal representative and the legal representative has signed the acknowledgment of service form, the address must be the legal representative's business address. Section 4.1 provides that an acknowledgment must be signed by the defendant or his legal representative. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">89.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">CPR 3.2 defines "legal representative" as (a) a barrister (b) a  solicitor, (b) a solicitor's employee (c) a manager of a body recognised under section 9 of the Administration of Justice Act 1985 or (e) a person, who for the purposes of the Legal Services Act 2007 is an authorised person in relation to an activity which constitutes the conduct of litigation (within the meaning of that Act) who has been instructed to act for a party in relation to proceedings. It follows that where, as here, an acknowledgement of service was signed on behalf of Aidar, the signatory was required to be a legal representative as defined under CPR 3.2 and the address for  service,  a business address of that representative. <span style="color:#FF0000"> </span>Putting this in<span style="color:#FF0000"> </span>more common parlance, this means that where a defendant does not act in person, but instead appoints a solicitor to act on his behalf, that solicitor must be a legal representative within CPR 3.2 with a business address for service in England and Wales. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">90.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the present case, it is agreed that MWP filed and served  Form N9 on behalf of Aidar. It is to be noted  that<span style="color:#FF0000"> </span>MWP also came onto the court record  on behalf of  Baurzhan.  He, Baurzhan,  was not a party  to the second engagement letter.  Unquestionably, therefore, MWP can only have done so under the engagement letter. Yet nowhere in Mr Wilson's extensive witness statements have I been able to trace the explanation for this. For there to have been compliance with CPR 3.2, MWP needed to be a legal representative and to have a business address within the jurisdiction. Yet Mr Wilson has deposed repeatedly that MWP is not an English solicitor, has no office in England and provides no legal services here. Clearly one of these propositions cannot be correct.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <table>
+	      <tr>
+		<td rowspan="1" colspan="1">
+		  <p/>
+		</td>
+	      </tr>
+	    </table>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">91.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> In his evidence, Mr Wilson from the outset  has played down  the fact that MWP  came on the court record for Aidar and Baurzhan  at all. The preamble to paragraph 11 of his third witness statement says this:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="font-weight:bold">"History behind MWP going on the Court record for the Third Claimant [Aidar], at the request of Messrs Allen and Overy…..English solicitors in relation to the English proceedings against him and what limited work was actually done "</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">92.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The witness statement continues:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">"19. <marker name="tab"/>On or about 12<span style="vertical-align:super;font-size:smaller">th</span> August 2010, Polyus made an application to debar the third Claimant from defending the proceedings and also for judgment in default to be entered against him…..</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">20.<marker name="tab"/>… In mid August 2010 all of A&amp;O, CGSH, the Claimants and GLH asked MWP if it would be willing to act for and represent the third Claimant, in relation to the English proceedings. When MWP informed them it did not wish to do so because it was fully committed if not overstretched in acting for the Claimants…and also because it is not and never was an English firm of solicitors, does not practice English law and does not have a London office…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">22. <marker name="tab"/>After continual requests and pressure from A&amp; O, CGSH and the Claimants and GLH and also because they explained that in all likelihood there would be only be one or two hearings involving issues relating to the third Claimant (because the focus was on the other Defendants) before the long summer recess……MWP reluctantly agreed with the requests of A&amp; O CGSH and the Claimants and GLH.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">23. <marker name="tab"/>This agreement to go on the record for the third Claimant was on the strict condition and understanding that A&amp; O and CGSH would provide MWP, at their cost,  with all necessary background information and documents……This included all issues of English law and practice because A&amp;O and CGSH understood that MWP was not and has never been a firm of English solicitors……</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">24. <marker name="tab"/>Accordingly, A&amp;O, with the approval of CGSH, drafted an acknowledgement of service on behalf of the Third Claimant which it asked MWP to sign and which A&amp;O then filed with the Chancery Division of the High Court…..</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.57in;margin-right:0.50in;text-indent:-0.57in">25. <marker name="tab"/>On 27<span style="vertical-align:super;font-size:smaller">th</span> August 2010, while hearings were underway in relation to the other defendants, there was a short hearing relating to certain limited and relatively small matters involving the Third Claimant ... "</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">93.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In paragraph 26, Mr Wilson refers to MWP as being  "nominally on the record acting for the Third Claimant [Aidar] in the circumstances I have described above" and he continues  at paragraph 27 that -  "The matters relating to the third Claimant were rather a side-show and certainly were not the main focus of the English proceedings". </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">94.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In Wilson 4, Mr Wilson goes on  much in the same vein:- </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">"18.<marker name="tab"/>MWP does not have and has never had an office in England and Wales ….</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">19. <marker name="tab"/>For the avoidance of doubt, the address at 25 Grove Road Barnes London was (from late August 2010) the rented family home of Marco Radosavljevic. Marco is an employee of MWP who currently lives and works in London……Although this address has occasionally and as a matter of logistical convenience, been given as a correspondence address it is not and has never been a business address of MWP. It is and has   never been an office of MWP".</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">95.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">These statements do not sit comfortably with the requirements for acknowledging service I have set out at paragraphs 88-89 above , nor with the evidence   deployed on the application for a stay. First, the acknowledgement of service filed on 31<span style="vertical-align:super;font-size:smaller">st</span> August 2010 in Chancery chambers on behalf of Aidar clearly indicates that MWP was, at that point, his solicitor on the court record (PB4 page 456). Under the section "<span style="font-weight:bold">Acknowledgment of service"</span>, the section marked  "Defendant's full name if different from the name given on the claim form",  has been completed with Aidar's name. Below that, under "Address to which documents about this claim should be sent", the name "Michael Wilson &amp; Partners  25 Grove Road Barnes London SW13 0HH" is given. Under "Signed", there is a signature followed by "Defendant's solicitor" and next to it under "Position" appears the word "Associate". In my view it is clear that the Form N9 was signed by MWP in which case in order to comply with the CPR, the address for service must have been a business address.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">96.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Wilson deposes that, in fact, MWP did not draft the Form N9.  A&amp;O did.  But that is contrary to what MWP's invoice says which makes  clear that it was Mr Chudzynski who prepared the acknowledgement of service and that he spent 7.1 hours on that  and on other chargeable tasks that day which were later billed to the Family.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">97.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> On page 457 there is then  a Notice sealed by Chancery Chambers on 31 August 2010  which  says this:-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"<span style="font-weight:bold">The 3</span><span style="font-weight:bold;vertical-align:super;font-size:smaller">rd</span><span style="font-weight:bold"> defendant filed an Acknowledgment of Service on 31 August 2010... </span>The acknowledgment was filed by the solicitors acting for this defendant who have given the following name and address for service of documents: Michael Wilson and Partners 25 Grove Road Barnes London SW13 0HH"</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">98.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On page 458 there is then an Application notice issued on 3<span style="vertical-align:super;font-size:smaller">rd</span> September 2010 on Aidar's behalf for relief from sanctions pursuant to CPR 3.9. Under box 1 "What is your name or if you are a solicitor, the name of your firm, the words "Michael Wilson &amp; Partners" appear. On the second page, under paragraph 11, "Signature and address details", the notice is signed "Applicant's solicitor" and below that under "Position or office held"  the word "Associate"  is given. In the final box under "Applicant's address to which documents about this application should be sent", the address of Michael Wilson &amp; partners at 25 Grove Road is once again provided.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">99.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my judgment, in completing these court documents in this way, MWP  held itself out under CPR 3.2  as  legal representatives  instructed on behalf of Aidar to represent him in the English proceedings. I therefore reject the assertion that MWP was "nominally on the record" acting for Aidar, or that MWP did not have a business address or, indeed, that MWP was not providing legal services in England.  I deal with the consequences of these findings in paragraph 103 below. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">100.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Wilson has also deposed that the matters relating to Aidar, "were rather a side-show". That is not what MWP stated in terms was the case at the time. On 26<span style="vertical-align:super;font-size:smaller">th</span> August 2010 MWP had written to PCB Litigation LLP, the solicitors for Jenington, in the following terms (PB4 page 501 <span style="font-style:italic">et seq</span>):-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">
+	      <span style="text-decoration:underline">"Re Jenington Intl &amp; ors v Kanat Assaubayev &amp; ors others</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in"> We write regarding the above litigation in relation to which you act on behalf of the Claimants. Mr Aidar K Assaubayev the third Defendant in the proceedings has just instructed us to represent him.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">
+	      <span style="text-decoration:underline">Present Position</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">As we understand it there is a hearing presently ongoing before Mr Justice Peter Smith in the Chancery Division concerning<span style="text-decoration:underline"> </span>various applications in these proceedings. These include (or included) at least three applications which were of direct and immediate relevance to the Third Defendant, namely:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.25in;margin-right:0.50in;text-indent:-0.25in">(1)<marker name="tab"/>an application for third party disclosure against Yahoo! and Microsoft relating to the Third Defendants e-mail accounts</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.25in;margin-right:0.50in;text-indent:-0.25in">(2)<marker name="tab"/>an application for judgment in default of acknowledgment of service and/or defence pursuant to CPR 12.4(2)</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.25in;margin-right:0.50in;text-indent:-0.25in">(3)<marker name="tab"/>an application for an interim payment in the sum of US$ 179 million pursuant to CPR 25.7.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">In addition, so far as we can see, the other matters of relevance   or concern of the Third Defendant (which are not directly before the Court at this hearing) are the position in relation to the Court's earlier orders against the Third Defendant, particularly as to an affidavit confirming his asset position, as to the delivery up of his Kazakhstan passport and the highly unusual debarring order which was made against the Third Defendant with the effect of preventing him from defending himself in the proceedings….</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">
+	      <span style="text-decoration:underline">The position of MWP</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in"> Having now been instructed it is our intention to come on the record in the proceedings as soon as we can. As you will appreciate, there is a 5 hour time difference between Almaty and London although this would not ordinarily be a problem, it has created difficulties in circumstances of such urgency where there is a court hearing ongoing…..</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">We are also in the process of instructing Leading and Junior counsel…..</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">Acknowledgement of Service.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">Having taken instruction from the Third Defendant, we intend to file an acknowledgement of service on his behalf next Tuesday 31<span style="vertical-align:super;font-size:smaller">st</span> August 2010……</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">
+	      <span style="text-decoration:underline">Debarring order/trial timetable</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">...We will be issuing and serving an application to vary the debarring order, with the intention that this application will be heard at the same time as your client's application for default judgment and/or an interim payment. Our client's evidence will deal with all applications together and the  proposed timetable will allow your clients an opportunity to respond in relation to all applications….</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">
+	      <span style="text-decoration:underline">Applications for Default Judgment/Interim Payment</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">….We should, however, point out that in our view and that of Leading Counsel, this is the most extraordinary application. There are serious issues as to whether it appropriately falls within CPR 12.4 (2) at all. As a matter of substance, it appears to be an application for summary judgment. Furthermore there are various serious legal issues as to its subject matter including, in particular, (but without limitation) the obvious election which it involves and the attempt to avoid its consequences, as well as the considerable legal difficulties surrounding the alleged quantification of the Claimants' claims and the apparent attempts to avoid these by assignment……</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">In any event we propose the current timetable be slightly varied so as to allow ourselves and Counsel to prepare as follows…..</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">This proposed timetable is of course dependent upon the learned Judge being content for these further and very difficult applications to be treated as vacation business……</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;margin-right:0.50in">Given the urgency and the present procedural position before the Court we have sent a separate copy of this letter to Mr Justice Peter Smith."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">101.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my judgment, Mr Wilson's evidence to this court belittles the work he considered MWP was instructed to undertake in late August 2010, when he described Jenington's application to Peter Smith J as "most extraordinary", that there were "very difficult applications" involved which justified  the case being treated as vacation business and that there were  "very serious legal issues as to its subject matter" which required the instruction of both Junior and Leading counsel. The ensuing correspondence does not bear out the assertions now advanced in his witness statements, nor is it consistent with Mr. Wilson's claim that MWP does not practice English law or have a London office. The reality is that  PB4 is replete with emails and documents which indicate  the type of work that MWP was undertaking for Aidar and Baurzhan when on the court record.  In addition to the email exchange with Jenington's solicitors in this period, Mr James Drake of counsel appeared before Mr. Justice Vos on 13<span style="vertical-align:super;font-size:smaller">th</span> September 2010 instructed by MWP (PB4 p.539) on behalf of Aidar. A copy of an order Vos J  made on 17<span style="vertical-align:super;font-size:smaller">th</span> September 2010 has MWP's name on it (p.543): likewise an order of Mr Justice Floyd date 4<span style="vertical-align:super;font-size:smaller">th</span> November 2010 (pp.547-548): likewise an order of Master Bowles dated 22<span style="vertical-align:super;font-size:smaller">nd</span> October 2010, albeit MWP is there expressed to be "Legal Advisers for the Third Defendant" (pp. 449-450): likewise a consent  order  of the Chancery Division dated 11<span style="vertical-align:super;font-size:smaller">th</span> November 2010 with MWP expressed to be "legal advisers of the Third and Fifth Defendants" : likewise  an order of Chancery Chambers of 11 November 2010 providing for service on Baurzhan at "Michael Wilson &amp; Partners Limited at 25 Grove Road Barnes" (pp. 559-561):  likewise an order of Master Bowles dated 12<span style="vertical-align:super;font-size:smaller">th</span> April 2011 with MWP described as "Solicitors for the fifth Defendant" (pp. 563-564). Moreover, it was not until 28 April 2011 that MWP actually ceased to be the solicitors on the court record for Aidar when CGSH served Notice of Change (Wilson 3 paragraph 30).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">102.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my judgment, none of this evidence supports Mr Wilson's claim  that MWP was acting "nominally" in a side-show, still less that MWP was  not acting as a firm of solicitors at all and did  not provide legal services in England.  The documents simply do not bear that out. First, as I have said, the narratives to the bills charge for work that a firm of English solicitors conducting High Court litigation would do and, in this case MWP did do  in the Jenington litigation. Second, the fact and circumstances of MWP going on the court record can lead to no other conclusion in my view that in doing so, MWP was holding itself as a firm of English solicitors with a place of business within the jurisdiction. Third, there are  the variations MWP introduced to its standard engagement letter by the removal of the clause stating that MWP was not a firm of solicitors to which either the Act or the Code applied, and the addition of material informing the Claimants that Mr Wilson was a member of the Law Society and that Mr Chudzynski was admitted as an English Solicitor. They  lead to the  obvious inference being drawn  that MWP was qualified to handle the Jenington litigation in the English Courts and that it was willing to do so.  If that was not the case, why did MWP remove from the standard form of engagement letter the very term upon which Mr Wilson is now relying  to assert that MWP was not an English solicitor with a business presence in England? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">103.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">If I am right, what is the consequence of these findings upon the agreement to arbitrate?  In my judgment it is to render the agreement null and void, inoperative and incapable of being performed  because were it to be otherwise, MWP would be benefiting from its own default. That default is that having submitted to a retainer letter that was subject to English law,  MWP  pretended to be a firm of English solicitors by doing things that only English Solicitors can do, such as going on the court record, corresponding with Jenington's solicitors on behalf of clients, issuing applications in the High Court, briefing counsel, signing orders and generally doing as an English solicitor would do, and then rendering bills to the Claimants for the work involved.  Yet in contrast to the English solicitor, when it has come to the checking of those bills to ensure that they are fair and reasonable, it is MWP's contention that it should not be subject to the same statutory scrutiny as the English solicitor, even though the charges relate to work done as if MWP was an English solicitor and  indeed was done when MWP was pretending to be an English solicitor. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">104.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> MWP's  justification for this,  when confronted by a complaint about fees, is that the Act has no application because MWP is an off-shore BVI   and  is immune from its operation. That is an unattractive submission.  Were it to prevail, I would agree with Mr Bacon that it would enable any foreign lawyer to masquerade as an English solicitor, do work as an English solicitor but then to argue in the event of a dispute about fees, that the clients could not  make use  the statutory rights they would be able to exercise, had the work  been done by a legal representative falling within  the category of "solicitor" set out in  CPR 3.2.    For that reason, I am satisfied that MWP should not be permitted to benefit from such a masquerade. To do so would be to flout the  principle set out in <span style="font-style:italic">Alghussein v Eton College</span> and the long line of authorities recited therein, succinctly encapsulated by Lord Jauncey on page 594 at D that "no man can take advantage of his own wrong" . It would  enable MWP to have arbitrated, sums it has charged the Claimants  for acting as an English solicitor when it says it has not, and at the same time, to deprive those same Claimants of the opportunity to  argue before  this court, that the fees claimed for work done when MWP  purported to be an English solicitor, should be assessed under the Act. Were a stay to be granted, such an outcome would be manifestly unjust to the Claimants. For that reason, I consider that MWP, being in breach of the terms of the engagement letter for the reasons given here and  in paragraph 103,  cannot rely on the agreement to arbitrate for its own advantage and that, accordingly, the agreement  is null, void  and inoperative.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">105.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">If I be wrong in my finding that MWP held itself out as  English solicitors, the position for MWP is no better. Suppose that Mr Wilson is right and that  MWP never  acted in this capacity and did not carry on or have a business address within the jurisdiction, indeed that the address that he  inserted in the Form N 9 was just "a correspondence address" (Wilson 4 paragraph19). The upshot, in my judgment, is that identified by Mr Bacon: a reserved activity will have been carried out in breach of section 20 of the Act, possibly a criminal offence will have been committed under s.20(2),  an address for service will have been given that is not a business address and the High Court in the Jenington litigation will have been misled into believing that MWP was a legal representative as defined in CPR 3.2 when it was not. To permit MWP to rely on the arbitration agreement in these circumstances would again, in my view, enable MWP to take advantage of its own wrong doings. For that reason,  the agreement to arbitrate would be null and void even if  Mr Wilson were  to be correct in his assertion that MWP is not and never has been a firm of English solicitors.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">106.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">That is not to say that MWP's invoices <span style="text-decoration:underline">will</span> be made subject to an assessment  under the Act. That is an argument for another day. It is, rather, a decision that the Family's ability to advance  that argument should  not be stopped in its tracks now by granting a stay, thereby permitting MWP to proceed with its arbitration without the bother of a Solicitors Act assessment hanging over it.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">107.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">All of this ties in with Mr Holland's final argument concerning the court's inherent jurisdiction to grant a stay. He submits that the arbitration is likely to take place much more quickly than any determination by court proceedings and, for his part,  Mr Wilson contends that MWP has perfectly valid, legitimate and proper commercial reasons for including the arbitration clause in the engagement letter (Wilson 3 paragraph 56). The reason for that is that  judgments of the English courts cannot be enforced in Kazakhstan where the bulk of the Family's assets lie (paragraph 54). I infer that Mr Wilson  suspects that any adjudication on costs in MWP's favour will be ignored unless it is in the form of an arbitration award. All that is unjust, he says, so a stay should be granted on those grounds too. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">108.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In so far as these submissions go to the exercise of any residual power to order a stay under the inherent jurisdiction of the court, they do not carry much weight with me. It is plain from Mr Wilson's own evidence that he had concerns about the Family's willingness to pay legal fees even before MWP agreed to take on their case. An "engagement fee" referred to under paragraph 2 of the engagement letter concerned a balance of $ 162,509.53  said to be due under a prior arbitration in respect of which the Family had defaulted. For that reason, MWP would not start work until it was paid - (Wilson 3 paragraph 44.4).  This leads to an  inference  being drawn  that unless there is a stay and the arbitration goes ahead, MWP will go unpaid, because the Family will refuse to honour any certificate issued by this court. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">109.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my judgment, these are not matters which should bear upon whether or not there should be a stay. If Mr Wilson considers that permitting these proceedings to continue will be a bar to MWP's legitimate claims in the arbitration, or indeed, that the only purpose of these proceedings is so that the Family can "delay payment of MWP's outstanding bills and cause unnecessary costs to be unreasonably incurred" (Wilson 3 paragraph 51),  he could usefully reflect that any financial difficulties in this respect would have been avoided had money on account  been taken before MWP did the work in the first place.  In any case, considerations about MWP's cash flow must be subordinate to the Family's legitimate opportunity  to seek an order for the assessment of the very substantial bills that  MWP has rendered. For these reasons, the application for a stay must fail.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">110.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I would add that in rejecting MWP's application, I am not saying that MWP is an English solicitor when it is not, in the sense that I am exercising a jurisdiction which cannot be conferred on the court by agreement or estoppel. The limit of the decision is that, for the purposes of this judgment, I do not need to make a finding about whether he/MWP was a solicitor and/or is subject to the Act. It is sufficient to find that in MWP  holding itself out as and having behaved as a solicitor, it would be unjust for it  to benefit from the arbitration clause, in relation to deciding how much MWP should be paid for work done when it was  pretending it was an English solicitor. Moreover, it would be a further injustice to the Family, in my judgment, if MWP  were  able to have an arbitration award enforced  for  work done during that pretence, before those responsible for satisfying that award (the Claimants) have had an opportunity in these proceedings to decide whether the fees are at least capable of  being assessed by this court under the Act.  For that reason, Mr Holland's argument on estoppel either does not arise or, if it does, is misplaced.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">111.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">  In conclusion, I need to emphasise that the parties' submissions have been wide ranging. In particular (and by way of examples only), much emphasis has been placed upon whether MWP is subject to the Act, whether Mr Wilson is a solicitor of the courts of England and Wales, whether, if so, he/MWP are subject to the Code, whether or not there is a contentious business agreement and whether the arbitration clause falls foul of UCTA and/or UTTCR.  I  have thought long and hard about whether  these points    needed   to be resolved before I could  answer the discrete question posed in the application notice- should there be a stay?  In the end,  I concluded that reaching final views on any of them was unnecessary in order to do so. First, and most obviously, the application before the court is about whether there should be a stay. Whether or not the engagement letter is a contentious business agreement and/ or whether the court should be making orders against MWP for delivery of bills under s.68 of the Act, are arguments for another day. The court is not seised of them on this application. Second, it is agreed that the invoices rendered to Aidar  are excluded from the request for the stay because they do not form  part of the arbitration. Accordingly, a further hearing will be required to decide whether they are eligible to be and if so, should be the subject of an order for assessment under s.70 of the Act. The invoices rendered under the engagement letter will be  part of that same argument. Third, I do not need to make any finding about whether MWP is or is not a regulated body and is, or is not, subject to the Code, in order to decide whether there should be a stay.  For the reasons I have given, I consider the argument advanced by Mr Bacon in relation to MWP's breach and the rule that a party cannot benefit from his own   wrongdoing, by itself gets the Claimants home.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">FORMAL DECISION AND NEXT STEPS</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">112.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The application dated 27 January 2012 is dismissed. To save costs, there is no need for the parties to attend when this judgment is handed down. Any application for permission to appeal will be dealt with on paper with brief submissions to be lodged in writing within 14 days of the date of this judgment if permission is sought.  So far as costs are concerned, it would appear irresistible that MWP must pay the Claimants' costs, to be assessed if not agreed. If MWP disagree, I will accept written submissions why this should not be the case, also within 14 days of the date of handing down. The Claimants, if so advised, may lodge counter- submissions within 14 days thereafter and I will decide the point on paper. There will also need to be a further hearing to decide whether the invoices rendered by MWP to the Claimants and those to Aidar alone, should be assessed under s.70 of the Act. As to that, the parties will need to liaise about a hearing date and a  time estimate and, in particular, the level and extent of any further material to be deployed.   If a brief directions hearing is required, this can be convened on short notice  on a date convenient to all.</p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

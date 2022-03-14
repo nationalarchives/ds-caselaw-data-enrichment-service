@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ukpc/2021/26"/>
+	  <FRBRuri value="ukpc/2021/26"/>
+	  <FRBRdate date="2021-10-04" name="judgment"/>
+	  <FRBRauthor href="#ukpc"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="26"/>
+	  <FRBRname value="Gordon v Havener (Antigua and Barbuda)"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ukpc/2021/26/eng"/>
+	  <FRBRuri value="ukpc/2021/26/eng"/>
+	  <FRBRdate date="2021-10-04" name="judgment"/>
+	  <FRBRauthor href="#ukpc"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ukpc/2021/26/eng/akn"/>
+	  <FRBRuri value="ukpc/2021/26/eng/akn"/>
+	  <FRBRdate date="2021-10-28T15:48:12" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ukpc" href="https://www.jcpc.uk/" showAs="The Judicial Committee of the Privy Council"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="gordon" href="" showAs="Gordon"/>
+	<TLCPerson eId="havener" href="" showAs="Havener"/>
+	<TLCRole eId="appellant" href="" showAs="Appellant"/>
+	<TLCRole eId="respondent" href="" showAs="Respondent"/>
+	<TLCPerson eId="judge-lord-lloyd-jones" href="/judge-lord-lloyd-jones" showAs="Lord Lloyd-Jones"/>
+	<TLCPerson eId="judge-lord-kitchin" href="/judge-lord-kitchin" showAs="Lord Kitchin"/>
+	<TLCPerson eId="judge-lord-burrows" href="/judge-lord-burrows" showAs="Lord Burrows"/>
+	<TLCPerson eId="judge-lord-stephens" href="/judge-lord-stephens" showAs="Lord Stephens"/>
+	<TLCPerson eId="judge-lady-rose" href="/judge-lady-rose" showAs="Lady Rose"/>
+	<TLCLocation eId="antigua-and-barbuda" href="/antigua-and-barbuda" showAs="Antigua and Barbuda"/>
+      </references>
+      <proprietary source="ukpc/2021/26/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>UKPC</uk:court>
+	<uk:year>2021</uk:year>
+	<uk:number>26</uk:number>
+      </proprietary>
+      <presentation source="ukpc/2021/26/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+judgment { font-size: 12pt; font-family: Calibri, sans-serif; }
+.Normal { font-family: Calibri, sans-serif; font-size: 12pt; }
+.Footer { font-family: Univers; font-size: 12pt; }
+.Caveat { text-align: justify; font-weight: bold; font-family: Calibri, sans-serif; font-size: 10pt; }
+.Header { font-family: Calibri, sans-serif; font-size: 12pt; }
+.ParaHeading1 { font-weight: bold; font-family: Calibri, sans-serif; font-size: 13pt; }
+.ParaNoNumber { font-family: Calibri, sans-serif; font-size: 13pt; }
+.ParaLevel1 { margin-left: 0.00in; font-family: Calibri, sans-serif; font-size: 13pt; }
+.ParaLevel2 { margin-left: 0.50in; font-family: Calibri, sans-serif; font-size: 13pt; }
+.Quote { margin-left: 1.00in; margin-right: 0.87in; font-family: Calibri, sans-serif; font-size: 13pt; }
+.NewSpeech { font-weight: bold; font-family: Calibri, sans-serif; font-size: 13pt; }
+.Paraheading2 { font-weight: bold; font-family: Calibri, sans-serif; font-size: 13pt; }
+.Paraheading3 { font-weight: bold; text-decoration: underline; font-family: Calibri, sans-serif; font-size: 13pt; }
+.Embargo { text-align: justify; font-weight: bold; font-size: 10pt; }
+.JudgmentReferences { text-align: right; font-size: 12pt; }
+.Bulletpara { margin-left: 0.50in; font-family: Calibri, sans-serif; font-size: 13pt; }
+.Paraheading4 { font-style: italic; font-weight: bold; font-family: Calibri, sans-serif; font-size: 13pt; }
+.Paraheading5 { font-style: italic; text-decoration: underline; font-family: Calibri, sans-serif; font-size: 13pt; }
+.Paraheading6 { font-style: italic; font-family: Calibri, sans-serif; font-size: 13pt; }
+.CourtOrder { font-weight: bold; font-size: 13pt; color: C00000; }
+.JudgmentTitle { text-align: center; font-weight: bold; font-size: 20pt; }
+.JudgmentDetail1 { text-align: center; font-weight: bold; font-size: 20pt; }
+.ParaSubHeading1 { font-style: italic; font-weight: bold; font-family: Calibri, sans-serif; font-size: 13pt; }
+.ParaSubHeading2 { font-style: italic; text-decoration: underline; font-family: Calibri, sans-serif; font-size: 13pt; }
+.ParaSubHeading3 { font-style: italic; font-family: Calibri, sans-serif; font-size: 13pt; }
+.ParaApprovedLevel1 { margin-left: 0.00in; font-family: Calibri, sans-serif; font-size: 13pt; }
+.ParaApprovedLevel2 { margin-left: 0.50in; font-family: Calibri, sans-serif; font-size: 13pt; }
+.ParaNoNumberApproved { font-family: Calibri, sans-serif; font-size: 13pt; }
+.JudgmentJudges { text-align: center; font-weight: bold; font-size: 17pt; }
+.JudgmentAppRespInt { text-align: center; font-size: 12pt; }
+.ListParagraph { margin-left: 0.50in; font-size: 11pt; }
+.ParaLevel3 { margin-left: 0.98in; font-family: Calibri, sans-serif; font-size: 13pt; }
+.ParaLevel4 { text-align: justify; margin-left: 1.48in; font-family: 'Times New Roman'; font-size: 13pt; }
+.ParaLevel5 { text-align: justify; margin-left: 1.97in; font-family: 'Times New Roman'; font-size: 13pt; }
+.ParaLevel6 { text-align: justify; margin-left: 2.46in; font-family: 'Times New Roman'; font-size: 13pt; }
+.ParaLevel7 { text-align: justify; margin-left: 2.95in; font-family: 'Times New Roman'; font-size: 13pt; }
+.ParaLevel8 { text-align: justify; margin-left: 3.45in; font-family: 'Times New Roman'; font-size: 13pt; }
+.ParaLevel9 { text-align: justify; margin-left: 3.94in; font-family: 'Times New Roman'; font-size: 13pt; }
+.ParaHeading { font-style: italic; font-family: 'Times New Roman'; font-size: 13pt; }
+.FooterChar { font-family: Univers; font-size: 12pt; }
+.HeaderChar { font-family: Calibri, sans-serif; font-size: 12pt; }
+.QuoteChar { font-family: Calibri, sans-serif; font-size: 13pt; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p class="Header"/>
+      <p class="Header"/>
+    </coverPage>
+    <header>
+      <p class="JudgmentReferences">
+	<span style="font-weight:bold">Michaelmas Term</span>
+	<br/>
+	<neutralCitation>[2021] UKPC 26</neutralCitation>
+	<br/>
+	<span style="font-weight:bold">Privy Council Appeal No 0017 of 2020</span>
+      </p>
+      <p class="JudgmentTitle">JUDGMENT</p>
+      <p class="JudgmentDetail1"><party refersTo="#gordon" as="#appellant">Gordon</party> (<role refersTo="#appellant">Appellant</role>) <span style="font-style:italic">v</span><span> </span><party refersTo="#havener" as="#respondent">Havener</party> (<role refersTo="#respondent">Respondent</role>) (<location refersTo="#antigua-and-barbuda">Antigua and Barbuda</location>)</p>
+      <p class="JudgmentTitle">From the Court of Appeal of the Eastern Caribbean Supreme Court (Antigua and Barbuda)</p>
+      <p class="JudgmentJudges">
+	<span style="font-weight:normal">before</span>
+	<br/>
+	<br/>
+	<judge refersTo="#judge-lord-lloyd-jones">Lord Lloyd-Jones</judge>
+	<br/>
+	<judge refersTo="#judge-lord-kitchin">Lord Kitchin</judge>
+	<br/>
+	<judge refersTo="#judge-lord-burrows">Lord Burrows</judge>
+	<br/>
+	<judge refersTo="#judge-lord-stephens">Lord Stephens</judge>
+	<br/>
+	<judge refersTo="#judge-lady-rose">Lady Rose</judge>
+      </p>
+      <p class="JudgmentJudges">JUDGMENT GIVEN ON<br/><docDate date="2021-10-04">4 October 2021</docDate><br/><br/>Heard on 8 July 2021</p>
+      <p class="JudgmentAppRespInt"><span style="font-style:italic">Appellant</span><br/>Tom Poole QC<br/>Sara Ibrahim<br/>(Instructed by Simons Muirhead Burton LLP (Newman Street))</p>
+      <p class="JudgmentAppRespInt"><span style="font-style:italic">Respondent</span><br/>Dane Hamilton QC<br/>(Instructed by Dane Hamilton &amp; Associates)</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level class="author">
+	  <content>
+	    <p class="NewSpeech">LORD BURROWS:</p>
+	  </content>
+	</level>
+	<level>
+	  <num>1.</num>
+	  <heading class="Paraheading2">The essential facts and an overview of the dispute</heading>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">This appeal is concerned with three plots of land at Dian Bay, Antigua. Contracts for the sale of those plots of land were made between a sister and her brother. The sister, the seller, is Mrs Jacqueline Havener and she is the defendant and the respondent in this appeal. The brother, the purchaser, is Mr Gregory Gordon and he is the claimant and the appellant in this appeal. Following the death of their mother, Margaret Ruth McNutt (also known as Ruth Gordon Livingston), Mrs Havener became the sole owner of the three plots of land. Mrs Havener lives in the United States. Although of no direct relevance to the matters on this appeal, in November 2005 Mrs Havener gave Mr Gordon a power of attorney to act on her behalf in certain matters but she revoked that in September 2009.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Mr Gordon alleges that, in breach of contract, Mrs Havener has failed to transfer the plots of land to him and that he should therefore be granted specific performance or damages for breach of contract. She alleges that he is in breach of contract by failing to pay the agreed purchase price under any of the three contracts. Mr Gordon further alleges that, if his claim for breach of contract fails, he should be awarded a remedy under the doctrine of proprietary estoppel as he has detrimentally relied on Mrs Havener’s promise to transfer to him the legal title in the plots of land.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">The three plots of land are referred to as plot 117 (being part of parcel 59), plot 116 (being the other part of parcel 59) and plot 82B (being part of parcel 82). It is not in dispute that Mr Gordon already owns plot 83, which is next to plot 82, and already owns Gordon House, which is next to plot 117. It is also submitted on his behalf that, at the time of the contracts of sale, he was already the lessee of plots 116 and 117 under a 99-year lease granted by his mother and sister, dated 12 January 1979.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">The first contract of sale, dated 15 June 2001, was for plot 117 and the agreed contract price was US$1,000. The second contract of sale, dated 27 August 2007, was for plot 116 and the agreed contract price was US$10. The third contract of sale, also dated 27 August 2007, was for plot 82B and the agreed contract price was also US$10. All three contracts were written, signed and dated. In relation to all three contracts, the purchase price was to be paid on the signing of the contract; and “closing” (that is, completion) was defined as the settlement of the obligations of the seller to deliver to the purchaser a deed transferring ownership of the respective plot of land and the purchaser paying the purchase price to the seller.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Mr Gordon alleges that he paid Mrs Havener the agreed price for all three contracts by the payment by a cheque in the sum of US$3,000 on or around 24 January 2006. Mrs Havener disputes that and alleges that that sum was paid to enable her to obtain legal services in relation to a dispute with a tenant, Charles Fernandez, which involved her issuing proceedings for eviction against Mr Fernandez in 2006.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Mr Gordon also alleges that, in reliance on the title being transferred to him, he expended a total sum of EC$192,125 maintaining, repairing, and improving the three plots of land; and that he also paid the property taxes on those plots for the years 2008, 2009 and 2010.</p>
+	    </content>
+	  </level>
+	</level>
+	<level>
+	  <num>2.</num>
+	  <heading class="Paraheading2">The decisions and reasoning of the lower courts</heading>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">At first instance, in the Eastern Caribbean Supreme Court (Antigua and Barbuda), Cottle J, in a judgment dated 6 August 2015, dismissed Mr Gordon’s claims. His central reasoning was as follows:</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaNoNumber" style="margin-left:0.50in">(i)<marker name="tab"/>The contracts for the sale of the plots of land were not valid and enforceable for two reasons. First, there was no intention to create legal relations. These were family arrangements. Secondly, there was an “absence of consideration” (para 17 of Cottle J’s judgment) because the agreed purchase price was not paid. The payment of US$3,000 in 2006 was not related to the contract made five years earlier in 2001. Nor was it intended to be the consideration for the two contracts made one year later.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaNoNumber" style="margin-left:0.50in">(ii)<marker name="tab"/>Mrs Havener did not request or encourage Mr Gordon to expend money in relation to the plots of land so that there was no basis for an equitable estoppel. In any event, he claimed to have a long lease of plots 116 and 117, and he could not therefore “be relying on a promise by the defendant to give him lands which he effectively owns” (para 19 of the judgment). The requirements for the doctrine of equitable estoppel were therefore not made out.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Mr Gordon appealed to the Court of Appeal of the Eastern Caribbean Supreme Court (Antigua and Barbuda). While critical of some aspects of the trial judge’s reasoning, the Court of Appeal dismissed Mr Gordon’s appeal for the following main reasons:</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaNoNumber" style="margin-left:0.50in">(i)<marker name="tab"/>The trial judge had been incorrect in deciding - and his conclusion on this was irrational - that there was no intention to create legal relations. Even if one started from the presumption that there was no intention to create legal relations, because these were agreements made in a family context, that presumption was comfortably rebutted. This was because, for example, the agreements had been reduced to formal written and signed contracts with consideration payable.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaNoNumber" style="margin-left:0.50in">(ii)<marker name="tab"/>The trial judge was clearly entitled to find that the payment of US$3,000 was not the payment of the consideration for the three contracts of sale. The amount paid did not match the amount owing and the time when the US$3,000 was paid did not align with the date of the contracts. In the words of Gonsalves JA, at para 35, in giving the leading judgment in the Court of Appeal, with which Baptiste JA and Blenman JA agreed:</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="Quote" style="margin-left:1.00in">“Bearing in mind the timelines specified for payment of the consideration in each of the contracts, the dates when the $3,000 was paid, the amount paid, and the circumstances of payment, the judge was, on the evidence, clearly entitled to reject the evidence of the appellant that the $3,000 was effective to provide the consideration for the contracts.”</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaNoNumber" style="margin-left:0.50in">However, the fact that the US$3,000 was not the payment of the consideration did not mean that the contracts were invalid for “absence of consideration”. The non-payment meant that there was a defect in Mr Gordon’s performance not that there was a defect in the formation of the contract.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaNoNumber" style="margin-left:0.50in">(iii)<marker name="tab"/>It was not now open to Mr Gordon to argue that he was ready, able and willing to pay the contract price. That was not how his case had been pleaded and it would be manifestly unfair to the defendant for that new argument to be considered. In any event, having incorrectly alleged that he had already paid the contract price, Mr Gordon would not be coming to the court with clean hands. For these reasons, the trial judge had been correct not to grant specific performance.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaNoNumber" style="margin-left:0.50in">(iv)<marker name="tab"/>Turning to proprietary estoppel, the various promises and representations alleged were inextricably bound up with the promise or representation made in the contracts of sale in 2001 and 2007. As there were valid contracts between the parties, one could not found a separate proprietary estoppel argument on those valid contracts. Rather, Mr Gordon’s remedy lay in contract only. As Gonsalves JA said, at para 41:</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="Quote" style="margin-left:1.00in">“[W]hat the appellant describes as representations … are inextricably tied up with the promise said to emanate from the contracts. The difficulty that this causes is that, this Court having found that the promises contained in the contracts were enforceable, the matter then lay in contract and not in proprietary estoppel.”</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaNoNumber" style="margin-left:0.50in">Having cited two cases, one from Australia and another from New Zealand, and some academic writing in support of the proposition that the law of contract, not proprietary estoppel, applied, Gonsalves JA continued at para 43:</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="Quote" style="margin-left:1.00in">“[I]f the matter lies in contract, no proprietary estoppel can be established, at least when the promise or assurance being relied upon arises exclusively out of the contract. Having determined that a valid contract existed between the parties, as between contract and proprietary estoppel, it is to the contract that the appellant must look for his remedy.”</p>
+	    </content>
+	  </level>
+	</level>
+	<level>
+	  <num>3.</num>
+	  <heading class="Paraheading2">The appeal to the Board</heading>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Mr Gordon has now appealed to the Judicial Committee of the Privy Council. Tom Poole QC, counsel for Mr Gordon, with considerable skill, submitted that, because of legal errors by the Court of Appeal, following the errors exposed in the trial judge’s reasoning by the Court of Appeal, Mr Gordon has not had his claims properly considered. He therefore invited the Board to remit the matter to the High Court for Mr Gordon’s case to be reheard both on his contractual claims and, in the alternative, on his claim for proprietary estoppel.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">More specifically, Mr Poole submitted that, as regards the non-payment of consideration, the Court of Appeal had erred in regarding the contractual term as a condition and in treating the non-payment as being fatal to the contractual claim. The consideration for each of the three contracts should have been looked at separately. Moreover, the trial judge had been influenced in his approach to consideration by his erroneous approach to the intention to create legal relations. In addition, not all the relevant evidence had been taken into account by the lower courts in deciding that the US$3,000 payment was not the payment of consideration for the three contracts. It followed that specific performance was an appropriate remedy and, in any event, neither of the lower courts had gone on to consider the alternative remedy of damages for breach of contract.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Turning to proprietary estoppel, Mr Poole submitted that this had not been properly considered by the lower courts. The trial judge had erroneously thought that there could be no proprietary estoppel in relation to plots 116 and 117 because Mr Gordon was already a lessee of those plots. And the Court of Appeal had incorrectly thought that one could not properly separate out the representations made outside the contract from those made within the contract. But the interest that Mr Gordon was claiming, under proprietary estoppel, was an interest in the real property and was distinct from a contractual interest.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Despite Mr Poole doing all that he possibly could have done, it is clear that the Board’s advice to Her Majesty must be that this appeal should be dismissed. The Board considered it unnecessary to call on Dane Hamilton QC, counsel for Mrs Havener.</p>
+	    </content>
+	  </level>
+	</level>
+	<level>
+	  <num>4.</num>
+	  <heading class="Paraheading2">The reasons why the appeal should be dismissed</heading>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">There are three reasons why this appeal should be dismissed. The first is that, for the reasons set out by the Court of Appeal (see para 8(ii) above), the trial judge was clearly entitled to find, on the evidence, that the payment of US$3,000 was not the payment of the consideration for the three contracts of sale. The consideration moving from Mr Gordon under the contracts was the promise to pay, respectively, US$1,000, US$10 and US$10. The sum of US$3,000 did not match those agreed purchase prices. No explanation was given by Mr Gordon as to why he had paid an excess sum. That sum of US$3,000 was paid almost five years after the making of the first contract of sale and over 18 months before the making of the second and third contract of sale. No explanation was given as to why the dates did not align. The explanation for the payment given by Mrs Havener - that the US$3,000 was paid to enable her to obtain legal services in relation to the litigation involving Mr Fernandez - is far more convincing. In any event, it is the well-known practice of the Board not to go behind the concurrent findings of fact of two lower courts: see, eg, <span style="font-style:italic">Dass v Marchand</span> [2021] UKPC 2; [2021] 1 WLR 1788.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Secondly, and in the light of that first reason, the correct legal analysis is as follows. Mr Gordon failed to pay any part of the agreed purchase price under any of the three contracts. Even if one viewed the payment terms as innominate terms (sometimes referred to as intermediate terms), as Mr Poole submitted, rather than as conditions, the consequences of the breach were such as to “deprive the party not in default [Mrs Havener] of substantially the whole benefit” of the contract in question (to use the famous words of Diplock LJ in <span style="font-style:italic">Hongkong Fir Shipping Co Ltd v Kawasaki Kisen Kaisha Ltd</span> [1962] 2 QB 26, 70) so that Mrs Havener was entitled to terminate the contracts for breach. She has exercised her right to terminate the contracts by making clear to Mr Gordon - not least by defending Mr Gordon’s claims in this litigation - that she is treating the contracts as being at an end. As the contracts have been terminated for Mr Gordon’s breach, he is not entitled to an order of specific performance and, as there has been no breach by Mrs Havener, he is also not entitled to damages for breach of contract.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Thirdly, the Court of Appeal was entitled to decide and, in the Board’s view, was correct to decide, that, having considered the pleadings and submissions, the only clear alleged representations or promises as regards the three plots of land were contained in the contracts of sale or, at least, were inextricably tied up with the contractual promises. To understand the legal consequence of this, it is helpful to clarify that, in essence, in this context, proprietary estoppel applies where a person makes a promise to confer rights in relation to its land, which is then detrimentally relied on by the promisee such that it would be unconscionable for the promisor to go back on its promise: see, eg, <span style="font-style:italic">Crabb v Arun District Council</span> [1976] Ch 179; <span style="font-style:italic">Cobbe v Yeoman’s Row Management Ltd</span> [2008] UKHL 55; [2008] 1 WLR 1752; <span style="font-style:italic">Thorner v Major</span> [2009] UKHL 18; [2009] 1 WLR 776; <span style="font-style:italic">Chitty on Contracts</span>, 33rd ed (2018), paras 4-139 to 4-185. While it appears that proprietary estoppel can sometimes be invoked where a contract is void (see the discussion in <span style="font-style:italic">Chitty on Contracts</span>, 33rd ed (2018), paras 5-044 to 5-048 in relation to contracts for the sale of land that do not comply with formal requirements), proprietary estoppel cannot, as a matter of principle, be invoked by a contract-breaker where the relevant promise is contained in the contract, or is inextricably tied up with the contractual promise, and that contract has been terminated for breach by the innocent party. Two explanations may be given as to why that is the principled position. The first is that it would be inconsistent with the contractual agreement for a contract-breaker to be able to enforce the contractual promise by proprietary estoppel when he or she would be unable to enforce the contract directly because it has been terminated for the breach. The second is that proprietary estoppel is concerned to prevent unconscionable behaviour by the promisor and it would not be unconscionable for a promisor to deny proprietary estoppel where the promisee has committed a breach of contract entitling the promisor to terminate the contract and the promisor has done so.</p>
+	    </content>
+	  </level>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">Although not necessary for this decision, and neither the trial judge nor the Court of Appeal directly addressed this point, the Board is also of the view that the alleged expenses incurred by Mr Gordon have not been sufficiently clarified to constitute relevant detrimental reliance for the purposes of proprietary estoppel. Although the Board has seen the break-down of those costs, there is no indication of the date when those costs were incurred (they are simply listed as expenses incurred for all three plots of land between 2001 and 2010) and not all the expenses are separately allocated to separate plots of land. Moreover, some of the alleged expenses are specified as being incurred in relation to plots 116 and 117 and yet it is not clear how far they might have been incurred in Mr Gordon’s alleged capacity as a lessee.</p>
+	    </content>
+	  </level>
+	</level>
+	<level>
+	  <num>5.</num>
+	  <heading class="Paraheading2">Conclusion</heading>
+	  <level>
+	    <content>
+	      <p class="ParaApprovedLevel1">For all these reasons, the Board will humbly advise Her Majesty that the appeal should be dismissed.</p>
+	    </content>
+	  </level>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

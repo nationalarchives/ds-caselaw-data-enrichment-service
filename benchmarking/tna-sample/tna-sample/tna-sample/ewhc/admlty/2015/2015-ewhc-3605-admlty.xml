@@ -1,0 +1,1625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewhc/admlty/2015/3605"/>
+	  <FRBRuri value="ewhc/admlty/2015/3605"/>
+	  <FRBRdate date="2015-12-18" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-admiralty"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="3605"/>
+	  <FRBRname value="THE OWNERS AND/OR DEMISE CHARTERERS OF THE VESSEL “NORDLAKE” v THE OWNERS OF THE VESSEL “SEAEAGLE” now named MV ELBELLA"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewhc/admlty/2015/3605/eng"/>
+	  <FRBRuri value="ewhc/admlty/2015/3605/eng"/>
+	  <FRBRdate date="2015-12-18" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-admiralty"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewhc/admlty/2015/3605/eng/akn"/>
+	  <FRBRuri value="ewhc/admlty/2015/3605/eng/akn"/>
+	  <FRBRdate date="2021-12-01T10:26:51" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewhc-qbd-admiralty" href="https://www.gov.uk/courts-tribunals/admiralty-court" showAs="The Business and Property Courts (Admiralty Court)" shortForm="The Admiralty Court"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="the-owners-and/or-demise-charterers-of-the-vessel-nordlake" href="" showAs="THE OWNERS AND/OR DEMISE CHARTERERS OF THE VESSEL “NORDLAKE”"/>
+	<TLCPerson eId="the-owners-of-the-vessel-seaeagle-now-named-mv-elbella" href="" showAs="THE OWNERS OF THE VESSEL “SEAEAGLE” now named MV ELBELLA"/>
+	<TLCRole eId="claimant" href="" showAs="Claimant"/>
+	<TLCRole eId="defendant" href="" showAs="Defendant"/>
+	<TLCPerson eId="judge-mr-justice-teare" href="/judge-mr-justice-teare" showAs="MR. JUSTICE TEARE"/>
+      </references>
+      <proprietary source="ewhc/admlty/2015/3605/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWHC-QBD-Admiralty</uk:court>
+	<uk:year>2015</uk:year>
+	<uk:number>3605</uk:number>
+	<uk:cite>[2015] EWHC 3605 (Admlty)</uk:cite>
+	<uk:hash>14dac2597fd94545e8ea1035e0ff853cf0d01c75752e649333fca07191173451</uk:hash>
+      </proprietary>
+      <presentation source="ewhc/admlty/2015/3605/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { font-weight: bold; font-family: Arial; font-size: 16pt; }
+#judgment .Heading3 { font-weight: bold; font-family: Arial; font-size: 13pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .ParaHeading { font-size: 12pt; }
+#judgment .ParaLevel1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .ParaLevel2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .ParaLevel3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 1.00in; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .Heading { font-size: 12pt; }
+#judgment .Title { text-align: center; font-weight: bold; font-size: 10pt; }
+#judgment .ListParagraph { margin-left: 0.50in; font-family: Calibri, sans-serif; font-size: 11pt; }
+#judgment .eMailBlock { text-align: center; font-weight: bold; font-size: 13pt; }
+#judgment .BalloonText { font-family: Tahoma; font-size: 8pt; }
+#judgment .DocumentMap { font-family: Tahoma; font-size: 10pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .Heading3Char { font-weight: bold; font-size: 13pt; }
+#judgment .QuoteChar { font-size: 12pt; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .TitleChar { font-weight: bold; font-size: 16pt; }
+#judgment .BalloonTextChar { font-family: 'Segoe UI'; font-size: 9pt; }
+#judgment .italictext1 { font-style: italic; }
+#judgment .DocumentMapChar { font-family: 'Segoe UI'; font-size: 8pt; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p class="CoverText">Case No: 2013 Folios 121 and 134</p>
+      <p class="CoverText" style="text-align:left">Neutral Citation Number: <neutralCitation>[2015] EWHC 3605 (Admlty)</neutralCitation></p>
+      <p class="CoverMain">
+	<courtType>IN THE HIGH COURT OF JUSTICE</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">QUEEN'S BENCH DIVISION</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">ADMIRALTY COURT</courtType>
+      </p>
+      <p class="CoverText">Royal Courts of Justice</p>
+      <p class="CoverText">Rolls Building, 7 Rolls Buildings</p>
+      <p class="CoverText">Fetter Lane, London EC4A 1NL</p>
+      <p class="CoverText">Date: <docDate date="2015-12-18">18/12/2015</docDate></p>
+      <p style="text-align:center"><span style="font-weight:bold">Before</span> :</p>
+      <p class="CoverMain" style="text-align:center">
+	<judge refersTo="#judge-mr-justice-teare">MR. JUSTICE TEARE</judge>
+      </p>
+      <p class="CoverMain" style="text-align:center">(sitting with Commodore David Squire and Captain Stephen Gobbi as Nautical Assessors)</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#the-owners-and/or-demise-charterers-of-the-vessel-nordlake" as="#claimant" style="font-weight:bold">THE OWNERS AND/OR DEMISE CHARTERERS OF THE VESSEL “NORDLAKE”</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#claimant">Claimants</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#the-owners-of-the-vessel-seaeagle-now-named-mv-elbella" as="#defendant" style="font-weight:bold">THE OWNERS OF THE VESSEL “SEAEAGLE” now named MV ELBELLA</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Defendants</role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center"><span style="font-weight:bold">Elizabeth Blackburn QC and Henry Ellis </span>(instructed by<span style="font-weight:bold"> Ince &amp; Co</span>) for the <span style="font-weight:bold">Claimants</span></p>
+      <p style="text-align:center"><span style="font-weight:bold">Lionel Persey QC and Andrew Carruth</span> (instructed by <span style="font-weight:bold">Holman Fenwick Willan LLP</span>) for the <span style="font-weight:bold">Defendants</span></p>
+      <p style="text-align:center">Hearing dates: 12, 13 &amp; 14 October 2015</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p class="CoverDesc">Judgment</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">Mr. Justice Teare :</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On 30 January 2011 the container vessel NORDLAKE narrowly avoided a collision with the container vessel SEAEAGLE in the entrance to the port of Mumbai but very shortly thereafter collided with the Indian warship VINDHYAGIRI. No casualties were reported but at some stage after the collision a fire broke out on VINDHYAGIRI and the next day she sank at her berth in the naval dockyard. Some five months later she was salved. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On 23 February 2011 a claim was brought in the Indian Courts by the Union of India, the Owners of VINDHYAGIRI, against the Owners of NORDLAKE. In that suit the claim of NORDLAKE against VINDHYAGIRI will also be decided. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On 25 January 2013 the Owners of NORDLAKE brought a claim against the Owners of SEAEAGLE in this court. It is the case of the Owners of NORDLAKE that the collision was caused by the negligence of those on board SEAEAGLE and by the negligence of three Indian warships, VINDHYAGIRI, GODAVARI and a vessel described by the Claimants as the “Lead Warship”. On 29 January 2013 the Owners of SEAEAGLE brought a claim against the Owners of NORDLAKE. It is the case of the Owners of SEAEAGLE that the collision was caused by the negligence of those on board NORDLAKE and by the negligence of those on board the same three Indian warships. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This court is required to decide whether any of the allegations of navigational fault made by the Owners of NORDLAKE and SEAEAGLE have been substantiated and, if there was fault by two or more vessels, apportion liability in proportion to the degree in which each vessel was at fault; see section 187 of the Merchant Shipping Act 1995. The Union of India is not party to the proceedings in this court and so the court has received no evidence from those on board the three Indian warships. Any findings of fault and any apportionment of liability will be based on the evidence adduced by the Owners of NORDLAKE and SEAEAGLE and will not be binding on the Union of India. In the <span style="font-style:italic">Bovenkerk</span> [1973] 1 Lloyd’s Rep. 63 leading counsel agreed (see p.70 rhc) that if three vessels were at fault and only two were party to the action liability had to be apportioned between the three vessels pursuant to section 1 of the Maritime Conventions Act 1911, the predecessor of section 187 of the Merchant Shipping Act 1995. The trial judge, Brandon J. (as he then was), held that the non-party vessel was not at fault and said (at p.71 rhc) that if it had been necessary for him to decide the point he would have wished to have heard further argument as to whether liability had to be apportioned between all three vessels even though one was not before the court. In his extra-judicial article <span style="font-style:italic">Apportionment of Liability in British Courts under the Maritime Conventions Act 1911</span> (1977) 51 Tulane Law Review 1025 at pp.1035-1036 Sir Henry Brandon described the question as an “open question of some difficulty”. In the present case leading counsel are also agreed that if a collision is caused by two or more vessels the court is required by section 187 to apportion liability in proportion to the degree in which each vessel was in fault. I shall first consider the question of fault and, if necessary, consider the question left open by Brandon J. in the <span style="font-style:italic">Bovenkerk</span>.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There is also a counterclaim by the Owners of NORDLAKE to limit its liability (if any) to the Owners of SEAEAGLE pursuant to the Merchant Shipping Act 1995. That right has not been admitted by the Owners of SEAEAGLE but no positive case that the Owners of NORDLAKE are not entitled to limit their liability has been pleaded. Since the burden is on the person challenging a right to limit to allege and prove conduct barring the right to limit it must follow that the Owners of NORDLAKE are entitled to a declaration that they can limit their liability pursuant to the Merchant Shipping Act 1995. It is common ground that the amount of that limit is 6,680,800 Special Drawing Rights pursuant to the 1976 Limitation Convention and the 1996 Protocol. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The place and time of collision are common ground. The collision occurred at 1636:49 local time in position Lat.18.53.75’ N Long 72.51.43’ E. It is also common ground that the weather was fine and clear and that the tide was flooding at a rate of about half a knot. The collision occurred in a dredged channel marked on Admiralty Chart No. 2624 and used by outward and inward bound vessels to enter and leave Mumbai. NORDLAKE was outward bound and SEAEAGLE was inward bound. Other merchant vessels were at anchor to either side of the dredged channel. The Indian warships were also inward bound and were making for the naval tidal basin to the west of the dredged channel. It appears that they had been part of a large fleet of naval vessels which had been out at sea on a “family day”, when families of officers and ratings were on board the naval vessels. It is unclear how many naval vessels were involved in this activity and returning to port. There was reference in the evidence to 11, 14 and even 27 naval vessels being inbound at some stage during the day. NORDLAKE passed an anchored aircraft carrier, an anchored naval tanker and four inward bound warships (the fourth being GODAVARI) before colliding with VINDHYAGIRI.  On her inward passage SEAEAGLE overtook a submarine and VINDHYAGIRI before narrowly avoiding a  collision with NORDLAKE.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is to the credit of the parties to this action that, with the assistance of experts and NORDLAKE’s voyage data recorder, ECDIS data from SEAEAGLE, a video film of the electronic radar record of the events kept by the Mumbai Port Vessel Traffic Management System and the engine movement records from SEAEAGLE, they have been able to agree the navigation of both NORDLAKE and SEAEAGLE and, to a lesser extent, the navigation of both VINDHYAGIRI and GODAVARI. They have also been able to agree a transcript of the Mumbai VTS voice recording and NORDLAKE’s VDR voice recording. The facts are therefore agreed and have been displayed on a video from which snapshots have been taken so that the position of the vessels in relation to each other at intervals before the collision can be studied.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The master of NORDLAKE was not available to give oral evidence because he was no longer employed by the Owners of NORDLAKE and they were rather late in advising him of the trial date. The master of SEAEAGLE did give oral evidence. In circumstances where the facts of each vessel’s navigation were agreed there was little which oral evidence could add. However, the cross-examination of the evidence of the master of SEAEAGLE gave him the opportunity to answer the criticisms made of his navigation. Whilst he accepted much of the factual matters put to him I considered that he might not always have fully understood the question put to him and therefore care was required in assessing his evidence. Although he appeared to me to be a witness who sought to give his honest recollection and genuine opinion as to the navigation of both SEAEAGLE and NORDLAKE, his answers were sometimes difficult to follow even with the assistance of an interpreter. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The navigation of NORDLAKE</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">NORDLAKE, a conventional container vessel built in 1994, 179m. in length and 25.3m. in beam, 16,202 tons gross and powered by a Sulzer diesel engine of 13,300 kW, was laden with 775 containers and had just commenced a voyage from the container terminal in Mumbai to ports in the UAE. She was drawing 9.4m. forward and 9.9m. aft. Her bridge and engine room were situated aft, the bridge being some 160m. from the bow. Three cranes serving the four holds were on the centreline.  At full ahead her speed was 14 knots, at half ahead 8.1 knots, at slow ahead 6.1 knots and at dead slow ahead 5.9 knots. On the bridge the helm and radars were situated on the starboard side of the wheelhouse because the view from the centreline was obscured by the cranes.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">NORDLAKE was outbound from Mumbai. On the bridge were the master, chief officer, helmsman and pilot. The pilot was using the outboard radar (set to one and half mile range) and the master was using the inboard radar (set to 3 mile range) though he was generally on the port side of the wheelhouse. The chief officer was operating the telegraph and noting events in the bell book. He has said in his statement that he was also monitoring the inboard radar keeping an anti-collision watch using the ARPA facility. The VHF sets were switched to channel 13 for JNPT Port Control, channel 12 for Mumbai VTMS and a listening watch was also kept on channel 16. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1612:49 or C-24 NORDLAKE was in the main channel with her engines at half ahead and turning to port so as to proceed down the stretch of channel north east of the North Karanja Buoy which requires a heading of 236 degrees. At 1614:49 or C-22 her engines were increased to full ahead and by 1615:49 or C-21 her heading was 236 degrees. At this time her speed over the ground was 9.6 knots and increasing. By 1619:49 or C-17 her speed over the ground was 12 knots. She was a little to port of the centre line of the dredged channel. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Just before C-17 (when, according to the chief officer the warship convoy was seen) her pilot called a warship by VHF and was answered by a warship who said she was the “third warship in the column.” The pilot said “I am rounding off North Karanja now. So how would you like to pass?” At about 1620:19 or C-16.5 the pilot, having confirmed that she was an outbound ship, repeated her question. The warship replied “green to green, sir.” The pilot replied “You would like to pass green to green. OK. Affirmative. Confirm with all warships, I will like to pass green to green with all.” The warship replied “Yes sir, we will pass on the message to all the warships, that you will be passing green to green.”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1621:49 or C-15 NORDLAKE began altering her heading to port in preparation for rounding the North Karanja Buoy and taking up the heading required for the next stretch of the dredged channel. At 1622:47 or C-14 the pilot on NORDLAKE advised the warship “to remain on the western …keep eastern side clear for me.” The warship replied that she was “shifting more to port keeping place for you on my starboard side.” At about this time the master of NORDLAKE claimed in his statement that he noticed SEAEAGLE at a distance of about 4 miles. At 1623:49 or C-13 her heading was 219 degrees and she reduced her engines to half ahead. At 1625:03 or just after C-12 she was navigating so far to port of the centre line of the dredged channel that she was outside the dredged channel, having passed the North Karanja Buoy to port.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By 1628:49 or C-8 NORDLAKE had passed three warships to starboard or green to green. She was heading 211 degrees and her speed over the ground was about 9 knots. She was navigating outside the eastern edge of the dredged channel. Her pilot addressed a warship by VHF in these terms: “Warship, are you right ahead of me now because I already crossed three warships now. I think you are the fourth one correct?” A warship replied “I am on your starboard quarter now.” The pilot replied: “I am calling the ship on my port bow.”  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">VINDHYAGIRI was extremely fine on NORDLAKE’s port bow distant about 1.5 miles. She was not the only vessel on the port bow of NORDLAKE. The warship GODAVARI was also on her port bow, a little broader but still fine, and distant about a mile. In addition SEAEAGLE was on her port bow, broader than both warships, distant about 1.6 miles. By contrast there was no vessel on the starboard side of NORDLAKE in the dredged channel. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1629:49 or about C-7 a warship informed the pilot of NORDLAKE by VHF that he “passed the message to all ships that you are passing green to green.” The pilot replied: “I will be passing green to green with all ships but I can see two – three warships on my port bow. Ask them to alter to port.” The warship replied: “Yes sir, I will pass the message once again.”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1630:49 or C-6 the pilot on NORDLAKE called SEAEAGLE by VHF. The pilot on SEAEAGLE asked: “How would you like to pass?” The pilot on NORDLAKE replied (in Hindi): “I cannot understand the intentions of these warships. There are two – three warships behind me and some ahead of me. I will be passing green to green with them, but it is not possible I think.” The pilot on SEAEAGLE replied: “I don’t know why they are blocking the channel.”     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At about C-5 the engines of NORDLAKE were reduced to slow ahead. At about the same time or a little later NORDLAKE called “warship on my port bow” and asked “how you would like to pass?”. The warship GODAVARI addressed NORDLAKE by VHF in the following terms: “NORDLAKE, this is warship, request pass green to green, sir, green to green.”  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At this time GODAVARI, still fine on the port bow of NORDLAKE, was distant about 5 cables or more. The pilot on NORDLAKE shouted over the VHF: “So how? Why are you coming to port, because already, already I cannot alter to port now, cannot alter.” GODAVARI replied: “Roger, I am altering to starboard; we will pass red to red, sir.” The pilot replied: “I’ve already confirmed that we have to pass that’s why I was keeping to western side of channel.” GODAVARI then confirmed that she would alter to starboard and pass red to red. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1633:07 or a little before C-3.5 the pilot on SEAEAGLE called NORDLAKE. He asked: “Please pass green to green....is green to green OK?”. The pilot on NORDLAKE replied: “Yeah okay green to green with you.” The pilot on SEAEAGLE   then said in Hindi: “I don’t know how they pass, this Navy traffic.” The pilot on NORDLAKE replied: “Yes. F20 [GODAVARI] has created all this problem.” NORDLAKE’s speed over the ground was about 8 knots and her heading remained 211 degrees. SEAEAGLE   was still fine on the port bow of NORDLAKE and was distant about 5 cables.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1633:49 or C-3 the two vessels confirmed the green to green passing.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Shortly before 1634:19 or C-2.5 the engines of NORDLAKE were reduced to dead slow ahead. The master of NORDLAKE was heard saying “What is she doing?” A little later at about the same time the pilot on SEAEAGLE informed the pilot on NORDLAKE that he was “going more to port”. At this the master of NORDLAKE shouted “No!” and the pilot replied “Go more to starboard”. The pilot on SEAEAGLE asked “You want to pass port to port, correct?” The pilot on NORDLAKE repeated “Go more to starboard.” The pilot on SEAEAGLE again asked: “You want to pass port to port correct?” to which the pilot on NORDLAKE answered: “No, green to green, green to green.” This caused the pilot on SEAEAGLE   to say: “Green to green – then you please (or I will?) go more to port.” The pilot on NORDLAKE again said “Go to your starboard.” The Mumbai VTIS then had a short conversation with the pilot on SEAEAGLE after which the VTIS said to NORDLAKE: “You want to pass [SEAEAGLE] port to port, confirm?” The pilot on NORDLAKE replied “Yeah, yeah, port to port.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> At 1634:49 or about C-2 GODAVARI was passing NORDLAKE red to red. SEAEAGLE was still on the port bow of NORDLAKE distant about one and half cables or a little more. The master of NORDLAKE shouted “hard starboard” and the pilot repeated “hard starboard, slow ahead”. Her speed over the ground was about 7.5 knots.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By 1635:10 or about C-1.5 the heading of NORDLAKE had begun to turn to starboard. The two pilots informed each other by VHF that each was going hard to starboard. At about C-1 the engines of NORDLAKE were put to full ahead. As NORDLAKE crossed the stern of SEAEAGLE the master of NORDLAKE ordered hard port to swing the port quarter of NORDLAKE away from the bow of SEAEAGLE. NORDLAKE and SEAEAGLE narrowly avoided colliding with each other. SEAEAGLE passed down NORDLAKE’s port side. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At about this time the warship VINDHYAGIRI spoke to NORDLAKE by VHF requesting her intention. At this time VINDHYAGIRI was on the port bow of NORDLAKE distant less than 1.5 cables and crossing ahead of NORDLAKE. The master of NORDLAKE ordered hard starboard. The heading of NORDLAKE was swinging to starboard and the heading of VINDHYAGIRI was swinging to port. The bow of NORDLAKE then collided with the starboard side of VINDHYAGIRI at a broad angle of about 70-80 degrees. Her speed at collision was about 7.8 knots over the ground and her heading 257 degrees. Thus in the last two minutes before collision she had swung some 46 degrees to starboard.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The navigation of SEAEAGLE  </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">SEAEAGLE, a cellular container vessel built in 2006, of 18,327 tons gross and 10,980 net tons, 175.54m. in length and 27.4m. in breadth, powered by a MAN/B&amp;W engine with a power output of 15,785 kW, and laden with 7,277 mt of containerised cargo was inbound to Mumbai. Her full sea speed was 16 knots. At slow ahead her speed was about 11 knots and at dead slow ahead her speed was about 8.7 knots. Her master said in evidence that her steerage way was about 4 knots. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">She had arrived off Mumbai on 29 January 2011 and on 30 January 2011 at about 1430 weighed anchor to proceed to the pilot station. The master and second officer were on the bridge. The vessel was drawing 8m. forward and 9.1m. aft. The pilot boarded at about 1612 by which time it is likely that the second officer had been replaced by the chief officer. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1612:49 or C-24 SEAEAGLE was well to the east of the dredged channel on a heading of 59 degrees and with her engines stopped was making about 5.6 knots over the ground. Shortly after 1614:49 or C-22 her engines were increased to dead slow ahead and her heading was altering to port to follow the direction of the dredged channel (although she remained well to the east of it). At 1615:49 or C-21 her engines were increased to slow ahead.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1619:49 or C-17 when her heading was 49 degrees (but still turning to port)  and her speed over the ground was about 8 knots Mumbai VTIS informed SEAEAGLE that there was a submarine and warship ahead of her. The VTIS said: “Confirm where she will be going ...and then you can overtake.” SEAEAGLE’s pilot confirmed that she was overtaking the submarine “from starboard side”. The VTIS again asked SEAEAGLE to confirm with the warship to where that vessel was proceeding and SEAEAGLE said she would speak with the warship.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At or just after 1620:49 or C-16 SEAEAGLE spoke to the warship, VINDHYAGIRI. The pilot requested her destination and was told she was going to the naval tidal basin. The pilot informed her that SEAEAGLE could overtake her from her starboard side and that a tanker was going to anchorage Bravo 3 (which was to the east of the dredged channel). He also asked where another warship “right ahead” was going. He was told that the other warship was also going to the naval tidal basin.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At about this time those on board SEAEAGLE had also seen NORDLAKE and her target echo had been automatically acquired by ARPA. She was fine to starboard distant about 4 miles. She appeared to be cutting the corner of the channel (at the North Karanja Buoy) and making her way to her port side of the channel. Those on board had been keeping a VHF lookout and were aware that she intended to pass the inbound naval vessels green to green.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1624:49 or C-12 SEAEAGLE spoke with GODAVARI by VHF. At this time GODAVARI was fine on the port bow of SEAEAGLE and less than a mile distant. SEAEAGLE was now heading about 21 degrees (though her course made good over the ground was a little to starboard of her heading). Having confirmed that GODAVARI was bound for the tidal basin the pilot on SEAEAGLE requested her “to go more on the port side and leave the starboard of the channel as I am proceeding to JNPT and we request you to pass from your starboard side.” GODAVARI replied: “Roger SEAEAGLE   we will move more to port and keep this side clear.”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1629:27 or a little before C-7 SEAEAGLE spoke again to GODAVARI. SEAEAGLE was still making about 8 knots over the ground. Her heading had come round to 14 or 15 degrees so that, although still well to the east of the dredged channel, she was getting closer to it. GODAVARI was also to the east of the dredged channel and on SEAEAGLE’s starboard bow. SEAEAGLE’s pilot said to GODAVARI: “I don’t know why you are blocking the starboard side; you have the whole sea on your port side left open to you. I don’t know why you are blocking on the starboard side. Please go more to port, or in that case I have gone out of the channel.” GODAVARI replied that she was moving to port. At or about C-7 SEAEAGLE stopped her engines. At this time she was about to overtake VINDHYAGIRI on that vessel’s starboard side. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1630:49 or C-6 there was a conversation between SEAEAGLE and NORDLAKE. I have already summarised it but for convenience I shall do so again. The pilot on NORDLAKE called SEAEAGLE by VHF. The pilot on SEAEAGLE asked: “How would you like to pass?” The pilot on NORDLAKE replied (in Hindi): “I cannot understand the intentions of these warships. There are two – three warships behind me and some ahead of me. I will be passing green to green with them, but it is not possible I think.” The pilot on SEAEAGLE replied: “I don’t know why they are blocking the channel.”  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1631:19 or C-5.5, when SEAEAGLE was in the course of overtaking VINDHYAGIRI and her heading had altered a little to starboard, GODAVARI called SEAEAGLE and requested her “to overtake from my port. There is another vessel NORDLAKE coming out, so request you.” The pilot on SEAEAGLE replied: “yeah, OK. I think that is a better option. You please go more to starboard and please give me more space on the port side.”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1633:07 or a little before C-3.5 NORDLAKE was on the starboard bow of SEAEAGLE distant about 5 cables or a little more. The pilot on SEAEAGLE   called NORDLAKE. He asked: “Please pass green to green....is green to green OK?” The pilot on NORDLAKE replied: “Yeah okay green to green with you.” The pilot on SEAEAGLE commented:” I don’t know how they pass this Navy traffic.” To which the pilot on NORDLAKE replied: “Yes [GODAVARI] has created all this problem.”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1633:49 or C-3 the two vessels confirmed the green to green passing. At this time SEAEAGLE had overtaken VINDHYAGIRI. The pilot had ordered helm port 20 and the heading of SEAEAGLE had begun to turn to port. At C-5 it had been 18 degrees and at C-3 it was 11 degrees. Her speed had fallen to 5.1 knots over the ground.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At just before 1634:19 or C-2.5 the engines of SEAEAGLE were put to dead slow ahead. At about the same time there was a confused and confusing conversation between SEAEAGLE and NORDLAKE which I have already summarised but will do so again. The pilot on SEAEAGLE informed the pilot on NORDLAKE that he was “going more to port”. At this the master of NORDLAKE shouted “No!” and the pilot of NORDLAKE replied “Go more to starboard”. The pilot on SEAEAGLE asked “You want to pass port to port, correct?” The pilot on NORDLAKE repeated “Go more to starboard.” The pilot on SEAEAGLE again asked: “You want to pass port to port correct?” to which the pilot on NORDLAKE answered: “No, green to green, green to green.” This caused the pilot on SEAEAGLE to say: “Green to green – then you please (or I will?) go more to port.” The pilot on NORDLAKE again said “Go to your starboard.”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Mumbai VTIS then called SEAEAGLE and said: “NORDLAKE is saying go to starboard, to starboard.” The pilot replied: “Go to starboard OK -Hard starboard OK, I am going to more to starboard.”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Mumbai VTIS then said to NORDLAKE: “You want to pass [SEAEAGLE] port to port, confirm ?” The pilot on NORDLAKE replied “Yeah, yeah, port to port.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> At 1634:49 or about C-2 SEAEAGLE was on a heading of 11 degrees and her speed over the ground had increased slightly to 5.4 knots. NORDLAKE was on her starboard bow distant under 2 cables. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By 1635:10 or about C-1.5 the engines of SEAEAGLE were put full astern. The two pilots informed each other by VHF that each was going hard to starboard. NORDLAKE and SEAEAGLE narrowly avoided colliding with each other. SEAEAGLE passed down NORDLAKE’s port side. At no stage had she been within the dredged channel as marked on the chart. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p>
+	      <span style="text-decoration:underline">The navigation of VINDHYAGIRI</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Much less is known of the navigation of the naval vessels because there has been no evidence from those on board those vessels. However, an analysis of the evidence before the court of “ground referenced” positions taken from the video of the VTIS radar record has enabled the navigation of VINDHYAGIRI and GODAVARI to be reconstructed, as from C-8 in the case of VINDHYAGIRI and as from C-13 in the case of GODAVARI. The resulting speeds and headings purport to have great accuracy but given their source there must be a margin of error and some caution is required.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">VINDHYAGIRI was a frigate built in 1981. She was 113 m. in length and 13m. in beam. Her draft was 4.3m. She had a speed of up to 28 knots.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">When summarising the navigation of SEAEAGLE I recounted a VHF conversation between SEAEAGLE and VINDHYAGIRI at or just after 1620:49 or C-16. SEAEAGLE spoke to the warship, VINDHYAGIRI. The pilot requested her destination and was told she was going to the naval tidal basin. VINDHYAGIRI informed her that SEAEAGLE could overtake her from her starboard side.  This conversation was about half a minute after NORDLAKE had agreed with another warship to pass her green to green and had stated that she wished to pass all the warships green to green.  Had VINDHYAGIRI been keeping a good aural lookout she would have heard this, as it seems SEAEAGLE did. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At about C-8 VINDHYAGIRI was heading about 21 degrees and making good a speed of about 3.5 knots over the ground. It is likely that at this time she was just outside and east of the dredged channel as marked on the chart. It is also likely that NORDLAKE was fine on her starboard bow distant about 1.5 miles.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By about C-7, when VINDHYAGIRI was about to be overtaken on her (VINDHYAGIRI’s) starboard side, her heading was altering a little to starboard. By C-6 her heading was about 32 degrees. By about C-4, when SEAEAGLE had overtaken her, her heading had come back to port and was about 27 degrees. Her speed may have increased a little to about 4 knots. At this time NORDLAKE was still fine on her starboard bow distant about 7 cables.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By about C-3 her heading had come back to port to about 23 degrees and her speed was again about 3.5 knots. She was probably just within the dredged channel as shown on the chart. NORDLAKE was still fine on her starboard bow (though it is possible that the bearing had increased a little to starboard) and was now distant about 5 cables. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By about C-2 her heading was a little more to port, about 20 degrees and her speed may have been reduced a little. She was now within the dredged channel. NORDLAKE remained fine on her starboard bow distant about 3.5 cables.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By about C-1 it is apparent that VINDHYAGIRI had applied substantial port helm and had increased her speed. Her heading was now about 6 degrees and her speed was over 5 knots. NORDLAKE was now bearing more to starboard but was distant only one and half cables. VINDHYAGIRI was seeking to cross ahead of her.  It was at this time that VINDHYAGIRI asked NORDLAKE by VHF what her intentions were. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">VINDHYAGIRI continued to turn to port so that at C-30 seconds she was heading about north. At collision her heading was probably just to west of north. In the last minute and a half before collision she had swung some 25 degrees to port. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The navigation of GODAVARI</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">GODAVARI was a guided missile frigate built in 1983. She was 126m. in length and 14.5m. in breadth. She had a draft of 4.5m. and a speed of 27 knots.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At about C-13 GODAVARI was navigating just outside, and to the east of the dredged channel shown on the chart. Her heading was about 30 degrees and her speed about 2 knots. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1624:49 or C-12 SEAEAGLE spoke with GODAVARI by VHF. At this time SEAEAGLE was on GODAVARI’s starboard quarter distant less than a mile. Having confirmed that GODAVARI was bound for the tidal basin the pilot on SEAEAGLE requested her “to go more on the port side and leave the starboard of the channel as I am proceeding to JNPT and we request you to pass from your starboard side.” GODAVARI replied: “Roger SEAEAGLE   we will move more to port and keep this side clear.”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">However, GODAVARI’s heading did not move to port but moved a little to starboard, to about 34 degrees. As a result she moved further to the east of the channel. Her speed remained about 2 knots.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> At 1629:27 or a little before C-7 SEAEAGLE spoke again to GODAVARI. SEAEAGLE was at this time about 5 cables or a little less astern of GODAVARI. SEAEAGLE’s pilot said to GODAVARI: “I don’t know why you are blocking the starboard side; you have the whole sea on your port side left open to you. I don’t know why you are blocking on the starboard side. Please go more to port, or in that case I have gone out of the channel.” GODAVARI replied that she was moving to port. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">However, according to the agreed calculations GODAVARI did not, at least immediately, alter her heading to port. Her heading appears to have gone further to starboard reaching 40 degrees or more at C-6.5.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At 1631:19 or C-5.5, when SEAEAGLE was in the course of overtaking VINDHYAGIRI, GODAVARI called SEAEAGLE and requested her “to overtake from my port. There is another vessel NORDLAKE coming out, so request you.” The pilot on SEAEAGLE replied: “yeah, OK. I think that is a better option. You please go more to starboard and please give me more space on the port side.” By this time, as can be seen from the video, GODAVARI was about a cable to the east of the dredged channel. She was further to the east than she had been. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At about C-4.5 or a little later the warship GODAVARI addressed NORDLAKE by VHF in the following terms: “NORDLAKE, this is warship, request pass green to green, sir, green to green.” At this time NORDLAKE was on the port bow of GODAVARI distant about 4 cables or a little more. The pilot on NORDLAKE shouted over the VHF: “So how? Why are you coming to port, because already, already I cannot alter to port now, cannot alter.” GODAVARI replied: “Roger, I am altering to starboard; we will pass red to red, sir.” The pilot replied: “I’ve already confirmed that we have to pass that’s why I was keeping to western side of channel.” GODAVARI then confirmed that she would alter to starboard and pass red to red. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Thereafter the heading of GODAVARI was altered to port. By C-3 she was heading about 17 degrees and her speed was increasing. But very shortly after that her heading was altered to starboard so that by C-2.5 it was about 40 degrees. In consequence GODAVARI and NORDLAKE passed red to red at about C-2 at a distance of under 1 cable. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Navigational fault</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Before considering the faults alleged against the vessels it is necessary to consider the application of Rule 9 of the Collision Regulations to this case. Rule 9(a) provides:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“A vessel proceeding along the course of a narrow channel or fairway shall keep as near to the outer limit of the channel or fairway which lies on her starboard side as is safe and practicable.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was common ground that there was a narrow channel or fairway used by vessels entering and leaving Mumbai. There was however a dispute as to whether the narrow channel or fairway was the dredged channel as marked on the chart or the navigable water between the anchorages marked on the chart either side of the dredged channel. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The dredged channel is in the middle of a wide stretch of water between the docks in Mumbai port to the west and the Karanja reefs to the east. The channel is dredged to a depth between 10.8m. (at the inward end) and 11m. (at the seaward end). To the west and east of the dredged channel (or at any rate that part of it which lies on a 210/30 degrees axis) are anchorages in depths of water varying between 8 and 10 metres. Neither the dredged channel nor the anchorages are marked by buoys. The width of the dredged channel varies from 3 cables at the inward end to 2 cables at the seaward end. The distance between the anchorages as marked on either side of the dredged channel is about 6 cables. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Rule 9 uses two different terms, narrow channel and fairway, and it has been held that it is wrong to treat the two as synonymous; see <span style="font-style:italic">The Koningen Juliana</span> [1974] 2 Lloyd’s Rep. 353 at p.359 per Cairns LJ and p.362 per Sir Gordon Willmer. Where there is a wide stretch of water through which vessels navigate along an unmarked narrow stretch of water it could be said that there is a fairway, rather than a narrow channel, which is used by vessels entering and leaving Mumbai. However, the Navigational Rules/Regulations published by the Mumbai Port Trust which apply to all vessels navigating within the limits of the port refer to a channel and it is therefore appropriate to refer to a channel rather than a fairway. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Regulation no. 1 provides:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Entrance to Mumbai Harbour consists of a single channel for inbound as well as outbound vessels, with an average width of three cables and minimum chartered depth of 10.8 metres……</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Vessels are to always to comply with Rule No.9 of the Collision Regulations and conduct themselves as per these Rules……</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Vessels are to exercise caution during spring tides due to drift experienced and the close proximity of anchored vessels on either side of the channel.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Regulation No.6 (which applies specifically to naval vessels) states that vessels must not wait in the channel and adds:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“If unavoidable, they should wait in any suitable available anchorage outside the navigation channel and inform VTS of the same.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my judgment the local regulations contemplate that the dredged channel as marked on the chart is to be regarded as the narrow channel. The reference in Regulation No.1 to a single channel for inbound as well as outbound vessels as having an average width of 3 cables and a minimum chartered depth of 10.8 metres clearly indicates the dredged channel (even though the reference to an average width of 3 cables may not be entirely accurate). Thus, when Regulation No.1 goes on to state that vessels are to comply with Rule 9 of the Collision Regulations it must have been envisaged that the dredged channel was the narrow channel within Rule 9. This is consistent with the reference in the local regulations to “anchored vessels on either side of the channel” and to naval vessels having to “wait in any suitable anchorage outside the navigable channel.” </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The local regulation, which is to be followed by all vessels, is so clear in this regard that I did not find it necessary to ask the Elder Brethren whether seamen would regard the dredged channel or the navigable water between the anchorages as the narrow channel. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">But in any event I do not consider that my conclusion on this matter affects the application of Rule 9 or the question of fault. The difference between the two contentions does not appear to me to be of significance. If an outbound vessel, by reason of her draft, is able to navigate just outside the outer limit of the channel to the east it could not sensibly be said that she was in other than her wrong water. She is obliged, pursuant to Regulation No.1, to proceed outbound using the dredged channel and must, pursuant to that Regulation and Rule 9 of the Collision Regulations, keep as near to the outer limit of the channel which lies on her starboard side as is safe and practicable. Equally, if an inbound vessel, by reason of her draft, is able to navigate just outside the outer limit of the channel to the east it could not sensibly be said that she was in other than her correct water. She is obliged, pursuant to Regulation No.1, to proceed inbound using the dredged channel and must, pursuant to that Regulation and Rule 9 of the Collision Regulations, keep as near to the outer limit of the channel which lies on her starboard side as is safe and practicable. If she is a naval vessel she is obliged, pursuant to Regulation No.6, to “remain on the starboard side of channel always”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was submitted by counsel for NORDLAKE that if a vessel were navigating outside the dredged channel Rule 9 did not apply. I am unable to accept that submission. The obligation imposed by Rule 9 applies when a vessel is proceeding along the course of a narrow channel or fairway. NORDLAKE was departing from Mumbai. The dredged channel is for the use of inbound and outbound vessels. Prior to rounding the North Karanja Buoy NORDLAKE, an outbound vessel, was certainly proceeding along the course of a narrow channel. She was obliged to keep as near to the outer limit of the channel as lay on her starboard side as was safe and practicable. She chose not to do so having agreed a green to green passing with one of the warships. As a result she approached and crossed the eastern edge of the dredged channel. She continued to follow a course almost parallel to the course of the dredged channel. In my judgment a vessel cannot claim to be free of the obligation imposed by Rule 9 in those circumstances. She is still “proceeding along the course of a narrow channel”. Any other conclusion would be unseamanlike and dangerous. Instead of a safe system in which inbound and outbound vessels navigated as near to the outer limit of the channel as lay on their starboard side as was safe and practicable there would be an unsafe system in which outbound vessels proceeded <span style="font-style:italic">either</span> as near to the outer limit of the channel as lay on their starboard side as was safe and practicable <span style="font-style:italic">or</span> just to the east of the dredged channel, precisely where they would expect to meet inbound vessels. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The faults of NORDLAKE</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Rule 9; the narrow channel rule</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">From about C-16.5, when NORDLAKE agreed with an unidentified warship by VHF to pass the naval convoy green to green, NORDLAKE failed to comply with her obligation pursuant to Rule 9 to keep as near to the outer limit of the narrow channel which lay on her starboard side as was safe and practicable. Indeed from about C-12 she was navigating just outside the eastern limit of the narrow channel. Fortunately, she passed three warships green to green without mishap. However, by C-8 she had two warships (GODAVARI and VINDHYAGIRI) and a merchant ship (SEAEAGLE) fine on her port bow and there were no vessels on her starboard bow within the dredged channel. Her starboard side of the channel was clear. NORDLAKE, in breach of Rule 9, failed at C-8 to alter course to starboard to keep as near to the outer limit of the channel which lay on her starboard side as was safe and practicable.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was submitted on behalf of NORDLAKE that the master’s failure to comply with Rule 9 following the green to green agreement at C-16 and at C-8 was not a fault:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“The claimant’s primary case is that the [Mumbai] VTS had implicitly accepted at about [C-16.5] that the overall coordination which was to be applied to the naval convoy was that it should navigate on the western side of the channel and adopt a green to green passing with NORDLAKE which of necessity would navigate on the eastern side of the channel. Pursuant to Rule 2 of the Collision Regulations, those on board NORDLAKE had to have due regard to the special circumstances which had developed and, as matter of good seamanship, it was appropriate in these circumstances for them to continue with the “green to green” agreement with the Naval Convoy. The Claimants deny that they improperly used VHF as an aid to navigation and that on the facts of the case that they were in breach of rule 9 of the Collision Regulations.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Regulation 1 of the local regulations expressly provided that vessels were to comply with Rule 9 of the Collision Regulations (the narrow channel rule) and regulation 6 expressly provided that naval vessels were “to remain on the starboard side of channel always”. It is therefore unlikely that the local regulations contemplated that the VTS would sanction departures from Rule 9 of the Collision Regulations. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Reliance was placed on the references to the VTS <span style="font-style:italic">coordinating</span> the movement of traffic. Thus Part 5 of the Port Users Information deals with vessels calling at the port and provides that “final coordination and programme of vessel traffic movement will be decided by VTS (O) Mumbai.” Regulation 6 of the local regulations deals with the movement of naval vessels and states that “if vessels are in formation/convoy ………….prior information to VTS is necessary for overall coordination.” I do not consider that either reference to <span style="font-style:italic">coordination</span> by the VTS extended to directing how vessels should navigate in relation to each other or to approving how vessels should navigate in relation to each other. There is an exception to this with regard to large vessels (defined as in excess of 220m.). For example, they may only overtake other large vessels if directed by VTS (see Regulations 1 and 3). But even with large vessels there is no mention of the VTS directing them as to which side of the channel they should navigate. In my judgment <span style="font-style:italic">coordination</span> extended to such matters as the time at which vessels would enter the port rather than to navigation (see the Port Users Information Parts 3, 4 and 5). That is, it seems to me, the sense in which <span style="font-style:italic">coordination</span> is used in Regulation no.6. Since the paragraph in question follows immediately upon the paragraph which states that naval vessels “are to remain on the starboard side of channel always” it is unlikely that the reference to <span style="font-style:italic">coordination</span> was intended to empower the VTS to direct the side of the channel on which naval vessels were to navigate.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">VTS discussed overtaking with SEAEAGLE at C-17. SEAEAGLE was not a “large vessel” but it is possible that the regime with regard to large vessels was in practice applied to other vessels overtaking in the channel. There was, however, silence from VTS following the agreement at about C-16.5 between NORDLAKE and one of the warships that they would pass green to green. I do not consider that one can infer from silence that VTS “implicitly accepted” that the convoy was to navigate on the western side of the channel. Given the emphasis in the local Regulations on compliance with Rule 9 it is unlikely that any seaman would infer such acceptance from silence. There was no evidence from the master or pilot of NORDAKE that they so interpreted VTS’ silence. The suggestion that VTS should be regarded as having directed the convoy to navigate on the western side of the channel or as having consented to the convoy doing so in circumstances where the VTS had not communicated with any of the vessels in the convoy to inform them of such a radical change to the application of Rule 9 is so fraught with danger that it only has to be stated to be rejected. I therefore cannot accept the submission that there were special circumstances which, pursuant to Rule 2 of the Collision Regulations, made a departure from the Rules necessary to avoid immediate danger. In any event at C-16.5 there was no immediate danger. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The pilot of NORDLAKE reached an agreement by VHF with a warship (identified only as “the third warship in the column”) which was contrary to Rule 9 of the Collision Regulations. In the light of the observations of the Court of Appeal in <span style="font-style:italic">The Mineral Dampier</span> [2001] 2 Lloyd’s Rep. 419 at paragraphs 35-39 and of this court in <span style="font-style:italic">The Samco Europe</span> [2011] 2 Lloyd’s Rep. 579 at paragraph 55 there can be no doubt that whilst VHF may be used to exchange information it cannot be used to agree on a course of navigation which would conflict with the Collision Regulations. The use of VHF made by the pilot of NORDLAKE was therefore improper. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Having made an agreement contrary to Rule 9 at C-16.5 and, I accept, having passed three warships green to green without mishap, the pilot of NORDLAKE continued to act upon the basis of his improper agreement with the result that when, at C-8, he was confronted with two naval vessels and a merchant ship fine on his port bow, variously distant 1 to 1.5 miles, and no vessels in the channel to starboard, he made no attempt to keep to the side of the dredged channel which lay on his starboard side. Instead, at C-7 he informed a warship (it seems one of the three which he had passed green to green) that he would be passing green to green with all ships and he asked the warship to inform “the two – three warships on my port bow” to alter to port. The warship replied that she would pass on the message once again. But the dredged channel to the starboard of NORDLAKE was free. There was no reason why NORDLAKE should not have moved to starboard given that three vessels were ahead of her in their correct water and she was in her wrong water. At C-6 it seems that the pilot appreciated that his intended course of action was impractical. He said to the pilot on SEAEAGLE in Hindi that he did not think passing green to green with the warships ahead of him was possible. Yet NORDLAKE continued to navigate in her wrong water. It was not until about C-5 that NORDLAKE reduced her engines to slow ahead. At about the same time her pilot asked GODAVARI how she would like to pass. Although GODAVARI requested to pass green to green the pilot of NORDLAKE said that she must alter to starboard and GODAVARI agreed to pass red to red. NORDLAKE maintained her course and did not alter course to starboard. She did not alter course to starboard until after GODAVARI was passing NORDLAKE red to red. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my judgment NORDLAKE was required by Rule 9 at C-8 to navigate as near to the outer limit of the dredged channel as lay on her starboard side as was safe and practicable. The fact that the pilot had made improper use of VHF at C-16.5 by asking a warship to inform all other warships that NORDLAKE would pass all the warships green to green was not a special circumstance which justified a departure from Rule 9. Nor was his further improper use of VHF at C-7 a special circumstance which justified a departure from Rule 9. On neither occasion was a departure from the Rules necessary to avoid immediate danger.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Speed</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">NORDLAKE maintained her engines at half ahead until about C-5 when they were reduced to slow ahead. Her speed over the ground from C-8 until C-3.5 was in excess of 8 knots. Although her engines were reduced to dead slow ahead at C-2.5 before being increased again her speed did not fall below 7.3 knots. It was submitted that her speed was excessive in circumstances where she was proceeding outside the wrong side of the channel towards three oncoming vessels who remained, as they were entitled to do, outside their starboard side of the channel. In her defence it was submitted that NORDLAKE cannot be criticised for maintaining her speed at half ahead until about C-5 in circumstances where (i) the pilot had been informed at about C-7 (as he had been earlier at about C-16.5) that the warships would be asked to alter to port, (ii) GODAVARI had told SEAEAGLE at about C-7.5 (as she had at C-12) that she would move to port and (iii) the pilot reduced the engines of NORDLAKE to slow ahead at C-5 and to dead slow ahead (briefly) at C-2.5. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I asked the Elder Brethren the following question:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“At C-8, when NORDLAKE was navigating outside the dredged channel, beyond the outer limit of the dredged channel which lay on her portside, and was intending to continue to do so, and had VINDHYAGIRI extremely fine on her port distant about 1.5 miles, GODAVARI a little broader but still fine on her port bow distant about a mile and SEAEAGLE also on her port bow, a little broader than both warships, distant a little more than 1.6 miles, what was a safe speed for NORDLAKE pursuant to Rule 6 of the Collision Regulations.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Elder Brethren replied as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“In our opinion NORDLAKE should have reduced her speed at an earlier stage (at C-16 or before) as proper observation of radar would have clearly shown a developing close quarters situation with several inbound vessels. At C-8 NORDLAKE should have reduced speed through the water as quickly as possible while maintaining steerage way, perhaps even stopping her engine completely to reduce speed effectively.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I accept that advice. It accords with my opinion that at C-8, when  NORDLAKE was proceeding in her wrong water towards three vessels in their correct water, NORDLAKE, if she was not going to cross to the starboard side of the narrow channel, ought to have reduced her speed to no more than steerage way in order that she could navigate with caution. To achieve this as quickly as possible she ought to have stopped her engines. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Lookout</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">83.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is convenient to examine both the master’s lookout with regard to SEAEAGLE and VINDHYAGIRI and the pilot’s lookout with regard to those vessels.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">84.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The master claims to have noticed SEAEAGLE at a distance of about 4 miles. This would have been at about C-14. However, the next mention of SEAEAGLE in his statement is after GODAVARI had passed down his port side. He said SEAEAGLE was now about half a point on his port bow at a distance of between half and one mile. When GODAVARI passed down the port side of NORDLAKE at about C-2 SEAEAGLE was distant about one and half cables. This evidence suggests that the master’s lookout with regard to SEAEAGLE was not good and that he only paid attention to SEAEAGLE at about C-2. In fact it would appear that he appreciated the presence of SEAEAGLE a little earlier at about C-2.5 when, in response to the pilot on SEAEAGLE saying that he was “going more to port”, the master shouted “No.” Nevertheless I find that the master’s lookout with regard to SEAEAGLE was poor from C-14 until C-2.5.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">85.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">With regard to VINDHYAGIRI it was worse. The master accepts that he suddenly saw VINDHYAGIRI “emerging from behind” the port side of SEAEAGLE as the two merchant ships narrowly missed colliding with each other. This was at about C-1. The master claims that VINDHYAGIRI had been hidden behind SEAEAGLE so that he could not see her before that. But reference to the expert’s video shows that VINDHYAGIRI was never hidden by SEAEAGLE. Indeed, had a careful lookout been kept visually or by radar the master would have observed that the bearing of VINDHYAGIRI from NORDLAKE remained constant from C-8 until about C-0.5, a clear sign of a risk of collision. The master never appreciated this.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">86.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The pilot has not provided a statement. The standard of his lookout must therefore be inferred from what is known of the navigation of NORDLAKE. The pilot was aware of SEAEAGLE at about C-6 when he called her by VHF. At this time SEAEAGLE was distant a little more than a mile and fine on the port bow of NORDLAKE. The pilot said that he would be passing the warships green to green but added that he did not think that was “possible”. Although the question was asked by the pilot of SEAEAGLE there was no discussion as to how the two merchant ships would pass. Some 2 and half minutes at or a little before C-3.5 the pilot of SEAEAGLE suggested that the vessels pass green to green and the pilot of NORDLAKE agreed. When at C-2.5 the pilot on SEAEAGLE said that he was “going more to port” the master of NORDLAKE shouted “No” and the pilot said “Go more to starboard.” This suggests that until C-2.5 the pilot, like the master, had not appreciated that a green to green passing would require SEAEAGLE to cross ahead of NORDLAKE. He may well have been aware that caution was required because he reduced the engines of NORDLAKE to dead slow ahead at about this time but the reactions of the master and pilot clearly show that they had not appreciated the real danger of collision. Thus the pilot, like the master, cannot have been keeping a good lookout with regard to SEAEAGLE.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">87.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">With regard to VINDHYAGIRI the pilot had sought to contact her at about C-8 (when he addressed a warship “right ahead of me now”). He did not however have a conversation with her. At C-7 he informed a warship that he could see “two-three warships on my port bow”. One of those must have been VINDHYAGIRI. He requested that the warships be asked to alter to port. VINDHYAGIRI did not alter her heading to port until somewhat later. The pilot’s statement to the pilot of SEAEAGLE at C-6 that he did not think it “possible” to pass the warships green to green suggests that he appreciated that they had not moved to port to permit a green to green passing and the reduction of his vessel’s engines to slow ahead at C-5 suggests that he was aware of the need for caution. But had a good visual or radar lookout been kept the pilot would have appreciated that the bearing of VINDHYAGIRI from NORDLAKE did not appreciably alter and that there was therefore a risk of collision. There is no indication that the pilot ever appreciated this. He certainly did not alert the master to the risk because he only became aware of VINDHYAGIRI after a collision with SEAEAGLE had been narrowly avoided. I infer that the pilot had not appreciated the risk of collision with VINDHYAGIRI. If he had done so he would surely have informed the master of the risk before C-1. So I must conclude that the pilot did not keep a good lookout with regard to VINDHYAGIRI. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="text-align:left">
+	      <span style="text-decoration:underline">The faults of SEAEAGLE  </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">88.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Although SEAEAGLE was in her correct water at all times and from C-7 her engines were stopped causing her speed over the ground to fall from about 8 knots at C-7 to about 5 knots at C-3 a number of faults were alleged against her. Those in counsel’s written submissions may be summarised as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">SEAEAGLE ought not to have agreed to overtake VINDHYAGIRI at C-16.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">SEAEAGLE ought not to have requested GODAVARI at about C-12 to overtake her on her starboard side.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">SEAEAGLE, having agreed to overtake GODAVARI on her starboard side, failed to alter to starboard in due time or sufficiently.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">SEAEAGLE, having been requested by GODAVARI at about C-5.5, to overtake her on her port side, wrongly acceded to this request, instead of telling her that she would go to starboard. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">SEAEAGLE failed to keep a good lookout.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">vi)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">SEAEAGLE wrongly requested a green to green passing with NORDLAKE at or a little before C-3.5.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">vii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">SEAEAGLE improperly attempted to cross ahead of NORDLAKE, a vessel crossing from her starboard side, and failed to keep out of the way of NORDLAKE in breach of Rule 15 of the Collision Regulations, </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">89.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In addition it was suggested in cross-examination that SEAEAGLE ought to have stopped her engines earlier than she did (which was at C-7) and that at C-4 SEAEAGLE ought to have altered course to port and kicked her engines ahead. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The overtaking agreements at C-16 and C-12</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">90.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At C-17 Mumbai VTIS had informed SEAEAGLE that there was a warship ahead and that, after she had confirmed with the warship where she was heading, she could overtake her. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">91.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At about C-16 SEAEAGLE requested the intention of VINDHYAGIRI and was told she was going to the naval tidal basin. VINDHYAGIRI said that SEAEAGLE could overtake her on her starboard side. SEAEAGLE agreed to do so. SEAEAGLE was making good a speed over the ground of about 8 knots with her engines at slow ahead. She was in the course of altering her heading to port so as to follow the direction of the dredged channel but outside it to the east. She had seen NORDLAKE and was aware, presumably as a result of keeping a good aural lookout, that NORDLAKE was intending to pass the inbound naval vessels green to green. The speed of VINDHYAGIRI at this time is unknown but it is likely to have been of the order of 3.5 knots which it was some minutes later. Her position at this time is unknown but is likely to have been just to the east of the dredged channel as it was some minutes later.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">92.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At C-12 SEAEAGLE was on a heading of 21 degrees following the direction of the dredged channel but outside it, beyond the eastern edge of the dredged channel. Her engines were at slow ahead and she was making about 8.3 knots over the ground. GODAVARI was fine on her port bow less than a mile distant. SEAEAGLE was aware of NORDLAKE (which was about 2.75 miles distant) and that she intended to pass the naval vessels green to green. GODAVARI was making about 2 knots over the ground. It was in these circumstances that SEAEAGLE requested permission to pass her on her starboard side.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">93.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was submitted that both agreements were a breach of good seamanship because they were likely, when executed, to bring NORDLAKE, SEAEAGLE, VINDHYAGIRI and GODAVARI into a close quarters situation. It was said that if VINDHYAGIRI and GODAVARI had been keeping a good aural lookout they should have been expecting NORDLAKE to pass starboard to starboard.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">94.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In defence of SEAEAGLE it was submitted that there was no breach of good seamanship in agreeing to overtake either vessel. With regard to the C-16 agreement it was said (i) that VINDHYAGIRI was proceeding very slowly and had initiated a passing agreement, (ii) that there was no navigational reason why VINDHYAGIRI would have expected NORDLAKE to pass down her starboard side and, with regard to the C-12 agreement, (i) that GODAVARI was proceeding at a very slow speed indeed and (ii) that there was no navigational reason why GODAVARI would have expected NORDLAKE to pass down her starboard side. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">95.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Since this is a matter of good seamanship I have asked the Elder Brethren the following questions:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“(a) Was it in breach of good seamanship for SEAEAGLE at about C-16 to agree to overtake VINDHYAGIRI on her starboard side in the circumstances just described.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(b) Was it in breach of good seamanship for SEAEAGLE   shortly after C-12 to request permission to overtake GODAVARI on her starboard side in the circumstances just described (and illustrated by the video shot at tab 7 of Appendix A to the Mr. Persey’s Skeleton Argument).”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">96.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Elder Brethren replied as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“In our opinion, it was not in breach of good seamanship for SEAEAGLE at about C-16 to agree to overtake VINDHYAGIRI on her starboard side; neither was it in breach of good seamanship for SEAEAGLE shortly after C-12 to request permission to overtake GODAVARI who was proceeding at such a low speed (much less than SEAEAGLE’s navigable minimum) that SEA EAGLE had no choice but to overtake the two warships. The manoeuvre was completed with good seamanship. ”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">97.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">That advice coincides with my own view. Both naval vessels were proceeding very slowly and NORDLAKE was some distance away. In this regard it is of interest to note that the master, when it was suggested to him that he ought not to have agreed to overtake VINDHYAGIRI given that NORDLAKE was ahead, replied that “NORDLAKE is still far away”.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">98.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In their comments upon this advice from the Elder Brethren Counsel for NORDLAKE did not accept their advice and submitted that SEAEAGLE had a choice; she could have slowed right down at C-16 to maintain steerage way. To reduce her speed to the minimum at which steerage way could be maintained required SEAEAGLE to stop her engines. That is because at dead slow ahead her speed was 8.7 knots and her minimum steerage way was 4 knots. Thus the criticism of SEAEAGLE’s agreement to overtake is necessarily bound up with the criticism of her speed. As it was put in counsel’s closing submissions SEAEAGLE ought to have “waited behind” the two naval vessels.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">99.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I consider this suggestion unrealistic. SEAEAGLE’s engines were at slow ahead and had been so since C-21. Even with her engines at slow ahead she was making good over 8 knots over the ground whereas the naval vessels were proceeding at a much slower speed. Overtaking the naval vessels was a natural step to take in those circumstances and the VTS expressly approved such a manoeuvre. There was no cause at C-16 to stop her engines. Counsel for NORDLAKE referred to the Elder Brethren’s advice with regard to NORDLAKE that she ought to have reduced her speed at C-16 or after as there was a close quarters situation developing. It was suggested that there was a lack of consistency in their advice to the court. But the positions of the two vessels are not comparable. NORDLAKE was in her wrong water and SEAEAGLE was in her correct water.  The reason why a close quarters situation was developing was because NORDLAKE was in her wrong water. Notwithstanding that, NORDLAKE’s engines at C-16 were at full ahead causing her to make in excess of 12 knots over the ground. By contrast SEAEAGLE’s engines were already at slow ahead at C-16 causing her to make 8 knots or more over the ground. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">100.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Since I had asked the Elder Brethren about the speed of NORDLAKE and in view of the submissions made by counsel for NORDLAKE I decided to ask the Elder Brethren whether the speed of SEAEAGLE at C-8 was safe. At about C-8 SEAEAGLE was proceeding with her engines at slow ahead making good a speed of about 8.5 knots over the ground. Her engines had been at slow ahead since C-21. NORDLAKE was about 1.6 miles ahead of her on her starboard bow (as illustrated in the plot for C-8 at tab 5 to Mrs. Blackburn’s Submissions). VINDHYAGIRI was on her port bow distant less than 2 cables and GODAVARI was on her starboard bow distant less than 6 cables. At about C-7 SEAEAGLE stopped her engines. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">101.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I asked the Elder Brethren the following question:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“What was a safe speed for SEAEAGLE at C-8 pursuant to Rule 6 of the Collision Regulations? Did good seamanship require her to have reduced her engines to dead slow ahead or to have stopped them before C-8. If so, when? ”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">102.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Elder Brethren replied:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“In our opinion at C-8 SEAEAGLE was proceeding at a safe speed, having established that she could pass to starboard of VINDHYAGIRI and then GODAVARI. However, given the master’s uncertainty about GODAVARI’s movements, in our opinion, it was appropriate for SEAEAGLE to stop her engines at about C-7 in order to assess the situation. We would have expected SEAEAGLE to increase speed to pass the warships as quickly as possible, but we understand the Master’s caution in consideration of the uncertainty about GODAVARI’s movements.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">103.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I agree with and accept that advice. It coincides with my own view.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">104.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">When it was suggested to the master that he ought to have stopped his engines earlier than he did the master replied that his vessel was on time charter and that he was under commercial pressure. That was a candid answer and was relied upon by counsel for NORDLAKE in support of their submissions. But it does not appear that the master succumbed to commercial pressure.  At C-12, when SEAEAGLE agreed to overtake GODAVARI, NORDLAKE was distant almost 3 miles. Her engines were at slow ahead. There was no cause then to stop engines. As the master said when cross-examined “we have still a safe distance and I can control my engine………we are still running on a slow speed”. This was, in my judgment, prudent. It was not a decision of a master succumbing to commercial pressure. By contrast, at C-7 when SEAEAGLE did stop her engines, NORDLAKE was about 1.4 miles distant.  The master said in cross-examination that his engines were stopped at that time because he was worried about NORDLAKE. He wanted “slow movement on to avoid collision” and “time to alter the course to starboard or to port”. This was, it seemed to me, a prudent decision at C-7 and manifestly not that of a master succumbing to commercial pressure.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">105.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The suggestion was also put to the master in cross-examination that SEAEAGLE could have managed to keep astern of VINDHYAGIRI without having to stop her engines. Counsel for NORDLAKE submitted in their comments on the advice of the Elder Brethren that the master had accepted that proposition. I am not sure that he did. I suspect that his answer “yes, my Lord” (before making a point about the speed of NORDLAKE) meant no more than he noted the suggestion made. At the time counsel may also have thought so because the master was said to have “carefully avoided answering the question”. In any event keeping astern of the naval vessels when they were proceeding at a slower speed than SEAEAGLE would be expected to achieve even with her engines at dead slow ahead was unrealistic. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Failure to alter course to starboard</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">106.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The submission made by counsel for NORDLAKE was that SEAEAGLE, having agreed to overtake GODAVARI on her starboard side at C-12, failed to alter to starboard herself in due time or sufficiently. It is true that SEAEAGLE, having agreed to overtake GODAVARI on her starboard side, did not alter her heading to starboard but continued altering her heading to port having rounded the bend in the channel. However, the suggested criticism of SEAEAGLE must take account of the circumstances in which SEAEAGLE found herself after having agreed to overtake GODAVARI on her starboard side, something which counsel’s submission failed to do. Given that SEAEAGLE was already about 2 cables beyond the dredged channel to the east and that there were vessels anchored in the anchorages to the east of the dredged channel I do not consider that SEAEAGLE can fairly be criticised for not altering her course to starboard.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Agreeing to overtake on the port side of GODAVARI at C-5.5</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">107.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The submission made by counsel for NORDLAKE was that SEAEAGLE wrongly acceded to the request of GODAVARI to be overtaken on her port side. This criticism must take account of the circumstances in which SEAEAGLE found herself at the time, something which counsel’s submission did not do. By C-5.5 GODAVARI was about a cable to the east of the channel and was on the starboard bow of SEAEAGLE. It was in these circumstances that SEAEAGLE agreed to GODAVARI’s request to be overtaken on her port side. I do not consider that SEAEAGLE can fairly be criticised for agreeing to the suggestion in those circumstances. It was suggested in cross-examination that in circumstances where GODAVARI had not gone to port when there was an agreement to overtake her on her starboard side SEAEAGLE ought not to have relied upon her to go to starboard. The master replied that GODAVARI “is going to starboard”. The expert’s video shows that GODAVARI had indeed moved further to starboard away from the dredged channel. It is true that shortly afterwards GODAVARI altered her heading to port but, as the master emphasised in his evidence, the engines of SEAEAGLE were stopped so that he could monitor the position and decide what to do. I therefore do not consider that SEAEAGLE can be blamed for agreeing to overtake her on her port side. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Failure to keep a good lookout</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">108.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This allegation is based upon the evidence of the master of SEAEAGLE in his statement to the effect that at about C-5 SEAEAGLE and NORDLAKE were end on. He was cross-examined about this and accepted that they were not. On the contrary NORDLAKE was on the starboard bow of SEAEAGLE. In the light of the master’s mistaken recollection that the vessels were end on at about C-5 I accept that his appreciation of what he saw was defective which suggests that his lookout was not as careful as it ought to have been. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Requesting a green to green passing</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">109.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In circumstances where the narrow channel rule applied SEAEAGLE ought not to have requested (and NORDLAKE ought not to have agreed) a green to green passing. The request was made a little before C-3.5 and SEAEAGLE   gave effect to it by altering her heading to port. It was accepted on her behalf that the requested green to green passing was a fault. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Attempting to cross ahead; breach of the crossing rule</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">110.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was said that after the green to green agreement SEAEAGLE altered to port and improperly attempted to cross ahead of NORDLAKE. This was said to be a breach of the crossing rule. Mr. Persey submitted, in reliance upon <span style="font-style:italic">The Glenfalloch</span> [1970] 1 Lloyd’s Rep. 247 at p.255 per Brandon J. that where one ship is proceeding along a narrow channel in one direction and another ship is proceeding along the same channel in the other direction, even though their courses are crossing so as to involve risk of collision, the narrow channel governs the case and not the crossing rules. I accept that submission. But it does not really assist SEAEAGLE because her porting was the result of her improper agreement to pass green to green in breach of the narrow channel rule.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">111.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In her oral submissions Mrs. Blackburn advanced the criticism that SEAEAGLE ought to have moved boldly to port, assisted by a kick on her engines, at about C-4. This seemed to be contrary to the sense of her written submissions which were to the effect that she ought to have moved to starboard. At about C-4 SEAEAGLE was in her correct water to the east of the dredged channel and NORDLAKE was distant about 7 cables fine on her starboard bow. Her engines were stopped and her speed was falling. At C-4 it was about 5.8 knots. To move boldly to port assisted by a kick on her engines would involve her crossing ahead of NORDLAKE which, as Mrs. Blackburn had correctly submitted in writing, she ought not to have attempted to do. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The faults of VINDHYAGIRI</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">112.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">VINDHYAGIRI is not a party to this action and was not represented. Both parties to the action said that she was at fault and I must therefore consider the allegations against her. Any conclusions I reach cannot bind her in any other proceedings. They can only be based upon the evidence which has been adduced before this court which does not include any evidence from those on board VINDHYAGIRI. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">113.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was submitted that VINDHYAGIRI was at fault in that:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought not to have agreed to be overtaken at C-16 by SEAEAGLE   on her starboard side.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought to have been aware of the green to green passing agreement reached between NORDLAKE and one of the warships and altered course to port so as to navigate on the western side of the channel.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought to have communicated more with SEAEAGLE, NORDLAKE the other warships and/or Mumbai VTS.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She failed to keep a good lookout.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought not to have gone to port between C-1.5 and C-1. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The agreement to overtake</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">114.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This is the same argument as was advanced in relation to SEAEAGLE’s decision to overtake. I therefore asked the Elder Brethren the following question:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Does your answer [with regard to SEAEAGLE] also apply to the submission that VINDHYAGIRI was at fault in permitting SEAEAGLE to overtake her on her starboard side ?”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">115.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Elder Brethren replied:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“In our opinion, VINDHYAGIRI was not at fault in permitting SEAEAGLE to overtake her on her starboard side, given the earlier agreement that the warships would pass green to green with NORDLAKE. The agreement to overtake on the starboard side of VINDHYAGIRI, who was navigating at such a low speed (less than Dead Slow Ahead speed of the inbound SEAEAGLE) and intending a port turn into the Naval Basin made this agreement perfectly reasonable.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">116.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I agree that VINDHYAGIRI was not at fault in permitting SEAEAGLE to overtake her on her starboard side. Given the respective speeds of the vessels overtaking was the natural step to take for SEAEAGLE. The conversation in which VINDHYAGIRI told SEAEAGLE that she could overtake on her starboard side took place about half a minute after NORDLAKE had informed another warship that she wished to pass all warships green to green. If that conversation was heard by VINDHYAGIRI it may well explain her request to be overtaken on her starboard side. But even if that wish had not been expressed (or heard by VINDHYAGIRI) the request to be overtaken on her starboard side would not have been a fault. It is more likely than not that at C-16 SEAEAGLE was approaching from the starboard quarter of VINDHYAGIRI and so a request to be overtaken on her starboard side was the natural choice. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">117.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Counsel for NORDLAKE said that there was an inconsistency between this answer and the answer of the Elder Brethren with regard to the speed of NORDLAKE that at C-16 there was a developing close quarters situation. But NORDLAKE and VINDHYAGIRI were not in comparable positions. NORDLAKE was in her wrong water (hence the developing close quarters situation) and proceeding at full speed ahead. It is unsurprising that in those circumstances the Elder Brethren advised that NORDLAKE ought to have reduced her speed. By contrast VINDHYAGIRI was in her correct water and was probably proceeding at a slow speed (6 knots was suggested by the master of SEAEAGLE for the convoy but VINDHYAGIRI’s speed may well have been less). The decision to overtake was not hers but that of SEAEAGLE.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">118.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Counsel also suggested that the agreement to be overtaken on her starboard side cannot have been “perfectly reasonable” because SEAEAGLE could not overhaul VINDHYAGIRI prior to C-2. But it was not known at C-16 that at C-7 it would be necessary for SEAEAGLE to stop her engines.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Failing to navigate on the western side of the dredged channel</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">119.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The submission that VINDHYAGIRI ought to have navigated on the western side of the dredged channel is based upon the suggestion that VINDHYAGIRI was or ought to have been aware of the green to green passing agreement reached between NORDLAKE and one of the warships. If the warship which agreed a green to green passing with NORDLAKE and said that it would pass on the message to the warships in the convoy did so it is likely that VINDHYAGIRI, if she had been keeping a good aural lookout, would have heard such message. However, at C-16.5 NORDLAKE was probably 4 miles or more ahead of VINDHYAGIRI. Moreover, being a naval vessel. VINDHYAGIRI was obliged by Local Regulation No.6 “to remain on the starboard side of channel always.” I do not consider that hearing the green to green message at C-16.5 required VINDHYAGIRI to navigate on the western side of the channel. Even if VINDHYAGIRI heard the later message from the warship at C-7 to alter to port I do not consider that she was obliged to alter course to port to navigate on the western side of the channel. To do so would be a breach of Rule 9 of the Collision Regulations and Regulation 6 of the local regulations. For the same reason I do not think that observation of the three warships ahead passing green to green with NORDLAKE required her also to navigate on the western side of the channel.  Such an observation would have been an unsure foundation on which to decide not to comply with the narrow channel rule. Regulation 6 of the local regulations expressly required that naval vessels “are to remain on the starboard side of the channel always”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">120.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Reliance was placed upon the fact that the pilots of NORDLAKE and SEAEAGLE thought that the naval ships were “blocking the channel” and were creating “the problem.” But in so far as these comments indicated that the pilots thought the naval ships should move to the western side of the channel so that they could pass green to green with NORDLAKE such opinions were in conflict with Rule 9 of the Collision Regulations and Regulation 6 of the local rules. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">121.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">What her aural and visual lookout required was that she should proceed at a slow speed and keep a good lookout. As to her speed VINDHYAGIRI proceeded at about 3.5 knots from C-8 though she may have increased her speed a little between C-5 and C-3. She was proceeding at a slow speed. I shall consider her lookout below.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Failure to communicate in breach of Regulation 6 of the local rules.</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">122.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Regulation 6 of the local rules provides that naval vessels must report to VTS about their movements well in time. There is no evidence that VINDHYAGIRI did not do so. The Regulation also provides that such vessels are to maintain communication on channel 12 at all times during passage. There is no evidence that VINDHYAGIRI did not have channel 12 open. (I deal below with the suggestion that she ought to have heard and acted upon the conversation between SEAEAGLE and VINDHYAGIRI at C-2.5). Finally the regulation provides that such vessels must communicate effectively with merchant vessels by identifying themselves. VINDHYAGIRI did so at C-16 when speaking to SEAEAGLE and at C-1 when speaking to NORDLAKE. On both occasions she identified herself as “Warship Foxtrot 42”. It may be that this form of identification may not always be sufficient but it does not appear that there was in fact any doubt as to who was speaking to whom.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Failure to keep a good lookout and going to port between C-1.5 and C-1.  </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">123.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is convenient to take both of these allegations together. Had a good visual or radar lookout been kept by VINDHYAGIRI from C-8 those on board her would have concluded that there was a risk of collision with NORDLAKE. She was already proceeding at a slow speed (though she may have increased speed between C-5 and C-3) and could not alter course significantly to starboard whilst SEAEAGLE was overtaking her. It is said that had a good aural lookout been kept on VHF VINDHYAGIRI would have learnt at C-2.5 that NORDLAKE and SEAEAGLE were passing red to red. The conversation at that time was confusing. When asked by SEAEAGLE whether NORDLAKE wanted to pass port to port NORDLAKE responded “No, green to green”. After the VTIS had intervened to clarify matters NORDLAKE replied: “Yeah, yeah, port to port” (though the transcript added that that was not clear). I am not persuaded that this conversation, to which VINDHYAGIRI was not party, was one on which that vessel could safely base its navigation. Between C-1.5 and C-1 she altered course significantly to port and increased her speed. Such action was designed to take her across to the western side of the channel and was therefore a fault. If the presence of SEAEAGLE on her starboard bow prevented her from altering course to starboard she ought to have put her engines astern and taken all way off. The fact that she did not do so and instead ported and attempted to cross ahead of NORDLAKE suggests that she had not been keeping a good lookout.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The faults of GODAVARI</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">124.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As with VINDHYAGIRI my findings with regard to the fault of GODAVARI cannot be binding on GODAVARI because she was not party to this action and there was no evidence from her. The following faults were alleged:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought not to have permitted SEAEAGLE to overtake her on her starboard side shortly after C-12.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought to have been aware of the green to green passing agreement reached between NORDLAKE and one of the warships and altered course to port so as to navigate on the western side of the channel.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought not to have requested SEAEAGLE to overtake her on her port side shortly after C-6.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Having requested to be overtaken on her port side she failed to alter course to starboard sufficiently or at all to permit a safe overtaking by SEAEAGLE and safe passing with NORDLAKE.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought not to have requested a green to green passing with NORDLAKE when it was no longer safe to do so and ought not to have ported after C-5.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">vi)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought to have communicated more with SEAEAGLE, NORDLAKE the other warships and/or Mumbai VTS.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">vii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">She ought to have increased speed and turned to starboard shortly after C-4.5 to provide more searoom for the other vessels.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The agreement to overtake at C-12</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">125.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This is the same argument as was advanced in relation to SEAEAGLE’s decision to overtake. I therefore asked the Elder Brethren the following question:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Does your answer [with regard to SEAEAGLE] also apply to the submission that GODAVARI was at fault in permitting SEAEAGLE  to overtake her on her starboard side ?”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">126.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Elder Brethren replied:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“In our opinion, GODAVARI was not at fault in permitting SEA EAGLE to overtake her on her starboard side given the earlier agreements that she would overtake on VINDHYAGIRI’s starboard side and that the warships would pass green to green with NORDLAKE.<span style="color:#00B050">”</span></p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">127.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I agree that GODAVARI was not at fault in permitting SEAEAGLE to overtake her on her starboard side. Given the respective speeds of the vessels overtaking was the natural step to take for SEAEAGLE. Whether or not GODAVARI was aware of the earlier agreement between VINDHYAGIRI and SEAEAGLE or of NORDLAKE’s wish to pass all naval vessels green to green the request to be overtaken on her starboard side was not a fault. It is more likely than not that at C-12 SEAEAGLE was approaching from the starboard quarter of GODAVARI and so a request to be overtaken on her starboard side was the natural choice. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">128.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Counsel for NORDLAKE said that there was an inconsistency between this answer and the answer of the Elder Brethren with regard to the speed of NORDLAKE that there was a developing close quarters situation by C-16. But NORDLAKE and GODAVARI were not in comparable positions. NORDLAKE was in her wrong water (hence the developing close quarters situation) and proceeding at full speed ahead. It is unsurprising that in those circumstances the Elder Brethren advised that NORDLAKE ought to have reduced her speed. By contrast GODAVARI was in her correct water and was probably proceeding at 2 knots. The decision to overtake was not hers but that of SEAEAGLE.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Failing to navigate on the western side of the dredged channel</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">129.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The submission that GODAVARI ought to have navigated on the western side of the dredged channel is based upon the suggestion that GODAVARI was or ought to have been aware of the green to green passing agreement reached between NORDLAKE and one of the warships. Assuming that this ought to have been heard NORDLAKE would have been 3 miles or more distant from GODAVARI at C-16.5.  Moreover, being a naval vessel, GODAVARI was obliged by Local Regulation No.6 “to remain on the starboard side of channel always.” I do not consider that hearing the green to green message agreement at C-16.5 required VINDHYAGIRI to navigate on the western side of the channel. Even if GODAVARI heard the later message at C-7 to alter to port I do not consider that she was obliged to alter course to port to navigate on the western side of the channel. To do so would have been a breach of Rule 9 of the Collision Regulations and Regulation 6 of the local rules. For the same reason I do not think that observation of the three warships ahead passing green to green with NORDLAKE required her also to navigate on the western side of the channel.  Such an observation would have been an unsure foundation on which to decide not to comply with the narrow channel rule. Regulation 6 of the local regulations expressly required that naval vessels “are to remain on the starboard side of the channel always”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">130.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Reliance was placed upon the fact that the pilots of NORDLAKE and SEAEAGLE thought that the naval ships were “blocking the channel” and creating “the problem.” But in so far as these comments indicated that they thought the naval ships should move to the western side of the channel so that they could pass green to green with NORDLAKE such opinions were in conflict with Rule 9 of the Collision Regulations and Regulation 6 of the local rules.      </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The agreement to overtake at C-6 on her port side</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">131.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By C-5.5 GODAVARI was about a cable to the east of the channel and was on the starboard bow of SEAEAGLE. It was in these circumstances that GODAVARI requested SEAEAGLE to overtake her on her port side. I do not consider that GODAVARI can fairly be criticised for making this request in those circumstances. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Failure to alter course to starboard sufficiently or at all to permit a safe overtaking by SEAEAGLE and safe passing with NORDLAKE</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">132.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">GODAVARI does not appear to have altered her heading further to starboard but she did continue on a heading of about 40 degrees which took her further away from the dredged channel. I do not consider that she was obliged to alter her heading further to starboard than 40 degrees. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The request for a green to green passing at C-4.5 and subsequent alteration of heading to port.  </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">133.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"> At C-4.5 GODAVARI requested a green to green passing with NORDLAKE. Although the conversation ended with an agreement for a red to red passing GODAVARI in fact altered her heading significantly to port (from about 40 degrees to about 17 degrees) and increased her speed. A green to green passing required GODAVARI to cross ahead of NORDLAKE when NORDLAKE was about 4 cables on her port bow. This decision was unsafe and unseamanlike. However, GODAVARI quickly had second thoughts and by C-2.5 her heading was changed boldly to starboard with the result that she passed NORDLAKE red to red at a distance of under 1 cable.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Failure to communicate in breach of Regulation 6 of the local rules.</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">134.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Regulation 6 of the local rules provides that naval vessels must report to VTS about their movements well in time. There is no evidence that GODAVARI did not do so. The Regulation also provides that such vessels are to maintain communication on channel 12 at all times during passage. There is no evidence that GODAVARI did not have channel 12 open. Finally the regulation provides that such vessels must communicate effectively with merchant vessels by identifying themselves.  GODAVARI identified herself at C-5.5 when speaking to SEAEAGLE and at C-4.5 when speaking to NORDLAKE as “Foxtrot 20”. It may be that this form of identification may not always be sufficient but it does not appear that there was in fact any doubt as to who was speaking to whom. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Failure to increase speed and turn to starboard shortly after C-4.5.</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">135.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I have already held that GODAVARI was at fault in going to port after C-4.5. She altered course to starboard shortly after that. Her speed had been increased when going to port.    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline"> The faults of the “lead” warship</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">136.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was alleged that another warship, described by counsel for NORDLAKE as the “Lead Warship,” was also at fault. The “Lead Warship” was the warship with whom NORDLAKE communicated and agreed a green to green passing at C-16. In addition that warship agreed to inform the other warships of the NORDLAKE’s wish to pass them green to green. It is said that the Lead Warship failed to inform the other warships of that wish and failed to instruct them prior to C-11 to move to the western side of the dredged channel. The agreement by this warship to pass NORDLAKE green to green was in breach of the narrow channel rule and was a fault. However, good seamanship cannot require one naval vessel to advise other naval vessels that NORDLAKE wished to pass them green to green in breach Rule 9 of the Collision Regulations and Regulation 6 of the local rules. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Causation</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">137.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">NORDLAKE was guilty of three faults; breach of Rule 9 (the narrow channel rule), breach of Rule 6 (safe speed) and breach of Rule 5 (look out). The causative faults all occurred at and after C-8. Thus the causative breach of Rule 9 was at C-8 when NORDLAKE had vessels ahead of her fine on her port bow, including VINDHYAGIRI at a distance of about 1.5 miles, and none to starboard. She then failed to stop her engines and to proceed with caution. Her causative breach of poor lookout was from at least C-8 when she failed to appreciate a clear risk of collision. It may be that her failure to navigate at a safe speed was the result of her poor lookout. All three faults were causative in that the breach of Rule 9 brought about a close quarters situation and her unsafe speed and poor lookout exacerbated the damage at collision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">138.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">VINDHYAGIRI was guilty of two faults; poor lookout and an attempt to cross ahead of NORDLAKE towards the western side of the channel by altering to port at C1.5-C-1. It is however likely that the second fault was the result of the first. These faults were causative of the collision. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">139.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Both GODAVARI and SEAEAGLE were at fault but their faults did not cause either vessel to collide with NORDLAKE. The question is whether their faults were causative of the collision which occurred between NORDLAKE and VINDHYAGIRI.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">140.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">GODAVARI was guilty of altering her heading significantly to port and of increasing her speed at C-4.5. However, she altered back significantly to starboard by C-2.5 and so avoided collision with NORDLAKE. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">141.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">SEAEAGLE was guilty of three faults: a poor lookout at about C-5, requesting a green to green passing with NORDLAKE at C-3.5 and going to port immediately thereafter (though only for a very short time). These faults did not cause a collision between NORDLAKE and SEAEAGLE because that was avoided by NORDLAKE going hard starboard at the last and by SEAEAGLE putting her engines full astern at the last. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">142.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It seems to me that the faults of both vessels in going to port, GODAVARI at C-4.5 and SEAEAGLE at C-3.5, probably contributed to the collision in that those movements distracted NORDLAKE. Had both vessels not done so NORDLAKE would probably have seen VINDHYAGIRI a little earlier than she did and may have avoided a collision with her. Of course, she should have appreciated the risk of collision long before that but the faults of GODAVARI and SEAEAGLE probably distracted the attention of those on board NORDLAKE.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">143.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The “Lead Warship” was at fault in agreeing a green to green passing with NORDLAKE at C-16.5. Happily this fault did not cause a collision between the “Lead Warship” and NORDLAKE. I accept that that agreement (together with the warship’s acceptance of NORDLAKE’s request to pass on to other naval vessels that NORDLAKE wished to pass green to green with all of the naval vessels) was part of the background against which the later collision occurred. But it was not an effective cause of that collision. It was an “introductory” matter, an “antecedent”; see <span style="font-style:italic">The Peter Benoit</span> (1915) 13 Asp.MLC 203 at p.208. At C-16.5 VINDHYAGIRI was of the order of 4 miles distant. At C-8, when VINDHYAGIRI was about 1.5 miles distant, NORDLAKE’s clear duty pursuant to Rule 9 of the Collision Regulations was to go to the starboard side of the dredged channel. NORDLAKE’s decision to breach Rule 9 was its own decision and not the fault of any other vessel. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Apportionment of liability</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">144.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The collision between NORDLAKE and VINDHYAGIRI was caused by the fault of four vessels, namely, NORDLAKE, VINDHYAGIRI, GODAVARI and SEAEAGLE. It is therefore necessary for the court to consider the question left open by Brandon J. in the <span style="font-style:italic">Bovenkerk</span> [1973] 1 Lloyd’s Rep. 63, namely, where one of the vessels which is at fault is not before the court, can the court take into account the degree to which that vessel was at fault. Brandon J. regarded this question as “an open question of some difficulty” (see his article <span style="font-style:italic">Apportionment of Liability in British Courts under The Maritime Conventions Act 1911</span> [1977] 51 Tulane Law Review 1025 at p.1036.) </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">145.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The text of section 187 of the Merchant Shipping Act 1995 is not identical to the language of section 8 of the Maritime Conventions Act 1911 but it is not materially different. It provides as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Where, by the fault of two or more ships, damage or loss is caused to one or more of those ships, to their cargoes or freight, or to any property on board, the liability to make good the damage or loss shall be in proportion to the degree in which each ship was in fault.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">146.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The present case is one where by the fault of four ships damage was caused to two ships. The Act provides that in such a case the liability to make good that damage shall be in proportion to the degree in which each ship was in fault. In their action the Owners of NORDLAKE seek a judgment pursuant to which they seek to hold the Owners of SEAEAGLE liable for the damage to NORDLAKE and VINDHYAGIRI. In their action the Owners of SEAEAGLE  seek a judgment pursuant to which they seek to hold the Owners of NORDLAKE liable for the damage to NORDLAKE and VINDHYAGIRI. In those actions both NORDLAKE and SEAEAGLE are entitled to require, pursuant to section 187, that their liability for such damage “shall be in proportion to the degree in which each ship was at fault.” Unless account is taken by the court of the degree in which VINDHYAGIRI and GODAVARI were at fault the proportions in which NORDLAKE and SEAEAGLE are held liable for the damage will exceed the degree in which NORDLAKE and SEAEAGLE were at fault. That would be contrary to section 187. My understanding of that section therefore, in circumstances where the damage to NORDLAKE and VINDHYAGIRI has been caused by the fault of  NORDLAKE, SEAEAGLE, VINDHYAGIRI and GODAVARI, is that, when giving judgment in the two actions which have been commenced in this court, the court must take into account the degree to which VINDHYAGIRI and GODAVRI were at fault in addition to the degree in which NORDLAKE and SEAEAGLE were at fault. Of course the court cannot give judgment against VINDHYAGIRI and GODAVARI to make good the damage in proportion to the degree in which those vessels were at fault because those vessels were not party to either action before the court. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">147.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Brandon J.’s understanding of section 8 of the Maritime Conventions Act and his knowledge of how liability for damage in collision cases was in practice assessed was unsurpassed. I am therefore somewhat concerned that he described the issue with which I must deal as “an open question of some difficulty.” Not only have I reached a clear view on the matter but neither counsel before me has been able to identify the particular reason why Brandon J. found the issue difficult. Notwithstanding my concern I must decide this question by holding that pursuant to section 187 the court must take into account the causative fault not only of those vessels which are party to the action before the court but also the causative fault of any other vessel, even if that vessel is not party to the action before the court. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">148.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In <span style="font-style:italic">The Samco Europe and MSC Prestige</span> [2011] 2 Lloyd’s Rep. 579 the court summarised the task of apportionment of liability in this way:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“81. Apportionment of responsibility for a collision depends upon an assessment of the blameworthiness and causative potency of both vessels: see <span class="italictext1" style="color:#262A2D">The British Aviator</span><span> </span><a href="https://www.i-law.com/ilaw/doc/xref.htm?citation_dest=LLR:1965010271">[1965] 1 Lloyd’s Rep 271</a> at page 277 per Willmer LJ. The assessment is of the <span class="italictext1" style="color:#262A2D">relative</span> degree of responsibility of each vessel: see <span class="italictext1" style="color:#262A2D">The</span><span> </span><span class="italictext1" style="color:#262A2D">Mineral Dampier</span><span> </span><a href="https://www.i-law.com/ilaw/doc/xref.htm?citation_dest=LLR:2001020419">[2001] 2 Lloyd’s Rep 419</a> at para 39. For that reason Admiralty judges often consider, where one ship is more to blame than the other, how many more times to blame one vessel is than the other: see, for example, <span class="italictext1" style="color:#262A2D">The Angelic Spirit</span><span> </span><a href="https://www.i-law.com/ilaw/doc/xref.htm?citation_dest=LLR:1994020595">[1994] 2 Lloyd’s Rep 595</a> at page 608 per Clarke J and <span class="italictext1" style="color:#262A2D">The Mineral Dampier</span> at para 52 per Lord Phillips MR”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">149.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sir Henry Brandon’s extra-judicial exposition of the law and practice of apportionment of liability in his article in the Tulane Law Review should be better known than it is. It will assist all who have to consider such matters. His understanding and knowledge of how liability for damages in collision cases was in practice assessed was gained at a time when almost every week there was a collision action in the Admiralty Court, unlike the present time when, perhaps because voyage data recorders and other electronic devices have almost eliminated the need for a trial, there are few such trials. In his article Sir Henry Brandon described the proposition that both culpability and causative potency must be taken into account as “the true principle of law applicable” (see pp.1031-2). Whilst there were no universal rules with regard to the assessment of culpability or causative potency he identified (“on the basis of practical experience of apportionment in numerous cases over many years”) certain broad lines of approach which can be used when apportioning liability (see pp.1037-1041). They may be summarised as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">The number of faults on one side or the other is not decisive. It is the nature and quality of a ship’s faults, rather than their number, that matter. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Breaches of the obligations imposed on ships in certain defined situations by the Collision Regulations will usually be regarded as seriously culpable. One such rule is the narrow channel rule. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Causative potency has two aspects. The first is the extent to which the fault contributed to the fact that the collision occurred. The second is the extent to which the fault contributed to the damage resulting from the casualty. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">In most cases though not all it will be right to treat the fault of a ship that creates a situation of difficulty or danger as greater than that of the ship that fails to react properly to such situation after it has been created. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">The fact that a fault consists of a deliberate act or ommission may in certain circumstances justify the court in treating it as more culpable than a fault which consists of ommission only. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">150.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The court deals with questions of apportionment in a fairly broad way (or as it was put in <span style="font-style:italic">The Volute</span> [1922] 1 AC 129 at p. 144 “somewhat broadly and on common sense principles”). Sir Henry Brandon said that it may be helpful (as indeed subsequent Admiralty judges have found, see the extract from <span style="font-style:italic">The Samco Europe and MSC Prestige</span>) to consider, in cases where a clear preponderance of fault has been established, whether the degree of fault of the ship more to blame is one and half times as great, or three, four, five or even more times as great as the degree of the fault of the ship less to blame. “There is however no single correct approach to the problem.”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">151.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Apportionment pursuant to section 187 of the Merchant Shipping Act 1995 requires an apportionment of liability in proportion to the degree in which each ship was at fault. This requires an assessment of relative liability, as was made clear in a case involving damage caused by the fault of three ships, <span style="font-style:italic">The Miraflores and the Abadesa</span> [1967] AC 826. The underlying principle was explained by Sir Henry Brandon thus: “The correct approach was to consider and weigh the faults of each ship separately and individually and then to arrive at an apportionment of liability that justly reflected the relative degree of fault as between all three.”</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Causative potency </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">152.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The primary fault which gave rise to a dangerous situation, namely, NORDLAKE and VINDHYAGIRI approaching each other at close quarters on or about the eastern edge of the dredged channel, was the failure of NORDLAKE to cross to the western edge of the dredged channel as required by Rule 9 of the Collision Regulations. If NORDLAKE had complied with her duty that dangerous situation would never have developed.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">153.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The fault of NORDLAKE in failing to stop her engines and to proceed with caution at C-8 meant that when she collided with VINDHYAGIRI she still had substantial way on. This would have exacerbated the damage caused by the collision and so added yet further to the causative potency of NORDLAKE’s fault. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">154.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By contrast VINDHYAGIRI complied with Rule 9 of the Collision Regulations until C-1 when she attempted to cross the dredged channel to the west. Her fault lay in her erroneous reaction, probably as a result of a poor lookout, to the dangerous situation created by NORDLAKE. Although her attempt to cross ahead of NORDLAKE meant that her starboard side was exposed to the oncoming bows of NORDLAKE and so exacerbated the damage caused by the collision the causative potency of her faults was much less than those of NORDLAKE.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">155.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The faults of GODAVARI and SEAEAGLE contributed to the collision but their causative potency was very much less than that of NORDLAKE and significantly less than that of VINDHYAGIRI.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Culpability  </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">156.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At C-8 NORDLAKE chose not to navigate in accordance with Rule 9 of the Collision Regulations. This was a deliberate decision. The master and pilot must have known that they were breaching Rule 9 when there was no need to do so. The starboard side of the channel was clear. A deliberate decision to breach a Rule in the Collision Regulations designed to ensure that a close quarters situation is avoided is seriously culpable. The fault was further aggravated by NORDLAKE’s apparent reliance upon its VHF request to an unidentified warship to pass on to other unidentified warships its wish to pass green to green.  The dangers inherent in reliance upon VHF to agree navigational manoeuvres in conflict with the Regulations could not be better illustrated than by the confused and confusing exchanges between NORDLAKE, GODAVARI and SEAEAGLE between C-5 and C-2.5. By contrast, had NORDLAKE complied with Rule 9 she would have passed GODAVARI, SEAEAGLE and VINDHYAGIRI safely red to red.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">157.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Having decided to remain in her wrong water NORDLAKE steamed towards three vessels ahead of her in their correct water. Her failure to reduce her speed and to navigate with caution was also highly culpable. A particularly keen lookout was required in those circumstances. NORDLAKE’s lookout with regard to VINDHYAGIRI was poor. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">158.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">VINDHYAGIRI’s lookout must also have been seriously deficient and led to her altering course to port seeking to cross ahead of NORDLAKE shortly before the collision. However, her culpability was considerably less than that of NORDLAKE. She was reacting to the dangerous situation created by NORDLAKE.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">159.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Both GODAVARI and SEAEAGLE succeeded in avoiding collision with NORDLAKE. That was their primary concern. But GODAVARI was aware that VINDHYAGIRI was on her port quarter and SEAEAGLE was aware that VINDHYAGIRI was abaft her beam to port. Each knew that NORDLAKE was approaching VINDHYAGIRI. In those circumstances the faults of GODAVARI and SEAEAGLE which distracted NORDLAKE’s attention from VINDHYAGIRI were culpable but to a very much lesser degree than those of NORDLAKE and to a significantly lesser degree than those of VINDHYAGRI.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The relative degrees of blame and resulting apportionment</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">160.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my judgment the degree of NORDLAKE’s fault was at least three times as great as that of VINDHYAGIRI and the degree of VINDHYAGIRI’s fault was significantly greater that that of each of GODAVARI and SEAEAGLE. Apportionment of blame between four vessels is unusual and perhaps unprecedented. No other example of it was brought to my attention. I have sought to weigh the faults of each vessel separately and to apportion liability for the damage caused by the collision between NORDLAKE and VINDHYAGIRI in proportion to the degree in which each of the four vessels was in fault. I have also borne in mind that apportionment of liability must necessarily be done “somewhat broadly”.  Indeed, this must inevitably be so when apportioning liability between four vessels; such an exercise is difficult when each share of liability must be relative to each of the other three and tends to produce unusually precise percentages suggesting that the exercise has a precision which it cannot in reality possess. My apportionment of liability is as follows: 60% to NORDLAKE, 20% to VINDHYAGIRI, 10% to GODAVARI and 10% to SEAEAGLE. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

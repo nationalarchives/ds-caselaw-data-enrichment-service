@@ -1,0 +1,1809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewhc/costs/2007/90092"/>
+	  <FRBRuri value="ewhc/costs/2007/90092"/>
+	  <FRBRdate date="2007-11-08" name="judgment"/>
+	  <FRBRauthor href="#ewhc-seniorcourtscosts"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="90092"/>
+	  <FRBRname value="TERENCE WINMILL v DONCASTER METROPOLITAN BOROUGH COUNCIL"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewhc/costs/2007/90092/eng"/>
+	  <FRBRuri value="ewhc/costs/2007/90092/eng"/>
+	  <FRBRdate date="2007-11-08" name="judgment"/>
+	  <FRBRauthor href="#ewhc-seniorcourtscosts"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewhc/costs/2007/90092/eng/akn"/>
+	  <FRBRuri value="ewhc/costs/2007/90092/eng/akn"/>
+	  <FRBRdate date="2021-12-01T21:20:33" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewhc-seniorcourtscosts" href="https://www.gov.uk/courts-tribunals/senior-courts-costs-office" showAs="The England and Wales High Court (Senior Courts Costs Office)" shortForm="The Senior Courts Costs Office"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="terence-winmill" href="" showAs="TERENCE WINMILL"/>
+	<TLCPerson eId="doncaster-metropolitan-borough-council" href="" showAs="DONCASTER METROPOLITAN BOROUGH COUNCIL"/>
+	<TLCPerson eId="bernard-pearson" href="" showAs="BERNARD PEARSON"/>
+	<TLCPerson eId="wakefield-metropolitan-borough-council" href="" showAs="WAKEFIELD METROPOLITAN BOROUGH COUNCIL"/>
+	<TLCPerson eId="the-trustees-of-the-chatsworth-settlement" href="" showAs="THE TRUSTEES OF THE CHATSWORTH SETTLEMENT"/>
+	<TLCPerson eId="derbyshire-county-council" href="" showAs="DERBYSHIRE COUNTY COUNCIL"/>
+	<TLCRole eId="claimant" href="" showAs="Claimant"/>
+	<TLCRole eId="defendant" href="" showAs="Defendant"/>
+      </references>
+      <proprietary source="ewhc/costs/2007/90092/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWHC-SeniorCourtsCosts</uk:court>
+	<uk:year>2007</uk:year>
+	<uk:number>90092</uk:number>
+	<uk:cite>[2007] EWHC 90092 (Costs)</uk:cite>
+	<uk:hash>debb47a439e17ef4f94ac44df0850bc12f79561f9a188c008f2551c8ac44b838</uk:hash>
+      </proprietary>
+      <presentation source="ewhc/costs/2007/90092/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { font-weight: bold; font-family: Arial; font-size: 16pt; }
+#judgment .Heading3 { font-weight: bold; font-family: Arial; font-size: 13pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .ParaHeading { font-size: 12pt; }
+#judgment .ParaLevel1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .ParaLevel2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .ParaLevel3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 1.00in; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .Heading { font-size: 12pt; }
+#judgment .Title { text-align: center; font-weight: bold; font-size: 10pt; }
+#judgment .eMailBlock { text-align: center; font-weight: bold; font-size: 13pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .Heading3Char { font-weight: bold; font-size: 13pt; }
+#judgment .QuoteChar { font-style: italic; font-size: 12pt; color: #404040; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .TitleChar { font-weight: bold; font-size: 16pt; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p class="CoverText">Claim Nos: SE314616 and SE301327</p>
+      <p class="CoverText">SCCO Refs:  0700826 and 0700689</p>
+      <p class="CoverMain">IN THE HIGH COURT OF JUSTICE</p>
+      <p>
+	<span style="font-weight:bold;text-decoration:underline">SUPREME COURT COSTS OFFICE</span>
+      </p>
+      <p>
+	<span style="font-weight:bold;text-decoration:underline">ON TRANSFER FROM SHEFFIELD COUNTY COURT</span>
+      </p>
+      <p class="CoverText">Clifford’s Inn, Fetter Lane</p>
+      <p class="CoverText">London, EC4A 1DQ</p>
+      <p class="CoverText">Date:  <docDate date="2007-11-08">8 November 2007</docDate></p>
+      <p style="text-align:center"><span style="font-weight:bold">Before</span> :</p>
+      <p class="CoverMain" style="text-align:center">MASTER ROGERS, SITTING AS A </p>
+      <p class="CoverMain" style="text-align:center">DEPUTY JUDGE OF THE SHEFFIELD COUNTY COURT</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#terence-winmill" as="#claimant" style="font-weight:bold">TERENCE WINMILL</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#claimant">Claimant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#doncaster-metropolitan-borough-council" as="#defendant" style="font-weight:bold">DONCASTER METROPOLITAN BOROUGH COUNCIL</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Defendant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center"/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">And Between :</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center"/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#bernard-pearson" as="#claimant" style="font-weight:bold">BERNARD PEARSON</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#claimant">Claimant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#wakefield-metropolitan-borough-council" as="#defendant" style="font-weight:bold">WAKEFIELD METROPOLITAN BOROUGH COUNCIL</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">First Defendant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#the-trustees-of-the-chatsworth-settlement" as="#defendant" style="font-weight:bold">THE TRUSTEES OF THE CHATSWORTH SETTLEMENT</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Second Defendant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#derbyshire-county-council" as="#defendant" style="font-weight:bold">DERBYSHIRE COUNTY COUNCIL</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Third Defendant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">ROTHERHAM METROPOLITAN BOROUGH COUNCIL</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">Fourth Defendant</p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center"><span style="font-weight:bold">Ms Caroline Truscott </span>(instructed by<span style="font-weight:bold"> Thompsons</span>) for the <span style="font-weight:bold">Claimants in both cases</span></p>
+      <p style="text-align:center"><span style="font-weight:bold">Mr Simon Brown</span> (instructed by <span style="font-weight:bold">Halliwells</span>) for the <span style="font-weight:bold">Defendants in the Winmill case</span></p>
+      <p style="text-align:center"><span style="font-weight:bold">Mr William Whawell</span> (instructed by <span style="font-weight:bold">Praxis &amp; Partners</span>) for the </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Defendants in the Pearson case</span>
+      </p>
+      <p style="text-align:center">Hearing date: 18 October 2007</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p class="CoverDesc">Judgment</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">Master Rogers:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE ISSUE</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The issue in both these cases is whether the Claimant, who was represented by Thompsons under a CCFA, is entitled to recover the full ATE insurance premium of £7,297.50 (inclusive of IHT), as claimed in the respective bills of costs, or some lower figure as contended for by the respective Defendants.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE INTERRELATIONSHIP OF THE CASES</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Although they raise the same issue, and for convenience have been argued together, these two cases are in fact quite separate, so that the outcome of one cannot necessarily determine that of the other.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">For convenience, in the rest of this judgment the first case will be referred to as “the Winmill case”, and the second case as “the Pearson case”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the Winmill case a District Judge in Sheffield has assessed the Claimant’s bill, sought in the sum of some £86,000 odd, but reduced substantially (because the District Judge applied the necessity test), save only for this one item, which he sent to the SCCO for determination.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Whilst I can well understand the wish of the District Judge that this issue should be heard in the SCCO, I am unconvinced that it is entirely appropriate for a detailed assessment to be carried out partly in one court, and partly in another. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">For instance, in this case the District Judge decided that, on the face of it, the bill for £86,000 was disproportionate, and applied the necessity test.   In the event the Defendant, through Mr Brown, does not contest the Claimant’s right to payment of a sum for the ATE premium, but, if that concession had not been made, I would have been faced with the unenviable task of deciding whether such a payment was “necessary”, or, whether indeed I was bound by the District Judge’s ruling, that the bill as a whole was disproportionate.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It seems to me that where a point of principle is identified, even as late as the start of the detailed assessment proceedings in the County Court, the whole assessment should normally be transferred to the SCCO, if that is what the parties wish, as indeed happened in the Pearson case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In that case I was told that the parties have reached agreement on everything, save for this insurance premium point.   It is perhaps interesting to note that the Claimant’s bill in that case was claimed at some £38,000 less than in the Winmill case.   Apart from the issue of the ATE premium, the costs have been agreed at £26,200.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE BACKGROUND IN THE WINMILL CASE</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the Winmill case the Claimant had been employed by the Defendant since 5 August 1974.   From that date, until about 1991, he was employed as a gardener, working in the Defendant’s amenities and leisure department.   In about 1991 he was appointed a charge hand.    In the course of his employment with the Defendant, since 1974 the Claimant had undertaken general gardening duties, including cutting grass and hedges.   In order to undertake those tasks the Claimant was required to use petrol hedge trimmers, stoic rotary mowers, Hayter Condor grass cutters, strimmers, half moon edgers and mount filled petrol mowers.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Additionally, his duties included inserting stakes for trees, which required the use of a pod hammer, as well as digging, which required the use of jack hammers.   All those tools vibrated, or imparted vibration, to the Claimant’s hands.    One or more of these tools were used on most days.    The Claimant would use the tools for up to eight hours per day. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In due course, and as he contended, as a direct use of those tools, the Claimant was injured, in that he developed injuries to the hands, with symptoms of carpal tunnel syndrome, and vibration white finger. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The action was initiated on 27 March 2001, when the Claimant’s solicitors, instructed by his union, sent a letter before action to the Defendant inviting them to address the claim, thereby avoiding incurring unnecessary costs on the matter.  Thereafter, but outside the pre-action protocol period, on 4 September 2002, the Defendant admitted primary liability, but causation remained in dispute. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Clearly, in those circumstances, medical evidence was required, and, so far as the Claimant was concerned, this was obtained from a consultant vascular surgeon, a Mr D C Berridge, who was commissioned to prepare a report in respect of injuries sustained. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Berridge, having considered the Claimant’s work history, concluded that if this was substantiated at trial, it was possible that he may have suffered from vibration white finger, but the Claimant did need also potentially to consider the diagnosis of carpal tunnel syndrome.  He was of the opinion that it would be important for the Claimant to undergo EMG testing. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Following the obtaining of factual evidence from other witnesses, an updated medical report was obtained from Mr Berridge. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Proceedings were issued in December 2003, as settled by counsel, and the allocation questionnaires were prepared and filed on 24 September 2004. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By this time the Defendant had instructed Professor Charlesworth, also a consultant vascular surgeon. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On 24 September 2004, at a case management conference, the claim was allocated to the multi-track, and directions were provided to deal with discovery and exchange of evidence.   There was a further hearing concerning directions on 31 January 2005.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">After Professor Charlesworth prepared his report for the Defendant, the two expert consultant surgeons met, and produced a joint statement of issues, but there remained substantive disagreements between them.   Meanwhile, the Claimant underwent surgery for bilateral carpal tunnel syndrome, leading Mr Berridge later to come to the view that, the exposure to vibration during the course of his employment with the Defendant had caused, or materially contributed to, such condition. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On the other hand, Mr Charlesworth remained of the view that the evidence did not establish that the Claimant had vibration white finger, and he also suggested that the Claimant’s carpal tunnel syndrome was constitutional. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Following the lodging of listing questionnaires, the trial was listed to take place on 13 October 2005, but, at the last moment, it was withdrawn from the list, on the basis that it could not be tried fairly until further evidence had been obtained on the issues of causation and quantum. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The case was re-listed for 19 January 2006, but very shortly before that hearing the Defendant made an offer of £5,000.   The Claimant made a counter offer of £8,000, and subsequently agreement was reached at the latter figure, with the Defendant paying the Claimant’s costs on the standard basis, to be assessed failing agreement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As already indicated, the Claimant’s bill for a total of £86,431.51 was reduced by the District Judge to £13,186.32, for profit costs and disbursements, exclusive of the ATE insurance premium claimed in the bill plus VAT of £4,740.80.   Disbursements had been claimed (apart from the ATE premium) at £8,006.30.   Some substantial reductions were made to these, notably in Counsel’s brief fee for the trial, reduced from £2,500 to £1,000, and one doctor’s court cancellation fee, halved from £2,000 to £1,000.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE BACKGROUND IN THE PEARSON CASE</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the Pearson case the Claimant had been employed by the First or Fourth Defendants as a plumber and pipe fitter, from October 1954 to April 1955, and by the Second Defendant as an estate plumber from April 1955 to August 1957, and by the Third Defendant as a plumber and pipe fitter from August 1957 to June 1958.   During the course of the Claimant’s employment, for each of these Defendants, he was exposed to asbestos. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">During his period of employment with the First or Fourth Defendants, the Claimant worked in the cellars of schools, offices and other buildings, which were controlled by the First Defendant.   His work involved the repair, maintenance and alteration of pipes, many of which were lagged with asbestos, which was removed and replaced routinely.    The Claimant further supervised the mixing of asbestos paste, and undertook the finishing off, after the lagging had dried, which caused asbestos dust to rise.   Finally, he was further exposed to asbestos dust, created by his fellow workers. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">So far as the Claimant’s employment by the Second Defendant was concerned, this was limited to some two to three days in each month, when he worked with asbestos roof sheeting in the construction of roofs covering farmyard and milking parlours. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">His exposure to asbestos while working for the Third Defendant was because he worked on repair, maintenance and the alternation of asbestos lagged in schools, offices and other buildings. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As a result of the Claimant’s exposure to asbestos, he developed bilateral interstitial fibrosis in the lungs, with radiological features consistent with asbestosis.    He further developed calcified plural plaques, characteristics of asbestos exposure.   The Claimant’s solicitors received instructions via the union, in this case on 15 August 2002, with a personal interview with the Claimant some six weeks later, on 27 September 2002, to obtain full particulars of the extent of his injuries, and financial loss. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The letter of claim, setting out details of the Claimant’s condition, allegations of negligence, medical expert details, and funding arrangements, was forwarded to the Defendants on 9 October 2002.   At that stage all Defendants denied liability to the Claimant. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Claimant’s solicitors instructed Dr G S Basran, a consultant physician, to prepare a medical report.    This was dated 11 February 2003, and confirmed that the Claimant had developed multiple calcified asbestos, related plural plaques, and that he also had clinical physiological and radiological evidence of interstitial lung disease, and, on the basis of the Claimant’s occupational history, and the presence of plural plaques, the medical expert confirmed that the same was, on the balance of probabilities, asbestosis. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On 9 April 2003, the Third Defendant denied liability, on the basis that they were not aware that the Claimant was exposed to asbestos on a regular basis.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Counsel thereafter settled the Particulars of Claim, which were served on the Second, Third and Fourth Defendants on 30 May 2003.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On 25 July 2003, a defence was filed by the Third Defendant, raising limitation as an issue, denying the Claimant’s employment with themselves, and further denying liability.    At a listing hearing, on 21 August 2003, the Fourth  Defendant pleaded that the claim should not have been made against them, but rather against the First Defendant, who were responsible for West Riding of Yorkshire, who were the Claimant’s employers while he was exposed to asbestos.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the light of those comments, the Claimant discontinued proceedings against the Fourth Defendant, but the First Defendant was brought into the proceedings in its place. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">However, later investigations disclosed that the Claimant was indeed employed by the Fourth Defendant, rather than the First Defendant, and accordingly the proceedings were amended to re-join the Fourth Defendant. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Following further interlocutory hearings, on 9 November 2004, the court dismissed the claim against the First Defendant, and ordered the Claimant to pay the First Defendant’s costs of £3,000, although granting him the right to seek an indemnity in respect of those costs against the Fourth Defendant. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Expert evidence was obtained from consultant engineers, and, after yet further interlocutory hearings, the matter was listed for a pre-trial review on 18 July 2005, but, four days prior to that, the Claimant put forward a Part 36 offer to all Defendants, in the sum of £23,400. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Claimant then underwent a CT scan, further medical evidence was prepared, and the medical experts prepared a joint report to the court on 17 October 2005. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Three days prior to that the Third and Fourth Defendants put forward a Part 36 offer, in the sum of £5,000, and, this not having been accepted, on 16 December 2005 they paid into court that sum.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Following receipt and consideration of Counsel’s advice, dated 23 November 2005, a Notice of Discontinuance was served on the Second Defendant, and the Third and Fourth Defendants’ payment into court was accepted.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Claimant’s bill in this case was for £48,000, and had been agreed, subject to the issue of the ATE insurance premium, in the sum of £26,200. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Claimant’s solicitors represented both Claimants, pursuant to a CCFA entered into on 30 November 2000.   In the Winmill case, those solicitors took out an ATE insurance with UIA, on 20 December 2003.   The policy had a two-stage premium.   The “base” premium was £950, plus IPT of £47.50.   An additional premium of £6,000, plus IPT of £300, became payable upon allocation of the case to the multi track.   The limit of the indemnity under the policy was £100,000, and the cover comprehensive. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the Pearson case the Claimant’s solicitors took out an ATE insurance policy with UIA, on 30 September 2002.   This also was a two-stage premium policy, with the base premium of £950, plus IPT of £47.50, and the additional premium of £6,000, plus IPT of £300, becoming payable upon allocation of the case to the multi-track in December 2003.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is common ground that the Claimant’s solicitors did not tell the Defendant solicitors that these were two-stage premium payment cases, but simply gave them the information that the rules then required in relation to the CCFA. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">When the matter was transferred to the SCCO, from Sheffield County Court, and balloted to me, the Defendants in the Winmill case issued an application notice seeking the following relief: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“(1)<marker name="tab"/>Consolidation with the Pearson case and vacation of the detailed assessment hearing listed for 29 March; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(2)<marker name="tab"/>the matter to be jointly listed for a CMC within 14 days of the date of this order; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(3)<marker name="tab"/>the Claimant to answer a Part 18 questionnaire previously sent and give the further disclosure required by that request; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(4)<marker name="tab"/>the matter be re-listed for a detailed assessment with a time estimate of one day; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(5)<marker name="tab"/>that the parties have permission to rely upon the expert evidence if so desired; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">(6)<marker name="tab"/>that there be further directions given permitting the cross-examination of Rachel Sarfas (who made a witness statement on behalf of the Claimants) and Lisa Walker (who made a witness statement on behalf of the Winmill Defendant) and any other witnesses called by the Defendant.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">That application was listed before me on 20 March this year, and the three advocates who appeared before me at the 18 October hearing, also appeared on that occasion, though the real contest was between Ms Truscott on behalf of the Claimant, and Mr Brown on behalf of the Winmill Defendant, since the Pearson Defendants’ solicitors had not, by 20 March, issued their corresponding application.  Mr Whawell on their behalf undertook to issue such an application.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Following a hearing lasting all morning, I dismissed the Defendants’ applications, and refused permission to appeal, or an extension of time for them to lodge a notice of appeal, indicating that any appeal would need to be made to a Circuit Judge at Sheffield. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the event no appeals were pursued, and the matter proceeded before me on 18 October, on the basis of the witness statements previously filed, but without any cross-examination, and, of course, without an expert’s report.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">One somewhat unsatisfactory aspect of this matter is that the certificate of legal expenses insurance issued in this matter, seems to have changed.  The first version, if I can so describe it, stated: “additional premium payable if allocated to the multi track £6,000”.    On the other hand, the second version had the words “additional premium payable post issue £6,000”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The first version had at the bottom, under the signature, the following wording: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“UIA is a member of the Association of British Insurers, the General Insurance Standards Council and Insurance Ombudsman Bureau.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">The second version, however, had the following wording in its place: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“UIA is a member of the Association of British Insurers, the Financial Ombudsman Service and is registered under the Industrial and Providence Societies Act – No.2898R UIA (Insurance) Ltd is authorised and regulated by the Financial Services Authority.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The discrepancy between these two versions was explained to me by Ms Truscott on instructions, but I rejected an application made at the hearing by Mr Brown to adjourn the case, to enable further evidence to be adduced to explain this discrepancy. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This was because, Ms Truscott was able to produce a witness statement made by Stephen Paul Allen, which explained what had happened in a case proceeding to assessment in Maidstone County Court and raising the same issue.    I was told that the District Judge carrying out that assessment was satisfied with the explanation given on the basis of Mr Allen’s witness statement, and did not require any further evidence.   I was shown a copy of that witness statement.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It seemed to me that, although the amount of this premium is not insubstantial, it would have been totally disproportionate to adjourn this case, yet again, to enable further evidence to be filed, which, in my judgment, would not have taken the matter any further, and which in any event would not have been determinative of the issue in these cases.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This is because, as already indicated, it is common ground that the Claimants’ solicitors did not tell the Defendants’ solicitors that this was a two-stage premium case.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Accordingly, the matter proceeded on the basis of Ms Truscott’s original skeleton, and the original skeleton of Mr Whawell, and an updated skeleton filed by Mr Brown. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE EVIDENCE FILED </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On behalf of the Claimant a witness statement of Rachel Sarfas was relied on.   That witness statement is dated 4 December 2003, and is not case specific, being a generic witness statement, apparently used by the Claimant’s solicitors in all cases in which there has been a challenge to this insurance premium. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is a lengthy witness statement, running to 49 paragraphs, spread over 16 pages, and including two addendums.   First it gives brief details of the cover, and second, in the form of a table, sets out the comparative benefits of policies entered into under the ULSAAS (later UIA) policy on the one hand, and the Accident Line Protect policy on the other. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The first nine paragraphs of the witness statement set out the history of how CFAs and CCFAs came to succeed legal aid as a method of funding litigation of this nature. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is, however, I think important that I should quote certain paragraphs of Ms Sarfas’ statement, and these are set out below: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“9.<marker name="tab"/>Clearly, the unions felt that there should be fairness and that union members should be allowed to pursue their claims, with the support of the union but with a form of recoverability appropriate to union-supported cases.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">10.<marker name="tab"/>The Government accepted this reasoned case and the outcome was the CCFA Regulations 2000 and also Section 30 of the Access to Justice Act 1999 which permitted self-insurance by unions and other prescribed bodies.   By this means, unions were given additional options as well as the basic options available to private clients, namely individual CFA’s and insurance policies.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">11.<marker name="tab"/>Section 29 of the 1999 Act provided recovery of the premium of an insurance policy taken out by Claimants.   It was, therefore, open to unions to require such Claimant’s to take out policies pursuant to Section 29 to cover own disbursements and Defendant’s costs.   Combined with a CCFA which covered own profit costs, there would then be complete protection for Claimants. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">12. <marker name="tab"/>Section 30 of the 1999 Act permitted a form of self-insurance in respect of prescribed bodies.   Trade unions have been prescribed and can, therefore, provide self-insurance arrangements.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">13.<marker name="tab"/>However, Section 30 allows self-insurance only in respect of “… the costs of other parties to the proceedings.”  (Section 30(1)). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">14.<marker name="tab"/>It is not known why this limitation was imposed.   I was involved in communications with Government officials at the time the Access to Justice Act (then the Bill) was passing through Parliament.   I recall that Section 30 was added at a late stage, at Report stage.   This is somewhat unusual.   No proper opportunity was given for unions to have the appropriate time to consider the proposed provision in detail and suggest any amendment.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">15.<marker name="tab"/>No explanation for this restriction has ever been forthcoming.  Trade unions have concluded that this was simply an error and have been lobbying for an amendment to allow Section 30 to cover own disbursements and Defendant’s costs.   As matters stand at present, though, until such amendment is made, the legislation permits self-insurance arrangements to cover Defendant’s costs only.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">16.<marker name="tab"/>Clearly, trade unions were and remain keen to ensure that Claimants are fully protected in respect of claims pursued.   It would clearly be very bureaucratic and costly for unions to have a CCFA under Section 27 for Claimant’s own profit costs, self-insurance under Section 30 for Defendants costs and insurance taken out by Claimants under Section 29 for Claimant’s own disbursements.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">17.<marker name="tab"/>The CCFA and UNISON was signed on 30<span style="vertical-align:super;font-size:smaller">th</span> November 2000.   However, unions throughout the labour movement were still uncertain whether to make use of the new arrangements under Section 30 or to require insurance by individual Claimants under Section 29.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">18.<marker name="tab"/>The disadvantages of Section 30 self-insurance have been set out.   Many unions were concerned about this and a considerable debate followed throughout the labour movement as to what type of protection should be afforded for Claimants under the CCFA.   Some unions chose to adopt self-insurance under Section 30.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">19.<marker name="tab"/>Other unions including large unions, mindful of the anomaly in Section 30, preferred to require insurance arrangements under Section 20.   UNISON is the biggest single trade union and it preferred insurance arrangements. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">20.<marker name="tab"/>However, it would not have been appropriate to leave it to individual Claimants to simply find insurance on the open market.   The market for after the event products is highly complex and very much in a state of flux.   This has been illustrated by the dramatic failures of Claims Direct and the Accident Group.   Outside the claims companies, with after the event insurance providers, there is a great deal of marketing puff and spin offering cover and premiums which at first sight appear attractive but on closer analysis are much less so.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">21.<marker name="tab"/>The unions wanted to be confident that Claimants under their CCFA were obtaining proper cover with a reputable insurer at an appropriate market rate. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">22.<marker name="tab"/>This took time,   Having signed up to the CCFA in November 2000, it was not until the Autumn of 2001 that Claimants under the UNISON CCFA could take out appropriate insurance. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">QUANTUM OF PREMIUM </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">23.<marker name="tab"/>With regard to quantum of the premium as previously outlined, the Union were keen to ensure that Claimants under the CCFA had access to insurance provided by reputable suppliers at a reasonable market rate.   Likewise, our duty to our clients, as solicitors, was to advise them as to appropriate insurance for their cases.    It was part of my responsibility to review insurance products to ensure that our clients would be provided with appropriate insurance cover in respect of their claims and also to ensure that unions could themselves approve such insurance which would replace the old-fashioned arrangements referred to. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">24.<marker name="tab"/>My task involved looking at a large number of insurances on the market.   As outlined, the variety was enormous and it was often difficult to make sense of why the market was so varied.   It seemed that insurance companies were themselves uncertain of the market whilst small or hitherto unheard of insurance companies appeared to offer insurance which, on closer inspection, did not quite match up to the marketing gloss.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">25.<marker name="tab"/>Further, it was clear that simply because a particular insurance package was advertised, it did not follow that the insurer would then make it available to a particular case, or to a block of cases such as union cases.   One major insurer in particular offering a potentially competitive package, made it clear that the advertised premium structure would not be made available for union cases.  They would quote specific premiums but required extensive information before doing so.   This is an important point as I am aware that Defendants have sought to persuade courts on assessments that cheaper alternatives were available but have not produced the full scheme documentation for analysis by the court and the Claimant’s representatives.   Certainly, no alternative can be properly considered by the courts without detailed consideration of all of this documentation.    One thing I learned quite quickly was that, in respect of ATE insurance, it is crucial to cut through the headlines and advertising gloss and focus on the small print details.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">26.<marker name="tab"/>What was absolutely clear, though, was that the market leader was the Accident Line Protect Policy endorsed by the Law Society.   This was the only insurance product which had been available since the inception of CFA’s in 1995.  These insurers, therefore, had the most extensive experience in the field and there could be no more reputable supplier than an insurer endorsed by the Law Society.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">27.<marker name="tab"/>But that insurance was geared primarily for individual CFA’s and was not specifically designed for trade unions.   There are a number of differences.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">28.<marker name="tab"/>Trade union cases are supported by CCFA’s rather than an individual CFA.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">29.<marker name="tab"/>Further, CCFA’s funded many thousands of claims and an insurer was needed who would be prepared to take on such a bulk of claims, both new and existing, with the existing cases at numerous different stages. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">30.<marker name="tab"/>In addition, trade unions have always expected cases to be pursued aggressively.   They expect cases to be pursued which are 50/50 and they will enforce this by means of case reviews, audits and other means to ensure that the very best service is provided and that damages are recovered in all cases save where liability clearly cannot be established. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">31.<marker name="tab"/>High Street law firms with private cases may not have any such review or audit system.   They can often simply reject a claim on the basis of their advice, and that will be an end to the matter.   A union, on the other hand, can question whether such advice is correct, can obtain second opinions and will take all measures necessary to ensure that there is no question of any cherry-picking of cases.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">32.<marker name="tab"/>In addition, there is no advance filtering mechanism for union cases.  Whilst a High Street law firm may reject cases without even an interview on the basis that the initial indications are negative, there is no such option for union referrals.    Unions expect all cases to be thoroughly investigated with evident collated, claims made and a detailed advice upon liability provided.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">33.<marker name="tab"/>As a result of this lack of pre-selection or filtering, the failure rate for union cases, with the aggressive litigation policy referred to, is potentially higher than non-union cases. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">34.<marker name="tab"/>It is also important to bear in mind the other risks covered by the insurance with regard to, for example, failure to beat a Part 36 payment, late acceptance of such offers, successful multi-Defendant cases where adverse costs orders are made etc.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">35.<marker name="tab"/>For these reasons, I was impressed that insurance was available through Union Legal Support and Administrative Service Limited (ULSAAS) with UIA insurance. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">36.<marker name="tab"/>ULSAAS was a company largely dedicated to providing insurance services for trade unions.   They had negotiated with UIA an insurance product specifically for trade union supported cases.   They had been able to negotiate an impressive insurance product as it was potentially an attractive option for insurers to have the opportunity to provide insurance in many thousands of trade union cases.    In the same way that a trade union can negotiate a collective agreement with an employer far more effectively than an individual union member can negotiate individually, likewise ULSAAS could negotiate appropriate policies on a collective basis.    Having said that, the market for after the event (ATE) insurance has been ‘hard’ for some time such that block purchasing is not necessarily an advantage in such circumstances.   In this respect I was aware of the Judgment of the Court of Appeal in <span style="text-decoration:underline">Callery</span> and the reference at paragraph 68 to Master O’Hare’s investigation of the market and his finding that results had been universally poor over several years leading to major premium increases over those years.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">37.<marker name="tab"/>I was satisfied that the cover provided was extensive and would be approved by the Union.   Likewise, I was satisfied that the premium structure was competitive.     I was particularly impressed that the ULSAAS/UIA premium structure was almost identical to that of the market leader, namely, the Accident Line Protect policy endorsed by the Law Society, and yet the cover was equal to and in some respects more extensive.    Additionally, it was of very significant importance that UIA were prepared to quote a premium structure in line with Accident Line Protect and yet which covered existing cases as well as new cases.   I will explain this very important point more fully below.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">38.<marker name="tab"/>In the circumstances, it was appropriate for the Union to approve the UIA insurance through ULSAAS.    We were able to advise Claimants under CCFA’s that this was an appropriate insurance and such Claimants, were entirely reasonable in taking out this insurance at the relevant premium.   This was done by requesting insurance through ULSAAS who duly provided cover with UIA.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The witness statement then proceeds, in paragraphs 39 to 42, with the so called prematurity issue, which arose because of the distinction to be drawn between existing and new cases, and then continued in paragraphs 42 to 49 to explain why she chose the UIA scheme, in preference to the Law Society scheme.   Paragraphs 42 to 49 are set out below: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“42.<marker name="tab"/>What is unique about union cases following implementation of the Access to Justice Act regime is that there were numerous cases which were ongoing at various stages of proceedings but without insurance cover.   Accordingly, I was in the position of trying to find insurance for cases which had not been insured at the outset.   This was not at all an attractive proposition for insurers.  Indeed, as Lord Woolf had outlined, it was not at all clear that cover would be available for such cases.   It is important to note that some such case would be very advanced indeed.    There may, for example, be multiple parties, money in court, liability and quantum in issue, conflicting evidence and a hearing listed for several days or weeks with potential liability for costs up to or exceeding £100,000.   Clearly, there would be more straightforward cases but the basket of cases would be high risk and potentially uninsurable as highlighted by Lord Woolf. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">43.<marker name="tab"/>With that background I was very impressed indeed that UIA offered a premium structure by which the premium for ongoing employers liability cases which settled before allocation stage was the same as for new cases insured at the outset, ie £800 plus IPT for accident cases and £950 plus IPT for disease cases.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">44.<marker name="tab"/>There is no ATE insurer in the market who will quote fixed rates for ongoing cases without attaching unacceptable conditions, let alone apply equal premiums where the matter is settled before allocation stage.   For example, in one scheme providing for insurance of ongoing cases, the premium was to be quoted by the insurer but the solicitor was contractually bound to accept that quote whatever it might be.   This was because the scheme required exclusivity from the solicitor, ie the solicitor had to insure all cases with that insurer.   Consequently, even if the insurer quoted an astronomical premium in an ongoing case, the solicitor would be in breach of contract if he sought a quote elsewhere.   He would have contracted to act unprofessionally in that he would be bound to take up a policy for his client at whatever premium the insurer quoted whether reasonable, unreasonable, excessive or otherwise.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">45.<marker name="tab"/>There could never have been any question of my endorsing such a scheme.  Effectively this further confirms Lord Woolf’s concerns that such cover may not be available.  Clearly a scheme which requires unprofessional conduct is one which may not be regarded as available in any realistic sense. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">46.<marker name="tab"/>In another scheme, a substantial excess would be applied to ongoing cases unless liability had already been admitted at the time of taking out the insurance.   In other, a figure was quoted but the insurer charged an additional annual renewal fee and also reserved the right to charge higher premiums in what it considered to be ‘difficult cases’.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">47.<marker name="tab"/>With these matters in mind the UIA scheme was far better than any alternative.   The £800 and £950 premiums where cases settle before allocation equated to the Law Society premiums of £775 and £975 respectively.    The UIA premiums applied to both new and ongoing cases.   The Law Society premiums applied only to cases insured at the outset. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">48.<marker name="tab"/>Likewise, where the case proceeds to and advanced stage, ie after allocation, and is allocated to the multi track an additional premium is payable under both the Law Society and UIA schemes.   Again the figures are almost identical, ie the total premium is then £5,800 and £6,950 under the UIA scheme and £5,775 and £6,975 under the Law Society scheme.    Again, the UIA scheme is a considerable improvement on the Law Society scheme in that the UIA premiums apply to ongoing cases but the Law Society premiums are limited to cases insured at the outset. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">49.<marker name="tab"/>Overall, therefore, no other ATE insurer in the market offered an unconditional premium structure in respect of ongoing cases.   This remains the case and is entirely consistent with the comments of Lord Woolf summarising the evidence in Callery.   Not only did UIA uniquely offer such a structure, they did so at rates which in practice were the same as the Law Society quoted for new cases.   I considered that to be very impressive indeed and had no hesitation in recommending the UIA scheme.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On behalf of the Winmill Defendant, two witness statements were made by Ms Lisa Walker.   However, I need not refer to the second witness statement, because that was used in connection with the application before me in March, referred to above, and which was dismissed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Ms Lisa Walker describes herself as a Deputy Costs Manager, employed by Halliwells, and, of course, dealt only with the Winmill case.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Paragraphs 8 to 22 are the relevant paragraphs of that witness statement, and these are set out below: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“8.<marker name="tab"/>I submit that the costs risk in this case would not have been in the region of more than £10,000 to trial. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">9.<marker name="tab"/><marker name="tab"/>This can be evidenced by the amount of the Claimant’s own disbursements and the costs estimates contained within the Defendant’s listing questionnaire and allocation questionnaire.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">10.<marker name="tab"/>It is therefore my primary submission that the premium is manifestly excessive and disproportionate and that the choice of premium in this case was unreasonable.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">11.<marker name="tab"/>In support of my submission I would initially point out that the company ULSAAS was set up by way of a loan from Thompsons solicitors in the sum of £80,000.   I have checked the detailed on the companies house website and I attach exhibit “LW1” which is the report showing details of the said loan.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">12.<marker name="tab"/>In addition I attach and mark “LW2” which is a statement of the directors of ULSAAS who are all ex-partners of Thompsons, I can confirm that I have had this verified by the Law Society. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">13.<marker name="tab"/>I have dealt with many Thompsons costs claims and all their insurance premiums at this time appear to have been funded by this company.   I believe it is their policy to use this company on every case. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">14.<marker name="tab"/>I would submit that given the “buying power” of Thompsons was so great they would be in an excellent position to negotiate better premiums for their client if they had made enquiries with the market.   I would submit that on a particular case, if this premium was not suitable, it would be reasonable to expect them to make independent searches of the market to see other premiums which were available. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">15.<marker name="tab"/>I have accessed “The Judge” website and found premiums available at 01/07/2003, just before the premium was taken out in this case.   I appreciate that the terms and conditions of the individual polices vary.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">16.<marker name="tab"/>I would submit that on an individual basis the following premiums would have been worthy of further investigation.  I attach and mark “LW3” which is details of a premium available with Abbey Legal Protect.   This shows that cover would be available to Multi-track cases with cover of £10,000 for a premium of between £1023.75 and £3468.75.   I confirm that this is substantially less than the premium claimed in this case. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">17.<marker name="tab"/>I attach and mark “LW4” which is a copy of premium details available from LEX Accident assist at a cost of £1365.00.   I consider that this would be a more suitable premium in a case of this nature.   Cover is available up to £50,000, more than adequate in a case of this nature.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">18.<marker name="tab"/>I attach and mark “LW5” which are premium details available from Amicus Legal Limited, this shows a premium available at £540.75 to £892.50 on multi-track cases with cover up to £25,000.   Again, I consider that this would have been a much more suitable and proportionate choice.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">19.<marker name="tab"/>I attach and mark “LW6” which is an ATE premium available from Capita (formally Eastgate) at a cost of £945.00 providing £25,000 worth of cover in a case of this nature.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">20.<marker name="tab"/>I also submit that the Learned District Judge is able to take into account his knowledge.   In support of this submission I attach and mark “LW7” which is a copy of the judgement of Masters v Hewden Stuart Heavy Lifting Limited.   In this case the Claimant appealed because their insurance premium was reduced from £982.50 to £892.50.   I would refer to Paragraph 16 at Page 7 of the attached judgement. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">21.<marker name="tab"/>I also refer to the dicta contained in Callery v Gray “Master O’Hare did his best to investigate premium rates in the market.   He found that it was not possible to state standard or average premiums for different classes of business.   He also found that results over several years had been uniformly poor, leading to several major increases in premium rates over the years.   This lead him to conclude that a starting point the premium was reasonable.   We do not consider it correct start with Master O Hares presumption.  When considering whether a premium is reasonable, the Court must have regard to such evidence as there is or knowledge that experience has provided of the relationship between premium and risk and also the cost of alternative cover available.   As time progresses this task should become easier.  In the present case it is not easy as both data and experience are sparce.”   In the masters case at Paragraph 17 “this case it points out that four years have passed since Callery v Gray and that the task has become easier as experience grows and District Judge Spencer is an experienced District Judge.   Having rejected the Claimant’s proposed success fee</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in">I would therefore respectfully ask the Learned District Judge to apply his own knowledge and experience of industrial disease premiums that are regularly charged in routine cases of this nature.   On the basis of my knowledge as a costs draftsman, in my 4 years at Halliwells these are the largest industrial disease premiums I have come across.   I regularly see premiums in the region of £750 to £1700 and have had many District Judges reduce these premiums on assessment.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">22.<marker name="tab"/>In the event that this approach is not the preferred approach of the Learned District Judge I would ask that a detailed assessment is made into the premium and how the premium is calculated.   No further information has been provided on what collateral benefits are contained within the premium.   It would appear to me that USLAAS are not the insurance provider, simply a broker who sell on policies from Composite.   I would respectfully submit that the Court should make a detailed consideration of the breakdown of the policy as was carried out in The Claims Direct and TAG cases.  I think that this is a matter which needs further investigation.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">For the Pearson Defendants a witness statement has been made by Mr Bob Gordon, and I set out below paragraphs 2 to 14 of this witness statement: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“<span style="text-decoration:underline">Introduction/Background</span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">2.<marker name="tab"/><marker name="tab"/>I have been involved with the underwriting and provision of ATE insurance from the inception of the market over 12 years ago.   I have sat on a number of Lord Chancellor’s working parties relating to ATE insurance and funding and have been a member of the Civil Justice Council – Costs Forum.   I make this statement from my personal knowledge and experience gained in the marketplace and where applicable from information that I have obtained and collated.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">3.<marker name="tab"/><marker name="tab"/>As I understand it, this was an industrial disease case that ultimately settled for a sum of £5,000.  The case was assigned to the multi-track and a limit of indemnity under the After the Event (ATE) insurance of £100,000 was obtained at a premium of £6,950 plus IPT for the case from UIA (Insurance) Limited under the Collective Conditional Fee Personal Injury Legal Protection policy. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">4.<marker name="tab"/><marker name="tab"/>This statement is designed to consider if the premium of £6,950 plus IPT was reasonable in all the circumstances prevailing in September 2002 when the policy was incepted and in the light of the specific requirements for ATE insurance for this case.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">
+	      <span style="text-decoration:underline">The Issues: </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">5.<marker name="tab"/><marker name="tab"/>What ATE policies were available to the client in September 2002?  A number of policies would have been available but I specifically refer to the IOMA Insurance Company policy that at that time charged a premium of £1,000 plus IPT for £50,000 of cover for industrial disease cases and if the case required the cover to be increased to £100,000 the additional premium charged was £1,500 to £2,000.  Cover could therefore have been provided for this multi-track case with a limit of indemnity of £100,000 for a total premium of between £2,500 and £3,000 plus IPT.  I would also note that this premium rate still applies today.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">6.<marker name="tab"/><marker name="tab"/>The following actual insurers all accepted ATE insurance in September 2002.  AIG, Templeton, MMA, Royal &amp; Sun Alliance, NIG, QBE, DAS, IOMA and Allianz Cornhill both directly and via numerous brokers and underwriting agencies.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">7.<marker name="tab"/><marker name="tab"/>It would have been most surprising if a system and premium rating for this case could not have been achieved that, as a minimum, did not mirror the premium rates and terms offered by these insurers for multi-track disease cases.   By way of example, Allianz Cornhill provided £100,000 of cover for industrial disease cases with a premium that started at £840 plus IPT and even allowing for an additional premium for multi-track cases the total premium involved would have been very unlikely to have been more than £2,500 to £3,000 plus IPT.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">8.<marker name="tab"/><marker name="tab"/>The policy did not have a premium rebate clause wherein a case that settles is subject to a reduced premium.  By way of example, one of the ATE policies has a premium rebate clause at a rate of 75% of the initial premium charged should the case settle before the start of the hearing.  Had this been utilised the ultimate premium would have been in the region of £1,800 plus IPT. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">9.<marker name="tab"/><marker name="tab"/>Was the policy in any way specific to the requirements for the actual case?   I refer to the witness statement of Rachel Sarfas of Thompsons Solicitors dated 4<span style="vertical-align:super;font-size:smaller">th</span> December 2003 and note that no attempt at all appears to have been made to make the policy cover and/or premium specific to the actual case.   It should be noted that whilst some cases may need substantial cover of £100,000 when assigned to the multi-track this is by no means always the case and no assessment of the individual needs relative to insurance appears to have been undertaken for this case.    The option of having initial cover of up to £50,000 and only adding to this should the specific case warrant it appears not have been considered or if it was considered no detailed reasons have been provided as to why this specific case warranted the level of cover obtained at the premium of £6,950 plus IPT. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">10.<marker name="tab"/>The statement of Rachel Sarfas also refers to specific additional requirements and/or idiosyncrasies due to the nature of the work flowing to them from the Union that Thompsons had to fulfil due to the relationship they had with the Union involved and that those requirements are audited on behalf of the Union.   Whilst this may well be true, to suggest that only Thompsons fulfilled the professional duty to clients as against the work done by the many thousands of other firms of solicitors handling personal injury cases and using ATE insurance from the insurers and schemes available at that time at much reduced cost is not reasonable. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">11.<marker name="tab"/>If additional requirements over and above those duties and professional responsibilities that always apply to the client applied due to the relationship between Thompsons and the Unions then the cost of fulfilling those requirements is reflected in the considerably higher premium involved.    This must be questionable as to the reasonableness of the ability to recover any element of the premium that reflects those requirements. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">12.<marker name="tab"/>I certainly do not accept that all the schemes and systems at much lower premiums being run for the use of clients at that time had such onerous provisions as to make them incapable of use by Thompsons.   If this was correct then by inference what is being said is that Thompsons and them only correctly fulfilled all the professional duties to clients – this patently is incorrect. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">13.<marker name="tab"/>The use of “blanket” cover of £100,000 at a premium of £6,950 without a premium rebate clause should the case settle for multi-track cases whilst presumably administratively easier for the solicitors can and should be questioned for the lack of any case specific risk assessment as to the level and extent of cover actually reasonably required for this individual case.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">14.<marker name="tab"/>It is my view that a more competitive premium could have been obtained for this case in September 2002 whilst sill fulfilling the correct cover and limit of indemnity requirements that the client had.   In all the circumstances that prevailed at that time I am of the opinion that a premium of not more than £3,000 plus IPT would have been achieved for this client and with a reasonable chance that the premium level would not have exceeded £2,500 plus IPT.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE REGULATORY PROVISIONS AND THE CASES REFERRED TO BY THE PARTIES</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The relevant parts of Section 11 of the CPD referred to, are paragraphs 11.7 to 11.11 respectively: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“11.7<marker name="tab"/>Subject to paragraph 17.8(2), when the court is considering the factors to be taken into account in assessing an additional liability, it will have regard to the facts and circumstances as they reasonably appeared to the solicitor or counsel when the funding arrangement was entered into and at the time of any variation of the arrangement.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">11.8(1)<marker name="tab"/>In deciding whether a percentage increase is reasonable relevant factors to be taken into account may include:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:2.15in;text-indent:-0.57in">(a)<marker name="tab"/>the risk that the circumstances in which the costs, fees or expenses would be payable might or might not occur;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:2.15in;text-indent:-0.57in">(b)<marker name="tab"/>the legal representative's liability for any disbursements;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:2.15in;text-indent:-0.57in">(c)<marker name="tab"/>what other methods of financing the costs were available to the receiving party.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">11.9<marker name="tab"/>A percentage increase will not be reduced simply on the ground that, when added to base costs which are reasonable and (where relevant) proportionate, the total appears disproportionate.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">11.10<marker name="tab"/>In deciding whether the cost of insurance cover is reasonable, relevant factors to be taken into account include:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:2.15in;text-indent:-0.57in">(1)<marker name="tab"/>where the insurance cover is not purchased in support of a conditional fee agreement with a success fee, how its cost compares with the likely cost of funding the case with a conditional fee agreement with a success fee and supporting insurance cover;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in">(2)<marker name="tab"/>    the level and extent of the cover provided;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:2.14in;text-indent:-0.56in">(3)<marker name="tab"/>the availability of any pre-existing insurance cover;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:2.15in;text-indent:-0.57in">(4)<marker name="tab"/>whether any part of the premium would be rebated in the event of early settlement;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:2.15in;text-indent:-0.57in">(5)<marker name="tab"/>the amount of commission payable to the receiving party or his legal representatives or other agents.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">11.11<marker name="tab"/>Where the court is considering a provision made by a membership organisation, rule 44.3B(1) (b) provides that any such provision which exceeds the likely cost to the receiving party of the premium of an insurance policy against the risk of incurring a liability to pay the costs of other parties to the proceedings is not recoverable. In such circumstances the court will, when assessing the additional liability, have regard to the factors set out in paragraph 11.10 above, in addition to the factors set out in rule 44.5.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In addition I was referred to four cases:  <span style="font-style:italic">Callery v Gray</span> [2002] 2 Costs LR 5205;  <span style="font-style:italic">In The Matter of Claims Direct Test Cases</span> [2003] 2 Costs LR 254;  <span style="font-style:italic">Rogers v Merthyr Tydfil Borough Council</span> [2007] 1 Costs LR 77 and a County Court decision <span style="font-style:italic">Marwood Parsons v Leeds City Council &amp; Kirklees Metropolitan Council</span>.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This latter was a decision of His Honour Judge Hawkesworth QC, on appeal from a Deputy District Judge in Leeds County Court, and, as two of the advocates before me, Ms Truscott and Mr Brown, had argued that case, and had apparently also appeared before the Deputy District Judge in the preceding assessment, made it, in their joint submissions, particularly valuable as a helpful pointer, though not a binding precedent on me.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I have already indicated that each party put in skeleton arguments, and I found these, together with the oral submissions, extremely valuable. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">MR BROWN’S SUBMISSIONS ON BEHALF OF THE WINMILL DEFENDANT</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Brown opened the submissions on behalf of the Winmill Defendant by reciting the history of that case, as set out earlier in this judgment, and then came to the issue of the different versions of the insurance certificate, which I have already dealt with, and which I therefore need not lengthen this judgment by further referring to it, since no application for permission to appeal was made in respect of that ruling. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Having referred me to CPD 11.7 to 11.10, Mr Brown reminded me that <span style="font-style:italic">Callery v Gray</span> set out the court’s view, that reasonableness should be tested by reference to the facts known at the time of the taking out of the premium.  So much was common ground with Ms Truscott, but he said he parted company with her, with regard to the block rating of the policies in these two cases.    He contended that the witness statement of Ms Walker carried substantial force in this case.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">He contended that a premium of £6,950 (exclusive of IPT), was disproportionate in relation to the damages recovered, and he pointed to the level of indemnity, in this case being far too high at £100,000, contending that £25,000 would have been perfectly adequate cover. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">He also submitted that it was unusual that disbursements, such as counsel’s fees, should be covered by the premium, it being more normal for counsel to enter into his own CFA with the solicitors. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Brown placed reliance on the dicta of Lady Justice Smith in <span style="font-style:italic">Rogers v Merthyr Tydfil County Borough Council</span> (paragraphs 123 to 131 of the judgment).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The difficulty I have with that part of the judgment, is that it appears to me not to form part of the ratio of the decision of the court.  For instance, in paragraph 122, at the end of the judgment of the court, delivered by Lord Justice Brooke, he said:   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“22.<marker name="tab"/>We are adding to this judgment an Annex written by Lady Justice Smith.  Although the two other members of the court agree with what she says, we felt that it would be far better that she expressed her anxieties in her own words, in view of her immense experience of the practice of personal injuries litigation in this country.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At the end of the day, I think Mr Brown was constrained to accept that, interesting and valuable though the comments by Lady Justice Smith undoubtedly are, they do not form part of the ratio of the <span style="font-style:italic">Rogers</span> decision which is binding on me.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">However, Mr Brown did rely on what was said by His Honour Judge Hawkesworth in the case of <span style="font-style:italic">Marwood Parsons v Leeds City Council</span>.   Oddly, that judgment is not dated, but both counsel involved thought that it was handed down in the early summer of this year.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Apparently, a Deputy District Judge, at the end of a very long, and at times fractious, detailed assessment, was asked to decide on the issue of the level of the ATE insurance premium.   In that case, the premium claimed was exactly the same sum as in these cases, namely, £7,297.50.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In paragraph 9 of that judgment, the Learned Circuit Judge said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“9.<marker name="tab"/>It seems from reading the transcript that the Deputy District Judge reached his conclusion as to the ATE premium recoverable based upon his reading of the case of <span style="font-weight:bold">Rogers v Merthyr Tydfil County Borough Council [2006] EWCA Civ 1134</span> and his broad assessment that the premium claimed was a high figure having regard to the risks present in the case.   He said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.97in">“My view on that is that the figure that the Claimants have paid and which they seek to recover appears to be somewhat more than was absolutely necessary to cover the risks in this case.    I am not satisfied that the market was adequately tested.   But having said that I am also going to bear in mind the fact that the Defendants did continue to contest these proceedings in such a way that the risks of expense being incurred at the conclusion of the litigation were increasing significantly and therefore that is what figured the larger premium that the Claimants actually paid.   Having regard to those factors I think a proper premium or amount to allow in respect of the contribution to that premium would be £6,250 inclusive of premium tax.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.58in">From this passage it is not clear that the statement of Rachel Sarfas has been fully read or considered or played any real part in reaching the conclusion which the Deputy District Judge expressed.   Nor is it clear what the Deputy District Judge had in mind when he referred to the conduct of the Defendants in continuing to contest the proceedings and thus triggering the larger premium.  The very substantial increase had taken place in the premium triggered by allocation when it is clear that neither Defendant had yet had the opportunity to evaluate the strength of the lay evidence much less any expert evidence.   The order made on allocation dated 21<span style="vertical-align:super;font-size:smaller">st</span> August 2004 provided for an exchange of lay witness evidence by 1<span style="vertical-align:super;font-size:smaller">st</span> November 2004, joint instruction of an Acoustic Engineer by the 15<span style="vertical-align:super;font-size:smaller">th</span> of November 2004 and as to medical evidence the Defendants had permission to obtain a medical report from their ENT Surgeon which had to be disclosed by the 10<span style="vertical-align:super;font-size:smaller">th</span> of January 2005.   Thereafter there was the usual provision for discussions between medical experts and a joint report.    As to the low level of the ultimate settlement, there were serious issues as to the causation of the Claimant’s hearing loss, which might have been resolved wholly against the Claimant rather than as in the event appears to have happened being apportioned between noise and other factors.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Circuit Judge then went on to consider the submissions made by Mr Brown, who was appealing against the reduction by the Deputy District Judge of the claimed £7,297.50 for the premium, down to £6,250 inclusive of IPT.   This is contained in paragraphs 10 to 15 of his judgment.   These read as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“10.<marker name="tab"/>Mr Brown on behalf of the Appellants, while contending that the Deputy District Judge was right to conclude that the market was inadequately tested submits he was wrong to conclude that the ATE premium should be recoverable at a high level because the Defendants fought the case to the door of the Court.   He submits that although some reduction was made by the Deputy District Judge this was insufficient and did not reflect the evidence presented to him at the detailed assessment by the Defendants, namely quotations obtained by reference to a Law Society publication “Litigation Funding” of 2003 which gave various premiums for this type of case and indicated that £1,500 was a realistic figure having regard to the general levels of premium which were contained in the article.   Mr Brown also submits that the Defendants were unfairly disadvantaged by having no notice of the nature of the staged premium and when the staging took effect.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">11.<marker name="tab"/>The form N251 which was filed in this case on 2<span style="vertical-align:super;font-size:smaller">nd</span> December 2003 complied, it is conceded, with the relevant rules in identifying funding by a Conditional Fee Agreement with UNISON which provided for a success fee coupled with an insurance policy issued by UIA on the 25<span style="vertical-align:super;font-size:smaller">th</span> June 2003.   In the case of <span style="font-weight:bold">Rogers</span> the Court of Appeal did refer to the effect of staging and at paragraph 116 of the Judgment referred to the procedure to be followed <span style="font-style:italic">in future</span>, and accordingly Miss Truscott is correct in her submission that having regard to the date of the Judgement (31<span style="vertical-align:super;font-size:smaller">st</span> July 2006) such a procedure did not apply in this case.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">12.<marker name="tab"/>In the following paragraph of the Judgment of the Court of Appeal turned to the “evidence justifying the ATE premium claimed”: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.97in">“If an issue arises about the size of a second or third stage premium, it will ordinarily be sufficient for a claimant’s solicitor to write a brief note for the purposes of the costs assessment explaining how he came to choose the particular ATE product for his client, and the basis on which the premium is rated – whether block rated or individually rated.  District judges and costs judges do not, as Lord Hoffmann observed in <span style="font-style:italic">Callery v Gray (Nos 1 and 2)</span> [2002] UKHL 28 at [44]; [2002] 1 WLR 2000, have the expertise to judge the reasonableness of a premium except in very broad brush terms, and the viability of the ATE market will be imperilled if they regard themselves (without the assistance of expert evidence) as better qualified than the underwriter to rate the financial risk the insurer faces.  Although the claimant very often does not have to pay the premium himself, this does not mean that there are no competitive or other pressures at all in the market.  As the evidence before this court shows, it is not in an insurer’s interest to fix a premium at a level which will attract frequent challenges.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.58in">In the case of an agreement between a union and an insurer however a brief note may be insufficient (as the statement of Rachel Sarfas indicates), particularly where the union approved insurance was obtained through a brokerage intermediary, in this case ULSAAS, who it is said by Mr Brown had a close connection with the Claimant’s solicitors.   However, I can see no basis upon which the Court can realistically be expected to conduct an enquiry into whether the negotiations conducted by ULSAAS were properly conducted and did result in a fair level of premiums generally.   To do so would require a test case to be properly mounted with extensive disclosure and expert evidence on both sides.   In the case of <span style="font-weight:bold">Rogers</span> the Court of Appeal were considering an ATE premium with three stages: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.97in">“£450 was payable at the outset, a further £900 when proceedings were issued, and a further £3,510.60 days before the trial. This third stage premium was individually rated, and IPT of 5% was added at each stage.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.97in">The judge observed that according to Litigation Funding, ATE insurance was available at a cost of between £450 and £1,350 from a range of companies, and he could not see that the staged premium justified the wholly excessive charge that was made, given that other companies in the market were charging much less than £1,800 for the whole proceedings.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.97in">He said that nobody conducting litigation reasonably would have agreed to pay a premium of this order if the case did not settle, when he could obtain an insurance policy that covered him for the whole of the conduct of the proceedings for much less than was payable at Stage Two of the DAS policy,  and indeed for not very much more than was payable at Stage One.  He decided that the evidence before him clearly indicated that products were available from a range of companies for cheaper premiums providing the same amount of cover, including the self-insurance aspects of it.  That was why he reduced the recoverable premium to £900, which he said was in the middle of the range of £450 to £1,350 quoted in Litigation Funding.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">13.<marker name="tab"/>That case involved a tripping accident where in the event damages were agreed at £3,105 and were awarded to the Claimant after a trial on liability.   The Court of Appeal approved the Judgment of Master Hurst in the <span style="font-weight:bold">RSA pursuit test cases</span> where he said: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.97in">“As to the information contained in Litigation Funding and The Judge website, this is no more than an indication of policies which might be available in certain circumstances.   As counsel points out, the premiums on his website are “indicative only” and the website contains further warnings.  Litigation Funding has similar warnings and reservations.   I can derive no firm data from these sources.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in">As the Court of Appeal pointed out, in most cases ATE insurance is block rated rather than individually assessed, as was the case here.  In the case considered by the Court of Appeal the third staging took place sixty days before trial and would only be triggered in 5% of cases.  At that stage the premium was assessed by reference to the specific risks involved in the case.   This contrasts sharply with the staging in the present case which escalates dramatically at the allocation stage without any reference to the risks in the individual case.  The initial premium of £950 was not of itself, it is submitted, exceptionally low, and whereas the Defendants in <span style="font-weight:bold">Rogers</span> had the benefit of low premiums (£450 plus £900) up to sixty days before trial, such benefit from staging did not accrue to the Defendants in this case.   Thus Mr Brown submits that on the evidence adduced before the Deputy District Judge from Litigation Funding and the Judge web site he should have concluded that the level and timing of the second stage premium was unreasonable.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">14.<marker name="tab"/>This case was however fully contested to the door of the Court by the Defendants and the structure and level of the premium could not and did not play any part in that decision to litigate to the door of the Court.   I therefore have to look at the final premium paid whether or not it was fair or reasonable to trigger the second stage at allocation without notice to the Defendants.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">15.<marker name="tab"/>The decision of the Court of Appeal in <span style="font-weight:bold">Rogers</span> has made the task of challenging an insurance premium obtained in circumstances such as the present extremely difficult for Defendants, as was recognised by Smith LJ in her annexe to the Judgment of the Court.   If the evidence adduced by the Defendants in this case before the Deputy District Judge from Litigation Funding and the web site is to be given little weight, and the premium is block rated and is obtained through the intermediary of a broker whose expertise in the market cannot be challenged without expert evidence, then the scope of the challenge can only be “in very broad brush terms” (see <span style="font-weight:bold">Rogers</span> para 117).”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Actually, Mr Brown relies heavily on what was said in paragraph 16, and, in particular, the section that starts “some reduction was plainly justified”.  He drew my attention particularly to the last sentence of that paragraph: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Clearly by paying his union subscription the Claimant may have been entitled to expect a ‘Rolls Royce’ service in relation to legal representation, but I see nothing unreasonable in expecting the union to bear from its funds (derived in part from its members’ subscriptions) that part of the unrecovered premium.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Brown maintained that the website quotations made by Ms Walker were relevant, and pointed out that the allocation and listing questionnaires filed on behalf of the Defendant, indicated a much more modest level of expenditure than the Claimants were seeking to cover by this ATE policy. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">He entirely accepted that there was nothing wrong at all in the staging of the premium, but did complain that those instructing him should have been told of the staging, so that they could have decided whether they wished to try to settle the case prior to the very substantial increase in premium, which would come about at the allocation stage. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">83.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">He contended that the premium payable, presumably at the outset, was set at such a level that was not very far different from that payable had there been a single ATE policy, without any staged payment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">84.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Accordingly, his primary contention was that the initial payment, of £950, was sufficient, but, if I was against him on that point, then he would contend that a premium of £1,500 was adequate. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">MR WHAWELL’S SUBMISSIONS ON BEHALF OF THE PEARSON DEFENDANTS </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">85.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Whawell obviously started by pointing out the distinctions between his case, and the Winmill case, in terms of liability and damages, and submitted that Mr Gordon’s witness statement was particularly valuable, because it was a witness statement by someone with first hand knowledge of the insurance industry, and their experience on exposure to this sort of risk. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">86.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">He was able to keep his submissions relatively short, for two reasons.  Firstly, he adopted the general principle set out by Mr Brown in his submissions, on behalf of the Winmill Defendant, but secondly, he said his case was clearly set out in his skeleton argument, dated 26 March. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">87.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Paragraphs 9 to 17 are at the heart of his submissions, and I set these out below: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“9.<marker name="tab"/>The market is in insurance terms a young one with a claims experience that goes back to only 1993.   When ATE first launched, it was accepted that there would need to be a period during which the performance of the market would need to be monitored and that premiums would need to be adjusted when more meaningful claims data became available.  The nature of the insurance is such that unlike motor or household insurance, the risk does not run off within a specified period, and therefore that claims data has only been available in the last two to three years.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">10.<marker name="tab"/>The market has developed a number of different products that differentiate between the risks in a variety of different ways.  The market now differentiates between the different types of litigation, and within the personal injury market, between the different types of litigation risk.   Therefore, the premiums charged for more complicated industrial disease cases are higher than the premiums charged for simple road traffic accident cases. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">11.<marker name="tab"/>The biggest competitor to after the event insurance is self-insurance, where the fully informed client decides to forego insuring the case.   This usually only happens when the case is very strong, but means that the various insurance provides will be insuring a pool of the more difficult risks. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">12.<marker name="tab"/>It is an established risk assessment tool to look at the amounts in dispute in the case, as the higher the amount at stake in terms of damages, the more likely it will be that the case will be strongly defended.  In order to create a differential, the frequently used demarcation is whether the case is in the fast track or the multi track with higher premium rates applying for multi track cases.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">13.<marker name="tab"/>The After the Event industry has taken on board the encouragement given in the Civil Procedure Rules for an early admission of liability and understands that the timing of applications for Litigation costs insurance will be a matter of tactics in each case.   It does however recognise that if insurance is applied for at around the time when proceedings are issued, then they are getting a smaller basket of more risky cases. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">15.<marker name="tab"/>Trade unions and specialist law firms with volumes of cases have an advantage in the insurance market in that they can use their specialisation and greater buying power to negotiate lower rates for there clients.  Was it appropriate that the Claimant entered into this particular agreement.   Did the Claimant’s solicitors asses his needs, did they consider whether he had any pre-existing BTE and where the full checks carried out.   Did indeed the Claimant get offered alternatives.   If not why not or is it the case that there is a financial or mutually beneficial relationship between the claimant’s solicitors and or union and the insurers.  Within the statement it is shown clearly that there were alternatives and while the Claimant say that they have not utilised a block rate, how is the premium calculated if it is not on a block of risk.   There has been no individual rating of the Claimant nor the Claimant’s needs and while this premium might suit one Claimant it might not suit another. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">16.<marker name="tab"/>The Claimant’s witness statement does not say why the Law Society product was the market leader and what matters she considered.    The statement itself is not up to date nor does it provide any individual items to this premium and this Claimant. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">17.<marker name="tab"/>It is submitted by the Claimants that a lower amount of premium would have been paid for early settlement.   However, the Claimant failed to tell the Defendant the premium was staged.   Additionally had the Defendants settled for the sum that the Claimant’s wished they would have ended up paying considerably more than they have to date in terms of damages.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">88.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">He had, of course, earlier in his skeleton, submitted figures from alternative insurers, which he suggested should have been explored on behalf of the Claimant, and, if they had been, would have resulted in a much lower premium than was paid in this case. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">89.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Whawell also urged me to press Ms Truscott as to whether the IPT had actually been paid, and who was the ultimate carrier of the risk. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">90.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">He concluded by suggesting that the appropriate premium in the Pearson case would have been £3,000.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">MS TRUSCOTT’S SUBMISSIONS ON BEHALF OF BOTH CLAIMANTS</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">91.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the submissions on behalf of the Claimants, in both cases, Ms Truscott opened by reminding me of what was said in paragraph 13 of <span style="font-style:italic">Callery v Gray (No.2)</span>.  This, near the start of the short speech of Lord Nicholl’s of Birkenhead, reads: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“In short this result comes about as follows.   By entering into a conditional fee agreement at the outset, a claimant achieves the position that his solicitor’s charges will never be payable by him or at his expense.   If his claim is successful the fees, including the amount of the uplift, will be payable by the defendant’s liability insurers.   If his claim is unsuccessful, nothing will be due from him to his solicitor under the agreement.   Likewise with the premium payable for the after the event insurance:   if the claim is successful, the premium will be payable by the other side’s liable to the insurers.   If the claim is unsuccessful, nothing will be payable by the claimant when, as frequently happens, the policy provides that no premium will be payable in that event.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">92.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mindful of the two following paragraphs from Lord Nicholls speech, Ms Truscott then referred me to the guidance given by the Court of Appeal in <span style="font-style:italic">Rogers</span><span style="font-weight:bold">,</span> at paragraph 117:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“117.<marker name="tab"/>If an issue arises about the size of a second or third stage premium, it will ordinarily be sufficient for a claimant’s solicitor to write a brief note for the purposes of the costs assessment explaining how he came to choose the particular ATE product for his client, and the basis on which the premium is rated – whether block rated or individually rated.  District judges and costs judges do not, as Lord Hoffmann observed in <span style="font-style:italic">Callery v Gray (Nos 1 and 2)</span> [2002] UKHL 28 at [44]; [2002] 1 WLR 2000, have the expertise to judge the reasonableness of a premium except in very broad brush terms, and the viability of the ATE market will be imperilled if they regard themselves (without the assistance of expert evidence) as better qualified than the underwriter to rate the financial risk the insurer faces.  Although the claimant very often does not have to pay the premium himself, this does not mean that there are no competitive or other pressures at all in the market.  As the evidence before this court shows, it is not in an insurer’s interest to fix a premium at a level which will attract frequent challenges.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">93.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">She submitted, that, in the light of that guidance, it was difficult for defendants to challenge the amount of the premium claimed, and even more difficult for the Costs Judges and District Judges to decide on a lower figure. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">94.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">She then turned to deal with the points raised by Mr Brown, in the order in which he had raised them, and, as far as his criticism of basing the premium on block rating was concerned, she referred to paragraphs 105 and 106 of <span style="font-style:italic">Rogers</span>:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“105.<marker name="tab"/>In this case it might be thought that all the considerations urged on the court by Mr Bartlett which favour the course taken by Mr Cater, the appellant’s solicitor, might go to demonstrate the reasonableness of his bill of costs – specifically, the ATE insurance staged premium – but not its proportionality: precisely because they have nothing to do with the quantum of the claim.  But we do not think that is right.  If the court concludes that it was <span style="font-style:italic">necessary </span>to incur the staged premium, then as this court’s judgment in <span style="font-style:italic">Lownds </span>shows, it should be adjudged a proportionate expense.  Necessity here is, we think, not some absolute litmus test.  It may be demonstrated by the application of strategic considerations which travel beyond the dictates of the particular case.  Thus it may include, as we are persuaded it does, the unavoidable characteristics of the market in insurance of this kind.  It does so because this very market is integral to the means of providing access to justice in civil disputes in what may be called the post-legal aid world.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">106.<marker name="tab"/>It is important to recognise that this conclusion runs with, not across, the grain of the procedural reforms expressed in the CPR.  The very recognition that justice requires a use of resources that is proportionate to what is at stake implies the rightness of a strategic approach.  There can be no touchstone of a proportionate use of resources so understood, without an eye to the context in which any such resources are expended.  Once it is concluded that the ATE staged premium here was necessarily incurred, principle and pragmatism together compel the conclusion that it was a proportionate expense.  We turn therefore to the question whether the ATE staged premium was necessarily incurred.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">95.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Ms Truscott then turned to the question of proportionality, and pointed out that the Winmill case settled for a relatively modest sum, very much at the last minute, after the experts had been ready to give oral evidence at trial.  She referred me to paragraph 34 of <span style="font-style:italic">Rogers</span>, which reads: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“34.<marker name="tab"/>The level of premium is not generally, nor in this particular case, predicated by or related to the amount of damages.   It is set by reference to the risk to the insurer and his exposure to costs and disbursements in a failed case.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">96.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">She criticised Ms Walker’s witness statement, saying that it was difficult to tell from this document the exact details of the scope of the cover which was provided, and the alternatives which she put forward. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">97.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">She referred me to Master O’Hare’s Report, annexed to their judgment and referred to by the Court of Appeal in the case of <span style="font-style:italic">Callery v Gray</span>, and in particular she referred me to question 4, which Master O’Hare had posed, and his answer in paragraph 30 of his report:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">“<span style="font-style:italic">What does the premium cover?</span></p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in">30.<marker name="tab"/>In most if not all off the peg policies the limit of indemnity cover will be standardised; £25,000, £50,000 or £100,000. Several ATE providers argue that the vast majority of cases will not require this level, but a reduction of it would not substantially affect the premiums (see "burning cost" in para. 36, below). Having one limit of indemnity keeps the administrative costs down. Also, I am impressed by the argument (raised by Abbey and Litigation Protection Ltd) that it is a basic premise of good underwriting practice that all risks are adequately insured.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">98.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">
+	      <span style="color:#000000">She criticised the references to Ms Walker’s witness statement to the various quotations from websites, pointing out their inherent unreliability. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">99.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">
+	      <span style="color:#000000">She maintained that Ms Sarfas’ evidence, taken as a whole, showed that she had indeed tested the market, and that when you compared the benefits to be obtained from the policy, which she ultimately opted for, and the competing Law Society policy, it could be seen that she had indeed got the best possible value by entering into the UIA policy. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">100.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">
+	      <span style="color:#000000">As to the staging of the premium, she said that </span>
+	      <span style="font-style:italic;color:#000000">Rogers</span>
+	      <span style="color:#000000"> had to be applied in a broad brush way, and reminded me that, at paragraph 107 of </span>
+	      <span style="font-style:italic;color:#000000">Rogers</span>
+	      <span style="color:#000000">, it was indicated that it was not unreasonable to have, as a trigger point, the allocation to the relevant track for the purposes of increasing the premium. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">101.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">
+	      <span style="color:#000000">She referred me to paragraph 116 of </span>
+	      <span style="font-style:italic;color:#000000">Rogers</span>
+	      <span style="color:#000000">: </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in"><span style="color:#000000">“116.</span><marker name="tab"/>During the course of argument it was accepted on all sides that a party who has an ATE insurance policy incorporating two or more staged premiums should inform its opponent that the policy is staged, and should set out accurately the trigger moments at which the second or later stages will be reached.  This obligation should be undertaken in addition to the obligations set out in CPR 44.15(1) and in paras 19.1(1) and 19.4 of the Costs Practice Direction.  If this is done, the opponent has been given fair notice of the staging, and unless there are features of the case that are out of the ordinary, his liability to pay at the second or third stage a higher premium than he would have had to pay if the claim had been settled at the first stage should not prove to be a contentious issue.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">102.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">
+	      <span style="color:#000000">She reminded me that, of course, this case preceded </span>
+	      <span style="font-style:italic;color:#000000">Rogers</span>
+	      <span style="color:#000000">, and therefore the guidance for the future given in that case could not be applicable to the facts of this case. </span>
+	    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">103.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">
+	      <span style="color:#000000">Finally, she reminded me of what was said in paragraph 11 of </span>
+	      <span style="font-style:italic;color:#000000">Parsons</span>
+	      <span style="color:#000000">:</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.57in;text-indent:-0.57in"><span style="color:#000000">“</span>11.<marker name="tab"/>The form N251 which was filed in this case on 2<span style="vertical-align:super;font-size:smaller">nd</span> December 2003 complied, it is conceded, with the relevant rules in identifying funding by a Conditional Fee Agreement with UNISON which provided for a success fee coupled with an insurance policy issued by UIA on the 25<span style="vertical-align:super;font-size:smaller">th</span> June 2003.   In the case of <span style="font-weight:bold">Rogers</span> the Court of Appeal did refer to the effect of staging and at paragraph 116 of the Judgment referred to the procedure to be followed <span style="font-style:italic">in future</span>, and accordingly Miss Truscott is correct in her submission that having regard to the date of the Judgement (31<span style="vertical-align:super;font-size:smaller">st</span> July 2006) such a procedure did not apply in this case.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">104.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in"><span style="color:#000000">She then turned to </span>Mr Whawell’s submissions in the Pearson case, and, as far as the question of whether IPT had actually been paid was concerned, she reminded me, that at the relevant time, paragraph 32.5(2) of CPD did not require that information to be given, and, if and in so far as there was any conflict between CPD 32.5(2) and 32.3(d), the former clearly had to prevail.  Paragraph 32.2(3) applies to “ordinary” assessments, while paragraph 32.5(2) applies exclusively to assessments involving an additional liability. She submitted that the certificate of accuracy on the bill was sufficient to dispose of that point.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">105.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">She then turned to the facts of Pearson, and reminded me that it was factually, and to some extent legally, complicated, and that no offer was made until less than a month before the trial.  It settled at such a modest figure because of the litigation risk that the Claimant might fail completely.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">106.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Turning to Bob Gordon’s evidence, she submitted that he focussed entirely on the level of the premium, but gave no detail as to other factors, apart from the limit of indemnity, and whether they were available indeed in CCFA cases, such factors as self appointment, reporting, etc, all of which are missing from his examples.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">107.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">She reminded me, that, in considering the question of proportionality in this case, it had to be borne in mind, that, had the Claimant established primary liability, his damages might well have been in the order of £70,000. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">SUBMISSIONS IN REPLY</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">108.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Both Mr Brown, at greater length, and Mr Whawell, at shorter length, replied to Ms Truscott’s submissions, but no disrespect is intended towards those submissions, which I found valuable, if I do not deal with them in detail.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">109.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The battle lines were clearly drawn in respect of the initial submissions made by the parties, and, as is often the case, submissions in reply do not often taken the matter very much further.   </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">MY DECISION IN THE WINMILL CASE</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">110.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I have not found this an easy matter to resolve.   On the one hand I fully accept Ms Truscott’s submission that the level of the premium has to take account of the fact that it is a block rated premium, and not tailor made to the facts of this particular case.    If it had been, then clearly more enquiries would probably have had to have been carried out.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">111.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Equally, I can understand the submissions made on behalf of this Defendant.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">112.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Having given the matter long and careful thought, however, I have come to the conclusion that the approach adopted by the Deputy District Judge in the Parsons case, as endorsed on appeal by His Honour Judge Hawkesworth QC, should guide me in coming to my conclusion in this case.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">113.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Defendants could have made proposals to settle this case at a much earlier stage than they did, and, so far as the Claimant was concerned, there was always the risk that he would go away empty handed if the case was fully contested. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">114.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Nevertheless, I think that the premium claimed is higher than was strictly necessary bearing all the circumstances in mind, and I accordingly reduce it to £5,750, plus IPT. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">MY DECISION IN THE PEARSON CASE</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">115.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I think that the principles set out in the immediately preceding paragraphs are equally applicable, but this was a much more difficult case, from the Claimant’s point of view, and I think this needs to be reflected in the level of premium to be allowed, which I consider should be £6,250 plus IPT.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">116.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As to Mr Whawell’s point about whether or not IPT has been paid, I accept Ms Truscott’s submissions about that, and do not think that there was anything in the point raised by Mr Whawell that needs to be taken further in this judgment.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">117.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Perhaps I need hardly add that my decisions in these cases are based on the facts of those cases and cannot, and do not purport, to lay down any general principle applicable to all Thompson cases involving this level of premium.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE WAY AHEAD</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">118.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is, I think, common ground that I cannot resolve the question of costs in the Winmill case, because only the level of the insurance premium has been referred to me, and therefore clearly, all issues as to costs, and I would also venture to suggest also interest in that case, will need to go back to the District Judge dealing with this case in Sheffield. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">119.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">So far as the Pearson case is concerned, I was told that costs were agreed, subject to this discrete issue of the level of the insurance premium, and it would seem appropriate (if only in the interests of saving further costs), for me to resolve the issue of costs in that case, rather than referring it back to the District Judge. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">120.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">None of the parties addressed me on the question of interest on the premium, and certainly in the case of Pearson I would welcome such submissions when this judgment is formally handed down, to avoid the necessity to remit that case to the County Court, just for that purpose.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">121.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It goes without saying that I will consider any submissions made to me when the judgment is handed down, which need not be restricted to the points which I have raised in the immediately preceding paragraphs.</p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

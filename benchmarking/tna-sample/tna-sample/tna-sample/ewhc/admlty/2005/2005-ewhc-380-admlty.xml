@@ -1,0 +1,1582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewhc/admlty/2005/380"/>
+	  <FRBRuri value="ewhc/admlty/2005/380"/>
+	  <FRBRdate date="2005-03-23" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-admiralty"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="380"/>
+	  <FRBRname value="The Owners and Bareboat Charterers of the v The Owners and Bareboat Charterers of the vessel"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewhc/admlty/2005/380/eng"/>
+	  <FRBRuri value="ewhc/admlty/2005/380/eng"/>
+	  <FRBRdate date="2005-03-23" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-admiralty"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewhc/admlty/2005/380/eng/akn"/>
+	  <FRBRuri value="ewhc/admlty/2005/380/eng/akn"/>
+	  <FRBRdate date="2021-12-01T10:24:04" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewhc-qbd-admiralty" href="https://www.gov.uk/courts-tribunals/admiralty-court" showAs="The Business and Property Courts (Admiralty Court)" shortForm="The Admiralty Court"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="the-owners-and-bareboat-charterers-of-the" href="" showAs="The Owners and Bareboat Charterers of the"/>
+	<TLCPerson eId="vessel-global-mariner" href="" showAs="Vessel “GLOBAL MARINER”"/>
+	<TLCPerson eId="the-owners-and-bareboat-charterers-of-the-vessel" href="" showAs="The Owners and Bareboat Charterers of the vessel"/>
+	<TLCPerson eId="atlantic-crusader" href="" showAs="“ATLANTIC CRUSADER”"/>
+	<TLCRole eId="claimant" href="" showAs="Claimant"/>
+	<TLCRole eId="defendant" href="" showAs="Defendant"/>
+	<TLCPerson eId="judge-the-honourable-mr-justice-gross" href="/judge-the-honourable-mr-justice-gross" showAs="THE HONOURABLE MR JUSTICE GROSS"/>
+      </references>
+      <proprietary source="ewhc/admlty/2005/380/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWHC-QBD-Admiralty</uk:court>
+	<uk:year>2005</uk:year>
+	<uk:number>380</uk:number>
+	<uk:cite>[2005] EWHC 380 (Admlty)</uk:cite>
+	<uk:hash>49865fceda30fd0fe3925df0b8a33d3a0e9085ead9f94968661d7ac08e910b4e</uk:hash>
+      </proprietary>
+      <presentation source="ewhc/admlty/2005/380/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .Heading2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .Heading3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .Heading4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .Heading5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .Heading6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .Heading7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .Heading8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .Heading9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .Heading { font-size: 12pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 0.50in; font-size: 12pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .Heading2Char { font-style: italic; font-weight: bold; font-size: 14pt; }
+#judgment .Heading3Char { font-weight: bold; font-size: 13pt; }
+#judgment .Heading4Char { font-weight: bold; font-size: 14pt; }
+#judgment .Heading5Char { font-style: italic; font-weight: bold; font-size: 13pt; }
+#judgment .Heading6Char { font-weight: bold; font-size: 11pt; }
+#judgment .Heading7Char { font-size: 12pt; }
+#judgment .Heading8Char { font-style: italic; font-size: 12pt; }
+#judgment .Heading9Char { font-size: 11pt; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .Hyperlink { text-decoration: underline; color: #0044BB; }
+#judgment .QuoteChar { font-style: italic; font-size: 12pt; color: #404040; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p class="CoverText" style="text-align:left">Neutral Citation Number: <neutralCitation>[2005] EWHC 380 (Admlty)</neutralCitation><span> </span></p>
+      <p class="CoverText">Case No: <docketNumber>2002/737</docketNumber></p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline"> IN THE HIGH COURT OF JUSTICE</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">QUEENS BENCH DIVISION</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">ADMIRALTY COURT</courtType>
+      </p>
+      <p class="CoverText">Royal Courts of Justice</p>
+      <p class="CoverText">Strand, London, WC2A 2LL</p>
+      <p class="CoverText">Date: <docDate date="2005-03-23">23 March 2005</docDate></p>
+      <p style="text-align:center"><span style="font-weight:bold">Before</span> :  </p>
+      <p style="text-align:center">
+	<judge refersTo="#judge-the-honourable-mr-justice-gross" style="font-weight:bold">THE HONOURABLE MR JUSTICE GROSS</judge>
+      </p>
+      <p style="text-align:center">Sitting with CAPTAIN COLIN STEWART  &amp; CAPTAIN IAN GIBB </p>
+      <p style="text-align:center">RNR Elder brethren of Trinity House, as Nautical Assessors</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#the-owners-and-bareboat-charterers-of-the" as="#claimant" style="font-weight:bold">The Owners and Bareboat Charterers of the</party>
+	    </p>
+	    <p style="text-align:center">
+	      <party refersTo="#vessel-global-mariner" as="#claimant" style="font-weight:bold">Vessel “GLOBAL MARINER”</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#claimant">Claimants</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#the-owners-and-bareboat-charterers-of-the-vessel" as="#defendant" style="font-weight:bold">The Owners and Bareboat Charterers of the vessel</party>
+	    </p>
+	    <p style="text-align:center">
+	      <party refersTo="#atlantic-crusader" as="#defendant" style="font-weight:bold">“ATLANTIC CRUSADER”</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Defendants</role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center"><span style="font-weight:bold">Mr N Teare QC &amp; Mr J Turner </span>(instructed by <span style="font-weight:bold">Barlow Lyde &amp; Gilbert</span>) for the Claimants</p>
+      <p style="text-align:center"><span style="font-weight:bold">Mr L Persey QC &amp; Mr M Davey </span>(instructed by <span style="font-weight:bold">Hill Taylor Dickinson</span>) for the Defendants</p>
+      <p style="text-align:center">Hearing dates : 6<span style="vertical-align:super;font-size:smaller">th</span> &amp; 7<span style="vertical-align:super;font-size:smaller">th</span> October; 22<span style="vertical-align:super;font-size:smaller">nd</span> – 14<span style="vertical-align:super;font-size:smaller">th</span> Oct and 20<span style="vertical-align:super;font-size:smaller">th</span> October 2004</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p class="CoverDesc">APPROVED JUDGMENT</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">Mr Justice  Gross:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading">
+	      <span style="text-decoration:underline">INTRODUCTION</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">At about 08.28-08.29 local time on the 2<span style="vertical-align:super;font-size:smaller">nd</span> August, 2000 (GMT-4), the Claimants’ vessel, the “GLOBAL MARINER” (“GM”) and the Defendants’ vessel, the “ATLANTIC CRUSADER” (“AC”), came into collision in the River Orinoco, between miles 194 and 195, off the port of Matanzas, Venezuela. The consequences of the collision were dramatic, in that GM sank within minutes; fortunately, there was no loss of life or significant personal injury.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">GM, registered in the port of London, was a geared motor cargo vessel of 12,778 GRT, 161.83m in length overall and 22.90m in beam. She was powered by an 8827 kW engine.  At the time of collision she was laden with some 16,598mt of wire rods and hot and cold rolled steel coils and was on an even keel drawing 9.9m. She was in commercial service but was being used as a training vessel for deck and engineering cadets.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">AC, registered in the port of Limassol, was a motor cargo vessel of 7,366 GRT, 122.34m in length overall and 20m in beam. She was powered by an engine developing 6,080 BHP. At the time of collision, she was laden with a cargo of some 7,700mt of bulk ferromanganese and her drafts were 8.17m forward and 8.34m aft. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">GM had hitherto been berthed port side to alongside Sidor no.3 berth on an upriver heading. In broad terms, the collision occurred in the course of her undertaking a 180<span style="font-family:Symbol"></span> starboard turn to commence her downriver passage, assisted by two tugs and under the advice of a local pilot.  Another vessel, “ILLAPEL”, was anchored abeam of GM, distant some 2.5 – 3 cables off the berth, to the northern side of the navigable channel.  AC had been at anchor, most recently to her starboard anchor, with 5½ shackles in the water, about astern of “ILLAPEL”, distant some 5 cables from her.  As will be seen, AC’s position, the question of whether she had been dragging and, if so, the direction of her dragging were controversial; subject to AC’s substantial yawing, which was common ground, for the moment it suffices to say that her heading had been very broadly upriver.  There is annexed to this judgment, a copy of a chart of the relevant area, with the simulations of both parties’ experts superimposed thereon (“Annexe I”).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">A number of matters were common ground:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The time of the collision, as already recorded.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The weather was fine and clear. The wind was immaterial, being NE of 10 knots or less, alternatively variable, about force 1. The river current, which was of significance, was setting ENE at some 4-5 knots, generally following the direction of the river (downriver).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The current could cause AC to yaw substantially, to about 35-40<span style="font-family:Symbol"></span> either side of her mean upriver heading. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The angle of blow was about 60<span style="font-family:Symbol"></span>, leading aft on GM. Contact was between the bow of AC and the port side of GM, about in way of hold 2A and, thereafter, hold 3 (both of which were penetrated).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">At the time of collision, GM was on a heading to starboard of downriver and AC was on a heading to port of upriver.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Certain matters were not common ground but the differences between the parties were such as, in my judgment, to render dispute immaterial:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Experts instructed by both parties prepared simulated tracks of GM, covering her manoeuvre from her berth to the collision position.  As appears from Annexe I, there is a difference of about 50m (North/South) between the two. Given (<span style="font-style:italic">inter alia</span>) the fact that the GM did not have a course recorder or an engine data logger and the inevitable margins of error in such exercises, nothing turns on the difference between the two simulated tracks.  I accept these simulations as providing good illustrative plots of the track of GM, subject throughout to the caution expressed by David Steel J. in <span style="text-decoration:underline">The Pelopidas</span> [1999] 2 Lloyd’s Rep. 675, esp. at p.682.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">As further appears from Annexe I, the difference between the parties’ collision positions is of the order of 70m (East/West); indeed the  disagreement between expert photogrammetrists (who contributed in their reports to this debate), was of no more than 37m, within each expert’s acknowledged margin of error.  Again, no practical consequences rest on such differences. I am therefore content to conclude that the collision position was about 500m from and bearing about WNW of the South Western end of Venalum pier, shown in the annexe. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">I did not understand the parties ultimately to dispute that the “ILLAPEL” was (as already noted) anchored some 2.5 – 3 cables off the Sidor berth.  For completeness, the difference between 2.5 and 3 cables is wholly immaterial and I say no more of it. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">The principal issues in the case may conveniently be considered under the following broad headings:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">AC’s anchorage position and the control of yaw, sway and drag by AC (“Issue (I):  AC at anchor”);</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The manoeuvre carried out by GM, including planning, appreciation and lookout (“Issue (II):  The GM manoeuvre”);</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Causative faults, if any, on the part of each vessel (“Issue (III): Fault”);</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Apportionment of such causative faults (if any) as are found against each vessel (“Issue (IV): Apportionment”).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">By way of broad outline only, the rival cases were these.  GM, if I may say so, somewhat boldly, contended that AC was solely to blame, alternatively should bear the preponderance of blame.  AC had been anchored in an unsafe anchorage and had failed to take any or adequate steps to control her yaw, drag and sway. In its final form, GM’s case was that there probably was some but not very great dragging in a SE direction, towards Venalum berth; the greater movement was caused by yaw and sway.  The duty to control yaw, drag and sway was acute, given that AC had anchored in a narrow channel in close proximity to busy berths.  Control could have been achieved by the adoption of an open moor (anchoring with two anchors, to an angle of about 60<span style="font-family:Symbol"></span>), together with use of helm and engines; had such measures been taken, AC would have been more to the North of the channel and a collision would probably have been avoided or its nature would have been less serious.   For her part, GM had maintained a proper lookout before unberthing; neither “ILLAPEL” nor AC presented risks to the unberthing manoeuvre and it could not reasonably be anticipated by those on board GM that AC would yaw and sway substantially and not take steps to control such movement.  The manoeuvre itself was reasonably conducted and it was AC’s intermittent movement into the middle of the narrow channel which caused or was the major cause of the collision. The notion that GM as the moving vessel should be solely to blame was in any event wrong and amounted to a resurrection of the “last opportunity rule”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">AC’s case was that GM was solely to blame for the collision; very much as a fallback alternative, GM was preponderantly to blame. GM, underway, had struck a vessel at anchor. At anchor, AC, painted bright red, had been visible; her yawing was not unusual for a vessel at anchor in a river with a fast flowing current.  Her anchorage was not unsafe. She was not dragging or any dragging was minimal and immaterial; she had taken reasonable measures to seek to control her yaw; an open moor had been tried; so too had use of the helm; the use of engines would likely have made matters worse.  The fault here lay with the failure of those on board GM to make any appreciation prior to unberthing or to maintain a proper lookout before or after departure from the berth. There had been no adequate planning or discussion between the master and pilot.  The use of her engines at full ahead for some 3 minutes (between 08.24 and 08.27) had resulted in GM proceeding further to the North than should have been the case and accelerating out of her turn; if GM had needed half or full ahead at all, only a kick with the engines was needed.  Even after GM came onto a downriver heading, having made too wide a turn at an excessive speed, a collision could have been avoided if (now having her engines on full ahead) her engines had been kept at full ahead and she had gone to starboard; instead confusion prevailed on the bridge and a series of unjustifiable orders were given, resulting in GM failing to keep clear of AC.  GM’s manoeuvring was such that any failure on the part of AC to control her yaw and sway was not causative of the collision; there would have been a collision in any event. While not disputing that AC’s log and record keeping had been lamentable, it would be wrong to hold AC causatively to blame in order to register the court’s disapproval of the way she may have managed herself. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">As to the evidence:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">I heard from nine witnesses of fact; eight called by GM and one by AC. GM called her master, third officer, pilot and helmsman, together with four tug masters, on board the two tugs (“NICOLE” and “MARIANNE D”) waiting to assist in the berthing of “ILLAPEL”, scheduled to follow GM’s departure. AC called her relatively inexperienced third officer, Mr. Cubid, but neither her master nor chief officer.  It was a feature of the case that, with the sole exception of the helmsman of GM, all this evidence must be approached with varying degrees of caution – though I should make it clear at once that there was, rightly, no suggestion that either the master or third officer of GM had been other than honest witnesses.  It is convenient to note here that prior proceedings in the United States (“the US proceedings”) had generated a volume of evidential material, which, in the event, furnished considerable pickings for cross-examination in this trial.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Given the record keeping on board AC and, in particular certain alterations to her bell book and log to which I must return, no particular weight could be placed on the written statement evidence from her master, Captain Quimsing.  He could not attend to give evidence on the stated ground of ill-health.  I must of course do the best I can on the evidence before me but it is perhaps unfortunate that no steps were taken to make the master of AC available to give evidence by way of video link. I particularly highlight this matter to draw attention to the use to which video technology can be put, in appropriate cases, when, for good reason, attendance by the witness cannot be obtained.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">A plethora of expert evidence, which it is unnecessary to list in detail, was available in statement form. In the event, through the good sense of the parties, it proved unnecessary to call any of the experts to give evidence orally.  To a large extent this was apparent at the outset of the trial, given the immaterial disagreements as to the track of GM and the collision position, as already noted.  Although it had been anticipated that it might be necessary to call some expert evidence as to questions going to the simulation of a vessel at an open moor, in the event AC’s expert came to accept the views of GM’s expert.  It is not to be inferred from the fact that they were not called to give oral evidence, that the experts did not play a useful role in narrowing the ambit of the dispute.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I was most grateful to Mr. Teare QC, representing GM and to Mr. Persey QC, representing AC and their respective teams, for their assistance throughout this case.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading">
+	      <span style="text-decoration:underline">NAUTICAL ASSESSORS AND THE HUMAN RIGHTS ACT </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">This trial post-dated the decision of the Court of Appeal noted in <span style="text-decoration:underline">Bow Spring (Owners) v Manzanillo II (Owners)</span> [2004] EWCA 1007; [2005] 1 WLR 144. Before coming to the principal issues, it may be of some general interest to consider the procedure to be adopted at trial to give effect to the guidance furnished by the Court of Appeal in that case.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">In <span style="text-decoration:underline">The Manzanillo II</span>, the Court of Appeal held that the practice previously followed in collision actions was not compatible with Art. 6 of the European Convention for the Protection of Human Rights and Fundamental Freedoms 1950 (as set out in Schedule 1 to the Human Rights Act 1998), in that the parties did not have the opportunity to address argument as to the answers of the nautical assessors in response to questions posed by the Judge. Giving the judgment of the Court of Appeal, Clarke LJ said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ [59] Where the court has evidence from an expert who has not been called as a witness by either party – and CPR 61.12 makes it clear that nautical assessors are such experts – the principle needs to be adapted to the procedure. Its effect is that any consultation between the assessors and the court should take place openly as part of the assembling of evidence. Because the judge is not bound to accept the advice he receives from the assessors ….the parties are entitled to an opportunity to contend that he should or should not follow it. In many, perhaps most, cases the questions and advice taken together will be susceptible of little or no argument that has not already been directed to the issues which have prompted the questions. But fairness requires the opportunity to be given…..</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">[61] …it is right that, except in cases where such a discussion is unnecessary in the light of submissions made earlier, the preferable modern practice of putting questions to the assessors after discussion with counsel should be complemented by a practice of disclosing their answers to counsel, either orally or in writing – in order that any appropriate submission can be made as to whether the Judge should accept their advice.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">As it seems to me, in the light of <span style="text-decoration:underline">The Manzanillo II</span>, the correct course to adopt is as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The range of topics on which advice might be sought from the Assessors should be canvassed with counsel by, latest, the stage of final submissions.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Ordinarily, the questions asked of the Assessors by the Judge should not stray outside the range previously discussed with counsel; should they do so, however, there are safeguards contained in iii) and iv) below.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The questions ultimately put by the Judge, together with the answers given by the Assessors, should be disclosed to counsel before any draft judgment is handed down.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Counsel should thereafter be given the opportunity to make submissions to the Judge, as to whether the advice given by the Assessors should be followed.  Ordinarily, any such submissions should be in writing; but if there is good reason for doing so, an application could be made for an oral hearing.  The Judge will consider any such submissions before finalising his judgment. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Generally speaking, the interests of proportionality and finality will make it unnecessary to repeat the procedure after the Judge and the Assessors have had the opportunity of considering the parties’ submissions and any suggested further or revised questions. Accordingly, unless the Judge in his discretion thinks it appropriate to disclose them to counsel before the judgment is finalised, any further or revised answers will simply be recorded in the judgment, together with the Judge’s decision as to whether or not to accept the Assessors’ advice and his reasons for doing so.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Pausing there, I have had the benefit of discussing this proposed procedure with David Steel J, who authorises me to say that he agrees with it. It should accordingly be treated as the proper practice in all collision cases.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">The aim is to strike the right (and proportionate) balance between the desirable goal of transparency on the one hand and the need to curb the cost and delay inherent in the “ping pong” of post-hearing exchanges on the other.  No doubt both the practice and the balance will be refined by experience in due course.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">The procedure adopted in this trial followed the course set out above. In the event, following disclosure to counsel of the questions put to my Assessors and their answers (“the questions and answers”), both counsel responded with written submissions. In summary, these included invitations to the Assessors to reconsider their answers and a number of suggested further or revised questions. All these matters were raised with my Assessors.  In the light of their response to the submissions of counsel, it seemed to me unnecessary to repeat the disclosure procedure.  The questions and answers, together, where appropriate, with their evolution, are set out below. So too is my response to the advice given by the Assessors.  I turn to the principal issues.  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading">
+	      <span style="text-decoration:underline">ISSUE (I):  AC AT ANCHOR</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">(1) AC’s final anchorage position before the collision:</span>  While no credit is due to those on AC in this regard, the scope for debate on AC’s “final” anchorage position prior to the collision is necessarily limited.  It is therefore appropriate to mention this feature at the outset, in order to maintain some perspective on the debate. Given:  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">the conclusions of the experts that the extent of AC’s sway was a total of some 200m and hence some 100m on the port swing (there being no evidence of asymmetric yawing in the relevant location); </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">the realistic acceptance by Mr. Teare that any dragging, let alone any cross-channel rather than downriver dragging, was “not very great”; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">that on her own pleaded case, the heading of AC at the time of collision was well to port of an upriver heading; </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">it can be deduced that the collision occurred towards the extreme end of AC’s port swing. If so, it follows that AC’s final pre-collision anchorage position was about 100m to the North of the collision position, or marginally (and immaterially) further to the North if there was any cross-channel dragging.  It further follows that AC was then anchored a little downriver and closer to the centre of the channel than the position inserted by the master into AC’s log, in circumstances to which I shall come.  The fact that AC’s final anchorage position can be relatively straightforwardly deduced, permits shorter treatment of the matters leading up to it, though they remain important in the light of the rival cases.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">(2) AC’s arrival off Matanzas and her repeated re-anchoring: </span>On the 29<span style="vertical-align:super;font-size:smaller">th</span> July, 2000, at about 09.36, AC anchored off Matanzas.  Though, in the light of the somewhat unsatisfactory evidence of the third officer generally as to position fixing, there must be some doubt as to the precision of the position, for practical purposes it can be taken as that recorded in the bell book, namely, 8<span style="font-family:Symbol"></span>18.35’N  62<span style="font-family:Symbol"></span>49.8’W.  At all events, that is the position that corresponds to the notation made (at some time after the collision) on AC’s working chart of “I” and “29/7  09.36”.  She was then anchored to her starboard anchor, with 5 shackles out on deck. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">There is no dispute that between about 18.25 and 19.44 on the 30<span style="vertical-align:super;font-size:smaller">th</span> July, AC dragged her anchor during what appears to have been something of a passing squall.  The vessel ultimately re-anchored, again to her starboard anchor, with 5 shackles in the water. Curiously, no position is entered in either the bell book or the log.  Still more curiously, the notation on the AC working chart marked “2<span style="vertical-align:super;font-size:smaller">nd</span>” (whenever and by whomsoever it was made) puts the AC at anchor over a rocky shoal. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">On the 31<span style="vertical-align:super;font-size:smaller">st</span> July, at about 09.30, the AC again dragged her anchor. According to the log (though not recorded in the bell book), AC thereafter re-anchored at about 11.40, in an upriver position of 18<span style="font-family:Symbol"></span>18.10’N 62<span style="font-family:Symbol"></span>50.09’W.  If plotted on the working chart (there is no notation matching this position), it places AC some 2.5 cables upriver of the shallow patch with rocks already referred to. Though he had entered this position in the log and claimed to have cross-checked it, the third officer could not shed any light on this position; it had been given to him by the master, who had plotted it on the chart and recorded it on a “piece of paper”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">On the afternoon of the 31<span style="vertical-align:super;font-size:smaller">st</span> July, between about 14.30 and 16.06, the AC dragged again before re-anchoring. This time both anchors were deployed; the starboard anchor was out  to 5 shackles in the water and the port anchor to 2 shackles on deck. No record of AC’s new anchorage position was kept; the third officer said that when he came on watch, this position too was given to him on a piece of paper. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">On the 1<span style="vertical-align:super;font-size:smaller">st</span> August, there was a further incident of dragging between about 10.15 and 12.24.   The third officer was on watch between 08.00 and 12.00.  Both anchors were recovered and, thereafter the vessel re-anchored to her starboard anchor with 6 shackles in the water. As at 12.24, no anchorage position was recorded in the log.  As to re-anchoring to one anchor, according to the third officer, the master told him that he did not want to be caught dragging with both anchors down.  That is something of a puzzle because, according to the log, at 13.30 the engine was started and at 13.36 the log records that the port anchor was (additionally) let go to 3 shackles on deck; the master’s witness statement asserts that the AC was now lying “in what was almost an open moor”.  At 13.42, the log records Finished With Engines and an anchorage position of 08<span style="font-family:Symbol"></span>17.7’N 62<span style="font-family:Symbol"></span>50.48’W (“the 13.42 position”). The third officer did not know how that position came to be taken; it appears in a location on the working chart where there have been erasures and where there is also located the time “08.28” and the notation “collision”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Later on the 1<span style="vertical-align:super;font-size:smaller">st</span> August, between about 22.47 and 23.40, AC dragged again. Both anchors were recovered; when the vessel re-anchored, it was to the starboard anchor only, put out to 6 shackles in the water.  No anchorage position is found in the bell book.  The log purports to record an anchorage position for 23.40; it is the 13.42 position. In his witness statement, the master admits that he wrote this position in as an “estimate” after the collision. Curiously, the third officer maintained in his evidence that he had written this position in contemporaneously. I see no reason to doubt admissions made by the master against his interest. I am unable to accept the third officer’s evidence in this regard; in my judgment, personable though he was, he was here giving an untruthful answer out of misplaced loyalty. It follows that when the third officer went off watch (at 24.00), there was no record of the vessel’s anchorage position in the log.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I come to the 2<span style="vertical-align:super;font-size:smaller">nd</span> August, the day of the collision.  Between 01.50 and 02.48, a further dragging incident is recorded in the log.  When AC re-anchored on this occasion, it is clear that no contemporaneous record was made of AC’s anchorage position, either in the bell book or the log. Shortly after the collision (some time after 09.00), the Harbour Master at Matanzas took away and copied the AC’s log and bell book entries for that day.  These show that no anchorage position is recorded for 02.48.  However, subsequently, an entry has been made in the log, inserting the same 13.42 position for 02.48.  Again, the master admits to having made this insertion. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Between 05.06 and 05.48 on the 2<span style="vertical-align:super;font-size:smaller">nd</span> August, AC dragged again. She re-anchored, once more to her starboard anchor, with 5½ shackles in the water.  The same farce concerning the AC’s log was again played out. No position was recorded at the time, either in the log or bell book; that is clear from the copies taken by the Harbour Master.  Both bell book and log contain insertions of the selfsame 13.42 position made, admittedly by the master, subsequent to the collision.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">At 08.00, the third officer again came on watch.  He claims that the anchorage position was plotted on the working chart in the much used 08.28 area;  moreover, he claims that he double-checked the vessel’s position by use of radar. On the morning of the 2<span style="vertical-align:super;font-size:smaller">nd</span> August, he accepted that AC was yawing, though he had not measured the extent; he agreed that AC was moving across the channel to port and to starboard up “to the limit of her …chain”. It was for the master to decide whether to let go one anchor or two; he did not know what an open moor was; he had received no instructions as to the use of helm and/or engines to control yaw and swing. In short, he admitted that while he did have instructions from the master to guard against dragging, involving (<span style="font-style:italic">inter alia</span>) the use of AC’s GPS anchor watch facility, he had not been given any instructions at any time to guard against or control her yaw and swing.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">(3) Conclusions:</span>  Pulling the threads together: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The master’s conduct in inserting positions into the log and bell book after the collision was disgraceful.  In his witness statement, he says that he had not “intended to mislead anyone but [it was] rather an error on my part in believing the record should be made more complete rather than leaving it as it was”.  Insofar as that sentence is intended to suggest an innocent explanation, I regret that I am unable to accept it. The inference which I draw from the master’s conduct is that he and those on board AC had no more than an approximate idea of where AC had been at anchor (somewhere in the vicinity of the 13.42 position), felt embarrassed or exposed in consequence and sought to create a false record to the contrary. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Misguidedly, as already indicated, the third officer sought to lend his name to this exercise, in his evidence as to the suggested contemporaneous nature of the 23.40 position on the 1<span style="vertical-align:super;font-size:smaller">st</span> August; no more need be said of that. Additionally, the third officer suggested that where no records existed for various positions over the days in question, he had been given the vessel’s position, recorded not in the bell book or log but on pieces of paper. None of those pieces of paper have been disclosed.  For my part, in the light both of the master’s conduct and the third officer’s evidence as to the 23.40 position, I regret that I do not accept this explanation.  I think this is another instance of misplaced loyalty on the part of the third officer, leading to an untruthful answer.  If wrong on that, however, then the picture painted of the conduct of those on board AC is scarcely more attractive; a system which depended on positions being recorded on pieces of paper – none of which have survived – does nothing to encourage confidence in AC’s position fixing, lookout or record-keeping.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The suggestion made by the master in his deposition for the US proceedings, together with those made by the third officer in his evidence, that GPS was used to take or check positions, cannot be true. The evidence was clear that GPS could not be used on the Orinoco to plot a position on the chart without making appropriate corrections to the co-ordinates. As was all too apparent when he gave his oral evidence, the third officer did not know how to make any such corrections.  This evidence too was therefore false.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Save for the periods to which reference has been made on the 31<span style="vertical-align:super;font-size:smaller">st</span> July and 1<span style="vertical-align:super;font-size:smaller">st</span> August, AC was never anchored to two anchors; at no point was she anchored to two anchor cables of even approximately equal length. The master himself recognised that he was never anchored to an open moor; in his witness statement, he asserts, as already noted, that he achieved “almost” an open moor. I return later to the topic of open moor.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">No instructions whatever were given by the master to those on board as to the control of yaw and sway. Save for a wholly unparticularised reference in the master’s witness statement to an unsuccessful attempt being made to use the helm with a view to maintaining AC’s upriver heading, no use appears to have been made of the helm to control yaw and sway. Nor was use made of her engines in this regard, though it is unnecessary to consider the use of the engines further (given the view which I take of that matter,  set out below).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">vi)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">For my part, I think it is plainly the case that between the 30<span style="vertical-align:super;font-size:smaller">th</span> July and the 2<span style="vertical-align:super;font-size:smaller">nd</span> August, AC dragged her anchor. Given the evidence as to her yawing, that is indeed hardly surprising. In the light of the downriver set of the current, I would anticipate that the direction of any dragging would primarily be downriver rather than cross-channel. That is certainly so between 08.00 on the 2<span style="vertical-align:super;font-size:smaller">nd</span> August and the time of collision when, in my judgment, any dragging was immaterial, a matter of no more than some metres and with a negligible, if any, cross-channel component.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">vii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">It does seem to be the case that use was made of AC’s GPS anchor watch facility to detect dragging; it is difficult otherwise to explain the frequent observations of dragging in the log entries (to which no challenge is made) and the evidence as to the sounding of the GPS alarm; moreover, I am not persuaded that Mr. Teare was correct to suggest that the vessel needed to drag some 1.4 cables before the GPS alarm was triggered.  All that said, the benefits of the GPS anchor watch facility were much reduced by the failure on the part of those on AC to engage in proper position fixing, as already discussed. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">viii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">In his witness statement, the master expressed his attitude as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ By the morning of 02 August, I was already aware from regular contact with the agents that we would be berthing at some time on 02 August. I accepted the fact that we might drag again but I felt I had exhausted all possible options to try to reduce or avoid the dragging occurring. I did not feel any further change of position was going to help. When it did occur the drag was slow and intermittent. I felt that by continuing to closely monitor the ship’s position we could deal with any dragging when it occurred and that it would not endanger either my ship or any other…”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.98in">Rightly or wrongly (a matter to which I return when considering fault), it is plain that the master of AC in effect “gave up”.  I turn to consider the GM manoeuvre.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Heading">
+	      <span style="text-decoration:underline">ISSUE (II):  THE GM MANOEUVRE</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">The Master:</span>  This was the second visit by Captain Crofts, the master of GM, to Matanzas.  Both times he had navigated with the aid of BA charts – but their scale was too small to be of any real use. On the 1<span style="vertical-align:super;font-size:smaller">st</span> August, he in fact received a local chart for which he had asked; but, in the event, he had not yet looked at it by the time of the departure manoeuvres from Matanzas on the next morning and the collision which so shortly followed. On the occasion of the master’s previous visit, the current had not been flowing so strongly and there had been no ships anchored even approximately in the position of “ILLAPEL” and AC.  In accordance with his owners’ (or managers’) standard procedures a berth to berth passage plan had been prepared for the voyage to come (it was lost in the collision); so far, however, as unberthing manoeuvres were concerned, these had been left, understandably in my view, to be discussed between master and pilot.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Although the master knew of the presence of the anchored “ILLAPEL” and thought that she was far enough off the vessel for GM to complete her turn safely, it was clear from his evidence that at the time he had no real appreciation of the distance between GM and “ILLAPEL”;  in an early interview (weeks after the collision), the master put “ILLAPEL” as being some 7-8 ship’s lengths distant, i.e., some 5.5 – 6.3 cables.  Subsequently, after time for consideration, the master revised this view down to the (correct) distance of some 2.5 – 3 cables.  Though there may be some doubt in the matter, I am content to accept that the master knew that AC had moved up-river (rather than remaining at her original anchorage), albeit that, to begin with, he under-estimated her distance from “ILLAPEL”.   More significantly, he said in evidence that he did not make accurate observations of AC because she appeared to be safely at anchor and did not consider her a threat to his departure manoeuvres.  His intention was to pass AC, at a distance no closer than 1 ½  cables.  He said that he had observed AC on a number of occasions but did not notice her yawing. He agreed that radar observation (using GM’s two rastascan radars) would have revealed her yawing but he had not thought it necessary to make any such observation.  Had he seen AC yawing, he would have consulted with the pilots and the harbour authorities as to what action to take.  He had not considered proceeding upriver before making his turn because he did not consider such a course to be necessary. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">The Pilot:</span><span>  </span><span style="font-style:italic"> </span>The (un)docking pilot was pilot Torres.  He was experienced and self confident.  In the event, having seen and heard both men give evidence, the combination between a somewhat relaxed master and a forceful and over-confident pilot, proved unfortunate in the extreme.  Prior to unberthing, there was no more than a cursory discussion between master and pilot.  Pilot Torres was more interested in his conversation with the river pilots than in any discussion with the master.  The master did not pursue the matter further; it does not appear that anything was said between master and pilot which went beyond that it would be “the same as last time”; but, as already observed, the conditions on this occasion were very different from “last time”.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">The pilot said in his evidence that he had seen AC at anchor and that at the time GM’s unberthing manoeuvre commenced, the AC was “tranquil”. He did not observe her swinging.  He also thought (a matter to which I shall return later) that she was anchored in a “proper position”.   As far as the pilot was concerned, this was a routine operation.  He said that the positions of “ILLAPEL” and AC gave him no particular cause for concern; hence, he did not check their positions by radar. However, as the evidence emerged, it seemed clear that he lacked any accurate grasp of their positions and their distances from GM – a necessary pre-condition for treating them, even on the basis of instinct and experience, as posing no danger to GM’s proposed manoeuvre.  Strikingly, he put “ILLAPEL” at some 700 metres distant from GM, on the edge of the deep water channel; she was in fact some 200 metres closer than that. So too, AC was correspondingly and significantly closer to GM than the pilot appreciated.  The pilot assumed, however, that provided he cleared “ILLAPEL” he would clear AC.   Only when the ships were “very near” would the pilot take a ship upriver before making her turn; but he declined to talk in terms of distances or how close was “very near”.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">The manoeuvre itself:</span>   In his deposition in the US proceedings, pilot Torres said this as to his practice in conducting this manoeuvre:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ Q. Do you use a half ahead or full ahead to assist the turn?</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">A. No, that’s not necessary… just dead slow to make sure that the ship is away from the pier and that the stern doesn’t hit the pier….</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Q. …on the day of the unberthing, after you left the berth, did you order half ahead and full ahead?</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">A. Yes, it’s very possible, because after having turned, if there was no apparent danger, I would have ordered half ahead and then proceeded full ahead, once the ship was safe and free of all obstacles.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Q. I am not asking what is possible. I am asking what you did…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">A. It would be hard for me to remember …. But had I asked for half ahead, it would have been because the ship was then safe and free of obstacles, because during the manoeuvre itself, one would never command half and full ahead. It would only be after the turn had been safely executed that you go to half and full ahead.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">At the hearing there was some, if to my mind inconclusive, debate about the true meaning of “never” in translation from the original Spanish used by the pilot.  Suffice to say that in cross-examination, the pilot accepted that it would not be usual to use half or full ahead during the course of the turn (i.e., prior to its completion).  He explained that the purpose of his standard procedure would be to make as short a turn as possible; it would be a “dead ship” turn, with as little use of the engines as possible;  the key was for the turn to be conducted carefully and slowly in a controlled manner. In the event that the turn did not proceed satisfactorily, then a kick to half ahead might be used; but too much forward way towards the north of the channel was to be avoided.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I am amply satisfied that the turn in fact conducted was very different:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">GM’s Deck Bell Book records that at 08.23 the vessel was swinging off the berth. At that time, the engines were put to half ahead. At 08.24, the engines were put to full ahead and remained at full ahead for 3 minutes until stop engines was ordered at 08.27.  This was not in any sense a momentary “kick” to half or full ahead.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">As is apparent from Annexe I, both half ahead and full ahead were ordered, on any view, when GM was still on a broadly Northerly heading and well before completion of her turn. Indeed as the plots in Annexe I suggest and as I accept, were it otherwise, it would be difficult to reconcile GM’s manoeuvres and any realistic collision position.  Furthermore, I accept the master’s evidence (in its final form) that GM was on a northerly heading when full ahead was ordered.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">In the event, as the pilot confirmed in his evidence, including in a sketch and on a chart which he marked, GM conducted a wide turn. That turn, as GM’s helmsman said in his evidence and as I accept, took GM “a bit” too close to “ILLAPEL”.  In short, the turn produced the very northerly (or forward) movement which the pilot had said was to be avoided.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The pilot’s motive for conducting the turn in this fashion remained unexplained and the master could shed no real light on the pilot’s intentions; as already noted, the unberthing manoeuvre had not been discussed between them.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">In the light of the important debate at the hearing as to the effect of using half and (in particular) full ahead for a sustained period during the turn, I consulted my Assessors as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">Q.1: What would be the effect of using half ahead and then full ahead in the manner recorded in GM’s deck bell book, assuming that the vessel was on a broadly northerly heading at 08.24?</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">A.1: Whereas a short kick to full ahead could assist the tightness of the turn by increasing its rate, anything more than a kick of half or full ahead would inevitably take the vessel further to the north due to the increased advance.  Moreover the use of full ahead in the manner set out in the deck bell book would increase the speed of GM when coming out of the turn and would render the tugs less effective in maintaining the vessel’s position.</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Following the disclosure of the questions and answers to counsel, GM requested that, in this regard, various supplementary questions should be put to the Assessors.  Pausing there, by way of terminology, GM referred to the turn, approximating to that in fact conducted, as a “standing turn” – a turn in which the engine speed is increased to full ahead and thereafter maintained at that speed; it is unnecessary to consider whether that terminology is appropriate, provided the meaning given to “standing turn” by GM is clearly understood. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">These supplementary questions were as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SQ(i): If a short kick ahead is used instead of executing a standing turn, what effect will that have on the vessel’s overall turn rate, and thus on the time taken for the vessel to complete the turn?</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SQ(ii): If the turn rate is lower, will the vessel have been swept further downstream by the time the turn is complete than if a standing turn had been executed?</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SQ(iii): Is it desirable for a vessel turning to head downstream in a strong current to turn quickly, in order to keep to a minimum the time that the vessel is swept downstream on a heading which is not downstream?</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SQ(iv): Is it desirable for a vessel turning to head downstream in a strong current to have at least sufficient speed through the water to give her steerage way when coming out of the turn?</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SQ(v):  Where there is a downstream current of about 4-5 knots would the prudent mariner rely upon the tugs assisting GM to maintain her in position when coming out of the turn or would he ensure that he had sufficient headway to ensure that he could steer with his rudder? </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">The Assessors’ supplementary answers to these questions were as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SA(i): The overall turn rate would not be materially affected.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SA(ii): Possibly, but only marginally.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SA(iii): Yes, but maintaining full ahead gave rise to two problems detrimental to safety: (i) going to the North; (ii) taking GM further downstream more quickly as she came out of the turn. </span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SA(iv):  Yes.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">
+	      <span style="font-style:italic">SA(v): A prudent mariner would have allowed the tugs to all but complete the turn before slow ahead was given; once pointed downstream, properly assisted by the tugs, there would have been sufficient steerage by the application of full ahead or half ahead to maintain safe clearing distances from both “ILLAPEL” and AC.</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I accept the Assessors’ advice, both as originally given and as subsequently amplified. Elaboration is unnecessary. It seems to me unanswerable that maintaining full ahead while still on a broadly northerly heading would result both in GM proceeding on a more northerly track and coming out of the turn faster than would otherwise have been the case.<span style="font-style:italic"> </span>The Assessors’ advice is further reflected when considering questions of fault, below.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Contrary to the pilot’s continued assertions and some other evidence, to the effect that GM was about abeam of Sidor no. 3 berth when she completed her turn, the probability is that by then she was further downriver, about abeam of Sidor no. 5 or no. 6 berth. Quite apart from the simulations contained in the annexe, it seems inevitable to me that such would be the case, given the nature of the manoeuvre and the strength and direction of the current. Indeed, in his deposition for the US proceedings, the pilot himself (when describing his standard procedure) accepted that the “ship travels downstream somewhat”; the actual manoeuvre, as already described, can only have increased this tendency. It follows that GM must have been downriver of “ILLAPEL” when her turn was completed and the evidence of GM’s helmsman was plainly to this effect.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">For completeness, it will be recollected that GM was assisted by two tugs. These were pusher tugs. In the event, the aft tug was not made fast.  As to that, there was some further controversy, on which it is unnecessary to dwell, as to a suggested change in the pilot’s evidence.   In all the circumstances, I have no real doubt both that the tugs would not have prevented the downstream movement of GM and that the manner in which GM conducted her manoeuvre would have reduced or lost any benefit which the pusher tugs might otherwise have provided (especially if GM had been turned short-round).  See too, in this regard, the Assessors’ expanded advice, set out above in their answer <span style="font-style:italic">SA(v)</span>. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">First concerns as to AC:</span>  I come next to the question of when GM first became concerned as to AC. In my judgment, this was not until GM had steadied onto a downriver heading, at about C-2 (or C-3 at the earliest); before then, it is likely that GM had focused on “ILLAPEL”.  In deference to the arguments advanced, my reasons for this conclusion are these:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">GM’s third officer (Mr. Watterson) was on the fo’c’sle. In cross-examination, he said that after “getting clear” of “ILLAPEL”, his next concern would be to see what else was in the river.  At about this time, he observed that AC had changed her aspect.  AC was on the port bow; her bearing was opening from, he estimated, 2 to 4 points, though he accepted that it was possible that it was from 1.5 to 2.5 points.   From her change of heading, the third officer deduced (wrongly in the event) that she was no longer at anchor and was manoeuvring. The third officer reported this development to the bridge.  In my judgment, it is probable that this was the first time that those on GM became concerned as to AC. Thereafter, as the third officer put it, things happened “rather rapidly”.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">In cross-examination, the master’s evidence was clear and to like effect. He said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“A. The first time that we noticed that her [i.e., AC’s] aspect had changed and her heading had changed was as we steadied up.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Q. That was shortly before about 08.27, was it not?</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">A. About that time, yes.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.98in">While it is fair to Captain Crofts to say that, on the day, he was probably not timing events by reference to his watch, the 08.27 answer does not stand alone. To the contrary it ties in with his preceding answer as to GM’s heading.   Moreover, this timing accords well with the subsequent action taken, attempted or considered by GM (see below); conversely, had concern as to AC arisen significantly before (about) 08.27, the delay before those on GM considered taking action would be both considerable and curious.   At the time, the master made the assumption that AC was manoeuvring to reposition herself in a SSW direction, towards Sidor pier; she appeared to be moving slowly.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The pilot first noticed that AC was heading into and across the channel when GM was completing her turn; GM was then passing Sidor no.6 berth and nearing Venalum pier. If this is right, the time would have been about 08.27.  The pilot thought that AC was dragging her anchor. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">The evidence of the helmsman of GM (Mr. Holmes) is consistent with the sequence suggested above. Having hitherto focused on “ILLAPEL”, his attention turned to AC when the pilot ordered GM to steady up.  For his part, he thought that AC was “gently nudging across the channel”. Thereafter, in his words, “It got a bit hot”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">I am not dissuaded from this conclusion by evidence that a VHF call from someone on GM to someone on AC, probably prompted by the perceived change of AC’s aspect, was timed in AC’s VHF log at 08.24; that timing is supported by evidence from the AC’s master (in his US depositions) and third officer.   At the hearing it was unclear who had made or participated in the VHF call but it is unnecessary to take time over that or as to the substance of the conversation (such as it may have been).  The short answer to the timing point is that the record keeping on AC was lamentable and the evidence from her master and third officer is entitled to little, if any, weight, as already described; such evidence as is furnished by AC’s VHF log (in any event written up after the collision) is simply outweighed by the overwhelming weight of evidence pointing to concern about AC developing amongst those on GM at about 08.27. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">Subsequent orders and manoeuvres:</span> Interposing here, the reality, not appreciated on GM, was that AC’s change in aspect was to be explained by a combination of GM’s own movement (due to her speed and the effect of the current) and AC swinging at anchor; the likelihood, as pictured in Annexe I, was that at about this time AC was distant about 2-3 cables and bearing about 1.5 points on GM’s port bow.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"> Turning to the position on GM’s bridge, the evidence suggests a degree of confusion at about this time. Those on GM gave uncertain and varied accounts of AC’s distance and her bearing from GM. On the most favourable view of the master’s and pilot’s evidence, AC was suddenly and surprisingly a concern. Plainly at this time, the fear of collision was very real indeed. Both the master and the helmsman described the pilot’s orders then or thereafter as erratic, albeit that by this it was meant (according to elaboration in re-examination) that the orders were given quickly (the master) or fast and furious (the helmsman). The master thought that the pilot was slightly agitated; the helmsman thought that the pilot was very confused. At some point, the master appears to have taken over the con.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Although this confusion seems to have manifested itself in the sense that there was some uncertainty in the evidence as to what orders were then given on GM and as to the giving and countermanding of one particular order, the actual sequence of subsequent orders and manoeuvres can be traced with reasonable confidence as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">At 08.27, GM’s deck bell book records stop engines.  There is no reason to doubt that this order was given and acted upon.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">At about the same time, the master accepted that he had also ordered full astern but that he countermanded the order before the engines were operated astern.  I accept that evidence.  In the circumstances, it is unnecessary to dwell on criticism levelled during the trial at his thought process in giving this order (namely, that had GM gone astern she would have lost steerage and risked broaching).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Also, at about this time, starboard helm was ordered. The master said that he ordered hard to starboard. By contrast, the helmsman said that he was ordered to steer starboard 20<span style="font-family:Symbol"></span>, to bring (as he put it) the vessel over a bit; had he steered hard to starboard, GM “would have gone straight up the bank”.  In this regard, I am unable to accept the master’s evidence and prefer that of the helmsman. It is further to be recollected (as underlined by the pilot in his evidence) that GM was not only seeking to keep clear of AC to port but also the various ships berthed at Venalum pier to starboard. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">At 08.28, GM’s deck bell book records full ahead. According to the helmsman, immediately before the collision hard to starboard was ordered but there was not time for this order to take effect.  It may be that hard to port was likewise ordered (I reach no conclusion on that) but that order too (if given) did not take effect.  As it appears, at least at the last, the master was making every attempt to overcome the effect of the current, setting GM down on AC. It was, however, to no avail and the collision resulted. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span>     </span><span style="font-style:italic">Postscript: The evidence of the tug masters:</span> I come to the evidence of the tug masters.  To some extent, in the view I take of it, this is a digression – but it is not a digression without any relevance.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"> Captain Acosta, the master of the tug “NICOLE” spoke of AC swinging at anchor, some 45<span style="font-family:Symbol"></span>; he did not report it because to anyone who looked at her it would have been apparent that she was swinging.  According to his oral evidence and consistent with a statement made in March 2002, suddenly AC stopped swinging and then dragged rapidly in a SE direction.  When he observed AC dragging, GM was already on a downriver heading; she was not however being set downriver by the current, as, he said, the tugs were holding her in position; the stern tug was made fast. Asked to draw what he was describing, he put both “ILLAPEL” and AC well aground in the shallows to the north of the channel.  He was very surprised by the rapid movement of AC across the river.  With the sole exception of his observation that the “swinging” of AC was obvious to anyone who looked and that he did not report it, evidence which I do accept, I have no hesitation in rejecting the remainder of his oral evidence.  It is unnecessary to say more of  Captain Acosta’s sketch. He was wrong about the tugs and about GM not being set downriver; but perhaps all that is by the by. However, were he right, AC would have been dragging at speed <span style="font-style:italic">across</span> the current; that is improbable, to put it no higher.  Still further and strikingly, in a statement made on the 14<span style="vertical-align:super;font-size:smaller">th</span> August, 2000, within a fortnight of the collision, Captain Acosta said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“From the position where I was located, I could observe the manoeuvre…The mentioned vessel [i.e., GM] aimed bow down river. When at that moment, I observed that it was going directly to the position where the vessel …[AC].. was anchored. Coming so close it could not avoid colliding with it almost head to head.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">As is apparent there is no mention in that contemporaneous statement of AC dragging her anchor, let alone in the remarkable fashion described in Captain Acosta’s evidence.  With great respect and though he sought to do so, he was unable in his oral evidence to provide a coherent explanation as to why not.  Taken at face value, his contemporaneous statement suggests that GM failed to keep clear of AC.  In my judgment, the very different account of AC dragging, given by Captain Acosta in his oral evidence, was incredible.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Captain Rodriguez was the relief master of the “NICOLE”, due to take over from Captain Acosta. His evidence too encountered real difficulties. To begin with, his timings were impossible to reconcile with the events which happened; he spoke of a period exceeding 20 minutes between the time when he first saw GM on a downriver heading and the collision; he spoke too of the collision being unavoidable for 15 minutes; yet on any view, the total time between GM commencing unberthing and the collision was less than 10 minutes.  His evidence must be treated as unreliable on that ground alone. Further, although he said in evidence that he had seen AC dragging into the channel and (in fairness to him) had made some mention of dragging when interviewed after the collision (albeit in different terms to the picture he described in evidence), in a report to his operations manager made on the day of the collision, he said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ …once the vessel [GM] was freed of the dock it started positioning in order to set a course to head down the river and start to navigate, when it collided with the vessel …[AC] …that was anchored in the area….”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">As with Captain Acosta’s contemporaneous statement, this suggests not AC dragging but GM failing to keep clear of AC.  I can therefore give no weight to Captain Rodriguez’s account of the incident as given in his oral evidence.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"> Captain Omana was the master of the tug “MARIANNE D”; he was due to hand over to Captain Lossada at 08.00 on the 2<span style="vertical-align:super;font-size:smaller">nd</span> August, 2000. I accept Captain Omana’s evidence that the swinging of AC at anchor had been pronounced and obvious. That apart and though he was a confident witness, I am unable to accept Captain Omana’s account of the incident.  In large measure, Captain Omana’s evidence was based on a sketch drawn by Captain Lossada, who, as became clear, had not in fact seen the collision.  Curiously, according to Captain Omana, Captain Lossada had prepared this sketch of his own initiative and without assistance from others, at a joint meeting attended by Captains Omana, Lossada and Rodriguez, together with US attorneys. (For completeness, Captain Rodriguez suggested that Captain Lossada undertook the sketch because of his drawing abilities). Whatever the provenance of the sketch it and a chart marked by Captain Omana’s were remarkable for the unlikely speed at which they suggested AC to be  dragging in a SE direction towards Venalum pier and the distance travelled (some 700 metres in a matter of minutes) – even making generous allowance for “guesstimates”. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Finally, Captain Hernandez gave evidence. Suffice to say that as he appeared not to recognise diagrams apparently containing his signature and even a 2004 statement apparently signed by him, any evidence from him must simply be disregarded as worthless.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Pulling the threads together on the tug masters:  first, for the reasons given, no weight can be put on their evidence, insofar as it purports to assist GM’s case; secondly, to the contrary, their contemporaneous (or most contemporaneous) material, if anything, tends to support the AC argument that AC’s yawing at anchor was obvious and that GM failed to keep clear of AC.  In the circumstances, it suffices to conclude that these were unreliable witnesses (save where their evidence was contrary to GM’s interests); it is unnecessary to go further and consider whether this unreliability was attributable to mistaken recollection, exaggeration, rationalisation after the event, or design. It is fair to the tug masters to record that no motive was suggested, still less established, as to why they should have attended Court in order deliberately to give untruthful evidence.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading">
+	      <span> </span>
+	      <span style="text-decoration:underline">ISSUE (III):  FAULT</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I turn to the topic of causative faults, if any, on the part of each vessel. In the light of the facts already set out, it is convenient to consider this matter under the following broad headings: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">(A) Was AC’s anchorage position unsafe?</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">(B) Was AC at fault in failing to control her yawing and swaying? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">(C) Was GM at fault in terms of lookout and appreciation?</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">(D) Was GM at fault in respect of her unberthing manoeuvre?</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">(E) Was GM at fault in respect of her later manoeuvres?</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">vi)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">(F)  What caused the collision? </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span>   </span><span style="font-style:italic">(A) Was AC’s anchorage position unsafe?</span>   I have already concluded that AC’s final anchorage position was about 100m to the North of the collision position, which was itself about 500m from and bearing about WNW of the South Western end of Venalum pier, shown in Annexe I. As such, AC was anchored in the channel, albeit towards its Northern side. It is difficult to express the matter more precisely in terms of AC’s position within the channel as the channel’s limits were not defined with accuracy.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">GM’s case was that this was an unsafe anchorage position; as Mr. Teare put it in his closing oral submissions, AC was anchored in close proximity to busy berths (Sidor and Venalum) in a narrow channel. There was a risk that AC might sway and/or drag into the centre of the channel in circumstances where movements might be expected off those berths. The fault was serious in that it gave rise to a dangerous situation; a vessel turning off (for example) Sidor berth might not appreciate that AC was moving intermittently into or towards the centre of the channel.  Moreover, it was particularly blameworthy because the master had (re-) anchored there without reference to the local authorities and by reason of the position fixing failures (already set out).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I am unable to accept GM’s submissions in this regard.  I do not think that AC’s anchorage position was, <span style="font-style:italic">as such</span>, unsafe.  For completeness, I reach this conclusion independently of any consideration as to whether AC’s yawing ought to have been observed by those on GM, a matter to which I later return. My reasons follow.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">First, I accept the thrust of Mr. Persey’s summary, in his closing oral submissions:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ It has never been suggested by either the authorities, the local authority, the port Captain, or indeed Pilot Torres, that …[AC’s]…anchorage position astern of the Illapel was either unlawful or inappropriate. It is common ground that she was astern of the Illapel, and indeed that was the observation of everybody….Her position was a position about 5 cables or 900 metres astern of the Illapel….”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">As has already been noted, the pilot had no criticism to make of AC’s anchorage position; moreover and regardless of whether he falls to be criticised in this respect, it is noteworthy that the anchorage position of AC did not prompt the pilot to consider going upriver before turning GM. Equally, the tug masters made no criticism in this regard.  This silence is improbable, had AC’s anchorage position been unsafe. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Secondly, although there was some evidence that AC was fined for re-anchoring without a pilot, there is no evidence that the fine was imposed for anchoring in the wrong place or that the anchorage position was outside the permitted anchorage.  In the circumstances, it is unnecessary to enter into the controversy over whether the fine had been properly imposed. Instead, it seems relevant to me that AC re-anchored on several occasions, over a relatively extended period, in full view of a busy port;  wherever precisely she anchored, the general area cannot have been in doubt; yet no objections were raised until after the collision. Again, this is a feature difficult to reconcile with the submission that her anchorage position was unsafe.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Thirdly and tellingly, if AC’s anchorage position was unsafe, so too must “ILLAPEL’s” have been – perhaps even more so.  There is, however, no  evidence whatsoever of any criticism or surprise as to “ILLAPEL’s” anchorage position. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I accordingly conclude that this was a channel in which ships were accustomed to anchor and that AC’s anchorage position was not unsafe.  AC was not at fault in this regard; accordingly, questions of culpability and causation do not arise. That said, the fact that AC was anchored in a narrow channel, in close proximity to busy berths does have ramifications; to those, I turn next.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">(B) Was AC at fault in failing to control her yawing and swaying?</span>   The first question here is whether AC was under any <span style="font-style:italic">duty</span> to control her yawing (and swaying).  In my view there plainly was such a duty. Given AC’s anchorage position, as already described, commonsense rebels at the notion that with knowledge of her yawing and even if able to do so, AC was not required to take reasonable steps to control her yawing. As so much of good seamanship involves the application of informed commonsense in the interests of safety at sea, I am amply satisfied that the requirements of good seamanship are to like effect. In his final oral submissions, Mr. Teare said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“It is a non sequitur to suggest that because you can anchor in a channel, therefore you need not correct a sway. On the contrary, because you have anchored in a narrow channel it is good seamanship, and indeed common sense, that you should control your sway. That is because other river users can be expected to be navigating in the same channel.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">I agree. The fact that even with AC yawing there was sufficient sea room for another vessel to pass safely in the channel, does not mean that good seamanship did not require AC to take reasonable steps to control that yaw with a view to maximising the amount of available sea room. Furthermore, it was not or not seriously in dispute that pronounced yawing gives rise to the risk of dragging; as there can be no doubt that a vessel is under a duty to exercise reasonable care to prevent dragging it must follow that there is a duty to take reasonable care to control her yawing. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">If necessary to cite authority, it discloses support for this approach. In <span style="text-decoration:underline">The “Sedulity”</span> [1956] 1 Lloyd’s Rep. 510, Willmer J (as he then was) held an anchored vessel to be at fault for failing to take adequate measures to control her sheer. See too, <span style="text-decoration:underline">The “Gerda Toft”</span> [1953] 2 Lloyd’s Rep. 249, esp. at p.257, with regard to an anchored vessel’s duties in respect of dragging.  Insofar as it was suggested that observations in <span style="text-decoration:underline">The Viper</span> [1926] P 37 (as to an anchored vessel not altering her position or heading until it was apparent to her that a ship underway could not by her own unaided action avoid a collision) told against the imposition of such a duty, I reject the suggestion.  I agree with Mr. Teare that those observations are inapplicable in the circumstances of this case, involving as they do a vessel yawing and swaying unlike the anchored vessel in <span style="text-decoration:underline">The Viper</span> and, moreover, doing so close to a busy berth; further, were it otherwise, it is impossible to imagine that Willmer J. would have expressed himself in <span style="text-decoration:underline">The “Sedulity”</span> as he did.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Turning to <span style="font-style:italic">breach</span> of duty to control yawing and swaying, I start with the facts, as already found.  First, no instructions had been given by the master of AC to control yaw and sway; secondly, AC had never been anchored to an open moor; thirdly, such if any effort as had been made to use the helm to control yaw and sway, had been ineffective; fourthly, no use had been made of the engines in this regard.   GM’s criticisms were founded on all these facts.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">The criticism as to the failure to use AC’s engines can be disposed of at once. As demonstrated by the expert evidence, the use of engines ahead would be detrimental to the yawing amplitude and the amount of swing; conversely, yawing would be reduced by using the engines astern. Mr. Persey submitted that going astern would be “counterintuitive” and, even if beneficial, was not reasonably to be expected from an ordinarily competent master. Mr. Hendy (the relevant AC expert) added this in his report: “Going astern may not be the obvious choice to reduce dragging.”  I agree.  I do not think that AC falls to be criticised in this regard.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">The position as to anchoring to an open moor is, in my judgment, very different.  For practical purposes, an open moor involves the vessel anchoring with both anchors leading ahead. GM’s case was that adopting an open moor required no more than ordinary good seamanship; its purpose was to dampen down yawing and swaying, so as to enable a vessel to lie quietly (or more quietly) at anchor, thereby reducing the risk of dragging. On the evidence, the master of GM, her third officer and the pilot were all familiar with the technique.  As I understood the expert evidence, by the conclusion of the trial it was not (or not seriously) in dispute that the adoption of an open moor, with a total angle of 60<span style="font-family:Symbol"></span> between the anchors (i.e., 2 x 30<span style="font-family:Symbol"></span>) would reduce the angle of yaw to a maximum of +/- 20<span style="font-family:Symbol"></span> and swaying to about 20m each side of the centre position.  Furthermore, there was agreement between the relevant experts that while, even with an open moor, there would be some dragging after about 30 minutes to an hour and that the anchors would thereafter drag closer together, reaching a 2 x 15<span style="font-family:Symbol"></span> moor after about a further 4.5 hours, it would take some 9-9.5 hours in total for the anchors to drag together.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Notwithstanding this evidence, AC’s case remained that the master was not to be criticised in this regard; it was not clear why a 60<span style="font-family:Symbol"></span> open moor should be adopted; given that there would be yawing, swaying and dragging in any event, the master’s concerns were not unreasonable.  Instead, he made the legitimate and reasonable decision to remain anchored to a single anchor and to deal with dragging as and when it occurred.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I sought advice from the Assessors as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">Q.2: As a matter of ordinary seamanship, would you expect the master of a vessel, anchored as AC was and (to his knowledge) yawing and swaying considerably, to consider anchoring to an open moor? If used, what would you expect anchoring to an open moor to achieve? If adopted, what total angle would you recommend between the anchors?</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">A.2: Yes. Anchoring to an open moor is a recognised seamanship skill and unquestionably the correct anchoring selection to avoid or reduce yawing and swaying. A 60</span>
+	      <span style="font-style:italic;font-family:Symbol"></span>
+	      <span style="font-style:italic"> open moor should be adequate, though a larger angle may be used.</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">In response to the disclosure of this answer, AC submitted that while a 60<span style="font-family:Symbol"></span> open moor was a possible approach for a prudent mariner to take, a 30<span style="font-family:Symbol"></span> open moor would likewise have been a legitimate choice for a prudent mariner; in short, the Assessors’ opinion should not be accepted as reflecting the only reasonable view.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">To this submission the Assessors responded as follows.  The aim was to reduce yaw and sway, as yawing gives rise to the risk of dragging. Such considerations outweigh the increase in holding power (such as it may be) obtained by reducing the angle of the open moor. Accordingly, a prudent mariner would have aimed for an open moor of 60<span style="font-family:Symbol"></span> or more. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I accept the Assessors’ advice, as originally given and as supplemented, essentially for the reasons which they gave.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Against this background, I can see no good reason for the failure by the master of AC to anchor to an open moor.  An open moor of 60<span style="font-family:Symbol"></span> or more should have been adopted; in any event, the master had ample time to ascertain which angle was most beneficial. The master’s observation, that he did not want to be caught dragging with both anchors down is, with respect, not an answer or a good answer; on the occasion when he made that comment, not only was he able to raise both anchors without difficulty but <span style="font-style:italic">thereafter</span> he anchored to two anchors, albeit not to an open moor. As to the two anchors dragging together, on the evidence of the experts which I accept, he would have had ample time to reset the open moor before that happened. I therefore conclude that an open moor was a recognised technique, requiring no more than ordinary good seamanship; by latest 05.48 on the 2<span style="vertical-align:super;font-size:smaller">nd</span> August, 2000, in the light of her pronounced yawing and the number of instances of anchor dragging, AC was at fault in not anchoring or re-anchoring in this manner.  For completeness, it may be that an open moor should have been adopted following an earlier dragging occasion but nothing turns on that and I express no final view in that regard.  At all events, giving up, as the master of AC appears to have done, was not a prudent option.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">As to the use of helm, it has already been observed that in his witness statement the master spoke of using his helm but that it was not successful. Indeed, in essence, that was AC’s case on this point. With justification, as it seemed to me, Mr. Teare remarked that he gave no details; it is impossible to say when and for how long he tried it and what precisely he did.  GM’s case was that, with a strong current against her, the use by AC of her helm to control yaw was a recognised seamanship skill and an obvious step to take as a matter of ordinary good seamanship. As agreed by the relevant experts, the application of constant 15<span style="font-family:Symbol"></span> starboard helm would, after about 30 minutes, have reduced the amount of yaw and offset the location of the yaw to starboard (i.e., away from the centre and towards the North side of the channel).   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I again consulted my Assessors:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">Q.3:  As a matter of ordinary seamanship, would you expect the master of a vessel, anchored as AC was and (to his knowledge) yawing and swaying considerably, to consider the use of his helm? If used, what would you expect to achieve?</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">A.3: Yes. The use of helm is a well-known procedure as a matter of ordinary good seamanship, which, if persevered with, should serve to reduce yaw and offset the location of the yaw in the direction in which the helm is used.</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">On the disclosure of this answer, once again AC submitted that the Assessors’ advice should not be accepted.  The submission was that there was no reason “why the prudent mariner should necessarily have used the helm in the manner suggested”.  To this submission, the Assessors’ answer was succinct.  They repeated their original answer; the helm could and should have been used to control yawing.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I accept the Assessors’ advice as reiterated. The use of helm was an obvious step to take. The master must either be mistaken in saying that he did apply helm or he failed to apply it effectively or for long enough.  There is no reason to suppose that if the master had persevered, adjusting his helm as appropriate, he would not have achieved a good result in terms both of dampening the yaw and offsetting its location to starboard.  If this measure indeed involved thirty minutes of constant starboard helm, it would have been thirty minutes well spent.  If there was some additional reason for the master’s failure to pursue this measure beyond that which appears in his witness statement, then he has only himself to blame for not supplying additional particulars in his statement or attending (if need be by video link) to explain himself.  In the circumstances, I conclude that AC was at fault in this respect as well.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">It follows from the above conclusions that the master of AC was likewise at fault in failing to give instructions as to the control of yaw and sway. Such instructions should have covered the adoption of an open moor and the use of AC’s helm.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Accordingly, I conclude that AC was at fault in failing to control her yaw and sway, to the extent and in the manner already described. It remains to consider whether AC’s failure to control her yaw and sway was <span style="font-style:italic">causative</span> of the collision. That question is by no means straightforward and is best deferred until later, for consideration in conjunction with such faults of GM (if any) as have by then been established.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">(C) Was GM at fault in terms of lookout and appreciation?</span>   This issue relates to the appreciation and lookout of those on GM, both prior to unberthing and in the course of the manoeuvre. Prior to unberthing, the key questions are whether those on GM were at fault in failing to appreciate or observe the true positions of “ILLAPEL” and AC, together with the pronounced yawing and swaying on the part of AC.  So far as concerns the manoeuvre itself, the central question, it may be thought, is whether GM was at fault in only becoming concerned as to AC’s position and heading at C-2  (or C-3 at the earliest). </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">In a nutshell, GM’s case was to the following effect. Prior to unberthing, in the prevailing good weather, a visual lookout was all that was required. That lookout did not reveal AC’s yawing and swaying. Those on board GM were aware of both “ILLAPEL” and AC at anchor; they did not regard them as giving rise to any danger; they were not under any duty to look out for behaviour which should not be happening – they could not be expected to anticipate that <span style="font-style:italic">if</span> AC was yawing and swaying, she would not take steps to control and reduce the same.  There were difficulties with radar observations which were, in any event, not required. On the turn, GM argued that the problem lay in AC’s unexpected and intermittent movement towards the centre of the channel rather than in any failure of lookout on her (GM’s) part.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I am in large measure unable to accept GM’s submissions in this regard. I conclude that GM was at fault in terms of appreciation and lookout.  My reasons follow.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">The starting point is the framework for this debate, contained in Rules 5 and 7 of the Collision Regulations 1972 (“the Collision Regulations”). So far as here material, these Rules provide as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ Rule 5  Look-out</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Every vessel shall at all times maintain a proper look-out by sight …as well as by all available means appropriate in the prevailing circumstances and conditions so as to make a full appraisal of the situation and of the risk of collision.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">Rule 7  Risk of collision</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(a) Every vessel shall use all available means appropriate to the prevailing circumstances and conditions to determine if risk of collision exists. If there is any doubt such risk shall be deemed to exist…”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">The philosophy of these Rules is both well known and apparent. They emphasise the need for those on a vessel to make a proper appreciation of her situation; assumptions are to be avoided; where there is doubt, a risk of collision is deemed to exist. I turn to GM’s performance, measured against such yardsticks.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">As is clear on the evidence, those on board GM proceeded on the basis that both “ILLAPEL” and AC posed no risk to their proposed manoeuvre.  For this conclusion to be tenable, they needed an accurate understanding of the positions and hence distance of both those vessels and of their behaviour at anchorage insofar as such behaviour might impact on GM’s turn.  Were it otherwise, not only would they have failed to keep a proper lookout but they would not have available the information to negate the risk of collision. In stark terms, GM could not plan a manoeuvre with a safe passing distance from vessels to be encountered on route, unless those on board had a proper understanding of the position and behaviour of the vessels they were to pass. This is emphatically not a recipe for navigation by paperwork or chart; it is instead basic good seamanship.  It is here, that the failures of those on board GM began.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"> It is unnecessary to recount the evidence as to the positions of “ILLAPEL” and AC and their distance from GM.  It is plain that neither master nor pilot had any real appreciation of these matters. Insofar as the master discounted the significance of these vessels because he remained unaware of the details of the proposed manoeuvre, having left those to the pilot, that is of course no answer. As to the pilot, his appraisal was simply inaccurate, with the result that he effectively ignored “ILLAPEL” and AC when he should not have done. If visual observation did not suffice, then radar plotting could have been undertaken.   On the evidence, although the vessel had two rastascan radars available, no use was made of radar to plot the position of “ILLAPEL” and AC.  It could not seriously be suggested that plotting the positions of these vessels by radar would have occasioned any difficulty. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">83.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">In answer to a question which I posed with regard to the use of radar, the Assessors expressed an opinion which comprised the original answer disclosed to counsel.  In the light of GM’s submissions on this topic and the Assessors’ response, it is only necessary to set out here the revised question and answer.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">Q.4: On the assumptions: (i) that it was daylight; (ii) that visibility was good; (iii) that AC was only about a ½ mile downstream of GM at anchor astern of “ILLAPEL”, which was herself at anchor abeam of GM’s berth: would a prudent seaman, formulating an unberthing plan, rely simply on visual observation to ascertain the distance of vessels on route from the berth to the completion of the manoeuvre or would use be made of radar (if available) for this purpose?</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">A.4: A prudent seaman would have carried out a radar plot. Radar plotting would have indicated distances more satisfactorily than visual estimates (even with daylight and good visibility); radar plotting should therefore have been done. An accurate assessment of the positions of vessel in the vicinity of the berth is one of the pre-conditions for the formulation of a prudent unberthing plan. </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">84.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I accept this advice. It may be noted, <span style="font-style:italic">inter alia</span>, how it dovetails with the philosophy of Rule 5 of the Collision Regulations (set out above), mandating the use of “all available means”.  The fact of the matter here is that, even on the assumptions on which the (revised) question is premised, those on GM failed to evaluate distances correctly; a correct evaluation would or should have had a material impact on the unberthing plan.  First, such an evaluation would have lent emphasis to the need for the manoeuvre to be conducted as tightly as could safely be accomplished (see the Assessors’ earlier answer); secondly, the option of proceeding upriver to turn could and, if need be, should have been considered.  The matter does not quite end there.   If the Assessors’ reasoning is to be faulted, it can only be because in daylight and with good visibility, visual observation should have sufficed. But if that be right, then it serves, with respect, only to underline the egregious nature of GM’s failure(s) of lookout.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">85.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I accordingly conclude, without hesitation, that those on GM were at fault in failing to form an accurate appraisal of the positions of “ILLAPEL” and AC. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">86.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I come next to the failure by master and pilot to observe that AC had been yawing.  Each said that they had observed AC but not seen her yawing. Intuitively, this is surprising.  To begin with AC’s yawing cannot be regarded as unusual or unexpected; as agreed by the relevant experts, yawing was “normal” for a laden vessel in the Orinoco, subject to a current of 4 to 4.5 or 5 knots (unless appropriate steps were taken to reduce it).  Mr. Teare, for his part, realistically accepted that yaw and sway are normal consequences of lying to a single anchor in a heavy current with a vessel of a certain trim and in a certain depth. To the extent that there was evidence to the contrary (notably from the pilot), I cannot give it credence; curiously, the pilot thought that dragging caused yawing when the converse is plainly the case.  Furthermore, AC’s yawing was noticed by others: two days earlier, GM’s helmsman had seen AC yawing “quite a lot”; additionally, as will be recollected, the tug masters (Captains Acosta and Omana) had likewise seen her yawing, in effect, obviously.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">87.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">In essence and as already foreshadowed, GM’s case came to this: given a yawing period of in excess of 10 minutes (as agreed by the experts), it would have taken a prolonged period of observation to detect it; neither master nor pilot could be faulted for not undertaking such a lengthy observation when it was not to be expected that AC would fail to take steps to control her yaw and sway. With respect, I am wholly unable to accept this submission.  Again for the moment instinctively, the object of a good lookout is to permit planning for a safe passage; it <span style="font-style:italic">is</span> therefore necessary to take into account the behaviour of the ship under observation; where yawing is to be anticipated (as here), an observer is, so to speak, on notice to look out for it. It is unsafe and imprudent to proceed on the <span style="font-style:italic">assumption</span> that appropriate measures have been taken to reduce it. In any event, others appeared to have seen AC yawing without any particular difficulty. It cannot be right that the duty under Rule 5 of the Collision Regulations is satisfied by a fleeting observation which at the moment it is made detects nothing of significance; that would be to pay lip service to the Rule and to ignore its object.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">88.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Against this background, I sought and obtained advice from my Assessors, which, again, in the light of GM’s further submissions and the Assessors’ response, need only be set out in its revised form:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">Q.5: On the assumption that AC was yawing over about 1 cable in a period of 11-14.5 minutes, should a prudent seaman on GM, carrying out a lookout of the duration properly to be expected of such a seaman where AC is anchored in a 4-5 knot current downstream of another vessel at anchor, have detected such yawing by visual observation?</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:1.00in">
+	      <span style="font-style:italic">A.5: Yes.  A good lookout involves noting the behaviour as well as the position of all vessels to be passed in an unberthing procedure, so as to enable safe planning for a “worst case” scenario.  There is no reason to think that a proper as opposed to a cursory lookout on GM should have failed to note pronounced yawing by AC.  An appreciation of the yaw would have been evident over a minute or two’s proper observation. </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">89.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I regard that advice as compelling; I accept it. Those on GM were at fault in failing to observe AC’s yawing and to plan their passage accordingly. Either the observations of the master and pilot were no more than cursory or else they were simply inadequate. The reality, in all probability, was that on the basis of inappropriate factual assumptions, neither the master nor the pilot of GM paid sufficient attention to AC.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">90.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Pausing there, given GM’s failure in respect of visual lookout, it is unnecessary to enter into the debate as to whether difficulties were likely to have arisen had GM sought to observe AC’s yawing by means of radar.  Suffice to say that in my judgment, the difficulties suggested by GM were significantly overstated.  Had it been necessary to use radar, then in gyro-stabilised (north-up) mode, no particular difficulty ought to have attached to observing AC’s behaviour by radar, before and during GM’s turn.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">91.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"> I have already concluded (contrary to GM’s submissions) that GM did not first become concerned as to AC until C-2 (or C-3 at the earliest). In these circumstances, it seems inescapable on the facts of this case that there was a failure in lookout, regardless of the behaviour of AC. A good lookout entailed keeping watch on the vessels to be passed during the manoeuvre, not least so as to observe any changes in their position or behaviour. Whether this failure of lookout was attributable to the absence of a dedicated lookout on the bridge (as the master appeared to accept) or to the failure of those on the bridge to maintain a proper lookout, is neither here nor there.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">92.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"> Though very much linked with the manoeuvre in fact conducted by GM, it seems plain that the failure of appreciation and lookout on the part of GM prior to conducting the turn was causative of the collision. As already foreshadowed, with proper appreciation and lookout it is probable that the future course of events would have been very different. Two examples suffice; first, the master accepted in his evidence that if he had realised that AC was yawing, he would have consulted with the pilot and harbour authorities as to what action to take; secondly, there was always the option of going upriver before making the turn; in the event that option was not even considered. Further consideration of causation is best deferred until later both on this aspect of the failure of lookout and as to poor lookout during the manoeuvre.   For the present it is sufficient to remark that there was much force in the following criticism contained in AC’s final written submissions:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ [GM] did not determine whether there was, or might be, a risk of collision with [AC] but instead proceeded on the basis of assumptions, in breach of Rule 7 of the Collision Regulations. The result was that those on board [GM] adopted a course that would on any view bring her far too close to [AC] and then had to deal unexpectedly with a close quarters situation that was of their own making and which they should have foreseen. ”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">93.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">(D) Was GM at fault in respect of her unberthing manoeuvre?</span> This is an issue of the first importance. However, in the light of the facts already found, it requires minimal elaboration given the inevitability of the conclusions which follow: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">There had been a failure to plan the unberthing manoeuvre; the premise of the passage plan’s silence as to unberthing was the expectation of proper discussion between master and pilot; but as between the master and pilot there had been no discussion, still less planning, to speak of.   While the master did have in mind a (broad) minimum safe passing distance for vessels on route, he could not have had any real idea of whether and, if so, how the pilot would achieve that.  Understandable though it may be in some respects that the master chose to leave the turn to the local pilot, such abdication of responsibility cannot be right in terms of good seamanship – and furnishes no defence in law.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">As explained by the Assessors’ answers to <span style="font-style:italic">Questions 1, 4 </span>and <span style="font-style:italic">5 </span>(as supplemented or revised), there was a comprehensive failure in the execution of the turn.  GM proceeded too far to the North, came too close to “ILLAPEL”, came too far downstream (adjacent to Sidor Nos. 5 or 6 berths) and came out of the turn too quickly. All of these matters flowed both from the prior failure of appreciation and lookout and from the unusual decision to use the engines, for a sustained period, half ahead and, thereafter, full ahead, in the course of the turn For the decision to use the engines as described, there has been no or no satisfactory explanation.  There was moreover, no need to conduct the turn in such a manner. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">In the result, GM rapidly encountered a close quarters situation with AC for which those on board GM were unprepared. She was then being taken rapidly downstream by the current, aided by her speed of advance through the water attributable to the sustained full ahead movement.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">94.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">   Rule 6 of the Collision Regulations provides as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ Every vessel shall at all times proceed at a safe speed so that she can take proper and effective action to avoid collision and be stopped within a distance appropriate to the prevailing circumstances and conditions…”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">Among the factors to take into account in determining what is a “safe speed” are traffic density (Rule 6 (a)(ii)) and the state of the current (Rule 6(a)(v)). In my judgment, the manner in which GM conducted her turn discloses a plain breach of this Rule – and the requirements of good seamanship.  Her turn failed to take into account adequately or at all the presence, position and behaviour of “ILLAPEL” and AC and the strength of the current.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">95.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Whether taken by itself or in conjunction with the prior failure of appreciation and lookout, together with the failure of lookout during the turn, there can be no realistic doubt that GM’s conduct of the turn was, at the least, a major cause of the collision. I return later to the relationship between this GM fault and other suggested causes of the collision. The question of whether a collision was unavoidable at the conclusion of GM’s turn or whether subsequent manoeuvres could have avoided a collision, I also defer until after consideration of the next topic. On any view, however, the failures of appreciation and lookout and the manner in which the turn was conducted, left those on GM now ill-placed to avoid a collision.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">96.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">(E) Was GM at fault in respect of her later manoeuvres?</span>  Mr. Persey submitted that if, at 08.27, GM had kept her engines at full ahead and gone to starboard, even then and notwithstanding all that had gone before, a collision would have been avoided.  Having conducted her turn too fast and having, hitherto, failed to “ease, stop or reverse” her engines, at this stage GM should have maintained full ahead.   Accordingly, Mr. Persey criticised the 08.27 “stop engines” order as “disastrous”; steerage way was lost when it was most needed and there was a significant risk of broaching.  Mr. Persey accepted, however, that it would be wrong to “weigh matters too finely in the balance” in the last two minutes preceding the collision.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">97.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I do not think it would be right to criticise those on GM for their conduct from the time they first became concerned as to the proximity of AC (i.e. C-2, or, at most, C-3, onwards).  Moreover, by then, a collision was in any event probable, so that such conduct made no causative difference.  My reasons are these:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">    When AC’s change of aspect was belatedly seen, those on GM did not (it would appear) appreciate that she was yawing; the master and third officer thought that she was manoeuvring rather than at anchor and the pilot thought she was dragging her anchor.  Against this background, the master’s instinctive order to stop engines can be understood, whatever view might be taken of it free from those prior misconceptions.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Moreover, by C-2 (or even C-3), it is easy to imagine the desperate concern to avoid a collision that now appeared both imminent and unavoidable. It is in that context that the 08.27 order falls to be judged – with the anxiety of a looming collision and without the benefit of hindsight. It would be harsh to criticise the master’s instinctive adoption of a measure which (at all events) would serve to reduce the impact of a collision.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">For these reasons and those given earlier, the proper criticism to be made is that, at C-2 or thereabouts, by reason of the earlier faults of those on GM, they were both in the wrong position and unable to make a proper evaluation of events; such criticism is well-founded. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Further, by C-2 or thereabouts, it is in my judgment probable that there would have been a collision regardless of whether the master had maintained full ahead as well as ordering starboard helm.  While no doubt it is possible that with the additional steerage way furnished by maintaining full ahead, a collision might have been avoided, I regard it as unlikely; the current was too strong, so that, by then, the die was already cast.  In the circumstances, even if the master was at fault in ordering stop engines, any such fault was not causative of the collision.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">98.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in"><span style="font-style:italic">(F) What caused the collision?</span> Causation is an important topic and it is convenient to begin by separating out some first principles.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">As concisely set out in <span style="font-style:italic">Marsden</span> (12<span style="vertical-align:super;font-size:smaller">th</span> ed.), para. 13-01, it is not every act of negligence committed at or about the time of a collision that is actionable;  to found a claim for damages, the negligence in question must form “a link in the chain of causation ending in the collision” and thereby cause damage.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">If the collision is due partly to the fault of one ship and partly to the fault of the other, then liability is to be apportioned.  The so-called “last opportunity” rule has long disappeared: <span style="text-decoration:underline">The “Ouro Fino”</span> [1988] 2 Lloyd’s Rep. 325. Thus the fact that one ship had the “last opportunity” to avoid a collision does not mean that she will be solely to blame for it <span style="font-style:italic">if</span> in fact the fault of both ships caused or contributed to the collision.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">If, however, both ship X and ship Y were at fault but the fault of ship X was causative of the collision, whereas the collision would have happened in any event regardless of the fault of ship Y, then ship X is solely to blame for the collision.  In this example, the fault of ship Y is causatively irrelevant. See too, <span style="font-style:italic">Marsden</span>, at para. 13-02. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">99.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">In the present case, there was undoubtedly sufficient water for GM, differently manoeuvred, to have passed AC safely, even at the extremity of her yaw; accordingly, there can be no realistic doubt that the faults of GM, in respect of appreciation, lookout and the manner in which her unberthing manoeuvre was conducted, were at least a major contributory cause of the collision.  Provided only that it is right to conclude, as I already have, that AC’s yawing should have been observed, then it can properly be said that the collision, in broad daylight, was caused by GM simply failing to keep clear of the very visible AC.  It will be recollected that in contemporaneous statements, two of the tug masters (Captains Acosta and Rodriguez) said, effectively, just that – and, for whatever reason, neither of those two witnesses was predisposed to favour AC.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">100.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">I have also, however, concluded that AC was at fault in failing to control her yaw in that she neither anchored to an open moor nor used her helm (adequately or at all) to dampen down her yawing and offset it to starboard. On this footing, Mr. Teare submits that AC’s fault was also a cause of the collision and, accordingly, that liability is to be apportioned.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">101.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">Before, however, the apportionment stage is reached, the issue must be resolved:  would the collision have occurred even if AC had controlled her yaw?  If the answer is “yes”, then, as it seems to me, AC’s fault is causatively irrelevant and GM must be solely to blame for the collision.  If the answer is “no”, then I must go on to consider apportionment.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">102.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">For AC, Mr. Persey submitted that GM’s manoeuvre was such that whatever AC did (whether by way of open moor or use of helm), a collision would probably not have been avoided. In support of this argument he relied on a diagram produced by his expert (Mr. Hendy) which, as a matter of geometry, was agreed by GM’s expert (Mr. Byrne); a copy of that diagram forms Annexe II to this judgment.  Annexe II shows the actual degree of AC’s yaw (in green), together with the degrees of yaw on a 60<span style="font-family:Symbol"></span> open moor (in red) and a 30<span style="font-family:Symbol"></span> open moor (in blue).  Superimposed on Annexe II are GM and her track.  Annexe II suggests, Mr. Persey submitted, that a collision would not have been avoided on red (i.e. had AC anchored to a 60<span style="font-family:Symbol"></span> open moor) and would only have been avoided had she been at the starboard or northern extremity of green (her actual yawing) or blue (the lesser 30<span style="font-family:Symbol"></span> open moor). In short, the collision would probably not have been avoided. In the circumstances, GM was solely to blame for the collision. In the event, AC’s fault was not causative and she was not to be fixed with a share of the liability for the collision simply to register the Court’s disapproval as to the manner in which she had been managed.  This last submission, however unpalatable, is of course plainly right and no more need be said of it.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">103.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">For GM, Mr. Teare’s submissions proceeded as follows.  First, although the experts had agreed the geometry of Annexe II, GM’s expert (Mr. Byrne) had added the following qualifications: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“ …any conclusions drawn using this plot regarding the possibility of a collision with the AC lying to two anchors should include reference to the following:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(a) for the 2*30 situation [i.e., “red”], the AC would need to be found at the southern extremity of her cycle of movement;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(b) for the 2*15 [i.e., “blue”] situation, the AC would need to be found in the southern side of the cycle;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(c) the drift angle of the GM illustrated in the plot (the difference between her heading and her track) is that which obtained at the point of collision;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(d) the simulations themselves are not necessarily precise ….”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">Accordingly, Annexe II needed to be approached with caution and with these qualifications in mind.  Secondly, had the collision been between GM and AC on (the notional) blue or red, it would have been a less serious collision;  the angle of blow would have been less so that it “might well have been something in the nature of a glancing blow”.   Thirdly, Annexe II only applied to GM’s case that AC should have anchored to an open moor; it did not apply to GM’s case that AC should have used helm to offset her yaw to starboard.  For completeness, Mr. Teare also submitted that Annexe II had no application if his case succeeded that AC’s anchorage position was unsafe; but as I have already reached an adverse conclusion to GM on that point, no more need be said of that argument.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">104.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">For my part, I am satisfied that a collision would probably not have been avoided even had AC anchored to an open moor or used her helm to offset her yaw to starboard.  In expressing my conclusion in these terms, it may be that I have been generous to GM in respect of the incidence of the burden of proof but I am content to proceed on that basis.  The reasons for my conclusion are these:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">I readily accept that the simulations underlying Annexe II are not necessarily precise; indeed, I approach them here, as I have throughout, with considerable caution. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">I begin, therefore, by treating Annexe II as no more than a good illustration of the overall situation on the various assumptions there set out.  As such, fairly considered, it strongly suggests to me that even had AC adopted an open moor, while it was <span style="font-style:italic">possible</span> that a collision would be avoided (if all concerned were lucky there might have been the closest of near-misses), the <span style="font-style:italic">probability</span> was that a collision would have occurred in any event. This conclusion follows from the nature of GM’s manoeuvre and irrespective of the beneficial steps AC should have taken to control her yaw.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">A more detailed study of Annexe II (if appropriate) points to the same conclusion. In my judgment, a collision with AC on “red” was unlikely to be avoided.  I am unable to accept Mr. Byrne’s suggestion that it is <span style="font-style:italic">only</span> with AC at the “southern extremity” of her cycle of movement that a collision was likely.   So far as concerns AC on “blue”, there is force in Mr. Byrne’s qualification that for a collision to be probable, AC needed to be in the southern side of her cycle; however, as already discussed (and as was <span style="font-style:italic">GM’s</span> case), the desired open moor contemplated a total angle of 60<span style="font-family:Symbol"></span> (or more) between the anchors (“red”), rather than 30<span style="font-family:Symbol"></span> (“blue”).  In any event, to my mind, it is artificial to conduct an over-refined analysis of Annexe II; it is the overall picture which matters.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">As to the submission that, with AC anchored to an open moor, any collision would have been less serious, with respect, this is simply too speculative.  If anything, Annexe II raises the spectre of a contact occurring in way of GM’s accommodation area or certainly closer to it.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.98in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="Heading2" style="margin-left:0.98in;text-indent:0.5in">Finally, it is right, so far as it goes, that Annexe II does not deal in terms with the application by AC of starboard helm.  It is legitimate, however, to approach Annexe II, on the assumption that starboard helm was applied (<span style="font-style:italic">ex hypothesi</span>, to AC on “green” in Annexe II). If so, it remains <span style="font-style:italic">improbable</span> that sufficient movement would have been achieved for a collision to be avoided. I would accept that it was <span style="font-style:italic">possible</span> here too that a collision might have been avoided; but that is not the test.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">105.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">It must follow from these conclusions that though there is much to criticise in the conduct of those on AC, her failure to control yaw and sway was not causative of the collision. It follows further that GM must be held solely to blame and that no question of apportionment arises. In essence, this was and remained a straightforward case of a vessel under way colliding with a very visible vessel at anchor, in broad daylight, following poor appreciation and lookout and a poorly executed turn. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Heading">
+	      <span style="text-decoration:underline">ISSUE (IV):  APPORTIONMENT</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">106.</num>
+	  <content>
+	    <p class="Heading1" style="margin-left:0.50in;text-indent:0.5in">For the reasons already given, this Issue does not arise.  In deference however to the arguments advanced at trial, I record that had I thought AC’s fault (in not controlling yaw and sway) to be causative, I would nonetheless have remained of the view that the preponderance of blame lay with GM.  Whatever the failings on board AC (and in terms of ship management they were real indeed), even on this assumption, the faults of those on GM gave rise to the dangerous situation which resulted in the collision or, at the very least, played the major role in converting a passing with the potential for embarrassment into a collision. Standing back from the matter and viewing it in terms of both culpability and causation, I would have apportioned liability 90% to GM and 10% to AC; necessarily, however, this observation is of academic interest only. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

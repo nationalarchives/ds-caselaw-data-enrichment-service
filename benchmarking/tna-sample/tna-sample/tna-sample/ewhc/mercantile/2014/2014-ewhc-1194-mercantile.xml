@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewhc/mercantile/2014/1194"/>
+	  <FRBRuri value="ewhc/mercantile/2014/1194"/>
+	  <FRBRdate date="2014-04-02" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-general"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1194"/>
+	  <FRBRname value="Marilyn Freda Knatchbull-Hugessen v SISU Capital Limited"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewhc/mercantile/2014/1194/eng"/>
+	  <FRBRuri value="ewhc/mercantile/2014/1194/eng"/>
+	  <FRBRdate date="2014-04-02" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-general"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewhc/mercantile/2014/1194/eng/akn"/>
+	  <FRBRuri value="ewhc/mercantile/2014/1194/eng/akn"/>
+	  <FRBRdate date="2021-12-01T23:00:59" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewhc-qbd-general" href="https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court" showAs="The Queen's Bench Division of the High Court" shortForm="The Queen's Bench Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="marilyn-freda-knatchbull-hugessen" href="" showAs="Marilyn Freda Knatchbull-Hugessen"/>
+	<TLCPerson eId="paul-michael-harris" href="" showAs="Paul Michael Harris"/>
+	<TLCPerson eId="rowley-thomas-edward-higgs" href="" showAs="Rowley Thomas Edward Higgs"/>
+	<TLCPerson eId="emily-lucy-barlow" href="" showAs="Emily Lucy Barlow"/>
+	<TLCPerson eId="as-trustees-of-the" href="" showAs="(As Trustees of the"/>
+	<TLCPerson eId="alan-edwards-higgs-charity" href="" showAs="ALAN EDWARDS HIGGS CHARITY)"/>
+	<TLCPerson eId="sisu-capital-limited" href="" showAs="SISU Capital Limited"/>
+	<TLCRole eId="claimant" href="" showAs="Claimant"/>
+	<TLCRole eId="defendant" href="" showAs="Defendant"/>
+	<TLCPerson eId="judge-mr-justice-leggatt" href="/judge-mr-justice-leggatt" showAs="MR JUSTICE LEGGATT"/>
+      </references>
+      <proprietary source="ewhc/mercantile/2014/1194/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWHC-QBD-General</uk:court>
+	<uk:year>2014</uk:year>
+	<uk:number>1194</uk:number>
+	<uk:cite>[2014] EWHC 1194 (Mercantile)</uk:cite>
+	<uk:hash>0ca829e3e9d0c122190389b771e03f7abf63d8cee6dbeec4979774415a38d276</uk:hash>
+      </proprietary>
+      <presentation source="ewhc/mercantile/2014/1194/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { font-weight: bold; font-family: Arial; font-size: 16pt; }
+#judgment .Heading3 { font-weight: bold; font-family: Arial; font-size: 13pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .ParaHeading { font-size: 12pt; }
+#judgment .ParaLevel1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .ParaLevel2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .ParaLevel3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 1.00in; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .Heading { font-size: 12pt; }
+#judgment .Title { text-align: center; font-weight: bold; font-size: 10pt; }
+#judgment .Colloquy { margin-left: 0.40in; font-size: 12pt; }
+#judgment .eMailBlock { text-align: center; font-weight: bold; font-size: 13pt; }
+#judgment .ContinCol { margin-left: 0.40in; font-size: 12pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .Heading3Char { font-weight: bold; font-size: 13pt; }
+#judgment .QuoteChar { font-style: italic; font-size: 12pt; color: #404040; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .TitleChar { font-weight: bold; font-size: 16pt; }
+#judgment .Hyperlink { text-decoration: underline; color: #0044BB; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p class="CoverText" style="text-align:left">Neutral Citation Number: [2014] EWHC 1194 (Mercantile)</p>
+      <p class="CoverText">Case No: <docketNumber>A40BM014</docketNumber></p>
+      <p class="CoverMain">
+	<courtType>IN THE HIGH COURT OF JUSTICE</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">QUEEN'S BENCH DIVISION</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">BIRMINGHAM DISTRICT REGISTRY</courtType>
+      </p>
+      <p>
+	<span style="font-weight:bold;text-decoration:underline">MERCANTILE COURT</span>
+      </p>
+      <p class="CoverText">Royal Courts of Justice</p>
+      <p class="CoverText">Strand, London, WC2A 2LL</p>
+      <p class="CoverText">Date: <docDate date="2014-04-02">02/04/2014</docDate></p>
+      <p style="text-align:center"><span style="font-weight:bold">Before</span> :</p>
+      <p class="CoverMain" style="text-align:center">
+	<judge refersTo="#judge-mr-justice-leggatt">MR JUSTICE LEGGATT</judge>
+      </p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.25in">
+	      <party refersTo="#marilyn-freda-knatchbull-hugessen" as="#claimant" style="font-weight:bold">(1) Marilyn Freda Knatchbull-Hugessen</party>
+	    </p>
+	    <p style="text-align:center;margin-left:0.25in">
+	      <party refersTo="#paul-michael-harris" as="#claimant" style="font-weight:bold">(2) Paul Michael Harris</party>
+	    </p>
+	    <p style="text-align:center;margin-left:0.25in">
+	      <party refersTo="#rowley-thomas-edward-higgs" as="#claimant" style="font-weight:bold">(3) Rowley Thomas Edward Higgs</party>
+	    </p>
+	    <p style="text-align:center;margin-left:0.25in">
+	      <party refersTo="#emily-lucy-barlow" as="#claimant" style="font-weight:bold">(4) Emily Lucy Barlow</party>
+	    </p>
+	    <p style="margin-left:0.25in"/>
+	    <p style="text-align:center;margin-left:0.25in">
+	      <party refersTo="#as-trustees-of-the" as="#claimant" style="font-weight:bold">(As Trustees of the</party>
+	    </p>
+	    <p style="text-align:center;margin-left:0.25in">
+	      <party refersTo="#alan-edwards-higgs-charity" as="#claimant" style="font-weight:bold">ALAN EDWARDS HIGGS CHARITY)</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#claimant">Claimant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#sisu-capital-limited" as="#defendant" style="font-weight:bold">SISU Capital Limited</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Defendant</role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center"><span style="font-weight:bold">John Brennan </span>for the <span style="font-weight:bold">Claimants</span></p>
+      <p style="text-align:center"><span style="font-weight:bold">Rhodri Thompson QC &amp; Christopher Brown </span>for the <span style="font-weight:bold">Defendants</span></p>
+      <p style="text-align:center">Hearing dates: 1-3 April 2014</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p class="CoverDesc">
+	      <span style="font-size:12pt">Judgment</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">Mr Justice Leggatt :</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The claim and counterclaim in this case arise out of commercial negotiations which did not result in a concluded agreement.  They are claims by the claimants and defendant respectively to recover professional fees and other expenses incurred in or in connection with those abortive negotiations.  The negotiations formed part of an attempt by the owners of Coventry City Football Club (“the Club”) to find a solution to serious financial difficulties which in 2012 had brought the Club to the brink of insolvency. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Club was owned by a company in the SISU group of companies, being a group of companies whose investments are managed by the defendant in this case, SISU Capital Limited (“SISU”).  The Club's home ground at the time was the Ricoh Arena in Coventry.  The arena was operated by Arena Coventry Limited (“ACL”).  ACL was owned indirectly in equal shares by the claimants in this case who are the four Trustees of the Alan Edward Higgs Charity (whom I shall refer to as "the Trustees" or "the Charity") and Coventry City Council. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">ACL had borrowed a very substantial sum of the order of £22 million from Clydesdale Bank plc trading as Yorkshire Bank in order to fund the acquisition of a lease of the arena.  The Club had a licence to use the arena, granted by a wholly owned subsidiary of ACL.  ACL was dependent on the revenue from this licence to service its debt to Yorkshire Bank. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In March 2012, SISU embarked on negotiations to try to rescue the Club from its financial difficulties.  At the same time the Club stopped making payments of licence fees to the ACL subsidiary.  One element of the negotiations was a proposal by SISU to acquire the Charity's 50 per cent interest in the share capital of ACL.  Discussions reached the stage where SISU and the Charity were able to agree indicative terms for such a share purchase, which were recorded in a document dated 18 June 2012, described as an indicative term sheet. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This term sheet outlined a proposed transaction whereby "SISU or another SISU Group company" would purchase the Charity's 50 per cent interest in ACL for a total cash consideration of £1.5 million, payable immediately upon completion of the share purchase. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Following completion, it was envisaged that what was in effect further deferred consideration would be payable over a period of ten years.  The mechanism for this proposed by SISU was the allocation to the Charity of preferred equity in ACL for a value of £4 million, which would be paid down through annual payments over the ten-year period.  However, this proposal was not set in stone.  The term sheet contained a statement that: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"SISU would consider an alternative structure to that of preferred equity.  The parties will work together to achieve a solution in respect of suitable alternatives."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The term sheet further recorded that SISU would require a period for due diligence investigations, which was expected to last 30 days.  Four conditions precedent to completion were indicated, the first of which was that completion would only take place: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"once a transaction has been satisfactorily agreed between Clydesdale Bank plc trading as Yorkshire Bank and SISU."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There were provisions concerning costs and exclusivity, which are at the heart of this case and which I will come back to.  The expected closing date for the transaction was said to be "as soon as possible".</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There was then a paragraph which stated:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"This offer [meaning the offer made by SISU to purchase shares] is non-binding and subject to due diligence, save for the paragraphs related to Costs and Exclusivity, which shall become immediately binding upon both SISU and the Charity upon countersignature of this term sheet by the Charity, notwithstanding that the remaining terms of this letter remain subject to execution and completion of formal legal agreements."</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The term sheet was countersigned on behalf of all the Charity Trustees on 19 June 2012.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It follows that the only two parts of the term sheet which were intended to have contractual effect were the provisions relating to costs and exclusivity.  When I refer to "the contract", I shall therefore be referring to those provisions and only those provisions of the term sheet.  They stated as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"<span style="text-decoration:underline">Costs.</span>  SISU acknowledges that the Charity will incur significant costs, fees and expense in evaluating SISU's offer to purchase the shares, and in negotiating the transaction with SISU and its advisors.  Accordingly, in the event that SISU withdraws its offer to purchase the shares, or the Charity withdraws from negotiations as a result of SISU seeking a reduction in the purchase price or seeking unreasonable terms, or the Conditions Precedent cannot be met ('Aborted Transaction'), SISU agrees to underwrite and be responsible for all the Charity's reasonable costs and expenses (including without limitation the legal and other professional costs of PwC, Bates Wells &amp; Braithwaite LLP and Gateley LLP and all expenses and associated VAT) incurred up to the point of a transaction with Clydesdale Bank plc, to a maximum of £29,000.  Underwriting of further costs will be agreed once the transaction has progressed beyond discussions with Clydesdale Bank plc.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in"><span style="text-decoration:underline">Exclusivity</span>.  The parties have agreed to a period of exclusivity, commencing on the date of signing of this agreement and ending 6 weeks later (the 'Exclusivity Period').  The Charity undertakes that during the Exclusivity Period it shall (i) only allow SISU to conduct due diligence investigations in relation to ACL; and (ii) conduct negotiations with SISU in good faith with a view to agreeing and executing the legal agreements within the Exclusivity Period.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">The Charity undertakes that, during the Exclusivity Period, it shall not, directly or indirectly, enter into, re-start, solicit, initiate or otherwise participate in any third party negotiations, or supply or otherwise disclose any information about ACL to a third party that wishes, or may wish, to enter into third party negotiations (unless the information is publicly available)." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Exclusivity Period expired on 31 July 2012 without any share purchase agreement being concluded.  There was no agreement to extend the Exclusivity Period.  No share purchase agreement has ever been concluded.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This action has been brought by the Charity to recover expenses from SISU in the maximum amount permitted by the contract of £29,000 on the ground that the conditions precedent cannot be met.  The Charity contends that this became so when, in January 2013, ACL repaid its loan from Yorkshire Bank with the assistance of funding from Coventry City Council, with the result that it became impossible for a transaction to be agreed between Yorkshire Bank and SISU. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">SISU denies that it is liable to pay the costs claimed or any costs incurred by the Charity.  SISU has also advanced a counterclaim.  This counterclaim is for damages for breach of an alleged implied term of the contract.  The alleged implied term is pleaded in paragraph 31 of SISU's draft amended statement of case as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"It was an implied contractual term of the agreement … that the parties would conduct the negotiations in good faith and, in particular, that the claimants would not do anything (or procure that anything be done by any other party or parties) to render impossible or materially to impede the performance of the conditions precedent set out at paragraph 9 of the Defence." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The implied term for which SISU contends has two limbs and the allegations of breach likewise fall into two categories.  First, it is alleged that the Charity Trustees acted in a way which rendered compliance with the conditions precedent impossible or materially impeded their performance.  Second, it is alleged that, as from 17 August 2012, the Trustees resolved or elected to proceed with an alternative scheme under which (a) the debt owed by ACL to Yorkshire Bank would be assumed by Coventry City Council and not by SISU, but at the same time (b) the Trustees would keep negotiations with SISU open.  It is said that proceeding in this way without informing SISU of their "true decision(s), plan(s), objective(s) and/or motive(s)" was a breach of the implied obligation to conduct negotiations with SISU in good faith. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The counterclaim alleges that costs have been incurred relating to the proposed transaction envisaged by the term sheet, amounting in total to some £290,000.  Those costs were incurred not by the defendant company, but by other companies in the SISU group.  An application has been made to add those companies as additional parties to the counterclaim on the ground that the defendant was acting as their agent in entering into the contract with the Charity or, alternatively, that they have rights of action under the Contracts (Rights of Third Parties) Act (1999).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">That application to add additional parties is opposed by Mr Brennan on behalf of the Charity Trustees, who seeks to attack the counterclaim at its root by arguing that the implied term on which it rests does not exist.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In these circumstances, and as the question whether the alleged term is to be implied raises a short point of contractual interpretation, I took the view that as a matter of case management I should decide that point as a preliminary issue at the start of this trial before any witnesses are called to give evidence.  Establishing at the outset whether the counterclaim is built on rock or on sand may affect the shape and size of the trial. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The principles of law which govern the implication of contractual terms are well-known and I need not rehearse them at any length.  Since the influential judgment of Lord Hoffmann in <span style="text-decoration:underline">Attorney General for Belize v Belize Telecom</span> [2009] 1 WLR 1988, the process of implication of terms is generally seen as an exercise in the construction of the contract as a whole.  The criteria traditionally used are still relevant, namely that the proposed term must be: (1) reasonable and equitable; (2) necessary to give business efficacy to the contract; (3) so obvious that it goes without saying; (4) capable of clear expression; and (5) must not contradict any express term of the contract.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">However, as stated by Lord Hoffmann in <span style="text-decoration:underline">Belize</span> at [27]:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">"This list is best regarded not as a series of independent tests which must each be surmounted, but rather as a collection of different ways in which judges have tried to express the central idea that the proposed implied term must spell out what the contract actually means or in which they have explained why they did not think that it did so.  The Board has already discussed the significance of 'necessary to give business efficacy' and ‘goes without saying’.  As for the other formulations, the fact that the proposed implied term would be inequitable or unreasonable or contradict what the parties have expressly said or is incapable of clear expression are all good reasons for saying that a reasonable man would not have understood that to be what the instrument meant." </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I have mentioned the factual background to the contract.  The legal background is equally important.  As many prospective house buyers or sellers know to their cost, there is no general duty currently recognised in English law to conduct contractual negotiations in good faith.  There is a duty not to misrepresent facts, but there is no duty to disclose facts which it would be material for the other party to negotiations to know, nor is there any constraint in law which prohibits someone from carrying on negotiations with more than one counterparty at the same time without informing them about the existence of the other or others. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">By the same token, if a party incurs costs as a result of entering into or pursuing contractual negotiations which do not result in any concluded agreement, those costs as a general rule are not recoverable from the other party to the negotiations even if the negotiations fail because the other party acts unreasonably or concludes an agreement with someone else with whom it has been negotiating without telling the party who has incurred the costs.  That is the general rule or default position. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is open to parties entering into negotiations to depart from that default position by making a binding contract which will regulate their negotiations.  Such a contract may impose an obligation not to negotiate with anyone else during a specified period.  Notwithstanding the decision of the House of Lords in <span style="text-decoration:underline">Walford v Miles</span> [1992] 2 AC 128, it is also now generally accepted that such a contract may impose an obligation on one or both parties to conduct negotiations in good faith, see eg <span style="text-decoration:underline">Petromec Inc v Petroleo Brasileiro SA Petrobras (No 3)</span> [2005] EWCA Civ 891, [2006] 1 Lloyd's Rep 121.  Such a contract may also confer a right to recover from the other party costs and expenses incurred in negotiations which prove abortive.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The parties in this case made a contract which contained provisions of all those kinds.  However, it is important when construing the contract to bear in mind the default position which applies, except to the extent that the parties have agreed otherwise. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As I have indicated, the parties agreed to a period of exclusivity during which the Charity undertook, first, not to negotiate with anyone or allow anyone else to conduct due diligence investigations in relation to ACL other than SISU and, second, to conduct negotiations with SISU in good faith with a view to concluding a legally binding share purchase agreement.  In return for that contractual undertaking by the Charity, SISU undertook to reimburse costs incurred by the Charity up to a specified maximum limit if the negotiations failed for any of certain specified reasons.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It seems to me impossible to imply into that agreement an undertaking by the Charity to conduct negotiations with SISU in good faith after the end of the Exclusivity Period.  Such a term would be inconsistent with the parties' agreement. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On behalf of SISU, Mr Thompson QC disputed that proposition.  There is, he submitted, no inconsistency between agreeing to conduct negotiations in good faith during the six-week Exclusivity Period and agreeing to do so for as long as the negotiations continued.  That is true in the sense that those two obligations could in principle exist in parallel without either contradicting the other.  But in circumstances where a party has undertaken to conduct negotiations in good faith for a specified period against the background that in the absence of such an agreement there is no legal duty of good faith in negotiation, the clear and unambiguous meaning of the agreement is that the undertaking is limited to the period specified in the contract and does not extend beyond it. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The contention that a term is to be implied whereby the Charity undertook to conduct negotiations with SISU in good faith after the end of the specified period of six weeks seems to me as plain a case as there could be of an attempt to rewrite the parties' bargain.  If accepted, it would mean that in return for the promise which SISU gave to reimburse certain costs, SISU would get not just the six week period of good faith negotiation which it bargained for, but a longer period which went beyond, indeed potentially far beyond, what it had bargained for. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The argument for this limb of the alleged implied term therefore falls in my view at the first hurdle.  Far from being necessary to imply a term that the Charity would conduct negotiations in good faith after the end of the Exclusivity Period, there is in my view no scope in the contract for any such term. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The other limb of the implied term for which SISU contends is that the Charity Trustees would not do anything to render impossible or materially to impede the performance of the conditions precedent.  Such an undertaking is said to be implicit in the provision relating to the Charity's costs.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Thompson submitted that it cannot have been intended that the Charity should on the one hand be entitled to come after SISU for costs in the event that the conditions precedent could not be met and, on the other hand, at the same time be free to act in a way which rendered it impossible for those same conditions precedent to be met. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I can see some force in that argument when viewed as an argument for construing the last of the three events which gives rise to a liability of SISU to pay costs, namely that "the Conditions Precedent cannot be met" as excluding a situation in which the conditions precedent cannot be met because the Charity prevents them from being met.  I express no concluded view on this point and do not consider it further in this judgment because it is not part of the preliminary issue.  If the point is a good one, it operates as a potential defence to the Charity's claim. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">However, I can see no justification at all for implying into the contract a free-standing obligation on the part of the Charity not to prevent the conditions precedent from being met, which, if broken, would give rise to a liability in damages.  That would again be inconsistent with the parties' bargain.  It is clear from the express terms of the contract that the only party which was given a right to recover wasted costs in certain circumstances was the Charity.  In return for that right, the Charity gave undertakings limited in time to afford exclusivity to SISU.  The contract contains no provision which gives SISU a right to recover costs from the Charity in any circumstances and SISU gave no undertaking with regard to the conduct of negotiations as a quid pro quo for any such right. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It would furthermore be wholly disproportionate and unreasonable if the consequence of preventing the conditions precedent from being met was not merely to deprive the Charity of the right to recover its own wasted expenditure, limited to a maximum sum of £29,000, but was to render the Charity liable to reimburse SISU for its expenses without any limitation in amount.  It would, in my view, require clear words before the contract could be construed as requiring such an unreasonable result.  As it is, there are no words in the contract at all which suggest, let alone expressly state, that this was intended.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In short, the attempt to imply out of SISU's promise to reimburse the Charity's costs to a maximum of £29,000 in certain circumstances an unstated promise by the Charity to reimburse SISU's costs with no limit in amount in certain circumstances seems to me to be hopeless.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">For these reasons, I rule that there was no implied term of the contract of the kind alleged in paragraph 31 of the counterclaim.  It follows that the counterclaim must be dismissed and all that remains to be decided at this trial is whether or not the Charity is entitled to succeed in its claim. </p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

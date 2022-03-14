@@ -1,0 +1,2241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewhc/ipec/2015/1773"/>
+	  <FRBRuri value="ewhc/ipec/2015/1773"/>
+	  <FRBRdate date="2015-06-29" name="judgment"/>
+	  <FRBRauthor href="#ewhc-chancery-ipec"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="1773"/>
+	  <FRBRname value="THE SOFA WORKSHOP LIMITED v SOFAWORKS LIMITED"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewhc/ipec/2015/1773/eng"/>
+	  <FRBRuri value="ewhc/ipec/2015/1773/eng"/>
+	  <FRBRdate date="2015-06-29" name="judgment"/>
+	  <FRBRauthor href="#ewhc-chancery-ipec"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewhc/ipec/2015/1773/eng/akn"/>
+	  <FRBRuri value="ewhc/ipec/2015/1773/eng/akn"/>
+	  <FRBRdate date="2021-12-01T22:57:48" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewhc-chancery-ipec" href="https://www.gov.uk/courts-tribunals/intellectual-property-enterprise-court" showAs="The Business and Property Courts (Intellectual Property Enterprise Court)" shortForm="The Intellectual Property Enterprise Court"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="the-sofa-workshop-limited" href="" showAs="THE SOFA WORKSHOP LIMITED"/>
+	<TLCPerson eId="sofaworks-limited" href="" showAs="SOFAWORKS LIMITED"/>
+	<TLCRole eId="claimant" href="" showAs="Claimant"/>
+	<TLCRole eId="defendant" href="" showAs="Defendant"/>
+	<TLCPerson eId="judge-his-honour-judge-hacon" href="/judge-his-honour-judge-hacon" showAs="HIS HONOUR JUDGE HACON"/>
+      </references>
+      <proprietary source="ewhc/ipec/2015/1773/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWHC-Chancery-IPEC</uk:court>
+	<uk:year>2015</uk:year>
+	<uk:number>1773</uk:number>
+	<uk:cite>[2015] EWHC 1773 (IPEC)</uk:cite>
+	<uk:hash>8060a0ab893ea60dcef2bbd79fcfb7e03cb5ad6e6bf8a871ab103769007ec501</uk:hash>
+      </proprietary>
+      <presentation source="ewhc/ipec/2015/1773/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { font-weight: bold; font-family: Arial; font-size: 16pt; }
+#judgment .Heading3 { font-weight: bold; font-family: Arial; font-size: 13pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .ParaHeading { font-size: 12pt; }
+#judgment .ParaLevel1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .ParaLevel2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .ParaLevel3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 1.00in; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .Heading { font-size: 12pt; }
+#judgment .Title { text-align: center; font-weight: bold; font-size: 10pt; }
+#judgment .eMailBlock { text-align: center; font-weight: bold; font-size: 13pt; }
+#judgment .CommentText { font-size: 10pt; }
+#judgment .CommentSubject { font-weight: bold; font-size: 10pt; }
+#judgment .BalloonText { font-family: Tahoma; font-size: 8pt; }
+#judgment .indent11 { font-size: 12pt; }
+#judgment .c01pointnumerotealtn { font-size: 12pt; }
+#judgment .ListBullet { margin-left: 0.25in; font-size: 12pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .Heading3Char { font-weight: bold; font-size: 13pt; }
+#judgment .QuoteChar { font-style: italic; font-size: 12pt; color: #404040; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .TitleChar { font-weight: bold; font-size: 16pt; }
+#judgment .CommentReference { font-size: 8pt; }
+#judgment .CommentSubjectChar { font-weight: bold; }
+#judgment .BalloonTextChar { font-family: 'Segoe UI'; font-size: 9pt; }
+#judgment .Emphasis { font-style: italic; }
+#judgment .starpage1 { font-style: italic; font-weight: bold; color: #663366; }
+#judgment .starpage2 { font-style: italic; font-weight: bold; color: #663366; }
+#judgment .Hyperlink { text-decoration: underline; color: #0000FF; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p class="CoverText">Case No: <docketNumber>IP14M00054</docketNumber></p>
+      <p class="CoverText" style="text-align:left">Neutral Citation Number: <neutralCitation>[2015] EWHC 1773 (IPEC)</neutralCitation></p>
+      <p class="CoverMain">
+	<courtType>IN THE HIGH COURT OF JUSTICE</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">CHANCERY DIVISION</courtType>
+      </p>
+      <p>
+	<courtType style="font-weight:bold;text-decoration:underline">INTELLECTUAL PROPERTY ENTERPRISE COURT</courtType>
+      </p>
+      <p class="CoverText">Royal Courts of Justice, Rolls Building</p>
+      <p class="CoverText">Fetter Lane, London, EC4A 1NL</p>
+      <p class="CoverText">Date: <docDate date="2015-06-29">29/06/2015</docDate></p>
+      <p style="text-align:center"><span style="font-weight:bold">Before</span> :</p>
+      <p class="CoverMain" style="text-align:center">
+	<judge refersTo="#judge-his-honour-judge-hacon">HIS HONOUR JUDGE HACON</judge>
+      </p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#the-sofa-workshop-limited" as="#claimant" style="font-weight:bold">THE SOFA WORKSHOP LIMITED</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#claimant">Claimant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#sofaworks-limited" as="#defendant" style="font-weight:bold">SOFAWORKS LIMITED</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Defendant</role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center"><span style="font-weight:bold">Michael Silverleaf QC </span>and<span style="font-weight:bold"> Anna Edwards-Stuart </span>(instructed by<span style="font-weight:bold"> Weil, Gotshal &amp; Manges</span>) for the <span style="font-weight:bold">Claimant</span></p>
+      <p style="text-align:center"><span style="font-weight:bold">John Baldwin QC </span>and <span style="font-weight:bold">Fiona Clark</span> (instructed by <span style="font-weight:bold">DLA Piper UK LLP</span>) for the <span style="font-weight:bold">Defendant</span></p>
+      <p style="text-align:center">Hearing dates: 29-30 April 2015</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p class="CoverDesc">Judgment</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">Judge Hacon :</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Claimant (“Sofa Workshop”) is a retailer of sofas and other furniture.  The Defendant (“Sofaworks”) is in the same business.  Sofa Workshop alleges that the similarity in their respective trading names is such that Sofaworks has infringed Sofa Workshop’s two Community Trade Marks (“the CTMs”) and has passed itself off as being associated with Sofa Workshop.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The CTMs are:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(1)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">CTM No. 4,229,605 (“the 605 Mark”), the word mark SOFA WORKSHOP, registered with effect from 11 February 2005 in respect of the following goods and services in the stated classes:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:2.00in;text-indent:-1.00in">Class 18:<marker name="tab"/>Leather and imitations of leather, and goods made of these materials and not included in other classes; animal skins, hides; trunks and travelling bags; umbrellas, parasols and walking sticks; whips harness and saddlery.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:2.00in;text-indent:-1.00in">Class 20:<marker name="tab"/>Furniture; pillows, bolsters, mattresses; beds, sofa beds; mirrors; picture frames; goods (not included in other classes) of wood, cork, reed, cane, wicker, horn, bone, ivory, whalebone, shell, amber, mother-of-pearl, meerschaum and substitutes for all these materials, or of plastics.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:2.00in;text-indent:-1.00in">Class 24:<marker name="tab"/>Textiles; textile articles, textile piece goods; bed and table covers; household linen; linen cloth; bed linen; bath linen; table linen; table cloths; curtains of textile or plastic; pillow shams; pillow cases; sheets; towels; eiderdowns; duvets; covers for eiderdown and duvets; napery; napkins; serviettes; table mats (not of paper); face towels; flannels; tissues of textile for removing make-up; traced cloth for embroidery; tapestry (wall hangings) of textile; rugs (travelling); furniture coverings of plastic.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:2.00in;text-indent:-1.00in">Class 35:<marker name="tab"/>Retail services of a general store specialising in household furniture (including home office furniture), appliances, apparatus, textiles and security.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(2)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">CTM No. 301,531 (“the 531 Mark”), also the word mark SOFA WORKSHOP, registered with effect from 1 August 1996 in respect of the following goods in the stated classes:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Class 20:<marker name="tab"/>Furniture; upholstered chairs and sofas.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Class 24:<marker name="tab"/>Textile piece goods for furnishings.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Infringement of the CTMs is alleged pursuant to art.9(1)(b) of Council Regulation (EC) 207/2009 (“the CTM Regulation”).  Sofaworks denies both infringement of the CTMs and passing off.  It also counterclaims for revocation of both CTMs for non-use pursuant to art.51 and for a declaration that both CTMs are invalid, having been registered contrary to both art.7(1)(b) and 7(1)(c) of the CTM Regulation.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In its Defence to Counterclaim, Sofa Workshop admits non-use in relation to some of the goods in the respective specifications and therefore concedes that there should be partial revocation of both CTMs.  In relation to the allegation of invalidity because the marks are descriptive, aside from denying the allegation Sofa Workshop argues that (i) it applies only in relation to sofas, (ii) the CTMs have acquired a distinctive character in relation to sofas and (iii) if the allegation is made good and there is no acquired distinctive character, the specification of the CTMs can be appropriately narrowed to neutralise the objection.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofa Workshop also raised the possibility of converting the CTMs to national UK trade mark applications, pursuant to art.112 of the CTM Regulation, by way of a further fall-back position.  This was posited both in the event of a finding that the CTMs should be revoked for non-use and if either is found to be invalidly registered.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Michael Silverleaf QC and Anna Edwards-Stuart appeared for Sofa Workshop.  John Baldwin QC and Fiona Clark appeared for Sofaworks. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">The Issues</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The issues have evolved since the CMC and are now these:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">
+	      <span style="text-decoration:underline">Trade Marks</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(1)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">The extent to which each of the CTMs should be revoked for non-use pursuant to art.51 of the CTM Regulation.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(2)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">The amendments which should be made to the specifications of the CTMs pursuant to (1).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(3)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Whether either CTM was invalidly registered pursuant to art.7(1)(b) and/or art.7(1)(c).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(4)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">If so, whether either CTM has acquired distinctive character pursuant to art.7(3).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(5)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Whether Sofaworks has infringed either CTM pursuant to art.9(1)(b).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(6)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Conversion of either CTM to a UK national application pursuant to art.112.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">
+	      <span style="text-decoration:underline">Passing Off</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(7)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Whether Sofa Workshop owns goodwill in its business associated with its trade name.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(8)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Whether Sofaworks’ use of its trade name constitutes a misrepresentation.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(9)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">If so, whether as a consequence Sofa Workshop has suffered or is likely to suffer damage.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">Non-use of the CTMs</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofa Workshop accepts that it has not used its CTMs in relation to some of the goods and services in the specifications and that accordingly both CTMs must be partially revoked.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofaworks puts its case on non-use in two ways.  First, while it concedes that there has been use of both marks by Sofa Workshop in the United Kingdom, it argues that there has been no use outside this country and therefore both CTMs must be revoked <span style="font-style:italic">in toto</span>.  Secondly, if that is wrong, Sofaworks argues that Sofa Workshop’s admissions of non-use do not go far enough and nor do the consequential amendments to the specifications which Sofa Workshop is prepared to accept.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">The Law</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Article 15 of the Regulation provides in relevant part as follows: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic">Article 15</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic;font-weight:bold">Use of Community trade marks</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:-0.50in"><span style="font-style:italic">1.</span><marker name="tab"/><span style="font-style:italic">If, within a period of five years following registration, the proprietor has not put the Community trade mark to genuine use in the Community in connection with the goods or services in respect of which it is registered, or if such use has been suspended during an uninterrupted period of five years, the Community trade mark shall be subject to the sanctions provided for in this Regulation, unless there are proper reasons for non-use. …</span> ”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">One of the sanctions referred to in art.15(1) is contained in art.51, namely that a CTM may be revoked for non-use:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic">Article 51</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic;font-weight:bold">Grounds for revocation</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:-0.50in">
+	      <span style="font-style:italic">1.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">The rights of the proprietor of the Community trade mark shall be declared to be revoked on application to the Office or on the basis of a counterclaim in infringement proceedings: </span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.49in;text-indent:-0.49in">(a)</num>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:1.49in;text-indent:0.5in">
+	      <span style="font-style:italic">if, within a continuous period of five years, the trade mark has not been put to genuine use in the Community in connection with the goods or services in respect of which it is registered, and there are no proper reasons for non-use; …”</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:1.00in">
+	      <span style="font-style:italic">…</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:italic;font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:1.00in;text-indent:0.5in"><span style="font-style:italic">Where the grounds for revocation of rights exist in respect of only some of the goods or services for which the Community trade mark is registered, the rights of the proprietor shall be declared to be revoked in respect of those goods or services only.</span>”</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Whether ‘genuine use in the Community’ requires use in more than one Member State</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In <span style="font-style:italic">Leno Merken BV v Hagelkruis Beheer BV</span> (C-149/11) [2013] E.T.M.R. 16, Leno opposed the registration of Hagelkruis’s mark OMEL, relying on Leno’s earlier registered mark ONEL.  It was not in dispute that the marks were similar, that they were registered for identical or similar services and that the use of OMEL would give rise to a likelihood of confusion.  The only point at issue was whether Leno had put its ONEL mark to genuine use in the Community during the five years preceding the date of publication of Hagelkruis’s application to register OMEL.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Court of Justice of the European Union (“CJEU”) identified the basic principles underlying the law on non-use of a trade mark by reference to its earlier case law:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">“[28] The Court has already – in the judgments in <span style="font-style:italic">Ansul </span><a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=15&amp;crumb-action=replace&amp;docguid=I5E814AC0E42711DA8FC2A0F0355337E9">
+		<span class="Emphasis" style="font-style:normal">[2003] E.T.M.R. 85</span>
+	      </a><span style="font-style:italic"> </span>and<span style="font-style:italic"> Sunrider </span>[2006] E.C.R. I-4237 and the order in <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=15&amp;crumb-action=replace&amp;docguid=ID645B140E42711DA8FC2A0F0355337E9">
+		<span class="Emphasis">La Mer Technology </span>
+		<span class="Emphasis" style="font-style:normal">[2004] E.T.M.R. 47</span>
+	      </a> – interpreted the concept of “genuine use” in the context of the assessment of whether national trade marks had been put to genuine use, considering it to be an autonomous concept of EU law which must be given a uniform interpretation. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[29]<marker name="tab"/>It follows from that line of authority that there is ‘genuine use’ of a trade mark where the mark is used in accordance with its essential function, which is to guarantee the identity of the origin of the goods or services for which it is registered, in order to create or preserve an outlet for those goods or services; genuine use does not include token use for the sole purpose of preserving the rights conferred by the mark. When assessing whether use of the trade mark is genuine, regard must be had to all the facts and circumstances relevant to establishing whether there is real commercial exploitation of the mark in the course of trade, particularly the usages regarded as warranted in the economic sector concerned as a means of maintaining or creating market share for the goods or services protected by the mark, the nature of those goods or services, the characteristics of the market and the scale and frequency of use of the mark (see <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=15&amp;crumb-action=replace&amp;docguid=I5E814AC0E42711DA8FC2A0F0355337E9">
+		<span class="Emphasis">Ansul </span>
+		<span class="Emphasis" style="font-style:normal">[2003] E.T.M.R. 85</span>
+	      </a><span class="Emphasis"> at [43], </span><span style="font-style:italic">Sunrider</span> [2006] E.C.R. I-4237 at [70], and the order in <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=15&amp;crumb-action=replace&amp;docguid=ID645B140E42711DA8FC2A0F0355337E9">
+		<span class="Emphasis">La Mer Technology </span>
+		<span class="Emphasis" style="font-style:normal">[2004] E.T.M.R. 47</span>
+	      </a> at [27]). </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The point at issue in <span style="font-style:italic">Leno Merken</span> was whether establishing genuine use depended on the geographical extent of the use, particularly whether the mark had to have been put to use in more than one Member State.  It was common ground that Leno had put its mark to genuine use in the Netherlands throughout the relevant five years, but there was no evidence of use outside the Netherlands.  The <span style="font-style:italic">Gerechtshof ’s-Gravenhage </span>(Regional Court of Appeal, The Hague) asked the CJEU, broadly, whether use of a mark in one Member State qualified as use in the Community as a whole; if it did not so qualify, the referring court asked the CJEU to identify the territorial area of the Community in which a mark had to be used in order to avoid the sanction of non-use, or alternatively to state whether territoriality was relevant at all.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The marks in relation to which genuine use had been in issue in <span style="font-style:italic">Ansul, La Mer</span> and <span style="font-style:italic">Sunrider </span>were all national marks (or in the case of <span style="font-style:italic">Ansul</span>, a Benelux mark).  In <span style="font-style:italic">Sunrider </span>(C-416/04 P) [2006] E.C.R. I-4237 the Court had made a passing reference to the relevance of the territorial extent of use.  The mark, VITAFRUT, had been used in the relevant five years only by way of sales of concentrated juices to a single customer in Spain, amounting to 293 cases of juice at a total price of €4,800.  The CJEU rejected a challenge to the finding of the Court of First Instance that this qualified as genuine use of the national Spanish mark.  The reference to territoriality comes in paragraph 76:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“[76]<marker name="tab"/>Third, contrary to the appellant’s assertions, the fact that in the present case the proof of use of the earlier trade mark was established only for the sale of products intended for a single customer does not a priori preclude the use being genuine (see, to that effect, order in <span style="font-style:italic">La Mer Technology</span>, paragraph 24), even though it follows from that situation that the mark was not present in a substantial part of the territory of Spain, in which it is protected.  As OHIM has maintained, the territorial scope of the use is only one of several factors to be taken into account in the determination of whether it is genuine or not.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Returning to <span style="font-style:italic">Leno Merken</span>, the CJEU considered the extent to which its earlier rulings in relation to national marks could be applied by analogy to Community marks:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">“[30]<marker name="tab"/>The Court has also stated that the territorial scope of the use is only one of several factors to be taken into account in the determination of whether that use is genuine or not (see <span style="font-style:italic">Sunrider </span>[2006] E.C.R. I-4237 at [76]). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[31]<marker name="tab"/>That interpretation may be applied by analogy to Community trade marks since, in requiring that the trade mark be put to genuine use, <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=15&amp;crumb-action=replace&amp;docguid=IF980F855C2734D83BED5BABB57526C39">Directive 2008/95</a> and <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=15&amp;crumb-action=replace&amp;docguid=I04C5D388CA3F4B3DA5265BA42BEE9400">Regulation 207/2009</a> pursue the same objective.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[33]<marker name="tab"/>Account must nonetheless be taken, when applying by analogy to Community trade marks the case law cited in [29] of this judgment, of the difference between the territorial extent of the protection conferred on national trade marks and that of the protection afforded Community marks, a difference which is in any event apparent from the wording of the provisions relating to the requirement for genuine use which apply to those two types of marks respectively.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Although the difference between the territorial protection provided by a Community mark and that provided by a national mark must be taken into account, the Court was not specific about how this affects the question of genuine use.  The Court largely repeated what it had said in <span style="font-style:italic">Sunrider</span>, i.e. territoriality is one factor among others to be considered: </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">“[36]<marker name="tab"/>It should, however, be observed that, as is apparent from the case law referred to in [30] of this judgment, the territorial scope of the use is not a separate condition for genuine use but one of the factors determining genuine use, which must be included in the overall analysis and examined at the same time as other such factors. In that regard, the phrase ‘in the Community’ is intended to define the geographical market serving as the reference point for all consideration of whether a Community trade mark has been put to genuine use.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[37]<marker name="tab"/>It is therefore necessary, in order to reply to the questions raised, to ascertain what is encompassed by the phrase ‘genuine use in the Community’ for the purposes of art.15(1) of Regulation 207/2009.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Court considered the objectives pursued by the legislation, particularly to remove the barrier of territoriality and to enable undertakings to adapt their activities to the scale of the Community.  Having done so, it said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="indent11" style="margin-left:1.00in">“[44]<marker name="tab"/>It follows from the foregoing considerations that the territorial borders of the Member States should be disregarded in the assessment of ‘genuine use in the Community’ within the meaning of art.15(1) of Regulation 207/2009.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This suggests that the assessment of genuine use in the Community is to be approached in the same way as the assessment of genuine use in a Member State, with the obvious qualification that the territory of the Community is much bigger and with the instruction that territorial borders are to be disregarded.  Thus far it is not clear what difference that makes.  If sales to one customer in one location in Spain are good enough to qualify as genuine use for the whole of Spain, why should they not be good enough for the whole Community, especially since borders must be disregarded?</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">But the Court went on to consider two arguments which had been advanced by parties to the proceedings.  Neither was accepted but the reasons for rejection cast a light on what ‘genuine use in the Community’ requires.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The first argument was based on art.112 of the CTM Regulation (see [49]).  That article allows a proprietor whose Community mark has been revoked for non-use to request that it be converted into a national trade mark application in a Member State in which there has been genuine use.  It was argued that the availability of conversion led to the conclusion that genuine use in one Member State could never by itself qualify as genuine use in the Community as a whole.  The Court said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">“[50]<marker name="tab"/>Whilst there is admittedly some justification for thinking that a Community trade mark should – because it enjoys more extensive territorial protection than a national trade mark – be used in a larger area than the territory of a single Member State in order for the use to be regarded as ‘genuine use’, it cannot be ruled out that, in certain circumstances, the market for the goods or services for which a Community trade mark has been registered is in fact restricted to the territory of a single Member State. In such a case, use of the Community trade mark on that territory might satisfy the conditions both for genuine use of a Community trade mark and for genuine use of a national trade mark.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Court’s ‘some justification for thinking’ could be taken to imply that in the general run of things – in the absence of one or more countervailing considerations – genuine use in just one Member State will not be sufficient to qualify as genuine use in the Community as a whole.  The implication is reinforced by the stated exception to that generality, namely where the proprietor can show that the market for the relevant goods or services is restricted to the territory of a single Member State.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The second argument presented to the Court (see [52]) was that a condition of genuine use should be that the trade mark has been used in a substantial part of the Community and that this may correspond to the territory of a single Member State.  The argument was advanced by analogy with the Court’s ruling as to the meaning of ‘reputation in the Community’ in the context of art.9(1)(c) of the CTM Regulation (see in particular <span style="font-style:italic">PAGO International GmbH v Tirolmilch Registrierte Genossenschaft mbH </span>(C-301/07) [2010] ETMR 5, at [27]-[29]).   The argument was rejected for two reasons.  The first was that ‘genuine use in the Community’ is not analogous to ‘reputation in the Community’ within the meaning of art.9(1)(c).  More importantly for present purposes, in giving its second reason the Court said there was a reasonable expectation that use of a Community mark should extend to more than one Member State, thereby again implying that this is a default requirement. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“[54]<marker name="tab"/>Secondly, whilst it is reasonable to expect that a Community trade mark should be used in a larger area than a national mark, it is not necessary that the mark should be used in an extensive geographic area for the use to be deemed genuine, since such a qualification will depend on the characteristics of the product or service concerned on the corresponding market.  (see, by analogy, with regard to the scale of the use, <span style="font-style:italic">Ansul </span>[2003] E.T.M.R. 85 at [39]).”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">The qualification – that it is not necessary that a mark should be used in an ‘extensive’ geographic area for the use to be deemed genuine – is ambiguous.  I think that in paragraph 54 the Court was probably repeating what it had said in paragraph 50 regarding the territorial extent of genuine use, using different words, but either way it underlines the implied default requirement that use beyond one Member State is a necessary ingredient of genuine use in the Community as a whole.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The indications given in paragraphs 50 and 54 did not appear in the ruling of the Court at the conclusion of its judgment:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">“Article 15(1) of Regulation 207/2009 of 26 February 2009 on the Community trade mark must be interpreted as meaning that the territorial borders of the Member States should be disregarded in the assessment of whether a trade mark has been put to ‘genuine use in the Community’ within the meaning of that provision.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">A Community trade mark is put to ‘genuine use’ within the meaning of art.15(1) of Regulation 207/2009 when it is used in accordance with its essential function and for the purpose of maintaining or creating market share within the European Community for the goods or services covered by it. It is for the referring court to assess whether the conditions are met in the main proceedings, taking account of all the relevant facts and circumstances, including the characteristics of the market concerned, the nature of the goods or services protected by the trade mark and the territorial extent and the scale of the use as well as its frequency and regularity.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">It is essentially a repetition of what had been said in <span style="font-style:italic">Ansul</span>, <span style="font-style:italic">La Mer</span> and <span style="font-style:italic">Sunrider </span>adapted to the context of a Community mark, with the specific instruction that the territorial borders of Member States are to be disregarded.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This notwithstanding, I think that in paragraphs 50 and 54 of the judgment the Court gave guidance as to the practical effect of disregarding territorial borders.  I must apply that guidance.   I would summarise the ruling of the Court as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(1)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">The question of whether there has been ‘genuine use in the Community’ is not to be approached from the perspective of whether there has been use of the mark in more than one, two or any other particular number of Member States.  Territorial borders are to be disregarded.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(2)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">A Community trade mark is put to genuine use in the Community where it is used in accordance with its essential function, which is to guarantee the identity of the origin of the goods or services for which it is registered, and<span style="font-style:italic"> </span>used for the purpose of maintaining or creating market share within the European Community for the goods or services covered by the mark.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(3)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Whether the mark has been so used will depend on all relevant facts and circumstances, including the characteristics of the market concerned, the nature of the relevant goods and services, the territorial extent and scale of use, and the frequency and regularity of use.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(4)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Purely in relation to the territorial extent of use, genuine use in the Community will in general require use in more than one Member State.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(5)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">An exception to that general requirement arises where the market for the relevant goods or services is restricted to the territory of a single Member State.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">If I am right about the effect of the Court’s judgment, it means that there is a distinction between national marks and Community marks when it comes to assessing genuine use.  For national marks the geographical extent of use is a factor to be taken into account, but it is apparently of no great weight – see <span style="font-style:italic">Sunrider</span>.  <span style="font-style:italic"> </span>In respect of Community marks the geographical extent of use is, in the general run, crucial: it must extend at least beyond the boundaries of one Member State.  By way of a non-exhaustive exception to the general rule, this does not apply where the market for the goods or services is confined to one Member State.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In fact, the logic of disregarding territorial borders suggests that it may in some circumstances be necessary to have used the mark in more than two Member States, depending on the size of the market for the relevant goods or services in the States concerned when compared to the market in the Community as a whole.  On one possible reading of paragraph 54 of the judgment, this what the Court had there in mind.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Although the Court did not develop its reasoning for the distinction between national and Community marks, it is possible to see what it might have been.  A rough and ready assumption can be made that a trade mark proprietor who sells his products to one customer in one town in Spain may in due course wish to trade all across that country.  This justifies maintenance of the mark for the whole of Spain.  It can not in the same way be assumed that a trader in one Member State will wish to expand his trade across the EU.  Accordingly in order to maintain a Community mark, some evidence should be required that the mark has been used to create or maintain a share in the market for the relevant goods or services across a section of the EU extending beyond one Member State.  Looked at another way, an applicant for a Community mark must be taken to intend to use it outside one Member State and has five years in which to justify his presumed intention.  Otherwise he risks having to make do with a national mark by conversion and leaving the sign in question free for use elsewhere in the Community.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">What qualifies as use of a mark in a particular Member State?</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is clear that in the context of online marketing, a trade mark will be used in a particular Member State if the offer for sale of relevant goods or services bearing the trade mark is targeted at consumers in that Member State, as opposed to the website being merely accessible in the Member State, see <span style="font-style:italic">L’Oréal SA v eBay International AG </span>(C-324/09)<span style="font-style:italic"> </span>[2011] E.C.R. I-6011; [2011] R.P.C. 27, at [61]-[65].</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In <span style="font-style:italic">Euromarket Designs Inc v Peters </span>[2000] E.T.M.R. 1025; [2001] F.S.R. 20, the defendant ran a shop in Dublin called ‘Crate &amp; Barrel’ selling household goods and furniture.  The claimant brought proceedings for infringement of its UK and Community trade marks, both for the words ‘Crate &amp; Barrel’.  The claimant applied for summary judgment, in relation to the UK mark only.  The application was dismissed.  One of the main issues before the court was whether there had been use of the mark in the United Kingdom.  There were only two alleged acts of infringement.  One was an advertisement in an issue of <span style="font-style:italic">Homes &amp; Gardens</span>, a magazine which is published in the UK and which circulates in this country and in Ireland.  The defendant argued that even if it had placed the advertisement in a magazine which had a substantial UK circulation, it was solely targeted at readers in the Irish republic, no products had ever been sold to the UK and that therefore there was no use of the mark in the UK.  Jacob J said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">“[19] … The right question, I think, is to ask whether a reasonable trader would regard the use concerned as ‘in the course of trade in relation to goods’ within the Member State concerned. Thus if a trader from state X is trying to sell goods or services <span style="font-style:italic">into </span>state Y, most people would regard that as having a sufficient link with state Y to be ‘in the course of trade’ there. But if the trader is merely carrying on business in X, and an advertisement of his slips over the border into Y, no businessman would regard that fact as meaning that he was trading in Y. This would especially be so if the advertisement were for a local business such as a shop or a local service rather than for goods. I think this conclusion follows from the fact that the Directive is concerned with what <span style="font-style:italic">national </span>law is to be, that it is a law governing what traders cannot do, and that it is unlikely that the Directive would set out to create conflict within the internal market. So I think Mr Miller is right. One needs to ask whether the defendant has any trade here, customers buying goods or services for consumption here. It was that sort of concept I had in mind in <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=12&amp;crumb-action=replace&amp;docguid=I469DDFE0E42711DA8FC2A0F0355337E9">
+		<span style="font-style:italic">800 FLOWERS Trade Mark</span>
+	      </a>.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">[20]<marker name="tab"/>On the facts here, I think the advertisement in <span style="font-style:italic">Homes &amp; Gardens </span>is not an infringing use. I recognise that my view is provisional, this being only an application for summary judgment. Ultimately the question of the extent to which national trade mark law is permitted to impinge on trade within other countries may have to be considered by the European Court of Justice.”  (original emphasis)</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It seems to me that even though Jacob J had particularly in mind that he was dealing with a national mark, his approach to whether there has been use of a mark in a particular territory applies in the same way to use of a Community mark and is consistent with what the CJEU has since said in <span style="font-style:italic">L‘Oréal </span>and also in <span style="font-style:italic">Pammer v Reederei Karl Schlüter GmbH &amp; Co. KG and Hotel Alpenhof GmbH v Heller </span>(Cases C-585/08 &amp; C-144/09) [2010] E.C.R. I-12527, at [93].  These and <span style="font-style:italic">Euromarket Designs </span>were discussed by Arnold J in <span style="font-style:italic">Stichtung BDO v BDO Unibank, Inc </span>[2013] EWHC 418 (Ch); [2013] F.S.R. 35, at [101]-[109].</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In short, genuine use of a trade mark by reason of its use in an article or advertisement in a publication will qualify as genuine use in a particular Member State if, viewed objectively, the article or advertisement is at least partly targeted at consumers in that Member State.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">This case</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There is no dispute that Sofa Workshop has put its CTMs to genuine use on an extensive scale in the UK in the relevant 5 year period.  It was not suggested by Sofa Workshop that the market for the goods and services covered by the CTMs is restricted to the territory of the UK, or that there was any other reason to override the general requirement of use beyond the boundaries of the UK.  Therefore I must consider the evidence of use outside the UK.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">That evidence came from Paul Staden who is Head of Marketing at Sofa Workshop and from Andrea Summers who is their Store Manager.  Ms Summers’ evidence was confined to referring to two sets of customers.  The first was an individual who used to live in the north of England, has moved to France and who has ordered furniture from Sofa Workshop which will be delivered to a UK address of their choice.  The second was a couple from Malta who found Sofa Workshop online, visited the Harrogate store but did not place an order.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Staden in his witness statement said that Sofa Workshop’s goods and services had featured under the SOFA WORKSHOP mark in advertorial content in magazines which he said were distributed in 25 named EU Member States.  The magazines were <span style="font-style:italic">World of Interiors</span>, <span style="font-style:italic">House and Garden</span>, <span style="font-style:italic">Country Living </span>and <span style="font-style:italic">Elle Decoration</span>.  As to sales outside the UK, Mr Staden referred to one sale to a hotel in Copenhagen in 2013.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In cross-examination, with regard to the magazines Mr Staden only supported the advertorial in <span style="font-style:italic">World of Interiors</span> as a serious basis for the suggestion that Sofa Workshop had used its CTMs in Member States outside the UK.  Sofa Workshop relied on one page taken from each of the issues of <span style="font-style:italic">World of Interiors</span> dated September 2010, July 2012 and July 2013.  Those pages all featured products from 7 to 9 different suppliers, so the advertorial devoted to each supplier was quite short.  All the advertorials, including the three promoting Sofa Workshop in 2010, 2012 and 2013 respectively, provided telephone numbers appropriate only for callers from within the UK.  Most of the featured traders, including Sofa Workshop, also provided an email address.  One of the Sofa Workshop advertorials invited readers to ‘pop into one of their shops.’</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Staden said that the average monthly circulation of <span style="font-style:italic">World of Interiors</span> in the EU and outside the UK for the period February 2014 to January 2015 was 15,728 and that he had been told by the publishers that the figures for previous years were similar.  The date of the counterclaim was 19 May 2014, so the latest potentially relevant five year period was the period ending on that date.  Mr Staden identified 25 EU countries outside the UK in which the magazine circulated, although there was no evidence about the distribution of circulation between countries.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I accept that thousands of individuals within the EU but outside the UK will have read the issues of <span style="font-style:italic">World of Interiors </span>dated September 2010, July 2012 and July 2013.  I have no way of telling how many of them looked at the page relied on in each issue and, of those individuals, how many read the Sofa Workshop advertorial.  I am prepared to assume that a significant number did.  I bear in mind that if they did they would have seen that it was possible to access Sofa Workshop’s website at the address given.  But I think that viewed objectively the Sofa Workshop advertorials were not targeted at readers outside the UK.  The phone numbers and the invitation to ‘pop in’ are not consistent with targeting anyone except UK consumers.  In fact, the same is true of all the advertorials on the three pages relied on, so that the non-UK reader would in each case have regarded the entire page, at best, as an interesting insight into the sort of furniture and other household products that were on offer to consumers in the UK.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This is consistent with the fact that Sofa Workshop could point to only one sale outside the UK.  An order was placed on 11 February 2013 by a hotel in Copenhagen for a footstool, a chair, two sofas and a bench.  But there was no evidence that the individual responsible for the purchase had done so in response to any marketing received in Denmark.  It is entirely possible that the individual concerned made the order while in the UK.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my view the CTMs have not been used by Sofa Workshop in the five year period up to the date of the counterclaim to maintain or create market share within the Community for the goods or services covered by the marks.  Consequently the CTMs should be revoked pursuant to art.51.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">Amendment to the specifications</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In case I am wrong that the CTMs must be revoked, I will consider the extent to which the specifications should be amended by reason of non-use on the assumption that the marks remain validly on the register.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">The law</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There was no dispute between the parties on the law, which is set out by Kitchin LJ, with whom Underhill LJ agreed, in <span style="font-style:italic">Maier v ASOS plc</span> [2015] EWCA Civ 220; [2015] E.T.M.R. 26, at [55] to [65].</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">This case</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.39in;text-indent:-0.39in">
+	      <span style="text-decoration:underline">The 605 Mark</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was agreed that all goods under class 18 should be deleted.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Under class 20 Sofa Workshop contended for the following specification:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Bolsters, mattresses, beds, upholstered furniture, upholstered chairs, sofas, snugglers, chaises longues, storage stools and footstools, sofa beds, occasional tables”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">The points of contention were whether this should include bolsters, mattresses and occasional tables.  Mr Staden’s evidence was that 911 bolsters were sold under the SOFA WORKSHOP mark between May 2009 and May 2014 and exhibited sample customer orders.  Mr Staden also exhibited evidence of a few occasional tables having been sold between February 2011 and March 2013.  Andrea Summers, Store Manager of Sofa Workshop said that there were about 10 aerobed mattresses in stock but her evidence was not clear in that she may have been referring to entire aerobeds, of which she said that one was typically sold per month.  Mr Staden I think clarified matters.  Under the heading ‘Mattresses’ in his witness statement, he unambiguously indicated that what he meant by ‘mattresses’ was aerobed style inflatable mattress beds.  This was confirmed by the exhibited orders.  I take the view that use of the mark in relation to these goods was use in relation to beds.  I would therefore allow the specification proposed by Sofa Workshop with the deletion of mattresses:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Bolsters, beds, upholstered furniture, upholstered chairs, sofas, snugglers, chaises longues, storage stools and footstools, sofa beds, occasional tables.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In class 24 Sofa Workshop contended for:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Textiles, textile articles, textile piece goods”.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">I was told by Mr Silverleaf that ‘textile piece goods’ means lengths of fabric.  Mr Baldwin submitted that this clearer term should be used. The evidence suggested that sales of ‘textiles’ by Sofa Workshop amounted only to sales of fabric lengths.  ‘Textile articles’, which amounts to any article made from textiles, is broad.  I think the average consumer would sub-divide that category into more specific items.  Sofa Workshop’s evidence concerned the sale of scatter cushions, bolsters and throws.  Bolsters belong better in class 20, which leaves cushions and throws.  Sofaworks conceded that ‘loose covers of sofas and chairs’ should be included and consequently I think a fair specification would be:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Fabric lengths, cushions, throws, loose covers of sofas and chairs.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In class 35 Sofa Workshop sought the following specification:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Retail services of a store specialising in household furniture.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">The present specification is:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Retail services of a general store specialising in household furniture (including home office furniture), appliances, apparatus, textiles and security”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">Mr Baldwin submitted that deletion of the word ‘general’ broadened the first part of the specification, contrary to art.43(1) and (2) of the CTM Regulation.  As a matter of ordinary construction, deleting ‘general’ either makes no difference or, as Mr Baldwin said, the specification is broadened.  That said, this has the hallmarks of a dispute about nothing much.  Subject to further submissions I would accept </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Retail services of a furniture store specialising in household furniture”.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The 531 Mark</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In closing Mr Silverleaf said he had no objection to Sofaworks’ proposed specification for the 531 Mark, which was this in class 20:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Upholstered furniture, upholstered chairs, sofas, snugglers and chaises longues, storage stools and footstools; beds”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">and in class 24:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Fabric lengths, loose covers of sofas and chairs and textile furnishing accessories.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On the assumption that the 531 Mark were not to be revoked, I would accept that agreed amended specification.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">Invalidity pursuant to art 52 and arts.7(1)(b) and 7(1)(c)</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">The Law</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The relevant parts of Articles 52 and 7(1)(b) and (c) are as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic">Article 52</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic;font-weight:bold">Absolute grounds for invalidity</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:-0.50in">
+	      <span style="font-style:italic">1. </span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">A Community trade mark shall be declared invalid on application to the Office or on the basis of a counterclaim in infringement proceedings:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">
+	      <span style="font-style:italic">(a)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic"> where the Community trade mark has been registered contrary to the provisions of Article 7;</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">
+	      <span style="font-style:italic">(b)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">…</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:-0.50in">
+	      <span style="font-style:italic">2.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">Where the Community trade mark has been registered in breach of the provisions of Article 7(1)(b), (c) or (d), it may nevertheless not be declared invalid if, in consequence of the use which has been made of it, it has after registration acquired a distinctive character in relation to the goods or services for which it is registered.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:-0.50in">
+	      <span style="font-style:italic">3.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">Where the ground for invalidity exists in respect of only some of the goods or services for which the Community trade mark is registered, the trade mark shall be declared invalid as regards those goods or services only.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic">Article 7</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic;font-weight:bold">Absolute grounds for refusal</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.50in">
+	      <span style="font-style:italic">1.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">The following shall not be registered:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">
+	      <span style="font-style:italic">(a)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">…</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">
+	      <span style="font-style:italic">(b)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">trade marks which are devoid of any distinctive character;</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">
+	      <span style="font-style:italic">(c)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">trade marks which consist exclusively of signs or indications which may serve, in trade, to designate the kind, quality, quantity, intended purpose, value, geographical origin or the time of production of the goods or of rendering of the service, or other characteristics of the goods or service;</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">
+	      <span style="font-style:italic">(d)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">…</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:-0.50in">
+	      <span style="font-style:italic">2.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">Paragraph 1 shall apply notwithstanding that the grounds of non-registrability obtain in only part of the Community.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:-0.50in">
+	      <span style="font-style:italic">3.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">Paragraph 1(b), (c) and (d) shall not apply if the trade mark has become distinctive in relation to the goods or services for which registration is requested in consequence of the use which has been made of it.</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Baldwin’s submissions on invalidity were directed only to art.7(1)(c).  In a Venn diagram of word marks, those prohibited under art.7(1)(c) fall wholly within those prohibited under art.7(1)(b), see <span style="font-style:italic">Campina Melkunie BV v Benelux-Merkenbureau</span> (Case C-265-00) [2004] ETMR 58, at [19].  So it is enough for me just to consider art.7(1)(c).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The law in relation to art.7(1)(c) was recently reviewed by Floyd LJ, with whom Patten and Tomlinson LJJ agreed, in <span style="font-style:italic">J.W. Spear &amp; Sons Ltd v Zynga Inc</span> [2015] EWCA Civ 290; [2015] F.S.R. 19.  He said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">“[73]<marker name="tab"/>The most recent judgment of the CJEU to which we were referred is Agencja Wydawnicza Technopol sp z oo v Office for Harmonisation in the Internal Market (Trade Marks and Designs) (OHIM) <span class="Emphasis" style="font-style:normal">(C-51/10 P) [2011] E.T.M.R. 34</span><span style="font-style:italic"> .</span>  A number of points emerge from that judgment. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[74]<marker name="tab"/>The court first identified the underlying interest protected by art.7(1)(c) as: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.50in">‘…that of ensuring that descriptive signs relating to one or more characteristics of the goods or services in respect of which registration as a mark is sought may be freely used by all traders offering such goods or services…’ ([37]).</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[75]<marker name="tab"/>Secondly, in order to come within art.7(1)(c) it is not necessary that the sign in question actually be in use at the time of the application for registration in a way that is descriptive. It is sufficient that the sign could be used for such purposes ([38]). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[76]<marker name="tab"/>Thirdly, it is irrelevant whether there are other, more usual, signs than that at issue for designating the same characteristics of the goods or services referred to in the application for registration. Article 7(1)(c) does not depend for its application on the sign at issue being the usual means of referring to the goods or their characteristics ([39] and [40]). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[77]<marker name="tab"/>Fourthly, the context of the list of specific terms in art.7(1)(c) (quality, quantity, intended purpose, value, geographical origin or the time of production of the goods or of rendering of the service) shows that those terms are all regarded as ‘characteristics’ of the goods. The list is not exhaustive, as the reference to ‘other characteristics’ shows ([49]). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[78]<marker name="tab"/>Fifthly, and importantly, the court said this at [50]: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.50in">‘The fact that the legislature chose to use the word ‘characteristic’ highlights the fact that the signs referred to in Article 7(1)(c) of Regulation No 40/94 are merely those which serve to designate a property, easily recognisable by the relevant class of persons, of the goods or the services in respect of which registration is sought.  As the Court has pointed out, a sign can be refused registration on the basis of Article 7(1)(c) of Regulation No 40/94 only if it is reasonable to believe that it will actually be recognised by the relevant class of persons as a description of one of those characteristics … ” .</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[79]<marker name="tab"/>Thus it is the presumed perception of the average consumer which is relevant.  It is not of course enough if the connection between the signs and a characteristic of the goods does not dawn immediately on the average consumer.  If it requires any thought or explanation it is not ‘easily recognisable’.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[80]<marker name="tab"/>Thus, in <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=9&amp;crumb-action=replace&amp;docguid=I747A8B108CA711E09799D0C73914D7E1">
+		<span class="Emphasis">Agencja Wydawnicza Technopol </span>
+		<span class="Emphasis" style="font-style:normal">[2011] E.T.M.R. 34</span>
+	      </a>, the applicant was seeking to register the numeral “1000” in relation, for example, to puzzles.  The General Court had held: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.50in">‘26.<marker name="tab"/>In that regard, it should be noted that, as is apparent from paragraphs 18 and 19 of the contested decision, there is from the point of view of the relevant public a direct and specific link between the sign ‘1000’ and some of the characteristics of the goods concerned. The sign ‘1000’ alludes to a quantity and will immediately be perceived by the relevant public, without further thought, as a description of the characteristics of the goods in question, in particular the number of pages and works, amount of data, or the number of puzzles in a collection, or the ranking of items referred to in them. That conclusion cannot be invalidated by the fact that the mark applied for is composed only of figures, since … the missing information may be readily identified by the relevant public, the association between the figure and those characteristics of the goods in question being immediate.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.50in">27.<marker name="tab"/>In particular, as the Board of Appeal stated in paragraphs 18 and 19 of the contested decision, brochures, periodicals and magazines frequently publish ranking lists and collections, with the preference then being for round numbers in order to indicate content, the Board of Appeal referring in particular in that regard to the example of the publication ‘1000 Fragen und Antworten’ (‘1000 Questions and Answers’). This strengthens the descriptive relationship that exists from the point of view of the average consumer between the goods in question and the [sign ‘1000’]. The court considered that, in that context, the average consumer would perceive 1000 as an indication of the number of puzzles, and for that reason it was unregistrable.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[81]<marker name="tab"/>Other cases make it clear that it is enough if at least one of the possible meanings designates a characteristic of the goods: see, e.g. Office for Harmonisation in the Internal Market (Trade Marks and Designs) (OHIM) v Wm Wrigley Jr Co (“DOUBLEMINT”) <span class="Emphasis" style="font-style:normal">(C-191/01 P) [[2003] E.C.R. I-12447; [2004] R.P.C. 18</span> at [32]. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[82]<marker name="tab"/>It is nevertheless the case that signs which are candidate trade marks lie on a continuum between the entirely generic, through the descriptive to the inherently distinctive.  Not every word which alludes to or is suggestive of some aspect of the goods or services is necessarily unregistrable.  It is of course trite that it is not an objection to registration that the word has a dictionary meaning, or is an ordinary English word.  The objection bites on relationships between the word and the characteristics of the goods or services for which it is sought to be registered which the average consumer will immediately perceive.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[83]<marker name="tab"/>I have found helpful and agree with the analysis of the Advocate General in his opinion in DOUBLEMINT <span class="Emphasis" style="font-style:normal">[2003] E.C.R. I-12447</span><span style="font-style:italic"> </span>at [61]–[64].  He draws attention to the fact that that there is no clear-cut distinction between indications which designate a characteristic and those which merely allude suggestively to it and suggests three considerations which may determine on which side of the line the indication lies.  Although the entire passage repays reading, I will summarise his three points as: (i) how factual and objective is the relationship between an indication and the product or one of its characteristics? (ii) how readily is the message of the indication conveyed? and (iii) how significant or central to the product is the characteristic?  Asking these questions will assist a fact-finding tribunal to determine whether it is likely that a particular indication may be used in trade to designate a characteristic of goods.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Baldwin relied in particular on <span style="font-style:italic">Geddes v OHIM </span>(Case T-173/03) [2004] E.C.R. II-4165, in which the Court of First Instance found that the mark NURSERYROOM was descriptive of the intended purpose of the goods covered by the mark and descriptive also of the category of end users of the goods, namely babies and young children, contrary to art.7(1)(c).  The goods in question were books, stationery, cards (class 16); diaper bags (class 18); plates and cups (class 21); hats, booties, baby clothing, shoes, layettes (class 25) and plush toys, mobiles (class 28).  The Court said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">“[22]<marker name="tab"/>Of the goods covered, some are exclusively for babies or young children. Thus it is for diaper bags, booties, baby clothing, layettes and soft toys. As regards the other goods, namely books, stationery, cards, plates, cups, hats, shoes and mobiles, all those categories of goods include those which, because of their shape, their size, or their look, are specifically intended for use by babies or young children.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">[23]<marker name="tab"/>Admittedly, the immediate meaning of the sign in question designates a place in which that category of persons may be. However, that meaning must be analysed in relation to the goods covered in the trade mark application (see paragraph 17 above). In that perspective, the word sign in question is perfectly appropriate to designate goods capable of being used in a nursery and, therefore, for use by babies or young children. Since the goods in question are all capable of being intended, exclusively or potentially, for those users, the relevant public will easily establish a direct and specific link between the sign and the goods in question. The fact, relied upon by the applicant, that the goods covered can obviously be used outside a nursery does not undermine that conclusion, since, for the average consumer, that possibility does not affect his understanding of the intended purpose of the goods in question.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">[25]<marker name="tab"/>It follows from the foregoing that the Board of Appeal correctly held that the sign in question is descriptive of the intended purpose of the goods, and, by extension, of the category of end users, namely babies and young children (paragraph 10 of the contested decision).”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">This case</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was not in dispute that the words ‘sofa’ and ‘workshop’, taken separately, have well established meanings in the mind of the average consumer, namely, an item of furniture for sitting on and premises where goods are manufactured or repaired and from which they may be sold.  The issue between the parties was the perception of the average consumer in relation to the combination of those words.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Baldwin submitted that to the average consumer ‘sofa workshop’, when used in relation to sofas and similar goods, would convey the meaning that such goods were made in, or supplied from, a workshop in which sofas are designed, manufactured or repaired.  This was a characteristic of the goods or services that would be easily recognised by the average consumer and one which other traders should be free to use for their sofa-related products.  Although Sofaworks’ pleading advanced a similar point in relation to the retail services for which the 605 Mark is registered, this was not pursued in Mr Baldwin’s skeleton argument or oral submissions.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There was evidence that the term ‘sofa workshop’ is used as a descriptive term by traders in the sofa business.  A sofa company in Clevedon, Somerset called ‘Clevedon Sofa Company’ has a website which includes the following in the explanation of the company’s business:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Contemporary sofa, custom made sofa, bespoke sofa, luxury sofa or designer sofa, whatever style of sofa you require we can create it.  Why?  Because our sofa’s are handmade in our sofa workshop to your precise specifications and budget”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“Why not come and visit our sofa workshop for yourself, and remember if there is nothing that takes your fancy then we can design and handcraft the sofa of your dreams!”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">There was also evidence that 41 businesses use ‘Workshop’ in their names, though none use it together with ‘Sofa’.  These were names which included ‘Blinds Workshop’, ‘Curtain Design Workshop’, ‘The Cane Seating Workshop’, ‘Furniture Repair Workshop’ and ‘The Upholstery Workshop’.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofa Workshop itself uses the term ‘workshop’ descriptively in its advertising.  The word is used to indicate the type of place in which its products are made and also to emphasise the higher quality and greater flexibility in manufacture which is a consequence of the products coming from a workshop.  By way of example, the following come from Sofa Workshop’s website:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“It’s because you’re all so different that we make our sofas to order,  especially for you, in our <span style="text-decoration:underline">British workshops</span>.  And it’s because we make them like this we can offer you options.  No one can match us for choice.”  (original underlining)</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“It takes 4 years to qualify as a British upholsterer and many of our upholsterers have been ‘on the bench’ since they left school, honing their skills to perfection.  If you visited our <span style="text-decoration:underline">workshops</span> you may be surprised at how hands on and traditional it is.  There’s no swanky robots whizzing about or production lines.  One person will work on your sofa from start to finish, taking tremendous pride in what they do.  So much so they will sign every sofa they complete, knowing full well if there’s a problem it can be traced back to them.  Trust us this would really dent their pride.”  (original underlining)</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Baldwin argued that the characteristic brought to mind by ‘Sofa Workshop’ was akin to that in <span style="font-style:italic">Geddes</span>.  In that instance ‘nurseryroom’ described the type of place in which the goods in question were to be used.  ‘Sofa workshop’ describes the type of place in which sofas and related goods are made.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Silverleaf submitted that in order for a trade mark to fall foul of art.7(1)(c), the characteristic it summoned to mind had to be one which has a bearing on the consumer’s use, acquisition or appreciation of the article.  In other words, the characteristic must matter to the average consumer in that it affects his or her perception of the goods or services.  Mr Silverleaf referred me to no authority for this proposition of law and I do not accept it.  For instance, if POST OFFICE is descriptive of the sort of goods one might buy from a post office, there is no requirement in law, so far as I am aware, that the average consumer must be shown to care whether the goods come from a post office rather than, say, a stationer, in order for art.7(1)(c) to apply (see <span style="font-style:italic">Koninklijke KPN Nederland NV v Benelux-Merkenbureau</span> (Case C363/99) [2004] ECR I-1619).  Besides, in the present case it seems that the average consumer probably does care that a sofa comes from a sofa workshop because Sofa Workshop itself is at some pains to advertise the fact to its potential purchasers (see above).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my view, subject to acquired distinctiveness, both of Sofa Workshop’s CTMs consist exclusively of signs which may serve in trade to designate a characteristic of some of the goods for which those marks are registered, contrary to art.7(1)(c).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Little attention was paid to which goods should be excluded from the specification if art.7(1)(c) were to bite.  Sofaworks’ skeleton argument said that ‘sofas and similar goods’ should be excluded, whereas Sofa Workshop’s skeleton limited the exclusion to sofas.  Provisionally, it seems to me that the goods that would be removed from the specifications are sofas, sofa beds, loose covers of sofas and upholstered furniture to the extent that this term includes sofas or sofa beds.  But any exclusion depends on acquired distinctiveness, to which I turn next.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">Whether the CTMs have become distinctive in consequence of use</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">61.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofa Workshop’s pleading and skeleton do not specify whether Sofa Workshop relies on art.7(3), which would require distinctiveness through use by the date of application of the CTMs (see <span style="font-style:italic">Imagination Technologies Ltd v OHIM </span>(Case C-542/07 P) EU:C:2009:392 at [41]-[49]), or art.52(2), as to which distinctiveness at a date after registration is what matters (see <span style="font-style:italic">Imagination Technologies </span>at [55]), which I will take to be the date of the counterclaim (19 May 2014).  Sofa Workshop’s submissions implied that it relies on art.52(2).  Aside from date, the principles to be applied are in any event the same as regards both art.7(3) and art.52(2).</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">The law</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">62.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Pursuant to art.7(2), a Community mark is invalid if it has descriptive character within the meaning of art.7(1)(c) in part of the Community.  ‘Part of the Community’ can be just one Member State, see <span style="font-style:italic">Storck KG v Office for Harmonisation in the Internal Market (Trade Marks and Designs) (OHIM)</span> (C-25/05 P) [2006] E.C.R. I-5719 at [83], although descriptiveness in one or another Member State is not the real issue in relation to a word mark: the question is whether the Community mark is descriptive in a language spoken in Europe (such as Catalan, see <span style="font-style:italic">Sogepi Consulting y Publicidad  SL v OHIM </span>(Case T-72/11) EU:T:2012:424, at [33]-[38]).  If it is, the Community mark is invalid. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">63.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This is subject to the mark having acquired distinctiveness.  Arnold J summarised the law in <span style="font-style:italic">Enterprise Holdings Inc v Europcar Group UK Ltd </span>[2015] EWHC 17 (Ch); [2015] E.T.M.R. 16, at [144] to [152].</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">64.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Arnold J did not have cause to consider the territorial extent of acquired distinctive character which must be proved.  In <span style="font-style:italic">Powerserv Personalservice GmbH v OHIM </span>(Case 553/08 P) [2009] E.C.R., the ECJ held (at [60]) that acquired distinctive character is established under art.7(3):</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in"> “… only if evidence is provided that it has acquired, through the use which has been made of it, distinctive character in the part of the Community in which it initially had descriptive character for the purposes of Article 7(1)(c) (see, to that effect, Case C-25/05 P <span style="font-style:italic">Storck</span> v <span style="font-style:italic">OHIM</span>, paragraph 83).”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">65.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Again, this is not to do with the particular Member State in which the mark has been shown to be descriptive.  The territory across which acquired distinctiveness of a word mark must be established depends on the language of the mark.  Where it is English, the proof of distinctiveness required – in terms of how many Member States the proof must relate to – is liable to be substantial.  In <span style="font-style:italic">Liz Earle Beauty Co Ltd v OHIM </span>(Case T-307/09) [2011] E.T.M.R. 16 the OHIM examiner refused to register NATURALLY ACTIVE for cosmetics and related products on the ground that the mark was devoid of distinctive character within the meaning of art.7(1)(b) and the applicant had not established that the mark had acquired distinctive character through use pursuant to art.7(3).  An appeal to the Board of Appeal was dismissed.  A further appeal to the General Court was dismissed insofar as it concerned art.7(3).  The General Court said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">“[49]<marker name="tab"/>It is clear from the case law that, in order to have the registration of a trade mark accepted under art.7(3) of Regulation 207/2009, the distinctive character acquired through the use of that trade mark must be demonstrated in the substantial part of the European Union where it was devoid of any such character under art.7(1)(b) of the Regulation (<a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=34&amp;crumb-action=replace&amp;docguid=IA8364F80E42711DA8FC2A0F0355337E9">
+		<span class="Emphasis">Ford Motor Co v Office for Harmonisation in the Internal Market (Trade Marks and Designs) (OHIM) (OPTIONS) </span>
+		<span class="Emphasis" style="font-style:normal">(T-91/99) [2000] E.C.R. II-1925; [2000]</span>
+		<span class="Emphasis"> </span>
+		<span class="Emphasis" style="font-style:normal">E.T.M.R. 554</span>
+	      </a><span class="Emphasis" style="font-style:normal"> at </span>[27]). The part of the Community referred to in art.7(2) may be comprised of a single Member State (<span style="font-style:italic">Storck KG v Office for Harmonisation in the Internal Market (Trade Marks and Designs) (OHIM)</span> (C-25/05 P) [2006] E.C.R. I-5719 at [83]). Consequently, distinctiveness acquired through use must be demonstrated in all the Member States in which the existence of the ground for refusal had been established (see, to that effect, <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=34&amp;crumb-action=replace&amp;docguid=IE96B97A0CC6411DBBA2999C0A3FA7173">
+		<span class="Emphasis">Bovemij Verzekeringen NV v Benelux-Merkenbureau </span>
+		<span class="Emphasis" style="font-style:normal">(C-108/05) [2006] E.C.R.</span>
+		<span class="Emphasis"> </span>
+		<span class="Emphasis" style="font-style:normal">I-7605; [2007] E.T.M.R. 29</span>
+	      </a><span style="font-style:italic"> </span>at [28]). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[50]<marker name="tab"/>In the present case, the Board of Appeal found, in para.18 of the contested decision, that the relevant consumers were European English-speakers. Next, it considers, in para.33 of the contested decision, that the applicant ought to have demonstrated that the word sign at issue had acquired distinctiveness not only in the English-speaking countries of the European Union, but also in all the other countries where basic English words could be understood, that it is to say in all the countries of the European Union. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[51]<marker name="tab"/>The applicant challenges only that last assertion and claims that the public consisting of European English-speakers cannot include persons with a very rudimentary knowledge of English.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[52]<marker name="tab"/>Even if the Board of Appeal construed the concept of “European English-speakers” too broadly, it is clear, and the applicant has, moreover, never claimed the contrary, that the relevant public does not only consist of nationals of the United Kingdom and Ireland whose mother tongue is English.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[53]<marker name="tab"/>It is settled case law that a word sign consisting of English words the combination of which is grammatically correct may have a meaning not only for a public who are native English speakers, but also for a public which has sufficient knowledge of the English language (see <span style="font-style:italic">NEW LOOK</span> (T-435/07) at [20] and the case law cited). As noted in [26] above, the General Court has previously confirmed that a basic understanding of the English language by the general public, in any event, in the Scandinavian countries, the Netherlands and Finland is a well-known fact (<span style="font-style:italic">NEW LOOK</span> (T-435/07) at [23]).  As pointed out in the same paragraph, this also applies to Malta, where English is one of the official languages, and to Cyprus. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[54]<marker name="tab"/>With regard to all of those countries, the applicant never furnished the slightest proof that the mark applied for had become distinctive through use. In particular, the letters and statements mentioned in [46] above, and the evidence of use submitted to OHIM concern only the United Kingdom, Ireland and Germany.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">[55]<marker name="tab"/>Consequently the applicant’s second plea must be dismissed.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">66.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Thus,<span style="font-style:italic"> </span>the proprietor of a word mark must establish acquired distinctiveness in all Member States in which the average consumer is liable to recognise its descriptive character.  How many Member States will depend not only on how widely the language of the mark is spoken, but also on the mark itself.  The specific issue is how that particular mark is likely to be interpreted in each Member State, see <span style="font-style:italic">Junited Autoglas Deutschland GmbH &amp; Co KG v OHIM </span>(Case T-297/13) EU: T:2014:893, at [31]-[32] and <span style="font-style:italic">Matratzen Concord AG v Hukla Germany SA </span>(Case C-421/04) [2006] E.C.R. I-2303, at [25].</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">This case</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">67.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There was a great deal of evidence of use of the trade name SOFA WORKSHOP in the UK by Sofa Workshop since 1986.  Use of a mark does not necessarily translate into that mark becoming distinctive of the user, see <span style="font-style:italic">British Sugar plc v James Robertson &amp; Sons Ltd</span> [1996] R.P.C. 281, per Jacob J at 286.  However, Jacob J was there particularly concerned with use of the mark in issue alongside use of another distinctive and well-recognised mark.  On any view, absent any other candidate mark by which consumers might identify the origin of the goods or services, substantial use of a mark is a good start to proving that it has acquired distinctiveness.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">68.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There was no evidence of market share, but Sofa Workshop has marketed its products under that name on its website since 2004 and in brochures since 2009.  From October 2013 a feature on its website called a ‘look book’ has been available, which has received more than 36,000 unique hits between October 2013 and May 2014.  Between January 2013 and January 2014 Sofa Workshop published over 260 advertisements in 26 magazines.  Promotional emails were sent to a customer base of more than 45,000 having active email addresses.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">69.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Aside from evidence of extensive use of the ‘Sofa Workshop’ trading name, Sofa Workshop’s evidence established the following:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(1)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Electronic customer interest forms completed by shop assistants since 2011 indicate that around 7% of customers cited an advertisement, an article or a recommendation as their source of interest in Sofa Workshop’s products.  It is likely that those products were identified in the customers’ minds by the trade name.  A further 25% of customers identified themselves as repeat customers, which indicated a trade loyalty.  This is likely to be in the form of brand loyalty, other possibilities being improbable.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(2)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">There were examples of reviews posted online which referred to Sofa Workshop and its products by that name.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">70.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">All of this evidence related to use and distinctiveness of the marks in the UK.  I am satisfied that by 19 May 2014 the mark SOFA WORKSHOP had acquired in the UK a distinctive character in relation to sofas and related goods.  No admission was made in that regard by Sofaworks, but Mr Baldwin did not actively contend to the contrary.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">71.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Baldwin’s point was that in the light of <span style="font-style:italic">Liz Earle</span>, acquired distinctiveness in one Member State is not good enough.  As the General Court stated, a mark which is descriptive to a native English speaker is liable to be equally descriptive elsewhere because of the widespread use of English: the Scandinavian countries, the Netherlands and Cyprus were cited.  Ireland and Malta must also be taken into account, where English is an official language.  In order to satisfy art.52(2), Sofa Workshop must prove acquired distinctiveness in all such countries.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">72.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofa Workshop has not even established acquired distinctiveness in Ireland or Malta, far less the Scandinavian countries, the Netherlands or Cyprus.  I refer back to my discussion of the evidence of use of the CTMs outside the UK, which is all there is and which does not begin to support acquired distinctiveness outside the UK.  I find that the CTMs have not acquired a distinctive character within the meaning of art.52(2) in relation to sofas and related goods.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">Infringement</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">73.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I turn to infringement in case I am wrong about both the invalidity of the CTMs and their revocation for non-use.  Sofa Workshop complains of use by Sofaworks of its sign as part of a device and in word form.  Argument was entirely directed to the word SOFAWORKS and its similarity or otherwise to SOFA WORKSHOP.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">The law</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">74.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofa Workshop’s allegation of confusion rests on art.9(1)(b) of the CTM Regulation:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic">Article 9</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic;font-weight:bold">Rights conferred by a Community trade mark</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:-0.50in">
+	      <span style="font-style:italic">1.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">A Community trade mark shall confer on the proprietor exclusive rights therein. The proprietor shall be entitled to prevent all third parties not having his consent from using in the course of trade:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.00in">
+	      <span style="font-style:italic">…</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">
+	      <span style="font-style:italic">(b)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">any sign where, because of its identity with, or similarity to, the Community trade mark and the identity or similarity of the goods or services covered by the Community trade mark and the sign, there exists a likelihood of confusion on the part of the public; the likelihood of confusion includes the likelihood of association between the sign and the trade mark;</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">75.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Art.9(1)(b) has been considered twice recently by the Court of Appeal, in <span style="font-style:italic">Spear v Zynga </span>[2015] EWCA Civ 290; [2015] F.S.R. 19 and <span style="font-style:italic">Maier v ASOS </span>[2015] EWCA Civ 220; [2015] E.T.M.R. 26, at [71]-[80]).  In <span style="font-style:italic">Spear v Zynga </span>Floyd LJ said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">“[33]<marker name="tab"/>There is much CJEU learning on the interpretation and application of <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=13&amp;crumb-action=replace&amp;docguid=I04C5D388CA3F4B3DA5265BA42BEE9400">art.9(1)(b)</a> . In <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=13&amp;crumb-action=replace&amp;docguid=I8B84E6A04C6B11E1A67AC14364AE3220"><span style="font-style:italic">Specsavers International Healthcare Ltd v Asda Stores Ltd </span>[2012] EWCA Civ 24; [2012] E.T.M.R. 17; [2012]<span style="font-style:italic"> </span>F.S.R. 19</a> at [52] Kitchin LJ approved the following summary of the principles to be derived from the court’s jurisprudence: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">a.<marker name="tab"/>the likelihood of confusion must be appreciated globally, taking account of all relevant factors; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">b.<marker name="tab"/>the matter must be judged through the eyes of the average consumer of the goods or services in question, who is deemed to be reasonably well informed and reasonably circumspect and observant, but who rarely has the chance to make direct comparisons between marks and must instead rely upon the imperfect picture of them he has kept in his mind, and whose attention varies according to the category of goods or services in question; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">c.<marker name="tab"/>the average consumer normally perceives a mark as a whole and does not proceed to analyse its various details; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">d.<marker name="tab"/>the visual, aural and conceptual similarities of the marks must normally be assessed by reference to the overall impressions created by the marks bearing in mind their distinctive and dominant components, but it is only when all other components of a complex mark are negligible that it is permissible to make the comparison solely on the basis of the dominant elements; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">e.<marker name="tab"/>nevertheless, the overall impression conveyed to the public by a composite trade mark may, in certain circumstances, be dominated by one or more of its components; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">f.<marker name="tab"/>and beyond the usual case, where the overall impression created by a mark depends heavily on the dominant features of the mark, it is quite possible that in a particular case an element corresponding to an earlier trade mark may retain an independent distinctive role in a composite mark, without necessarily constituting a dominant element of that mark; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">g.<marker name="tab"/>a lesser degree of similarity between the goods or services may be offset by a greater degree of similarity between the marks, and vice versa; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">h.<marker name="tab"/>there is a greater likelihood of confusion where the earlier mark has a highly distinctive character, either per se or because of the use that has been made of it; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">i.<marker name="tab"/>mere association, in the strict sense that the later mark brings the earlier mark to mind, is not sufficient; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">j.<marker name="tab"/>the reputation of a mark does not give grounds for presuming a likelihood of confusion simply because of a likelihood of association in the strict sense; and </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">k.<marker name="tab"/>if the association between the marks causes the public to wrongly believe that the respective goods [or services] come from the same or economically-linked undertakings, there is a likelihood of confusion.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">[34]<marker name="tab"/>In making the global comparison the sign is to be considered in the context in which it is used. Kitchin LJ made this point in <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=13&amp;crumb-action=replace&amp;docguid=I8B84E6A04C6B11E1A67AC14364AE3220"><span style="font-style:italic">Specsavers </span>[2012] F.S.R. 19</a> at [87]: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in">“In assessing the likelihood of confusion arising from the use of a sign the court must consider the matter from the perspective of the average consumer of the goods or services in question and must take into account all the circumstances of that use that are likely to operate in that average consumer’s mind in considering the sign and the impression it is likely to make on him. The sign is not to be considered stripped of its context.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">[35]<marker name="tab"/>The reference in sub-para.(d) of the citation from <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=13&amp;crumb-action=replace&amp;docguid=I8B84E6A04C6B11E1A67AC14364AE3220"><span style="font-style:italic">Specsavers </span>[2012] F.S.R.<span style="font-style:italic"> </span>19</a> in [33] above to the assessment by the average consumer of the “visual, aural and conceptual similarities” derives from, amongst other places, the judgment of the CJEU in <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=13&amp;crumb-action=replace&amp;docguid=IE203D390E42711DA8FC2A0F0355337E9"><span style="font-style:italic">Lloyd Schuhfabrik Meyer &amp; Co GmbH v Klijsen Handel BV </span>(C-342/97) [1999] E.C.R. I-3819; [2000] F.S.R. 77</a> at [27]: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in">“In order to assess the degree of similarity between the marks concerned, the national court must determine the degree of visual, aural or conceptual similarity between them and, where appropriate, evaluate the importance to be attached to those different elements, taking account of the category of goods or services in question and the circumstances in which they are marketed.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">76.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Floyd LJ went on to consider the attributes of the average consumer, a topic to which I return below.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-style:italic">This case</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">77.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofaworks admitted that the goods it markets include goods which are identical with goods falling within the class 20 specification of both CTMs, that is to say furniture, sofabeds, upholstered chairs and sofas.  By consent ‘furniture’ is to be amended to ‘upholstered furniture’, but the admission still applies.  It is sufficient for me to focus on those goods and to decide whether the similarity between the CTMs and the sign SOFAWORKS is sufficient for infringement.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Sofa Workshop’s online commercial strategy</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">78.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">A particular feature of these proceedings has been the commercial strategy pursued by Sofa Workshop to gain an advantage over Sofaworks in online marketing.  Until December 2013 Sofaworks traded as ‘CSL’.  From the time of its change of name, or since very shortly thereafter, Sofa Workshop has conducted a campaign of purchasing ‘sofaworks’ as a Google adword.  The principal consequence has been that when consumers have searched for ‘sofaworks’ online, Google has presented a Google advertisement for Sofa Workshop much higher in the list than that Sofaworks’ advertisement.  Consequently those searching have been preferentially shown Sofa Workshop’s phone number and a link to Sofa Workshop’s website even though they were searching for ‘sofaworks’.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">79.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I should make it plain that it was not suggested by Sofaworks that there is anything improper in this sort of strategy for gaining Google prominence.  It is now a regular feature of marketing in many commercial sectors.  But from the point of view of a potential claimant in an action for trade mark infringement or passing off it carries a risk.  Online confusion which might formerly have provided a potent source of relevant evidence will in many instances be neutralised because of the impossibility of distinguishing art.9(1)(b) confusion or a misrepresentation from confusion merely generated by the claimant’s Google strategy.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">80.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Quite a lot of time was devoted to analysing how much effect this strategy had on the evidence of confusion.  No clear picture emerged.  However, as Sofaworks acknowledged, while the phenomenon of Sofa Workshop’s Google advertisement appearing prominently in response to a search for ‘Sofaworks’ occurred in the weeks immediately after Sofaworks’ rebranding from CSL to its present name in January 2014, it tailed off rapidly thereafter because of the number of searches under its name and the way that search engines work.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">81.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofaworks also alleged that Sofa Workshop’s strategy went beyond the commercially acceptable.  For a five week period during November and December 2014 one of the paid online advertisements placed by Sofa Workshop read ‘Sofaworks Sofa Workshop’.  Sofa Workshop has admitted that this should not have happened and blamed it on a mistake by a media company employee.  Also, in October and November 2014 an advertisement for autumn sales of sofas was placed by Sofa Workshop in the middle of a recruitment notice placed by Sofaworks.  This was also said to have been a mistake.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Visual, aural and conceptual similarities; context of sale</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">82.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There are obvious visual and aural similarities between ‘Sofaworks’ and ‘Sofa Workshop’ even though, from a visual perspective the former consists of one word and the latter two, and from an aural perspective the former has three syllables and the latter four.  To my mind these differences are noticeable but not highly marked.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">83.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The conceptual meaning of ‘Sofa Workshop’ is clear and I have already discussed it in the context of the descriptive nature of the CTMs.  With regard to ‘Sofaworks’, Jason Tyldesley, who is the Chief Executive Officer of Sofaworks, acknowledged that ‘works’ can mean a factory or works where products (such as sofas) are made.  I agree with him.  A ‘furniture works’ would be an example.  I think the average consumer would know that one possible meaning of a ‘sofa works’ is a place where sofas are made.  I have accepted Sofaworks’ strong contention that ‘Sofa Workshop’ is descriptive of the place of manufacture of sofas.  Even though it consists of one word, I think the same applies with almost equal force to ‘Sofaworks’.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">84.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofaworks relied on the rule that the sign is not to be considered stripped of its context (see <span style="font-style:italic">Spear v Zynga</span> at [34]).  In this regard Sofaworks made two points.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">85.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">First, many traders use the word ‘Sofa’ as part of their trading name: Sofa World, Sofa Warehouse, Sofa Wise, Sofa Shop, SofaSofa, Sofabedfactory, Sofa&amp;More, Sofa Magic and Sofaland were examples that were given and these said not to be exhaustive.  Consumers are accustomed to distinguishing businesses with similar names, particularly those containing ‘Sofa’.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">86.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Secondly, sofas are relatively expensive items and so consumers will take care in correctly identifying the retailer.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">87.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There was no evidence as to how significant is the market presence of the various retailers with ‘Sofa’ in their names.  It may be that consumers have become used to the idea that there are several sofa retailers with ‘Sofa’ in their name and that each is independent of the other.  But this does not answer the question whether Sofaworks have chosen to adopt a name which is sufficiently close to ‘Sofa Workshop’ to generate a likelihood of confusion.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">88.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Likewise I take into account that the purchase of a sofa involves an expenditure that will not generally be made lightly and that consumers will pay appropriate attention to the retailer from which they are buying.  However, if relevant confusion has occurred before the consumer has approached Sofaworks to make a purchase, in other words the customer believes he is buying from the same outfit as Sofa Workshop, it will not make any difference how carefully the purchase is made.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">89.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">If the criteria for assessing likelihood of confusion had gone no further than this, then following all the guidance of the CJEU as explained by the Court of Appeal, I would have found that there is a likelihood of confusion.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">90.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In <span style="font-style:italic">Spear v Zynga </span>Floyd LJ applied this guidance of the CJEU and held that but for certain factors the judge at first instance would have been in a position to conclude that there was a risk of confusion without going further (contrary to the actual finding by the judge).  Yet in the light of these three factors, namely (i) a descriptive allusion within the accused sign, (ii) the extent of side-by-side use of mark and sign and (iii) the circumstances in which the average consumer would download from the internet the defendant’s app complained of, Floyd LJ held that it was not appropriate to make a finding of infringement without testing it by reference to the evidence of confusion (at [160]-[161]).  In fact, even though Floyd LJ categorised the evidence of confusion as ‘secondary evidence’, on the facts of that case it was enough to overturn his initial view on the likelihood of confusion.  Taking the secondary evidence into account he was not prepared to reverse the finding of no infringement by the judge.  Floyd LJ explained that the principal reason for this was the extent of side-by-side use of mark and sign, which would have been expected to produce far more abundant evidence of confusion by the date of the trial than was the case (at [181]).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">91.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">To some considerable degree, the first two factors referred to by Floyd LJ apply here.  I must therefore consider the evidence of confusion.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Evidence of confusion</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">92.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofa Workshop’s evidence of confusion was summarised and annexed to the Particulars of Claim.  In most instances Sofa Workshop’s evidence of confusion took the form of an entry in a ‘Schedule of Actual Confusion’ which appeared as Schedule A to the Particulars of Claim.  Mr Staden was asked about Schedule A and admitted that in most cases he did not know who was responsible for the entry.  No witness was produced by Sofa Workshop to confirm the accuracy of the entries or the Schedule as a whole, or to explain how it had been created.  The remaining evidence took the form of emails to Sofa Workshop from potential customers.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">93.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofa Workshop in closing divided its evidence into categories, largely as follows, although I have combined the two internet categories:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(1)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">
+	      <span style="text-decoration:underline">People who contacted Sofa Workshop after seeing Sofaworks’ advertising</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">These were individuals who had either visited a Sofaworks store or seen its advertising and then gone to a Sofa Workshop store.  Of the seven people referred to, on the face of the evidence there is an indication of relevant confusion in the mind of five.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(2)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">
+	      <span style="text-decoration:underline">People who contacted Sofa Workshop after becoming aware of one or more of Sofaworks’ products</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">These people had either gone into one of Sofa Workshop’s stores or contacted Sofa Workshop online with some knowledge of Sofaworks’ products.  On the face of the summaries and emails all nine had confused Sofa Workshop with Sofaworks.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(3)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">
+	      <span style="text-decoration:underline">People who posted reviews</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Mr Staden exhibited pages from a review site maintained by Sofa Workshop for the purpose of inviting feedback from customers.  Ten reviews suggest that the customer in question had confused Sofaworks with Sofa Workshop, generally by posting a complaint about a Sofaworks’ product.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(4)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">
+	      <span style="text-decoration:underline">Internet searches or website visits</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Sofa Workshop maintained reliance on all of its claimed instances of internet confusion.  These took the form of individuals seeing Sofaworks’ advertising and then searching for Sofa Workshop, or those who searched for ‘Sofaworks’ but clicked through to Sofa Workshop.  A lot of time was spent analysing statistics from both sides of searches and website visits.  Part of this was in order to identify trends as they appeared from prepared graphs and thus to draw inferences of confusion and to dispel the suggestion that Google adword purchasing by either side had neutralised the impact of all of this evidence.  Some of the evidence was presented by Sofaworks for the opposite purpose – to show that adword purchasing had indeed been the real source of any apparent confusion.  Taken as a whole, I did not find this internet-based evidence convincing.  It was neutral.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(5)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">
+	      <span style="text-decoration:underline">People who ordered goods from Sofaworks when trading as ‘CSL’</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">After Sofaworks changed its name from ‘CSL’, some people who had ordered products from CSL approached Sofa Workshop about the order, for example to complain about late delivery.  There were seven such people, all of whom contacted Sofa Workshop by email.  At least on the face of the emails there had been confusion between Sofa Workshop and Sofaworks caused by Sofaworks’ new name.  </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(6)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">
+	      <span style="text-decoration:underline">Job applicants who contacted the wrong retailer</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">Two people separately approached Sofaworks for work and thereafter contacted Sofa Workshop about the prospective job.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(7)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">
+	      <span style="text-decoration:underline">People who observed that the parties’ names were the same or too similar</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">One individual is recorded as pointing out to Sofa Workshop that it and Sofaworks had the same name.   A second stated that that the retailers’ names were too similar.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">94.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofaworks submitted its own evidence on confusion.  It put into place a system for checking for evidence of confusion from August 2014.  Stephen Hartley, who is Head of Direct Sales at Sofaworks, said that only three instances emerged from that system.  All three had contacted Sofaworks.  The first stated that she had bought a sofa from Sofa Workshop some years previously and asked whether Sofaworks was the same company.  The second also had bought a sofa from Sofa Workshop, wanted to have it re-upholstered by that company, but approached Sofaworks.  The third had earlier spoken to someone at Sofa Workshop and contacted Sofaworks, wanted to speak to that person again.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">95.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In addition Emily Howells, who is the PR and Social Media Manager of Sofaworks, conducted a search on ‘Twitter’ for any sign of confusion.  She found four tweets suggesting that Sofa Workshop was being confused with Sofaworks, although this was out of over a thousand results.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">96.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Baldwin argued that Sofa Workshop’s evidence of confusion was so vague and unsupported that it should be ignored.  He also made the following submissions:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:-0.50in">(1)<marker name="tab"/>Such was the level of (a) Sofaworks’ turnover since it re-branded in January 2014 (£101 million) and (b) the footfall into Sofa Workshop’s shops in a year (about 450,000 people) that for confusion to have occurred on a significant scale there would have to have been a large number of people confused.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:-0.50in">(2)<marker name="tab"/>On the ‘Contact Us’ page of Sofa Workshop’s website there is an invitation to email enquiries to roomtotalk@sofaworkshop.com.  Mr Staden explained that this is manned by a team of about six people who take hundreds of inquiries per week, all of them documented.  Mr  Baldwin pointed out that of all these inquiries, only a handful indicated confusion on the part of the public as between the parties’ trading names.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">97.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The burden of Mr Baldwin’s submissions on this aspect of the case was that Sofa Workshop had stretched every sinew to find proven instances of infringement, had failed, so I should conclude that such instances were either negligible or wholly non-existent.  I don’t think that is right.  I accept that the instances of confusion relied on by Sofa Workshop were not each fire tested to exclude any possibility of the confusion being irrelevant.  But Sofaworks itself assumed that in those cases where it was approached by an individual wishing to contact Sofa Workshop there had been confusion between Sofa Workshop and Sofaworks on the part of that individual.  No explanation for such confusion in these instances was offered other than the obvious one: the similarity between the parties’ names.  I think it is reasonable to make a similar broad assumption with regard to Sofa Workshops’ evidence of confusion.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">98.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I also accept that Sofa Workshop has not provided instances of confusion among a high proportion of either its or Sofaworks’ customers.  But that could never happen.  Relevant confusion in the mind of consumers will always be difficult to detect.  For instance, if an individual sees an advertisement for Sofa Workshop’s products, mistakenly goes to a Sofaworks store in the belief that it is the same retailer and finds a sofa which he or she likes enough to buy, there is no reason for that mistake to emerge.  Also, measuring instances of confusion against the total number of either Sofa Workshop’s or Sofaworks’ customers is based on a false premise.  The relevant base comprises those customers who are aware of Sofa Workshop as a trade mark and have also become aware of the Sofaworks sign.  It is not possible for me to know how many people fall within that group.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Likelihood of confusion in real terms</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">99.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It seems to me, reviewing the secondary evidence as a whole, that among the instances of alleged confusion relied on by Sofa Workshop and that admitted by Sofaworks, some was relevant confusion.  In the nature of things, it is likely that this represents only part of the relevant confusion that actually occurred.  Also, I do not understand Floyd LJ in <span style="font-style:italic">Spear v Zynga </span>to have meant that if there is secondary evidence, the matters to be considered pursuant to the guidance of the CJEU (visual, aural and conceptual similarity, etc.) are thereby consigned to irrelevance.  I think I must still take them into account.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">100.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Of the consumers who recognise SOFA WORKSHOP as a trade mark and are aware of the sign SOFAWORKS, some will be reasonably well-informed, reasonably circumspect and observant.  I will call these persons ‘relevant actual consumers’ to distinguish them from the legal construct that is the average consumer.  In my view, because of the similarity between mark and sign, a proportion of relevant actual consumers is likely to believe that the respective goods of Sofa Workshop and Sofaworks come from the same or economically-linked undertakings.  My impression is that this proportion is well above <span style="font-style:italic">de minimis </span>but markedly below half.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">101.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I have to determine whether this translates into a likelihood of confusion within the meaning of art.9(1)(b) and in order to do so I must reach a view in relation to the average consumer of trade mark law in the context of this case.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The Average Consumer</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">102.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I was referred by Mr Silverleaf and Mr Baldwin to <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=13&amp;crumb-action=replace&amp;docguid=I04DEFED0651111E4B68BC9BB15C82C71"><span style="font-style:italic">Interflora Inc v Marks &amp; Spencer Plc </span>(“<span style="font-style:italic">Interflora III</span>”)<span style="font-style:italic"> </span>[2014] EWCA Civ 1403; [2015] F.S.R. 10</a> and to <span style="font-style:italic">Spear v Zynga</span>.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">103.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In <span style="font-style:italic">Interflora </span>Kitchin LJ, who gave the judgment of the Court, set out certain attributes of the average consumer which were common ground between the parties and which the Court of Appeal expressly endorsed (at [112]-[115]).  These were summarised by Floyd LJ in <span style="font-style:italic">Spear v Zynga </span>to the extent that they were relevant to the issues in that case:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“[36]<marker name="tab"/>Mr Silverleaf also referred us to the discussion of the attributes of the average consumer in <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=13&amp;crumb-action=replace&amp;docguid=I04DEFED0651111E4B68BC9BB15C82C71"><span style="font-style:italic">Interflora Inc v Marks &amp; Spencer Plc </span>(“<span style="font-style:italic">Interflora III</span>”)<span style="font-style:italic"> </span>[2014] EWCA Civ 1403; [2015] F.S.R. 10</a> at [107]–[130].  In that case it was argued on behalf of the defendant that the judge had been wrong to ask himself whether a “significant proportion of members of the public” would be confused. The average consumer, it was suggested, was either confused or he was not. In the course of dealing with that question the court approved the following propositions of materiality here: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">(i)<marker name="tab"/>the average consumer in any context is a hypothetical person or “legal construct”: a person who has been created to strike the right balance between various competing interests including, on the one hand, the need to protect consumers and, on the other hand, the promotion of free trade in an openly competitive market, and also to provide a standard, defined in EU law, which national courts may then apply. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">(ii)<marker name="tab"/>the average consumer test is not a statistical test. The national court must exercise its own judgment, in accordance with the principle of proportionality and the principles explained by the Court of Justice, to determine the perceptions of the average consumer in any given case in light of all the relevant circumstances. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">(iii)<marker name="tab"/>in a case concerning ordinary goods or services, the court may be able to put itself in the position of the average consumer without requiring evidence from consumers, still less expert evidence or a consumer survey. In such a case, the judge can make up his or her own mind about the particular issue he or she has to decide in the absence of evidence and using his or her own common sense and experience of the world.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">104.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Court of Appeal in <span style="font-style:italic">Interflora</span> went on to review the case law of the CJEU, beginning with <span style="font-style:italic">Gut Springenheide GmbH v Oberkreisdirektor des Kreises Steinfurt – Amt für Lebenmittelüberwachung </span>(C-210/96) [1998] E.C.R. I-4657, from which further principles were derived (at [118]), also summarised in <span style="font-style:italic">Spear v Zynga</span>:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">“[37]<marker name="tab"/>In relation to what the court described as the crucial question, namely whether the average consumer, as a hypothetical person, necessarily has a single reaction and so precludes a consideration of the perceptions of a proportion of the relevant public the court in <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=13&amp;crumb-action=replace&amp;docguid=I04DEFED0651111E4B68BC9BB15C82C71"><span style="font-style:italic">Interflora </span>[2014] EWCA Civ 1403 </a>identified the following propositions: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">(i)<marker name="tab"/>the average consumer test provides the court with a perspective from which to assess the particular question it has to decide, for example whether a statement is liable to mislead purchasers. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">(ii)<marker name="tab"/>a national court may be able to assess this question without the benefit of a survey or expert evidence. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">(iii)<marker name="tab"/>a national court may nevertheless decide, in accordance with its own national law, that it is necessary to have recourse to an expert’s opinion or a survey for the purpose of assisting it to decide whether the statement is misleading or not. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">(iv)<marker name="tab"/>absent any provision of EU law dealing with the issue, it is then for the national court to determine, in accordance with its own national law, the percentage of consumers misled by the statement that, in its view, is sufficiently significant in order to justify banning its use.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">105.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Court in <span style="font-style:italic">Interflora </span>continued its review of the case law of the CJEU and also considered recital 18 of the Unfair Commercial Practices Directive (European Parliament and Council Directive 2005/29 of 11 May 2005).  It set out propositions which I believe I can summarise as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(1)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">For the purpose of assessing whether a mark has acquired distinctive character within the meaning of art.3(3) of the Trade Mark Directive (European Parliament and Council Directive 89/104, later Directive 2008/95), the requirement of distinctive character is satisfied if at least a significant proportion of the relevant class of persons, because of the mark, identify the goods as originating from a particular undertaking (at [119]).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(2)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">The perception of the marks in the mind of the average consumer plays a decisive role in the global appreciation of the likelihood of confusion.  This does not preclude the national court from having regard to the perceptions of a significant proportion of the relevant public in assessing either distinctiveness or alternatively a likelihood of confusion (at [120]).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(3)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">The average consumer provides a benchmark, for it is the presumed expectations of this person that are to be taken into account by the national court in assessing distinctiveness and whether a significant proportion of the relevant class of consumers identify the goods or services in issue as coming from a particular undertaking (at [121]-[122]).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(4)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">The issue of a trade mark’s distinctiveness is intimately tied to the scope of protection to which it is entitled.  It necessarily follows that the court must therefore have regard to the impact of the accused sign on the proportion of consumers to whom the trade mark is particularly distinctive (at [123]).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(5)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">The concept of the average consumer is not anything so formalistic as a mathematical average; it is instead a hypothetical person within the group of which the average member is part who represents a normative standard.  In assessing whether a practice is deceptive from the perspective of the average consumer (for the purposes of the Unfair Commercial Practices Directive) a national court may have regard to the effect it has upon a significant number of persons to whom it is addressed (at [124]).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(6)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">In the context of whether advertisements enable the average consumer to tell that a service did not originate from the advertiser (the specific point at issue in <span style="font-style:italic">Interflora</span>), it is only the effect of the advertisement on consumers who are reasonably well-informed and reasonably observant that must be taken into account (at [125]).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.00in;text-indent:-0.50in">(7)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in;text-indent:0.5in">It makes no difference whether the question before the court is asked and answered from the perspective of the single hypothetical well-informed and reasonably observant consumer or whether that hypothetical person provides the benchmark or threshold for the purposes of identifying the population of consumers whose views are material.  The CJEU has used the two interchangeably (at [126]).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">106.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Thus, in relation to whether there is a likelihood of confusion and therefore infringement of a trade mark under art.9(1)(b), the view of the average consumer provides the benchmark.  The average consumer’s view can be taken to be consistent with the view of a significant proportion of relevant actual consumers.  Relevant actual consumers are those to whom the mark is an indication of origin of the relevant goods or services and who are in addition reasonably well-informed, reasonably circumspect and observant.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">107.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I pause there to add that to qualify as relevant actual consumers such people need also to be aware of the accused sign.  On certain facts this may matter.  A claimant might be in a very large way of business so that a huge number of consumers are familiar with his trade mark as a badge of origin.  The defendant could have a very small business.  If there is no need for relevant actual consumers to be aware of the defendant’s sign, then even if every one of them who comes across the sign is confused the proportion of relevant actual consumers who are confused would still be very small.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">108.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Returning to <span style="font-style:italic">Interflora</span>,<span style="font-style:italic"> </span>the Court of Appeal went on to say this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="indent11" style="text-align:justify;margin-left:1.00in">“[129]<marker name="tab"/>As we have seen, the average consumer does not stand alone for it is from the perspective of this person that the court must consider the particular issue it is called upon to determine. In deciding a question of infringement of a trade mark, and determining whether a sign has affected or is liable to affect one of the functions of the mark in a claim under <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=26&amp;crumb-action=replace&amp;docguid=I89F40ADEC2EC457E9E00AD9F3628746E">art.5(1)(a)</a> of the Directive (or <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=26&amp;crumb-action=replace&amp;docguid=I30ECF75B711949E287FAB0E1C26001ED">art.9(1)(a)</a> of the Regulation), whether there is a likelihood of confusion or association under <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=26&amp;crumb-action=replace&amp;docguid=I89F40ADEC2EC457E9E00AD9F3628746E">art.5(1)(b)</a> (or <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=26&amp;crumb-action=replace&amp;docguid=I30ECF75B711949E287FAB0E1C26001ED">art.9(1)(b)</a> ), or whether there is a link between the mark and the sign under <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=26&amp;crumb-action=replace&amp;docguid=I89F40ADEC2EC457E9E00AD9F3628746E">art.5(2)</a> (or <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=26&amp;crumb-action=replace&amp;docguid=I30ECF75B711949E287FAB0E1C26001ED">art.9(1)(c)</a> ), the national court is required to make a qualitative assessment. It follows that it must make that assessment from the perspective of the average consumer and in accordance with the guidance given by the Court of Justice. Of course the court must ultimately give a binary answer to the question before it, that is to say, in the case of <a href="http://login.westlaw.co.uk/maf/wluk/app/document?src=doc&amp;linktype=ref&amp;context=26&amp;crumb-action=replace&amp;docguid=I89F40ADEC2EC457E9E00AD9F3628746E">art.5(1)(b)</a> of the Directive, whether or not, as a result of the accused use, there exists a likelihood of confusion on the part of the public. But in light of the foregoing discussion we do not accept that a finding of infringement is precluded by a finding that many consumers, of whom the average consumer is representative, would not be confused. To the contrary, if, having regard to the perceptions and expectations of the average consumer, the court concludes that a significant proportion of the relevant public is likely to be confused such as to warrant the intervention of the court then we believe it may properly find infringement.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">109.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Where the Court of Appeal speaks of ‘a finding that many consumers, of whom the average consumer is representative, would not be confused’, I take this to mean a finding that many consumers having the attributes accorded to the average consumer would not be confused.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">110.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Court of Appeal then turned to the finding of the judge at first instance and the question he had to answer, namely whether the advertisements in issue did not enable reasonably well-informed and observant internet users, or enabled them only with difficulty, to ascertain whether the goods and services so advertised originated either from Interflora or an undertaking economically linked to it.  The Court said this (at [130]):</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“In answering this question we consider the judge was entitled to have regard to the effect of the advertisements upon a significant section of the relevant class of consumers, and he was not barred from finding infringement by a determination that the majority of consumers were not confused.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">111.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It follows from <span style="font-style:italic">Interflora </span>and <span style="font-style:italic">Spear v Zynga </span>that if there is a likelihood of confusion among a substantial proportion of relevant actual consumers, the court may conclude that there is a likelihood of confusion from the perspective of the average consumer and that therefore a finding of infringement is warranted.  A substantial proportion of relevant actual consumers may be less than half the total.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">112.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Baldwin referred to paragraph 37(iv) of <span style="font-style:italic">Spear v Zynga </span>and submitted that intervention could not be warranted in the present case because Sofaworks had achieved over £101 million in sales under the SOFAWORKS sign by the end of 2014.  I do not accept that.  It implies that the court’s intervention will depend on the size of the defendant’s business: a large corporation is liable to escape infringement in circumstances where a party in a small way of business would be found to infringe.  That, it seems to me, is wrong in principle.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">113.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In <span style="font-style:italic">L’Oréal SA v Bellure NV </span>(Case C487/07) [2009] E.C.R. I-5185; [2010] R.P.C. 1, the CJEU identified, non-exhaustively, the functions of a trade mark, at [58]:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">“These functions include not only the essential function of the trade mark, which is to guarantee to consumers the origin of the goods or services, but also its other functions, in particular that of guaranteeing the quality of the goods or services in question and those of communication, investment or advertising.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">See also <span style="font-style:italic">Google France Sarl v Louis Vuitton Malletier SA </span>(Joined Cases C-236/08, C-237/08 and C-238/08) [2010] R.P.C. 19, at [77].</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">114.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my view, if one or more of those functions of Sofa Workshop’s CTMs is materially damaged by Sofaworks' acts, a finding of infringement is warranted.  It is difficult to see why the use of a sign which adversely affects one or more functions of a trade mark should not have the consequence that the trade mark owner is afforded the protection of the court.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">115.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I have found in the present case that among a proportion of relevant actual consumers, which is well above <span style="font-style:italic">de minimis</span> although markedly less than half the total,<span style="font-style:italic"> </span>there is a belief because of the similarity between mark and sign that the respective goods of Sofa Workshop and Sofaworks come from the same or economically-linked undertakings.  I think it follows that at least one essential function of the Sofa Workshop’s CTMs, namely to guarantee to consumers the origin of the goods or services has been materially damaged and will be further damaged if the court does not intervene.  Probably the same applies to the guarantee of quality of the goods and services.  Consequently, if I had found that the CTMs were validly registered and not liable to be revoked, I would have found that Sofaworks has infringed the CTMs.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">Conversion under art.112</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">116.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Silverleaf suggested that in the event I were to reach the conclusion that Sofa Workshop’s CTMs were either liable to be revoked for non-use or that they were invalidly registered, I should make findings expressly directed to whether the CTMs can be converted into one or more national trade mark applications and if so, which ones.  Art.112 of the CTM Regulation is in relevant part as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic">Article 112</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:center;margin-left:0.50in">
+	      <span style="font-style:italic;font-weight:bold">Request for the application of national procedure</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:-0.50in">
+	      <span style="font-style:italic">1.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">The applicant for or proprietor of a Community trade mark may request the conversion of his Community trade mark application or Community trade mark into a national trade mark application:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">
+	      <span style="font-style:italic">(a)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">to the extent that the Community trade mark application is refused, withdrawn, or deemed to be withdrawn;</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.50in;text-indent:-0.50in">
+	      <span style="font-style:italic">(b)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">to the extent that the Community trade mark ceases to have effect.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.50in">
+	      <span style="font-style:italic">2.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">Conversion shall not take place:</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">
+	      <span style="font-style:italic">(a)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">where the rights of the proprietor of the Community trade mark have been revoked on the grounds of non-use, unless in the Member State for which conversion is requested the Community trade mark has been put to use which would be considered to be genuine use under the laws of that Member State;</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in">
+	      <span style="font-style:italic">(b)</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">for the purpose of protection in a Member State in which, in accordance with the decision of the Office or of the national court, grounds for refusal of registration or grounds for revocation or invalidity apply to the Community trade mark application or Community trade mark.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:-0.50in">
+	      <span style="font-style:italic">3.</span>
+	      <marker name="tab"/>
+	      <span style="font-style:italic">The national trade mark application resulting from the conversion of a Community trade mark application or a Community trade mark shall enjoy in respect of the Member State concerned the date of filing or the date of priority of that application or trade mark and, where appropriate, the seniority of a trade mark of that State claimed under Articles 34 or 35.</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.50in">
+	      <span style="font-style:italic">…</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:italic;font-family:'Times New Roman';margin-left:1.00in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p style="text-align:justify;margin-left:1.00in;text-indent:0.5in">
+	      <span style="font-style:italic">Where the Community trade mark application is refused by decision of the Office or where the Community trade mark ceases to have effect as a result of a decision of the Office or of a Community trade mark court, the request for conversion shall be filed within three months after the date on which that decision acquired the authority of a final decision.</span>
+	    </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.50in">…</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">117.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Baldwin said that Sofa Workshop has made no application to convert and so conversion should not be considered at this stage.  I agree.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">Passing Off</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">118.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Passing off was given only brief attention by both parties.  I can see why.  The legal concepts of Community trade mark infringement and passing off have entirely distinct origins so there is no reason why the criteria which govern them should always coincide.  But on the present facts there is a large degree of overlap.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">119.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There was no dispute that the present case can be assessed by reference to the usual three elements set out by the House of Lords in <span style="font-style:italic">Reckitt &amp; Colman Products Ltd v Borden Inc</span> [1990] R.P.C. 341, at 406.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">120.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">For the reasons stated above in relation to whether Sofa Workshop’s CTMs have acquired distinctive character in the UK, I find that Sofa Workshop has goodwill in its business in England and Wales associated in the public mind with its trading name ‘Sofa Workshop’.  Notwithstanding the descriptive qualities of that trading name when used in relation to sofas and related goods and services, it has acquired a secondary meaning in the mind of the relevant public in England and Wales, that is to say as a badge of origin for such goods and services, see <span style="font-style:italic">Reddaway v Banham </span>[1896] A.C. 199, at 212-213.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">121.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In <span style="font-style:italic">Moroccanoil Israel Ltd v Aldi Stores Ltd </span>[2014] EWHC 1686 (IPEC); [2015] F.S.R. 4, I considered the proportion of the relevant public to which the defendant’s trade name must constitute a misrepresentation for the second element of passing off to be satisfied (at [13]-[16]).  I concluded that it had to be sufficient to cause material damage to the goodwill of the claimant.  I maintain the same criterion in this case.  For the reasons given in relation to infringement of the CTMs, I find that Sofaworks’ use of its SOFAWORKS sign results in a representation to a proportion of the relevant public in England and Wales that the goods and services of Sofaworks come from a source which is the same as, or is associated in the course of trade with, Sofa Workshop.  That proportion is sufficient for Sofaworks’ acts to cause material damage to Sofa Workshop’s goodwill.  It therefore constitutes a substantial proportion, that is to say enough to warrant a finding of misrepresentation on the part of Sofaworks.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">122.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It follows that the second and third elements of the tort are satisfied and I find that Sofa Workshop succeeds in its claim for passing off.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="font-weight:bold">Conclusion</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">123.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Sofa Workshop’s CTMs are invalidly registered and are also liable to be revoked for non-use.  Had they been otherwise I would have found that they have been infringed by Sofaworks.  Sofa Workshop succeeds in its claim for passing off.</p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

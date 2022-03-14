@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewhc/mercantile/2008/11"/>
+	  <FRBRuri value="ewhc/mercantile/2008/11"/>
+	  <FRBRdate date="2008-01-11" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-commercial-circuit"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="11"/>
+	  <FRBRname value="UNISERVE NORTHERN LTD v BIRKART GLOBISTICS LTD."/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewhc/mercantile/2008/11/eng"/>
+	  <FRBRuri value="ewhc/mercantile/2008/11/eng"/>
+	  <FRBRdate date="2008-01-11" name="judgment"/>
+	  <FRBRauthor href="#ewhc-qbd-commercial-circuit"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewhc/mercantile/2008/11/eng/akn"/>
+	  <FRBRuri value="ewhc/mercantile/2008/11/eng/akn"/>
+	  <FRBRdate date="2021-12-01T23:00:55" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewhc-qbd-commercial-circuit" href="https://www.gov.uk/courts-tribunals/commercial-circuit-court" showAs="The Business and Property Courts (Circuit Commercial Court)" shortForm="The Circuit Commercial Court"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="uniserve-northern-ltd" href="" showAs="UNISERVE NORTHERN LTD"/>
+	<TLCPerson eId="birkart-globistics-ltd" href="" showAs="BIRKART GLOBISTICS LTD."/>
+	<TLCRole eId="claimant" href="" showAs="Claimant"/>
+	<TLCRole eId="defendant" href="" showAs="Defendant"/>
+	<TLCPerson eId="judge-mr-justice-andrew-smith" href="/judge-mr-justice-andrew-smith" showAs="MR JUSTICE ANDREW SMITH"/>
+      </references>
+      <proprietary source="ewhc/mercantile/2008/11/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWHC-QBD-Commercial-Circuit</uk:court>
+	<uk:year>2008</uk:year>
+	<uk:number>11</uk:number>
+	<uk:cite>[2008] EWHC 11 (Mercantile)</uk:cite>
+	<uk:hash>68d4253e4a155e81752d09fd2a6423764f14dba4d1b9d1dc5a719a0064147d73</uk:hash>
+      </proprietary>
+      <presentation source="ewhc/mercantile/2008/11/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { font-weight: bold; font-family: Arial; font-size: 16pt; }
+#judgment .Heading3 { font-weight: bold; font-family: Arial; font-size: 13pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .ParaHeading { font-size: 12pt; }
+#judgment .ParaLevel1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .ParaLevel2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .ParaLevel3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 1.00in; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .Heading { font-size: 12pt; }
+#judgment .Title { text-align: center; font-weight: bold; font-size: 10pt; }
+#judgment .BalloonText { font-family: Tahoma; font-size: 8pt; }
+#judgment .eMailBlock { text-align: center; font-weight: bold; font-size: 13pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .Heading3Char { font-weight: bold; font-size: 13pt; }
+#judgment .QuoteChar { font-style: italic; font-size: 12pt; color: #404040; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .TitleChar { font-weight: bold; font-size: 16pt; }
+#judgment .BalloonTextChar { font-family: 'Segoe UI'; font-size: 9pt; }
+#judgment .Hyperlink { text-decoration: underline; color: #0000FF; }
+</style>
+      </presentation>
+    </meta>
+    <header>
+      <p class="CoverText" style="text-align:left">Neutral Citation Number: <span style="color:#000000">2008 EWHC 11 (Mercantile)</span></p>
+      <p class="CoverText">Case No: <docketNumber>2006-1221</docketNumber></p>
+      <p class="CoverMain">IN THE HIGH COURT OF JUSTICE</p>
+      <p>
+	<span style="font-weight:bold;text-decoration:underline">QUEEN'S BENCH DIVISION</span>
+      </p>
+      <p>
+	<span style="font-weight:bold;text-decoration:underline">MERCANTILE COURT</span>
+      </p>
+      <p class="CoverText">Royal Courts of Justice</p>
+      <p class="CoverText">Strand, London, WC2A 2LL</p>
+      <p class="CoverText">Date: <docDate date="2008-01-11">11 January 2008</docDate></p>
+      <p style="text-align:center"><span style="font-weight:bold">Before</span> :</p>
+      <p class="CoverMain" style="text-align:center">
+	<judge refersTo="#judge-mr-justice-andrew-smith">MR JUSTICE ANDREW SMITH</judge>
+      </p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">(1) MATRIX EUROPE LIMITED</span>
+      </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">(2) ADOVE TRADING LIMITED </span>
+      </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">And</span>
+      </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">(1) UNISERVE HOLDINGS LIMITED</span>
+      </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">(2) UNISERVE (NORTHERN) LIMITED</span>
+      </p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">(3) BIRKART GLOBISTICS LIMITED</span>
+      </p>
+      <p>
+	<span style="font-weight:bold">AND BETWEEN</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#uniserve-northern-ltd" as="#claimant" style="font-weight:bold">UNISERVE NORTHERN LTD  </party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#claimant">Claimant</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#birkart-globistics-ltd" as="#defendant" style="font-weight:bold">BIRKART GLOBISTICS LTD.</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Defendant</role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center"><span style="font-weight:bold">MR JEFFREY BACON </span>(instructed by<span style="font-weight:bold"> CLYDE &amp; CO</span>) for the <span style="font-weight:bold">CLAIMANT</span></p>
+      <p style="margin-left:0.39in;text-indent:0.39in"><span style="font-weight:bold">MR NEVIL PHILLIPS</span> (instructed by <span style="font-weight:bold">PYSDENS</span>) for the <span style="font-weight:bold">DEFENDANT</span></p>
+      <p style="text-align:center">Hearing dates: 7-8 November 2007</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p class="CoverDesc">Approved Judgment</p>
+      <p style="text-align:center">I direct that pursuant to CPR PD 39A para 6.1 no official shorthand note shall be taken of this Judgment and that copies of this version as handed down may be treated as authentic.</p>
+      <p style="text-align:center">.............................</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">MR JUSTICE ANDREW SMITH :</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">These proceedings concern a claim in respect of the loss of a consignment of Bluetooth mobile telephone adaptors in January 2003.    Matrix Europe Limited (“Matrix”) were selling the goods to Adove Trading Company, who were then called Oversea Chinese Limited and to whom I refer as “OCL”.  They were sending the consignment to Hong Kong, and, as they claim and I do not understand to be disputed, they engaged Birkart Globistics Limited (“Birkart”), a company of freight forwarders, to arrange their carriage by air.    Birkart instructed Cheadle Courier Company Stockport Limited (“Cheadle”) to have the goods collected from Matrix’s premises in Altrincham, and Cheadle in turn subcontracted that work to a driver called Trevor Lancashire.   According to Birkart, they instructed Cheadle to deliver the goods to the premises of Robins Transport Limited (“Robins”) at Manchester Airport.   In fact, Mr Lancashire delivered them on 10 January 2003 to the warehouse premises of Uniserve Northern Limited (“UNL”) at Claverton Road, Wythenshawe, which were also near the airport, and UNL received them there.  The  Claverton Road premises were UNL’s principle “hub” in the North of England.      On 11 January 2003 there was a burglary there, and the goods were stolen and have not been recovered.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Matrix and OCL have brought proceedings in respect of the loss against both Birkart and UNL, although the proceedings against Birkart are presently stayed. (Proceedings were also brought against Uniserve Holdings Limited but they have been struck out.)  UNL have brought part 20 proceedings against Birkart in which they claim damages for breach of warranty of authority and an indemnity from Birkart in respect of any liability to Matrix (and the costs and expenses of the proceedings).   The basis of both these claims, as I understand it, is UNL’s contention that they dealt with Birkart upon what have been referred to as “BIFA terms”, the standard terms from time to time of the British International Freight Association, to which both they and Birkart belonged.  The  relevant  BIFA terms, the  2000 edition, provide:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in">(by clause 3) that “The Customer warrants that he<span style="font-weight:bold"> </span>is either the Owner or the Authorised Agent of the Owner and also that he is accepting these conditions not only for himself but also as Agent for and on behalf of the Owner”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in">(by clause 20) that “the Customer shall save harmless and keep the Company indemnified from and against” all relevant liability, costs and expenses.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In response to the part 20 claim, Birkart’s case is that “UNL were simply their (accidental) sub-bailees of the goods, and no standard or other terms applied to or were incorporated or implied into the sub-bailment”:  see para 31(3)(c) of the re-amended defence in the part 20 proceedings.  They have argued, inter alia, that whatever the arrangements between them and UNL as to doing business upon BIFA terms, they did not apply in the circumstances of this case because </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in">“It is not possible for an erroneous or uncontemplated delivery to be within the scope of the agreed terms which the parties must necessarily have agreed should apply to deliveries which were foreseen as being within the scope of such agreement – there can be no intention that agreed terms should apply to an event which the parties never intend or contemplate will occur; there is no <span style="font-style:italic">consensus ad idem</span> with regard to any such event”:    see para. 31(4)(a) of the re-amended defence in the part 20 proceedings.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in">“The BIFA Terms do not (on a true construction thereof) have the effect of applying to a mistaken and erroneous delivery”: see para. 31(4)(b) of the re-amended defence in the part 20 proceedings.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It was ordered that there be a preliminary trial to determine two questions in the part 20 proceedings, namely:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in"> Whether delivery into UNL’s premises of the relevant goods was, as a matter of fact, unintended by either party; and</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in"> If so, whether such delivery could have been subject to the terms of the British International Freight Association (Edition 2000).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At the trial of these issues, UNL and Birkart, but not Matrix, were represented and presented evidence.  I enquired whether  the parties were in agreement about whether my findings were to be binding between Matrix on the one hand and UNL and Birkart on the other hand.    When this point was raised with Messrs Hill Dickinson, who act for Matrix, they wrote that:  </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Matrix accept ‘that the Court’s findings in relation to these two preliminary issues will apply in the main action as well as in the Part 20 proceedings’”.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.39in">I am grateful to them for that prompt response.    My understanding is that Birkart accept that my findings should be binding upon them as against Matrix as well as between them and UNL.    UNL, on the other hand, were unwilling to accept that my findings were binding upon them as against Matrix.     I shall revisit this question in light of my judgment.   My present impression is that the position adopted by UNL about this is not sustainable, and it might be that in light of my judgment UNL will not seek to argue otherwise.    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I am concerned that the determination of the preliminary questions will do little to resolve this litigation.    It is to be observed that the first question is directed to whether the parties <span style="font-style:italic">intended</span> delivery of the goods to the premises of UNL (and not to whether the delivery was made and received by persons acting with actual or ostensible authority of the parties).   The second question is whether the delivery, if unintended by either party, <span style="font-style:italic">could </span>have been subject to the BIFA terms, not whether it was subject to the BIFA terms.     However, the parties prepared for the hearing on the basis that the trial would be of these specific issues, and it did not seem to me possible to re-formulate them at the hearing or do other than simply determine these questions, not least because Matrix agreed to be bound by my determination of those questions and no others.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Birkart called five witnesses to give evidence.  They were:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in">Mr Andrew Checkley, who at the relevant time was employed by Birkart as an Airfreight Supervisor, and was responsible for dealing with airfreight exports.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in">Mr Michael Royan, who at the relevant time was the managing director of Cheadle.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in">Ms Angela Kennedy, the general manager of Birkart.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">iv)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in">Mr Williams Stynes, who was the general manager of Robins.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-size:12pt;margin-left:1.97in;text-indent:-0.49in">v)</num>
+	  <content>
+	    <p class="ParaLevel4" style="margin-left:1.97in;text-indent:0.5in">Detective Constable Paul Caine of the Greater Manchester Police, who was involved in investigating the burglary at UNL’s premises.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">UNL called to give evidence Mr Iain Liddell, who is the managing director of the Uniserve Group and their sole shareholder.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I am satisfied that all six witnesses were seeking to give the court truthful and accurate evidence.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Birkart also put in evidence under the Civil Evidence Act 1968 a statement of Mr Walter Marsh, who until his recent retirement was employed by Birkart as a Senior Airfreight Clerk.  Birkart served a Civil Evidence Act notice in respect of Mr Marsh’s statement on 1 November 2007.    Although, I think, no formal counter-notice was served, UNL’s representatives made it clear that they wished to cross-examine Mr Marsh and that they do not accept that his statement is accurate.    However, difficulties in Mr Marsh’s personal life prevented him from attending court, and it also proved difficult to make arrangements to cross-examine him over a video-link.  In these circumstances, I admitted Mr Marsh’s witness statement as evidence, although Mr Jeffrey Bacon, who represented UNL, made it clear that it was disputed.   In the event, my decision on the preliminary issues does not depend upon his evidence.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In January 2003 Birkart leased offices in Claverton Road, Wythernshaw at the same premises as UNL.  Their landlord was Mr Liddell, UNL’s managing director, and they had moved there in mid-December 2002.  Birkart and UNL both belonged to a consortium known as Group 99, an organisation directed, as I understand it, to achieving efficient cooperation in the handling and conveying of cargoes consigned by way of sea freight.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In December 2002 UNL began providing services, including warehouses services, to Birkart as well as other Group 99 companies.  Matrix were one of Birkart’s customers and on two occasions before the delivery of the goods with which these proceedings are concerned UNL had stored computer goods shipped by Matrix on behalf of Birkart.  It was the evidence of Ms. Kennedy, and I accept, that Birkart used UNL’s services to divide the consignment because on those occasions more than one pallet of goods was consigned and in view of the value of the goods Matrix required that consignments of that size be broken down before carriage.  On other occasions Birkart used Robins’ storage services when sending Matrix goods by air.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the afternoon of Thursday 9 January 2003 Matrix telephoned Mr Checkley of Birkart and asked him to arrange for a courier to collect a consignment of goods the next day.   (According to Mr Checkley’s evidence, the instructions were given by Mr Khalid Khan in a telephone conversation with him.   I observe that Matrix plead that they were given in a telephone conversation between Mr Frank Steele of Matrix and a person named “Dave” at Birkart.    This difference does not affect the questions that I have to decide, it would be unsatisfactory to explore it in the absence of Matrix, and I do not do so.)    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">According to Mr Marsh’s statement, Matrix sent to Birkart a copy of a commercial invoice relating to the goods.   Mr Marsh believes that the invoice that was sent was a document addressed to OCL which described the goods and stated their price, and which has written on it a manuscript note, “FAO Wally”, meaning “for the attention of Walter Marsh”.   There was nothing else on the invoice that indicated how the goods were to be handled or where they were to be kept before carriage to Hong Kong.    UNL dispute that this invoice was so sent by Matrix, and I observe that this part of Mr Marsh’s witness statement is tentative in tone.    Again, I decline to determine in the absence of Matrix an issue that has arisen in the context of the trial of these preliminary issues but that does not affect my determination of them.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In order to carry out Matrix’s instructions, Mr Checkley prepared a collection note on Birkart’s computer system.    The note produced by the system stated that the goods were to be collected from Matrix’s premises in Altrincham and delivered to Birkart in Wythenshawe.    The “haulier” was named as Network Couriers.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Checkley’s evidence was that, although the collection note referred to delivery to Birkart’s premises, he never intended the goods to be sent there and always intended them to go to Robins.  He explained that the note produced by the computer system referred to delivery to Birkart’s premises because the system produced notes likes this by way of a default option if no other address which the system would accept was entered.    He said that when he was entering the information to produce that note, he tried to enter Robins’ premises as the delivery address.   The system would not accept this because the system did not hold, or did not recognise, an account number for Robins and therefore rejected them as a delivery address.     </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Although Network Couriers were named as the haulier on the collection note, in fact, as I have said, Birkart engaged Cheadle for the job.  (Birkart’s pleaded case that Cheadle were engaged through the agency of Network Couriers is inconsistent with their evidence before me.)  Mr Checkley’s evidence, which I accept, was that he “expects” that that was because when he prepared the collection note he had it in mind to use Network Couriers, but when he could not contact Mr Raj Malhotra of Network Couriers, he telephoned Cheadle instead.    He also sent them a copy of the collection note by fax.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Royan gave evidence of receiving the fax and a telephone call about this job from Mr Checkley, but there is some difference between his evidence and Mr Checkley’s account. Mr Checkley believes that he first had contact with Cheadle by telephone and the collection note was then faxed at the request of Cheadle.   He explained in the telephone call that the delivery address on the collection note would need to be changed to Robins.   Mr Royan’s recollection was that the first contact was by fax and later the same day he received a telephone call asking him to amend the note to show that the cargo should be delivered to Robins.   Undoubtedly, a copy of the collection note was sent by fax from Birkart to Cheadle, and I prefer the evidence of Mr Checkley that there was telephone contact before the fax was sent: I do not think that he would have faxed the collection note to Cheadle without first telephoning them to arrange for them to do the job.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Royan’s evidence was that he wrote on the document sent by fax a note of the changed instructions about the delivery address.   He produced a copy of the collection note on which he had struck through the address of Birkart and had written, “into Robins @ Senator, M90”: Robins, as Mr Royan explained, shared office space with another freight forwarding company called Senator and Robins’ postcode is M90.   There is a further annotation of “£18” that Mr Royan made on his faxed copy of the collection note, which reflects the charge that Cheadle were to make for the delivery.   That would have been Cheadle’s charge whether delivery was to be made to Robin’s premises or to UNL’s premises.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There is, it seems to me, a curiosity in the evidence presented by Birkart about this part of the case.     Mr Checkley identified a copy of the collection note sent by fax to Cheadle together with the fax confirmation note produced by the fax machine showing the transmission of one page at 17.24 hours on 9 January 2003.    That copy of the collection note is stated to be “Warehouse Copy”.     However, Mr Royan wrote on a “Haulier Copy” of the note.   Either Mr Checkley did not identify the precise version of the collection note sent by fax, or Mr Royan is wrong in thinking that he wrote on the version of the collection note that was sent by fax but made his notes on a different but similar collection note provided to Cheadle.   The former explanation seems more likely, but this point was not explored in evidence with either Mr Checkley or Mr Royan.    Whatever the explanation, I am satisfied that on 9 January 2003 or possibly on 10 January 2003 Mr Royan struck out Birkart’s address on a copy of the delivery note and wrote on it “into Robins @ Senator M90”.  Indeed, it was not suggested to Mr Royan that he had not written this or that he had written it at some materially later date.   I cannot conceive of any reason for him to do this unless it reflected instructions given to him by Birkart.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Royan also produced in evidence a copy of the relevant page of Cheadle’s job book.     Against the entry for this job Mr Royan had written, “Birks Matrix 1 pall[et] into M90 Robins”.     Although Mr Royan was asked why there were more details about this entry in the job book than some other entries, it was not suggested to him that this was other than a contemporaneous entry.    This too, it seems to me, is powerful evidence that Cheadle were instructed that delivery was to be made to Robins’ premises.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Trevor Lancashire was a self-employed driver who worked for Cheadle.    On Friday 10 January 2003, he went to their offices and Mr Royan assigned to him the job of collecting and delivering Matrix’s goods.    In his witness statement Mr Royan said that, while he cannot remember exactly what he said to Mr Lancashire, he “would have told him to pick the goods up from Matrix and to deliver to Robins”.     However, according to a report (which is undated but was written in the last week of January 2003) by Lacey &amp; Co, who were apparently investigating the loss for insurers of the goods, on 24 January 2003 Mr Royan said that he could not be sure whether or not he had told Mr Lancashire where to deliver the goods, and that he had assumed that Mr Lancashire would be given instruction by Matrix.  When asked about this in cross-examination, he acknowledged that what he is recorded as saying in January 2003 is more likely to be reliable than his witness statement.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Lancashire collected the goods from Matrix about 11.45am, and delivered them to UNL’s warehouse.   He presented a delivery note referring to the delivery of one pallet from Matrix to Birkart to a Mr Anthony Churcher, an employee of UNL.  Mr Churcher or another of UNL’s warehouse staff, as I conclude from Mr Liddell’s evidence, asked Mr Lancashire who was sending the goods and was told that they were from Birkart.  The goods were accepted and Mr Churcher signed above an acknowledgment that they were received in good condition.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As far as UNL are concerned, they admit in their pleadings that they were not expecting the goods and had no record of the intended delivery of the goods, but they plead that it was not unusual for them to receive unexpected deliveries.  When the goods were delivered to them, UNL thought that they were for carriage by sea and covered by the arrangements between Group 99 members and dealt with them on that basis.  They did not deal with them as airfreight.  Mr Liddell’s unchallenged evidence was that “the goods were accepted on the misapprehension that they were Group 99 goods and the paperwork was stapled together by Anthony Churcher and placed in the seafreight tray”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">It is not clear from the evidence what led Mr Lancashire to deliver the goods to UNL’s premises.  It might be that he was instructed by Mr Royan to do so: as I have said, Mr Royan’s witness statement and his evidence in cross-examination were different.   It might be that Mr Lancashire was told by Matrix to deliver the goods to UNL or at least was told something by Matrix that led him to think that they should be delivered there (for example, that they were Birkart goods).     It might be that Mr Lancashire simply assumed that they were for delivery to UNL’s premises.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Matrix’s pleaded case is that when he collected the goods, Mr Lancashire was provided with a copy of a Matrix sales invoice dated 10 January 2003 issued to OCL.    The “preliminary report” of Lacey &amp; Co states that he was to hand it over upon delivery of the goods.   That invoice was the one marked “FAO Wally”, and it was UNL’s contention that this was or evidenced an instruction given by Matrix to Mr Lancashire to deliver the goods to Birkart for the attention of Walter Marsh.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The evidential position about this is not satisfactory.   There was no evidence from either Matrix or Mr Lancashire.   Although there was in the papers before me a statement made by Mr Lancashire, both parties declined to put it in evidence, although at the same time Mr Bacon for UNL submitted that I should “have regard” to it.   In it Mr Lancashire said that he thought that Mr Royan mentioned “Wythenshawe” to him when he was instructed to do the job, but did not mention Robins.  (I was told, although it is not strictly in evidence, that both Robin’s premises and UNL’s and Birkart’s premises are in the area that would be described as “Wythenshawe”.)     He went to Matrix’s premises and signed for receipt of the goods and was not told where to deliver them.    He was given the invoice marked “FAO Wally” but there is no suggestion that that indicated to him that he should deliver the goods to Birkart or UNL.   Rather he assumed, because Wythenshawe had been referred to and because previously he had delivered Matrix’s goods to the UNL premises in Wythenshawe, that is where he was to take this consignment.  He obtained a signature for the delivery of the goods and handed over the invoice.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I do not understand UNL’s contention that I should have regard to Mr Lancashire’s statement when they decline to put it in evidence.   However, I do not need to make a finding about how Mr Lancashire came to deliver the goods to UNL, and I do not do so.   This is not necessary to determine either of the preliminary issues.   It is not clear to me whether or not the determination of this question might affect the main claim, but in any case it is not, to my mind, satisfactory in these circumstances to make a decision about this in the absence of Matrix and without proper evidence from Mr Lancashire.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I return to the evidence about how Birkart dealt with the shipment.   Mr Checkley said that he telephoned Robins to advise them to expect the goods, and I accept his evidence.  He said that he left it to Walter Marsh to “do the paperwork”, because he was not at work on Friday 10 January 2003. </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The first issue</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The first issue is whether the parties <span style="font-style:italic">intended</span> the delivery of the goods to UNL.   It was made clear to me that the parties understood the question to be directed to the parties’ own intention and not to the intention or status of any agents or putative agents acting or purporting to act on their behalf.    Although another question (or another understanding of the first question) might have gone further to resolve the dispute between the parties, for the reason that I have explained, I can, I think, only answer the questions as they were formulated and understood.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In my judgment Birkart did not intend that the goods should be delivered to UNL.  They intended them to be delivered to Robins.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I accept Mr Checkley’s explanation for the entry of Birkart as the delivery address in the collection note.  It might seem surprising that Birkart’s computer system could not enter Robins on the note, but I found entirely convincing Mr Checkley’s evidence about this, and indeed his general dissatisfaction with Birkart’s computer system, when he was cross-examined about it. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The most telling evidence about this part of the case is, to my mind, the notes made by Mr Royan.  As I have said, it was not suggested to him that he had manufactured them after the event, and they can really only be explained on the basis that he understood that the goods were to be delivered to Robins, and that understanding, in my judgment, most likely came from what Mr Checkley had told him was to be done with them.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Bacon argued on behalf of Birkart that the note that Mr Royan made in Cheadle’s job book might be interpreted as stating that a pallet was to go to Birkart and then taken to Robins.   I find this a strained interpretation of the note and the suggestion was not put to Mr Royan, and in any event Mr Royan’s writing on the collection note cannot be so explained.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Birkart put forward other arguments to support their submission that they intended that the goods should be delivered to Robins and not to UNL:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">First they said that they would have had no reason to send the goods to UNL rather than Robins.  This was the evidence of Ms Kennedy, and also that of Mr Checkley.  In his witness statement Mr Checkley said that goods from Matrix would always go to Robins unless there was more than one pallet, in which case UNL would be engaged to break the consignment down.  In cross-examination his evidence about this was less clear, but whatever the precise reason for sending some previous consignments to UNL rather than Robins, there was no reason to send this consignment to UNL.   However, my decision does not depend upon this point.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">According to Mr Marsh’s statement, he took the documents concerning this consignment to Robins.  Again, I prefer not to rely upon this point because Mr Marsh could not be cross-examined about it.  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Bacon also argued that Mr Royan might have given Mr Lancashire no instructions about where to take the goods because he believed that he would receive instructions from Matrix when he collected the goods.   I do not understand how this bears upon Birkart’s intention, or affects the answer to the first question.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As for UNL’s intention, I find that UNL intended to accept the delivery of the goods.  That was Mr Liddell’s evidence and Birkart did not dispute it.     Nor was it submitted that UNL’s intention was void or of no effect because they were under a misapprehension about the goods, and therefore I decline to explore their state of mind further.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">The second issue</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">There are broadly two arguments that UNL advance in support of their contention that the delivery of the consignment on 10 January 2003 was governed by the BIFA terms: that they applied because of what might be called an “umbrella” agreement between Birkart and UNL that the terms would apply to goods held by UNL, and that they applied because the terms of an agreement made specifically about this delivery.   As I have observed, however, the question that I have to decide is not whether in fact the terms were contractually binding between the parties and applicable to this consignment, but whether they <span style="font-style:italic">could </span>have been.   Both parties made it clear that they did not consider that the second question was directed to whether in fact there was any agreement between UNL and Birkart (either by way of an umbrella agreement or an agreement specifically in respect of these goods).  </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Birkart’s contention is that if, as I have concluded on the first issue, they did not intend to deliver the goods to Birkart, the BIFA terms cannot have applied to this delivery.   They cannot have applied because of an agreement relating specifically to this agreement because there was not any contract relating to this delivery if it was unintended, and they cannot have applied because of an umbrella agreement because again that will have applied only where UNL took goods under an agreement with Birkart.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I am not persuaded that it <span style="font-style:italic">necessarily </span>follows that there was no contract between Birkart and UNL relating to this delivery from the fact it was unintended on the part of Birkart.    It might seem improbable that if Bikart did not intend delivery to UNL they will have authorised it, but an agreement might have been made by an agent with their ostensible authority.   Mr Nevil Phillips, who represented Birkart, submitted that they could only be party to an agreement made with their ostensible authority if in some way they held the agent out as having authority.   That is undoubtedly so, and on the face of it, there was much force in Mr Phillips’ submission that Birkart could not have held out Cheadle or drivers used by Cheadle as having any relevant authority.    However, this is another area where I must proceed cautiously given the nature of the hearing before me.    I do not find it fanciful to suppose that, given the nature of the business, it is to be implied that, when he collected the goods, Mr Lancashire should, or at least might, accept instructions about how to deal with them.   I can well see that if Mr Lancashire did have any such discretion, it might well be limited to relatively minor matters, but I am not prepared to rule out the possibility that they might include which warehouse in Wythenshawe should receive them.     I have said enough to illustrate why I am unhappy about reaching final conclusions about how the contractual arrangements between the parties might work at a trial in which I am to assume the contractual arrangements and when the questions whether and what the contractual arrangements were are reserved for a separate hearing.      </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">However that might be, in order to show that the BIFA terms cannot have applied, Birkart have to establish that the umbrella arrangements that UNL allege they had with Birkart cannot have applied to an unintended delivery.   I am not persuaded of this, and I would not have been so persuaded even if I were satisfied that if Birkart did not intend a delivery, they could not have authorised it.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Birkart say first that because it would be inconsistent with the BIFA terms themselves for them to be applied in such circumstances.    The terms, they point out, are directed towards the provision of services by a freight forwarder to a customer.<span style="font-weight:bold">  </span>Thus, for example, the definition of “The Owner” is (emphasis added) “the Owner of the goods (including any packaging, containers or equipment) to which any <span style="font-style:italic">business</span> concluded under these Conditions relates and any other person who is or may become interested in them”, and “Customer” is defined as “any person at whose request or on whose behalf the Company undertakes any <span style="font-style:italic">business</span> or provides advice, information or <span style="font-style:italic">services</span>.”</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.39in;text-indent:0.00in">It is not necessary for the present purposes to refer to all the provisions in the terms upon which Mr Phillips relied to reinforce this submission.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On this basis, Mr Phillips argued that the terms were not designed for incorporation into a contract between freight forwarders and a company providing storage services for them or the like, that is to say into an arrangement such as had – I am to assume – been reached between UNL and Birkart.    I am not persuaded by this argument.   In this submission Birkart seek to construe the BIFA terms without taking account of the contract between Birkart and UNL into which UNL contend that they were incorporated, and then to reject the terms on the basis that they are not apt for incorporation into such a contract. This is not a proper approach to contractual interpretation, which is to construe the contract as a whole.    No doubt the BIFA terms are directed primarily to regulating contracts between freight forwarder and customer, but if it was agreed that they should apply to contractual arrangements between UNL and Birkart, then the court will make necessary adjustments in their interpretation and apply them mutatis mutandis to the contract of which they are part.   </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Furthermore, this argument of Birkart undermines the basis upon which, as Birkart themselves submit, I should approach the second preliminary issue because, as Mr Phillips told me at the start of the hearing, I am to assume that there was an agreement between the parties that UNL would handle Birkart’s goods on BIFA terms, and decide on the basis of that assumption whether the terms could apply in a case where there was a delivery of goods that was not “intended”.   This part of Birkart’s argument assumes too much, and so does not, to my mind, assist to answer the question whether the terms could apply if a delivery was unintended.    </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Birkart also argue however that the BIFA terms would not apply to an unintended delivery.  They refer to clause 2(A) of the BIFA terms, which provides that, “… all and any activities of [UNL] in the course of business whether gratuitous or not are undertaken subject to these Conditions”.   They say that, in the context of the BIFA terms, this wording confines the application of the terms to business that has been undertaken consensually.    They rely upon other provisions in the terms to reinforce this argument.    It is not necessary to set them all out: the terms refer to the Company providing “services” and the “Customer” giving “instructions”, and these references, Birkart argue, are directed to a consensual relationship.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Birkart also draw my attention to UNL’s pleadings, and advance another argument along similar lines.   I do not find that the pleadings crystallise the issues between the parties as clearly as might be wished, but I hope that I can state Birkart’s point fairly as follows.    UNL plead that there was an express agreement that the BIFA terms would “govern services provided by [UNL] to Birkart and other Group 99 members” (paragraph 19 of their reamended part 20 particulars of claim) and by way of further information of their case they state that the agreement was that “all dealings by which [UNL] provided services to Birkart …would be governed by BIFA” (paragraph 1e of the further information).     Birkart’s contention is that, if delivery was unintended on the part of Birkart, it cannot properly be said that there were “dealings” between the parties whereby UNL “provided services”, and so, it is said, if the goods were delivered unintentionally as far as Birkart were concerned, the goods were not governed by the express agreement pleaded by UNL.     Birkart support this argument by referring to other passages of UNL’s pleading.  For example: </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">In paragraph 20.8 of their particulars of claim, UNL rely upon a letter that they wrote which said that “work via [UNL’s] warehouse would all be governed by BIFA terms”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">In paragraph 13 of their reply, UNL plead that “it was agreed that all business between [UNL] and Birkart would be according to BIFA terms”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-size:12pt;margin-left:0.98in;text-indent:-0.49in">iii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">In paragraph 30(9) of their reply, UNL plead that “Birkart knew that any services provided by [UNL] would be on BIFA terms...”.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.49in">Birkart argue that if they did not intend to deliver the goods, it cannot properly be said that the storage of them was “business” or “work” or “services provided by [UNL]”.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I cannot accept this argument.  While accepting that the pleadings might be clearer, I do not consider that, on any reasonable reading of them, UNL’s case is confined as Birkart contend.  UNL plead that the express agreement between the partiers was that the BIFA terms should apply even if UNL received an unintentional delivery of goods.  For example, in their reply (at paragraph 4(6)(c)) they plead, that “BIFA terms apply in any event to the situation where [UNL] takes in goods in good faith that are from or under the control of another BIFA member”, and (at paragraph 35(10)) they plead that “the BIFA terms can and do apply whether or not the delivery was unintended or mistaken or unintentional”.   In the further information UNL plead this: “[UNL’s] case is that even if delivery to [UNL] or storage of the goods was “mistaken” and/or “unintended” and/or “in error” (and whatever those phrases mean and depending on the findings of fact in each respect) then the actual services provided by [UNL] to (which were handling and storage of the Goods) were either governed by the agreement between the parties or give rise to an implied agreement or contract”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">If Birkart and UNL made an umbrella agreement the terms of which were that the BIFA terms should apply even if there was an unintended delivery by UNL to Birkart, the court will recognise and give effect to that agreement.    If some manipulation of the wording of the BIFA terms is needed to give effect to the parties’ bargain, that would be done.    I did not understand Mr Phillips to argue otherwise.    In the end, his argument was that UNL’s pleading did not include a contention that there was such an agreement, and so the second preliminary issue boiled down to a pleading point. I should have been reluctant to determine the issue on the basis of a rather arid pleading point, but in any event I conclude that UNL’s pleading does aver an express umbrella agreement covering unintended deliveries.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1">
+	      <span style="text-decoration:underline">Conclusion</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">I therefore answer the preliminary issues as follows:</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-size:12pt;margin-left:0.98in;text-indent:-0.49in">i)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Birkart did not intend to deliver the goods, but UNL intended to accept delivery of the goods.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;font-size:12pt;margin-left:0.98in;text-indent:-0.49in">ii)</num>
+	  <content>
+	    <p class="ParaLevel2" style="margin-left:0.98in;text-indent:0.5in">Such a delivery could have been subject to the terms of the British International Freight Association (2000).</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Unfortunately, therefore, these preliminary issues have, I think, done little to advance this unhappily protracted and extravagant litigation.   When I hand down this judgment, I shall seek the parties’ assistance to formulate directions with a view to achieving its efficient resolution.</p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

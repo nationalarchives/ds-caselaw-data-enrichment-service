@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns:uk="https:/judgments.gov.uk/" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ukpc/2021/29"/>
+	  <FRBRuri value="ukpc/2021/29"/>
+	  <FRBRdate date="2021-11-01" name="judgment"/>
+	  <FRBRauthor href="#ukpc"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="29"/>
+	  <FRBRname value="Sookhan v The Children's Authority of Trinidad and Tobago"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ukpc/2021/29/eng"/>
+	  <FRBRuri value="ukpc/2021/29/eng"/>
+	  <FRBRdate date="2021-11-01" name="judgment"/>
+	  <FRBRauthor href="#ukpc"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ukpc/2021/29/eng/akn"/>
+	  <FRBRuri value="ukpc/2021/29/eng/akn"/>
+	  <FRBRdate date="2022-01-04T18:13:34" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ukpc" href="https://www.jcpc.uk/" showAs="The Judicial Committee of the Privy Council"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="judge-lord-briggs" href="/judge-lord-briggs" showAs="Lord Briggs"/>
+	<TLCPerson eId="judge-lady-arden" href="/judge-lady-arden" showAs="Lady Arden"/>
+	<TLCPerson eId="judge-lord-stephens" href="/judge-lord-stephens" showAs="Lord Stephens"/>
+      </references>
+      <proprietary source="ukpc/2021/29/eng/docx">
+	<uk:court>UKPC</uk:court>
+	<uk:year>2021</uk:year>
+	<uk:number>29</uk:number>
+	<uk:cite>[2021] UKPC 29</uk:cite>
+	<uk:hash>521658205b476e44b87c921843b569dda9263ce0fdd2c0c28572ca88e1a161ca</uk:hash>
+      </proprietary>
+      <presentation source="ukpc/2021/29/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-size: 12pt; font-family: Calibri, sans-serif; }
+#judgment .Normal { font-family: Calibri, sans-serif; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .Caveat { text-align: justify; font-weight: bold; font-family: Calibri, sans-serif; font-size: 10pt; }
+#judgment .Header { font-family: Calibri, sans-serif; font-size: 12pt; }
+#judgment .ParaHeading1 { font-weight: bold; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .ParaNoNumber { font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .ParaLevel1 { margin-left: 0.25in; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .ParaLevel2 { margin-left: 0.50in; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .Quote { margin-left: 1.00in; margin-right: 0.87in; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .NewSpeech { font-weight: bold; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .Paraheading2 { font-weight: bold; font-family: Calibri, sans-serif; font-size: 12pt; }
+#judgment .Paraheading3 { font-weight: bold; text-decoration-line: underline; text-decoration-style: solid; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .Embargo { text-align: justify; font-weight: bold; font-size: 10pt; }
+#judgment .JudgmentReferences { text-align: right; font-size: 12pt; }
+#judgment .Bulletpara { margin-left: 0.50in; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .Paraheading4 { font-style: italic; font-weight: bold; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .Paraheading5 { font-style: italic; text-decoration-line: underline; text-decoration-style: solid; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .Paraheading6 { font-style: italic; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .CourtOrder { font-weight: bold; font-size: 13pt; color: #C00000; }
+#judgment .JudgmentTitle { text-align: center; font-weight: bold; font-size: 20pt; }
+#judgment .JudgmentDetail1 { text-align: center; font-weight: bold; font-size: 20pt; }
+#judgment .ParaSubHeading1 { font-style: italic; font-weight: bold; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .ParaSubHeading2 { font-style: italic; text-decoration-line: underline; text-decoration-style: solid; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .ParaSubHeading3 { font-style: italic; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .ParaApprovedLevel1 { margin-left: 0.00in; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .ParaApprovedLevel2 { margin-left: 0.50in; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .ParaNoNumberApproved { font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .JudgmentJudges { text-align: center; font-weight: bold; font-size: 17pt; }
+#judgment .JudgmentAppRespInt { text-align: center; font-size: 12pt; }
+#judgment .ListParagraph { margin-left: 0.50in; font-size: 11pt; }
+#judgment .ParaLevel3 { margin-left: 1.00in; font-family: Calibri, sans-serif; font-size: 13pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.48in; font-family: 'Times New Roman'; font-size: 13pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 1.97in; font-family: 'Times New Roman'; font-size: 13pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.46in; font-family: 'Times New Roman'; font-size: 13pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 2.95in; font-family: 'Times New Roman'; font-size: 13pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.45in; font-family: 'Times New Roman'; font-size: 13pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 3.94in; font-family: 'Times New Roman'; font-size: 13pt; }
+#judgment .FooterChar { font-family: Univers; font-size: 12pt; }
+#judgment .HeaderChar { font-family: Calibri, sans-serif; font-size: 12pt; }
+#judgment .QuoteChar { font-family: Calibri, sans-serif; font-size: 13pt; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p class="Header"/>
+      <p class="Header"/>
+    </coverPage>
+    <header>
+      <p class="ParaNoNumber" style="margin-left:0.25in">
+	<img src="image1.png" style="width:1.1in;height:1.1in;"/>
+	<span style="font-weight:bold;color:#C00000">THE BOARD ORDERED that no one shall publish or reveal the name or address of the child who is the subject of these proceedings or publish or reveal any information which would be likely to lead to the identification of the child or of any member of his biological or his prospective or actual adoptive family in connection with these proceedings.</span>
+      </p>
+      <p class="JudgmentReferences">
+	<span style="font-weight:bold">Michaelmas Term</span>
+	<br/>
+	<neutralCitation>[2021] UKPC 29</neutralCitation>
+	<br/>
+	<span style="font-weight:bold">Privy Council Appeal No 0063 of 2021</span>
+      </p>
+      <p class="JudgmentTitle">JUDGMENT</p>
+      <p class="JudgmentDetail1">Sookhan (Respondent) <span style="font-style:italic">v</span> The Children’s Authority of Trinidad and Tobago (Appellant) (Trinidad and Tobago)</p>
+      <p class="JudgmentTitle">From the Court of Appeal of the Republic of Trinidad and Tobago</p>
+      <p class="JudgmentJudges">
+	<span style="font-weight:normal">before</span>
+	<br/>
+	<br/>
+	<judge refersTo="#judge-lord-briggs">Lord Briggs</judge>
+	<br/>
+	<judge refersTo="#judge-lady-arden">Lady Arden</judge>
+	<br/>
+	<judge refersTo="#judge-lord-stephens">Lord Stephens</judge>
+	<br/>
+      </p>
+      <p class="JudgmentJudges">JUDGMENT GIVEN ON<br/><docDate date="2021-11-01">1 November 2021</docDate><br/><br/>Heard on 7 October 2021</p>
+      <p class="JudgmentAppRespInt"><span style="font-style:italic">Appellant</span><br/>Ravi Heffes-Doon<br/>(Instructed by The Children’s Authority of Trinidad and Tobago)</p>
+      <p class="JudgmentAppRespInt"><span style="font-style:italic">Respondent</span><br/>Farai Hove Masaisai<br/>(Instructed by Hove &amp; Associates (Trinidad and Tobago))</p>
+      <p class="JudgmentAppRespInt"><span style="font-style:italic">Prospective Adopters (written submissions only)</span><br/>Ebony Young<br/>(Instructed by Janet Peters &amp; Associates)<br/></p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level class="author">
+	  <content>
+	    <p class="NewSpeech">LORD STEPHENS:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Paraheading6">Introduction</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">This appeal concerns an application by Ms Ena Sookhan (“the respondent”) for leave to apply for judicial review in respect of either a failure by the Children’s Authority of Trinidad and Tobago (“the appellant”) to consider or alternatively a positive decision of the appellant not to consider, the respondent’s application dated 24 November 2016 to be placed on the list of suitable persons for the adoption of children. By her application the respondent also applied to adopt a particular child, whom the Board anonymises as AB. On 15 July 2020, with written reasons given on 7 August 2020, Jacqueline Wilson J dismissed that application. In a short ruling delivered ex tempore on 10 August 2020, the Court of Appeal (Gregory Smith and Mark Mohammed JJA) allowed the respondent’s appeal granting her leave to apply. On 25 September 2020 the Court of Appeal (G Smith, C Pemberton and R Boodoosingh JJA) granted the appellant conditional leave to appeal to the Board, and on 21 April 2021 the same panel of the Court of Appeal granted the appellant final leave to appeal, pursuant to which it appealed to the Board.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The threshold for the grant of leave to apply for judicial review is low. The Board is concerned only to examine whether the respondent has an arguable ground for judicial review that has a realistic prospect of success and is not subject to a discretionary bar such as delay or an alternative remedy: see governing principle (4) identified in <span style="font-style:italic">Sharma v Brown-Antoine</span> [2006] UKPC 57; [2007] 1 WLR 780, para 14.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The Board acknowledges and commends the sensible and practical approach taken by the parties in relation to the discretionary bar of delay. The appellant had argued that the respondent should be refused leave to apply for judicial review as her application was delayed. The appellant argued that this delay caused substantial hardship to AB and to his prospective adopters. Following the Court of Appeal’s grant of leave to bring judicial review, the family judge with care of AB’s placement and adoption stayed the prospective adopters’ adoption application pending the outcome of the judicial review proceedings. The appellant argued that this caused AB and the prospective adopters significant distress and threatened to jeopardise AB’s successful placement and adoption. At the start of the hearing, the Board asked the respondent whether she maintained her request for an order requiring the appellant to consider her application to adopt AB specifically, in addition to an order requiring the appellant to consider her application to be placed on the list of suitable adopters for the adoption of any eligible child. In response, the respondent withdrew her request for an order requiring the appellant to consider her application to adopt AB, such that any judicial review proceedings brought by her would not impede the adoption of AB by his prospective adopters. The appellant accepted that this amendment meant that there was no hardship to AB or the prospective adopters. Accordingly, the appellant no longer suggests that the appeal should be allowed based on the discretionary bar of delay. The Board observes that this practical approach by the parties has the effect of substantially narrowing the issues before the Board in this appeal, and also is likely to affect AB’s adoption proceedings in the Family Court. The Board requests that the family judge be provided with a copy of this judgment.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Paraheading6">The basis upon which an appellate court will interfere with a grant of leave to apply for judicial review</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">In assessing when an appellate court should interfere with a grant of leave to apply for judicial review, it is instructive to consider existing authority outlining the basis on which an ex parte order granting leave should be set aside following an inter partes application.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">It is clear that if leave to apply for judicial review is granted ex parte that it should not subsequently be set aside unless the court is satisfied on inter partes argument that the leave should plainly not have been granted; see <span style="font-style:italic">R v Secretary of State for the Home Department, Ex p Chinoy</span> (1991) 4 Admin LR 457 and <span style="font-style:italic">Sharma v Brown-Antoine</span>, para 22. In <span style="font-style:italic">Chinoy</span> Bingham LJ said:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“I would, however, wish to emphasise that the procedure to set aside is one that should be invoked very sparingly. It would be an entirely unfortunate development if the grant of leave ex parte were to be followed by applications to set aside inter partes which would then be followed, if the leave were not set aside, by a full hearing. The only purpose of such a procedure would be to increase costs and lengthen delays, both of which would be regrettable results. I stress therefore that the procedure is one to be invoked <span style="font-style:italic">very sparingly</span> and it is an order which the court will only grant in <span style="font-style:italic">a very plain case</span>.” (Emphasis added)</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber">Simon Brown J followed this statement in <span style="font-style:italic">R v Secretary of State for the Home Department, Ex p Sholola</span> [1992] Imm AR 135, in which he said (at 138):</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“It is not sufficient to show merely that the judicial review application is distinctly unpromising and most likely to fail. It is not sufficient merely to persuade the judge hearing the setting aside application that he personally would not have been disposed to grant leave and certainly would not have been disposed to do so had he heard the respondent’s argument and perhaps had the advantage of seeing their evidence. Rather it is necessary to deliver some clean knockout blow to justify invoking this procedure.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber">In <span style="font-style:italic">R v Environment Agency, Ex p Leam</span> (unreported) 18 March 1997 Laws J expressed the principle succinctly when he said that “such an application is not to be brought merely on the footing that a respondent has a very powerful, even an overwhelming, case”.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The Board considers that the reasons expressed by Bingham LJ in <span style="font-style:italic">Chinoy</span> are applicable in relation to an appeal against the grant of leave to apply for judicial review, so that leave to apply for judicial review stands on appeal unless the appellate court is satisfied that it should plainly not have been granted.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Paraheading6">The legislative regime</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">In relation to the issues raised on this appeal the relevant legislative provisions are contained in the Children’s Authority Act, the Adoption of Children Act 2000 and the Adoption of Children Regulations (110/21/2015) (“the Regulations”).</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The Children’s Authority Act establishes the appellant. Section 5 of the Children’s Authority Act provides the appellant’s powers and functions, which include the investigation and making of recommendations with respect to the adoption of children in accordance with the Adoption of Children Act.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">Section 9(1) of the Adoption of Children Act 2000 provides that “No person other than the [appellant] shall make arrangements for the adoption of a child.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">Section 10 of the Adoption of Children Act 2000 provides that:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“In making arrangements for the adoption of a child the [appellant] shall -</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in">(a)<marker name="tab"/>have regard to all the circumstances and first consideration shall be given to the need to safeguard and to promote the welfare of the child;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in">(b)<marker name="tab"/>so far as is practicable, ascertain the wishes of the child and give due consideration to them, having regard to the age and understanding of the child.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The Regulations are made under section 40 of the Adoption of Children Act 2000. Regulation 3(1) provides that:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“A person who wishes to adopt a child shall make an application to the Authority in the form approved by the Authority.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber">Regulation 3(2) provides that:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“An application under sub regulation (1) shall be accompanied by -</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in">(a)<marker name="tab"/>photo identification;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in">(b)<marker name="tab"/>the names and contact information of three referees;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in">(c)<marker name="tab"/>a police certificate of character issued within six months before the application in respect of the applicant and each member of the household over 18;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in">(d)<marker name="tab"/>a medical certificate of fitness, as set out in the form approved by the Authority, as to the physical and mental health of the applicant. Where the applicant is the natural father or mother of the child, that person shall not be required to submit a certificate of fitness unless so requested by the Authority; and</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in">(e)<marker name="tab"/>any other information as considered necessary by the Authority.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber">Regulation 4(1) provides that:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Upon receipt of an application under regulation 3(1), the Authority shall conduct an investigation if necessary to determine whether an applicant should be placed on a list of suitable persons.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Paraheading6">The factual background</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The factual background, as at the leave stage, in relation to AB, the respondent and to the respondent’s application to adopt AB or any other child can be summarised as follows.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaSubHeading3" style="margin-left:0.50in">(a)<marker name="tab"/>The factual background in relation to AB</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">In September 2015 AB was born at the Eric Williams Medical Sciences Complex (“the hospital”). Due to medical complications, he spent one month in the hospital’s neonatal intensive care unit.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">On 9 October 2015 AB was released into the care of his mother but was returned to the hospital’s accident and emergency department the following morning. AB was admitted to the hospital’s paediatric intensive care unit where he remained for one month and ten days until he was transferred to ward 2 of the paediatric medical unit where he remained for over a year during which time no one from outside the hospital visited him, and he was abandoned by his biological parents.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">AB was removed from the hospital by the appellant in February of 2017 and placed in foster care. While in foster care the respondent states that AB returned to the hospital for medical treatment on four occasions. The respondent recounts that she observed that AB was underweight and malnourished due to the lack of care at the foster home. On the fourth occasion AB returned to the hospital the respondent states that he was admitted as he was suffering from pneumonia.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">On 24 July 2017 Ramkerrysingh J in the Family Court declared AB a ward of court and granted a care order pursuant to section 25(c) of the Children’s Authority Act vesting the care of AB in the appellant. On 17 July 2018 AB was freed for adoption. The appellant then matched AB to his present prospective adopters, a married couple. This was followed by a familiarisation and assessment period, where the prospective adopters would visit AB at the premises of the appellant for ten one-hour supervised interactive sessions. The observations of those sessions by the appellant’s personnel were that AB appeared to be comfortable with, and fond of, the prospective adopters and that as the sessions came to an end AB would hug the prospective adopters and wave goodbye.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">Upon successful completion of the ten interactive sessions the Adoption Committee (established under section 7A of the Children’s Authority Act) decided to place AB with the prospective adopters for a six-month probationary period monitored by the appellant. On 1 February 2019 AB was placed with the prospective adopters. Mrs Humphrey, the manager of the appellant’s adoption unit, states that AB has thrived in this placement, and shows improvement in his speech, social, emotional, and educational skills. In their written submissions by way of intervention, AB’s prospective adopters recount that after AB was placed with them he attended pre-school from the age of three and performed exceptionally well with their help and guidance. They also state that they enrolled him in extra-curricular activities such as swimming and gymnastics. They recount that after AB “graduated from pre-school they enrolled him in primary school and have outfitted him with all necessary equipment to participate in the online learning environment which Trinidad currently operates.” AB’s recent school reports show that he is an outstanding pupil who has lots of potential. The prospective adopters also state that they took time off work to provide AB with the necessary support and that AB refers to the prospective adopters as “mummy” and “daddy”, and has formed strong relationships with their extended family.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">At the end of the six-month probationary period the appellant compiled a suitability report which was presented to the Adoption Committee on 6 December 2019. That report concluded that AB’s placement with the prospective adopters was in AB’s best interests. The Adoption Committee gave its approval for the prospective adopters to proceed with the adoption of AB.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The prospective adopters have made an application to the Family Court for an adoption order in respect of AB pursuant to section 18 of the Adoption of Children Act. The judge assigned to the Family Court proceedings adjourned those proceedings to await the outcome of the leave application in the High Court, adjourned the Family Court proceedings again pending the outcome of the respondent’s appeal to the Court of Appeal, and after the Court of Appeal made its order, adjourned the Family Court proceedings pending the determination of the respondent's claim for judicial review.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">In summary AB spent approximately one year five months in the hospital, he was then in a foster placement for two years and he has been in a placement with the prospective adopters for approximately two years eight months.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaSubHeading3" style="margin-left:0.50in">(b)<marker name="tab"/>The factual background in relation to the respondent</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent, who is now 45, is a registered nurse practising at the hospital and she was one of the nurses in the hospital’s paediatric intensive care unit. She was responsible for AB’s care in that unit for one month and ten days. After AB was transferred to ward 2, which is not the ward on which the respondent works, she states that she alone took care of AB. She states that this involved her washing all his clothes, providing at her own expense disposable diapers, milk formula, supplements, pharmaceuticals, and other items required for his day-to-day needs. On the respondent’s days off she states that she took care of AB and while she was on duty, she states that she would spend all her breaks with him. Accordingly, on a daily basis over approximately one year and five months from September 2015 to February 2017 the respondent states that she lavished love and care on him which was far more than the care and attention normally given to a patient in a nursing environment. It is the respondent’s case that because of this emotional and physical support she provided to him, they both formed a deep mutual attachment to each other.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent is not related to AB.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The Board acknowledges the respondent’s evidence of her persisting enduring attachment to AB but also recognises that AB’s attachment to the respondent is likely to have greatly diminished given that he is now six years old and that after he left the hospital in February 2017, aged approximately one and a-half, the respondent has had no contact with him.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaSubHeading3" style="margin-left:0.50in">(c)<marker name="tab"/>The factual background in relation to the respondent’s application to adopt AB or any other child</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent’s evidence is that in or around January or February 2016, that is approximately one year before AB left hospital in February 2017, she visited the appellant’s office seeking advice from the appellant as to the requirements and the procedure for her to adopt AB. The respondent recounts that she informed Mrs Alana Humphrey and Ms Noreen Furlonge that she wished to adopt AB and that she explained to them her relationship with AB since his birth. The respondent states that Ms Furlonge explained that AB would be able to come home with the respondent if she formally expressed her interest to adopt him and the appellant’s Board of Management approval was given after investigations had been completed. Accordingly, the respondent’s evidence is that she sought advice from the appellant, the only adoption agency recognised by law in the Republic of Trinidad and Tobago, that she did so as a layperson and that she was not told that there was any requirement for her to submit a formal application accompanied by police certificates of character. That evidence has not been challenged by the appellant for the purposes of the leave application or this appeal save that the appellant states that the meeting with Ms Furlonge was on 8 August 2016. Furthermore, the appellant for the purposes of the leave application and this appeal has not challenged the respondent’s evidence that at this meeting the only step which Ms Furlonge advised her to take was to write a letter to the appellant stating her interest in fostering and adopting AB. Finally, the oral advice that was given to the respondent at this meeting is to be seen in the context that the appellant has not provided evidence of any written guidance that it provides to those seeking to adopt a child.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">In accordance with that oral advice on 29 August 2016 the respondent wrote to the appellant indicating her interest in adopting or in the interim fostering AB. The appellant did not reply to this letter and has not put forward any explanation as to why it did not do so. The Board observes that if the appellant had replied to this letter this would have provided a further opportunity for advice to be given to the respondent as to the procedure for applying to adopt a child.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">After having no response to her letter of 29 August 2016 the respondent states that she again visited the appellant’s office. On this occasion, she was told that she should make an application to adopt AB and an application to be placed on the list of suitable persons for the adoption of children by completing the form approved by the appellant (“the standard application form”). On 24 November 2016 the respondent submitted her application to the appellant on that form. The application not only identified AB as the child that the respondent wished to adopt but also included an application to be added to the list of suitable persons to adopt any child. The respondent states that the completed form was received by Mrs Humphrey who reviewed and accepted it. The respondent states that Mrs Humphrey did not request any amendments be made to it. Furthermore, the respondent states that Mrs Humphrey advised her that the next step would be a psychological and home evaluation in order for the appellant to assess the respondent’s application. For the purposes of the leave application and this appeal the appellant has not challenged this evidence except that in its letter dated 13 June 2019 it is stated that the respondent was advised by Mrs Humphrey to make “certain amendments” to the adoption application and that the respondent failed to do so. No details are given as to the nature of those amendments.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The Board observes that the standard application form is four pages long and does not contain guidance as to how it should be filled out by the applicant. No reference is made in it to the Regulations and there is no advice or warning that a failure to comply with the Regulations would mean that an application would not be considered by the appellant. Section C of the standard application form is entitled “Criminal History”. That section seeks answers to questions such as whether the applicant has been convicted of a crime in Trinidad and Tobago or in any other country. There is no requirement listed either in that section or in any other part of the form that the application be accompanied by a police certificate of character, as is required under regulation 3(2)(c) of the Regulations. Rather there is simply no reference at all to this requirement which is to be found in regulation 3(2)(c). Section K of the standard application form is entitled “References”. That section invites an applicant to list the name, address and telephone number of three individuals who have knowledge of the applicant’s home environment, lifestyle and capability to be an adoptive parent. The form does not state that the provision of the names and contact information of three referees is a requirement under regulation 3(2)(b). Furthermore, the standard application form does not require an applicant to submit photo identification, nor does it alert an applicant that this is a requirement under regulation 3(2)(a). Finally, the form does not require an applicant to submit a medical certificate of fitness as to the physical and mental health of the applicant, nor does it alert an applicant that this is a requirement under regulation 3(2)(d). The form concludes with a certificate to be signed by the applicant that the information given is true and correct and with an authorisation permitting the appellant to take such steps as necessary to verify the information given.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent states that on 9 February 2017 she visited the appellant’s office to follow up on the status of her application to foster or adopt AB. The respondent states that she spoke to Mrs Humphrey who told her that she would never get AB. Furthermore, the respondent states that she was told by Mrs Humphrey that she should not come back to the Children’s Authority. For the purposes of this leave application and this appeal this evidence has not been challenged by the appellant. The Board observes that this meeting was an obvious opportunity for the appellant to have told the respondent that her application was incomplete because it was not accompanied by police certificates of character.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">By a letter dated 28 March 2017 46 members of the staff of the Paediatric Medical and Paediatric Intensive Care Units stated that they believed that AB would benefit from being placed in the care of the respondent as the person with whom he had bonded whilst in the hospital. There were other letters to the same effect from Dr Elizabeth Persad dated 13 February 2017, Dr Leonardo Akan, Consultant Paediatrician, dated 3 April, 2017 and Ms Siobhan Clarke, Paediatric Nurse Manager dated 8 March, 2017.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent states that she made many visits to the appellant’s office seeking answers as to why her application was not being processed and as to why feedback was not being given to her, but these visits were to no avail. She also states that on one of those visits she was informed that there was a list of 66 persons qualified for adoption and that she was the 14th on the list of persons to be assessed.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">A friend of the respondent, Ms Joseph, states that she accompanied the respondent on some of her visits to the appellant’s office. Ms Joseph states that sometime in 2017 on one of the follow up visits, the respondent asked Mrs Humphrey what the next step would be and Mrs Humphrey indicated that the respondent was not suitable and that “nurses should not be allowed to adopt any children”.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent instructed Gidla &amp; Associates, attorneys who wrote to the appellant on 9 May 2017 setting out the circumstances in which the application dated 24 November 2016 had been made and enquiring as to why it “was not even being pursued in terms, ie, social worker visiting her place to determine the application”. The letter concluded by stating that “unless you do what is right and fair” there would be no other choice but to commence judicial review proceedings. The appellant did not reply to that letter. However, the respondent did not then commence judicial review proceedings.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent states that in or around the second week of May 2018, she received a call from the appellant’s assessment centre enquiring as to whether she was still interested in the adoption of AB. She states that she affirmed her interest and that consequently she attended for an assessment on 22 May 2018, where she was told that she was being assessed in relation to her adoption application for AB. She states that she provided pictures and videos of AB showing the bond between them, that she completed a questionnaire and was questioned by a case worker and psychologist about AB. She also states that she was informed that a home assessment would be conducted within two weeks. For the purposes of this leave application the appellant responded to this allegation in its letter dated 13 June 2019 in which it stated that the respondent attended this appointment for the “primary purpose” of obtaining AB’s medical and social history which formed part of the child's assessment and that the respondent “was never assessed with a view to determining her fitness to care for [AB]”.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent states that not having heard from the appellant after her attendance on 22 May 2018 she again visited the appellant’s office in June 2018. She states that she was informed that she was not on the list of persons qualified to adopt any child in the care of the appellant and further not entitled to adopt AB.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent instructed new attorneys, Hove &amp; Associates, who wrote a pre-action protocol letter to the appellant on 13 May 2019 again setting out the circumstances in which the application dated 24 November 2016 had been made and requesting, amongst other matters, an answer as to why the respondent was not considered as a qualified adoptive parent for AB.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">By letter dated 13 June 2019 the appellant replied stating, amongst other matters, that to date the respondent had not submitted a proper application and that AB had been freed for adoption and matched with prospective adopters. No explanation was given as to why the application dated 24 November 2016 was not a proper application.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Paraheading6">The judicial review proceedings</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">On 4 September 2019 the respondent sought leave to apply for judicial review on the ground that the appellant had acted in breach of the provisions of the Children’s Authority Act by its failure and/or refusal to accept and consider the respondent’s application for adoption of AB. The primary relief sought was an order of mandamus ordering the appellant to consider the respondent’s adoption application submitted on 24 November 2016. The application for leave was supported by the respondent’s affidavit filed on 4 September 2019. On 16 December 2019 the appellant filed the affidavit of Mrs Humphrey which for the first time informed the respondent that her application dated 24 November 2016 was deficient because it had not been accompanied by police certificates of character in relation to the respondent and in relation to members of her household over 18 as required by regulation 3(2)(c).</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">On 20 January 2020 the respondent filed an amended application seeking leave on the ground that the appellant had not acted fairly in the respondent’s application for adoption of AB. The amended relief being sought included:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">(a)<marker name="tab"/>A declaration that the [appellant] acted with bad faith by its failure to notify the [respondent] of the statutory procedure after she gave notice and/or made an application for adoption of [AB].</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">(b)<marker name="tab"/>A declaration that the [appellant] acted unreasonable and/or irrational (sic) by accepting the [respondent’s] application without informing the [respondent] of the full requirements for adoption when the [respondent] gave notice and/or made an application for adoption of a child, namely [AB].</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">(c)<marker name="tab"/>A declaration that the [appellant] acted in breach of the respondent’s right to fairness under section 5(e) of the Constitution by its failure to provide the respondent with notice of the statutory procedure for adoption under regulation 3(2).</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">(d)<marker name="tab"/>A declaration that the [appellant] infringed the [respondent’s] right to due process of law under section 4(a) of the Constitution when the Defendant failed to consider the applicant for the placement on the list for suitable persons for adoption under regulation 4.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">(e)<marker name="tab"/>That an order for certiorari is made to quash the list of suitable persons of the adoption unit of the Children’s Authority.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">(f)<marker name="tab"/>An order of mandamus ordering the [appellant] to consider the adoption application of the [respondent] submitted on 24 November 2016.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber" style="margin-left:0.50in">(g)<marker name="tab"/>An order that the [appellant] do pay to the [respondent], damages including aggravated, exemplary and punitive damages for infringement of her fundamental rights as guaranteed to her by the Constitution of the Republic of Trinidad and Tobago.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber">The respondent applied at the leave hearing in the High Court to make these amendments. Wilson J held that there was no need to determine whether permission should be granted to amend the application. The Court of Appeal subsequently granted leave to amend. As indicated (at para 3 above) there was a further application to amend the relief sought at the hearing before the Board. First, the relief sought at (e) was to be deleted. Second, the relief at (f) was to be amended to exclude any impediment to the adoption of AB by the prospective adopters. The amended wording at (f) being:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“An order of mandamus ordering the [appellant] to consider the adoption application of the [respondent] submitted on 24 November 2016 together with the supporting documents submitted during these proceedings, ie, the police certificate of good character and medical certificate for the purpose of being placed on the list of suitable persons of the adoption unit of the [appellant].”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaNoNumber">The Board acceded to the application to make these sensible amendments.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Paraheading6">The submissions advanced in the courts below</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The respondent’s case relied on several aspects of the evidence including the respondent’s firm belief “based on comments made by staff of the respondent that there was perceived bias towards nurses adopting children that they have cared for while at the hospital”. The evidence of Ms Joseph gave more particulars stating that “sometime in 2017” she accompanied the respondent at a meeting with a manager of the appellants adoption unit, Mrs Humphrey, and that Mrs Humphrey stated that “nurses should not be allowed to adopt any children”. That evidence has not been contradicted by or on behalf of the appellants for the purposes of this leave application.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The appellant opposed the application for leave on the ground of the respondent’s delay. In doing so the appellant relied on the respondent’s evidence that on 9 February 2017 she was told by Mrs Humphrey that she “would never get AB” and that the respondent should “not come back to the Children’s Authority”. Furthermore, that on 9 May 2017 the respondent’s then attorney wrote to the appellant threatening judicial review but that the respondent did not then commence proceedings. Also, that in June 2018 the respondent had recounted how she was told by Mrs Humphrey that she was “not entitled to adopt AB”. However, it was not until 13 May 2019, some ten months later, that the respondent’s present attorney wrote a pre-action protocol letter to the appellant challenging the decision of the appellant that the respondent was not entitled to adopt AB and it was not until 4 September 2019, some one year and three months later that the respondent had commenced her application for judicial review. Based on this evidence the appellant asserted that there was substantial delay between at the latest June 2018 and 4 September 2019. In the meantime, AB had been freed for adoption, matched to prospective adopters, experienced a ten-week familiarisation period and had been placed with the prospective adopters in which placement he had thrived. Accordingly, the appellant argued that the delay in bringing these proceedings meant that there would be substantial hardship, particularly to AB, but also to the prospective adopters, if his present placement was disrupted or even threatened. The appellant considered that any delay in determining AB’s placement was likely to adversely affect his welfare denying him a sense of being an integral and settled part of a stable family.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The appellant also opposed the application for leave on the basis that there was no arguable ground for judicial review that had a realistic prospect of success because the respondent’s application dated 24 November 2016 was not accompanied by a police certificate of character issued within six months of the application in respect of the respondent and each member of her household over 18 as required by regulation 3(2)(c). This requirement was said to be mandatory in the sense that a failure to comply with it rendered the application incomplete so that the appellant was correct not to consider it. The appellant accepted, for the purposes of the leave application, that it did not inform the respondent of this requirement either orally or in writing or on the appellant’s adoption application form which the respondent was required to use by regulation 3(1). Furthermore, the appellant accepted that there was no evidence that after the adoption application was made and until the affidavit of Mrs Humphrey was filed in December 2019, that the appellant informed the respondent that it was deficient because it had not been accompanied by the police certificates of character. The appellant contended that this failure to inform the respondent of this requirement either before the application was made or after it had been submitted was fair on the basis that there is no general duty on a public authority to inform members of the public as to the contents of written laws. The appellant further contended that the adoption application remained unarguably deficient even though a police certificate of character had subsequently been provided in respect of the respondent, no police certificate had been submitted in relation to her two sisters who were members of her household at the time that the respondent made the application. The respondent has since submitted that she has moved address and that her two sisters are no longer members of her household.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Paraheading6">The judgments of the High Court and of the Court of Appeal</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaSubHeading3" style="margin-left:0.50in">(a)<marker name="tab"/>The judgment of Wilson J in the High Court</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The judge held that the respondent’s application dated 24 November 2016 did not meet the requirement of regulation 3(2)(c) in that it was not accompanied by police certificates of character in relation to the respondent and in relation to her two adult sisters who lived with her. The judge accepted that there had been a failure by the appellant to advise the respondent of this requirement, but the judge considered that this failure could not be elevated to the threshold of unreasonableness or unfairness. Accordingly, the judge held that as the application dated 24 November 2016 did not meet the requirements of the Regulations that it was appropriate for the appellant to exclude the respondent’s application from consideration and that there was no arguable case of unfairness against the appellant in that it had failed to inform the respondent of the requirement. Accordingly, the judge held that the respondent’s application for leave to apply for judicial review was devoid of merit and unarguable so that the application for leave to apply for judicial review was dismissed. Furthermore, the judge ordered the respondent to pay the appellant’s costs which she assessed in the sum of $15,000.00. The respondent appealed to the Court of Appeal.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaSubHeading3" style="margin-left:0.50in">(b)<marker name="tab"/>The judgment of the Court of Appeal</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">In the Court of Appeal, Smith JA in his <span style="font-style:italic">ex tempore</span> judgment, with which Mohammed JA agreed, relied by analogy on <span style="font-style:italic">In the matter of F (A Child) (Placement Order)</span> [2008] EWCA Civ 439; [2008] 2 FLR 550 and <span style="font-style:italic">R (EL) v Essex County Council</span> [2017] EWHC 1041; [2018] 1 FLR 802 to find that it was arguable that there should be a fair procedure applied to an application to be placed on the list of suitable persons for the adoption of children. He acknowledged that these authorities involved biological parents and related to the need for an adoption agency to act fairly when placing a child for adoption whilst this case concerned a fair procedure for a person who wished to adopt a child, but he did not consider that to be a material distinction.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">Having determined that it was arguable that there should be a fair procedure applied to such applications, Smith JA posits that, with regard to the low threshold applicable to the grant of leave, there was an arguable case that the procedure followed in the present case might have been unfair in the following respects. First, prior to submitting the application dated 24 November 2016, the respondent had not been advised by the appellant as to the requirement that the application should be accompanied by police certificates of character. Second, the respondent was not informed by the appellant at an appropriate time that it was considered that her application was defective because it was not accompanied by police certificates of character. The first time the respondent was so informed was on the receipt of the affidavit of Mrs Humphrey in December 2019. Third, the respondent was deprived of the opportunity at an appropriate time of correcting her failure to provide the police certificates of character. Fourth, the respondent was subjected to a policy of not giving nurses the opportunity of adopting a child. Fifth, the respondent’s application dated 24 November 2016 was arbitrarily dismissed without any justifiable reasons in that she was told that she would never get AB. On this basis, Smith JA found that the respondent had raised an arguable case of procedural unfairness which met the threshold for the grant of leave to bring judicial review.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">In relation to delay Smith JA stated that “if as is alleged, the [appellant] has behaved very badly or disgracefully, they can’t then say, ‘well, so what? the child has already been in care’”. He considered that this would be contrary to good administrative practice and that these matters could still be raised in the substantive proceedings at any event. Accordingly, Smith JA considered that a sufficient case had been raised, on the evidence as it then stood, to grant leave to apply for judicial review. He emphasised that the appellant at the full hearing might adduce evidence which dispelled the respondent’s allegations. However, he considered that if the appellant was doing things that “are an abuse of power or that are disgraceful” these should be examined if only for the benefit of the entire system.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">By order dated 13 August 2020 the Court of Appeal granted the respondent leave to pursue the respondent’s amended application for judicial review of the appellant's decision with respect to the adoption of the child AB. It set aside the order for costs made by Wilson J, it ordered that the costs of the application for leave before the High Court should follow the event of the judicial review and it ordered the appellant to pay the respondent’s costs of the appeal which were assessed in the sum of $10,000.00.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Paraheading6">The appeal to the Board</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">As explained in para 3 above, the appellant no longer suggests that the appeal should be allowed based on the discretionary bar of delay. Rather, the appellant contends that there was no arguable ground for judicial review which has a realistic prospect of success.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The appellant argued that the Board should not apply the cases of <span style="font-style:italic">F (A Child)</span> and <span style="font-style:italic">R (EL) v Essex County Council</span> in assessing the fairness of the procedure adopted in the present case, since these cases related to the termination of parental rights, rather than any rights claimed by an unrelated third party. The appellant argued that such cases were at “the polar opposite extremities of the fairness continuum” from this case, and implied procedural fairness safeguards of a wholly different character. Accordingly, the appellant suggested that it was not arguable in this case that fairness required the appellant to inform the respondent of what it described as “the straightforward statutory requirements” relating to her application to be placed on the list of suitable persons for the adoption of children.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">Conversely, relying on <span style="font-style:italic">F (A Child)</span> and <span style="font-style:italic">R (EL) v Essex County Council</span> the respondent submitted that an obligation of fairness did arise in relation to an application to be placed on the list of suitable persons for the adoption of children. Furthermore, that this obligation of fairness was not only for the benefit of applicants but was also an important obligation for the benefit of the children who may be adopted.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The public law requirements of procedural fairness are issue and fact sensitive. It is correct that “if a court were confident at the leave stage that the legal position was entirely clear and to the effect that the claim could not succeed, it would usually be appropriate for the court to dispose of the matter at that stage”, see <span style="font-style:italic">Attorney General of Trinidad and Tobago v Ayers-Caesar</span> [2019] UKPC 44, para 2. Thus, the appellant’s arguments on this ground can only succeed if both (a) the legal position was entirely clear and (b) the Court of Appeal was plainly wrong to consider that it was arguable that there should be a fair procedure in relation to an application to be placed on the list of suitable persons for the adoption of children. The Board is not persuaded that the legal position advanced by the appellant is entirely clear. Rather the existence and extent of any obligation of fairness in this context is a matter for the full hearing. Furthermore, the Board is not persuaded that the Court of Appeal was plainly wrong in holding that it was arguable that there should be a fair procedure in relation to an application to be placed on the list of suitable persons for the adoption of children.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">The next issue is whether the Court of Appeal was plainly wrong to determine that there was an arguable case that the obligation of fairness had been breached on the evidence on this appeal. The Board considers that each of potential breaches of the obligation of fairness as set out by Smith JA (see para 44 above) are supported by the evidence as it presently stands.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Paraheading6">Disposal of the appeal</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaApprovedLevel1" style="margin-left:0.00in;text-indent:0.00in">For the reasons given above, the Board dismisses the appeal.</p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

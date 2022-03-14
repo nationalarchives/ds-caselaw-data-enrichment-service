@@ -1,0 +1,1468 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewhc/costs/2005/90017"/>
+	  <FRBRuri value="ewhc/costs/2005/90017"/>
+	  <FRBRdate date="2005-08-11" name="judgment"/>
+	  <FRBRauthor href="#ewhc-seniorcourtscosts"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="90017"/>
+	  <FRBRname value="A A and the other Claimants set out in Schedule 1 to the Order of the Senior Master dated v TUI UK Limited"/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewhc/costs/2005/90017/eng"/>
+	  <FRBRuri value="ewhc/costs/2005/90017/eng"/>
+	  <FRBRdate date="2005-08-11" name="judgment"/>
+	  <FRBRauthor href="#ewhc-seniorcourtscosts"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewhc/costs/2005/90017/eng/akn"/>
+	  <FRBRuri value="ewhc/costs/2005/90017/eng/akn"/>
+	  <FRBRdate date="2021-12-01T21:19:22" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewhc-seniorcourtscosts" href="https://www.gov.uk/courts-tribunals/senior-courts-costs-office" showAs="The England and Wales High Court (Senior Courts Costs Office)" shortForm="The Senior Courts Costs Office"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="a-a-and-the-other-claimants-set-out-in-schedule-1-to-the-order-of-the-senior-master-dated" href="" showAs="A A and the other Claimants set out in Schedule 1 to the Order of the Senior Master dated"/>
+	<TLCPerson eId="17-january-2005" href="" showAs="17 January 2005"/>
+	<TLCPerson eId="tui-uk-limited" href="" showAs="TUI UK Limited"/>
+	<TLCPerson eId="thomas-cook-tour-operators" href="" showAs="Thomas Cook Tour Operators"/>
+	<TLCPerson eId="sunstar-leisure-limited" href="" showAs="Sunstar Leisure Limited"/>
+	<TLCPerson eId="travel-city-direct" href="" showAs="Travel City Direct"/>
+	<TLCPerson eId="cosmosair-plc" href="" showAs="Cosmosair PLC"/>
+	<TLCRole eId="claimant" href="" showAs="Claimant"/>
+	<TLCRole eId="defendant" href="" showAs="Defendant"/>
+      </references>
+      <proprietary source="ewhc/costs/2005/90017/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWHC-SeniorCourtsCosts</uk:court>
+	<uk:year>2005</uk:year>
+	<uk:number>90017</uk:number>
+	<uk:cite>[2005] EWHC 90017 (Costs)</uk:cite>
+	<uk:hash>92407e2daa9d69f0cb2ed2fd93415ffe2787a3c3a7ac7bc769abd1de0a167aaa</uk:hash>
+      </proprietary>
+      <presentation source="ewhc/costs/2005/90017/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { font-weight: bold; font-family: Arial; font-size: 16pt; }
+#judgment .Heading3 { font-weight: bold; font-family: Arial; font-size: 13pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .ParaHeading { font-size: 12pt; }
+#judgment .ParaLevel1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .ParaLevel2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .ParaLevel3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 1.00in; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .Heading { font-size: 12pt; }
+#judgment .Title { text-align: center; font-weight: bold; font-size: 10pt; }
+#judgment .eMailBlock { text-align: center; font-weight: bold; font-size: 13pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .Heading3Char { font-weight: bold; font-size: 13pt; }
+#judgment .QuoteChar { font-style: italic; font-size: 12pt; color: #404040; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .TitleChar { font-weight: bold; font-size: 16pt; }
+#judgment .Hyperlink { text-decoration: underline; color: #0000FF; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <p class="Header"/>
+    </coverPage>
+    <header>
+      <p class="CoverText">Case Nos: <docketNumber>HQ04X03737</docketNumber>, <docketNumber>HQ04X03648</docketNumber></p>
+      <p class="CoverText"><docketNumber>HQ04X03645</docketNumber>, <docketNumber>HQ04X03646</docketNumber></p>
+      <p class="CoverText">
+	<docketNumber>HQ04X03647</docketNumber>
+      </p>
+      <p class="CoverMain">Neutral Citation Number: <neutralCitation>[2005] EWHC 90017 (Costs)</neutralCitation></p>
+      <p class="CoverMain">IN THE HIGH COURT OF JUSTICE</p>
+      <p>
+	<span style="font-weight:bold;text-decoration:underline">SUPREME COURT COSTS OFFICE</span>
+      </p>
+      <p class="CoverText">Clifford’s Inn, Fetter Lane</p>
+      <p class="CoverText">London, EC4A 1DQ</p>
+      <p class="CoverText">Date: <docDate date="2005-08-11">11 August 2005</docDate></p>
+      <p style="text-align:center"><span style="font-weight:bold">Before</span> :</p>
+      <p class="CoverMain" style="text-align:center">MASTER HURST, SENIOR COSTS JUDGE</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center;margin-left:0.25in">
+	      <party refersTo="#a-a-and-the-other-claimants-set-out-in-schedule-1-to-the-order-of-the-senior-master-dated" as="#claimant" style="font-weight:bold">A A and the other Claimants set out in Schedule 1 to the Order of the Senior Master dated </party>
+	    </p>
+	    <p style="text-align:center;margin-left:0.25in">
+	      <party refersTo="#17-january-2005" as="#claimant" style="font-weight:bold">17 January 2005</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	    <p class="CoverMain" style="text-align:right"/>
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#claimant">Claimants</role>
+	    </p>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <blockContainer>
+	      <num>(1)</num>
+	      <p style="text-align:center;margin-left:0.52in;text-indent:0.5in">
+		<party refersTo="#tui-uk-limited" as="#defendant" style="font-weight:bold">TUI UK Limited</party>
+	      </p>
+	    </blockContainer>
+	    <blockContainer>
+	      <num>(2)</num>
+	      <p style="text-align:center;margin-left:0.52in;text-indent:0.5in">
+		<party refersTo="#thomas-cook-tour-operators" as="#defendant" style="font-weight:bold"> Thomas Cook Tour Operators</party>
+	      </p>
+	    </blockContainer>
+	    <blockContainer>
+	      <num>(3)</num>
+	      <p style="text-align:center;margin-left:0.52in;text-indent:0.5in">
+		<party refersTo="#sunstar-leisure-limited" as="#defendant" style="font-weight:bold">Sunstar Leisure Limited</party>
+	      </p>
+	    </blockContainer>
+	    <blockContainer>
+	      <num>(4)</num>
+	      <p style="text-align:center;margin-left:0.52in;text-indent:0.5in">
+		<party refersTo="#travel-city-direct" as="#defendant" style="font-weight:bold">Travel City Direct</party>
+	      </p>
+	    </blockContainer>
+	    <p style="text-align:center">
+	      <party refersTo="#cosmosair-plc" as="#defendant" style="font-weight:bold">(5)   Cosmosair PLC</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:right"/>
+	    <p class="CoverMain" style="text-align:right"/>
+	    <p class="CoverMain" style="text-align:right"/>
+	    <p class="CoverMain" style="text-align:right"/>
+	    <p class="CoverMain" style="text-align:right">
+	      <role refersTo="#defendant">Defendants</role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center"><span style="font-weight:bold">Mr James Dingemans QC </span>(instructed by<span style="font-weight:bold"> Plexus Law and MB Law</span>) for all Defendants</p>
+      <p style="text-align:center"><span style="font-weight:bold">Mr Nicholas Bacon</span> (instructed by <span style="font-weight:bold">Irwin Mitchell and Co</span>) for the <span style="font-weight:bold">Claimants</span></p>
+      <p style="text-align:center">Hearing date: 20 July 2005</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p style="text-align:center">Judgment</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">Chief Master Hurst</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">BACKGROUND</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-family:'Times New Roman';font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">This judgment deals with the quantification of a costs capping order made by the Senior Master, Master Turner, on 17 January 2005, with the consent of the Lord Chief Justice dated 4 April 2005.  The costs capping issue throws into sharp relief the tension between the desire to provide access to justice to those with a legitimate claim and the requirement to act proportionately within the overriding objective of the Civil Procedure Rules.  Part 1 of the CPR sets out the overriding objective and sets out the way in which both the Court and the parties must approach every aspect of litigation.  The Rules provide so far as relevant:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in;text-indent:-0.62in">“1.1(1)<marker name="tab"/>These Rules are a new procedural code with the overriding objective of enabling the Court to deal with cases justly.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.62in;text-indent:-0.33in">(2)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in">Dealing with a case justly includes, so far as practicable –</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.12in;text-indent:-0.38in">(a)</num>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:2.12in">ensuring that the parties are on an equal footing;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.12in;text-indent:-0.38in">(b)</num>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:2.12in">saving expense;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.12in;text-indent:-0.38in">(c)</num>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:2.12in">dealing with the case in ways which are proportionate –</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.95in;text-indent:-0.49in">(i)</num>
+	  <content>
+	    <p class="ParaLevel6" style="margin-left:2.95in;text-indent:0.5in">to the amount of money involved;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.95in;text-indent:-0.49in">(ii)</num>
+	  <content>
+	    <p class="ParaLevel6" style="margin-left:2.95in;text-indent:0.5in">to the importance of the case;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.95in;text-indent:-0.49in">(iii)</num>
+	  <content>
+	    <p class="ParaLevel6" style="margin-left:2.95in;text-indent:0.5in">to the complexity of the issues; and</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.95in;text-indent:-0.49in">(iv)</num>
+	  <content>
+	    <p class="ParaLevel6" style="margin-left:2.95in;text-indent:0.5in">to the financial position of each party;</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.46in;text-indent:-0.49in">(d)</num>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:2.46in;text-indent:0.5in">ensuring that it is dealt with expeditiously and fairly; and </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.46in;text-indent:-0.49in">(e)</num>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:2.46in;text-indent:0.5in">allotting to it an appropriate share of the Court’s resources, while taking into account the need to allot resources to other cases.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.50in;text-indent:-0.46in">1.2</num>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:1.50in">The Court must seek to give effect to the overriding objective when it –</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:3.45in;text-indent:-1.95in">(a)</num>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:3.45in">exercises any power given to it by the Rules; or</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:3.45in;text-indent:-1.95in">(b)</num>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:3.45in">interprets any Rule.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.29in;text-indent:-0.25in">1.3</num>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:1.29in;text-indent:0.5in">The parties are required to help the Court to further the overriding objective.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:1.62in;text-indent:-0.58in"> 1.4(1)<marker name="tab"/>The Court must further the overriding objective by actively managing cases.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:1.62in;text-indent:-0.58in">      (2)<marker name="tab"/>Active case management includes-</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:2.00in;text-indent:-0.38in">(a)<marker name="tab"/>encouraging parties to cooperate with each other in the conduct of proceedings;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:2.00in;text-indent:-0.38in">(b)<marker name="tab"/>identifying the issues at an early stage;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:2.00in;text-indent:-0.38in">…</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.00in;text-indent:-0.38in">(h)</num>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:2.00in">considering whether the likely benefits of taking a particular step justify the cost of taking it;</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:2.00in;text-indent:-0.38in">…</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.00in;text-indent:-0.38in">(l)</num>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:2.00in">giving directions to ensure that the trial of a case proceeds quickly and efficiently.”</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.38in;text-indent:-0.38in">2.<marker name="tab"/>Lord Woolf, writing in the interim Access to Justice Report in 1995 stated:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“There is a view that our long established Rule that costs normally follow the result of litigation engenders in litigants a ‘win at all costs’ mentality.  This is supported by some research which indicates that the existing Rule has a tendency to increase expenditure on cases when compared with a system where each party bears its own costs.  On the other hand, as one might expect, the same research indicates that any propensity to litigate which our Rule might encourage tends to be associated with more meritorious cases and greater expectations of success than does the American Rule under which, win or lose, each party generally bears his own costs.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in;text-indent:-0.50in">(Interim Report, Chapter 25, paragraph 1).</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:0.39in;text-indent:-0.39in">3.<marker name="tab"/>In his Access to Justice Final Report, July 1996, Lord Woolf expressed the view that costs were a significant problem because litigation was so expensive that the majority of the public could not afford it unless they received financial assistance; the costs incurred in litigation were out of proportion to the issues involved; and the costs were uncertain in amount so that the parties had difficulty in predicting what their ultimate liability might be if the action was lost.  He identified the adverse consequences of this situation and felt that they contaminated the whole of the Civil Justice system:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Fear of costs deters some litigants from litigating when they would otherwise be entitled to do so and compels other litigants to settle their claim when they have no wish to do so.  It enables a more powerful litigant to take unfair advantage of the weaker litigant…” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:0.38in">(Access to Justice Final Report, Chapter 7, Paragraphs 2 and 3).</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.38in;text-indent:-0.38in">4.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.38in">Lord Woolf went on to recommend that all clients or funders of litigation should impose eight requirements on their solicitors:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:-0.38in">“(a)<marker name="tab"/>Prevent major litigation strategies without instructions.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.38in;text-indent:-0.29in">(b)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:0.5in">Eliminate unnecessary research and details.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.38in;text-indent:-0.29in">(c)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:0.5in">Control the hiring and use of barristers and experts.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.38in;text-indent:-0.29in">(d)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:0.5in">Forbid interlocutory/discovery activities without prior approval.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.38in;text-indent:-0.29in">(e)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:0.5in">Prevent convening of meetings when telephone calls will suffice.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.38in;text-indent:-0.29in">(f)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:0.5in">Control the level of money.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.38in;text-indent:-0.29in">(g)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:0.5in">Agree the level and method of charging.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.38in;text-indent:-0.29in">(h)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:0.5in">Emphasise that the case belongs to the client.” </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:0.50in;text-indent:-0.11in">(Access to Justice Final Report, Chapter 7, paragraph 30.)</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.38in;text-indent:-0.38in">5.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.38in">Since the publication of Lord Woolf’s report, the Civil Procedure Rules have had a profound effect upon the way in which litigation is conducted, and the introduction, by the Access to Justice Act 1999, of conditional fee agreements (CFAs) with recoverable success fees, together with the withdrawal of legal aid in personal injury cases, has fundamentally altered the way in which this type of litigation is funded.  This, together with the introduction of after the event (ATE) insurance with recoverable premiums, has meant that a Claimant being represented on a CFA with the benefit of ATE insurance is in fact able to litigate without risk, and has no personal interest in the level of costs being generated by his legal representatives.  It follows that in this type of litigation Lord Woolf’s eight requirements fail to operate effectively and it is therefore for the Court to take an active part in the case management of the proceeding in accordance with the overriding objective, and for the parties to assist the Court in so doing.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">HISTORY OF THE LITIGATION</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:0.38in;text-indent:-0.38in">6.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.38in">Five sets of proceedings were commenced in the Birmingham District Registry in October 2003.  All of the Claimants had visited the Torremolinos Beach Club on holiday between October 2000 and August 2002.  They claim damages as a result of gastro-intestinal or viral infections contracted by themselves and members of their family whilst on holiday.  The generic particulars of claim were served on 10 March 2004.  On 13 July 2004 Timothy Oliver of Plexus Law made a witness statement stating that the Defendants would be seeking a cost capping order.  Both sides apparently agreed that the litigation was suitable for a Group Litigation Order (GLO) (see Order of HHJ Macduff dated 3 November 2004).  On 17 January 2005 the Senior Master, Master Turner, made a GLO to which Lord Chief Justice consented on 4 April 2005.  The GLO included the following:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in;text-indent:-0.62in">“(15)(a)<marker name="tab"/>The Claimants’ costs be capped with the amount to be determined by a Costs Judge. </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.58in;text-indent:-0.25in">(b)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.58in;text-indent:0.5in">List for hearing before a Costs Judge….; directions to be given by the Costs Judge for the filing of any estimates of costs over and above those provided for in paragraph 33 below and/or any evidence; the matter to be referred to the Costs Judge for such purpose.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.58in;text-indent:-0.25in">(c)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.58in;text-indent:0.5in">Regardless of the said cap imposed on the Claimant’s costs, if any party wishes to make any application to the Court that may significantly increase the costs in these actions it must first serve notice of its application on all other parties; all parties must then file and serve up-to-date estimates of costs pursuant to paragraph 6 of the Costs Practice Direction in 21 days of such notice being given; the Court will then decide whether to permit the application to be issued.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.33in;text-indent:-0.33in">…</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.62in;text-indent:-0.62in">(17)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in">There shall be not more than 20 lead cases…</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in;text-indent:-0.62in">…</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.62in;text-indent:-0.62in">(21)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in">Each party has permission to use experts in the disciplines of Spanish Law, food safety, environmental hygiene, microbiology and virology (no more than one expert per specialism).  The parties shall exchange reports by no later than 4pm on 16 September 2005.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.62in;text-indent:-0.62in">(22)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in">Each party has permission to rely on the expert evidence of a gastroenterologist for lead cases in respect of diagnosis, causation and condition of those lead Claimants.  Reports are to be served by 4pm on 16 September 2005.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in;text-indent:-0.62in">…</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.62in;text-indent:-0.62in">(33)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in">Each of the parties in each of the above actions shall by 4pm on 7 March 2005 serve upon each other estimates of costs complying with the provisions for CPR 43 PD 6.2(1) and 6.5.”</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">7.<marker name="tab"/>The costs capping order was only in respect of the Claimants’ costs.  In response to my inquiry, Mr Dingemans indicated that the Defendants in the first two actions were happy to have their costs capped.  It was necessary to obtain specific instructions from the remainder.  I have yet to be informed of their attitude.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE EFFECTIVE DATE OF THE COST CAPPING ORDER</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">8.<marker name="tab"/>Mr Dingemans argues that the costs capping order applies to the whole of the Claimants’ costs whether incurred before 17 January 2005 or after.  There had been a previous submission by the Claimants that the costs cap would only run from the date of the Order.  Mr Bacon accepts that in arriving at the costs cap it is proper for the Court to take into account the amount of costs already incurred prior to 17 January 2005.  In respect of those prior costs he points out that the Claimants are entitled to detailed assessment of their costs.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">9.<marker name="tab"/>In my judgment, unless the costs capping order makes specific provision, that order can only speak from the day upon which it was made.  In <span style="font-style:italic">AB and Ors v Leeds Teaching Hospitals NHS Trust </span>[2003] EWHC 1034 (QB) Gage J, a costs capping order was made on 9 May 2003, but the parties had agreed that it would be retrospective and start from 10 February 2003.  There is no such agreement in this case.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">
+	      <span style="font-weight:bold">THE COSTS TO BE CAPPED</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">10.<marker name="tab"/>The Claimants’ costs up to 16 January 2005 totalled £1,621,838 (profit costs £1,519,838 disbursements of £37,000 counsels’ fees, £65,000; all these figures are excluding VAT).  After the making of the costs capping order the Claimants continued to incur costs up to 17 June 2005, the date of the order for directions made by me.  The profit costs for that period exclusive of VAT amount to £217,470.  The Claimants estimate the future costs from 17 June 2005 at a lower range of £1,404,490 (profit costs £879,990, disbursements £120,000, counsels’ fees £315,000) and higher range £1,481,715 (profits costs £956,715, disbursements and counsels’ fees as before).  These figures are again excluding VAT.  The grand total of all the Claimants’ costs, including disbursements and counsels’ fees, but excluding VAT, is, on the lower range £3,154,298, and, on the higher range £3,231,023.  (The Defendants calculate, by adding in the VAT on profit costs, that those figures would be £3,612,326 and £3,702,478 respectively).  With the addition of success fees and ATE premiums the total of the Claimants’ costs could well exceed £6,000,000.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">11.<marker name="tab"/>The Defendants’ case is that the Claimants’ total costs should be capped at a total of £893,652, including disbursements, counsels’ fees and VAT.  Mr Dingemans submits that, if I were to accept his figure, the effect would be to make any costs incurred by the Claimants to date, irrecoverable and to limit future costs to the figure which he puts forward.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">12.<marker name="tab"/>The total for the Defendants’ costs is put at £900,752 including VAT by the Defendants and £936,257 including VAT by Mr Bacon.  Mr Dingemans points out that since the Defendants are for commercial and conflict reasons represented by two firms of solicitors the total costs must inevitably involve some duplication of work which should not be the case in respect of those representing the Claimants.  Mr Bacon argues that the Defendants’ estimates will be based on lower hourly rates since those instructing the defence lawyers have the commercial muscle to impose lower rates.  The Defendants’ estimate is based on a three week trial (the Claimants’ suggest the trial will last five weeks).  The estimate takes no account of any “in house” legal costs i.e. work done by tour operators and insurers.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">PROPORTIONALITY</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">13.<marker name="tab"/>Proportionality is a theme running through the whole of the CPR which is encapsulated in the overriding objective.  It has a more specific meaning in relation to the assessment of costs as set out in CPR 44.4:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:-0.38in">“(1)<marker name="tab"/>Where the Court is to assess the amount of costs (whether by summary or detailed assessment) it will assess those costs-</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:1.75in;text-indent:-0.38in">(a)<marker name="tab"/>on the standard basis; or</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:1.75in;text-indent:-0.38in">(b)<marker name="tab"/>on the indemnity basis,</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:1.38in">but the Court will not in either case allow costs which have been unreasonably incurred or are unreasonable in amount.</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.38in;text-indent:-0.33in">(2)</num>
+	  <content>
+	    <p class="ParaLevel5" style="margin-left:1.38in">Where the amount of cost is to be assessed on the standard basis, the Court will-</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:1.75in;text-indent:-0.38in">(a)<marker name="tab"/>only allow costs which are proportionate to the matters in issue; and</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:1.75in;text-indent:-0.38in">(b)<marker name="tab"/>resolve any doubt which it may have as to whether costs were reasonably incurred or reasonably proportionate in amount in favour of the paying party.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel7" style="margin-left:0.38in;text-indent:0.02in">Where costs are ordered to be paid on the indemnity basis, the test of proportionality is omitted and the way in which the Court resolves any doubt which it may have, as to whether the costs were reasonably incurred or were reasonable in amount, is decided in favour of the receiving party.  (Rule 44.4(3)).</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.38in;text-indent:-0.38in">14.<marker name="tab"/>CPR 44.5 sets out the factors to be taken into account in deciding the amount of costs:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.38in;text-indent:-0.38in">“(1)<marker name="tab"/>The Court is to have regard to all the circumstances in deciding whether costs were-</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.75in;text-indent:-0.38in">(a)<marker name="tab"/>if it is assessing costs on the standard basis-</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:2.12in;text-indent:-0.38in">(i)<marker name="tab"/>proportionately and reasonably incurred; or</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:2.12in;text-indent:-0.38in">(ii)<marker name="tab"/>were proportionate and reasonable in amount, or</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.75in;text-indent:-0.38in">(b)<marker name="tab"/>if it is assessing costs on the indemnity basis-</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.12in;text-indent:-0.38in">(i)</num>
+	  <content>
+	    <p class="ParaLevel6" style="margin-left:2.12in">unreasonably incurred; or</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.12in;text-indent:-0.38in">(ii)</num>
+	  <content>
+	    <p class="ParaLevel6" style="margin-left:2.12in">unreasonable in amount;</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel6" style="margin-left:1.75in">…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel6" style="margin-left:1.38in;text-indent:-0.38in"> (3)<marker name="tab"/>The Court must also have regard to-</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel6" style="margin-left:1.75in;text-indent:-0.38in">(a)<marker name="tab"/>the conduct of all the parties, including in particular</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.12in;text-indent:-0.38in">(i)</num>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:2.12in">conduct before, as well as during, the proceedings; and</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.12in;text-indent:-0.38in">(ii)</num>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:2.12in">the efforts made, if any, before and during the proceedings in order to try to resolve the dispute; </p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:1.75in;text-indent:-0.38in">(b)<marker name="tab"/>the amount or value of any money or property involved;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:1.75in;text-indent:-0.38in">(c)<marker name="tab"/>the importance of the matter to all the parties;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:1.75in;text-indent:-0.38in">(d)<marker name="tab"/>the particular complexity of the matter or the difficulty or novelty of the questions raised; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:1.75in;text-indent:-0.38in">(e)<marker name="tab"/>the skill, effort, specialised knowledge and responsibility involved;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:1.75in;text-indent:-0.38in">(f)<marker name="tab"/>the time spent on the case; and</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:1.75in;text-indent:-0.38in">(g)<marker name="tab"/>the place where and the circumstances in which work or any part of it was done.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:0.50in;text-indent:-0.50in">15.<marker name="tab"/>The Lord Chief Justice, explained the correct approach to proportionality in <span style="font-style:italic">Home Office v Lownds </span>[2002] EWCA Civ 365.  Lord Woolf described the provisions of CPR 44.3 as “redolent of proportionality”.  Because of the central role proportionality should have in the resolution of civil litigation, he stated that it was essential the Court should attach the appropriate significance to the requirements of proportionality when making orders for costs and when assessing the amount of costs.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel8" style="margin-left:0.50in">Lord Woolf described the correct approach on assessment:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“…what is required is a two stage approach.  There has to be a global approach and an item by item approach.  The global approach will indicate whether the total sum claimed is, or appears to be, disproportionate having particular regard to the considerations which part 44.5(3) states are relevant.  If the costs as a whole are not disproportionate according to that test then all that is normally required is that each item should have been reasonably incurred and the costs for that item should be reasonable.  If on the other hand, costs as a whole appear disproportionate, then the Court will want to be satisfied that the work in relation to each item was necessary and, if necessary, that the cost of the item was reasonable.  If, because of lack of planning or due to other causes, the global costs are disproportionately high, then the requirement that the costs should be proportionate means that no more should be payable than would have been payable if the litigation had been conducted in a proportionate manner.  This in turn means that reasonable costs will only be recovered for the items which were necessary if the litigation had been conducted in a proportionate manner.” </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">ISSUES AFFECTING THE LEVEL OF THE CAP</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="margin-left:0.39in">
+	      <span style="font-style:italic;font-weight:bold">Complexity</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">16.<marker name="tab"/>Mr Bacon submits that this group action is unique and set apart from other group actions with which Irwin Mitchell have hitherto been involved.  The group contains more Claimants than any other overseas group action illness claim and brings with it what he describes as “a huge array of complex and challenging issues both medical and legal”.  He says that the illnesses suffered and the method of transmission is very different to the travel litigation cases of <span style="font-style:italic">Harris v Thomson Holidays</span> and <span style="font-style:italic">Clyde v Thomson Holidays </span> and <span style="font-style:italic">Giambrone v JMC Holidays</span> to which Mr Robbins, the Defendants’ Costs Draftsman and Mr Oliver, Solicitor for the first and second Defendants, refer in their evidence.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">17.<marker name="tab"/>The principal causes of gastric illness were norovirus and salmonella.  The Defendants effectively deny that norovirus caused the Claimants any illness, arguing that: the virus was airborne within the local area and not caused by an act or omission of the tour operator; the virus was spread from one guest to another and not from any act or omission of the tour operator; and stool samples evidenced no aetiological agent for the symptoms identified.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">18.<marker name="tab"/>The Defendants have put the Claimants to proof of the illness suffered; how it was caused to be transmitted to any Claimant; whether it was transmitted by reason of negligence, if so by whose negligence; whether it was transmitted by a breach of statutory duty and which statutory duty; and which part of the hotel facilities caused the transmission and why.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">19.<marker name="tab"/>The Defendants assert that there were twice monthly inspections of the hotel by independent hygiene consultants; the accommodation in the hotel was of a high standard with high satisfaction ratings and substantial numbers of annual repeat bookings.  In addition, the hotel had passed local public health authority inspections.  It is the Defendants’ case that the nature of norovirus is such that there was nothing the hotel could have done to predict the illnesses arising or to prevent the virus from spreading.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">20.<marker name="tab"/>Against that background Mr Bacon argues that these are highly complex claims for damages for personal injury and he submits that these cases are not comparable with simple, low value, personal injury actions.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">21.<marker name="tab"/>In support of his contention that these are highly complex claims, Mr Bacon relies in part on the confidential bundle which contains, among other things, details of the longer term illnesses suffered by some of the Claimants.  He argues that in the majority cases the Claimants suffered from a “nasty illness”.  So far as I am aware the Defendants do not dispute that the Claimants suffered from nasty illnesses.  Some, however, claim damages only for having to care for members of their family who were unwell.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">22.<marker name="tab"/>With regard to the confidential bundle, I indicated to the parties that I would read it, but that if it contained anything which might persuade me to alter the view which I would have taken from reading the other disclosed papers in the case, I would inform the parties, and the Claimants would then have to be put to their election as to whether or not to disclose the particular document or documents or to withdraw the document and rely on other evidence.  Under this head I have seen nothing to alter the opinion which I had already formed from reading the other papers.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">23.<marker name="tab"/>Mr Bacon submits that these proceedings are unquestionably complex, not just because of the number of Claimants (869), but also because of the number of Defendants; the period covered by the proceedings (October 2000 to September 2002); the expert evidence as to norovirus; evidence about the actual or constructive date of knowledge of the existence of the virus; the reasonableness of the Defendants’ actions; other illnesses contracted by the Claimants e.g. salmonella and campylobacter; steps taken by the hotel and the fact that the proceedings are being strenuously defended.  He also points out that there are difficult issues as to the transmission of the virus; and that these issues have to be decided whilst taking into account the effect of Spanish Law.  He also points out that the Defendants have retained leading counsel throughout.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">24.<marker name="tab"/>He goes on to argue that the closest comparable Irwin Mitchell case to the present one is that of <span style="font-style:italic">Giambrone v JMC Holidays</span>, a group action involving 662 Claimants.  In those proceedings liability was admitted at an early stage and the matter proceeded mainly on quantum issues.  At paragraph 63 of his skeleton he sets out a comparative table in order to demonstrate the greater complexity of the present proceedings.  The detailed assessment in <span style="font-style:italic">Giambrone</span> was dealt with Master Campbell, who apparently, following concessions by the paying party, allowed an uplift of 120% on top of the solicitors’ base fees.  I do not find either the table of comparison or the level of hourly rate allowed by Master Campbell to be of any assistance in this case.  Had I dealt with the case of <span style="font-style:italic">Giambrone</span> there is no guarantee that I would have arrived at the same result as Master Campbell.  Each case must be decided on its own facts.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">25.<marker name="tab"/>Mr Dingemans argues that the only real complexity is the number of Claimants.  The GLO has limited lead cases to 20 (although the parties appear to have selected 21 – but I am assured that this should not cause a difficulty in the future).  Therefore, for the time being at least, the Claimants’ solicitors are not having to deal with 848 of the cases, other than to keep the Claimants informed of what is happening.  He points out that the Claimants’ solicitors have obtained an order that there should be no individual medical reports and no individual Schedules of damages.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">26.<marker name="tab"/>Mr Bacon also points to the complexity of the issues to be tried, which I deal with below.  Dealing with the points that I have set out under this heading, having considered the papers which have been lodged on behalf of the Claimants, I can find nothing which makes this litigation in any way exceptional apart from the number of Claimants and the issues to be dealt with by the experts.  The problem of numbers has now been brought under control by the making of the GLO and the limiting of lead cases to 20.  The complexities contained in the papers which have been lodged, including the confidential folders, disclose no more difficulties than one would expect in holiday litigation which is not subject to a GLO.  The quantum issues will be few, the issues of Spanish Law, food safety, environmental hygiene, microbiology and virology, although potentially difficult, will be dealt with by experts in those fields but should not cause particular difficulty for the Claimants’ solicitors.  Paragraph 23 of the GLO requires the Defendants to endeavour to agree to use the same expert in each of the five disciplines.  Similarly the evidence of a gastroenterologist would deal with diagnosis, causation and condition of the lead Claimants.  This is all routine litigation procedure which should cause no untoward difficulties for the Claimants’ legal representatives. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="margin-left:0.39in">
+	      <span style="font-style:italic;font-weight:bold">Issues</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">27.<marker name="tab"/>The list of issues first identified by the Claimants ran to 23 issues.  The present draft list of lead issues now runs to 82.  Mr Bacon argues that this increase in the number of issues has transformed the case.  In addition he points out that from an initial two Defendants the Claimants now have five opponents.  The Defendants, in their request for further information, seek a high level of detail from the Claimants.  Mr Bacon produced a spread sheet showing the information which the Claimants’ solicitors had obtained from the individual Claimants by means of questionnaires.  Mr Bacon submits that since there are five Defendants there will be different answers in respect of each Defendant.  This, he says, must increase the costs. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">28.<marker name="tab"/>The lead cases have been selected on a time basis so that the whole period covered by the litigation is represented in the lead cases.  As it happens, there is no Claimant with continuing illness among any of the lead Claimants.  The purpose of the lead cases is to resolve the so called lead or generic issues.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">29.<marker name="tab"/>Although there are now 20 lead cases, the Claimants’ solicitors originally indicated that they expected to call 120 witnesses, a number which Mr Bacon conceded may be reduced to 80 witnesses.  Those witnesses would include: not only the lead Claimants themselves but other non-lead Claimants who are able to give factual evidence relevant to the lead cases; Spanish medical personnel and ex-tour operator staff.  On this basis, leading counsel for the Claimants, Mr Brian Langstaff QC has estimated that the trial would be likely to last five weeks.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">30.<marker name="tab"/>Mr Dingemans argues that the first list of issues produced by the Claimants was not comprehensive of all the pleaded issues.  The current draft breaks down the issues to make them comprehensible to the judge and to enable the trial to run in an orderly manner.  By way of example, the original wording of Issue 1 was:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Were the Claimants, or any of them, induced to enter into the contracts to stay at the Beach Club Hotel by the description of the hotel in the Defendants’ brochures (in words or pictures) and if so, was that description misleading in any material way?”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">That topic now appears in the joint draft list of lead issues as follows:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“<span style="font-weight:bold">Brochures</span></p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.62in;text-indent:-0.50in">(1)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in">Were any of the lead claimants induced to enter into the contracts for their holidays by representations contained in the Defendants’ brochures?</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.62in;text-indent:-0.50in">(2)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in">If so, were any of the representations false?</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:1.62in;text-indent:-0.50in">(3)</num>
+	  <content>
+	    <p class="Quote" style="margin-left:1.62in">If so, to what, if any, damages are the lead Claimants entitled?”</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">Similarly, the original Issue 3 was:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“During such periods, was the Defendant ‘<span style="font-style:italic">unable to provide a significant portion of the services contracted for</span>’ (i.e. was unable to offer accommodation which was free from infection carrying a significant risk of causing illness) within the meaning of Regulation 14 of the 1992 Regulations?”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">That issue now appears as Issue 14: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“If the hotel was contaminated by the norovirus –</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.50in;text-indent:-0.50in">(a)<marker name="tab"/>did that fact and its consequences mean that ‘<span style="font-style:italic">a significant portion of the services contracted for [was] not provided</span>’? and/or</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.50in;text-indent:-0.50in">(b)<marker name="tab"/>did the Defendants ‘<span style="font-style:italic">[become] aware that [they would] be unable to procure a significant proportion of the services to be provided’</span>?</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.50in;text-indent:-0.50in">within the meaning of Regulation 14 of the 1992 Regulations?”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">In Mr Dingemans' submission, the issues as originally drafted did not cover the pleaded points, whereas the new list does, in that it reflects the pleadings.  He suggests that the Claimants have increased their costs estimates on the basis that the cases have altered.  In his submission this is not so.  The increased number of issues merely sets out in convenient form, the matters to be decided by the trial judge, which have not in fact altered.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">31.<marker name="tab"/>In respect of the increase in the number of Defendants he points out that Master Turner was aware of the existence of the five Defendants when making the GLO on 17 January 2005.  In the Defendants’ note of Master Turner’s decision, it is evident that he felt, that if there were two groups of Defendants the length of trial would be extended.  He did not however, indicate the possible length of trial.  Mr Dingemans for his part sets out his suggested trial timetable, including some leeway in case of overrun, and estimates that the trial could be concluded within a three week time span.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">32.<marker name="tab"/>In my judgment, although the increase in the number of issues was necessary, adequately to reflect the pleaded cases, the sheer number of issues will not, on the face of it, take longer to resolve than the issues originally and incompletely drafted by the Claimants.  The parties are under an obligation to help the Court to further the overriding objective and this includes active case management.  CPR 1.4(2) states:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Active case management includes –</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.00in">…</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.11in;text-indent:-0.57in">(b)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:2.11in;text-indent:0.5in">identifying the issues at an early stage; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.11in;text-indent:-0.57in">(c)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:2.11in;text-indent:0.5in">deciding promptly which issues need full investigation and trial and accordingly disposing summarily on the others; </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';font-size:12pt;margin-left:2.11in;text-indent:-0.57in">(d)</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:2.11in;text-indent:0.5in">deciding the order in which the issues are to be resolved;”.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">That duty also extends to limiting the number of live witnesses to the minimum necessary to establish the case, and agreeing, so far as possible, to the use of joint experts and, even where it is not possible to agree to a joint expert, agreeing as much of the expert evidence as possible prior to trial.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">33.<marker name="tab"/>One of the purposes of a GLO is to enable Claimants, who would otherwise not be able to litigate their claims economically, to obtain access to justice.  Mr Bacon suggests that the making of the GLO in this case would automatically result in great savings to the Defendants, should they be ordered to pay the costs.  In my judgment, those savings will not be achieved unless the Court and the parties exercise rigorous control over the way in which this litigation is conducted.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="margin-left:0.39in">
+	      <span style="font-style:italic;font-weight:bold">Disclosure</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">34.<marker name="tab"/>Mr Bacon points out that, although disclosure has taken place, some Claimants have documentary evidence of reporting complaints, signed by tour representatives, whilst there has been no mention of such documents by the Defendants.  He states that there are 869 lists of documents and that the Claimants’ solicitors must take into account all the Claimants in order to cover all the lead issues.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">35.<marker name="tab"/>Mr Dingemans states that the Defendants are not aware that there are any further documents which should have been disclosed, but that, if the Claimants wish to make an application, they should do so in accordance with paragraph 15(c) of the Order of 17 January 2005, the terms of which I have already quoted at paragraph 6.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">36.<marker name="tab"/>For the purpose of this exercise I am treating disclosure as having been completed.  Should it be necessary for the Claimants to make a further application, paragraph 15(c) of the Order of 17 January 2005 sets out the steps to be taken.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="margin-left:0.39in">
+	      <span style="font-style:italic;font-weight:bold">Quantum</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">37.<marker name="tab"/>Mr Bacon, basing his arguments on settlements achieved in respect of claims against Sky Holidays and Libra Holidays, arising out of holidays at the Torremolinos Beach Club Hotel, suggests that damages for Claimants who did not suffer long term illness, are likely, on average, to lie somewhere between £1,977 and £2,473.  He suggests that the average settlement for a Claimant with long term illness (put at 60 Claimants by Mr Garner in his fourth witness statement), is likely to be in the region of £20,000.  Using these figures he suggests that an estimate of the overall damages is something between £2,800,000 and £3,200,000, giving an average figure for damages per case of £3,680.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">38.<marker name="tab"/>Mr Dingemans points out that there are certainly some Claimants who suffered no illness.  On 6 September 2004, the solicitors for the first two Defendants wrote to the Claimants’ solicitors raising various queries about the number of Claimants included in Schedule 1 to their Reply to the Request for Further Information.  A number of names appeared which were not listed in the Schedule of Claimants which accompanied the original Particulars of Claim.  In addition, it was suggested that more than 150 of the Claimants did not suffer any illness at all.  The request for information was repeated on 21 September and again on 7 October 2004.  On 15 July 2005 the Claimants’ solicitors replied stating </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“It is apparent that there is an error contained within Schedule 1 attached to the Reply to the Request for Further Information of the Amended Group Particulars of Claim in terms of the numbers of Claimants who fell ill.  Due to a suspected computer malfunction, a significant number of Claimants who suffered with gastric illness were not actually contained within this Schedule.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in"><marker name="tab"/>The letter enclosed “a copy of the definitive Schedule 1 to the Reply”.  Mr Dingemans suggests that the failure by the Claimants to provide the information requested, goes to the conduct of the Claimants’ solicitors.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">39.<marker name="tab"/>The lead cases were chosen by agreement of the parties.  They do not contain any case of continuing illness; the maximum period of illness of any of the lead Claimants being two weeks.  The damages in respect of some Claimants could well be below the small claims track limit.  Mr Dingemans argued that in any event most of the cases would not be worth litigating individually and it is for that reason that a GLO was made.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">40.<marker name="tab"/>Mr Bacon sought to demonstrate, by using his figure of £3,680 average damages against the estimate for future costs and disbursements of £1,609,185, that the average future costs per case would be £1,851.76; however that submission ignores the fact that the future costs relate to the 20 lead cases, not to the whole 869, save to the extent that the remaining 849 have to be kept abreast of developments.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">41.<marker name="tab"/>Mr Bacon seeks to demonstrate that the overall costs per Claimant, from the outset of the retainer to trial, are proportionate when taken on an individual basis.  Thus, on his figures, the average cost per case would be £3,630 in the lower range and £3,718 in the higher range.  This, he submits, demonstrates that the costs are proportionate.  He relies on Section 11 of the Costs Practice Direction and in particular on paragraph 11.2: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“In any proceedings there will be costs which will inevitably be incurred and which are necessary for the successful conduct of the case.  Solicitors are not required to conduct litigation at rates which are uneconomic, thus in a modest claim the proportionate cost is likely to be higher than in a large claim and may even equal, or possibly exceed amount in dispute.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in"><marker name="tab"/>The flaw in Mr Bacon’s argument, as I have already indicated, is that from the making of the GLO on 17 January 2005, the litigation proper is limited to the 20 lead cases.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">42.<marker name="tab"/>Mr Bacon seeks to support his argument by reference to the Predictable Costs Regime for road traffic cases set out in CPR part 45, Section II; research undertaken by Messrs Fenn and Rickman in respect of employers’ liability cases and the decisions of the Court in <span style="font-style:italic">AB and Ors v Leeds</span> and in <span style="font-style:italic">Various Ledward Claimants v Kent and Medway H.A. and East Kent Hospitals</span> [2003] EWHC 2551 (QB) Hallett J.  For the reasons I have given, these comparisons do not assist Mr Bacon.  In any event the facts in the <span style="font-style:italic">Ledward</span> case were so extraordinary as to make it an unsuitable comparator in any circumstances.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">43.<marker name="tab"/>Mr Bacon submits that costs savings are being achieved by the GLO since, by pooling the costs otherwise chargeable in every case “huge savings result”.  He seeks to demonstrate that, whilst the number of experts has been limited under the GLO, if each of the Claimants pursued their case individually, the total cost for experts would be some £8.9 million.  This is a preposterous assertion and I reject it.  He makes a similar point in respect of counsels’ fees, seeking to argue that the overall estimated fees equate to £424 per case.  This argument is again flawed since the lead cases are now limited to 20.  Similar submissions in relation to the work to be undertaken by the solicitors fail for the same reason. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="margin-left:0.39in">
+	      <span style="font-style:italic;font-weight:bold">Length of Trial</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">44.<marker name="tab"/>Mr Bacon argues that the trial is estimated to last five weeks, on the basis that there will be 10 expert witnesses, 80 witnesses of fact and 82 lead issues to be decided.  He submits that, for the purpose of the costs cap, I should accept these figures, on the basis that, if there is any doubt, the benefit of that doubt should be resolved in the Claimants’ favour.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">45.<marker name="tab"/>Mr Dingemans disagrees with these figures.  Mr Garner, in his statement of 19 July 2005, indicates that the Claimants will be seeking to rely on 120 lay witnesses at the trial.  He says: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in;margin-right:0.40in;text-indent:-0.50in">“…<marker name="tab"/>It is hoped that not all of the witnesses will need to give oral evidence at the trial and I am keen to reduce the length of the trial to the minimum reasonably required.  Indeed I previously suggested a three week time estimate for trial.  This was on the basis that the lead cases would be pursued against the first and second Defendant only.  The rationale was that the outcome of those cases was highly likely to have a determinative effect upon the claims against the other Defendants.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:1.50in;margin-right:0.40in;text-indent:-0.50in">41.<marker name="tab"/>The benefit of pursuing the claims against only two Defendants was that there would be significantly reduced numbers of issues to deal with.  On that basis, I considered that the length of trial could be kept to three weeks.  The Defendants objected to proceeding on this basis, preferring the trial to occur against all Defendants at one time.  The inevitable consequence of this is that the length of the trial will increase and, having considered this matter with counsel, I consider that five weeks is a reasonable estimate taking into account what we consider to be likely areas of agreement in respect of evidence prior to trial.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">46.<marker name="tab"/>Mr Dingemans says that all the issues relate to the first two Defendants as well as to the other Defendants and that there are no issues which are specific only to the third to fifth Defendants.  On this basis, he argues that the length of trial will not be increased by the presence of the third to fifth Defendants.  He submits that the number of actual issues has not increased, although they have been broken down into their individual elements.  He says that the Defendants expect to call some 30 witnesses, most of whom are common to all the Defendants.  He points out that witness statements are due to be exchanged by 30 July but, to date, the Defendants have no indication of who the Claimants’ witnesses are, nor has there been any application for an extension of time for exchange of witness statements.  In Mr Dingemans’ submission the trial could never last for five weeks, three weeks being the reasonable and appropriate estimate for the length of trial.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">47.<marker name="tab"/>Even taking into account the number of issues now to be resolved and the potential number of witnesses, I accept Mr Dingemans’ submission that the increase in the number of issues has not transformed the case or added to its complexity and that this trial can reasonably be expected to be completed within the three week time span and I base my decision on the Cost Cap on that assumption.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="margin-left:0.39in">
+	      <span style="font-style:italic;font-weight:bold">The Factors under CPR 44.5</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">48.<marker name="tab"/>In his fifth witness statement Mr Garner deals with the various factors under CPR 44.5.  Under the heading of ‘<span style="font-style:italic">Conduct</span>’, he expresses concern that the Defendants’ conduct may significantly increase the costs of the litigation.  He suggests that their decision to serve highly detailed Requests for Further Information was unexpected.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">49.<marker name="tab"/>Under the heading “<span style="font-style:italic">Amounts Involved</span>”, Mr Bacon repeats the arguments which I have already rejected, but also refers to the list of settlements achieved in the claims against Sky Holidays and Libra.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">50.<marker name="tab"/>Mr Garner suggests that these cases are of considerable <span style="font-style:italic">importance to the parties,</span> the majority of whom suffered severe unpleasant, but largely short lived symptoms.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">51.<marker name="tab"/>He deals with the <span style="font-style:italic">skill, effort, specialised knowledge and responsibility</span> required in his witness statements numbered 4 and 5.  Whilst there is no doubt that he and his team have acquired significant expertise in this type of litigation, I have been forced to the conclusion that the litigation is being used to generate excessive and unreasonable costs.  It has to be recognised that not every claim can be litigated economically.  Had these Claimants been litigating individually and bearing the costs risk themselves I have no doubt that the majority would not have pursued their claims, particularly if the costs included, as Mr Bacon suggests, experts’ fees of £10,000, counsels’ fees and solicitors’ costs in addition.  The purpose of a GLO is to enable such claims to be brought at a realistic cost.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">52.<marker name="tab"/>The introduction of CFAs and ATE insurance has brought about a situation where Claimants litigate in a risk free environment, but that legislation does not set aside the overriding requirement that cases be dealt with reasonably and proportionately.  The GLO enables Claimants with modest claims to pursue those claims, but that ability comes with the concomitant requirement that the costs be strictly controlled.  The Court of Appeal, when dealing with disproportionate costs in defamation cases, brought with the benefit of CFAs but without ATE insurance, decided (on the facts of that case):</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in;text-indent:-0.50in">“<marker name="tab"/>…that when making any cost capping order the Court should prescribe a total amount of recoverable costs which will be inclusive, so far as the CFA funded party is concerned, of any additional liability.  It cannot be just to submit Defendants in these cases, where their right to freedom of expression is at stake, to a costs regime where the costs they will have to pay if they lose are neither reasonable nor proportionate and they have no reasonable prospect of recovering their reasonable and proportionate costs if they win.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.50in;text-indent:-0.50in">102.<marker name="tab"/>If this means, now that the amount at stake in defamation cases has been so greatly reduced, that it will not be open to a CFA assisted Claimant to receive the benefit of an advocate instructed at anything more than a modest fee or to receive the help of a litigation partner in a very expensive firm who is not willing to curtail his fees, then his/her fate will be no different from that of a conventional, legally aided litigant in modern times.  It is rare these days for such a litigant to be able to secure the services of leading counsel unless the size of the likely award of compensation justifies such an outlay, and defamation litigation does not open the door to awards on that scale today.  Similarly, if the introduction of this novel costs capping regime means that a Claimant’s lawyers may be reluctant to accept instructions on a CFA basis unless they assess the chances of success as significantly greater than evens (so that the size of the success fee will be to that extent reduced), this in my judgment will be a small price to pay in contrast to the price that is potentially to be paid if the present state of affairs is allowed to continue”.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in">(<span style="font-style:italic">King v Telegraph Group Ltd</span> [2004[ EWCA Civ 613).</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">53.<marker name="tab"/>Those words, suitably modified, must, in my view, apply equally to this litigation.  The Court went on to quote again with approval, the words of Judge Caroline Alton which were approved by Lord Woolf CJ in his judgment in <span style="font-style:italic">Lownds</span>:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“In modern litigation, with the emphasis on proportionality, there is a requirement for parties to make an assessment at the outset of the likely value of the claim and its importance and complexity, and then to plan in advance the necessary work, the appropriate level of person to carry out the work, the overall time which would be necessary and appropriate to spend on the various stages in bringing the action to trial and the likely overall cost.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">54.<marker name="tab"/>As to the <span style="font-style:italic">time spent and to be spent</span>, Mr Bacon submits that there has been proper delegation, a submission which I accept.  I return to the question of the time spent and hourly rates below.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">55.<marker name="tab"/>As to the <span style="font-style:italic">place and circumstances in which the work was done</span>, Mr Bacon points out that the Claimants’ solicitors are the only solicitors involved and he suggests that they are the steering committee, coordinating solicitors and individual solicitors all in one.  They have to deal with Claimants scattered across the whole country.  This the Defendants accept.  Mr Bacon also correctly points to the fact that they have to take into account the possible impact of Spanish legislation on the claims.  This international element is, of course, present in all overseas holiday claims.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">56.<marker name="tab"/>Mr Dingemans suggests that in having regard to proportionality, I should have regard to the base costs but also to the fact that the majority of Claimants are being represented on CFA with a success fee.  In his submission, I should add a reasonable success fee to the base costs and make an overall Cap.  He relies on the fact that Court of Appeal in <span style="font-style:italic">King</span> envisaged the imposition of an overall Cap including the success fee.  It is however, clear from that judgment that the Court of Appeal had in mind defamation litigation with a CFA specifically, and not any other type of litigation.  Mr Dingemans submits that, in common with newspaper publishers, tour operators are now faced with constant claims from holiday makers who have suffered some loss or injury and those claims are themselves accompanied by “massive claims for costs against the tour operators”.  If these proceedings are typical, and, after reading the various decisions put before the Court it seems that they are, the tour operators are quite right to be concerned about the level of costs being claimed against them.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="margin-left:0.39in">
+	      <span style="font-style:italic;font-weight:bold">Hourly Rates</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">57.<marker name="tab"/>The hourly rates claimed by the Claimants’ solicitors are: Partner £350, Associate £325, Solicitor £300, paralegal £240.  The rates put forward by the Defendants are: Partner £184, Associate £163, Solicitor £137, paralegal £100.  Mr Bacon states that these rates have been “agreed with the clients”.  This may well be the case but as I have already indicated, the clients have no real interest in what their legal representatives seek to charge.  Mr Bacon states that the hourly rates reflect a large complex group action for a large national law firm which specialises in both personal injury work and claims abroad.  The rates put forward by the Defendants are the guideline hourly rates for Inner Birmingham.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">58.<marker name="tab"/>The guideline hourly rates are published for the assistance of judges and court users in connection with summary assessment.  They are guidelines only and the Court retains the discretion to allow rates which are reasonable in all the circumstances.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">59.<marker name="tab"/>It is appropriate to recognise that the conducting partner has additional responsibilities because of the number of Claimants and the fact that this is a group action, also because of the detailed expert evidence.  So far as the other members of the team are concerned, the responsibility is no greater than in any other personal injury litigation involving modest awards of damages.  The Claimants argue that the guideline rates are composed of a base rate plus a notional 50% uplift for care and conduct.  This is not in fact the case.  When the first guideline rates were produced in July 1999 they were replacing the previous A+B method of arriving at hourly rates, which the Lord Chancellor had indicated that he wished to cease.  In arriving at the first figures for guideline rates a 50% uplift was taken as the starting point.  Since that time however, the guideline rates have been revised four times, each time after a consultation conducted by the Designated Civil Judge for each area of the Country.  This court has no way of knowing the basis upon which the rates recommended by the Designated Civil Judge have been arrived at.  It must however, be borne in mind that there has, inevitably, been inflation since the original guideline rates were given and, in addition, the Master of the Rolls asked that the rates be banded into areas, rather than having different rates for individual locations.  The most recent revision was based only on the Retail Price Index for the period.  Thus, all that can be acknowledged is that the guideline rates contain an element for care and conduct.  The precise percentage of that element is not ascertainable.  Accordingly, Mr Bacon’s submission that it would be reasonable for the direct notional cost (the A factor) to be set at: Partner £145, Associate £130, Solicitor £120 and paralegal £85, cannot be sustained.  I have no evidence as to what the broad average direct cost of doing this work is, nor am I persuaded that there are no other firms of solicitors in Birmingham (or any other city) who are capable of handling this type of litigation.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">60.<marker name="tab"/>Mr Bacon goes on to suggest that his A figures should be increased by 150%.  A figure which he arrives at by reference to Master Campbell’s decision in <span style="font-style:italic">Giambrone</span> and a number of authorities starting with <span style="font-style:italic">Johnson v Reed Corrugated Cases </span>[1992] 1 All ER 184, Evans J,<span style="font-style:italic"> </span>through <span style="font-style:italic">Brush v Bower, Cotton and Bower </span>[1993] 1 WLR 1325, Brooke J and <span style="font-style:italic">Loveday v Renton </span>(No 2) [1992] 3 All ER 184 Hobhouse J.  All those cases dealt with the setting of uplifts for care and conduct.  In <span style="font-style:italic">Johnson v Reed</span> Evans J decided that the usual starting point in run of the mill litigation is a 50% uplift.  In <span style="font-style:italic">Brush</span>, Brooke J indicated that anything higher than 100% would not be granted unless the case was truly exceptional.  I have already decided that this case is not exceptional.  Furthermore, the authorities relied on by Mr Bacon related to the period when the A+B method of arriving at an hourly rate was the recognised way of dealing with the issue, and were well before the introduction of the CPR.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">61.<marker name="tab"/>Mr Bacon, relying on <span style="font-style:italic">Jones v Secretary of State for Wales </span>[1997] 1 WLR 1008, Buckley J, suggests that the Claimants’ solicitors should be given rates above the broad average direct cost because the firm is a large national practice outside the range of firms within the general Birmingham area.  He suggests that the work is of a specialised nature and that the firm is one of a small number of firms specialising in travel litigation and group litigation work.  In <span style="font-style:italic">Jones</span>, Buckley J allowed a higher than average rate because the work being undertaken was specialist work normally undertaken in the City of London.  The solicitors involved had to pay London salaries in order to obtain the expertise which they required.  There was no evidence about London salary rates before the judge.  He therefore allowed the sum the paying party had conceded.  None of the factors put forward by Mr Bacon justify allowing a rate higher than the normal rate for Birmingham.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">COUNSELS’ FEES</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">62.<marker name="tab"/>The estimated counsels’ fees on the Claimants’ side are £65,000 up to 17 January 2005 and £315,000 thereafter, i.e. a total of £380,000.  Leading counsel’s fees for trial are £100,000 on the brief, plus refreshers of £3,000 per day.  To this must be added preparation time and the case management conference claimed at £7,500, giving a total figure of £190,000 on the basis of a 25 day trial.  Junior counsel’s brief fee is put at £30-35,000 based on an estimated 100 hours of preparation and refreshers of £1,750 per day, giving a total of £77,000.  Preparation is charged by leading counsel at £350 per hour and by junior counsel at £175 per hour.  Mr Bacon relies on the authority of <span style="font-style:italic">Higgs</span><span> </span><span style="font-style:italic">v Camden and Islington H.A.</span> [2003] EWHC 15 (QB) Fulford J for the proposition that an hourly rate of £350 for leading counsel is not unreasonable, particularly since the onus in this litigation is on the Claimants’ counsel.  He suggests that the figures for Defence counsels’ fees are on the low side and that the period of preparation put forward by Mr Dingemans of one and a half weeks to prepare for trial is not realistic.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">63.<marker name="tab"/>The first and second Defendants’ counsels’ fees prior to the making of the cost cap order were £27,000 (see Timothy Oliver witness statement for 13 July 2005).  Counsels’ fees for the first and second Defendant for the future are estimated at £122,500 based on a brief fee for leading counsel of £30,000 and refreshers of £3,000 per day and half those figures for junior counsel.  The third to fifth Defendants estimate their future counsels’ fees at £40,000 giving a total for all Defendants of £162,500.  Mr Dingemans suggests that brief fee of £30,000 is appropriate as reflecting one and a half week’s preparation.  He submits that a fee of £100,000 for the Claimants’ leading counsel’s brief fee is excessive.  Similarly fees of £30-35,000 for junior counsel are also excessive.  In addition, Mr Dingemans submits that the Defence has been active rather than reactive throughout.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">EXPERTS’ FEES AND OTHER DISBURSEMENTS</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">64.<marker name="tab"/>Mr Oliver’s fourth witness, dated 13 July 2005, estimates the future experts’ fees for the first and second Defendants at £60,000.  The updated costs estimate of the remaining Defendants includes “experts’ fees and miscellaneous” of £30,000.  A total for the Defendants of £90,000.  In the analysis of costs produced by the Defendants, the figure put forward in respect of the Claimants’ disbursements, including experts, is £75,000.  There is clearly an imbalance here which cannot be justified.  I would expect the experts’ fees for both sides to be very similar.  In addition, something must be allowed to the Claimants in respect of other disbursements such as Court fees and travelling expenses.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">THE DEFENDANTS’ CONDUCT</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="text-align:justify;margin-left:0.50in;text-indent:-0.50in">65.<marker name="tab"/>Mr Garner suggests that there have been significant difficulties in dealing with a number of issues, and whilst he does not go so far as to suggest that the Defendants have been deliberately obstructive, he suggests that this may be a reflection of the complexity of the issues and how important the parties consider them.  He states: </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Thus there have been, and continue to be, real issues in relation to the Defendants’ disclosure, their delay in providing disclosure and their failure to disclose documents which are clearly relevant.  There have also been difficulties in agreeing lead cases and lead issues which have meant a significant amount of time has been spent, significant costs incurred upon these issues.  The service of highly detailed requests for further information by the Defendants has also been dealt with in my earlier statement…”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="text-align:justify;margin-left:0.50in;text-indent:-0.50in"><marker name="tab"/>(Clive Garner, witness statement 5, 19 July 2005, paragraph 43).</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading" style="text-align:justify;margin-left:0.50in;text-indent:-0.50in">66.<marker name="tab"/>The Defendants assert that their disclosure is adequate and, relying on Section 15(c) of the Order of 17 January 2005, suggest that any application for further disclosure should be excluded from the cap, a submission which I accept.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">67.<marker name="tab"/>With regard to the Defendants’ request for information Mr Dingemans points out that the Group Particulars of Claim do not make it clear which Claimants certain allegations refer to.  For example, at paragraphs 13 and 14, the Claimants set out over 13 pages, various failings on the part of the Defendants, or those for whose actions they are responsible.  Paragraph 13 commences </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“The following particulars, and the particulars set out in paragraph 14 below, are general allegations applying to all or most Claimants.  In advance of full disclosure, they are the best particulars which can be given at this stage…the Claimants expect to add to and to perfect these particulars upon completion of disclosure and exchange of experts’ reports.”</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in"><marker name="tab"/>Mr Dingemans argues that given the way paragraphs 13 and 14 are phrased, it is not clear which Claimants the allegations applied to and that the Defendants are entitled to have the case against them particularised.  He asserts that the Defendants are not engaged in any exercise to rack up the costs.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">
+	      <span style="font-weight:bold">COMPARISON WITH THE DEFENDANTS’ COSTS</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">68.<marker name="tab"/>There is some conflict between the different Defendants because they have different commercial interests.  The first and second Defendants are jointly represented, as are the third to the fifth Defendants.  There is, therefore, bound to be some duplication of effort which is unavoidable. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">69.<marker name="tab"/>Mr Bacon points out that the legal representatives acting for the Defendants will be paid by the insurers whilst those representing the Claimants have to rely on CFAs and costs recovery.  All the lead Claimants are on CFAs, as are most of the others, although some have BTE insurance which is being used up.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">70.<marker name="tab"/>Mr Bacon suggests that the joint figures put forward by Mr Dingemans amounting to some £900,752 are difficult to sort out, a submission which I reject.  See Mr Garner’s fifth witness statement at paragraphs 35-39.  The estimates put forward by the Defendants do not include the individual costs.  The Claimants’ estimate for individual costs amounts to £1,000,000.  Mr Bacon seeks to take this figure and add to it the Defendants’ figure of £900,752 suggesting that, taking the Claimants’ higher hourly rates into account, there is not that much difference in the costs sought.  He points out that the figures for MB Law’s costs have gone up 20%.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">71.<marker name="tab"/>Mr Bacon says that the Defendants’ estimates have to be considered in context, because they will be based on lower hourly rates (the insurer clients insist on low hourly rates: MB Law’s rates are: £185, £145, £135 and £85).  The Defendants’ figures are based only on a three week trial; they do not take into account any in-house legal costs which may be undertaken by tour operators and insurers.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">72.<marker name="tab"/>Mr Dingemans argues that although the burden of proof is on the Claimants, two separate firms of solicitors act for the five Defendants but their joint costs, including duplicated costs, amount to nowhere near the costs sought by the Claimants.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-weight:bold">ATE INSURANCE</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">73.<marker name="tab"/>The Defendants point out that the Claimants have claimed £140,000 in respect of future correspondence and telephone calls with clients regarding setting up ATE insurance (875 hours at £160 per hour).  The Defendants dispute this on two grounds; one is that taking out ATE insurance in respect of all the Claimants is not necessary, and the second is that costs incurred in discussing and setting up an ATE policy for each individual Claimant should not, in any event, be recoverable on assessment.  The Defendants seek to rely on my decision in the Claims Direct Test Cases dated 19 July 2002, paragraphs 171 to 172.  Those paragraphs merely refer to the judgment of the Court of Appeal in <span style="font-style:italic">Hunt v RM Douglas (Roofing) Limited </span>18 November 1987, CA unreported.  Since there may well be an issue as to whether or not these costs are recoverable, I will deal with that issue at a later date should the need arise.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">74.<marker name="tab"/>Mr Bacon informed me that negotiations were well advanced with ATE Insurance providers to put ATE insurance in place.  Every Claimant has, by virtue of the GLO, a potential several liability for adverse costs.  He asserts that it is necessary for the Claimants to have ATE insurance in place.  He suggests that the time estimated to deal with the obtaining of ATE insurance should be limited to approximately one hour per case.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">75.<marker name="tab"/>Given that there is no ATE insurance in place and that there will presumably be an application to increase the cap to take ATE Insurance into account, I confirm that the figure for the cost cap which I reach takes no account of the time which may be spent in arranging ATE insurance nor any figure for the premium itself.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">
+	      <span style="font-weight:bold">THE COSTS CAP</span>
+	    </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">76.<marker name="tab"/>Gage J In <span style="font-style:italic">AB and Ors v Leeds Teaching Hospitals NHS Trust</span>, set out seven matters which he took into account in arriving at the figure for the Costs Cap in that litigation.  In arriving at his final figures, he divided the litigation into four component parts, namely: solicitors’ costs, experts’ fees, counsels’ fees and other disbursements.  He said this:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.12in;text-indent:-0.38in">“23.<marker name="tab"/>In making the order I take into account the following matters. Firstly, the order for costs must be proportionate with the amount at stake and the complexity of the issues. Proportionality is to be judged by a two-fold test namely, initially, whether the global sum is proportionate to the amount at stake. Next, if the global sum is disproportionate the court should look at the component parts in order to determine if they are proportionate (see <span style="text-decoration:underline">Lownds v Home Office </span><a href="http://www.bailii.org/ew/cases/EWCA/Civ/2002/365.html">
+		<span class="Hyperlink">[2002] EWCA Civ 365</span>
+	      </a>). </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="margin-left:1.12in;text-indent:-0.38in">…</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';margin-left:1.12in;text-indent:-0.38in">1.</num>
+	  <content>
+	    <p style="margin-left:1.12in">In my judgment, if successful, the claimants' figure for damages, allowing for a proportion of failed claims, is more realistic than that of the defendants. Taking the number of claimants as 2100, the average sum in damages is just over £7,000 for each claimant on a total of £15 million. This seems to me to be a not unreasonable figure. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';margin-left:1.12in;text-indent:-0.38in">2.</num>
+	  <content>
+	    <p style="margin-left:1.12in">The factual issues are relatively simple, but the legal issues are, undoubtedly, complex. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';margin-left:1.12in;text-indent:-0.38in">3.</num>
+	  <content>
+	    <p style="margin-left:1.12in">Secondly, it is agreed, and I accept, that the costs cap should only relate to the costs incurred in relation to generic issues. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';margin-left:1.12in;text-indent:-0.38in">4.</num>
+	  <content>
+	    <p style="margin-left:1.12in">Thirdly, both sides suggest, and again I accept, that in conducting a cost cap exercise I must adopt a broad approach. It is not possible, nor would it be cost effective, for the court to go into the minutiae of each item. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';margin-left:1.12in;text-indent:-0.38in">5.</num>
+	  <content>
+	    <p style="margin-left:1.12in">Fourthly, I must be careful not to fall into the trap of assessing the claimants' costs solely on the basis of the sum for which the defendants' solicitors and counsel have agreed to conduct the litigation. The latter may provide a guide, and in some respects a good guide, to costs but it should not be the sole or dominant factor. Similarly, the basis upon which the claimants have agreed costs with the Legal Services Commission is only a guide but not a determinative factor when making this order. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';margin-left:1.12in;text-indent:-0.38in">6.</num>
+	  <content>
+	    <p style="margin-left:1.12in">Fifthly, assessing the global figure at which costs will be capped I do so on the basis that the trial will last no longer than four weeks. If it lasts for longer this will be a factor which may give rise to an application to vary this order. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';margin-left:1.12in;text-indent:-0.38in">7.</num>
+	  <content>
+	    <p style="margin-left:1.12in">Sixthly, having assessed the global sum comprising the various component parts, at the conclusion of the trial, I shall hope to be able to make an order for costs which will avoid the necessity for most, if not all, of the costs to be the subject of a detailed assessment. The order will, of course, only be in respect of costs actually incurred up to the limit of the cost cap. </p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-family:'Times New Roman';margin-left:1.12in;text-indent:-0.38in">8.</num>
+	  <content>
+	    <p style="margin-left:1.12in">Seventhly, I shall give liberty to each party to apply to vary the order in the event of any unforeseen and exceptional additional costs arising; or in the event of an unforeseen event leading to a reduction in costs.”</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">77.<marker name="tab"/>Mr Bacon argues that in deciding on the figure for the costs cap the Court should decide the benefit of any doubt about the reasonableness or proportionality of the costs claimed by the Claimants in the Claimants’ favour.  The position would of course be reversed should the Claimants succeed in obtaining an order for costs on the <span style="font-style:italic">standard basis</span> at the end of the proceedings.  Should the Claimants succeed in obtaining an order for costs on the <span style="font-style:italic">indemnity basis</span> any costs cap decided on the basis that the benefit of doubt should be resolved in favour of the Defendants will be too restrictive.  Similarly, since the test of proportionality would not apply in respect of an order for costs on the indemnity basis the test to be applied in deciding the Costs Cap is one of reasonableness.  In my judgment the Claimants and the Defendants are adequately protected by my deciding the figure for the Cap in the way I have described and by the inclusion of a review clause should any of the factors upon which my decision has been made change significantly.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">78.<marker name="tab"/>Mr Bacon submits that once the proceedings are concluded the Court and the parties will still have available to them the procedure for detailed assessment.  This is correct, but one of the purposes of imposing a cost cap and requiring the parties to set out their proposed expenditure, is so that there is a high probability, assuming that the successful party has stayed within the figures making up the costs cap, that the parties will be able to agree the amount payable under any costs order.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">79.<marker name="tab"/>As I said at the outset of this judgment, Claimants are now able to litigate in a risk free environment which means that individual Claimants have no interest in controlling the actions of their legal representatives, nor have they any interest in the level of costs being incurred.  Once ATE insurance is in place these Claimants will be at no risk as to costs whatsoever and there will no doubt be an application that the amount of the ATE premium be added to the cost cap.  In addition, for the reasons I have already given, any success fee will attach to the solicitors’ base costs but will not be subject to the overall cap.  There is a very real danger that in litigation of this type, where many Claimants would not think it worth risking their own money in order to sue for very modest damages, the funding regime created by the Access to Justice Act 1999 has provided a vehicle for litigation to be conducted for the benefit of the lawyers by generating costs rather than for benefit of the clients.  This is a criticism frequently levelled against the contingency fee system in the United States in respect of class actions.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.50in;text-indent:-0.50in">80.<marker name="tab"/>The Claimants lodged details of their costs broken down, for the period prior to 17 January 2005; for the period from 17 January 2005 to 17 June 2005; and where appropriate, individual costs estimates.  The costs were further split into High Tier Generic, i.e. work applicable across the whole of the litigation, and then, Generic, relating to each tour operator.  This exercise produced details running to 387 pages in two ring-binders.  The Defendants have helpfully analysed this mass of material in a 26 page bundle which was set out, under headings such as, “Documents”, “Witness Statements”, “Disclosure”, “Experts” and “Preparing for Trial” and, under each heading, they had inserted the time allowances which they thought appropriate at the hourly rates, which in their submission were reasonable.  This exercise produced the figure put forward by Mr Dingemans of £893,652.83 for all the costs and disbursements of the litigation from its inception to trial, including counsels’ fees, other disbursements and VAT.  The Defendants’ figure for profit costs, exclusive of VAT, was £505,555.60.  In respect of future costs, the Defendants suggested an overall figure of £240,875, made up of profit costs of £115,534, counsel’s fees of £130,000 and other disbursements of £75,000, which together with VAT, made up the total put forward.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.50in;text-indent:-0.50in">81.<marker name="tab"/>In a further analysis, the Defendants had set against the costs claimed by the Claimants, their own suggested figures for costs, thus allowing me a direct comparison of the amounts claimed and suggested.  These figures are summarised at page 24 of the Defendants’ analysis bundle.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.50in;text-indent:-0.50in">82.<marker name="tab"/>The Claimants helpfully lodged an annotated version of the Defendants’ analysis, giving me the location of the various items of costs within the bundles.  This made the exercise of deciding upon the final costs cap very much easier and I am grateful to them for it.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.50in;text-indent:-0.50in">83.<marker name="tab"/>I have read and considered the individual sample files lodged by the Claimants, together with the Thompson Generic File Notes (two ring-binders), the Travel City Direct Generic Party and Party Correspondence, the Sunstar Generic Party and Party Correspondence, the Thomas Cook Generic Party and Party Correspondence, the Top Tier Generic File Notes (two ring-binders), the Thompson Generic Party and Party Correspondence (two ring-binders) and the Cosmos Generic Party and Party Correspondence.  In addition, I have also read the bundle of privileged documents lodged by the Claimants, but, as I have stated, that has not caused me to alter the decision I would have reached without seeing those documents.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">84.<marker name="tab"/>Having considered these papers and the rival submissions at length, I am satisfied that the Defendants’ suggested hourly rates are too low and that the times which they have allowed for the Claimants to carry out the work, too short.  Having said that, the rates claimed by the Claimants cannot be justified, nor can the times which they put forward as being reasonable in the context of this litigation.  Bearing these factors in mind I base my figures for the costs cap on the following hourly rates: Partner £250, Associate £175, Solicitor £150, paralegal £100. </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">85.<marker name="tab"/>As I have already indicated, this costs capping order applies only from 17 January 2005, and costs incurred prior to that date will, if necessary, have to be the subject of detailed assessment.  In respect of the Claimants’ costs incurred up to 17 January 2005, I find that those costs have the appearance of being disproportionate.  This means that when those costs come to be assessed, if the assessment is on the standard basis, the test of necessity will have to be applied.  If on the other hand the assessment is on the indemnity basis, the test of reasonableness alone will apply.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.50in;text-indent:-0.50in">86.<marker name="tab"/>In arriving at this costs cap I make an allowance under four heads, namely profit costs, counsels’ fees, experts’ fees and other disbursements.  My final figure for the costs cap is a total of £881, 250, made up as follows:</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.75in">Solicitors’ profit costs, £500,000; </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.75in">VAT (if applicable), £87,500;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.75in">Counsels’ fees, £150,000;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.75in">VAT (if applicable), £26,250;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.75in">Experts’ fees, £90,000;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.75in">VAT (if applicable),` £15,750;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.75in">Other disbursements, £10,000;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p style="text-align:justify;margin-left:0.75in">VAT (if applicable), £1750.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">87.<marker name="tab"/>Accordingly, the costs cap imposed on 17 January 2005 is quantified in the sum of £881,250.  As I have said, I make this order on the basis of a three week trial.  I shall direct that each party shall have liberty to apply to vary the order in the event of some future, unforeseen event or factor arising, which significantly affects the estimated costs on which this order was based.  </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:-0.50in">88.<marker name="tab"/>I will hear further submissions relating to costs caps on the Defendants’ costs; any consequential orders; and the costs of the costs capping exercise.</p>
+	  </content>
+	</level>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>
