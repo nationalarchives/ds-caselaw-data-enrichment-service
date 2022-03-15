@@ -13,7 +13,7 @@ from correction_strategies import apply_correction_strategy
 from replacer import replacer
 from analysis import pie_malformed, bar_citation_types, bar_citation_year, bar_malformed_type, citations_hist
 
-ROOTDIR = "../benchmarking/tna-sample/tna-sample/tna-sample"
+ROOTDIR = "../2020"
 DATABASE = "manifest.db"
 db_conn = create_connection(DATABASE)
 load_patterns(db_conn)
@@ -29,7 +29,7 @@ MATCHED_RULE_TYPE = []
 YEARS = []
 TYPE_MALFORMED = []
 CITATIONS_PER_DOC = []
-benchmark_dict = {'filename': [], 'rule_id': [], 'citation': []}
+# benchmark_dict = {'filename': [], 'rule_id': [], 'citation': []}
 
 for subdir, dirs, files in os.walk(ROOTDIR):
   for file in files:
@@ -45,9 +45,9 @@ for subdir, dirs, files in os.walk(ROOTDIR):
         for ent in doc.ents:
           rule_id = ent.ent_id_
           citation_match = ent.text
-          benchmark_dict['filename'].append(file)
-          benchmark_dict['rule_id'].append(rule_id)
-          benchmark_dict['citation'].append(citation_match)
+          # benchmark_dict['filename'].append(file)
+          # benchmark_dict['rule_id'].append(rule_id)
+          # benchmark_dict['citation'].append(citation_match)
           MATCHED_RULE_ID.append(rule_id)
           is_canonical, citation_type, canonical_form, description = get_matched_rule(db_conn, rule_id)
           MATCHED_RULE_TYPE.append(description)
@@ -72,13 +72,13 @@ for subdir, dirs, files in os.walk(ROOTDIR):
       for replacement in REPLACEMENTS:
           file_data = replacer(file_data, replacement)
       
-      output_file = f"output/{file}".replace(".xml", "_enriched.xml")
+    output_file = f"output/{file}".replace(".xml", "_enriched.xml")
 
-      with open(output_file, "w") as data_out:
-          data_out.write(file_data)
+    with open(output_file, "w") as data_out:
+        data_out.write(file_data)
 
-with open('benchmark.json', 'w') as f:
-  json.dump(benchmark_dict, f)
+# with open('benchmark.json', 'w') as f:
+#   json.dump(benchmark_dict, f)
 close_connection(db_conn)
 pie_malformed(WELL_FORMED, MALFORMED)
 bar_citation_types(MATCHED_RULE_TYPE)
