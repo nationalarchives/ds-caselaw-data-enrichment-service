@@ -47,6 +47,7 @@ def find_abbreviation(
 
     long_index = len(long_form) - 1
     short_index = len(short_form) - 1
+    contains_date = 0
     while short_index >= 0:
         current_char = short_form[short_index].lower()
         # We don't check non alpha-numeric characters.
@@ -60,6 +61,7 @@ def find_abbreviation(
         abrv_date = False
         if current_char.isnumeric():
             abrv_date = True
+            contains_date += 1
            
 
         while (  
@@ -93,17 +95,8 @@ def find_abbreviation(
     # Now we know the character index of the start of the character span,
     # here we just translate that to the first token beginning after that
     # value, so we can return a spaCy span instead.
-    word_lengths = 0 
-    for char in str(short_form_candidate): 
-        if char.isdigit():
-            word_lengths += 1
-    
- 
-        
-        
-   
+    word_lengths = contains_date
     starting_index = None
-    
     
 
     for i, word in enumerate(long_form_candidate):
@@ -140,7 +133,8 @@ def filter_matches(
             start = match[1] + 1
             end = match[2] - 1
             quote_offset = 1
-
+        else: 
+            continue
         # Ignore spans with more than 8 words in.
         if end - start > 8:
             continue
@@ -150,30 +144,37 @@ def filter_matches(
             short_form_candidate = doc[
                 start - 3 - quote_offset : start - 1 - quote_offset
             ]
+            if not contains(short_form_candidate.text, QUOTES):
+                continue
             if short_form_filter(short_form_candidate):
                 candidates.append((doc[start:end], short_form_candidate))
         else:
             # Normal case.
             # Short form is inside the parens.
             # Sum character lengths of contents of parens.
-
+            str_shortform = str(doc[start:end])
+            
             abbreviation_length = sum([len(x) for x in doc[start:end]])
             max_words = min(abbreviation_length + 5, abbreviation_length * 2)
-            # Look up to max_words backwards
+            # # Look up to max_words backwards
             long_form_candidate = doc[
                 max(start - max_words - 1 - quote_offset, 0) : start - 1 - quote_offset
             ]
+
             candidates.append((long_form_candidate, doc[start:end]))
+            continue
     return candidates
 
 
 def short_form_filter(span: Span) -> bool:
     # All words are between length 2 and 10
+    QUOTES = ['"', "'", "‘", "’", "“", "”"]
     if not all([2 < len(x) < 10 for x in span]):
         return False
     # At least one word is alpha numeric
     if not any([x.is_alpha for x in span]):
         return False
+    
     return True
 
 
@@ -212,23 +213,27 @@ class AbbreviationDetector():
         """
         dummy_matches = [(-1, int(span.start), int(span.end))]
         filtered = filter_matches(dummy_matches, doc)
+        
         abbreviations = self.find_matches_for(filtered, doc)
 
         if not abbreviations:
             return span, set()
         else:
             return abbreviations[0]
+   
 
     def __call__(self, doc: Doc) -> Doc:
         matches = self.matcher(doc)
         matches_no_brackets = [(x[0], x[1] + 1, x[2] - 1) for x in matches]
         filtered = filter_matches(matches_no_brackets, doc)
+
         occurences = self.find_matches_for(filtered, doc)
         
         for (long_form, short_forms) in occurences:
             for short in short_forms:
                 short._.long_form = long_form
                 doc._.abbreviations.append(short)
+        
         return doc
 
     def find_matches_for(
