@@ -15,6 +15,7 @@ DATABASE = "manifest.db"
 # create mock function for the db connection 
 # mock function to replicate the main file, without needing to use the xml files 
 def mock_return_citation(nlp, text, db_conn):
+   
     doc = nlp(text)
     citation_match = None
     is_canonical = None
