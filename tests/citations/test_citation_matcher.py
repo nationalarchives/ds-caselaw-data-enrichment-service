@@ -1,15 +1,10 @@
 from tokenize import String
 import unittest
-from numpy import number 
 from spacy.lang.en import English
 from caselaw_extraction.correction_strategies import apply_correction_strategy
-from caselaw_extraction.replacer import replacer
 from caselaw_extraction.db_connection import create_connection, close_connection, get_matched_rule
-from caselaw_extraction.helper import parse_file, load_patterns
-import pandas as pd
-import sqlite3
-from sqlite3 import Error
-import random
+from caselaw_extraction.helper import load_patterns
+
 
 """
     Testing the matching of the citations based on the data found in the rules. 
