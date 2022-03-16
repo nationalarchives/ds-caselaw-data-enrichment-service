@@ -5,8 +5,11 @@ Created on Mon Mar 3 10:48:33 2022
 @author: Imane.Hafnaoui
 
 
-Detects legislation references that are either well-formed (Exact matching) or malformed (Fuzzy/Hybrid) 
-as long as they contain [Act YYYY]
+Detects legislation references by searching through a lookup table of existing acts.
+    - Exact matcher: searches the judgement for exact matches to the legislation title in lookup table.
+    - Fuzzy matcher: detects well-formed and malformed citations (parameter: cutoff - confidence ratio to filter the search (min -> 90))
+    - Hybrid matcher: narrows down the fuzzy matching to candidate segments in the judgement that contain the pattern [Act YYYY]
+    
 """
 import pandas as pd
 import bs4 as BeautifulSoup
@@ -156,9 +159,10 @@ def main(argv):
     # read leg-title lookup table
     leg_titles = pd.read_csv(leg_path)
     # limit search to years that appear in doc -- to be discussed with the team
-    dates = detect_year_span(docobj, nlp)
-    shorttitles = leg_titles[leg_titles.year.isin(
-        dates)].shorttitle.dropna().drop_duplicates().tolist()
+    #dates = detect_year_span(docobj, nlp)
+    #shorttitles = leg_titles[leg_titles.year.isin(dates)].candidate_titles.drop_duplicates().tolist()
+    
+    shorttitles = leg_titles.candidate_titles
 
     print("Matching in progress...", len(shorttitles))
     # run pipeline
