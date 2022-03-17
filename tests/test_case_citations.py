@@ -176,17 +176,43 @@ class TestCorrectionStrategy(unittest.TestCase):
     def test_incorrect_forms(self): 
         citation_match = "[2022] P.N.L.R 123"
         citation_type = "PubYearAbbrNum"
-        canonical_form = "d1 ExD d2"
+        canonical_form = "[dddd] PNLR d+"
         corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation != citation_match
+        assert corrected_citation == "[2022] PNLR 123"
         assert year == "2022"
 
-        citation_match = "[2022] P.N.L.R 123"
-        citation_type = "PubYearAbbrNum"
-        canonical_form = "d1 ExD d2"
+        citation_match = "(1995) 99 Cr. App. R. 123"
+        citation_type = "PubYearNumAbbrNum"
+        canonical_form = "(dddd) d1 Cr App R d2"
         corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation != citation_match
-        assert year == "2022"
+        assert corrected_citation == "(1995) 99 Cr App R 123"
+        assert year == "1995"
+
+        citation_match = "(2026) EWHC 789 (Fam)"
+        citation_type = "NCitYearAbbrNumDiv"
+        canonical_form = "[dddd] EWHC d+ (Fam)"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation != citation_match
+        assert corrected_citation == "[2026] EWHC 789 (Fam)"
+        assert year == "2026"
+
+        citation_match = "[1999] A.C. 666"
+        citation_type = "PubYearAbbrNum"
+        canonical_form = "[dddd] AC d+"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation != citation_match
+        assert corrected_citation == "[1999] AC 666"
+        assert year == "1999"
+
+        citation_match = "[2019] Q.B. 456"
+        citation_type = "PubYearAbbrNum"
+        canonical_form = "[dddd] QB d+"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation != citation_match
+        assert corrected_citation == "[2019] QB 456"
+        assert year == "2019"
 
 
     def tearDown(self):
@@ -201,14 +227,55 @@ class TestCitationReplacer(unittest.TestCase):
         self.nlp, self.db_conn = set_up()
     
     def test_citation_replacer(self):
-        citation_match = "[2025] 1 All E.R. 123"
-        corrected_citation = "[2025] 1 All ER 123"
+        citation_match = "[2025] 1 All E.R. 123" # incorrect citation
+        corrected_citation = "[2025] 1 All ER 123" # in practice, returned via the citation matcher
         year = "2025"
         text = "In the judgment the incorrect citation is [2025] 1 All E.R. 123."
         replacement_entry = (citation_match, corrected_citation, year)
         replaced_entry = replacer(text, replacement_entry)
         assert corrected_citation in replaced_entry
+        replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
+        assert replacement_string in replaced_entry
 
+        citation_match = "[2022] UKET 789123_2012" 
+        corrected_citation = "[2022] UKET 789123/2012" 
+        year = "2022"
+        text = "This citation that needs to be changed is [2022] UKET 789123_2012 which discussed..."
+        replacement_entry = (citation_match, corrected_citation, year)
+        replaced_entry = replacer(text, replacement_entry)
+        assert corrected_citation in replaced_entry
+        replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
+        assert replacement_string in replaced_entry
+
+        citation_match = "LR 1 A&E 123" 
+        corrected_citation = "LR 1 AE 123" 
+        year = "No Year"
+        text = "LR 1 A&E 123 refers to..."
+        replacement_entry = (citation_match, corrected_citation, year)
+        replaced_entry = replacer(text, replacement_entry)
+        assert corrected_citation in replaced_entry
+        replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
+        assert replacement_string in replaced_entry
+
+        citation_match = "(2022) EWHC 123 (Mercantile)" 
+        corrected_citation = "[2022] EWHC 123 (Mercantile)" 
+        year = "2022"
+        text = "I defer to the judgment in (2022) EWHC 123 (Mercantile)."
+        replacement_entry = (citation_match, corrected_citation, year)
+        replaced_entry = replacer(text, replacement_entry)
+        assert corrected_citation in replaced_entry
+        replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
+        assert replacement_string in replaced_entry
+
+        citation_match = "[2022] ewca civ 123" 
+        corrected_citation = "[2022] EWCA Civ 123" 
+        year = "2022"
+        text = "[2022] ewca civ 123."
+        replacement_entry = (citation_match, corrected_citation, year)
+        replaced_entry = replacer(text, replacement_entry)
+        assert corrected_citation in replaced_entry
+        replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
+        assert replacement_string in replaced_entry
 
     def tearDown(self):
         close_connection(self.db_conn)
