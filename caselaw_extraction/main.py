@@ -1,10 +1,7 @@
 import os
 import re
-import pandas as pd
-from collections import Counter
 
 from spacy.lang.en import English
-import bs4 as BeautifulSoup
 
 from helper import parse_file, load_patterns
 from db_connection import create_connection, close_connection, get_matched_rule
