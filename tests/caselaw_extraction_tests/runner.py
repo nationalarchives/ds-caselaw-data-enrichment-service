@@ -5,10 +5,10 @@ from test_xml_parser import TestXmlParser
 
 # initialize the test suite
 
+XMLParserSuite = unittest.TestLoader().loadTestsFromTestCase(TestXmlParser)
 CorrectionStrategySuite = unittest.TestLoader().loadTestsFromTestCase(TestCorrectionStrategy)
 CitationProcessorSuite = unittest.TestLoader().loadTestsFromTestCase(TestCitationProcessor)
 CitationReplacerSuite = unittest.TestLoader().loadTestsFromTestCase(TestCitationReplacer)
-XMLParserSuite = unittest.TestLoader().loadTestsFromTestCase(TestXmlParser)
 suite = unittest.TestSuite([CorrectionStrategySuite, CitationProcessorSuite, CitationReplacerSuite, XMLParserSuite])
 
 runner = unittest.TextTestRunner(verbosity=3)
