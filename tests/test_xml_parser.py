@@ -37,7 +37,7 @@ class TestXmlParser(unittest.TestCase):
             </content>"
 
         judgment_content_text = parse_file(text)
-        assert judgment_content_text == "in accordance with CPR Rule 22.1 and PD 22."
+        assert judgment_content_text == "in accordance with CPR Rule 22.1 and PD 22.\”"
 
 
         text = "<content>\
@@ -60,7 +60,7 @@ class TestXmlParser(unittest.TestCase):
                 </content>"
         
         judgment_content_text = parse_file(text)
-        print(judgment_content_text)
+        assert judgment_content_text == "The present case is different.  The Sellers had a single obligation to provide and maintain the capacity to deliver gas from the Reservoirs at 130% of the TRDQ, whatever that was at the time.  They had no discretion as to how much daily gas they had to deliver.  As already noted, and the distinction is a subtle one, the power to change an obligation is not a discretion as to how to perform it.  Accordingly, once the obligation is identified and the breach established, the only remaining question is what if any loss has flowed from the breach.  There is no uncertainty about definition of the loss, though its quantification may be complex, depending on the circumstances. I would therefore also allow the cross-appeal.  I am conscious that we are differing from the judge not once but twice, but that is no reflection on his judgment, which dealt clearly and succinctly with three difficult issues.  It should also be noted that his undisturbed finding on the third issue (no implied term) has had a decisive effect on the outcome and that his decision and ours have by different routes arrived at the same destination."
 
 if __name__ == '__main__':
     unittest.main()
