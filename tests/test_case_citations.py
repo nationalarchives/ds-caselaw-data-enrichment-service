@@ -37,8 +37,6 @@ def mock_return_citation(nlp, text, db_conn):
 def mock_get_rules_total(db_conn): 
     cursor = db_conn.cursor()
     number_of_rules = cursor.execute('''SELECT COUNT(*) FROM manifest''')
-    number_of_rules = cursor.fetchone()
-    number_of_rules = number_of_rules[0]  
 
     return number_of_rules
 
@@ -276,19 +274,6 @@ class TestCitationReplacer(unittest.TestCase):
         assert corrected_citation in replaced_entry
         replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
         assert replacement_string in replaced_entry
-
-    def tearDown(self):
-        close_connection(self.db_conn)
-
-"""
-    Other files to test - test helper.py (it's own file?)
-    Replacer.py 
-    DB_connection.py
-"""       
-class TestCitationRules(unittest.TestCase): 
-    # test that the rules in the DB are as expected
-    def setUp(self):
-        self.nlp, self.db_conn = set_up()
 
     def tearDown(self):
         close_connection(self.db_conn)
