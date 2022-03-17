@@ -1,6 +1,6 @@
 # tests/runner.py
 import unittest
-from test_citation_matcher import TestCitationProcessor, TestCitationMatcher
+from test_case_citations import TestCitationProcessor, TestCitationMatcher
 
 # initialize the test suite
 
