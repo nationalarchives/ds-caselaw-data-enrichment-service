@@ -1,12 +1,12 @@
 # tests/runner.py
 import unittest
-from test_case_citations import TestCitationProcessor, TestCitationMatcher
+from test_case_citations import TestCitationProcessor, TestCorrectionStrategy
 
 # initialize the test suite
 
-suite1 = unittest.TestLoader().loadTestsFromTestCase(TestCitationMatcher)
-suite2 = unittest.TestLoader().loadTestsFromTestCase(TestCitationProcessor)
-suite = unittest.TestSuite([suite1, suite2])
+CorrectionStrategySuite = unittest.TestLoader().loadTestsFromTestCase(TestCorrectionStrategy)
+CitationProcessorSuite = unittest.TestLoader().loadTestsFromTestCase(TestCitationProcessor)
+suite = unittest.TestSuite([CorrectionStrategySuite, CitationProcessorSuite])
 
 runner = unittest.TextTestRunner(verbosity=3)
 result = runner.run(suite)

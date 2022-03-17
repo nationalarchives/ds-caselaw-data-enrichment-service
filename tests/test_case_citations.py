@@ -10,12 +10,14 @@ from caselaw_extraction.replacer import replacer
 
 """
     Testing the matching of the citations based on the data found in the rules. 
+    These are independent unit tests.
 """
 
 DATABASE = "manifest.db"
 CORRECT_CITATIONS = ["random text goes here random text goes here **[2022] UKUT 177 (TCC)", "[2022] 1 Lloyd's Rep 123.", "..........Case C-123/12........", "[[2022] EWHC 123 (Mercantile) ", "[2022] EWHC 123 (TCC))", "random text goes here [2022] 1 WLR 123 random text goes here",  "random text goes here random text goes here [2022] UKUT 123 (TCC)",  "random text [2004] AC 816 goes here  random text goes here "\
             "[2022] EWHC 123 (Pat)","......[2022] 1 QB 123......"]
 INCORRECT_CITATIONS = ["random text goes here (2022) UKUT 123 (IAC) random text goes here", "[2057] A.C. 657 random text goes here"]
+UNKNOWN_CITATIONS = ["random text goes here random text goes here [2022] UKUT 177  (TCC)","gCase C-123/12",  "[2022]] UKUT 177 (TCC)"]
 
 # create mock function for the db connection - extracting the logic from main.py
 def mock_return_citation(nlp, text, db_conn):
@@ -51,6 +53,11 @@ def set_up():
     load_patterns(db_conn)
     return nlp, db_conn
 
+"""
+    This class focuses on testing the Citation Processor, which gathers the results from the DB. This class primarily uses the mock_return_citation method.
+    This includes testing incorrect or missing citations. 
+    This is relevant for the logic performed in main.py
+"""
 class TestCitationProcessor(unittest.TestCase): 
     def setUp(self): 
         self.nlp, self.db_conn = set_up()
@@ -68,7 +75,6 @@ class TestCitationProcessor(unittest.TestCase):
 
         text = "amy [2022] KB 123"
         citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-        print(is_canonical)
         assert is_canonical == True
     
     # for correct citations - ensure it finds that it is canonical
@@ -113,8 +119,7 @@ class TestCitationProcessor(unittest.TestCase):
             assert citation_match is not None
 
     def test_unknown_citations(self):
-        unknown_citations = ["random text goes here random text goes here [2022] UKUT 177  (TCC)","gCase C-123/12",  "[2022]] UKUT 177 (TCC)"]
-        for text in unknown_citations: 
+        for text in UNKNOWN_CITATIONS: 
             print("Testing: " + text)
             citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
             assert is_canonical != True and is_canonical != False
@@ -122,32 +127,104 @@ class TestCitationProcessor(unittest.TestCase):
     def tearDown(self):
         close_connection(self.db_conn)
 
-class TestCitationMatcher(unittest.TestCase): 
+"""
+    This class focuses on testing the Citation Matcher, which includes verifying that correct citations are matched to ensure that the 
+    DB is behaving as expected. 
+    This also verifies that the year and numbers are extracted correctly is extracted from the citation as expected, this is relevant for 
+    correct_strategies.py
+"""
+class TestCorrectionStrategy(unittest.TestCase): 
     def setUp(self): 
        self.nlp, self.db_conn = set_up()
-
-    def test_corrected_citation(self):
-        text = "random text goes here (2022) UKUT 123 (IAC) random text goes here"
-        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
-        # check the strings to ensure they have actually been replaced here 
-        assert corrected_citation == "[2022] UKUT 123 (IAC)"
-        citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, corrected_citation, self.db_conn)
-        assert is_canonical == True # Replaced citation should now be correct 
     
-    def test_replaced_citation(self):
-        texts = ["random test goes here... [1892] 1 QB 123....", "random test goes here... [1345] F.S.R. 123....", "refer to the case in (5674) 74 EHRR 123.", "also seen in [2022] R.P.C. 123..", \
-            "see the judgment given in  (2045) UKFTT 143 (TC)"]
-        for text in texts: 
-            citation_match, is_canonical, citation_type, canonical_form, description = mock_return_citation(self.nlp, text, self.db_conn)
-            corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
-            replacement_entry = (citation_match, corrected_citation, year)
-            replaced_entry = replacer(text, replacement_entry)
-            assert corrected_citation in replaced_entry
-            
+    def test_correct_forms(self): 
+        citation_match = "1 ExD 123"
+        citation_type = "PubNumAbbrNum"
+        canonical_form = "d1 ExD d2"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation == citation_match
+        assert year == "No Year"
+
+        citation_match = "[2025] EWHC 123 (TCC)"
+        citation_type = "NCitYearAbbrNumDiv"
+        canonical_form = "[dddd] EWHC d+ (TCC)"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation == citation_match
+        assert year == "2025"
+
+        citation_match = "[2024] EWCOP 758"
+        citation_type = "NCitYearAbbrNum"
+        canonical_form = "[dddd] EWCOP d+"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation == citation_match
+        assert year == "2024"
+
+        citation_match = "[1999] LGR 666"
+        citation_type = "PubYearAbbrNum"
+        canonical_form = "[dddd] LGR d+"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation == citation_match
+        assert year == "1999"
+
+        citation_match = "Case T-123/12"
+        citation_type = "EUTCase"
+        canonical_form = "Case T-123/12"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation == citation_match
+        assert year == "No Year"
+
+    def test_incorrect_forms(self): 
+        citation_match = "[2022] P.N.L.R 123"
+        citation_type = "PubYearAbbrNum"
+        canonical_form = "d1 ExD d2"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation != citation_match
+        assert year == "2022"
+
+        citation_match = "[2022] P.N.L.R 123"
+        citation_type = "PubYearAbbrNum"
+        canonical_form = "d1 ExD d2"
+        corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        assert corrected_citation != citation_match
+        assert year == "2022"
+
+
+    def tearDown(self):
+        close_connection(self.db_conn)
+
+
+"""
+    This class tests the replacement of the citations within the text itself. This comes from replacer.py
+"""
+class TestCitationReplacer(unittest.TestCase): 
+    def setUp(self):
+        self.nlp, self.db_conn = set_up()
+    
+    def test_citation_replacer(self):
+        citation_match = "[2025] 1 All E.R. 123"
+        corrected_citation = "[2025] 1 All ER 123"
+        year = "2025"
+        text = "In the judgment the incorrect citation is [2025] 1 All E.R. 123."
+        replacement_entry = (citation_match, corrected_citation, year)
+        replaced_entry = replacer(text, replacement_entry)
+        assert corrected_citation in replaced_entry
+
+
+    def tearDown(self):
+        close_connection(self.db_conn)
+
+"""
+    Other files to test - test helper.py (it's own file?)
+    Replacer.py 
+    DB_connection.py
+"""       
 class TestCitationRules(unittest.TestCase): 
     # test that the rules in the DB are as expected
-    a = 1
+    def setUp(self):
+        self.nlp, self.db_conn = set_up()
+
+    def tearDown(self):
+        close_connection(self.db_conn)
     
 if __name__ == '__main__':
     unittest.main()

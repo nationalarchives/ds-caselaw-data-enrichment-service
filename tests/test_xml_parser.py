@@ -9,7 +9,7 @@ from caselaw_extraction.helper import load_patterns
 from caselaw_extraction.replacer import replacer
 
 """
-    Testing the xml parser. 
+    Testing the xml parser to ensure that information is extracted as expected. 
 """
 
 DATABASE = "manifest.db"
