@@ -30,7 +30,8 @@ def mock_return_citation(nlp, text, db_conn):
     for ent in doc.ents:
         rule_id = ent.ent_id_
         citation_match = ent.text
-        is_canonical, citation_type, canonical_form, description = get_matched_rule(db_conn, rule_id)
+        # TODO: this should be mocked 
+        is_canonical, citation_type, canonical_form, description = get_matched_rule(db_conn, rule_id) 
     return citation_match, is_canonical, citation_type, canonical_form, description
 
 # current number of rules in the database
