@@ -8,21 +8,18 @@ Created on Mon Mar 3 10:48:33 2022
 Detects legislation references by searching through a lookup table of existing acts.
     - Exact matcher: searches the judgement for exact matches to the legislation title in lookup table.
     - Fuzzy matcher: detects well-formed and malformed citations (parameter: cutoff - confidence ratio to filter the search (min -> 90))
-    - Hybrid matcher: narrows down the fuzzy matching to candidate segments in the judgement that contain the pattern [Act YYYY]
+    - Hybrid matcher: narrows down the fuzzy matching to candidate segments in the judgement that contain the pattern [Act YYYY] and 
+    performs exact matching otherwise.
     
 """
 import pandas as pd
 import bs4 as BeautifulSoup
 from spacy.matcher import PhraseMatcher, Matcher
 from spaczz.matcher import FuzzyMatcher
-from joblib import Parallel, delayed
-import json
 import sys
 from time import time
 from spacy.lang.en import English
 
-cpus = 100
-chunksize = 50
 keys = ['detected_ref', 'start', 'end', 'confidence']
 
 # EXACT MATCHING
@@ -85,8 +82,13 @@ def hybrid(title, docobj, nlp, cutoff=95, candidates=None):
     return all_matches
 
 ######
+def mergedict(x,b):
+    a = {}
+    for k,v in b.items(): a[k] = a.get(k, []) + b[k]
+    for k,v in x.items(): a[k] = a.get(k, []) + x[k]
+    return a
 
-def detect_year_span(docobj, nlp):  # TODO: to be discussed - enforces reference to have a year
+def detect_year_span(docobj, nlp):
     pattern = [{"SHAPE": "dddd"}]
     dmatcher = Matcher(nlp.vocab)
     dmatcher.add('date matcher', [pattern])
@@ -96,13 +98,7 @@ def detect_year_span(docobj, nlp):  # TODO: to be discussed - enforces reference
     return dates
 
 
-methods = {
-    'exact': search_for_act,
-    'fuzzy': search_for_act_fuzzy,
-    'hybrid': hybrid
-}
 
-# MULTIPROC
 
 
 def chunker(iterable, total_length, chunksize):
@@ -117,66 +113,63 @@ def lookup_pipe(titles, docobj, nlp, method, cutoff=95):
     results = {}
     candidates = detectCandidate(
         nlp, docobj) if method.__name__ == 'hybrid' else None
-    for title in nlp.pipe(titles, batch_size=10):
+    for title in nlp.pipe(titles, batch_size=100):
         matches = method(title.text, docobj, nlp, cutoff, candidates)
         if matches:
             results[title.text] = results.get(title.text, []) + matches
     return results
 
-
-def lookup_parallel(titles, docobj, nlp, method, chunksize=150, cpus=1):
-    executor = Parallel(
-        n_jobs=cpus, backend='multiprocessing', prefer="processes")
-    do = delayed(lookup_pipe)
-    tasks = (do(chunk, docobj, nlp, method)
-             for chunk in chunker(titles, len(titles), chunksize=chunksize))
-    result = executor(tasks)
-    return flatten(result)
-
 ######
 
+
+methods = {
+    'exact': search_for_act,
+    'fuzzy': search_for_act_fuzzy,
+    'hybrid': hybrid
+}
 
 def main(argv):
     xml_path = argv[0]
     leg_path = argv[1]
     method = argv[2]
 
-    # print("Loading judgement...")
+    print("Loading judgement...")
     with open(xml_path, "r", encoding="utf-8") as file_in:
         file_data = file_in.read()
     soup = BeautifulSoup.BeautifulSoup(str(file_data), "lxml")
     leg_content = soup.find_all("content")
     leg_content_text = " ".join([content.text for content in leg_content])
 
-    # print("Loading NLP corpus...")
-    # spacy english model (small)
-    #nlp = spacy.load('en_core_web_sm')
+    print("Loading NLP corpus...")
     nlp = English()
-    nlp.max_length = len(leg_content_text)
+    nlp.max_length = len(leg_content_text) #1500000
     docobj = nlp(leg_content_text)
 
-    # print("Loading legislation table...")
+    print("Loading legislation table...")
     # read leg-title lookup table
     leg_titles = pd.read_csv(leg_path)
     # limit search to years that appear in doc -- to be discussed with the team
-    # print('detecting dates...')
+    results = []
     dates = detect_year_span(docobj, nlp)
-    shorttitles = leg_titles[leg_titles.year.isin(dates)].candidate_titles.drop_duplicates().tolist()
-    
-    # shorttitles = leg_titles.candidate_titles
+    shorttitles = leg_titles[leg_titles.year.isin(dates)]
 
-    # print("Matching in progress...", len(shorttitles))
     # run pipeline
     t = time()
-    res = lookup_pipe(shorttitles, docobj, nlp, methods[method])
-    t1 = time()
+    for fuzzy, method in zip([True, False], ('hybrid','exact')):
+        titles = shorttitles[shorttitles.for_fuzzy==fuzzy].candidate_titles.drop_duplicates().tolist()
+        res = lookup_pipe(titles, docobj, nlp, methods[method])
+        results.append(res)
+ 
+    results = mergedict(results[0], results[1])
     results = dict([(k, [dict(zip(keys, j)) for j in v])
-                   for k, v in res.items()])
+                   for k, v in results.items()])    
     refs = [i for j in results.values() for i in j]
-    # print(json.dumps(results, indent=(4)))
-    # print('--> Detected %d legislations in %d (s): %d references out of  ""' %
-          # (len(results), (t1-t), len(refs)))
-    return t1-t, len(results), len(refs), xml_path
+    t1 = time()
+    #print(json.dumps(results, indent=(4)))
+    print('%s--> Detected %d legislations in %d (s): %d references' %
+           (xml_path, len(results), (t1-t), len(refs)))
+    # return t1-t, len(results), len(refs), xml_path
+
 
 if __name__ == "__main__":
     main(sys.argv[1:])
