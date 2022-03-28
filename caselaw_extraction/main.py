@@ -1,5 +1,8 @@
 import os
 import re
+import pandas as pd
+from collections import Counter
+import json
 
 from spacy.lang.en import English
 
@@ -15,8 +18,7 @@ db_conn = create_connection(DATABASE)
 load_patterns(db_conn)
 
 nlp = English()
-nlp.max_length = 1500000
-# Citation rules added to teh spacy pipeline
+nlp.max_length = 2500000
 citation_ruler = nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
 
 MATCHED_RULE_ID = []
@@ -26,54 +28,57 @@ MATCHED_RULE_TYPE = []
 YEARS = []
 TYPE_MALFORMED = []
 CITATIONS_PER_DOC = []
+# benchmark_dict = {'filename': [], 'rule_id': [], 'citation': []}
 
 for subdir, dirs, files in os.walk(ROOTDIR):
   # TODO: This needs to be updated to just handle the file that is being passed to it
   for file in files:
-    REPLACEMENTS = []
-    file_path = os.path.join(subdir, file)
-    with open(file_path, "r", encoding="utf-8") as file_in:
-      print(file)
-      file_data = file_in.read()
-      # Parse the XML into sentences
-      judgment_content_text = parse_file(file_data)
-      # Run the spacy pipeline over the judgment
-      doc = nlp(judgment_content_text)
-      CITATIONS_PER_DOC.append(len(doc.ents))
-      # Ent = citation found by Spacy 
-      for ent in doc.ents:
-        rule_id = ent.ent_id_
-        citation_match = ent.text # This will only contain the citation 
-        MATCHED_RULE_ID.append(rule_id)
-        is_canonical, citation_type, canonical_form, description = get_matched_rule(db_conn, rule_id) # Find the matched rule
-        MATCHED_RULE_TYPE.append(description)
-        if is_canonical == False:
-          MALFORMED += 1
-          corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
-          print ("-----> CORRECTED:", corrected_citation, file)
-          replacement_entry = (citation_match, corrected_citation, year)
-          YEARS.append(year)
-          TYPE_MALFORMED.append(description)
-        # Years collected for graph/analysis data
-        else:
-          WELL_FORMED += 1 
-          if 'Year' in citation_type:
-            components = re.findall(r"\d+", citation_match)
-            year = components[0]
-          else: 
-            year = 'No Year'
-          replacement_entry = (citation_match, citation_match, year)
-          YEARS.append(year)
-        REPLACEMENTS.append(replacement_entry)
-    # Actual replacement of malformed citations
-    for replacement in REPLACEMENTS:
-        file_data = replacer(file_data, replacement)
-    
+    if not file.startswith('.'):
+      REPLACEMENTS = []
+      file_path = os.path.join(subdir, file)
+      with open(file_path, "r", encoding="utf-8") as file_in:
+        print(file)
+        file_data = file_in.read()
+        judgment_content_text = parse_file(file_data)
+        doc = nlp(judgment_content_text)
+        CITATIONS_PER_DOC.append(len(doc.ents))
+        for ent in doc.ents:
+          rule_id = ent.ent_id_
+          citation_match = ent.text
+          # benchmark_dict['filename'].append(file)
+          # benchmark_dict['rule_id'].append(rule_id)
+          # benchmark_dict['citation'].append(citation_match)
+          MATCHED_RULE_ID.append(rule_id)
+          is_canonical, citation_type, canonical_form, description = get_matched_rule(db_conn, rule_id)
+          MATCHED_RULE_TYPE.append(description)
+          if is_canonical == False:
+            MALFORMED += 1
+            corrected_citation, year = apply_correction_strategy(citation_type, citation_match, canonical_form)
+            print ("-----> CORRECTED:", corrected_citation, file)
+            replacement_entry = (citation_match, corrected_citation, year)
+            YEARS.append(year)
+            TYPE_MALFORMED.append(description)
+          else:
+            WELL_FORMED += 1
+            if 'Year' in citation_type:
+              components = re.findall(r"\d+", citation_match)
+              year = components[0]
+            else: 
+              year = 'No Year'
+            replacement_entry = (citation_match, citation_match, year)
+            YEARS.append(year)
+          REPLACEMENTS.append(replacement_entry)
+        
+      for replacement in REPLACEMENTS:
+          file_data = replacer(file_data, replacement)
+      
     output_file = f"output/{file}".replace(".xml", "_enriched.xml")
 
     with open(output_file, "w") as data_out:
         data_out.write(file_data)
 
+# with open('benchmark.json', 'w') as f:
+#   json.dump(benchmark_dict, f)
 close_connection(db_conn)
 pie_malformed(WELL_FORMED, MALFORMED)
 bar_citation_types(MATCHED_RULE_TYPE)
