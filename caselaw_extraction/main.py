@@ -5,7 +5,6 @@ from collections import Counter
 import json
 
 from spacy.lang.en import English
-import bs4 as BeautifulSoup
 
 from helper import parse_file, load_patterns
 from db_connection import create_connection, close_connection, get_matched_rule
@@ -13,7 +12,7 @@ from correction_strategies import apply_correction_strategy
 from replacer import replacer
 from analysis import pie_malformed, bar_citation_types, bar_citation_year, bar_malformed_type, citations_hist
 
-ROOTDIR = "../2020"
+ROOTDIR = os.getcwd() + "/2020"
 DATABASE = "manifest.db"
 db_conn = create_connection(DATABASE)
 load_patterns(db_conn)
@@ -32,6 +31,7 @@ CITATIONS_PER_DOC = []
 # benchmark_dict = {'filename': [], 'rule_id': [], 'citation': []}
 
 for subdir, dirs, files in os.walk(ROOTDIR):
+  # TODO: This needs to be updated to just handle the file that is being passed to it
   for file in files:
     if not file.startswith('.'):
       REPLACEMENTS = []
