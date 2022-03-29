@@ -15,7 +15,7 @@ nlp.add_pipe("abbreviation_detector")
 
 # TODO: replace this to intake the different statements - this is where we'll integrate the pipeline
 # processin the document 
-doc = nlp('Council of Europe 59 ("CoE") is the court ultimately responsible for applying European Convention on Human Rights 1972 (ECHR 72) and therefore it should apply to the Human Rights Act 1998 (HRA 98) ')
+doc = nlp('Paragraph 5 of Sally’s skeleton argument refers to the fact that she had paid a substantial sum which “was inclusive of an occupation rent for the entirety of the period from the death of Roger Kingsley 30 September 2018”; and paragraph 6 complains about an error in the claimants’ draft order: “Paragraph 5 contains an error in that the use and occupation of the Properties is that of the First, not the Second Defendant.” (Sally’s emphasis)')
 
 # for testing purposes, see the results returned from the abbreviation detector - TODO: remove 
 print("Abbreviation", "\t", "Definition")

@@ -127,7 +127,7 @@ def filter_matches(
         start = match[1]
         end = match[2]
         quote_offset = 0
-
+        
         # Adjust indexes where match is enclosed in quotation marks.
         if contains(doc[start:end].text, QUOTES):
             start = match[1] + 1
@@ -144,7 +144,7 @@ def filter_matches(
             short_form_candidate = doc[
                 start - 3 - quote_offset : start - 1 - quote_offset
             ]
-            if not contains(short_form_candidate.text, QUOTES):
+            if not contains(short_form_candidate.text, QUOTES): 
                 continue
             if short_form_filter(short_form_candidate):
                 candidates.append((doc[start:end], short_form_candidate))
@@ -152,29 +152,36 @@ def filter_matches(
             # Normal case.
             # Short form is inside the parens.
             # Sum character lengths of contents of parens.
-            str_shortform = str(doc[start:end])
-            
-            abbreviation_length = sum([len(x) for x in doc[start:end]])
-            max_words = min(abbreviation_length + 5, abbreviation_length * 2)
-            # # Look up to max_words backwards
-            long_form_candidate = doc[
-                max(start - max_words - 1 - quote_offset, 0) : start - 1 - quote_offset
-            ]
+            short_string = str(doc[start:end])
+            quote_counter = 0
+            # Ensures that the short form is wrapped in quotations
+            for c in short_string: 
+                if c in QUOTES: 
+                    quote_counter += 1 
+            if not quote_counter >= 2: 
+                continue
+            else:
+                abbreviation_length = sum([len(x) for x in doc[start:end]])
+                max_words = min(abbreviation_length + 5, abbreviation_length * 2)
+                # # Look up to max_words backwards
+                long_form_candidate = doc[
+                    max(start - max_words - 1 - quote_offset, 0) : start - 1 - quote_offset
+                ]
 
-            candidates.append((long_form_candidate, doc[start:end]))
-            continue
+                candidates.append((long_form_candidate, doc[start:end]))
+                continue
     return candidates
 
 
 def short_form_filter(span: Span) -> bool:
     # All words are between length 2 and 10
-    QUOTES = ['"', "'", "‘", "’", "“", "”"]
     if not all([2 < len(x) < 10 for x in span]):
         return False
     # At least one word is alpha numeric
     if not any([x.is_alpha for x in span]):
         return False
     
+
     return True
 
 
