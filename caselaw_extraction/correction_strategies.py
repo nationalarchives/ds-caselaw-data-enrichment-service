@@ -2,7 +2,7 @@ import re
 
 def apply_correction_strategy(citation_type, citation_match, canonical_form):
     """Find the appropriate correction strategy and apply it"""
-
+    print(citation_type)
     # e.g [2022] EWCA Civ 123
     if (citation_type == "NCitYearAbbrNum") | (citation_type == "NCitYearAbbrNumDiv") | (citation_type == "PubYearAbbrNum"):
         # TODO: rewrite this regex
