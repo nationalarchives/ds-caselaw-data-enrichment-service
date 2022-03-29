@@ -37,12 +37,21 @@ def get_matched_rule(conn, rule_id):
   """
 
   matched_rule = get_manifest_row(conn, rule_id)
+  is_neutral = bool(matched_rule["isNeutral"].iloc[0])
   is_canonical = matched_rule["isCanonical"].iloc[0]
   citation_type = matched_rule["citationType"].iloc[0]
   canonical_form = matched_rule["canonicalForm"].iloc[0]
   rule_description = matched_rule["description"].iloc[0]
 
-  return is_canonical, citation_type, canonical_form, rule_description
+  return is_neutral, is_canonical, citation_type, canonical_form, rule_description
+
+def get_legtitles(conn):
+  leg_titles = pd.read_sql('''SELECT candidate_titles, year, for_fuzzy FROM ukpga_lookup''', conn)
+  return leg_titles
+
+def get_hrefs(conn, title):
+  ref_link = pd.read_sql('''SELECT ref_version FROM ukpga_lookup WHERE candidate_titles="{0}"'''.format(title), conn)
+  return ref_link.ref_version.values[0]
 
 def close_connection(conn):
   """
