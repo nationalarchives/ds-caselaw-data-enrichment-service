@@ -1,14 +1,18 @@
 """
-A slightly modified version of scispaCy's AbbreviationDetector. The only minor
-modification has been to handle common instances in legal text in which short form
-abbreviations are bounded by quote marks, like so:
+@author: amy.conroy
 
-Section 1 of the Human Rights Act 1998 ("HRA") provides...
+Adapted from Blackstone's abbreviation detector which itself was an 
+adaption of ScispaCy's abbreviation detector. 
 
-Save for this minor modification, the code has been untouched.
+Updated for SpaCy version 3.0+, as well as to handle dates in both long and short form abbreviations, 
+and to be limited specifically to abbreviations where there are quotes in the
+brackets. This prevents erroneous abbreviations being detected where brackets
+are used separaetly from defining abbreviations. 
 
+Blackstone repo here -> https://github.com/ICLRandD/Blackstone
 ScispaCy repo here -> https://github.com/allenai/scispacy
 """
+
 
 from curses.ascii import isalnum
 from typing import Tuple, List, Optional, Set, Dict
@@ -144,32 +148,25 @@ def filter_matches(
             short_form_candidate = doc[
                 start - 3 - quote_offset : start - 1 - quote_offset
             ]
-            if not contains(short_form_candidate.text, QUOTES): 
-                continue
             if short_form_filter(short_form_candidate):
                 candidates.append((doc[start:end], short_form_candidate))
         else:
             # Normal case.
             # Short form is inside the parens.
             # Sum character lengths of contents of parens.
-            short_string = str(doc[start:end])
-            quote_counter = 0
-            # Ensures that the short form is wrapped in quotations
-            for c in short_string: 
-                if c in QUOTES: 
-                    quote_counter += 1 
-            if not quote_counter >= 2: 
-                continue
-            else:
-                abbreviation_length = sum([len(x) for x in doc[start:end]])
-                max_words = min(abbreviation_length + 5, abbreviation_length * 2)
-                # # Look up to max_words backwards
-                long_form_candidate = doc[
-                    max(start - max_words - 1 - quote_offset, 0) : start - 1 - quote_offset
-                ]
-
-                candidates.append((long_form_candidate, doc[start:end]))
-                continue
+            if quote_offset == 1: 
+                quote_start = match[1]
+                # check that the first and last char is a quote in the short form defined in brackets
+                if not contains(str(doc[quote_start]), QUOTES) or not contains(str(doc[end]), QUOTES): 
+                    continue
+            abbreviation_length = sum([len(x) for x in doc[start:end]])
+            max_words = min(abbreviation_length + 5, abbreviation_length * 2)
+            # # Look up to max_words backwards
+            long_form_candidate = doc[
+                max(start - max_words - 1 - quote_offset, 0) : start - 1 - quote_offset
+            ]
+            candidates.append((long_form_candidate, doc[start:end]))
+            continue
     return candidates
 
 
