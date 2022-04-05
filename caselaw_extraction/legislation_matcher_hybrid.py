@@ -40,7 +40,6 @@ def search_for_act(title, doc_obj, nlp, cutoff=None, candidates=None):
     for match_id, start, end in matched_items:
         span = doc_obj[start: end]
         matched_text.append((span.text, start, end, 100))
-        print(matched_text)
     return matched_text
 
 # FUZZY MATCHING
@@ -55,7 +54,6 @@ def search_for_act_fuzzy(title, doc_obj, nlp, cutoff=95, candidates=None):
     for match_id, start, end, ratio in matched_items:
         span = doc_obj[start: end]
         matched_text.append((span.text, start, end, ratio))
-        print(matched_text)
     return matched_text
 
 # HYBRID MATCHING
@@ -125,14 +123,14 @@ methods = {
     'hybrid': hybrid
 }
 
-def leg_pipeline(leg_titles, docobj, nlp, conn):
+def leg_pipeline(leg_titles, nlp, doc, conn):
     results = []
-    dates = detect_year_span(docobj, nlp)
+    dates = detect_year_span(doc, nlp)
     shorttitles = leg_titles[leg_titles.year.isin(dates)]
 
     for fuzzy, method in zip([True, False], ('hybrid','exact')):
         titles = shorttitles[shorttitles.for_fuzzy==fuzzy].candidate_titles.drop_duplicates().tolist()
-        res = lookup_pipe(titles, docobj, nlp, methods[method], conn)
+        res = lookup_pipe(titles, doc, nlp, methods[method], conn)
         results.append(res)
 
     results = mergedict(results[0], results[1])

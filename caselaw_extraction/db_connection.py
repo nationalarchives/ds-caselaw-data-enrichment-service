@@ -1,5 +1,4 @@
-import numbers
-from numpy import number
+from numpy import mat
 import pandas as pd
 import sqlite3
 from sqlite3 import Error
@@ -35,15 +34,14 @@ def get_matched_rule(conn, rule_id):
   :param rule_id: rule_id string, required
   :return: variables is_canonical, citation_type, canonical_form and rule_description for specified rule
   """
-
   matched_rule = get_manifest_row(conn, rule_id)
+  family = matched_rule["family"].iloc[0].lower()
+  URItemplate = matched_rule["URItemplate"].iloc[0]
   is_neutral = bool(matched_rule["isNeutral"].iloc[0])
   is_canonical = matched_rule["isCanonical"].iloc[0]
   citation_type = matched_rule["citationType"].iloc[0]
   canonical_form = matched_rule["canonicalForm"].iloc[0]
-  rule_description = matched_rule["description"].iloc[0]
-
-  return is_neutral, is_canonical, citation_type, canonical_form, rule_description
+  return family, URItemplate, is_neutral, is_canonical, citation_type, canonical_form
 
 def get_legtitles(conn):
   leg_titles = pd.read_sql('''SELECT candidate_titles, year, for_fuzzy FROM ukpga_lookup''', conn)
