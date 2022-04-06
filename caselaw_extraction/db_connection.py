@@ -1,20 +1,16 @@
 from numpy import mat
 import pandas as pd
-import sqlite3
-from sqlite3 import Error
+import psycopg2
 
-def create_connection(db_file):
-    """ 
-    Create a database connection to the SQLite database specified by db_file
-    :param db_file: Path to database file
-    :return: Connection object or None
-    """
+def create_connection(db, user, host, port):
+    """ Connect to the PostgreSQL database server """
     conn = None
     try:
-        conn = sqlite3.connect(db_file)
-    except Error as e:
-        print(e)
-
+        # connect to the PostgreSQL server
+        print('Connecting to the PostgreSQL database...')
+        conn = psycopg2.connect(database=db, user=user, host=host, port=port)
+    except (Exception, psycopg2.DatabaseError) as error:
+        print(error)
     return conn
 
 def get_manifest_row(conn, rule_id):
@@ -24,7 +20,7 @@ def get_manifest_row(conn, rule_id):
   :param rule_id: ID of manifest rule to be extracted
   :return: DataFrame of matched rule
   """
-  matched_rule = pd.read_sql('''SELECT * FROM manifest WHERE id="{0}"'''.format(rule_id), conn)
+  matched_rule = pd.read_sql("SELECT * FROM manifest where id='{0}'".format(rule_id), conn)
   return matched_rule
 
 def get_matched_rule(conn, rule_id):
@@ -48,7 +44,7 @@ def get_legtitles(conn):
   return leg_titles
 
 def get_hrefs(conn, title):
-  ref_link = pd.read_sql('''SELECT ref_version FROM ukpga_lookup WHERE candidate_titles="{0}"'''.format(title), conn)
+  ref_link = pd.read_sql("SELECT ref_version FROM ukpga_lookup WHERE candidate_titles='{0}'".format(title), conn)
   return ref_link.ref_version.values[0]
 
 def close_connection(conn):

@@ -73,6 +73,7 @@
 {"id": "ptsr", "description": "Public & Third Sector Reports (ICLR)", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"ORTH": "PTSR"},{"LIKE_NUM": true}]}
 {"id": "icr", "description": "Industrial Cases Reports (ICLR)", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"ORTH": "ICR"},{"LIKE_NUM": true}]}
 {"id": "icr_a", "description": "Industrial Cases Reports (ICLR)", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"ORTH": "I.C.R."},{"LIKE_NUM": true}]}
+{"id": "eglr", "description": "Estates Gazette Law Reports", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"LIKE_NUM": true}, {"ORTH": "EGLR"},{"LIKE_NUM": true}]}
 {"id": "ftt_tc", "description": "First-tier Tribunal (Tax Chamber)" ,"label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"ORTH": "UKFTT"} , {"LIKE_NUM": true}, {"ORTH": "("}, {"ORTH": "TC"}, {"ORTH": ")"}]}
 {"id": "ftt_tc_a", "description": "First-tier Tribunal (Tax Chamber)" ,"label": "CITATION", "pattern": [{"ORTH": "("}, {"SHAPE": "dddd"}, {"ORTH": ")"}, {"ORTH": "UKFTT"} , {"LIKE_NUM": true}, {"ORTH": "("}, {"ORTH": "TC"}, {"ORTH": ")"}]}
 {"id": "ftt_hesc", "description": "First-tier Tribunal (Health, Education and Social Care Chamber)" ,"label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"ORTH": "UKFTT"} , {"LIKE_NUM": true}, {"ORTH": "("}, {"ORTH": "HESC"}, {"ORTH": ")"}]}
@@ -124,6 +125,7 @@
 {"id": "ewca_civ_c", "description": "Court of Appeal (Civil Division)" ,"label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"ORTH": "ewca"}, {"ORTH": "civ"} , {"LIKE_NUM": true}]}
 {"id": "ewca_civ_d", "description": "Court of Appeal (Civil Division)" ,"label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "["}, {"ORTH": "EWCA"}, {"ORTH": "Civ"}, {"LIKE_NUM": true}]}
 {"id": "ewca_civ_e", "description": "Court of Appeal (Civil Division)" ,"label": "CITATION", "pattern": [{"ORTH": "]"}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"ORTH": "EWCA"}, {"ORTH": "Civ"}, {"LIKE_NUM": true}]}
+{"id": "eu_c_case", "description": "Court of Justice of the European Union (C-Case)", "label": "CITATION", "pattern": [{"ORTH": "Case"},{"TEXT": {"REGEX": "C-\\d+\\/\\d+"}}]}
 {"id": "ewca_civ_f", "description": "Court of Appeal (Civil Division)" ,"label": "CITATION", "pattern": [{"ORTH": "("}, {"SHAPE": "dddd"}, {"ORTH": ")"}, {"ORTH": "EWCA"}, {"ORTH": "Civ"}, {"LIKE_NUM": true}]}
 {"id": "ewca_civ_g", "description": "Court of Appeal (Civil Division)" ,"label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"ORTH": "EWCA"}, {"ORTH": "Civ"}, {"IS_PUNCT":true}, {"LIKE_NUM": true}]}
 {"id": "ewca_civ_h", "description": "Court of Appeal (Civil Division)" ,"label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"ORTH": "EWCA"}, {"ORTH": "("}, {"ORTH": "Civ"}, {"ORTH": ")"},{"LIKE_NUM": true}]}
@@ -143,6 +145,7 @@
 {"id": "cmlr", "description": "Common Market Law Reports", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"LIKE_NUM": true}, {"ORTH": "CMLR"},{"LIKE_NUM": true}]}
 {"id": "costslr", "description": "Costs Law Reports", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"},{"ORTH": "Costs"},{"ORTH": "LR"},{"LIKE_NUM": true}]}
 {"id": "crappr_volumnal_with_year", "description": "Criminal Appeal Reports (Volumnal Pre-1995)", "label": "CITATION", "pattern": [{"ORTH": "("}, {"SHAPE": "dddd"}, {"ORTH": ")"}, {"TEXT": {"REGEX": "\\d+"}}, {"ORTH": "Cr"},{"ORTH": "App"}, {"ORTH": "R"}, {"LIKE_NUM": true}]}
+{"id": "eu_c_case_a", "description": "Court of Justice of the European Union (C-Case)", "label": "CITATION", "pattern": [{"ORTH": "Case"},{"TEXT": {"REGEX": "C\\d+\\/\\d+"}}]}
 {"id": "crappr_volumnal_with_year_a", "description": "Criminal Appeal Reports (Volumnal Pre-1995)", "label": "CITATION", "pattern": [{"ORTH": "("}, {"SHAPE": "dddd"}, {"ORTH": ")"}, {"TEXT": {"REGEX": "\\d+"}}, {"ORTH": "Cr"},{"IS_PUNCT": true},{"ORTH": "App"},{"IS_PUNCT": true}, {"ORTH": "R."}, {"LIKE_NUM": true}]}
 {"id": "crappr_annual", "description": "Criminal Appeal Reports (Annual Volumes Post-1995)", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"LIKE_NUM": true},{"ORTH": "Cr"},{"ORTH": "App"}, {"ORTH": "R"}, {"LIKE_NUM": true}]}
 {"id": "crappr_sentencing_annual", "description": "Criminal Appeal Reports (Sentencing) (Annual Volumes Post-1995)", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"LIKE_NUM": true},{"ORTH": "Cr"},{"ORTH": "App"}, {"ORTH": "R"},{"ORTH": "("},{"ORTH": "S"},{"ORTH": ")"}, {"LIKE_NUM": true}]}
@@ -185,9 +188,6 @@
 {"id": "rpc_a", "description": "Reports of Patents Cases", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"},{"ORTH": "R.P.C."},{"LIKE_NUM": true}]}
 {"id": "stc", "description": "Simon's Tax Cases", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"},{"ORTH": "STC"},{"LIKE_NUM": true}]}
 {"id": "taxcases", "description": "Appeal Cases (1875-1890) (ICLR)", "label": "CITATION", "pattern": [{"LIKE_NUM": true},{"ORTH": "TC"}, {"LIKE_NUM": true}]}
-{"id": "eglr", "description": "Estates Gazette Law Reports", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"}, {"LIKE_NUM": true}, {"ORTH": "EGLR"},{"LIKE_NUM": true}]}
-{"id": "eu_c_case", "description": "Court of Justice of the European Union (C-Case)", "label": "CITATION", "pattern": [{"ORTH": "Case"},{"TEXT": {"REGEX": "C-\\d+\\/\\d+"}}]}
-{"id": "eu_c_case_a", "description": "Court of Justice of the European Union (C-Case)", "label": "CITATION", "pattern": [{"ORTH": "Case"},{"TEXT": {"REGEX": "C\\d+\\/\\d+"}}]}
 {"id": "eu_c_case_c", "description": "Court of Justice of the European Union (C-Case)", "label": "CITATION", "pattern": [{"ORTH": "case"},{"TEXT": {"REGEX": "C-\\d+\\/\\d+"}}]}
 {"id": "eu_t_case", "description": "Court of Justice of the European Union (T-Case)", "label": "CITATION", "pattern": [{"ORTH": "Case"},{"TEXT": {"REGEX": "T-\\d+\\/\\d+"}}]}
 {"id": "bcc", "description": "British Company Cases", "label": "CITATION", "pattern": [{"ORTH": "["}, {"SHAPE": "dddd"}, {"ORTH": "]"},{"ORTH": "BCC"},{"LIKE_NUM": true}]}

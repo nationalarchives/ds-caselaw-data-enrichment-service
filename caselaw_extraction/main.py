@@ -1,7 +1,6 @@
 import os
 import re
 from time import time
-import pickle
 
 import spacy
 
@@ -13,8 +12,8 @@ from legislation_matcher_hybrid import leg_pipeline
 from abbreviations_matcher import abb_pipeline
 
 ROOTDIR = "../2020"
-DATABASE = "tna.db"
-db_conn = create_connection(DATABASE)
+# DATABASE = "tna.db"
+db_conn = create_connection('tna', 'editha.nemsic', 'localhost', 5432)
 leg_titles = get_legtitles(db_conn)
 load_patterns(db_conn)
 
