@@ -7,24 +7,18 @@ Created on Mon Mar 3 10:48:33 2022
 
 Detects legislation references by searching through a lookup table of existing acts.
     - Exact matcher: searches the judgement for exact matches to the legislation title in lookup table.
-    - Fuzzy matcher: detects well-formed and malformed citations (parameter: cutoff - confidence ratio to filter the search (min -> 90))
+    - Fuzzy matcher: detects well-formed and malformed citations (parameter: cutoff - confidence ratio to filter the search (min -> 70))
     - Hybrid matcher: narrows down the fuzzy matching to candidate segments in the judgement that contain the pattern [Act YYYY] and 
     performs exact matching otherwise.
     
 """
-import pandas as pd
-import bs4 as BeautifulSoup
-import spacy
 from spacy.matcher import PhraseMatcher, Matcher
 from spaczz.matcher import FuzzyMatcher
-import sys
-from time import time
-from spacy.lang.en import English
-import json
-
 from db_connection import get_hrefs
 
 keys = ['detected_ref', 'start', 'end', 'confidence', 'ref']
+CUTOFF=90
+PAD=5
 
 # EXACT MATCHING
 
@@ -44,10 +38,10 @@ def search_for_act(title, doc_obj, nlp, cutoff=None, candidates=None):
 
 # FUZZY MATCHING
 
-def search_for_act_fuzzy(title, doc_obj, nlp, cutoff=95, candidates=None):
+def search_for_act_fuzzy(title, doc_obj, nlp, cutoff, candidates=None):
     fuzzy_matcher = FuzzyMatcher(nlp.vocab)
     phrase_list = [nlp(title)]
-    options = {"fuzzy_func": "token_sort", "min_r1": 90, "min_r2": cutoff}
+    options = {"fuzzy_func": "token_sort", "min_r1": 70, "min_r2": cutoff}
     fuzzy_matcher.add("Text Extractor",  phrase_list, kwargs=[options])
     matched_items = fuzzy_matcher(doc_obj)
     matched_text = []
@@ -67,9 +61,9 @@ def detectCandidate(nlp, docobj):
     return [(start, end) for match_id, start, end in matches]
 
 
-def hybrid(title, docobj, nlp, cutoff=95, candidates=None):
+def hybrid(title, docobj, nlp, cutoff, candidates=None):
     act, year = title[:-4], title[-4:]
-    act_span = len(nlp(title))
+    act_span = len(nlp(title)) + PAD
     all_matches = []
     for _, end in candidates:
         # get segment in judgment that contains candidate ref
@@ -99,7 +93,7 @@ def detect_year_span(docobj, nlp):
     dates = set([int(d) for d in dates if (len(d) == 4) & (d.isdigit())])
     return dates
 
-def lookup_pipe(titles, docobj, nlp, method, conn, cutoff=95):
+def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
     results = {}
     candidates = detectCandidate(
         nlp, docobj) if method.__name__ == 'hybrid' else None
@@ -130,7 +124,7 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
 
     for fuzzy, method in zip([True, False], ('hybrid','exact')):
         titles = shorttitles[shorttitles.for_fuzzy==fuzzy].candidate_titles.drop_duplicates().tolist()
-        res = lookup_pipe(titles, doc, nlp, methods[method], conn)
+        res = lookup_pipe(titles, doc, nlp, methods[method], conn, CUTOFF)
         results.append(res)
 
     results = mergedict(results[0], results[1])
