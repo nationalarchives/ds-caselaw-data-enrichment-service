@@ -3,7 +3,7 @@ from abbreviation_extraction.abbreviations import AbbreviationDetector
 from spacy.language import Language
 from collections import namedtuple
 
-abbr = namedtuple('abb', 'abb_match longform')
+abb = namedtuple('abb', 'abb_match longform')
 
 def abb_pipeline(judgment_content_text):
     nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
@@ -19,7 +19,7 @@ def abb_pipeline(judgment_content_text):
 
     REPLACEMENTS_ABBR = []
     for abrv in doc._.abbreviations:
-        abr_tuple = abbr(str(abrv), str(abrv._.long_form))
+        abr_tuple = abb(str(abrv), str(abrv._.long_form))
         REPLACEMENTS_ABBR.append(abr_tuple)
 
     return REPLACEMENTS_ABBR
