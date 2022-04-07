@@ -1,17 +1,23 @@
 import unittest
 import sys
 sys.path.append("./")
-from replacer.replacer import replacer_abbr, replacer_leg, replacer_caselaw, write_repl_file
+from replacer.replacer import write_repl_file
 import json
+from collections import namedtuple
+
+case = namedtuple('case', 'citation_match corrected_citation year URI is_neutral')
+abb = namedtuple('abb', 'abb_match longform')
+leg = namedtuple('leg', 'detected_ref href')
 
 """
     Testing the list of replacements being extracted, added to a list, 
     and confirming the format. 
 """
 
-CITATION_REPLACEMENTS = [('[2020] EWHC 537 (Ch)', '[2020] EWHC 537 (Ch)', '2020', 'https://caselaw.nationalarchives.gov.uk/ewhc/ch/2020/537', True), ('[2022] 1 P&CR 123', '[2022] 1 P&CR 123', '2022', '#', False)]
-LEGISLATION_REPLACEMENTS = [('Companies Act 2006', 'http://www.legislation.gov.uk/ukpga/2006/46'), ('Trusts of Land and Appointment of Trustees Act 1996', 'https://www.legislation.gov.uk/ukpga/1996/47')]
-ABBREVIATION_REPLACEMENTS = [('Dr Guy', 'Geoffrey Guy'), ('ECTHR', 'Europen Court of Human Rights')]
+
+CITATION_REPLACEMENTS = [case(citation_match='[2020] EWHC 537 (Ch)', corrected_citation='[2020] EWHC 537 (Ch)', year='2020', URI='https://caselaw.nationalarchives.gov.uk/ewhc/ch/2020/537', is_neutral=True), case(citation_match='[2022] 1 P&CR 123', corrected_citation='[2022] 1 P&CR 123', year='2022',URI= '#', is_neutral=False)]
+LEGISLATION_REPLACEMENTS = [leg(detected_ref='Companies Act 2006', href='http://www.legislation.gov.uk/ukpga/2006/46'), leg(detected_ref='Trusts of Land and Appointment of Trustees Act 1996', href='https://www.legislation.gov.uk/ukpga/1996/47')]
+ABBREVIATION_REPLACEMENTS = [abb(abb_match='Dr Guy', longform='Geoffrey Guy'), abb(abb_match='ECTHR', longform='Europen Court of Human Rights')]
 
 def read_file(): 
     replacements = []
@@ -36,24 +42,35 @@ class TestReplacements(unittest.TestCase):
     def test_citations(self): 
         replacements = read_file()
         test_list = ['[2020] EWHC 537 (Ch)', '[2020] EWHC 537 (Ch)', '2020', 'https://caselaw.nationalarchives.gov.uk/ewhc/ch/2020/537', True]
-        assert replacements[0] == test_list
+        key, value = list(replacements[0].items())[0]
+        assert key == "case"
+        assert value == test_list
         test_list = ['[2022] 1 P&CR 123', '[2022] 1 P&CR 123', '2022', '#', False]
-        assert replacements[1] == test_list
+        key, value = list(replacements[1].items())[0]
+        assert key == "case"
+        assert value == test_list
     
     def test_legislation(self): 
         replacements = read_file()
         test_list = ['Companies Act 2006', 'http://www.legislation.gov.uk/ukpga/2006/46']
-        assert replacements[2] == test_list
+        key, value = list(replacements[2].items())[0]
+        assert key == "leg"
+        assert value == test_list
         test_list = ['Trusts of Land and Appointment of Trustees Act 1996', 'https://www.legislation.gov.uk/ukpga/1996/47']
-        assert replacements[3] == test_list
+        key, value = list(replacements[3].items())[0]
+        assert key == "leg"
+        assert value == test_list
 
     def test_abbreviations(self): 
         replacements = read_file()
         test_list = ['Dr Guy', 'Geoffrey Guy']
-        assert replacements[4] == test_list
+        key, value = list(replacements[4].items())[0]
+        assert key == "abb"
+        assert value == test_list
         test_list = ['ECTHR', 'Europen Court of Human Rights']
-        assert replacements[5] == test_list
-
+        key, value = list(replacements[5].items())[0]
+        assert key == "abb"
+        assert value == test_list
 
 if __name__ == '__main__':
     unittest.main()
