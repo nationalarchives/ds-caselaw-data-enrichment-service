@@ -1,10 +1,11 @@
 import os
+import json
 
 import spacy
 
-from utils.helper import parse_file, load_patterns, removeDuplicates
+from utils.helper import parse_file, load_patterns
 from database.db_connection import create_connection, close_connection, get_legtitles
-from replacer.replacer import replacer_pipeline
+from replacer.replacer import replacer_pipeline, write_repl_file
 from caselaw_extraction.caselaw_matcher import case_pipeline
 from legislation_processing.legislation_matcher_hybrid import leg_pipeline
 from abbreviation_extraction.abbreviations_matcher import abb_pipeline
@@ -19,8 +20,10 @@ nlp.max_length = 2500000
 
 citation_ruler = nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
 
+tuple_file = open("tuples.jsonl", "w+")
+
 for subdir, dirs, files in os.walk(ROOTDIR):
-  for file in files[:5]:
+  for file in files[:2]:
     if not file.startswith('.'):
       file_path = os.path.join(subdir, file)
       with open(file_path, "r", encoding="utf-8") as file_in:
@@ -28,13 +31,18 @@ for subdir, dirs, files in os.walk(ROOTDIR):
         file_data = file_in.read()
         judgment_content_text = parse_file(file_data)
         doc = nlp(judgment_content_text)
-        
+
       # create replacements for case law, legislation and abbreviations
       REPLACEMENTS_CASELAW = case_pipeline(doc, db_conn)
+      for i in REPLACEMENTS_CASELAW:
+        print(i)
       REPLACEMENTS_LEG = leg_pipeline(leg_titles, nlp, doc, db_conn)
       REPLACEMENTS_ABBR = abb_pipeline(judgment_content_text)
-      REPLACEMENTS_ABBR = removeDuplicates(REPLACEMENTS_ABBR)
       
+      write_repl_file(tuple_file, REPLACEMENTS_CASELAW)
+      write_repl_file(tuple_file, REPLACEMENTS_LEG)
+      write_repl_file(tuple_file, REPLACEMENTS_ABBR)
+
       file_data_enriched = replacer_pipeline(file_data, REPLACEMENTS_CASELAW, REPLACEMENTS_LEG, REPLACEMENTS_ABBR)
 
       output_file = f"output/{file}".replace(".xml", "_enriched.xml")

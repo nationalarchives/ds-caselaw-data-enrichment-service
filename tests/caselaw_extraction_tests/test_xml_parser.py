@@ -1,8 +1,9 @@
 import unittest
 import sys
 sys.path.append("./")
-from utils.helper import parse_file
+from utils.helper import parse_file, load_patterns
 from spacy.lang.en import English
+from database.db_connection import create_connection, close_connection
 
 """
     Testing the xml parser to ensure that information is extracted as expected. 
