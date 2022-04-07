@@ -1,18 +1,15 @@
 import os
-import re
-from time import time
 
 import spacy
 
-from helper import parse_file, load_patterns, removeDuplicates
-from db_connection import create_connection, close_connection, get_legtitles
-from replacer import replacer_pipeline
-from caselaw_matcher import case_pipeline
-from legislation_matcher_hybrid import leg_pipeline
-from abbreviations_matcher import abb_pipeline
+from utils.helper import parse_file, load_patterns, removeDuplicates
+from database.db_connection import create_connection, close_connection, get_legtitles
+from replacer.replacer import replacer_pipeline
+from caselaw_extraction.caselaw_matcher import case_pipeline
+from legislation_processing.legislation_matcher_hybrid import leg_pipeline
+from abbreviation_extraction.abbreviations_matcher import abb_pipeline
 
-ROOTDIR = "../2020"
-# DATABASE = "tna.db"
+ROOTDIR = "2020"
 db_conn = create_connection('tna', 'editha.nemsic', 'localhost', 5432)
 leg_titles = get_legtitles(db_conn)
 load_patterns(db_conn)
@@ -22,7 +19,6 @@ nlp.max_length = 2500000
 
 citation_ruler = nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
 
-t = time()
 for subdir, dirs, files in os.walk(ROOTDIR):
   for file in files[:5]:
     if not file.startswith('.'):
@@ -46,7 +42,4 @@ for subdir, dirs, files in os.walk(ROOTDIR):
       with open(output_file, "w") as data_out:
           data_out.write(file_data_enriched)
 
-t1 = time()
-
-print('Time to run:', (t1-t))
 close_connection(db_conn)

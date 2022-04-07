@@ -1,5 +1,5 @@
 import spacy
-from abbreviations import AbbreviationDetector
+from abbreviation_extraction.abbreviations import AbbreviationDetector
 from spacy.language import Language
 
 def abb_pipeline(judgment_content_text):
