@@ -240,7 +240,7 @@ class TestCitationReplacer(unittest.TestCase):
         year = "2022"
         text = "This citation that needs to be changed is [2022] UKET 789123_2012 which discussed..."
         replacement_entry = (citation_match, corrected_citation, year)
-        replaced_entry = replacer(text, replacement_entry)
+        replaced_entry = replacer_pipeline(text, replacement_entry)
         assert corrected_citation in replaced_entry
         replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
         assert replacement_string in replaced_entry
@@ -250,7 +250,7 @@ class TestCitationReplacer(unittest.TestCase):
         year = "No Year"
         text = "LR 1 A&E 123 refers to..."
         replacement_entry = (citation_match, corrected_citation, year)
-        replaced_entry = replacer(text, replacement_entry)
+        replaced_entry = replacer_pipeline(text, replacement_entry)
         assert corrected_citation in replaced_entry
         replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
         assert replacement_string in replaced_entry

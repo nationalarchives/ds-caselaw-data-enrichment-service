@@ -14,7 +14,6 @@ ScispaCy repo here -> https://github.com/allenai/scispacy
 """
 
 
-from curses.ascii import isalnum
 from typing import Tuple, List, Optional, Set, Dict
 from collections import defaultdict
 from spacy.language import Language

@@ -1,4 +1,4 @@
-import re
+
 
 def replacer_caselaw(file_data, replacement):
   # TODO: href attribute to TNA URI
