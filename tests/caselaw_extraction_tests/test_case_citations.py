@@ -1,12 +1,11 @@
-from tokenize import String
 import unittest
 from spacy.lang.en import English
 import sys
 sys.path.append("./")
 from caselaw_extraction.correction_strategies import apply_correction_strategy
-from caselaw_extraction.db_connection import create_connection, close_connection, get_matched_rule
-from caselaw_extraction.helper import load_patterns
-from caselaw_extraction.replacer import replacer
+from database.db_connection import create_connection, close_connection, get_matched_rule
+from utils.helper import load_patterns
+from replacer.replacer import replacer_pipeline
 
 """
     Testing the matching of the citations based on the data found in the rules. 

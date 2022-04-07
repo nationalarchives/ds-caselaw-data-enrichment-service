@@ -20,8 +20,10 @@ psycopg2
 spacy==3.2.2
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0-py3-none-any.whl
 
-
-
+# Tests
+spacy==3.2.2
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0-py3-none-any.whl
+pandas==1.4.1
 
 blis==0.7.5
 catalogue==2.0.6
@@ -40,7 +42,6 @@ matplotlib==3.5.1
 murmurhash==1.0.6
 numpy==1.22.2
 packaging==21.3
-
 pathy==0.6.1
 Pillow==9.0.1
 plotly==5.6.0
