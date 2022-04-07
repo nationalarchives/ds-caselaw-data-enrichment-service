@@ -15,10 +15,13 @@ Detects legislation references by searching through a lookup table of existing a
 from spacy.matcher import PhraseMatcher, Matcher
 from spaczz.matcher import FuzzyMatcher
 from database.db_connection import get_hrefs
+from collections import namedtuple
 
 keys = ['detected_ref', 'start', 'end', 'confidence', 'ref']
 CUTOFF=90
 PAD=5
+
+leg = namedtuple('leg', 'detected_ref href')
 
 # EXACT MATCHING
 
@@ -138,7 +141,7 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
     for ref in refs:
         detected_ref = ref['detected_ref']
         ref = ref['ref']
-        replacement = tuple([detected_ref, ref])
+        replacement = leg(detected_ref, ref)
         replacements.append(replacement)
 
     return replacements

@@ -34,8 +34,6 @@ for subdir, dirs, files in os.walk(ROOTDIR):
 
       # create replacements for case law, legislation and abbreviations
       REPLACEMENTS_CASELAW = case_pipeline(doc, db_conn)
-      for i in REPLACEMENTS_CASELAW:
-        print(i)
       REPLACEMENTS_LEG = leg_pipeline(leg_titles, nlp, doc, db_conn)
       REPLACEMENTS_ABBR = abb_pipeline(judgment_content_text)
       
