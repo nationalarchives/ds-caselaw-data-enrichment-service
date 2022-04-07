@@ -230,7 +230,7 @@ class TestCitationReplacer(unittest.TestCase):
         year = "2025"
         text = "In the judgment the incorrect citation is [2025] 1 All E.R. 123."
         replacement_entry = (citation_match, corrected_citation, year)
-        replaced_entry = replacer(text, replacement_entry)
+        replaced_entry = replacer_pipeline(text, replacement_entry)
         assert corrected_citation in replaced_entry
         replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
         assert replacement_string in replaced_entry
@@ -260,7 +260,7 @@ class TestCitationReplacer(unittest.TestCase):
         year = "2022"
         text = "I defer to the judgment in (2022) EWHC 123 (Mercantile)."
         replacement_entry = (citation_match, corrected_citation, year)
-        replaced_entry = replacer(text, replacement_entry)
+        replaced_entry = replacer_pipeline(text, replacement_entry)
         assert corrected_citation in replaced_entry
         replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
         assert replacement_string in replaced_entry
@@ -270,7 +270,7 @@ class TestCitationReplacer(unittest.TestCase):
         year = "2022"
         text = "[2022] ewca civ 123."
         replacement_entry = (citation_match, corrected_citation, year)
-        replaced_entry = replacer(text, replacement_entry)
+        replaced_entry = replacer_pipeline(text, replacement_entry)
         assert corrected_citation in replaced_entry
         replacement_string = "<ref type=\"case\" year=\"{}\" canonical_form=\"{}\">{}</ref>".format(year, corrected_citation, citation_match)
         assert replacement_string in replaced_entry
