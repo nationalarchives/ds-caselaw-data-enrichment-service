@@ -17,7 +17,7 @@ leg = namedtuple('leg', 'detected_ref href')
 
 CITATION_REPLACEMENTS = [case(citation_match='[2020] EWHC 537 (Ch)', corrected_citation='[2020] EWHC 537 (Ch)', year='2020', URI='https://caselaw.nationalarchives.gov.uk/ewhc/ch/2020/537', is_neutral=True), case(citation_match='[2022] 1 P&CR 123', corrected_citation='[2022] 1 P&CR 123', year='2022',URI= '#', is_neutral=False)]
 LEGISLATION_REPLACEMENTS = [leg(detected_ref='Companies Act 2006', href='http://www.legislation.gov.uk/ukpga/2006/46'), leg(detected_ref='Trusts of Land and Appointment of Trustees Act 1996', href='https://www.legislation.gov.uk/ukpga/1996/47')]
-ABBREVIATION_REPLACEMENTS = [abb(abb_match='Dr Guy', longform='Geoffrey Guy'), abb(abb_match='ECTHR', longform='Europen Court of Human Rights')]
+ABBREVIATION_REPLACEMENTS = [abb(abb_match='Dr Guy', longform='Geoffrey Guy'), abb(abb_match='ECTHR', longform='European Court of Human Rights')]
 
 def read_file(): 
     replacements = []
@@ -67,7 +67,7 @@ class TestReplacements(unittest.TestCase):
         key, value = list(replacements[4].items())[0]
         assert key == "abb"
         assert value == test_list
-        test_list = ['ECTHR', 'Europen Court of Human Rights']
+        test_list = ['ECTHR', 'European Court of Human Rights']
         key, value = list(replacements[5].items())[0]
         assert key == "abb"
         assert value == test_list
