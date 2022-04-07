@@ -1,4 +1,5 @@
 import re
+import json
 
 def replacer_caselaw(file_data, replacement):
   # TODO: href attribute to TNA URI
@@ -44,7 +45,12 @@ def replacer_pipeline(file_data, REPLACEMENTS_CASELAW, REPLACEMENTS_LEG, REPLACE
     print(replacement)
     file_data = replacer_leg(file_data, replacement)
   
-  for replacement in REPLACEMENTS_ABBR:
+  for replacement in list(set(REPLACEMENTS_ABBR)):
     file_data = replacer_abbr(file_data, replacement)
 
   return file_data
+
+def write_repl_file(tuple_file, replacement_list):
+  for i in replacement_list:
+    json.dump(i, tuple_file)
+    tuple_file.write("\n")

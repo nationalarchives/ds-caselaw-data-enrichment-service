@@ -17,3 +17,7 @@ def parse_file(file_data):
   judgment_content = soup.find_all("content")
   judgment_content_text = " ".join([content.text.strip() for content in judgment_content])
   return judgment_content_text
+
+def removeDuplicates(lst):
+  return [[a, b] for i, [a, b] in enumerate(lst) 
+  if not any(c == b for _, c in lst[:i])]
