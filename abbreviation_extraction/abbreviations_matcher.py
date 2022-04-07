@@ -16,7 +16,7 @@ def abb_pipeline(judgment_content_text):
 
     REPLACEMENTS_ABBR = []
     for abrv in doc._.abbreviations:
-        abr_tuple = (abrv, abrv._.long_form)
+        abr_tuple = (str(abrv), str(abrv._.long_form))
         REPLACEMENTS_ABBR.append(abr_tuple)
 
     return REPLACEMENTS_ABBR

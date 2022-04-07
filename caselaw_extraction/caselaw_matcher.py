@@ -1,6 +1,9 @@
 import re
 from database.db_connection import get_matched_rule
 from caselaw_extraction.correction_strategies import apply_correction_strategy
+from collections import namedtuple
+
+case = namedtuple('case', 'citation_match corrected_citation year URI is_neutral')
 
 def create_URI(uri_template, year, d1, d2):
     if 'd1' in str(uri_template):
@@ -26,7 +29,7 @@ def case_pipeline(doc, db_conn):
                 URI = create_URI(URItemplate, year, d1, d2)
             else:
                 URI = '#'
-            replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
+            replacement_entry = case(citation_match, corrected_citation, year, URI, is_neutral)
         else:
             components = re.findall(r"\d+", citation_match)
             if 'Year' in citation_type:
@@ -47,7 +50,7 @@ def case_pipeline(doc, db_conn):
                 URI = create_URI(URItemplate, year, d1, d2)
             else:
                 URI = '#'
-            replacement_entry = (citation_match, citation_match, year, URI, is_neutral)
+            replacement_entry = case(citation_match, citation_match, year, URI, is_neutral)
         
         REPLACEMENTS_CASELAW.append(replacement_entry)
     
