@@ -1,6 +1,6 @@
 import re
 from database.db_connection import get_matched_rule
-from correction_strategies import apply_correction_strategy
+from caselaw_extraction.correction_strategies import apply_correction_strategy
 
 def create_URI(uri_template, year, d1, d2):
     if 'd1' in str(uri_template):

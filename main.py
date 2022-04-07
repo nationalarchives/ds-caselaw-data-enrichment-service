@@ -9,7 +9,7 @@ from caselaw_extraction.caselaw_matcher import case_pipeline
 from legislation_processing.legislation_matcher_hybrid import leg_pipeline
 from abbreviation_extraction.abbreviations_matcher import abb_pipeline
 
-ROOTDIR = "../2020"
+ROOTDIR = "2020"
 db_conn = create_connection('tna', 'editha.nemsic', 'localhost', 5432)
 leg_titles = get_legtitles(db_conn)
 load_patterns(db_conn)

@@ -1,14 +1,13 @@
-from cgi import test
 import pandas as pd
-from spacy.lang.en import English
+import spacy
 
 MANIFEST = pd.read_csv("caselaw_extraction/rules/2022_04_05_Citation_Manifest.csv")
 
-nlp = English()
-nlp.max_length = 1500000
+nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
+nlp.max_length = 2500000
 patterns = MANIFEST["pattern"].tolist()
 
-with open("test_citation_patterns.jsonl", "w+") as patterns_file:
+with open("tests/test_citation_patterns.jsonl", "w+") as patterns_file:
     for pattern in patterns:
         patterns_file.write(pattern + "\n")
 
