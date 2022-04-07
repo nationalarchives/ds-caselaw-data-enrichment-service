@@ -1,6 +1,5 @@
 import re
-import spacy
-from db_connection import get_matched_rule
+from database.db_connection import get_matched_rule
 from correction_strategies import apply_correction_strategy
 
 def create_URI(uri_template, year, d1, d2):
