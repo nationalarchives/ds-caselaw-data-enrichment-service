@@ -20,7 +20,7 @@ nlp.max_length = 2500000
 
 citation_ruler = nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
 
-tuple_file = open("tuples.jsonl", "w+")
+# tuple_file = open("tuples.jsonl", "w+")
 
 for subdir, dirs, files in os.walk(ROOTDIR):
   for file in files[:2]:
@@ -37,11 +37,32 @@ for subdir, dirs, files in os.walk(ROOTDIR):
       REPLACEMENTS_LEG = leg_pipeline(leg_titles, nlp, doc, db_conn)
       REPLACEMENTS_ABBR = abb_pipeline(judgment_content_text)
       
-      write_repl_file(tuple_file, REPLACEMENTS_CASELAW)
-      write_repl_file(tuple_file, REPLACEMENTS_LEG)
-      write_repl_file(tuple_file, REPLACEMENTS_ABBR)
+      # write_repl_file(tuple_file, REPLACEMENTS_CASELAW)
+      # write_repl_file(tuple_file, REPLACEMENTS_LEG)
+      # write_repl_file(tuple_file, REPLACEMENTS_ABBR)
 
-      file_data_enriched = replacer_pipeline(file_data, REPLACEMENTS_CASELAW, REPLACEMENTS_LEG, REPLACEMENTS_ABBR)
+      replacements = []
+      replacement_tuples_case = []
+      replacement_tuples_leg = []
+      replacement_tuples_abb = []
+      tuple_file = open("tuples.jsonl", "r")
+
+      for line in tuple_file:
+          replacements.append(json.loads(line))
+
+      for i in replacements:
+          key, value = list(i.items())[0]
+          if key == 'case':
+              case_law_tuple = tuple(i['case'])
+              replacement_tuples_case.append(case_law_tuple)
+          elif key == 'leg':
+              leg_tuple = tuple(i['leg'])
+              replacement_tuples_leg.append(leg_tuple)
+          else:
+              abb_tuple = tuple(i['abb'])
+              replacement_tuples_abb.append(abb_tuple)
+
+      file_data_enriched = replacer_pipeline(file_data, replacement_tuples_case, replacement_tuples_leg, replacement_tuples_abb)
 
       output_file = f"output/{file}".replace(".xml", "_enriched.xml")
 
