@@ -1,6 +1,6 @@
 # tests/runner.py
 import unittest
-from test_case_citations import TestCitationProcessor, TestCorrectionStrategy, TestCitationReplacer
+from caselaw_extraction_tests.test_case_citations import TestCitationProcessor, TestCorrectionStrategy, TestCitationReplacer
 from test_xml_parser import TestXmlParser
 
 # initialize the test suite
