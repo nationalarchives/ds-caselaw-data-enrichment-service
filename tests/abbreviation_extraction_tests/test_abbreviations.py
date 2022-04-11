@@ -101,8 +101,32 @@ class TestAbbrevationMatcher(unittest.TestCase):
 
     # testing that different abbreviations without quotations in their brackets are not parsed correctly
     def test_no_quotations(self):
+        text = "European Economic Area (EEA)"
+        doc = self.nlp(text)
+        filtered = filter_matches([(1, 4, 7)], doc)
+        # no matches are returned and therefore length is 0 
+        assert len(filtered) == 0
 
+        # check that quotes in the long form don't interefere
+        text = "section 6 of the \"Human Rights Act 1998\" (the HRA 1998)"
+        doc = self.nlp(text)
+        filtered = filter_matches([(5, 11, 15)], doc)
+        # no matches are returned and therefore length is 0 
+        assert len(filtered) == 0
 
+        # only one quotation mark will not be counted as an abbreviation
+        text = "Value Added Tax Act (the VAT Act\") "
+        doc = self.nlp(text)
+        filtered = filter_matches([(1, 5, 9)], doc)
+        # no matches are returned and therefore length is 0 
+        assert len(filtered) == 0
+
+        # apostrophe will not count as an abbreviation
+        text = "at the doctor's office (the doctor's office) "
+        doc = self.nlp(text)
+        filtered = filter_matches([(1, 5, 9)], doc)
+        # no matches are returned and therefore length is 0 
+        assert len(filtered) == 0
     
 if __name__ == '__main__':
     unittest.main()
