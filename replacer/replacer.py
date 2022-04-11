@@ -55,3 +55,14 @@ def replacer_pipeline(file_data, REPLACEMENTS_CASELAW, REPLACEMENTS_LEG, REPLACE
 #     replacement_object = {"{}".format(type(i).__name__): list(i)}
 #     json.dump(replacement_object, tuple_file)
 #     tuple_file.write("\n")
+
+def write_replacements_file(replacement_list):
+  tuple_file = ""
+  for i in replacement_list:
+    replacement_object = {"{}".format(type(i).__name__): list(i)}
+    # json.dump(replacement_object, tuple_file)
+    # tuple_file.write("\n")
+    tuple_file += json.dumps(replacement_object)
+    tuple_file += "\n"
+
+  return tuple_file
