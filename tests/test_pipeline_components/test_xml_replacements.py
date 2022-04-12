@@ -1,7 +1,7 @@
 import unittest
 import sys
 sys.path.append("./")
-from replacer.replacer import replacer_caselaw, replacer_leg, replacer_abbr, replacer_pipeline
+from replacer.replacer import replacer_pipeline
 import json
 
 """
@@ -74,7 +74,6 @@ class TestXMLFiles(unittest.TestCase):
             test_file_data = file_in.read()
         
         assert verified_file_data == test_file_data
-    
         
     def test_abbreviations(self): 
         with open("./tests/test_pipeline_components/verified_test_files/test_judgment_case_and_leg_and_abb_enriched.xml", "r", encoding="utf-8") as file_in:
