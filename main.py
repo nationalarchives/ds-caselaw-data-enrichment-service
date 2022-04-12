@@ -36,14 +36,14 @@ for subdir, dirs, files in os.walk(ROOTDIR):
       REPLACEMENTS_CASELAW = case_pipeline(doc, db_conn)
       REPLACEMENTS_LEG = leg_pipeline(leg_titles, nlp, doc, db_conn)
       REPLACEMENTS_ABBR = abb_pipeline(judgment_content_text)
-      
+
       test_caselaw_file = write_replacements_file(REPLACEMENTS_CASELAW)
       test_leg_file = write_replacements_file(REPLACEMENTS_LEG)
       test_abb_file = write_replacements_file(REPLACEMENTS_ABBR)
       # print(test_caselaw_file)
       # write_replacements_file(REPLACEMENTS_LEG)
       # write_replacements_file(REPLACEMENTS_ABBR)
-  
+
       # Writing to sample.json
       tuple_file.write(test_caselaw_file)
       tuple_file.write(test_leg_file)
