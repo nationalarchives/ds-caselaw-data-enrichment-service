@@ -10,16 +10,9 @@ import boto3
 import random
 from botocore.exceptions import ClientError
 from dateutil.parser import parse as dparser
-import psycopg2 as pg
-from psycopg2 import Error
 
 import spacy
-from database import db_connection
-from typing import Tuple, List, Optional, Set, Dict
-from collections import defaultdict
 from spacy.language import Language
-from spacy.tokens import Span, Doc
-from spacy.matcher import Matcher
 
 LOGGER = logging.getLogger()
 # LOGGER.setLevel(logging.INFO)
