@@ -1,8 +1,9 @@
 # tests/runner.py
 import unittest
-from caselaw_extraction_tests.test_case_citations import TestCitationProcessor, TestCorrectionStrategy, TestCitationReplacer
+from caselaw_extraction_tests.test_case_citations import TestCorrectionStrategy, TestCitationProcessor, TestCitationReplacer
+from abbreviation_extraction_tests.test_abbreviations import TestAbbrevationMatcher, TestAbbrevationReplacer
+from legislation_extraction_tests.test_legislation_citations import TestLegislationProcessor, TestLegislationReplacer
 from test_xml_parser import TestXmlParser
-from tests.abbreviation_extraction_tests.test_abbreviations import TestAbbrevationMatcher, TestAbbrevationReplacer
 
 # initialize the test suite
 
@@ -12,7 +13,10 @@ CitationProcessorSuite = unittest.TestLoader().loadTestsFromTestCase(TestCitatio
 CitationReplacerSuite = unittest.TestLoader().loadTestsFromTestCase(TestCitationReplacer)
 AbbreviationMatcher = unittest.TestLoader().loadTestsFromTestCase(TestAbbrevationMatcher)
 AbbreviationReplacer = unittest.TestLoader().loadTestsFromTestCase(TestAbbrevationReplacer)
-suite = unittest.TestSuite([CorrectionStrategySuite, CitationProcessorSuite, CitationReplacerSuite, XMLParserSuite, AbbreviationMatcher, AbbreviationReplacer])
+LegislationProcessorSuite = unittest.TestLoader().loadTestsFromTestCase(TestLegislationProcessor)
+LegislationReplacerSuite = unittest.TestLoader().loadTestsFromTestCase(TestLegislationReplacer)
+
+suite = unittest.TestSuite([CorrectionStrategySuite, CitationProcessorSuite, CitationReplacerSuite, XMLParserSuite, AbbreviationMatcher, AbbreviationReplacer, LegislationProcessorSuite, LegislationReplacerSuite])
 
 runner = unittest.TextTestRunner(verbosity=3)
 result = runner.run(suite)
