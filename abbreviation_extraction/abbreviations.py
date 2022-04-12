@@ -126,7 +126,6 @@ def filter_matches(
     candidates = []
     for match in matcher_output:
         QUOTES = ['"', "'", "‘", "’", "“", "”"]
-
         start = match[1]
         end = match[2]
         quote_offset = 0
