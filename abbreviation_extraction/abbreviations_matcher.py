@@ -1,13 +1,11 @@
-import spacy
-from abbreviation_extraction.abbreviations import AbbreviationDetector
-from spacy.language import Language
 from collections import namedtuple
+import spacy
+from spacy.language import Language
+from abbreviation_extraction.abbreviations import AbbreviationDetector
 
 abb = namedtuple('abb', 'abb_match longform')
 
-def abb_pipeline(judgment_content_text):
-    nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
-
+def abb_pipeline(judgment_content_text, nlp):
     # init the class - stateful pipeline component 
     @Language.factory("abbreviation_detector")
     def create_abbreviation_detector(nlp, name: str): 

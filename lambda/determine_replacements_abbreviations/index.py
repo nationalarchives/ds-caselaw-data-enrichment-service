@@ -10,12 +10,10 @@ import boto3
 import random
 from botocore.exceptions import ClientError
 from dateutil.parser import parse as dparser
+import spacy
+from spacy.language import Language
 import psycopg2 as pg
 from psycopg2 import Error
-
-import spacy
-from database import db_connection
-# from caselaw_extraction.caselaw_matcher import case_pipeline
 
 LOGGER = logging.getLogger()
 # LOGGER.setLevel(logging.INFO)
@@ -154,70 +152,27 @@ def write_replacements_file(replacement_list):
     return tuple_file
 
 def upload_replacements(replacements_bucket, replacements_key, replacements):
-    LOGGER.info('uploading text content to %s/%s', replacements_bucket, replacements_key)
     s3 = boto3.resource('s3')
     object = s3.Object(replacements_bucket, replacements_key)
     object.put(Body=replacements)
-    return object.key
 
-def init_NLP(rules_content):
-    nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
-    nlp.max_length = 2500000
-    LOGGER.debug('checking file system access')
-    from os import listdir
-    from os.path import isfile, join
-    mypath = '/var/task'
-    onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    print(onlyfiles)
-    print(os.path.exists('/var/task/caselaw_extraction/rules/citation_patterns.jsonl'))
-    print(os.path.exists('/var/task/citation_patterns.jsonl'))
-    # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/caselaw_extraction/rules/citation_patterns.jsonl')
-    citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/citation_patterns.jsonl')
-    # citation_ruler = nlp.add_pipe("entity_ruler").from_bytes(rules_content)
+def determine_replacements(file_content):
+    replacements = get_abbreviation_replacements(file_content)
+
+    return replacements
+
+def get_abbreviation_replacements(file_content):
+    from abbreviation_extraction.abbreviations_matcher import abb_pipeline 
+
+    nlp = init_NLP()
+    replacements = abb_pipeline(file_content, nlp)
+
+    return replacements
+
+def init_NLP(): 
+    nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer'])
+
     return nlp
-
-def init_DB():
-    password = get_secret.get_secret(aws_secret_name, aws_region_name)
-    db_conn = db_connection.create_connection(database_name, username, password, host, port)
-    return db_conn
-
-def close_connection(db_conn):
-    db_connection.close_connection(db_conn)
-
-def determine_replacements(file_content, rules_content):
-
-    # connect to the database
-    db_conn = init_DB()
-    # db_conn = create_connection(DATABASE)
-   
-    # setup the spacy pipeline
-    nlp = init_NLP(rules_content)
-    LOGGER.debug('got nlp')
-    # attempt to free memory
-    # del rules_content
-    # import gc
-    # gc.collect()
-    # doc = nlp(file_content)
-    doc = nlp(file_content)
-
-    replacements = get_caselaw_replacements(doc, db_conn)
-    LOGGER.debug('replacements identified')
-    LOGGER.debug(len(replacements))
-    close_connection(db_conn)
-
-    return replacements
-
-def get_caselaw_replacements(doc, db_conn):
-    # TODO add replacement
-    from caselaw_extraction.caselaw_matcher import case_pipeline
-    # return case_pipeline(doc, db_conn)
-
-    # replacement_entry = (citation_match, corrected_citation, year)  
-    # replacements = []
-    # replacement_entry = ("test_citation_match", "test_corrected_citation", "test_year")
-    # replacements = replacements.append(replacement_entry)
-    replacements = case_pipeline(doc, db_conn)
-    return replacements
 
 def push_contents(uploaded_bucket, uploaded_key):
     # Get the queue
