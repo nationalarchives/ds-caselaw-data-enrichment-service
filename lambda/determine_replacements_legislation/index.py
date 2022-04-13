@@ -127,17 +127,18 @@ def process_event(sqs_rec):
     LOGGER.debug(file_content)
     LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
 
-    # fetch the rules
-    rules_content = s3_client.get_object(
-                Bucket=RULES_FILE_BUCKET, Key=RULES_FILE_KEY)["Body"].read()
-    LOGGER.debug(rules_content)
-    LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
-
-    replacements = determine_replacements(file_content, rules_content)
+    # determine legislation replacements
+    replacements = determine_replacements(file_content)
     LOGGER.debug("got replacements")
     replacements_encoded = write_replacements_file(replacements)
     LOGGER.debug("encoded replacements")
     LOGGER.debug(replacements_encoded)
+
+     # open and read existing file from s3 bucket
+    replacements_content = s3_client.get_object(
+      Bucket=REPLACEMENTS_BUCKET, Key=source_key+'.txt')["Body"].read().decode('utf-8')
+    replacements_encoded = replacements_content + replacements_encoded
+
     uploaded_key = upload_replacements(REPLACEMENTS_BUCKET, source_key, replacements_encoded)
     LOGGER.debug("uploaded replacements to %s", uploaded_key)
     push_contents(REPLACEMENTS_BUCKET, uploaded_key)
@@ -163,17 +164,6 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
 def init_NLP(rules_content):
     nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
     nlp.max_length = 2500000
-    LOGGER.debug('checking file system access')
-    from os import listdir
-    from os.path import isfile, join
-    mypath = '/var/task'
-    onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    print(onlyfiles)
-    print(os.path.exists('/var/task/caselaw_extraction/rules/citation_patterns.jsonl'))
-    print(os.path.exists('/var/task/citation_patterns.jsonl'))
-    # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/caselaw_extraction/rules/citation_patterns.jsonl')
-    citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/citation_patterns.jsonl')
-    # citation_ruler = nlp.add_pipe("entity_ruler").from_bytes(rules_content)
     return nlp
 
 def init_DB():
@@ -200,23 +190,23 @@ def determine_replacements(file_content, rules_content):
     # doc = nlp(file_content)
     doc = nlp(file_content)
 
-    replacements = get_caselaw_replacements(doc, db_conn)
+    leg_titles = db_connection.get_legtitles(db_conn)
+
+    replacements = get_legislation_replacements(leg_titles, nlp, doc, db_conn)
     LOGGER.debug('replacements identified')
     LOGGER.debug(len(replacements))
     close_connection(db_conn)
 
     return replacements
 
-def get_caselaw_replacements(doc, db_conn):
-    # TODO add replacement
-    from caselaw_extraction.caselaw_matcher import case_pipeline
-    # return case_pipeline(doc, db_conn)
+def get_legislation_replacements(leg_titles, nlp, doc, db_conn):
+    from legislation_extraction.legislation_matcher_hybrid import leg_pipeline
 
     # replacement_entry = (citation_match, corrected_citation, year)  
     # replacements = []
     # replacement_entry = ("test_citation_match", "test_corrected_citation", "test_year")
     # replacements = replacements.append(replacement_entry)
-    replacements = case_pipeline(doc, db_conn)
+    replacements = leg_pipeline(leg_titles, nlp, doc, db_conn)
     return replacements
 
 def push_contents(uploaded_bucket, uploaded_key):
