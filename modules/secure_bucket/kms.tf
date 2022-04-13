@@ -1,0 +1,14 @@
+resource "aws_kms_key" "this" {
+  count = var.use_kms_encryption ? 1 : 0
+
+  description             = "KMS key used to encrypt bucket ${var.bucket_name}"
+  deletion_window_in_days = 7
+  enable_key_rotation     = true
+}
+
+resource "aws_kms_alias" "this" {
+  count = var.use_kms_encryption ? 1 : 0
+
+  name          = "alias/${var.bucket_name}-kms-key"
+  target_key_id = aws_kms_key.this[0].key_id
+}
