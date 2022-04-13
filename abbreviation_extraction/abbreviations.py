@@ -180,7 +180,6 @@ def short_form_filter(span: Span) -> bool:
     return True
 
 
-
 class AbbreviationDetector():
     """
     Detects abbreviations using the algorithm in "A simple algorithm for identifying

@@ -151,48 +151,27 @@ def write_replacements_file(replacement_list):
     return tuple_file
 
 def upload_replacements(replacements_bucket, replacements_key, replacements):
-    LOGGER.info('uploading text content to %s/%s', replacements_bucket, replacements_key)
     s3 = boto3.resource('s3')
     object = s3.Object(replacements_bucket, replacements_key)
     object.put(Body=replacements)
-    return object.key
-
-def init_NLP():
-    nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
-    
-    from abbreviation_extraction.abbreviations import AbbreviationDetector
-    # init the class - stateful pipeline component 
-    @Language.factory("abbreviation_detector")
-    def create_abbreviation_detector(nlp, name: str): 
-        return AbbreviationDetector(nlp)
-
-    nlp.add_pipe("abbreviation_detector") 
-
-    return nlp
-
 
 def determine_replacements(file_content):
-    # setup the spacy pipeline
+    replacements = get_abbreviation_replacements(file_content)
+
+    return replacements
+
+def get_abbreviation_replacements(file_content):
+    from abbreviation_extraction.abbreviations_matcher import abb_pipeline 
+
     nlp = init_NLP()
-    LOGGER.debug('got nlp')
-    # attempt to free memory
-    # del rules_content
-    # import gc
-    # gc.collect()
-    # doc = nlp(file_content)
-    doc = nlp(file_content)
-
-    replacements = get_abbreviation_replacements(doc)
-    LOGGER.debug('replacements identified')
-    LOGGER.debug(len(replacements))
+    replacements = abb_pipeline(file_content, nlp)
 
     return replacements
 
-def get_abbreviation_replacements(doc):
-    from abbreviation_extraction.abbreviations import abb_pipeline 
+def init_NLP(): 
+    nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer'])
 
-    replacements = abb_pipeline(doc)
-    return replacements
+    return nlp
 
 def push_contents(uploaded_bucket, uploaded_key):
     # Get the queue
