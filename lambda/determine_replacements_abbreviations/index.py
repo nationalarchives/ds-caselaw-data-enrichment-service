@@ -125,17 +125,17 @@ def process_event(sqs_rec):
     LOGGER.debug(file_content)
     LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
 
-    # fetch the rules
-    rules_content = s3_client.get_object(
-                Bucket=RULES_FILE_BUCKET, Key=RULES_FILE_KEY)["Body"].read()
-    LOGGER.debug(rules_content)
-    LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
-
-    replacements = determine_replacements(file_content, rules_content)
+    replacements = determine_replacements(file_content)
     LOGGER.debug("got replacements")
     replacements_encoded = write_replacements_file(replacements)
     LOGGER.debug("encoded replacements")
     LOGGER.debug(replacements_encoded)
+
+     # open and read existing file from s3 bucket
+    replacements_content = s3_client.get_object(
+      Bucket=REPLACEMENTS_BUCKET, Key=source_key+'.txt')["Body"].read().decode('utf-8')
+    replacements_encoded = replacements_content + replacements_encoded
+
     uploaded_key = upload_replacements(REPLACEMENTS_BUCKET, source_key, replacements_encoded)
     LOGGER.debug("uploaded replacements to %s", uploaded_key)
     push_contents(REPLACEMENTS_BUCKET, uploaded_key)
