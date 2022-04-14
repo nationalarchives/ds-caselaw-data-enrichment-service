@@ -22,7 +22,8 @@ terraform {
     organization = "mdrx-tna"
 
     workspaces {
-      name = "tna-dev"
+      # name = "tna-dev"
+      name = "tna-staging"
     }
   }
 }
