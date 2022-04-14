@@ -112,23 +112,23 @@ jobs:
       #     docker push ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
  
 
-      # - name: Setup Terraform
-      #   uses: hashicorp/setup-terraform@v1
-      #   with:
-      #     terraform_version: 0.13.0:
-      #     cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 0.13.0:
+          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-      # - name: Terraform Format
-      #   id: fmt
-      #   run: terraform fmt -check -diff
+      - name: Terraform Format
+        id: fmt
+        run: terraform fmt -check -diff
 
-      # - name: Terraform Init
-      #   id: init
-      #   run: terraform init -upgrade
+      - name: Terraform Init
+        id: init
+        run: terraform init -upgrade
       
-      # - name: Terraform Validate
-      #   id: validate
-      #   run: terraform validate -no-color
+      - name: Terraform Validate
+        id: validate
+        run: terraform validate -no-color
 
       # - uses: actions/setup-python@v3
       #   with:
