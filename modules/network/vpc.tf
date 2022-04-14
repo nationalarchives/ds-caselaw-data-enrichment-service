@@ -72,9 +72,9 @@ resource "aws_vpc_endpoint" "secrets_manager" {
       # "name": "private",
 
   # subnet_ids = [for value in module.vpc.public_subnets: value.id] 
-  for_each = toset(data.aws_subnets.private.ids)
+  #### for_each = toset(data.aws_subnets.private.ids)
   # id       = each.value
-  subnet_ids = [each.value]
+  ####subnet_ids = [each.value]
 
   # private_dns_enabled = true
 }
