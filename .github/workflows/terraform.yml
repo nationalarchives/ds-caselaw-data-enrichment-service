@@ -107,9 +107,9 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
           aws ecr get-login-password --region ${var.aws_region} | docker login --username AWS --password-stdin ${split("/", aws_ecr_repository.main.repository_url)[0]}:${var.container_image_tag}
-        docker pull hello-world
-        docker tag hello-world:latest ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
-        docker push ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
+          docker pull hello-world
+          docker tag hello-world:latest ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
+          docker push ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
  
 
       # - name: Setup Terraform
