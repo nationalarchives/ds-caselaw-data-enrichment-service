@@ -99,9 +99,6 @@ jobs:
       - name: Copy Python into Lambda
         id: move
         run: |
-          mkdir lambda/extract_judgement_contents/caselaw_extraction
-          cp -r caselaw_extraction/*.py lambda/extract_judgement_contents/caselaw_extraction/
-
           mkdir lambda/extract_judgement_contents/utils
           cp -r utils/*.py lambda/extract_judgement_contents/utils/
 
