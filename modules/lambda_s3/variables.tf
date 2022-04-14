@@ -91,3 +91,7 @@ variable "default_security_group_id" {
 variable "aws_subnets_private_ids" {
   type    = list
 }
+
+variable "bucket_prefix" {
+  default = "sg"
+}
