@@ -83,7 +83,7 @@ jobs:
           docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
 
 
- terraform:
+terraform:
    name: "Terraform"
    runs-on: ubuntu-latest
     container:
