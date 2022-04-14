@@ -61,7 +61,7 @@ jobs:
           cd lambda/determine_replacements_caselaw
           # cat /home/runner/.docker/config.json
           # echo "-------------------"
-          sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 440630071420.dkr.ecr.eu-west-2.amazonaws.com
+          AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 440630071420.dkr.ecr.eu-west-2.amazonaws.com
           # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
           echo "logged in caselaw"
           docker buildx build --load -t tna-s3-tna-ecr-repository-dev .
@@ -69,7 +69,7 @@ jobs:
           docker images --filter reference=tna-s3-tna-ecr-repository-dev
           docker tag tna-s3-tna-ecr-repository-dev:latest 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
           echo "tagged caselaw"
-          sudo docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+          docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
 
           # cat lambda/determine_replacements_legislation/requirements.txt
           # docker pull hello-world
