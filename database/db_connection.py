@@ -32,11 +32,11 @@ def get_matched_rule(conn, rule_id):
   """
   matched_rule = get_manifest_row(conn, rule_id)
   family = matched_rule["family"].iloc[0].lower()
-  URItemplate = matched_rule["URItemplate"].iloc[0]
-  is_neutral = bool(matched_rule["isNeutral"].iloc[0])
-  is_canonical = matched_rule["isCanonical"].iloc[0]
-  citation_type = matched_rule["citationType"].iloc[0]
-  canonical_form = matched_rule["canonicalForm"].iloc[0]
+  URItemplate = matched_rule["uri_template"].iloc[0]
+  is_neutral = bool(matched_rule["is_neutral"].iloc[0])
+  is_canonical = matched_rule["is_canonical"].iloc[0]
+  citation_type = matched_rule["citation_type"].iloc[0]
+  canonical_form = matched_rule["canonical_form"].iloc[0]
   return family, URItemplate, is_neutral, is_canonical, citation_type, canonical_form
 
 def get_legtitles(conn):
