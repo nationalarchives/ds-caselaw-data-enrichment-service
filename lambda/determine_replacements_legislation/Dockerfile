@@ -22,7 +22,7 @@ COPY index.py ${LAMBDA_TASK_ROOT}
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
 COPY database/ ${LAMBDA_TASK_ROOT}/database/
 COPY utils/ ${LAMBDA_TASK_ROOT}/utils/
-COPY legislation_processing/ ${LAMBDA_TASK_ROOT}/legislation_processing/
+COPY legislation_extraction/ ${LAMBDA_TASK_ROOT}/legislation_extraction/
 
 RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 # RUN pip install psycopg2-binary==2.9.2 --target "${LAMBDA_TASK_ROOT}"
