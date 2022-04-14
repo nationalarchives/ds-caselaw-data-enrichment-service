@@ -60,7 +60,7 @@ jobs:
           # docker pull hello-world
           cd lambda/determine_replacements_caselaw
           sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 440630071420.dkr.ecr.eu-west-2.amazonaws.com
-          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
+          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
           echo "logged in caselaw"
           docker buildx build --load -t tna-s3-tna-ecr-repository-staging .
           echo "built"
@@ -73,7 +73,7 @@ jobs:
           # docker pull hello-world
           cd ../../lambda/determine_replacements_legislation
           sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 440630071420.dkr.ecr.eu-west-2.amazonaws.com
-          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
+          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
           echo "logged in legislation"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-staging .
           echo "built"
@@ -104,12 +104,12 @@ jobs:
           mkdir -p lambda/make_replacements/replacer
           cp -r replacer/*.py lambda/make_replacements/replacer/
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v1
-          aws ecr get-login-password --region ${var.aws_region} | docker login --username AWS --password-stdin ${split("/", aws_ecr_repository.main.repository_url)[0]}:${var.container_image_tag}
-          docker pull hello-world
-          docker tag hello-world:latest ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
-          docker push ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
+      # - name: Set up Docker Buildx
+      #   uses: docker/setup-buildx-action@v1
+      #     aws ecr get-login-password --region ${var.aws_region} | docker login --username AWS --password-stdin ${split("/", aws_ecr_repository.main.repository_url)[0]}:${var.container_image_tag}
+      #     docker pull hello-world
+      #     docker tag hello-world:latest ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
+      #     docker push ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
  
 
       # - name: Setup Terraform
