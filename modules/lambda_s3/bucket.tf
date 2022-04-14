@@ -20,7 +20,7 @@
 module "xml_original_bucket" {
   source = "../secure_bucket"
 
-  bucket_name = "${local.environment}-${local.name}-${varbucket_prefix}-xml-original-bucket"
+  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-xml-original-bucket"
 #   policy_json = data.aws_iam_policy_document.dest_bucket_policy.json
 
   tags = local.tags
@@ -29,7 +29,7 @@ module "xml_original_bucket" {
 module "text_content_bucket" {
   source = "../secure_bucket"
 
-  bucket_name = "${local.environment}-${local.name}-${varbucket_prefix}-text-content-bucket"
+  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-text-content-bucket"
 #   policy_json = data.aws_iam_policy_document.dest_bucket_policy.json
 
   tags = local.tags
@@ -38,7 +38,7 @@ module "text_content_bucket" {
 module "xml_enriched_bucket" {
   source = "../secure_bucket"
 
-  bucket_name = "${local.environment}-${local.name}-${varbucket_prefix}-xml-enriched-bucket"
+  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-xml-enriched-bucket"
 #   policy_json = data.aws_iam_policy_document.dest_bucket_policy.json
 
   tags = local.tags
@@ -47,7 +47,7 @@ module "xml_enriched_bucket" {
 module "replacements_bucket" {
   source = "../secure_bucket"
 
-  bucket_name = "${local.environment}-${local.name}-${varbucket_prefix}-replacements-bucket"
+  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-replacements-bucket"
 #   policy_json = data.aws_iam_policy_document.dest_bucket_policy.json
 
   tags = local.tags
@@ -56,7 +56,7 @@ module "replacements_bucket" {
 module "rules_bucket" {
   source = "../secure_bucket"
 
-  bucket_name = "${local.environment}-${local.name}-${varbucket_prefix}-rules-bucket"
+  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-rules-bucket"
 #   policy_json = data.aws_iam_policy_document.dest_bucket_policy.json
 
   tags = local.tags
@@ -65,7 +65,7 @@ module "rules_bucket" {
 module "container_bucket" {
   source = "../secure_bucket"
 
-  bucket_name = "${local.environment}-${local.name}-${varbucket_prefix}-container-bucket"
+  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-container-bucket"
 #   policy_json = data.aws_iam_policy_document.dest_bucket_policy.json
 
   tags = local.tags
