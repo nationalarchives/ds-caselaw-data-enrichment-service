@@ -60,14 +60,14 @@ jobs:
           # docker pull hello-world
           cd lambda/determine_replacements_caselaw
           sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 440630071420.dkr.ecr.eu-west-2.amazonaws.com
-          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
+          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
           echo "logged in caselaw"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-staging .
-          echo "built"
-          docker images --filter reference=tna-s3-tna-ecr-repository-staging
-          docker tag tna-s3-tna-ecr-repository-staging:latest 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
-          # echo "tagged"
-          docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-dev .
+          echo "built caselaw"
+          docker images --filter reference=tna-s3-tna-ecr-repository-dev
+          docker tag tna-s3-tna-ecr-repository-dev:latest 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+          echo "tagged caselaw"
+          docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
 
           # cat lambda/determine_replacements_legislation/requirements.txt
           # docker pull hello-world
@@ -76,10 +76,10 @@ jobs:
           # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
           echo "logged in legislation"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-staging .
-          echo "built"
+          # echo "built legislation"
           docker images --filter reference=tna-s3-tna-ecr-repository-legislation-staging
           docker tag tna-s3-tna-ecr-repository-legislation-staging:latest 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-staging:latest
-          # echo "tagged"
+          echo "tagged legislation"
           docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-staging:latest
 
 
