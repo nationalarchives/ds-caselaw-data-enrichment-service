@@ -83,113 +83,113 @@ jobs:
           docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
 
 
-#  terraform:
-  #  name: "Terraform"
-  #  runs-on: ubuntu-latest
-    # container:
-    #   image: hashicorp/terraform:light
-  #  steps:
-  #    - name: Checkout
-  #      uses: actions/checkout@v3
+ terraform:
+   name: "Terraform"
+   runs-on: ubuntu-latest
+    container:
+      image: hashicorp/terraform:light
+   steps:
+     - name: Checkout
+       uses: actions/checkout@v3
 
-  #    - name: Copy Python into Lambda
-  #      id: move
-  #      run: |
-  #        mkdir lambda/extract_judgement_contents/caselaw_extraction
-  #        cp -r caselaw_extraction/*.py lambda/extract_judgement_contents/caselaw_extraction/
+     - name: Copy Python into Lambda
+       id: move
+       run: |
+         mkdir lambda/extract_judgement_contents/caselaw_extraction
+         cp -r caselaw_extraction/*.py lambda/extract_judgement_contents/caselaw_extraction/
 
-  #        mkdir lambda/extract_judgement_contents/utils
-  #        cp -r utils/*.py lambda/extract_judgement_contents/utils/
+         mkdir lambda/extract_judgement_contents/utils
+         cp -r utils/*.py lambda/extract_judgement_contents/utils/
 
-  #        mkdir -p lambda/make_replacements/replacer
-  #        cp -r replacer/*.py lambda/make_replacements/replacer/
+         mkdir -p lambda/make_replacements/replacer
+         cp -r replacer/*.py lambda/make_replacements/replacer/
 
-      # - name: Set up Docker Buildx
-      #   uses: docker/setup-buildx-action@v1
-          # aws ecr get-login-password --region ${var.aws_region} | docker login --username AWS --password-stdin ${split("/", aws_ecr_repository.main.repository_url)[0]}:${var.container_image_tag}
-#         docker pull hello-world
-#         docker tag hello-world:latest ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
-#         docker push ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
-#  
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+          aws ecr get-login-password --region ${var.aws_region} | docker login --username AWS --password-stdin ${split("/", aws_ecr_repository.main.repository_url)[0]}:${var.container_image_tag}
+        docker pull hello-world
+        docker tag hello-world:latest ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
+        docker push ${aws_ecr_repository.main.repository_url}:${var.container_image_tag}
+ 
 
-  #    - name: Setup Terraform
-  #      uses: hashicorp/setup-terraform@v1
-  #      with:
-          # terraform_version: 0.13.0:
-  #        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+     - name: Setup Terraform
+       uses: hashicorp/setup-terraform@v1
+       with:
+          terraform_version: 0.13.0:
+         cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
-      # - name: Terraform Format
-      #   id: fmt
-      #   run: terraform fmt -check -diff
+      - name: Terraform Format
+        id: fmt
+        run: terraform fmt -check -diff
 
-  #    - name: Terraform Init
-  #      id: init
-  #      run: terraform init -upgrade
+     - name: Terraform Init
+       id: init
+       run: terraform init -upgrade
       
-  #    - name: Terraform Validate
-  #      id: validate
-  #      run: terraform validate -no-color
+     - name: Terraform Validate
+       id: validate
+       run: terraform validate -no-color
 
-  #    - uses: actions/setup-python@v3
-  #      with:
-  #        python-version: '3.8'
-      # - name: Install dependencies
-      #   run: |
-      #     python -m pip install --upgrade pip
-      #     python -m pip install flake8 pytest
-      #     if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-      # - name: Lint with flake8
-      #   run: |
-      #     # stop the build if there are Python syntax errors or undefined names
-      #     flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-      #     # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-      #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-      # - name: Test with pytest
-      #   run: |
-      #     pytest
+     - uses: actions/setup-python@v3
+       with:
+         python-version: '3.8'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install flake8 pytest
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Lint with flake8
+        run: |
+          # stop the build if there are Python syntax errors or undefined names
+          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+          # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      - name: Test with pytest
+        run: |
+          pytest
 
-  #    - name: Terraform Plan
-  #      id: plan
-  #      if: github.event_name == 'pull_request'
-  #      run: terraform plan -no-color
-  #      continue-on-error: true
+     - name: Terraform Plan
+       id: plan
+       if: github.event_name == 'pull_request'
+       run: terraform plan -no-color
+       continue-on-error: true
 
-  #    - uses: actions/github-script@0.9.0
-  #      if: github.event_name == 'pull_request'
-  #      env:
-  #        PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
-  #      with:
-  #        github-token: ${{ secrets.GITHUB_TOKEN }}
-  #        script: |
-  #          const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
-  #          #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
-  #          #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
-  #          #### Terraform Plan 📖\`${{ steps.plan.outcome }}\`
+     - uses: actions/github-script@0.9.0
+       if: github.event_name == 'pull_request'
+       env:
+         PLAN: "terraform\n${{ steps.plan.outputs.stdout }}"
+       with:
+         github-token: ${{ secrets.GITHUB_TOKEN }}
+         script: |
+           const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
+           #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
+           #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
+           #### Terraform Plan 📖\`${{ steps.plan.outcome }}\`
 
-  #          <details><summary>Show Plan</summary>
+           <details><summary>Show Plan</summary>
 
-  #          \`\`\`\n
-  #          ${process.env.PLAN}
-  #          \`\`\`
+           \`\`\`\n
+           ${process.env.PLAN}
+           \`\`\`
 
-  #          </details>
+           </details>
 
-  #          *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
+           *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
 
-  #          github.issues.createComment({
-  #            issue_number: context.issue.number,
-  #            owner: context.repo.owner,
-  #            repo: context.repo.repo,
-  #            body: output
-  #          })
+           github.issues.createComment({
+             issue_number: context.issue.number,
+             owner: context.repo.owner,
+             repo: context.repo.repo,
+             body: output
+           })
 
-  #    - name: Terraform Plan Status
-  #      if: steps.plan.outcome == 'failure'
-  #      run: exit 1
+     - name: Terraform Plan Status
+       if: steps.plan.outcome == 'failure'
+       run: exit 1
 
-  #    - name: Terraform Apply
-  #      if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-  #      run: terraform apply -auto-approve
+     - name: Terraform Apply
+       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+       run: terraform apply -auto-approve
   # test:
   #   runs-on: ubuntu-latest
   #   strategy:
