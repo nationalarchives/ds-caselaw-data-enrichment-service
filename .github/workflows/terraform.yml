@@ -41,9 +41,9 @@ jobs:
           cp -r replacer/*.py lambda/make_replacements/replacer/
 
 
-          mkdir lambda/determine_replacements_legislation/legislation_processing
-          cp -r legislation_processing/*.* lambda/determine_replacements_legislation/legislation_processing/
-          cp legislation_processing/requirements.txt lambda/determine_replacements_legislation/
+          mkdir lambda/determine_replacements_legislation/legislation_extraction
+          cp -r legislation_extraction/*.* lambda/determine_replacements_legislation/legislation_extraction/
+          cp legislation_extraction/requirements.txt lambda/determine_replacements_legislation/
           mkdir lambda/determine_replacements_legislation/utils
           cp -r utils/*.py lambda/determine_replacements_legislation/utils/
           mkdir lambda/determine_replacements_legislation/database
