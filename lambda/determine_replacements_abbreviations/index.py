@@ -35,85 +35,25 @@ def validate_env_variable(env_var_name):
 ############################################
 # CLASS HELPERS
 ############################################
-class getLoginSecrets:
-    def get_secret(self, aws_secret_name, aws_region_name):
-        secret_name = aws_secret_name
-        region_name = aws_region_name
-
-        # Create a Secrets Manager client
-        session = boto3.session.Session()
-        client = session.client(service_name="secretsmanager", region_name=region_name)
-
-        # In this sample we only handle the specific exceptions for the 'GetSecretValue' API.
-        # See https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
-        # We rethrow the exception by default.
-
-        try:
-            LOGGER.info(" about to get_secret_value_response")
-            get_secret_value_response = client.get_secret_value(SecretId=secret_name)
-            LOGGER.info("got_secret_value_response")
-
-            # Decrypts secret using the associated KMS CMK.
-            # Depending on whether the secret is a string or binary, one of these fields will be populated.
-            if "SecretString" in get_secret_value_response:
-                secret = get_secret_value_response["SecretString"]
-                LOGGER.info("got SecretString")
-            else:
-                LOGGER.info("not SecretString")
-                decoded_binary_secret = base64.b64decode(
-                    get_secret_value_response["SecretBinary"]
-                )
-                secret = decoded_binary_secret
-            LOGGER.info("here")
-            return secret
-        # except ClientError as e:
-        #     if e.response["Error"]["Code"] == "DecryptionFailureException":
-        #         # Secrets Manager can't decrypt the protected secret text using the provided KMS key.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "InternalServiceErrorException":
-        #         # An error occurred on the server side.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "InvalidParameterException":
-        #         # You provided an invalid value for a parameter.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "InvalidRequestException":
-        #         # You provided a parameter value that is not valid for the current state of the resource.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "ResourceNotFoundException":
-        #         # We can't find the resource that you asked for.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        # added as the validation exception was not being caught
-        except Exception as exception:
-            LOGGER.error('Exception: %s', exception)
-            raise
-        # else:
 
 ############################################
 # - INSTANTIATE CLASS HELPERS
 # - GET ENV VARIABLES
 ############################################
-database_name = validate_env_variable("DATABASE_NAME")
-table_name = validate_env_variable("TABLE_NAME")
-username = validate_env_variable("USERNAME")
-port = validate_env_variable("PORT")
-host = validate_env_variable("HOSTNAME")
-aws_secret_name = validate_env_variable("SECRET_PASSWORD_LOOKUP")
-aws_region_name = validate_env_variable("REGION_NAME")
-
-get_secret = getLoginSecrets()
 
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
     s3_client = boto3.client("s3")
-    source_bucket = sqs_rec["s3"]["bucket"]["name"]
-    source_key = urllib.parse.unquote_plus(
-                sqs_rec["s3"]["object"]["key"], encoding="utf-8"
-            )
+    message = json.loads(sqs_rec['body'])
+    LOGGER.info('EVENT: %s', message)
+    msg_attributes = sqs_rec['messageAttributes']
+    replacements = message['replacements']
+    source_key = msg_attributes['source_key']['stringValue']
+
+    source_bucket = msg_attributes['source_bucket']['stringValue']
+    LOGGER.info('replacement_bucket from message')
+    LOGGER.info(source_bucket)
+    
     LOGGER.debug("Input bucket name:%s", source_bucket)
     LOGGER.debug("Input S3 key:%s", source_key)
 
@@ -195,8 +135,6 @@ def push_contents(uploaded_bucket, uploaded_key):
     response = queue.send_message(MessageBody=json.dumps(message), MessageAttributes=msg_attributes)
 
 DEST_QUEUE = validate_env_variable("DEST_QUEUE_NAME")
-RULES_FILE_BUCKET = validate_env_variable("RULES_FILE_BUCKET")
-RULES_FILE_KEY = validate_env_variable("RULES_FILE_KEY")
 REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
 def handler(event, context):
