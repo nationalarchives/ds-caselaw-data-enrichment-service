@@ -111,11 +111,21 @@ get_secret = getLoginSecrets()
 
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
-    s3_client = boto3.client("s3")
-    source_bucket = sqs_rec["s3"]["bucket"]["name"]
-    source_key = urllib.parse.unquote_plus(
-                sqs_rec["s3"]["object"]["key"], encoding="utf-8"
-            )
+    # s3_client = boto3.client("s3")
+    # source_bucket = sqs_rec["s3"]["bucket"]["name"]
+    # source_key = urllib.parse.unquote_plus(
+    #             sqs_rec["s3"]["object"]["key"], encoding="utf-8"
+    #         )
+    message = json.loads(sqs_rec['body'])
+    LOGGER.info('EVENT: %s', message)
+    msg_attributes = sqs_rec['messageAttributes']
+    replacements = message['replacements']
+    source_key = msg_attributes['source_key']['stringValue']
+
+    source_bucket = msg_attributes['source_bucket']['stringValue']
+    LOGGER.info('replacement_bucket from message')
+    LOGGER.info(source_bucket)
+
     LOGGER.debug("Input bucket name:%s", source_bucket)
     LOGGER.debug("Input S3 key:%s", source_key)
 
