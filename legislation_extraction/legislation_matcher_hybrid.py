@@ -106,6 +106,7 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
             href = get_hrefs(conn, title.text)
             matches_with_refs = []
             for match in matches:
+                print("leg match:", match)
                 match_list = list(match)
                 match_list.append(href)
                 match = tuple(match_list)
@@ -124,9 +125,7 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
     results = []
     dates = detect_year_span(doc, nlp)
     print("Legislation date span:", dates)
-    # temporarily stopping the filter on `dates`
-    # shorttitles = leg_titles[leg_titles.year.isin(dates)]
-    shorttitles = leg_titles
+    shorttitles = leg_titles[leg_titles.year.isin(dates)]
     print("Shorttitles:", shorttitles)
 
     for fuzzy, method in zip([True, False], ('hybrid','exact')):
@@ -151,6 +150,4 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
         replacements.append(replacement)
     print(f"Found {len(replacements)} legislation replacements")
     
-    # temporarily return dummy replacements to see if they come back
-    replacements = ["replacement_1", "replacement_2"]
     return replacements
