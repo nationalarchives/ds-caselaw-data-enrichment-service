@@ -161,7 +161,7 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
     object.put(Body=replacements)
     return object.key
 
-def init_NLP(rules_content):
+def init_NLP():
     nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
     nlp.max_length = 2500000
     return nlp
@@ -174,14 +174,14 @@ def init_DB():
 def close_connection(db_conn):
     db_connection.close_connection(db_conn)
 
-def determine_replacements(file_content, rules_content):
+def determine_replacements(file_content):
 
     # connect to the database
     db_conn = init_DB()
     # db_conn = create_connection(DATABASE)
    
     # setup the spacy pipeline
-    nlp = init_NLP(rules_content)
+    nlp = init_NLP()
     LOGGER.debug('got nlp')
     # attempt to free memory
     # del rules_content
@@ -230,8 +230,8 @@ def push_contents(uploaded_bucket, uploaded_key):
     response = queue.send_message(MessageBody=json.dumps(message), MessageAttributes=msg_attributes)
 
 DEST_QUEUE = validate_env_variable("DEST_QUEUE_NAME")
-RULES_FILE_BUCKET = validate_env_variable("RULES_FILE_BUCKET")
-RULES_FILE_KEY = validate_env_variable("RULES_FILE_KEY")
+# RULES_FILE_BUCKET = validate_env_variable("RULES_FILE_BUCKET")
+# RULES_FILE_KEY = validate_env_variable("RULES_FILE_KEY")
 REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
 def handler(event, context):
