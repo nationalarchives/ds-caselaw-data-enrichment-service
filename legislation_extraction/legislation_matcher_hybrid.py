@@ -132,6 +132,7 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
     for fuzzy, method in zip([True, False], ('hybrid','exact')):
         titles = shorttitles[shorttitles.for_fuzzy==fuzzy].candidate_titles.drop_duplicates().tolist()
         res = lookup_pipe(titles, doc, nlp, methods[method], conn, CUTOFF)
+        print ("res:", res)
         results.append(res)
 
     results = mergedict(results[0], results[1])
