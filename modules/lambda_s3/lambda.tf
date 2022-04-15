@@ -466,11 +466,6 @@ module "lambda-determine-replacements-caselaw" {
   # }
 
   vpc_security_group_ids = [var.default_security_group_id]
-  # vpc_subnet_ids = "${element(var.public_subnets, count.index)}"
-  # vpc_subnet_ids = "${var.public_subnets}"
-  # for_each = toset(var.aws_subnets_private_ids)
-  # id       = each.value
-  # vpc_subnet_ids = [each.value]
   vpc_subnet_ids = var.aws_subnets_private_ids
 
   environment_variables = {
@@ -599,6 +594,9 @@ module "lambda-determine-replacements-legislation" {
       }
     }
   }
+
+  vpc_security_group_ids = [var.default_security_group_id]
+  vpc_subnet_ids = var.aws_subnets_private_ids
 
   environment_variables = {
     DATABASE_NAME = "rules"
