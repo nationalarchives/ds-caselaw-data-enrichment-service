@@ -22,6 +22,13 @@
 
 resource "aws_sqs_queue" "replacement-caselaw-queue" {
   name = "${local.name}-${local.environment}-replacement-caselaw-event-notification-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 86400
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-caselaw_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+
 }
 
 resource "aws_sqs_queue_policy" "replacement-caselaw-queue-policy" {
@@ -43,6 +50,24 @@ resource "aws_sqs_queue_policy" "replacement-caselaw-queue-policy" {
 }
 POLICY
 }
+
+resource "aws_sqs_queue" "replacements-caselaw_dlq_queue" {
+  name                      = "${local.name}-${local.environment}-replacements-caselaw-dlq-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+
+  tags = local.tags
+}
+
+
+
+
+
+
 
 resource "aws_sqs_queue" "replacements_dlq_queue" {
   name                      = "${local.name}-${local.environment}-replacements-dlq-queue"
@@ -68,8 +93,19 @@ resource "aws_sqs_queue" "replacements_queue" {
   tags = local.tags
 }
 
+
+
+
+
 resource "aws_sqs_queue" "replacement-legislation-queue" {
   name = "${local.name}-${local.environment}-replacement-legislation-event-notification-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 86400
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-legislation_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+
 }
 
 resource "aws_sqs_queue_policy" "replacement-legislation-queue-policy" {
@@ -92,8 +128,31 @@ resource "aws_sqs_queue_policy" "replacement-legislation-queue-policy" {
 POLICY
 }
 
+resource "aws_sqs_queue" "replacements-legislation_dlq_queue" {
+  name                      = "${local.name}-${local.environment}-replacements-legislation-dlq-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+
+  tags = local.tags
+}
+
+
+
+
+
 resource "aws_sqs_queue" "replacement-abbreviations-queue" {
   name = "${local.name}-${local.environment}-replacement-abbreviations-event-notification-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 86400
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-abbreviations_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+
 }
 
 resource "aws_sqs_queue_policy" "replacement-abbreviations-queue-policy" {
@@ -115,6 +174,22 @@ resource "aws_sqs_queue_policy" "replacement-abbreviations-queue-policy" {
 }
 POLICY
 }
+
+resource "aws_sqs_queue" "replacements-legislation-abbreviations_dlq_queue" {
+  name                      = "${local.name}-${local.environment}-replacements-legislation-dlq-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+
+  tags = local.tags
+}
+
+
+
+
 
 # resource "aws_sqs_queue" "validation-queue" {
 #   name = "${local.name}-${local.environment}-validation-event-notification-queue"
@@ -210,10 +285,18 @@ POLICY
 # }
 
 # Event source from SQS
-resource "aws_lambda_event_source_mapping" "sqs_replacements_event_source_mapping" {
+resource "aws_lambda_event_source_mapping" "sqs_replacements_event_source_mapping_caselaw" {
   event_source_arn = aws_sqs_queue.replacement-caselaw-queue.arn
   enabled          = true
-  function_name    = "${module.lambda-make-replacements.lambda_function_arn}"
+  # function_name    = "${module.lambda-make-replacements.lambda_function_arn}"
+  function_name    = "${module.lambda-determine-replacements-legislation.lambda_function_arn}"
   batch_size       = 1
 }
 
+resource "aws_lambda_event_source_mapping" "sqs_replacements_legislation_event_source_mapping" {
+  event_source_arn = aws_sqs_queue.replacement-legislation-queue.arn
+  enabled          = true
+  function_name    = "${module.lambda-make-replacements.lambda_function_arn}"
+  # function_name    = "${module.lambda-determine-replacements-abbreviation.lambda_function_arn}"
+  batch_size       = 1
+}

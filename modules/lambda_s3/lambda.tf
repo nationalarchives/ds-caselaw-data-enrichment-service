@@ -782,7 +782,7 @@ module "lambda-make-replacements" {
         "sqs:DeleteMessage",
         "sqs:GetQueueAttributes"
       ],
-      resources = ["${aws_sqs_queue.replacements_queue.arn}","${aws_sqs_queue.replacement-caselaw-queue.arn}"]
+      resources = ["${aws_sqs_queue.replacements_queue.arn}","${aws_sqs_queue.replacement-caselaw-queue.arn}","${aws_sqs_queue.replacement-legislation-queue.arn}"]
       # resources = ["${aws_sqs_queue_terraform_queue_arn}"]
       # resources = [module.aws_sqs_queue.terraform_queue.arn]
     },
