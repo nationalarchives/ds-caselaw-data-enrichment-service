@@ -43,10 +43,14 @@ def get_matched_rule(conn, rule_id):
 
 def get_legtitles(conn):
   leg_titles = pd.read_sql("SELECT candidate_titles, year, for_fuzzy FROM ukpga_lookup", conn)
+  print ('leg_titles')
+  print (leg_titles)
   return leg_titles
 
 def get_hrefs(conn, title):
   ref_link = pd.read_sql("SELECT ref_version FROM ukpga_lookup WHERE candidate_titles='{0}'".format(title), conn)
+  print ('ref_link')
+  print (ref_link)
   return ref_link.ref_version.values[0]
 
 def close_connection(conn):
