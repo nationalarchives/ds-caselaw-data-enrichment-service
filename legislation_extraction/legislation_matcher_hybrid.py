@@ -145,6 +145,6 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
         ref = ref['ref']
         replacement = leg(detected_ref, ref)
         replacements.append(replacement)
-    print(f"Found {len(replacements} legislation replacements")
+    print(f"Found {len(replacements)} legislation replacements")
 
     return replacements
