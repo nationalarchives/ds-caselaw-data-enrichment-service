@@ -358,8 +358,8 @@ module "lambda-determine-replacements-caselaw" {
 
   create_current_version_allowed_triggers = false # !var.use_container_image
 
-  timeout     = 30
-  memory_size = 1024
+  timeout     = 900
+  memory_size = 5120
 
   attach_policy_statements = true
   policy_statements = {
@@ -508,8 +508,8 @@ module "lambda-determine-replacements-legislation" {
 
   create_current_version_allowed_triggers = false # !var.use_container_image
 
-  timeout     = 30
-  memory_size = 512
+  timeout     = 900
+  memory_size = 5120
 
   attach_policy_statements = true
   policy_statements = {
@@ -520,7 +520,7 @@ module "lambda-determine-replacements-legislation" {
         "s3:GetObject",
         "s3:GetObjectVersion"
       ],
-      resources = ["${module.text_content_bucket.s3_bucket_arn}/*"]
+      resources = ["${module.text_content_bucket.s3_bucket_arn}/*","${module.replacements_bucket.s3_bucket_arn}/*"]
     },
     s3_put = {
       effect    = "Allow",
@@ -677,7 +677,7 @@ module "lambda-determine-replacements-abbreviations" {
         "sqs:GetQueueAttributes"
       ],
       "Effect": "Allow",
-      resources = [aws_sqs_queue.replacements_queue.arn]
+      resources = [aws_sqs_queue.replacement-abbreviations-queue.arn]
     },
     log_lambda = {
       effect = "Allow",
@@ -782,7 +782,7 @@ module "lambda-make-replacements" {
         "sqs:DeleteMessage",
         "sqs:GetQueueAttributes"
       ],
-      resources = ["${aws_sqs_queue.replacements_queue.arn}","${aws_sqs_queue.replacement-caselaw-queue.arn}","${aws_sqs_queue.replacement-legislation-queue.arn}"]
+      resources = ["${aws_sqs_queue.replacements_queue.arn}","${aws_sqs_queue.replacement-caselaw-queue.arn}","${aws_sqs_queue.replacement-legislation-queue.arn}","${aws_sqs_queue.replacement-abbreviations-queue.arn}"]
       # resources = ["${aws_sqs_queue_terraform_queue_arn}"]
       # resources = [module.aws_sqs_queue.terraform_queue.arn]
     },
