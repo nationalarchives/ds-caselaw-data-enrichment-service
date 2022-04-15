@@ -388,16 +388,16 @@ module "lambda-determine-replacements-caselaw" {
       ],
       resources = [module.text_content_bucket.kms_key_arn, module.replacements_bucket.kms_key_arn, module.rules_bucket.kms_key_arn]
     },
-    sqs_get_message = {
-      effect = "Allow",
-      actions = [
-        "sqs:ReceiveMessage",
-        "sqs:DeleteMessage",
-        "sqs:GetQueueAttributes"
-      ],
-      "Effect": "Allow",
-      resources = [aws_sqs_queue.text_content_bucket_sqs_queue.queue.arn]
-    },
+    # sqs_get_message = {
+    #   effect = "Allow",
+    #   actions = [
+    #     "sqs:ReceiveMessage",
+    #     "sqs:DeleteMessage",
+    #     "sqs:GetQueueAttributes"
+    #   ],
+    #   "Effect": "Allow",
+    #   resources = [aws_sqs_queue.text_content_bucket_sqs_queue.queue.arn]
+    # },
     secrets_get = {
       effect = "Allow",
       actions = [
