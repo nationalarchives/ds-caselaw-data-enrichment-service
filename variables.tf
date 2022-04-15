@@ -7,3 +7,7 @@ variable "app_env" {
     default = "tna-mxt-staging"
     description = "Common prefix for all Terraform created resources"
 }
+
+variable "bucket_prefix" {
+    default = "sg"
+}
