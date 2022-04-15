@@ -14,8 +14,8 @@ module "lambda-extract-judgement-contents" {
   # Deploy as code
   # handler     = var.lambda_handler
   handler = "index.handler"
-  runtime     = var.runtime
-  # runtime           = "python3.6" 
+  # runtime     = var.runtime
+  runtime           = "python3.6" 
   source_path = "${var.lambda_source_path}extract_judgement_contents"
 
   # Deploy as ECR image
