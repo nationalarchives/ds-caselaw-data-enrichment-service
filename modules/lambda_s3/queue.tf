@@ -175,8 +175,8 @@ resource "aws_sqs_queue_policy" "replacement-abbreviations-queue-policy" {
 POLICY
 }
 
-resource "aws_sqs_queue" "replacements-legislation-abbreviations_dlq_queue" {
-  name                      = "${local.name}-${local.environment}-replacements-legislation-dlq-queue"
+resource "aws_sqs_queue" "replacements-abbreviations_dlq_queue" {
+  name                      = "${local.name}-${local.environment}-replacements-abbreviations-dlq-queue"
   delay_seconds             = 90
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
