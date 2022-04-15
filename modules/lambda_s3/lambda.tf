@@ -629,8 +629,8 @@ module "lambda-determine-replacements-abbreviations" {
 
   create_current_version_allowed_triggers = false # !var.use_container_image
 
-  timeout     = 30
-  memory_size = 512
+  timeout     = 900
+  memory_size = 2048
 
   attach_policy_statements = true
   policy_statements = {
@@ -641,7 +641,7 @@ module "lambda-determine-replacements-abbreviations" {
         "s3:GetObject",
         "s3:GetObjectVersion"
       ],
-      resources = ["${module.text_content_bucket.s3_bucket_arn}/*"]
+      resources = ["${module.text_content_bucket.s3_bucket_arn}/*","${module.replacements_bucket.s3_bucket_arn}/*"]
     },
     s3_put = {
       effect    = "Allow",
