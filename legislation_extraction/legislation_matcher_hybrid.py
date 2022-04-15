@@ -124,7 +124,8 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
     results = []
     dates = detect_year_span(doc, nlp)
     print("Legislation date span:", dates)
-    #shorttitles = leg_titles[leg_titles.year.isin(dates)]
+    # temporarily stopping the filter on `dates`
+    # shorttitles = leg_titles[leg_titles.year.isin(dates)]
     shorttitles = leg_titles
     print("Shorttitles:", shorttitles)
 
@@ -138,6 +139,7 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
     results = dict([(k, [dict(zip(keys, j)) for j in v])
                     for k, v in results.items()])    
     refs = [i for j in results.values() for i in j]
+    print("These are the refs:", refs)
 
     keys_to_extract = {'detected_ref', 'ref'}
     replacements = []
