@@ -123,7 +123,9 @@ methods = {
 def leg_pipeline(leg_titles, nlp, doc, conn):
     results = []
     dates = detect_year_span(doc, nlp)
+    print("Legislation date span:", dates)
     shorttitles = leg_titles[leg_titles.year.isin(dates)]
+    print("Shorttitles:", shorttitles)
 
     for fuzzy, method in zip([True, False], ('hybrid','exact')):
         titles = shorttitles[shorttitles.for_fuzzy==fuzzy].candidate_titles.drop_duplicates().tolist()
@@ -143,5 +145,6 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
         ref = ref['ref']
         replacement = leg(detected_ref, ref)
         replacements.append(replacement)
+    print(f"Found {len(replacements} legislation replacements")
 
     return replacements
