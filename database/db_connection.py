@@ -2,13 +2,13 @@
 import pandas as pd
 import psycopg2
 
-def create_connection(db, user, host, port):
+def create_connection(db, user, password, host, port):
     """ Connect to the PostgreSQL database server """
     conn = None
     try:
         # connect to the PostgreSQL server
         print('Connecting to the PostgreSQL database...')
-        conn = psycopg2.connect(database=db, user=user, host=host, port=port)
+        conn = psycopg2.connect(database=db, user=user, password=password, host=host, port=port)
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
     return conn
