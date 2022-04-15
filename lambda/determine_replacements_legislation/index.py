@@ -218,6 +218,7 @@ def get_legislation_replacements(leg_titles, nlp, doc, db_conn):
     # replacement_entry = ("test_citation_match", "test_corrected_citation", "test_year")
     # replacements = replacements.append(replacement_entry)
     replacements = leg_pipeline(leg_titles, nlp, doc, db_conn)
+    LOGGER.debug("Found the following replacements", replacements)
     return replacements
 
 def push_contents(uploaded_bucket, uploaded_key):
