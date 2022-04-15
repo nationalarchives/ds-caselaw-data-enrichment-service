@@ -124,7 +124,8 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
     results = []
     dates = detect_year_span(doc, nlp)
     print("Legislation date span:", dates)
-    shorttitles = leg_titles[leg_titles.year.isin(dates)]
+    #shorttitles = leg_titles[leg_titles.year.isin(dates)]
+    shorttitles = leg_titles
     print("Shorttitles:", shorttitles)
 
     for fuzzy, method in zip([True, False], ('hybrid','exact')):
