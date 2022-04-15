@@ -557,6 +557,18 @@ module "lambda-determine-replacements-legislation" {
       "Effect": "Allow",
       resources = [aws_sqs_queue.replacement-legislation-queue.arn]
     },
+    secrets_get = {
+      effect = "Allow",
+      actions = [
+        "secretsmanager:GetResourcePolicy",
+        "secretsmanager:GetSecretValue",
+        "secretsmanager:DescribeSecret",
+        "secretsmanager:ListSecretVersionIds"
+      ],  
+      # resources = ["${module.data.aws_secretsmanager_secret.postgress_master_password.arn}"] 
+      # module.data.aws_secretsmanager_secret.postgress_master_password
+      resources = ["${var.postgress_master_password_secret_id}"] 
+    },
     log_lambda = {
       effect = "Allow",
       actions = [
