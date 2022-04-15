@@ -14,8 +14,8 @@ module "lambda-extract-judgement-contents" {
   # Deploy as code
   # handler     = var.lambda_handler
   handler = "index.handler"
-  # runtime     = var.runtime
-  runtime           = "python3.6" 
+  runtime     = var.runtime
+  # runtime           = "python3.6" 
   source_path = "${var.lambda_source_path}extract_judgement_contents"
 
   # Deploy as ECR image
@@ -388,16 +388,16 @@ module "lambda-determine-replacements-caselaw" {
       ],
       resources = [module.text_content_bucket.kms_key_arn, module.replacements_bucket.kms_key_arn, module.rules_bucket.kms_key_arn]
     },
-    # sqs_get_message = {
-    #   effect = "Allow",
-    #   actions = [
-    #     "sqs:ReceiveMessage",
-    #     "sqs:DeleteMessage",
-    #     "sqs:GetQueueAttributes"
-    #   ],
-    #   "Effect": "Allow",
-    #   resources = [aws_sqs_queue.text_content_bucket_sqs_queue.queue.arn]
-    # },
+    sqs_get_message = {
+      effect = "Allow",
+      actions = [
+        "sqs:ReceiveMessage",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+      ],
+      "Effect": "Allow",
+      resources = [aws_sqs_queue.text_content_bucket_sqs_queue.queue.arn]
+    },
     secrets_get = {
       effect = "Allow",
       actions = [
@@ -598,7 +598,8 @@ module "lambda-determine-replacements-legislation" {
     REGION_NAME = "${local.region}"
     HOSTNAME = "${var.postgress_hostname}"
 
-    DEST_QUEUE_NAME     = aws_sqs_queue.replacement-abbreviations-queue.url
+    # DEST_QUEUE_NAME     = aws_sqs_queue.replacement-abbreviations-queue.url
+    DEST_QUEUE_NAME     = aws_sqs_queue.replacement-legislation-queue.arn
     REPLACEMENTS_BUCKET = "${module.replacements_bucket.s3_bucket_id}"
     SOURCE_BUCKET = "${module.text_content_bucket.s3_bucket_arn}"
   }
