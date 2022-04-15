@@ -9,9 +9,11 @@ def create_connection(db, user, password, host, port):
         # connect to the PostgreSQL server
         print('Connecting to the PostgreSQL database...')
         conn = psycopg2.connect(database=db, user=user, password=password, host=host, port=port)
+        return conn
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
-    return conn
+        raise
+    # return conn
 
 def get_manifest_row(conn, rule_id):
   """
