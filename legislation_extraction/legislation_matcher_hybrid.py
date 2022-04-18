@@ -77,6 +77,7 @@ def hybrid(title, docobj, nlp, cutoff, candidates=None):
         if (len(matches) > 0) & (dyear == year):
             all_matches.extend(
                 [(docobj[end-1-e+s:end].text, end-1-e+s, end, ratio) for text, s, e, ratio in matches])
+    print ("Here are matches from the hybrid matcher:", all_matches)
     return all_matches
 
 ######
