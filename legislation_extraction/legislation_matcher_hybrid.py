@@ -130,11 +130,11 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
     shorttitles = leg_titles[leg_titles.year.isin(dates)]
     print("Shorttitles:", shorttitles)
 
-    for fuzzy, method in zip([True, False], ('hybrid','exact')):
-        titles = shorttitles[shorttitles.for_fuzzy==fuzzy].candidate_titles.drop_duplicates().tolist()
-        res = lookup_pipe(titles, doc, nlp, methods[method], conn, CUTOFF)
-        print ("res:", res)
-        results.append(res)
+    # for fuzzy, method in zip([True, False], ('hybrid','exact')):
+    titles = shorttitles[shorttitles.for_fuzzy==False].candidate_titles.drop_duplicates().tolist()
+    res = lookup_pipe(titles, doc, nlp, methods['exact'], conn, CUTOFF)
+    print ("res:", res)
+    results.append(res)
 
     results = mergedict(results[0], results[1])
 
