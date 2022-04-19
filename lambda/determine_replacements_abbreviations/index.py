@@ -62,6 +62,7 @@ def process_event(sqs_rec):
                 # Bucket=source_bucket, Key=source_key)["Body"].read()
                 Bucket=source_bucket, Key=source_key)["Body"].read().decode('utf-8')
                 
+    LOGGER.info(file_content)
     LOGGER.debug(file_content)
     LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
 
@@ -73,7 +74,7 @@ def process_event(sqs_rec):
 
      # open and read existing file from s3 bucket
     replacements_content = s3_client.get_object(
-      Bucket=REPLACEMENTS_BUCKET, Key=source_key+'.txt')["Body"].read().decode('utf-8')
+      Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"].read().decode('utf-8')
     replacements_encoded = replacements_content + replacements_encoded
 
     uploaded_key = upload_replacements(REPLACEMENTS_BUCKET, source_key, replacements_encoded)
