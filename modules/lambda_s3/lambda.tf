@@ -177,6 +177,20 @@ resource "aws_ecr_repository" "legislation" {
   tags = local.tags
 }
 
+resource "aws_ecr_repository" "abbreviations" {
+  # count = var.use_container_image == true ? 1 : 0
+
+  name                 = "${local.name}-ecr-repository-abbreviations-${local.environment}"
+  # image_tag_mutability = "IMMUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  tags = local.tags
+}
+
+
 # resource "aws_ecr_lifecycle_policy" "main" {
 #   count = var.use_container_image == true ? 1 : 0
 
@@ -636,7 +650,8 @@ module "lambda-determine-replacements-abbreviations" {
   handler = "index.handler"
   # runtime     = var.runtime
   # runtime           = "python3.9" 
-  source_path = "${var.lambda_source_path}determine_replacements_abbreviations"
+  # source_path = "${var.lambda_source_path}determine_replacements_abbreviations"
+  image_uri     = "${aws_ecr_repository.abbreviations.repository_url}:${var.container_image_tag}"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
 
