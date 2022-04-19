@@ -12,8 +12,8 @@ from botocore.exceptions import ClientError
 from dateutil.parser import parse as dparser
 import spacy
 from spacy.language import Language
-import psycopg2 as pg
-from psycopg2 import Error
+# import psycopg2 as pg
+# from psycopg2 import Error
 
 LOGGER = logging.getLogger()
 # LOGGER.setLevel(logging.INFO)
