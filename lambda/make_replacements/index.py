@@ -32,7 +32,7 @@ def upload_contents(source_key, text_content):
     LOGGER.info('uploading text content to %s/%s', DEST_BUCKET, filename)
     s3 = boto3.resource('s3')
     object = s3.Object(DEST_BUCKET, filename)
-    object.put(Body=text_content)
+    object.put(Body=text_content, ContentType='text/xml')
 
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
