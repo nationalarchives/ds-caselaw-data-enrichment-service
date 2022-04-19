@@ -95,6 +95,7 @@ jobs:
 
   terraform:
     name: "Terraform"
+    needs: [buildx]
     runs-on: ubuntu-latest
     # container:
     #   image: hashicorp/terraform:light
@@ -195,7 +196,6 @@ jobs:
         run: exit 1
 
       - name: Terraform Apply
-        needs: [buildx]
         # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         run: terraform apply -auto-approve
