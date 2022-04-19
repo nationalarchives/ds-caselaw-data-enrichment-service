@@ -43,6 +43,10 @@ jobs:
           cp -r utils/*.py lambda/determine_replacements_legislation/utils/
           mkdir lambda/determine_replacements_legislation/database
           cp -r database/*.py lambda/determine_replacements_legislation/database/
+
+          mkdir lambda/determine_replacements_abbreviations/abbreviation_extraction
+          cp -r abbreviation_extraction/*.* lambda/determine_replacements_abbreviations/abbreviation_extraction/
+          cp abbreviation_extraction/requirements.txt lambda/determine_replacements_abbreviations/
          
       -
         name: Build Lambda images
@@ -67,15 +71,26 @@ jobs:
           # cat lambda/determine_replacements_legislation/requirements.txt
           # docker pull hello-world
           cd ../../lambda/determine_replacements_legislation
-          sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com
+          # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com
           # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
-          echo "logged in legislation"
+          # echo "logged in legislation"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-dev .
           # echo "built legislation"
           docker images --filter reference=tna-s3-tna-ecr-repository-legislation-dev
           docker tag tna-s3-tna-ecr-repository-legislation-dev:latest 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
           echo "tagged legislation"
           docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
+
+          cd ../../lambda/determine_replacements_abbreviations
+          # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com
+          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+          # echo "logged in legislation"
+          docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-dev .
+          echo "built abbreviations"
+          docker images --filter reference=tna-s3-tna-ecr-repository-abbreviations-dev
+          docker tag tna-s3-tna-ecr-repository-abbreviations-dev:latest 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
+          echo "tagged abbreviations"
+          docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
 
 
   terraform:
@@ -95,11 +110,6 @@ jobs:
 
           mkdir -p lambda/make_replacements/replacer
           cp -r replacer/*.py lambda/make_replacements/replacer/
-
-          mkdir lambda/determine_replacements_abbreviations/abbreviation_extraction
-          cp -r abbreviation_extraction/*.* lambda/determine_replacements_abbreviations/abbreviation_extraction/
-          cp abbreviation_extraction/requirements.txt lambda/determine_replacements_abbreviations/
-          ls -l lambda/determine_replacements_abbreviations
 
       # - name: Set up Docker Buildx
       #   uses: docker/setup-buildx-action@v1

@@ -625,17 +625,17 @@ module "lambda-determine-replacements-abbreviations" {
 
   function_name = "${local.name}-${local.environment}-determine-replacements-abbreviations"
   # package_type  = var.use_container_image == true ? "Image" : "Zip"
-  # package_type  = "Image"
-  # create_package = false
+  package_type  = "Image"
+  create_package = false
 
-  package_type  = var.use_container_image == true ? "Image" : "Zip"
+  # package_type  = var.use_container_image == true ? "Image" : "Zip"
   # package_type = "Image"
 
   # Deploy as code
   # handler     = var.lambda_handler
   handler = "index.handler"
   # runtime     = var.runtime
-  runtime           = "python3.6" 
+  # runtime           = "python3.9" 
   source_path = "${var.lambda_source_path}determine_replacements_abbreviations"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
