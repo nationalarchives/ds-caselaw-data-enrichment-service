@@ -62,7 +62,6 @@ def process_event(sqs_rec):
                 # Bucket=source_bucket, Key=source_key)["Body"].read()
                 Bucket=source_bucket, Key=source_key)["Body"].read().decode('utf-8')
                 
-    LOGGER.info(file_content)
     LOGGER.debug(file_content)
     LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
 
@@ -112,7 +111,7 @@ def get_abbreviation_replacements(file_content):
 
 def init_NLP(): 
     nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer'])
-
+    nlp.max_length = 2500000
     return nlp
 
 def push_contents(uploaded_bucket, uploaded_key):

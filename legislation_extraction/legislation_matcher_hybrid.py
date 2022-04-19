@@ -106,7 +106,6 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
             href = get_hrefs(conn, title.text)
             matches_with_refs = []
             for match in matches:
-                print("leg match:", match)
                 match_list = list(match)
                 match_list.append(href)
                 match = tuple(match_list)
