@@ -608,8 +608,8 @@ module "lambda-determine-replacements-legislation" {
     REGION_NAME = "${local.region}"
     HOSTNAME = "${var.postgress_hostname}"
 
-    DEST_QUEUE_NAME     = aws_sqs_queue.replacement-abbreviations-queue.url
-    # DEST_QUEUE_NAME     = aws_sqs_queue.replacement-legislation-queue.url
+    # DEST_QUEUE_NAME     = aws_sqs_queue.replacement-abbreviations-queue.url
+    DEST_QUEUE_NAME     = aws_sqs_queue.replacement-legislation-queue.url
     
     REPLACEMENTS_BUCKET = "${module.replacements_bucket.s3_bucket_id}"
     SOURCE_BUCKET = "${module.text_content_bucket.s3_bucket_arn}"
