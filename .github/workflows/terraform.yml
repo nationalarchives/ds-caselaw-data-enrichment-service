@@ -36,11 +36,6 @@ jobs:
           mkdir lambda/determine_replacements_caselaw/utils
           cp -r utils/*.py lambda/determine_replacements_caselaw/utils/
 
-
-          mkdir lambda/make_replacements/replacer
-          cp -r replacer/*.py lambda/make_replacements/replacer/
-
-
           mkdir lambda/determine_replacements_legislation/legislation_extraction
           cp -r legislation_extraction/*.* lambda/determine_replacements_legislation/legislation_extraction/
           cp legislation_extraction/requirements.txt lambda/determine_replacements_legislation/
@@ -48,11 +43,6 @@ jobs:
           cp -r utils/*.py lambda/determine_replacements_legislation/utils/
           mkdir lambda/determine_replacements_legislation/database
           cp -r database/*.py lambda/determine_replacements_legislation/database/
-
-          mkdir lambda/determine_replacements_abbreviations/abbreviation_extraction
-          cp -r abbreviation_extraction/*.* lambda/determine_replacements_abbreviations/abbreviation_extraction/
-          cp abbreviation_extraction/requirements.txt lambda/determine_replacements_abbreviations/
-          ls -l lambda/determine_replacements_abbreviations
          
       -
         name: Build Lambda images
@@ -105,6 +95,11 @@ jobs:
 
           mkdir -p lambda/make_replacements/replacer
           cp -r replacer/*.py lambda/make_replacements/replacer/
+
+          mkdir lambda/determine_replacements_abbreviations/abbreviation_extraction
+          cp -r abbreviation_extraction/*.* lambda/determine_replacements_abbreviations/abbreviation_extraction/
+          cp abbreviation_extraction/requirements.txt lambda/determine_replacements_abbreviations/
+          ls -l lambda/determine_replacements_abbreviations
 
       # - name: Set up Docker Buildx
       #   uses: docker/setup-buildx-action@v1
