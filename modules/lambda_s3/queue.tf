@@ -66,10 +66,6 @@ resource "aws_sqs_queue" "replacements-caselaw_dlq_queue" {
 
 
 
-
-
-
-
 resource "aws_sqs_queue" "replacements_dlq_queue" {
   name                      = "${local.name}-${local.environment}-replacements-dlq-queue"
   delay_seconds             = 90
@@ -94,7 +90,6 @@ resource "aws_sqs_queue" "replacements_queue" {
 
   tags = local.tags
 }
-
 
 
 
@@ -312,3 +307,4 @@ resource "aws_lambda_event_source_mapping" "sqs_replacements_abbreviations_event
   # function_name    = "${module.lambda-determine-replacements-abbreviation.lambda_function_arn}"
   batch_size       = 1
 }
+

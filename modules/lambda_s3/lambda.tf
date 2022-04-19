@@ -888,6 +888,23 @@ resource "aws_s3_bucket_notification" "text_content_bucket_notification" {
   }
 }
 
+
+resource "aws_s3_bucket_notification" "xml_enriched_bucket_notification" {
+  # bucket = module.xml_original_bucket.bucket_name.id
+  # bucket = module.xml_original_bucket.bucket.id
+  # bucket = "${module.xml_original_bucket.name}"
+  # bucket = "${module.xml_original_bucket.s3_bucket_arn}"
+  # bucket =module.xml_original_bucket.s3_bucket.arn
+  bucket = module.xml_enriched_bucket.s3_bucket_id
+
+  lambda_function {
+    lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+    # filter_prefix       = var.source_bucket_folder
+    # filter_suffix       = var.source_filter_suffix
+  }
+}
+
 # resource "aws_lambda_layer_version" "lambda_layer" {
 #   # filename   = var.layer_zip_filename
 #   # filename   = "lambda_layer.zip"
@@ -1068,91 +1085,90 @@ module "lambda-read-rules" {
 
 }
 
-# module "lambda-validate-replacements" {
-#   source  = "terraform-aws-modules/lambda/aws"
-#   version = ">=2.0.0,<3.0.0"
+module "lambda-validate-replacements" {
+  source  = "terraform-aws-modules/lambda/aws"
+  version = ">=2.0.0,<3.0.0"
 
-#   function_name = "${local.name}-${local.environment}-xml-validate"
-#   package_type  = var.use_container_image == true ? "Image" : "Zip"
+  function_name = "${local.name}-${local.environment}-xml-validate"
+  package_type  = var.use_container_image == true ? "Image" : "Zip"
 
-#   # Deploy as code
-#   handler = "index.handler"
-#   runtime     = var.runtime
-#   source_path = "${var.lambda_source_path}make_replacements"
+  # Deploy as code
+  handler = "index.handler"
+  runtime     = var.runtime
+  source_path = "${var.lambda_source_path}make_replacements"
 
-#   create_current_version_allowed_triggers = false # !var.use_container_image
+  create_current_version_allowed_triggers = false # !var.use_container_image
 
-#   timeout     = 30
-#   memory_size = var.memory_size
+  timeout     = 30
+  memory_size = var.memory_size
 
-#   attach_policy_statements = true
-#   policy_statements = {
-#     s3_read = {
-#       effect = "Allow",
-#       actions = [
-#         "s3:HeadObject",
-#         "s3:GetObject",
-#         "s3:GetObjectVersion"
-#       ],
-#       resources = ["${module.xml_enriched_bucket.s3_bucket_arn}/*"]
-#     },
-#     kms_get_key = {
-#       effect = "Allow",
-#       actions = [
-#         "kms:Encrypt",
-#         "kms:DescribeKey",
-#         "kms:GenerateDataKey",
-#         "kms:Decrypt",
-#         "kms:ReEncryptTo"
-#       ],
-#       resources = [module.xml_enriched_bucket.kms_key_arn]
-#     },
-#     sqs_get = {
-#       effect = "Allow",
-#       actions = [
-#         "sqs:ReceiveMessage",
-#         "sqs:DeleteMessage",
-#         "sqs:GetQueueAttributes"
-#       ],
-#       resources = ["${aws_sqs_queue.replacements_made_queue.arn}"]
-#     },
+  attach_policy_statements = true
+  policy_statements = {
+    s3_read = {
+      effect = "Allow",
+      actions = [
+        "s3:HeadObject",
+        "s3:GetObject",
+        "s3:GetObjectVersion"
+      ],
+      resources = ["${module.xml_enriched_bucket.s3_bucket_arn}/*"]
+    },
+    kms_get_key = {
+      effect = "Allow",
+      actions = [
+        "kms:Encrypt",
+        "kms:DescribeKey",
+        "kms:GenerateDataKey",
+        "kms:Decrypt",
+        "kms:ReEncryptTo"
+      ],
+      resources = [module.xml_enriched_bucket.kms_key_arn]
+    },
+    sqs_get = {
+      effect = "Allow",
+      actions = [
+        "sqs:ReceiveMessage",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+      ],
+      resources = ["${aws_sqs_queue.replacements_made_queue.arn}"]
+    },
 
-#     log_lambda = {
-#       effect = "Allow",
-#       actions = [
-#         "logs:CreateLogGroup",
-#         "logs:CreateLogStream",
-#         "logs:PutLogEvents"
-#       ],
-#       resources = ["*"]
-#     }
-#   }
+    log_lambda = {
+      effect = "Allow",
+      actions = [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      resources = ["*"]
+    }
+  }
 
+  assume_role_policy_statements = {
+    account_root = {
+      effect  = "Allow",
+      actions = ["sts:AssumeRole"],
+      principals = {
+        account_principal = {
+          type        = "Service",
+          identifiers = ["lambda.amazonaws.com"]
+        }
+      }
+    }
+  }
 
-#   assume_role_policy_statements = {
-#     account_root = {
-#       effect  = "Allow",
-#       actions = ["sts:AssumeRole"],
-#       principals = {
-#         account_principal = {
-#           type        = "Service",
-#           identifiers = ["lambda.amazonaws.com"]
-#         }
-#       }
-#     }
-#   }
+  environment_variables = {
+    DEST_QUEUE_NAME       = "${aws_sqs_queue.validation_queue.arn}"
+    # use the existing rules bucket for simplicty
+    SCHEMA_BUCKET = "${module.rules_bucket.s3_bucket_arn}"
+    SCHEMA_BUCKET_KEY = "judgment-1-1.xsd"
 
-#   environment_variables = {
-#     DEST_QUEUE_NAME       = "${aws_sqs_queue.validation_queue.arn}"
-#     # use the existing rules bucket for simplicty
-#     SCHEMA_BUCKET = "${module.rules_bucket.s3_bucket_arn}"
-#     SCHEMA_BUCKET_KEY = "judgment-1-1.xsd"
+  }
 
-#   }
+  tags = local.tags
 
-#   tags = local.tags
-
-# }
+}
 
 
 

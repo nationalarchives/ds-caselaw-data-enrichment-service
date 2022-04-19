@@ -39,6 +39,11 @@ def process_event(sqs_rec):
                 Bucket=source_bucket, Key=source_key)["Body"].read()
 
     content_valid = validate_content(file_content)
+    if content_valid:
+        LOGGER.debug("content valid")
+    else:
+        LOGGER.error("content invalid")
+        raise Exception ("content is invalid")
 
 def find_schema(schema_bucket, schema_key):
     s3_client = boto3.client("s3")
@@ -58,16 +63,16 @@ def validate_content(file_content):
     parser = etree.XMLParser(dtd_validation=VALIDATE_USING_DTD) 
     parser.setContentHandler(ContentHandler(  ))
     xmldoc = parser.parseString(file_content)
-
+    result = True
     if VALIDATE_USING_SCHEMA:
         schema_bucket = validate_env_variable("SCHEMA_BUCKET_NAME")
         schema_key = validate_env_variable("SCHEMA_BUCKET_KEY")
     
         schema_content = find_schema(schema_bucket, schema_key)
         schema = load_schema(schema_content)
-        schema.validate(xmldoc)
+        result = schema.validate(xmldoc)
 
-    return True
+    return result
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
