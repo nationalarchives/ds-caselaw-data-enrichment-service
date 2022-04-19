@@ -123,6 +123,7 @@ methods = {
 }
 
 def leg_pipeline(leg_titles, nlp, doc, conn):
+    print(doc)
     results = []
     dates = detect_year_span(doc, nlp)
     print("Legislation date span:", dates)
