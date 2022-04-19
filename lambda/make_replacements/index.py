@@ -110,19 +110,19 @@ def replace_text_content(file_content, replacements_content):
     for i in replacements:
         key, value = list(i.items())[0]
 
-    LOGGER.info('replacements')
-    print(replacements)
-    if key == 'case':
-        case_law_tuple = tuple(i['case'])
-        replacement_tuples_case.append(case_law_tuple)
+        LOGGER.info('replacements')
+        print(replacements)
+        if key == 'case':
+            case_law_tuple = tuple(i['case'])
+            replacement_tuples_case.append(case_law_tuple)
 
-    elif key == 'leg':
-        leg_tuple = tuple(i['leg'])
-        replacement_tuples_leg.append(leg_tuple)
+        elif key == 'leg':
+            leg_tuple = tuple(i['leg'])
+            replacement_tuples_leg.append(leg_tuple)
 
-    else:
-        abb_tuple = tuple(i['abb'])
-        replacement_tuples_abb.append(abb_tuple)
+        else:
+            abb_tuple = tuple(i['abb'])
+            replacement_tuples_abb.append(abb_tuple)
 
     LOGGER.info('replacement_tuples_case')   
     print(replacement_tuples_case)
