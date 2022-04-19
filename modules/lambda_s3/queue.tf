@@ -24,6 +24,7 @@ resource "aws_sqs_queue" "replacement-caselaw-queue" {
   name = "${local.name}-${local.environment}-replacement-caselaw-event-notification-queue"
   delay_seconds             = 90
   max_message_size          = 2048
+  visibility_timeout_seconds = 900
   message_retention_seconds = 86400
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled = true
@@ -85,6 +86,7 @@ resource "aws_sqs_queue" "replacements_queue" {
   name                      = "${local.name}-${local.environment}-replacements-queue"
   delay_seconds             = 90
   max_message_size          = 2048
+  visibility_timeout_seconds = 900
   message_retention_seconds = 86400
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled = true
@@ -101,6 +103,7 @@ resource "aws_sqs_queue" "replacement-legislation-queue" {
   name = "${local.name}-${local.environment}-replacement-legislation-event-notification-queue"
   delay_seconds             = 90
   max_message_size          = 2048
+  visibility_timeout_seconds = 900
   message_retention_seconds = 86400
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled = true
@@ -148,6 +151,7 @@ resource "aws_sqs_queue" "replacement-abbreviations-queue" {
   name = "${local.name}-${local.environment}-replacement-abbreviations-event-notification-queue"
   delay_seconds             = 90
   max_message_size          = 2048
+  visibility_timeout_seconds = 900
   message_retention_seconds = 86400
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled = true
