@@ -78,7 +78,7 @@ resource "aws_sqs_queue" "replacements_dlq_queue" {
   tags = local.tags
 }
 
-resource "aws_sqs_queue" "replacements-queue" {
+resource "aws_sqs_queue" "replacement-queue" {
   name                      = "${local.name}-${local.environment}-replacements-queue"
   delay_seconds             = 90
   max_message_size          = 2048
@@ -174,7 +174,7 @@ resource "aws_sqs_queue" "replacement-abbreviations-queue" {
 
 }
 
-resource "aws_sqs_queue_policy" "replacement-abbreviations-queue-policy" {
+resource "aws_sqs_queue_policy" "replacements-abbreviations-queue-policy" {
   queue_url = aws_sqs_queue.replacement-abbreviations-queue.id
   policy = <<POLICY
 {
@@ -326,3 +326,47 @@ resource "aws_lambda_event_source_mapping" "sqs_replacements_abbreviations_event
   batch_size       = 1
 }
 
+resource "aws_sns_topic" "validation_updates" {
+  name = "validation-updates-topic"
+}
+
+resource "aws_sqs_queue" "validation_updates_queue" {
+  name = "validation-updates-queue"
+}
+
+# data "aws_iam_policy_document" "sqs-validation-queue-policy" {
+#   policy_id = "arn:aws:sqs:${var.sqs["region"]}:${var.sqs["account-id"]}:${var.sqs["name"]}/SQSDefaultPolicy"
+
+#   statement {
+#     sid    = "example-sns-topic"
+#     effect = "Allow"
+
+#     principals {
+#       type        = "AWS"
+#       identifiers = ["*"]
+#     }
+
+#     actions = [
+#       "SQS:SendMessage",
+#     ]
+
+#     resources = [
+#       "arn:aws:sqs:${var.sqs["region"]}:${var.sqs["account-id"]}:${var.sqs["name"]}",
+#     ]
+
+#     condition {
+#       test     = "ArnEquals"
+#       variable = "aws:SourceArn"
+
+#       values = [
+#         "arn:aws:sns:${var.sns["region"]}:${var.sns["account-id"]}:${var.sns["name"]}",
+#       ]
+#     }
+#   }
+# }
+
+resource "aws_sns_topic_subscription" "validation_updates_sqs_target" {
+  topic_arn = aws_sns_topic.validation_updates.arn
+  protocol  = "sqs"
+  endpoint  = aws_sqs_queue.validation_updates_queue.arn
+}
