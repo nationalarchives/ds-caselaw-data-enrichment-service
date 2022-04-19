@@ -98,7 +98,7 @@ def replace_text_content(file_content, replacements_content):
     replacement_tuples_leg = []
     replacement_tuples_abb = []
 
-    tuple_file = replacements_content.decode('utf-8')
+    tuple_file = replacements_content
     LOGGER.info('tuple_file')
     print(tuple_file)
     LOGGER.info('---lines--')
