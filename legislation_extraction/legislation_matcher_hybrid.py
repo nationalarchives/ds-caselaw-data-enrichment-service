@@ -77,7 +77,6 @@ def hybrid(title, docobj, nlp, cutoff, candidates=None):
         if (len(matches) > 0) & (dyear == year):
             all_matches.extend(
                 [(docobj[end-1-e+s:end].text, end-1-e+s, end, ratio) for text, s, e, ratio in matches])
-    print ("Here are matches from the hybrid matcher:", all_matches)
     return all_matches
 
 ######
@@ -123,18 +122,14 @@ methods = {
 }
 
 def leg_pipeline(leg_titles, nlp, doc, conn):
-    print("Len of doc:", len(doc))
     results = []
     dates = detect_year_span(doc, nlp)
-    print("Legislation date span:", dates)
     shorttitles = leg_titles[leg_titles.year.isin(dates)]
-    print("Shorttitles:", shorttitles)
 
-    # for fuzzy, method in zip([True, False], ('hybrid','exact')):
-    titles = shorttitles[shorttitles.for_fuzzy==False].candidate_titles.drop_duplicates().tolist()
-    res = lookup_pipe(titles, doc, nlp, methods['exact'], conn, CUTOFF)
-    print ("res:", res)
-    results.append(res)
+    for fuzzy, method in zip([True, False], ('hybrid','exact')):
+        titles = shorttitles[shorttitles.for_fuzzy==fuzzy].candidate_titles.drop_duplicates().tolist()
+        res = lookup_pipe(titles, doc, nlp, methods[method], conn, CUTOFF)
+        results.append(res)
 
     results = mergedict(results[0], results[1])
 
