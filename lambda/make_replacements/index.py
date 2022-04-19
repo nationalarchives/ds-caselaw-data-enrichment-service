@@ -32,7 +32,7 @@ def upload_contents(source_key, text_content):
     LOGGER.info('uploading text content to %s/%s', DEST_BUCKET, filename)
     s3 = boto3.resource('s3')
     object = s3.Object(DEST_BUCKET, filename)
-    object.put(Body=text_content, ContentType='text/xml')
+    object.put(Body=text_content)
 
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
@@ -76,12 +76,12 @@ def process_event(sqs_rec):
     LOGGER.info(filename)
 
     file_content = s3_client.get_object(
-                Bucket=SOURCE_BUCKET, Key=filename)["Body"].read()
+                Bucket=SOURCE_BUCKET, Key=filename)["Body"].read().decode('utf-8')
     
     LOGGER.info("got original xml file_content")
     LOGGER.info(REPLACEMENTS_BUCKET)
     replacement_file_content = s3_client.get_object(
-                Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"].read()
+                Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"].read().decode('utf-8')
       
     LOGGER.info("got replacement file_content")
 
