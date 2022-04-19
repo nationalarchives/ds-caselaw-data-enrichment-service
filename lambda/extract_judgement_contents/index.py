@@ -36,8 +36,8 @@ def process_event(sqs_rec):
     print("Input S3 key:", source_key)
 
     file_content = s3_client.get_object(
-                Bucket=source_bucket, Key=source_key)["Body"].read()
-    # LOGGER.info(file_content)
+                Bucket=source_bucket, Key=source_key)["Body"].read().decode('utf-8')
+    LOGGER.info(file_content)
 
     # extract the judgement contents
     text_content = extract_text_content(file_content)
