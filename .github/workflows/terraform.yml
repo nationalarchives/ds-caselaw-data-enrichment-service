@@ -52,6 +52,7 @@ jobs:
           mkdir lambda/determine_replacements_abbreviations/abbreviation_extraction
           cp -r abbreviation_extraction/*.* lambda/determine_replacements_abbreviations/abbreviation_extraction/
           cp abbreviation_extraction/requirements.txt lambda/determine_replacements_abbreviations/
+          ls -l lambda/determine_replacements_abbreviations
          
       -
         name: Build Lambda images
