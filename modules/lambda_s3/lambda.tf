@@ -1131,7 +1131,8 @@ module "lambda-validate-replacements" {
         "sqs:DeleteMessage",
         "sqs:GetQueueAttributes"
       ],
-      resources = ["${aws_sqs_queue.replacements_made_queue.arn}"]
+      # resources = ["${aws_sqs_queue.replacements_made_queue.arn}"]
+      resources = ["${aws_sqs_queue.replacements-queue.arn}"]
     },
 
     log_lambda = {
@@ -1159,7 +1160,7 @@ module "lambda-validate-replacements" {
   }
 
   environment_variables = {
-    DEST_QUEUE_NAME       = "${aws_sqs_queue.validation_queue.arn}"
+    DEST_QUEUE_NAME       = "${aws_sqs_queue.validation-queue.arn}"
     # use the existing rules bucket for simplicty
     SCHEMA_BUCKET = "${module.rules_bucket.s3_bucket_arn}"
     SCHEMA_BUCKET_KEY = "judgment-1-1.xsd"
