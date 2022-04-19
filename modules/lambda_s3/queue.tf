@@ -297,7 +297,7 @@ resource "aws_lambda_event_source_mapping" "sqs_replacements_legislation_event_s
   event_source_arn = aws_sqs_queue.replacement-legislation-queue.arn
   enabled          = true
   # function_name    = "${module.lambda-make-replacements.lambda_function_arn}"
-  function_name    = "${module.lambda-determine-replacements-abbreviation.lambda_function_arn}"
+  function_name    = "${module.lambda-determine-replacements-abbreviations.lambda_function_arn}"
   batch_size       = 1
 }
 
