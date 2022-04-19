@@ -79,7 +79,7 @@ def process_event(sqs_rec):
 
     uploaded_key = upload_replacements(REPLACEMENTS_BUCKET, source_key, replacements_encoded)
     LOGGER.debug("uploaded replacements to %s", uploaded_key)
-    push_contents(REPLACEMENTS_BUCKET, uploaded_key)
+    push_contents(REPLACEMENTS_BUCKET, source_key)
     LOGGER.debug("message sent on queue")
 
 def write_replacements_file(replacement_list):
