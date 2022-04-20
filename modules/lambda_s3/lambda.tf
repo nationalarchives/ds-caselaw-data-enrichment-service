@@ -1122,7 +1122,7 @@ module "lambda-validate-replacements" {
         "kms:Decrypt",
         "kms:ReEncryptTo"
       ],
-      resources = [module.xml_enriched_bucket.kms_key_arn, module.rules_bucket.s3_bucket.kms_key_arn]
+      resources = [module.xml_enriched_bucket.kms_key_arn, module.rules_bucket.kms_key_arn]
     },
     sqs_get = {
       effect = "Allow",
