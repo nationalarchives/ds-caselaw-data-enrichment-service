@@ -1183,7 +1183,7 @@ module "lambda-validate-replacements" {
     DEST_ERROR_TOPIC_NAME       = "${aws_sns_topic.validation_updates_error.arn}"
     DEST_BUCKET_NAME = module.xml_enriched_bucket.s3_bucket_arn
     # use the existing rules bucket for simplicty
-    SCHEMA_BUCKET_NAME = "${module.rules_bucket.s3_bucket_arn}"
+    SCHEMA_BUCKET_NAME = "${module.rules_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_KEY = "judgment-1-1.xsd"
     VALIDATE_USING_DTD = "False" # the xml appears to not use a DTD
     VALIDATE_USING_SCHEMA = "True"
