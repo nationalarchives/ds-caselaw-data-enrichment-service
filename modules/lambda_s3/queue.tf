@@ -78,7 +78,7 @@ resource "aws_sqs_queue" "replacements_dlq_queue" {
   tags = local.tags
 }
 
-resource "aws_sqs_queue" "replacement-queue" {
+resource "aws_sqs_queue" "replacements-queue" {
   name                      = "${local.name}-${local.environment}-replacements-queue"
   delay_seconds             = 90
   max_message_size          = 2048
@@ -91,8 +91,8 @@ resource "aws_sqs_queue" "replacement-queue" {
   tags = local.tags
 }
 
-resource "aws_sqs_queue_policy" "replacement-queue-policy" {
-  queue_url = aws_sqs_queue.replacement-queue.id
+resource "aws_sqs_queue_policy" "replacements-queue-policy" {
+  queue_url = aws_sqs_queue.replacements-queue.id
   policy = <<POLICY
 {
   "Version": "2012-10-17",
@@ -101,7 +101,7 @@ resource "aws_sqs_queue_policy" "replacement-queue-policy" {
       "Effect": "Allow",
       "Principal": "*",
       "Action": "sqs:SendMessage",
-      "Resource": "${aws_sqs_queue.replacement-queue.arn}",
+      "Resource": "${aws_sqs_queue.replacements-queue.arn}",
       "Condition": {
         "ArnEquals": { "aws:SourceArn": "${module.lambda-make-replacements.lambda_function_arn}" }
       }
