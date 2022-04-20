@@ -37,7 +37,7 @@ def process_event(sqs_rec):
     print("Input S3 key:", source_key)
 
     file_content = s3_client.get_object(
-                Bucket=source_bucket, Key=source_key)["Body"].read().decode('utf-8')
+                Bucket=source_bucket, Key=source_key)["Body"].read()
 
     content_valid = validate_content(file_content)
     if content_valid:
