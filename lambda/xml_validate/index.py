@@ -76,8 +76,8 @@ def validate_content(file_content):
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
-VALIDATE_USING_SCHEMA = validate_env_variable("VALIDATE_USING_SCHEMA")
-VALIDATE_USING_DTD = validate_env_variable("VALIDATE_USING_DTD")
+VALIDATE_USING_SCHEMA = bool(validate_env_variable("VALIDATE_USING_SCHEMA"))
+VALIDATE_USING_DTD = bool(validate_env_variable("VALIDATE_USING_DTD"))
 
 def handler(event, context):
     LOGGER.info("validate-judgement-contents")
