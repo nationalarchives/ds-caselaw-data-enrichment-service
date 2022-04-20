@@ -132,6 +132,6 @@ def handler(event, context):
         response = sns_client.publish (
         TargetArn = topic,
         
-        Message = json.dumps({'error': not valid_content, 'key': source_key, 'status': message}),
+        Message = json.dumps({'default': {'error': not valid_content, 'key': source_key, 'status': message}}),
         MessageStructure = 'json'
    )
