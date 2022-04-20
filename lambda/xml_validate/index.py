@@ -65,7 +65,8 @@ def load_schema(schema_content):
 def validate_content(file_content):
     LOGGER.info("VALIDATE_USING_DTD")
     LOGGER.info(VALIDATE_USING_DTD)
-    parser = etree.XMLParser(dtd_validation=VALIDATE_USING_DTD) 
+    # parser = etree.XMLParser(dtd_validation=VALIDATE_USING_DTD) 
+    parser = etree.XMLParser(dtd_validation=False)
     # parser.setContentHandler(ContentHandler(  ))
     # xmldoc = parser.parseString(file_content)
     # xmldoc   = etree.parse(StringIO(file_content), parser)
