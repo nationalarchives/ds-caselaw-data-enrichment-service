@@ -61,7 +61,7 @@ def load_schema(schema_content):
 
 def validate_content(file_content):
     parser = etree.XMLParser(dtd_validation=VALIDATE_USING_DTD) 
-    parser.setContentHandler(ContentHandler(  ))
+    # parser.setContentHandler(ContentHandler(  ))
     xmldoc = parser.parseString(file_content)
     result = True
     if VALIDATE_USING_SCHEMA:
