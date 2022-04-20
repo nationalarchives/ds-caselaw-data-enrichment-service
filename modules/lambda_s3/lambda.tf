@@ -1135,6 +1135,7 @@ module "lambda-validate-replacements" {
       # resources = ["${aws_sqs_queue.replacements_made_queue.arn}"]
       resources = ["${aws_sqs_queue.replacements-queue.arn}"]
     },
+    
 
     log_lambda = {
       effect = "Allow",
@@ -1144,6 +1145,15 @@ module "lambda-validate-replacements" {
         "logs:PutLogEvents"
       ],
       resources = ["*"]
+    }
+  }
+
+  allowed_triggers = {
+    S3BucketUpload = {
+      service    = "s3"
+      principal  = "s3.amazonaws.com"
+      # source_arn = module.xml_original_bucket.s3_bucket.arn
+      source_arn = "${module.xml_enriched_bucket.s3_bucket_arn}"
     }
   }
 
@@ -1163,6 +1173,7 @@ module "lambda-validate-replacements" {
   environment_variables = {
     # DEST_QUEUE_NAME       = "${aws_sqs_queue.validation-queue.arn}"
     DEST_TOPIC_NAME       = "${aws_sns_topic.validation_updates.arn}"
+    DEST_BUCKET_NAME = module.xml_enriched_bucket.s3_bucket_arn
     # use the existing rules bucket for simplicty
     SCHEMA_BUCKET = "${module.rules_bucket.s3_bucket_arn}"
     SCHEMA_BUCKET_KEY = "judgment-1-1.xsd"
