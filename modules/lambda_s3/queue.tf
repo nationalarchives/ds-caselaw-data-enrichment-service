@@ -330,6 +330,10 @@ resource "aws_sns_topic" "validation_updates" {
   name = "validation-updates-topic"
 }
 
+resource "aws_sns_topic" "validation_updates_error" {
+  name = "validation-updates-error-topic"
+}
+
 resource "aws_sqs_queue" "validation_updates_queue" {
   name = "validation-updates-queue"
 }
