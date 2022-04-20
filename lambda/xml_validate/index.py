@@ -56,13 +56,15 @@ def find_schema(schema_bucket, schema_key):
     return schema_content
 
 def load_schema(schema_content):
-    parser = etree.XMLParser(dtd_validation=True)   
+    parser = etree.XMLParser(dtd_validation=False)   
     xmlschema_doc = parser.parseString(schema_content)
     xmlschema = etree.XMLSchema(xmlschema_doc)
 
     return xmlschema
 
 def validate_content(file_content):
+    LOGGER.info("VALIDATE_USING_DTD")
+    LOGGER.info(VALIDATE_USING_DTD)
     parser = etree.XMLParser(dtd_validation=VALIDATE_USING_DTD) 
     # parser.setContentHandler(ContentHandler(  ))
     # xmldoc = parser.parseString(file_content)
