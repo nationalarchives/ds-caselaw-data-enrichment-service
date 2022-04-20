@@ -7,6 +7,7 @@ import os
 import boto3
 
 from lxml import etree
+from io import StringIO
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -36,7 +37,7 @@ def process_event(sqs_rec):
     print("Input S3 key:", source_key)
 
     file_content = s3_client.get_object(
-                Bucket=source_bucket, Key=source_key)["Body"].read()
+                Bucket=source_bucket, Key=source_key)["Body"].read().decode('utf-8')
 
     content_valid = validate_content(file_content)
     if content_valid:
@@ -48,7 +49,7 @@ def process_event(sqs_rec):
 def find_schema(schema_bucket, schema_key):
     s3_client = boto3.client("s3")
     schema_content = s3_client.get_object(
-                Bucket=schema_bucket, Key=schema_key)["Body"].read()
+                Bucket=schema_bucket, Key=schema_key)["Body"].read().decode('utf-8')
 
     return schema_content
 
@@ -62,7 +63,8 @@ def load_schema(schema_content):
 def validate_content(file_content):
     parser = etree.XMLParser(dtd_validation=VALIDATE_USING_DTD) 
     # parser.setContentHandler(ContentHandler(  ))
-    xmldoc = parser.parseString(file_content)
+    # xmldoc = parser.parseString(file_content)
+    xmldoc   = etree.parse(StringIO(file_content), parser)
     result = True
     if VALIDATE_USING_SCHEMA:
         schema_bucket = validate_env_variable("SCHEMA_BUCKET_NAME")
