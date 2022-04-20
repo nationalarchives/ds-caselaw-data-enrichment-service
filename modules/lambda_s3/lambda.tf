@@ -1135,8 +1135,15 @@ module "lambda-validate-replacements" {
       # resources = ["${aws_sqs_queue.replacements_made_queue.arn}"]
       resources = ["${aws_sqs_queue.replacements-queue.arn}"]
     },
-    
-
+    sns_put = {
+      effect = "Allow",
+      actions = [
+        "SNS:Publish",
+        "SNS:ListSubscriptionsByTopic",
+        "SNS:GetTopicAttributes"
+      ],
+      resources = ["${aws_sns_topic.validation_updates.arn}","${aws_sns_topic.validation_updates_error.arn}"]
+    },
     log_lambda = {
       effect = "Allow",
       actions = [
