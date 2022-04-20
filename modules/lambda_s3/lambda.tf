@@ -1096,7 +1096,7 @@ module "lambda-validate-replacements" {
   handler = "index.handler"
   # runtime     = var.runtime
   runtime           = "python3.6"
-  source_path = "${var.lambda_source_path}make_replacements"
+  source_path = "${var.lambda_source_path}xml_validate"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
 
