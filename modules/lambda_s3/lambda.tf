@@ -1180,7 +1180,7 @@ module "lambda-validate-replacements" {
   environment_variables = {
     # DEST_QUEUE_NAME       = "${aws_sqs_queue.validation-queue.arn}"
     DEST_TOPIC_NAME       = "${aws_sns_topic.validation_updates.arn}"
-    DEST_TOPIC_ERROR_NAME       = "${aws_sns_topic.validation_updates_error.arn}"
+    DEST_ERROR_TOPIC_NAME       = "${aws_sns_topic.validation_updates_error.arn}"
     DEST_BUCKET_NAME = module.xml_enriched_bucket.s3_bucket_arn
     # use the existing rules bucket for simplicty
     SCHEMA_BUCKET = "${module.rules_bucket.s3_bucket_arn}"
