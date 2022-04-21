@@ -375,8 +375,14 @@ resource "aws_sns_topic_subscription" "validation_updates_sqs_target" {
   endpoint  = aws_sqs_queue.validation_updates_queue.arn
 }
 
-resource "aws_sns_topic_subscription" "validation-error-email-target" {
+resource "aws_sns_topic_subscription" "validation-error-email-niall-target" {
   topic_arn = aws_sns_topic.validation_updates_error.arn
   protocol  = "email"
   endpoint  = "niall.roche@mdrx.tech"
+}
+
+resource "aws_sns_topic_subscription" "validation-error-email-dan-target" {
+  topic_arn = aws_sns_topic.validation_updates_error.arn
+  protocol  = "email"
+  endpoint  = "daniel.hoadley@mishcon.com"
 }
