@@ -57,7 +57,8 @@ def find_schema(schema_bucket, schema_key):
 
 def load_schema(schema_content):
     parser = etree.XMLParser(dtd_validation=False)   
-    xmlschema_doc = parser.parseString(schema_content)
+    # xmlschema_doc = parser.parseString(schema_content)
+    xmlschema_doc   = etree.parse(BytesIO(schema_content), parser)
     xmlschema = etree.XMLSchema(xmlschema_doc)
 
     return xmlschema
