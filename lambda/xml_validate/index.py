@@ -51,7 +51,7 @@ def process_event(sqs_rec):
 def find_schema(schema_bucket, schema_key):
     s3_client = boto3.client("s3")
     schema_content = s3_client.get_object(
-                Bucket=schema_bucket, Key=schema_key)["Body"].read().decode('utf-8')
+                Bucket=schema_bucket, Key=schema_key)["Body"].read()
 
     return schema_content
 
