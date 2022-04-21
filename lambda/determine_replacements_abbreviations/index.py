@@ -110,7 +110,7 @@ def get_abbreviation_replacements(file_content):
     return replacements
 
 def init_NLP(): 
-    nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer'])
+    nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
     nlp.max_length = 2500000
     return nlp
 
