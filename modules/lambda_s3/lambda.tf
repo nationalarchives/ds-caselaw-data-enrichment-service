@@ -1186,7 +1186,7 @@ module "lambda-validate-replacements" {
     SCHEMA_BUCKET_NAME = "${module.rules_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_KEY = "judgment-1-1.xsd"
     VALIDATE_USING_DTD = "False" # the xml appears to not use a DTD
-    VALIDATE_USING_SCHEMA = "True"
+    VALIDATE_USING_SCHEMA = "False"
 
   }
 
