@@ -47,8 +47,6 @@ def get_legtitles(conn):
 
 def get_hrefs(conn, title):
   ref_link = pd.read_sql("SELECT ref_version FROM ukpga_lookup WHERE candidate_titles='{0}'".format(title), conn)
-  print ('ref_link')
-  print (ref_link)
   return ref_link.ref_version.values[0]
 
 def close_connection(conn):

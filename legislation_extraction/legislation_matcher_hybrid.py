@@ -135,7 +135,6 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
     results = dict([(k, [dict(zip(keys, j)) for j in v])
                     for k, v in results.items()])    
     refs = [i for j in results.values() for i in j]
-    print("These are the refs:", refs)
 
     keys_to_extract = {'detected_ref', 'ref'}
     replacements = []
