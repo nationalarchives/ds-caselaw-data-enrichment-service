@@ -152,11 +152,7 @@ def filter_matches(
             # Normal case.
             # Short form is inside the parens.
             # Sum character lengths of contents of parens.
-            if quote_offset == 1: 
-                quote_start = match[1]
-                # check that the first and last char is a quote in the short form defined in brackets
-                if not contains(str(doc[quote_start]), QUOTES) or not contains(str(doc[end]), QUOTES): 
-                    continue
+
             abbreviation_length = sum([len(x) for x in doc[start:end]])
             max_words = min(abbreviation_length + 5, abbreviation_length * 2)
             # # Look up to max_words backwards
@@ -178,6 +174,22 @@ def short_form_filter(span: Span) -> bool:
     
 
     return True
+
+# verify that the matches appear in a form where such as ("abbrv") or ("long_form") with quotes and brackets as the first two and final two characters
+def verify_match_format(
+    matcher_output: List[Tuple[int, int, int]], doc: Doc
+) -> List[Tuple[Span, Span]]:
+    for match in matcher_output:
+        QUOTES = ['"', "'", "‘", "’", "“", "”"]
+        BRACKETS = ["(", ")"]
+        start = match[1]
+        end = match[2] - 1
+        if not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS): 
+            matcher_output.remove(match)
+    
+    return matcher_output
+        
+
 
 
 class AbbreviationDetector():
@@ -225,7 +237,9 @@ class AbbreviationDetector():
 
     def __call__(self, doc: Doc) -> Doc:
         matches = self.matcher(doc)
-        matches_no_brackets = [(x[0], x[1] + 1, x[2] - 1) for x in matches]
+        matches_brackets = [(x[0], x[1], x[2]) for x in matches]
+        matcher_output = verify_match_format(matches_brackets, doc)
+        matches_no_brackets = [(x[0], x[1] + 1, x[2] - 1) for x in matcher_output]
         filtered = filter_matches(matches_no_brackets, doc)
 
         occurences = self.find_matches_for(filtered, doc)
@@ -236,6 +250,8 @@ class AbbreviationDetector():
                 doc._.abbreviations.append(short)
         
         return doc
+
+
 
     def find_matches_for(
         self, filtered: List[Tuple[Span, Span]], doc: Doc
