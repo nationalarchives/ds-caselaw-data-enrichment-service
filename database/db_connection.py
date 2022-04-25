@@ -49,6 +49,10 @@ def get_hrefs(conn, title):
   ref_link = pd.read_sql("SELECT ref_version FROM ukpga_lookup WHERE candidate_titles='{0}'".format(title), conn)
   return ref_link.ref_version.values[0]
 
+def get_canonical_leg(conn, title):
+  canonical_leg = pd.read_sql("SELECT citation FROM ukpga_lookup WHERE candidate_titles='{0}'".format(title), conn)
+  return canonical_leg.citation.values[0]
+
 def close_connection(conn):
   """
   Closes the Database connection

@@ -14,14 +14,14 @@ Detects legislation references by searching through a lookup table of existing a
 """
 from spacy.matcher import PhraseMatcher, Matcher
 from spaczz.matcher import FuzzyMatcher
-from database.db_connection import get_hrefs
+from database.db_connection import get_hrefs, get_canonical_leg
 from collections import namedtuple
 
-keys = ['detected_ref', 'start', 'end', 'confidence', 'ref']
+keys = ['detected_ref', 'start', 'end', 'confidence', 'ref', 'canonical']
 CUTOFF=90
 PAD=5
 
-leg = namedtuple('leg', 'detected_ref href')
+leg = namedtuple('leg', 'detected_ref href canonical')
 
 # EXACT MATCHING
 
@@ -104,10 +104,12 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
         matches = method(title.text, docobj, nlp, cutoff, candidates)
         if matches:
             href = get_hrefs(conn, title.text)
+            canonical = get_canonical_leg(conn, title.text)
             matches_with_refs = []
             for match in matches:
                 match_list = list(match)
                 match_list.append(href)
+                match_list.append(canonical)
                 match = tuple(match_list)
                 matches_with_refs.append(match)
             results[title.text] = results.get(title.text, []) + matches_with_refs
@@ -136,12 +138,13 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
                     for k, v in results.items()])    
     refs = [i for j in results.values() for i in j]
 
-    keys_to_extract = {'detected_ref', 'ref'}
+    # keys_to_extract = {'detected_ref', 'ref'}
     replacements = []
     for ref in refs:
         detected_ref = ref['detected_ref']
-        ref = ref['ref']
-        replacement = leg(detected_ref, ref)
+        href = ref['ref']
+        canonical_form = ref['canonical']
+        replacement = leg(detected_ref, href, canonical_form)
         replacements.append(replacement)
     print(f"Found {len(replacements)} legislation replacements")
     

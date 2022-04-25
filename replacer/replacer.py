@@ -21,7 +21,7 @@ def replacer_leg(file_data, replacement):
   :param replacement: tuple of citation match and corrected citation
   :return: enriched XML file data
   """
-  replacement_string = f'<ref href="{replacement[1]}" type="legislation">{replacement[0]}</ref>'
+  replacement_string = f'<ref href="{replacement[1]}" canonical="{replacement[2]}" type="legislation">{replacement[0]}</ref>'
   file_data = str(file_data).replace(replacement[0], replacement_string)
   # file_data = re.sub(replacement[0], replacement_string, str(file_data))
   return file_data
