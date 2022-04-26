@@ -241,7 +241,7 @@ jobs:
       - name: Terraform Apply
         if: ${{ false }}  # disable for now
         # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        if: (github.ref == 'refs/heads/master' || github.ref == 'refs/head/tf_prod') && github.event_name == 'push'
+        # if: (github.ref == 'refs/heads/master' || github.ref == 'refs/head/tf_prod') && github.event_name == 'push'
         # run: terraform apply -auto-approve
         run: echo "apply called ${{ steps.set_workspace.outputs.environment }} -- ${{ envs.DEPLOYMENT_ENVIRONMENT }}"
         env:
