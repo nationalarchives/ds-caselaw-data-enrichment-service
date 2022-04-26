@@ -23,8 +23,9 @@ terraform {
 
     workspaces {
       # name = "tna-dev"
-      # name = "tna-staging"
-      prefix = "tna-"
+      # name = "tna-dev"
+      # prefix = "tna-"
+      tags = ["tna-staging", "tna-prod"]
     }
   }
 }

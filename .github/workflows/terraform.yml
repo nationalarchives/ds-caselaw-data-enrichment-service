@@ -161,7 +161,7 @@ jobs:
         run: |
           prod="${{ github.event.pull_request.base.ref == 'tna_prod' || github.ref == 'refs/head/tna_prod' }}"
           if [ "$prod" = true ]; then
-            echo "::set-output name=environment::prod"
+            echo "::set-output name=environment::tna-prod"
             # echo "::set-output name=account_id::893937975773"
             # set variables for docker repo suffix and prefix
             echo "DEPLOYMENT_ENVIRONMENT=production" >> $GITHUB_ENV
@@ -170,7 +170,7 @@ jobs:
             # name
             # s3 bucket prefix bucket_prefix app_env="tna-mxt-staging" environment
           else
-            echo "::set-output name=environment::staging"
+            echo "::set-output name=environment::tna-staging"
             # echo "DEPLOYMENT_ENVIRONMENT=staging" >> $GITHUB_ENV
             echo "DEPLOYMENT_ENVIRONMENT=dev" >> $GITHUB_ENV
           fi
