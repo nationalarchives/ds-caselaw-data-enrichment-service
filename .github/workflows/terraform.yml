@@ -175,10 +175,10 @@ jobs:
             echo "DEPLOYMENT_ENVIRONMENT=dev" >> $GITHUB_ENV
           fi
 
-    - name: Check Workspace
-      id: check_workspace
-      run: |          
-        echo "workspace = ${{ steps.set_workspace.outputs.environment }}"
+      - name: Check Workspace
+        id: check_workspace
+        run: |          
+          echo "workspace = ${{ steps.set_workspace.outputs.environment }}"
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
