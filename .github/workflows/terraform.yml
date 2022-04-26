@@ -200,7 +200,7 @@ jobs:
         id: plan
         # if: github.event_name == 'pull_request'
         # run: terraform plan -no-color
-        run: terraform plan -no-color -var "app_env=${{ envs.DEPLOYMENT_ENVIRONMENT }}"
+        run: terraform plan -no-color -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}"
         continue-on-error: true
 
       - uses: actions/github-script@0.9.0
