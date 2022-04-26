@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - tna_prod
   pull_request:
 
 jobs:
@@ -47,7 +48,27 @@ jobs:
           mkdir lambda/determine_replacements_abbreviations/abbreviation_extraction
           cp -r abbreviation_extraction/*.* lambda/determine_replacements_abbreviations/abbreviation_extraction/
           cp abbreviation_extraction/requirements.txt lambda/determine_replacements_abbreviations/
-         
+      - 
+        name: Set Workspace
+        id: set_workspace
+        run: |
+          prod="${{ github.event.pull_request.base.ref == 'tna_prod' || github.ref == 'refs/head/tna_prod' }}"
+          if [ "$prod" = true ]; then
+            echo "::set-output name=environment::prod"
+            # echo "::set-output name=account_id::893937975773"
+            # set variables for docker repo suffix and prefix
+            echo "ACCOUNT_ID=893937975773" >> $GITHUB_ENV
+            echo "REPO_SUFFIX=dev" >> $GITHUB_ENV
+
+            # environment="dev"
+            # name
+            # s3 bucket prefix bucket_prefix app_env="tna-mxt-staging" environment
+          else
+            echo "::set-output name=environment::staging"
+            # echo "::set-output name=account_id::087925987720"
+            echo "ACCOUNT_ID=087925987720" >> $GITHUB_ENV
+            echo "REPO_SUFFIX=prod" >> $GITHUB_ENV
+          fi
       -
         name: Build Lambda images
         run: |
@@ -58,50 +79,62 @@ jobs:
           rm /home/runner/.docker/config.json
           # echo "-------------------"
           AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com
-          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
           echo "logged in caselaw"
-          cat /home/runner/.docker/config.json
-          docker buildx build --load -t tna-s3-tna-ecr-repository-dev .
+          # cat /home/runner/.docker/config.json
+          docker buildx build --load -t tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }} .
           echo "built caselaw"
-          docker images --filter reference=tna-s3-tna-ecr-repository-dev
-          docker tag tna-s3-tna-ecr-repository-dev:latest 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+          docker images --filter reference=tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}
+          docker tag tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
           echo "tagged caselaw"
-          docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+          docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
 
           # cat lambda/determine_replacements_legislation/requirements.txt
           # docker pull hello-world
           cd ../../lambda/determine_replacements_legislation
-          # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com
-          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+          # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
           # echo "logged in legislation"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-dev .
+          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-${{ env.REPO_SUFFIX }} .
           # echo "built legislation"
-          docker images --filter reference=tna-s3-tna-ecr-repository-legislation-dev
-          docker tag tna-s3-tna-ecr-repository-legislation-dev:latest 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
+          docker images --filter reference=tna-s3-tna-ecr-repository-legislation-${{ env.REPO_SUFFIX }}
+          docker tag tna-s3-tna-ecr-repository-legislation-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-${{ env.REPO_SUFFIX }}:latest
           echo "tagged legislation"
-          docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
+          docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-${{ env.REPO_SUFFIX }}:latest
 
           cd ../../lambda/determine_replacements_abbreviations
-          # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com
-          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+          # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
           # echo "logged in legislation"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-dev .
+          docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-${{ env.REPO_SUFFIX }} .
           echo "built abbreviations"
-          docker images --filter reference=tna-s3-tna-ecr-repository-abbreviations-dev
-          docker tag tna-s3-tna-ecr-repository-abbreviations-dev:latest 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
+          docker images --filter reference=tna-s3-tna-ecr-repository-abbreviations-${{ env.REPO_SUFFIX }}
+          docker tag tna-s3-tna-ecr-repository-abbreviations-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ env.REPO_SUFFIX }}:latest
           echo "tagged abbreviations"
-          docker push 087925987720.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
+          docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ env.REPO_SUFFIX }}:latest
 
 
   terraform:
     name: "Terraform"
     needs: [buildx]
+    if: ${{ false }}  # disable for now
     runs-on: ubuntu-latest
     # container:
     #   image: hashicorp/terraform:light
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+      # setting earlier in the process
+      # - name: Set Workspace
+      #   id: set_workspace
+      #   run: |
+      #     prod="${{ github.event.pull_request.base.ref == 'tna_prod' || github.ref == 'refs/head/tna_prod' }}"
+      #     if [ "$prod" = true ]; then
+      #       echo "::set-output name=environment::tna-prod"
+      #     else
+      #       echo "::set-output name=environment::tna-staging"
+      #     fi
 
       - name: Copy Python into Lambda
         id: move
@@ -133,10 +166,14 @@ jobs:
       - name: Terraform Init
         id: init
         run: terraform init -upgrade
-      
+        env:
+          TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
+      # -var "environment=prod"
       - name: Terraform Validate
         id: validate
         run: terraform validate -no-color
+        env:
+            TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
 
       - uses: actions/setup-python@v3
         with:
@@ -194,11 +231,15 @@ jobs:
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1
+        env:
+          TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
 
       - name: Terraform Apply
         # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+        if: (github.ref == 'refs/heads/master' || github.ref == 'refs/head/tf_prod') && github.event_name == 'push'
         run: terraform apply -auto-approve
+        env:
+          TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
   # # test:
   # #   runs-on: ubuntu-latest
   # #   strategy:
