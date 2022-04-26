@@ -58,7 +58,7 @@ jobs:
             # echo "::set-output name=account_id::893937975773"
             # set variables for docker repo suffix and prefix
             echo "ACCOUNT_ID=893937975773" >> $GITHUB_ENV
-            echo "REPO_SUFFIX=dev" >> $GITHUB_ENV
+            echo "REPO_SUFFIX=prod" >> $GITHUB_ENV
 
             # environment="dev"
             # name
@@ -67,7 +67,7 @@ jobs:
             echo "::set-output name=environment::staging"
             # echo "::set-output name=account_id::087925987720"
             echo "ACCOUNT_ID=087925987720" >> $GITHUB_ENV
-            echo "REPO_SUFFIX=prod" >> $GITHUB_ENV
+            echo "REPO_SUFFIX=dev" >> $GITHUB_ENV
           fi
       -
         name: Build Lambda images
