@@ -195,6 +195,12 @@ jobs:
         run: terraform init -upgrade
         env:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
+
+      - name: Check TF
+        id: check_tf
+        run: |          
+          echo "tf workspace = ${{ steps.set_workspace.outputs.environment }}"
+
       # -var "environment=prod"
       - name: Terraform Validate
         id: validate
