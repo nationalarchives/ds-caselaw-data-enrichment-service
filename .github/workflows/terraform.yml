@@ -75,6 +75,7 @@ jobs:
           fi
       -
         name: Build Lambda images
+        if: ${{ false }}
         run: |
           cat lambda/determine_replacements_caselaw/requirements.txt
           # docker pull hello-world
