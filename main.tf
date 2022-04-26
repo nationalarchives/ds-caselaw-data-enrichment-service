@@ -23,7 +23,8 @@ terraform {
 
     workspaces {
       # name = "tna-dev"
-      name = "tna-staging"
+      # name = "tna-staging"
+      prefix = "tna-"
     }
   }
 }
@@ -135,7 +136,10 @@ module "lambda_s3" {
   # environment = "production"
   name = "tna"
   # environment = "ucl"
-  environment = "dev"
+  # environment = "dev"
+  environment = "${var.app_env}"
+
+  bucket_prefix = "sg"
 
   vpc_id = module.network.vpc_id
   
