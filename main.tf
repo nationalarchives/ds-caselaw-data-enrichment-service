@@ -21,13 +21,13 @@ terraform {
   cloud {
     organization = "mdrx-tna"
 
-    # workspaces {
-    #   # name = "tna-dev"
-    #   # name = "tna-dev"
-    #   # prefix = "tna-"
-    #   # tags = ["tna-staging", "tna-prod"]
-    #   name = var.environment
-    # }
+    workspaces {
+      # name = "tna-dev"
+      # name = "tna-dev"
+      # prefix = "tna-"
+      tags = ["tna-staging", "tna-prod"]
+      # name = var.environment
+    }
   }
 }
 
