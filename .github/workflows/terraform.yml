@@ -209,6 +209,14 @@ jobs:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
           TF_LOG: TRACE
 
+      - name: Terraform workspace select
+        id: workspace select
+        run: terraform workspace select ${{ steps.set_workspace.outputs.environment }}
+        env:
+          TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
+          TF_LOG: TRACE
+          
+
       - name: Check TF
         id: check_tf
         run: |          
