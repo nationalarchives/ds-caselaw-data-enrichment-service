@@ -181,7 +181,8 @@ module "network" {
   source = "./modules/network"
 
   # environment                  = "production"
-  environment                  = "staging"
+  # environment                  = "staging"
+  environment = "${var.app_env}"
   # aws_profile                  = var.aws_profile
   # aws_region                   = var.aws_region
 }
@@ -189,7 +190,8 @@ module "network" {
 
 module "data" {
   source = "./modules/data"
-  environment = "production"
+  # environment = "production"
+  environment = "${var.app_env}"
   # name = "development"
   # environment = "ucl"
   # environment = "${var.app_env}"
