@@ -167,8 +167,9 @@ jobs:
       - name: Set Workspace
         id: set_workspace
         run: |
+          prod="${{ github.event.pull_request.base.ref == 'tna_prod' || github.ref == 'refs/head/tna_prod' }}"
           echo "branch is ${{ github.ref }}"
-          prod="${{ github.event.pull_request.base.ref == 'master' || github.ref == 'refs/head/master' }}"
+          
           echo "prod is ${{ prod }}"
           # set $prod=true
           if [ "$prod" = true ]; then
