@@ -60,7 +60,11 @@ jobs:
             echo "ACCOUNT_ID=893937975773" >> $GITHUB_ENV
             echo "REPO_SUFFIX=prod" >> $GITHUB_ENV
             echo "REPO_SUFFIX=prod" >> $GITHUB_ENV
-            echo "DEPLOYMENT_ENVIRONMENT=production" >> $GITHUB_ENV
+            # echo "DEPLOYMENT_ENVIRONMENT=production" >> $GITHUB_ENV
+            echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN_PROD }}" >> $GITHUB_ENV
+            
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> $GITHUB_ENV
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
 
             # environment="dev"
             # name
@@ -71,7 +75,10 @@ jobs:
             echo "ACCOUNT_ID=087925987720" >> $GITHUB_ENV
             echo "REPO_SUFFIX=dev" >> $GITHUB_ENV
             # echo "DEPLOYMENT_ENVIRONMENT=staging" >> $GITHUB_ENV
-            echo "DEPLOYMENT_ENVIRONMENT=dev" >> $GITHUB_ENV
+            # echo "DEPLOYMENT_ENVIRONMENT=dev" >> $GITHUB_ENV
+
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }}" >> $GITHUB_ENV
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}" >> $GITHUB_ENV
           fi
       -
         name: Build Lambda images
@@ -83,7 +90,8 @@ jobs:
           # cat /home/runner/.docker/config.json
           rm /home/runner/.docker/config.json
           # echo "-------------------"
-          AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com
+          #AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com
+          AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 087925987720.dkr.ecr.eu-west-2.amazonaws.com
           # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
           echo "logged in caselaw"
           # cat /home/runner/.docker/config.json
@@ -165,6 +173,7 @@ jobs:
             # echo "::set-output name=account_id::893937975773"
             # set variables for docker repo suffix and prefix
             echo "DEPLOYMENT_ENVIRONMENT=production" >> $GITHUB_ENV
+            echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN_PROD }}" >> $GITHUB_ENV
 
             # environment="dev"
             # name
@@ -173,6 +182,8 @@ jobs:
             echo "::set-output name=environment::tna-staging"
             # echo "DEPLOYMENT_ENVIRONMENT=staging" >> $GITHUB_ENV
             echo "DEPLOYMENT_ENVIRONMENT=dev" >> $GITHUB_ENV
+            echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN }}" >> $GITHUB_ENV
+
           fi
 
       - name: Check Workspace
@@ -184,7 +195,8 @@ jobs:
         uses: hashicorp/setup-terraform@v1
         with:
           # terraform_version: 0.13.0:
-          cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+          # cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+          cli_config_credentials_token: ${{ env.TF_API_TOKEN }}
 
       # - name: Terraform Format
       #   id: fmt
