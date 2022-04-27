@@ -64,8 +64,8 @@ jobs:
             # echo "DEPLOYMENT_ENVIRONMENT=production" >> $GITHUB_ENV
             echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN_PROD }}" >> $GITHUB_ENV
             
-            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> $GITHUB_ENV
-            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }}" >> $GITHUB_ENV
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}" >> $GITHUB_ENV
 
             # environment="dev"
             # name
@@ -78,8 +78,8 @@ jobs:
             # echo "DEPLOYMENT_ENVIRONMENT=staging" >> $GITHUB_ENV
             # echo "DEPLOYMENT_ENVIRONMENT=dev" >> $GITHUB_ENV
 
-            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }}" >> $GITHUB_ENV
-            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}" >> $GITHUB_ENV
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> $GITHUB_ENV
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
           fi
       -
         name: Build Lambda images
