@@ -168,6 +168,7 @@ jobs:
         id: set_workspace
         run: |
           prod=true
+          # prod="${{ github.event.pull_request.base.ref == 'master' || github.ref == 'refs/head/master' }}"
           if [ "$prod" = true ]; then
             echo "::set-output name=environment::tna-prod"
             # echo "::set-output name=account_id::893937975773"
@@ -251,8 +252,8 @@ jobs:
         id: plan
         # if: github.event_name == 'pull_request'
         # run: terraform plan -no-color
-        run: echo "plan called ${{ steps.set_workspace.outputs.environment }} -- ${{ env.DEPLOYMENT_ENVIRONMENT }}"
-        # run: terraform plan -no-color -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}"
+        # run: echo "plan called ${{ steps.set_workspace.outputs.environment }} -- ${{ env.DEPLOYMENT_ENVIRONMENT }}"
+        run: terraform plan -no-color -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}"
         continue-on-error: true
 
       - uses: actions/github-script@0.9.0
