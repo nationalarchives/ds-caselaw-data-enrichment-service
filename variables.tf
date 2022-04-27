@@ -4,7 +4,7 @@ variable "region" {
 }
 
 variable "app_env" {
-    default = "tna-mxt-staging"
+    default = "dev"
     description = "Common prefix for all Terraform created resources"
 }
 

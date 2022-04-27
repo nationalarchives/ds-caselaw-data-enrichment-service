@@ -253,7 +253,7 @@ jobs:
         # if: github.event_name == 'pull_request'
         # run: terraform plan -no-color
         # run: echo "plan called ${{ steps.set_workspace.outputs.environment }} -- ${{ env.DEPLOYMENT_ENVIRONMENT }}"
-        run: terraform plan -no-color -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}" -target=module.data
+        run: terraform plan -no-color -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}"
         continue-on-error: true
         env:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
@@ -294,14 +294,14 @@ jobs:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
 
       - name: Terraform Apply
-        # if: ${{ false }}  # disable for now
-        run: terraform apply -auto-approve -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}" -target=module.data
+        if: ${{ false }}  # disable for now
+        # run: terraform apply -auto-approve -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}" -target=module.data
         # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
         # if: (github.ref == 'refs/heads/master' || github.ref == 'refs/head/tf_prod') && github.event_name == 'push'
         # run: terraform apply -auto-approve
         # run: echo "apply called ${{ steps.set_workspace.outputs.environment }} -- ${{ env.DEPLOYMENT_ENVIRONMENT }}"
-        env:
-          TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
+        # env:
+          # TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
   # # test:
   # #   runs-on: ubuntu-latest
   # #   strategy:
