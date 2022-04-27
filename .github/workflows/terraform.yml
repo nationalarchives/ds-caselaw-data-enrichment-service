@@ -253,7 +253,7 @@ jobs:
         # if: github.event_name == 'pull_request'
         # run: terraform plan -no-color
         # run: echo "plan called ${{ steps.set_workspace.outputs.environment }} -- ${{ env.DEPLOYMENT_ENVIRONMENT }}"
-        run: terraform plan -no-color -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}" -target=network
+        run: terraform plan -no-color -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}" -target=module.network
         continue-on-error: true
         env:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
