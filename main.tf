@@ -26,8 +26,8 @@ terraform {
       # name = "tna-dev"
       # prefix = "tna-"
       # tags = ["tna-staging", "tna-prod"]
-      # tags = ["tna-staging"]
-      tags = ["${var.environment}"]
+      tags = ["tna-staging"]
+      # tags = ["${var.environment}"]
       # name = var.environment
     }
   }
