@@ -294,7 +294,7 @@ jobs:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
 
       - name: Terraform Apply
-        run: echo "apply called ${{ steps.set_workspace.outputs.environment }}
+        # run: echo "apply called ${{ steps.set_workspace.outputs.environment }}
         # if: ${{ false }}  # disable for now
         run: terraform apply -auto-approve -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}" -target=module.data
         # if: github.ref == 'refs/heads/main' && github.event_name == 'push'
