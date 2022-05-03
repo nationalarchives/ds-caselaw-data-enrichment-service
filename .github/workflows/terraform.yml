@@ -52,8 +52,8 @@ jobs:
         name: Set Workspace
         id: set_workspace
         run: |
-          # prod="${{ github.event.pull_request.base.ref == 'tna_prod' || github.ref == 'refs/head/tna_prod' }}"
-          prod=true
+          prod="${{ github.event.pull_request.base.ref == 'tna_prod' || github.ref == 'refs/head/tna_prod' }}"
+          # prod=true
           if [ "$prod" = true ]; then
             echo "::set-output name=environment::prod"
             # echo "::set-output name=account_id::893937975773"
@@ -168,8 +168,8 @@ jobs:
       - name: Set Workspace
         id: set_workspace
         run: |
-          prod=true
-          # prod="${{ github.event.pull_request.base.ref == 'master' || github.ref == 'refs/head/master' }}"
+          # prod=true
+          prod="${{ github.event.pull_request.base.ref == 'master' || github.ref == 'refs/head/master' }}"
           if [ "$prod" = true ]; then
             echo "::set-output name=environment::tna-prod"
             # echo "::set-output name=account_id::893937975773"
