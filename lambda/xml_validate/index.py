@@ -11,7 +11,7 @@ from io import StringIO, BytesIO
 from distutils.util import strtobool
 
 LOGGER = logging.getLogger()
-LOGGER.setLevel(logging.INFO)
+LOGGER.setLevel(logging.DEBUG)
 
 def validate_env_variable(env_var_name):
     print(f"Getting the value of the environment variable: {env_var_name}")
@@ -133,11 +133,11 @@ def handler(event, context):
             message = "content is invalid for " + source_key
             LOGGER.error(message)
             topic = DEST_ERROR_TOPIC
-        sns_client = boto3.client('sns')
-        response = sns_client.publish (
-        TargetArn = topic,
-        
-        # Message = json.dumps({'default': {'error': not valid_content, 'key': source_key, 'status': message}}),
-        Message = json.dumps({'default': message}),
-        MessageStructure = 'json'
-   )
+            sns_client = boto3.client('sns')
+            response = sns_client.publish (
+                TargetArn = topic,
+                
+                # Message = json.dumps({'default': {'error': not valid_content, 'key': source_key, 'status': message}}),
+                Message = json.dumps({'default': message}),
+                MessageStructure = 'json'
+            )
