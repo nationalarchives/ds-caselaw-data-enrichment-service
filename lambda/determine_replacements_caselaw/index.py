@@ -184,7 +184,7 @@ def init_NLP(rules_content):
 
     # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/caselaw_extraction/rules/citation_patterns.jsonl')
     # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/citation_patterns.jsonl')
-    citation_ruler = nlp.add_pipe("entity_ruler").from_disk(newFile)
+    citation_ruler = nlp.add_pipe("entity_ruler").from_disk(new_filename)
     # citation_ruler = nlp.add_pipe("entity_ruler").from_bytes(rules_content)
     return nlp
 
