@@ -418,7 +418,7 @@ resource "aws_sns_topic_subscription" "validation_updates_sqs_target" {
 }
 
 resource "aws_sns_topic_subscription" "validation_updates_error_sqs_target" {
-  topic_arn = aws_sns_topic.validation_updates_error
+  topic_arn = aws_sns_topic.validation_updates_error.arn
   protocol  = "sqs"
   endpoint  = aws_sqs_queue.validation_updates_error_queue.arn
 }
