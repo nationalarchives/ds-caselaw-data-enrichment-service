@@ -171,9 +171,20 @@ def init_NLP(rules_content):
     onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
     print(onlyfiles)
     print(os.path.exists('/var/task/caselaw_extraction/rules/citation_patterns.jsonl'))
-    print(os.path.exists('/var/task/citation_patterns.jsonl'))
+    rule_file_name = 'citation_patterns.jsonl'
+    rule_file_path = '/var/task/' + rule_file_name
+    print(os.path.exists(rule_file_path))
+
+    # hack to avoid using from disk is to overwrite the local file with the latest version from s3
+    new_filename = '/tmp/'+rule_file_name
+    newFile = open(new_filename,'wb')
+    newFile.write(rules_content)
+    LOGGER.debug(os.path.exists(new_filename))
+
+
     # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/caselaw_extraction/rules/citation_patterns.jsonl')
-    citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/citation_patterns.jsonl')
+    # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/citation_patterns.jsonl')
+    citation_ruler = nlp.add_pipe("entity_ruler").from_disk(newFile)
     # citation_ruler = nlp.add_pipe("entity_ruler").from_bytes(rules_content)
     return nlp
 
