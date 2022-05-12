@@ -15,7 +15,8 @@ module "lambda-extract-judgement-contents" {
   # handler     = var.lambda_handler
   handler = "index.handler"
   # runtime     = var.runtime
-  runtime           = "python3.6" 
+  # runtime           = "python3.6" 
+  runtime           = "python3.8" 
   source_path = "${var.lambda_source_path}extract_judgement_contents"
 
   # Deploy as ECR image
@@ -763,7 +764,8 @@ module "lambda-make-replacements" {
   # handler     = var.lambda_handler
   handler = "index.handler"
   # runtime     = var.runtime
-  runtime           = "python3.6" 
+  runtime           = "python3.8" 
+  # runtime           = "python3.6" 
   source_path = "${var.lambda_source_path}make_replacements"
 
   # Deploy as ECR image
@@ -979,8 +981,8 @@ module "lambda-read-rules" {
   # docker_file       = "${var.lambda_source_path}make_replacements/Dockerfile"
   # docker_build_root = "${var.lambda_source_path}make_replacements"
   # docker_image      = "lambci/lambda:build-python3.8"
-  # runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
-  runtime           = "python3.6" 
+  runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
+  # runtime           = "python3.6" 
 
   # layers = [aws_lambda_layer_version.lambda_layer.arn]
 
