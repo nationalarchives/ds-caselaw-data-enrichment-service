@@ -344,7 +344,7 @@ module "lambda-determine-replacements-caselaw" {
 
   function_name = "${local.name}-${local.environment}-determine-replacements-caselaw"
   # package_type  = var.use_container_image == true ? "Image" : "Zip"
-  package_type  = "Image"
+  package_type  = "Image" 
   create_package = false
 
   # Deploy as code
@@ -1095,7 +1095,8 @@ module "lambda-validate-replacements" {
   # Deploy as code
   handler = "index.handler"
   # runtime     = var.runtime
-  runtime           = "python3.6"
+  # runtime           = "python3.6"
+  runtime           = "python3.8"
   source_path = "${var.lambda_source_path}xml_validate"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
