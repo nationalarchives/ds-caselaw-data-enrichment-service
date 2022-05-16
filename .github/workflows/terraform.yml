@@ -52,6 +52,8 @@ jobs:
         name: Set Workspace
         id: set_workspace
         run: |
+        echo ${{ github.event.ref }}
+        echo ${{ github.event.pull_request.base.ref }}
           prod="${{ github.event.pull_request.base.ref == 'prod' || github.ref == 'refs/head/prod' }}"
           # prod=true
           if [ "$prod" = true ]; then
