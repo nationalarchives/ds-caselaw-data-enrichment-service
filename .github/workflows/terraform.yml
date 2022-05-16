@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - tna_prod
+      - prod
   pull_request:
 
 jobs:
@@ -52,7 +52,7 @@ jobs:
         name: Set Workspace
         id: set_workspace
         run: |
-          prod="${{ github.event.pull_request.base.ref == 'tna_prod' || github.ref == 'refs/head/tna_prod' }}"
+          prod="${{ github.event.pull_request.base.ref == 'prod' || github.ref == 'refs/head/prod' }}"
           # prod=true
           if [ "$prod" = true ]; then
             echo "::set-output name=environment::prod"
@@ -142,7 +142,7 @@ jobs:
       # - name: Set Workspace
       #   id: set_workspace
       #   run: |
-      #     prod="${{ github.event.pull_request.base.ref == 'tna_prod' || github.ref == 'refs/head/tna_prod' }}"
+      #     prod="${{ github.event.pull_request.base.ref == 'prod' || github.ref == 'refs/head/prod' }}"
       #     if [ "$prod" = true ]; then
       #       echo "::set-output name=environment::tna-prod"
       #     else

@@ -252,8 +252,60 @@ resource "aws_sqs_queue" "validation_dlq_queue" {
   tags = local.tags
 }
 
+resource "aws_sqs_queue" "validation_updates_queue" {
+  name                      = "${local.name}-${local.environment}-validation-updates-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+
+  tags = local.tags
+}
+
+resource "aws_sqs_queue" "validation_updates_error_queue" {
+  name                      = "${local.name}-${local.environment}-validation-updates-error-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+
+  tags = local.tags
+}
+
+resource "aws_sqs_queue" "validation_updates_dlq_queue" {
+  name                      = "${local.name}-${local.environment}-validation-updates-dlq-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+
+  tags = local.tags
+}
+
+resource "aws_sqs_queue" "validation_updates_error_dlq_queue" {
+  name                      = "${local.name}-${local.environment}-validation-updates-error-dlq-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled = true
+#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+
+  tags = local.tags
+}
 
 
+resource "aws_sns_topic" "validation_updates" {
+  name = "validation-updates-topic"
+}
+
+resource "aws_sns_topic" "validation_updates_error" {
+  name = "validation-updates-error-topic"
+}
 
 # resource "aws_sqs_queue_policy" "validated-queue-policy" {
 #   queue_url = aws_sqs_queue.validated-queue.id
@@ -326,17 +378,7 @@ resource "aws_lambda_event_source_mapping" "sqs_replacements_abbreviations_event
   batch_size       = 1
 }
 
-resource "aws_sns_topic" "validation_updates" {
-  name = "validation-updates-topic"
-}
 
-resource "aws_sns_topic" "validation_updates_error" {
-  name = "validation-updates-error-topic"
-}
-
-resource "aws_sqs_queue" "validation_updates_queue" {
-  name = "validation-updates-queue"
-}
 
 # data "aws_iam_policy_document" "sqs-validation-queue-policy" {
 #   policy_id = "arn:aws:sqs:${var.sqs["region"]}:${var.sqs["account-id"]}:${var.sqs["name"]}/SQSDefaultPolicy"
@@ -373,6 +415,12 @@ resource "aws_sns_topic_subscription" "validation_updates_sqs_target" {
   topic_arn = aws_sns_topic.validation_updates.arn
   protocol  = "sqs"
   endpoint  = aws_sqs_queue.validation_updates_queue.arn
+}
+
+resource "aws_sns_topic_subscription" "validation_updates_error_sqs_target" {
+  topic_arn = aws_sns_topic.validation_updates_error.arn
+  protocol  = "sqs"
+  endpoint  = aws_sqs_queue.validation_updates_error_queue.arn
 }
 
 resource "aws_sns_topic_subscription" "validation-error-email-niall-target" {

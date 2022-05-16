@@ -8,9 +8,10 @@ import boto3
 
 from lxml import etree
 from io import StringIO, BytesIO
+from distutils.util import strtobool
 
 LOGGER = logging.getLogger()
-LOGGER.setLevel(logging.INFO)
+LOGGER.setLevel(logging.DEBUG)
 
 def validate_env_variable(env_var_name):
     print(f"Getting the value of the environment variable: {env_var_name}")
@@ -87,8 +88,8 @@ def validate_content(file_content):
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 DEST_ERROR_TOPIC = validate_env_variable("DEST_ERROR_TOPIC_NAME")
 DEST_TOPIC = validate_env_variable("DEST_TOPIC_NAME")
-VALIDATE_USING_SCHEMA = bool(validate_env_variable("VALIDATE_USING_SCHEMA"))
-VALIDATE_USING_DTD = bool(validate_env_variable("VALIDATE_USING_DTD"))
+VALIDATE_USING_SCHEMA = strtobool(validate_env_variable("VALIDATE_USING_SCHEMA"))
+VALIDATE_USING_DTD = strtobool(validate_env_variable("VALIDATE_USING_DTD"))
 
 def handler(event, context):
     LOGGER.info("validate-judgement-contents")
@@ -132,11 +133,11 @@ def handler(event, context):
             message = "content is invalid for " + source_key
             LOGGER.error(message)
             topic = DEST_ERROR_TOPIC
-        sns_client = boto3.client('sns')
-        response = sns_client.publish (
-        TargetArn = topic,
-        
-        # Message = json.dumps({'default': {'error': not valid_content, 'key': source_key, 'status': message}}),
-        Message = json.dumps({'default': message}),
-        MessageStructure = 'json'
-   )
+            sns_client = boto3.client('sns')
+            response = sns_client.publish (
+                TargetArn = topic,
+                
+                # Message = json.dumps({'default': {'error': not valid_content, 'key': source_key, 'status': message}}),
+                Message = json.dumps({'default': message}),
+                MessageStructure = 'json'
+            )
