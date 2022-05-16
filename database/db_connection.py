@@ -45,9 +45,15 @@ def get_legtitles(conn):
   leg_titles = pd.read_sql("SELECT candidate_titles, year, for_fuzzy FROM ukpga_lookup", conn)
   return leg_titles
 
+# def get_hrefs(conn, title):
+#   ref_link = pd.read_sql('''SELECT ref FROM ukpga_lookup WHERE candidate_titles="{0}"'''.format(title), conn)
+#   return ref_link.ref.values[0]
+
+sql = """SELECT ref FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
+
 def get_hrefs(conn, title):
-  ref_link = pd.read_sql('''SELECT ref FROM ukpga_lookup WHERE candidate_titles="{0}"'''.format(title), conn)
-  return ref_link.ref.values[0]
+  test = pd.read_sql_query(sql, conn, params={'title': "{}".format(title)})
+  return test.ref.values[0]
 
 def get_canonical_leg(conn, title):
   canonical_leg = pd.read_sql('''SELECT citation FROM ukpga_lookup WHERE candidate_titles="{0}"'''.format(title), conn)
