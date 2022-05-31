@@ -1,6 +1,12 @@
 import re
 import json
 
+"""
+Replacer logic for the entire enrichment pipeline. 
+Handles the replacements of abbreviations, legislation, and case law. 
+"""
+
+
 def replacer_caselaw(file_data, replacement):
   # TODO: href attribute to TNA URI
   # add a new field in manifest for URI --> check URI material
@@ -23,7 +29,6 @@ def replacer_leg(file_data, replacement):
   """
   replacement_string = f'<ref href="{replacement[1]}" canonical="{replacement[2]}" type="legislation">{replacement[0]}</ref>'
   file_data = str(file_data).replace(replacement[0], replacement_string)
-  # file_data = re.sub(replacement[0], replacement_string, str(file_data))
   return file_data
 
 def replacer_abbr(file_data, replacement):
@@ -50,18 +55,10 @@ def replacer_pipeline(file_data, REPLACEMENTS_CASELAW, REPLACEMENTS_LEG, REPLACE
 
   return file_data
 
-# def write_repl_file(tuple_file, replacement_list):
-#   for i in replacement_list:
-#     replacement_object = {"{}".format(type(i).__name__): list(i)}
-#     json.dump(replacement_object, tuple_file)
-#     tuple_file.write("\n")
-
 def write_replacements_file(replacement_list):
   tuple_file = ""
   for i in replacement_list:
     replacement_object = {"{}".format(type(i).__name__): list(i)}
-    # json.dump(replacement_object, tuple_file)
-    # tuple_file.write("\n")
     tuple_file += json.dumps(replacement_object)
     tuple_file += "\n"
 

@@ -5,6 +5,10 @@ from abbreviation_extraction_tests.test_abbreviations import TestAbbrevationMatc
 from legislation_extraction_tests.test_legislation_citations import TestLegislationProcessor, TestLegislationReplacer
 from test_xml_parser import TestXmlParser
 
+"""
+Test suite for the project. Loads and runs all tests.
+"""
+
 # initialize the test suite
 
 XMLParserSuite = unittest.TestLoader().loadTestsFromTestCase(TestXmlParser)

@@ -1,6 +1,10 @@
 import pandas as pd
 import spacy
 
+"""
+Test for the rules manifest. 
+"""
+
 MANIFEST = pd.read_csv("caselaw_extraction/rules/2022_04_05_Citation_Manifest.csv")
 
 nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])

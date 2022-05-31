@@ -1,6 +1,8 @@
 import bs4 as BeautifulSoup
 import pandas as pd
 
+
+
 def load_patterns(conn):
   """
   Write patterns file
@@ -13,6 +15,10 @@ def load_patterns(conn):
         patterns_file.write(pattern + "\n")
 
 def parse_file(file_data):
+  """
+  Parses the file and returns the text of the judgment
+  :param file_data: The file data
+  """
   soup = BeautifulSoup.BeautifulSoup(str(file_data), "lxml")
   judgment_content = soup.find_all("content")
   judgment_content_text = " ".join([content.text.strip() for content in judgment_content])

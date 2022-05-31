@@ -1,9 +1,8 @@
 import unittest
 import sys
 sys.path.append("./")
-from utils.helper import parse_file, load_patterns
+from utils.helper import parse_file
 from spacy.lang.en import English
-from database.db_connection import create_connection, close_connection
 
 
 """
