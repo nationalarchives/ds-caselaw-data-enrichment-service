@@ -1,14 +1,17 @@
 #!env/bin/python
 
-import json 
 import os 
-import random
 import logging
 import psycopg2 as pg
 import boto3
 from botocore.exceptions import ClientError
-from dateutil.parser import parse as dparser
 from psycopg2 import Error
+from sqlalchemy import create_engine
+import pandas as pd
+import datetime
+from SPARQLWrapper import SPARQLWrapper, CSV
+from io import BytesIO
+import re
 # import awswrangler.secretsmanager as awssm 
 
 LOGGER = logging.getLogger()
@@ -100,91 +103,74 @@ host = validate_env_variable("HOSTNAME")
 aws_secret_name = validate_env_variable("SECRET_PASSWORD_LOOKUP")
 aws_region_name = validate_env_variable("REGION_NAME")
 
+sparql_username = validate_env_variable("SPARQL_USERNAME")
+sparql_password = validate_env_variable("SPARQL_PASSWORD")
+
 get_secret = getLoginSecrets()
 
-# read rules from db and write to s3
+def get_leg_update(sparql_username, sparql_password, days=7):
+    # date = pd.to_datetime(date)
+    today = datetime.datetime.today()
+    date = today - datetime.timedelta(days)
+
+    sparql = SPARQLWrapper("https://www.legislation.gov.uk/sparql")
+    sparql.setCredentials(user=sparql_username, passwd=sparql_password)
+    sparql.setReturnFormat(CSV)
+    df = pd.DataFrame()
+    sparql.setQuery("""
+                prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+                prefix void: <http://rdfs.org/ns/void#>
+                prefix dct: <http://purl.org/dc/terms/>
+                prefix sd: <http://www.w3.org/ns/sparql-service-description#>
+                prefix prov: <http://www.w3.org/ns/prov#>
+                prefix leg: <http://www.legislation.gov.uk/def/legislation/>
+                select distinct ?ref  ?title ?ref_version ?shorttitle ?citation ?acronymcitation 
+                where {
+                   ?activity prov:endedAtTime ?actTime .
+                   ?graph prov:wasInfluencedBy ?activity .
+                   ?activity rdf:type <http://www.legislation.gov.uk/def/provenance/Addition> .
+                   ?dataUnitDataSet sd:namedGraph ?graph .
+                   <http://www.legislation.gov.uk/id/dataset/topic/core> void:subset ?dataUnitDataSet .
+                   graph ?graph { ?ref a leg:Legislation; a leg:UnitedKingdomPublicGeneralAct ;
+                                        leg:title ?title ;
+                                        leg:interpretation ?version .
+                                   OPTIONAL { ?ref leg:citation ?citation  } . 
+                                   OPTIONAL {?ref leg:acronymCitation ?acronymcitation} .
+                                   OPTIONAL {?ref_version   leg:shortTitle ?shorttitle} .}
+                   FILTER(str(?actTime) > "%s")
+                }
+                """ % date)
+    results = sparql.query().convert()
+    df = pd.read_csv(BytesIO(results))
+    stitles = ['shorttitle', 'citation', 'acronymcitation']
+    df['candidate_titles'] = df[stitles].apply(list, axis=1)
+    df = df.explode('candidate_titles')
+    df = df[~df['candidate_titles'].isna()].drop_duplicates('candidate_titles')
+    df['for_fuzzy'] = df.candidate_titles.apply(lambda x: re.search(r'Act\s+(\d{4})', x)!=None)
+
+
 def handler(event, context): 
+    LOGGER.info("update legislation database")
+    
     password = get_secret.get_secret(aws_secret_name, aws_region_name)
-    LOGGER.info("password length %d", len(password))
-    cxn = None
-    csr = None
 
     try:
-        cxn = pg.connect( user=username, 
-                    password=password, 
-                    host=host, 
-                    port=port, 
-                    database=database_name)
+        engine = create_engine(f"postgresql://{username}:{password}@{host}:{port}/{database_name}")
+        LOGGER.info("engine created")
 
-        LOGGER.info('connected to db')
-        # query_create_table = f"create table {table_name} ( ix serial primary key, names varchar(50) unique not null );"
-        # LOGGER.info('created table')
-        # query_insert_data = f"insert into {table_name} (city) values ('Washington'), ('Philadelphia'), ('New York'), ('Chicago'), ('Los Angeles'), ('Seattle'), ('Portland'), ('Dallas'), ('Miami'), ('Charlotte');"
-        # LOGGER.info('inserted in table')
+        if 'trigger_date' in event:
+            trigger_date = event['trigger_date']
+            if type(trigger_date) == int:
+                df = get_leg_update(sparql_username, sparql_password, trigger_date)
+                df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
+        else:
+            df = get_leg_update(sparql_username, sparql_password)
+            df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
 
-        query_create_table = """CREATE TABLE IF NOT EXISTS "manifest" (
-        "id" TEXT PRIMARY KEY,
-        "family" TEXT NOT NULL,
-        "description" TEXT NOT NULL,
-        "URItemplate" TEXT,
-        "canonicalForm" TEXT NOT NULL,
-        "canonicalExample" TEXT NOT NULL,
-        "matchExample" TEXT NOT NULL,
-        "citationType" TEXT NOT NULL,
-        "isCanonical" TEXT NOT NULL,
-        "isNeutral" TEXT NOT NULL,
-        "jurisdiction" varchar(2) NOT NULL,
-        "pattern" TEXT NOT NULL
-        );
+        engine.dispose()
+        LOGGER.info("legislation updated")
 
-        CREATE TABLE IF NOT EXISTS "ukpga_lookup" (
-        "id" int PRIMARY KEY,
-        "ref" TEXT,
-        "title" TEXT,
-        "ref_version" TEXT,
-        "shorttitle" TEXT,
-        "citation" TEXT,
-        "acronymcitation" TEXT,
-        "year" int,
-        "candidate_titles" TEXT,
-        "for_fuzzy" TEXT
-        );"""
-
-        rule_id = "wlr"
-        # query_select_data = '''SELECT * FROM manifest WHERE id="{0}"'''.format(rule_id)
-        query_select_data = '''SELECT * FROM manifest'''
-
-
-        # '''SELECT * FROM manifest WHERE id="{0}"'''.format(rule_id), conn
-        csr = cxn.cursor()
-        csr.execute( query_create_table ) 
-        cxn.commit()
-        LOGGER.debug('created tables')
-        csr.execute( query_select_data )
-        cxn.commit()
-        len_table = csr.rowcount 
-        LOGGER.debug('queried tables')
-        
-        # random_record = random.randint(1, len_table)
-        # query_random_data = f"select names from {table_name} where ix = {random_record};"
-        # cxn.execute( query_random_data )
-
-        # record = cxn.fetchall()
-        # record = cxn.fetchone()
-        rows = csr.fetchall()
-        for row in rows:
-            LOGGER.debug("id = %s", row[0])
-
-        LOGGER.info( f"{len_table} rows returned sucessfully" ) 
-
-        return {"statusCode" : 200, 
-                "body" : f"number of records returned is {len_table}" } 
     except (Exception, Error) as error:
-        print("Error while connecting to PostgreSQL", error)
-
-    finally:
-        if (cxn!= None):
-            if (csr!= None):
-                csr.close()
-            cxn.close()
-            LOGGER.debug("PostgreSQL connection is closed")
+        LOGGER.error("Error while connecting to PostgreSQL", error)
