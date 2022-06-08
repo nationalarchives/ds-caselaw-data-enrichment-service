@@ -191,6 +191,19 @@ resource "aws_ecr_repository" "abbreviations" {
   tags = local.tags
 }
 
+resource "aws_ecr_repository" "legislation-update" {
+  # count = var.use_container_image == true ? 1 : 0
+
+  name                 = "${local.name}-ecr-repository-legislation-update-${local.environment}"
+  # image_tag_mutability = "IMMUTABLE"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  tags = local.tags
+}
+
 
 # resource "aws_ecr_lifecycle_policy" "main" {
 #   count = var.use_container_image == true ? 1 : 0
