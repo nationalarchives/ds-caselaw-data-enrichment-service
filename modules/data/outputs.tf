@@ -8,6 +8,14 @@ output "postgress_hostname" {
     value = module.metadata-db.rds_cluster_endpoint
 }
 
+output "sparql_username" {
+  value = aws_secretsmanager_secret.sparql_username.name
+}
+
+output "sparql_password" {
+  value = aws_secretsmanager_secret.sparql_password.name
+}
+
 output "aws_vpc" {
   value = data.aws_vpc.vpc.id
 }
