@@ -161,8 +161,7 @@ def handler(event, context):
         engine = create_engine(f"postgresql://{username}:{password}@{host}:{port}/{database_name}")
         LOGGER.info("engine created")
 
-        print(event)
-        print(event['trigger_date'])
+        print("Trigger Date: ", event['trigger_date'])
 
         if 'trigger_date' in event:
             trigger_date = event['trigger_date']
@@ -170,10 +169,10 @@ def handler(event, context):
                 df = get_leg_update(sparql_username, sparql_password, trigger_date)
                 print(df)
                 # df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
-        else:
-            df = get_leg_update(sparql_username, sparql_password)
-            print(df)
-            # df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
+            else:
+                df = get_leg_update(sparql_username, sparql_password)
+                print(df)
+                # df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
 
         engine.dispose()
         LOGGER.info("legislation updated")
