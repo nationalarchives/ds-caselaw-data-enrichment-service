@@ -9,11 +9,11 @@ output "postgress_hostname" {
 }
 
 output "sparql_username" {
-  value = aws_secretsmanager_secret.sparql_username.name
+  value = aws_secretsmanager_secret.sparql_username
 }
 
 output "sparql_password" {
-  value = aws_secretsmanager_secret.sparql_password.name
+  value = aws_secretsmanager_secret.sparql_password
 }
 
 output "aws_vpc" {
