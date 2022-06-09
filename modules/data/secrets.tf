@@ -18,6 +18,16 @@ resource "aws_secretsmanager_secret_version" "postgress_master_password" {
   secret_string = random_password.password.result
 }
 
+resource "aws_secretsmanager_secret" "sparql_username" {
+  name                    = "${local.name}-sparql-username-${local.environment}"
+  recovery_window_in_days = 0
+}
+
+resource "aws_secretsmanager_secret" "sparql_password" {
+  name                    = "${local.name}-sparql-password-${local.environment}"
+  recovery_window_in_days = 0
+}
+
 # resource "random_password" "app_secret" {
 #   length      = 32
 #   special     = true
