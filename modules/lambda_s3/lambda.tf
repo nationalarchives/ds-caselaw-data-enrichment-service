@@ -1008,7 +1008,7 @@ module "lambda-update-legislation-table" {
   create_current_version_allowed_triggers = false # !var.use_container_image
 
   timeout     = 60
-  memory_size = var.memory_size
+  memory_size = 512
 
   # vpc_config {
   #   subnet_ids = ["${split(",", var.subnet_ids)}"]
