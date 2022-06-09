@@ -168,11 +168,11 @@ def handler(event, context):
             if type(trigger_date) == int:
                 df = get_leg_update(sparql_username, sparql_password, trigger_date)
                 print(df)
-                # df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
+                df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
             else:
                 df = get_leg_update(sparql_username, sparql_password)
                 print(df)
-                # df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
+                df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
 
         engine.dispose()
         LOGGER.info("legislation updated")
