@@ -1096,6 +1096,8 @@ module "lambda-update-legislation-table" {
     HOSTNAME = "${var.postgress_hostname}"
     # SPARQL_USERNAME = "${var.sparql_username}"
     # SPARQL_PASSWORD = "${var.sparql_password}"
+    SPARQL_USERNAME = "Editha.Nemsic@Mishcon.com"
+    SPARQL_PASSWORD = "unscathed-enviably-irk-695"
   }
   
   tags = local.tags

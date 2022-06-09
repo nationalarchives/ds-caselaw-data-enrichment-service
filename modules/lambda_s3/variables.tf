@@ -77,13 +77,13 @@ variable "postgress_hostname" {
   # default = "tna-metadata-db-ucldetf-1.cvbrurw4plvi.eu-west-1.rds.amazonaws.com"
 }
 
-variable "sparql_username" {
-  type    = string
-}
+# variable "sparql_username" {
+#   type    = string
+# }
 
-variable "sparql_password" {
-  type    = string
-}
+# variable "sparql_password" {
+#   type    = string
+# }
 
 variable "vpc_id" {
   type    = string
