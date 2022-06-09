@@ -160,15 +160,17 @@ def handler(event, context):
         engine = create_engine(f"postgresql://{username}:{password}@{host}:{port}/{database_name}")
         LOGGER.info("engine created")
 
+        print(event)
+
         if 'trigger_date' in event:
             trigger_date = event['trigger_date']
             if type(trigger_date) == int:
                 df = get_leg_update(sparql_username, sparql_password, trigger_date)
-                print(df)
+                # print(df)
                 # df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
         else:
             df = get_leg_update(sparql_username, sparql_password)
-            print(df)
+            # print(df)
             # df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
 
         engine.dispose()
