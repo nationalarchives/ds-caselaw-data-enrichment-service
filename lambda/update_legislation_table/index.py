@@ -149,6 +149,7 @@ def get_leg_update(sparql_username, sparql_password, days=7):
     df = df.explode('candidate_titles')
     df = df[~df['candidate_titles'].isna()].drop_duplicates('candidate_titles')
     df['for_fuzzy'] = df.candidate_titles.apply(lambda x: re.search(r'Act\s+(\d{4})', x)!=None)
+    return df
 
 
 def handler(event, context): 
@@ -161,16 +162,17 @@ def handler(event, context):
         LOGGER.info("engine created")
 
         print(event)
+        print(event['trigger_date'])
 
         if 'trigger_date' in event:
             trigger_date = event['trigger_date']
             if type(trigger_date) == int:
                 df = get_leg_update(sparql_username, sparql_password, trigger_date)
-                # print(df)
+                print(df)
                 # df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
         else:
             df = get_leg_update(sparql_username, sparql_password)
-            # print(df)
+            print(df)
             # df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
 
         engine.dispose()
