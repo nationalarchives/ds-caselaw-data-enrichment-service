@@ -1094,8 +1094,8 @@ module "lambda-update-legislation-table" {
     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME = "${local.region}"
     HOSTNAME = "${var.postgress_hostname}"
-    # SPARQL_USERNAME = "${var.sparql_username}"
-    # SPARQL_PASSWORD = "${var.sparql_password}"
+    SPARQL_USERNAME = "${var.sparql_username}"
+    SPARQL_PASSWORD = "${var.sparql_password}"
   }
   
   tags = local.tags
