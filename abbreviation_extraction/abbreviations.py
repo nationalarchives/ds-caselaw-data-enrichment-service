@@ -13,7 +13,6 @@ Blackstone repo here -> https://github.com/ICLRandD/Blackstone
 ScispaCy repo here -> https://github.com/allenai/scispacy
 """
 
-
 from typing import Tuple, List, Optional, Set, Dict
 from collections import defaultdict
 from spacy.language import Language
@@ -58,15 +57,13 @@ def find_abbreviation(
             short_index -= 1
             continue
 
-            # Does the character match at this position? ...
-
         # ignoring dates that are part of the references to the legislation/legislation abbreviation 
         abrv_date = False
         if current_char.isnumeric():
             abrv_date = True
+            # adjust the index to reflect the fact that it contains a date
             contains_date += 1
            
-
         while (  
             (long_index >= 0 and long_form[long_index].lower() != current_char and abrv_date != True)
             or
@@ -78,35 +75,24 @@ def find_abbreviation(
                 and long_form[long_index - 1].isalnum()
             )
         ):
-             
-            
             long_index -= 1
-            
             if long_index < 0:
-
                 return short_form_candidate, None
 
         long_index -= 1
         short_index -= 1
 
-    # If we complete the string, we end up with -1 here,
-    # but really we want all of the text.
-    
+    # If we complete the string, we end up with -1 here, but really we want all of the text.
     long_index = max(long_index, 0)
 
-
-    # Now we know the character index of the start of the character span,
-    # here we just translate that to the first token beginning after that
-    # value, so we can return a spaCy span instead.
+    # Converts the char index to the first token beginning after that value so a spaCy span can be returned. 
     word_lengths = contains_date
     starting_index = None
     
-
     for i, word in enumerate(long_form_candidate):
         word_lengths += len(word)
         if word_lengths > long_index:
             starting_index = i
-        
             break
 
     return short_form_candidate, long_form_candidate[starting_index:]
@@ -152,7 +138,6 @@ def filter_matches(
             # Normal case.
             # Short form is inside the parens.
             # Sum character lengths of contents of parens.
-
             abbreviation_length = sum([len(x) for x in doc[start:end]])
             max_words = min(abbreviation_length + 5, abbreviation_length * 2)
             # # Look up to max_words backwards
@@ -190,8 +175,6 @@ def verify_match_format(
     return matcher_output
         
 
-
-
 class AbbreviationDetector():
     """
     Detects abbreviations using the algorithm in "A simple algorithm for identifying
@@ -204,7 +187,6 @@ class AbbreviationDetector():
 
     Note that this class does not replace the spans, or merge them.
     """
-
     def __init__(self, nlp: Language) -> None:
         Doc.set_extension("abbreviations", default=[], force=True)
         Span.set_extension("long_form", default=None, force=True)

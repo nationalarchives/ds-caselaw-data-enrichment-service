@@ -1,5 +1,11 @@
 import re
 
+"""
+Correct strategies for the case law replacements. 
+:param citation_type: Citation pattern 
+:param citation_match: Citation that was matched 
+:param canonical_form: Canonical form of the citation
+"""
 def apply_correction_strategy(citation_type, citation_match, canonical_form):
     """Find the appropriate correction strategy and apply it"""
 
