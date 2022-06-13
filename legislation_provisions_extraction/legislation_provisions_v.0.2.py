@@ -7,7 +7,8 @@ patterns = {
     # does not catch the subsections for the initial definition to create the dictionary
     'section':r'( [sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+| [sS]+\W*[0-9]+)', 
     # when replacing sections, we want to identify the subsections as well
-    'section_replace': r'( [sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+| [sS]+\W*[0-9]+)(\W*\([0-9]+\))?'
+    'section_replace': r'( [sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+| [sS]+\W*[0-9]+)(\W*\([0-9]+\))?', 
+    'sub_sections': r'( [sS]+\W*[0-9]+)(\W*\([0-9]+\))?'
 }
 
 # get the href from the xml 
@@ -30,7 +31,7 @@ def detect_reference(text, etype='legislation'):
     references = [(m.span(), m.group()) for m in re.finditer(patterns[etype], text)]
     return references
 
-def resolve_section_to_leg(legislations, sections):
+def find_closest_legislation(legislations, sections):
     section_dict = {}
     current_match = {}
 
@@ -56,8 +57,42 @@ def resolve_section_to_leg(legislations, sections):
                 
         section_dict[section[1]] = current_match[section[1]]['legislation']
 
-    print(section_dict)
     return section_dict
+
+def generate_lone_section_links(section_dict): 
+    # generate the links for the sections based on detected href
+    a = 1
+
+
+def get_clean_section_number(section):
+    section_number = re.findall(r'\d+', section)
+    return section_number[0]
+
+def save_section_to_dict(section_dict, para_number): 
+    # get the section number [clean and save to dict]
+    # open the save ref line
+    # get the href
+    # get the canonical - save this to the dict
+    
+    clean_section_dict = {}
+
+    for section in section_dict: 
+        section_number = get_clean_section_number(section)
+        full_ref = section_dict[section]
+        soup = BeautifulSoup(full_ref,'xml')
+        ref = soup.find('ref') 
+        leg_href = ref['href']
+        section_href = str(leg_href) +"/section/"+str(section_number)
+        canonical = ref.find('canonical')
+
+        if canonical is not None:
+            canonical = ref['canonical']
+            clean_section_dict["section " + str(section_number)] = {'para_number': para_number, 'ref': ref, 'leg_href': leg_href, 'canonical': canonical, 'section_href': section_href}
+        
+        else:
+            clean_section_dict["section " + str(section_number)] = {'para_number': para_number, 'ref': ref, 'leg_href': leg_href, 'section_href': section_href}
+
+    return clean_section_dict
 
 def provision_replacer():
     # split body at [start] point of detected sections 
@@ -79,7 +114,9 @@ def main(enriched_judgment_file_path):
             if "type=\"legislation\"" in str(line):
                 legislations = detect_reference(str(line))
                 sections = detect_reference(str(line), 'section')
-                section_to_leg = resolve_section_to_leg(legislations, sections)
+                section_to_leg_matches = find_closest_legislation(legislations, sections)
+                section_dict = save_section_to_dict(section_to_leg_matches, para_number)
+                # create the master section dictionary 
 
                 # save the sections that are already resolved as well - then replace if that section already exists 
 
