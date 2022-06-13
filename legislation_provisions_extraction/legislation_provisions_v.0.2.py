@@ -4,7 +4,10 @@ from bs4 import BeautifulSoup
 
 patterns = {
     'legislation':r'<ref(.*?)type=\"legislation\"(.*?)ref>',
-    'section':r'( [sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+| [sS]+\W*[0-9]+)(\W*\([0-9]+\))?'
+    # does not catch the subsections for the initial definition to create the dictionary
+    'section':r'( [sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+| [sS]+\W*[0-9]+)', 
+    # when replacing sections, we want to identify the subsections as well
+    'section_replace': r'( [sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+| [sS]+\W*[0-9]+)(\W*\([0-9]+\))?'
 }
 
 # get the href from the xml 
@@ -28,10 +31,32 @@ def detect_reference(text, etype='legislation'):
     return references
 
 def resolve_section_to_leg(legislations, sections):
-    # resolve explicit references - references abbreviated eg. section 13 of act (section 13) ??? <- can this occur? [AC - No, have never seen that]
-    # resolve explicit references - closest to a legislation tag within a threshold eg. s.4 of act blah | act blah section 3
-    # resolve other references - either by closest legislation or explicit ref. eg. section.3 of act ...<p> ...section.3 ...
     section_dict = {}
+    current_match = {}
+
+    # iterate through each of the sections found in that paragraph
+    for section in sections:
+        first_match = True
+        section_loc = section[0]
+        section_loc_average = (section_loc[0] + section_loc[1])/2
+
+        # iterate through the legislation found in the same para to find the closest
+        for legislation in legislations: 
+            leg_loc = legislation[0]
+            leg_loc_average = (leg_loc[0] + leg_loc[1])/2 # take the average of the start and end points
+            distance = abs(leg_loc_average - section_loc_average) # get the absolute distance between the two
+
+            # first legislation matched
+            if section[1] not in current_match.keys():
+                current_match[section[1]] = {'legislation': legislation[1], 'distance': distance}
+            else:
+                # if the distance is closer, update the legislation
+                if distance < current_match[section[1]]['distance']:
+                    current_match[section[1]] = {'legislation': legislation[1], 'distance': distance}
+                
+        section_dict[section[1]] = current_match[section[1]]['legislation']
+
+    print(section_dict)
     return section_dict
 
 def provision_replacer():
@@ -47,15 +72,15 @@ def main(enriched_judgment_file_path):
         print(enriched_judgment_file)
         with open(enriched_judgment_file, "r") as f:
             soup = BeautifulSoup(f,'xml')
-        text = soup.find_all('p') #TODO: decide whether to resolve per <p> or per body. Cur.Pref=body
+        text = soup.find_all('p') 
+        para_number = 0
         for line in text: 
+            para_number += 1
             if "type=\"legislation\"" in str(line):
                 legislations = detect_reference(str(line))
-                print(legislations)
                 sections = detect_reference(str(line), 'section')
-                print(sections)
                 section_to_leg = resolve_section_to_leg(legislations, sections)
-                
+
                 # save the sections that are already resolved as well - then replace if that section already exists 
 
         #         if sections and len(split_sentences) > 1:
