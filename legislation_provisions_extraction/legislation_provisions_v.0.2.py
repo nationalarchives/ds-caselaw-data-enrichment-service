@@ -4,11 +4,8 @@ from bs4 import BeautifulSoup
 
 patterns = {
     'legislation':r'<ref(.*?)type=\"legislation\"(.*?)ref>',
-    # does not catch the subsections for the initial definition to create the dictionary
-    'section':r'( [sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+| [sS]+\W*[0-9]+)', 
-    # when replacing sections, we want to identify the subsections as well
-    'section_replace': r'( [sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+| [sS]+\W*[0-9]+)(\W*\([0-9]+\))?', 
-    'sub_sections': r'( [sS]+\W*[0-9]+)(\W*\([0-9]+\))?'
+    'section':r'( [sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+| [sS]+\W*[0-9]+)(\W*\([0-9]+\))?', 
+    'sub_section': r'/\([0-9]+\)/gm' 
 }
 
 # get the href from the xml 
@@ -59,8 +56,8 @@ def find_closest_legislation(legislations, sections):
 
     return section_dict
 
-def generate_lone_section_links(section_dict): 
-    # generate the links for the sections based on detected href
+def generate_sub_section_links(section_dict): 
+    # we generate sub-section links here
     a = 1
 
 
@@ -68,13 +65,7 @@ def get_clean_section_number(section):
     section_number = re.findall(r'\d+', section)
     return section_number[0]
 
-def save_section_to_dict(section_dict, para_number): 
-    # get the section number [clean and save to dict]
-    # open the save ref line
-    # get the href
-    # get the canonical - save this to the dict
-    
-    clean_section_dict = {}
+def save_section_to_dict(section_dict, para_number, clean_section_dict): 
 
     for section in section_dict: 
         section_number = get_clean_section_number(section)
@@ -84,20 +75,20 @@ def save_section_to_dict(section_dict, para_number):
         leg_href = ref['href']
         section_href = str(leg_href) +"/section/"+str(section_number)
         canonical = ref.find('canonical')
+        clean_section = "section " + str(section_number)
 
-        if canonical is not None:
-            canonical = ref['canonical']
-            clean_section_dict["section " + str(section_number)] = {'para_number': para_number, 'ref': ref, 'leg_href': leg_href, 'canonical': canonical, 'section_href': section_href}
-        
+        if clean_section not in clean_section_dict.keys():
+            clean_section_dict[clean_section] = [{'para_number': para_number, 'ref': ref, 'leg_href': leg_href, 'canonical': canonical, 'section_href': section_href}]
+
         else:
-            clean_section_dict["section " + str(section_number)] = {'para_number': para_number, 'ref': ref, 'leg_href': leg_href, 'section_href': section_href}
-
+            value = clean_section_dict[clean_section]
+            new_value = [value, {'para_number': para_number, 'ref': ref, 'leg_href': leg_href, 'canonical': canonical, 'section_href': section_href}]
+            clean_section_dict[clean_section] = new_value
+      
     return clean_section_dict
 
-def provision_replacer():
-    # split body at [start] point of detected sections 
+def provision_replacer(text, section_dict):
 
-    #make replacement per split then join
 
     return
 
@@ -109,16 +100,26 @@ def main(enriched_judgment_file_path):
             soup = BeautifulSoup(f,'xml')
         text = soup.find_all('p') 
         para_number = 0
+        section_dict = {}
         for line in text: 
             para_number += 1
             if "type=\"legislation\"" in str(line):
                 legislations = detect_reference(str(line))
                 sections = detect_reference(str(line), 'section')
                 section_to_leg_matches = find_closest_legislation(legislations, sections)
-                section_dict = save_section_to_dict(section_to_leg_matches, para_number)
                 # create the master section dictionary 
+                section_dict = save_section_to_dict(section_to_leg_matches, para_number, section_dict)
+                print(section_dict)
 
-                # save the sections that are already resolved as well - then replace if that section already exists 
+
+
+
+
+
+
+
+
+
 
         #         if sections and len(split_sentences) > 1:
                 #TODO: rewrite this according to how resolve_section_to_leg is implemented
