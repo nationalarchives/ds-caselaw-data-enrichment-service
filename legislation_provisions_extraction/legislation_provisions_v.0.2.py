@@ -1,6 +1,26 @@
-# from html import entities
 import re, os
 from bs4 import BeautifulSoup
+
+"""
+This code handles the link of provisions (i.e sections) to legislation. This is done in the following way: 
+
+1. We use the previously enriched judgment and identify where there are legislation xrefs in paragraphs. 
+2. We then search for and 'section' references in that paragraph. 
+3. We then use the location of the 'section' reference and 'legislation' reference to find which legislation the 
+section is closest to, and then link the section to that legislation.
+4. We handle re-definition of sections by keeping track of the paragraph number when identifying xrefs and sections. 
+We use the paragraph number when replacing and only add the link to the section when we are after where the section was last defined. 
+If it is re-defined at a later paragraph, we would then use that new link instead from the paragraph number onwards. 
+
+The limitations of this method means that: 
+1. There may be incorrect linking, this is seen in cases where the section is previously defined, and then appears
+again in a paragraph with a different piece of legislation. Because it is the only explicit mention to legislation 
+in that paragraph, this methodology assumes that the provision must be linked to that legislation. 
+
+For example: "Section 1 refers to ... In the Puppies and Kittens Act, this has a different meaning ..." 
+
+In this instance, the link will be generated to the Puppies and Kittens Act, despit the fact that it's 
+"""
 
 patterns = {
     'legislation':r'<ref(.*?)type=\"legislation\"(.*?)ref>',
@@ -8,43 +28,38 @@ patterns = {
     'sub_section': r'\([0-9]+\)' 
 }
 
-# get the href from the xml 
-def get_legislation_href(tagged_legislation): 
-    soup = BeautifulSoup(tagged_legislation,'xml')
-    href_all = []
-    for ref in soup.find_all('ref', href=True):
-        href = ref['href']
-        href_all.append(href)
-    return href_all
-
-def create_section_href(section, legislation_href): 
-    # return this as an array where there are multiple hrefs - not currently handled
-    number = re.findall(r'\d+', section)
-    href = str(legislation_href[0]) +"/section/"+str(number[0])
-    return href
-
+"""
+Detect legislation and section references. 
+:param text: text to be searched for references
+:param etype: type of reference to be detected
+"""
 def detect_reference(text, etype='legislation'):
-    # returns a list of tuples in the form [((start, end), detected_ref)]
+
     references = [(m.span(), m.group()) for m in re.finditer(patterns[etype], text)]
+    # returns a list of tuples in the form [((start, end), detected_ref)]
     return references
 
+"""
+Find the closest legislation to the section. This means that the section is likely a section from that piece of legislation.
+:param legislations: list of legislation references found in the paragraph, and their location
+:param sections: list of section references found in the paragraph, and their location
+"""
 def find_closest_legislation(legislations, sections):
     section_dict = {}
     current_match = {}
 
     # iterate through each of the sections found in that paragraph
     for section in sections:
-        first_match = True
         section_loc = section[0]
         section_loc_average = (section_loc[0] + section_loc[1])/2
 
         # iterate through the legislation found in the same para to find the closest
         for legislation in legislations: 
             leg_loc = legislation[0]
-            leg_loc_average = (leg_loc[0] + leg_loc[1])/2 # take the average of the start and end points
+            leg_loc_average = (leg_loc[0] + leg_loc[1])/2 # take the average of the start and end points of the legislation
             distance = abs(leg_loc_average - section_loc_average) # get the absolute distance between the two
 
-            # first legislation matched
+            # first time the legislation is matched to the section
             if section[1] not in current_match.keys():
                 current_match[section[1]] = {'legislation': legislation[1], 'distance': distance}
             else:
@@ -52,33 +67,48 @@ def find_closest_legislation(legislations, sections):
                 if distance < current_match[section[1]]['distance']:
                     current_match[section[1]] = {'legislation': legislation[1], 'distance': distance}
                 
+        # save the legislation href to the section dictionary
         section_dict[section[1]] = current_match[section[1]]['legislation']
 
     return section_dict
 
+"""
+Cleans just the section number. 
+:param section: section to return the number for
+"""
 def get_clean_section_number(section):
     section_number = re.findall(r'\d+', section)
     return section_number[0]
 
+"""
+Saves the section and the relevant information to the master dictionary of all sections in the judgment.
+:param section_dict: current section information for the paragraph 
+:param clean_section_dict: master dictionary of all sections in the judgment
+:param para_number: number of the paragraph in the judgment
+"""
 def save_section_to_dict(section_dict, para_number, clean_section_dict):
 
+    # for each section found in the paragraph 
     for section in section_dict: 
 
         section_number = get_clean_section_number(section)
-        full_ref = section_dict[section]
-        soup = BeautifulSoup(full_ref,'xml')
+        full_ref = section_dict[section] # gets the full ref tag
+        soup = BeautifulSoup(full_ref,'xml') 
         ref = soup.find('ref') 
-        leg_href = ref['href']
-        section_href = str(leg_href) +"/section/"+str(section_number)
+        leg_href = ref['href'] # get the legislation href
+        section_href = str(leg_href) +"/section/"+str(section_number) # creates the section href
         canonical = ref.find('canonical')
         clean_section = "section " + str(section_number)
 
+        # new dictionary with the relevant information for the entry
         new_definition = {'para_number': para_number, 'ref': ref, 'leg_href': leg_href, 'canonical': canonical, 'section_href': section_href}
 
+        # isn't currently in the master dictionary
         if clean_section not in clean_section_dict.keys():
             clean_section_dict[clean_section] = [new_definition]
 
         else:
+            # if it is, add the new definition to the list of definitions attached to the section. This means it has been re-defined at a later paragraph.
             value = clean_section_dict[clean_section]
             value.append(new_definition)
             clean_section_dict[clean_section] = value
@@ -86,11 +116,18 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
     
     return clean_section_dict
 
+"""
+Generates the links for any sub-sections in the judgment. 
+:param section_dict: individual dictionary for the current section 
+:param match: the section reference found in the paragraph
+"""
 def create_sub_section_links(section_dict, match): 
 
-    new_section_dict = section_dict.copy()
-    curr_href = new_section_dict['section_href']
+    new_section_dict = section_dict.copy() 
+    curr_href = new_section_dict['section_href'] 
+    # get the sub-section number
     sub_section = re.findall(patterns['sub_section'], match)
+    # get the number itself
     sub_section_number = get_clean_section_number(sub_section[0])
     new_href = curr_href + "/" + str(sub_section_number)
     # replace href in section_dict with new_href
@@ -98,12 +135,21 @@ def create_sub_section_links(section_dict, match):
 
     return new_section_dict
 
+"""
+Check if the current reference is a sub-section.
+:param section: the section to check
+"""
 def check_if_sub_section(section):
     if re.search(patterns['sub_section'], section):
         return True
     else:
         return False
 
+"""
+Performs the check if the current reference has been redefined and returns the correct reference by using the paragraph number. 
+:param section_matches: list of dictionaries that include where that section has been redefined
+:param para_number: the number of the paragraph in the judgment
+"""
 def get_correct_section_def(section_matches, para_number): 
 
     i = 0
@@ -118,28 +164,37 @@ def get_correct_section_def(section_matches, para_number):
 
     return False
 
-def provision_replacer(text, section_dict, matches, para_number):
+"""
+Matches all sections found in the judgment to the correct legislation, and provides necessary information for the replacements.
+:param section_dict: master dictionary of all sections in the judgment
+:param matches: list of the matches for the section references
+:param para_number: current paragraph number in the judgment
+"""
+def provision_replacer(section_dict, matches, para_number):
 
+    # for each section found in the paragraph
     for match in matches:
 
         clean_section_num = get_clean_section_number(match)
         clean_section = "section " + str(clean_section_num)
+
+        # check if we have a match for the section that we've found
         if clean_section in section_dict.keys():
             values = section_dict[clean_section]
             # if they referred to the section before it was defined in a paragraph with linked leg, skip
             if para_number < values[0]['para_number']:
                 continue
             
-            # if the section was re-defined, handle this
+            # if the section was re-defined (aka there is more than one dictionary), handle this
             if len(values) > 1: 
                 correct_reference = get_correct_section_def(values, para_number)
                 if correct_reference == False: 
                     continue
-            
+        
             else: 
                 correct_reference = values[0]
             
-            # check if this was a sub_section 
+            # check if this was a sub_section - as we only initially match to sections to create master dictionary
             sub_section = check_if_sub_section(match)
             if sub_section:
                 correct_reference = create_sub_section_links(correct_reference, match)
@@ -173,10 +228,11 @@ def main(enriched_judgment_file_path):
             para_number = 0
             for line in text:
                 para_number += 1
+                # find all sections in the match, regardless of whether they are in a paragraph with a legislation or not
                 matches = re.finditer(patterns['section'], str(line))
                 matches_lst = [i.group(0) for i in matches]
                 if matches_lst:
-                    provision_replacer(text, section_dict, matches_lst, para_number)
+                    provision_replacer(section_dict, matches_lst, para_number)
 
 
 
