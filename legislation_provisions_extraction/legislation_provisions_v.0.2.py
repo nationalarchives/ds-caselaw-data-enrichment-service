@@ -88,15 +88,15 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
 
 def create_sub_section_links(section_dict, match): 
 
-    print(section_dict)
-    curr_href = section_dict['section_href']
+    new_section_dict = section_dict.copy()
+    curr_href = new_section_dict['section_href']
     sub_section = re.findall(patterns['sub_section'], match)
     sub_section_number = get_clean_section_number(sub_section[0])
     new_href = curr_href + "/" + str(sub_section_number)
     # replace href in section_dict with new_href
-    section_dict['section_href'] = new_href
+    new_section_dict['section_href'] = new_href
 
-    return section_dict
+    return new_section_dict
 
 def check_if_sub_section(section):
     if re.search(patterns['sub_section'], section):
@@ -109,12 +109,8 @@ def create_replacement_dictionary(section_dict, para_number, match, sub_section,
 
 def get_correct_section_def(section_matches, para_number): 
 
-    print(section_matches)
-
     i = 0
-    print(len(section_matches))
     while i < len(section_matches) - 1:
-        print(section_matches[i])
         # if the current para number is greater than but less than next para number, return the current match
         curr_match = section_matches[i]['para_number']
         next_match = section_matches[i+1]['para_number']
@@ -126,15 +122,13 @@ def get_correct_section_def(section_matches, para_number):
     return False
 
 def provision_replacer(text, section_dict, matches, para_number):
-    print("\n")
-    print(matches)
+
     for match in matches:
 
         clean_section_num = get_clean_section_number(match)
         clean_section = "section " + str(clean_section_num)
         if clean_section in section_dict.keys():
             values = section_dict[clean_section]
-            print(values) 
             # if they referred to the section before it was defined in a paragraph with linked leg, skip
             if para_number < values[0]['para_number']:
                 continue
@@ -150,13 +144,11 @@ def provision_replacer(text, section_dict, matches, para_number):
             
             # check if this was a sub_section 
             sub_section = check_if_sub_section(match)
-            print(correct_reference)
-            # TODO - change this so that it doesn't permanently change the sub-link
             if sub_section:
                 correct_reference = create_sub_section_links(correct_reference, match)
-                
+            print(match)
+            print(correct_reference)
 
-    return
 
 
 
