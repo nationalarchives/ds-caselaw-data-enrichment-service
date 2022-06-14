@@ -104,9 +104,6 @@ def check_if_sub_section(section):
     else:
         return False
 
-def create_replacement_dictionary(section_dict, para_number, match, sub_section, clean_section):
-    return 
-
 def get_correct_section_def(section_matches, para_number): 
 
     i = 0
@@ -146,6 +143,7 @@ def provision_replacer(text, section_dict, matches, para_number):
             sub_section = check_if_sub_section(match)
             if sub_section:
                 correct_reference = create_sub_section_links(correct_reference, match)
+
             print(match)
             print(correct_reference)
 
@@ -169,7 +167,6 @@ def main(enriched_judgment_file_path):
                 section_to_leg_matches = find_closest_legislation(legislations, sections)
                 # create the master section dictionary with relevant leg links
                 section_dict = save_section_to_dict(section_to_leg_matches, para_number, section_dict)
-                
                 
         # replacement logic
         if section_dict:
