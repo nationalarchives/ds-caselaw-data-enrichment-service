@@ -142,7 +142,7 @@ Generates the <ref> tag for a section in the judgment.
 def create_section_ref_tag(section_dict, match):
     canonical = section_dict['section_canonical']
     href = section_dict['section_href']
-    section_ref = f'<ref uk:type="legislation" uk:canonical="{canonical}" href="{href}">{match.strip()}</ref>'
+    section_ref = f'<ref uk:type="legislation" href="{href}" uk:canonical="{canonical}">{match.strip()}</ref>'
     return section_ref
    
 """
@@ -216,6 +216,7 @@ def provision_resolver(section_dict, matches, para_number):
            
             resolved_refs.append(dict(zip(keys, [match, para_number, pos[0], correct_reference['section_ref']])))
             print(f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}")
+
     return resolved_refs
 
 def main(enriched_judgment_file_path):
