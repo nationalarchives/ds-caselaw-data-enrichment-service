@@ -14,14 +14,6 @@ section is closest to, and then link the section to that legislation.
 We use the paragraph number when replacing and only add the link to the section when we are after where the section was last defined. 
 If it is re-defined at a later paragraph, we would then use that new link instead from the paragraph number onwards. 
 
-The limitations of this method means that: 
-1. There may be incorrect linking, this is seen in cases where the section is previously defined, and then appears
-again in a paragraph with a different piece of legislation. Because it is the only explicit mention to legislation 
-in that paragraph, this methodology assumes that the provision must be linked to that legislation. 
-
-For example: "Section 1 refers to ... In the Puppies and Kittens Act, this has a different meaning ..." 
-
-In this instance, the link will be generated to the Puppies and Kittens Act, despit the fact that it's 
 """
 THR = 30
 keys = ['detecte_ref', 'ref_para', 'section_position', 'ref_tag']
@@ -253,5 +245,4 @@ def main(enriched_judgment_file_path):
             
             cur_para_number += 1
 
-
-main("/Users/imane.hafnaoui/Downloads/test_judgments")
+main("legislation_provisions_extraction/test_judgments")
