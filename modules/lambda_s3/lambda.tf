@@ -25,7 +25,7 @@ module "lambda-extract-judgement-contents" {
 
   create_current_version_allowed_triggers = false # !var.use_container_image
 
-  timeout     = 30
+  timeout     = 60
   memory_size = 256
   # memory_size = var.memory_size
 

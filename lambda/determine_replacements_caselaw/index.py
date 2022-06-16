@@ -163,7 +163,7 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
 
 def init_NLP(rules_content):
     nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
-    nlp.max_length = 2500000
+    nlp.max_length = 5000000
     LOGGER.debug('checking file system access')
     from os import listdir
     from os.path import isfile, join
