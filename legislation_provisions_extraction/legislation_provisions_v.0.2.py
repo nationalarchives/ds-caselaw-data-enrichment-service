@@ -16,7 +16,7 @@ If it is re-defined at a later paragraph, we would then use that new link instea
 
 """
 THR = 30
-keys = ['detecte_ref', 'ref_para', 'section_position', 'ref_tag']
+keys = ['detected_ref', 'ref_para', 'ref_position', 'ref_tag']
 patterns = {
     'legislation': r'<ref(((?!ref>).)*)type=\"legislation\"(.*?)ref>',
     'section': r'( [sS]ection\W*[0-9]+(?=)| [sS]ections\W*[0-9]+(?=)| [sS]+\W*[0-9]+(?=))(\W*\([0-9]+\))?',
@@ -214,7 +214,7 @@ def provision_resolver(section_dict, matches, para_number):
             # create a <ref> tag for detected provision
             correct_reference['section_ref'] = create_section_ref_tag(correct_reference,  match)
            
-            resolved_refs.append(dict(zip(keys, [match, para_number, pos, correct_reference['section_ref']])))
+            resolved_refs.append(dict(zip(keys, [match, para_number, pos[0], correct_reference['section_ref']])))
             print(f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}")
     return resolved_refs
 
@@ -229,6 +229,7 @@ def main(enriched_judgment_file_path):
         text = soup.find_all('p')
         cur_para_number = 0
         section_dict = {}
+        resolved_refs = []
         for line in text:
             sections = detect_reference(str(line), 'section')
             if sections:
@@ -241,8 +242,9 @@ def main(enriched_judgment_file_path):
                     section_dict = save_section_to_dict(section_to_leg_matches, cur_para_number, section_dict)
                 
                 # resolve sections to legislations
-                provision_resolver(section_dict, sections, cur_para_number)
+                resolved_refs.extend(provision_resolver(section_dict, sections, cur_para_number))
             
             cur_para_number += 1
+        return resolved_refs
 
 main("legislation_provisions_extraction/test_judgments")
