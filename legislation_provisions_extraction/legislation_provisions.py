@@ -14,6 +14,11 @@ section is closest to, and then link the section to that legislation.
 We use the paragraph number when replacing and only add the link to the section when we are after where the section was last defined. 
 If it is re-defined at a later paragraph, we would then use that new link instead from the paragraph number onwards. 
 
+To do: 
+1. "Sections 18-19" - we currently on replace sections 18 with a link to 18
+2. "Section 27(A)" - currently miss these references when replacing
+3. Sub-sections aren't being replaced 
+
 """
 THR = 30
 keys = ['detected_ref', 'ref_para', 'ref_position', 'ref_tag']

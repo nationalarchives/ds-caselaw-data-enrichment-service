@@ -15,8 +15,7 @@ def demo_main():
             enriched_judgment_file = os.path.join(enriched_judgment_file_path, filename)
             with open(enriched_judgment_file, "r") as f:
                 soup = BeautifulSoup(f, 'xml')
-            enriched_file = second_stage_replacer.oblique_replacement(soup, resolved_refs)
-
+            enriched_file = second_stage_replacer.provision_replacement(soup, resolved_refs)
             output_file = f"legislation_provisions_extraction/output/{filename}".replace(".xml", "_enriched.xml")
 
             with open(output_file, "w") as data_out:
