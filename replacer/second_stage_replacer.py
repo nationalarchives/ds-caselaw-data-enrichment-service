@@ -19,7 +19,7 @@ def replacer(text, detected_refs):
     split_text = splitString(text, split_points)
     enriched_text = text[:split_points[0]]
     for spt, match in zip(split_text, detected_refs):
-        enriched_text += re.sub(match['detected_ref'], match['ref_tag'], spt)
+        enriched_text += re.sub(re.escape(match['detected_ref']), match['ref_tag'], spt)
     
     return enriched_text
 
@@ -38,7 +38,7 @@ def provision_replacement(file_data, replacements):
     relevant_paras = sorted(replacements, key=key_func)
     
     for p, matches in groupby(relevant_paras, key=key_func):
-        new_txt = BeautifulSoup(replacer(str(paras[p]), list(matches)))
+        new_txt = BeautifulSoup(replacer(str(paras[p]), list(matches)), "lxml")
         paras[p].replace_with(new_txt.p)
     return str(file_data)
 
