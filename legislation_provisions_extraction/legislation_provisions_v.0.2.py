@@ -172,6 +172,7 @@ def get_correct_section_def(section_matches, cur_para_number, cur_pos):
     else:
         # same as above; relies on position within a paragraph if the section is redefined within the paragraph.
         positions = pos_refs[:, 1]
+        print(positions, cur_pos)
         idx = (np.abs(positions - cur_pos)).argmin()
         return [match for match in section_matches if match['section_position'] == positions[idx]][0]
     
@@ -202,7 +203,7 @@ def provision_resolver(section_dict, matches, para_number):
             # if the section was re-defined (aka there is more than one dictionary), handle this
             if len(values) > 1:
                 correct_reference = get_correct_section_def(
-                    values, para_number, pos)
+                    values, para_number, pos[0])
     
             else:
                 correct_reference = values[0]
@@ -246,6 +247,6 @@ def main(enriched_judgment_file_path):
                 resolved_refs.extend(provision_resolver(section_dict, sections, cur_para_number))
             
             cur_para_number += 1
-        return resolved_refs
+    return resolved_refs
 
-main("legislation_provisions_extraction/test_judgments")
+main("test_judgments")
