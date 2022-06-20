@@ -24,7 +24,7 @@ THR = 30
 keys = ['detected_ref', 'ref_para', 'ref_position', 'ref_tag']
 patterns = {
     'legislation': r'<ref(((?!ref>).)*)type=\"legislation\"(.*?)ref>',
-    'section': r'( [sS]ection\W*[0-9]+(?=)| [sS]ections\W*[0-9]+(?=)| [sS]+\W*[0-9]+(?=))(\W*\([0-9]+\))?',
+    'section': r'([sS]ection\W*[0-9]+(?=)|[sS]ections\W*[0-9]+(?=)|\b[sS]+\W*[0-9]+(?=))(\W*\([0-9]+\))?',
     'sub_section': r'\([0-9]+\)'
 }
 
