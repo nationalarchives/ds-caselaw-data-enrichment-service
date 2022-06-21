@@ -68,6 +68,22 @@ def create_section_ref_tag(replacement_dict, match):
     oblique_ref = f'<ref href="{href}" uk:canonical="{canonical}" uk:type="legislation">{match.strip()}</ref>'
     return oblique_ref
 
+def get_replacements(detected_acts, legislation_dicts, numbered_act, replacements): 
+    for detected_act in detected_acts:
+        replacement_dict = {}
+        match = detected_act[1]
+        if numbered_act: 
+            matched_replacement = match_numbered_act(detected_act, legislation_dicts)
+        else:
+            matched_replacement = match_act(detected_act, legislation_dicts)
+        replacement_dict['detected_ref'] = match
+        replacement_dict['ref_position'] = detected_act[0][0]
+        if matched_replacement != None:
+            replacement_dict['ref_tag'] = create_section_ref_tag(matched_replacement, match)
+            replacements.append(replacement_dict)
+    
+    return replacements 
+
 def main(enriched_judgment_file_path): 
     for filename in os.listdir(enriched_judgment_file_path):
         enriched_judgment_file = os.path.join(enriched_judgment_file_path, filename)
@@ -81,31 +97,10 @@ def main(enriched_judgment_file_path):
                 legislation_dicts = create_legislation_dict(detected_leg)
                 detected_numbered_acts = detect_reference(text, 'numbered_act')
                 detected_acts = detect_reference(text, 'act')
-
                 replacements = []
-
-                for detected_act in detected_acts:
-                    replacement_dict = {}
-                    match = detected_act[1]
-                    matched_replacement = match_act(detected_act, legislation_dicts)
-                    replacement_dict['detected_ref'] = match
-                    replacement_dict['ref_position'] = detected_act[0][0]
-                    if matched_replacement != None:
-                        replacement_dict['ref_tag'] = create_section_ref_tag(matched_replacement, match)
-                        replacements.append(replacement_dict)
-                
-                for detected_numbered_act in detected_numbered_acts:
-                    replacement_dict = {}
-                    match = detected_numbered_act[1]
-                    matched_replacement = match_numbered_act(detected_numbered_act, legislation_dicts)
-                    replacement_dict['detected_ref'] = match
-                    replacement_dict['ref_position'] = detected_numbered_act[0][0]
-                    if matched_replacement != None:
-                        replacement_dict['ref_tag'] = create_section_ref_tag(matched_replacement, match)
-                        replacements.append(replacement_dict)
-
-                # print(replacements)
+                replacements = get_replacements(detected_acts, legislation_dicts, False, replacements)
+                replacements = get_replacements(detected_numbered_acts, legislation_dicts, True, replacements)
                 for replacement in replacements:
                     print(f"  => {replacement['detected_ref']} \t {replacement['ref_tag']}")
 
-main('/Users/editha.nemsic/Desktop/ds-caselaw-data-enrichment-service/oblique_references/test_judgments')
+main('oblique_references/test_judgments')
