@@ -17,8 +17,6 @@ If it is re-defined at a later paragraph, we would then use that new link instea
 To do: 
 1. "Sections 18-19" - we currently on replace sections 18 with a link to 18
 2. "Section 27(A)" - currently miss these references when replacing
-3. Sub-sections aren't being replaced 
-
 """
 THR = 30
 keys = ['detected_ref', 'ref_para', 'ref_position', 'ref_tag']
@@ -48,11 +46,13 @@ Find the closest legislation to the section. This means that the section is like
 
 
 def find_closest_legislation(legislations, sections, thr=30):
+    print(sections)
+    print(legislations)
    # gets positions of refs
     sec_pos = np.asarray([x[0] for x in sections])
     leg_pos = np.asarray([x[0] for x in legislations])
     
-    # calculates distance between legislations ans sections
+    # calculates distance between legislations and sections
     dist1 = sec_pos[:, 0][:, None] - leg_pos[:, 1]
     dist2 = leg_pos[:, 0] - sec_pos[:, 1][:, None]
     dist = dist1 * (dist1 > 0) + dist2 * (dist2 > 0)
