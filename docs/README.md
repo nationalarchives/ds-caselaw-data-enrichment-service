@@ -22,6 +22,7 @@ The JEP is a modular system comprising a series of AWS Lambda functions that are
 2. [Legislation Annotator](legislation-annotator.md) -- detects references to UK primary legislation, such as `Theft Act 1968`
 3. [Abbreviation Annotator](abbreviation-annotator.md) -- detects abbreviations and resolves them to their longform. For example, the longform of `HRA 1998` is `Human Rights Act 1998`.
 4. [Legislative Provision Annotator](legislative-provision-annotator.md)
+5. [Oblique Legislative References Annotator](oblique-references.md)
 
 ### The pipeline in overview
 
