@@ -5,18 +5,13 @@ sys.path.append("./")
 from replacer.second_stage_replacer import provision_replacement
 from legislation_provisions_extraction.legislation_provisions import detect_reference, find_closest_legislation, get_clean_section_number, save_section_to_dict
 
-correct_references = ["section 23 of the <ref uk:type=\"legislation\" href=\"http://www.legislation.gov.uk/id/ukpga/1968/19\" uk:canonical=\"1968 c. 19\">Criminal Appeal Act 1968</ref>, which provides as follows:", 
-    "Section 129 of the <ref uk:type=\"legislation\" href=\"http://www.legislation.gov.uk/id/ukpga/1985/68\" uk:canonical=\"1985 c. 68\">Housing Act 1985</ref>", 
-    "section 23 of the <ref uk:type=\"legislation\" href=\"http://www.legislation.gov.uk/id/ukpga/1968/19\" uk:canonical=\"1968 c. 19\">Criminal Appeal Act 1968</ref> and Section 129 of the \
-         <ref uk:type=\"legislation\" href=\"http://www.legislation.gov.uk/id/ukpga/1985/68\" uk:canonical=\"1985 c. 68\">Housing Act 1985</ref>"]
-
 
 """
     This class focuses on testing the Legislation Provision processor, which detects references to sections and links them to the 
     section within the legislation itself. 
 """
 class TestLegislationProvisionProcessor(unittest.TestCase): 
-    # Handling extra characters around the citations to ensure that spacy handles it well
+
     def test_leg_detect_reference(self): 
 
         ref = "section 23 of the <ref uk:type=\"legislation\" href=\"http://www.legislation.gov.uk/id/ukpga/1968/19\" uk:canonical=\"1968 c. 19\">Criminal Appeal Act 1968</ref>, which provides as follows:"

@@ -13,14 +13,6 @@ patterns = {
     'act': r'(the|this|that|The|This|That)\s(Act)'
 }
 
-# class UnsortedAttributes(HTMLFormatter):
-#     def attributes(self, tag):
-#         for k, v in tag.attrs.items():
-#             # here you can filter attributes:
-#             # if k == 'm':
-#             #     continue
-#             yield k, v
-
 def detect_reference(text, etype):
     references = [(m.span(), m.group()) for m in re.finditer(patterns[etype], text)]
 
@@ -77,6 +69,7 @@ def create_section_ref_tag(replacement_dict, match):
     return oblique_ref
 
 def get_replacements(detected_acts, legislation_dicts, numbered_act, replacements): 
+
     for detected_act in detected_acts:
         replacement_dict = {}
         match = detected_act[1]
