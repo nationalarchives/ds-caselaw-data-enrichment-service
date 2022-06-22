@@ -2,15 +2,11 @@
 
 ## Introduction
 
-This resource documents the design and operation of the Judgment Enrichment Pipeline (JEP) built for The National Archives by MDRxTECH and vLex Justis. 
+This resource documents the design and operation of the Judgment Enrichment Pipeline (JEP) built for The National Archives by MDRxTECH and vLex Justis to support the publishing process that sits behind [caselaw.nationalarchives.gov.uk](caselaw.nationalarchives.gov.uk).
 
-## What does the Judgment Enrichment Pipeline (JEP) do?
+The primary purpose of the JEP is to "enrich" the jugdments published on [caselaw.nationalarchives.gov.uk](caselaw.nationalarchives.gov.uk) by marking up important pieces of legal information, such as references to earlier cases and legislation, that are cited in the judgments. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.   
 
-The JEP performs two main functions. 
-
-The first is to enrich incoming raw LegalDocML judgments by marking up important pieces of legal information, such as references to case law and legislation, cited in the incoming judgments. This enriched markup enables TNA to provide additional functionality to end users of caselaw.nationalarchives.gov.uk.  In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.  
-
-The second function the JEP performs is the generation of linked data in the form of RDF triples. These triples encode interactions between core entities within and between the judgment. 
+Architecturally, the JEP is composed of a series of serverless *Annotators* that sequentially add layers of enrichment to an incoming judgment. An overview of the *Annotators* can be found below with more detailed guidance on each set out in dedicated documentation. 
 
 ## The general anatomy of the JEP
 
@@ -54,21 +50,3 @@ The enrichment process typically takes five-six minutes per judgment. Enriched j
 Not yet implemented
 
 ## Tests
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
