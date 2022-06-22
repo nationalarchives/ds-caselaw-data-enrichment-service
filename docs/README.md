@@ -18,7 +18,7 @@ The second function the JEP performs is the generation of linked data in the for
 
 The JEP is a modular system comprising a series of AWS Lambda functions that are each responsible for a discrete element of the processing pipeline. The current version of the JEP has four *Annotators*. They are:
 
-1. [Case Law Annotator](case-law-annotator.md) -- detects references to UK case law citations, such as `[2022] 1 WLR 123` 
+1. [Case Law Annotator](caselaw/case-law-annotator.md) -- detects references to UK case law citations, such as `[2022] 1 WLR 123` 
 2. [Legislation Annotator](legislation-annotator.md) -- detects references to UK primary legislation, such as `Theft Act 1968`
 3. [Abbreviation Annotator](abbreviation-annotator.md) -- detects abbreviations and resolves them to their longform. For example, the longform of `HRA 1998` is `Human Rights Act 1998`.
 4. [Legislative Provision Annotator](legislative-provision-annotator.md)
