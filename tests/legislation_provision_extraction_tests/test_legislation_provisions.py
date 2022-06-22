@@ -3,7 +3,7 @@ from numpy import mat
 import sys
 sys.path.append("./")
 from replacer.second_stage_replacer import provision_replacement
-from legislation_provisions_extraction.legislation_provisions import detect_reference, find_closest_legislation, get_clean_section_number, save_section_to_dict
+from legislation_provisions_extraction.legislation_provisions import detect_reference, find_closest_legislation, get_clean_section_number, provision_resolver
 
 
 """
@@ -67,7 +67,31 @@ class TestLegislationProvisionProcessor(unittest.TestCase):
 
         assert clean_sec == "140"
     
-     
+    def test_resolver_single_match(self):
+        section_dict = {'section 55': [{'para_number': 115, 'section_position': 276, 'section_href': 'http://www.legislation.gov.uk/id/ukpga/Edw7/6/41/section/55', 'section_canonical': '1906 (6 Edw. 7) c. 41 s. 55', 'ref': '<ref canonical="1906 (6 Edw. 7) c. 41" href="http://www.legislation.gov.uk/id/ukpga/Edw7/6/41" type="legislation">Marine Insurance Act 1906</ref>', 'leg_href': 'http://www.legislation.gov.uk/id/ukpga/Edw7/6/41', 'canonical': '1906 (6 Edw. 7) c. 41'}, {'para_number': 937, 'section_position': 1066, 'section_href': 'http://www.legislation.gov.uk/id/ukpga/Edw7/6/41/section/55', 'section_canonical': '1906 (6 Edw. 7) c. 41 s. 55', 'ref': '<ref canonical="1906 (6 Edw. 7) c. 41" href="http://www.legislation.gov.uk/id/ukpga/Edw7/6/41" type="legislation">Marine Insurance Act 1906</ref>', 'leg_href': 'http://www.legislation.gov.uk/id/ukpga/Edw7/6/41', 'canonical': '1906 (6 Edw. 7) c. 41'}], 'section 41': [{'para_number': 991, 'section_position': 182, 'section_href': 'http://www.legislation.gov.uk/id/ukpga/Edw7/6/41/section/41', 'section_canonical': '1906 (6 Edw. 7) c. 41 s. 41', 'ref': '<ref canonical="1906 (6 Edw. 7) c. 41" href="http://www.legislation.gov.uk/id/ukpga/Edw7/6/41" type="legislation">Marine Insurance Act 1906</ref>', 'leg_href': 'http://www.legislation.gov.uk/id/ukpga/Edw7/6/41', 'canonical': '1906 (6 Edw. 7) c. 41', 'section_ref': '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/Edw7/6/41/section/41" uk:canonical="1906 (6 Edw. 7) c. 41 s. 41">section 41</ref>'}], 'section 3': [{'para_number': 991, 'section_position': 376, 'section_href': 'http://www.legislation.gov.uk/id/ukpga/Edw7/6/41/section/3', 'section_canonical': '1906 (6 Edw. 7) c. 41 s. 3', 'ref': '<ref canonical="1906 (6 Edw. 7) c. 41" href="http://www.legislation.gov.uk/id/ukpga/Edw7/6/41" type="legislation">the Act</ref>', 'leg_href': 'http://www.legislation.gov.uk/id/ukpga/Edw7/6/41', 'canonical': '1906 (6 Edw. 7) c. 41', 'section_ref': '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/Edw7/6/41/section/3" uk:canonical="1906 (6 Edw. 7) c. 41 s. 3">Section 3</ref>'}]}
+        match = [((170, 180), 'section 41')]
+        para_number = 1005
+        ex_resolved_ref = [{'detected_ref': 'section 41', 'ref_para': 1005, 'ref_position': 170, 'ref_tag': '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/Edw7/6/41/section/41" uk:canonical="1906 (6 Edw. 7) c. 41 s. 41">section 41</ref>'}]
+        resolved_ref = provision_resolver(section_dict, match, para_number)
+
+        assert ex_resolved_ref == resolved_ref
+
+        section_dict = {'section 1': [{'para_number': 202, 'section_position': 950, 'section_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37/section/1', 'section_canonical': '1977 c. 37 s. 1', 'ref': '<ref canonical="1977 c. 37" href="http://www.legislation.gov.uk/id/ukpga/1977/37" type="legislation">Patents Act 1977</ref>', 'leg_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37', 'canonical': '1977 c. 37'}]}
+        match = [((950, 962), 'Section 1(1)')]
+        para_number = 202
+        ex_resolved_ref = [{'detected_ref': 'Section 1(1)', 'ref_para': 202, 'ref_position': 950, 'ref_tag': '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1977/37/section/1/1" uk:canonical="1977 c. 37 s. 1">Section 1(1)</ref>'}]
+        resolved_ref = provision_resolver(section_dict, match, para_number)
+
+        assert ex_resolved_ref == resolved_ref
+
+    def test_multiple_matches_resolver(self):
+        section_dict = {'section 1': [{'para_number': 202, 'section_position': 950, 'section_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37/section/1', 'section_canonical': '1977 c. 37 s. 1', 'ref': '<ref canonical="1977 c. 37" href="http://www.legislation.gov.uk/id/ukpga/1977/37" type="legislation">Patents Act 1977</ref>', 'leg_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37', 'canonical': '1977 c. 37'}, {'para_number': 203, 'section_position': 349, 'section_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37/section/1', 'section_canonical': '1977 c. 37 s. 1', 'ref': '<ref canonical="1977 c. 37" href="http://www.legislation.gov.uk/id/ukpga/1977/37" type="legislation">Patents Act 1977</ref>', 'leg_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37', 'canonical': '1977 c. 37'}], 'section 2': [{'para_number': 205, 'section_position': 404, 'section_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37/section/2', 'section_canonical': '1977 c. 37 s. 2', 'ref': '<ref canonical="1977 c. 37" href="http://www.legislation.gov.uk/id/ukpga/1977/37" type="legislation">Patents Act 1977</ref>', 'leg_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37', 'canonical': '1977 c. 37'}, {'para_number': 205, 'section_position': 654, 'section_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37/section/2', 'section_canonical': '1977 c. 37 s. 2', 'ref': '<ref canonical="1977 c. 37" href="http://www.legislation.gov.uk/id/ukpga/1977/37" type="legislation">the Act</ref>', 'leg_href': 'http://www.legislation.gov.uk/id/ukpga/1977/37', 'canonical': '1977 c. 37'}]}
+        match = [((404, 416), 'Section 2(1)'), ((654, 666), 'Section 2(2)')]
+        para_number = 205
+        ex_resolved_ref = [{'detected_ref': 'Section 2(1)', 'ref_para': 205, 'ref_position': 404, 'ref_tag': '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1977/37/section/2/1" uk:canonical="1977 c. 37 s. 2">Section 2(1)</ref>'}, {'detected_ref': 'Section 2(2)', 'ref_para': 205, 'ref_position': 654, 'ref_tag': '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1977/37/section/2/2" uk:canonical="1977 c. 37 s. 2">Section 2(2)</ref>'}]
+        resolved_ref = provision_resolver(section_dict, match, para_number)
+
+        assert ex_resolved_ref == resolved_ref
 
 if __name__ == '__main__':
     unittest.main()

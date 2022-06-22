@@ -187,6 +187,7 @@ Matches all sections found in the judgment to the correct legislation, and provi
 def provision_resolver(section_dict, matches, para_number):
     resolved_refs = []
 
+
     # for each section found in the paragraph
     for pos, match in matches:
 
@@ -219,6 +220,7 @@ def provision_resolver(section_dict, matches, para_number):
            
             resolved_refs.append(dict(zip(keys, [match, para_number, pos[0], correct_reference['section_ref']])))
             print(f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}")
+
 
     return resolved_refs
 
