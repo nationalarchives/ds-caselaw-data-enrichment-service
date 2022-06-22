@@ -16,6 +16,8 @@ from spacy.matcher import PhraseMatcher, Matcher
 from spaczz.matcher import FuzzyMatcher
 from database.db_connection import get_hrefs, get_canonical_leg
 from collections import namedtuple
+import pandas as pd 
+import numpy as np
 
 keys = ['detected_ref', 'start', 'end', 'confidence', 'ref', 'canonical']
 CUTOFF=90
@@ -80,6 +82,19 @@ def hybrid(title, docobj, nlp, cutoff, candidates=None):
     return all_matches
 
 ######
+def resolveOverlap(results_dict):
+    qq = pd.DataFrame([results_dict])
+    qq = qq.T.explode(0)[0].apply(pd.Series)
+    qq.columns = keys
+    mask = (qq.start.values[:, None] >= qq.start.values) & (
+        qq.end.values[:, None] <= qq.end.values)
+    np.fill_diagonal(mask, 0)
+    r, c = np.where(mask)
+    overlaps = list(map(list, zip(r, c)))
+    for ol in overlaps:
+        ol.remove(qq.reset_index().iloc[list(ol)].confidence.idxmax())
+        qq.drop(qq.index[ol[0]], inplace=True)
+    return qq.apply(tuple, axis=1).groupby(qq.index).apply(list).T.to_dict()
 
 def mergedict(x,b):
     a = {}
@@ -133,7 +148,8 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
         results.append(res)
 
     results = mergedict(results[0], results[1])
-
+    results = resolveOverlap(results)
+    
     results = dict([(k, [dict(zip(keys, j)) for j in v])
                     for k, v in results.items()])    
     refs = [i for j in results.values() for i in j]
