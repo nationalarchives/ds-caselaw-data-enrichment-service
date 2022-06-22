@@ -3,7 +3,7 @@ from numpy import mat
 import sys
 sys.path.append("./")
 from replacer.second_stage_replacer import provision_replacement
-from legislation_provisions_extraction.legislation_provisions import detect_reference
+from legislation_provisions_extraction.legislation_provisions import detect_reference, find_closest_legislation, get_clean_section_number, save_section_to_dict
 
 correct_references = ["section 23 of the <ref uk:type=\"legislation\" href=\"http://www.legislation.gov.uk/id/ukpga/1968/19\" uk:canonical=\"1968 c. 19\">Criminal Appeal Act 1968</ref>, which provides as follows:", 
     "Section 129 of the <ref uk:type=\"legislation\" href=\"http://www.legislation.gov.uk/id/ukpga/1985/68\" uk:canonical=\"1985 c. 68\">Housing Act 1985</ref>", 
@@ -46,7 +46,33 @@ class TestLegislationProvisionProcessor(unittest.TestCase):
         # section 130 should be out of the threshold for the Patents Act 1977
         sec = [((129, 142), 'Section 67(1)'), ((7052, 7066), 'section 130')]
         leg = [((150, 273), '<ref canonical="1977 c. 37" href="http://www.legislation.gov.uk/id/ukpga/1977/37" type="legislation">Patents Act 1977</ref>')]
+        sec_to_leg = find_closest_legislation(sec, leg)
+
+        assert sec_to_leg[0][1] == "Section 67(1)"
+        # assert section 130 not found as being close to the legislation
+        assert len(sec_to_leg) == 1 
+
+        sec = [((129, 142), 'Section 67(1)'), ((752, 766), 'section 130')]
+        leg = [((150, 273), '<ref canonical="1977 c. 37" href="http://www.legislation.gov.uk/id/ukpga/1977/37" type="legislation">Patents Act 1977</ref>'), ((740, 742), '<ref uk:type=\"legislation\" href=\"http://www.legislation.gov.uk/id/ukpga/1985/68\" uk:canonical=\"1985 c. 68\">Housing Act 1985</ref>')]
+        sec_to_leg = find_closest_legislation(sec, leg)
+
+        assert sec_to_leg[0][0] == "<ref canonical=\"1977 c. 37\" href=\"http://www.legislation.gov.uk/id/ukpga/1977/37\" type=\"legislation\">Patents Act 1977</ref>"
+        assert sec_to_leg[0][1] == "Section 67(1)"
+
+        assert sec_to_leg[1][1] == "section 130"
     
+    def test_clean_sec_number(self):
+        sec = "Section 67(1)"
+        clean_sec = get_clean_section_number(sec)
+
+        assert clean_sec == "67"
+
+        sec = "Section 140.2(1)(A)"
+        clean_sec = get_clean_section_number(sec)
+
+        assert clean_sec == "140"
+    
+     
 
 if __name__ == '__main__':
     unittest.main()

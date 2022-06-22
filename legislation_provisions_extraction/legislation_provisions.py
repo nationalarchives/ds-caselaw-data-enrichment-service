@@ -46,8 +46,6 @@ Find the closest legislation to the section. This means that the section is like
 
 
 def find_closest_legislation(legislations, sections, thr=30):
-    print(sections)
-    print(legislations)
    # gets positions of refs
     sec_pos = np.asarray([x[0] for x in sections])
     leg_pos = np.asarray([x[0] for x in legislations])
@@ -80,7 +78,6 @@ Saves the section and the relevant information to the master dictionary of all s
 :param para_number: number of the paragraph in the judgment
 """
 def save_section_to_dict(section_dict, para_number, clean_section_dict):
-
     # for each section found in the paragraph
     for section, full_ref, pos in section_dict:
 
@@ -189,6 +186,7 @@ Matches all sections found in the judgment to the correct legislation, and provi
 """
 def provision_resolver(section_dict, matches, para_number):
     resolved_refs = []
+
     # for each section found in the paragraph
     for pos, match in matches:
 
