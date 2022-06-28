@@ -173,16 +173,16 @@ def verify_match_format(
         start = match[1]
         end = match[2] - 1
 
-        # verify that the match is wrapped in quotes and brackets
-        if not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS): 
-            matcher_output.remove(match)
-
         first_char = str(doc[start+2])
         last_char = str(doc[end-2])
         abbreviation_length = len(last_char)
 
+        # verify that the match is wrapped in quotes and brackets
+        if not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS): 
+            matcher_output.remove(match)
+
         # verify that the start and end of the abbreviation contains upper case
-        if first_char[0].isupper() is not True or last_char[abbreviation_length-1].isupper() is not True: 
+        elif first_char[0].isupper() is not True or last_char[abbreviation_length-1].isupper() is not True: 
             matcher_output.remove(match)
     
     return matcher_output
