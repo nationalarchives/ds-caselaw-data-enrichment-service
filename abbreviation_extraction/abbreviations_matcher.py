@@ -7,8 +7,6 @@ AbbreviationDetector class and the pipeline.
 from collections import namedtuple
 import spacy
 from spacy.language import Language
-import sys 
-sys.path.append("./")
 from abbreviation_extraction.abbreviations import AbbreviationDetector
 
 abb = namedtuple('abb', 'abb_match longform')
