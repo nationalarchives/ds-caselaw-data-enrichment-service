@@ -112,45 +112,45 @@ resource "aws_ecr_repository" "abbreviations" {
   tags = local.tags
 }
 
-resource "aws_ecr_repository" "legislation-provision" {
-  name = "${local.name}-ecr-repository-legislation-provision-${local.environment}"
+# resource "aws_ecr_repository" "legislation-provision" {
+#   name = "${local.name}-ecr-repository-legislation-provision-${local.environment}"
 
-  image_scanning_configuration {
-    scan_on_push = true
-  }
+#   image_scanning_configuration {
+#     scan_on_push = true
+#   }
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
-resource "aws_ecr_repository" "oblique-references" {
-  name                 = "${local.name}-ecr-repository-oblique-references-${local.environment}"
+# resource "aws_ecr_repository" "oblique-references" {
+#   name                 = "${local.name}-ecr-repository-oblique-references-${local.environment}"
 
-  image_scanning_configuration {
-    scan_on_push = true
-  }
+#   image_scanning_configuration {
+#     scan_on_push = true
+#   }
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
-resource "aws_ecr_repository" "legislation-update" {
-  name                 = "${local.name}-ecr-repository-legislation-update-${local.environment}"
+# resource "aws_ecr_repository" "legislation-update" {
+#   name                 = "${local.name}-ecr-repository-legislation-update-${local.environment}"
 
-  image_scanning_configuration {
-    scan_on_push = true
-  }
+#   image_scanning_configuration {
+#     scan_on_push = true
+#   }
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
-resource "aws_ecr_repository" "rules-update" {
-  name                 = "${local.name}-ecr-repository-rules-update-${local.environment}"
+# resource "aws_ecr_repository" "rules-update" {
+#   name                 = "${local.name}-ecr-repository-rules-update-${local.environment}"
 
-  image_scanning_configuration {
-    scan_on_push = true
-  }
+#   image_scanning_configuration {
+#     scan_on_push = true
+#   }
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
 resource "random_pet" "this" {
   length = 2
@@ -516,190 +516,190 @@ module "lambda-determine-replacements-abbreviations" {
   tags = local.tags
 }
 
-module "lambda-determine-legislation-provisions" {
-  source  = "terraform-aws-modules/lambda/aws"
-  version = ">=2.0.0,<3.0.0"
+# module "lambda-determine-legislation-provisions" {
+#   source  = "terraform-aws-modules/lambda/aws"
+#   version = ">=2.0.0,<3.0.0"
 
-  function_name = "${local.name}-${local.environment}-determine-legislation-provisions"
-  package_type  = "Image"
-  create_package = false
+#   function_name = "${local.name}-${local.environment}-determine-legislation-provisions"
+#   package_type  = "Image"
+#   create_package = false
 
-  handler = "index.handler"
+#   handler = "index.handler"
 
-  image_uri     = "${aws_ecr_repository.legislation-provision.repository_url}:${var.container_image_tag}"
+#   image_uri     = "${aws_ecr_repository.legislation-provision.repository_url}:${var.container_image_tag}"
 
-  create_current_version_allowed_triggers = false # !var.use_container_image
+#   create_current_version_allowed_triggers = false # !var.use_container_image
 
-  timeout     = 900
-  memory_size = 5120 
+#   timeout     = 900
+#   memory_size = 5120 
 
-  attach_policy_statements = true
-  policy_statements = {
-    s3_read = {
-      effect = "Allow",
-      actions = [
-        "s3:HeadObject",
-        "s3:GetObject",
-        "s3:GetObjectVersion"
-      ],
-      resources = ["${module.xml_second_phase_enriched_bucket.s3_bucket_arn}/*"]
-    },
-    s3_put = {
-      effect    = "Allow",
-      actions   = ["s3:PutObject", "s3:PutObjectAcl"],
-      resources = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}/*"]
-    },
-    kms_get_key = {
-      effect = "Allow",
-      actions = [
-        "kms:Encrypt",
-        "kms:DescribeKey",
-        "kms:GenerateDataKey",
-        "kms:Decrypt",
-        "kms:ReEncryptTo"
-      ],
-      resources = [module.xml_second_phase_enriched_bucket.kms_key_arn, module.xml_third_phase_enriched_bucket.kms_key_arn]
-    },
-    log_lambda = {
-      effect = "Allow",
-      actions = [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      resources = ["*"]
-    }
-  }
+#   attach_policy_statements = true
+#   policy_statements = {
+#     s3_read = {
+#       effect = "Allow",
+#       actions = [
+#         "s3:HeadObject",
+#         "s3:GetObject",
+#         "s3:GetObjectVersion"
+#       ],
+#       resources = ["${module.xml_second_phase_enriched_bucket.s3_bucket_arn}/*"]
+#     },
+#     s3_put = {
+#       effect    = "Allow",
+#       actions   = ["s3:PutObject", "s3:PutObjectAcl"],
+#       resources = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}/*"]
+#     },
+#     kms_get_key = {
+#       effect = "Allow",
+#       actions = [
+#         "kms:Encrypt",
+#         "kms:DescribeKey",
+#         "kms:GenerateDataKey",
+#         "kms:Decrypt",
+#         "kms:ReEncryptTo"
+#       ],
+#       resources = [module.xml_second_phase_enriched_bucket.kms_key_arn, module.xml_third_phase_enriched_bucket.kms_key_arn]
+#     },
+#     log_lambda = {
+#       effect = "Allow",
+#       actions = [
+#         "logs:CreateLogGroup",
+#         "logs:CreateLogStream",
+#         "logs:PutLogEvents"
+#       ],
+#       resources = ["*"]
+#     }
+#   }
 
-  attach_policies    = true
-  number_of_policies = 2
-  policies = [
-    "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-    "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
-  ]
+#   attach_policies    = true
+#   number_of_policies = 2
+#   policies = [
+#     "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+#     "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+#   ]
 
-  assume_role_policy_statements = {
-    account_root = {
-      effect  = "Allow",
-      actions = ["sts:AssumeRole"],
-      principals = {
-        account_principal = {
-          type        = "Service",
-          identifiers = ["lambda.amazonaws.com"]
-        }
-      }
-    }
-  }
+#   assume_role_policy_statements = {
+#     account_root = {
+#       effect  = "Allow",
+#       actions = ["sts:AssumeRole"],
+#       principals = {
+#         account_principal = {
+#           type        = "Service",
+#           identifiers = ["lambda.amazonaws.com"]
+#         }
+#       }
+#     }
+#   }
 
-  allowed_triggers = {
-    S3BucketUpload = {
-      service    = "s3"
-      principal  = "s3.amazonaws.com"
-      source_arn = "${module.xml_second_phase_enriched_bucket.s3_bucket_arn}"
-    }
-  }
+#   allowed_triggers = {
+#     S3BucketUpload = {
+#       service    = "s3"
+#       principal  = "s3.amazonaws.com"
+#       source_arn = "${module.xml_second_phase_enriched_bucket.s3_bucket_arn}"
+#     }
+#   }
 
-  vpc_security_group_ids = [var.default_security_group_id]
-  vpc_subnet_ids = var.aws_subnets_private_ids
+#   vpc_security_group_ids = [var.default_security_group_id]
+#   vpc_subnet_ids = var.aws_subnets_private_ids
 
-  environment_variables = {
-    DEST_BUCKET = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
-  }
+#   environment_variables = {
+#     DEST_BUCKET = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
+#   }
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
-module "lambda-determine-oblique-references" {
-  source  = "terraform-aws-modules/lambda/aws"
-  version = ">=2.0.0,<3.0.0"
+# module "lambda-determine-oblique-references" {
+#   source  = "terraform-aws-modules/lambda/aws"
+#   version = ">=2.0.0,<3.0.0"
 
-  function_name = "${local.name}-${local.environment}-determine-oblique-references"
-  package_type  = "Image"
-  create_package = false
+#   function_name = "${local.name}-${local.environment}-determine-oblique-references"
+#   package_type  = "Image"
+#   create_package = false
 
-  handler = "index.handler"
-  image_uri     = "${aws_ecr_repository.oblique-references.repository_url}:${var.container_image_tag}"
+#   handler = "index.handler"
+#   image_uri     = "${aws_ecr_repository.oblique-references.repository_url}:${var.container_image_tag}"
 
-  create_current_version_allowed_triggers = false # !var.use_container_image
+#   create_current_version_allowed_triggers = false # !var.use_container_image
 
-  timeout     = 900
-  memory_size = 5120 
+#   timeout     = 900
+#   memory_size = 5120 
 
-  attach_policy_statements = true
-  policy_statements = {
-    s3_read = {
-      effect = "Allow",
-      actions = [
-        "s3:HeadObject",
-        "s3:GetObject",
-        "s3:GetObjectVersion"
-      ],
-      resources = ["${module.xml_enriched_bucket.s3_bucket_arn}/*"]
-    },
-    s3_put = {
-      effect    = "Allow",
-      actions   = ["s3:PutObject", "s3:PutObjectAcl"],
-      resources = ["${module.xml_second_phase_enriched_bucket.s3_bucket_arn}/*"]
-    },
-    kms_get_key = {
-      effect = "Allow",
-      actions = [
-        "kms:Encrypt",
-        "kms:DescribeKey",
-        "kms:GenerateDataKey",
-        "kms:Decrypt",
-        "kms:ReEncryptTo"
-      ],
-      resources = [module.xml_enriched_bucket.kms_key_arn, module.xml_second_phase_enriched_bucket.kms_key_arn]
-    },
-    log_lambda = {
-      effect = "Allow",
-      actions = [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      resources = ["*"]
-    }
-  }
+#   attach_policy_statements = true
+#   policy_statements = {
+#     s3_read = {
+#       effect = "Allow",
+#       actions = [
+#         "s3:HeadObject",
+#         "s3:GetObject",
+#         "s3:GetObjectVersion"
+#       ],
+#       resources = ["${module.xml_enriched_bucket.s3_bucket_arn}/*"]
+#     },
+#     s3_put = {
+#       effect    = "Allow",
+#       actions   = ["s3:PutObject", "s3:PutObjectAcl"],
+#       resources = ["${module.xml_second_phase_enriched_bucket.s3_bucket_arn}/*"]
+#     },
+#     kms_get_key = {
+#       effect = "Allow",
+#       actions = [
+#         "kms:Encrypt",
+#         "kms:DescribeKey",
+#         "kms:GenerateDataKey",
+#         "kms:Decrypt",
+#         "kms:ReEncryptTo"
+#       ],
+#       resources = [module.xml_enriched_bucket.kms_key_arn, module.xml_second_phase_enriched_bucket.kms_key_arn]
+#     },
+#     log_lambda = {
+#       effect = "Allow",
+#       actions = [
+#         "logs:CreateLogGroup",
+#         "logs:CreateLogStream",
+#         "logs:PutLogEvents"
+#       ],
+#       resources = ["*"]
+#     }
+#   }
 
-  attach_policies    = true
-  number_of_policies = 2
-  policies = [
-    "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-    "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
-  ]
+#   attach_policies    = true
+#   number_of_policies = 2
+#   policies = [
+#     "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+#     "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+#   ]
 
-  assume_role_policy_statements = {
-    account_root = {
-      effect  = "Allow",
-      actions = ["sts:AssumeRole"],
-      principals = {
-        account_principal = {
-          type        = "Service",
-          identifiers = ["lambda.amazonaws.com"]
-        }
-      }
-    }
-  }
+#   assume_role_policy_statements = {
+#     account_root = {
+#       effect  = "Allow",
+#       actions = ["sts:AssumeRole"],
+#       principals = {
+#         account_principal = {
+#           type        = "Service",
+#           identifiers = ["lambda.amazonaws.com"]
+#         }
+#       }
+#     }
+#   }
 
-  allowed_triggers = {
-    S3BucketUpload = {
-      service    = "s3"
-      principal  = "s3.amazonaws.com"
-      source_arn = "${module.xml_enriched_bucket.s3_bucket_arn}"
-    }
-  }
+#   allowed_triggers = {
+#     S3BucketUpload = {
+#       service    = "s3"
+#       principal  = "s3.amazonaws.com"
+#       source_arn = "${module.xml_enriched_bucket.s3_bucket_arn}"
+#     }
+#   }
 
-  vpc_security_group_ids = [var.default_security_group_id]
-  vpc_subnet_ids = var.aws_subnets_private_ids
+#   vpc_security_group_ids = [var.default_security_group_id]
+#   vpc_subnet_ids = var.aws_subnets_private_ids
 
-  environment_variables = {
-    DEST_BUCKET = "${module.xml_second_phase_enriched_bucket.s3_bucket_id}"
-  }
+#   environment_variables = {
+#     DEST_BUCKET = "${module.xml_second_phase_enriched_bucket.s3_bucket_id}"
+#   }
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
 module "lambda-make-replacements" {
   source  = "terraform-aws-modules/lambda/aws"
@@ -837,199 +837,199 @@ resource "aws_s3_bucket_notification" "rules_bucket_notification" {
   }
 }
 
-module "lambda-update-legislation-table" {
-  source  = "terraform-aws-modules/lambda/aws"
-  version = ">=2.0.0,<3.0.0"
+# module "lambda-update-legislation-table" {
+#   source  = "terraform-aws-modules/lambda/aws"
+#   version = ">=2.0.0,<3.0.0"
 
-  # Lambda function declaration
-  function_name = "${local.name}-${local.environment}-update-legislation-table"
-  package_type  = var.use_container_image == true ? "Image" : "Zip"
+#   # Lambda function declaration
+#   function_name = "${local.name}-${local.environment}-update-legislation-table"
+#   package_type  = var.use_container_image == true ? "Image" : "Zip"
 
-  runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
+#   runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
-  # Deploy as code
-  handler = "index.handler"
+#   # Deploy as code
+#   handler = "index.handler"
   
-  source_path = "${var.lambda_source_path}update_legislation_table"
+#   source_path = "${var.lambda_source_path}update_legislation_table"
 
-  create_current_version_allowed_triggers = false # !var.use_container_image
+#   create_current_version_allowed_triggers = false # !var.use_container_image
 
-  timeout     = 60
-  memory_size = 512
+#   timeout     = 60
+#   memory_size = 512
 
-  attach_policies    = true
-  number_of_policies = 2
-  policies = [
-    "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-    "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
-  ]
+#   attach_policies    = true
+#   number_of_policies = 2
+#   policies = [
+#     "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+#     "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+#   ]
 
-  attach_policy_statements = true
-  policy_statements = {
-    secrets_get = {
-      effect = "Allow",
-      actions = [
-        "secretsmanager:GetResourcePolicy",
-        "secretsmanager:GetSecretValue",
-        "secretsmanager:DescribeSecret",
-        "secretsmanager:ListSecretVersionIds"
-      ],
-      resources = ["${var.postgress_master_password_secret_id}"] 
-    }
-  }
+#   attach_policy_statements = true
+#   policy_statements = {
+#     secrets_get = {
+#       effect = "Allow",
+#       actions = [
+#         "secretsmanager:GetResourcePolicy",
+#         "secretsmanager:GetSecretValue",
+#         "secretsmanager:DescribeSecret",
+#         "secretsmanager:ListSecretVersionIds"
+#       ],
+#       resources = ["${var.postgress_master_password_secret_id}"] 
+#     }
+#   }
 
-  assume_role_policy_statements = {
-    account_root = {
-      effect  = "Allow",
-      actions = ["sts:AssumeRole"],
-      principals = {
-        account_principal = {
-          type        = "Service",
-          identifiers = ["lambda.amazonaws.com"]
-        }
-      }
-    }
-  }
+#   assume_role_policy_statements = {
+#     account_root = {
+#       effect  = "Allow",
+#       actions = ["sts:AssumeRole"],
+#       principals = {
+#         account_principal = {
+#           type        = "Service",
+#           identifiers = ["lambda.amazonaws.com"]
+#         }
+#       }
+#     }
+#   }
 
-  vpc_security_group_ids = [var.default_security_group_id]
+#   vpc_security_group_ids = [var.default_security_group_id]
 
-  vpc_subnet_ids = var.aws_subnets_private_ids
+#   vpc_subnet_ids = var.aws_subnets_private_ids
 
-  environment_variables = {
-    DATABASE_NAME = "rules"
-    TABLE_NAME = "rules"
-    USERNAME = "root"
-    PORT = "5432"
-    SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
-    REGION_NAME = "${local.region}"
-    HOSTNAME = "${var.postgress_hostname}"
-    # SPARQL_USERNAME = "${var.sparql_username}"
-    # SPARQL_PASSWORD = "${var.sparql_password}"
-    SPARQL_USERNAME = "Editha.Nemsic@Mishcon.com"
-    SPARQL_PASSWORD = "unscathed-enviably-irk-695"
-  }
+#   environment_variables = {
+#     DATABASE_NAME = "rules"
+#     TABLE_NAME = "rules"
+#     USERNAME = "root"
+#     PORT = "5432"
+#     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
+#     REGION_NAME = "${local.region}"
+#     HOSTNAME = "${var.postgress_hostname}"
+#     # SPARQL_USERNAME = "${var.sparql_username}"
+#     # SPARQL_PASSWORD = "${var.sparql_password}"
+#     SPARQL_USERNAME = "Editha.Nemsic@Mishcon.com"
+#     SPARQL_PASSWORD = "unscathed-enviably-irk-695"
+#   }
   
-  tags = local.tags
+#   tags = local.tags
 
-}
+# }
 
-module "lambda-update-rules-processor" {
-  source  = "terraform-aws-modules/lambda/aws"
-  version = ">=2.0.0,<3.0.0"
+# module "lambda-update-rules-processor" {
+#   source  = "terraform-aws-modules/lambda/aws"
+#   version = ">=2.0.0,<3.0.0"
 
-  # Lambda function declaration
-  function_name = "${local.name}-${local.environment}-update-rules-processor"
+#   # Lambda function declaration
+#   function_name = "${local.name}-${local.environment}-update-rules-processor"
   
-  package_type  = "Image" 
-  create_package = false
+#   package_type  = "Image" 
+#   create_package = false
 
-  runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
+#   runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
-  image_uri     = "${aws_ecr_repository.rules-update.repository_url}:${var.container_image_tag}"
+#   image_uri     = "${aws_ecr_repository.rules-update.repository_url}:${var.container_image_tag}"
 
-  # Deploy as code
-  handler = "index.handler"
+#   # Deploy as code
+#   handler = "index.handler"
   
-  source_path = "${var.lambda_source_path}update_rules_processor"
+#   source_path = "${var.lambda_source_path}update_rules_processor"
 
-  create_current_version_allowed_triggers = false # !var.use_container_image
+#   create_current_version_allowed_triggers = false # !var.use_container_image
 
-  timeout     = 60
-  memory_size = 512
+#   timeout     = 60
+#   memory_size = 512
 
-  attach_policies    = true
-  number_of_policies = 2
-  policies = [
-    "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-    "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
-  ]
+#   attach_policies    = true
+#   number_of_policies = 2
+#   policies = [
+#     "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+#     "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+#   ]
 
-  attach_policy_statements = true
-  policy_statements = {
-    s3_read = {
-      effect = "Allow",
-      actions = [
-        "s3:HeadObject",
-        "s3:GetObject",
-        "s3:GetObjectVersion"
-      ],
-      resources = ["${module.rules_bucket.s3_bucket_arn}/*"]
-    },
-    s3_put = {
-      effect    = "Allow",
-      actions   = ["s3:PutObject", "s3:PutObjectAcl"],
-      resources = ["${module.rules_bucket.s3_bucket_arn}/*"]
-    },
-    kms_get_key = {
-      effect = "Allow",
-      actions = [
-        "kms:Encrypt",
-        "kms:DescribeKey",
-        "kms:GenerateDataKey",
-        "kms:Decrypt",
-        "kms:ReEncryptTo"
-      ],
-      resources = [module.rules_bucket.kms_key_arn]
-    },
-    secrets_get = {
-      effect = "Allow",
-      actions = [
-        "secretsmanager:GetResourcePolicy",
-        "secretsmanager:GetSecretValue",
-        "secretsmanager:DescribeSecret",
-        "secretsmanager:ListSecretVersionIds"
-      ],
-      resources = ["${var.postgress_master_password_secret_id}"] 
-    },
-    log_lambda = {
-      effect = "Allow",
-      actions = [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      resources = ["*"]
-    }
-  }
+#   attach_policy_statements = true
+#   policy_statements = {
+#     s3_read = {
+#       effect = "Allow",
+#       actions = [
+#         "s3:HeadObject",
+#         "s3:GetObject",
+#         "s3:GetObjectVersion"
+#       ],
+#       resources = ["${module.rules_bucket.s3_bucket_arn}/*"]
+#     },
+#     s3_put = {
+#       effect    = "Allow",
+#       actions   = ["s3:PutObject", "s3:PutObjectAcl"],
+#       resources = ["${module.rules_bucket.s3_bucket_arn}/*"]
+#     },
+#     kms_get_key = {
+#       effect = "Allow",
+#       actions = [
+#         "kms:Encrypt",
+#         "kms:DescribeKey",
+#         "kms:GenerateDataKey",
+#         "kms:Decrypt",
+#         "kms:ReEncryptTo"
+#       ],
+#       resources = [module.rules_bucket.kms_key_arn]
+#     },
+#     secrets_get = {
+#       effect = "Allow",
+#       actions = [
+#         "secretsmanager:GetResourcePolicy",
+#         "secretsmanager:GetSecretValue",
+#         "secretsmanager:DescribeSecret",
+#         "secretsmanager:ListSecretVersionIds"
+#       ],
+#       resources = ["${var.postgress_master_password_secret_id}"] 
+#     },
+#     log_lambda = {
+#       effect = "Allow",
+#       actions = [
+#         "logs:CreateLogGroup",
+#         "logs:CreateLogStream",
+#         "logs:PutLogEvents"
+#       ],
+#       resources = ["*"]
+#     }
+#   }
 
-  allowed_triggers = {
-    S3BucketUpload = {
-      service    = "s3"
-      principal  = "s3.amazonaws.com"
-      source_arn = "${module.rules_bucket.s3_bucket_arn}"
-    }
-  }
+#   allowed_triggers = {
+#     S3BucketUpload = {
+#       service    = "s3"
+#       principal  = "s3.amazonaws.com"
+#       source_arn = "${module.rules_bucket.s3_bucket_arn}"
+#     }
+#   }
 
-  assume_role_policy_statements = {
-    account_root = {
-      effect  = "Allow",
-      actions = ["sts:AssumeRole"],
-      principals = {
-        account_principal = {
-          type        = "Service",
-          identifiers = ["lambda.amazonaws.com"]
-        }
-      }
-    }
-  }
+#   assume_role_policy_statements = {
+#     account_root = {
+#       effect  = "Allow",
+#       actions = ["sts:AssumeRole"],
+#       principals = {
+#         account_principal = {
+#           type        = "Service",
+#           identifiers = ["lambda.amazonaws.com"]
+#         }
+#       }
+#     }
+#   }
 
-  vpc_security_group_ids = [var.default_security_group_id]
+#   vpc_security_group_ids = [var.default_security_group_id]
 
-  vpc_subnet_ids = var.aws_subnets_private_ids
+#   vpc_subnet_ids = var.aws_subnets_private_ids
 
-  environment_variables = {
-    DATABASE_NAME = "rules"
-    TABLE_NAME = "rules"
-    USERNAME = "root"
-    PORT = "5432"
-    SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
-    REGION_NAME = "${local.region}"
-    HOSTNAME = "${var.postgress_hostname}"
-  }
+#   environment_variables = {
+#     DATABASE_NAME = "rules"
+#     TABLE_NAME = "rules"
+#     USERNAME = "root"
+#     PORT = "5432"
+#     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
+#     REGION_NAME = "${local.region}"
+#     HOSTNAME = "${var.postgress_hostname}"
+#   }
   
-  tags = local.tags
+#   tags = local.tags
 
-}
+# }
 
 module "lambda-validate-replacements" {
   source  = "terraform-aws-modules/lambda/aws"
