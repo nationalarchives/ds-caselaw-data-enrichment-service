@@ -141,49 +141,49 @@ jobs:
           echo "tagged abbreviations"
           docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ env.REPO_SUFFIX }}:latest
 
-          # cd ../../lambda/update_legislation_table
+          # # cd ../../lambda/update_legislation_table
+          # # # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+          # # # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
+          # # # echo "logged in legislation update"
+          # # docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }} .
+          # # echo "built legislation update"
+          # # docker images --filter reference=tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }}
+          # # docker tag tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }}:latest
+          # # echo "tagged legislation update"
+          # # docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }}:latest
+
+          # cd ../../lambda/update_rules_processor
           # # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
           # # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
-          # # echo "logged in legislation update"
-          # docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }} .
-          # echo "built legislation update"
-          # docker images --filter reference=tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }}
-          # docker tag tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }}:latest
-          # echo "tagged legislation update"
-          # docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ env.REPO_SUFFIX }}:latest
-
-          cd ../../lambda/update_rules_processor
-          # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
-          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
-          # echo "logged in rules update"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }} .
-          echo "built rules update"
-          docker images --filter reference=tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}
-          docker tag tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}:latest
-          echo "tagged rules update"
-          docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}:latest
+          # # echo "logged in rules update"
+          # docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }} .
+          # echo "built rules update"
+          # docker images --filter reference=tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}
+          # docker tag tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}:latest
+          # echo "tagged rules update"
+          # docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}:latest
           
-          cd ../../lambda/determine_legislation_provisions
-          # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
-          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
-          # echo "logged in legislation provision"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }} .
-          echo "built legislation provision"
-          docker images --filter reference=tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}
-          docker tag tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}:latest
-          echo "tagged legislation provision"
-          docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}:latest
+          # cd ../../lambda/determine_legislation_provisions
+          # # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+          # # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
+          # # echo "logged in legislation provision"
+          # docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }} .
+          # echo "built legislation provision"
+          # docker images --filter reference=tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}
+          # docker tag tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}:latest
+          # echo "tagged legislation provision"
+          # docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}:latest
           
-          cd ../../lambda/determine_oblique_references
-          # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
-          # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
-          # echo "logged in oblique references"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }} .
-          echo "built oblique references"
-          docker images --filter reference=tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}
-          docker tag tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest
-          echo "tagged oblique references"
-          docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest
+          # cd ../../lambda/determine_oblique_references
+          # # sudo AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+          # # aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}:latest
+          # # echo "logged in oblique references"
+          # docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }} .
+          # echo "built oblique references"
+          # docker images --filter reference=tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}
+          # docker tag tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest
+          # echo "tagged oblique references"
+          # docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest
 
   terraform:
     name: "Terraform"
