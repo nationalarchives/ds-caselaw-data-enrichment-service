@@ -799,43 +799,43 @@ resource "aws_s3_bucket_notification" "text_content_bucket_notification" {
 }
 
 
-resource "aws_s3_bucket_notification" "xml_enriched_bucket_notification" {
-  bucket = module.xml_enriched_bucket.s3_bucket_id
+# resource "aws_s3_bucket_notification" "xml_enriched_bucket_notification" {
+#   bucket = module.xml_enriched_bucket.s3_bucket_id
 
-  lambda_function {
-    lambda_function_arn = module.lambda-determine-oblique-references.lambda_function_arn
-    events              = ["s3:ObjectCreated:*"]
-  }
-}
+#   lambda_function {
+#     lambda_function_arn = module.lambda-determine-oblique-references.lambda_function_arn
+#     events              = ["s3:ObjectCreated:*"]
+#   }
+# }
 
-resource "aws_s3_bucket_notification" "xml_second_phase_enriched_bucket_notification" {
-  bucket = module.xml_second_phase_enriched_bucket.s3_bucket_id
+# resource "aws_s3_bucket_notification" "xml_second_phase_enriched_bucket_notification" {
+#   bucket = module.xml_second_phase_enriched_bucket.s3_bucket_id
 
-  lambda_function {
-    lambda_function_arn = module.lambda-determine-legislation-provisions.lambda_function_arn
-    events              = ["s3:ObjectCreated:*"]
-  }
-}
+#   lambda_function {
+#     lambda_function_arn = module.lambda-determine-legislation-provisions.lambda_function_arn
+#     events              = ["s3:ObjectCreated:*"]
+#   }
+# }
 
 
-resource "aws_s3_bucket_notification" "xml_third_phase_enriched_bucket_notification" {
-  bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
+# resource "aws_s3_bucket_notification" "xml_third_phase_enriched_bucket_notification" {
+#   bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
 
-  lambda_function {
-    lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn
-    events              = ["s3:ObjectCreated:*"]
-  }
-}
+#   lambda_function {
+#     lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn
+#     events              = ["s3:ObjectCreated:*"]
+#   }
+# }
 
-resource "aws_s3_bucket_notification" "rules_bucket_notification" {
-  bucket = module.rules_bucket.s3_bucket_id
+# resource "aws_s3_bucket_notification" "rules_bucket_notification" {
+#   bucket = module.rules_bucket.s3_bucket_id
 
-  lambda_function {
-    lambda_function_arn = module.lambda-update-rules-processor.lambda_function_arn
-    events              = ["s3:ObjectCreated:*"]
-    filter_suffix       = ".csv"
-  }
-}
+#   lambda_function {
+#     lambda_function_arn = module.lambda-update-rules-processor.lambda_function_arn
+#     events              = ["s3:ObjectCreated:*"]
+#     filter_suffix       = ".csv"
+#   }
+# }
 
 # module "lambda-update-legislation-table" {
 #   source  = "terraform-aws-modules/lambda/aws"
@@ -1136,22 +1136,22 @@ module "lambda-validate-replacements" {
 
 }
 
-resource "aws_cloudwatch_event_rule" "update_legislation_table_lambda_event_rule" {
-  name = "update-legislation-table-lambda-event-rule"
-  description = "retry scheduled every 1 week"
-  schedule_expression = "rate(7 days)"
-}
+# resource "aws_cloudwatch_event_rule" "update_legislation_table_lambda_event_rule" {
+#   name = "update-legislation-table-lambda-event-rule"
+#   description = "retry scheduled every 1 week"
+#   schedule_expression = "rate(7 days)"
+# }
 
-resource "aws_cloudwatch_event_target" "update_legislation_table_lambda_target" {
-  arn = module.lambda-update-legislation-table.lambda_function_arn
-  rule = aws_cloudwatch_event_rule.update_legislation_table_lambda_event_rule.name
-  input = "{\"trigger_date\": 7}"
-}
+# resource "aws_cloudwatch_event_target" "update_legislation_table_lambda_target" {
+#   arn = module.lambda-update-legislation-table.lambda_function_arn
+#   rule = aws_cloudwatch_event_rule.update_legislation_table_lambda_event_rule.name
+#   input = "{\"trigger_date\": 7}"
+# }
 
-resource "aws_lambda_permission" "allow_cloudwatch_to_call_rw_fallout_retry_step_deletion_lambda" {
-  statement_id = "AllowExecutionFromCloudWatch"
-  action = "lambda:InvokeFunction"
-  function_name = module.lambda-update-legislation-table.lambda_function_name
-  principal = "events.amazonaws.com"
-  source_arn = aws_cloudwatch_event_rule.update_legislation_table_lambda_event_rule.arn
-}
+# resource "aws_lambda_permission" "allow_cloudwatch_to_call_rw_fallout_retry_step_deletion_lambda" {
+#   statement_id = "AllowExecutionFromCloudWatch"
+#   action = "lambda:InvokeFunction"
+#   function_name = module.lambda-update-legislation-table.lambda_function_name
+#   principal = "events.amazonaws.com"
+#   source_arn = aws_cloudwatch_event_rule.update_legislation_table_lambda_event_rule.arn
+# }
