@@ -965,13 +965,13 @@ resource "aws_s3_bucket_notification" "xml_enriched_bucket_notification" {
 #   policy_arn = "${data.aws_iam_policy.LambdaVPCAccess.arn}"
 # }
 
-module "lambda-read-rules" {
+module "lambda-update-legislation-table" {
   source  = "terraform-aws-modules/lambda/aws"
   version = ">=2.0.0,<3.0.0"
 
 # Lambda function declaration
 # resource "aws_lambda_function" "lambda-read-rules" {
-  function_name = "${local.name}-${local.environment}-read-rules"
+  function_name = "${local.name}-${local.environment}-update-legislation-table"
   package_type  = var.use_container_image == true ? "Image" : "Zip"
 
   # build_in_docker   = true
@@ -990,12 +990,12 @@ module "lambda-read-rules" {
   # handler     = var.lambda_handler
   handler = "index.handler"
   # runtime     = var.runtime
-  source_path = "${var.lambda_source_path}read_rules"
+  source_path = "${var.lambda_source_path}update_legislation_table"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
 
   timeout     = 60
-  memory_size = var.memory_size
+  memory_size = 512
 
   # vpc_config {
   #   subnet_ids = ["${split(",", var.subnet_ids)}"]
@@ -1072,15 +1072,15 @@ module "lambda-read-rules" {
   vpc_subnet_ids = var.aws_subnets_private_ids
 
   environment_variables = {
-    # DB_SECRETS_ARN = "${resource.aws_secretsmanager_secret.postgress_master_password.arn}"
     DATABASE_NAME = "rules"
-    # TABLE_NAME = "manifest"
     TABLE_NAME = "rules"
     USERNAME = "root"
     PORT = "5432"
     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME = "${local.region}"
     HOSTNAME = "${var.postgress_hostname}"
+    SPARQL_USERNAME = "Editha.Nemsic@Mishcon.com"
+    SPARQL_PASSWORD = "unscathed-enviably-irk-695"
   }
   
   tags = local.tags
