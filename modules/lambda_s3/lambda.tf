@@ -112,45 +112,45 @@ resource "aws_ecr_repository" "abbreviations" {
   tags = local.tags
 }
 
-# resource "aws_ecr_repository" "legislation-provision" {
-#   name = "${local.name}-ecr-repository-legislation-provision-${local.environment}"
+resource "aws_ecr_repository" "legislation-provision" {
+  name = "${local.name}-ecr-repository-legislation-provision-${local.environment}"
 
-#   image_scanning_configuration {
-#     scan_on_push = true
-#   }
+  image_scanning_configuration {
+    scan_on_push = true
+  }
 
-#   tags = local.tags
-# }
+  tags = local.tags
+}
 
-# resource "aws_ecr_repository" "oblique-references" {
-#   name                 = "${local.name}-ecr-repository-oblique-references-${local.environment}"
+resource "aws_ecr_repository" "oblique-references" {
+  name                 = "${local.name}-ecr-repository-oblique-references-${local.environment}"
 
-#   image_scanning_configuration {
-#     scan_on_push = true
-#   }
+  image_scanning_configuration {
+    scan_on_push = true
+  }
 
-#   tags = local.tags
-# }
+  tags = local.tags
+}
 
-# resource "aws_ecr_repository" "legislation-update" {
-#   name                 = "${local.name}-ecr-repository-legislation-update-${local.environment}"
+resource "aws_ecr_repository" "legislation-update" {
+  name                 = "${local.name}-ecr-repository-legislation-update-${local.environment}"
 
-#   image_scanning_configuration {
-#     scan_on_push = true
-#   }
+  image_scanning_configuration {
+    scan_on_push = true
+  }
 
-#   tags = local.tags
-# }
+  tags = local.tags
+}
 
-# resource "aws_ecr_repository" "rules-update" {
-#   name                 = "${local.name}-ecr-repository-rules-update-${local.environment}"
+resource "aws_ecr_repository" "rules-update" {
+  name                 = "${local.name}-ecr-repository-rules-update-${local.environment}"
 
-#   image_scanning_configuration {
-#     scan_on_push = true
-#   }
+  image_scanning_configuration {
+    scan_on_push = true
+  }
 
-#   tags = local.tags
-# }
+  tags = local.tags
+}
 
 resource "random_pet" "this" {
   length = 2
