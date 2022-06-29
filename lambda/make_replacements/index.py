@@ -5,6 +5,7 @@ import json
 import urllib.parse
 import os
 import boto3
+import re
 
 LOGGER = logging.getLogger()
 # LOGGER.setLevel(logging.INFO)
@@ -77,6 +78,9 @@ def process_event(sqs_rec):
 
     file_content = s3_client.get_object(
                 Bucket=SOURCE_BUCKET, Key=filename)["Body"].read().decode('utf-8')
+
+    # split file_content into header and judgment to ensure replacements only occur in judgment body
+    judgment_split = re.split('(</header>)',  file_content)
     
     LOGGER.info("got original xml file_content")
     LOGGER.info(REPLACEMENTS_BUCKET)
@@ -86,9 +90,13 @@ def process_event(sqs_rec):
     LOGGER.info("got replacement file_content")
 
     # extract the judgement contents
-    replaced_text_content = replace_text_content(file_content, replacement_file_content)
+    replaced_text_content = replace_text_content(judgment_split[2], replacement_file_content)
     LOGGER.info("got replacement text_content")
-    upload_contents(filename, replaced_text_content)
+
+    # combine header with replaced text content before uploading to enriched bucket
+    judgment_split[2] = replaced_text_content
+    full_replaced_text_content = ''.join(judgment_split)
+    upload_contents(filename, full_replaced_text_content)
 
 def replace_text_content(file_content, replacements_content):
     # TODO split replacement
