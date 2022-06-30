@@ -49,17 +49,17 @@ jobs:
           cp -r abbreviation_extraction/*.* lambda/determine_replacements_abbreviations/abbreviation_extraction/
           cp abbreviation_extraction/requirements.txt lambda/determine_replacements_abbreviations/
 
-          # mkdir lambda/determine_legislation_provisions/legislation_provisions_extraction
-          # cp -r legislation_provisions_extraction/*.* lambda/determine_legislation_provisions/legislation_provisions_extraction/
-          # cp legislation_provisions_extraction/requirements.txt lambda/determine_legislation_provisions/
-          # mkdir lambda/determine_legislation_provisions/replacer
-          # cp -r replacer/*.py lambda/determine_legislation_provisions/replacer/
+          mkdir lambda/determine_legislation_provisions/legislation_provisions_extraction
+          cp -r legislation_provisions_extraction/*.* lambda/determine_legislation_provisions/legislation_provisions_extraction/
+          cp legislation_provisions_extraction/requirements.txt lambda/determine_legislation_provisions/
+          mkdir lambda/determine_legislation_provisions/replacer
+          cp -r replacer/*.py lambda/determine_legislation_provisions/replacer/
 
-          # mkdir lambda/determine_oblique_references/oblique_references
-          # cp -r oblique_references/*.* lambda/determine_oblique_references/oblique_references/
-          # cp oblique_references/requirements.txt lambda/determine_oblique_references/
-          # mkdir lambda/determine_oblique_references/replacer
-          # cp -r replacer/*.py lambda/determine_oblique_references/replacer/
+          mkdir lambda/determine_oblique_references/oblique_references
+          cp -r oblique_references/*.* lambda/determine_oblique_references/oblique_references/
+          cp oblique_references/requirements.txt lambda/determine_oblique_references/
+          mkdir lambda/determine_oblique_references/replacer
+          cp -r replacer/*.py lambda/determine_oblique_references/replacer/
       - 
         name: Set Workspace
         id: set_workspace
