@@ -16,60 +16,133 @@ from spacy.matcher import PhraseMatcher, Matcher
 from spaczz.matcher import FuzzyMatcher
 from database.db_connection import get_hrefs, get_canonical_leg
 from collections import namedtuple
+import pandas as pd
+import numpy as np
 
-keys = ['detected_ref', 'start', 'end', 'confidence', 'ref', 'canonical']
 CUTOFF=90
 PAD=5
 
+keys = ['detected_ref', 'start', 'end', 'confidence', 'ref', 'canonical']
 leg = namedtuple('leg', 'detected_ref href canonical')
+
+
+def mergedict(x, b):
+    a = {}
+    for k, v in b.items():        a[k] = a.get(k, []) + b[k]
+    for k, v in x.items():        a[k] = a.get(k, []) + x[k]
+    return a
+
+
+def resolve_overlap(results_dict):
+    """
+    Resolves references that have been detected as legislation but overlap in the body of judgement to the most accurate legislation. 
+    This might occur due to the nature of the fuzzy matching where it matches two closely worded legislation to the same text in a judgement.
+    This function ensures a 1-to-1 linkage between a legislation title and a detected reference.
+    Parameters
+    ----------
+    results_dict : dict
+        Dictionary containing the detected references.
+    Returns
+    -------
+    outout : dict 
+        dictionary containing the detected references with overlapped references removed.
+    """
+    qq = pd.DataFrame([results_dict])
+    qq = qq.T.explode(0)[0].apply(pd.Series)
+    qq.columns = keys
+    # get refs that overlap in the text
+    mask = (qq.start.values[:, None] >= qq.start.values) & (
+        qq.end.values[:, None] <= qq.end.values)
+    np.fill_diagonal(mask, 0)
+    r, c = np.where(mask)
+    overlaps = list(map(list, zip(r, c)))
+    
+    # for every detected pair of refs that overlap
+    for ol in overlaps:
+        # remove the reference with the least similarity to the legislation
+        ol.remove(qq.reset_index().iloc[list(ol)].confidence.idxmax())
+        qq.drop(qq.index[ol[0]], inplace=True)
+    return qq.apply(tuple, axis=1).groupby(qq.index).apply(list).T.to_dict()
+
 
 # EXACT MATCHING
 
-def search_for_act(title, doc_obj, nlp, cutoff=None, candidates=None):
-    # print(title)
+def exact_matcher(title, docobj, nlp, cutoff=None, candidates=None):
+    """
+    Detects legislation in body of judgement by searching for the exact match of the title in the text.
+    Parameters
+    ----------
+    title : string
+        Title of a legislation.
+    docobj : spacy.Doc
+        The body of the judgement.
+    nlp : spacy.English
+        English NLP module.
+    Returns
+    -------
+    matched_text : list(tuple)
+        List of tuples of the form ('detected reference', 'start position', 'end position', 100)
+    """
     phrase_matcher = PhraseMatcher(nlp.vocab)
     phrase_list = [nlp(title)]
     phrase_matcher.add("Text Extractor", None, *phrase_list)
 
-    matched_items = phrase_matcher(doc_obj)
+    matched_items = phrase_matcher(docobj)
 
     matched_text = []
     for match_id, start, end in matched_items:
-        span = doc_obj[start: end]
+        span = docobj[start: end]
         matched_text.append((span.text, start, end, 100))
     return matched_text
 
 # FUZZY MATCHING
 
-def search_for_act_fuzzy(title, doc_obj, nlp, cutoff, candidates=None):
+
+def search_for_act_fuzzy(title, docobj, nlp, cutoff, candidates=None):
+    """ 
+    detects well-formed and malformed references to a legislation title in the judgement body.
+    """
+
     fuzzy_matcher = FuzzyMatcher(nlp.vocab)
     phrase_list = [nlp(title)]
     options = {"fuzzy_func": "token_sort", "min_r1": 70, "min_r2": cutoff}
     fuzzy_matcher.add("Text Extractor",  phrase_list, kwargs=[options])
-    matched_items = fuzzy_matcher(doc_obj)
+    matched_items = fuzzy_matcher(docobj)
     matched_text = []
     for match_id, start, end, ratio in matched_items:
-        span = doc_obj[start: end]
+        span = docobj[start: end]
         matched_text.append((span.text, start, end, ratio))
     return matched_text
 
-# HYBRID MATCHING
 
-def detectCandidate(nlp, docobj):
-    # detect possible legislation refs with pattern [Act YYYY]
-    pattern = [{"ORTH": "Act"}, {"SHAPE": "dddd"}]
-    matcher = Matcher(nlp.vocab)
-    matcher.add('Act Matcher', [pattern])
-    matches = matcher(docobj)
-    return [(start, end) for match_id, start, end in matches]
-
-
-def hybrid(title, docobj, nlp, cutoff, candidates=None):
+def fuzzy_matcher(title, docobj, nlp, cutoff, candidates=None):
+    """
+    Detects legislation in body of judgement by searching the candidate segments for similar matches of the title by running a fuzzy matcher.
+    Parameters
+    ----------
+    title : string
+        Title of a legislation.
+    docobj : spacy.Doc
+        The body of the judgement.
+    nlp : spacy.English
+        English NLP module.
+    cutoff : int
+        Value to determine the level of similarity of matches to be returned by the fuzzy matcher.
+        Eg. a match between two string with a ratio of 90 and cutoff 95 would not be returned by the matcher.
+    candidates : list(tuple)
+        List of tuples in the form [(start_pos, end_pos)] indicating the position of the candidate segments in the text.
+    Returns
+    -------
+    matched_text : list(tuple)
+        List of tuples of the form ('detected reference', 'start position', 'end position', 'similarity')
+    """
+    # split the year refernce from the act title
     act, year = title[:-4], title[-4:]
+    # get the span of the act title to be searched
     act_span = len(nlp(title)) + PAD
     all_matches = []
     for _, end in candidates:
-        # get segment in judgment that contains candidate ref
+        # get segment in judgment that contains candidate reference
         segment = nlp(docobj[end-act_span:end-1].text)
         dyear = docobj[end-1:end].text
         # fuzzy match act with segment
@@ -79,30 +152,68 @@ def hybrid(title, docobj, nlp, cutoff, candidates=None):
                 [(docobj[end-1-e+s:end].text, end-1-e+s, end, ratio) for text, s, e, ratio in matches])
     return all_matches
 
-######
 
-def mergedict(x,b):
-    a = {}
-    for k,v in b.items(): a[k] = a.get(k, []) + b[k]
-    for k,v in x.items(): a[k] = a.get(k, []) + x[k]
-    return a
+def detect_candidates(nlp, docobj):
+    """
+    Detect possible legislation references with pattern [Act YYYY].
+    Parameters
+    ----------
+    docobj : spacy.Doc
+        The body of the judgement.
+    nlp : spacy.English
+        English NLP module.
+    Returns
+    -------
+    output : list(tuple)
+        List of tuples indicating the position of the candidate segments in the text.
+    """
+    #
+    pattern = [{"ORTH": "Act"}, {"SHAPE": "dddd"}]
+    matcher = Matcher(nlp.vocab)
+    matcher.add('Act Matcher', [pattern])
+    matches = matcher(docobj)
+    return [(start, end) for match_id, start, end in matches]
 
-def detect_year_span(docobj, nlp):
-    pattern = [{"SHAPE": "dddd"}]
-    dmatcher = Matcher(nlp.vocab)
-    dmatcher.add('date matcher', [pattern])
-    dm = dmatcher(docobj)
-    dates = [docobj[start:end].text for match_id, start, end in dm]
-    dates = set([int(d) for d in dates if (len(d) == 4) & (d.isdigit())])
-    return dates
 
 def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
+    """
+    Executes the 'method' matcher againt the judgement body to detect legislations.
+    Parameters
+    ----------
+    titles : list(string)
+        List of legislation titles.
+    docobj : spacy.Doc
+        The body of the judgement.
+    nlp : spacy.English
+        English NLP module.
+    method : function
+        Function specifying which matcher to execute (fuzzy or exact).
+    conn : database connection
+        Database connection to the legislation look-up table.
+    cutoff : int
+        Value to determine the level of similarity of matches to be returned by the fuzzy matcher.
+        Eg. a match between two string with a ratio of 90 and cutoff 95 would not be returned by the matcher.
+    Returns
+    -------
+    results : list(dict)
+        List of dictionaries of the form {
+            'detected_ref'(string): 'detected reference in the judgement body', 
+            'ref'(string): 'matched legislation title', 
+            'canonical'(string): 'canonical form of legislation act',
+            'start'(int): 'start position of reference',
+            'end'(int): 'end positin of reference',
+            'confidence'(int): 'matching similarity between detected_ref and ref'}
+    """
     results = {}
-    candidates = detectCandidate(
-        nlp, docobj) if method.__name__ == 'hybrid' else None
+    # get candidate segments matching the pattern [Act YYYY]
+    candidates = detect_candidates(
+        nlp, docobj) if method.__name__ == 'fuzzy_matcher' else None
+    # for every legislation title in the table
     for title in nlp.pipe(titles, batch_size=100):
+        # detect legislation in the judgement body
         matches = method(title.text, docobj, nlp, cutoff, candidates)
         if matches:
+            # pull relevant information from database and append to detected reference
             href = get_hrefs(conn, title.text)
             canonical = get_canonical_leg(conn, title.text)
             matches_with_refs = []
@@ -112,30 +223,61 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
                 match_list.append(canonical)
                 match = tuple(match_list)
                 matches_with_refs.append(match)
-            results[title.text] = results.get(title.text, []) + matches_with_refs
+            results[title.text] = results.get(
+                title.text, []) + matches_with_refs
     return results
+
+
+def detect_year_span(docobj, nlp):
+    """
+    Detects year -like text in the judgement body.
+    Parameters
+    ----------
+    docobj : spacy.Doc
+        The body of the judgement.
+    nlp : spacy.English
+        English NLP module.
+    Returns
+    -------
+    dates : list[string]
+        List of year -like strings.
+    """
+    pattern = [{"SHAPE": "dddd"}]
+    dmatcher = Matcher(nlp.vocab)
+    dmatcher.add('date matcher', [pattern])
+    dm = dmatcher(docobj)
+    dates = [docobj[start:end].text for match_id, start, end in dm]
+    dates = set([int(d) for d in dates if (len(d) == 4) & (d.isdigit())])
+    return dates
 
 ######
 
 methods = {
-    'exact': search_for_act,
-    'hybrid': hybrid
+    'exact': exact_matcher,
+    'fuzzy': fuzzy_matcher
 }
 
-def leg_pipeline(leg_titles, nlp, doc, conn):
+def leg_pipeline(leg_titles, nlp, docobj, conn):
     results = []
-    dates = detect_year_span(doc, nlp)
-    shorttitles = leg_titles[leg_titles.year.isin(dates)]
+    dates = detect_year_span(docobj, nlp)
+    # filter the legislation list down to the years detected above
+    titles = leg_titles[leg_titles.year.isin(dates)]
 
-    for fuzzy, method in zip([True, False], ('hybrid','exact')):
-        titles = shorttitles[shorttitles.for_fuzzy==fuzzy].candidate_titles.drop_duplicates().tolist()
-        res = lookup_pipe(titles, doc, nlp, methods[method], conn, CUTOFF)
+    for fuzzy, method in zip([True, False], ('fuzzy', 'exact')):
+        # select the titles relevant to the approach to be run using the 'for_fuzzy' flag already built into the look-up table
+        relevant_titles = titles[titles.for_fuzzy ==
+                                 fuzzy].candidate_titles.drop_duplicates().tolist()
+        res = lookup_pipe(relevant_titles, docobj, nlp,
+                          methods[method], conn, CUTOFF)
         results.append(res)
 
+    # merges the results of both matchers to return a single list of detected references
     results = mergedict(results[0], results[1])
 
+    results = resolve_overlap(results) if results else results
+
     results = dict([(k, [dict(zip(keys, j)) for j in v])
-                    for k, v in results.items()])    
+                    for k, v in results.items()])
     refs = [i for j in results.values() for i in j]
 
     # keys_to_extract = {'detected_ref', 'ref'}
@@ -147,5 +289,5 @@ def leg_pipeline(leg_titles, nlp, doc, conn):
         replacement = leg(detected_ref, href, canonical_form)
         replacements.append(replacement)
     print(f"Found {len(replacements)} legislation replacements")
-    
+
     return replacements

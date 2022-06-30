@@ -153,7 +153,11 @@ def filter_matches(
             last_char = str(doc[end-1]) 
             length = len(last_char) # use the length to get the index of the last char
 
-            if first_char.isupper() is not True or last_char[length-1].isupper() is not True:
+            # if the first character of the abbreviation is not upper case
+            if first_char.isupper() is not True: 
+                continue
+            # if the last character of the abbreviation is not upper case AND it is not a number (this is to allow years in the abbreviations)
+            if last_char[length-1].isupper() is not True and last_char[length-1].isnumeric() is not True:
                 continue
 
 
@@ -186,20 +190,11 @@ def verify_match_format(
         start = match[1]
         end = match[2] - 1
 
-        first_char = str(doc[start+2])
-        last_char = str(doc[end-2])
-        abbreviation_length = len(last_char)
-
         if end - start > 8: 
-
             matcher_output.remove(match)
 
         # verify that the match is wrapped in quotes and brackets
         elif not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS): 
-            matcher_output.remove(match)
-
-        # verify that the start and end of the abbreviation contains upper case
-        elif first_char[0].isupper() is not True or last_char[abbreviation_length-1].isupper() is not True: 
             matcher_output.remove(match)
     
     return matcher_output
@@ -246,8 +241,10 @@ class AbbreviationDetector():
 
     def __call__(self, doc: Doc) -> Doc:
         matches = self.matcher(doc)
+
         matches_brackets = [(x[0], x[1], x[2]) for x in matches]
         matcher_output = verify_match_format(matches_brackets, doc)
+
         matches_no_brackets = [(x[0], x[1] + 1, x[2] - 1) for x in matcher_output]
         filtered = filter_matches(matches_no_brackets, doc)
 
