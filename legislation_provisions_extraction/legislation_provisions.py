@@ -17,8 +17,6 @@ If it is re-defined at a later paragraph, we would then use that new link instea
 To do: 
 1. "Sections 18-19" - we currently on replace sections 18 with a link to 18
 2. "Section 27(A)" - currently miss these references when replacing
-3. Sub-sections aren't being replaced 
-
 """
 THR = 30
 keys = ['detected_ref', 'ref_para', 'ref_position', 'ref_tag']
@@ -52,7 +50,7 @@ def find_closest_legislation(legislations, sections, thr=30):
     sec_pos = np.asarray([x[0] for x in sections])
     leg_pos = np.asarray([x[0] for x in legislations])
     
-    # calculates distance between legislations ans sections
+    # calculates distance between legislations and sections
     dist1 = sec_pos[:, 0][:, None] - leg_pos[:, 1]
     dist2 = leg_pos[:, 0] - sec_pos[:, 1][:, None]
     dist = dist1 * (dist1 > 0) + dist2 * (dist2 > 0)
@@ -80,7 +78,6 @@ Saves the section and the relevant information to the master dictionary of all s
 :param para_number: number of the paragraph in the judgment
 """
 def save_section_to_dict(section_dict, para_number, clean_section_dict):
-
     # for each section found in the paragraph
     for section, full_ref, pos in section_dict:
 
@@ -189,6 +186,8 @@ Matches all sections found in the judgment to the correct legislation, and provi
 """
 def provision_resolver(section_dict, matches, para_number):
     resolved_refs = []
+
+
     # for each section found in the paragraph
     for pos, match in matches:
 
@@ -221,6 +220,7 @@ def provision_resolver(section_dict, matches, para_number):
            
             resolved_refs.append(dict(zip(keys, [match, para_number, pos[0], correct_reference['section_ref']])))
             print(f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}")
+
 
     return resolved_refs
 
