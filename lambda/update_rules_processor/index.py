@@ -151,16 +151,6 @@ def lambda_handler(event, context):
         try:
             test_manifest(df, pattern_list)
 
-            s3_resource = boto3.resource('s3')
-            # Declaring the source to be copied
-            copy_source = {
-                'Bucket': 'dev-tna-s3-tna-sg-rules-bucket',
-                'Key': '2022_05_10_Citation_Manifest.csv'
-            }
-            target_bucket = s3.Bucket('dev-tna-s3-tna-sg-rules-bucket/Manifest_versions/')
-            # Copying the files to another bucket
-            target_bucket.copy(copy_source, '2022_05_10_Citation_Manifest.csv')
-            
             # write new jsonl file
             # date_today = datetime.datetime.now().strftime("%Y-%m-%d")
             new_patterns_file = write_patterns_file(df['pattern'].to_list())
