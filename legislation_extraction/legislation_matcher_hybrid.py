@@ -300,7 +300,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
     # merges the results of both matchers to return a single list of detected references
     results = mergedict(results[0], results[1])
 
-    results = resolve_overlap(results)
+    results = resolve_overlap(results) if results else results
 
     results = dict([(k, [dict(zip(keys, j)) for j in v])
                     for k, v in results.items()])
