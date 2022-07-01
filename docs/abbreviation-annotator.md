@@ -29,7 +29,8 @@ The implementation is based on the abbreviation detection algorithm in ["A simpl
 The Schwartz & Hearst (2003) approach is remarkably effective at resolving abbreviations used in scientific texts. Some modifications to the algorithm's logic were necessary to render the approach suitable for legal texts. These modifications include:
 
 * The short form abbreviation must be defined within quotes inside parentheses. `("PACE")` will be detected, `(PACE)` will not be detected. This significantly reduces the risks of false positives, such as where parentheticals are used in the titles of legislation.
-* The short form must be at least three characters long
+* The short form must be at least three characters long.
+* The first and last characters of the sort form must be uppercase, or if the last character is not an upper case, it must be a number. This is to allow for the inclusion of dates in the short form abbreviation.
 
 The Abbreviation Annotator is added as a pipeline component to the spaCy `nlp` model and abbreviations are made available by the resulting `Doc` object. To prevent memory errors when dealing with longer judgments, the Abbreviation Annotator divides the raw text of the judgment body into an arbitrary number of chunks that are sequentially fed to the model to reduce memory overhead at inference time. 
 
