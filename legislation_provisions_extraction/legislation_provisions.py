@@ -2,10 +2,10 @@ import re
 import os
 from bs4 import BeautifulSoup
 import numpy as np
+import xml
 
 """
 This code handles the link of provisions (i.e sections) to legislation. This is done in the following way: 
-
 1. We use the previously enriched judgment and identify where there are legislation xrefs in paragraphs. 
 2. We then search for and 'section' references in that paragraph. 
 3. We then use the location of the 'section' reference and 'legislation' reference to find which legislation the 
@@ -13,11 +13,12 @@ section is closest to, and then link the section to that legislation.
 4. We handle re-definition of sections by keeping track of the paragraph number when identifying xrefs and sections. 
 We use the paragraph number when replacing and only add the link to the section when we are after where the section was last defined. 
 If it is re-defined at a later paragraph, we would then use that new link instead from the paragraph number onwards. 
-
 To do: 
 1. "Sections 18-19" - we currently on replace sections 18 with a link to 18
 2. "Section 27(A)" - currently miss these references when replacing
+3. Sub-sections aren't being replaced 
 """
+
 THR = 30
 keys = ['detected_ref', 'ref_para', 'ref_position', 'ref_tag']
 patterns = {
@@ -50,7 +51,7 @@ def find_closest_legislation(legislations, sections, thr=30):
     sec_pos = np.asarray([x[0] for x in sections])
     leg_pos = np.asarray([x[0] for x in legislations])
     
-    # calculates distance between legislations and sections
+    # calculates distance between legislations ans sections
     dist1 = sec_pos[:, 0][:, None] - leg_pos[:, 1]
     dist2 = leg_pos[:, 0] - sec_pos[:, 1][:, None]
     dist = dist1 * (dist1 > 0) + dist2 * (dist2 > 0)
@@ -82,7 +83,7 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
     for section, full_ref, pos in section_dict:
 
         section_number = get_clean_section_number(section)
-        soup = BeautifulSoup(full_ref, 'lxml')
+        soup = BeautifulSoup(full_ref, 'xml')
         ref = soup.find('ref')
         canonical = ref.get('canonical') # get the legislation canonical form 
         leg_href = ref.get('href')  # get the legislation href
@@ -186,8 +187,6 @@ Matches all sections found in the judgment to the correct legislation, and provi
 """
 def provision_resolver(section_dict, matches, para_number):
     resolved_refs = []
-
-
     # for each section found in the paragraph
     for pos, match in matches:
 
@@ -221,7 +220,6 @@ def provision_resolver(section_dict, matches, para_number):
             resolved_refs.append(dict(zip(keys, [match, para_number, pos[0], correct_reference['section_ref']])))
             print(f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}")
 
-
     return resolved_refs
 
 def main(enriched_judgment_file_path, filename):
@@ -234,6 +232,30 @@ def main(enriched_judgment_file_path, filename):
     cur_para_number = 0
     section_dict = {}
     resolved_refs = []
+    for line in text:
+        sections = detect_reference(str(line), 'section')
+        if sections:
+            legislations = detect_reference(str(line))
+            if legislations:
+                section_to_leg_matches = find_closest_legislation(
+                    legislations, sections, THR)
+                
+            # create the master section dictionary with relevant leg links
+                section_dict = save_section_to_dict(section_to_leg_matches, cur_para_number, section_dict)
+            
+            # resolve sections to legislations
+            resolved_refs.extend(provision_resolver(section_dict, sections, cur_para_number))
+        
+        cur_para_number += 1
+    return resolved_refs
+
+def provisions_pipeline(file_data):
+    soup = BeautifulSoup(file_data, 'xml')
+    text = soup.find_all('p')
+    cur_para_number = 0
+    section_dict = {}
+    resolved_refs = []
+
     for line in text:
         sections = detect_reference(str(line), 'section')
         if sections:

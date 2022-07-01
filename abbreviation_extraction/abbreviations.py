@@ -1,14 +1,11 @@
 """
 @author: amy.conroy
-
 Adapted from Blackstone's abbreviation detector which itself was an 
 adaption of ScispaCy's abbreviation detector. 
-
 Updated for SpaCy version 3.0+, as well as to handle dates in both long and short form abbreviations, 
 and to be limited specifically to abbreviations where there are quotes in the
 brackets. This prevents erroneous abbreviations being detected where brackets
 are used separaetly from defining abbreviations. 
-
 Blackstone repo here -> https://github.com/ICLRandD/Blackstone
 ScispaCy repo here -> https://github.com/allenai/scispacy
 """
@@ -26,19 +23,16 @@ def find_abbreviation(
     """
     Implements the abbreviation detection algorithm in "A simple algorithm
     for identifying abbreviation definitions in biomedical text.", (Schwartz & Hearst, 2003).
-
     The algorithm works by enumerating the characters in the short form of the abbreviation,
     checking that they can be matched against characters in a candidate text for the long form
     in order, as well as requiring that the first letter of the abbreviated form matches the
     _beginning_ letter of a word.
-
     Parameters
     ----------
     long_form_candidate: Span, required.
         The spaCy span for the long form candidate of the definition.
     short_form_candidate: Span, required.
         The spaCy span for the abbreviation candidate.
-
     Returns
     -------
     A Tuple[Span, Optional[Span]], representing the short form abbreviation and the
@@ -144,7 +138,6 @@ def filter_matches(
             long_form_candidate = doc[
                 max(start - max_words - 1 - quote_offset, 0) : start - 1 - quote_offset
             ]
-            
             short_form = str(doc[start:end])
             word = short_form
             quote_offset_new = 0
@@ -155,7 +148,6 @@ def filter_matches(
 
             short_form_clean = word  # use the clean short form if we return the match
             first_char = short_form_clean[0] # this is the first character of the word
-    
             last_char = str(doc[end-1]) 
             length = len(last_char) # use the length to get the index of the last char
 
@@ -168,7 +160,7 @@ def filter_matches(
 
 
             # abbreviation must have 3 or more characters
-            if len(str(doc[start:end])) >= 3: 
+            if len(str(doc[start:end])) >= 3:
                 candidates.append((long_form_candidate, doc[start+quote_offset_new:end]))
 
             continue
@@ -203,20 +195,13 @@ def verify_match_format(
         elif not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS): 
             matcher_output.remove(match)
 
-
-    return matcher_output
-        
-
 class AbbreviationDetector():
     """
     Detects abbreviations using the algorithm in "A simple algorithm for identifying
     abbreviation definitions in biomedical text.", (Schwartz & Hearst, 2003).
-
     This class sets the `._.abbreviations` attribute on spaCy Doc.
-
     The abbreviations attribute is a `List[Span]` where each Span has the `Span._.long_form`
     attribute set to the long form definition of the abbreviation.
-
     Note that this class does not replace the spans, or merge them.
     """
     def __init__(self, nlp: Language) -> None:
@@ -251,9 +236,9 @@ class AbbreviationDetector():
 
     def __call__(self, doc: Doc) -> Doc:
         matches = self.matcher(doc)
-        
+
         matches_brackets = [(x[0], x[1], x[2]) for x in matches]
-        matcher_output = verify_match_format(matches_brackets, doc) 
+        matcher_output = verify_match_format(matches_brackets, doc)
 
         matches_no_brackets = [(x[0], x[1] + 1, x[2] - 1) for x in matcher_output]
         filtered = filter_matches(matches_no_brackets, doc)

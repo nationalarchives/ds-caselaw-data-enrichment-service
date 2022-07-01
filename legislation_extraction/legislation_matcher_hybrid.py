@@ -25,10 +25,8 @@ from collections import namedtuple
 import pandas as pd
 import numpy as np
 
-# User-defined params
-CUTOFF = 95 # ratio value for fuzzy matching; the higher, the tighter the condition has to be to say that string A and B are the same.
-PAD = 5     # a pad to account for misspellings and deviations in the act title
-
+CUTOFF=90
+PAD=5
 
 keys = ['detected_ref', 'start', 'end', 'confidence', 'ref', 'canonical']
 leg = namedtuple('leg', 'detected_ref href canonical')
@@ -46,17 +44,14 @@ def resolve_overlap(results_dict):
     Resolves references that have been detected as legislation but overlap in the body of judgement to the most accurate legislation. 
     This might occur due to the nature of the fuzzy matching where it matches two closely worded legislation to the same text in a judgement.
     This function ensures a 1-to-1 linkage between a legislation title and a detected reference.
-
     Parameters
     ----------
     results_dict : dict
         Dictionary containing the detected references.
-
     Returns
     -------
     outout : dict 
         dictionary containing the detected references with overlapped references removed.
-
     """
     qq = pd.DataFrame([results_dict])
     qq = qq.T.explode(0)[0].apply(pd.Series)
@@ -81,7 +76,6 @@ def resolve_overlap(results_dict):
 def exact_matcher(title, docobj, nlp, cutoff=None, candidates=None):
     """
     Detects legislation in body of judgement by searching for the exact match of the title in the text.
-
     Parameters
     ----------
     title : string
@@ -90,12 +84,10 @@ def exact_matcher(title, docobj, nlp, cutoff=None, candidates=None):
         The body of the judgement.
     nlp : spacy.English
         English NLP module.
-
     Returns
     -------
     matched_text : list(tuple)
         List of tuples of the form ('detected reference', 'start position', 'end position', 100)
-
     """
     phrase_matcher = PhraseMatcher(nlp.vocab)
     phrase_list = [nlp(title)]
@@ -132,7 +124,6 @@ def search_for_act_fuzzy(title, docobj, nlp, cutoff, candidates=None):
 def fuzzy_matcher(title, docobj, nlp, cutoff, candidates=None):
     """
     Detects legislation in body of judgement by searching the candidate segments for similar matches of the title by running a fuzzy matcher.
-
     Parameters
     ----------
     title : string
@@ -146,12 +137,10 @@ def fuzzy_matcher(title, docobj, nlp, cutoff, candidates=None):
         Eg. a match between two string with a ratio of 90 and cutoff 95 would not be returned by the matcher.
     candidates : list(tuple)
         List of tuples in the form [(start_pos, end_pos)] indicating the position of the candidate segments in the text.
-
     Returns
     -------
     matched_text : list(tuple)
         List of tuples of the form ('detected reference', 'start position', 'end position', 'similarity')
-
     """
     # split the year refernce from the act title
     act, year = title[:-4], title[-4:]
@@ -173,19 +162,16 @@ def fuzzy_matcher(title, docobj, nlp, cutoff, candidates=None):
 def detect_candidates(nlp, docobj):
     """
     Detect possible legislation references with pattern [Act YYYY].
-
     Parameters
     ----------
     docobj : spacy.Doc
         The body of the judgement.
     nlp : spacy.English
         English NLP module.
-
     Returns
     -------
     output : list(tuple)
         List of tuples indicating the position of the candidate segments in the text.
-
     """
     #
     pattern = [{"ORTH": "Act"}, {"SHAPE": "dddd"}]
@@ -198,7 +184,6 @@ def detect_candidates(nlp, docobj):
 def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
     """
     Executes the 'method' matcher againt the judgement body to detect legislations.
-
     Parameters
     ----------
     titles : list(string)
@@ -224,7 +209,6 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
             'start'(int): 'start position of reference',
             'end'(int): 'end positin of reference',
             'confidence'(int): 'matching similarity between detected_ref and ref'}
-
     """
     results = {}
     # get candidate segments matching the pattern [Act YYYY]
@@ -253,19 +237,16 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
 def detect_year_span(docobj, nlp):
     """
     Detects year -like text in the judgement body.
-
     Parameters
     ----------
     docobj : spacy.Doc
         The body of the judgement.
     nlp : spacy.English
         English NLP module.
-
     Returns
     -------
     dates : list[string]
         List of year -like strings.
-
     """
     pattern = [{"SHAPE": "dddd"}]
     dmatcher = Matcher(nlp.vocab)
@@ -281,7 +262,6 @@ methods = {
     'exact': exact_matcher,
     'fuzzy': fuzzy_matcher
 }
-
 
 def leg_pipeline(leg_titles, nlp, docobj, conn):
     results = []

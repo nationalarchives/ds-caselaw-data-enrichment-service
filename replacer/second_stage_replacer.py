@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Wed Jun 15 11:21:36 2022
-
-@author: imane.hafnaoui
-"""
 
 import re
 from itertools import groupby
@@ -50,6 +45,5 @@ def oblique_replacement(file_data, replacements):
  :param replacements: list of dict of resolved oblique refs
  :return: enriched XML file data
  """
-    body_text = str(file_data)
-    enriched_text = replacer(body_text, replacements)
+    enriched_text = replacer(file_data, replacements)
     return enriched_text

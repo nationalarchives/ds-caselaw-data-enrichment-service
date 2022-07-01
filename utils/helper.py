@@ -16,10 +16,10 @@ def load_patterns(conn):
 
 def parse_file(file_data):
   """
-  Parses the file and returns the text of the judgment
-  :param file_data: The file data
+  Parse XML file. Only get text within content elements
+  :param file_data: XML file
   """
-  soup = BeautifulSoup.BeautifulSoup(str(file_data), "lxml")
+  soup = BeautifulSoup.BeautifulSoup(str(file_data), "xml")
   judgment_content = soup.find_all("content")
   judgment_content_text = " ".join([content.text.strip() for content in judgment_content])
   return judgment_content_text

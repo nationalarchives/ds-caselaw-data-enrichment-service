@@ -45,7 +45,6 @@ def process_event(sqs_rec):
         LOGGER.debug("content valid")
     else:
         LOGGER.error("content invalid")
-        # raise Exception ("content is invalid")
 
     return content_valid, source_key
 
@@ -58,7 +57,6 @@ def find_schema(schema_bucket, schema_key):
 
 def load_schema(schema_content):
     parser = etree.XMLParser(dtd_validation=False)   
-    # xmlschema_doc = parser.parseString(schema_content)
     xmlschema_doc   = etree.parse(BytesIO(schema_content), parser)
     xmlschema = etree.XMLSchema(xmlschema_doc)
 
@@ -67,11 +65,8 @@ def load_schema(schema_content):
 def validate_content(file_content):
     LOGGER.info("VALIDATE_USING_DTD")
     LOGGER.info(VALIDATE_USING_DTD)
-    # parser = etree.XMLParser(dtd_validation=VALIDATE_USING_DTD) 
+
     parser = etree.XMLParser(dtd_validation=False)
-    # parser.setContentHandler(ContentHandler(  ))
-    # xmldoc = parser.parseString(file_content)
-    # xmldoc   = etree.parse(StringIO(file_content), parser)
     xmldoc   = etree.parse(BytesIO(file_content), parser)
     result = True
     if VALIDATE_USING_SCHEMA:
@@ -98,21 +93,8 @@ def handler(event, context):
     source_key = ""
     try:
         LOGGER.info('SQS EVENT: %s', event)
-        # event structure and parsing logic varies if the lambda function is involved directly from an S3:put object vs reading from an SQS queue
-
-
-        # Get the object from the event and show its content type
-        # source_bucket = event["Records"][0]["s3"]["bucket"]["name"]
-        # source_key = urllib.parse.unquote_plus(
-        #     event["Records"][0]["s3"]["object"]["key"], encoding="utf-8"
-        # )
-
-        # print("Input bucket name:", source_bucket)
-        # print("Input S3 key:", source_key)
 
         for sqs_rec in event['Records']:
-            # TODO make the code adapt to a direct invocation vs reading from an SQS queue
-
             # stop the test notification event from breaking the parsing logic
             if 'Event' in sqs_rec.keys() and sqs_rec['Event'] == 's3:TestEvent':
                 break
@@ -136,8 +118,6 @@ def handler(event, context):
             sns_client = boto3.client('sns')
             response = sns_client.publish (
                 TargetArn = topic,
-                
-                # Message = json.dumps({'default': {'error': not valid_content, 'key': source_key, 'status': message}}),
                 Message = json.dumps({'default': message}),
                 MessageStructure = 'json'
             )

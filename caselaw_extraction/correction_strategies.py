@@ -1,13 +1,35 @@
 import re
 
 """
-Correct strategies for the case law replacements. 
-:param citation_type: Citation pattern 
-:param citation_match: Citation that was matched 
-:param canonical_form: Canonical form of the citation
+
+This code corrects malformed citation matches.
+
+- The choice of correction strategy is based on the type of citation match.
+- Based on citation type the function retrieves the year and 1 or more digits from the citation match.
+- The extracted information is used to build the well-formed citation using a canonical template that is being filled with the extracted year and digits.
+
 """
+
 def apply_correction_strategy(citation_type, citation_match, canonical_form):
-    """Find the appropriate correction strategy and apply it"""
+    """
+    Finds the appropriate correction strategy and applies it to the detected citation match.
+    Parameters
+    ----------
+    citation_type : string
+        type of citation that the detected citation match corresponds to (retrieved from Rules Manifest).
+    citation_match : string
+        detected citation match.
+    canonical_form : string
+        canoncial form template for the citation type corresponding to the detected citation match.
+    Returns
+    -------
+    corrected_citation : string 
+        well-formed version of detected citation match.
+    year : int or string
+        year of cited case law
+    d1/d2 : int/int or empty string
+        digits building neutral citation for cited case law
+    """
 
     # e.g [2022] EWCA Civ 123
     if (citation_type == "NCitYearAbbrNum") | (citation_type == "NCitYearAbbrNumDiv") | (citation_type == "PubYearAbbrNum"):
