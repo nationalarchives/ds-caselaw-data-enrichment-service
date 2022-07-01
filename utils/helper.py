@@ -13,7 +13,11 @@ def load_patterns(conn):
         patterns_file.write(pattern + "\n")
 
 def parse_file(file_data):
-  soup = BeautifulSoup.BeautifulSoup(str(file_data), "lxml")
+  """
+  Parse XML file. Only get text within content elements
+  :param file_data: XML file
+  """
+  soup = BeautifulSoup.BeautifulSoup(str(file_data), "xml")
   judgment_content = soup.find_all("content")
   judgment_content_text = " ".join([content.text.strip() for content in judgment_content])
   return judgment_content_text

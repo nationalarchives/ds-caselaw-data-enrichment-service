@@ -12,11 +12,8 @@ from botocore.exceptions import ClientError
 from dateutil.parser import parse as dparser
 import spacy
 from spacy.language import Language
-# import psycopg2 as pg
-# from psycopg2 import Error
 
 LOGGER = logging.getLogger()
-# LOGGER.setLevel(logging.INFO)
 LOGGER.setLevel(logging.DEBUG)
 
 def validate_env_variable(env_var_name):
@@ -31,15 +28,6 @@ def validate_env_variable(env_var_name):
         raise Exception(f"Please, provide environment variable {env_var_name}")
 
     return env_variable
-
-############################################
-# CLASS HELPERS
-############################################
-
-############################################
-# - INSTANTIATE CLASS HELPERS
-# - GET ENV VARIABLES
-############################################
 
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
@@ -59,7 +47,6 @@ def process_event(sqs_rec):
 
     # fetch the judgement contents
     file_content = s3_client.get_object(
-                # Bucket=source_bucket, Key=source_key)["Body"].read()
                 Bucket=source_bucket, Key=source_key)["Body"].read().decode('utf-8')
                 
     LOGGER.debug(file_content)
@@ -85,8 +72,6 @@ def write_replacements_file(replacement_list):
     tuple_file = ""
     for i in replacement_list:
         replacement_object = {"{}".format(type(i).__name__): list(i)}
-        # json.dump(replacement_object, tuple_file)
-        # tuple_file.write("\n")
         tuple_file += json.dumps(replacement_object)
         tuple_file += "\n"
     return tuple_file
@@ -131,7 +116,6 @@ def push_contents(uploaded_bucket, uploaded_key):
             'StringValue': uploaded_bucket
         }
     }
-    # json.dumps({"rev":rev_,"s_ver_str":s_ver_str_,"pro": pro_ })
     response = queue.send_message(MessageBody=json.dumps(message), MessageAttributes=msg_attributes)
 
 DEST_QUEUE = validate_env_variable("DEST_QUEUE_NAME")
@@ -142,21 +126,8 @@ def handler(event, context):
     LOGGER.info(DEST_QUEUE)
     try:
         LOGGER.info('SQS EVENT: %s', event)
-        # event structure and parsing logic varies if the lambda function is involved directly from an S3:put object vs reading from an SQS queue
-
-
-        # Get the object from the event and show its content type
-        # source_bucket = event["Records"][0]["s3"]["bucket"]["name"]
-        # source_key = urllib.parse.unquote_plus(
-        #     event["Records"][0]["s3"]["object"]["key"], encoding="utf-8"
-        # )
-
-        # print("Input bucket name:", source_bucket)
-        # print("Input S3 key:", source_key)
 
         for sqs_rec in event['Records']:
-            # TODO make the code adapt to a direct invocation vs reading from an SQS queue
-
             # stop the test notification event from breaking the parsing logic
             if 'Event' in sqs_rec.keys() and sqs_rec['Event'] == 's3:TestEvent':
                 break

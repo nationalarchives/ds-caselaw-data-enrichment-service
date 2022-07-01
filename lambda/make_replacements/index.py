@@ -8,7 +8,6 @@ import boto3
 import re
 
 LOGGER = logging.getLogger()
-# LOGGER.setLevel(logging.INFO)
 LOGGER.setLevel(logging.DEBUG)
 
 def validate_env_variable(env_var_name):
@@ -25,11 +24,8 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 def upload_contents(source_key, text_content):
-    # store the file contents in the destination bucket
-    # LOGGER.info(os.path.splitext(source_key)[0])
-    # filename = os.path.splitext(source_key)[0] + ".xml"
     filename = source_key
-            # filename = source_key.print(os.path.splitext("/path/to/some/file.txt")[0])
+
     LOGGER.info('uploading text content to %s/%s', DEST_BUCKET, filename)
     s3 = boto3.resource('s3')
     object = s3.Object(DEST_BUCKET, filename)
@@ -38,26 +34,10 @@ def upload_contents(source_key, text_content):
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
     s3_client = boto3.client("s3")
-    # source_bucket = sqs_rec["s3"]["bucket"]["name"]
-    # source_key = urllib.parse.unquote_plus(
-    #             sqs_rec["s3"]["object"]["key"], encoding="utf-8"
-    #         )
-    # print("Input bucket name:", source_bucket)
-    # print("Input S3 key:", source_key)
 
     message = json.loads(sqs_rec['body'])
     LOGGER.info('EVENT: %s', message)
-    # msg_attributes = {
-    #     'source_key': {
-    #         'DataType': 'String',
-    #         'StringValue': source_key
-    #     }
-    #     # ,
-    #     # 'source_bucket': {
-    #     #     'DataType': 'String',
-    #     #     'StringValue': source_bucket
-    #     # }
-    # }
+
     msg_attributes = sqs_rec['messageAttributes']
     replacements = message['replacements']
     source_key = msg_attributes['source_key']['stringValue']
@@ -99,7 +79,6 @@ def process_event(sqs_rec):
     upload_contents(filename, full_replaced_text_content)
 
 def replace_text_content(file_content, replacements_content):
-    # TODO split replacement
     replacements = []
 
     replacement_tuples_case = []
@@ -135,21 +114,15 @@ def replace_text_content(file_content, replacements_content):
     LOGGER.info('replacement_tuples_case')   
     print(replacement_tuples_case)
 
-    # file_data_enriched = replacer_pipeline(file_content, replacements_caselaw, replacements_leg, replacements_abbr)
     from replacer.replacer import replacer_pipeline
     file_data_enriched = replacer_pipeline(file_content, replacement_tuples_case, replacement_tuples_leg, replacement_tuples_abb)
     LOGGER.info('file_data_enriched')
-    print(file_data_enriched)
+
     return file_data_enriched
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 SOURCE_BUCKET = validate_env_variable("SOURCE_BUCKET_NAME")
 REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
-
-# read the input data from hashlib import sha3_384
-# from an sqs queue
-# list of replacements
-# link to file in s3
 
 # make replacements
 # write to s3 which will trigger a message on an sqs queue
@@ -159,20 +132,8 @@ def handler(event, context):
     LOGGER.info(SOURCE_BUCKET)
     try:
         LOGGER.info('SQS EVENT: %s', event)
-        # event structure and parsing logic varies if the lambda function is involved directly from an S3:put object vs reading from an SQS queue
-
-        # Get the object from the event and show its content type
-        # source_bucket = event["Records"][0]["s3"]["bucket"]["name"]
-        # source_key = urllib.parse.unquote_plus(
-        #     event["Records"][0]["s3"]["object"]["key"], encoding="utf-8"
-        # )
-
-        # print("Input bucket name:", source_bucket)
-        # print("Input S3 key:", source_key)
 
         for sqs_rec in event['Records']:
-            # TODO make the code adapt to a direct invocation vs reading from an SQS queue
-
             # stop the test notification event from breaking the parsing logic
             if 'Event' in sqs_rec.keys() and sqs_rec['Event'] == 's3:TestEvent':
                 break

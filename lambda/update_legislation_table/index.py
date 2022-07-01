@@ -12,7 +12,6 @@ import datetime
 from SPARQLWrapper import SPARQLWrapper, CSV
 from io import BytesIO
 import re
-# import awswrangler.secretsmanager as awssm 
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -41,10 +40,6 @@ class getLoginSecrets:
         # Create a Secrets Manager client
         session = boto3.session.Session()
         client = session.client(service_name="secretsmanager", region_name=region_name)
-
-        # In this sample we only handle the specific exceptions for the 'GetSecretValue' API.
-        # See https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
-        # We rethrow the exception by default.
 
         try:
             LOGGER.info(" about to get_secret_value_response")

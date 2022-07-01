@@ -3,7 +3,15 @@ import pandas as pd
 import psycopg2
 
 def create_connection(db, user, password, host, port):
-    """ Connect to the PostgreSQL database server """
+    """ 
+    Connect to the PostgreSQL database server
+    :param db
+    :param user
+    :param password
+    :param host
+    :param port
+    :return: db connection
+    """
     conn = None
     try:
         # connect to the PostgreSQL server
@@ -18,7 +26,7 @@ def create_connection(db, user, password, host, port):
 def get_manifest_row(conn, rule_id):
   """
   Select all fields/rows from manifest that match the rule id
-  :param conn: database connection created with create_connection(db_file)
+  :param conn: database connection created with create_connection()
   :param rule_id: ID of manifest rule to be extracted
   :return: DataFrame of matched rule
   """
@@ -27,10 +35,10 @@ def get_manifest_row(conn, rule_id):
 
 def get_matched_rule(conn, rule_id):
   """
-  Uses database connection to select matched rule row from manifest.
+  Uses database connection to select fields/rows of interest from manifest that match the rule id
   :param conn: database connection, required
   :param rule_id: rule_id string, required
-  :return: variables is_canonical, citation_type, canonical_form and rule_description for specified rule
+  :return: variables family, URItemplate, is_neutral, is_canonical, citation_type, canonical_form
   """
   matched_rule = get_manifest_row(conn, rule_id)
   family = matched_rule["family"].iloc[0].lower()
@@ -42,17 +50,35 @@ def get_matched_rule(conn, rule_id):
   return family, URItemplate, is_neutral, is_canonical, citation_type, canonical_form
 
 def get_legtitles(conn):
+  """
+  Retrieves legislation titles from legislation lookup table
+  :param conn: database connection, required
+  :return: DataFrame of legislation titles
+  """
   leg_titles = pd.read_sql("SELECT candidate_titles, year, for_fuzzy FROM ukpga_lookup", conn)
   return leg_titles
 
+# sql queries for legislation lookup table
 href_query = """SELECT ref FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
 canonical_query = """SELECT citation FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
 
 def get_hrefs(conn, title):
+  """
+  Retrieves link to legislation title
+  :param conn: database connection, required
+  :param title: legislation title, required
+  :return: link to legislation title
+  """
   test = pd.read_sql_query(href_query, conn, params={'title': "{}".format(title)})
   return test.ref.values[0]
 
 def get_canonical_leg(conn, title):
+  """
+  Retrieves canonical form of legislation title
+  :param conn: database connection, required
+  :param title: legislation title, required
+  :return: canoncial form of legislation title
+  """
   canonical_leg = pd.read_sql(canonical_query, conn, params={'title': "{}".format(title)})
   return canonical_leg.citation.values[0]
 

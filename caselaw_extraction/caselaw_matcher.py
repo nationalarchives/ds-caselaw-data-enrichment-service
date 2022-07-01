@@ -3,6 +3,26 @@ from database.db_connection import get_matched_rule
 from caselaw_extraction.correction_strategies import apply_correction_strategy
 from collections import namedtuple
 
+"""
+
+This code builds the Case Law Annotator. The 3 main functionalities are: 
+
+1. Detect references to well-formed (canonical) citations and malformed citations
+2. Correct malformed citations to their canonical form
+3. Mark up the detected citations in the LegalDocML
+
+- The input to case_pipeline is a spacy Doc object. 
+- The first step is to detect the entities based on the EntityRuler built into the nlp pipeline in a previous step.
+- Once the citation match and its corresponding ID have been detected, the code queries a 'Rules Manifest' in Postgres 
+to retrieve associated metadata about the matched citation.
+- If the citation is well-formed, the pipeline retrieves additional metadata from the citation match, creates the corresponding URI 
+and finally creates a replacement entry as a tuple.
+- If the citation match is malformed, the citation match and parts of the metadata are passed to a correction pipeline before following
+the same path as well-formed citation matches.
+- case_pipeline returns a list of tuples that hold the replacements. 
+
+"""
+
 case = namedtuple('case', 'citation_match corrected_citation year URI is_neutral')
 
 def create_URI(uri_template, year, d1, d2):

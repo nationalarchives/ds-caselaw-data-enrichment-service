@@ -26,8 +26,6 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 def upload_contents(source_key, output_file_content):
-    # store the file contents in the destination bucket
-    # LOGGER.info(os.path.splitext(source_key)[0])
     filename = source_key
 
     LOGGER.info('Uploading enriched file to %s/%s', DEST_BUCKET, filename)
@@ -48,15 +46,6 @@ def add_timestamp_and_engine_version(file_data):
     return soup
 
 def process_event(sqs_rec):
-
-    # Get the object from the event and show its content type
-    # source_bucket = event["Records"][0]["s3"]["bucket"]["name"]
-    # source_key = urllib.parse.unquote_plus(
-    #     event["Records"][0]["s3"]["object"]["key"], encoding="utf-8"
-    # )
-
-    # print("Input bucket name:", source_bucket)
-    # print("Input S3 key:", source_key)
 
     s3_client = boto3.client("s3")
     source_bucket = sqs_rec["s3"]["bucket"]["name"]
@@ -87,11 +76,8 @@ def handler(event, context):
     LOGGER.info("detect-legislation-provisions")
     try:
         LOGGER.info('SQS EVENT: %s', event)
-        # event structure and parsing logic varies if the lambda function is involved directly from an S3:put object vs reading from an SQS queue
 
         for sqs_rec in event['Records']:
-            # TODO make the code adapt to a direct invocation vs reading from an SQS queue
-
             # stop the test notification event from breaking the parsing logic
             if 'Event' in sqs_rec.keys() and sqs_rec['Event'] == 's3:TestEvent':
                 break

@@ -15,10 +15,8 @@ from psycopg2 import Error
 
 import spacy
 from database import db_connection
-# from caselaw_extraction.caselaw_matcher import case_pipeline
 
 LOGGER = logging.getLogger()
-# LOGGER.setLevel(logging.INFO)
 LOGGER.setLevel(logging.DEBUG)
 
 def validate_env_variable(env_var_name):
@@ -46,17 +44,11 @@ class getLoginSecrets:
         session = boto3.session.Session()
         client = session.client(service_name="secretsmanager", region_name=region_name)
 
-        # In this sample we only handle the specific exceptions for the 'GetSecretValue' API.
-        # See https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
-        # We rethrow the exception by default.
-
         try:
             LOGGER.info(" about to get_secret_value_response")
             get_secret_value_response = client.get_secret_value(SecretId=secret_name)
             LOGGER.info("got_secret_value_response")
 
-            # Decrypts secret using the associated KMS CMK.
-            # Depending on whether the secret is a string or binary, one of these fields will be populated.
             if "SecretString" in get_secret_value_response:
                 secret = get_secret_value_response["SecretString"]
                 LOGGER.info("got SecretString")
@@ -68,32 +60,9 @@ class getLoginSecrets:
                 secret = decoded_binary_secret
             LOGGER.info("here")
             return secret
-        # except ClientError as e:
-        #     if e.response["Error"]["Code"] == "DecryptionFailureException":
-        #         # Secrets Manager can't decrypt the protected secret text using the provided KMS key.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "InternalServiceErrorException":
-        #         # An error occurred on the server side.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "InvalidParameterException":
-        #         # You provided an invalid value for a parameter.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "InvalidRequestException":
-        #         # You provided a parameter value that is not valid for the current state of the resource.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "ResourceNotFoundException":
-        #         # We can't find the resource that you asked for.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        # added as the validation exception was not being caught
         except Exception as exception:
             LOGGER.error('Exception: %s', exception)
             raise
-        # else:
 
 ############################################
 # - INSTANTIATE CLASS HELPERS
@@ -121,7 +90,6 @@ def process_event(sqs_rec):
 
     # fetch the judgement contents
     file_content = s3_client.get_object(
-                # Bucket=source_bucket, Key=source_key)["Body"].read()
                 Bucket=source_bucket, Key=source_key)["Body"].read().decode('utf-8')
                 
     LOGGER.debug(file_content)
@@ -148,8 +116,6 @@ def write_replacements_file(replacement_list):
     tuple_file = ""
     for i in replacement_list:
         replacement_object = {"{}".format(type(i).__name__): list(i)}
-        # json.dump(replacement_object, tuple_file)
-        # tuple_file.write("\n")
         tuple_file += json.dumps(replacement_object)
         tuple_file += "\n"
     return tuple_file
@@ -164,27 +130,37 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
 def init_NLP(rules_content):
     nlp = spacy.load("en_core_web_sm", exclude=['tok2vec', 'attribute_ruler', 'lemmatizer', 'ner'])
     nlp.max_length = 5000000
+    LOGGER.debug('Loading citation patterns jsonl')
+
+    s3 = boto3.client('s3')
+    patterns_resp = s3.get_object(Bucket=RULES_FILE_BUCKET, Key=RULES_FILE_KEY)
+    patterns = patterns_resp['Body']
+    pattern_list = [json.loads(line) for line in patterns.iter_lines()]
+
+    citation_ruler = nlp.add_pipe("entity_ruler")
+    citation_ruler.add_patterns(pattern_list)
+
     LOGGER.debug('checking file system access')
     from os import listdir
     from os.path import isfile, join
-    mypath = '/var/task'
-    onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    print(onlyfiles)
-    print(os.path.exists('/var/task/caselaw_extraction/rules/citation_patterns.jsonl'))
-    rule_file_name = 'citation_patterns.jsonl'
-    rule_file_path = '/var/task/' + rule_file_name
-    print(os.path.exists(rule_file_path))
+    # mypath = '/var/task'
+    # onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+    # print(onlyfiles)
+    # print(os.path.exists('/var/task/caselaw_extraction/rules/citation_patterns.jsonl'))
+    # rule_file_name = 'citation_patterns.jsonl'
+    # rule_file_path = '/var/task/' + rule_file_name
+    # print(os.path.exists(rule_file_path))
 
-    # hack to avoid using from disk is to overwrite the local file with the latest version from s3
-    new_filename = '/tmp/'+rule_file_name
-    newFile = open(new_filename,'wb')
-    newFile.write(rules_content)
-    LOGGER.debug(os.path.exists(new_filename))
+    # # hack to avoid using from disk is to overwrite the local file with the latest version from s3
+    # new_filename = '/tmp/'+rule_file_name
+    # newFile = open(new_filename,'wb')
+    # newFile.write(rules_content)
+    # LOGGER.debug(os.path.exists(new_filename))
 
 
     # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/caselaw_extraction/rules/citation_patterns.jsonl')
     # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/citation_patterns.jsonl')
-    citation_ruler = nlp.add_pipe("entity_ruler").from_disk(new_filename)
+    # citation_ruler = nlp.add_pipe("entity_ruler").from_disk(new_filename)
     # citation_ruler = nlp.add_pipe("entity_ruler").from_bytes(rules_content)
     return nlp
 
@@ -200,16 +176,10 @@ def determine_replacements(file_content, rules_content):
 
     # connect to the database
     db_conn = init_DB()
-    # db_conn = create_connection(DATABASE)
    
     # setup the spacy pipeline
     nlp = init_NLP(rules_content)
     LOGGER.debug('got nlp')
-    # attempt to free memory
-    # del rules_content
-    # import gc
-    # gc.collect()
-    # doc = nlp(file_content)
     doc = nlp(file_content)
 
     replacements = get_caselaw_replacements(doc, db_conn)
@@ -220,14 +190,8 @@ def determine_replacements(file_content, rules_content):
     return replacements
 
 def get_caselaw_replacements(doc, db_conn):
-    # TODO add replacement
     from caselaw_extraction.caselaw_matcher import case_pipeline
-    # return case_pipeline(doc, db_conn)
 
-    # replacement_entry = (citation_match, corrected_citation, year)  
-    # replacements = []
-    # replacement_entry = ("test_citation_match", "test_corrected_citation", "test_year")
-    # replacements = replacements.append(replacement_entry)
     replacements = case_pipeline(doc, db_conn)
     return replacements
 
@@ -248,7 +212,6 @@ def push_contents(uploaded_bucket, uploaded_key):
             'StringValue': uploaded_bucket
         }
     }
-    # json.dumps({"rev":rev_,"s_ver_str":s_ver_str_,"pro": pro_ })
     response = queue.send_message(MessageBody=json.dumps(message), MessageAttributes=msg_attributes)
 
 DEST_QUEUE = validate_env_variable("DEST_QUEUE_NAME")
@@ -261,21 +224,8 @@ def handler(event, context):
     LOGGER.info(DEST_QUEUE)
     try:
         LOGGER.info('SQS EVENT: %s', event)
-        # event structure and parsing logic varies if the lambda function is involved directly from an S3:put object vs reading from an SQS queue
-
-
-        # Get the object from the event and show its content type
-        # source_bucket = event["Records"][0]["s3"]["bucket"]["name"]
-        # source_key = urllib.parse.unquote_plus(
-        #     event["Records"][0]["s3"]["object"]["key"], encoding="utf-8"
-        # )
-
-        # print("Input bucket name:", source_bucket)
-        # print("Input S3 key:", source_key)
 
         for sqs_rec in event['Records']:
-            # TODO make the code adapt to a direct invocation vs reading from an SQS queue
-
             # stop the test notification event from breaking the parsing logic
             if 'Event' in sqs_rec.keys() and sqs_rec['Event'] == 's3:TestEvent':
                 break

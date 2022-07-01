@@ -26,8 +26,6 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 def upload_contents(source_key, output_file_content):
-    # store the file contents in the destination bucket
-    # LOGGER.info(os.path.splitext(source_key)[0])
     filename = source_key
 
     LOGGER.info('Uploading enriched file to %s/%s', DEST_BUCKET, filename)
@@ -67,11 +65,8 @@ def handler(event, context):
     LOGGER.info("detect-oblique-references")
     try:
         LOGGER.info('SQS EVENT: %s', event)
-        # event structure and parsing logic varies if the lambda function is involved directly from an S3:put object vs reading from an SQS queue
-
+    
         for sqs_rec in event['Records']:
-            # TODO make the code adapt to a direct invocation vs reading from an SQS queue
-
             # stop the test notification event from breaking the parsing logic
             if 'Event' in sqs_rec.keys() and sqs_rec['Event'] == 's3:TestEvent':
                 break

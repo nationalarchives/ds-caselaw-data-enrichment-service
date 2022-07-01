@@ -65,7 +65,6 @@ class getLoginSecrets:
         except Exception as exception:
             LOGGER.error('Exception: %s', exception)
             raise
-        # else:
 
 ############################################
 # - INSTANTIATE CLASS HELPERS
@@ -152,9 +151,8 @@ def lambda_handler(event, context):
             test_manifest(df, pattern_list)
 
             # write new jsonl file
-            # date_today = datetime.datetime.now().strftime("%Y-%m-%d")
             new_patterns_file = write_patterns_file(df['pattern'].to_list())
-            upload_replacements(source_bucket, 'citations_patterns_test.jsonl', new_patterns_file)
+            upload_replacements(source_bucket, 'citation_patterns.jsonl', new_patterns_file)
 
             # connect to database
             try:
