@@ -4,7 +4,7 @@
 
 The Abbreviation Annotator is the third Annotator function in the JEP pipeline. It is preceded by the [Legislation Annotator](/docs/legislation/legislation-annotator.md) and followed the [Oblique Legislative References Annotator](/docs/legislation/oblique-references.md). The Abbreviation Annotator is deployed as a container function Lambda function. [!!!! name of lambda!]
 
-The purpose of the Abbreviation Annotator is to detect the use of abbreviations and resolve the abbreviated shortform, such as `ECtHR`, to its corresponding longform, `European Court of Human Rights`. Abbreviation shortform are used extensively in judgments as a device to reduce wordcount and aid readability and are generally declared within double quotes inside parentheses following the first mention of the corresponding longform, like so:
+The purpose of the Abbreviation Annotator is to detect the use of abbreviations and resolve the abbreviated shortform, such as `ECtHR`, to its corresponding longform, `European Court of Human Rights`. Abbreviation shortform are used extensively in judgments as a device to reduce wordcount and aid readability. They are generally declared within double quotes inside parentheses following the first mention of the corresponding longform, like so:
 
 > ... section 4 of the Human Rights Act 1998 ("HRA 1998") provides...
 

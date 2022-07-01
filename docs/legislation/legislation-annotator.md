@@ -14,7 +14,7 @@ The following snippet provides an example of an enriched reference to an Act of 
 ```xml
 <ref href="http://www.legislation.gov.uk/id/ukpga/2006/46/" uk:canonical="2006 c. 46" uk:type="legislation">Companies Act 2006</ref>
 ```
-References to primary legislation are enclosed in `</ref>` tags with the following five attributes:
+References to primary legislation are enclosed in `</ref>` tags with the following three attributes:
 
 * `href`: the TNA URI for the detected piece of primary legislation 
 * `uk:canonical`: the citation, componsed of the year and chapter number assigned to the detected piece of primary legislation
@@ -32,7 +32,7 @@ The Legislation Annotator's logic follows three stages. First, the Legislation A
 
 The second stage runs the exact matcher against legislation entries in the lookup table that do not conform to the `Act YYYY` pattern, e.g. `RCRA 1926`. 
 
-The final stage completes the detection process by (i) merging the results of the first and second stages; (ii) resolves detected references that might overlap due the nature of the fuzzy matching to a [1-to-1] linking between legislation short titles and the detected reference; and (iii) creates replacement tuples for the detected references which are passed over to the first enrichment [replacer](/docs/the-replacers.md)
+The final stage completes the detection process by (i) merging the results of the first and second stages; (ii) resolves detected references that might overlap due the nature of the fuzzy matching to a [1-to-1] linking between legislation short titles and the detected reference; and (iii) creates replacement tuples for the detected references which are passed over to the first enrichment [replacer](/docs/the-replacers.md).
 
 
 

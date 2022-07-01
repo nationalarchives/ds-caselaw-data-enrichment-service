@@ -7,13 +7,13 @@ The Case Law Annotator provides the following core functionality:
 
 1. Detects references to well-formed (canonical) citations and malformed citations
 2. Casts malformed case citations to their canonical form
-3. Marks up the detected references in the LegalDocML.
+3. Marks up the detected references in the LegalDocML
 
 ## Implementation details
 
 The input to the Case Law Annotator is the raw text of the judgment body of the incoming judgment XML file to be enriched. The output is a list of replacements and associated metadata that is sent to the first phase enrichment [replacer](/docs/the-replacers.md).
 
-The Case Law Annotator uses a deterministic rules-based approach to identify case law citations and apply any necessary correction strategies to malformed citations (these are explained extensively in the documentatin that follows).
+The Case Law Annotator uses a deterministic rules-based approach to identify case law citations and apply any necessary correction strategies to malformed citations (these are explained extensively in the documentation that follows).
 
 The heart of the Case Law Annotator is the *Rules Manifest*, a set of citation detection rule patterns and associated data stored in Postgres. Whenever the Rules Manifest is updated and re-ingested into Postgres, the spaCy rule patterns are extracted to a JSONL file, `citation_patterns.jsonl`, which is stored in S3. When a new judgment arrives for enrichment, the following process occurs:
 
@@ -25,7 +25,7 @@ The heart of the Case Law Annotator is the *Rules Manifest*, a set of citation d
 
 ## XML and attributes
 
-The primary purpose of the Case Law Annotator is to apply LegalDocML markup to references to case law present in the judgment. This serves many downstream use-cases, such as being generating lists of citing and cited cases for a given judgment or generating a citation graph. 
+The primary purpose of the Case Law Annotator is to apply LegalDocML markup to references to case law present in the judgment. This serves many downstream use-cases, such as generating lists of citing and cited cases for a given judgment or generating a citation graph. 
 
 The following snippet provides an example of enriched references to case law (a neutral citation and a reference to a case reported in The Weekly Law Reports):
 
@@ -35,16 +35,16 @@ The following snippet provides an example of enriched references to case law (a 
 
 References to case law are enclosed in `</ref>` tags with the following five attributes:
 
-* `href`: the TNA URI for the judgment that corresponds to the detected citation. Note that this attribute is only assigned a value where the value of `uk:isneutral` is `true`.
+* `href`: the TNA URI for the judgment that corresponds to the detected citation. Note that this attribute is only assigned a value where the value of `uk:isneutral` is `true`
 * `uk:canonical`: the canonical form of the detected citation
 * `uk:isneutral`: whether the detected citation is a neutral citation 
 * `uk:type`: the type of `ref` element. For case law citations this is always set to `case`
-* `uk:year`: the year extracted from the detected citation, if present. Note: the value of `year` reflects the year in the detected citation, which is not necessarily the same as the year of judgment. 
+* `uk:year`: the year extracted from the detected citation, if present. Note: the value of `year` reflects the year in the detected citation, which is not necessarily the same as the year of judgment
 
 ## Detection of Canonical and Malformed Citations
 The accuracy with which case law citations are used in judgments is highly variable. Some citations are perfect and follow the *canonical form*. For example, the correct, or canonical, way to cite a case reported in *The Weekly Law Reports* is like so: `[year] vol WLR page`or `[2022] 1 WLR 123`. The square brackets are present and the right way round. The volume number has been included. There are no fullstops interspersed through the series abbreviation. The citation is just right. 
 
-Sometimes citations are less than perfect: they do not follow the *canonical form* and are *malformed*. For example, whilst there is only one way to correctly cite a case reported in *The Weekly Law Reports* there are many wrong ways. One incorrect way might be to incorrectly specify the series abbreviation, such as `[2022] 1 Weekly LR 123` instead of `[2022] 1 Weekly LR 123`. As we explain below, the JEP's Case Law Annotator is particularly opinionated about the use of punctuation in case law citations and adopts 
+Sometimes citations are less than perfect: they do not follow the *canonical form* and are *malformed*. For example, whilst there is only one way to correctly cite a case reported in *The Weekly Law Reports* there are many wrong ways. One example of this might be to incorrectly specify the series abbreviation, such as `[2022] 1 Weekly LR 123` instead of `[2022] 1 Weekly LR 123`. As we explain below, the JEP's Case Law Annotator is particularly opinionated about the use of punctuation in case law citations. 
 
 The Case Law Annotator has been designed to detect both canonical and malformed variations of the case law citations most often found in judgments given in the courts of England and Wales. It does so by using rules (contained in the *Rules Manifest*) to specify which citation patterns to match against and whether those patterns match the canonical form of a citation or not. For example, there is a rule that matches the canonical form of a citation to a case reported in *The Weekly Law Reports*. That rule's `id` is `wlr`. 
 
