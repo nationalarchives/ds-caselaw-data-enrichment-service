@@ -14,7 +14,9 @@ In the example above, the shortform is `HRA` and the longform is `Human Rights A
 
 The markup on abbreviations is straightforward. The Abbreviation Annotator wraps the shortform abbreviation, e.g. `FSA`, within `</abbr>` tags. The longform definition, e.g. `Food Standards Agency`, is captured as the value of the `title` attribute, like so:
 
-```<abbr title="Food Standards Agency">FSA</abbr>```
+```xml
+<abbr title="Food Standards Agency">FSA</abbr>
+```
 
 ## Implementation Details
 
