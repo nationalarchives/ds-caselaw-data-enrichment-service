@@ -5,6 +5,8 @@ import sys
 sys.path.append("./")
 from replacer import second_stage_replacer
 
+# Main for the purposes of demoing the legislation provision enrichment
+
 def demo_main(): 
     enriched_judgment_file_path = "legislation_provisions_extraction/test_judgments"
     file_list = [i for i in os.listdir(enriched_judgment_file_path) if i.endswith('.xml')]

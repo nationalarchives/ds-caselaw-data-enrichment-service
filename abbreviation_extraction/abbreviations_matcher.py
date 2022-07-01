@@ -48,4 +48,4 @@ def abb_pipeline(judgment_content_text, nlp):
             REPLACEMENTS_ABBR.append(abr_tuple)
 
     return REPLACEMENTS_ABBR
-    
+

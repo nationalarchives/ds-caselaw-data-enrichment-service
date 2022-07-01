@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment name="judgment" contains="originalVersion">
+    <meta>
+      <identification source="#tna">
+	<FRBRWork>
+	  <FRBRthis value="ewca/crim/2006/2749"/>
+	  <FRBRuri value="ewca/crim/2006/2749"/>
+	  <FRBRdate date="2006-11-15" name="judgment"/>
+	  <FRBRauthor href="#ewca-criminal"/>
+	  <FRBRcountry value="GB-UKM"/>
+	  <FRBRnumber value="2749"/>
+	  <FRBRname value="Robson, R v."/>
+	</FRBRWork>
+	<FRBRExpression>
+	  <FRBRthis value="ewca/crim/2006/2749/eng"/>
+	  <FRBRuri value="ewca/crim/2006/2749/eng"/>
+	  <FRBRdate date="2006-11-15" name="judgment"/>
+	  <FRBRauthor href="#ewca-criminal"/>
+	  <FRBRlanguage language="eng"/>
+	</FRBRExpression>
+	<FRBRManifestation>
+	  <FRBRthis value="ewca/crim/2006/2749/eng/akn"/>
+	  <FRBRuri value="ewca/crim/2006/2749/eng/akn"/>
+	  <FRBRdate date="2021-11-30T23:24:32" name="transform"/>
+	  <FRBRauthor href="#tna"/>
+	  <FRBRformat value="application/xml"/>
+	</FRBRManifestation>
+      </identification>
+      <references source="#tna">
+	<TLCOrganization eId="ewca-criminal" href="https://www.gov.uk/courts-tribunals/court-of-appeal-criminal-division" showAs="The Court of Appeal of England and Wales (Criminal Division)" shortForm="Court of Appeal Criminal Division"/>
+	<TLCOrganization eId="tna" href="https://www.nationalarchives.gov.uk/" showAs="The National Archives"/>
+	<TLCPerson eId="michael-robson" href="" showAs="Michael Robson"/>
+	<TLCRole eId="appellant" href="" showAs="Appellant"/>
+	<TLCPerson eId="judge-lord-justice-rix" href="/judge-lord-justice-rix" showAs="LORD JUSTICE RIX"/>
+	<TLCPerson eId="judge-mrs-justice-cox-dbe" href="/judge-mrs-justice-cox-dbe" showAs="MRS JUSTICE COX DBE"/>
+	<TLCPerson eId="judge-sir-michael-wright" href="/judge-sir-michael-wright" showAs="SIR MICHAEL WRIGHT"/>
+      </references>
+      <proprietary source="ewca/crim/2006/2749/eng/docx" xmlns:uk="https:/judgments.gov.uk/">
+	<uk:court>EWCA-Criminal</uk:court>
+	<uk:year>2006</uk:year>
+	<uk:number>2749</uk:number>
+	<uk:cite>[2006] EWCA Crim 2749</uk:cite>
+	<uk:hash>53539d3b04a1701a591691f12cf20d3d4305eaae0f1ecc31e60aa9293548680a</uk:hash>
+      </proprietary>
+      <presentation source="ewca/crim/2006/2749/eng/docx">
+	<style xmlns="http://www.w3.org/1999/xhtml">
+#judgment { font-family: 'Times New Roman'; font-size: 12pt; }
+#judgment .Normal { font-size: 12pt; }
+#judgment .Heading1 { font-weight: bold; font-family: Arial; font-size: 16pt; }
+#judgment .CoverText { text-align: right; text-decoration: underline; font-size: 12pt; }
+#judgment .CoverMain { font-weight: bold; text-decoration: underline; font-size: 12pt; }
+#judgment .Header { font-family: Univers; font-size: 12pt; }
+#judgment .Footer { font-family: Univers; font-size: 12pt; }
+#judgment .CoverDesc { text-align: center; font-weight: bold; font-size: 18pt; }
+#judgment .ParaHeading { font-size: 12pt; }
+#judgment .ParaLevel1 { text-align: justify; margin-left: 0.50in; font-size: 12pt; }
+#judgment .ParaLevel2 { text-align: justify; margin-left: 0.98in; font-size: 12pt; }
+#judgment .ParaLevel3 { text-align: justify; margin-left: 1.48in; font-size: 12pt; }
+#judgment .ParaLevel4 { text-align: justify; margin-left: 1.97in; font-size: 12pt; }
+#judgment .ParaLevel5 { text-align: justify; margin-left: 2.46in; font-size: 12pt; }
+#judgment .ParaLevel6 { text-align: justify; margin-left: 2.95in; font-size: 12pt; }
+#judgment .ParaLevel7 { text-align: justify; margin-left: 3.45in; font-size: 12pt; }
+#judgment .ParaLevel8 { text-align: justify; margin-left: 3.94in; font-size: 12pt; }
+#judgment .ParaLevel9 { text-align: justify; margin-left: 4.43in; font-size: 12pt; }
+#judgment .ParaNoNumber { text-align: justify; font-size: 12pt; }
+#judgment .Quote { text-align: justify; margin-left: 1.00in; margin-right: 1.00in; font-size: 12pt; }
+#judgment .Title { text-align: center; font-weight: bold; font-size: 10pt; }
+#judgment .BalloonText { font-family: Tahoma; font-size: 8pt; }
+#judgment .eMailBlock { text-align: center; font-weight: bold; font-size: 13pt; }
+#judgment .Heading1Char { font-weight: bold; font-size: 16pt; }
+#judgment .HeaderChar { font-size: 12pt; }
+#judgment .FooterChar { font-size: 12pt; }
+#judgment .PageNumber { font-size: 10pt; }
+#judgment .QuoteChar { font-style: italic; font-size: 12pt; color: #404040; }
+#judgment .TitleChar { font-weight: bold; font-size: 16pt; }
+#judgment .BalloonTextChar { font-family: 'Segoe UI'; font-size: 9pt; }
+</style>
+      </presentation>
+    </meta>
+    <coverPage>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p class="Header">
+	      <span style="font-weight:bold;text-decoration:underline;font-family:'Times New Roman';font-size:8pt">Judgment Approved by the court for handing down.</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="Header" style="text-align:right">
+	      <span style="font-family:'Times New Roman';font-size:8pt">R v Robson</span>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p class="Header"/>
+    </coverPage>
+    <header>
+      <p class="CoverText" style="text-align:left">Neutral Citation Number: <neutralCitation>[2006] EWCA Crim 2749</neutralCitation></p>
+      <p class="CoverText">Case No: <docketNumber>2003 06693 D4</docketNumber></p>
+      <p class="CoverMain">
+	<courtType>IN THE SUPREME COURT OF JUDICATURE</courtType>
+      </p>
+      <p class="CoverMain">
+	<courtType>COURT OF APPEAL (CRIMINAL DIVISION)</courtType>
+      </p>
+      <p class="CoverMain">ON APPEAL FROM NEWCASTLE-UPON-TYNE CROWN COURT</p>
+      <p class="CoverMain">MR JUSTICE HARRISON</p>
+      <p class="CoverText">Royal Courts of Justice</p>
+      <p class="CoverText">Strand, London, WC2A 2LL</p>
+      <p class="CoverText">Date: <docDate date="2006-11-15">15/11/2006</docDate></p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Before :</span>
+      </p>
+      <p class="CoverMain" style="text-align:center">
+	<judge refersTo="#judge-lord-justice-rix">LORD JUSTICE RIX</judge>
+      </p>
+      <p class="CoverMain" style="text-align:center">
+	<judge refersTo="#judge-mrs-justice-cox-dbe">MRS JUSTICE COX DBE</judge>
+      </p>
+      <p class="CoverMain" style="text-align:center">
+	<span style="font-weight:normal;text-decoration:none">and</span>
+      </p>
+      <p class="CoverMain" style="text-align:center">
+	<judge refersTo="#judge-sir-michael-wright">SIR MICHAEL WRIGHT</judge>
+      </p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">
+	<span style="font-weight:bold">Between :</span>
+      </p>
+      <table>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">Regina</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:center"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <span style="font-weight:bold">- and -</span>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:right"/>
+	  </td>
+	</tr>
+	<tr>
+	  <td rowspan="1" colspan="1">
+	    <p/>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p style="text-align:center">
+	      <party refersTo="#michael-robson" as="#appellant" style="font-weight:bold">Michael Robson</party>
+	    </p>
+	  </td>
+	  <td rowspan="1" colspan="1">
+	    <p class="CoverMain" style="text-align:center">
+	      <role refersTo="#appellant">Appellant</role>
+	    </p>
+	  </td>
+	</tr>
+      </table>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+      <p style="text-align:center">Mr Michael Turner QC &amp; Mr Keir Monteith (instructed by Messrs Mclarty &amp; Co<span style="font-weight:bold"> Solicitors</span>) for the Appellant</p>
+      <p style="text-align:center"><span style="font-weight:bold">Mr Benjamin Nolan QC </span>(instructed by<span style="font-weight:bold"> the Crown Prosecution Service</span>) for the Prosecution</p>
+      <p style="text-align:center">Hearing dates : 29 June &amp; 16 October 2006</p>
+      <p style="text-align:center">- - - - - - - - - - - - - - - - - - - - -</p>
+    </header>
+    <judgmentBody>
+      <decision>
+	<level>
+	  <content>
+	    <p class="CoverDesc">Judgment</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p>
+	      <span style="font-weight:bold">This is the judgment of the court :</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">1.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On 7 June 1995 the applicant, Michael Robson, killed his friend, Robert Williamson, by stabbing him in the stomach with a knife. Not long after, following a row with his sister, Lisa, he lashed at her face with the knife, almost severing her nose. He was arrested about 15 days later and spent the time up to trial on remand. In October 1996 he faced trial in the Crown Court at Newcastle-on-Tyne before Harrison J and a jury for the murder of his friend and the wounding (with intent) of his sister, and on 14 October 1996 was convicted of both. He was sentenced to life imprisonment, with a concurrent sentence of 5 years for the section 18 offence. A specified period for the purpose of the life sentence was increased by the Lord Chief Justice from 11 years (the recommendation of the judge) to 14 years.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">2.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">We are here concerned with a renewed application, made on 20 November 2003, some seven years out of time, for leave to appeal against his conviction of murder: on the ground that the judge misdirected the jury on the defence of diminished responsibility.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">3.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">At his trial the applicant did not deny the killing of his friend, but ran a number of defences which included diminished responsibility and provocation.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">4.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The defence of diminished responsibility, the burden of which is on the defendant, and which if accepted reduces a liability for murder to one of manslaughter, is contained in section 2(1) of the <ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/Eliz2/5-6/11" uk:canonical="1957 (5 & 6 Eliz. 2) c. 11">Homicide Act 1957</ref>, which provides:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“(1) Where a person kills or is party to the killing of another, he shall not be convicted of murder if he was suffering from such abnormality of mind (whether arising from a condition of arrested or retarded development of mind or any inherent causes or induced by disease or injury) as substantially impaired his mental responsibility for his acts and omissions in doing or being a party to the killing.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">5.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The law on the correct way to direct a jury on diminished responsibility in the context of evidence of drink has suffered a significant change since the trial, as a result of the decision of the House of Lords in <span style="font-style:italic">R v. Dietschmann</span> <ref uk:type="case" href="https://caselaw.nationalarchives.gov.uk/ukhl/2003/10" uk:isNeutral="true" uk:canonical="[2003] UKHL 10" uk:year="2003">[2003] UKHL 10</ref>, <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[2003] 1 AC 1209" uk:year="2003">[2003] 1 AC 1209</ref>.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">6.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Prior to <span style="font-style:italic">Dietschmann</span> the course of jurisprudence as to how juries should be directed where there was evidence both of an abnormality of mind and of the disinhibiting effect of drink had not run smooth. The history is set out in the speech of Lord Hutton in <span style="font-style:italic">Dietschmann</span>. Suffice to say that at the time of the applicant’s trial in 1996 the then current approved direction, based on the decisions of this court in <span style="font-style:italic">R v. Atkinson </span>[1985] Crim LR 314 and <span style="font-style:italic">R v. Egan</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[1992] 4 All ER 470" uk:year="1992">[1992] 4 All ER 470</ref>, emphasised that drink, where a contributory factor, could undermine a defence of diminished responsibility even where the defendant was suffering from an abnormality of mind and even where that abnormality might be thought to have been the or a substantial cause of the homicide and in any event to have substantially impaired the defendant’s mental responsibility, despite the involvement of drink. Thus <span style="font-style:italic">Atkinson</span> and <span style="font-style:italic">Egan </span>adopted as correct two questions which came to be known as the “Smith questions”, formulated by the late Professor Sir John Smith in his comment in [1984] Crim LR 554 on <span style="font-style:italic">R v. Gittens </span><ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[1984] QB 698" uk:year="1984">[1984] QB 698</ref>, where he said:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“It may be, however, that the jury will be of the opinion that, if the defendant had not taken drink or drugs, he would not have killed at all. In that case, it appears that the defence would not be open. The jury were certainly directed to that effect in <span style="font-style:italic">R v Turnbull</span> and the Court of Appeal did not disapprove of that direction: ‘Have the defence satisfied you that it is more probable than not that Turnbull would have acted as he had on this night even had he not taken drink?...If…you did take the view…that if he had not had drink this would not have happened, then the defence would have failed to prove that the abnormality of mind substantially diminished Turnbull’s responsibility for the act in killing.’…So the two questions for the jury, in logical sequence would seem to be: ‘Have the defence satisfied you on the balance of probabilities – that, if the defendant had not taken drink – (i) he would have killed as he in fact did? And (ii) he would have been under diminished responsibility when he did so?’”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">7.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In<span style="font-style:italic"> Atkinson</span> and<span style="font-style:italic"> Egan</span> this court approved those two questions. In due course a direction based on those two questions became part of the standard recommended directions to be found in the JSB Bench Book.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">8.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In <span style="font-style:italic">Dietschmann</span>, however, the House of Lords held that the Smith questions were a misdirection and reverted to what this court had actually decided in <span style="font-style:italic">R v. Gittens</span>, where it had approved the direction in <span style="font-style:italic">R v. Fenton</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="(1975) 61 Cr App R 261" uk:year="1975">(1975) 61 Cr App R 261</ref> and disapproved the direction in <span style="font-style:italic">R v. Turnbull</span><span> </span><span style="font-style:italic">(Launcelot)</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="(1977) 65 Cr App R 242" uk:year="1977">(1977) 65 Cr App R 242</ref>. In the upshot, Lord Hutton, with whose speech the other members of the House agreed, said that a jury should be directed along the following lines (at para 41):</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“Assuming that the defence have established that the defendant was suffering from mental abnormality as described in section 2, the important question is: did that abnormality substantially impair his mental responsibility for his acts in doing the killing? You know that before he carried out the killing the defendant had had a lot to drink. Drink cannot be taken into account as something which contributed to his mental abnormality and to any impairment of mental responsibility arising from that abnormality. But you may take the view that both the defendant’s mental abnormality and drink played a part in impairing his mental responsibility for the killing and that he might not have killed if he had not taken drink. If you take that view, then the question for you to decide is this: has the defendant satisfied you that, despite the drink, his mental abnormality substantially impaired his mental responsibility for his fatal acts, or has he failed to satisfy you of that? If he has satisfied you of that, you will find him not guilty of murder but you may find him guilty of manslaughter. If he has not satisfied you of that, the defence of diminished responsibility is not available to him.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">9.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Since <span style="font-style:italic">Dietschmann</span> the JSB Bench Book’s standard direction has been revised accordingly.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">10.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The effect of this jurisprudence for appeals, post <span style="font-style:italic">Dietschmann</span>,<span style="font-style:italic"> </span>based on the pre <span style="font-style:italic">Dietschmann </span>direction, where the notice of appeal concerned is substantially out of time, was considered by this court in <span style="font-style:italic">R v. Hendy</span> <ref uk:type="case" href="https://caselaw.nationalarchives.gov.uk/ewca/crim/2006/819" uk:isNeutral="true" uk:canonical="[2006] EWCA Crim 819" uk:year="2006">[2006] EWCA Crim 819</ref> (12 April 2006, unreported). The circumstances of that appeal had similarities with the present case. In <span style="font-style:italic">Hendy</span>, the defendant was convicted of the murder of a friend in 1993, unsuccessfully raised a defence of diminished responsibility, did not give evidence himself but called medical experts to support that defence. Drink was involved. The Crown called further medical experts to rebut the defence on the basis that the defendant suffered no abnormality of mind. They also said that drink was the trigger for the killing. No transcript of the summing up survived, but the trial judge’s written questions for the jury on the subject of diminished responsibility had survived and they were in the form of the Smith questions. It was common ground that if the law at the time of trial was as explained in <span style="font-style:italic">Dietschmann</span>, then the judge had misdirected the jury and that misdirection was such as to render the verdict of murder unsafe. The issue was whether the law in <span style="font-style:italic">Dietschmann</span> was “new law” or “old law”, ie represented the law as it always was. The importance of the issue was that, if it was “new law”, then the principle applicable to applications for leave to appeal brought out of time on the premise of a change of law would have led to the refusal of an extension of time to accommodate Hendy’s application, which had been made in July 2004, some 11 years out of time. However, this court held that the <span style="font-style:italic">Dietschmann </span>direction was “old law”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">11.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Gage LJ, giving the judgment of this court, said:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“35. In our judgment it is clear from those passages in the speech of Lord Hutton that he was not stating any new principles of law on this topic. In our opinion he was doing no more than re-stating what the law was before the Court of Appeal incorrectly approved the two questions raised by Professor Smith following the judgment in <span style="font-style:italic">Gittens</span>. It is, in our judgment, relevant to note that Lord Hutton started with a reference to s.2(1) of the Homicide Act 1959 the meaning of which he said was clear, he went on to approve the judgment of Lord Lane in <span style="font-style:italic">Gittens</span> on the basis that it was consistent with his construction of that subsection. We have reached the conclusion that the law on this topic as explained in <span style="font-style:italic">Dietschmann </span> was not “new law”…It follows that the direction given by the judge was wrong and that the verdict of the jury was unsafe.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">36. We should add that we were not impressed by Mr Pringle’s floodgates submission. It would in our judgment have been unjust and unsatisfactory if we had been driven to dismiss the appeal on the basis that although the verdict of the jury was unsafe on the law as it now is, it would have had to have been dismissed on the basis of the law as it was understood in 1993. However, on the conclusion that we have reached on the issue, as it has been presented to us, this does not arise. Notwithstanding the long delay since trial we extend time for the appellant to seek leave to appeal. We give leave on this amended ground and the verdict of the jury will be quashed.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">12.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the present case, the only relevant difference for our initial and present purpose of considering whether to extend time for the applicant to seek leave to appeal, before we approach more closely the particular facts of his trial, is the submission made on behalf of the Crown by Mr Ben Nolan QC that, in the absence of a surviving transcript of the judge’s summing up and in the absence also of any other material (such as the draft directions in <span style="font-style:italic">Hendy</span>) from which his diminished responsibility direction can be ascertained, this application is doomed because no misdirection can be established. In that respect, however, Mr Nolan acknowledged the force of the submissions advanced by Mr Turner QC on behalf of the applicant, that there was substantial material, both in the pre-<span style="font-style:italic">Dietschmann</span> JSB Bench Book, and in the recognition in <span style="font-style:italic">Hendy </span>(at para 26) that after <span style="font-style:italic">Atkinson </span>and <span style="font-style:italic">Egan</span> and before <span style="font-style:italic">Dietschmann</span> “judges have invariably…directed the jury in the same way as the judge did in this case”, and in the nature of some of the Crown’s cross-examination in the applicant’s trial (see below at paras 26/27), that the parties anticipated and the judge delivered a direction along the line held to be a misdirection in <span style="font-style:italic">Dietschmann.</span></p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">13.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">We accept Mr Turner’s submissions in this respect.  Therefore we would extend time here to apply for leave to appeal, and give leave to appeal, and we treat the submissions we have heard as given on appeal.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-style:italic">The essential facts</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">14.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Despite the absence of a surviving transcript of the summing-up it has been possible to reconstruct the facts from notes, including the judge’s notes, of the testimony of witnesses, as well as from what the appellant, as I shall now call Michael Robson, told the various doctors who were called as witnesses at the trial. The appellant himself, like the defendant in <span style="font-style:italic">Hendy</span>, gave no evidence. The experts’ reports survive intact.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">15.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The essential facts, however, can be stated quite quickly. At about 7.30 pm on 7 June 1995 the appellant, in a violent and distressed state, was walking in the street with another man when he came across Robert Williamson, described as a good, or even his best, friend, sitting in the passenger seat of a van next to its driver. The appellant had drunk up to half or thereabouts of a bottle of vodka and a pint of cider. He had had little to eat during the day. He had become upset and depressed by a number of incidents, and was suicidal. The appellant, seeing Williamson, beckoned to him, saying that he wanted to have back the gun which Williamson had taken off him earlier in the day and with which the appellant had been threatening to commit suicide. The appellant’s reaction was to produce a large knife with a serrated edge from his coat pocket and thrust it in Williamson’s face through the van window. Williamson pulled away in the direction of the driver to avoid injury but the appellant stabbed him in the stomach. He died shortly afterwards.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">16.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The appellant went with the man with whom he had been walking back to that man’s girlfriend’s home, where he found his, the appellant’s, sister, Lisa. They were very fond of one another, and he had been living with her and her family. They had a row, in the course of which she told him that she did not want him living with her anymore. The appellant slashed her face.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">17.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The appellant at the time of these events was 24 (or possibly 21, two dates of birth are found). He had a poor criminal record.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-style:italic">The psychiatric evidence</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">18.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Three consultant forensic psychiatrists gave evidence for the defence (Dr Kim Fraser, Dr Kenneth Davison, and Dr H A McClelland) and two for the prosecution (Dr R C Gibb and Dr Don Grubin). Each had produced a psychiatric report.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">19.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr Fraser in his report recorded the appellant telling him that his personality changed when he was 19, when his mother died. He began to bottle things up, and became depressed. He suffered a depressive relapse a year later on the death of his brother. He first started to think of suicide then, and resorted more heavily to alcohol and drugs. In December 1992 he had made a suicide attempt, as he saw it, with pain-killers, as a result of a break-up with his then girl-friend. There was another such attempt in March 1995, for the same reason. Robert Williamson was a good friend: they saw each other most days, and there had never been any trouble between them. The night before the killing he had been high on cocaine. On the afternoon of the killing he had earlier had a pint of cider and later drunk about three-quarters of a half bottle of vodka and was “pleasantly drunk”. He had had a row with his sister and smashed his bedroom door, then gone out for a walk. When he returned, he found his girl-friend’s parents asking for their daughter, Emma (who was 17), to leave him. He felt provoked, and ripped his shirt off (in a show of aggression). Emma left with her parents. He blamed his sister for letting them know where Emma was. He became suicidal. He wanted to shoot himself. He went out again, and that was when he came across Williamson. He saw a gun in his hand but did not remember what happened next until he was with his sister again. A further row led to her saying “It’s you I want rid of”, and he snapped and slashed her.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">20.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr Fraser’s conclusions were that at the time of the killing the appellant was suffering from a number of depressive symptoms not amounting to a depressive illness. However, in the hours leading up to the killing a number of situational factors, namely the departure of his girlfriend and the belief that his sister had betrayed him led to an <span style="font-style:italic">acute stress reaction</span>, an abnormality of the mind, to which he was particularly vulnerable by virtue of past experiences and which in her opinion substantially impaired his mental responsibility.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">21.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr Davison in his report recorded a similar account, also mentioning the deaths of a maternal grandmother in 1992 and a paternal uncle (by suicide) in 1995. Dr Davison’s conclusions were that, against the background of a <span style="font-style:italic">dissocial personality disorder</span> (indicated by his frequent offending, random violence, difficulty in maintaining relationships and lack of interest in working) and a <span style="font-style:italic">reactive depression </span>(aggravated by drug and alcohol abuse), the appellant had suffered an <span style="font-style:italic">acute stress reaction</span> brought on by the loss of his girlfriend, and his thoughts of his sister’s betrayal. All three conditions were mental disorders and it was the combination of them which substantially impaired his mental responsibility, with a causal contribution from alcohol intoxication and drug withdrawal.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">22.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr McClelland reported in similar vein. In his opinion the appellant was tormented by intense emotion, and thus aggressive under pressure, subject to depressive moods (but not a sustained depressive disorder) and morbid jealousy. His self-control was weakened by drug and alcohol intake. The vodka would have increased his mental instability but was not the essential factor. Following the departure of his girlfriend, he entered on a sustained state of rage, seriously contemplated suicide, killed his longstanding friend without cause and slashed his sister, with whom he lived and with whom he was bonded. He agreed with the diagnoses of both Dr Fraser and Dr Davison: the appellant suffered from a <span style="font-style:italic">dissocial personality</span><span> </span><span style="font-style:italic">disorder</span> and, at the time of the killing, an <span style="font-style:italic">acute stress disorder</span>. His abnormality of mind was such as substantially to impair his responsibility.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">23.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The Crown’s experts rejected these diagnoses. Dr Gibb gave an account which was consistent with that of the defence psychiatrists, but he came to a different conclusion. He recorded the appellant’s description of himself as quick tempered and easily roused to violence and possessive towards girlfriends. He described the appellant’s alcohol and drug misuse. The appellant presented as pleasant and communicative, did not appear to be depressed, and was without evidence of psychosis. At the time of the offences he was low in mood and upset, aroused and irritable, but was not suffering from a mental illness such as depression. Dr Gibb rejected a diagnosis of <span style="font-style:italic">acute stress reaction</span> on the ground that that required exposure to an exceptional mental or physical stressor: whereas the supposed stressor, the trouble with his girlfriend, was not particularly unusual given his past history of unstable and turbulent relationships. Rather, his self-reported mood swings, past history of self-harm, irritability and poor anger control were best considered to be features of his personality, enhanced by chronic substance misuse: but did not amount to a <span style="font-style:italic">dissocial personality disorder</span>, which required callous unconcern for the feelings of others and other characteristics which the appellant did not exhibit. He suffered from no abnormality of mind.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">24.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr Grubin came to somewhat of the same conclusion. There was no evidence of any current mental illness. As for the time of the offences, against the background of a history of antisocial behaviour, alcohol and drug abuse, and violence, he experienced periods when he was low in mood and irritable, but was not depressed or suffering from any form of mental illness. The night before he had been using cocaine and amphetamines and on the afternoon in question had drunk “a large but indeterminate amount of vodka” and had little to eat. He had become highly aroused and angry. The diagnosis of <span style="font-style:italic">acute stress reaction</span> was rejected on the ground that he was already aroused, agitated and paranoid before the arrival of Emma’s parents – “the role of alcohol appears to have been crucial and cannot be underestimated”. The diagnosis of <span style="font-style:italic">dissocial personality disorder </span>was also rejected on the basis that, despite behaviour which could be indicative of an underlying personality disorder, his lack of callousness, his clear concern for others and his capacity to feel guilt were inconsistent with the illness. In sum, at the time he “was in an enraged state caused by alcohol. He has acted similarly in the past after consuming alcohol. In so far as this can be considered an abnormality of mind, I do <span style="font-style:italic">not</span> believe that it was sufficient to impair his responsibility…”</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">25.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the circumstances it might be said that Dr Grubin’s rejection of an abnormality of mind was not unequivocal. Alcohol and drug abuse, also stressed by Dr Gibb, was used as a reason for rejecting diminished responsibility.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-style:italic">Cross-examination of the defence psychiatrists</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">26.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Certain passages in the cross-examination of the defence psychiatrists are consistent with the Crown’s anticipation of a direction on diminished responsibility along the lines of the Smith questions. Thus Dr Fraser agreed that Dr Gibb and Dr Grubin attached a lot of importance to alcohol and substance abuse; and said that the cocaine could have led to actions which the appellant “may not have undertaken had he not had the drugs”. Dr Davison said that “in terms of law” drink and drugs were pivotal; and agreed that they made the appellant’s actions more likely, albeit they could still have occurred without them. Dr McClelland agreed that drink and drugs were contributing factors, and even that despite the appellant’s vulnerable personality he would not have killed without them.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">27.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the light of that evidence, it is not perhaps surprising that the jury did not accept the defence of diminished responsibility and returned a verdict of murder. The pre <span style="font-style:italic">Dietschmann</span> direction would have left them little option to do otherwise.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-style:italic">New evidence</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">28.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">For the purposes of this appeal, both the appellant and the Crown have commissioned new reports. The appellant has obtained a report dated 11 August 2005 from Dr Frank Farnham, a consultant forensic psychiatrist, and the Crown has obtained a further report dated 31 October 2005 from Dr Grubin, one of the two psychiatrists who gave evidence for the Crown at trial. Each of these has responded to the other by means of a supplementary report, dated 6 and 28 February 2006 respectively.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">29.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The history of this is as follows. On 1 February 2005 this court (Gage LJ, Jack J and Sir Douglas Brown) adjourned the appellant’s renewed applications for an extension of time and for leave to appeal to allow the Crown to be present. On 11 July 2005, at a directions hearing, this court (Lady Justice Smith DBE, Nelson J and Henriques J) granted the appellant a representation order to obtain a further psychiatric report from Dr Farnham. Dr Grubin produced his further report in response, and, as we have said, there were supplementary reports from both. Each side has served applications to introduce the respective reports as fresh evidence.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">30.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr Farnham’s reports conduct a full review of the medical and other evidence at trial. For the purpose of his supplementary report, he had the opportunity to interview the appellant at HMP Ackington on 6 January 2006. In that supplementary report he considered in particular the question of diminished responsibility from the point of view of the interrelationship of mental disorder and drink and drugs in the light of the <span style="font-style:italic">Dietschmann </span>direction. Dr Grubin has not interviewed the appellant again, but both psychiatrists have reviewed the appellant’s prison records.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">31.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In his first report Dr Farnham concluded that the appellant was suffering from an abnormality of the mind at the time of the killing. He diagnosed that abnormality as a personality disorder, best described as either a <span style="font-style:italic">dissocial personality disorder</span> or a <span style="font-style:italic">borderline personality disorder</span> and sharing features in common with both, and thus also described as a <span style="font-style:italic">mixed personality disorder</span>. There was the further possibility of a discrete <span style="font-style:italic">depressive illness</span>. As for drink and drugs, he concluded that such illness or illnesses were in themselves sufficient to have caused his behaviour without the disinhibiting effects of drink or drugs. In his supplementary report, Dr Farnham said that the trial psychiatrists were “well placed to assess his mental state at the time of the killing compared to an assessment some ten years later”: he would confirm such a diagnosis of personality disorder, even if he analysed it in somewhat new, albeit overlapping, terms. As for the prison records, it was accepted that the appellant’s progress over the last ten years has not tended to confirm the diagnosis, but it has not negated it either, and on the whole had reinforced it.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">32.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr Grubin, on the other hand, in his first new report recorded his opinion that the appellant had not been suffering an abnormality of the mind at the time of the killing and therefore the question of the interaction between abnormality of mind and alcohol did not arise. In both those respects, Dr Grubin’s opinion had developed somewhat from his report for trial. In his brief supplementary report, Dr Grubin said that he remained unconvinced of the diagnosis of personality disorder.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">33.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In the preparations for this appeal, it was the appellant who appears to have made the running for the admission of new evidence; whereas on this appeal itself, Mr Turner eschewed reliance on Dr Farnham, did not seek the admission of his reports, and opposed the Crown’s attempts to introduce Dr Grubin’s new reports.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">34.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">We have heard conflicting submissions on this topic. In the end, however, we have not been persuaded that we should admit this new evidence. We have, of course, been referred by Mr Nolan to section 23 of the <ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19">Criminal Appeal Act 1968</ref>, which provides as follows:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“(1) For the purposes of an appeal under this Part of this Act the Court of Appeal may, if they think it necessary or expedient in the interests of justice – </p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(c) receive any evidence which was not adduced in the proceedings from which the appeal lies.</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(2) The Court of Appeal shall, in considering whether to receive any evidence, have regard in particular to –</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(a) whether the evidence appears to the Court to be capable of belief;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(b) whether it appears to the Court that the evidence may afford any ground for allowing the appeal;</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(c) whether the evidence would have been admissible in the proceedings from which the appeal lies on an issue which is the subject of the appeal; and</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">(d) whether there is a reasonable explanation for the failure to adduce the evidence in those proceedings.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">35.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Mr Nolan submits that, despite the emphasis on evidence which may afford any ground for allowing the appeal to be found in subsection (2)(b), the section also permits the receipt of evidence from the Crown in support of upholding a conviction: the terms of subsection (1) are quite general. Mr Turner does not in principle dispute that possibility: it has occurred, at any rate in rebuttal, where incontrovertible DNA evidence has become available to support the safety of a conviction. Mr Nolan submits that this is another such case where new evidence on behalf of the Crown should be admitted in the interests of justice. The prison records only became available after conviction; and this court should not approach this appeal in artificial or blinkered ignorance of the full picture. Mr Turner, however, referred us to <span style="font-style:italic">R v. Pendleton </span><ref uk:type="case" href="https://caselaw.nationalarchives.gov.uk/ukhl/2001/66" uk:isNeutral="true" uk:canonical="[2001] UKHL 66" uk:year="2001">[2001] UKHL 66</ref>, <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[2002] 1 WLR 72" uk:year="2002">[2002] 1 WLR 72</ref>, <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[2002] 1 Cr App R 34" uk:year="2002">[2002] 1 Cr App R 34</ref> to support his submission that, in the light of the evidence given at trial, the Crown’s new evidence could not render safe a conviction flawed by a misdirection on diminished responsibility in relation to the relevance of drink and drugs.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">36.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In <span style="font-style:italic">Pendleton</span> Lord Bingham of Cornhill said this:</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">“17. My Lords, Mr Mansfield is right to emphasise the central role of the jury in a trial on indictment. This is an important and greatly-prized feature of our constitution. Trial by jury does not mean trial by jury in the first instance and trial by judges of the Court of Appeal in the second. The Court of Appeal is entrusted with a power of review to guard against the possibility of injustice but it is a power to be exercised with caution, mindful that the Court of Appeal is not privy to the jury’s deliberations and must not intrude into territory which properly belongs to the jury…</p>
+	  </content>
+	</level>
+	<level>
+	  <content>
+	    <p class="Quote" style="margin-left:1.00in">19…It would, as the House pointed out [in <span style="font-style:italic">R v. Stafford</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[1974] AC 878" uk:year="1974">[1974] AC 878</ref>], be anomalous for the Court to say that the evidence raised no doubt whatever in their minds but might have raised a reasonable doubt in the minds of the jury. I am not persuaded that the House laid down any incorrect principle in <span style="font-style:italic">Stafford</span>, so long as the Court of Appeal bears very clearly in mind that the question for its consideration is whether the conviction is safe and not whether the accused is guilty. But the test advocated by counsel in <span style="font-style:italic">Stafford</span> and by Mr Mansfield in this appeal does have a dual virtue…First, it reminds the Court of Appeal that it is not and should never become the primary decision-maker. Secondly, it reminds the Court of Appeal that it has an imperfect and incomplete understanding of the full processes which led the jury to convict. The Court of Appeal can make its assessment of the fresh evidence it has heard, but save in a clear case in it at a disadvantage in seeking to relate that evidence to the rest of the evidence which the jury heard. For these reasons it will usually be wise for the Court of Appeal, in a case of any difficulty, to test their own provisional view by asking whether the evidence, if given at the trial, might reasonably have affected the decision of the trial jury to convict. If it might, the conviction must be thought to be unsafe.”</p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">37.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">What Lord Bingham said there was said in a case where the appellant sought, by the means of new evidence, to upset a conviction at trial. However, it seems to us that essentially similar principles also apply where it is the Crown which seeks to say that a conviction should be upheld as safe on the ground of new evidence, despite considerations which would otherwise cause this court to weigh very carefully the safety of the conviction. That would be to get this court to act as a primary decision-maker. Thus it was that Mr Nolan submitted that the importance of Dr Grubin’s new evidence was that it made it reasonably speaking impossible to conceive that the jury might have decided differently on the question of diminished responsibility.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">38.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In our judgment, however, Dr Grubin’s new evidence is not of that kind. It is at best simply further evidence to throw into the scales, to add to the evidence of the five psychiatrists which were already before the jury at trial. In as much as Dr Grubin was one of those five, it is simply a further assessment of his, which, although based in part on new material deriving from the prison records, was in one sense always available to him. Moreover, his conclusion in his new records does not so much confirm his trial evidence as produce a developing diagnosis.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">39.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In these circumstances, and, mindful that if the evidence of Dr Grubin had been admitted, it would have been necessary in fairness to the appellant to have admitted Dr Farnham’s new reports as well, we have concluded that the path down which the Crown was inviting us to go would have been the illegitimate one of seeking to second guess the trial jury as primary decision makers of fact. This is a fortiori the case where the evidence in question is seeking, ten years down the line, to make an ex post facto assessment of the appellant’s mental state at the time of the killing.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-style:italic">The safety of the conviction</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">40.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Ultimately, therefore, the question that arises is whether the conviction is safe in the light of <span style="font-style:italic">Dietschmann </span>and <span style="font-style:italic">Hendy</span>. In our judgment, it is not. We are unable to distinguish this case from <span style="font-style:italic">Hendy</span>. It was common ground between the Crown and the appellant in that case that the judge’s misdirection was such as to render the verdict of murder unsafe (at paras 25 and 36). We agree. Despite the circumstance that the burden of the defence of diminished responsibility lay on the appellant, and despite the fact that here, as in <span style="font-style:italic">Hendy</span>, the appellant did not give evidence at his trial, we readily conclude that, if the jury had been correctly directed in accordance with the <span style="font-style:italic">Dietschmann</span> direction, it may well have been persuaded that the appellant was suffering from an abnormality of mind that, despite drink or drugs, had substantially impaired his mental responsibility. For all we know, the jury here had been persuaded by the evidence of the three defence psychiatrists at trial that the appellant had been suffering from an abnormality of mind, but were not satisfied that his drink had not removed the defence from him. We are unable to see how we can second guess that judgment by describing the conviction as nevertheless safe, with or without new evidence.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">41.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Therefore, this conviction for murder must be quashed. In these circumstances Mr Nolan does not suggest that there should or can, in the interests of justice, be a retrial. He accepts that this court should substitute a verdict of manslaughter on the ground of diminished responsibility and turn to the question of an appropriate sentence on that basis. It is therefore to that question that we now turn, with the assistance of counsel’s submissions and further psychiatric reports.</p>
+	  </content>
+	</paragraph>
+	<level>
+	  <content>
+	    <p class="ParaHeading">
+	      <span style="font-style:italic">Sentence</span>
+	    </p>
+	  </content>
+	</level>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">42.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr Farnham has produced, since the hearing of the appeal against conviction and at the request of the court, a further report dated 15 September 2006. He there sets out a detailed account of the appellant’s recent prison medical records. In January 2006 he was assessed by Dr Nicola Mitcheson, visiting forensic psychiatrist to HMP Acklington. There had been reports of strange conduct such as talking to walls and to bin bags. He told her that he had been having arguments with his wife, whom he had married while he was in prison but was in the process of divorcing. He was upset about his divorce and his appeal. He felt he was haunted, something he said had been going on since he was young, even if he had not mentioned it before. Her impression was of a probable schizophreniform psychotic disorder and she commenced him on a trial of risperidone, an anti-psychotic medication. Two weeks later, he appeared somewhat anxious, and she increased his dose. In March 2006 Dr Mitcheson saw him again. He had stopped his medication. There was a prison wing report that his behaviour had again been causing concern. He agreed to resume taking risperidone. In May 2006 Dr Mitcheson reviewed him again. He told her he was not coping well and staying in his cell most of the time. She suggested increasing the dose a second time. In June 2006 she reviewed him. There had been an altercation with prison officers about his failure to do his job washing pots adequately. He said he had had three funny turns in the last few months. Dr Mitcheson queried organic aetiology or malingering. At the end of June 2006 his cellmate claimed he was hitting his head on the wall and floor: on investigation it was concluded that he had had a panic attack. He was transferred to another prison. He said that he had been banging his head because he had not been getting appropriate medical attention.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">43.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr Farnham had taken the opportunity of the appellant’s presence at the Royal Courts of Justice on the occasion of his appeal to interview him again. The appellant described a poor sleep pattern, and a low mood, blackouts, heart-racing and sweating. Dr Farnham was unable to elicit any symptoms compatible with psychotic mental illness. Dr Farnham was also able to discuss the appellant’s case with Professor Grubin.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">44.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In conclusion, Dr Farnham remains of the opinion that the appellant suffers from a chronic depressive illness and from a number of maladaptive personality traits which amount to a personality disorder. He has noted the possibility that has been raised of a psychotic illness, but observes that no definitive diagnosis has been made. As for ongoing risk, he is ignorant of the appellant’s progress in any courses or groups he may have undertaken, but concludes that he “remains prone to impulsive behaviour and irritability when under stress, as evidenced by the deterioration to his mental state and behaviour around the time of his appeal…[T]he major risk factors for future offending are likely to be untreated depression and continued abuse of alcohol and drugs.” He does not consider that the appellant fulfilled the criteria for the imposition of a hospital order. In the meantime, the parole board would probably be best placed to gather all the necessary information when considering risk.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">45.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Professor Grubin has also produced a further report, as the court requested of him, and this is dated 8 September 2006. For these purposes, Professor Grubin assessed the appellant at HMP Acklington on 30 August 2006 and also had access to his prison file and discussed his case with Dr Mitcheson. He too describes, in his own terms, the material regarding the appellant’s mental state under the care of Dr Mitcheson, which Dr Farnham has covered in his report. When Professor Grubin saw and assessed him, the appellant said that he had benefited from courses on Enhanced Thinking Skills, Reasoning and Rehabilitation, anger management, violence and weapons, grief and loss, healthy relationships, and drink and drugs. He had learned lessons and no longer desired to use drugs or alcohol. Nevertheless, he described himself as having poor concentration and variable mood, poor sleep, and said he was “on edge”. He gave a vague account of auditory hallucinations. Even so, he appeared pleasant and cooperative, and settled in mood, and there was no evidence of any disorder in the form of his thinking.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">46.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In conclusion, Professor Grubin describes the appellant as having suffered since 2001 from an intermittently unsettled mental state, initially associated with a depressive illness. From January 2005 he has reported agitation and restlessness, poor concentration, vague auditory hallucinations, and mild persecutory ideation. Medication has been taken only intermittently and appears to have been of limited benefit and its side effects may have contributed to his restlessness. The extent to which his symptoms are the result of an underlying mental illness or a response to his current circumstances (divorce, appeal, prison) is unclear. Despite his denial of any recent use of illicit drugs, this must remain a possible cause of his presentation. In sum, Professor Grubin’s diagnosis is uncertain, but symptoms to date have not warranted transfer to hospital or justified disposal by way of a hospital order. Primary ongoing concern relates to alcohol and drug misuse, against the background of many failed drug tests. Lack of information regarding participation in offending behaviour programmes has inhibited further comment on risk.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">47.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Dr Mitcheson has provided the court, with the appellant’s consent, with a psychiatric report dated 4 October 2006. She has been treating the appellant since January 2006. She describes at first hand her dealings with and treatment of the appellant since that time, but the effect of what she says is covered in Dr Farnham’s report until at any rate June 2006. Since then, she saw the appellant again on 11 July, when he appeared very restless and was singing quietly to himself. He had then been off risperidone for some five weeks and Dr Mitcheson was therefore uncertain whether his condition was due to risperidone or its absence. There was no clear evidence of ongoing psychotic symptoms. He was last seen on 26 September 2006, still off risperidone, when his condition appeared a lot less restless.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">48.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">In conclusion, Dr Mitcheson refers to the appellant’s past history of treatment for depression but says that during her contact with him he was not suffering depression and had not been treated with anti-depressant medication for some time. She suspected a presumed psychotic illness for a time, but has now rejected that diagnosis in the light of his improvement without being on anti-psychotic medication for some time. Moreover, despite some possible features of schizotypal disorder, he lacks other features consistent with such a diagnosis. Her current working formulation is that his unusual behaviour has been due to increased stress. She has considered but thinks unlikely that his variability in presentation could be due to feigning or exaggeration in the light of his appeal, but she has not been able to rule it out absolutely. She has no current plans to review him routinely. He does not require hospital treatment, nor, were he to be released, does he need to be referred directly to a community mental health team.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">49.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">Finally, there is a helpful pre-appeal report prepared by Mr Steven Doggett on 13 September 2006. Mr Doggett has been the appellant’s external home probation officer since 1 September 2005. He has interviewed the appellant on three occasions and has worked closely with him. Writing initially on the basis of prison records, he reports that the appellant was deeply regretful and ashamed for his actions. Mr Doggett went on to describe various programmes which the appellant has undertaken in prison. At HMP Durham he completed two low intensity programmes focusing on anger management and drink and drug abuse. At HMP Gartree he completed the Reasoning and Rehabilitation programme. At HMP Swaleside he failed to complete an intensive, long term, Cognitive Self Change Programme. The appellant ascribed his failure to difficulties in settling at the prison.  He began to suffer from depression again, and there was a self harm attempt. He was transferred to HMP Acklington, where he remains today. There he attempted, albeit again unsuccessfully, the Healthy Relationships Programme, a failure possibly connected with the breakdown of his marriage and his own deteriorating mental health. However, he did complete another course, Enhanced Thinking Skills. In sum, while he has made some very good progress with general offending behaviour programmes, he has struggled with the more intensive and challenging programmes and “there is still a strong argument that further intervention is required”.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">50.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">As for the assessment of risk, Mr Doggett considers the topic to be complex: in part because the appellant continues to assert that he does not remember why he committed the offence; in part because of potential alcohol or drug misuse. He recommends that further work needs to be done to reduce the potential high risk of future violent offending. Such offending cannot be ruled out without a fuller assessment and treatment of the issues that may have diminished his responsibility for the stabbing. In any event, conditions upon any release would have to be carefully worked out to ensure that he did not return to the North Shields area, where Mr Williamson’s family still live, to support him, and to manage risks of harm to himself and to others.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">51.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On behalf of the appellant, Mr Turner did not contend for a determinate sentence, and submitted that the stark choice, after a period of custody which, including the period during which the appellant was held on remand, is already in excess of 11 years, is between a discretionary life sentence and a community sentence within the regime of the <ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/2000/6" uk:canonical="2000 c. 6">Powers of Criminal Courts (Sentencing) Act 2000</ref>. He frankly accepted that he could not exclude the appropriateness of a discretionary life sentence, but submitted that it would be preferable to explore the terms and conditions on which the appellant might be released into the community under a community sentence. He accepted that this could not be done by the court immediately, because it was not armed with knowledge of what an appropriate “package” of conditions might be: but he asked the court to adjourn sentencing while ordering a report from the probation services in Luton, where the appellant has an aunt who would be willing to give the appellant a home. He submitted that such a post-release package of conditions could not, in respect of offences committed before 4 April 2005, be attached to a life sentence.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">52.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">However, Mr Turner came to acknowledge (a) that a community sentence could only extend for two years, which the court might consider insufficient protection for the future; (b) that the Parole Board, considering the possible release on licence of a life prisoner, could fashion a package of conditions which might be appropriate for the case; and (c) that he could not exclude the possibility of a life sentence. However, he did say that a life sentence was not a necessity.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">53.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The first question we have to ask ourselves is whether a discretionary life sentence is necessary, or whether the offences with which we are concerned can or could have been disposed of by determinate sentences.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">54.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">We approach the question by considering in the first place what the sentencing judge would have been likely to have decided if, following trial in 1996, the jury had returned a verdict of manslaughter by reason of diminished responsibility. In our judgment, he would without hesitation have decided that a discretionary life sentence was necessary. A defendant suffering from the mental disorders found by the three psychiatrists who gave evidence for the defence, who was likely to be rendered all the more dangerous by reason of his addiction to misuse of drugs and alcohol, who could give no explanation for his offending since he said he did not remember the events, and who had killed his close or best friend and slashed in anger at his sister with whom he was living and to whom he was bonded, had plainly committed offences of sufficient seriousness and would for a wholly uncertain period remain dangerous to the public and constitute a sufficiently high risk of committing further grave offences likely to cause serious harm as not only to justify but require a life sentence: see, for instance, albeit not a case of homicide, <span style="font-style:italic">Attorney-General’s Reference No 5 of 1998 (R v. Davies)</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[1998] 2 Cr App R (S) 442" uk:year="1998">[1998] 2 Cr App R (S) 442</ref>; see also <span style="font-style:italic">R v. O’Connor</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[1994] 15 Cr App R (S) 473" uk:year="1994">[1994] 15 Cr App R (S) 473</ref>, a case of diminished responsibility. There is nothing in the reports before the trial judge or subsequently to suggest that a hospital order would have been an appropriate alternative.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">55.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The second question which we ask ourselves is whether anything which has occurred since 1996, or any further information which has come to the attention of the court at this appeal, makes it inappropriate for us to conclude that a sentence of life imprisonment has and remains necessary. In our judgment, there is nothing which entitles us to say that it is not necessary. Whether the appellant today still remains a danger is not something which this court is equipped to decide. There is certainly no medical opinion before us that enables us to say that he does not still remain a danger. The Parole Board, however, is practically and constitutionally the authority best placed to make that determination.  There is no submission before us that the appellant could presently be released without careful consideration of the conditions under which any such release could be effected.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">56.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">On the basis that a discretionary life sentence is appropriate and necessary, the next question relates to the specified minimum period which the appellant must serve before being eligible for consideration by the Parole Board for early release on licence.  In 1996 the trial judge would have been sentencing the appellant under section 34 of the <ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1991/53" uk:canonical="1991 c. 53">Criminal Justice Act 1991</ref>, and would have been required to specify a period, being from one half to two thirds of what would otherwise have been the judge’s notional determinate sentence having regard to the seriousness of the offence in question or the combination of that offence and other offences associated with it, as being <abbr title="the relevant part of his sentence">that part</abbr> (“the relevant part of his sentence”) which had to be served as such a minimum period. In those days the practice on the whole was to adopt two-thirds of the notional determinate sentence.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">57.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The third question therefore is what determinate sentence the judge would have had in mind for the purposes of arriving at “the relevant part”. That question is not easy. We know that in his report to the Home Secretary, premised on the conviction for murder, the judge recommended a specified period, namely “the actual length of detention necessary to meet the requirements of retribution and general deterrence”, of 11 years, but Lord Bingham of Cornhill CJ raised that recommendation to one of 14 years. That reflects a period of time actually to be served and is the equivalent therefore to a determinate period of 28 years. We also know that the judge’s determinate (concurrent) sentence for the separate offence of wounding with intent was one of five years. However, we must assume the appellant’s mental responsibility to have been substantially impaired. In the light of the time already spent by the appellant in prison Mr Turner had no particular submission to make to us on this third question. We consider that the determinate sentence for these two offences, bearing in mind that the wounding with intent count, if sentenced on a determinate basis, would have properly attracted a consecutive sentence, would be one of sixteen years: see <span style="font-style:italic">R v. Sanderson</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[1994] 15 Cr App R (S) 263" uk:year="1994">[1994] 15 Cr App R (S) 263</ref>, <span style="font-style:italic">R v. O’Connor</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[1994] 15 Cr App R (S) 473" uk:year="1994">[1994] 15 Cr App R (S) 473</ref>, and <span style="font-style:italic">R v. Juono Bozo Mohammed</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[1996] 1 Cr App R (S) 317" uk:year="1996">[1996] 1 Cr App R (S) 317</ref>.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">58.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The fourth question is what the “relevant part” of that sentence would have been or ought to be. In 1996 we think that the judge would have been likely to have specified a “relevant part” of two-thirds. In due course, however, the provisions of section 34 of the 1991 Act have been superseded by section 28 of the <ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1997/43" uk:canonical="1997 c. 43">Crime (Sentences) Act 1997</ref> and in turn by section 82A of the <ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/2000/6" uk:canonical="2000 c. 6">Powers of Criminal Courts (Sentencing) Act 2000</ref>. It is under that last statute that we are sentencing today. Ever since <span style="font-style:italic">R v. Marklew v. Lambert</span> <ref uk:type="case" href="#" uk:isNeutral="false" uk:canonical="[1999] 1 Cr App R (S) 6" uk:year="1999">[1999] 1 Cr App R (S) 6</ref>, this court has said that the specified period should normally be calculated by taking one-half rather than two-thirds of the notional determinate sentence. We therefore consider that we should specify the relevant part which must be served before consideration of early release to be eight years (half of sixteen years). However, from that period of eight years we need to deduct the period of time already spent in prison on remand which is 1 year and 107 days. Therefore the relevant part before early release can be considered is 6 years 258 days.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">59.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">The appellant has spent considerably longer than that in prison since his conviction and sentence. It follows that he is entitled to be considered for early release by the Parole Board immediately. We recognise that the Parole Board has a heavy workload and responsibility. Nevertheless, having regard to the time which the appellant has spent in prison, we would direct the Board, if we have power to do so, alternatively urge it, to consider the appellant’s case as soon as possible.  Their consideration of his case is, of course, entirely a matter for them, as the appellant should understand.</p>
+	  </content>
+	</paragraph>
+	<paragraph>
+	  <num style="font-style:normal;font-weight:normal;text-decoration:none;font-size:12pt;margin-left:0.50in;text-indent:-0.50in">60.</num>
+	  <content>
+	    <p class="ParaLevel1" style="margin-left:0.50in;text-indent:0.5in">We heard submissions as to sentence on 16 October, and pronounced our decision at that time. This judgment contains our reasons for that decision.</p>
+	  </content>
+	</paragraph>
+      </decision>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

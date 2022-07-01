@@ -115,7 +115,7 @@ def filter_matches(
         start = match[1]
         end = match[2]
         quote_offset = 0
-        
+
         # Adjust indexes where match is enclosed in quotation marks.
         if contains(doc[start:end].text, QUOTES):
             start = match[1] + 1
@@ -144,8 +144,35 @@ def filter_matches(
             long_form_candidate = doc[
                 max(start - max_words - 1 - quote_offset, 0) : start - 1 - quote_offset
             ]
-            candidates.append((long_form_candidate, doc[start:end]))
+            
+            short_form = str(doc[start:end])
+            word = short_form
+            quote_offset_new = 0
+            # Occassionally quotations at the start of the short form slips through - this is to clean that 
+            if short_form.startswith('"') or short_form.startswith("“") or short_form.startswith("”") or short_form.startswith("“"):
+                word = short_form[1:]
+                quote_offset_new = 1
+
+            short_form_clean = word  # use the clean short form if we return the match
+            first_char = short_form_clean[0] # this is the first character of the word
+    
+            last_char = str(doc[end-1]) 
+            length = len(last_char) # use the length to get the index of the last char
+
+            # if the first character of the abbreviation is not upper case
+            if first_char.isupper() is not True: 
+                continue
+            # if the last character of the abbreviation is not upper case AND it is not a number (this is to allow years in the abbreviations)
+            if last_char[length-1].isupper() is not True and last_char[length-1].isnumeric() is not True:
+                continue
+
+
+            # abbreviation must have 3 or more characters
+            if len(str(doc[start:end])) >= 3: 
+                candidates.append((long_form_candidate, doc[start+quote_offset_new:end]))
+
             continue
+
     return candidates
 
 
@@ -156,7 +183,6 @@ def short_form_filter(span: Span) -> bool:
     # At least one word is alpha numeric
     if not any([x.is_alpha for x in span]):
         return False
-    
 
     return True
 
@@ -169,9 +195,15 @@ def verify_match_format(
         BRACKETS = ["(", ")"]
         start = match[1]
         end = match[2] - 1
-        if not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS): 
+
+        if end - start > 8: 
             matcher_output.remove(match)
-    
+
+        # verify that the match is wrapped in quotes and brackets
+        elif not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS): 
+            matcher_output.remove(match)
+
+
     return matcher_output
         
 
@@ -219,13 +251,14 @@ class AbbreviationDetector():
 
     def __call__(self, doc: Doc) -> Doc:
         matches = self.matcher(doc)
+        
         matches_brackets = [(x[0], x[1], x[2]) for x in matches]
-        matcher_output = verify_match_format(matches_brackets, doc)
+        matcher_output = verify_match_format(matches_brackets, doc) 
+
         matches_no_brackets = [(x[0], x[1] + 1, x[2] - 1) for x in matcher_output]
         filtered = filter_matches(matches_no_brackets, doc)
-
         occurences = self.find_matches_for(filtered, doc)
-        
+
         for (long_form, short_forms) in occurences:
             for short in short_forms:
                 short._.long_form = long_form
