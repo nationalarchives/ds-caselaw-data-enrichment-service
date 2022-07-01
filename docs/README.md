@@ -4,7 +4,7 @@
 
 This resource documents the design and operation of the Judgment Enrichment Pipeline (JEP) built for The National Archives by MDRxTECH and vLex Justis to support the publishing process that sits behind [caselaw.nationalarchives.gov.uk](caselaw.nationalarchives.gov.uk).
 
-The primary purpose of the JEP is to "enrich" the jugdments published on [caselaw.nationalarchives.gov.uk](caselaw.nationalarchives.gov.uk) by marking up important pieces of legal information (such as references to earlier cases and legislation) cited within them. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.   
+The primary purpose of the JEP is to "enrich" the judgments published on [caselaw.nationalarchives.gov.uk](caselaw.nationalarchives.gov.uk) by marking up important pieces of legal information (such as references to earlier cases and legislation) cited within them. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.   
 
 ## 1.1 The general anatomy of the JEP
 
