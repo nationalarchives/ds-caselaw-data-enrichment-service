@@ -1,6 +1,8 @@
 import bs4 as BeautifulSoup
 import pandas as pd
 
+
+
 def load_patterns(conn):
   """
   Write patterns file

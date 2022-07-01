@@ -40,37 +40,12 @@ for subdir, dirs, files in os.walk(ROOTDIR):
       test_caselaw_file = write_replacements_file(REPLACEMENTS_CASELAW)
       test_leg_file = write_replacements_file(REPLACEMENTS_LEG)
       test_abb_file = write_replacements_file(REPLACEMENTS_ABBR)
-      # print(test_caselaw_file)
-      # write_replacements_file(REPLACEMENTS_LEG)
-      # write_replacements_file(REPLACEMENTS_ABBR)
 
       # Writing to sample.json
       tuple_file.write(test_caselaw_file)
       tuple_file.write(test_leg_file)
       tuple_file.write(test_abb_file)
 
-      # replacements = []
-      # replacement_tuples_case = []
-      # replacement_tuples_leg = []
-      # replacement_tuples_abb = []
-      # tuple_file = open("tuples.jsonl", "r")
-
-      # for line in tuple_file:
-      #     replacements.append(json.loads(line))
-
-      # for i in replacements:
-      #     key, value = list(i.items())[0]
-      #     if key == 'case':
-      #         case_law_tuple = tuple(i['case'])
-      #         replacement_tuples_case.append(case_law_tuple)
-      #     elif key == 'leg':
-      #         leg_tuple = tuple(i['leg'])
-      #         replacement_tuples_leg.append(leg_tuple)
-      #     else:
-      #         abb_tuple = tuple(i['abb'])
-      #         replacement_tuples_abb.append(abb_tuple)
-
-      # file_data_enriched = replacer_pipeline(file_data, replacement_tuples_case, replacement_tuples_leg, replacement_tuples_abb)
       file_data_enriched = replacer_pipeline(file_data, REPLACEMENTS_CASELAW, REPLACEMENTS_LEG, REPLACEMENTS_ABBR)
 
       output_file = f"output/{file}".replace(".xml", "_enriched.xml")

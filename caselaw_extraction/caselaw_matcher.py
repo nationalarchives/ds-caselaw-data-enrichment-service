@@ -44,7 +44,6 @@ def case_pipeline(doc, db_conn):
         family, URItemplate, is_neutral, is_canonical, citation_type, canonical_form = get_matched_rule(db_conn, rule_id)
         if is_canonical == False:
             corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
-            print ("-----> CORRECTED:", corrected_citation)
             if URItemplate != None:
                 URI = create_URI(URItemplate, year, d1, d2)
             else:

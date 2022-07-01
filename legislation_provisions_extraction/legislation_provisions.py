@@ -79,7 +79,6 @@ Saves the section and the relevant information to the master dictionary of all s
 :param para_number: number of the paragraph in the judgment
 """
 def save_section_to_dict(section_dict, para_number, clean_section_dict):
-
     # for each section found in the paragraph
     for section, full_ref, pos in section_dict:
 

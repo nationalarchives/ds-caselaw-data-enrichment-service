@@ -5,11 +5,17 @@ Created on Mon Mar 3 10:48:33 2022
 @author: Imane.Hafnaoui
 
 
-Detects legislation references by searching through a lookup table of existing acts.
-    - Exact matcher: searches the judgement for exact matches to the legislation title in lookup table.
-    - Fuzzy matcher: detects well-formed and malformed citations (parameter: cutoff - confidence ratio to filter the search (min -> 70))
-    - Hybrid matcher: narrows down the fuzzy matching to candidate segments in the judgement that contain the pattern [Act YYYY] and 
-    performs exact matching otherwise.
+Detects legislation references by searching through a lookup table of existing acts. We do this through a hybrid approach that merges exact and fuzzy matching. 
+The hybrid matcher goes through three stages:
+    Stage 1:
+        - Narrows down the search space to candidate segments in the judgement text that contain the pattern [Act YYYY]; and
+        - Performs the fuzzy matching against legislation in the lookup table.Then;
+    Stage 2:
+        - Runs exact matching against the entries in the table that don't fit the [Act YYYY] pattern (e.g. RCRA 1926).
+    Stage 3:
+        - Merges the results of Stages 1 & 2;
+        - Resolves detected references that might overlap due the nature of the fuzzy matching to a [1-to-1] linking between legislation title and detected reference.
+        - Creates replacement tuples for the detected references
     
 """
 from spacy.matcher import PhraseMatcher, Matcher
@@ -249,8 +255,8 @@ def detect_year_span(docobj, nlp):
     dates = [docobj[start:end].text for match_id, start, end in dm]
     dates = set([int(d) for d in dates if (len(d) == 4) & (d.isdigit())])
     return dates
-
 ######
+
 
 methods = {
     'exact': exact_matcher,

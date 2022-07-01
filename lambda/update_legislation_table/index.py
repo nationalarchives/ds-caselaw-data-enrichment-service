@@ -12,6 +12,7 @@ import datetime
 from SPARQLWrapper import SPARQLWrapper, CSV
 from io import BytesIO
 import re
+# import awswrangler.secretsmanager as awssm 
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -41,6 +42,10 @@ class getLoginSecrets:
         session = boto3.session.Session()
         client = session.client(service_name="secretsmanager", region_name=region_name)
 
+        # In this sample we only handle the specific exceptions for the 'GetSecretValue' API.
+        # See https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
+        # We rethrow the exception by default.
+
         try:
             LOGGER.info(" about to get_secret_value_response")
             get_secret_value_response = client.get_secret_value(SecretId=secret_name)
@@ -59,6 +64,27 @@ class getLoginSecrets:
                 secret = decoded_binary_secret
             LOGGER.info("here")
             return secret
+        # except ClientError as e:
+        #     if e.response["Error"]["Code"] == "DecryptionFailureException":
+        #         # Secrets Manager can't decrypt the protected secret text using the provided KMS key.
+        #         # Deal with the exception here, and/or rethrow at your discretion.
+        #         raise e
+        #     elif e.response["Error"]["Code"] == "InternalServiceErrorException":
+        #         # An error occurred on the server side.
+        #         # Deal with the exception here, and/or rethrow at your discretion.
+        #         raise e
+        #     elif e.response["Error"]["Code"] == "InvalidParameterException":
+        #         # You provided an invalid value for a parameter.
+        #         # Deal with the exception here, and/or rethrow at your discretion.
+        #         raise e
+        #     elif e.response["Error"]["Code"] == "InvalidRequestException":
+        #         # You provided a parameter value that is not valid for the current state of the resource.
+        #         # Deal with the exception here, and/or rethrow at your discretion.
+        #         raise e
+        #     elif e.response["Error"]["Code"] == "ResourceNotFoundException":
+        #         # We can't find the resource that you asked for.
+        #         # Deal with the exception here, and/or rethrow at your discretion.
+        #         raise e
         # added as the validation exception was not being caught
         except Exception as exception:
             LOGGER.error('Exception: %s', exception)
@@ -131,9 +157,6 @@ def handler(event, context):
     
     password = get_secret.get_secret(aws_secret_name, aws_region_name)
 
-    sparql_username_value = get_secret.get_secret(sparql_username, aws_region_name)
-    sparql_password_value = get_secret.get_secret(sparql_password, aws_region_name)
-
     try:
         engine = create_engine(f"postgresql://{username}:{password}@{host}:{port}/{database_name}")
         LOGGER.info("engine created")
@@ -143,13 +166,13 @@ def handler(event, context):
         if 'trigger_date' in event:
             trigger_date = event['trigger_date']
             if type(trigger_date) == int:
-                df = get_leg_update(sparql_username_value, sparql_password_value)
+                df = get_leg_update(sparql_username, sparql_password, trigger_date)
                 print(df)
                 df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
-        else:
-            df = get_leg_update(sparql_username_value, sparql_password_value)
-            print(df)
-            df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
+            else:
+                df = get_leg_update(sparql_username, sparql_password)
+                print(df)
+                df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
 
         engine.dispose()
         LOGGER.info("legislation updated")

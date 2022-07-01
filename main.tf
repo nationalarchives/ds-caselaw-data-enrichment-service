@@ -34,6 +34,9 @@ module "lambda_s3" {
   postgress_master_password_secret_id = "${module.data.postgress_master_password}"
   postgress_hostname = "${module.data.postgress_hostname}"
 
+  # sparql_username = "${module.data.sparql_username}"
+  # sparql_password = "${module.data.sparql_password}"
+
   default_security_group_id = "${module.network.default_security_group_id}"
 
   aws_subnets_private_ids = "${module.data.aws_subnets_private_ids}"
