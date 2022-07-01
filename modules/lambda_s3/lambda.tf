@@ -840,6 +840,22 @@ resource "aws_s3_bucket_notification" "rules_bucket_notification" {
   }
 }
 
+resource "aws_secretsmanager_secret" "sparql_username" {
+  description             = "Secret for storing the sparql username"
+  name                    = "${local.name}-sparql-username-${local.environment}"
+  recovery_window_in_days = 0
+
+  tags = local.tags
+}
+
+resource "aws_secretsmanager_secret" "sparql_password" {
+  description             = "Secret for storing the sparql username"
+  name                    = "${local.name}-sparql-password-${local.environment}"
+  recovery_window_in_days = 0
+
+  tags = local.tags
+}
+
 module "lambda-update-legislation-table" {
   source  = "terraform-aws-modules/lambda/aws"
   version = ">=2.0.0,<3.0.0"
@@ -877,7 +893,7 @@ module "lambda-update-legislation-table" {
         "secretsmanager:DescribeSecret",
         "secretsmanager:ListSecretVersionIds"
       ],
-      resources = ["${var.postgress_master_password_secret_id}"] 
+      resources = ["${var.postgress_master_password_secret_id}", "${aws_secretsmanager_secret.sparql_username.arn}", "${aws_secretsmanager_secret.sparql_password.arn}"] 
     }
   }
 
@@ -906,10 +922,8 @@ module "lambda-update-legislation-table" {
     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME = "${local.region}"
     HOSTNAME = "${var.postgress_hostname}"
-    # SPARQL_USERNAME = "${var.sparql_username}"
-    # SPARQL_PASSWORD = "${var.sparql_password}"
-    SPARQL_USERNAME = "Editha.Nemsic@Mishcon.com"
-    SPARQL_PASSWORD = "unscathed-enviably-irk-695"
+    SPARQL_USERNAME = "${aws_secretsmanager_secret.sparql_username.arn}"
+    SPARQL_PASSWORD = "${aws_secretsmanager_secret.sparql_password.arn}"
   }
   
   tags = local.tags
