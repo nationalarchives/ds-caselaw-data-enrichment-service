@@ -20,8 +20,8 @@ The JEP is a modular system comprising a series of AWS Lambda functions -- the *
 
 1. [Case Law Annotator](caselaw/case-law-annotator.md) -- detects references to UK case law citations, such as `[2022] 1 WLR 123` 
 2. [Legislation Annotator](legislation/legislation-annotator.md) -- detects references to UK primary legislation, such as `Theft Act 1968`
-3. [Abbreviation Annotator](abbreviation-annotator.md) -- detects abbreviations and resolves them to their longform. For example, the longform of `HRA 1998` is `Human Rights Act 1998`.
-4. [Oblique Legislative References Annotator](legislation/oblique-references.md) -- detects indirect references to primary legislaton, such as `the Act` or `the 1998 Act` and determines which cited primary enactment the indirect reference corresponds to.
+3. [Abbreviation Annotator](abbreviation-annotator.md) -- detects abbreviations and resolves them to their longform. For example, the longform of `HRA 1998` is `Human Rights Act 1998`
+4. [Oblique Legislative References Annotator](legislation/oblique-references.md) -- detects indirect references to primary legislaton, such as `the Act` or `the 1998 Act` and determines which cited primary enactment the indirect reference corresponds to
 5. [Legislative Provision Annotator](legislation/legislative-provision-annotator.md) -- identifies references to legislation provisions, such as `section 6`, and identifies the corresponding primary enactment, for example `section 6 of the Human Rights Act`
 
 ## 2 Enriching judgments: How to run the pipeline
@@ -47,7 +47,7 @@ The enrichment process typically takes five-six minutes per judgment. Enriched j
 
 ## 2.2 API integration with the MarkLogic database
 
-Not yet implemented
+Not yet implemented.
 
 ## 3 Tests
 

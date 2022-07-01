@@ -67,7 +67,7 @@ The structure of the rules is outlined below. However, it is worth highlighting 
 #### `family`
 The first feature is the `family`, which is set to `WLR` in the case of the two examples rules set out above. There is a `family` of rules that cater for references to cases reported in *The Weekly Law Reports* and many other series of law reports.  
 
-A `family` must have one and only one rule that matches the canonical form. That is to say, a `family` must have one and only rule for which the `isCanonical` attribute  is `TRUE`. 
+A `family` must have one and only one rule that matches the canonical form. That is to say, a `family` must have one and only one rule for which the `isCanonical` attribute  is `TRUE`. 
 
 #### `id`
 Each rule requires its own unique `id`. This identifier is used at inference time to access various information about the citation and the rule that detected it. Notice that the `id` in the first snippet, which matches the canonical form, is simply `wlr`. The `id` for the second snippet, which matches a malformed variant, is `wlr_a`.  A convention of the *Rules Manifest* is that the `id` for rules that match malformed variants should use the `id` for the canonical rule with an `_a`, `_b`, `_c` etc appended to the end. This ensure that all rule IDs are unique whilst providing a coherent way of grouping rules together.
