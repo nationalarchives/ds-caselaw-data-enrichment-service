@@ -10,7 +10,7 @@ The primary purpose of the JEP is to "enrich" the judgments published on [casela
 
 At its core, the JEP is a series of serverless functions, which we call *Annotators*, that sequentially add layers of markup to judgments submitted for enrichment. Each Annotator is responsible for performing a specific type of enrichment. For example, the [Case Law Annotator](caselaw/case-law-annotator.md) detects references to case law citations (such as [2021] 1 WLR 1) and the [Legislation Annotator](legislation/legislation-annotator.md) is responsible for marking up mentions of UK primary legislation. An overview of the *Annotators* can be found below with more detailed guidance on each set out in dedicated documentation. 
 
-The *Annotators* are supported by a cast of utility functions that are responsible for ETL, XML validation, rules-management and file manipulation. The most important of these utility functions are the [*Replacers*](the-replacers.md), which generate the enriched XML that is sent back for publication on caselaw.nationalarchives.gov.uk](caselaw.nationalarchives.gov.uk).
+The *Annotators* are supported by a cast of utility functions that are responsible for ETL, XML validation, rules-management and file manipulation. The most important of these utility functions are the [*Replacers*](the-replacers.md), which generate the enriched XML that is sent back for publication on [caselaw.nationalarchives.gov.uk](caselaw.nationalarchives.gov.uk).
 
 A step-by-step commentary on the pipeline can be found [here](pipeline-walkthrough.md).
 
