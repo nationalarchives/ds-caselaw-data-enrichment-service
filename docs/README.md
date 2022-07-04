@@ -33,13 +33,13 @@ There are two ways to operate the pipeline:
 
 ### 2.1 Triggering the pipeline via file upload to S3
 
-### 2.1.1 Upload the judgment XML to the origin bucket in S3
+#### 2.1.1 Upload the judgment XML to the origin bucket in S3
 
 The JEP can be operated manually by uploading judgments directly to the JEP's trigger S3 bucket: `s3://production-tna-s3-tna-sg-xml-original-bucket/`. We recommend using the AWS CLI to achieve this, like so:
 
 `aws s3 cp path/to/judgment.xml s3://production-tna-s3-tna-sg-xml-original-bucket/`
 
-### 2.1.2 Collect the enriched XML file from the terminal bucket in S3
+#### 2.1.2 Collect the enriched XML file from the terminal bucket in S3
 
 The enrichment process typically takes five-six minutes per judgment. Enriched judgment XML is deposited in the JEP's terminal bucket: `s3://production-tna-s3-tna-sg-xml-third-phase-enriched-bucket`. Again, we recommend using the AWS CLI to retrieve the enriched XML, like so:
 
