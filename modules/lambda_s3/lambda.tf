@@ -112,7 +112,6 @@ resource "aws_ecr_repository" "abbreviations" {
   tags = local.tags
 }
 
-<<<<<<< HEAD
 resource "aws_ecr_repository" "legislation-provision" {
   name = "${local.name}-ecr-repository-legislation-provision-${local.environment}"
 
@@ -135,13 +134,6 @@ resource "aws_ecr_repository" "oblique-references" {
 
 resource "aws_ecr_repository" "legislation-update" {
   name                 = "${local.name}-ecr-repository-legislation-update-${local.environment}"
-=======
-resource "aws_ecr_repository" "legislation-update" {
-  # count = var.use_container_image == true ? 1 : 0
-
-  name                 = "${local.name}-ecr-repository-legislation-update-${local.environment}"
-  # image_tag_mutability = "IMMUTABLE"
->>>>>>> fee8f47adc26a9cd4145b1c3aa13b36c0f208520
 
   image_scanning_configuration {
     scan_on_push = true
@@ -150,11 +142,8 @@ resource "aws_ecr_repository" "legislation-update" {
   tags = local.tags
 }
 
-<<<<<<< HEAD
 resource "aws_ecr_repository" "rules-update" {
   name                 = "${local.name}-ecr-repository-rules-update-${local.environment}"
-=======
->>>>>>> fee8f47adc26a9cd4145b1c3aa13b36c0f208520
 
   image_scanning_configuration {
     scan_on_push = true
@@ -851,7 +840,6 @@ resource "aws_s3_bucket_notification" "rules_bucket_notification" {
   }
 }
 
-<<<<<<< HEAD
 resource "aws_secretsmanager_secret" "sparql_username" {
   description             = "Secret for storing the sparql username"
   name                    = "${local.name}-sparql-username-${local.environment}"
@@ -868,18 +856,11 @@ resource "aws_secretsmanager_secret" "sparql_password" {
   tags = local.tags
 }
 
-=======
->>>>>>> fee8f47adc26a9cd4145b1c3aa13b36c0f208520
 module "lambda-update-legislation-table" {
   source  = "terraform-aws-modules/lambda/aws"
   version = ">=2.0.0,<3.0.0"
 
-<<<<<<< HEAD
   # Lambda function declaration
-=======
-# Lambda function declaration
-# resource "aws_lambda_function" "lambda-read-rules" {
->>>>>>> fee8f47adc26a9cd4145b1c3aa13b36c0f208520
   function_name = "${local.name}-${local.environment}-update-legislation-table"
   package_type  = var.use_container_image == true ? "Image" : "Zip"
 
@@ -887,28 +868,13 @@ module "lambda-update-legislation-table" {
 
   # Deploy as code
   handler = "index.handler"
-<<<<<<< HEAD
   
-=======
-  # runtime     = var.runtime
->>>>>>> fee8f47adc26a9cd4145b1c3aa13b36c0f208520
   source_path = "${var.lambda_source_path}update_legislation_table"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
 
   timeout     = 60
   memory_size = 512
-<<<<<<< HEAD
-=======
-
-  # vpc_config {
-  #   subnet_ids = ["${split(",", var.subnet_ids)}"]
-  #   security_group_ids = ["${var.security_group_ids}"]
-  # }
-
-  # role = "${aws_iam_role.terraform_function_role.arn}"
-  # role = "${aws_iam_role.lambda_exec_role.arn}"
->>>>>>> fee8f47adc26a9cd4145b1c3aa13b36c0f208520
 
   attach_policies    = true
   number_of_policies = 2
