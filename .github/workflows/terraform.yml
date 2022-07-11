@@ -64,12 +64,11 @@ jobs:
         name: Set Workspace
         id: set_workspace
         run: |
-          echo ${{ github.event.ref }}
-          echo ${{ github.event.pull_request.base.ref }}
-          prod="${{ github.event.pull_request.base.ref == 'prod' || github.ref == 'refs/heads/prod' }}"
+          prod="${{ github.event.pull_request.base.ref == 'prod' || github.ref == 'refs/head/prod' }}"
           # prod=true
           if [ "$prod" = true ]; then
             echo "::set-output name=environment::prod"
+            echo "prod=true" >> $GITHUB_ENV
             # set variables for docker repo suffix and prefix
             echo "ACCOUNT_ID=893937975773" >> $GITHUB_ENV
             echo "REPO_SUFFIX=production" >> $GITHUB_ENV
@@ -80,6 +79,7 @@ jobs:
 
           else
             echo "::set-output name=environment::staging"
+            echo "prod=false" >> $GITHUB_ENV
             echo "ACCOUNT_ID=087925987720" >> $GITHUB_ENV
             echo "REPO_SUFFIX=dev" >> $GITHUB_ENV
 
@@ -165,6 +165,9 @@ jobs:
     needs: [buildx]
     runs-on: ubuntu-latest
 
+    env:
+      region: eu-west-2
+
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -182,33 +185,90 @@ jobs:
         id: set_workspace
         run: |
           # prod=true
-          prod="${{ github.event.pull_request.base.ref == 'prod' || github.ref == 'refs/heads/prod' }}"
+          prod="${{ github.event.pull_request.base.ref == 'master' || github.ref == 'refs/head/master' }}"
           if [ "$prod" = true ]; then
+          # if [ ${{ env.prod }} = true ]; then
             echo "::set-output name=environment::tna-prod"
+            # echo "::set-output name=account_id::893937975773"
+            # set variables for docker repo suffix and prefix
             echo "DEPLOYMENT_ENVIRONMENT=production" >> $GITHUB_ENV
             echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN_PROD }}" >> $GITHUB_ENV
 
+            # environment="dev"
+            # name
+            # s3 bucket prefix bucket_prefix app_env="tna-mxt-staging" environment
+            echo "ACCOUNT_ID=893937975773" >> $GITHUB_ENV
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }}" >> $GITHUB_ENV
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}" >> $GITHUB_ENV
           else
             echo "::set-output name=environment::tna-staging"
+            # echo "DEPLOYMENT_ENVIRONMENT=staging" >> $GITHUB_ENV
             echo "DEPLOYMENT_ENVIRONMENT=dev" >> $GITHUB_ENV
             echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN }}" >> $GITHUB_ENV
+            echo "ACCOUNT_ID=087925987720" >> $GITHUB_ENV
+            echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }}" >> $GITHUB_ENV
+            echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}" >> $GITHUB_ENV
 
           fi
+          echo "::add-mask::${{ env.AWS_ACCESS_KEY_ID }}"
+          echo "::add-mask::${{ env.AWS_SECRET_ACCESS_KEY }}"
 
       - name: Check Workspace
         id: check_workspace
         run: |          
           echo "workspace = ${{ steps.set_workspace.outputs.environment }}"
 
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@master
+        with:
+          aws-region: eu-west-2
+              # role-to-assume: arn:aws:iam::846769538626:role/GithubOIDCProviderIAMRolePermissions-Role-I80RXHT6O1PL
+              # role-session-name: MySessionName
+          aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
-        with:
+        # with:
+        #   # terraform_version: 0.13.0:
+        #   # cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+        #   cli_config_credentials_token: ${{ env.TF_API_TOKEN }}
 
-          cli_config_credentials_token: ${{ env.TF_API_TOKEN }}
+      - name: Define Backend S3 Bucket
+        run: |
+          echo "terraform_backend_bucket=tna-terraform-backend-state-enrichment-pipeline-${{ env.ACCOUNT_ID }}" >> $GITHUB_ENV
+
+      - name: Create Backend S3 Bucket
+        run: |          
+          echo ${{ env.terraform_backend_bucket }}
+          echo AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws s3 ls "s3://${{ env.terraform_backend_bucket }}" --region eu-west-2 2>&1
+
+          if 
+            AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws s3 ls "s3://${{ env.terraform_backend_bucket }}" --region eu-west-2 2>&1 | grep -q 'NoSuchBucket'
+          then 
+            echo "attepting to create bucket"
+            AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws s3api create-bucket \
+              --bucket ${{ env.terraform_backend_bucket }} \
+              --region eu-west-2 \
+              --create-bucket-configuration LocationConstraint=eu-west-2
+             echo "attepting to restrict bucket permission"
+            AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws s3api put-public-access-block \
+              --bucket ${{ env.terraform_backend_bucket }} \
+              --region eu-west-2 \
+              --public-access-block-configuration "BlockPublicAcls=true,IgnorePublicAcls=true,BlockPublicPolicy=true,RestrictPublicBuckets=true"
+          else
+            echo 'Bucket Already Exists'
+          fi
+
+      # - name: Terraform Format
+      #   id: fmt
+      #   run: terraform fmt -check -diff
 
       - name: Terraform Init
         id: init
-        run: terraform init -upgrade
+        run: terraform init -upgrade -backend-config="bucket=${{ env.terraform_backend_bucket}}"
+        # run: terraform init -upgrade -backend-config="bucket=fakebucket"
         env:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
           TF_LOG: TRACE
@@ -228,14 +288,23 @@ jobs:
       - uses: actions/setup-python@v3
         with:
           python-version: '3.8'
+          architecture: 'x64'
+
+      - name: Check Python
+        run: |
+          python --version
 
       - name: Terraform Plan
         id: plan
-
+        # if: github.event_name == 'pull_request'
+        # run: terraform plan -no-color
+        # run: echo "plan called ${{ steps.set_workspace.outputs.environment }} -- ${{ env.DEPLOYMENT_ENVIRONMENT }}"
         run: terraform plan -no-color -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}"
         continue-on-error: true
         env:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
+          TF_LOG: TRACE
+          # -var "backend_bucket=${{ env.terraform_backend_bucket}}"
 
       - uses: actions/github-script@0.9.0
         if: github.event_name == 'pull_request'
@@ -248,24 +317,19 @@ jobs:
             #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
             #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
             #### Terraform Plan 📖\`${{ steps.plan.outcome }}\`
-
             <details><summary>Show Plan</summary>
-
             \`\`\`\n
             ${process.env.PLAN}
             \`\`\`
-
             </details>
-
             *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
-
             github.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: output
             })
-
+            
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1

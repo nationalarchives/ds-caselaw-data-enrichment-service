@@ -12,13 +12,19 @@ terraform {
   }
   required_version = ">= 1.1.0"
 
-  cloud {
-    organization = "mdrx-tna"
-
-    workspaces {
-      tags = ["tna-staging"]
-    }
+  backend "s3" {
+      # bucket = "${var.backend_bucket}"
+      key    = "ds-infrastructure-enrichment-pipeline/backend.tfstate"
+      region = "eu-west-2"
   }
+
+  # cloud {
+  #   organization = "mdrx-tna"
+
+  #   workspaces {
+  #     tags = ["tna-staging"]
+  #   }
+  # }
 }
 
 module "lambda_s3" {
