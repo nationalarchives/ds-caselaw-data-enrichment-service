@@ -347,8 +347,8 @@ jobs:
         env:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
 
-      # - name: Terraform Apply
-      #   run: terraform apply -auto-approve -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}"
+      - name: Terraform Apply
+        run: terraform apply -auto-approve -var "app_env=${{ env.DEPLOYMENT_ENVIRONMENT }}"
 
-      #   env:
-      #     TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
+        env:
+          TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
