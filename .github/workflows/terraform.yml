@@ -3,7 +3,7 @@ name: "Terraform"
 on:
   push:
     branches:
-      - master
+      - main
       - prod
   pull_request:
 
@@ -185,7 +185,7 @@ jobs:
         id: set_workspace
         run: |
           # prod=true
-          prod="${{ github.event.pull_request.base.ref == 'master' || github.ref == 'refs/head/master' }}"
+          prod="${{ github.event.pull_request.base.ref == 'main' || github.ref == 'refs/head/main' }}"
           if [ "$prod" = true ]; then
           # if [ ${{ env.prod }} = true ]; then
             echo "::set-output name=environment::tna-prod"
@@ -329,7 +329,7 @@ jobs:
               repo: context.repo.repo,
               body: output
             })
-            
+
       - name: Terraform Plan Status
         if: steps.plan.outcome == 'failure'
         run: exit 1
