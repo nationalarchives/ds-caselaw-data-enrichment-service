@@ -3,22 +3,41 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
+      # version = "3.26.0"
       version = ">= 3.69.0, <= 4.4.0"
     }
     random = {
       source  = "hashicorp/random"
       version = "3.0.1"
     }
+    # docker = {
+    #   # source = "kreuzwerker/docker"
+    #   source = "hashicorp/docker"
+    #   # version = ">= 0.13"
+    # }
   }
   required_version = ">= 1.1.0"
 
-  cloud {
-    organization = "mdrx-tna"
+  # cloud {
+  #   organization = "mdrx-tna"
 
-    workspaces {
-      tags = ["tna-staging"]
-    }
+  #   workspaces {
+      # name = "tna-dev"
+      # name = "tna-dev"
+      # prefix = "tna-"
+      # tags = ["tna-staging", "tna-prod"]
+ #      tags = ["tna-staging"]
+      # tags = ["${var.environment}"]
+      # name = var.environment
+  #   }
+  # }
+
+  backend "s3" {
+      # bucket = "${var.backend_bucket}"
+      key    = "ds-infrastructure-enrichment-pipeline/backend.tfstate"
+      region = "eu-west-2"
   }
+
 }
 
 module "lambda_s3" {
