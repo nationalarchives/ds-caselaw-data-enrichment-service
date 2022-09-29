@@ -598,3 +598,47 @@ resource "aws_sns_topic_subscription" "rules-error-email-dan-target" {
   protocol  = "email"
   endpoint  = "daniel.hoadley@mishcon.com"
 }
+
+resource "aws_sqs_queue" "fetch_xml_queue" {
+  name                      = "${local.name}-${local.environment}-fetch-xml-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled   = true
+  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.fetch_xml_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+
+  tags = local.tags
+}
+
+resource "aws_sqs_queue" "fetch_xml_dlq_queue" {
+  name                      = "${local.name}-${local.environment}-fetch-xml-dlq-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled   = true
+
+  tags = local.tags
+}
+
+# Relies on the SNS topic of NA-25
+#resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
+#  queue_url = aws_sqs_queue.fetch_xml_queue.id
+#  policy = <<POLICY
+#{
+#  "Version": "2012-10-17",
+#  "Statement": [
+#    {
+#      "Effect": "Allow",
+#      "Principal": "*",
+#      "Action": "sqs:SendMessage",
+#      "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
+#      "Condition": {
+#        "ArnEquals": { "aws:SourceArn": "${}" } # will be the SNS topic done under NA-25
+#      }
+#    }
+#  ]
+#}
+#POLICY
+#}
