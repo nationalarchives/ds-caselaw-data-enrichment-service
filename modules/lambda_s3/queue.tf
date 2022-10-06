@@ -622,23 +622,29 @@ resource "aws_sqs_queue" "fetch_xml_dlq_queue" {
   tags = local.tags
 }
 
-# Relies on the SNS topic of NA-25
-#resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
-#  queue_url = aws_sqs_queue.fetch_xml_queue.id
-#  policy = <<POLICY
-#{
-#  "Version": "2012-10-17",
-#  "Statement": [
-#    {
-#      "Effect": "Allow",
-#      "Principal": "*",
-#      "Action": "sqs:SendMessage",
-#      "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
-#      "Condition": {
-#        "ArnEquals": { "aws:SourceArn": "${}" } # will be the SNS topic done under NA-25
-#      }
-#    }
-#  ]
-#}
-#POLICY
-#}
+resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
+  queue_url = aws_sqs_queue.fetch_xml_queue.id
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+      "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
+      "Condition": {
+        "ArnEquals": { "aws:SourceArn": "${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}" }
+      }
+    }
+  ]
+}
+POLICY
+}
+
+resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription" {
+  topic_arn = "arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated"
+  protocol  = "sqs"
+  endpoint  = aws_sqs_queue.fetch_xml_queue.arn
+}
+
