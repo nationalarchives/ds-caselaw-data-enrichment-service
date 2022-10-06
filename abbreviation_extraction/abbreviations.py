@@ -238,12 +238,11 @@ class AbbreviationDetector():
     def __call__(self, doc: Doc) -> Doc:
         matches = self.matcher(doc)
 
-        print(matches)
-
         matches_brackets = [(x[0], x[1], x[2]) for x in matches]
         print(matches_brackets)
+        
         matcher_output = verify_match_format(matches_brackets, doc)
-        print(matcher_output)
+        # print(matcher_output)
 
         matches_no_brackets = [(x[0], x[1] + 1, x[2] - 1) for x in matcher_output]
         filtered = filter_matches(matches_no_brackets, doc)
