@@ -237,6 +237,8 @@ class AbbreviationDetector():
     def __call__(self, doc: Doc) -> Doc:
         matches = self.matcher(doc)
 
+        print(matches)
+
         matches_brackets = [(x[0], x[1], x[2]) for x in matches]
         matcher_output = verify_match_format(matches_brackets, doc)
 
