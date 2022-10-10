@@ -184,7 +184,6 @@ def verify_match_format(
     matcher_output: List[Tuple[int, int, int]], doc: Doc
 ) -> List[Tuple[Span, Span]]:
     for match in matcher_output:
-        print(match)
         QUOTES = ['"', "'", "‘", "’", "“", "”"]
         BRACKETS = ["(", ")"]
         start = match[1]
@@ -194,7 +193,8 @@ def verify_match_format(
             matcher_output.remove(match)
 
         # verify that the match is wrapped in quotes and brackets
-        elif not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS): 
+        elif not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS):
+            print(str(doc(match)))
             matcher_output.remove(match)
 
 class AbbreviationDetector():
