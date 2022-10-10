@@ -265,6 +265,11 @@ jobs:
       #   id: fmt
       #   run: terraform fmt -check -diff
 
+      - name: Terraform clean
+        id: clean
+        run: |
+          if [ -d ".terraform" ]; then rm -rf ".terraform"; fi
+
       - name: Terraform Init
         id: init
         run: terraform init -upgrade -backend-config="bucket=${{ env.terraform_backend_bucket}}"
