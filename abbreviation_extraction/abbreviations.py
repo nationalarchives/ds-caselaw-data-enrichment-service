@@ -184,6 +184,7 @@ def verify_match_format(
     matcher_output: List[Tuple[int, int, int]], doc: Doc
 ) -> List[Tuple[Span, Span]]:
     for match in matcher_output:
+        print(match)
         QUOTES = ['"', "'", "‘", "’", "“", "”"]
         BRACKETS = ["(", ")"]
         start = match[1]
