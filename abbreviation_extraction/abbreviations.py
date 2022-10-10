@@ -188,13 +188,13 @@ def verify_match_format(
         BRACKETS = ["(", ")"]
         start = match[1]
         end = match[2] - 1
-        print(str(start), str(end))
 
         if end - start > 8: 
             matcher_output.remove(match)
 
         # verify that the match is wrapped in quotes and brackets
         elif not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS):
+            print(str(doc[start:end]))
             matcher_output.remove(match)
 
 class AbbreviationDetector():
