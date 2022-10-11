@@ -1189,7 +1189,7 @@ resource "aws_lambda_permission" "allow_cloudwatch_to_call_rw_fallout_retry_step
 
 module "lambda_fetch_xml" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = ">=2.0.0,<3.0.0"
+  version = ">=2.0.0,<5.0.0"
 
   function_name          = "${local.name}-${local.environment}-xml-fetch"
   description            = "Fetch XML"
