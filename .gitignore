@@ -155,3 +155,27 @@ abbreviation_extraction/abbreviations_matcher_test.py
 
 .idea
 *.iml
+
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Ignore any .tfvars files used locally.
+*.tfvars
+
+
+
+
+# Ignore override files as they are usually used to override resources locally and so
+# are not checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
