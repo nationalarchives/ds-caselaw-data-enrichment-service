@@ -152,6 +152,16 @@ resource "aws_ecr_repository" "rules-update" {
   tags = local.tags
 }
 
+resource "aws_ecr_repository" "fetch_xml" {
+  name                 = "${local.name}-ecr-repository-fetch-xml-${local.environment}"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  tags = local.tags
+}
+
 resource "random_pet" "this" {
   length = 2
 }
@@ -1179,7 +1189,7 @@ resource "aws_lambda_permission" "allow_cloudwatch_to_call_rw_fallout_retry_step
 
 module "lambda_fetch_xml" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "~> 4"
+  version = ">=2.0.0,<3.0.0"
 
   function_name          = "${local.name}-${local.environment}-xml-fetch"
   description            = "Fetch XML"
@@ -1199,8 +1209,9 @@ module "lambda_fetch_xml" {
   vpc_security_group_ids = [var.default_security_group_id]
   attach_network_policy  = true
 
-  environment_variables = {
-  }
+  # Add these as needed
+  #  environment_variables = {
+  #  }
 
   #Instead of CMD entry in dockerfile
   image_config_command = [
