@@ -1176,3 +1176,42 @@ resource "aws_lambda_permission" "allow_cloudwatch_to_call_rw_fallout_retry_step
   principal = "events.amazonaws.com"
   source_arn = aws_cloudwatch_event_rule.update_legislation_table_lambda_event_rule.arn
 }
+
+module "lambda_fetch_xml" {
+  source  = "terraform-aws-modules/lambda/aws"
+  version = "~> 4"
+
+  function_name          = "${local.name}-${local.environment}-xml-fetch"
+  description            = "Fetch XML"
+  maximum_retry_attempts = 0
+  handler                = "index.handler"
+  runtime                = "python3.8"
+  memory_size            = "128"
+  timeout                = 600
+
+
+  create_package = false
+
+  image_uri    = "${aws_ecr_repository.fetch_xml.repository_url}:${var.container_image_tag}"
+  package_type = "Image"
+
+  vpc_subnet_ids         = data.aws_subnets.private.ids
+  vpc_security_group_ids = [var.default_security_group_id]
+  attach_network_policy  = true
+
+  environment_variables = {
+  }
+
+  #Instead of CMD entry in dockerfile
+  image_config_command = [
+    "python3",
+    "start.py"
+  ]
+
+  allowed_triggers = {
+    sqs = {
+      principal  = "sqs.amazonaws.com"
+      source_arn = aws_sqs_queue.fetch_xml_queue.arn
+    }
+  }
+}
