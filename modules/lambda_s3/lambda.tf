@@ -1189,25 +1189,22 @@ resource "aws_lambda_permission" "allow_cloudwatch_to_call_rw_fallout_retry_step
 
 module "lambda_fetch_xml" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = ">=2.0.0,<5.0.0"
-
-  function_name          = "${local.name}-${local.environment}-xml-fetch"
-  description            = "Fetch XML"
-  maximum_retry_attempts = 0
-  handler                = "index.handler"
-  runtime                = "python3.8"
-  memory_size            = "128"
-  timeout                = 600
+  version = ">=2.0.0,<3.0.0"
 
 
-  create_package = false
-
-  image_uri    = "${aws_ecr_repository.fetch_xml.repository_url}:${var.container_image_tag}"
-  package_type = "Image"
-
-  vpc_subnet_ids         = data.aws_subnets.private.ids
-  vpc_security_group_ids = [var.default_security_group_id]
-  attach_network_policy  = true
+  function_name                           = "${local.name}-${local.environment}-xml-fetch"
+  package_type                            = var.use_container_image == true ? "Image" : "Zip"
+  description                             = "Fetch XML"
+  handler                                 = "index.handler"
+  runtime                                 = "python3.8"
+  source_path                             = "${var.lambda_source_path}xml_validate"
+  create_current_version_allowed_triggers = false # !var.use_container_image
+  timeout                                 = 30
+  memory_size                             = var.memory_size
+  attach_policy_statements                = true
+  vpc_subnet_ids                          = data.aws_subnets.private.ids
+  vpc_security_group_ids                  = [var.default_security_group_id]
+  attach_network_policy                   = true
 
   # Add these as needed
   #  environment_variables = {
@@ -1219,10 +1216,53 @@ module "lambda_fetch_xml" {
     "start.py"
   ]
 
+  policy_statements = {
+    s3_read = {
+      effect = "Allow",
+      actions = [
+        "s3:HeadObject",
+        "s3:GetObject",
+        "s3:GetObjectVersion"
+      ],
+      resources = ["*"]
+    },
+    kms_get_key = {
+      effect = "Allow",
+      actions = [
+        "kms:Encrypt",
+        "kms:DescribeKey",
+        "kms:GenerateDataKey",
+        "kms:Decrypt",
+        "kms:ReEncryptTo"
+      ],
+      resources = ["*"]
+    },
+    sqs_get = {
+      effect = "Allow",
+      actions = [
+        "sqs:ReceiveMessage",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+      ],
+      resources = ["${aws_sqs_queue.fetch_xml_queue.arn}"]
+    },
+    log_lambda = {
+      effect = "Allow",
+      actions = [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      resources = ["*"]
+    }
+  }
+
   allowed_triggers = {
     sqs = {
       principal  = "sqs.amazonaws.com"
       source_arn = aws_sqs_queue.fetch_xml_queue.arn
     }
   }
+
+  tags = local.tags
 }
