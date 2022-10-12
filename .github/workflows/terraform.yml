@@ -271,7 +271,7 @@ jobs:
         # run: terraform init -upgrade -backend-config="bucket=fakebucket"
         env:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
-          TF_LOG: TRACE
+          #TF_LOG: TRACE
 
       - name: Check TF
         id: check_tf
@@ -303,7 +303,7 @@ jobs:
         continue-on-error: true
         env:
           TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
-          TF_LOG: TRACE
+          #TF_LOG: TRACE
           # -var "backend_bucket=${{ env.terraform_backend_bucket}}"
 
       - uses: actions/github-script@0.9.0
