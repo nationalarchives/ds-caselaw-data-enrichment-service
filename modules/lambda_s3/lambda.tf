@@ -1199,12 +1199,18 @@ module "lambda_fetch_xml" {
   runtime                                 = "python3.8"
   source_path                             = "${var.lambda_source_path}xml_validate"
   create_current_version_allowed_triggers = false # !var.use_container_image
-  timeout                                 = 30
-  memory_size                             = var.memory_size
+  timeout                                 = 60
+  memory_size                             = 512
   attach_policy_statements                = true
   vpc_subnet_ids                          = data.aws_subnets.private.ids
   vpc_security_group_ids                  = [var.default_security_group_id]
   attach_network_policy                   = true
+  image_uri                               = "${aws_ecr_repository.fetch_xml.repository_url}:${var.container_image_tag}"
+  number_of_policies                      = 2
+  policies                                = [
+    "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+    "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+  ]
 
   # Add these as needed
   #  environment_variables = {
