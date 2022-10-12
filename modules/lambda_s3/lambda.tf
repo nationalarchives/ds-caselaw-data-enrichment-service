@@ -1193,7 +1193,7 @@ module "lambda_fetch_xml" {
 
 
   function_name                           = "${local.name}-${local.environment}-xml-fetch"
-  package_type                            = var.use_container_image == true ? "Image" : "Zip"
+  package_type                            = "Image"
   description                             = "Fetch XML"
   handler                                 = "index.handler"
   runtime                                 = "python3.8"
