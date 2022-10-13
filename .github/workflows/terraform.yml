@@ -159,6 +159,15 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest
           echo "tagged oblique references"
           docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest
+          
+          cd ../../lambda/fetch_xml
+          echo "CD'd into the fetch_xml directory"
+          docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }} .
+          echo "built fetch_xml"
+          docker images --filter reference=tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}
+          docker tag tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest
+          echo "tagged fetch xml"
+          docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest
 
   terraform:
     name: "Terraform"
