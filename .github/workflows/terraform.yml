@@ -163,10 +163,12 @@ jobs:
           cd ../../lambda/fetch_xml
           echo "CD'd into the fetch_xml directory"
           if [[ "${{ github.ref == 'refs/head/prod' }}" ]]; then
+            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
             docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-production .
             docker tag tna-s3-tna-ecr-repository-fetch-xml-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
             docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
           elif [[ "${{ github.ref != 'refs/head/prod' }}" ]]; then
+            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
             docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-dev .
             docker tag tna-s3-tna-ecr-repository-fetch-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
             docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
