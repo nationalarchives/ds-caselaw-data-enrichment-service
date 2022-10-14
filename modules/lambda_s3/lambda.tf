@@ -1305,8 +1305,8 @@ module "lambda-fetch-xml" {
 
  environment_variables = {
   DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_arn
-  API_USERNAME = "${aws_secretsmanager_secret.api_username.arn}"
-  API_PASSWORD = "${aws_secretsmanager_secret.api_password.arn}"
+  API_USERNAME = "${aws_secretsmanager_secret.API_username.arn}"
+  API_PASSWORD = "${aws_secretsmanager_secret.API_password.arn}"
  }
 
  tags = local.tags
