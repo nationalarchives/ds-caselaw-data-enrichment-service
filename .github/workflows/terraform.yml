@@ -168,7 +168,7 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest
           echo "tagged fetch xml"
           docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest
-          if [[ "${env.REPO_SUFFIX}" != "production" ]]; then
+          if [[ "${{ env.REPO_SUFFIX }}" != "production" ]]; then
             docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-production .
             docker tag tna-s3-tna-ecr-repository-fetch-xml-production:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
             docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
