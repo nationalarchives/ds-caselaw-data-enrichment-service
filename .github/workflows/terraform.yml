@@ -162,16 +162,16 @@ jobs:
           
           cd ../../lambda/fetch_xml
           echo "CD'd into the fetch_xml directory"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }} .
-          echo "built fetch_xml"
-          docker images --filter reference=tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}
-          docker tag tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest
-          echo "tagged fetch xml"
-          docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest
-          if [[ "${{ env.REPO_SUFFIX }}" != "production" ]]; then
+          if [[ "${{ env.REPO_SUFFIX }}" == "production" ]]; then
             docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-production .
-            docker tag tna-s3-tna-ecr-repository-fetch-xml-production:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
-            docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
+            docker tag tna-s3-tna-ecr-repository-fetch-xml-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
+            docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
+          elif [[ "${{ env.REPO_SUFFIX }}" != "production" ]]; then
+            docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-dev .
+            docker tag tna-s3-tna-ecr-repository-fetch-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
+            docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
+          else
+            echo "${{ env.REPO_SUFFIX }}"
           fi
 
   terraform:
