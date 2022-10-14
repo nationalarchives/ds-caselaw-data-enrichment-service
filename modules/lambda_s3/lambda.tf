@@ -1188,108 +1188,127 @@ resource "aws_ecr_repository" "fetch-xml" {
   tags = local.tags
 }
 
-#module "lambda-fetch-xml" {
-#  source  = "terraform-aws-modules/lambda/aws"
-#  version = ">=2.0.0,<3.0.0"
-#
-#  # Lambda function declaration
-#  function_name = "${local.name}-${local.environment}-fetch-xml"
-#
-#  package_type  = "Image"
-#  create_package = false
-#
-#  runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
-#
-#  image_uri     = "${aws_ecr_repository.fetch-xml.repository_url}:${var.container_image_tag}"
-#
-#  # Deploy as code
-#  handler = "index.handler"
-#
-#  source_path = "${var.lambda_source_path}fetch_xml"
-#
-#  create_current_version_allowed_triggers = false # !var.use_container_image
-#
-#  timeout     = 60
-#  memory_size = 512
-#
-#  attach_policies    = true
-#  number_of_policies = 2
-#  policies = [
-#    "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
-#    "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
-#  ]
-#
-#  attach_policy_statements = true
-#  policy_statements = {
-#    s3_read = {
-#      effect = "Allow",
-#      actions = [
-#        "s3:HeadObject",
-#        "s3:GetObject",
-#        "s3:GetObjectVersion",
-#        "s3:List*",
-#      ],
-#      resources = ["*"]
-#    },
-#    kms_get_key = {
-#      effect = "Allow",
-#      actions = [
-#        "kms:Encrypt",
-#        "kms:DescribeKey",
-#        "kms:GenerateDataKey",
-#        "kms:Decrypt",
-#        "kms:ReEncryptTo"
-#      ],
-#      resources = ["*"]
-#    },
-#    secrets_get = {
-#      effect = "Allow",
-#      actions = [
-#        "secretsmanager:GetResourcePolicy",
-#        "secretsmanager:GetSecretValue",
-#        "secretsmanager:DescribeSecret",
-#        "secretsmanager:ListSecretVersionIds"
-#      ],
-#      resources = ["${var.postgress_master_password_secret_id}"]
-#    },
-#    log_lambda = {
-#      effect = "Allow",
-#      actions = [
-#        "logs:CreateLogGroup",
-#        "logs:CreateLogStream",
-#        "logs:PutLogEvents"
-#      ],
-#      resources = ["*"]
-#    }
-#  }
-#
-#  allowed_triggers = {
-#    sqs = {
-#      principal  = "sqs.amazonaws.com"
-#      source_arn = aws_sqs_queue.fetch_xml_queue.arn
-#      }
-#  }
-#
-#  assume_role_policy_statements = {
-#    account_root = {
-#      effect  = "Allow",
-#      actions = ["sts:AssumeRole"],
-#      principals = {
-#        account_principal = {
-#          type        = "Service",
-#          identifiers = ["lambda.amazonaws.com"]
-#        }
-#      }
-#    }
-#  }
-#
-#  vpc_security_group_ids = [var.default_security_group_id]
-#
-#  vpc_subnet_ids = var.aws_subnets_private_ids
-#
-##  environment_variables = {
-##  }
-#
-#  tags = local.tags
-#
-#}
+resource "aws_secretsmanager_secret" "API_username" {
+  description             = "Secret for storing the API username"
+  name                    = "${local.name}-api-username-${local.environment}"
+  recovery_window_in_days = 0
+
+  tags = local.tags
+}
+
+resource "aws_secretsmanager_secret" "API_password" {
+  description             = "Secret for storing the API password"
+  name                    = "${local.name}-api-password-${local.environment}"
+  recovery_window_in_days = 0
+
+  tags = local.tags
+}
+
+module "lambda-fetch-xml" {
+ source  = "terraform-aws-modules/lambda/aws"
+ version = ">=2.0.0,<3.0.0"
+
+ # Lambda function declaration
+ function_name = "${local.name}-${local.environment}-fetch-xml"
+
+ package_type  = "Image"
+ create_package = false
+
+ runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
+
+ image_uri     = "${aws_ecr_repository.fetch-xml.repository_url}:${var.container_image_tag}"
+
+ # Deploy as code
+ handler = "index.handler"
+
+ source_path = "${var.lambda_source_path}fetch_xml"
+
+ create_current_version_allowed_triggers = false # !var.use_container_image
+
+ timeout     = 60
+ memory_size = 512
+
+ attach_policies    = true
+ number_of_policies = 2
+ policies = [
+   "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+   "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+ ]
+
+ attach_policy_statements = true
+ policy_statements = {
+   s3_read = {
+     effect = "Allow",
+     actions = [
+       "s3:HeadObject",
+       "s3:GetObject",
+       "s3:GetObjectVersion",
+       "s3:List*",
+     ],
+     resources = ["*"]
+   },
+   kms_get_key = {
+     effect = "Allow",
+     actions = [
+       "kms:Encrypt",
+       "kms:DescribeKey",
+       "kms:GenerateDataKey",
+       "kms:Decrypt",
+       "kms:ReEncryptTo"
+     ],
+     resources = ["*"]
+   },
+   secrets_get = {
+     effect = "Allow",
+     actions = [
+       "secretsmanager:GetResourcePolicy",
+       "secretsmanager:GetSecretValue",
+       "secretsmanager:DescribeSecret",
+       "secretsmanager:ListSecretVersionIds"
+     ],
+     resources = ["${var.postgress_master_password_secret_id}"]
+   },
+   log_lambda = {
+     effect = "Allow",
+     actions = [
+       "logs:CreateLogGroup",
+       "logs:CreateLogStream",
+       "logs:PutLogEvents"
+     ],
+     resources = ["*"]
+   }
+ }
+
+ allowed_triggers = {
+   sqs = {
+     principal  = "sqs.amazonaws.com"
+     source_arn = aws_sqs_queue.fetch_xml_queue.arn
+     }
+ }
+
+ assume_role_policy_statements = {
+   account_root = {
+     effect  = "Allow",
+     actions = ["sts:AssumeRole"],
+     principals = {
+       account_principal = {
+         type        = "Service",
+         identifiers = ["lambda.amazonaws.com"]
+       }
+     }
+   }
+ }
+
+ vpc_security_group_ids = [var.default_security_group_id]
+
+ vpc_subnet_ids = var.aws_subnets_private_ids
+
+ environment_variables = {
+  DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_arn
+  API_USERNAME = "${aws_secretsmanager_secret.api_username.arn}"
+  API_PASSWORD = "${aws_secretsmanager_secret.api_password.arn}"
+ }
+
+ tags = local.tags
+
+}
