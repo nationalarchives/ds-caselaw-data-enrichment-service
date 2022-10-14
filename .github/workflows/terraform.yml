@@ -60,12 +60,6 @@ jobs:
           cp oblique_references/requirements.txt lambda/determine_oblique_references/
           mkdir lambda/determine_oblique_references/replacer
           cp -r replacer/*.py lambda/determine_oblique_references/replacer/
-          
-          mkdir lambda/fetch_xml/fetch_xml
-          cp -r fetch_xml/*.* lambda/fetch_xml/fetch_xml/
-          cp fetch_xml/requirements.txt lambda/fetch_xml/
-          mkdir lambda/fetch_xml/replacer
-          cp -r replacer/*.py lambda/fetch_xml/replacer/
       - 
         name: Set Workspace
         id: set_workspace
@@ -174,6 +168,11 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest
           echo "tagged fetch xml"
           docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }}:latest
+          if [[ "${env.REPO_SUFFIX}" != "production" ]]; then
+            docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-production .
+            docker tag tna-s3-tna-ecr-repository-fetch-xml-production:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
+            docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
+          fi
 
   terraform:
     name: "Terraform"
