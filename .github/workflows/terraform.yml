@@ -170,7 +170,7 @@ jobs:
             docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
           elif [[ "${{ github.ref != 'refs/head/prod' }}" ]]; then
             AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
             docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-dev .
             docker tag tna-s3-tna-ecr-repository-fetch-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
             docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
@@ -178,23 +178,24 @@ jobs:
             echo "${{ env.REPO_SUFFIX }}"
           fi
           
-          cd ../../lambda/push_enriched_xml
-          echo "CD'd into the push_enriched_xml directory"
-          if [[ "${{ github.ref == 'refs/head/prod' }}" ]]; then
-            AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
-            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
-            docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-production .
-            docker tag tna-s3-tna-ecr-repository-push-enriched-xml-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
-            docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
-          elif [[ "${{ github.ref != 'refs/head/prod' }}" ]]; then
-            AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
-            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
-            docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-dev .
-            docker tag tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
-            docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
-          else
-            echo "${{ env.REPO_SUFFIX }}"
-          fi
+          # Disabled until ECR is created by Terraform
+#          cd ../../lambda/push_enriched_xml
+#          echo "CD'd into the push_enriched_xml directory"
+#          if [[ "${{ github.ref == 'refs/head/prod' }}" ]]; then
+#            AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
+#            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+#            docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-production .
+#            docker tag tna-s3-tna-ecr-repository-push-enriched-xml-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
+#            docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
+#          elif [[ "${{ github.ref != 'refs/head/prod' }}" ]]; then
+#            AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+#            docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-dev .
+#            docker tag tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
+#            docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
+#          else
+#            echo "${{ env.REPO_SUFFIX }}"
+#          fi
 
   terraform:
     name: "Terraform"
