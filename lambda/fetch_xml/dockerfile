@@ -2,10 +2,8 @@ FROM public.ecr.aws/lambda/python:3.9
 
 WORKDIR /
 
-RUN apt-get update && apt-get -y upgrade
-RUN apt-get install -y wget software-properties-common
-RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get install -y python3-distutils python3.9
+RUN yum -y upgrade
+RUN yum -y install wget
 
 RUN ln -sf python3 /usr/bin/python
 # install latest version of pip rather than the older OS one.
