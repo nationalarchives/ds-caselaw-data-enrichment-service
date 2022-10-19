@@ -1312,3 +1312,13 @@ module "lambda-fetch-xml" {
  tags = local.tags
 
 }
+
+resource "aws_ecr_repository" "push_enriched_xml" {
+  name                 = "${local.name}-ecr-repository-push-enriched-xml-${local.environment}"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  tags = local.tags
+}
