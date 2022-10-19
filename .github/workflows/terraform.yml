@@ -1,5 +1,5 @@
 name: "Terraform"
- 
+
 on:
   push:
     branches:
@@ -60,7 +60,7 @@ jobs:
           cp oblique_references/requirements.txt lambda/determine_oblique_references/
           mkdir lambda/determine_oblique_references/replacer
           cp -r replacer/*.py lambda/determine_oblique_references/replacer/
-      - 
+      -
         name: Set Workspace
         id: set_workspace
         run: |
@@ -73,7 +73,7 @@ jobs:
             echo "ACCOUNT_ID=893937975773" >> $GITHUB_ENV
             echo "REPO_SUFFIX=production" >> $GITHUB_ENV
             echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN_PROD }}" >> $GITHUB_ENV
-            
+          
             echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }}" >> $GITHUB_ENV
             echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}" >> $GITHUB_ENV
 
@@ -177,6 +177,24 @@ jobs:
           else
             echo "${{ env.REPO_SUFFIX }}"
           fi
+          
+          cd ../../lambda/push_enriched_xml
+          echo "CD'd into the push_enriched_xml directory"
+          if [[ "${{ github.ref == 'refs/head/prod' }}" ]]; then
+            AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
+            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+            docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-production .
+            docker tag tna-s3-tna-ecr-repository-push-enriched-xml-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
+            docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
+          elif [[ "${{ github.ref != 'refs/head/prod' }}" ]]; then
+            AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY }}
+            aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+            docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-dev .
+            docker tag tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
+            docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
+          else
+            echo "${{ env.REPO_SUFFIX }}"
+          fi
 
   terraform:
     name: "Terraform"
@@ -198,7 +216,7 @@ jobs:
 
           mkdir -p lambda/make_replacements/replacer
           cp -r replacer/*.py lambda/make_replacements/replacer/
- 
+
       - name: Set Workspace
         id: set_workspace
         run: |
@@ -233,7 +251,7 @@ jobs:
 
       - name: Check Workspace
         id: check_workspace
-        run: |          
+        run: |
           echo "workspace = ${{ steps.set_workspace.outputs.environment }}"
 
 
@@ -241,8 +259,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@master
         with:
           aws-region: eu-west-2
-              # role-to-assume: arn:aws:iam::846769538626:role/GithubOIDCProviderIAMRolePermissions-Role-I80RXHT6O1PL
-              # role-session-name: MySessionName
+            # role-to-assume: arn:aws:iam::846769538626:role/GithubOIDCProviderIAMRolePermissions-Role-I80RXHT6O1PL
+          # role-session-name: MySessionName
           aws-access-key-id: ${{ env.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ env.AWS_SECRET_ACCESS_KEY }}
 
@@ -258,7 +276,7 @@ jobs:
           echo "terraform_backend_bucket=tna-terraform-backend-state-enrichment-pipeline-${{ env.ACCOUNT_ID }}" >> $GITHUB_ENV
 
       - name: Create Backend S3 Bucket
-        run: |          
+        run: |
           echo ${{ env.terraform_backend_bucket }}
           echo AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws s3 ls "s3://${{ env.terraform_backend_bucket }}" --region eu-west-2 2>&1
 
@@ -293,7 +311,7 @@ jobs:
 
       - name: Check TF
         id: check_tf
-        run: |          
+        run: |
           echo "tf workspace = ${{ steps.set_workspace.outputs.environment }}"
 
       # -var "environment=prod"
@@ -301,7 +319,7 @@ jobs:
         id: validate
         run: terraform validate -no-color
         env:
-            TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
+          TF_WORKSPACE: ${{ steps.set_workspace.outputs.environment }}
 
       - uses: actions/setup-python@v3
         with:
