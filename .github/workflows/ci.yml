@@ -50,12 +50,12 @@ jobs:
         continue-on-error: false
 
       - name: Python Black Formatting Check
+        id: run_python_black
         run: black lambda/ --check --diff
-        continue-on-error: false
 
       - name: Python isort Order Check
+        id: run_python_isort
         run: isort . --check --diff
-        continue-on-error: false
 
 #Enable after adding manage.py
 #      - name: Test with nose and coverage
@@ -74,7 +74,6 @@ jobs:
         run: |
           tflint --init
           tflint -f compact --loglevel warn
-        continue-on-error: false
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2.0.2
@@ -92,8 +91,6 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
           aws-region: eu-west-2
-          # role-to-assume: arn:aws:iam::846769538626:role/GithubOIDCProviderIAMRolePermissions-Role-I80RXHT6O1PL
-          # role-session-name: MySessionName
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         continue-on-error: false
@@ -120,9 +117,12 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
-            #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
-            #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
-            #### Terraform Plan 📖\`${{ steps.plan.outcome }}\`
+            #### Python Black Formatter \`${{ steps.run_python_black.outcome }}\`
+            #### Python isort Ordering \`${{ steps.run_python_isort.outcome }}\`
+            #### TFLint 🤖\`${{ steps.run_tflint.outcome }}\`
+            #### Terraform Validation 🤖\`${{ steps.run_tf_validate.outcome }}\`
+            #### Terraform Initialization ⚙️\`${{ steps.run_tf_init.outcome }}\`
+            #### Terraform Plan 📖\`${{ steps.run_tf_plan.outcome }}\`
             <details><summary>Show Plan</summary>
             \`\`\`\n
             ${process.env.PLAN}
