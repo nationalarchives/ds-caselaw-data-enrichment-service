@@ -12,9 +12,9 @@ RUN python /get-pip.py
 RUN python -m pip install --upgrade pip
 RUN rm -f /get-pip.py
 
-COPY index.py ${LAMBDA_TASK_ROOT}
+# COPY index.py ${LAMBDA_TASK_ROOT}
 
-# COPY . .
+COPY . .
 RUN python3 -m pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
 RUN ls -la ${LAMBDA_TASK_ROOT}/*
