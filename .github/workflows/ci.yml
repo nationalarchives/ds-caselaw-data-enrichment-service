@@ -115,7 +115,7 @@ jobs:
           terraform plan -no-color -var "app_env=staging"
          
 
-      - uses: actions/github-script@6.3.3
+      - uses: actions/github-script@v6.3.3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
