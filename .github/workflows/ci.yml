@@ -1,0 +1,137 @@
+name: CI tests
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+
+permissions:
+  pull-requests: read
+  id-token: write
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4.3.0
+        with:
+          python-version: 3.9
+
+      - name: Install pip
+        run: |
+          set +e
+          set +o pipefail
+          apt-get update && apt-get -y upgrade
+          apt-get install -y wget software-properties-common
+          add-apt-repository ppa:deadsnakes/ppa
+          apt-get install -y python3-distutils python3.9
+          apt-get purge python-pip
+          ln -sf python3 /usr/bin/python
+          wget -q https://bootstrap.pypa.io/get-pip.py
+          python /get-pip.py
+          python -m pip install --upgrade pip
+          rm -f /get-pip.py
+          pip3 install black isort
+        continue-on-error: false
+
+      - name: Python Black Formatting Check
+        run: black lambda/ --check --diff
+        continue-on-error: false
+
+      - name: Python isort Order Check
+        run: isort . --check --diff
+        continue-on-error: false
+
+#Enable after adding manage.py
+#      - name: Test with nose and coverage
+#        run: |
+#          python manage.py test -s
+#        continue-on-error: false
+
+      - name: Install TFLint
+        uses: terraform-linters/setup-tflint@v2.0.1
+        with:
+          tflint_version: v0.38.1
+        continue-on-error: false
+
+      - name: Run TFLint
+        id: run_tflint
+        run: |
+          tflint --init
+          tflint -f compact --loglevel warn
+        continue-on-error: false
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.2
+        continue-on-error: false
+
+      - name: TF Validate
+        id: run_tf_validate
+        run: |
+          set +e
+          set +o pipefail
+          terraform validate -no-color
+        continue-on-error: false
+
+      - name: AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1.7.0
+        with:
+          aws-region: eu-west-2
+          # role-to-assume: arn:aws:iam::846769538626:role/GithubOIDCProviderIAMRolePermissions-Role-I80RXHT6O1PL
+          # role-session-name: MySessionName
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        continue-on-error: false
+
+     - name: Terraform init
+       id: run_tf_init
+       run: |
+         set +e
+         set +o pipefail
+         terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.STAGING_ACCOUNT_ID}}"
+       continue-on-error: false
+
+     - name: Terraform Plan
+       id: run_tf_plan
+       run: |
+         set +e
+         set +o pipefail
+         terraform workspace select tna-staging
+         terraform plan -no-color -var "app_env=staging"
+         
+
+      - uses: actions/github-script@6.3.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const output = `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
+            #### Terraform Initialization ⚙️\`${{ steps.init.outcome }}\`
+            #### Terraform Validation 🤖\`${{ steps.validate.outcome }}\`
+            #### Terraform Plan 📖\`${{ steps.plan.outcome }}\`
+            <details><summary>Show Plan</summary>
+            \`\`\`\n
+            ${process.env.PLAN}
+            \`\`\`
+            </details>
+            *Pusher: @${{ github.actor }}, Action: \`${{ github.event_name }}\`*`;
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: output
+            })
