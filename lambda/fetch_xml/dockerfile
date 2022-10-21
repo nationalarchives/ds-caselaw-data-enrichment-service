@@ -15,7 +15,7 @@ RUN rm -f /get-pip.py
 COPY index.py ${LAMBDA_TASK_ROOT}
 
 # COPY . .
-RUN python3 -m pip install -r requirements.txt --target ${LAMBDA_TASK_ROOT}
+RUN python3 -m pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
 RUN ls -la ${LAMBDA_TASK_ROOT}/*
 
