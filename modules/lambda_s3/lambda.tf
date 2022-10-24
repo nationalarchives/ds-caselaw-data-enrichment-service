@@ -1214,7 +1214,7 @@ module "lambda-fetch-xml" {
  package_type  = "Image"
  create_package = false
 
- runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
+ runtime           = "python3.9"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
  image_uri     = "${aws_ecr_repository.fetch-xml.repository_url}:${var.container_image_tag}"
 
