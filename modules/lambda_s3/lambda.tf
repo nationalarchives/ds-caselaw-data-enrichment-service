@@ -1,5 +1,3 @@
-
-
 module "lambda-extract-judgement-contents" {
   source  = "terraform-aws-modules/lambda/aws"
   version = ">=2.0.0,<3.0.0"
@@ -1287,13 +1285,6 @@ module "lambda-fetch-xml" {
       "Effect": "Allow",
       resources = [aws_sqs_queue.fetch_xml_queue.arn]
     }
- }
-
- allowed_triggers = {
-   sqs = {
-     principal  = "sqs.amazonaws.com"
-     source_arn = aws_sqs_queue.fetch_xml_queue.arn
-     }
  }
 
  assume_role_policy_statements = {

@@ -59,6 +59,7 @@ def release_lock(query, username, pw):
 
 def upload_contents(source_key, xml_content):
     filename = source_key + ".xml"
+    print(filename)
     LOGGER.info('Uploading XML content to %s/%s', DEST_BUCKET, filename)
     s3 = boto3.resource('s3')
     object = s3.Object(DEST_BUCKET, filename)
