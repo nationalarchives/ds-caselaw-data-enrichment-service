@@ -603,6 +603,7 @@ resource "aws_sqs_queue" "fetch_xml_queue" {
   name                      = "${local.name}-${local.environment}-fetch-xml-queue"
   delay_seconds             = 90
   max_message_size          = 2048
+  visibility_timeout_seconds = 900
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
