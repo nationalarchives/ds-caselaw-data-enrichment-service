@@ -74,32 +74,21 @@ def process_event(sqs_rec):
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
-    # message = json.loads(sqs_rec['body'])
-    message = sqs_rec['body']
-    query = message['uri_reference']
-    print("Query:", query)
-    query_split = query.split('/')
-    source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
-
-    # fetch the xml content
-    xml_content = fetch_judgment(query, API_USERNAME, API_PASSWORD)
-    upload_contents(source_key, xml_content)
-
 
 SOURCE_BUCKET = validate_env_variable("SOURCE_BUCKET")
 API_USERNAME = validate_env_variable("API_USERNAME")
 API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 def handler(event, context):
+    LOGGER.info("push-enriched-xml")
+    LOGGER.info(SOURCE_BUCKET)
     try:
-        client = boto3.client("s3")
-        response = client.list_buckets()
-        buckets = []
-        for bucket in response['Buckets']:
-            buckets += {bucket["Name"]}
+        LOGGER.info('SQS EVENT: %s', event)
+        for sqs_rec in event['Records']:
+            if 'Event' in sqs_rec.keys() and sqs_rec['Event'] == 's3:TestEvent':
+                break
+            process_event(sqs_rec)
 
-    except ClientError:
-        print("Error")
+    except Exception as exception:
+        LOGGER.error('Exception: %s', exception)
         raise
-    else:
-        return

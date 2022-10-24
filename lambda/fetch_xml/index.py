@@ -84,7 +84,6 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 
 def handler(event, context):
-    LOGGER.info('Starting Lambda')
     LOGGER.info("fetch-xml")
     LOGGER.info(DEST_BUCKET)
     try:

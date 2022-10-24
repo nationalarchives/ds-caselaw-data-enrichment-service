@@ -1335,7 +1335,7 @@ module "lambda-push-enriched-xml" {
 
  runtime           = "python3.9"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
- image_uri     = "${aws_ecr_repository.push-enriched-xml.repository_url}:${var.container_image_tag}"
+ image_uri     = "${aws_ecr_repository.push_enriched_xml.repository_url}:${var.container_image_tag}"
 
  # Deploy as code
  handler = "index.handler"
