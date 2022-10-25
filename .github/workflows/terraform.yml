@@ -162,6 +162,8 @@ jobs:
           
           cd ../../lambda/fetch_xml
           echo "CD'd into the fetch_xml directory"
+          echo "${{ github.ref }}"
+          echo "${{ github.event.pull_request.base.ref }}"
           if [[ "${{ github.ref == 'refs/head/prod' }}" ]]; then
             AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }} AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
             aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
