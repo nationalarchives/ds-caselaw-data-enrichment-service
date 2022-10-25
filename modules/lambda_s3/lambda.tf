@@ -1263,6 +1263,15 @@ module "lambda-fetch-xml" {
       ],
       resources = ["*"]
     },
+    sqs_get = {
+      effect = "Allow",
+      actions = [
+        "sqs:ReceiveMessage",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+      ],
+      resources = ["${aws_sqs_queue.fetch_xml_queue.arn}"]
+    },
     secrets_get = {
       effect = "Allow",
       actions = [
