@@ -644,7 +644,7 @@ POLICY
 }
 
 resource "aws_lambda_event_source_mapping" "sqs_replacements_fetch_xml_event_source_mapping" {
-  event_source_arn = aws_sqs_queue.fetch-xml-queue.arn
+  event_source_arn = aws_sqs_queue.fetch_xml_queue.arn
   enabled          = true
   function_name    = "${module.lambda-fetch-xml.lambda_function_arn}"
   batch_size       = 1
