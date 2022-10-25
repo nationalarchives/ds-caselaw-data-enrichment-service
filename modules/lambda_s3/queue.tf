@@ -603,6 +603,7 @@ resource "aws_sqs_queue" "fetch_xml_queue" {
   name                      = "${local.name}-${local.environment}-fetch-xml-queue"
   delay_seconds             = 90
   max_message_size          = 2048
+  visibility_timeout_seconds = 900
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
@@ -640,6 +641,13 @@ resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
   ]
 }
 POLICY
+}
+
+resource "aws_lambda_event_source_mapping" "sqs_replacements_fetch_xml_event_source_mapping" {
+  event_source_arn = aws_sqs_queue.fetch-xml-queue.arn
+  enabled          = true
+  function_name    = "${module.lambda-fetch-xml.lambda_function_arn}"
+  batch_size       = 1
 }
 
 resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription" {

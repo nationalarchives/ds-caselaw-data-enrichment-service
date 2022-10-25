@@ -1214,7 +1214,7 @@ module "lambda-fetch-xml" {
  package_type  = "Image"
  create_package = false
 
- runtime           = "python3.8"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
+ runtime           = "python3.9"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
  image_uri     = "${aws_ecr_repository.fetch-xml.repository_url}:${var.container_image_tag}"
 
@@ -1247,6 +1247,11 @@ module "lambda-fetch-xml" {
      ],
      resources = ["*"]
    },
+   s3_put = {
+      effect    = "Allow",
+      actions   = ["s3:PutObject", "s3:PutObjectAcl"],
+      resources = ["${module.xml_origin_bucket.s3_bucket_arn}/*"]
+    },
    kms_get_key = {
      effect = "Allow",
      actions = [
@@ -1279,13 +1284,6 @@ module "lambda-fetch-xml" {
    }
  }
 
- allowed_triggers = {
-   sqs = {
-     principal  = "sqs.amazonaws.com"
-     source_arn = aws_sqs_queue.fetch_xml_queue.arn
-     }
- }
-
  assume_role_policy_statements = {
    account_root = {
      effect  = "Allow",
@@ -1304,7 +1302,7 @@ module "lambda-fetch-xml" {
  vpc_subnet_ids = var.aws_subnets_private_ids
 
  environment_variables = {
-  DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_arn
+  DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
   API_USERNAME = "${aws_secretsmanager_secret.API_username.arn}"
   API_PASSWORD = "${aws_secretsmanager_secret.API_password.arn}"
  }
