@@ -37,6 +37,7 @@ def fetch_judgment(query, username, pw):
     response = requests.get(
                 f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
                 auth=HTTPBasicAuth(username, pw))
+    print(response)
     judgment = response.content.decode('utf-8')
     # judgment = json.loads(response.content)
     return judgment
