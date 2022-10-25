@@ -66,7 +66,8 @@ def upload_contents(source_key, xml_content):
 
 
 def process_event(sqs_rec):
-    message = json.loads(sqs_rec['body'])
+    # message = json.loads(sqs_rec['body'])
+    message = sqs_rec['body']
     LOGGER.info('EVENT: %s', message)
     query = message['uri_reference']
     print("Query:", query)
