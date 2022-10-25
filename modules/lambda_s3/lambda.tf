@@ -1321,12 +1321,12 @@ resource "aws_ecr_repository" "push_enriched_xml" {
   tags = local.tags
 }
 
-module "lambda-fetch-xml" {
+module "lambda-push-enriched-xml" {
   source  = "terraform-aws-modules/lambda/aws"
   version = ">=2.0.0,<3.0.0"
 
   # Lambda function declaration
-  function_name = "${local.name}-${local.environment}-fetch-xml"
+  function_name = "${local.name}-${local.environment}-push-enriched-xml"
 
   package_type   = "Image"
   create_package = false
@@ -1338,7 +1338,7 @@ module "lambda-fetch-xml" {
   # Deploy as code
   handler = "index.handler"
 
-  source_path = "${var.lambda_source_path}fetch_xml"
+  source_path = "${var.lambda_source_path}push_enriched_xml"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
 
@@ -1396,12 +1396,13 @@ module "lambda-fetch-xml" {
     }
   }
 
-  allowed_triggers = {
-    sqs = {
-      principal  = "sqs.amazonaws.com"
-      source_arn = aws_sqs_queue.fetch_xml_queue.arn
-    }
-  }
+# enable after adding queue
+#  allowed_triggers = {
+#    sqs = {
+#      principal  = "sqs.amazonaws.com"
+#      source_arn = aws_sqs_queue.push_enriched_xml_queue.arn
+#    }
+#  }
 
   assume_role_policy_statements = {
     account_root = {
