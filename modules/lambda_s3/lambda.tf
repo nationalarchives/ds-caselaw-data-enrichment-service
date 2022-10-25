@@ -1321,7 +1321,7 @@ resource "aws_ecr_repository" "push_enriched_xml" {
   tags = local.tags
 }
 
-module "lambda-push_enriched_xml" {
+module "lambda-push-enriched-xml" {
  source  = "terraform-aws-modules/lambda/aws"
  version = ">=2.0.0,<3.0.0"
 
@@ -1333,7 +1333,7 @@ module "lambda-push_enriched_xml" {
 
  runtime           = "python3.9"    # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
- image_uri     = "${aws_ecr_repository.push-enriched-xml.repository_url}:${var.container_image_tag}"
+ image_uri     = "${aws_ecr_repository.push_enriched_xml.repository_url}:${var.container_image_tag}"
 
  # Deploy as code
  handler = "index.handler"
