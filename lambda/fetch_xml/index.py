@@ -34,6 +34,8 @@ def check_lock_status(query, username, pw):
 
 
 def fetch_judgment(query, username, pw):
+    request_string = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
+    print(request_string)
     response = requests.get(
                 f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
                 auth=HTTPBasicAuth(username, pw))
