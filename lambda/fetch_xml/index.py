@@ -34,9 +34,13 @@ def check_lock_status(query, username, pw):
 
 
 def fetch_judgment(query, username, pw):
+    query = query.replace('/', '%2F')
+    request_string = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
+    print(request_string)
     response = requests.get(
                 f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
                 auth=HTTPBasicAuth(username, pw))
+    print(response)
     judgment = response.content.decode('utf-8')
     # judgment = json.loads(response.content)
     return judgment
@@ -66,7 +70,8 @@ def upload_contents(source_key, xml_content):
 
 
 def process_event(sqs_rec):
-    message = json.loads(sqs_rec['body'])
+    # message = json.loads(sqs_rec['body'])
+    message = sqs_rec['body']
     LOGGER.info('EVENT: %s', message)
     query = message['uri_reference']
     print("Query:", query)
