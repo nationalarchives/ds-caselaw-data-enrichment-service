@@ -63,6 +63,8 @@ jobs:
 #          python manage.py test -s
 #        continue-on-error: false
 
+      # Build docker images as part of test?
+
       - name: Install TFLint
         uses: terraform-linters/setup-tflint@v2.0.1
         with:
