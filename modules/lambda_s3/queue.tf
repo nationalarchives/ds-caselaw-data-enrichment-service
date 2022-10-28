@@ -635,7 +635,7 @@ resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
       "Action": "sqs:SendMessage",
       "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
       "Condition": {
-        "ArnEquals": { "aws:SourceArn": "$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}" }
+        "ForAnyValue:StringEquals": {"aws:SourceArn": "$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}", "aws:SourceArn": "$${arn:aws:sns:eu-west-2:276505630421:caselaw-judgment-updated}" }
       }
     }
   ]
@@ -651,7 +651,15 @@ resource "aws_lambda_event_source_mapping" "sqs_replacements_fetch_xml_event_sou
 }
 
 resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription" {
+  count     = var.environment != "production" ? 1 : 0
   topic_arn = "arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated"
+  protocol  = "sqs"
+  endpoint  = aws_sqs_queue.fetch_xml_queue.arn
+}
+
+resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription_prod" {
+  count     = var.environment == "production" ? 1 : 0
+  topic_arn = "arn:aws:sns:eu-west-2:276505630421:caselaw-judgment-updated"
   protocol  = "sqs"
   endpoint  = aws_sqs_queue.fetch_xml_queue.arn
 }
