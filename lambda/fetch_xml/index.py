@@ -34,12 +34,13 @@ def check_lock_status(query, username, pw):
 
 
 def fetch_judgment(query, username, pw):
-    query = query.replace('/', '%2F')
+    # query = query.replace('/', '%2F')
+    headers={'User-Agent': 'Custom'}
     request_string = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
     print(request_string)
     response = requests.get(
                 f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
-                auth=HTTPBasicAuth(username, pw))
+                auth=HTTPBasicAuth(username, pw), headers=headers)
     print(response)
     judgment = response.content.decode('utf-8')
     # judgment = json.loads(response.content)
