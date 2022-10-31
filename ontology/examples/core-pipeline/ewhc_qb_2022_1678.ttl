@@ -1,0 +1,71 @@
+
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix caselaw: <http://caselaw.nationalarchives.gov.uk/> .
+@prefix leg: <http://www.legislation.gov.uk/def/legislation/> .
+@prefix : <http://caselaw.nationalarchives.gov.uk/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@base <http://caselaw.nationalarchives.gov.uk/> .
+
+# Items for discussion
+#
+# * URI paths for courts 
+# * Ask Legislation.gov.uk to publish their URIs for 'extents'
+# * Court URLs base path
+
+# basic metadata for the case
+
+<https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709> a :Judgment;
+    :judgmentDate "2022-07-07"^^xsd:date;
+    :givenBy <https://www.gov.uk/courts-tribunals/queens-bench-division-of-the-high-court>;
+    :neutralCitation "[2022] EWHC 1678 (QB)";
+    :appellant <https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/appellant/john-poyser-co-ltd> ;
+    :respondent <https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/respondent/cynthia-spencer> ;
+    :heardBefore <https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/judge-mr-justice-morris> ;
+    :heardBefore <https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/judge-senior-costs-judge-gordon-saker-assessor> .
+
+# properties of the individual copy we received 
+
+<https://caselaw.nationalarchives.gov.uk/ewhc/admin/2022/1709> a :JudgmentExpression
+    dct:language "eng";
+    :caseName "FA GILL LIMITED & Ors (R on the application of) v FOOD STANDARDS AGENCY";
+    frbr:expressionOf <https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709>;
+    .
+
+# case parties are assigned URIs that are relative to the case for now -- to be replaced
+# by Omega project Person & Organisation URIs when available
+
+<https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/appellant/john-poyser-co-ltd> :a :CaseParty;
+    foaf:name "John Poyser & Co Ltd" .
+
+<https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/respondent/cynthia-spencer> :a :CaseParty;
+    foaf:name "Cynthia Spencer" .
+
+# judges are assigned URIs that are relative to the case -- until the full list of judges is normalised
+
+<https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/judge-mr-justice-morris> :a :Judge;
+    foaf:name "MR JUSTICE MORRIS" .
+
+<https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/#judge-senior-costs-judge-gordon-saker-assessor> :a :CostJudge;
+    foaf:name "SENIOR COSTS JUDGE GORDON-SAKER (ASSESSOR)" .
+
+# extracted citations are represented as a list of caselaw:cites edges
+
+<https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709> caselaw:cites <http://www.legislation.gov.uk/id/ukpga/1974/47/section/70> .
+<https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709> caselaw:cites <http://www.legislation.gov.uk/id/ukpga/1974/47/> .
+<https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709> caselaw:cites <https://caselaw.nationalarchives.gov.uk/ewca/civ/2020/178> .
+
+# when generating RDF links to a piece of legislation, our RDF emitted data will add one triple to describe the class 
+# of the citation target and another one to link the section to the entity representing the whole act
+
+<http://www.legislation.gov.uk/id/ukpga/1974/47/section/70> a leg:Item .
+<http://www.legislation.gov.uk/id/ukpga/1974/47/section/70> leg:legislation <http://www.legislation.gov.uk/id/ukpga/1974/47/> .
+
+
+# when generating RDF links to a case, we will add just one triple to describe the class of the citation target
+<https://caselaw.nationalarchives.gov.uk/ewca/civ/2020/178> a :Judgment .
