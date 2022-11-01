@@ -53,6 +53,8 @@ def fetch_judgment_urllib(query, username, pw):
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username+':'+pw)
     r = http.request('GET', url, headers=headers)
+    print(r.status)
+    print(r.data)
     return r.data.decode()
 
 
