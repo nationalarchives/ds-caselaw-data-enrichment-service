@@ -3,6 +3,7 @@ import boto3
 from botocore.exceptions import ClientError
 import requests
 from requests.auth import HTTPBasicAuth
+import urllib3
 import os
 import json
 import logging
@@ -47,6 +48,14 @@ def fetch_judgment(query, username, pw):
     return judgment
 
 
+def fetch_judgment_urllib(query, username, pw):
+    http = urllib3.PoolManager()
+    url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
+    headers = urllib3.make_headers(basic_auth=username+':'+pw)
+    r = http.request('GET', url, headers=headers)
+    return r.data.decode()
+
+
 def fetch_and_lock_judgment(query, username, pw):
     response = requests.put(
                 f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
@@ -80,7 +89,7 @@ def process_event(sqs_rec):
     source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
 
     # fetch the xml content
-    xml_content = fetch_judgment(query, API_USERNAME, API_PASSWORD)
+    xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
     upload_contents(source_key, xml_content)
 
 
