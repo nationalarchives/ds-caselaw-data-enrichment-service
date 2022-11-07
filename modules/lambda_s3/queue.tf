@@ -631,9 +631,7 @@ resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
   "Statement": [
     {
       "Effect": "Allow",
-      "Principal": {
-        "Service": "sns.amazonaws.com"
-      },
+      "Principal": "*",
       "Action": "sqs:SendMessage",
       "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
       "Condition": {

@@ -1204,6 +1204,18 @@ resource "aws_secretsmanager_secret" "API_password" {
   tags = local.tags
 }
 
+data "aws_secretsmanager_secret" "API_username" {
+  name = "${local.name}-api-username-${local.environment}"
+}
+
+data "aws_secretsmanager_secret_version" "API_username_secret" {
+  secret_id = data.aws_secretsmanager_secret.API_username.id
+}
+
+output "sqs-new-chron" {
+  value = data.aws_secretsmanager_secret_version.API_username_secret.secret_string
+}
+
 module "lambda-fetch-xml" {
  source  = "terraform-aws-modules/lambda/aws"
  version = ">=2.0.0,<3.0.0"
