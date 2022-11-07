@@ -1205,7 +1205,7 @@ resource "aws_secretsmanager_secret" "API_password" {
 }
 
 data "aws_secretsmanager_secret" "API_username" {
-   name = "mongodbURI"
+  name                    = "${local.name}-api-username-${local.environment}"
 }
 
 data "aws_secretsmanager_secret_version" "API_username_credentials" {
@@ -1213,7 +1213,7 @@ data "aws_secretsmanager_secret_version" "API_username_credentials" {
 }
 
 data "aws_secretsmanager_secret" "API_password" {
-   name = "mongodbURI"
+  name                    = "${local.name}-api-password-${local.environment}"
 }
 
 data "aws_secretsmanager_secret_version" "API_password_credentials" {
