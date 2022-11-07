@@ -1208,17 +1208,17 @@ data "aws_secretsmanager_secret" "API_username" {
   name                    = "${local.name}-api-username-${local.environment}"
 }
 
-data "aws_secretsmanager_secret_version" "API_username_credentials" {
-  secret_id = data.aws_secretsmanager_secret.API_username.id
-}
+# data "aws_secretsmanager_secret_version" "API_username_credentials" {
+#   secret_id = data.aws_secretsmanager_secret.API_username.id
+# }
 
 data "aws_secretsmanager_secret" "API_password" {
   name                    = "${local.name}-api-password-${local.environment}"
 }
 
-data "aws_secretsmanager_secret_version" "API_password_credentials" {
-  secret_id = data.aws_secretsmanager_secret.API_password.id
-}
+# data "aws_secretsmanager_secret_version" "API_password_credentials" {
+#   secret_id = data.aws_secretsmanager_secret.API_password.id
+# }
 
 module "lambda-fetch-xml" {
  source  = "terraform-aws-modules/lambda/aws"
