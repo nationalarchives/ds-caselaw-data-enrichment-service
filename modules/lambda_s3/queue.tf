@@ -1,19 +1,19 @@
 
 resource "aws_sqs_queue" "replacement-caselaw-queue" {
-  name = "${local.name}-${local.environment}-replacement-caselaw-event-notification-queue"
-  delay_seconds             = 90
-  max_message_size          = 2048
+  name                       = "${local.name}-${local.environment}-replacement-caselaw-event-notification-queue"
+  delay_seconds              = 90
+  max_message_size           = 2048
   visibility_timeout_seconds = 900
-  message_retention_seconds = 86400
-  receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-caselaw_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+  message_retention_seconds  = 86400
+  receive_wait_time_seconds  = 10
+  sqs_managed_sse_enabled    = true
+  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-caselaw_dlq_queue.arn}\",\"maxReceiveCount\":4}"
 
 }
 
 resource "aws_sqs_queue_policy" "replacement-caselaw-queue-policy" {
   queue_url = aws_sqs_queue.replacement-caselaw-queue.id
-  policy = <<POLICY
+  policy    = <<POLICY
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -37,8 +37,8 @@ resource "aws_sqs_queue" "replacements-caselaw_dlq_queue" {
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+  sqs_managed_sse_enabled   = true
+  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
@@ -51,28 +51,28 @@ resource "aws_sqs_queue" "replacements_dlq_queue" {
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+  sqs_managed_sse_enabled   = true
+  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
 
 resource "aws_sqs_queue" "replacements-queue" {
-  name                      = "${local.name}-${local.environment}-replacements-queue"
-  delay_seconds             = 90
-  max_message_size          = 2048
+  name                       = "${local.name}-${local.environment}-replacements-queue"
+  delay_seconds              = 90
+  max_message_size           = 2048
   visibility_timeout_seconds = 900
-  message_retention_seconds = 86400
-  receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+  message_retention_seconds  = 86400
+  receive_wait_time_seconds  = 10
+  sqs_managed_sse_enabled    = true
+  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements_dlq_queue.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
 
 resource "aws_sqs_queue_policy" "replacements-queue-policy" {
   queue_url = aws_sqs_queue.replacements-queue.id
-  policy = <<POLICY
+  policy    = <<POLICY
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -94,20 +94,20 @@ POLICY
 
 
 resource "aws_sqs_queue" "replacement-legislation-queue" {
-  name = "${local.name}-${local.environment}-replacement-legislation-event-notification-queue"
-  delay_seconds             = 90
-  max_message_size          = 2048
+  name                       = "${local.name}-${local.environment}-replacement-legislation-event-notification-queue"
+  delay_seconds              = 90
+  max_message_size           = 2048
   visibility_timeout_seconds = 900
-  message_retention_seconds = 86400
-  receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-legislation_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+  message_retention_seconds  = 86400
+  receive_wait_time_seconds  = 10
+  sqs_managed_sse_enabled    = true
+  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-legislation_dlq_queue.arn}\",\"maxReceiveCount\":4}"
 
 }
 
 resource "aws_sqs_queue_policy" "replacement-legislation-queue-policy" {
   queue_url = aws_sqs_queue.replacement-legislation-queue.id
-  policy = <<POLICY
+  policy    = <<POLICY
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -131,8 +131,8 @@ resource "aws_sqs_queue" "replacements-legislation_dlq_queue" {
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+  sqs_managed_sse_enabled   = true
+  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
@@ -142,20 +142,20 @@ resource "aws_sqs_queue" "replacements-legislation_dlq_queue" {
 
 
 resource "aws_sqs_queue" "replacement-abbreviations-queue" {
-  name = "${local.name}-${local.environment}-replacement-abbreviations-event-notification-queue"
-  delay_seconds             = 90
-  max_message_size          = 2048
+  name                       = "${local.name}-${local.environment}-replacement-abbreviations-event-notification-queue"
+  delay_seconds              = 90
+  max_message_size           = 2048
   visibility_timeout_seconds = 900
-  message_retention_seconds = 86400
-  receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-abbreviations_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+  message_retention_seconds  = 86400
+  receive_wait_time_seconds  = 10
+  sqs_managed_sse_enabled    = true
+  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-abbreviations_dlq_queue.arn}\",\"maxReceiveCount\":4}"
 
 }
 
 resource "aws_sqs_queue_policy" "replacements-abbreviations-queue-policy" {
   queue_url = aws_sqs_queue.replacement-abbreviations-queue.id
-  policy = <<POLICY
+  policy    = <<POLICY
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -179,8 +179,8 @@ resource "aws_sqs_queue" "replacements-abbreviations_dlq_queue" {
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+  sqs_managed_sse_enabled   = true
+  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
@@ -194,7 +194,7 @@ resource "aws_sqs_queue" "validation-queue" {
   max_message_size          = 2048
   message_retention_seconds = 86400
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
+  sqs_managed_sse_enabled   = true
   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.validation_dlq_queue.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
@@ -202,7 +202,7 @@ resource "aws_sqs_queue" "validation-queue" {
 
 resource "aws_sqs_queue_policy" "validation-queue-policy" {
   queue_url = aws_sqs_queue.validation-queue.id
-  policy = <<POLICY
+  policy    = <<POLICY
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -226,7 +226,7 @@ resource "aws_sqs_queue" "validation_dlq_queue" {
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
+  sqs_managed_sse_enabled   = true
 
   tags = local.tags
 }
@@ -237,7 +237,7 @@ resource "aws_sqs_queue" "validation_updates_queue" {
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
+  sqs_managed_sse_enabled   = true
 
   tags = local.tags
 }
@@ -248,7 +248,7 @@ resource "aws_sqs_queue" "validation_updates_error_queue" {
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
+  sqs_managed_sse_enabled   = true
 
   tags = local.tags
 }
@@ -259,8 +259,8 @@ resource "aws_sqs_queue" "validation_updates_dlq_queue" {
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+  sqs_managed_sse_enabled   = true
+  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
@@ -271,8 +271,8 @@ resource "aws_sqs_queue" "validation_updates_error_dlq_queue" {
   max_message_size          = 2048
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled = true
-#   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+  sqs_managed_sse_enabled   = true
+  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
@@ -287,47 +287,47 @@ resource "aws_sns_topic" "validation_updates_error" {
 }
 
 resource "aws_sns_topic" "rules_update_error" {
-  name = "rules-update-error-topic"
+  name         = "rules-update-error-topic"
   display_name = "Rules Update Error"
 }
 
 resource "aws_sns_topic" "legislation_update_error" {
-  name = "legislation-update-error-topic"
+  name         = "legislation-update-error-topic"
   display_name = "Legislation Update Error"
 }
 
 resource "aws_sns_topic" "extract_judgement_contents_error" {
-  name = "extract-judgement-contents-error-topic"
+  name         = "extract-judgement-contents-error-topic"
   display_name = "Extract Judgement Contents Error"
 }
 
 resource "aws_sns_topic" "caselaw_detection_error" {
-  name = "caselaw-detection-error-topic"
+  name         = "caselaw-detection-error-topic"
   display_name = "Case law Detection Error"
 }
 
 resource "aws_sns_topic" "legislation_detection_error" {
-  name = "legislation-detection-error-topic"
+  name         = "legislation-detection-error-topic"
   display_name = "Legislation Detection Error"
 }
 
 resource "aws_sns_topic" "abbreviation_detection_error" {
-  name = "abbreviation-detection-error-topic"
+  name         = "abbreviation-detection-error-topic"
   display_name = "Abbreviation Detection Error"
 }
 
 resource "aws_sns_topic" "make_replacements_error" {
-  name = "make-replacements-error-topic"
+  name         = "make-replacements-error-topic"
   display_name = "Replacements Error"
 }
 
 resource "aws_sns_topic" "oblique_references_error" {
-  name = "oblique-references-error-topic"
+  name         = "oblique-references-error-topic"
   display_name = "Oblique References Error"
 }
 
 resource "aws_sns_topic" "legislation_provisions_error" {
-  name = "legislation-provisions-error-topic"
+  name         = "legislation-provisions-error-topic"
   display_name = "Legislation Provisions Error"
 }
 
@@ -335,21 +335,21 @@ resource "aws_sns_topic" "legislation_provisions_error" {
 resource "aws_lambda_event_source_mapping" "sqs_replacements_event_source_mapping_caselaw" {
   event_source_arn = aws_sqs_queue.replacement-caselaw-queue.arn
   enabled          = true
-  function_name    = "${module.lambda-determine-replacements-legislation.lambda_function_arn}"
+  function_name    = module.lambda-determine-replacements-legislation.lambda_function_arn
   batch_size       = 1
 }
 
 resource "aws_lambda_event_source_mapping" "sqs_replacements_legislation_event_source_mapping" {
   event_source_arn = aws_sqs_queue.replacement-legislation-queue.arn
   enabled          = true
-  function_name    = "${module.lambda-determine-replacements-abbreviations.lambda_function_arn}"
+  function_name    = module.lambda-determine-replacements-abbreviations.lambda_function_arn
   batch_size       = 1
 }
 
 resource "aws_lambda_event_source_mapping" "sqs_replacements_abbreviations_event_source_mapping" {
   event_source_arn = aws_sqs_queue.replacement-abbreviations-queue.arn
   enabled          = true
-  function_name    = "${module.lambda-make-replacements.lambda_function_arn}"
+  function_name    = module.lambda-make-replacements.lambda_function_arn
   batch_size       = 1
 }
 
@@ -365,9 +365,9 @@ resource "aws_cloudwatch_metric_alarm" "rules_update_error" {
   period              = "180"
   statistic           = "Sum"
   threshold           = "0"
-  dimensions          = {
-		FunctionName = "${local.name}-${local.environment}-update-rules-processor"
-	}
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-update-rules-processor"
+  }
   alarm_actions = [aws_sns_topic.rules_update_error.arn]
 }
 
@@ -383,9 +383,9 @@ resource "aws_cloudwatch_metric_alarm" "legislation_update_error" {
   period              = "180"
   statistic           = "Sum"
   threshold           = "0"
-  dimensions          = {
-		FunctionName = "${local.name}-${local.environment}-update-legislation-table"
-	}
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-update-legislation-table"
+  }
   alarm_actions = [aws_sns_topic.legislation_update_error.arn]
 }
 
@@ -401,9 +401,9 @@ resource "aws_cloudwatch_metric_alarm" "extract-judgement-contents-error" {
   period              = "180"
   statistic           = "Sum"
   threshold           = "0"
-  dimensions          = {
-		FunctionName = "${local.name}-${local.environment}-extract-judgement-contents"
-	}
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-extract-judgement-contents"
+  }
   alarm_actions = [aws_sns_topic.extract_judgement_contents_error.arn]
 }
 
@@ -419,9 +419,9 @@ resource "aws_cloudwatch_metric_alarm" "caselaw_detection_error" {
   period              = "180"
   statistic           = "Sum"
   threshold           = "0"
-  dimensions          = {
-		FunctionName = "${local.name}-${local.environment}-determine-replacements-caselaw"
-	}
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-determine-replacements-caselaw"
+  }
   alarm_actions = [aws_sns_topic.caselaw_detection_error.arn]
 }
 
@@ -437,9 +437,9 @@ resource "aws_cloudwatch_metric_alarm" "legislation_detection_error" {
   period              = "180"
   statistic           = "Sum"
   threshold           = "0"
-  dimensions          = {
-		FunctionName = "${local.name}-${local.environment}-determine-replacements-legislation"
-	}
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-determine-replacements-legislation"
+  }
   alarm_actions = [aws_sns_topic.legislation_detection_error.arn]
 }
 
@@ -455,9 +455,9 @@ resource "aws_cloudwatch_metric_alarm" "abbreviation_detection_error" {
   period              = "180"
   statistic           = "Sum"
   threshold           = "0"
-  dimensions          = {
-		FunctionName = "${local.name}-${local.environment}-determine-replacements-abbreviations"
-	}
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-determine-replacements-abbreviations"
+  }
   alarm_actions = [aws_sns_topic.abbreviation_detection_error.arn]
 }
 
@@ -473,9 +473,9 @@ resource "aws_cloudwatch_metric_alarm" "make_replacements_error" {
   period              = "180"
   statistic           = "Sum"
   threshold           = "0"
-  dimensions          = {
-		FunctionName = "${local.name}-${local.environment}-make-replacements"
-	}
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-make-replacements"
+  }
   alarm_actions = [aws_sns_topic.make_replacements_error.arn]
 }
 
@@ -491,9 +491,9 @@ resource "aws_cloudwatch_metric_alarm" "oblique-references_error" {
   period              = "180"
   statistic           = "Sum"
   threshold           = "0"
-  dimensions          = {
-		FunctionName = "${local.name}-${local.environment}-determine-oblique-references"
-	}
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-determine-oblique-references"
+  }
   alarm_actions = [aws_sns_topic.oblique_references_error.arn]
 }
 
@@ -509,9 +509,9 @@ resource "aws_cloudwatch_metric_alarm" "legislation-provisions-error" {
   period              = "180"
   statistic           = "Sum"
   threshold           = "0"
-  dimensions          = {
-		FunctionName = "${local.name}-${local.environment}-determine-legislation-provisions"
-	}
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-determine-legislation-provisions"
+  }
   alarm_actions = [aws_sns_topic.legislation_provisions_error.arn]
 }
 
@@ -600,14 +600,14 @@ resource "aws_sns_topic_subscription" "rules-error-email-dan-target" {
 }
 
 resource "aws_sqs_queue" "fetch_xml_queue" {
-  name                      = "${local.name}-${local.environment}-fetch-xml-queue"
-  delay_seconds             = 90
-  max_message_size          = 2048
+  name                       = "${local.name}-${local.environment}-fetch-xml-queue"
+  delay_seconds              = 90
+  max_message_size           = 2048
   visibility_timeout_seconds = 900
-  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
-  receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled   = true
-  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.fetch_xml_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+  message_retention_seconds  = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds  = 10
+  sqs_managed_sse_enabled    = true
+  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.fetch_xml_dlq_queue.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
@@ -625,41 +625,43 @@ resource "aws_sqs_queue" "fetch_xml_dlq_queue" {
 
 resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
   queue_url = aws_sqs_queue.fetch_xml_queue.id
-  policy = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "sns.amazonaws.com"
-      },
-      "Action": "sqs:SendMessage",
-      "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
-      "Condition": {
-        "aws:SourceArn":"$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}"
-      }
-    },
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Service": "sns.amazonaws.com"
-      },
-      "Action": [
-        "kms:GenerateDataKey*",
-        "kms:Decrypt"
-      ],
-      "Resource": "*"
-    }
-  ]
+  policy    = data.aws_iam_policy_document.sqs_policy_fetch_xml.json
 }
-POLICY
-}
+#  policy = <<POLICY
+#{
+#  "Version": "2012-10-17",
+#  "Statement": [
+#    {
+#      "Effect": "Allow",
+#      "Principal": {
+#        "Service": "sns.amazonaws.com"
+#      },
+#      "Action": "sqs:SendMessage",
+#      "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
+#      "Condition": {
+#        "aws:SourceArn":"$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}"
+#      }
+#    },
+#    {
+#      "Effect": "Allow",
+#      "Principal": {
+#        "Service": "sns.amazonaws.com"
+#      },
+#      "Action": [
+#        "kms:GenerateDataKey*",
+#        "kms:Decrypt"
+#      ],
+#      "Resource": "*"
+#    }
+#  ]
+#}
+#POLICY
+#}
 
 resource "aws_lambda_event_source_mapping" "sqs_replacements_fetch_xml_event_source_mapping" {
   event_source_arn = aws_sqs_queue.fetch_xml_queue.arn
   enabled          = true
-  function_name    = "${module.lambda-fetch-xml.lambda_function_arn}"
+  function_name    = module.lambda-fetch-xml.lambda_function_arn
   batch_size       = 1
 }
 
