@@ -637,8 +637,19 @@ resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
       "Action": "sqs:SendMessage",
       "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
       "Condition": {
-        "ForAnyValue:StringEquals": {"aws:SourceArn": "$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}", "aws:SourceArn": "$${arn:aws:sns:eu-west-2:276505630421:caselaw-judgment-updated}" }
+        "ForAnyValue:StringEquals": "aws:SourceArn": "$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}"
       }
+    },
+    {
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "sns.amazonaws.com"
+      },
+      "Action": [
+        "kms:GenerateDataKey*",
+        "kms:Decrypt"
+      ],
+      "Resource": "*"
     }
   ]
 }
