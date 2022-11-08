@@ -631,10 +631,14 @@ resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
   "Statement": [
     {
       "Effect": "Allow",
-      "Principal": "*",
+      "Principal": {
+        "Service": "sns.amazonaws.com"
+      },
       "Action": "sqs:SendMessage",
       "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
-      "Condition": {"aws:SourceArn": "$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}" }
+      "Condition": {
+        "ForAnyValue:StringEquals": {"aws:SourceArn": "$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}", "aws:SourceArn": "$${arn:aws:sns:eu-west-2:276505630421:caselaw-judgment-updated}" }
+      }
     }
   ]
 }
