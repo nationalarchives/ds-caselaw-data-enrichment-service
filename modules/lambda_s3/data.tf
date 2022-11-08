@@ -21,6 +21,12 @@ data "aws_iam_policy_document" "sqs_policy_fetch_xml" {
     actions = [
       "sqs:*",
     ]
+    principals {
+      identifiers = [
+        "sns.amazonaws.com"
+      ]
+      type = "Service"
+    }
     condition {
       test = "StringEquals"
       values = [
