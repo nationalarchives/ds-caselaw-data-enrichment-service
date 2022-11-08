@@ -623,25 +623,23 @@ resource "aws_sqs_queue" "fetch_xml_dlq_queue" {
   tags = local.tags
 }
 
-# resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
-#   queue_url = aws_sqs_queue.fetch_xml_queue.id
-#   policy = <<POLICY
-# {
-#   "Version": "2012-10-17",
-#   "Statement": [
-#     {
-#       "Effect": "Allow",
-#       "Principal": "*",
-#       "Action": "sqs:SendMessage",
-#       "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
-#       "Condition": {
-#         "ForAnyValue:StringEquals": {"aws:SourceArn": "$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}", "aws:SourceArn": "$${arn:aws:sns:eu-west-2:276505630421:caselaw-judgment-updated}" }
-#       }
-#     }
-#   ]
-# }
-# POLICY
-# }
+resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
+  queue_url = aws_sqs_queue.fetch_xml_queue.id
+  policy = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+      "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
+      "Condition": {"aws:SourceArn": "$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}" }
+    }
+  ]
+}
+POLICY
+}
 
 resource "aws_lambda_event_source_mapping" "sqs_replacements_fetch_xml_event_source_mapping" {
   event_source_arn = aws_sqs_queue.fetch_xml_queue.arn
