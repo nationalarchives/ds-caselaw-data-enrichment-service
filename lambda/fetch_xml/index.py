@@ -90,7 +90,7 @@ def process_event(sqs_rec):
     query = message['uri_reference']
     print("Query:", query)
     query_split = query.split('/')
-    source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
+    # source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
 
     # fetch the xml content
     xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
