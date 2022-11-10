@@ -93,7 +93,8 @@ def process_event(sqs_rec):
     source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
 
     # fetch the xml content
-    # xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    print(xml_content)
     # upload_contents(source_key, xml_content)
 
 
