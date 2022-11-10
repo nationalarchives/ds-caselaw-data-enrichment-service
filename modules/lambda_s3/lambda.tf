@@ -1286,7 +1286,7 @@ module "lambda-fetch-xml" {
        "secretsmanager:DescribeSecret",
        "secretsmanager:ListSecretVersionIds"
      ],
-     resources = ["${var.postgress_master_password_secret_id}"]
+     resources = ["${aws_secretsmanager_secret.API_username.arn}", "${aws_secretsmanager_secret.API_password.arn}"]
    },
    log_lambda = {
      effect = "Allow",
