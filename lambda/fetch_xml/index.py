@@ -85,14 +85,16 @@ def process_event(sqs_rec):
     # message = json.loads(sqs_rec['body'])
     message = sqs_rec['body']
     LOGGER.info('EVENT: %s', message)
+    status = message['status']
+    print(status)
     query = message['uri_reference']
     print("Query:", query)
     query_split = query.split('/')
     source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
 
     # fetch the xml content
-    xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
-    upload_contents(source_key, xml_content)
+    # xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    # upload_contents(source_key, xml_content)
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
