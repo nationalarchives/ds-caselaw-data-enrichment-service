@@ -1209,6 +1209,7 @@ data "aws_secretsmanager_secret" "API_username" {
 
 data "aws_secretsmanager_secret_version" "current" {
   secret_id = data.aws_secretsmanager_secret.API_username.id
+  depends_on = [aws_secretsmanager_secret.API_username]
 }
 
 # data "aws_secretsmanager_secret" "API_username" {
