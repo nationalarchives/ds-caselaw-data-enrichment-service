@@ -111,6 +111,7 @@ def process_event(sqs_rec):
     query = message['uri_reference']
     print("Query:", query)
     query_split = query.split('/')
+    print(query_split)
     # source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
 
     username = get_secret()
@@ -123,8 +124,8 @@ def process_event(sqs_rec):
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
-API_USERNAME = validate_env_variable("API_USERNAME")
-API_PASSWORD = validate_env_variable("API_PASSWORD")
+# API_USERNAME = validate_env_variable("API_USERNAME")
+# API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 
 def handler(event, context):
