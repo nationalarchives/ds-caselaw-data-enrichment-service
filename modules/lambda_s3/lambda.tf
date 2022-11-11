@@ -1441,8 +1441,8 @@ module "lambda-push-enriched-xml" {
 
  environment_variables = {
   SOURCE_BUCKET = module.xml_third_phase_enriched_bucket.s3_bucket_id
-  API_USERNAME = "${aws_secretsmanager_secret.API_username.arn}"
-  API_PASSWORD = "${aws_secretsmanager_secret.API_password.arn}"
+  # API_USERNAME = "${aws_secretsmanager_secret.API_username.arn}"
+  # API_PASSWORD = "${aws_secretsmanager_secret.API_password.arn}"
  }
 
  tags = local.tags
