@@ -129,7 +129,6 @@ DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 
 
 def handler(event, context):
-    print(API_USERNAME)
     LOGGER.info("fetch-xml")
     LOGGER.info(DEST_BUCKET)
     try:
