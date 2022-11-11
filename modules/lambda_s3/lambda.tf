@@ -1287,16 +1287,16 @@ module "lambda-fetch-xml" {
      ],
      resources = ["*"]
    },
-   secrets_get = {
-     effect = "Allow",
-     actions = [
-       "secretsmanager:GetResourcePolicy",
-       "secretsmanager:GetSecretValue",
-       "secretsmanager:DescribeSecret",
-       "secretsmanager:ListSecretVersionIds"
-     ],
-     resources = ["${aws_secretsmanager_secret.API_username.arn}", "${aws_secretsmanager_secret.API_password.arn}"]
-   },
+  #  secrets_get = {
+  #    effect = "Allow",
+  #    actions = [
+  #      "secretsmanager:GetResourcePolicy",
+  #      "secretsmanager:GetSecretValue",
+  #      "secretsmanager:DescribeSecret",
+  #      "secretsmanager:ListSecretVersionIds"
+  #    ],
+  #    resources = ["${aws_secretsmanager_secret.API_username.arn}", "${aws_secretsmanager_secret.API_password.arn}"]
+  #  },
    log_lambda = {
      effect = "Allow",
      actions = [
