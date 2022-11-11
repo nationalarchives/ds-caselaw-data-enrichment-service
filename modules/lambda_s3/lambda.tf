@@ -1187,21 +1187,21 @@ resource "aws_ecr_repository" "fetch-xml" {
   tags = local.tags
 }
 
-resource "aws_secretsmanager_secret" "API_username" {
-  description             = "Secret for storing the API username"
-  name                    = "${local.name}-api-username-${local.environment}"
-  recovery_window_in_days = 0
+# resource "aws_secretsmanager_secret" "API_username" {
+#   description             = "Secret for storing the API username"
+#   name                    = "${local.name}-api-username-${local.environment}"
+#   recovery_window_in_days = 0
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
-resource "aws_secretsmanager_secret" "API_password" {
-  description             = "Secret for storing the API password"
-  name                    = "${local.name}-api-password-${local.environment}"
-  recovery_window_in_days = 0
+# resource "aws_secretsmanager_secret" "API_password" {
+#   description             = "Secret for storing the API password"
+#   name                    = "${local.name}-api-password-${local.environment}"
+#   recovery_window_in_days = 0
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
 # data "aws_secretsmanager_secret" "API_username" {
 #   arn = "${aws_secretsmanager_secret.API_username.arn}"
