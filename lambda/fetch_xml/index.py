@@ -25,6 +25,27 @@ def validate_env_variable(env_var_name):
 
     return env_variable
 
+def get_secret():
+    secret_name = "tna-s3-tna-api-username-dev"
+    region_name = "eu-west-2"
+
+    # Create a Secrets Manager client
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        raise e
+
+    # Decrypts secret using the associated KMS key.
+    secret = get_secret_value_response['SecretString']
+    return secret
 
 def check_lock_status(query, username, pw):
     response = requests.get(
@@ -91,6 +112,9 @@ def process_event(sqs_rec):
     print("Query:", query)
     query_split = query.split('/')
     # source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
+
+    username = get_secret()
+    print(username)
 
     # fetch the xml content
     # xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
