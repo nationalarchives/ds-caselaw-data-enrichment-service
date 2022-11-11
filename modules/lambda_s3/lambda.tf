@@ -1203,6 +1203,14 @@ resource "aws_secretsmanager_secret" "API_password" {
   tags = local.tags
 }
 
+data "aws_secretsmanager_secret" "API_username" {
+  arn = "${aws_secretsmanager_secret.API_username.arn}"
+}
+
+data "aws_secretsmanager_secret_version" "current" {
+  secret_id = data.aws_secretsmanager_secret.API_username.id
+}
+
 # data "aws_secretsmanager_secret" "API_username" {
 #   name                    = "${local.name}-api-username-${local.environment}"
 # }
@@ -1318,9 +1326,9 @@ module "lambda-fetch-xml" {
 
  environment_variables = {
   DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
-  API_USERNAME = "${aws_secretsmanager_secret.API_username.arn}"
-  # API_USERNAME = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
-  API_PASSWORD = "${aws_secretsmanager_secret.API_password.arn}"
+  # API_USERNAME = "${aws_secretsmanager_secret.API_username.arn}"
+  API_USERNAME = data.aws_secretsmanager_secret_version.current.secret_string
+  # API_PASSWORD = "${aws_secretsmanager_secret.API_password.arn}"
   # API_PASSWORD = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
  }
 

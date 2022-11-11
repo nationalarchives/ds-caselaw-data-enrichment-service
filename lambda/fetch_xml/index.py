@@ -93,8 +93,8 @@ def process_event(sqs_rec):
     # source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
 
     # fetch the xml content
-    xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
-    print(xml_content)
+    # xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    # print(xml_content)
     # upload_contents(source_key, xml_content)
 
 
@@ -104,6 +104,7 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 
 def handler(event, context):
+    print(API_USERNAME)
     LOGGER.info("fetch-xml")
     LOGGER.info(DEST_BUCKET)
     try:
