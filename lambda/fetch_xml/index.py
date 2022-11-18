@@ -25,27 +25,27 @@ def validate_env_variable(env_var_name):
 
     return env_variable
 
-def get_secret():
-    secret_name = "tna-s3-tna-api-username-dev"
-    region_name = "eu-west-2"
+# def get_secret():
+#     secret_name = "tna-s3-tna-api-username-dev"
+#     region_name = "eu-west-2"
 
-    # Create a Secrets Manager client
-    session = boto3.session.Session()
-    client = session.client(
-        service_name='secretsmanager',
-        region_name=region_name
-    )
+#     # Create a Secrets Manager client
+#     session = boto3.session.Session()
+#     client = session.client(
+#         service_name='secretsmanager',
+#         region_name=region_name
+#     )
 
-    try:
-        get_secret_value_response = client.get_secret_value(
-            SecretId=secret_name
-        )
-    except ClientError as e:
-        raise e
+#     try:
+#         get_secret_value_response = client.get_secret_value(
+#             SecretId=secret_name
+#         )
+#     except ClientError as e:
+#         raise e
 
-    # Decrypts secret using the associated KMS key.
-    secret = get_secret_value_response['SecretString']
-    return secret
+#     # Decrypts secret using the associated KMS key.
+#     secret = get_secret_value_response['SecretString']
+#     return secret
 
 def check_lock_status(query, username, pw):
     response = requests.get(
@@ -77,7 +77,6 @@ def fetch_judgment_urllib(query, username, pw):
     print(r.status)
     print(r.data)
     return r.data.decode()
-
 
 def fetch_and_lock_judgment(query, username, pw):
     response = requests.put(
@@ -114,23 +113,24 @@ def process_event(sqs_rec):
     print(query_split)
     # source_key = query_split[2]+'-'+query_split[0]+'-'+query_split[3]+'-'+query_split[1]
 
-    username = get_secret()
-    print(username)
+    # username = get_secret()
+    # print(username)
 
     # fetch the xml content
-    # xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
-    # print(xml_content)
+    xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    print(xml_content)
     # upload_contents(source_key, xml_content)
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
-# API_USERNAME = validate_env_variable("API_USERNAME")
-# API_PASSWORD = validate_env_variable("API_PASSWORD")
+API_USERNAME = validate_env_variable("API_USERNAME")
+API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 
 def handler(event, context):
     LOGGER.info("fetch-xml")
     LOGGER.info(DEST_BUCKET)
+    LOGGER.info(API_USERNAME)
     try:
         LOGGER.info('SQS EVENT: %s', event)
         for sqs_rec in event['Records']:
