@@ -1187,47 +1187,6 @@ resource "aws_ecr_repository" "fetch-xml" {
   tags = local.tags
 }
 
-# resource "aws_secretsmanager_secret" "API_username" {
-#   description             = "Secret for storing the API username"
-#   name                    = "${local.name}-api-username-${local.environment}"
-#   recovery_window_in_days = 0
-
-#   tags = local.tags
-# }
-
-# resource "aws_secretsmanager_secret" "API_password" {
-#   description             = "Secret for storing the API password"
-#   name                    = "${local.name}-api-password-${local.environment}"
-#   recovery_window_in_days = 0
-
-#   tags = local.tags
-# }
-
-# data "aws_secretsmanager_secret" "API_username" {
-#   arn = "${aws_secretsmanager_secret.API_username.arn}"
-# }
-
-# data "aws_secretsmanager_secret_version" "current" {
-#   secret_id = data.aws_secretsmanager_secret.API_username.id
-#   depends_on = [aws_secretsmanager_secret.API_username]
-# }
-
-# data "aws_secretsmanager_secret" "API_username" {
-#   name                    = "${local.name}-api-username-${local.environment}"
-# }
-
-# data "aws_secretsmanager_secret_version" "API_username_credentials" {
-#   secret_id = data.aws_secretsmanager_secret.API_username.id
-# }
-
-# data "aws_secretsmanager_secret" "API_password" {
-#   name                    = "${local.name}-api-password-${local.environment}"
-# }
-
-# data "aws_secretsmanager_secret_version" "API_password_credentials" {
-#   secret_id = data.aws_secretsmanager_secret.API_password.id
-# }
-
 module "lambda-fetch-xml" {
  source  = "terraform-aws-modules/lambda/aws"
  version = ">=2.0.0,<3.0.0"
@@ -1287,16 +1246,6 @@ module "lambda-fetch-xml" {
      ],
      resources = ["*"]
    },
-  #  secrets_get = {
-  #    effect = "Allow",
-  #    actions = [
-  #      "secretsmanager:GetResourcePolicy",
-  #      "secretsmanager:GetSecretValue",
-  #      "secretsmanager:DescribeSecret",
-  #      "secretsmanager:ListSecretVersionIds"
-  #    ],
-  #    resources = ["${aws_secretsmanager_secret.API_username.arn}", "${aws_secretsmanager_secret.API_password.arn}"]
-  #  },
    log_lambda = {
      effect = "Allow",
      actions = [
@@ -1327,10 +1276,6 @@ module "lambda-fetch-xml" {
 
  environment_variables = {
   DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
-  # API_USERNAME = "${aws_secretsmanager_secret.API_username.arn}"
-  # API_USERNAME = data.aws_secretsmanager_secret_version.current.secret_string
-  # API_PASSWORD = "${aws_secretsmanager_secret.API_password.arn}"
-  # API_PASSWORD = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
  }
 
  tags = local.tags
@@ -1401,16 +1346,6 @@ module "lambda-push-enriched-xml" {
      ],
      resources = ["*"]
    },
-   secrets_get = {
-     effect = "Allow",
-     actions = [
-       "secretsmanager:GetResourcePolicy",
-       "secretsmanager:GetSecretValue",
-       "secretsmanager:DescribeSecret",
-       "secretsmanager:ListSecretVersionIds"
-     ],
-     resources = ["${var.postgress_master_password_secret_id}"]
-   },
    log_lambda = {
      effect = "Allow",
      actions = [
@@ -1441,8 +1376,6 @@ module "lambda-push-enriched-xml" {
 
  environment_variables = {
   SOURCE_BUCKET = module.xml_third_phase_enriched_bucket.s3_bucket_id
-  # API_USERNAME = "${aws_secretsmanager_secret.API_username.arn}"
-  # API_PASSWORD = "${aws_secretsmanager_secret.API_password.arn}"
  }
 
  tags = local.tags
