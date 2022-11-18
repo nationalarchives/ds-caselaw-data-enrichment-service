@@ -25,49 +25,42 @@ def validate_env_variable(env_var_name):
 
     return env_variable
 
-# def get_secret():
-#     secret_name = "tna-s3-tna-api-username-dev"
-#     region_name = "eu-west-2"
+# def check_lock_status(query, username, pw):
+#     response = requests.get(
+#                 f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
+#                 auth=HTTPBasicAuth(username, pw))
+#     lock_status = json.loads(response.content)
+#     return lock_status
 
-#     # Create a Secrets Manager client
-#     session = boto3.session.Session()
-#     client = session.client(
-#         service_name='secretsmanager',
-#         region_name=region_name
-#     )
+# def fetch_judgment(query, username, pw):
+#     # query = query.replace('/', '%2F')
+#     headers={'User-Agent': 'Custom'}
+#     request_string = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
+#     print(request_string)
+#     response = requests.get(
+#                 f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
+#                 auth=HTTPBasicAuth(username, pw), headers=headers)
+#     print(response)
+#     judgment = response.content.decode('utf-8')
+#     # judgment = json.loads(response.content)
+#     return judgment
 
-#     try:
-#         get_secret_value_response = client.get_secret_value(
-#             SecretId=secret_name
-#         )
-#     except ClientError as e:
-#         raise e
+# def fetch_and_lock_judgment(query, username, pw):
+#     response = requests.put(
+#                 f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
+#                 auth=HTTPBasicAuth(username, pw))
+#     judgment = response.content.decode('utf-8')
+#     return judgment
 
-#     # Decrypts secret using the associated KMS key.
-#     secret = get_secret_value_response['SecretString']
-#     return secret
+# def release_lock(query, username, pw):
+#     response = requests.delete(
+#                 f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
+#                 auth=HTTPBasicAuth(username, pw))
+#     print(response.content)
 
-def check_lock_status(query, username, pw):
-    response = requests.get(
-                f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
-                auth=HTTPBasicAuth(username, pw))
-    lock_status = json.loads(response.content)
-    return lock_status
-
-
-def fetch_judgment(query, username, pw):
-    # query = query.replace('/', '%2F')
-    headers={'User-Agent': 'Custom'}
-    request_string = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
-    print(request_string)
-    response = requests.get(
-                f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
-                auth=HTTPBasicAuth(username, pw), headers=headers)
-    print(response)
-    judgment = response.content.decode('utf-8')
-    # judgment = json.loads(response.content)
-    return judgment
-
+############################################
+# - API FUNCTIONS
+############################################
 
 def fetch_judgment_urllib(query, username, pw):
     http = urllib3.PoolManager()
@@ -78,20 +71,25 @@ def fetch_judgment_urllib(query, username, pw):
     print(r.data)
     return r.data.decode()
 
-def fetch_and_lock_judgment(query, username, pw):
-    response = requests.put(
-                f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
-                auth=HTTPBasicAuth(username, pw))
-    judgment = response.content.decode('utf-8')
-    return judgment
+def lock_judgment_urllib(query, username, pw):
+    http = urllib3.PoolManager()
+    url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
+    headers = urllib3.make_headers(basic_auth=username+':'+pw)
+    r = http.request('PUT', url, headers=headers)
+    print(r.status)
+    print(r.data)
+    return r.data.decode()
 
+def check_lock_judgment_urllib(query, username, pw):
+    http = urllib3.PoolManager()
+    url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
+    headers = urllib3.make_headers(basic_auth=username+':'+pw)
+    r = http.request('GET', url, headers=headers)
+    print(r.status)
+    print(r.data)
+    return r.data.decode()
 
-def release_lock(query, username, pw):
-    response = requests.delete(
-                f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
-                auth=HTTPBasicAuth(username, pw))
-    print(response.content)
-
+############################################
 
 def upload_contents(source_key, xml_content):
     filename = source_key + ".xml"
@@ -116,7 +114,8 @@ def process_event(sqs_rec):
     xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
     # print(xml_content)
     upload_contents(source_key, xml_content)
-
+    lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    check_lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 API_USERNAME = validate_env_variable("API_USERNAME")

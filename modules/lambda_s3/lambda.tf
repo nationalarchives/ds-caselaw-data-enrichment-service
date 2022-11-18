@@ -1370,12 +1370,19 @@ module "lambda-push-enriched-xml" {
    }
  }
 
- vpc_security_group_ids = [var.default_security_group_id]
+ allowed_triggers = {
+    S3BucketUpload = {
+      service    = "s3"
+      principal  = "s3.amazonaws.com"
+      source_arn = "${module.xml_third_phase_enriched_bucket.s3_bucket_arn}"
+    }
+  }
 
+ vpc_security_group_ids = [var.default_security_group_id]
  vpc_subnet_ids = var.aws_subnets_private_ids
 
  environment_variables = {
-  SOURCE_BUCKET = module.xml_third_phase_enriched_bucket.s3_bucket_id
+  SOURCE_BUCKET       = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
  }
 
  tags = local.tags
