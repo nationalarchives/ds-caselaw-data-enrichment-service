@@ -90,7 +90,7 @@ def process_event(sqs_rec):
 # - INSTANTIATE CLASS HELPERS
 # - GET ENV VARIABLES
 ############################################
-SOURCE_BUCKET = validate_env_variable("SOURCE_BUCKET_NAME")
+SOURCE_BUCKET = validate_env_variable("SOURCE_BUCKET")
 API_USERNAME = validate_env_variable("API_USERNAME")
 API_PASSWORD = validate_env_variable("API_PASSWORD")
 
