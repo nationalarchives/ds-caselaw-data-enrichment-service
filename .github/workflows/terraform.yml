@@ -11,17 +11,14 @@ jobs:
   buildx:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v2
-      -
-        uses: docker/setup-buildx-action@v1
+      - uses: docker/setup-buildx-action@v1
         id: buildx
         with:
           install: true
 
-      -
-        name: Assemble Lambda
+      - name: Assemble Lambda
         run: |
           mkdir lambda/determine_replacements_caselaw/caselaw_extraction
           cp -r caselaw_extraction/*.py lambda/determine_replacements_caselaw/caselaw_extraction/
