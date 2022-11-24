@@ -68,12 +68,12 @@ variable "lambda_source_path" {
 }
 
 variable "postgress_master_password_secret_id" {
-  type    = string
+  type = string
   # default = "arn:aws:secretsmanager:eu-west-1:849689169827:secret:tna-postgress-password-ucldetf-tk6tPh"
 }
 
 variable "postgress_hostname" {
-  type    = string
+  type = string
   # default = "tna-metadata-db-ucldetf-1.cvbrurw4plvi.eu-west-1.rds.amazonaws.com"
 }
 
@@ -86,18 +86,18 @@ variable "postgress_hostname" {
 # }
 
 variable "vpc_id" {
-  type    = string
+  type = string
 }
 
 variable "default_security_group_id" {
-  type    = string
+  type = string
 }
 # variable "public_subnets" {
 #   type    = list
 # }
 
 variable "aws_subnets_private_ids" {
-  type    = list
+  type = list(any)
 }
 
 variable "bucket_prefix" {

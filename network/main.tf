@@ -6,20 +6,20 @@ terraform {
       version = ">=3.0.0,<4.0.0"
     }
   }
-#   cloud {
-#     organization = "mdr-research"
+  #   cloud {
+  #     organization = "mdr-research"
 
-#     workspaces {
-#       name = "mdr-insights-network-production"
-#     }
-#   }
+  #     workspaces {
+  #       name = "mdr-insights-network-production"
+  #     }
+  #   }
 
 }
 
 module "network" {
   source = "../modules/network"
 
-  environment                  = "production"
-  aws_profile                  = var.aws_profile
-  aws_region                   = var.aws_region
+  environment = "production"
+  aws_profile = var.aws_profile
+  aws_region  = var.aws_region
 }

@@ -9,11 +9,11 @@ module "vpc" {
   public_subnets   = local.public_cidr_blocks
   database_subnets = local.database_cidr_blocks
   private_subnets  = local.private_cidr_blocks
-#   redshift_subnets = local.redshift_cidr_blocks
+  #   redshift_subnets = local.redshift_cidr_blocks
 
-  create_database_subnet_group           = true
-  create_database_subnet_route_table     = true
-  create_database_nat_gateway_route      = true
+  create_database_subnet_group       = true
+  create_database_subnet_route_table = true
+  create_database_nat_gateway_route  = true
   #create_database_internet_gateway_route = true
 
   enable_nat_gateway     = true
@@ -62,15 +62,15 @@ resource "aws_vpc_endpoint" "secrets_manager" {
   # subnet_ids =each.key
 
   # ￼count = "${length(module.vpc.public_subnets.ids)}"
-# ￼  subnet_ids = "${element(tolist(module.vpc.public_subnets.ids), count.index)}"
+  # ￼  subnet_ids = "${element(tolist(module.vpc.public_subnets.ids), count.index)}"
   # subnet_ids = "${tolist(module.vpc.public_subnets.ids)}"
   # subnet_ids = "${tolist(module.vpc.public_subnets).ids}"
   # subnet_ids = ["${module.vpc.public_subnets}"]
 
-      # "module": "module.data",
-      # "mode": "data",
-      # "type": "aws_subnet",
-      # "name": "private",
+  # "module": "module.data",
+  # "mode": "data",
+  # "type": "aws_subnet",
+  # "name": "private",
 
   # subnet_ids = [for value in module.vpc.public_subnets: value.id] 
   for_each = toset(data.aws_subnets.private.ids)
