@@ -855,6 +855,17 @@ resource "aws_secretsmanager_secret" "sparql_password" {
   tags = local.tags
 }
 
+resource "random_password" "sparql_password" {
+  length           = 16
+  special          = true
+  override_special = "!#$%&*()-_=+[]{}<>:?"
+}
+
+resource "aws_secretsmanager_secret_version" "sparql_password" {
+  secret_id     = aws_secretsmanager_secret.sparql_password.id
+  secret_string = random_password.sparql_password.result
+}
+
 module "lambda-update-legislation-table" {
   source  = "terraform-aws-modules/lambda/aws"
   version = ">=2.0.0,<3.0.0"
@@ -892,7 +903,12 @@ module "lambda-update-legislation-table" {
         "secretsmanager:DescribeSecret",
         "secretsmanager:ListSecretVersionIds"
       ],
-      resources = ["${var.postgress_master_password_secret_id}", "${aws_secretsmanager_secret.sparql_username.arn}", "${aws_secretsmanager_secret.sparql_password.arn}"]
+      resources = [
+        var.postgress_master_password_secret_id,
+        aws_secretsmanager_secret.sparql_username.arn,
+        aws_secretsmanager_secret.sparql_password.arn,
+        aws_secretsmanager_secret_version.sparql_password.secret_string,
+      ]
     }
   }
 
@@ -918,11 +934,11 @@ module "lambda-update-legislation-table" {
     TABLE_NAME             = "rules"
     USERNAME               = "root"
     PORT                   = "5432"
-    SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
-    REGION_NAME            = "${local.region}"
-    HOSTNAME               = "${var.postgress_hostname}"
-    SPARQL_USERNAME        = "${aws_secretsmanager_secret.sparql_username.arn}"
-    SPARQL_PASSWORD        = "${aws_secretsmanager_secret.sparql_password.arn}"
+    SECRET_PASSWORD_LOOKUP = var.postgress_master_password_secret_id
+    REGION_NAME            = local.region
+    HOSTNAME               = var.postgress_hostname
+    SPARQL_USERNAME        = aws_secretsmanager_secret.sparql_username.arn
+    SPARQL_PASSWORD        = aws_secretsmanager_secret_version.sparql_password.secret_string
   }
 
   tags = local.tags
