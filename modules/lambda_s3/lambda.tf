@@ -907,7 +907,7 @@ module "lambda-update-legislation-table" {
         var.postgress_master_password_secret_id,
         aws_secretsmanager_secret.sparql_username.arn,
         aws_secretsmanager_secret.sparql_password.arn,
-        aws_secretsmanager_secret_version.sparql_password.secret_string,
+        aws_secretsmanager_secret_version.sparql_password.arn
       ]
     }
   }
