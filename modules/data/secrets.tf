@@ -1,6 +1,6 @@
 resource "random_password" "password" {
-  length           = 50
-  special          = true
+  length  = 50
+  special = true
   # override_special = "_%@"
   # override_special = "'/@\"_% "
   # Postgress passwords can't contain any of the following: 

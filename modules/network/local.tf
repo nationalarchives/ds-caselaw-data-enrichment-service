@@ -1,7 +1,7 @@
 locals {
-  name           = "tna-network"
-  region         = var.aws_region
-  environment    = var.environment
+  name        = "tna-network"
+  region      = var.aws_region
+  environment = var.environment
 
   tags = {
     Environment = var.environment
