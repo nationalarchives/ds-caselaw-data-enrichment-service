@@ -5,7 +5,11 @@ import spacy
 
 from abbreviation_extraction.abbreviations_matcher import abb_pipeline
 from caselaw_extraction.caselaw_matcher import case_pipeline
-from database.db_connection import close_connection, create_connection, get_legtitles
+from database.db_connection import (
+    close_connection,
+    create_connection,
+    get_legtitles,
+)
 from legislation_extraction.legislation_matcher_hybrid import leg_pipeline
 from replacer.replacer import replacer_pipeline, write_replacements_file
 from utils.helper import load_patterns, parse_file

@@ -51,7 +51,7 @@ jobs:
 
       - name: Python Black Formatting Check
         id: run_python_black
-        run: black lambda/ --check --diff
+        run: black . --check --diff
 
       - name: Python isort Order Check
         id: run_python_isort
