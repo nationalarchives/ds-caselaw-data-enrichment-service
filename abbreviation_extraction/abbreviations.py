@@ -52,15 +52,19 @@ def find_abbreviation(
             short_index -= 1
             continue
 
-        # ignoring dates that are part of the references to the legislation/legislation abbreviation 
+        # ignoring dates that are part of the references to the legislation/legislation abbreviation
         abrv_date = False
         if current_char.isnumeric():
             abrv_date = True
             # adjust the index to reflect the fact that it contains a date
             contains_date += 1
-           
-        while (  
-            (long_index >= 0 and long_form[long_index].lower() != current_char and abrv_date != True)
+
+        while (
+            (
+                long_index >= 0
+                and long_form[long_index].lower() != current_char
+                and abrv_date != True
+            )
             or
             # .... or if we are checking the first character of the abbreviation, we enforce
             # to be the _starting_ character of a span.
@@ -80,10 +84,10 @@ def find_abbreviation(
     # If we complete the string, we end up with -1 here, but really we want all of the text.
     long_index = max(long_index, 0)
 
-    # Converts the char index to the first token beginning after that value so a spaCy span can be returned. 
+    # Converts the char index to the first token beginning after that value so a spaCy span can be returned.
     word_lengths = contains_date
     starting_index = None
-    
+
     for i, word in enumerate(long_form_candidate):
         word_lengths += len(word)
         if word_lengths > long_index:
@@ -94,7 +98,7 @@ def find_abbreviation(
 
 
 def contains(str, set: Set[str]):
-    """ Check whether sequence str contains ANY of the items in set. """
+    """Check whether sequence str contains ANY of the items in set."""
     return any([c in str for c in set])
 
 
@@ -116,7 +120,7 @@ def filter_matches(
             start = match[1] + 1
             end = match[2] - 1
             quote_offset = 1
-        else: 
+        else:
             continue
         # Ignore spans with more than 8 words in.
         if end - start > 8:
@@ -142,27 +146,36 @@ def filter_matches(
             short_form = str(doc[start:end])
             word = short_form
             quote_offset_new = 0
-            # Occassionally quotations at the start of the short form slips through - this is to clean that 
-            if short_form.startswith('"') or short_form.startswith("“") or short_form.startswith("”") or short_form.startswith("“"):
+            # Occassionally quotations at the start of the short form slips through - this is to clean that
+            if (
+                short_form.startswith('"')
+                or short_form.startswith("“")
+                or short_form.startswith("”")
+                or short_form.startswith("“")
+            ):
                 word = short_form[1:]
                 quote_offset_new = 1
 
             short_form_clean = word  # use the clean short form if we return the match
-            first_char = short_form_clean[0] # this is the first character of the word
-            last_char = str(doc[end-1]) 
-            length = len(last_char) # use the length to get the index of the last char
+            first_char = short_form_clean[0]  # this is the first character of the word
+            last_char = str(doc[end - 1])
+            length = len(last_char)  # use the length to get the index of the last char
 
             # if the first character of the abbreviation is not upper case
-            if first_char.isupper() is not True: 
+            if first_char.isupper() is not True:
                 continue
             # if the last character of the abbreviation is not upper case AND it is not a number (this is to allow years in the abbreviations)
-            if last_char[length-1].isupper() is not True and last_char[length-1].isnumeric() is not True:
+            if (
+                last_char[length - 1].isupper() is not True
+                and last_char[length - 1].isnumeric() is not True
+            ):
                 continue
-
 
             # abbreviation must have 3 or more characters
             if len(str(doc[start:end])) >= 3:
-                candidates.append((long_form_candidate, doc[start+quote_offset_new:end]))
+                candidates.append(
+                    (long_form_candidate, doc[start + quote_offset_new : end])
+                )
 
             continue
 
@@ -179,6 +192,7 @@ def short_form_filter(span: Span) -> bool:
 
     return True
 
+
 # verify that the matches appear in a form where such as ("abbrv") or ("long_form") with quotes and brackets as the first two and final two characters
 def verify_match_format(
     matcher_output: List[Tuple[int, int, int]], doc: Doc
@@ -189,15 +203,21 @@ def verify_match_format(
         start = match[1]
         end = match[2] - 1
 
-        if end - start > 8: 
+        if end - start > 8:
             matcher_output.remove(match)
 
         # verify that the match is wrapped in quotes and brackets
-        elif not contains(str(doc[start+1]), QUOTES) or not contains(str(doc[end-1]), QUOTES) or not contains(str(doc[start]), BRACKETS) or not contains (str(doc[end]), BRACKETS):
+        elif (
+            not contains(str(doc[start + 1]), QUOTES)
+            or not contains(str(doc[end - 1]), QUOTES)
+            or not contains(str(doc[start]), BRACKETS)
+            or not contains(str(doc[end]), BRACKETS)
+        ):
             print(str(doc[start:end]))
             matcher_output.remove(match)
 
-class AbbreviationDetector():
+
+class AbbreviationDetector:
     """
     Detects abbreviations using the algorithm in "A simple algorithm for identifying
     abbreviation definitions in biomedical text.", (Schwartz & Hearst, 2003).
@@ -206,18 +226,15 @@ class AbbreviationDetector():
     attribute set to the long form definition of the abbreviation.
     Note that this class does not replace the spans, or merge them.
     """
+
     def __init__(self, nlp: Language) -> None:
         Doc.set_extension("abbreviations", default=[], force=True)
         Span.set_extension("long_form", default=None, force=True)
 
         self.matcher = Matcher(nlp.vocab)
         patterns = [[{"ORTH": "("}, {"OP": "+"}, {"ORTH": ")"}]]
-        self.matcher.add(
-            "parenthesis", patterns
-        )
+        self.matcher.add("parenthesis", patterns)
         self.global_matcher = Matcher(nlp.vocab)
-
-        
 
     def find(self, span: Span, doc: Doc) -> Tuple[Span, Set[Span]]:
         """
@@ -227,20 +244,19 @@ class AbbreviationDetector():
         """
         dummy_matches = [(-1, int(span.start), int(span.end))]
         filtered = filter_matches(dummy_matches, doc)
-        
+
         abbreviations = self.find_matches_for(filtered, doc)
 
         if not abbreviations:
             return span, set()
         else:
             return abbreviations[0]
-   
 
     def __call__(self, doc: Doc) -> Doc:
         matches = self.matcher(doc)
 
         matches_brackets = [(x[0], x[1], x[2]) for x in matches]
-        
+
         matcher_output = verify_match_format(matches_brackets, doc)
         print(matcher_output)
         if matcher_output:
@@ -252,10 +268,8 @@ class AbbreviationDetector():
                 for short in short_forms:
                     short._.long_form = long_form
                     doc._.abbreviations.append(short)
-            
+
         return doc
-
-
 
     def find_matches_for(
         self, filtered: List[Tuple[Span, Span]], doc: Doc
@@ -266,7 +280,7 @@ class AbbreviationDetector():
         already_seen_short: Set[str] = set()
         for (long_candidate, short_candidate) in filtered:
             short, long = find_abbreviation(long_candidate, short_candidate)
-       
+
             # We need the long and short form definitions to be unique, because we need
             # to store them so we can look them up later. This is a bit of a
             # pathalogical case also, as it would mean an abbreviation had been
@@ -281,9 +295,7 @@ class AbbreviationDetector():
                 all_occurences[long].add(short)
                 rules[long.text] = long
                 # Add a rule to a matcher to find exactly this substring.
-                self.global_matcher.add(
-                    long.text, [[{"ORTH": x.text} for x in short]]
-                )
+                self.global_matcher.add(long.text, [[{"ORTH": x.text} for x in short]])
         to_remove = set()
         global_matches = self.global_matcher(doc)
         for match, start, end in global_matches:

@@ -1,6 +1,6 @@
 #!env/bin/python
 
-import os 
+import os
 import logging
 import psycopg2 as pg
 import boto3
@@ -12,10 +12,12 @@ import datetime
 from SPARQLWrapper import SPARQLWrapper, CSV
 from io import BytesIO
 import re
-# import awswrangler.secretsmanager as awssm 
+
+# import awswrangler.secretsmanager as awssm
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
+
 
 def validate_env_variable(env_var_name):
     print(f"Getting the value of the environment variable: {env_var_name}")
@@ -29,6 +31,7 @@ def validate_env_variable(env_var_name):
         raise Exception(f"Please, provide environment variable {env_var_name}")
 
     return env_variable
+
 
 ############################################
 # CLASS HELPERS
@@ -87,9 +90,10 @@ class getLoginSecrets:
         #         raise e
         # added as the validation exception was not being caught
         except Exception as exception:
-            LOGGER.error('Exception: %s', exception)
+            LOGGER.error("Exception: %s", exception)
             raise
         # else:
+
 
 ############################################
 # - INSTANTIATE CLASS HELPERS
@@ -108,6 +112,7 @@ sparql_password = validate_env_variable("SPARQL_PASSWORD")
 
 get_secret = getLoginSecrets()
 
+
 def get_leg_update(sparql_username, sparql_password, days=7):
     # date = pd.to_datetime(date)
     today = datetime.datetime.today()
@@ -117,7 +122,8 @@ def get_leg_update(sparql_username, sparql_password, days=7):
     sparql.setCredentials(user=sparql_username, passwd=sparql_password)
     sparql.setReturnFormat(CSV)
     df = pd.DataFrame()
-    sparql.setQuery("""
+    sparql.setQuery(
+        """
                 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
                 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -141,38 +147,44 @@ def get_leg_update(sparql_username, sparql_password, days=7):
                                    OPTIONAL {?ref_version   leg:shortTitle ?shorttitle} .}
                    FILTER(str(?actTime) > "%s")
                 }
-                """ % date)
+                """
+        % date
+    )
     results = sparql.query().convert()
     df = pd.read_csv(BytesIO(results))
-    stitles = ['shorttitle', 'citation', 'acronymcitation']
-    df['candidate_titles'] = df[stitles].apply(list, axis=1)
-    df = df.explode('candidate_titles')
-    df = df[~df['candidate_titles'].isna()].drop_duplicates('candidate_titles')
-    df['for_fuzzy'] = df.candidate_titles.apply(lambda x: re.search(r'Act\s+(\d{4})', x)!=None)
+    stitles = ["shorttitle", "citation", "acronymcitation"]
+    df["candidate_titles"] = df[stitles].apply(list, axis=1)
+    df = df.explode("candidate_titles")
+    df = df[~df["candidate_titles"].isna()].drop_duplicates("candidate_titles")
+    df["for_fuzzy"] = df.candidate_titles.apply(
+        lambda x: re.search(r"Act\s+(\d{4})", x) != None
+    )
     return df
 
 
-def handler(event, context): 
+def handler(event, context):
     LOGGER.info("update legislation database")
-    
+
     password = get_secret.get_secret(aws_secret_name, aws_region_name)
 
     try:
-        engine = create_engine(f"postgresql://{username}:{password}@{host}:{port}/{database_name}")
+        engine = create_engine(
+            f"postgresql://{username}:{password}@{host}:{port}/{database_name}"
+        )
         LOGGER.info("engine created")
 
-        print("Trigger Date: ", event['trigger_date'])
+        print("Trigger Date: ", event["trigger_date"])
 
-        if 'trigger_date' in event:
-            trigger_date = event['trigger_date']
+        if "trigger_date" in event:
+            trigger_date = event["trigger_date"]
             if type(trigger_date) == int:
                 df = get_leg_update(sparql_username, sparql_password, trigger_date)
                 print(df)
-                df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
+                df.to_sql("ukpga_lookup", engine, if_exists="append", index=False)
             else:
                 df = get_leg_update(sparql_username, sparql_password)
                 print(df)
-                df.to_sql('ukpga_lookup', engine, if_exists='append', index=False)
+                df.to_sql("ukpga_lookup", engine, if_exists="append", index=False)
 
         engine.dispose()
         LOGGER.info("legislation updated")
