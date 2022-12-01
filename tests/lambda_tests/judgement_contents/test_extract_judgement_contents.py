@@ -1,9 +1,10 @@
-from operator import index
-import boto3
-import pytest
-import mock
 import os
 import unittest
+from operator import index
+
+import boto3
+import mock
+import pytest
 from moto import mock_s3
 
 # from lambdas.extract_judgement_contents.index import *

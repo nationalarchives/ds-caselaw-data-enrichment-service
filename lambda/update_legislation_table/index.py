@@ -1,17 +1,18 @@
 #!env/bin/python
 
-import os
+import datetime
 import logging
-import psycopg2 as pg
+import os
+import re
+from io import BytesIO
+
 import boto3
+import pandas as pd
+import psycopg2 as pg
 from botocore.exceptions import ClientError
 from psycopg2 import Error
+from SPARQLWrapper import CSV, SPARQLWrapper
 from sqlalchemy import create_engine
-import pandas as pd
-import datetime
-from SPARQLWrapper import SPARQLWrapper, CSV
-from io import BytesIO
-import re
 
 # import awswrangler.secretsmanager as awssm
 

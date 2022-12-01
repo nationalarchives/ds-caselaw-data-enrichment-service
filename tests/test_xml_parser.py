@@ -1,10 +1,10 @@
-import unittest
 import sys
+import unittest
 
 sys.path.append("./")
-from utils.helper import parse_file
 from spacy.lang.en import English
 
+from utils.helper import parse_file
 
 """
     Testing the xml parser to ensure that information is extracted as expected. 

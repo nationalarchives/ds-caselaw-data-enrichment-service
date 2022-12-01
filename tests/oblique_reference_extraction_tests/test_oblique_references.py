@@ -1,16 +1,17 @@
-import unittest
-from numpy import mat
 import sys
+import unittest
+
+from numpy import mat
 
 sys.path.append("./")
 from bs4 import BeautifulSoup
-from replacer.second_stage_replacer import oblique_replacement
+
 from oblique_references.oblique_references import (
-    detect_reference,
     create_legislation_dict,
+    detect_reference,
     get_replacements,
 )
-
+from replacer.second_stage_replacer import oblique_replacement
 
 """
     This class focuses on testing the Oblique Reference detector, which identifies references to things such as 'The Act' or 'This Act'. 

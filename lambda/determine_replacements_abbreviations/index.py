@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
 
-from gc import garbage
-import logging
 import json
+import logging
+import os
+import random
 import sys
 import urllib.parse
-import os
+from gc import garbage
+
 import boto3
-import random
+import spacy
 from botocore.exceptions import ClientError
 from dateutil.parser import parse as dparser
-import spacy
 from spacy.language import Language
 
 LOGGER = logging.getLogger()

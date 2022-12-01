@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
-import logging
 import json
-import urllib.parse
+import logging
 import os
-import boto3
-
-from lxml import etree
-from io import StringIO, BytesIO
+import urllib.parse
 from distutils.util import strtobool
+from io import BytesIO, StringIO
+
+import boto3
+from lxml import etree
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)

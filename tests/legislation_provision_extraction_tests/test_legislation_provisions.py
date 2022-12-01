@@ -1,16 +1,16 @@
-import unittest
-from numpy import mat
 import sys
+import unittest
+
+from numpy import mat
 
 sys.path.append("./")
-from replacer.second_stage_replacer import provision_replacement
 from legislation_provisions_extraction.legislation_provisions import (
     detect_reference,
     find_closest_legislation,
     get_clean_section_number,
     provision_resolver,
 )
-
+from replacer.second_stage_replacer import provision_replacement
 
 """
     This class focuses on testing the Legislation Provision processor, which detects references to sections and links them to the 

@@ -1,27 +1,29 @@
+import sys
 import unittest
+
 from numpy import mat
 from spacy.lang.en import English
-import sys
 
 sys.path.append("./")
-from database.db_connection import (
-    create_connection,
-    close_connection,
-    get_legtitles,
-    get_hrefs,
-)
 from legislation_processing.legislation_matcher_hybrid import (
-    search_for_act,
-    search_for_act_fuzzy,
+    detect_year_span,
     detectCandidate,
     hybrid,
-    mergedict,
-    detect_year_span,
-    lookup_pipe,
     leg_pipeline,
+    lookup_pipe,
+    mergedict,
+    search_for_act,
+    search_for_act_fuzzy,
 )
-from utils.helper import load_patterns
+
+from database.db_connection import (
+    close_connection,
+    create_connection,
+    get_hrefs,
+    get_legtitles,
+)
 from replacer.replacer import replacer_leg
+from utils.helper import load_patterns
 
 """
     Testing the matching of legislation based on the data found in the lookup table. 

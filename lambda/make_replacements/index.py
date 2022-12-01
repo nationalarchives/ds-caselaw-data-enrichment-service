@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
-import logging
 import json
-import urllib.parse
+import logging
 import os
-import boto3
 import re
+import urllib.parse
+
+import boto3
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)

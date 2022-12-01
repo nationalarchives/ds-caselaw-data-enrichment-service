@@ -1,12 +1,13 @@
-import unittest
-from spacy.lang.en import English
 import sys
+import unittest
+
+from spacy.lang.en import English
 
 sys.path.append("./")
 from caselaw_extraction.correction_strategies import apply_correction_strategy
-from database.db_connection import create_connection, close_connection, get_matched_rule
-from utils.helper import load_patterns
+from database.db_connection import close_connection, create_connection, get_matched_rule
 from replacer.replacer import replacer_caselaw
+from utils.helper import load_patterns
 
 """
     Testing the matching of the citations based on the data found in the rules. 

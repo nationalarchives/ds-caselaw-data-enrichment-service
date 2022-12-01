@@ -1,12 +1,13 @@
 # Replace this file with functional code rather than one that just lists the S3 buckets.
-import boto3
-from botocore.exceptions import ClientError
-import requests
-from requests.auth import HTTPBasicAuth
-import urllib3
-import os
 import json
 import logging
+import os
+
+import boto3
+import requests
+import urllib3
+from botocore.exceptions import ClientError
+from requests.auth import HTTPBasicAuth
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)

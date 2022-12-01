@@ -1,19 +1,19 @@
 #!env/bin/python
 
-import os
+import datetime
+import json
 import logging
-import psycopg2 as pg
+import os
+import urllib.parse
+from io import BytesIO, StringIO
+
 import boto3
+import pandas as pd
+import psycopg2 as pg
+import spacy
 from botocore.exceptions import ClientError
 from psycopg2 import Error
 from sqlalchemy import create_engine
-import pandas as pd
-from io import BytesIO
-from io import StringIO
-import urllib.parse
-import spacy
-import datetime
-import json
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)

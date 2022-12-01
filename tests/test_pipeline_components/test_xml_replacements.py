@@ -1,9 +1,10 @@
-import unittest
 import sys
+import unittest
 
 sys.path.append("./")
-from replacer.replacer import replacer_pipeline
 import json
+
+from replacer.replacer import replacer_pipeline
 
 """
     Testing the xml replacements at each stage of the pipeline, to validate that they have been replaced correctly. 

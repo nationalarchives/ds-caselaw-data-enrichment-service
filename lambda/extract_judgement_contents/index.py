@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
-import logging
 import json
-import urllib.parse
+import logging
 import os
+import urllib.parse
+
 import boto3
 
 from utils.helper import parse_file

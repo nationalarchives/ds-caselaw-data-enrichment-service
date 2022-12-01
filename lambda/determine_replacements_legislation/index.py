@@ -1,19 +1,20 @@
 #!/usr/bin/env python3
 
-from gc import garbage
-import logging
 import json
+import logging
+import os
+import random
 import sys
 import urllib.parse
-import os
+from gc import garbage
+
 import boto3
-import random
+import psycopg2 as pg
+import spacy
 from botocore.exceptions import ClientError
 from dateutil.parser import parse as dparser
-import psycopg2 as pg
 from psycopg2 import Error
 
-import spacy
 from database import db_connection
 
 LOGGER = logging.getLogger()
