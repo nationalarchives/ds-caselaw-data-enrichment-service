@@ -9,7 +9,7 @@ on:
       - synchronize
 
 permissions:
-  pull-requests: read
+  pull-requests: write
   id-token: write
   contents: read
 
@@ -104,22 +104,6 @@ jobs:
           terraform validate -no-color
         continue-on-error: false
 
-      - name: AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
-        with:
-          aws-region: eu-west-2
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        continue-on-error: false
-
-      - name: Terraform init
-        id: run_tf_init
-        run: |
-          set +e
-          set +o pipefail
-          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.STAGING_ACCOUNT_ID}}"
-        continue-on-error: false
-
       - name: Terraform Plan
         id: run_tf_plan
         run: |
@@ -137,8 +121,8 @@ jobs:
             #### Python Black Formatter \`${{ steps.run_python_black.outcome }}\`
             #### Python isort Ordering \`${{ steps.run_python_isort.outcome }}\`
             #### TFLint 🤖\`${{ steps.run_tflint.outcome }}\`
-            #### Terraform Validation 🤖\`${{ steps.run_tf_validate.outcome }}\`
             #### Terraform Initialization ⚙️\`${{ steps.run_tf_init.outcome }}\`
+            #### Terraform Validation 🤖\`${{ steps.run_tf_validate.outcome }}\`
             #### Terraform Plan 📖\`${{ steps.run_tf_plan.outcome }}\`
             <details><summary>Show Plan</summary>
             \`\`\`\n
