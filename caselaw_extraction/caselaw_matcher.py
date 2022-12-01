@@ -1,7 +1,8 @@
 import re
-from database.db_connection import get_matched_rule
-from caselaw_extraction.correction_strategies import apply_correction_strategy
 from collections import namedtuple
+
+from caselaw_extraction.correction_strategies import apply_correction_strategy
+from database.db_connection import get_matched_rule
 
 """
 

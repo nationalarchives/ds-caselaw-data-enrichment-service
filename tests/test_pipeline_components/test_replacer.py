@@ -1,10 +1,11 @@
-import unittest
 import sys
+import unittest
 
 sys.path.append("./")
-from replacer.replacer import write_repl_file
 import json
 from collections import namedtuple
+
+from replacer.replacer import write_repl_file
 
 case = namedtuple("case", "citation_match corrected_citation year URI is_neutral")
 abb = namedtuple("abb", "abb_match longform")

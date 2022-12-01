@@ -1,21 +1,22 @@
 # tests/runner.py
 import unittest
-from caselaw_extraction_tests.test_case_citations import (
-    TestCorrectionStrategy,
-    TestCitationProcessor,
-    TestCitationReplacer,
-)
+
 from abbreviation_extraction_tests.test_abbreviations import (
     TestAbbrevationMatcher,
     TestAbbrevationReplacer,
+)
+from caselaw_extraction_tests.test_case_citations import (
+    TestCitationProcessor,
+    TestCitationReplacer,
+    TestCorrectionStrategy,
 )
 from legislation_extraction_tests.test_legislation_citations import (
     TestLegislationProcessor,
     TestLegislationReplacer,
 )
-from test_xml_parser import TestXmlParser
 from legislation_provision_extraction_tests import TestLegislationProvisionProcessor
 from oblique_reference_extraction_tests import TestObliqueReferencesProcessor
+from test_xml_parser import TestXmlParser
 
 """
 Test suite for the project. Loads and runs all tests.

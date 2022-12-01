@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 
+import datetime
 import logging
-import urllib.parse
 import os
+import urllib.parse
+
 import boto3
 from bs4 import BeautifulSoup
-import datetime
+
 from legislation_provisions_extraction.legislation_provisions import provisions_pipeline
 from replacer.second_stage_replacer import provision_replacement
 

@@ -1,14 +1,15 @@
-import unittest
 import sys
+import unittest
 
 sys.path.append("./")
-from abbreviation_extraction.abbreviations import (
-    AbbreviationDetector,
-    find_abbreviation,
-    filter_matches,
-)
 import spacy
 from spacy.language import Language
+
+from abbreviation_extraction.abbreviations import (
+    AbbreviationDetector,
+    filter_matches,
+    find_abbreviation,
+)
 from replacer.replacer import replacer_abbr
 
 """

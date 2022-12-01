@@ -10,12 +10,13 @@ Blackstone repo here -> https://github.com/ICLRandD/Blackstone
 ScispaCy repo here -> https://github.com/allenai/scispacy
 """
 
-from nis import match
-from typing import Tuple, List, Optional, Set, Dict
 from collections import defaultdict
+from nis import match
+from typing import Dict, List, Optional, Set, Tuple
+
 from spacy.language import Language
-from spacy.tokens import Span, Doc
 from spacy.matcher import Matcher
+from spacy.tokens import Doc, Span
 
 
 def find_abbreviation(

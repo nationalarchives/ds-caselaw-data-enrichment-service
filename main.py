@@ -1,14 +1,14 @@
-import os
 import json
+import os
 
 import spacy
 
-from utils.helper import parse_file, load_patterns
-from database.db_connection import create_connection, close_connection, get_legtitles
-from replacer.replacer import replacer_pipeline, write_replacements_file
-from caselaw_extraction.caselaw_matcher import case_pipeline
-from legislation_extraction.legislation_matcher_hybrid import leg_pipeline
 from abbreviation_extraction.abbreviations_matcher import abb_pipeline
+from caselaw_extraction.caselaw_matcher import case_pipeline
+from database.db_connection import close_connection, create_connection, get_legtitles
+from legislation_extraction.legislation_matcher_hybrid import leg_pipeline
+from replacer.replacer import replacer_pipeline, write_replacements_file
+from utils.helper import load_patterns, parse_file
 
 ROOTDIR = "2020"
 db_conn = create_connection("tna", "editha.nemsic", "localhost", 5432)

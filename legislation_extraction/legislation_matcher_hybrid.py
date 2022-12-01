@@ -18,12 +18,14 @@ The hybrid matcher goes through three stages:
         - Creates replacement tuples for the detected references
     
 """
-from spacy.matcher import PhraseMatcher, Matcher
-from spaczz.matcher import FuzzyMatcher
-from database.db_connection import get_hrefs, get_canonical_leg
 from collections import namedtuple
-import pandas as pd
+
 import numpy as np
+import pandas as pd
+from spacy.matcher import Matcher, PhraseMatcher
+from spaczz.matcher import FuzzyMatcher
+
+from database.db_connection import get_canonical_leg, get_hrefs
 
 CUTOFF = 90
 PAD = 5

@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 
 import logging
-import urllib.parse
 import os
+import re
+import urllib.parse
+
 import boto3
 from bs4 import BeautifulSoup
-import re
+
 from oblique_references.oblique_references import oblique_pipeline
 from replacer.second_stage_replacer import oblique_replacement
 

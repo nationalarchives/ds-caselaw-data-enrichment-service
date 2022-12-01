@@ -1,8 +1,9 @@
-import re
 import os
-from bs4 import BeautifulSoup
-import numpy as np
+import re
 import xml
+
+import numpy as np
+from bs4 import BeautifulSoup
 
 """
 This code handles the link of provisions (i.e sections) to legislation. This is done in the following way: 

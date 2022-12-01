@@ -1,5 +1,5 @@
-import re
 import json
+import re
 
 """
 Replacer logic for the entire enrichment pipeline. 
