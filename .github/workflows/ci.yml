@@ -81,6 +81,14 @@ jobs:
         uses: hashicorp/setup-terraform@v2.0.2
         continue-on-error: false
 
+      - name: Get Staging AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1.7.0
+        with:
+          aws-region: eu-west-2
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        continue-on-error: false
+
       - name: Terraform init Staging
         run: |
           set +e
