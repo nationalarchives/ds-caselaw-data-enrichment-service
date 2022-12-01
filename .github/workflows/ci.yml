@@ -12,6 +12,7 @@ permissions:
   pull-requests: write
   id-token: write
   contents: read
+  issues: write
 
 defaults:
   run:
@@ -56,14 +57,6 @@ jobs:
       - name: Python isort Order Check
         id: run_python_isort
         run: isort . -s "get-pip.py" --check --diff
-
-#Enable after adding manage.py
-#      - name: Test with nose and coverage
-#        run: |
-#          python manage.py test -s
-#        continue-on-error: false
-
-      # Build docker images as part of test?
 
       - name: Install TFLint
         uses: terraform-linters/setup-tflint@v2.0.1
