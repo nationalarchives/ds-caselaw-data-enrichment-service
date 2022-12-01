@@ -9,7 +9,8 @@ import spacy
 from spacy.language import Language
 from abbreviation_extraction.abbreviations import AbbreviationDetector
 
-abb = namedtuple('abb', 'abb_match longform')
+abb = namedtuple("abb", "abb_match longform")
+
 
 def split_list(a, n):
     """
@@ -18,17 +19,18 @@ def split_list(a, n):
     :param n: size of the chunks
     """
     k, m = divmod(len(a), n)
-    return (a[i*k+min(i, m):(i+1)*k+min(i+1, m)] for i in range(n))
+    return (a[i * k + min(i, m) : (i + 1) * k + min(i + 1, m)] for i in range(n))
+
 
 def abb_pipeline(judgment_content_text, nlp):
     """
-    Main controller of the abbreviation detection pipeline. 
+    Main controller of the abbreviation detection pipeline.
     :param judgment_content_text: judgment content
     :param nlp: previously created spaCy nlp component
     """
-    # init the class - stateful pipeline component 
+    # init the class - stateful pipeline component
     @Language.factory("abbreviation_detector")
-    def create_abbreviation_detector(nlp, name: str): 
+    def create_abbreviation_detector(nlp, name: str):
         return AbbreviationDetector(nlp)
 
     nlp.add_pipe("abbreviation_detector", last=True)
@@ -37,9 +39,9 @@ def abb_pipeline(judgment_content_text, nlp):
     REPLACEMENTS_ABBR = []
 
     # Randomly split the judgment text into 5 chunks to avoid memory issues
-    judgment_content_text_list = judgment_content_text.split(' ')
+    judgment_content_text_list = judgment_content_text.split(" ")
     judgment_chunks = list(split_list(judgment_content_text_list, 5))
-    
+
     for chunk in judgment_chunks:
         chunk = " ".join(chunk)
         doc = nlp(chunk)
@@ -48,4 +50,3 @@ def abb_pipeline(judgment_content_text, nlp):
             REPLACEMENTS_ABBR.append(abr_tuple)
 
     return REPLACEMENTS_ABBR
-
