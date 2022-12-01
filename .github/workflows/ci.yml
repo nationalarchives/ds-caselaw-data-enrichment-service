@@ -81,6 +81,13 @@ jobs:
         uses: hashicorp/setup-terraform@v2.0.2
         continue-on-error: false
 
+      - name: Terraform init Staging
+        run: |
+          set +e
+          set +o pipefail
+          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.STAGING_ACCOUNT_ID}}"
+        continue-on-error: false
+
       - name: TF Validate
         id: run_tf_validate
         run: |
