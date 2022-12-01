@@ -55,7 +55,7 @@ jobs:
 
       - name: Python isort Order Check
         id: run_python_isort
-        run: isort . --check --diff
+        run: isort . -s "get-pip.py" --check --diff
 
 #Enable after adding manage.py
 #      - name: Test with nose and coverage
