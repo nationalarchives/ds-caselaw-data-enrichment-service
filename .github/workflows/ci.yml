@@ -51,7 +51,7 @@ jobs:
 
       - name: Python Black Formatting Check
         id: run_python_black
-        run: black . --check --diff
+        run: black . --extend-exclude "^/get-pip.py" --check --diff
 
       - name: Python isort Order Check
         id: run_python_isort
