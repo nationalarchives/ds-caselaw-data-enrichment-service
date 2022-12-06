@@ -1203,6 +1203,33 @@ resource "aws_ecr_repository" "fetch-xml" {
   tags = local.tags
 }
 
+resource "aws_secretsmanager_secret" "API_username" {
+  description             = "Secret for storing the API username"
+  name                    = "${local.name}-API-username-${local.environment}"
+  recovery_window_in_days = 0
+
+  tags = local.tags
+}
+
+resource "aws_secretsmanager_secret" "API_password" {
+  description             = "Secret for storing the API password"
+  name                    = "${local.name}-API-password-${local.environment}"
+  recovery_window_in_days = 0
+
+  tags = local.tags
+}
+
+resource "random_password" "API_password" {
+  length           = 16
+  special          = true
+  override_special = "!#$%&*()-_=+[]{}<>:?"
+}
+
+resource "aws_secretsmanager_secret_version" "API_password" {
+  secret_id     = aws_secretsmanager_secret.API_password.id
+  secret_string = random_password.API_password.result
+}
+
 module "lambda-fetch-xml" {
   source  = "terraform-aws-modules/lambda/aws"
   version = ">=2.0.0,<3.0.0"
