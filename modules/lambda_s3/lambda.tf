@@ -1219,14 +1219,6 @@ resource "aws_secretsmanager_secret" "API_password" {
   tags = local.tags
 }
 
-data "aws_secretsmanager_secret" "API_username_data" {
-  arn = aws_secretsmanager_secret.API_username.arn
-}
-
-data "aws_secretsmanager_secret_version" "current" {
-  secret_id = data.aws_secretsmanager_secret.API_username_data.id
-}
-
 # resource "random_password" "API_password" {
 #   length           = 16
 #   special          = true
@@ -1327,7 +1319,6 @@ module "lambda-fetch-xml" {
 
   environment_variables = {
     DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
-    API_USERNAME = data.aws_secretsmanager_secret_version.current.secret_string
   }
 
   tags = local.tags
