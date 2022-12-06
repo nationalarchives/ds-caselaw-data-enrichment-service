@@ -55,6 +55,14 @@ module "rules_bucket" {
   tags = local.tags
 }
 
+module "tracking_bucket" {
+  source = "../secure_bucket"
+
+  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-enrichment-tracking"
+
+  tags = local.tags
+}
+
 module "container_bucket" {
   source = "../secure_bucket"
 
