@@ -23,6 +23,19 @@ def split_list(a, n):
     k, m = divmod(len(a), n)
     return (a[i * k + min(i, m) : (i + 1) * k + min(i + 1, m)] for i in range(n))
 
+def chunking_mechanism(docobj, n, start, end):
+    k, m = divmod(len(docobj), n)
+    pos = [[i*k+min(i, m), (i+1)*k+min(i+1, m)] for i in range(n)]
+    print(pos)
+    for p in range(len(pos)):
+        if (start < pos[p][1] and end > pos[p][1]):
+            pos[p][1] = end
+            pos[p + 1][0] = end
+        else:
+            continue
+    judgement_chunks = [docobj[split[0]:split[1]] for split in pos]
+    print(pos)
+    return judgement_chunks
 
 def abb_pipeline(judgment_content_text, nlp):
     """
@@ -41,13 +54,17 @@ def abb_pipeline(judgment_content_text, nlp):
     REPLACEMENTS_ABBR = []
 
     # Randomly split the judgment text into 5 chunks to avoid memory issues
-    judgment_content_text_list = judgment_content_text.split(" ")
-    judgment_chunks = list(split_list(judgment_content_text_list, 5))
+    # judgment_content_text_list = judgment_content_text.split(" ")
+    # judgment_chunks = list(split_list(judgment_content_text_list, 5))
+
+    # new chunking mechanism
+    docobj = nlp(judgment_content_text)
+    judgment_chunks = chunking_mechanism(docobj, 4, 79, 83)
 
     for chunk in judgment_chunks:
-        chunk = " ".join(chunk)
-        doc = nlp(chunk)
-        for abrv in doc._.abbreviations:
+        # chunk = " ".join(chunk)
+        # doc = nlp(chunk)
+        for abrv in chunk._.abbreviations:
             abr_tuple = abb(str(abrv), str(abrv._.long_form))
             REPLACEMENTS_ABBR.append(abr_tuple)
 
