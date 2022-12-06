@@ -4,6 +4,7 @@ import logging
 import os
 import re
 import urllib.parse
+import csv
 
 import boto3
 from bs4 import BeautifulSoup

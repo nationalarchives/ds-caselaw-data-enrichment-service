@@ -274,7 +274,7 @@ module "lambda-determine-replacements-caselaw" {
     RULES_FILE_BUCKET   = "${module.rules_bucket.s3_bucket_id}"
     RULES_FILE_KEY      = "citation_patterns.jsonl"
     REPLACEMENTS_BUCKET = "${module.replacements_bucket.s3_bucket_id}"
-
+    ENRICHMENT_BUCKET = "${module.tracking_bucket.s3_bucket_id}"
   }
 
   tags = local.tags

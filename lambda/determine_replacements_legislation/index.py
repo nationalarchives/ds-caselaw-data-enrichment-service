@@ -7,6 +7,7 @@ import random
 import sys
 import urllib.parse
 from gc import garbage
+import csv
 
 import boto3
 import psycopg2 as pg
@@ -131,7 +132,24 @@ def process_event(sqs_rec):
     )
     LOGGER.debug("uploaded replacements to %s", uploaded_key)
     push_contents(source_bucket, source_key)
+    enrichment_tracking(ENRICHMENT_BUCKET, 'enrichment_tracking.csv')
     LOGGER.debug("message sent on queue")
+
+
+def enrichment_tracking(bucket, key):
+    s3_resource = boto3.resource('s3')
+    s3_object = s3_resource.Object(bucket, key)
+
+    data = s3_object.get()['Body'].read().decode('utf-8').splitlines()
+
+    lines = csv.reader(data)
+    headers = next(lines)
+    print('headers: %s' %(headers))
+    # for line in lines:
+        #print complete line
+        # print(line)
+        #print index wise
+        # print(line[0], line[1])
 
 
 def write_replacements_file(replacement_list):
@@ -222,6 +240,7 @@ def push_contents(uploaded_bucket, uploaded_key):
 
 DEST_QUEUE = validate_env_variable("DEST_QUEUE_NAME")
 REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
+ENRICHMENT_BUCKET = validate_env_variable("ENRICHMENT_BUCKET")
 
 
 def handler(event, context):

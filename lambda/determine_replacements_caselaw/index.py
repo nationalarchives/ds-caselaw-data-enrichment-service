@@ -7,6 +7,7 @@ import random
 import sys
 import urllib.parse
 from gc import garbage
+import csv
 
 import boto3
 import psycopg2 as pg
