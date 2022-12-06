@@ -1219,16 +1219,24 @@ resource "aws_secretsmanager_secret" "API_password" {
   tags = local.tags
 }
 
-resource "random_password" "API_password" {
-  length           = 16
-  special          = true
-  override_special = "!#$%&*()-_=+[]{}<>:?"
+data "aws_secretsmanager_secret" "API_username_data" {
+  arn = aws_secretsmanager_secret.API_username.arn
 }
 
-resource "aws_secretsmanager_secret_version" "API_password" {
-  secret_id     = aws_secretsmanager_secret.API_password.id
-  secret_string = random_password.API_password.result
+data "aws_secretsmanager_secret_version" "current" {
+  secret_id = data.aws_secretsmanager_secret.API_username_data.id
 }
+
+# resource "random_password" "API_password" {
+#   length           = 16
+#   special          = true
+#   override_special = "!#$%&*()-_=+[]{}<>:?"
+# }
+
+# resource "aws_secretsmanager_secret_version" "API_password" {
+#   secret_id     = aws_secretsmanager_secret.API_password.id
+#   secret_string = random_password.API_password.result
+# }
 
 module "lambda-fetch-xml" {
   source  = "terraform-aws-modules/lambda/aws"
@@ -1319,6 +1327,7 @@ module "lambda-fetch-xml" {
 
   environment_variables = {
     DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
+    API_USERNAME = data.aws_secretsmanager_secret_version.current.secret_string
   }
 
   tags = local.tags
