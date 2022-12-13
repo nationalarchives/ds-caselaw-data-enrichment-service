@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import csv
 import json
 import logging
 import os
@@ -7,7 +8,6 @@ import random
 import sys
 import urllib.parse
 from gc import garbage
-import csv
 
 import boto3
 import psycopg2 as pg

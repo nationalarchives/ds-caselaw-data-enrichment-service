@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
+import csv
 import logging
 import os
 import re
 import urllib.parse
-import csv
 
 import boto3
 from bs4 import BeautifulSoup
