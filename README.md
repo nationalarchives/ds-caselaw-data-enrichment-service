@@ -1,16 +1,16 @@
 # ds-caselaw-data-enrichment-service
 
-## Purpose
-
 ## CICD Workflow
-- When a pull request is opened a series of checks are made:
+- When a pull request is opened a series of checks are made, against both staging and production:
   - Python Black (Formats python code correctly)
   - Python iSort (Orders imports correctly)
   - TFLint (Terraform Linter)
+  - Terraform Validate
+  - Terraform init.
   - Terraform Plan (A plan of the infrastructure changes for that environment)
 - If the checks fail due to Python Black. 
 A message such as `Oh no! 💥 💔 💥 13 files would be reformatted, 5 files would be left unchanged.` 
-  - To fix this, install black locally `pip install black`, then run `black *.py` and commit the reformatted code.
+  - To fix this, install black locally `pip install black`, then run `black .` and commit the reformatted code.
 - If the check fails due to iSort. A message such as `ERROR: Imports are incorrectly sorted.`
   - To fix this, install isort locally `pip install isort`, then run `isort .`
 - TFLint will explain any errors it finds. 
