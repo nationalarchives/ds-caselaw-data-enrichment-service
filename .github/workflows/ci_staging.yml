@@ -19,7 +19,7 @@ defaults:
     shell: bash
 
 jobs:
-  lint-and-test:
+  lint-and-test_staging:
     runs-on: ubuntu-latest
 
     steps:
@@ -105,31 +105,6 @@ jobs:
           set +o pipefail
           terraform workspace select tna-staging
           terraform plan -no-color -var "app_env=staging"
-          
-
-      - name: Get Production AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
-        with:
-          aws-region: eu-west-2
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
-        continue-on-error: false
-
-      - name: Terraform init Prod
-        id: run_tf_init_prod
-        run: |
-          set +e
-          set +o pipefail
-          terraform init -reconfigure -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.PROD_ACCOUNT_ID}}"
-        continue-on-error: false
-
-      - name: Terraform Plan Prod
-        id: run_tf_plan_prod
-        run: |
-          set +e
-          set +o pipefail
-          terraform workspace select tna-prod
-          terraform plan -no-color -var "app_env=prod"
          
 # To be fixed at a later stage
 #      - uses: actions/github-script@v6
