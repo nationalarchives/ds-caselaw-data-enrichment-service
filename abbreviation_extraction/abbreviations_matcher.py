@@ -23,19 +23,21 @@ def split_list(a, n):
     k, m = divmod(len(a), n)
     return (a[i * k + min(i, m) : (i + 1) * k + min(i + 1, m)] for i in range(n))
 
+
 def chunking_mechanism(docobj, n, start, end):
     k, m = divmod(len(docobj), n)
-    pos = [[i*k+min(i, m), (i+1)*k+min(i+1, m)] for i in range(n)]
+    pos = [[i * k + min(i, m), (i + 1) * k + min(i + 1, m)] for i in range(n)]
     print(pos)
     for p in range(len(pos)):
-        if (start < pos[p][1] and end > pos[p][1]):
+        if start < pos[p][1] and end > pos[p][1]:
             pos[p][1] = end
             pos[p + 1][0] = end
         else:
             continue
-    judgement_chunks = [docobj[split[0]:split[1]] for split in pos]
+    judgement_chunks = [docobj[split[0] : split[1]] for split in pos]
     print(pos)
     return judgement_chunks
+
 
 def abb_pipeline(judgment_content_text, nlp):
     """
