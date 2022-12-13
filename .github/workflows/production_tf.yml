@@ -16,7 +16,7 @@ defaults:
 
 jobs:
   prod_terraform:
-    needs: [ staging_build, staging_terraform, prod_build ]
+    needs: [ staging_build, staging_terraform, production_build ]
     runs-on: ubuntu-latest
 
     steps:
