@@ -20,7 +20,6 @@ defaults:
 
 jobs:
   lint-and-test_prod:
-    needs: lint-and-test_staging
     runs-on: ubuntu-latest
 
     steps:
