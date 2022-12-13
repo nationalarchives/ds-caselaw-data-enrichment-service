@@ -1,4 +1,4 @@
-name: "Apply Staging"
+name: "Apply Production Build"
 
 on:
   push:
@@ -15,7 +15,8 @@ defaults:
     shell: bash
 
 jobs:
-  staging_build:
+  production_build:
+    needs: [staging_build, staging_terraform]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -49,8 +50,8 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1.7.0
       with:
         aws-region: eu-west-2
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
       continue-on-error: false
 
     - name: Buildx
@@ -98,61 +99,61 @@ jobs:
         set +e
         set +o pipefail
         cd "lambda/determine_replacements_caselaw"
-        docker buildx build --load -t tna-s3-tna-ecr-repository-dev .
-        docker tag tna-s3-tna-ecr-repository-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
-        docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+        docker buildx build --load -t tna-s3-tna-ecr-repository-production .
+        docker tag tna-s3-tna-ecr-repository-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-production:latest
+        docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-production:latest
         cd "${GITHUB_WORKSPACE}"
         
         cd "lambda/determine_replacements_legislation"
-        docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-dev .
-        docker tag tna-s3-tna-ecr-repository-legislation-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
-        docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
+        docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-production .
+        docker tag tna-s3-tna-ecr-repository-legislation-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-production:latest
+        docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
         cd "${GITHUB_WORKSPACE}"
 
         cd "lambda/determine_replacements_abbreviations"
-        docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-dev .
-        docker tag tna-s3-tna-ecr-repository-abbreviations-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
-        docker push ${{ staging.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
+        docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-production .
+        docker tag tna-s3-tna-ecr-repository-abbreviations-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-production:latest
+        docker push ${{ staging.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-production:latest
         cd "${GITHUB_WORKSPACE}"
         
         cd "lambda/update_legislation_table"
-        docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-dev .
-        docker tag tna-s3-tna-ecr-repository-legislation-update-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-dev:latest
-        docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-dev:latest
+        docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-production .
+        docker tag tna-s3-tna-ecr-repository-legislation-update-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-production:latest
+        docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-production:latest
         cd "${GITHUB_WORKSPACE}"
         
         cd "lambda/update_rules_processor"
-        docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-dev .
-        docker tag tna-s3-tna-ecr-repository-rules-update-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-dev:latest
-        docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-dev:latest
+        docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-production .
+        docker tag tna-s3-tna-ecr-repository-rules-update-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-production:latest
+        docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-production:latest
         cd "${GITHUB_WORKSPACE}"
         
         cd "lambda/determine_legislation_provisions"
-        docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-dev .
-        docker tag tna-s3-tna-ecr-repository-legislation-provision-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-dev:latest
-        docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-dev:latest
+        docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-production .
+        docker tag tna-s3-tna-ecr-repository-legislation-provision-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-production:latest
+        docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-production:latest
         cd "${GITHUB_WORKSPACE}"
         
         cd "lambda/determine_oblique_references"
-        docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-dev .
-        docker tag tna-s3-tna-ecr-repository-oblique-references-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-dev:latest
-        docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-dev:latest
+        docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-production .
+        docker tag tna-s3-tna-ecr-repository-oblique-references-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-production:latest
+        docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-production:latest
         cd "${GITHUB_WORKSPACE}"
         
         cd "lambda/fetch_xml"
-        docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-dev .
-        docker tag tna-s3-tna-ecr-repository-fetch-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
-        docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
+        docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-production .
+        docker tag tna-s3-tna-ecr-repository-fetch-xml-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
+        docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
         cd "${GITHUB_WORKSPACE}"
         
         cd "lambda/push_enriched_xml"
-        docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-dev .
-        docker tag tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
-        docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
+        docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-production .
+        docker tag tna-s3-tna-ecr-repository-push-enriched-xml-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
+        docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
         cd "${GITHUB_WORKSPACE}"
 
-  staging_terraform:
-    needs: staging_build
+  prod_terraform:
+    needs: [staging_build, staging_terraform, prod_build]
     runs-on: ubuntu-latest
 
     steps:
@@ -164,29 +165,29 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
           aws-region: eu-west-2
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
         continue-on-error: false
 
       - name: Terraform init
         run: |
           set +e
           set +o pipefail
-          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.STAGING_ACCOUNT_ID}}"
+          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.PROD_ACCOUNT_ID}}"
         continue-on-error: false
 
       - name: Terraform Plan
         run: |
           set +e
           set +o pipefail
-          terraform workspace select tna-staging
-          terraform plan -no-color -var "app_env=staging"
+          terraform workspace select tna-prod
+          terraform plan -no-color -var "app_env=production"
 
       - name: Terraform Apply
         run: |
           set +e
           set +o pipefail
-          terraform workspace select tna-staging
-          terraform apply --auto-approve -no-color -var "app_env=staging"
+          terraform workspace select tna-prod
+          terraform apply --auto-approve -no-color -var "app_env=production"
         
 
