@@ -83,7 +83,7 @@ jobs:
         continue-on-error: false
 
       - name: Terraform init Staging
-        id: run_tf_init
+        id: run_tf_init_staging
         run: |
           set +e
           set +o pipefail
@@ -99,7 +99,7 @@ jobs:
         continue-on-error: false
 
       - name: Terraform Plan
-        id: run_tf_plan
+        id: run_tf_plan_staging
         run: |
           set +e
           set +o pipefail
@@ -115,24 +115,16 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
         continue-on-error: false
 
-      - name: Terraform init Staging
-        id: run_tf_init
+      - name: Terraform init Prod
+        id: run_tf_init_prod
         run: |
           set +e
           set +o pipefail
           terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.PROD_ACCOUNT_ID}}"
         continue-on-error: false
 
-      - name: TF Validate
-        id: run_tf_validate
-        run: |
-          set +e
-          set +o pipefail
-          terraform validate -no-color
-        continue-on-error: false
-
-      - name: Terraform Plan
-        id: run_tf_plan
+      - name: Terraform Plan Prod
+        id: run_tf_plan_prod
         run: |
           set +e
           set +o pipefail
