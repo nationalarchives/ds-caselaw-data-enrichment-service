@@ -120,7 +120,7 @@ jobs:
         run: |
           set +e
           set +o pipefail
-          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.PROD_ACCOUNT_ID}}"
+          terraform init -reconfigure -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.PROD_ACCOUNT_ID}}"
         continue-on-error: false
 
       - name: Terraform Plan Prod
