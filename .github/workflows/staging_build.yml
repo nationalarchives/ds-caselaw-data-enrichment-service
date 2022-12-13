@@ -16,6 +16,7 @@ defaults:
 
 jobs:
   staging_build:
+    needs: staging_terraform
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code

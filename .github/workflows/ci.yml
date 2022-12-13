@@ -128,7 +128,7 @@ jobs:
         run: |
           set +e
           set +o pipefail
-          terraform workspace select tna-staging
+          terraform workspace select tna-prod
           terraform plan -no-color -var "app_env=prod"
          
 # To be fixed at a later stage

@@ -16,7 +16,6 @@ defaults:
 
 jobs:
   staging_terraform:
-    needs: staging_build
     runs-on: ubuntu-latest
 
     steps:
