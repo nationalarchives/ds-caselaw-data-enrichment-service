@@ -50,11 +50,11 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-staging
-          terraform plan -no-color -var "app_env=staging"
+          terraform plan -no-color -var "app_env=dev"
 
       - name: Terraform Apply
         run: |
           set +e
           set +o pipefail
           terraform workspace select tna-staging
-          terraform apply --auto-approve -no-color -var "app_env=staging"
+          terraform apply --auto-approve -no-color -var "app_env=dev"
