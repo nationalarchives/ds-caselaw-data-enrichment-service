@@ -104,7 +104,7 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-staging
-          terraform plan -no-color -var "app_env=staging"
+          terraform plan -no-color -var "app_env=dev"
          
 # To be fixed at a later stage
 #      - uses: actions/github-script@v6
