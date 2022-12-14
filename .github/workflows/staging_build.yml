@@ -113,7 +113,7 @@ jobs:
           cd "lambda/determine_replacements_abbreviations"
           docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-dev .
           docker tag tna-s3-tna-ecr-repository-abbreviations-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
-          docker push ${{ staging.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/update_legislation_table"
