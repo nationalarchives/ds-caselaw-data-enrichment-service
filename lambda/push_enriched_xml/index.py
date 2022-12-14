@@ -1,9 +1,9 @@
 # Replace this file with functional code rather than one that just lists the S3 buckets.
+import csv
 import json
 import logging
 import os
 import urllib
-import csv
 
 import boto3
 import requests
