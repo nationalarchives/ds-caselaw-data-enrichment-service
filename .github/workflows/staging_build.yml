@@ -126,8 +126,11 @@ jobs:
           set +o pipefail
           cd "lambda/determine_replacements_caselaw"
           docker buildx build --load -t tna-s3-tna-ecr-repository-staging .
+          echo "finished buildx"
           docker tag tna-s3-tna-ecr-repository-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
+          echo "finished docker tag"
           docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
+          echo "finished pushing docker image"
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/determine_replacements_legislation"
