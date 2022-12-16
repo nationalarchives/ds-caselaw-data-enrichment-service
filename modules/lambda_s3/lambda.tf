@@ -1067,110 +1067,110 @@ resource "random_pet" "this" {
 
 # }
 
-# module "lambda-validate-replacements" {
-#   source  = "terraform-aws-modules/lambda/aws"
-#   version = ">=2.0.0,<3.0.0"
+module "lambda-validate-replacements" {
+  source  = "terraform-aws-modules/lambda/aws"
+  version = ">=2.0.0,<3.0.0"
 
-#   function_name = "${local.name}-${local.environment}-xml-validate"
-#   package_type  = var.use_container_image == true ? "Image" : "Zip"
+  function_name = "${local.name}-${local.environment}-xml-validate"
+  package_type  = var.use_container_image == true ? "Image" : "Zip"
 
-#   # Deploy as code
-#   handler = "index.handler"
+  # Deploy as code
+  handler = "index.handler"
 
-#   runtime     = "python3.8"
-#   source_path = "${var.lambda_source_path}xml_validate"
+  runtime     = "python3.8"
+  source_path = "${var.lambda_source_path}xml_validate"
 
-#   create_current_version_allowed_triggers = false # !var.use_container_image
+  create_current_version_allowed_triggers = false # !var.use_container_image
 
-#   timeout     = 30
-#   memory_size = var.memory_size
+  timeout     = 30
+  memory_size = var.memory_size
 
-#   attach_policy_statements = true
-#   policy_statements = {
-#     s3_read = {
-#       effect = "Allow",
-#       actions = [
-#         "s3:HeadObject",
-#         "s3:GetObject",
-#         "s3:GetObjectVersion"
-#       ],
-#       resources = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}/*", "${module.rules_bucket.s3_bucket_arn}/*"]
-#     },
-#     kms_get_key = {
-#       effect = "Allow",
-#       actions = [
-#         "kms:Encrypt",
-#         "kms:DescribeKey",
-#         "kms:GenerateDataKey",
-#         "kms:Decrypt",
-#         "kms:ReEncryptTo"
-#       ],
-#       resources = [module.xml_third_phase_enriched_bucket.kms_key_arn, module.rules_bucket.kms_key_arn]
-#     },
-#     sqs_get = {
-#       effect = "Allow",
-#       actions = [
-#         "sqs:ReceiveMessage",
-#         "sqs:DeleteMessage",
-#         "sqs:GetQueueAttributes"
-#       ],
-#       resources = ["${aws_sqs_queue.replacements-queue.arn}"]
-#     },
-#     sns_put = {
-#       effect = "Allow",
-#       actions = [
-#         "SNS:Publish",
-#         "SNS:ListSubscriptionsByTopic",
-#         "SNS:GetTopicAttributes"
-#       ],
-#       resources = ["${aws_sns_topic.validation_updates.arn}", "${aws_sns_topic.validation_updates_error.arn}"]
-#     },
-#     log_lambda = {
-#       effect = "Allow",
-#       actions = [
-#         "logs:CreateLogGroup",
-#         "logs:CreateLogStream",
-#         "logs:PutLogEvents"
-#       ],
-#       resources = ["*"]
-#     }
-#   }
+  attach_policy_statements = true
+  policy_statements = {
+    s3_read = {
+      effect = "Allow",
+      actions = [
+        "s3:HeadObject",
+        "s3:GetObject",
+        "s3:GetObjectVersion"
+      ],
+      resources = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}/*", "${module.rules_bucket.s3_bucket_arn}/*"]
+    },
+    kms_get_key = {
+      effect = "Allow",
+      actions = [
+        "kms:Encrypt",
+        "kms:DescribeKey",
+        "kms:GenerateDataKey",
+        "kms:Decrypt",
+        "kms:ReEncryptTo"
+      ],
+      resources = [module.xml_third_phase_enriched_bucket.kms_key_arn, module.rules_bucket.kms_key_arn]
+    },
+    sqs_get = {
+      effect = "Allow",
+      actions = [
+        "sqs:ReceiveMessage",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+      ],
+      resources = ["${aws_sqs_queue.replacements-queue.arn}"]
+    },
+    sns_put = {
+      effect = "Allow",
+      actions = [
+        "SNS:Publish",
+        "SNS:ListSubscriptionsByTopic",
+        "SNS:GetTopicAttributes"
+      ],
+      resources = ["${aws_sns_topic.validation_updates.arn}", "${aws_sns_topic.validation_updates_error.arn}"]
+    },
+    log_lambda = {
+      effect = "Allow",
+      actions = [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents"
+      ],
+      resources = ["*"]
+    }
+  }
 
-#   allowed_triggers = {
-#     S3BucketUpload = {
-#       service    = "s3"
-#       principal  = "s3.amazonaws.com"
-#       source_arn = "${module.xml_third_phase_enriched_bucket.s3_bucket_arn}"
-#     }
-#   }
+  # allowed_triggers = {
+  #   S3BucketUpload = {
+  #     service    = "s3"
+  #     principal  = "s3.amazonaws.com"
+  #     source_arn = "${module.xml_third_phase_enriched_bucket.s3_bucket_arn}"
+  #   }
+  # }
 
-#   assume_role_policy_statements = {
-#     account_root = {
-#       effect  = "Allow",
-#       actions = ["sts:AssumeRole"],
-#       principals = {
-#         account_principal = {
-#           type        = "Service",
-#           identifiers = ["lambda.amazonaws.com"]
-#         }
-#       }
-#     }
-#   }
+  assume_role_policy_statements = {
+    account_root = {
+      effect  = "Allow",
+      actions = ["sts:AssumeRole"],
+      principals = {
+        account_principal = {
+          type        = "Service",
+          identifiers = ["lambda.amazonaws.com"]
+        }
+      }
+    }
+  }
 
-#   environment_variables = {
-#     DEST_TOPIC_NAME       = "${aws_sns_topic.validation_updates.arn}"
-#     DEST_ERROR_TOPIC_NAME = "${aws_sns_topic.validation_updates_error.arn}"
-#     DEST_BUCKET_NAME      = module.xml_third_phase_enriched_bucket.s3_bucket_arn
-#     SCHEMA_BUCKET_NAME    = "${module.rules_bucket.s3_bucket_id}"
-#     SCHEMA_BUCKET_KEY     = "judgment-1-1.xsd"
-#     VALIDATE_USING_DTD    = "False" # the xml appears to not use a DTD
-#     VALIDATE_USING_SCHEMA = "False"
+  environment_variables = {
+    # DEST_TOPIC_NAME       = "${aws_sns_topic.validation_updates.arn}"
+    # DEST_ERROR_TOPIC_NAME = "${aws_sns_topic.validation_updates_error.arn}"
+    DEST_BUCKET_NAME      = module.xml_third_phase_enriched_bucket.s3_bucket_arn
+    SCHEMA_BUCKET_NAME    = "${module.rules_bucket.s3_bucket_id}"
+    SCHEMA_BUCKET_KEY     = "judgment-1-1.xsd"
+    VALIDATE_USING_DTD    = "False" # the xml appears to not use a DTD
+    VALIDATE_USING_SCHEMA = "False"
 
-#   }
+  }
 
-#   tags = local.tags
+  tags = local.tags
 
-# }
+}
 
 # resource "aws_cloudwatch_event_rule" "update_legislation_table_lambda_event_rule" {
 #   name                = "update-legislation-table-lambda-event-rule"
