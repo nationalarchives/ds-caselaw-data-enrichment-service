@@ -92,6 +92,10 @@ jobs:
           cp oblique_references/requirements.txt lambda/determine_oblique_references/
           mkdir lambda/determine_oblique_references/replacer
           cp -r replacer/*.py lambda/determine_oblique_references/replacer/
+          mkdir lambda/extract_judgement_contents/utils
+          cp -r utils/*.py lambda/extract_judgement_contents/utils/
+          mkdir -p lambda/make_replacements/replacer
+          cp -r replacer/*.py lambda/make_replacements/replacer/
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2.0.2
