@@ -8,7 +8,7 @@ module "lambda-extract-judgement-contents" {
 
   # Deploy as code
   handler     = "index.handler"
-  runtime     = "python3.8"
+  runtime     = "python3.9"
   source_path = "${var.lambda_source_path}extract_judgement_contents"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
@@ -708,7 +708,7 @@ module "lambda-make-replacements" {
   package_type  = var.use_container_image == true ? "Image" : "Zip"
 
   handler = "index.handler"
-  runtime = "python3.8"
+  runtime = "python3.9"
 
   source_path = "${var.lambda_source_path}make_replacements"
 
@@ -874,7 +874,7 @@ module "lambda-update-legislation-table" {
   function_name = "${local.name}-${local.environment}-update-legislation-table"
   package_type  = var.use_container_image == true ? "Image" : "Zip"
 
-  runtime = "python3.8" # Setting runtime is required when building package in Docker and Lambda Layer resource.
+  runtime = "python3.9" # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
   # Deploy as code
   handler = "index.handler"
