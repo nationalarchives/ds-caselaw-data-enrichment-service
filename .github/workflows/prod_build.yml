@@ -1,0 +1,189 @@
+# Re enable after ensuring prod plan looks ok.
+
+#name: "Apply Prod Build"
+#
+#
+#on:
+#  push:
+#    branches:
+#      - main
+#
+#permissions:
+#  pull-requests: read
+#  id-token: write
+#  contents: read
+#
+#defaults:
+#  run:
+#    shell: bash
+#
+#jobs:
+#  prod_build_code_and_infra:
+#    runs-on: ubuntu-latest
+#    needs: staging_build_code_and_infra
+#    steps:
+#      - name: Checkout source code
+#        uses: actions/checkout@v3.1.0
+#        with:
+#          ref: ${{ github.event.pull_request.head.sha }}
+#
+#      - name: Set up Python 3.9
+#        uses: actions/setup-python@v4.3.0
+#        with:
+#          python-version: 3.9
+#
+#      - name: Install pip
+#        run: |
+#          set +e
+#          set +o pipefail
+#          apt-get update && apt-get -y upgrade
+#          apt-get install -y wget software-properties-common
+#          add-apt-repository ppa:deadsnakes/ppa
+#          apt-get install -y python3-distutils python3.9
+#          apt-get purge python-pip
+#          ln -sf python3 /usr/bin/python
+#          wget -q https://bootstrap.pypa.io/get-pip.py
+#          python /get-pip.py
+#          python -m pip install --upgrade pip
+#          rm -f /get-pip.py
+#          pip3 install black isort
+#        continue-on-error: false
+#
+#      - name: AWS Credentials
+#        uses: aws-actions/configure-aws-credentials@v1.7.0
+#        with:
+#          aws-region: eu-west-2
+#          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
+#          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
+#        continue-on-error: false
+#
+#      - name: Buildx
+#        uses: docker/setup-buildx-action@v2.2.1
+#        with:
+#          install: true
+#
+#      - name: Assemble Non-Dockerised Lambda
+#        run: |
+#          set +e
+#          set +o pipefail
+#          mkdir lambda/determine_replacements_caselaw/caselaw_extraction
+#          cp -r caselaw_extraction/*.py lambda/determine_replacements_caselaw/caselaw_extraction/
+#          cp caselaw_extraction/requirements.txt lambda/determine_replacements_caselaw/requirements.txt
+#          mkdir lambda/determine_replacements_caselaw/rules
+#          # cp caselaw_extraction/rules/citation_patterns.jsonl lambda/determine_replacements_caselaw/rules/citation_patterns.jsonl
+#          cp citation_patterns.jsonl lambda/determine_replacements_caselaw/
+#          mkdir lambda/determine_replacements_caselaw/database
+#          cp -r database/*.py lambda/determine_replacements_caselaw/database/
+#          mkdir lambda/determine_replacements_caselaw/utils
+#          cp -r utils/*.py lambda/determine_replacements_caselaw/utils/
+#          mkdir lambda/determine_replacements_legislation/legislation_extraction
+#          cp -r legislation_extraction/*.* lambda/determine_replacements_legislation/legislation_extraction/
+#          cp legislation_extraction/requirements.txt lambda/determine_replacements_legislation/
+#          mkdir lambda/determine_replacements_legislation/utils
+#          cp -r utils/*.py lambda/determine_replacements_legislation/utils/
+#          mkdir lambda/determine_replacements_legislation/database
+#          cp -r database/*.py lambda/determine_replacements_legislation/database/
+#          mkdir lambda/determine_replacements_abbreviations/abbreviation_extraction
+#          cp -r abbreviation_extraction/*.* lambda/determine_replacements_abbreviations/abbreviation_extraction/
+#          cp abbreviation_extraction/requirements.txt lambda/determine_replacements_abbreviations/
+#          mkdir lambda/determine_legislation_provisions/legislation_provisions_extraction
+#          cp -r legislation_provisions_extraction/*.* lambda/determine_legislation_provisions/legislation_provisions_extraction/
+#          cp legislation_provisions_extraction/requirements.txt lambda/determine_legislation_provisions/
+#          mkdir lambda/determine_legislation_provisions/replacer
+#          cp -r replacer/*.py lambda/determine_legislation_provisions/replacer/
+#          mkdir lambda/determine_oblique_references/oblique_references
+#          cp -r oblique_references/*.* lambda/determine_oblique_references/oblique_references/
+#          cp oblique_references/requirements.txt lambda/determine_oblique_references/
+#          mkdir lambda/determine_oblique_references/replacer
+#          cp -r replacer/*.py lambda/determine_oblique_references/replacer/
+#
+#      - name: Setup Terraform
+#        uses: hashicorp/setup-terraform@v2.0.2
+#        continue-on-error: false
+#
+#      - name: Terraform init
+#        run: |
+#          set +e
+#          set +o pipefail
+#          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.PROD_ACCOUNT_ID}}"
+#          terraform workspace list
+#        continue-on-error: false
+#
+#      - name: Terraform Plan
+#        run: |
+#          set +e
+#          set +o pipefail
+#          terraform workspace select tna-staging
+#          terraform plan -no-color -var "app_env=production"
+#
+#
+#
+#      - name: Terraform Apply
+#        run: |
+#          set +e
+#          set +o pipefail
+#          terraform workspace select tna-staging
+#          terraform apply --auto-approve -no-color -var "app_env=production"
+#
+#      # Pushing images to ECR last
+#      - name: Build Docker Images For Lambda
+#        run: |
+#          set +e
+#          set +o pipefail
+#          cd "lambda/determine_replacements_caselaw"
+#          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
+#          docker buildx build --load -t tna-s3-tna-ecr-repository-production .
+#          echo "finished buildx"
+#          docker tag tna-s3-tna-ecr-repository-staging:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-production:latest
+#          echo "finished docker tag"
+#          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-production:latest
+#          echo "finished pushing docker image"
+#          cd "${GITHUB_WORKSPACE}"
+#
+#          cd "lambda/determine_replacements_legislation"
+#          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-production .
+#          docker tag tna-s3-tna-ecr-repository-legislation-staging:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-production:latest
+#          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-production:latest
+#          cd "${GITHUB_WORKSPACE}"
+#
+#          cd "lambda/determine_replacements_abbreviations"
+#          docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-production .
+#          docker tag tna-s3-tna-ecr-repository-abbreviations-staging:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-production:latest
+#          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-production:latest
+#          cd "${GITHUB_WORKSPACE}"
+#
+#          cd "lambda/update_legislation_table"
+#          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-production .
+#          docker tag tna-s3-tna-ecr-repository-legislation-update-staging:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-production:latest
+#          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-production:latest
+#          cd "${GITHUB_WORKSPACE}"
+#
+#          cd "lambda/update_rules_processor"
+#          docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-production .
+#          docker tag tna-s3-tna-ecr-repository-rules-update-staging:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-production:latest
+#          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-production:latest
+#          cd "${GITHUB_WORKSPACE}"
+#
+#          cd "lambda/determine_legislation_provisions"
+#          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-production .
+#          docker tag tna-s3-tna-ecr-repository-legislation-provision-staging:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-production:latest
+#          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-production:latest
+#          cd "${GITHUB_WORKSPACE}"
+#
+#          cd "lambda/determine_oblique_references"
+#          docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-production .
+#          docker tag tna-s3-tna-ecr-repository-oblique-references-staging:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-production:latest
+#          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-production:latest
+#          cd "${GITHUB_WORKSPACE}"
+#
+#          cd "lambda/fetch_xml"
+#          docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-production .
+#          docker tag tna-s3-tna-ecr-repository-fetch-xml-staging:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
+#          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-production:latest
+#          cd "${GITHUB_WORKSPACE}"
+#
+#          cd "lambda/push_enriched_xml"
+#          docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-production .
+#          docker tag tna-s3-tna-ecr-repository-push-enriched-xml-staging:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
+#          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-production:latest
+#          cd "${GITHUB_WORKSPACE}"
