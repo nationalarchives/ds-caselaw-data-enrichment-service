@@ -1114,7 +1114,7 @@ module "lambda-validate-replacements" {
         "sqs:DeleteMessage",
         "sqs:GetQueueAttributes"
       ],
-      resources = ["${aws_sqs_queue.replacements-queue.arn}"]
+      # resources = ["${aws_sqs_queue.replacements-queue.arn}"]
     },
     sns_put = {
       effect = "Allow",
@@ -1123,7 +1123,7 @@ module "lambda-validate-replacements" {
         "SNS:ListSubscriptionsByTopic",
         "SNS:GetTopicAttributes"
       ],
-      resources = ["${aws_sns_topic.validation_updates.arn}", "${aws_sns_topic.validation_updates_error.arn}"]
+      # resources = ["${aws_sns_topic.validation_updates.arn}", "${aws_sns_topic.validation_updates_error.arn}"]
     },
     log_lambda = {
       effect = "Allow",
