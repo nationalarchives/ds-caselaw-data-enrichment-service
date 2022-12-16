@@ -1,15 +1,15 @@
 
-resource "aws_sqs_queue" "replacement-caselaw-queue" {
-  name                       = "${local.name}-${local.environment}-replacement-caselaw-event-notification-queue"
-  delay_seconds              = 90
-  max_message_size           = 2048
-  visibility_timeout_seconds = 900
-  message_retention_seconds  = 86400
-  receive_wait_time_seconds  = 10
-  sqs_managed_sse_enabled    = true
-  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-caselaw_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+# resource "aws_sqs_queue" "replacement-caselaw-queue" {
+#   name                       = "${local.name}-${local.environment}-replacement-caselaw-event-notification-queue"
+#   delay_seconds              = 90
+#   max_message_size           = 2048
+#   visibility_timeout_seconds = 900
+#   message_retention_seconds  = 86400
+#   receive_wait_time_seconds  = 10
+#   sqs_managed_sse_enabled    = true
+#   redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-caselaw_dlq_queue.arn}\",\"maxReceiveCount\":4}"
 
-}
+# }
 
 # resource "aws_sqs_queue_policy" "replacement-caselaw-queue-policy" {
 #   queue_url = aws_sqs_queue.replacement-caselaw-queue.id
@@ -31,17 +31,17 @@ resource "aws_sqs_queue" "replacement-caselaw-queue" {
 # POLICY
 # }
 
-resource "aws_sqs_queue" "replacements-caselaw_dlq_queue" {
-  name                      = "${local.name}-${local.environment}-replacements-caselaw-dlq-queue"
-  delay_seconds             = 90
-  max_message_size          = 2048
-  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
-  receive_wait_time_seconds = 10
-  sqs_managed_sse_enabled   = true
-  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
+# resource "aws_sqs_queue" "replacements-caselaw_dlq_queue" {
+#   name                      = "${local.name}-${local.environment}-replacements-caselaw-dlq-queue"
+#   delay_seconds             = 90
+#   max_message_size          = 2048
+#   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+#   receive_wait_time_seconds = 10
+#   sqs_managed_sse_enabled   = true
+#   #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
-  tags = local.tags
-}
+#   tags = local.tags
+# }
 
 
 
@@ -70,25 +70,25 @@ resource "aws_sqs_queue" "replacements-queue" {
   tags = local.tags
 }
 
-resource "aws_sqs_queue_policy" "replacements-queue-policy" {
-  queue_url = aws_sqs_queue.replacements-queue.id
-  policy    = <<POLICY
-{
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": "*",
-      "Action": "sqs:SendMessage",
-      "Resource": "${aws_sqs_queue.replacements-queue.arn}",
-      "Condition": {
-        "ArnEquals": { "aws:SourceArn": "${module.lambda-make-replacements.lambda_function_arn}" }
-      }
-    }
-  ]
-}
-POLICY
-}
+# resource "aws_sqs_queue_policy" "replacements-queue-policy" {
+#   queue_url = aws_sqs_queue.replacements-queue.id
+#   policy    = <<POLICY
+# {
+#   "Version": "2012-10-17",
+#   "Statement": [
+#     {
+#       "Effect": "Allow",
+#       "Principal": "*",
+#       "Action": "sqs:SendMessage",
+#       "Resource": "${aws_sqs_queue.replacements-queue.arn}",
+#       "Condition": {
+#         "ArnEquals": { "aws:SourceArn": "${module.lambda-make-replacements.lambda_function_arn}" }
+#       }
+#     }
+#   ]
+# }
+# POLICY
+# }
 
 
 

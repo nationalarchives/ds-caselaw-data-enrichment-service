@@ -700,93 +700,93 @@ resource "random_pet" "this" {
 #   tags = local.tags
 # }
 
-module "lambda-make-replacements" {
-  source  = "terraform-aws-modules/lambda/aws"
-  version = ">=2.0.0,<3.0.0"
+# module "lambda-make-replacements" {
+#   source  = "terraform-aws-modules/lambda/aws"
+#   version = ">=2.0.0,<3.0.0"
 
-  function_name = "${local.name}-${local.environment}-make-replacements"
-  package_type  = var.use_container_image == true ? "Image" : "Zip"
+#   function_name = "${local.name}-${local.environment}-make-replacements"
+#   package_type  = var.use_container_image == true ? "Image" : "Zip"
 
-  handler = "index.handler"
-  runtime = "python3.8"
+#   handler = "index.handler"
+#   runtime = "python3.8"
 
-  source_path = "${var.lambda_source_path}make_replacements"
+#   source_path = "${var.lambda_source_path}make_replacements"
 
-  create_current_version_allowed_triggers = false # !var.use_container_image
+#   create_current_version_allowed_triggers = false # !var.use_container_image
 
-  timeout     = 30
-  memory_size = var.memory_size
+#   timeout     = 30
+#   memory_size = var.memory_size
 
-  attach_policy_statements = true
-  policy_statements = {
-    s3_read = {
-      effect = "Allow",
-      actions = [
-        "s3:HeadObject",
-        "s3:GetObject",
-        "s3:GetObjectVersion"
-      ],
-      resources = ["${module.xml_original_bucket.s3_bucket_arn}/*", "${module.replacements_bucket.s3_bucket_arn}/*"]
-    },
-    s3_put = {
-      effect    = "Allow",
-      actions   = ["s3:PutObject", "s3:PutObjectAcl"],
-      resources = ["${module.xml_enriched_bucket.s3_bucket_arn}/*"]
-    },
-    kms_get_key = {
-      effect = "Allow",
-      actions = [
-        "kms:Encrypt",
-        "kms:DescribeKey",
-        "kms:GenerateDataKey",
-        "kms:Decrypt",
-        "kms:ReEncryptTo"
-      ],
-      resources = [module.xml_original_bucket.kms_key_arn, module.xml_enriched_bucket.kms_key_arn, module.replacements_bucket.kms_key_arn]
-    },
-    sqs_get = {
-      effect = "Allow",
-      actions = [
-        "sqs:ReceiveMessage",
-        "sqs:DeleteMessage",
-        "sqs:GetQueueAttributes"
-      ],
-      resources = ["${aws_sqs_queue.replacements-queue.arn}", "${aws_sqs_queue.replacement-caselaw-queue.arn}", "${aws_sqs_queue.replacement-legislation-queue.arn}", "${aws_sqs_queue.replacement-abbreviations-queue.arn}"]
-    },
-    log_lambda = {
-      effect = "Allow",
-      actions = [
-        "logs:CreateLogGroup",
-        "logs:CreateLogStream",
-        "logs:PutLogEvents"
-      ],
-      resources = ["*"]
-    }
-  }
+#   attach_policy_statements = true
+#   policy_statements = {
+#     s3_read = {
+#       effect = "Allow",
+#       actions = [
+#         "s3:HeadObject",
+#         "s3:GetObject",
+#         "s3:GetObjectVersion"
+#       ],
+#       resources = ["${module.xml_original_bucket.s3_bucket_arn}/*", "${module.replacements_bucket.s3_bucket_arn}/*"]
+#     },
+#     s3_put = {
+#       effect    = "Allow",
+#       actions   = ["s3:PutObject", "s3:PutObjectAcl"],
+#       resources = ["${module.xml_enriched_bucket.s3_bucket_arn}/*"]
+#     },
+#     kms_get_key = {
+#       effect = "Allow",
+#       actions = [
+#         "kms:Encrypt",
+#         "kms:DescribeKey",
+#         "kms:GenerateDataKey",
+#         "kms:Decrypt",
+#         "kms:ReEncryptTo"
+#       ],
+#       resources = [module.xml_original_bucket.kms_key_arn, module.xml_enriched_bucket.kms_key_arn, module.replacements_bucket.kms_key_arn]
+#     },
+#     sqs_get = {
+#       effect = "Allow",
+#       actions = [
+#         "sqs:ReceiveMessage",
+#         "sqs:DeleteMessage",
+#         "sqs:GetQueueAttributes"
+#       ],
+#       resources = ["${aws_sqs_queue.replacements-queue.arn}", "${aws_sqs_queue.replacement-caselaw-queue.arn}", "${aws_sqs_queue.replacement-legislation-queue.arn}", "${aws_sqs_queue.replacement-abbreviations-queue.arn}"]
+#     },
+#     log_lambda = {
+#       effect = "Allow",
+#       actions = [
+#         "logs:CreateLogGroup",
+#         "logs:CreateLogStream",
+#         "logs:PutLogEvents"
+#       ],
+#       resources = ["*"]
+#     }
+#   }
 
 
-  assume_role_policy_statements = {
-    account_root = {
-      effect  = "Allow",
-      actions = ["sts:AssumeRole"],
-      principals = {
-        account_principal = {
-          type        = "Service",
-          identifiers = ["lambda.amazonaws.com"]
-        }
-      }
-    }
-  }
+#   assume_role_policy_statements = {
+#     account_root = {
+#       effect  = "Allow",
+#       actions = ["sts:AssumeRole"],
+#       principals = {
+#         account_principal = {
+#           type        = "Service",
+#           identifiers = ["lambda.amazonaws.com"]
+#         }
+#       }
+#     }
+#   }
 
-  environment_variables = {
-    DEST_BUCKET_NAME    = "${module.xml_enriched_bucket.s3_bucket_id}"
-    REPLACEMENTS_BUCKET = "${module.replacements_bucket.s3_bucket_id}"
-    SOURCE_BUCKET_NAME  = "${module.xml_original_bucket.s3_bucket_id}"
-  }
+#   environment_variables = {
+#     DEST_BUCKET_NAME    = "${module.xml_enriched_bucket.s3_bucket_id}"
+#     REPLACEMENTS_BUCKET = "${module.replacements_bucket.s3_bucket_id}"
+#     SOURCE_BUCKET_NAME  = "${module.xml_original_bucket.s3_bucket_id}"
+#   }
 
-  tags = local.tags
+#   tags = local.tags
 
-}
+# }
 
 # resource "aws_s3_bucket_notification" "text_content_bucket_notification" {
 #   bucket = module.text_content_bucket.s3_bucket_id
