@@ -1,60 +1,60 @@
-name: "Apply Staging Terraform"
-
-on:
-  push:
-    branches:
-      - main
-
-permissions:
-  pull-requests: read
-  id-token: write
-  contents: read
-
-defaults:
-  run:
-    shell: bash
-
-jobs:
-  staging_terraform:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v3.1.0
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2.0.2
-        continue-on-error: false
-
-      - name: AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
-        with:
-          aws-region: eu-west-2
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        continue-on-error: false
-
-      - name: Terraform init
-        run: |
-          set +e
-          set +o pipefail
-          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.STAGING_ACCOUNT_ID}}"
-          terraform workspace list
-        continue-on-error: false
-
-      - name: Terraform Plan
-        run: |
-          set +e
-          set +o pipefail
-          terraform workspace select tna-staging
-          terraform plan -no-color -var "app_env=staging"
-
-      - name: Terraform Apply
-        run: |
-          set +e
-          set +o pipefail
-          terraform workspace select tna-staging
-          terraform apply --auto-approve -no-color -var "app_env=staging"
+#name: "Apply Staging Terraform"
+#
+#on:
+#  push:
+#    branches:
+#      - main
+#
+#permissions:
+#  pull-requests: read
+#  id-token: write
+#  contents: read
+#
+#defaults:
+#  run:
+#    shell: bash
+#
+#jobs:
+#  staging_terraform:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Checkout source code
+#        uses: actions/checkout@v3.1.0
+#        with:
+#          ref: ${{ github.event.pull_request.head.sha }}
+#
+#
+#      - name: Setup Terraform
+#        uses: hashicorp/setup-terraform@v2.0.2
+#        continue-on-error: false
+#
+#      - name: AWS Credentials
+#        uses: aws-actions/configure-aws-credentials@v1.7.0
+#        with:
+#          aws-region: eu-west-2
+#          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#        continue-on-error: false
+#
+#      - name: Terraform init
+#        run: |
+#          set +e
+#          set +o pipefail
+#          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.STAGING_ACCOUNT_ID}}"
+#          terraform workspace list
+#        continue-on-error: false
+#
+#      - name: Terraform Plan
+#        run: |
+#          set +e
+#          set +o pipefail
+#          terraform workspace select tna-staging
+#          terraform plan -no-color -var "app_env=dev"
+#
+#      - name: Terraform Apply
+#        run: |
+#          set +e
+#          set +o pipefail
+#          terraform workspace select tna-staging
+#          terraform apply --auto-approve -no-color -var "app_env=dev"

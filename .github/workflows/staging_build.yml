@@ -16,7 +16,6 @@ defaults:
 
 jobs:
   staging_build:
-    needs: staging_terraform
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -99,55 +98,55 @@ jobs:
           set +e
           set +o pipefail
           cd "lambda/determine_replacements_caselaw"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-dev .
-          docker tag tna-s3-tna-ecr-repository-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
-          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-dev:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-staging .
+          docker tag tna-s3-tna-ecr-repository-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/determine_replacements_legislation"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-dev .
-          docker tag tna-s3-tna-ecr-repository-legislation-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
-          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-staging .
+          docker tag tna-s3-tna-ecr-repository-legislation-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-staging:latest
           cd "${GITHUB_WORKSPACE}"
   
           cd "lambda/determine_replacements_abbreviations"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-dev .
-          docker tag tna-s3-tna-ecr-repository-abbreviations-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
-          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-dev:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-staging .
+          docker tag tna-s3-tna-ecr-repository-abbreviations-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-staging:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/update_legislation_table"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-dev .
-          docker tag tna-s3-tna-ecr-repository-legislation-update-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-dev:latest
-          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-dev:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-staging .
+          docker tag tna-s3-tna-ecr-repository-legislation-update-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-staging:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/update_rules_processor"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-dev .
-          docker tag tna-s3-tna-ecr-repository-rules-update-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-dev:latest
-          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-dev:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-staging .
+          docker tag tna-s3-tna-ecr-repository-rules-update-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-staging:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/determine_legislation_provisions"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-dev .
-          docker tag tna-s3-tna-ecr-repository-legislation-provision-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-dev:latest
-          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-dev:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-staging .
+          docker tag tna-s3-tna-ecr-repository-legislation-provision-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-staging:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/determine_oblique_references"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-dev .
-          docker tag tna-s3-tna-ecr-repository-oblique-references-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-dev:latest
-          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-dev:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-staging .
+          docker tag tna-s3-tna-ecr-repository-oblique-references-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-staging:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/fetch_xml"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-dev .
-          docker tag tna-s3-tna-ecr-repository-fetch-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
-          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-dev:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-staging .
+          docker tag tna-s3-tna-ecr-repository-fetch-xml-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-staging:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/push_enriched_xml"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-dev .
-          docker tag tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
-          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-dev:latest
+          docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-staging .
+          docker tag tna-s3-tna-ecr-repository-push-enriched-xml-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-staging:latest
           cd "${GITHUB_WORKSPACE}"
