@@ -20,8 +20,9 @@ module "vpc" {
   enable_vpn_gateway     = false
   enable_dns_support     = true
   enable_dns_hostnames   = true
-  single_nat_gateway     = true
-  one_nat_gateway_per_az = false
+  #single_nat_gateway     = true
+  single_nat_gateway     = local.vpc[local.environment].single_ngw
+  #one_nat_gateway_per_az = false
 
   tags = local.tags
 }
