@@ -90,6 +90,11 @@ resource "aws_ecr_repository" "main" {
   tags = local.tags
 }
 
+resource "aws_ecr_lifecycle_policy" "main_retention" {
+  repository     = aws_ecr_repository.main.name
+  policy         = file("${path.module}/retention_policy.json")
+}
+
 resource "aws_ecr_repository" "legislation" {
   name = "${local.name}-ecr-repository-legislation-${local.environment}"
 
@@ -98,6 +103,11 @@ resource "aws_ecr_repository" "legislation" {
   }
 
   tags = local.tags
+}
+
+resource "aws_ecr_lifecycle_policy" "leglislation_retention" {
+  repository     = aws_ecr_repository.legislation.name
+  policy         = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_ecr_repository" "abbreviations" {
@@ -111,6 +121,11 @@ resource "aws_ecr_repository" "abbreviations" {
   tags = local.tags
 }
 
+resource "aws_ecr_lifecycle_policy" "abbreviations_retention" {
+  repository     = aws_ecr_repository.abbreviations.name
+  policy         = file("${path.module}/retention_policy.json")
+}
+
 resource "aws_ecr_repository" "legislation-provision" {
   name = "${local.name}-ecr-repository-legislation-provision-${local.environment}"
 
@@ -119,6 +134,11 @@ resource "aws_ecr_repository" "legislation-provision" {
   }
 
   tags = local.tags
+}
+
+resource "aws_ecr_lifecycle_policy" "lp_retention" {
+  repository     = aws_ecr_repository.legislation-provision.name
+  policy         = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_ecr_repository" "oblique-references" {
@@ -131,6 +151,11 @@ resource "aws_ecr_repository" "oblique-references" {
   tags = local.tags
 }
 
+resource "aws_ecr_lifecycle_policy" "or_retention" {
+  repository     = aws_ecr_repository.oblique-references.name
+  policy         = file("${path.module}/retention_policy.json")
+}
+
 resource "aws_ecr_repository" "legislation-update" {
   name = "${local.name}-ecr-repository-legislation-update-${local.environment}"
 
@@ -141,6 +166,11 @@ resource "aws_ecr_repository" "legislation-update" {
   tags = local.tags
 }
 
+resource "aws_ecr_lifecycle_policy" "lu_retention" {
+  repository     = aws_ecr_repository.legislation-update.name
+  policy         = file("${path.module}/retention_policy.json")
+}
+
 resource "aws_ecr_repository" "rules-update" {
   name = "${local.name}-ecr-repository-rules-update-${local.environment}"
 
@@ -149,6 +179,11 @@ resource "aws_ecr_repository" "rules-update" {
   }
 
   tags = local.tags
+}
+
+resource "aws_ecr_lifecycle_policy" "ru_retention" {
+  repository     = aws_ecr_repository.rules-update.name
+  policy         = file("${path.module}/retention_policy.json")
 }
 
 resource "random_pet" "this" {
@@ -1203,6 +1238,11 @@ resource "aws_ecr_repository" "fetch-xml" {
   tags = local.tags
 }
 
+resource "aws_ecr_lifecycle_policy" "fx_retention" {
+  repository     = aws_ecr_repository.fetch-xml.name
+  policy         = file("${path.module}/retention_policy.json")
+}
+
 # resource "aws_secretsmanager_secret" "API_username" {
 #   description             = "Secret for storing the API username"
 #   name                    = "${local.name}-API-username-${local.environment}"
@@ -1333,6 +1373,11 @@ resource "aws_ecr_repository" "push_enriched_xml" {
   }
 
   tags = local.tags
+}
+
+resource "aws_ecr_lifecycle_policy" "pe_retention" {
+  repository     = aws_ecr_repository.push_enriched_xml.name
+  policy         = file("${path.module}/retention_policy.json")
 }
 
 # module "lambda-push-enriched-xml" {
