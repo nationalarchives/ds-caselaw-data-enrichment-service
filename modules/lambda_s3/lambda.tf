@@ -1297,6 +1297,15 @@ module "lambda-fetch-xml" {
         "logs:PutLogEvents"
       ],
       resources = ["*"]
+    },
+    sqs_get = {
+      effect = "Allow",
+      actions = [
+        "sqs:ReceiveMessage",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+      ],
+      resources = ["${aws_sqs_queue.fetch_xml_queue.arn}"]
     }
   }
 

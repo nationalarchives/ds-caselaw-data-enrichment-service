@@ -627,6 +627,7 @@ resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
   queue_url = aws_sqs_queue.fetch_xml_queue.id
   policy    = data.aws_iam_policy_document.sqs_policy_fetch_xml.json
 }
+
 #  policy = <<POLICY
 #{
 #  "Version": "2012-10-17",
