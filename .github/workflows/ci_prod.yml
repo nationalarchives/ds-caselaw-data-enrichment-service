@@ -79,7 +79,7 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-prod
-          terraform plan -no-color -var "app_env=prod"
+          terraform plan -no-color -var "app_env=production"
 
 #  To be fixed at a later stage
 #      - uses: actions/github-script@v6
