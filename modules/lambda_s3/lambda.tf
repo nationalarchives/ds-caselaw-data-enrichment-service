@@ -70,15 +70,15 @@ module "lambda-extract-judgement-contents" {
   tags = local.tags
 }
 
-# resource "aws_s3_bucket_notification" "xml_original_bucket_notification" {
-#   bucket = module.xml_original_bucket.s3_bucket_id
+resource "aws_s3_bucket_notification" "xml_original_bucket_notification" {
+  bucket = module.xml_original_bucket.s3_bucket_id
 
-#   lambda_function {
-#     lambda_function_arn = module.lambda-extract-judgement-contents.lambda_function_arn
-#     events              = ["s3:ObjectCreated:*"]
-#     filter_suffix       = ".xml"
-#   }
-# }
+  lambda_function {
+    lambda_function_arn = module.lambda-extract-judgement-contents.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+    filter_suffix       = ".xml"
+  }
+}
 
 resource "aws_ecr_repository" "main" {
   name = "${local.name}-ecr-repository-${local.environment}"
@@ -788,56 +788,56 @@ module "lambda-make-replacements" {
 
 }
 
-# resource "aws_s3_bucket_notification" "text_content_bucket_notification" {
-#   bucket = module.text_content_bucket.s3_bucket_id
+resource "aws_s3_bucket_notification" "text_content_bucket_notification" {
+  bucket = module.text_content_bucket.s3_bucket_id
 
-#   lambda_function {
-#     lambda_function_arn = module.lambda-determine-replacements-caselaw.lambda_function_arn
-#     events              = ["s3:ObjectCreated:*"]
-#   }
-# }
-
-
-# resource "aws_s3_bucket_notification" "xml_enriched_bucket_notification" {
-#   bucket = module.xml_enriched_bucket.s3_bucket_id
-
-#   lambda_function {
-#     lambda_function_arn = module.lambda-determine-oblique-references.lambda_function_arn
-#     events              = ["s3:ObjectCreated:*"]
-#     filter_suffix       = ".xml"
-#   }
-# }
-
-# resource "aws_s3_bucket_notification" "xml_second_phase_enriched_bucket_notification" {
-#   bucket = module.xml_second_phase_enriched_bucket.s3_bucket_id
-
-#   lambda_function {
-#     lambda_function_arn = module.lambda-determine-legislation-provisions.lambda_function_arn
-#     events              = ["s3:ObjectCreated:*"]
-#     filter_suffix       = ".xml"
-#   }
-# }
+  lambda_function {
+    lambda_function_arn = module.lambda-determine-replacements-caselaw.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+  }
+}
 
 
-# resource "aws_s3_bucket_notification" "xml_third_phase_enriched_bucket_notification" {
-#   bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
+resource "aws_s3_bucket_notification" "xml_enriched_bucket_notification" {
+  bucket = module.xml_enriched_bucket.s3_bucket_id
 
-#   lambda_function {
-#     lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn
-#     events              = ["s3:ObjectCreated:*"]
-#     filter_suffix       = ".xml"
-#   }
-# }
+  lambda_function {
+    lambda_function_arn = module.lambda-determine-oblique-references.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+    filter_suffix       = ".xml"
+  }
+}
 
-# resource "aws_s3_bucket_notification" "rules_bucket_notification" {
-#   bucket = module.rules_bucket.s3_bucket_id
+resource "aws_s3_bucket_notification" "xml_second_phase_enriched_bucket_notification" {
+  bucket = module.xml_second_phase_enriched_bucket.s3_bucket_id
 
-#   lambda_function {
-#     lambda_function_arn = module.lambda-update-rules-processor.lambda_function_arn
-#     events              = ["s3:ObjectCreated:*"]
-#     filter_suffix       = ".csv"
-#   }
-# }
+  lambda_function {
+    lambda_function_arn = module.lambda-determine-legislation-provisions.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+    filter_suffix       = ".xml"
+  }
+}
+
+
+resource "aws_s3_bucket_notification" "xml_third_phase_enriched_bucket_notification" {
+  bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
+
+  lambda_function {
+    lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+    filter_suffix       = ".xml"
+  }
+}
+
+resource "aws_s3_bucket_notification" "rules_bucket_notification" {
+  bucket = module.rules_bucket.s3_bucket_id
+
+  lambda_function {
+    lambda_function_arn = module.lambda-update-rules-processor.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+    filter_suffix       = ".csv"
+  }
+}
 
 resource "aws_secretsmanager_secret" "sparql_username" {
   description             = "Secret for storing the sparql username"
