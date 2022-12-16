@@ -4,7 +4,7 @@ variable "region" {
 }
 
 variable "app_env" {
-  default     = "dev"
+  default     = "staging"
   description = "Common prefix for all Terraform created resources"
 }
 
