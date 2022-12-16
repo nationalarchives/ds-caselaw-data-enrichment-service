@@ -110,14 +110,14 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-staging
-          terraform plan -no-color -var "app_env=dev"
+          terraform plan -no-color -var "app_env=staging"
 
       - name: Terraform Apply
         run: |
           set +e
           set +o pipefail
           terraform workspace select tna-staging
-          terraform apply --auto-approve -no-color -var "app_env=dev"
+          terraform apply --auto-approve -no-color -var "app_env=staging"
 
       # Pushing images to ECR last
       - name: Build Docker Images For Lambda
