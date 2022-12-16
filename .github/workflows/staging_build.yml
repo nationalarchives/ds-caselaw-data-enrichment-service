@@ -15,7 +15,7 @@ defaults:
     shell: bash
 
 jobs:
-  staging_build:
+  staging_build_code_and_infra:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
@@ -93,6 +93,33 @@ jobs:
           mkdir lambda/determine_oblique_references/replacer
           cp -r replacer/*.py lambda/determine_oblique_references/replacer/
 
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.2
+        continue-on-error: false
+
+      - name: Terraform init
+        run: |
+          set +e
+          set +o pipefail
+          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.STAGING_ACCOUNT_ID}}"
+          terraform workspace list
+        continue-on-error: false
+
+      - name: Terraform Plan
+        run: |
+          set +e
+          set +o pipefail
+          terraform workspace select tna-staging
+          terraform plan -no-color -var "app_env=dev"
+
+      - name: Terraform Apply
+        run: |
+          set +e
+          set +o pipefail
+          terraform workspace select tna-staging
+          terraform apply --auto-approve -no-color -var "app_env=dev"
+
+      # Pushing images to ECR last
       - name: Build Docker Images For Lambda
         run: |
           set +e
@@ -108,7 +135,7 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-legislation-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-staging:latest
           docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-staging:latest
           cd "${GITHUB_WORKSPACE}"
-  
+          
           cd "lambda/determine_replacements_abbreviations"
           docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-staging .
           docker tag tna-s3-tna-ecr-repository-abbreviations-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-staging:latest
