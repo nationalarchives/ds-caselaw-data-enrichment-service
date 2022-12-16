@@ -125,6 +125,7 @@ jobs:
           set +e
           set +o pipefail
           cd "lambda/determine_replacements_caselaw"
+          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
           docker buildx build --load -t tna-s3-tna-ecr-repository-staging .
           echo "finished buildx"
           docker tag tna-s3-tna-ecr-repository-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
