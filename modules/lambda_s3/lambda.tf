@@ -306,12 +306,13 @@ module "lambda-determine-replacements-legislation" {
         "s3:GetObject",
         "s3:GetObjectVersion"
       ],
-      resources = ["${module.text_content_bucket.s3_bucket_arn}/*", "${module.replacements_bucket.s3_bucket_arn}/*"]
+      resources = ["${module.text_content_bucket.s3_bucket_arn}/*", "${module.replacements_bucket.s3_bucket_arn}/*",
+                  "${module.tracking_bucket.s3_bucket_arn}/*"]
     },
     s3_put = {
       effect    = "Allow",
       actions   = ["s3:PutObject", "s3:PutObjectAcl"],
-      resources = ["${module.replacements_bucket.s3_bucket_arn}/*"]
+      resources = ["${module.replacements_bucket.s3_bucket_arn}/*", "${module.tracking_bucket.s3_bucket_arn}/*"]
     },
     kms_get_key = {
       effect = "Allow",
