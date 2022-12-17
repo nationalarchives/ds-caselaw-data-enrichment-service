@@ -27,7 +27,7 @@ def split_list(a, n):
 def chunking_mechanism(docobj, n, start, end):
     k, m = divmod(len(docobj), n)
     pos = [[i * k + min(i, m), (i + 1) * k + min(i + 1, m)] for i in range(n)]
-    print(pos)
+    # print(pos)
     for p in range(len(pos)):
         if start < pos[p][1] and end > pos[p][1]:
             pos[p][1] = end
@@ -35,7 +35,7 @@ def chunking_mechanism(docobj, n, start, end):
         else:
             continue
     judgement_chunks = [docobj[split[0] : split[1]] for split in pos]
-    print(pos)
+    # print(pos)
     return judgement_chunks
 
 
@@ -61,12 +61,13 @@ def abb_pipeline(judgment_content_text, nlp):
 
     # new chunking mechanism
     docobj = nlp(judgment_content_text)
-    judgment_chunks = chunking_mechanism(docobj, 4, 79, 83)
+    judgment_chunks = chunking_mechanism(docobj, 5, 79, 83)
+    chunk_strings  = [chunk.text for chunk in judgment_chunks]
 
-    for chunk in judgment_chunks:
+    for chunk in chunk_strings:
         # chunk = " ".join(chunk)
-        # doc = nlp(chunk)
-        for abrv in chunk._.abbreviations:
+        doc = nlp(chunk)
+        for abrv in doc._.abbreviations:
             abr_tuple = abb(str(abrv), str(abrv._.long_form))
             REPLACEMENTS_ABBR.append(abr_tuple)
 
