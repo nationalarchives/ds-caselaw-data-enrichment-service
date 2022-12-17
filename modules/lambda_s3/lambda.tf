@@ -323,7 +323,7 @@ module "lambda-determine-replacements-legislation" {
         "kms:Decrypt",
         "kms:ReEncryptTo"
       ],
-      resources = [module.text_content_bucket.kms_key_arn, module.replacements_bucket.kms_key_arn]
+      resources = [module.text_content_bucket.kms_key_arn, module.replacements_bucket.kms_key_arn, module.tracking_bucket.kms_key_arn]
     },
     sqs_get_message = {
       effect = "Allow",
