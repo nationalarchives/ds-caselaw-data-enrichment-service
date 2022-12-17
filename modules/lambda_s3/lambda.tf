@@ -400,7 +400,7 @@ module "lambda-determine-replacements-legislation" {
 
     REPLACEMENTS_BUCKET = "${module.replacements_bucket.s3_bucket_id}"
     SOURCE_BUCKET       = "${module.text_content_bucket.s3_bucket_arn}"
-    ENRICHMENT_BUCKET = "${module.tracking_bucket.s3_bucket_arn}"
+    ENRICHMENT_BUCKET = "${module.tracking_bucket.s3_bucket_id}"
   }
 
   tags = local.tags
