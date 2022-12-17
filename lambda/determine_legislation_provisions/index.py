@@ -52,6 +52,7 @@ def add_timestamp_and_engine_version(file_data):
     enrichment_version.string = "0.1.0"
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
     soup.proprietary.hash.insert_after(enrichment_version)
+    print(type(soup))
     # soup = soup.prettify()
     return soup
 
@@ -80,12 +81,10 @@ def process_event(sqs_rec):
         soup = BeautifulSoup(file_content, "xml")
         output_file_data = provision_replacement(soup, resolved_refs)
         timestamp_added = add_timestamp_and_engine_version(output_file_data)
-        print('Soup:', timestamp_added)
-        upload_contents(source_key, timestamp_added)
+        upload_contents(source_key, str(timestamp_added))
     else:
         timestamp_added = add_timestamp_and_engine_version(file_content)
-        print('Soup:', timestamp_added)
-        upload_contents(source_key, timestamp_added)
+        upload_contents(source_key, str(timestamp_added))
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET")
