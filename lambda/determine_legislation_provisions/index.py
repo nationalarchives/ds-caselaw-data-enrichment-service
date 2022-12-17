@@ -80,9 +80,11 @@ def process_event(sqs_rec):
         soup = BeautifulSoup(file_content, "xml")
         output_file_data = provision_replacement(soup, resolved_refs)
         timestamp_added = add_timestamp_and_engine_version(output_file_data)
+        print('Soup:', soup)
         upload_contents(source_key, timestamp_added)
     else:
         timestamp_added = add_timestamp_and_engine_version(file_content)
+        print('Soup:', soup)
         upload_contents(source_key, timestamp_added)
 
 
