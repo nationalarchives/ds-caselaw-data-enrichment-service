@@ -67,6 +67,8 @@ module "lambda-extract-judgement-contents" {
     DEST_BUCKET_NAME = "${module.text_content_bucket.s3_bucket_id}"
   }
 
+  cloudwatch_logs_retention_in_days = 365
+
   tags = local.tags
 }
 
@@ -277,6 +279,8 @@ module "lambda-determine-replacements-caselaw" {
     ENRICHMENT_BUCKET = "${module.tracking_bucket.s3_bucket_id}"
   }
 
+  cloudwatch_logs_retention_in_days = 365
+
   tags = local.tags
 }
 
@@ -404,6 +408,8 @@ module "lambda-determine-replacements-legislation" {
     ENRICHMENT_BUCKET = "${module.tracking_bucket.s3_bucket_id}"
   }
 
+  cloudwatch_logs_retention_in_days = 365
+
   tags = local.tags
 }
 
@@ -514,6 +520,8 @@ module "lambda-determine-replacements-abbreviations" {
     SOURCE_BUCKET       = "${module.text_content_bucket.s3_bucket_arn}"
   }
 
+  cloudwatch_logs_retention_in_days = 365
+
   tags = local.tags
 }
 
@@ -607,6 +615,8 @@ module "lambda-determine-legislation-provisions" {
     DEST_BUCKET = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
   }
 
+  cloudwatch_logs_retention_in_days = 365
+
   tags = local.tags
 }
 
@@ -699,6 +709,8 @@ module "lambda-determine-oblique-references" {
     DEST_BUCKET = "${module.xml_second_phase_enriched_bucket.s3_bucket_id}"
   }
 
+  cloudwatch_logs_retention_in_days = 365
+
   tags = local.tags
 }
 
@@ -785,6 +797,8 @@ module "lambda-make-replacements" {
     REPLACEMENTS_BUCKET = "${module.replacements_bucket.s3_bucket_id}"
     SOURCE_BUCKET_NAME  = "${module.xml_original_bucket.s3_bucket_id}"
   }
+
+  cloudwatch_logs_retention_in_days = 365
 
   tags = local.tags
 
@@ -943,6 +957,8 @@ module "lambda-update-legislation-table" {
     SPARQL_PASSWORD        = aws_secretsmanager_secret_version.sparql_password.secret_string
   }
 
+  cloudwatch_logs_retention_in_days = 365
+
   tags = local.tags
 
 }
@@ -1065,6 +1081,8 @@ module "lambda-update-rules-processor" {
     SPARQL_PASSWORD = ""
   }
 
+  cloudwatch_logs_retention_in_days = 365
+
   tags = local.tags
 
 }
@@ -1169,6 +1187,8 @@ module "lambda-validate-replacements" {
     VALIDATE_USING_SCHEMA = "False"
 
   }
+
+  cloudwatch_logs_retention_in_days = 365
 
   tags = local.tags
 
@@ -1332,6 +1352,8 @@ module "lambda-fetch-xml" {
     DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
   }
 
+  cloudwatch_logs_retention_in_days = 365
+
   tags = local.tags
 
 }
@@ -1438,6 +1460,8 @@ module "lambda-push-enriched-xml" {
   environment_variables = {
     SOURCE_BUCKET = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
   }
+
+  cloudwatch_logs_retention_in_days = 365
 
   tags = local.tags
 
