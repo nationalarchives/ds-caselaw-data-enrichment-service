@@ -133,7 +133,6 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 def handler(event, context):
     LOGGER.info("fetch-xml")
     LOGGER.info(DEST_BUCKET)
-    LOGGER.info(API_USERNAME)
     try:
         LOGGER.info("SQS EVENT: %s", event)
         for sqs_rec in event["Records"]:

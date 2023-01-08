@@ -1250,7 +1250,7 @@ data "aws_secretsmanager_secret_version" "API_username_credentials" {
 }
 
 data "aws_secretsmanager_secret" "API_password" {
-   name = "${local.name}-API-username-${local.environment}"
+   name = "${local.name}-API-password-${local.environment}"
 }
 
 data "aws_secretsmanager_secret_version" "API_password_credentials" {
