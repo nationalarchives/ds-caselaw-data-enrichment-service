@@ -65,10 +65,12 @@ def check_lock_judgment_urllib(query, username, pw):
 
 def read_message(message):
     message_read = json.loads(message)
-    status = message_read['status']
-    query = message_read['query']
+    print(type(message_read))
+    print(message_read)
+    # status = message_read['status']
+    # query = message_read['query']
 
-    return status, query
+    # return status, query
 
 def upload_contents(source_key, xml_content):
     filename = source_key + ".xml"
