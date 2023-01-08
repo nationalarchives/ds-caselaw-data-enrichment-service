@@ -132,7 +132,7 @@ def process_event(sqs_rec):
     )
     LOGGER.debug("uploaded replacements to %s", uploaded_key)
     push_contents(source_bucket, source_key)
-    enrichment_tracking(ENRICHMENT_BUCKET, "enrichment_tracking.csv")
+    # enrichment_tracking(ENRICHMENT_BUCKET, "enrichment_tracking.csv")
     LOGGER.debug("message sent on queue")
 
 

@@ -1257,17 +1257,6 @@ data "aws_secretsmanager_secret_version" "API_password_credentials" {
   secret_id = data.aws_secretsmanager_secret.API_password.id
 }
 
-# resource "random_password" "API_password" {
-#   length           = 16
-#   special          = true
-#   override_special = "!#$%&*()-_=+[]{}<>:?"
-# }
-
-# resource "aws_secretsmanager_secret_version" "API_password" {
-#   secret_id     = aws_secretsmanager_secret.API_password.id
-#   secret_string = random_password.API_password.result
-# }
-
 module "lambda-fetch-xml" {
   source  = "terraform-aws-modules/lambda/aws"
   version = ">=2.0.0,<3.0.0"

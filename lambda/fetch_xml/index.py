@@ -36,8 +36,8 @@ def fetch_judgment_urllib(query, username, pw):
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("GET", url, headers=headers)
-    print(r.status)
-    print(r.data)
+    print("Fetch judgment status:", r.status)
+    print("Fetch judgment data:", r.data)
     return r.data.decode()
 
 
@@ -46,9 +46,8 @@ def lock_judgment_urllib(query, username, pw):
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("PUT", url, headers=headers)
-    print(r.status)
-    print(r.data)
-    return r.data.decode()
+    print("Lock judgment API status:", r.status)
+    # return r.data.decode()
 
 
 def check_lock_judgment_urllib(query, username, pw):
@@ -56,13 +55,13 @@ def check_lock_judgment_urllib(query, username, pw):
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("GET", url, headers=headers)
-    print(r.status)
-    print(r.data)
-    return r.data.decode()
-
+    print("Check lock status:", r.status)
+    print("Check lock data:", r.data.decode())
+    # return r.data.decode()
 
 ############################################
-
+# OTHER FUNCTIONS
+############################################
 
 def upload_contents(source_key, xml_content):
     filename = source_key + ".xml"
@@ -93,6 +92,9 @@ def process_event(sqs_rec):
     else:
         print('Judgment not published.')
 
+############################################
+# LAMBDA HANDLER
+############################################
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 API_USERNAME = validate_env_variable("API_USERNAME")
@@ -100,8 +102,8 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 
 def handler(event, context):
-    LOGGER.info("fetch-xml")
-    LOGGER.info(DEST_BUCKET)
+    LOGGER.info("Lambda to fetch XML judgment via API")
+    LOGGER.info("Destination bucket for XML judgment", DEST_BUCKET)
     try:
         LOGGER.info("SQS EVENT: %s", event)
         for sqs_rec in event["Records"]:
