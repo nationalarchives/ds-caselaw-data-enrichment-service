@@ -92,6 +92,10 @@ jobs:
           cp oblique_references/requirements.txt lambda/determine_oblique_references/
           mkdir lambda/determine_oblique_references/replacer
           cp -r replacer/*.py lambda/determine_oblique_references/replacer/
+          mkdir lambda/extract_judgement_contents/utils
+          cp -r utils/*.py lambda/extract_judgement_contents/utils/
+          mkdir -p lambda/make_replacements/replacer
+          cp -r replacer/*.py lambda/make_replacements/replacer/
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2.0.2
@@ -110,14 +114,14 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-staging
-          terraform plan -no-color -var "app_env=dev"
+          terraform plan -no-color -var "app_env=staging"
 
       - name: Terraform Apply
         run: |
           set +e
           set +o pipefail
           terraform workspace select tna-staging
-          terraform apply --auto-approve -no-color -var "app_env=dev"
+          terraform apply --auto-approve -no-color -var "app_env=staging"
 
       # Pushing images to ECR last
       - name: Build Docker Images For Lambda
@@ -125,9 +129,13 @@ jobs:
           set +e
           set +o pipefail
           cd "lambda/determine_replacements_caselaw"
+          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
           docker buildx build --load -t tna-s3-tna-ecr-repository-staging .
+          echo "finished buildx"
           docker tag tna-s3-tna-ecr-repository-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
+          echo "finished docker tag"
           docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-staging:latest
+          echo "finished pushing docker image"
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/determine_replacements_legislation"
