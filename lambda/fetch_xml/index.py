@@ -26,6 +26,7 @@ def validate_env_variable(env_var_name):
 
     return env_variable
 
+
 ############################################
 # - API FUNCTIONS
 ############################################
@@ -59,20 +60,23 @@ def check_lock_judgment_urllib(query, username, pw):
     print("Check lock data:", r.data.decode())
     # return r.data.decode()
 
+
 ############################################
 # OTHER FUNCTIONS
 ############################################
 
+
 def read_message(message):
     json_body = json.dumps(message)
     json_message = json.loads(json_body)
-    message = json_message['Message']
+    message = json_message["Message"]
     message_read = json.loads(message)
     print(message_read)
-    status = message_read['status']
-    query = message_read['uri_reference']
+    status = message_read["status"]
+    query = message_read["uri_reference"]
 
     return status, query
+
 
 def upload_contents(source_key, xml_content):
     filename = source_key + ".xml"
@@ -83,14 +87,14 @@ def upload_contents(source_key, xml_content):
 
 
 def process_event(sqs_rec):
-    message = json.loads(sqs_rec['body'])
+    message = json.loads(sqs_rec["body"])
     status, query = read_message(message)
-    print('Judgment status: ', status)
-    print('Judgment query: ', query)
-    if status=='published':
+    print("Judgment status:", status)
+    print("Judgment query:", query)
+    if status=="published":
         print("Judgment:", query)
         source_key = query.replace("/", "-")
-        print('Source key:', source_key)
+        print("Source key:", source_key)
 
         # fetch the xml content
         xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
@@ -99,7 +103,8 @@ def process_event(sqs_rec):
         lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
         check_lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
     else:
-        print('Judgment not published.')
+        print("Judgment not published.")
+
 
 ############################################
 # LAMBDA HANDLER

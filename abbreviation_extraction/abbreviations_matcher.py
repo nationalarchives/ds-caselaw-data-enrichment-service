@@ -62,7 +62,7 @@ def abb_pipeline(judgment_content_text, nlp):
     # new chunking mechanism
     docobj = nlp(judgment_content_text)
     judgment_chunks = chunking_mechanism(docobj, 5, 79, 83)
-    chunk_strings  = [chunk.text for chunk in judgment_chunks]
+    chunk_strings = [chunk.text for chunk in judgment_chunks]
 
     for chunk in chunk_strings:
         # chunk = " ".join(chunk)
