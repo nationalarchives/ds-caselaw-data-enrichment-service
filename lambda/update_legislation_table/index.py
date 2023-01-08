@@ -145,7 +145,7 @@ def handler(event, context):
 
     try:
         engine = create_engine(
-            f"postgresql://{sparql_username}:{sparql_password}@{host}:{port}/{database_name}"
+            f"postgresql://{username}:{aws_secret_name}@{host}:{port}/{database_name}"
         )
         LOGGER.info("Engine created")
 
