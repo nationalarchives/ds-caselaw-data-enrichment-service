@@ -64,7 +64,8 @@ def check_lock_judgment_urllib(query, username, pw):
 ############################################
 
 def read_message(message):
-    message_read = json.loads(message)
+    message_read = message['Message']
+    # message_read = json.loads(message)
     print(type(message_read))
     print(message_read)
     # status = message_read['status']
