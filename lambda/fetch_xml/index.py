@@ -91,7 +91,7 @@ def process_event(sqs_rec):
     status, query = read_message(message)
     print("Judgment status:", status)
     print("Judgment query:", query)
-    if status=="published":
+    if status == "published":
         print("Judgment:", query)
         source_key = query.replace("/", "-")
         print("Source key:", source_key)
