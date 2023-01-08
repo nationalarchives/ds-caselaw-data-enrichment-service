@@ -139,7 +139,7 @@ def handler(event, context):
         for sqs_rec in event["Records"]:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
-            process_event(sqs_rec)
+            # process_event(sqs_rec)
 
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)
