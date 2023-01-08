@@ -103,7 +103,7 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 def handler(event, context):
     LOGGER.info("Lambda to fetch XML judgment via API")
-    LOGGER.info("Destination bucket for XML judgment", DEST_BUCKET)
+    LOGGER.info("Destination bucket for XML judgment: %s", DEST_BUCKET)
     try:
         LOGGER.info("SQS EVENT: %s", event)
         for sqs_rec in event["Records"]:
