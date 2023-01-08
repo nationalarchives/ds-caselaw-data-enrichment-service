@@ -27,39 +27,6 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 
-# def check_lock_status(query, username, pw):
-#     response = requests.get(
-#                 f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
-#                 auth=HTTPBasicAuth(username, pw))
-#     lock_status = json.loads(response.content)
-#     return lock_status
-
-# def fetch_judgment(query, username, pw):
-#     # query = query.replace('/', '%2F')
-#     headers={'User-Agent': 'Custom'}
-#     request_string = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
-#     print(request_string)
-#     response = requests.get(
-#                 f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
-#                 auth=HTTPBasicAuth(username, pw), headers=headers)
-#     print(response)
-#     judgment = response.content.decode('utf-8')
-#     # judgment = json.loads(response.content)
-#     return judgment
-
-# def fetch_and_lock_judgment(query, username, pw):
-#     response = requests.put(
-#                 f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
-#                 auth=HTTPBasicAuth(username, pw))
-#     judgment = response.content.decode('utf-8')
-#     return judgment
-
-# def release_lock(query, username, pw):
-#     response = requests.delete(
-#                 f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}",
-#                 auth=HTTPBasicAuth(username, pw))
-#     print(response.content)
-
 ############################################
 # - API FUNCTIONS
 ############################################
@@ -70,8 +37,8 @@ def fetch_judgment_urllib(query, username, pw):
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("GET", url, headers=headers)
-    print(r.status)
-    print(r.data)
+    print("Fetch judgment status:", r.status)
+    print("Fetch judgment data:", r.data)
     return r.data.decode()
 
 
@@ -80,9 +47,8 @@ def lock_judgment_urllib(query, username, pw):
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("PUT", url, headers=headers)
-    print(r.status)
-    print(r.data)
-    return r.data.decode()
+    print("Lock judgment API status:", r.status)
+    # return r.data.decode()
 
 
 def check_lock_judgment_urllib(query, username, pw):
@@ -90,12 +56,26 @@ def check_lock_judgment_urllib(query, username, pw):
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("GET", url, headers=headers)
-    print(r.status)
-    print(r.data)
-    return r.data.decode()
+    print("Check lock status:", r.status)
+    print("Check lock data:", r.data.decode())
+    # return r.data.decode()
 
 
 ############################################
+# OTHER FUNCTIONS
+############################################
+
+
+def read_message(message):
+    json_body = json.dumps(message)
+    json_message = json.loads(json_body)
+    message = json_message["Message"]
+    message_read = json.loads(message)
+    print(message_read)
+    status = message_read["status"]
+    query = message_read["uri_reference"]
+
+    return status, query
 
 
 def upload_contents(source_key, xml_content):
@@ -107,23 +87,28 @@ def upload_contents(source_key, xml_content):
 
 
 def process_event(sqs_rec):
-    # message = json.loads(sqs_rec['body'])
-    message = sqs_rec["body"]
-    LOGGER.info("EVENT: %s", message)
-    status = message["status"]
-    print(status)
-    query = message["uri_reference"]
-    print("Query:", query)
-    source_key = query.replace("/", "-")
-    print(source_key)
+    message = json.loads(sqs_rec["body"])
+    status, query = read_message(message)
+    print("Judgment status:", status)
+    print("Judgment query:", query)
+    if status=="published":
+        print("Judgment:", query)
+        source_key = query.replace("/", "-")
+        print("Source key:", source_key)
 
-    # fetch the xml content
-    xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
-    # print(xml_content)
-    upload_contents(source_key, xml_content)
-    lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
-    check_lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+        # fetch the xml content
+        xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+        # print(xml_content)
+        upload_contents(source_key, xml_content)
+        lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+        check_lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    else:
+        print("Judgment not published.")
 
+
+############################################
+# LAMBDA HANDLER
+############################################
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 API_USERNAME = validate_env_variable("API_USERNAME")
@@ -131,9 +116,8 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 
 def handler(event, context):
-    LOGGER.info("fetch-xml")
-    LOGGER.info(DEST_BUCKET)
-    LOGGER.info(API_USERNAME)
+    LOGGER.info("Lambda to fetch XML judgment via API")
+    LOGGER.info("Destination bucket for XML judgment: %s", DEST_BUCKET)
     try:
         LOGGER.info("SQS EVENT: %s", event)
         for sqs_rec in event["Records"]:

@@ -50,9 +50,9 @@ def add_timestamp_and_engine_version(file_data):
     )
     enrichment_version = soup.new_tag("uk:tna-enrichment-engine")
     enrichment_version.string = "0.1.0"
-    soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
-    soup.proprietary.parser.insert_after(enrichment_version)
-    soup = soup.prettify()
+    soup.FRBRManifestation.append(enriched_date)
+    soup.proprietary.append(enrichment_version)
+    # print(type(soup))
     return soup
 
 
@@ -71,7 +71,7 @@ def process_event(sqs_rec):
         .read()
         .decode("utf-8")
     )
-    # LOGGER.info(file_content)
+    LOGGER.info(file_content)
 
     resolved_refs = provisions_pipeline(file_content)
     print(resolved_refs)
@@ -80,10 +80,10 @@ def process_event(sqs_rec):
         soup = BeautifulSoup(file_content, "xml")
         output_file_data = provision_replacement(soup, resolved_refs)
         timestamp_added = add_timestamp_and_engine_version(output_file_data)
-        upload_contents(source_key, timestamp_added)
+        upload_contents(source_key, str(timestamp_added))
     else:
         timestamp_added = add_timestamp_and_engine_version(file_content)
-        upload_contents(source_key, timestamp_added)
+        upload_contents(source_key, str(timestamp_added))
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET")
