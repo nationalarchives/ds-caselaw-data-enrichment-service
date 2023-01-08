@@ -64,9 +64,10 @@ def check_lock_judgment_urllib(query, username, pw):
 ############################################
 
 def read_message(message):
-    message_read = message['Message']
-    # message_read = json.loads(message)
-    print(type(message_read))
+    print(message)
+    # message_read = message['Message']
+    message_read = json.loads(message)
+    # print(type(message_read))
     print(message_read)
     # status = message_read['status']
     # query = message_read['query']
@@ -84,7 +85,7 @@ def upload_contents(source_key, xml_content):
 def process_event(sqs_rec):
     # message = json.loads(sqs_rec['body'])
     message = sqs_rec["body"]
-    LOGGER.info("EVENT: %s", message)
+    # LOGGER.info("EVENT: %s", message)
     status, query = read_message(message)
     print('Judgment status: ', status)
     if status=='published':
