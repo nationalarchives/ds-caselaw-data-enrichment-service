@@ -1,0 +1,192 @@
+
+@prefix : <http://caselaw.nationalarchives.gov.uk/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix caselaw: <http://caselaw.nationalarchives.gov.uk/> .
+@base <http://caselaw.nationalarchives.gov.uk/> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://caselaw.nationalarchives.gov.uk/AdministrativeCourt
+caselaw:AdministrativeCourt rdf:type owl:NamedIndividual ,
+                                     <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Administrative_Appeals_Chamber
+caselaw:Administrative_Appeals_Chamber rdf:type owl:NamedIndividual ,
+                                                <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Chancery_Division
+caselaw:Chancery_Division rdf:type owl:NamedIndividual ,
+                                   <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/CommercialCourt
+caselaw:CommercialCourt rdf:type owl:NamedIndividual ,
+                                 <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Court_Martial_Appeal_Court
+caselaw:Court_Martial_Appeal_Court rdf:type owl:NamedIndividual ,
+                                            <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Court_of_Appeal
+caselaw:Court_of_Appeal rdf:type owl:NamedIndividual ,
+                                 <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                        caselaw:hasDivision <http://caselaw.nationalarchives.gov.uk/Court_of_Appeal_(Civil_Division)> ,
+                                            <http://caselaw.nationalarchives.gov.uk/Court_of_Appeal_(Criminal_Division)> ;
+                        caselaw:hearsAppealsFrom caselaw:High_Court .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Court_of_Protection
+caselaw:Court_of_Protection rdf:type owl:NamedIndividual ,
+                                     <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Employment_Appeal_Tribunal
+caselaw:Employment_Appeal_Tribunal rdf:type owl:NamedIndividual ,
+                                            <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                                   caselaw:hearsAppealsFrom caselaw:Employment_Tribunal .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Employment_Tribunal
+caselaw:Employment_Tribunal rdf:type owl:NamedIndividual ,
+                                     <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/European_Court_of_Human_Rights
+caselaw:European_Court_of_Human_Rights rdf:type owl:NamedIndividual ,
+                                                <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/European_Court_of_Justice
+caselaw:European_Court_of_Justice rdf:type owl:NamedIndividual ,
+                                           <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Family_Division
+caselaw:Family_Division rdf:type owl:NamedIndividual ,
+                                 <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/First_Tier_Tribunal
+caselaw:First_Tier_Tribunal rdf:type owl:NamedIndividual ,
+                                     <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                            caselaw:hasDivision caselaw:General_Regulatory_Chamber ,
+                                                caselaw:Tax_Chamber .
+
+
+###  http://caselaw.nationalarchives.gov.uk/GeneralCourt
+caselaw:GeneralCourt rdf:type owl:NamedIndividual ,
+                              <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/General_Regulatory_Chamber
+caselaw:General_Regulatory_Chamber rdf:type owl:NamedIndividual ,
+                                            <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/High_Court
+caselaw:High_Court rdf:type owl:NamedIndividual ,
+                            <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                   caselaw:hasDivision caselaw:Chancery_Division ,
+                                       caselaw:Court_of_Protection ,
+                                       caselaw:Family_Division ,
+                                       <http://caselaw.nationalarchives.gov.uk/Queen's_Bench_Division> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Immigration_and_Asylum_Chamber
+caselaw:Immigration_and_Asylum_Chamber rdf:type owl:NamedIndividual ,
+                                                <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Judicial_Comittee_of_the_House_of_Lords
+caselaw:Judicial_Comittee_of_the_House_of_Lords rdf:type owl:NamedIndividual ,
+                                                         <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                                                caselaw:replacedBy caselaw:Supreme_Court .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Lands_Chamber
+caselaw:Lands_Chamber rdf:type owl:NamedIndividual ,
+                               <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Privy_Council
+caselaw:Privy_Council 
+    rdf:type owl:NamedIndividual , <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+    :hasEpoch caselaw:Privy_Council_pre_1937 ;
+    :hasEpoch caselaw:Privy_Council_1937_1978 ;
+    :territorialJurisdiction <https://www.wikidata.org/wiki/Q244>  # current jurisdictions of the court are attached directly to the main entity
+    .
+
+# both Canada and Barbados were territorial jurisdictions pre 1937 - which is expressed as object
+# relationships originating from the Epoch
+caselaw:Privy_Council_pre_1937
+    rdf:type owl:NamedIndividual , <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBodyEpoch> ;    
+    :territorialJurisdiction <https://www.wikidata.org/wiki/Q16>, <https://www.wikidata.org/wiki/Q244> .
+
+###  http://caselaw.nationalarchives.gov.uk/Supreme_Court
+caselaw:Supreme_Court rdf:type owl:NamedIndividual ,
+                               <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                      caselaw:hearsAppealsFrom caselaw:Court_of_Appeal .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Tax_Chamber
+caselaw:Tax_Chamber rdf:type owl:NamedIndividual ,
+                             <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Tax_and_Chancery_Chamber
+caselaw:Tax_and_Chancery_Chamber rdf:type owl:NamedIndividual ,
+                                          <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Technology_and_Construction_Court
+caselaw:Technology_and_Construction_Court rdf:type owl:NamedIndividual ,
+                                                   <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Upper_Tribunal
+caselaw:Upper_Tribunal rdf:type owl:NamedIndividual ,
+                                <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                       caselaw:hasDivision caselaw:Administrative_Appeals_Chamber ,
+                                           caselaw:Immigration_and_Asylum_Chamber ,
+                                           caselaw:Lands_Chamber ,
+                                           caselaw:Tax_and_Chancery_Chamber ;
+                       caselaw:hearsAppealsFrom caselaw:First_Tier_Tribunal .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Court_of_Appeal_(Civil_Division)
+<http://caselaw.nationalarchives.gov.uk/Court_of_Appeal_(Civil_Division)> rdf:type owl:NamedIndividual ,
+                                                                                   <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                                                                          caselaw:hearsAppealsFrom caselaw:Employment_Appeal_Tribunal .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Court_of_Appeal_(Criminal_Division)
+<http://caselaw.nationalarchives.gov.uk/Court_of_Appeal_(Criminal_Division)> rdf:type owl:NamedIndividual ,
+                                                                                      <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                                                                             caselaw:hasComposition caselaw:Court_Martial_Appeal_Court .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Health,_Education_and_Social_Care_Chamber
+<http://caselaw.nationalarchives.gov.uk/Health,_Education_and_Social_Care_Chamber> rdf:type owl:NamedIndividual ,
+                                                                                            <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> .
+
+
+###  http://caselaw.nationalarchives.gov.uk/Queen's_Bench_Division
+<http://caselaw.nationalarchives.gov.uk/Queen's_Bench_Division> rdf:type owl:NamedIndividual ,
+                                                                         <http://caselaw.nationalarchives.gov.uk/#AdjudicatingBody> ;
+                                                                caselaw:hasDivision caselaw:AdministrativeCourt ,
+                                                                                    caselaw:CommercialCourt ,
+                                                                                    caselaw:GeneralCourt ,
+                                                                                    caselaw:Technology_and_Construction_Court .
+
+
