@@ -145,7 +145,7 @@ def handler(event, context):
 
     try:
         engine = create_engine(
-            f"postgresql://{username}:{aws_secret_name}@{host}:{port}/{database_name}"
+            "postgresql://${0}:${1}@${2}:${3}/${4}".format(username, aws_secret_name, host, port, database_name)
         )
         LOGGER.info("Engine created")
 
