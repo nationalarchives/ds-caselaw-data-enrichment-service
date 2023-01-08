@@ -1241,16 +1241,24 @@ resource "aws_secretsmanager_secret" "API_password" {
   tags = local.tags
 }
 
-resource "random_password" "API_password" {
-  length           = 16
-  special          = true
-  override_special = "!#$%&*()-_=+[]{}<>:?"
+data "aws_secretsmanager_secret" "API_username" {
+   name = "${local.name}-API-username-${local.environment}"
 }
 
-resource "aws_secretsmanager_secret_version" "API_password" {
-  secret_id     = aws_secretsmanager_secret.API_password.id
-  secret_string = random_password.API_password.result
+data "aws_secretsmanager_secret_version" "API_username_credentials" {
+  secret_id = data.aws_secretsmanager_secret.API_username.id
 }
+
+# resource "random_password" "API_password" {
+#   length           = 16
+#   special          = true
+#   override_special = "!#$%&*()-_=+[]{}<>:?"
+# }
+
+# resource "aws_secretsmanager_secret_version" "API_password" {
+#   secret_id     = aws_secretsmanager_secret.API_password.id
+#   secret_string = random_password.API_password.result
+# }
 
 module "lambda-fetch-xml" {
   source  = "terraform-aws-modules/lambda/aws"
@@ -1328,6 +1336,19 @@ module "lambda-fetch-xml" {
         "sqs:GetQueueAttributes"
       ],
       resources = ["${aws_sqs_queue.fetch_xml_queue.arn}"]
+    },
+    secrets_get = {
+      effect = "Allow",
+      actions = [
+        "secretsmanager:GetResourcePolicy",
+        "secretsmanager:GetSecretValue",
+        "secretsmanager:DescribeSecret",
+        "secretsmanager:ListSecretVersionIds"
+      ],
+      resources = [
+        aws_secretsmanager_secret.API_username.arn,
+        aws_secretsmanager_secret.API_password.arn
+      ]
     }
   }
 
@@ -1350,6 +1371,7 @@ module "lambda-fetch-xml" {
 
   environment_variables = {
     DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
+    API_USERNAME = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
   }
 
   cloudwatch_logs_retention_in_days = 365
