@@ -14,7 +14,6 @@ from psycopg2 import Error
 from SPARQLWrapper import CSV, SPARQLWrapper
 from sqlalchemy import create_engine
 
-# import awswrangler.secretsmanager as awssm
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -37,63 +36,40 @@ def validate_env_variable(env_var_name):
 ############################################
 # CLASS HELPERS
 ############################################
-class getLoginSecrets:
-    def get_secret(self, aws_secret_name, aws_region_name):
-        secret_name = aws_secret_name
-        region_name = aws_region_name
 
-        # Create a Secrets Manager client
-        session = boto3.session.Session()
-        client = session.client(service_name="secretsmanager", region_name=region_name)
 
-        # In this sample we only handle the specific exceptions for the 'GetSecretValue' API.
-        # See https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html
-        # We rethrow the exception by default.
+# class getLoginSecrets:
+#     def get_secret(self, aws_secret_name, aws_region_name):
+#         secret_name = aws_secret_name
+#         region_name = aws_region_name
 
-        try:
-            LOGGER.info(" about to get_secret_value_response")
-            get_secret_value_response = client.get_secret_value(SecretId=secret_name)
-            LOGGER.info("got_secret_value_response")
+#         # Create a Secrets Manager client
+#         session = boto3.session.Session()
+#         client = session.client(service_name="secretsmanager", region_name=region_name)
 
-            # Decrypts secret using the associated KMS CMK.
-            # Depending on whether the secret is a string or binary, one of these fields will be populated.
-            if "SecretString" in get_secret_value_response:
-                secret = get_secret_value_response["SecretString"]
-                LOGGER.info("got SecretString")
-            else:
-                LOGGER.info("not SecretString")
-                decoded_binary_secret = base64.b64decode(
-                    get_secret_value_response["SecretBinary"]
-                )
-                secret = decoded_binary_secret
-            LOGGER.info("here")
-            return secret
-        # except ClientError as e:
-        #     if e.response["Error"]["Code"] == "DecryptionFailureException":
-        #         # Secrets Manager can't decrypt the protected secret text using the provided KMS key.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "InternalServiceErrorException":
-        #         # An error occurred on the server side.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "InvalidParameterException":
-        #         # You provided an invalid value for a parameter.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "InvalidRequestException":
-        #         # You provided a parameter value that is not valid for the current state of the resource.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        #     elif e.response["Error"]["Code"] == "ResourceNotFoundException":
-        #         # We can't find the resource that you asked for.
-        #         # Deal with the exception here, and/or rethrow at your discretion.
-        #         raise e
-        # added as the validation exception was not being caught
-        except Exception as exception:
-            LOGGER.error("Exception: %s", exception)
-            raise
-        # else:
+#         try:
+#             LOGGER.info(" about to get_secret_value_response")
+#             get_secret_value_response = client.get_secret_value(SecretId=secret_name)
+#             LOGGER.info("got_secret_value_response")
+
+#             # Decrypts secret using the associated KMS CMK.
+#             # Depending on whether the secret is a string or binary, one of these fields will be populated.
+#             if "SecretString" in get_secret_value_response:
+#                 secret = get_secret_value_response["SecretString"]
+#                 LOGGER.info("got SecretString")
+#             else:
+#                 LOGGER.info("not SecretString")
+#                 decoded_binary_secret = base64.b64decode(
+#                     get_secret_value_response["SecretBinary"]
+#                 )
+#                 secret = decoded_binary_secret
+#             LOGGER.info("here")
+#             return secret
+#         # added as the validation exception was not being caught
+#         except Exception as exception:
+#             LOGGER.error("Exception: %s", exception)
+#             raise
+#         # else:
 
 
 ############################################
@@ -111,8 +87,7 @@ aws_region_name = validate_env_variable("REGION_NAME")
 sparql_username = validate_env_variable("SPARQL_USERNAME")
 sparql_password = validate_env_variable("SPARQL_PASSWORD")
 
-get_secret = getLoginSecrets()
-
+# get_secret = getLoginSecrets()
 
 def get_leg_update(sparql_username, sparql_password, days=7):
     # date = pd.to_datetime(date)
@@ -164,15 +139,15 @@ def get_leg_update(sparql_username, sparql_password, days=7):
 
 
 def handler(event, context):
-    LOGGER.info("update legislation database")
+    LOGGER.info("Lambda to update legislation database")
 
-    password = get_secret.get_secret(aws_secret_name, aws_region_name)
+    # password = get_secret.get_secret(aws_secret_name, aws_region_name)
 
     try:
         engine = create_engine(
-            f"postgresql://{username}:{password}@{host}:{port}/{database_name}"
+            f"postgresql://{sparql_username}:{sparql_password}@{host}:{port}/{database_name}"
         )
-        LOGGER.info("engine created")
+        LOGGER.info("Engine created")
 
         print("Trigger Date: ", event["trigger_date"])
 
@@ -188,7 +163,7 @@ def handler(event, context):
                 df.to_sql("ukpga_lookup", engine, if_exists="append", index=False)
 
         engine.dispose()
-        LOGGER.info("legislation updated")
+        LOGGER.info("Legislation updated")
 
     except (Exception, Error) as error:
         LOGGER.error("Error while connecting to PostgreSQL", error)

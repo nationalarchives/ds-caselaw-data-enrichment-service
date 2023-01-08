@@ -906,15 +906,20 @@ resource "aws_secretsmanager_secret" "sparql_password" {
   tags = local.tags
 }
 
-resource "random_password" "sparql_password" {
-  length           = 16
-  special          = true
-  override_special = "!#$%&*()-_=+[]{}<>:?"
+data "aws_secretsmanager_secret" "sparql_username" {
+   name = "${local.name}-sparql-username-${local.environment}"
 }
 
-resource "aws_secretsmanager_secret_version" "sparql_password" {
-  secret_id     = aws_secretsmanager_secret.sparql_password.id
-  secret_string = random_password.sparql_password.result
+data "aws_secretsmanager_secret_version" "sparql_username_credentials" {
+  secret_id = data.aws_secretsmanager_secret.sparql_username.id
+}
+
+data "aws_secretsmanager_secret" "sparql_password" {
+   name = "${local.name}-sparql-password-${local.environment}"
+}
+
+data "aws_secretsmanager_secret_version" "sparql_password_credentials" {
+  secret_id = data.aws_secretsmanager_secret.sparql_password.id
 }
 
 module "lambda-update-legislation-table" {
@@ -988,8 +993,8 @@ module "lambda-update-legislation-table" {
     SECRET_PASSWORD_LOOKUP = var.postgress_master_password_secret_id
     REGION_NAME            = local.region
     HOSTNAME               = var.postgress_hostname
-    SPARQL_USERNAME        = aws_secretsmanager_secret.sparql_username.arn
-    SPARQL_PASSWORD        = aws_secretsmanager_secret_version.sparql_password.secret_string
+    SPARQL_USERNAME        = data.aws_secretsmanager_secret_version.sparql_username_credentials.secret_string
+    SPARQL_PASSWORD        = data.aws_secretsmanager_secret_version.sparql_password_credentials.secret_string
   }
 
   cloudwatch_logs_retention_in_days = 365
