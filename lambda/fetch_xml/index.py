@@ -83,24 +83,26 @@ def upload_contents(source_key, xml_content):
 
 
 def process_event(sqs_rec):
-    # message = json.loads(sqs_rec['body'])
-    message = sqs_rec["body"]
+    message = json.loads(sqs_rec['body'])
+    # message = sqs_rec["body"]
     # LOGGER.info("EVENT: %s", message)
-    status, query = read_message(message)
-    print('Judgment status: ', status)
-    if status=='published':
-        print("Judgment:", query)
-        source_key = query.replace("/", "-")
-        print('Source key:', source_key)
+    # status, query = read_message(message)
+    print(message)
+    print(type(message))
+    # print('Judgment status: ', status)
+    # if status=='published':
+    #     print("Judgment:", query)
+    #     source_key = query.replace("/", "-")
+    #     print('Source key:', source_key)
 
-        # fetch the xml content
-        xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
-        # print(xml_content)
-        upload_contents(source_key, xml_content)
-        lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
-        check_lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
-    else:
-        print('Judgment not published.')
+    #     # fetch the xml content
+    #     xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    #     # print(xml_content)
+    #     upload_contents(source_key, xml_content)
+    #     lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    #     check_lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+    # else:
+    #     print('Judgment not published.')
 
 ############################################
 # LAMBDA HANDLER
