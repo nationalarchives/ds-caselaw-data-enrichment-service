@@ -989,7 +989,7 @@ module "lambda-update-legislation-table" {
     TABLE_NAME             = "rules"
     USERNAME               = "root"
     PORT                   = "5432"
-    SECRET_PASSWORD_LOOKUP = var.postgress_master_password_secret_id
+    SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME            = local.region
     HOSTNAME               = var.postgress_hostname
     SPARQL_USERNAME        = data.aws_secretsmanager_secret_version.sparql_username_credentials.secret_string
