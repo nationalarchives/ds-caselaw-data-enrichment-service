@@ -158,7 +158,7 @@ Generates the <ref> tag for a section in the judgment.
 def create_section_ref_tag(section_dict, match):
     canonical = section_dict["section_canonical"]
     href = section_dict["section_href"]
-    section_ref = f'<ref uk:type="legislation" href="{href}" uk:canonical="{canonical}">{match.strip()}</ref>'
+    section_ref = f'<ref uk:type="legislation" href="{href}" uk:canonical="{canonical}" uk:origin="TNA">{match.strip()}</ref>'
     return section_ref
 
 

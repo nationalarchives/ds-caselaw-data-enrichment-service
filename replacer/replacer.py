@@ -16,7 +16,7 @@ def replacer_caselaw(file_data, replacement):
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
-    replacement_string = f'<ref uk:type="case" href="{replacement[3]}" uk:isNeutral="{str(replacement[4]).lower()}" uk:canonical="{replacement[1]}" uk:year="{replacement[2]}">{replacement[0]}</ref>'
+    replacement_string = f'<ref uk:type="case" href="{replacement[3]}" uk:isNeutral="{str(replacement[4]).lower()}" uk:canonical="{replacement[1]}" uk:year="{replacement[2]}" uk:origin="TNA">{replacement[0]}</ref>'
     file_data = str(file_data).replace(replacement[0], replacement_string)
     return file_data
 
@@ -28,7 +28,7 @@ def replacer_leg(file_data, replacement):
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
-    replacement_string = f'<ref uk:type="legislation" href="{replacement[1]}" uk:canonical="{replacement[2]}">{replacement[0]}</ref>'
+    replacement_string = f'<ref uk:type="legislation" href="{replacement[1]}" uk:canonical="{replacement[2]}" uk:origin="TNA">{replacement[0]}</ref>'
     file_data = str(file_data).replace(replacement[0], replacement_string)
     return file_data
 
@@ -40,7 +40,7 @@ def replacer_abbr(file_data, replacement):
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
-    replacement_string = f'<abbr title="{replacement[1]}">{replacement[0]}</abbr>'
+    replacement_string = f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
     file_data = str(file_data).replace(str(replacement[0]), replacement_string)
     return file_data
 

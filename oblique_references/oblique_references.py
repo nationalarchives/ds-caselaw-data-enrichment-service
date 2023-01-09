@@ -111,7 +111,7 @@ def create_section_ref_tag(replacement_dict, match):
     """
     canonical = replacement_dict["canonical"]
     href = replacement_dict["href"]
-    oblique_ref = f'<ref href="{href}" uk:canonical="{canonical}" uk:type="legislation">{match.strip()}</ref>'
+    oblique_ref = f'<ref href="{href}" uk:canonical="{canonical}" uk:type="legislation" uk:origin="TNA">{match.strip()}</ref>'
 
     return oblique_ref
 
