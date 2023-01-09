@@ -1,4 +1,4 @@
-@prefix : <http://caselaw.nationalarchives.gov.uk/> .
+@prefix : <http://caselaw.nationalarchives.gov.uk/def/caselaw/> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -9,11 +9,11 @@
 @prefix rdaa: <http://rdaregistry.info/Elements/a/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix schema: <https://schema.org/> .
-@prefix caselaw: <http://caselaw.nationalarchives.gov.uk/> .
+@prefix caselaw: <http://caselaw.nationalarchives.gov.uk/def/caselaw/> .
 @prefix legislation: <http://www.legislation.gov.uk/def/legislation/> .
-@base <http://caselaw.nationalarchives.gov.uk/> .
+@base <http://caselaw.nationalarchives.gov.uk/def/caselaw/> .
 
-<http://caselaw.nationalarchives.gov.uk/> rdf:type owl:Ontology .
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/> rdf:type owl:Ontology .
 
 #################################################################
 #    Datatypes
@@ -32,7 +32,7 @@ xsd:gYear rdf:type rdfs:Datatype ;
 #    Object Properties
 #################################################################
 
-###  http://caselaw.nationalarchives.gov.uk/appealedJudgment
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/appealedJudgment
 caselaw:appealedJudgment rdf:type owl:ObjectProperty ;
                          owl:inverseOf caselaw:appealedTo ;
                          rdfs:domain caselaw:Judgment ;
@@ -40,28 +40,28 @@ caselaw:appealedJudgment rdf:type owl:ObjectProperty ;
                          rdfs:comment "The originating judgment for this case." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/appealedTo
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/appealedTo
 caselaw:appealedTo rdf:type owl:ObjectProperty ;
                    rdfs:domain caselaw:Judgment ;
                    rdfs:range caselaw:Judgment ;
                    rdfs:comment "A subsequent judgment from a higher court hearing an appeal against this judgment." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/appellant
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/appellant
 caselaw:appellant rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf caselaw:caseParty ;
                   rdfs:domain caselaw:Judgment ;
                   rdfs:range caselaw:CaseParty .
 
 
-###  http://caselaw.nationalarchives.gov.uk/caseParty
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/caseParty
 caselaw:caseParty rdf:type owl:ObjectProperty ;
                   rdfs:domain caselaw:Judgment ;
                   rdfs:range caselaw:CaseParty ;
                   rdfs:comment "A person or organisation that is party to a legal case." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/citedIn
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/citedIn
 caselaw:citedIn rdf:type owl:ObjectProperty ;
                 owl:inverseOf caselaw:cites ;
                 rdfs:domain caselaw:Judgment ;
@@ -69,7 +69,7 @@ caselaw:citedIn rdf:type owl:ObjectProperty ;
                 rdfs:comment "Subsequent judgments that refer to this judgments." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/cites
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/cites
 caselaw:cites rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf caselaw:mentions ;
               rdfs:domain caselaw:Judgment ;
@@ -77,41 +77,41 @@ caselaw:cites rdf:type owl:ObjectProperty ;
               rdfs:comment "Sources of law (e.g. case law, legislation or secondary sources) cited in this case" .
 
 
-###  http://caselaw.nationalarchives.gov.uk/claimant
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/claimant
 caselaw:claimant rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf caselaw:caseParty ;
                  rdfs:domain caselaw:CaseParty ;
                  rdfs:range caselaw:Judgment .
 
 
-###  http://caselaw.nationalarchives.gov.uk/compositionOf
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/compositionOf
 caselaw:compositionOf rdf:type owl:ObjectProperty ;
                       owl:inverseOf caselaw:hasComposition ;
                       rdfs:domain caselaw:AdjudicatingBody ;
                       rdfs:range caselaw:AdjudicatingBody .
 
 
-###  http://caselaw.nationalarchives.gov.uk/counsel
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/counsel
 caselaw:counsel rdf:type owl:ObjectProperty ;
                 rdfs:domain caselaw:CaseParty ;
                 rdfs:range caselaw:Solicitor .
 
 
-###  http://caselaw.nationalarchives.gov.uk/defendant
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/defendant
 caselaw:defendant rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf caselaw:caseParty ;
                   rdfs:domain caselaw:Judgment ;
                   rdfs:range caselaw:CaseParty .
 
 
-###  http://caselaw.nationalarchives.gov.uk/divisionOf
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/divisionOf
 caselaw:divisionOf rdf:type owl:ObjectProperty ;
                    owl:inverseOf caselaw:hasDivision ;
                    rdfs:domain caselaw:AdjudicatingBody ;
                    rdfs:range caselaw:AdjudicatingBody .
 
 
-###  http://caselaw.nationalarchives.gov.uk/givenBy
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/givenBy
 caselaw:givenBy rdf:type owl:ObjectProperty ,
                          owl:InverseFunctionalProperty ;
                 rdfs:domain caselaw:Judgment ;
@@ -119,34 +119,34 @@ caselaw:givenBy rdf:type owl:ObjectProperty ,
                 rdfs:comment "The Court or Tribunal that gave a Judgment." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/hasComposition
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/hasComposition
 caselaw:hasComposition rdf:type owl:ObjectProperty ;
                        rdfs:domain caselaw:AdjudicatingBody ;
                        rdfs:range caselaw:AdjudicatingBody .
 
 
-###  http://caselaw.nationalarchives.gov.uk/hasDivision
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/hasDivision
 caselaw:hasDivision rdf:type owl:ObjectProperty ;
                     rdfs:domain caselaw:AdjudicatingBody ;
                     rdfs:range caselaw:AdjudicatingBody ;
                     rdfs:comment "Each of the subdivisions or specialisations of a court or other adjudicating body." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/heardBefore
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/heardBefore
 caselaw:heardBefore rdf:type owl:ObjectProperty ;
                     rdfs:domain caselaw:Judgment ;
                     rdfs:range caselaw:Adjudicator ;
                     rdfs:comment "The judge(s) that participated in the hearing of a case and the drafting of the resultant judgment." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/hearsAppealsFrom
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/hearsAppealsFrom
 caselaw:hearsAppealsFrom rdf:type owl:ObjectProperty ;
                          rdfs:domain caselaw:AdjudicatingBody ;
                          rdfs:range caselaw:AdjudicatingBody ;
                          rdfs:comment "Describes the originating courts whose judgments can be appealed to the present court." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/judge
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/judge
 caselaw:judge rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain caselaw:CaseBench ;
@@ -155,28 +155,28 @@ caselaw:judge rdf:type owl:ObjectProperty ;
               rdfs:comment "An individual siting on a bench that is a judge" .
 
 
-###  http://caselaw.nationalarchives.gov.uk/memberOf
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/memberOf
 caselaw:memberOf rdf:type owl:ObjectProperty ;
                  rdfs:domain caselaw:Adjudicator ;
                  rdfs:range caselaw:CaseBench ;
                  rdfs:comment "Describes the participation of a judge (or other adjudicator) on the bench of a case." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/mentions
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/mentions
 caselaw:mentions rdf:type owl:ObjectProperty ;
                  rdfs:domain caselaw:Judgment ;
                  rdfs:range owl:Thing ;
                  rdfs:comment "A generic reference to another information resource with no attribution of intent." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/nonJudgeBenchMember
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/nonJudgeBenchMember
 caselaw:nonJudgeBenchMember rdf:type owl:ObjectProperty ;
                             rdfs:domain caselaw:CaseBench ;
                             rdfs:range foaf:Person ;
                             rdfs:comment "An individual (who is not a judge) who is a member of the body or panel of individuals responsible for adjudicating the case. For example, a domain expert." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/replacedBy
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/replacedBy
 caselaw:replacedBy rdf:type owl:ObjectProperty ;
                    owl:inverseOf caselaw:replaces ;
                    rdfs:domain caselaw:AdjudicatingBody ;
@@ -184,26 +184,26 @@ caselaw:replacedBy rdf:type owl:ObjectProperty ;
                    rdfs:comment "The successor adjudicating body that inherited the functions of this body after it ceased to exist." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/replaces
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/replaces
 caselaw:replaces rdf:type owl:ObjectProperty ;
                  rdfs:domain caselaw:AdjudicatingBody ;
                  rdfs:range caselaw:AdjudicatingBody ;
                  rdfs:comment "The adjudicating body that ceased to exist and whose functions where inherited by this adjudicating body." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/respondent
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/respondent
 caselaw:respondent rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf caselaw:caseParty ;
                    rdfs:domain caselaw:Judgment ;
                    rdfs:range caselaw:CaseParty .
 
 
-###  http://caselaw.nationalarchives.gov.uk/territorialJurisdiction
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/territorialJurisdiction
 caselaw:territorialJurisdiction rdf:type owl:ObjectProperty ;
                                 rdfs:domain caselaw:AdjudicatingBodyOrEpoch ;
                                 rdfs:comment "The geographical scope over which a court has binding jurisdiction." .
 
-###  http://caselaw.nationalarchives.gov.uk/subjectMatterJurisdiction
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/subjectMatterJurisdiction
 caselaw:subjectMatterJurisdiction rdf:type owl:ObjectProperty ;
                                 rdfs:domain caselaw:AdjudicatingBodyOrEpoch ;
                                 rdfs:comment "The subject matter over which a court has binding jurisdiction." .
@@ -213,7 +213,7 @@ caselaw:subjectMatterJurisdiction rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
-###  http://caselaw.nationalarchives.gov.uk/abbreviation
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/abbreviation
 
 caselaw:abbreviation rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf rdfs:label ;
@@ -222,7 +222,7 @@ caselaw:abbreviation rdf:type owl:DatatypeProperty ;
                      rdfs:comment "A shortform abbreviation referred to in a judgment. The longform of the abbreviation must also be present in the judgment." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/caseName
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/caseName
 caselaw:caseName rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf rdfs:label ;
                  rdfs:domain caselaw:JudgmentExpression ;
@@ -230,26 +230,26 @@ caselaw:caseName rdf:type owl:DatatypeProperty ;
                  rdfs:comment "The name of the case as it appears on the cover of the judgment." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/caseNumber
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/caseNumber
 caselaw:caseNumber rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf owl:topDataProperty ;
                    rdfs:domain caselaw:Judgment ;
                    rdfs:range xsd:string .
 
 
-###  http://caselaw.nationalarchives.gov.uk/current
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/current
 caselaw:current rdf:type owl:DatatypeProperty ;
                 rdfs:domain caselaw:AdjudicatingBody ;
                 rdfs:range xsd:boolean ;
                 rdfs:comment "A property describing whether a specific court is active." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/docketNumber
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/docketNumber
 caselaw:docketNumber rdf:type owl:DatatypeProperty ;
                      rdfs:domain caselaw:Judgment .
 
 
-###  http://caselaw.nationalarchives.gov.uk/ecli
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/ecli
 caselaw:ecli rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf dct:identifier ;
              rdfs:domain caselaw:Judgment ;
@@ -257,21 +257,21 @@ caselaw:ecli rdf:type owl:DatatypeProperty ;
              rdfs:comment "The European Case Law Identifier for a judgment." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/hearingDate
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/hearingDate
 caselaw:hearingDate rdf:type owl:DatatypeProperty ;
                     rdfs:domain caselaw:Judgment ;
                     rdfs:range xsd:date ;
                     rdfs:comment "The date(s) on which a case was heard." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/judgmentDate
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/judgmentDate
 caselaw:judgmentDate rdf:type owl:DatatypeProperty ;
                      rdfs:domain caselaw:Judgment ;
                      rdfs:range xsd:date ;
                      rdfs:comment "The date on which the judgment was given, whether extempore or handed-down." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/name
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/name
 caselaw:name rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf rdfs:label ;
              rdfs:domain caselaw:AdjudicatingBody ;
@@ -279,35 +279,35 @@ caselaw:name rdf:type owl:DatatypeProperty ;
              rdfs:comment "The full and formal name of the Adjudicating Body" .
 
 
-###  http://caselaw.nationalarchives.gov.uk/neutralCitation
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/neutralCitation
 caselaw:neutralCitation rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf dct:identifier;
                         rdfs:domain caselaw:Judgment ;
                         rdfs:range xsd:string .
 
 
-###  http://caselaw.nationalarchives.gov.uk/publishedDate
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/publishedDate
 caselaw:publishedDate rdf:type owl:DatatypeProperty ;
                       rdfs:domain caselaw:JudgmentExpression ;
                       rdfs:range xsd:date ;
                       rdfs:comment "The date on which a specific judgment expression was published." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/receivedDate
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/receivedDate
 caselaw:receivedDate rdf:type owl:DatatypeProperty ;
                      rdfs:domain caselaw:JudgmentExpression ;
                      rdfs:range xsd:date ;
                      rdfs:comment "The date on which a specific version of a judgment was received by The National Archives." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/yearCourtAbolished
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/yearCourtAbolished
 caselaw:yearCourtAbolished rdf:type owl:DatatypeProperty ;
                            rdfs:subPropertyOf owl:topDataProperty ;
                            rdfs:domain caselaw:AdjudicatingBody ;
                            rdfs:range xsd:gYear .
 
 
-###  http://caselaw.nationalarchives.gov.uk/yearCourtEstablished
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/yearCourtEstablished
 caselaw:yearCourtEstablished rdf:type owl:DatatypeProperty ;
                              rdfs:domain caselaw:AdjudicatingBody ;
                              rdfs:range xsd:gYear .
@@ -349,151 +349,151 @@ legislation:endDate rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://caselaw.nationalarchives.gov.uk/AdjudicatingBody
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody
 caselaw:AdjudicatingBody rdf:type owl:Class ;
                          rdfs:subClassOf caselaw:PublicBody ;
                          rdfs:subClassOf caselaw:AdjudicatingBodyOrEpoch ;
                          rdfs:comment "A body empowered to determine legal issues and disputes by issuing judgments and/or decisions. For example, a Court or a Tribunal" .
 
 
-###  http://caselaw.nationalarchives.gov.uk/AdjudicatingBodyEpoch
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBodyEpoch
 caselaw:AdjudicatingBodyEpoch rdf:type owl:Class ;
                          rdfs:subClassOf legislation:TimeInterval ;
                          rdfs:subClassOf caselaw:AdjudicatingBodyOrEpoch ;
                          rdfs:comment "A defined temporal period of a court" .
 
 
-###  http://caselaw.nationalarchives.gov.uk/AdjudicatingBody
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody
 caselaw:AdjudicatingBodyOrEpoch rdf:type owl:Class ;
     rdfs:comment "An auxillary class to describe the domain of properties that can be attached both to AdjudicatingBody and AdjudicatingBodyEpoch" .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Adjudicator
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Adjudicator
 caselaw:Adjudicator rdf:type owl:Class ;
                     rdfs:subClassOf foaf:Person ;
                     rdfs:comment "A person who performs an adjudicatory function in a case." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Book
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Book
 caselaw:Book rdf:type owl:Class ;
              owl:equivalentClass schema:Book ;
              rdfs:subClassOf frbr:Work .
 
 
-###  http://caselaw.nationalarchives.gov.uk/CaseBench
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/CaseBench
 caselaw:CaseBench rdf:type owl:Class ;
                   rdfs:comment "The group of individuals that participated in the adjudication of a case." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/CaseParty
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/CaseParty
 caselaw:CaseParty rdf:type owl:Class ;
                   rdfs:subClassOf foaf:Agent ;
                   rdfs:comment "A party to a legal case" .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Corporation
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Corporation
 caselaw:Corporation rdf:type owl:Class ;
                     owl:equivalentClass schema:Corporation ;
                     rdfs:subClassOf foaf:Organization .
 
 
-###  http://caselaw.nationalarchives.gov.uk/CostJudge
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/CostJudge
 caselaw:CostJudge rdf:type owl:Class ;
                   rdfs:subClassOf caselaw:Adjudicator .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Court
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Court
 caselaw:Court rdf:type owl:Class ;
               rdfs:subClassOf caselaw:AdjudicatingBody .
 
 
-###  http://caselaw.nationalarchives.gov.uk/CourtJurisdiction
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/CourtJurisdiction
 caselaw:CourtJurisdiction rdf:type owl:Class ;
                           rdfs:comment "An object representing the temporal assignment of a jurisdiction to a court" .
 
 
-###  http://caselaw.nationalarchives.gov.uk/HansardDebate
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/HansardDebate
 caselaw:HansardDebate rdf:type owl:Class ;
                       rdfs:subClassOf frbr:Work .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Journal
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Journal
 caselaw:Journal rdf:type owl:Class ;
                 rdfs:subClassOf frbr:Work ,
                                 schema:Periodical .
 
 
-###  http://caselaw.nationalarchives.gov.uk/JournalArticle
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/JournalArticle
 caselaw:JournalArticle rdf:type owl:Class ;
                        rdfs:subClassOf frbr:Work ,
                                        schema:ScholarlyArticle .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Judge
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Judge
 caselaw:Judge rdf:type owl:Class ;
               rdfs:subClassOf caselaw:Adjudicator .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Judgment
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Judgment
 caselaw:Judgment rdf:type owl:Class ;
                  rdfs:subClassOf frbr:Work ;
                  rdfs:comment "A decision of a court given in the course of a case." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/JudgmentExpression
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/JudgmentExpression
 caselaw:JudgmentExpression rdf:type owl:Class ;
                            rdfs:subClassOf frbr:Expression ;
                            rdfs:comment "A given version or revision of a Judgment. Judgment versions are considered to be FRBR expressions." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/LawFirm
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/LawFirm
 caselaw:LawFirm rdf:type owl:Class ;
                 rdfs:subClassOf foaf:Organization .
 
 
-###  http://caselaw.nationalarchives.gov.uk/LawReport
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/LawReport
 caselaw:LawReport rdf:type owl:Class ;
                   rdfs:subClassOf frbr:Work .
 
 
-###  http://caselaw.nationalarchives.gov.uk/NonJudicialPublicDocument
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/NonJudicialPublicDocument
 caselaw:NonJudicialPublicDocument rdf:type owl:Class ;
                                   rdfs:subClassOf frbr:Work ;
                                   rdfs:comment "A document published by a public body that does not have carry legal or regulatory force." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/OnlineReference
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/OnlineReference
 caselaw:OnlineReference rdf:type owl:Class ;
                         rdfs:subClassOf frbr:Work ;
                         rdfs:comment "A generic class for an unclassified reference that's available online." .
 
 
-###  http://caselaw.nationalarchives.gov.uk/PublicBody
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/PublicBody
 caselaw:PublicBody rdf:type owl:Class ;
                    rdfs:subClassOf foaf:Organization .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Solicitor
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Solicitor
 caselaw:Solicitor rdf:type owl:Class ;
                   rdfs:subClassOf foaf:Person .
 
 
-###  http://caselaw.nationalarchives.gov.uk/ThirdSectorOrganisation
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/ThirdSectorOrganisation
 caselaw:ThirdSectorOrganisation rdf:type owl:Class ;
                                 rdfs:subClassOf foaf:Organization .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Treaty
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Treaty
 caselaw:Treaty rdf:type owl:Class ;
                rdfs:subClassOf legislation:Item .
 
 
-###  http://caselaw.nationalarchives.gov.uk/Tribunal
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Tribunal
 caselaw:Tribunal rdf:type owl:Class ;
                  rdfs:subClassOf caselaw:AdjudicatingBody .
 
 
-###  http://caselaw.nationalarchives.gov.uk/legislation:Item
+###  http://www.legislation.gov.uk/def/legislation/Item
 legislation:Item rdf:type owl:Class ;
                          rdfs:subClassOf frbr:Work ;
                          rdfs:comment "A written language used in UK legislation." .
