@@ -166,4 +166,4 @@ def handler(event, context):
         LOGGER.info("Legislation updated")
 
     except (Exception, Error) as error:
-        LOGGER.error("Error while connecting to PostgreSQL", error)
+        LOGGER.error("Error while connecting to PostgreSQL: %s", error)
