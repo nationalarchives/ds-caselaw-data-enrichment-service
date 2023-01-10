@@ -1,9 +1,5 @@
-import os
-import re
-
-from bs4 import BeautifulSoup
-
 """
+@author: editha.nemsic
 This code handles the link of oblique references (i.e 'the Act' or 'the 1977 Act'). This is done in the following way:
 1. We use the previously enriched judgment and identify where there are legislation xrefs in the judgment body.
 2. We search for 'T(t)he/T(t)his/T(t)hat Act' and 'T(t)he/T(t)his/T(t)hat [dddd] Act' references in the judgment text.
@@ -15,6 +11,12 @@ and then link to that legislation.
 
 The pipeline returns a dictionary containing the detected oblique reference, its position and the replacement string.
 """
+
+
+import os
+import re
+
+from bs4 import BeautifulSoup
 
 patterns = {
     "legislation": r"<ref(((?!ref>).)*)type=\"legislation\"(.*?)ref>",

@@ -1,10 +1,3 @@
-import os
-import re
-import xml
-
-import numpy as np
-from bs4 import BeautifulSoup
-
 """
 This code handles the link of provisions (i.e sections) to legislation. This is done in the following way: 
 1. We use the previously enriched judgment and identify where there are legislation xrefs in paragraphs. 
@@ -19,6 +12,14 @@ To do:
 2. "Section 27(A)" - currently miss these references when replacing
 3. Sub-sections aren't being replaced 
 """
+
+import os
+import re
+import xml
+
+import numpy as np
+from bs4 import BeautifulSoup
+
 
 THR = 30
 keys = ["detected_ref", "ref_para", "ref_position", "ref_tag"]

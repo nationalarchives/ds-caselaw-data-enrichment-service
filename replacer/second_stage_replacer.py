@@ -1,5 +1,9 @@
-#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Replacer logic for second and third phase enrichment. 
+Handles the replacements of oblique references and legislation provisions. 
+"""
+
 
 import re
 from itertools import groupby

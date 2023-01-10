@@ -1,7 +1,5 @@
-import re
-
 """
-
+@author: editha.nemsic
 This code corrects malformed citation matches.
 
 - The choice of correction strategy is based on the type of citation match.
@@ -9,6 +7,8 @@ This code corrects malformed citation matches.
 - The extracted information is used to build the well-formed citation using a canonical template that is being filled with the extracted year and digits.
 
 """
+
+import re
 
 
 def apply_correction_strategy(citation_type, citation_match, canonical_form):

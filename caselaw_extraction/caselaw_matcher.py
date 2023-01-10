@@ -1,11 +1,5 @@
-import re
-from collections import namedtuple
-
-from caselaw_extraction.correction_strategies import apply_correction_strategy
-from database.db_connection import get_matched_rule
-
 """
-
+@author: editha.nemsic
 This code builds the Case Law Annotator. The 3 main functionalities are: 
 
 1. Detect references to well-formed (canonical) citations and malformed citations
@@ -24,10 +18,25 @@ the same path as well-formed citation matches.
 
 """
 
+import re
+from collections import namedtuple
+
+from caselaw_extraction.correction_strategies import apply_correction_strategy
+from database.db_connection import get_matched_rule
+
+
 case = namedtuple("case", "citation_match corrected_citation year URI is_neutral")
 
 
 def create_URI(uri_template, year, d1, d2):
+    """
+    Create URI.
+    :param uri_template: URI template to build correct URI for detected citation
+    :param year: year detected in citation
+    :param d1: first digit detected in citation
+    :param d2: second (optional) digit detected in citation
+    :returns: URI
+    """
     if "d1" in str(uri_template):
         URI = uri_template.replace("year", year).replace("d1", d1)
     elif "d2" in str(uri_template):
@@ -38,6 +47,13 @@ def create_URI(uri_template, year, d1, d2):
 
 
 def case_pipeline(doc, db_conn):
+
+    """
+    Loop through detected caselaw citations and build components for xref attribute.
+    :param doc: judgment as spacy Doc object
+    :param db_conn: DB connection parameters to call Rules Manifest
+    :returns: list of tuples containing detected caselaw and associated attributes
+    """
 
     REPLACEMENTS_CASELAW = []
 

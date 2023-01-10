@@ -1,10 +1,11 @@
-import json
-import re
-
 """
-Replacer logic for the entire enrichment pipeline. 
+Replacer logic for first phase enrichment. 
 Handles the replacements of abbreviations, legislation, and case law. 
 """
+
+
+import json
+import re
 
 
 def replacer_caselaw(file_data, replacement):

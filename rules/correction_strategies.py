@@ -1,11 +1,13 @@
-import re
-
 """
+@author: editha.nemsic
 Correct strategies for the case law replacements. 
 :param citation_type: Citation pattern 
 :param citation_match: Citation that was matched 
 :param canonical_form: Canonical form of the citation
 """
+
+
+import re
 
 
 def apply_correction_strategy(citation_type, citation_match, canonical_form):
