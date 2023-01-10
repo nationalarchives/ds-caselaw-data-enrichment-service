@@ -1499,6 +1499,19 @@ module "lambda-push-enriched-xml" {
         "logs:PutLogEvents"
       ],
       resources = ["*"]
+    },
+    secrets_get = {
+      effect = "Allow",
+      actions = [
+        "secretsmanager:GetResourcePolicy",
+        "secretsmanager:GetSecretValue",
+        "secretsmanager:DescribeSecret",
+        "secretsmanager:ListSecretVersionIds"
+      ],
+      resources = [
+        aws_secretsmanager_secret.API_username.arn,
+        aws_secretsmanager_secret.API_password.arn
+      ]
     }
   }
 
@@ -1528,6 +1541,8 @@ module "lambda-push-enriched-xml" {
 
   environment_variables = {
     SOURCE_BUCKET = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
+    API_USERNAME = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
+    API_PASSWORD = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
   }
 
   cloudwatch_logs_retention_in_days = 365
