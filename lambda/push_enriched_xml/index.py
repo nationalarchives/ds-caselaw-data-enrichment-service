@@ -11,6 +11,7 @@ import urllib3
 from botocore.exceptions import ClientError
 from requests.auth import HTTPBasicAuth
 
+
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
@@ -64,6 +65,14 @@ def release_lock(query, username, pw):
     return r.data.decode()
 
 
+def patch_judgment_request(query, data, username, pw):
+    response = requests.patch(
+        f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
+        auth=HTTPBasicAuth(username, pw), data=data.encode())
+    print(response)
+    print(response.content)
+
+
 ############################################
 
 
@@ -84,21 +93,22 @@ def process_event(sqs_rec):
     LOGGER.info(file_content)
 
     print(source_key)
-
-    # data = {
-    #     'annotation': 'Updated body',
-    #     'unlock': True,
-    #     'if-match': 'if-match'
-    # }
+    judgment_uri = source_key.replace("-","/").split(".")[0]
+    print(judgment_uri)
 
     # patch the judgment
-    # patch_judgment(judgment_uri, data, API_USERNAME, API_PASSWORD)
+    patch_judgment_request(judgment_uri, file_content, API_USERNAME, API_PASSWORD)
+
+    # release the lock
+    release_lock(judgment_uri, API_USERNAME, API_PASSWORD)
 
 
 ############################################
 # - INSTANTIATE CLASS HELPERS
 # - GET ENV VARIABLES
 ############################################
+
+
 SOURCE_BUCKET = validate_env_variable("SOURCE_BUCKET")
 API_USERNAME = validate_env_variable("API_USERNAME")
 API_PASSWORD = validate_env_variable("API_PASSWORD")
