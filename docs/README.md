@@ -57,3 +57,5 @@ There is a comprehensive suite of tests that can be run locally. Clone the repos
 $ python runner.py
 ```
 
+## 4 Architecture
+![Architecture](architecture.png)
