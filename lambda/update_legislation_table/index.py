@@ -89,6 +89,7 @@ sparql_password = validate_env_variable("SPARQL_PASSWORD")
 
 get_secret = getLoginSecrets()
 
+
 def get_leg_update(sparql_username, sparql_password, days=7):
     # date = pd.to_datetime(date)
     today = datetime.datetime.today()
@@ -145,7 +146,9 @@ def handler(event, context):
 
     try:
         engine = create_engine(
-            "postgresql://{0}:{1}@{2}:{3}/{4}".format(username, password, host, port, database_name)
+            "postgresql://{0}:{1}@{2}:{3}/{4}".format(
+                username, password, host, port, database_name
+            )
         )
         LOGGER.info("Engine created")
 

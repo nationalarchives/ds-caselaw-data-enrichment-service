@@ -68,7 +68,9 @@ def release_lock(query, username, pw):
 def patch_judgment_request(query, data, username, pw):
     response = requests.patch(
         f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
-        auth=HTTPBasicAuth(username, pw), data=data.encode())
+        auth=HTTPBasicAuth(username, pw), 
+        data=data.encode()
+    )
     print(response)
     print(response.content)
 
@@ -93,7 +95,7 @@ def process_event(sqs_rec):
     LOGGER.info(file_content)
 
     print(source_key)
-    judgment_uri = source_key.replace("-","/").split(".")[0]
+    judgment_uri = source_key.replace("-", "/").split(".")[0]
     print(judgment_uri)
 
     # patch the judgment
