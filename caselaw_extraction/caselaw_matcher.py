@@ -24,7 +24,6 @@ from collections import namedtuple
 from caselaw_extraction.correction_strategies import apply_correction_strategy
 from database.db_connection import get_matched_rule
 
-
 case = namedtuple("case", "citation_match corrected_citation year URI is_neutral")
 
 

@@ -14,7 +14,6 @@ from psycopg2 import Error
 from SPARQLWrapper import CSV, SPARQLWrapper
 from sqlalchemy import create_engine
 
-
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
