@@ -68,8 +68,8 @@ def release_lock(query, username, pw):
 def patch_judgment_request(query, data, username, pw):
     response = requests.patch(
         f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
-        auth=HTTPBasicAuth(username, pw), 
-        data=data.encode()
+        auth=HTTPBasicAuth(username, pw),
+        data=data.encode(),
     )
     print(response)
     print(response.content)

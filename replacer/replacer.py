@@ -41,7 +41,9 @@ def replacer_abbr(file_data, replacement):
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
-    replacement_string = f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
+    replacement_string = (
+        f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
+    )
     file_data = str(file_data).replace(str(replacement[0]), replacement_string)
     return file_data
 
