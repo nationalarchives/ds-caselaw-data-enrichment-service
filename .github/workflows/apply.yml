@@ -1,0 +1,26 @@
+name: Apply Staging then Prod
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  pull-requests: read
+  id-token: write
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  staging_apply:
+    name: Apply Staging Build
+    uses: ./.github/workflows/staging_build.yml
+    secrets: inherit
+  prod_apply:
+    name: Apply Production Build
+    needs: staging_apply
+    uses: ./.github/workflows/production_build.yml
+    secrets: inherit

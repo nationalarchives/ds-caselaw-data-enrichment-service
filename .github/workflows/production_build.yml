@@ -1,18 +1,21 @@
-name: "Apply Production Build"
+#name: "Apply Production Build"
+#
+#on:
+#  push:
+#    branches:
+#      - main
+#
+#permissions:
+#  pull-requests: read
+#  id-token: write
+#  contents: read
+#
+#defaults:
+#  run:
+#    shell: bash
 
 on:
-  push:
-    branches:
-      - main
-
-permissions:
-  pull-requests: read
-  id-token: write
-  contents: read
-
-defaults:
-  run:
-    shell: bash
+  workflow_call:
 
 jobs:
   production_build_code_and_infra:
