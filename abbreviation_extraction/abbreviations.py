@@ -98,17 +98,40 @@ def find_abbreviation(
     return short_form_candidate, long_form_candidate[starting_index:]
 
 
-def contains(str, set: Set[str]):
-    """Check whether sequence str contains ANY of the items in set."""
+def contains(str, set: Set[str]
+) -> bool:
+    """
+    Check whether sequence str contains ANY of the items in set.
+    Parameters
+    ----------
+    Str, required
+    Set, required
+    Returns
+    -------
+    A Boolean, True if str appears in set. 
+    """
     return any([c in str for c in set])
 
 
 def filter_matches(
     matcher_output: List[Tuple[int, int, int]], doc: Doc
 ) -> List[Tuple[Span, Span]]:
-    # Filter into two cases:
-    # 1. <Short Form> ( <Long Form> )
-    # 2. <Long Form> (<Short Form>) [this case is most common].
+    """    
+    Filter into two cases:
+    1. <Short Form> ( <Long Form> )
+    2. <Long Form> (<Short Form>) [this case is most common]. 
+    Parameters
+    ----------
+    matcher_output: List, required.
+        List of the abbreviation match number, the start and the end position 
+        of the match found from the spaCy matcher.
+    doc: Doc, required.
+        Doc object of the judgment content.
+    Returns
+    -------
+    List[Tuple[Span, Span]], Either short form and long form candidate
+    or long form and short form candidate     
+    """
     candidates = []
     for match in matcher_output:
         QUOTES = ['"', "'", "‘", "’", "“", "”"]
@@ -183,7 +206,20 @@ def filter_matches(
     return candidates
 
 
-def short_form_filter(span: Span) -> bool:
+def short_form_filter(span: Span
+) -> bool:
+    """
+    Abbreviation is checked to ensure it satisfies two constraints: 
+        1. Length is between 2 and 10 
+        2. Contains alpha numeric character
+    Parameters
+    ----------
+    span: Span, required.
+        Span of abbreviation
+    Returns
+    -------
+    Boolean, True if abbreviation passes both constraints
+    """
     # All words are between length 2 and 10
     if not all([2 < len(x) < 10 for x in span]):
         return False
@@ -194,10 +230,23 @@ def short_form_filter(span: Span) -> bool:
     return True
 
 
-# verify that the matches appear in a form where such as ("abbrv") or ("long_form") with quotes and brackets as the first two and final two characters
 def verify_match_format(
     matcher_output: List[Tuple[int, int, int]], doc: Doc
 ) -> List[Tuple[Span, Span]]:
+    """
+    Verify that the matches appear in a form where such as ("abbrv") or ("long_form") with quotes 
+    and brackets as the first two and final two characters
+    Parameters
+    ----------
+    matcher_output: List, required.
+        List of the abbreviation match number, the start and the end position 
+        of the match found from the spaCy matcher.
+    doc: Doc, required.
+        Doc object of the judgment content.        
+    Returns
+    -------    
+    List[Tuple[Span, Span]], List of match start and end position
+    """
     for match in matcher_output:
         QUOTES = ['"', "'", "‘", "’", "“", "”"]
         BRACKETS = ["(", ")"]
@@ -229,6 +278,12 @@ class AbbreviationDetector:
     """
 
     def __init__(self, nlp: Language) -> None:
+        """
+        Initialises the patterns and vocabulary to be used by spaCy's matcher
+        Parameters
+        ----------
+        nlp: construct a Doc object via spaCy's nlp object         
+        """
         Doc.set_extension("abbreviations", default=[], force=True)
         Span.set_extension("long_form", default=None, force=True)
 
@@ -242,6 +297,14 @@ class AbbreviationDetector:
         Functional version of calling the matcher for a single span.
         This method is helpful if you already have an abbreviation which
         you want to find a definition for.
+        Parameters
+        ----------
+        span: Span, required
+        doc: Doc, required
+            Doc object of the judgment content.        
+        Returns
+        -------    
+        Tuple[Span, Set[Span]], Abbreviation and long form
         """
         dummy_matches = [(-1, int(span.start), int(span.end))]
         filtered = filter_matches(dummy_matches, doc)
@@ -254,6 +317,17 @@ class AbbreviationDetector:
             return abbreviations[0]
 
     def __call__(self, doc: Doc) -> Doc:
+        """
+        This function sets the `._.abbreviations` attribute on spaCy Doc. Abbreviations are identified,
+        their format verified, constraints on matches tested and position in the document identified.
+        Parameters
+        ----------
+        doc: Doc, required
+            Doc object of the judgment content.   
+        Returns
+        -------    
+        Doc, Doc object of the judgment content.       
+        """
         matches = self.matcher(doc)
 
         matches_brackets = [(x[0], x[1], x[2]) for x in matches]
@@ -275,13 +349,25 @@ class AbbreviationDetector:
     def find_matches_for(
         self, filtered: List[Tuple[Span, Span]], doc: Doc
     ) -> List[Tuple[Span, Set[Span]]]:
+        """
+        Function to return all start and end positions of an abbreviation found in the judgment content.
+        Parameters
+        ----------
+        filtered: List[Tuple[Span, Span]], required
+            Abbreviations found and passed through the filter_matches function
+        doc: Doc, required
+            Doc object of the judgment content.        
+        Returns
+        -------    
+        List[Tuple[Span, Set[Span]]], for all short form and long form candidates found after filtering,
+        list of the match and every occurance of the match in the judgment body  
+        """
         rules = {}
         all_occurences: Dict[Span, Set[Span]] = defaultdict(set)
         already_seen_long: Set[str] = set()
         already_seen_short: Set[str] = set()
         for (long_candidate, short_candidate) in filtered:
             short, long = find_abbreviation(long_candidate, short_candidate)
-
             # We need the long and short form definitions to be unique, because we need
             # to store them so we can look them up later. This is a bit of a
             # pathalogical case also, as it would mean an abbreviation had been
