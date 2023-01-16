@@ -20,7 +20,6 @@ import xml
 import numpy as np
 from bs4 import BeautifulSoup
 
-
 THR = 30
 keys = ["detected_ref", "ref_para", "ref_position", "ref_tag"]
 patterns = {
