@@ -16,7 +16,7 @@ defaults:
 
 jobs:
   production_build_code_and_infra:
-    needs: [staging_build_code_and_infra]
+    needs: ['staging_build_code_and_infra']
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
