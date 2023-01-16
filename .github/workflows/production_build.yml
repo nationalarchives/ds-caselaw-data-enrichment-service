@@ -127,13 +127,13 @@ jobs:
           cd "lambda/determine_replacements_legislation"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-production .
           docker tag tna-s3-tna-ecr-repository-legislation-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-production:latest
-          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-dev:latest
+          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-production:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/determine_replacements_abbreviations"
           docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-production .
           docker tag tna-s3-tna-ecr-repository-abbreviations-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-production:latest
-          docker push ${{ staging.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-production:latest
+          docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-production:latest
           cd "${GITHUB_WORKSPACE}"
           
           cd "lambda/update_legislation_table"
