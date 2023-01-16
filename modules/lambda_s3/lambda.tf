@@ -1291,6 +1291,7 @@ data "aws_secretsmanager_secret" "API_username" {
 
 data "aws_secretsmanager_secret_version" "API_username_credentials" {
   secret_id = data.aws_secretsmanager_secret.API_username.id
+  depends_on = [aws_secretsmanager_secret.API_username]
 }
 
 data "aws_secretsmanager_secret" "API_password" {
@@ -1299,6 +1300,7 @@ data "aws_secretsmanager_secret" "API_password" {
 
 data "aws_secretsmanager_secret_version" "API_password_credentials" {
   secret_id = data.aws_secretsmanager_secret.API_password.id
+  depends_on = [aws_secretsmanager_secret.API_password]
 }
 
 module "lambda-fetch-xml" {

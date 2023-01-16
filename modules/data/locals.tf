@@ -3,7 +3,7 @@ locals {
     staging = {
       deletion_protection = true
     }
-    prod = {
+    production = {
       deletion_protection = true
     }
   }

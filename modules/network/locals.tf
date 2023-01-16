@@ -3,7 +3,7 @@ locals {
     staging = {
       single_ngw = true
     }
-    prod = {
+    production = {
       single_ngw = false
     }
   }
