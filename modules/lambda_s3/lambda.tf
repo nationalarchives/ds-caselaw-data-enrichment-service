@@ -93,8 +93,8 @@ resource "aws_ecr_repository" "main" {
 }
 
 resource "aws_ecr_lifecycle_policy" "main_retention" {
-  repository     = aws_ecr_repository.main.name
-  policy         = file("${path.module}/retention_policy.json")
+  repository = aws_ecr_repository.main.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_ecr_repository" "legislation" {
@@ -108,8 +108,8 @@ resource "aws_ecr_repository" "legislation" {
 }
 
 resource "aws_ecr_lifecycle_policy" "leglislation_retention" {
-  repository     = aws_ecr_repository.legislation.name
-  policy         = file("${path.module}/retention_policy.json")
+  repository = aws_ecr_repository.legislation.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_ecr_repository" "abbreviations" {
@@ -124,8 +124,8 @@ resource "aws_ecr_repository" "abbreviations" {
 }
 
 resource "aws_ecr_lifecycle_policy" "abbreviations_retention" {
-  repository     = aws_ecr_repository.abbreviations.name
-  policy         = file("${path.module}/retention_policy.json")
+  repository = aws_ecr_repository.abbreviations.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_ecr_repository" "legislation-provision" {
@@ -139,8 +139,8 @@ resource "aws_ecr_repository" "legislation-provision" {
 }
 
 resource "aws_ecr_lifecycle_policy" "lp_retention" {
-  repository     = aws_ecr_repository.legislation-provision.name
-  policy         = file("${path.module}/retention_policy.json")
+  repository = aws_ecr_repository.legislation-provision.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_ecr_repository" "oblique-references" {
@@ -154,8 +154,8 @@ resource "aws_ecr_repository" "oblique-references" {
 }
 
 resource "aws_ecr_lifecycle_policy" "or_retention" {
-  repository     = aws_ecr_repository.oblique-references.name
-  policy         = file("${path.module}/retention_policy.json")
+  repository = aws_ecr_repository.oblique-references.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_ecr_repository" "legislation-update" {
@@ -169,8 +169,8 @@ resource "aws_ecr_repository" "legislation-update" {
 }
 
 resource "aws_ecr_lifecycle_policy" "lu_retention" {
-  repository     = aws_ecr_repository.legislation-update.name
-  policy         = file("${path.module}/retention_policy.json")
+  repository = aws_ecr_repository.legislation-update.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_ecr_repository" "rules-update" {
@@ -184,8 +184,8 @@ resource "aws_ecr_repository" "rules-update" {
 }
 
 resource "aws_ecr_lifecycle_policy" "ru_retention" {
-  repository     = aws_ecr_repository.rules-update.name
-  policy         = file("${path.module}/retention_policy.json")
+  repository = aws_ecr_repository.rules-update.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 resource "random_pet" "this" {
@@ -311,7 +311,7 @@ module "lambda-determine-replacements-caselaw" {
     RULES_FILE_BUCKET   = "${module.rules_bucket.s3_bucket_id}"
     RULES_FILE_KEY      = "citation_patterns.jsonl"
     REPLACEMENTS_BUCKET = "${module.replacements_bucket.s3_bucket_id}"
-    ENRICHMENT_BUCKET = "${module.tracking_bucket.s3_bucket_id}"
+    ENRICHMENT_BUCKET   = "${module.tracking_bucket.s3_bucket_id}"
   }
 
   cloudwatch_logs_retention_in_days = 365
@@ -346,7 +346,7 @@ module "lambda-determine-replacements-legislation" {
         "s3:GetObjectVersion"
       ],
       resources = ["${module.text_content_bucket.s3_bucket_arn}/*", "${module.replacements_bucket.s3_bucket_arn}/*",
-                  "${module.tracking_bucket.s3_bucket_arn}/*"]
+      "${module.tracking_bucket.s3_bucket_arn}/*"]
     },
     s3_put = {
       effect    = "Allow",
@@ -440,7 +440,7 @@ module "lambda-determine-replacements-legislation" {
 
     REPLACEMENTS_BUCKET = "${module.replacements_bucket.s3_bucket_id}"
     SOURCE_BUCKET       = "${module.text_content_bucket.s3_bucket_arn}"
-    ENRICHMENT_BUCKET = "${module.tracking_bucket.s3_bucket_id}"
+    ENRICHMENT_BUCKET   = "${module.tracking_bucket.s3_bucket_id}"
   }
 
   cloudwatch_logs_retention_in_days = 365
@@ -907,7 +907,7 @@ resource "aws_secretsmanager_secret" "sparql_password" {
 }
 
 data "aws_secretsmanager_secret" "sparql_username" {
-   name = "${local.name}-sparql-username-${local.environment}"
+  name = "${local.name}-sparql-username-${local.environment}"
 }
 
 data "aws_secretsmanager_secret_version" "sparql_username_credentials" {
@@ -915,7 +915,7 @@ data "aws_secretsmanager_secret_version" "sparql_username_credentials" {
 }
 
 data "aws_secretsmanager_secret" "sparql_password" {
-   name = "${local.name}-sparql-password-${local.environment}"
+  name = "${local.name}-sparql-password-${local.environment}"
 }
 
 data "aws_secretsmanager_secret_version" "sparql_password_credentials" {
@@ -1265,8 +1265,8 @@ resource "aws_ecr_repository" "fetch-xml" {
 }
 
 resource "aws_ecr_lifecycle_policy" "fx_retention" {
-  repository     = aws_ecr_repository.fetch-xml.name
-  policy         = file("${path.module}/retention_policy.json")
+  repository = aws_ecr_repository.fetch-xml.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_secretsmanager_secret" "API_username" {
@@ -1286,20 +1286,20 @@ resource "aws_secretsmanager_secret" "API_password" {
 }
 
 data "aws_secretsmanager_secret" "API_username" {
-   name = "${local.name}-API-username-${local.environment}"
+  name = "${local.name}-API-username-${local.environment}"
 }
 
 data "aws_secretsmanager_secret_version" "API_username_credentials" {
-  secret_id = data.aws_secretsmanager_secret.API_username.id
+  secret_id  = data.aws_secretsmanager_secret.API_username.id
   depends_on = [aws_secretsmanager_secret.API_username]
 }
 
 data "aws_secretsmanager_secret" "API_password" {
-   name = "${local.name}-API-password-${local.environment}"
+  name = "${local.name}-API-password-${local.environment}"
 }
 
 data "aws_secretsmanager_secret_version" "API_password_credentials" {
-  secret_id = data.aws_secretsmanager_secret.API_password.id
+  secret_id  = data.aws_secretsmanager_secret.API_password.id
   depends_on = [aws_secretsmanager_secret.API_password]
 }
 
@@ -1414,8 +1414,8 @@ module "lambda-fetch-xml" {
 
   environment_variables = {
     DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
-    API_USERNAME = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
-    API_PASSWORD = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
+    API_USERNAME     = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
+    API_PASSWORD     = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
   }
 
   cloudwatch_logs_retention_in_days = 365
@@ -1435,8 +1435,8 @@ resource "aws_ecr_repository" "push_enriched_xml" {
 }
 
 resource "aws_ecr_lifecycle_policy" "pe_retention" {
-  repository     = aws_ecr_repository.push_enriched_xml.name
-  policy         = file("${path.module}/retention_policy.json")
+  repository = aws_ecr_repository.push_enriched_xml.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 module "lambda-push-enriched-xml" {
@@ -1543,8 +1543,8 @@ module "lambda-push-enriched-xml" {
 
   environment_variables = {
     SOURCE_BUCKET = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
-    API_USERNAME = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
-    API_PASSWORD = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
+    API_USERNAME  = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
+    API_PASSWORD  = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
   }
 
   cloudwatch_logs_retention_in_days = 365
