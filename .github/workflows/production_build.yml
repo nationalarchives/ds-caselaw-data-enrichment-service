@@ -1,25 +1,8 @@
-#name: "Apply Production Build"
-#
-#on:
-#  push:
-#    branches:
-#      - main
-#
-#permissions:
-#  pull-requests: read
-#  id-token: write
-#  contents: read
-#
-#defaults:
-#  run:
-#    shell: bash
-
 on:
   workflow_call:
 
 jobs:
   production_build_code_and_infra:
-    needs: ['staging_build_code_and_infra']
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
