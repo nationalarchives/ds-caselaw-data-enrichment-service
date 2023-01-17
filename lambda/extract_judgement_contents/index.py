@@ -27,8 +27,10 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 
-# isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
+    """
+    Isolating processing from event unpacking for portability and testing
+    """
     s3_client = boto3.client("s3")
     source_bucket = sqs_rec["s3"]["bucket"]["name"]
     source_key = urllib.parse.unquote_plus(
@@ -50,11 +52,17 @@ def process_event(sqs_rec):
 
 
 def extract_text_content(file_content):
+    """
+    Extract text from the content elements of the XML file
+    """
     file_content = parse_file(file_content)
     return file_content
 
 
 def upload_contents(source_key, text_content):
+    """
+    Uploads text to S3 bucket
+    """
     filename = os.path.splitext(source_key)[0] + ".txt"
     LOGGER.info("uploading text content to %s/%s", DEST_BUCKET, filename)
     s3 = boto3.resource("s3")
@@ -66,6 +74,9 @@ DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 
 
 def handler(event, context):
+    """
+    Function called by the lambda to run the process event     
+    """
     LOGGER.info("extract-judgement-contents")
     LOGGER.info(DEST_BUCKET)
     try:

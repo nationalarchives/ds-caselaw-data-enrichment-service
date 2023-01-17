@@ -33,6 +33,9 @@ def validate_env_variable(env_var_name):
 
 
 def fetch_judgment_urllib(query, username, pw):
+    """
+    Fetch the judgment from the National Archives
+    """
     http = urllib3.PoolManager()
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
@@ -43,6 +46,9 @@ def fetch_judgment_urllib(query, username, pw):
 
 
 def lock_judgment_urllib(query, username, pw):
+    """
+    Lock the judgment for editing
+    """
     http = urllib3.PoolManager()
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
@@ -52,6 +58,9 @@ def lock_judgment_urllib(query, username, pw):
 
 
 def check_lock_judgment_urllib(query, username, pw):
+    """
+    Check whether the judgment is locked
+    """
     http = urllib3.PoolManager()
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
@@ -67,6 +76,9 @@ def check_lock_judgment_urllib(query, username, pw):
 
 
 def read_message(message):
+    """
+    Return the status and URI of the judgment
+    """
     json_body = json.dumps(message)
     json_message = json.loads(json_body)
     message = json_message["Message"]
@@ -79,6 +91,9 @@ def read_message(message):
 
 
 def upload_contents(source_key, xml_content):
+    """
+    Upload judgment to destination S3 bucket
+    """
     filename = source_key + ".xml"
     LOGGER.info("Uploading XML content to %s/%s", DEST_BUCKET, filename)
     s3 = boto3.resource("s3")
@@ -87,6 +102,10 @@ def upload_contents(source_key, xml_content):
 
 
 def process_event(sqs_rec):
+    """
+    Function to check the status of the judgment, fetch the judgment if it is published, lock the judgment for editing
+    and upload to destination S3 bucket
+    """
     message = json.loads(sqs_rec["body"])
     status, query = read_message(message)
     print("Judgment status:", status)
@@ -116,6 +135,9 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 
 def handler(event, context):
+    """
+    Function called by the lambda to run the process event     
+    """
     LOGGER.info("Lambda to fetch XML judgment via API")
     LOGGER.info("Destination bucket for XML judgment: %s", DEST_BUCKET)
     try:

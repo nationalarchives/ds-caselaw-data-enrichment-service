@@ -41,6 +41,9 @@ def validate_env_variable(env_var_name):
 ############################################
 class getLoginSecrets:
     def get_secret(self, aws_secret_name, aws_region_name):
+        """
+        Get login secrets for database access
+        """
         secret_name = aws_secret_name
         region_name = aws_region_name
 
@@ -87,6 +90,10 @@ get_secret = getLoginSecrets()
 
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
+    """
+    Function to fetch the XML, call the legislation replacements pipeline and upload the enriched XML to the 
+    destination bucket
+    """
     s3_client = boto3.client("s3")
 
     message = json.loads(sqs_rec["body"])
@@ -137,6 +144,9 @@ def process_event(sqs_rec):
 
 
 def enrichment_tracking(bucket, key):
+    """
+    Print XML to track progress
+    """
     s3_resource = boto3.resource("s3")
     s3_object = s3_resource.Object(bucket, key)
 
@@ -155,6 +165,9 @@ def enrichment_tracking(bucket, key):
 
 
 def write_replacements_file(replacement_list):
+    """
+    Writes tuples of abbreviations and long forms from a list of replacements  
+    """
     tuple_file = ""
     for i in replacement_list:
         replacement_object = {"{}".format(type(i).__name__): list(i)}
@@ -164,6 +177,9 @@ def write_replacements_file(replacement_list):
 
 
 def upload_replacements(replacements_bucket, replacements_key, replacements):
+    """
+    Uploads replacements to S3 bucket
+    """
     LOGGER.info(
         "uploading text content to %s/%s", replacements_bucket, replacements_key
     )
@@ -174,6 +190,9 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
 
 
 def init_NLP():
+    """
+    Load spacy model 
+    """
     nlp = spacy.load(
         "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
     )
@@ -182,6 +201,9 @@ def init_NLP():
 
 
 def init_DB():
+    """
+    Establish database connection
+    """
     password = get_secret.get_secret(aws_secret_name, aws_region_name)
     db_conn = db_connection.create_connection(
         database_name, username, password, host, port
@@ -190,11 +212,16 @@ def init_DB():
 
 
 def close_connection(db_conn):
+    """
+    Close the database connection
+    """
     db_connection.close_connection(db_conn)
 
 
 def determine_replacements(file_content):
-
+    """
+    Fetch legislation replacements from database
+    """
     # connect to the database
     db_conn = init_DB()
     LOGGER.debug("got db")
@@ -216,6 +243,9 @@ def determine_replacements(file_content):
 
 
 def get_legislation_replacements(leg_titles, nlp, doc, db_conn):
+    """
+    Runs the legislation pipeline on the XML and returns the replacements
+    """
     from legislation_extraction.legislation_matcher_hybrid import leg_pipeline
 
     replacements = leg_pipeline(leg_titles, nlp, doc, db_conn)
@@ -225,6 +255,9 @@ def get_legislation_replacements(leg_titles, nlp, doc, db_conn):
 
 
 def push_contents(uploaded_bucket, uploaded_key):
+    """
+    Delivers replacements to the specified queue
+    """
     # Get the queue
     sqs = boto3.resource("sqs")
     queue = sqs.Queue(DEST_QUEUE)
@@ -246,6 +279,9 @@ ENRICHMENT_BUCKET = validate_env_variable("ENRICHMENT_BUCKET")
 
 
 def handler(event, context):
+    """
+    Function called by the lambda to run the process event     
+    """
     LOGGER.info("determine-replacements")
     LOGGER.info(DEST_QUEUE)
     try:

@@ -27,6 +27,9 @@ def validate_env_variable(env_var_name):
 
 
 def upload_contents(source_key, text_content):
+    """
+    Upload judgment to destination S3 bucket
+    """
     filename = source_key
 
     LOGGER.info("uploading text content to %s/%s", DEST_BUCKET, filename)
@@ -35,8 +38,10 @@ def upload_contents(source_key, text_content):
     object.put(Body=text_content)
 
 
-# isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
+    """
+    Isolating processing from event unpacking for portability and testing
+    """
     s3_client = boto3.client("s3")
 
     message = json.loads(sqs_rec["body"])
@@ -92,6 +97,9 @@ def process_event(sqs_rec):
 
 
 def replace_text_content(file_content, replacements_content):
+    """
+    Run the replacer pipeline to make replacements on caselaw, legislation and abbreviations
+    """
     replacements = []
 
     replacement_tuples_case = []
@@ -147,6 +155,9 @@ REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 # make replacements
 # write to s3 which will trigger a message on an sqs queue
 def handler(event, context):
+    """
+    Function called by the lambda to run the process event     
+    """
     LOGGER.info("determine-replacements")
     LOGGER.info(DEST_BUCKET)
     LOGGER.info(SOURCE_BUCKET)

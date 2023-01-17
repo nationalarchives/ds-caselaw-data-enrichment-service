@@ -38,6 +38,9 @@ def validate_env_variable(env_var_name):
 ############################################
 class getLoginSecrets:
     def get_secret(self, aws_secret_name, aws_region_name):
+        """
+        Get login secrets for database access
+        """
         secret_name = aws_secret_name
         region_name = aws_region_name
 
@@ -85,6 +88,9 @@ get_secret = getLoginSecrets()
 
 
 def write_patterns_file(patterns_list):
+    """
+    Write patterns to seperate lines
+    """
     patterns_file = ""
     for pattern in patterns_list:
         patterns_file += pattern + "\n"
@@ -92,6 +98,9 @@ def write_patterns_file(patterns_list):
 
 
 def upload_replacements(pattern_bucket, pattern_key, patterns_file):
+    """
+    Upload replacements to S3 bucket
+    """
     LOGGER.info("uploading text content to %s/%s", pattern_bucket, pattern_key)
     s3 = boto3.resource("s3")
     object = s3.Object(pattern_bucket, pattern_key)
@@ -100,6 +109,9 @@ def upload_replacements(pattern_bucket, pattern_key, patterns_file):
 
 
 def create_test_jsonl(source_bucket, df):
+    """
+    Create test jsonl of patterns pulled from a csv
+    """
     patterns = df["pattern"].tolist()
     patterns_file = write_patterns_file(patterns)
     upload_replacements(source_bucket, "test_citation_patterns.jsonl", patterns_file)
@@ -132,7 +144,9 @@ def test_manifest(df, patterns):
 
 
 def lambda_handler(event, context):
-
+    """
+    Function called by the lambda to update the rules
+    """
     LOGGER.info("Updating case law detection rules")
 
     # get password for database
