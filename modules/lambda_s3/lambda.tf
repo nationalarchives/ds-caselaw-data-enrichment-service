@@ -1192,6 +1192,17 @@ module "lambda-validate-replacements" {
         "logs:PutLogEvents"
       ],
       resources = ["*"]
+    },
+    vcite = {
+      effect = "Allow",
+      actions = [
+        "s3:GetObject",
+        "s3:PutObject",
+        "s3:PutObjectAcl",
+        "s3:DeleteObject",
+        "s3:GetObjectAcl"
+      ],
+      resources = ["arn:aws:s3:::vcite-tna-files/*"]
     }
   }
 
