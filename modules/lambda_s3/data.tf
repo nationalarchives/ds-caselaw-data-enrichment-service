@@ -37,3 +37,9 @@ data "aws_iam_policy_document" "sqs_policy_fetch_xml" {
     }
   }
 }
+
+data "aws_iam_policy_document" "vcite_policy" {
+  statement {
+
+  }
+}
