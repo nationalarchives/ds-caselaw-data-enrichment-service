@@ -36,8 +36,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
           aws-region: eu-west-2
-          aws-access-key-id: ${{ secrets.PROD_AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.PROD_AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
         continue-on-error: false
 
       - name: Buildx
