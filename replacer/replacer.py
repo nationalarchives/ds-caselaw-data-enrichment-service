@@ -9,8 +9,6 @@ import re
 
 
 def replacer_caselaw(file_data, replacement):
-    # TODO: href attribute to TNA URI
-    # add a new field in manifest for URI --> check URI material
     """
     String replacement in the XML
     :param file_data: XML file

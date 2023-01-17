@@ -38,7 +38,6 @@ def apply_correction_strategy(citation_type, citation_match, canonical_form):
         | (citation_type == "NCitYearAbbrNumDiv")
         | (citation_type == "PubYearAbbrNum")
     ):
-        # TODO: rewrite this regex
         components = re.findall(r"\d+", citation_match)
         year = components[0]
         d1 = components[1]
@@ -51,7 +50,6 @@ def apply_correction_strategy(citation_type, citation_match, canonical_form):
         | (citation_type == "NCitYearAbrrNumStrokeNum")
         | (citation_type == "PubYearNumAbbrNum")
     ):
-        # TODO: rewrite this regex
         components = re.findall(r"\d+", citation_match)
         year = components[0]
         d1 = components[1]
