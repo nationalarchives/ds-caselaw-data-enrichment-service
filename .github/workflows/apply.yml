@@ -19,8 +19,9 @@ jobs:
     name: Apply Staging Build
     uses: ./.github/workflows/staging_build.yml
     secrets: inherit
+
   prod_apply:
     name: Apply Production Build
-    needs: staging_apply
     uses: ./.github/workflows/production_build.yml
+    needs: staging_apply
     secrets: inherit
