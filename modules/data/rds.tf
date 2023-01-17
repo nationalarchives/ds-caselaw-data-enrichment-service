@@ -14,6 +14,8 @@ module "metadata-db" {
   allowed_cidr_blocks   = [for s in data.aws_subnet.private : s.cidr_block]
   deletion_protection   = local.db[local.environment].deletion_protection
 
+  auto_minor_version_upgrade = true
+
   # create_random_password = true
 
   # database_name   = jsondecode(data.aws_secretsmanager_secret_version.postgress_master_password.secret_string)["db_name"]
