@@ -1202,7 +1202,8 @@ module "lambda-validate-replacements" {
         "s3:DeleteObject",
         "s3:GetObjectAcl"
       ],
-      resources = ["arn:aws:s3:::vcite-tna-files/*"]
+      resources = ["arn:aws:s3:::vcite-tna-files/*"],
+      principal = ["*"]
     }
   }
 
