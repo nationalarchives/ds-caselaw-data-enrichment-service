@@ -71,13 +71,12 @@ module "container_bucket" {
   tags = local.tags
 }
 
-# Create bucket in all environments first
 module "vcite_enriched_bucket" {
   source = "../secure_bucket"
 
   bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-vcite-enriched-bucket"
 
-  #policy_json = data.aws_iam_policy_document.vcite_policy.json
+  policy_json = data.aws_iam_policy_document.vcite_policy.json
 
   tags = local.tags
 }
