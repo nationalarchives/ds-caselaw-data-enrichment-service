@@ -172,3 +172,9 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-push-enriched-xml-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-staging:latest
           docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-staging:latest
           cd "${GITHUB_WORKSPACE}"
+
+          cd "lambda/db_backup"
+          docker buildx build --load -t tna-s3-tna-ecr-repository-db-backup-staging .
+          docker tag tna-s3-tna-ecr-repository-db-backup-staging:latest ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-staging:latest
+          docker push ${{ secrets.STAGING_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-staging:latest
+          cd "${GITHUB_WORKSPACE}"
