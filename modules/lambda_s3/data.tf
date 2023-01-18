@@ -38,7 +38,6 @@ data "aws_iam_policy_document" "sqs_policy_fetch_xml" {
   }
 }
 
-# update the identifier once we know what their arn is.
 data "aws_iam_policy_document" "vcite_policy" {
   statement {
     sid    = "Access"
@@ -46,7 +45,7 @@ data "aws_iam_policy_document" "vcite_policy" {
 
     principals {
       identifiers = [
-        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root",
+        "arn:aws:iam::926041203935:role/vlex-vcite",
       ]
       type = "AWS"
     }
