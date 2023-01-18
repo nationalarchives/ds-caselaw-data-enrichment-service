@@ -1605,6 +1605,13 @@ module "db_backup_lambda" {
   package_type  = "Image"
   architectures = ["x86_64"]
 
+  attach_policies    = true
+  number_of_policies = 2
+  policies = [
+    "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole",
+    "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
+  ]
+
   environment_variables = {
     ENVIRONMENT = local.environment
     BUCKET_NAME = module.db_backup.s3_bucket_id
