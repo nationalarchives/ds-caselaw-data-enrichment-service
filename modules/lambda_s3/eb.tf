@@ -1,6 +1,6 @@
 module "eb_db_backup" {
   source  = "terraform-aws-modules/eventbridge/aws"
-  version = "~> 1"
+  version = "~> 0.1"
 
   create_bus = false
 
