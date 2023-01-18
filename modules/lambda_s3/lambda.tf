@@ -1589,30 +1589,29 @@ resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification"
   }
 }
 
-# enable after image is in ECR
-#module "db_backup_lambda" {
-#  source  = "terraform-aws-modules/lambda/aws"
-#  version = ">= 4.7.1, < 5"
-#
-#  function_name = "${local.name}-${local.environment}-db-backup"
-#  description   = "Takes a snapshot each day"
-#
-#  create_package                          = false
-#  create_current_version_allowed_triggers = false
-#
-#  maximum_retry_attempts = 0
-#
-#  image_uri     = "${data.aws_caller_identity.current.account_id}.dkr.ecr.${local.region}.amazonaws.com/${aws_ecr_repository.db-backup.name}:latest"
-#  package_type  = "Image"
-#  architectures = ["x86_64"]
-#
-#  environment_variables = {
-#    ENVIRONMENT = local.environment
-#    BUCKET_NAME = module.db_backup.s3_bucket_id
-#  }
-#
-#  vpc_security_group_ids = [var.default_security_group_id]
-#  vpc_subnet_ids         = var.aws_subnets_private_ids
-#
-#  depends_on = [aws_ecr_repository.db-backup]
-#}
+module "db_backup_lambda" {
+  source  = "terraform-aws-modules/lambda/aws"
+  version = ">= 4.7.1, < 5"
+
+  function_name = "${local.name}-${local.environment}-db-backup"
+  description   = "Takes a snapshot each day"
+
+  create_package                          = false
+  create_current_version_allowed_triggers = false
+
+  maximum_retry_attempts = 0
+
+  image_uri     = "${data.aws_caller_identity.current.account_id}.dkr.ecr.${local.region}.amazonaws.com/${aws_ecr_repository.db-backup.name}:latest"
+  package_type  = "Image"
+  architectures = ["x86_64"]
+
+  environment_variables = {
+    ENVIRONMENT = local.environment
+    BUCKET_NAME = module.db_backup.s3_bucket_id
+  }
+
+  vpc_security_group_ids = [var.default_security_group_id]
+  vpc_subnet_ids         = var.aws_subnets_private_ids
+
+  depends_on = [aws_ecr_repository.db-backup]
+}
