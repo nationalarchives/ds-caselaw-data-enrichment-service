@@ -1193,18 +1193,18 @@ module "lambda-validate-replacements" {
       ],
       resources = ["*"]
     },
-#    vcite = {
-#      effect = "Allow",
-#      actions = [
-#        "s3:GetObject",
-#        "s3:PutObject",
-#        "s3:PutObjectAcl",
-#        "s3:DeleteObject",
-#        "s3:GetObjectAcl"
-#      ],
-#      resources = ["arn:aws:s3:::vcite-tna-files/*"],
-#      principal = ["*"]
-#    }
+    #    vcite = {
+    #      effect = "Allow",
+    #      actions = [
+    #        "s3:GetObject",
+    #        "s3:PutObject",
+    #        "s3:PutObjectAcl",
+    #        "s3:DeleteObject",
+    #        "s3:GetObjectAcl"
+    #      ],
+    #      resources = ["arn:aws:s3:::vcite-tna-files/*"],
+    #      principal = ["*"]
+    #    }
   }
 
   allowed_triggers = {
@@ -1274,6 +1274,21 @@ resource "aws_ecr_repository" "fetch-xml" {
   }
 
   tags = local.tags
+}
+
+resource "aws_ecr_repository" "db-backup" {
+  name = "${local.name}-ecr-repository-db-backup-${local.environment}"
+
+  image_scanning_configuration {
+    scan_on_push = true
+  }
+
+  tags = local.tags
+}
+
+resource "aws_ecr_lifecycle_policy" "db_backup" {
+  repository = aws_ecr_repository.db-backup.name
+  policy     = file("${path.module}/retention_policy.json")
 }
 
 resource "aws_ecr_lifecycle_policy" "fx_retention" {
@@ -1573,3 +1588,31 @@ resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification"
     events              = ["s3:ObjectCreated:*"]
   }
 }
+
+# enable after image is in ECR
+#module "db_backup_lambda" {
+#  source  = "terraform-aws-modules/lambda/aws"
+#  version = ">= 4.7.1, < 5"
+#
+#  function_name = "${local.name}-${local.environment}-db-backup"
+#  description   = "Takes a snapshot each day"
+#
+#  create_package                          = false
+#  create_current_version_allowed_triggers = false
+#
+#  maximum_retry_attempts = 0
+#
+#  image_uri     = "${data.aws_caller_identity.current.account_id}.dkr.ecr.${local.region}.amazonaws.com/${aws_ecr_repository.db-backup.name}:latest"
+#  package_type  = "Image"
+#  architectures = ["x86_64"]
+#
+#  environment_variables = {
+#    ENVIRONMENT = local.environment
+#    BUCKET_NAME = module.db_backup.s3_bucket_id
+#  }
+#
+#  vpc_security_group_ids = [var.default_security_group_id]
+#  vpc_subnet_ids         = var.aws_subnets_private_ids
+#
+#  depends_on = [aws_ecr_repository.db-backup]
+#}
