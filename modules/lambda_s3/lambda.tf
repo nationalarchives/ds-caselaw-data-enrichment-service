@@ -1591,7 +1591,7 @@ resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification"
 
 module "db_backup_lambda" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = ">= 4.7.1, < 5"
+  version = ">=2.0.0,<3.0.0"
 
   function_name = "${local.name}-${local.environment}-db-backup"
   description   = "Takes a snapshot each day"
