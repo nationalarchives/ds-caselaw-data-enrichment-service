@@ -105,6 +105,7 @@ jobs:
           set +e
           set +o pipefail
           cd "lambda/determine_replacements_caselaw"
+          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
           docker buildx build --load -t tna-s3-tna-ecr-repository-production .
           docker tag tna-s3-tna-ecr-repository-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-production:latest
           docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-production:latest
