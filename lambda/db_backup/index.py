@@ -18,7 +18,7 @@ def lambda_handler(event, context):
         # Take snapshot of RDS database
         snapshot_name = "db-snapshot-" + date
         rds.create_db_cluster_snapshot(
-            DBClusterSnapshotIdentifier=snapshot_name, DBClusterInstanceIdentifier=db
+            DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db
         )
 
         # Wait for snapshot to be created
