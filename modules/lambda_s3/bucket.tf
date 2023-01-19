@@ -7,14 +7,6 @@ module "xml_original_bucket" {
   tags = local.tags
 }
 
-module "test-bucket" {
-  source = "../secure_bucket"
-
-  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-test-bucket"
-
-  tags = local.tags
-}
-
 module "text_content_bucket" {
   source = "../secure_bucket"
 
