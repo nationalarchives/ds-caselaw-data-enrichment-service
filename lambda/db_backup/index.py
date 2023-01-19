@@ -1,5 +1,5 @@
 import os
-
+from datetime import datetime
 import boto3
 from botocore.exceptions import ClientError
 
@@ -10,10 +10,12 @@ def lambda_handler(event, context):
     s3 = boto3.client("s3")
     bucket = os.getenv("bucket-name")
     db = event["db-name"]
+    now = datetime.now()
+    date = now.strftime("%d-%m-%Y")
 
     try:
         # Take snapshot of RDS database
-        snapshot_name = "db-snapshot-" + event["time"]
+        snapshot_name = "db-snapshot-" + event[date]
         rds.create_db_snapshot(
             DBSnapshotIdentifier=snapshot_name, DBInstanceIdentifier=db
         )
