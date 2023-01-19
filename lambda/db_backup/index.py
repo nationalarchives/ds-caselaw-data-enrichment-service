@@ -22,7 +22,9 @@ def lambda_handler(event, context):
         )
 
         # Wait for snapshot to be created
-        rds.get_waiter("db_snapshot_available").wait(DBClusterSnapshotIdentifier=snapshot_name)
+        rds.get_waiter("db_snapshot_available").wait(
+            DBClusterSnapshotIdentifier=snapshot_name
+        )
     except ClientError as e:
         print(e)
 
