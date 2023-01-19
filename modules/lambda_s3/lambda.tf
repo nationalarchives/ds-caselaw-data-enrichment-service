@@ -1612,6 +1612,19 @@ module "db_backup_lambda" {
     "arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole"
   ]
 
+  attach_policy_statements = true
+  policy_statements = {
+    rds = {
+      effect = "Allow",
+      actions = [
+        "rds:CreateDBSnapshot",
+      ],
+      resources = [
+        var.postgress_hostname
+      ]
+    }
+  }
+
   environment_variables = {
     ENVIRONMENT = local.environment
     BUCKET_NAME = module.db_backup.s3_bucket_id
