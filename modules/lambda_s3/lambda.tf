@@ -1617,7 +1617,7 @@ module "db_backup_lambda" {
     rds = {
       effect = "Allow",
       actions = [
-        "rds:CreateDBSnapshot",
+        "rds:Create*",
       ],
       resources = [
         "*"
