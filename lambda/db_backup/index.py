@@ -17,12 +17,12 @@ def lambda_handler(event, context):
     try:
         # Take snapshot of RDS database
         snapshot_name = "db-snapshot-" + date
-        rds.create_db_snapshot(
-            DBSnapshotIdentifier=snapshot_name, DBInstanceIdentifier=db
+        rds.create_db_cluster_snapshot(
+            DBClusterSnapshotIdentifier=snapshot_name, DBClusterInstanceIdentifier=db
         )
 
         # Wait for snapshot to be created
-        rds.get_waiter("db_snapshot_available").wait(DBSnapshotIdentifier=snapshot_name)
+        rds.get_waiter("db_snapshot_available").wait(DBClusterSnapshotIdentifier=snapshot_name)
     except ClientError as e:
         print(e)
 
