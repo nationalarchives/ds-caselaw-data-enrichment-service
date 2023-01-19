@@ -16,6 +16,7 @@ def lambda_handler(event, context):
 
     try:
         # Take snapshot of RDS database
+        print("Trying to create db snapshot")
         snapshot_name = "db-snapshot-" + date
         rds.create_db_cluster_snapshot(
             DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db
@@ -25,11 +26,13 @@ def lambda_handler(event, context):
         rds.get_waiter("db_snapshot_available").wait(
             DBClusterSnapshotIdentifier=snapshot_name
         )
+        print("Snapshot created")
     except ClientError as e:
         print(e)
 
     try:
         # Copy snapshot to S3 bucket
+        print("Attempting to upload snapshot to S3.")
         s3.copy_db_snapshot(
             SourceDBSnapshotIdentifier=snapshot_name,
             TargetBucket=bucket,
