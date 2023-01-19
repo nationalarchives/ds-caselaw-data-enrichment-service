@@ -16,7 +16,7 @@ def lambda_handler(event, context):
 
     try:
         # Take snapshot of RDS database
-        snapshot_name = "db-snapshot-" + event[date]
+        snapshot_name = "db-snapshot-" + date
         rds.create_db_snapshot(
             DBSnapshotIdentifier=snapshot_name, DBInstanceIdentifier=db
         )
