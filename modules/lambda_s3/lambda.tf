@@ -1601,7 +1601,7 @@ module "db_backup_lambda" {
 
   maximum_retry_attempts = 0
 
-  image_uri     = "${data.aws_caller_identity.current.account_id}.dkr.ecr.${local.region}.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-production:latest"
+  image_uri     = "${data.aws_caller_identity.current.account_id}.dkr.ecr.${local.region}.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${local.environment}:latest"
   package_type  = "Image"
   architectures = ["x86_64"]
 
