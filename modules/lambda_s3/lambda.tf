@@ -1620,7 +1620,7 @@ module "db_backup_lambda" {
         "rds:CreateDBSnapshot",
       ],
       resources = [
-        var.postgress_hostname
+        "*"
       ]
     }
   }
