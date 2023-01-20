@@ -9,6 +9,9 @@ def lambda_handler(event, context):
     # Create RDS and S3 clients
     rds = boto3.client("rds")
     s3 = boto3.client("s3")
+    region = "eu-west-2"
+    sts = boto3.client("sts")
+    account_id = boto3.client("sts").get_caller_identity().get("Account")
     bucket = os.getenv("bucket-name")
     db = event["db-name"]
     now = datetime.now()
@@ -36,7 +39,14 @@ def lambda_handler(event, context):
 
     try:
         # upload the object (file) to the bucket
-        s3.put_object(Bucket=bucket, Key=snapshot_name, Body=open(snapshot_name, "rb"))
+        s3.copy_object(
+            Bucket=bucket,
+            CopySource={
+                "DBClusterSnapshotIdentifier": f'arn:aws:rds:"{region}:${account_id}:cluster-snapshot:${snapshot_name}"',
+                "Region": region,
+            },
+            Key=snapshot_name,
+        )
 
         print(f"{snapshot_name} has been successfully uploaded to {bucket}")
     except ClientError as e:
