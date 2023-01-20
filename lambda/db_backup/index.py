@@ -31,24 +31,16 @@ def lambda_handler(event, context):
 
         print(f"DB cluster snapshot {snapshot_name} is now available")
 
-        # # Wait for snapshot to be created
-        # rds.get_waiter("db_snapshot_available").wait(
-        #     DBClusterSnapshotIdentifier=snapshot_name,
-        #     IncludeShared=True,
-        #     IncludePublic=False,
-        # )
-        # print("Snapshot is available")
-
     except ClientError as e:
         print(e)
 
     try:
         # Copy snapshot to S3 bucket
         print("Attempting to upload snapshot to S3.")
-        s3.copy_db_snapshot(
-            SourceDBSnapshotIdentifier=snapshot_name,
-            TargetBucket=bucket,
-            TargetDBSnapshotIdentifier=snapshot_name,
+        s3.put_object(
+            Body={snapshot_name},
+            Bucket=bucket,
+            Key={snapshot_name},
         )
         print("Copied snapshot to S3")
     except ClientError as e:
