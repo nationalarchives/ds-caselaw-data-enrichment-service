@@ -100,7 +100,7 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-prod
-          terraform apply -refresh-only -no-color -var "app_env=production"
+          terraform apply -refresh-only --auto-approve -no-color -var "app_env=production"
           terraform apply --auto-approve -no-color -var "app_env=production"
         continue-on-error: false
 
@@ -176,5 +176,5 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-prod
-          terraform apply -refresh-only -no-color -var "app_env=production"
+          terraform apply -refresh-only --auto-approve -no-color -var "app_env=production"
           terraform apply --auto-approve -no-color -var "app_env=production"
