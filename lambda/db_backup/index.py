@@ -35,13 +35,9 @@ def lambda_handler(event, context):
         print(e)
 
     try:
-        # Copy snapshot to S3 bucket
-        print("Attempting to upload snapshot to S3.")
-        s3.put_object(
-            Body=snapshot_name,
-            Bucket=bucket,
-            Key=snapshot_name,
-        )
-        print("Copied snapshot to S3")
+        # upload the object (file) to the bucket
+        s3.put_object(Bucket=bucket, Key=snapshot_name, Body=open(snapshot_name, "rb"))
+
+        print(f"{snapshot_name} has been successfully uploaded to {bucket}")
     except ClientError as e:
         print(e)
