@@ -1604,6 +1604,7 @@ module "db_backup_lambda" {
   image_uri     = "${data.aws_caller_identity.current.account_id}.dkr.ecr.${local.region}.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${local.environment}:latest"
   package_type  = "Image"
   architectures = ["x86_64"]
+  timeout       = 900
 
   attach_policies    = true
   number_of_policies = 2

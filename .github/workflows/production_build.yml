@@ -100,6 +100,7 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-prod
+          terraform apply -refresh-only -no-color -var "app_env=production"
           terraform apply --auto-approve -no-color -var "app_env=production"
         continue-on-error: false
 
@@ -168,3 +169,12 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-db-backup-production:latest ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-production:latest
           docker push ${{ secrets.PROD_ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-production:latest
           cd "${GITHUB_WORKSPACE}"
+
+      # Running Terraform Apply again now that a potential new image exists. Due to the possibility of creating ECR in the previous step, that must occur earlier, then push an image and lambda needs to grab the most recent
+      - name: Terraform Apply
+        run: |
+          set +e
+          set +o pipefail
+          terraform workspace select tna-prod
+          terraform apply -refresh-only -no-color -var "app_env=production"
+          terraform apply --auto-approve -no-color -var "app_env=production"
