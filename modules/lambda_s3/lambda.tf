@@ -1619,12 +1619,23 @@ module "db_backup_lambda" {
       effect = "Allow",
       actions = [
         "rds:Create*",
+        "rds:StartExportTask",
         "rds:Describe*",
       ],
       resources = [
         "*"
       ]
-    }
+    },
+    kms_get_key = {
+      effect = "Allow",
+      actions = [
+        "kms:Encrypt",
+        "kms:DescribeKey",
+        "kms:GenerateDataKey",
+        "kms:Decrypt",
+        "kms:ReEncryptTo"
+      ],
+      resources = ["*"]
   }
 
   environment_variables = {
