@@ -11,7 +11,8 @@ def lambda_handler(event, context):
     s3 = boto3.client("s3")
     region = "eu-west-2"
     sts = boto3.client("sts")
-    account_id = boto3.client("sts").get_caller_identity().get("Account")
+    environment = os.getenv("environment")
+    account_id = sts.get_caller_identity().get("Account")
     bucket = os.getenv("bucket-name")
     db = event["db-name"]
     now = datetime.now()
@@ -32,22 +33,28 @@ def lambda_handler(event, context):
         # wait for the DB cluster snapshot to be available
         waiter.wait(DBClusterSnapshotIdentifier=snapshot_name)
 
-        print(f"DB cluster snapshot {snapshot_name} is now available")
+        # Getting kms_key_id of snapshot
+        response = rds.describe_db_cluster_snapshots(
+            DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db
+        )
+        kms_key_id = response["DBClusterSnapshots"]["KmsKeyId"]
+
+        print(
+            f"DB cluster snapshot {snapshot_name} is now available. With {kms_key_id}"
+        )
 
     except ClientError as e:
         print(e)
 
     try:
         # upload the object (file) to the bucket
-        s3.copy_object(
-            Bucket=bucket,
-            CopySource={
-                "DBClusterSnapshotIdentifier": f'arn:aws:rds:"{region}:${account_id}:cluster-snapshot:${snapshot_name}"',
-                "Region": region,
-            },
-            Key=snapshot_name,
+        export_task_identifier = "db-backup-" + date
+        rds.start_export_task(
+            ExportTaskIdentifier=export_task_identifier,
+            SourceArn=snapshot_name,
+            S3BucketName=bucket,
+            IamRoleArn="arn:aws:iam::{account_id}:role/tna-s3-tna-{environment}-db-backup",
+            KmsKeyId=kms_key_id,
         )
-
-        print(f"{snapshot_name} has been successfully uploaded to {bucket}")
     except ClientError as e:
         print(e)
