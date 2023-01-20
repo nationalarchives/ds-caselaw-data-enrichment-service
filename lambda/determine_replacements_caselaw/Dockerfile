@@ -35,7 +35,7 @@ RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
 # RUN pip install aws-psycopg2 --target "${LAMBDA_TASK_ROOT}"
 
-RUN ls -la ${LAMBDA_TASK_ROOT}/*
+# RUN ls -la ${LAMBDA_TASK_ROOT}/*
 
 CMD [ "index.handler" ]
 # CMD [ "index.lambda_handler" ]
