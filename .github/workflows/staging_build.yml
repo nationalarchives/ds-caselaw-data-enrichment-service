@@ -108,6 +108,7 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-staging
+          terraform apply -refresh-only --auto-approve -no-color -var "app_env=staging"
           terraform apply --auto-approve -no-color -var "app_env=staging"
 
       # Pushing images to ECR last
@@ -185,5 +186,5 @@ jobs:
           set +e
           set +o pipefail
           terraform workspace select tna-staging
-          terraform apply -refresh-only -no-color -var "app_env=staging"
+          terraform apply -refresh-only --auto-approve -no-color -var "app_env=staging"
           terraform apply --auto-approve -no-color -var "app_env=staging"
