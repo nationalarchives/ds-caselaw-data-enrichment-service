@@ -22,6 +22,7 @@ def lambda_handler(event, context):
     try:
         # Take snapshot of RDS database
         print("Trying to create db snapshot")
+        print("Time now", now)
         snapshot_name = "db-snapshot-" + date
         rds.create_db_cluster_snapshot(
             DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db
