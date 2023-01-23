@@ -1652,12 +1652,12 @@ module "db_backup_lambda" {
   }
 
   assume_role_policy_statements = {
-    account_root = {
+    iam_pass = {
       effect  = "Allow",
       actions = ["iam:PassRole"],
       principals = {
         account_principal = {
-          type        = "AWS",
+          type        = "Service",
           identifiers = ["lambda.amazonaws.com"]
         }
       }
