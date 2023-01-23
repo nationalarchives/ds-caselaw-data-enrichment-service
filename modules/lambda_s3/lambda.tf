@@ -1658,7 +1658,7 @@ module "db_backup_lambda" {
       principals = {
         account_principal = {
           type        = "AWS",
-          identifiers = [module.db_backup_lambda.lambda_role_arn]
+          identifiers = ["lambda.amazonaws.com"]
         }
       }
     }
