@@ -61,3 +61,14 @@ $ python runner.py
 ![Architecture](architecture.png)
 The VCite integration is shown more distinctly in the diagram below:
 ![VCite-integration](tna-vcite-integration.png)
+
+## 4 Workflow
+
+CI/CD works in the following way:
+* Engineer branches from `main` branch, commits code and raises a pull request.
+  * The python code within the repo is checked against formatting tools called `black` and `isort`. 
+  * The Terraform code is checked against a linting tool called `TFLint`. 
+  * Terraform is validated and planned against staging and production as independent checks.
+* Upon merge, non dockerised lambdas are built, terraform is planned, applied and then docker images are built and pushed to ECR. This occurs for staging, if staging succeeds then the same happens for production.
+
+

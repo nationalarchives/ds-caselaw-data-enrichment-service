@@ -1636,6 +1636,13 @@ module "db_backup_lambda" {
         "kms:ReEncryptTo"
       ],
       resources = ["*"]
+    },
+    iam = {
+      effect = "Allow",
+      actions = [
+        "iam:PassRole",
+      ]
+      resources = [module.db_backup_lambda.lambda_role_arn]
     }
   }
 
@@ -1648,19 +1655,6 @@ module "db_backup_lambda" {
     db_backup = {
       principal  = "events.amazonaws.com"
       source_arn = aws_cloudwatch_event_rule.db_backup.arn
-    }
-  }
-
-  assume_role_policy_statements = {
-    account_root = {
-      effect  = "Allow",
-      actions = ["iam:PassRole"],
-      principals = {
-        account_principal = {
-          type        = "AWS",
-          identifiers = ["lambda.amazonaws.com"]
-        }
-      }
     }
   }
 
