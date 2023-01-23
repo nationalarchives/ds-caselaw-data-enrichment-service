@@ -44,7 +44,7 @@ def lambda_handler(event, context):
         for snapshot in response["DBClusterSnapshots"]:
             if snapshot["DBClusterSnapshotIdentifier"] == snapshot_name:
                 kms_key_id = snapshot["KmsKeyId"]
-                source = snapshot["SourceDBClusterSnapshotArn"]
+                source = snapshot["DBClusterSnapshotArn"]
                 break
 
     except ClientError as e:
