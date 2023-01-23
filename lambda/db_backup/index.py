@@ -52,7 +52,7 @@ def lambda_handler(event, context):
         kms_key_id = kms.describe_key(
             KeyId=f"alias/{environment}-tna-s3-tna-sg-db-backups-kms-key"
         )
-        key_id = response["KeyMetadata"]["KeyId"]
+        key_id = kms_key_id["KeyMetadata"]["KeyId"]
         print(key_id)
 
     except ClientError as e:
