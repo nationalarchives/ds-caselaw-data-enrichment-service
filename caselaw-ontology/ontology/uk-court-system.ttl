@@ -13,7 +13,7 @@
 #    Individuals
 #################################################################
 
-###  http://caselaw.nationalarchives.gov.uk/def/caselaw/AdministrativeCourt
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Administrative_Court
 caselaw:Administrative_Court rdf:type owl:NamedIndividual ,
                                      <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> .
 
@@ -28,7 +28,7 @@ caselaw:Chancery_Division rdf:type owl:NamedIndividual ,
                                    <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> .
 
 
-###  http://caselaw.nationalarchives.gov.uk/def/caselaw/CommercialCourt
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Commercial_Court
 caselaw:Commercial_Court rdf:type owl:NamedIndividual ,
                                  <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> .
 
@@ -84,8 +84,12 @@ caselaw:First_Tier_Tribunal rdf:type owl:NamedIndividual ,
                                                 caselaw:Tax_Chamber .
 
 
-###  http://caselaw.nationalarchives.gov.uk/def/caselaw/GeneralCourt
-caselaw:General_Court rdf:type owl:NamedIndividual ,
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/General_Court_KB
+caselaw:General_Court_KB rdf:type owl:NamedIndividual ,
+                              <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> .
+
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/General_Court_QB
+caselaw:General_Court_QB rdf:type owl:NamedIndividual ,
                               <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> .
 
 
@@ -100,7 +104,8 @@ caselaw:High_Court rdf:type owl:NamedIndividual ,
                    caselaw:hasDivision caselaw:Chancery_Division ,
                                        caselaw:Court_of_Protection ,
                                        caselaw:Family_Division ,
-                                       <http://caselaw.nationalarchives.gov.uk/def/caselaw/Queen's_Bench_Division> .
+                                       <http://caselaw.nationalarchives.gov.uk/def/caselaw/Queen's_Bench_Division> , 
+                                       <http://caselaw.nationalarchives.gov.uk/def/caselaw/King's_Bench_Division> .
 
 
 ###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Immigration_and_Asylum_Chamber
@@ -186,7 +191,15 @@ caselaw:Upper_Tribunal rdf:type owl:NamedIndividual ,
                                                                          <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> ;
                                                                 caselaw:hasDivision caselaw:Administrative_Court ,
                                                                                     caselaw:Commercial_Court ,
-                                                                                    caselaw:General_Court ,
+                                                                                    caselaw:General_Court_QB ,
+                                                                                    caselaw:Technology_and_Construction_Court .
+
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/King's_Bench_Division
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/King's_Bench_Division> rdf:type owl:NamedIndividual ,
+                                                                         <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> ;
+                                                                caselaw:hasDivision caselaw:Administrative_Court ,
+                                                                                    caselaw:Commercial_Court ,
+                                                                                    caselaw:General_Court_KB ,
                                                                                     caselaw:Technology_and_Construction_Court .
 
 
