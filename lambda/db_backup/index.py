@@ -11,6 +11,7 @@ def lambda_handler(event, context):
     rds = boto3.client("rds")
     sts = boto3.client("sts")
     environment = os.getenv("environment")
+    bucket = os.getenv("bucket_name")
     account_id = sts.get_caller_identity().get("Account")
     db = event["db-name"]
     now = datetime.now()
@@ -54,7 +55,7 @@ def lambda_handler(event, context):
         rds.start_export_task(
             ExportTaskIdentifier=export_task_identifier,
             SourceArn=snapshot_name,
-            S3BucketName=os.environ["bucket"],
+            S3BucketName=bucket,
             IamRoleArn=f"arn:aws:iam::{account_id}:role/tna-s3-tna-{environment}-db-backup",
             KmsKeyId=kms_key_id,
         )
