@@ -1,7 +1,7 @@
 resource "aws_cloudwatch_event_rule" "db_backup" {
   name                = "db-backup"
   description         = "Trigger lambda to perform db snapshot"
-  is_enabled          = false # update last
+  is_enabled          = true # update last
   schedule_expression = "cron(0 12 * * ? *)"
 }
 

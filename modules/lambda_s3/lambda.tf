@@ -1640,8 +1640,15 @@ module "db_backup_lambda" {
   }
 
   environment_variables = {
-    ENVIRONMENT = local.environment
-    BUCKET_NAME = module.db_backup.s3_bucket_id
+    environment = local.environment
+    bucket_name = module.db_backup.s3_bucket_id
+  }
+
+  allowed_triggers = {
+    db_backup = {
+      principal  = "events.amazonaws.com"
+      source_arn = aws_cloudwatch_event_rule.db_backup.arn
+    }
   }
 
   vpc_security_group_ids = [var.default_security_group_id]

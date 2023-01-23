@@ -44,6 +44,7 @@ def lambda_handler(event, context):
         for snapshot in response["DBClusterSnapshots"]:
             if snapshot["DBClusterSnapshotIdentifier"] == snapshot_name:
                 kms_key_id = snapshot["KmsKeyId"]
+                source = snapshot["SourceDBClusterSnapshotArn"]
                 break
 
     except ClientError as e:
@@ -54,7 +55,7 @@ def lambda_handler(event, context):
         export_task_identifier = "db-backup-" + date
         rds.start_export_task(
             ExportTaskIdentifier=export_task_identifier,
-            SourceArn=snapshot_name,
+            SourceArn=source,
             S3BucketName=bucket,
             IamRoleArn=f"arn:aws:iam::{account_id}:role/tna-s3-tna-{environment}-db-backup",
             KmsKeyId=kms_key_id,
