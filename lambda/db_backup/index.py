@@ -33,9 +33,11 @@ def lambda_handler(event, context):
         # wait for the DB cluster snapshot to be available
         waiter.wait(DBClusterSnapshotIdentifier=snapshot_name)
 
+        print(f"DB cluster snapshot {snapshot_name} is now available.")
+
         # Getting kms_key_id of snapshot
         response = rds.describe_db_cluster_snapshots(
-            DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db
+            DBClusterSnapshotIdentifier=snapshot_name, SnapshotType="Manual"
         )
         kms_key_id = response["DBClusterSnapshots"]["KmsKeyId"]
 
