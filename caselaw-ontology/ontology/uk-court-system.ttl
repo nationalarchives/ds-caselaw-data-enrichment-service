@@ -14,7 +14,7 @@
 #################################################################
 
 ###  http://caselaw.nationalarchives.gov.uk/def/caselaw/AdministrativeCourt
-caselaw:AdministrativeCourt rdf:type owl:NamedIndividual ,
+caselaw:Administrative_Court rdf:type owl:NamedIndividual ,
                                      <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> .
 
 
@@ -29,7 +29,7 @@ caselaw:Chancery_Division rdf:type owl:NamedIndividual ,
 
 
 ###  http://caselaw.nationalarchives.gov.uk/def/caselaw/CommercialCourt
-caselaw:CommercialCourt rdf:type owl:NamedIndividual ,
+caselaw:Commercial_Court rdf:type owl:NamedIndividual ,
                                  <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> .
 
 
@@ -85,7 +85,7 @@ caselaw:First_Tier_Tribunal rdf:type owl:NamedIndividual ,
 
 
 ###  http://caselaw.nationalarchives.gov.uk/def/caselaw/GeneralCourt
-caselaw:GeneralCourt rdf:type owl:NamedIndividual ,
+caselaw:General_Court rdf:type owl:NamedIndividual ,
                               <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> .
 
 
@@ -184,9 +184,9 @@ caselaw:Upper_Tribunal rdf:type owl:NamedIndividual ,
 ###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Queen's_Bench_Division
 <http://caselaw.nationalarchives.gov.uk/def/caselaw/Queen's_Bench_Division> rdf:type owl:NamedIndividual ,
                                                                          <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> ;
-                                                                caselaw:hasDivision caselaw:AdministrativeCourt ,
-                                                                                    caselaw:CommercialCourt ,
-                                                                                    caselaw:GeneralCourt ,
+                                                                caselaw:hasDivision caselaw:Administrative_Court ,
+                                                                                    caselaw:Commercial_Court ,
+                                                                                    caselaw:General_Court ,
                                                                                     caselaw:Technology_and_Construction_Court .
 
 
