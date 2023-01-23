@@ -1,3 +1,4 @@
+import json
 import os
 from datetime import datetime
 
@@ -37,9 +38,16 @@ def lambda_handler(event, context):
 
         # Getting kms_key_id of snapshot
         response = rds.describe_db_cluster_snapshots(
-            DBClusterSnapshotIdentifier=snapshot_name, SnapshotType="Manual"
+            SnapshotType="Manual",
+            IncludeShared=True,
+            IncludePublic=False,
         )
-        kms_key_id = response["KmsKeyId"]
+
+        for snapshot in response["DBClusterSnapshots"]:
+            if snapshot["DBClusterSnapshotIdentifier"] == snapshot_name:
+                kms_key_id = snapshot["KmsKeyId"]
+                print(kms_key_id)
+                break
 
         print(
             f"DB cluster snapshot {snapshot_name} is now available. With {kms_key_id}"
