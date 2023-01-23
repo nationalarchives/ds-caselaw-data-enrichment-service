@@ -1651,6 +1651,19 @@ module "db_backup_lambda" {
     }
   }
 
+  assume_role_policy_statements = {
+    account_root = {
+      effect  = "Allow",
+      actions = ["iam:PassRole"],
+      principals = {
+        account_principal = {
+          type        = "AWS",
+          identifiers = [module.db_backup_lambda.lambda_role_arn]
+        }
+      }
+    }
+  }
+
   vpc_security_group_ids = [var.default_security_group_id]
   vpc_subnet_ids         = var.aws_subnets_private_ids
 
