@@ -39,7 +39,7 @@ def lambda_handler(event, context):
         response = rds.describe_db_cluster_snapshots(
             DBClusterSnapshotIdentifier=snapshot_name, SnapshotType="Manual"
         )
-        kms_key_id = response["DBClusterSnapshots"]["KmsKeyId"]
+        kms_key_id = response["KmsKeyId"]
 
         print(
             f"DB cluster snapshot {snapshot_name} is now available. With {kms_key_id}"
