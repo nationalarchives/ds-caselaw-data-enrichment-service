@@ -10,6 +10,7 @@ def lambda_handler(event, context):
     # Create RDS and S3 clients
     rds = boto3.client("rds")
     sts = boto3.client("sts")
+    kms = boto3.client("kms")
     environment = os.getenv("environment")
     bucket = os.getenv("bucket_name")
     account_id = sts.get_caller_identity().get("Account")
@@ -34,7 +35,7 @@ def lambda_handler(event, context):
 
         print(f"DB cluster snapshot {snapshot_name} is now available.")
 
-        # Getting kms_key_id of snapshot
+        # Getting arn of snapshot
         response = rds.describe_db_cluster_snapshots(
             SnapshotType="Manual",
             IncludeShared=True,
@@ -43,9 +44,14 @@ def lambda_handler(event, context):
 
         for snapshot in response["DBClusterSnapshots"]:
             if snapshot["DBClusterSnapshotIdentifier"] == snapshot_name:
-                kms_key_id = snapshot["KmsKeyId"]
                 source = snapshot["DBClusterSnapshotArn"]
                 break
+            else:
+                print("Could not find snapshot")
+
+        kms_key_id = kms.describe_key(KeyId=f'alias/{environment}-tna-s3-tna-sg-db-backups-kms-key')
+        key_id = response['KeyMetadata']['KeyId']
+        print(key_id)
 
     except ClientError as e:
         print(e)
@@ -58,7 +64,7 @@ def lambda_handler(event, context):
             SourceArn=source,
             S3BucketName=bucket,
             IamRoleArn=f"arn:aws:iam::{account_id}:role/tna-s3-tna-{environment}-db-backup",
-            KmsKeyId=kms_key_id,
+            KmsKeyId=key_id,
         )
     except ClientError as e:
         print(e)
