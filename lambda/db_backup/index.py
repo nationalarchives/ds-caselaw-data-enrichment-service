@@ -9,12 +9,9 @@ from botocore.exceptions import ClientError
 def lambda_handler(event, context):
     # Create RDS and S3 clients
     rds = boto3.client("rds")
-    s3 = boto3.client("s3")
-    region = "eu-west-2"
     sts = boto3.client("sts")
     environment = os.getenv("environment")
     account_id = sts.get_caller_identity().get("Account")
-    bucket = os.getenv("bucket-name")
     db = event["db-name"]
     now = datetime.now()
     date = now.strftime("%d-%m-%Y")
@@ -22,7 +19,6 @@ def lambda_handler(event, context):
     try:
         # Take snapshot of RDS database
         print("Trying to create db snapshot")
-        print("Time now", now)
         snapshot_name = "db-snapshot-" + date
         rds.create_db_cluster_snapshot(
             DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db
@@ -47,12 +43,7 @@ def lambda_handler(event, context):
         for snapshot in response["DBClusterSnapshots"]:
             if snapshot["DBClusterSnapshotIdentifier"] == snapshot_name:
                 kms_key_id = snapshot["KmsKeyId"]
-                print(kms_key_id)
                 break
-
-        print(
-            f"DB cluster snapshot {snapshot_name} is now available. With {kms_key_id}"
-        )
 
     except ClientError as e:
         print(e)
@@ -63,8 +54,8 @@ def lambda_handler(event, context):
         rds.start_export_task(
             ExportTaskIdentifier=export_task_identifier,
             SourceArn=snapshot_name,
-            S3BucketName=bucket,
-            IamRoleArn="arn:aws:iam::{account_id}:role/tna-s3-tna-{environment}-db-backup",
+            S3BucketName=os.environ["bucket"],
+            IamRoleArn=f"arn:aws:iam::{account_id}:role/tna-s3-tna-{environment}-db-backup",
             KmsKeyId=kms_key_id,
         )
     except ClientError as e:
