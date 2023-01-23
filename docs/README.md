@@ -71,4 +71,7 @@ CI/CD works in the following way:
   * Terraform is validated and planned against staging and production as independent checks.
 * Upon merge, non dockerised lambdas are built, terraform is planned, applied and then docker images are built and pushed to ECR. This occurs for staging, if staging succeeds then the same happens for production.
 
-
+## 5 DB Backups
+As we use AWS Aurora, there is no multi-AZ functionality. Instead, “Aurora automatically replicates storage six ways across three availability zones”.
+Each night there is an automated snapshot by Amazon of RDS.
+We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron based from Amazon Eventbridge that triggers a lambda. DB backups are exported to an S3 bucket `{environment}-tna-s3-tna-sg-db-backups`
