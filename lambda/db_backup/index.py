@@ -33,7 +33,7 @@ def lambda_handler(event, context):
             IncludePublic=False,
         )
 
-        snapshots = response["DBClusterSnapshots"]
+        snapshots = response["DBClusterSnapshots"]["DBClusterSnapshotIdentifier"]
 
         # Sort the snapshots by the SnapshotCreateTime attribute in descending order
         snapshots.sort(key=lambda x: x["SnapshotCreateTime"], reverse=True)
@@ -43,7 +43,7 @@ def lambda_handler(event, context):
             print(f"DB cluster snapshot {snapshot_name} is now available.")
         else:
             print(
-                f"Could not find snapshot, the most recent one is called {most_recent_snapshot}"
+                f"Could not find snapshot, the most recent one is called {most_recent_snapshot}."
             )
 
     except ClientError as e:
