@@ -80,9 +80,3 @@ module "vcite_enriched_bucket" {
 
   tags = local.tags
 }
-
-module "db_backup" {
-  source = "../secure_bucket"
-
-  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-db-backups"
-}

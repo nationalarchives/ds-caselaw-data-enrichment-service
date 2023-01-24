@@ -1,5 +1,3 @@
-import json
-import os
 from datetime import datetime
 
 import boto3
@@ -9,11 +7,6 @@ from botocore.exceptions import ClientError
 def lambda_handler(event, context):
     # Create RDS and S3 clients
     rds = boto3.client("rds")
-    sts = boto3.client("sts")
-    kms = boto3.client("kms")
-    environment = os.getenv("environment")
-    bucket = os.getenv("bucket_name")
-    account_id = sts.get_caller_identity().get("Account")
     db = event["db-name"]
     now = datetime.now()
     date = now.strftime("%d-%m-%Y")
@@ -33,9 +26,7 @@ def lambda_handler(event, context):
         # wait for the DB cluster snapshot to be available
         waiter.wait(DBClusterSnapshotIdentifier=snapshot_name)
 
-        print(f"DB cluster snapshot {snapshot_name} is now available.")
-
-        # Getting arn of snapshot
+        # Confirming snapshot is there
         response = rds.describe_db_cluster_snapshots(
             SnapshotType="Manual",
             IncludeShared=True,
@@ -44,29 +35,10 @@ def lambda_handler(event, context):
 
         for snapshot in response["DBClusterSnapshots"]:
             if snapshot["DBClusterSnapshotIdentifier"] == snapshot_name:
-                source = snapshot["DBClusterSnapshotArn"]
+                print(f"DB cluster snapshot {snapshot_name} is now available.")
                 break
             else:
                 print("Could not find snapshot")
 
-        kms_key_id = kms.describe_key(
-            KeyId=f"alias/{environment}-tna-s3-tna-sg-db-backups-kms-key"
-        )
-        key_id = kms_key_id["KeyMetadata"]["KeyId"]
-        print(key_id)
-
-    except ClientError as e:
-        print(e)
-
-    try:
-        # upload the object (file) to the bucket
-        export_task_identifier = "db-backup-" + date
-        rds.start_export_task(
-            ExportTaskIdentifier=export_task_identifier,
-            SourceArn=source,
-            S3BucketName=bucket,
-            IamRoleArn=f"arn:aws:iam::{account_id}:role/tna-s3-tna-{environment}-db-backup",
-            KmsKeyId=key_id,
-        )
     except ClientError as e:
         print(e)

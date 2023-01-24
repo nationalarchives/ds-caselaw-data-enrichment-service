@@ -74,7 +74,7 @@ CI/CD works in the following way:
 ## 5 DB Backups
 As we use AWS Aurora, there is no multi-AZ functionality. Instead, “Aurora automatically replicates storage six ways across three availability zones”.
 Each night there is an automated snapshot by Amazon of RDS.
-We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron based from Amazon Eventbridge that triggers a lambda. DB backups are exported to an S3 bucket `{environment}-tna-s3-tna-sg-db-backups`
+We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron based from Amazon Eventbridge that triggers a lambda. DB backups are shown in the RDS console under manual snapshots. 
 
 ## Infrastructure
 Here are some brief notes on extending the infrastructure. 
