@@ -41,7 +41,6 @@ def lambda_handler(event, context):
         most_recent_snapshot = snapshots[0]
         if most_recent_snapshot == snapshot_name:
             print(f"DB cluster snapshot {snapshot_name} is now available.")
-            break
         else:
             print("Could not find snapshot")
 
