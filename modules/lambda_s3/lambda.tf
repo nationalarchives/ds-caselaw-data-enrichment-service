@@ -1648,7 +1648,6 @@ module "db_backup_lambda" {
 
   environment_variables = {
     environment = local.environment
-    bucket_name = module.db_backup.s3_bucket_id
   }
 
   allowed_triggers = {
