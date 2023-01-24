@@ -42,7 +42,9 @@ def lambda_handler(event, context):
         if most_recent_snapshot == snapshot_name:
             print(f"DB cluster snapshot {snapshot_name} is now available.")
         else:
-            print("Could not find snapshot")
+            print(
+                f"Could not find snapshot, the most recent one is called {most_recent_snapshot}"
+            )
 
     except ClientError as e:
         print(e)
