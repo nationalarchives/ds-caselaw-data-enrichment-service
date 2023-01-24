@@ -26,21 +26,7 @@ def lambda_handler(event, context):
         # wait for the DB cluster snapshot to be available
         waiter.wait(DBClusterSnapshotIdentifier=snapshot_name)
 
-        # Confirming snapshot is there
-        response = rds.describe_db_cluster_snapshots(
-            SnapshotType="Manual",
-            IncludeShared=True,
-            IncludePublic=False,
-            DBClusterSnapshotIdentifier=snapshot_name,
-        )
-
-        # Confirmation it exists.
-        snapshot = response["DBClusterSnapshots"]["DBClusterSnapshotIdentifier"]
-
-        if snapshot == snapshot_name:
-            print(f"DB cluster snapshot {snapshot_name} is now available.")
-        else:
-            print(f"Could not find snapshot.")
+        print(f"DB cluster snapshot {snapshot_name} is now available.")
 
     except ClientError as e:
         print(e)
