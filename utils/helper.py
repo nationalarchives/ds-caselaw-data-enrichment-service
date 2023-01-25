@@ -11,6 +11,7 @@ def load_patterns(conn):
     """
     Write patterns file
     :param conn: Database connection
+    :returns jsonl file: Writes citation_patterns to jsonl file
     """
     rules_manifest = pd.read_sql("""SELECT * FROM manifest""", conn)
     patterns = rules_manifest["pattern"].tolist()
@@ -23,6 +24,7 @@ def parse_file(file_data):
     """
     Parse XML file. Only get text within content elements
     :param file_data: XML file
+    :returns judgement_content_text: all content elements in judgment
     """
     soup = BeautifulSoup.BeautifulSoup(str(file_data), "xml")
     judgment_content = soup.find_all("content")

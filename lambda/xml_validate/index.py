@@ -28,8 +28,10 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 
-# isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
+    """
+    Isolating processing from event unpacking for portability and testing
+    """
     s3_client = boto3.client("s3")
     source_bucket = sqs_rec["s3"]["bucket"]["name"]
     source_key = urllib.parse.unquote_plus(
@@ -52,6 +54,9 @@ def process_event(sqs_rec):
 
 
 def find_schema(schema_bucket, schema_key):
+    """
+    Fetch schema from the schema S3 bucket
+    """
     s3_client = boto3.client("s3")
     schema_content = s3_client.get_object(Bucket=schema_bucket, Key=schema_key)[
         "Body"
@@ -61,6 +66,9 @@ def find_schema(schema_bucket, schema_key):
 
 
 def load_schema(schema_content):
+    """
+    Parse the schema to XML schema to describe structure of XML document
+    """
     parser = etree.XMLParser(dtd_validation=False)
     xmlschema_doc = etree.parse(BytesIO(schema_content), parser)
     xmlschema = etree.XMLSchema(xmlschema_doc)
@@ -69,6 +77,9 @@ def load_schema(schema_content):
 
 
 def validate_content(file_content):
+    """
+    Function to validate schema
+    """
     LOGGER.info("VALIDATE_USING_DTD")
     LOGGER.info(VALIDATE_USING_DTD)
 
@@ -94,6 +105,9 @@ VALIDATE_USING_DTD = strtobool(validate_env_variable("VALIDATE_USING_DTD"))
 
 
 def handler(event, context):
+    """
+    Function called by lambda to validate schema
+    """
     LOGGER.info("validate-judgement-contents")
     LOGGER.info(DEST_BUCKET)
     valid_content = False

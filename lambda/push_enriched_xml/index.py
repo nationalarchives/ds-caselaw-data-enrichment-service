@@ -1,4 +1,3 @@
-# Replace this file with functional code rather than one that just lists the S3 buckets.
 import csv
 import json
 import logging
@@ -35,6 +34,9 @@ def validate_env_variable(env_var_name):
 
 
 def fetch_judgment_urllib(query, username, pw):
+    """
+    Fetch the judgment from the National Archives
+    """
     http = urllib3.PoolManager()
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
@@ -45,6 +47,9 @@ def fetch_judgment_urllib(query, username, pw):
 
 
 def patch_judgment(query, data, username, pw):
+    """
+    Apply enrichments to the judgment
+    """
     http = urllib3.PoolManager()
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
@@ -55,6 +60,9 @@ def patch_judgment(query, data, username, pw):
 
 
 def release_lock(query, username, pw):
+    """
+    Unlock the judgment after editing
+    """
     http = urllib3.PoolManager()
     url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
@@ -65,6 +73,9 @@ def release_lock(query, username, pw):
 
 
 def patch_judgment_request(query, data, username, pw):
+    """
+    Apply enrichments to the judgment
+    """
     response = requests.patch(
         f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
         auth=HTTPBasicAuth(username, pw),
@@ -78,6 +89,9 @@ def patch_judgment_request(query, data, username, pw):
 
 
 def process_event(sqs_rec):
+    """
+    Function to apply enrichments to the judgment 
+    """
     s3_client = boto3.client("s3")
     source_bucket = sqs_rec["s3"]["bucket"]["name"]
     source_key = urllib.parse.unquote_plus(
@@ -116,6 +130,9 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 
 
 def handler(event, context):
+    """
+    Function called by the lambda to run the process event     
+    """
     LOGGER.info("push-xml")
     LOGGER.info(SOURCE_BUCKET)
     LOGGER.info(API_USERNAME)

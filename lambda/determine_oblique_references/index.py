@@ -31,6 +31,9 @@ def validate_env_variable(env_var_name):
 
 
 def upload_contents(source_key, output_file_content):
+    """
+    Upload enriched file to S3 bucket
+    """
     filename = source_key
 
     LOGGER.info("Uploading enriched file to %s/%s", DEST_BUCKET, filename)
@@ -40,7 +43,10 @@ def upload_contents(source_key, output_file_content):
 
 
 def process_event(sqs_rec):
-
+    """
+    Function to fetch the XML, call the oblique references pipeline and upload the enriched XML to the 
+    destination bucket
+    """
     s3_client = boto3.client("s3")
     source_bucket = sqs_rec["s3"]["bucket"]["name"]
     source_key = urllib.parse.unquote_plus(
@@ -54,7 +60,6 @@ def process_event(sqs_rec):
         .read()
         .decode("utf-8")
     )
-    # LOGGER.info(file_content)
 
     # split file_content into header and judgment to ensure replacements only occur in judgment body
     judgment_split = re.split("(</header>)", file_content)
@@ -75,6 +80,9 @@ DEST_BUCKET = validate_env_variable("DEST_BUCKET")
 
 
 def handler(event, context):
+    """
+    Function called by the lambda to run the process event 
+    """
     LOGGER.info("detect-oblique-references")
     try:
         LOGGER.info("SQS EVENT: %s", event)

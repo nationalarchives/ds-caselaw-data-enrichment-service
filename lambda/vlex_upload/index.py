@@ -26,9 +26,10 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 
-# isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
-
+    """
+    Isolating processing from event unpacking for portability and testing
+    """
     if not FORWARD_TO_VLEX_ENABLED:
         return False
 
@@ -50,6 +51,9 @@ def process_event(sqs_rec):
 
 
 def upload_contents(source_key, text_content):
+    """
+    Upload judgment XML to destination S3 bucket
+    """
     # store the file contents in the destination bucket
     # LOGGER.info(os.path.splitext(source_key)[0])
     filename = os.path.splitext(source_key)[0] + ".txt"
@@ -65,6 +69,9 @@ FORWARD_TO_VLEX_ENABLED = strtobool(validate_env_variable("FORWARD_TO_VLEX_ENABL
 
 
 def handler(event, context):
+    """
+    Function called by the lambda to upload the enriched judgment to vlex    
+    """
     LOGGER.info("vlex_upload")
     LOGGER.info(DEST_BUCKET)
     try:

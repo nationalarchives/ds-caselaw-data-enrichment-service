@@ -33,6 +33,9 @@ def validate_env_variable(env_var_name):
 
 
 def upload_contents(source_key, output_file_content):
+    """
+    Upload enriched file to S3 bucket
+    """
     filename = source_key
 
     LOGGER.info("Uploading enriched file to %s/%s", DEST_BUCKET, filename)
@@ -42,6 +45,9 @@ def upload_contents(source_key, output_file_content):
 
 
 def add_timestamp_and_engine_version(file_data):
+    """
+    Add today's timestamp and version at time of enrichment
+    """
     soup = BeautifulSoup(file_data, "xml")
     today = datetime.datetime.now()
     today_str = today.strftime("%Y-%m-%dT%H:%M:%S")
@@ -57,7 +63,10 @@ def add_timestamp_and_engine_version(file_data):
 
 
 def process_event(sqs_rec):
-
+    """
+    Function to fetch the XML, call the legislation provisions extraction pipeline and upload the enriched XML to the 
+    destination bucket
+    """
     s3_client = boto3.client("s3")
     source_bucket = sqs_rec["s3"]["bucket"]["name"]
     source_key = urllib.parse.unquote_plus(
@@ -90,6 +99,9 @@ DEST_BUCKET = validate_env_variable("DEST_BUCKET")
 
 
 def handler(event, context):
+    """
+    Function called by the lambda to run the process event 
+    """
     LOGGER.info("detect-legislation-provisions")
     try:
         LOGGER.info("SQS EVENT: %s", event)

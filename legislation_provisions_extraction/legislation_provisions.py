@@ -28,27 +28,25 @@ patterns = {
     "sub_section": r"\([0-9]+\)",
 }
 
-"""
-Detect legislation and section references. 
-:param text: text to be searched for references
-:param etype: type of reference to be detected
-"""
-
 
 def detect_reference(text, etype="legislation"):
+    """
+    Detect legislation and section references. 
+    :param text: text to be searched for references
+    :param etype: type of reference to be detected
+    :returns references: List(Tuple[((start, end), detected_ref)]), of detected legislation
+    """
     references = [(m.span(), m.group()) for m in re.finditer(patterns[etype], text)]
-    # returns a list of tuples in the form [((start, end), detected_ref)]
     return references
 
 
-"""
-Find the closest legislation to the section. This means that the section is likely a section from that piece of legislation.
-:param legislations: list of legislation references found in the paragraph, and their location
-:param sections: list of section references found in the paragraph, and their location
-"""
-
-
 def find_closest_legislation(legislations, sections, thr=30):
+    """
+    Find the closest legislation to the section. This means that the section is likely a section from that piece of legislation.
+    :param legislations: list of legislation references found in the paragraph, and their location
+    :param sections: list of section references found in the paragraph, and their location
+    :returns sections_to_leg: (section, legislation, sect_starting_position)
+    """
     # gets positions of refs
     sec_pos = np.asarray([x[0] for x in sections])
     leg_pos = np.asarray([x[0] for x in legislations])
@@ -63,29 +61,27 @@ def find_closest_legislation(legislations, sections, thr=30):
     section_to_leg = [
         (sections[i][1], legislations[j][1], sections[i][0][0]) for i, j in idx
     ]
-    return section_to_leg  # (section, legislation, sect_starting_position)
-
-
-"""
-Cleans just the section number. 
-:param section: section to return the number for
-"""
+    return section_to_leg 
 
 
 def get_clean_section_number(section):
+    """
+    Cleans just the section number. 
+    :param section: section to return the number for
+    :returns section_number: returns numbers from section
+    """
     section_number = re.findall(r"\d+", section)
     return section_number[0]
 
 
-"""
-Saves the section and the relevant information to the master dictionary of all sections in the judgment.
-:param section_dict: current section information for the paragraph 
-:param clean_section_dict: master dictionary of all sections in the judgment
-:param para_number: number of the paragraph in the judgment
-"""
-
-
 def save_section_to_dict(section_dict, para_number, clean_section_dict):
+    """
+    Saves the section and the relevant information to the master dictionary of all sections in the judgment.
+    :param section_dict: current section information for the paragraph 
+    :param clean_section_dict: master dictionary of all sections in the judgment
+    :param para_number: number of the paragraph in the judgment
+    :returns clean_section_dict: master dictionary with addition of new definitions for sections in the judgment
+    """
     # for each section found in the paragraph
     for section, full_ref, pos in section_dict:
 
@@ -126,15 +122,13 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
     return clean_section_dict
 
 
-"""
-Generates the links for any sub-sections in the judgment. 
-:param section_dict: individual dictionary for the current section 
-:param match: the section reference found in the paragraph
-"""
-
-
 def create_sub_section_links(section_dict, match):
-
+    """
+    Generates the links for any sub-sections in the judgment. 
+    :param section_dict: individual dictionary for the current section 
+    :param match: the section reference found in the paragraph
+    :returns new_section_dict: section_dict with replaces href with new_href
+    """
     new_section_dict = section_dict.copy()
     curr_href = new_section_dict["section_href"]
     # get the sub-section number
@@ -148,38 +142,34 @@ def create_sub_section_links(section_dict, match):
     return new_section_dict
 
 
-"""
-Generates the <ref> tag for a section in the judgment. 
-:param section_dict: individual dictionary for the current section 
-:param match: the section reference found in the paragraph
-"""
-
-
 def create_section_ref_tag(section_dict, match):
+    """
+    Generates the <ref> tag for a section in the judgment. 
+    :param section_dict: individual dictionary for the current section 
+    :param match: the section reference found in the paragraph
+    :returns section_ref: string of ref to be inserted in XML
+    """
     canonical = section_dict["section_canonical"]
     href = section_dict["section_href"]
     section_ref = f'<ref uk:type="legislation" href="{href}" uk:canonical="{canonical}" uk:origin="TNA">{match.strip()}</ref>'
     return section_ref
 
 
-"""
-Check if the current reference is a sub-section.
-:param section: the section to check
-"""
-
-
 def check_if_sub_section(section):
+    """
+    Check if the current reference is a sub-section.
+    :param section: the section to check
+    :returns: match object if sub section
+    """
     return re.search(patterns["sub_section"], section)
 
 
-"""
-Performs the check if the current reference has been redefined and returns the correct reference by using the paragraph number. 
-:param section_matches: list of dictionaries that include where that section has been redefined
-:param para_number: the number of the paragraph in the judgment
-"""
-
-
 def get_correct_section_def(section_matches, cur_para_number, cur_pos):
+    """
+    Performs the check if the current reference has been redefined and returns the correct reference by using the paragraph number. 
+    :param section_matches: list of dictionaries that include where that section has been redefined
+    :param para_number: the number of the paragraph in the judgment
+    """
     pos_refs = np.asarray(
         [(match["para_number"], match["section_position"]) for match in section_matches]
     )
@@ -203,15 +193,14 @@ def get_correct_section_def(section_matches, cur_para_number, cur_pos):
         ][0]
 
 
-"""
-Matches all sections found in the judgment to the correct legislation, and provides necessary information for the replacements.
-:param section_dict: master dictionary of all sections in the judgment
-:param matches: list of the matches for the section references
-:param para_number: current paragraph number in the judgment
-"""
-
-
 def provision_resolver(section_dict, matches, para_number):
+    """
+    Matches a section found in the judgment to the correct legislation, and provides necessary information for the replacements.
+    :param section_dict: master dictionary of all sections in the judgment
+    :param matches: list of the matches for the section references
+    :param para_number: current paragraph number in the judgment
+    :returns resolved_refs: list of dictionaries with the information for the replacements
+    """
     resolved_refs = []
     # for each section found in the paragraph
     for pos, match in matches:
@@ -260,6 +249,12 @@ def provision_resolver(section_dict, matches, para_number):
 
 
 def main(enriched_judgment_file_path, filename):
+    """
+    Matches all sections in the judgment to the correct legislation and provides necessary information for the replacements.
+    :param enriched_judgment_file_path: file path of the judgment
+    :param filename: file name of the judgment
+    :returns resolved_refs: list of dictionaries with the information for the replacements in each section
+    """
     enriched_judgment_file = os.path.join(enriched_judgment_file_path, filename)
     print("======", enriched_judgment_file)
     with open(enriched_judgment_file, "r") as f:
@@ -292,6 +287,11 @@ def main(enriched_judgment_file_path, filename):
 
 
 def provisions_pipeline(file_data):
+    """
+    Matches all sections in the judgment to the correct legislation and provides necessary information for the replacements.
+    :param file_data: file path of the judgment
+    :returns resolved_refs: list of dictionaries with the information for the replacements in each section
+    """
     soup = BeautifulSoup(file_data, "xml")
     text = soup.find_all("p")
     cur_para_number = 0

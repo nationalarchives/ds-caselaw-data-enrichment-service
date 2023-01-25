@@ -41,6 +41,9 @@ def validate_env_variable(env_var_name):
 ############################################
 class getLoginSecrets:
     def get_secret(self, aws_secret_name, aws_region_name):
+        """
+        Get login secrets for database access
+        """
         secret_name = aws_secret_name
         region_name = aws_region_name
 
@@ -85,6 +88,10 @@ get_secret = getLoginSecrets()
 
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
+    """
+    Function to fetch the XML, call the determine_replacements_caselaw pipeline and upload the enriched XML to the 
+    destination bucket
+    """
     s3_client = boto3.client("s3")
     source_bucket = sqs_rec["s3"]["bucket"]["name"]
     source_key = urllib.parse.unquote_plus(
@@ -125,6 +132,9 @@ def process_event(sqs_rec):
 
 
 def write_replacements_file(replacement_list):
+    """
+    Writes tuples of abbreviations and long forms from a list of replacements  
+    """
     tuple_file = ""
     for i in replacement_list:
         replacement_object = {"{}".format(type(i).__name__): list(i)}
@@ -134,6 +144,9 @@ def write_replacements_file(replacement_list):
 
 
 def upload_replacements(replacements_bucket, replacements_key, replacements):
+    """
+    Uploads replacements to S3 bucket
+    """
     LOGGER.info(
         "uploading text content to %s/%s", replacements_bucket, replacements_key
     )
@@ -144,6 +157,9 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
 
 
 def init_NLP(rules_content):
+    """
+    Load spacy model and add rules from pre-defined patterns list
+    """
     nlp = spacy.load(
         "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
     )
@@ -182,6 +198,9 @@ def init_NLP(rules_content):
 
 
 def init_DB():
+    """
+    Establish database connection
+    """
     password = get_secret.get_secret(aws_secret_name, aws_region_name)
     db_conn = db_connection.create_connection(
         database_name, username, password, host, port
@@ -190,11 +209,16 @@ def init_DB():
 
 
 def close_connection(db_conn):
+    """
+    Close the database connection
+    """
     db_connection.close_connection(db_conn)
 
 
 def determine_replacements(file_content, rules_content):
-
+    """
+    Fetch caselaw replacements from database
+    """
     # connect to the database
     db_conn = init_DB()
 
@@ -212,6 +236,9 @@ def determine_replacements(file_content, rules_content):
 
 
 def get_caselaw_replacements(doc, db_conn):
+    """
+    Run the caselaw pipeline on the document 
+    """
     from caselaw_extraction.caselaw_matcher import case_pipeline
 
     replacements = case_pipeline(doc, db_conn)
@@ -219,6 +246,9 @@ def get_caselaw_replacements(doc, db_conn):
 
 
 def push_contents(uploaded_bucket, uploaded_key):
+    """
+    Delivers replacements to the specified queue
+    """
     # Get the queue
     sqs = boto3.resource("sqs")
     queue = sqs.Queue(DEST_QUEUE)
@@ -241,6 +271,9 @@ REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
 
 def handler(event, context):
+    """
+    Function called by the lambda to run the process event     
+    """
     LOGGER.info("determine-replacements")
     LOGGER.info(DEST_QUEUE)
     try:

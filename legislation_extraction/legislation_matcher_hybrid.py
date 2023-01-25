@@ -35,6 +35,19 @@ leg = namedtuple("leg", "detected_ref href canonical")
 
 
 def mergedict(x, b):
+    """
+    Merges two dictionaries together
+    Parameters
+    ----------
+    x : dict
+        Dictionary containing the detected references from fuzzy matching.
+    b : dict
+        Dictionary containing the detected references from exact matching.
+    Returns
+    -------
+    outout : dict
+        dictionary containing the detected references.    
+    """
     a = {}
     for k, v in b.items():
         a[k] = a.get(k, []) + b[k]
@@ -113,7 +126,24 @@ def exact_matcher(title, docobj, nlp, cutoff=None, candidates=None):
 
 def search_for_act_fuzzy(title, docobj, nlp, cutoff, candidates=None):
     """
-    detects well-formed and malformed references to a legislation title in the judgement body.
+    Detects well-formed and malformed references to a legislation title in the judgement body.
+    Parameters
+    ----------
+    title : string
+        Title of a legislation.
+    docobj : spacy.Doc
+        The body of the judgement.
+    nlp : spacy.English
+        English NLP module.
+    cutoff : int
+        Value to determine the level of similarity of matches to be returned by the fuzzy matcher.
+        Eg. a match between two string with a ratio of 90 and cutoff 95 would not be returned by the matcher.
+    candidates : list(tuple)
+        List of tuples in the form [(start_pos, end_pos)] indicating the position of the candidate segments in the text.
+    Returns
+    -------
+    matched_text : list(tuple)
+        List of tuples of the form ('detected reference', 'start position', 'end position', 'similarity')        
     """
 
     fuzzy_matcher = FuzzyMatcher(nlp.vocab)
@@ -275,6 +305,25 @@ methods = {"exact": exact_matcher, "fuzzy": fuzzy_matcher}
 
 
 def leg_pipeline(leg_titles, nlp, docobj, conn):
+    """
+    Merges dictionary results of fuzzy and exact matching functions
+    Parameters
+    ----------
+    leg_titles: list(string)
+        List of legislation titles.
+    nlp : spacy.English
+    English NLP module.
+    docobj : spacy.Doc
+        The body of the judgement.
+    conn : database connection
+        Database connection to the legislation look-up table.
+    Returns
+    -------    
+    List[Tuple[Str, Str, Str]], of merged results of both matchers to list of tupled references
+        'detected_ref'(string): 'detected reference in the judgement body',
+        'ref'(string): 'matched legislation title',
+        'canonical'(string): 'canonical form of legislation act'
+    """
     results = []
     dates = detect_year_span(docobj, nlp)
     # filter the legislation list down to the years detected above

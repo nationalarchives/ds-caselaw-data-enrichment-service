@@ -9,8 +9,6 @@ import re
 
 
 def replacer_caselaw(file_data, replacement):
-    # TODO: href attribute to TNA URI
-    # add a new field in manifest for URI --> check URI material
     """
     String replacement in the XML
     :param file_data: XML file
@@ -51,6 +49,14 @@ def replacer_abbr(file_data, replacement):
 def replacer_pipeline(
     file_data, REPLACEMENTS_CASELAW, REPLACEMENTS_LEG, REPLACEMENTS_ABBR
 ):
+    """
+    Pipeline to run replacer_caselaw, replacer_leg, replacer_abbr
+    :param file_data: XML file
+    :param REPLACEMENTS_CASELAW: list of unique tuples of citation match and corrected citation
+    :param REPLACEMENTS_LEG: list of unique tuples of citation match and corrected citation
+    :param REPLACEMENTS_ABBR: list of unique tuples of citation match and corrected citation
+    :return: enriched XML file data    
+    """
     for replacement in list(set(REPLACEMENTS_CASELAW)):
         file_data = replacer_caselaw(file_data, replacement)
 
@@ -65,6 +71,11 @@ def replacer_pipeline(
 
 
 def write_replacements_file(replacement_list):
+    """
+    Writes tuples from a list
+    :param replacement_list: 
+    :return: tuple json file      
+    """
     tuple_file = ""
     for i in replacement_list:
         replacement_object = {"{}".format(type(i).__name__): list(i)}

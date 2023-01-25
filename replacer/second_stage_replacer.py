@@ -12,12 +12,24 @@ from bs4 import BeautifulSoup
 
 
 def splitString(text, split_points):
+    """
+    Splits a string at locations in the text where a reference was detected 
+    :param text: XML file
+    :param split_points: list of positions of matches
+    :return: list of split strings
+    """
     return list(
         map(lambda x: text[slice(*x)], zip(split_points, split_points[1:] + [None]))
     )
 
 
 def replacer(text, detected_refs):
+    """
+    String replacement with matches from references 
+    :param text: XML file
+    :param detected_refs: list of dict of detected references
+    :return: enriched XML file data
+    """
     split_points = [match["ref_position"] for match in detected_refs]
     split_text = splitString(text, split_points)
     enriched_text = text[: split_points[0]]

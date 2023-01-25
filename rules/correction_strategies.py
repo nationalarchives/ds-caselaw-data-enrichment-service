@@ -1,9 +1,7 @@
 """
 @author: editha.nemsic
-Correct strategies for the case law replacements. 
-:param citation_type: Citation pattern 
-:param citation_match: Citation that was matched 
-:param canonical_form: Canonical form of the citation
+Correction strategies for the case law replacements. 
+Corrections are based on observed errors in citation formats. 
 """
 
 
@@ -11,7 +9,13 @@ import re
 
 
 def apply_correction_strategy(citation_type, citation_match, canonical_form):
-    """Find the appropriate correction strategy and apply it"""
+    """
+    Find the appropriate correction strategy and apply it
+    :param citation_type: Citation pattern 
+    :param citation_match: Citation that was matched 
+    :param canonical_form: Canonical form of the citation
+    :returns corrected_citation, year: correct citation and year
+    """
 
     # e.g [2022] EWCA Civ 123
     if (

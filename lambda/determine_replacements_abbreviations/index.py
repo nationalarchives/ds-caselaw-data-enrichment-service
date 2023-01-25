@@ -35,6 +35,10 @@ def validate_env_variable(env_var_name):
 
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
+    """
+    Function to fetch the XML, call the replacements abbreviations pipeline and upload the enriched XML to the 
+    destination bucket
+    """
     s3_client = boto3.client("s3")
     message = json.loads(sqs_rec["body"])
     LOGGER.info("EVENT: %s", message)
@@ -82,6 +86,9 @@ def process_event(sqs_rec):
 
 
 def write_replacements_file(replacement_list):
+    """
+    Writes tuples of abbreviations and long forms from a list of replacements  
+    """
     tuple_file = ""
     for i in replacement_list:
         replacement_object = {"{}".format(type(i).__name__): list(i)}
@@ -91,18 +98,27 @@ def write_replacements_file(replacement_list):
 
 
 def upload_replacements(replacements_bucket, replacements_key, replacements):
+    """
+    Uploads replacements to S3 bucket
+    """
     s3 = boto3.resource("s3")
     object = s3.Object(replacements_bucket, replacements_key)
     object.put(Body=replacements)
 
 
 def determine_replacements(file_content):
+    """
+    Calls abbreviation function to return abbreviation and long form
+    """
     replacements = get_abbreviation_replacements(file_content)
 
     return replacements
 
 
 def get_abbreviation_replacements(file_content):
+    """
+    Calls abbreviation pipeline to return abbreviation and long form
+    """
     from abbreviation_extraction.abbreviations_matcher import abb_pipeline
 
     nlp = init_NLP()
@@ -112,6 +128,9 @@ def get_abbreviation_replacements(file_content):
 
 
 def init_NLP():
+    """
+    Load spacy model
+    """
     nlp = spacy.load(
         "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
     )
@@ -120,6 +139,9 @@ def init_NLP():
 
 
 def push_contents(uploaded_bucket, uploaded_key):
+    """
+    Delivers replacements to the specified queue
+    """
     # Get the queue
     sqs = boto3.resource("sqs")
     queue = sqs.Queue(DEST_QUEUE)
@@ -140,6 +162,9 @@ REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
 
 def handler(event, context):
+    """
+    Function called by the lambda to run the process event     
+    """
     LOGGER.info("determine-replacements")
     LOGGER.info(DEST_QUEUE)
     try:
