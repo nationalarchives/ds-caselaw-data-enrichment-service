@@ -77,8 +77,8 @@ Each night there is an automated snapshot by Amazon of RDS.
 We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron based from Amazon Eventbridge that triggers a lambda. DB backups are shown in the RDS console under manual snapshots. 
 
 ## Infrastructure
-Here are some brief notes on extending the infrastructure. 
-* The file `main.tf` at the root of the repo will invoke each of the modules, more of the same services can be created by adding to those modules. If more modules are created then `main.tf` will need to be extended to invoke them.
+
+* The file at `terraform/main.tf` will invoke each of the modules, more of the same services can be created by adding to those modules. If more modules are created then `main.tf` will need to be extended to invoke them.
 * Adding an S3 bucket is done by invoking the `secure_bucket` module, located at `modules/secure_bucket/`, you can see how the existing buckets are created by viewing `modules/lambda_s3/bucket.tf`, new buckets should be created by adding to this file.
 If a bucket policy is added, then an extra statement will automatically be added that denies insecure transport.
 * Docker images are stored in ECR. Each repo needs to exist before a docker image can be pushed to ECR. These are created in `modules/lambda_s3/lambda.tf`. 

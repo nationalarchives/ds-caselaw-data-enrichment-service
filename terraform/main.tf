@@ -18,6 +18,8 @@ terraform {
     region = "eu-west-2"
   }
 
+# why commented?
+
   # cloud {
   #   organization = "mdrx-tna"
 
@@ -39,6 +41,8 @@ module "lambda_s3" {
 
   postgress_master_password_secret_id = module.data.postgress_master_password
   postgress_hostname                  = module.data.postgress_hostname
+
+#why commented?
 
   # sparql_username = "${module.data.sparql_username}"
   # sparql_password = "${module.data.sparql_password}"
