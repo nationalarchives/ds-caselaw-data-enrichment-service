@@ -127,6 +127,7 @@ def process_event(sqs_rec):
 SOURCE_BUCKET = validate_env_variable("SOURCE_BUCKET")
 API_USERNAME = validate_env_variable("API_USERNAME")
 API_PASSWORD = validate_env_variable("API_PASSWORD")
+ENVIRONMENT = validate_env_variable("ENVIRONMENT")
 
 
 def handler(event, context):
@@ -136,6 +137,7 @@ def handler(event, context):
     LOGGER.info("push-xml")
     LOGGER.info(SOURCE_BUCKET)
     LOGGER.info(API_USERNAME)
+    LOGGER.info(ENVIRONMENT)
     try:
         LOGGER.info("SQS EVENT: %s", event)
         for sqs_rec in event["Records"]:

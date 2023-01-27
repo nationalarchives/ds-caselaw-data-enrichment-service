@@ -132,6 +132,7 @@ def process_event(sqs_rec):
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 API_USERNAME = validate_env_variable("API_USERNAME")
 API_PASSWORD = validate_env_variable("API_PASSWORD")
+ENVIRONMENT = validate_env_variable("ENVIRONMENT")
 
 
 def handler(event, context):
@@ -140,6 +141,7 @@ def handler(event, context):
     """
     LOGGER.info("Lambda to fetch XML judgment via API")
     LOGGER.info("Destination bucket for XML judgment: %s", DEST_BUCKET)
+    LOGGER.info(ENVIRONMENT)
     try:
         LOGGER.info("SQS EVENT: %s", event)
         for sqs_rec in event["Records"]:
