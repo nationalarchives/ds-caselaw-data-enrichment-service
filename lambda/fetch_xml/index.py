@@ -32,12 +32,12 @@ def validate_env_variable(env_var_name):
 ############################################
 
 
-def fetch_judgment_urllib(query, username, pw):
+def fetch_judgment_urllib(api_endpoint, query, username, pw):
     """
     Fetch the judgment from the National Archives
     """
     http = urllib3.PoolManager()
-    url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
+    url = f"{api_endpoint}judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("GET", url, headers=headers)
     print("Fetch judgment status:", r.status)
@@ -45,24 +45,24 @@ def fetch_judgment_urllib(query, username, pw):
     return r.data.decode()
 
 
-def lock_judgment_urllib(query, username, pw):
+def lock_judgment_urllib(api_endpoint, query, username, pw):
     """
     Lock the judgment for editing
     """
     http = urllib3.PoolManager()
-    url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
+    url = f"{api_endpoint}lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("PUT", url, headers=headers)
     print("Lock judgment API status:", r.status)
     # return r.data.decode()
 
 
-def check_lock_judgment_urllib(query, username, pw):
+def check_lock_judgment_urllib(api_endpoint, query, username, pw):
     """
     Check whether the judgment is locked
     """
     http = urllib3.PoolManager()
-    url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
+    url = f"{api_endpoint}lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("GET", url, headers=headers)
     print("Check lock status:", r.status)
@@ -110,17 +110,23 @@ def process_event(sqs_rec):
     status, query = read_message(message)
     print("Judgment status:", status)
     print("Judgment query:", query)
+
+    if ENVIRONMENT == 'staging':
+        api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
+    else:
+        api_endpoint == "https://api.caselaw.nationalarchives.gov.uk/"
+
     if status == "published":
         print("Judgment:", query)
         source_key = query.replace("/", "-")
         print("Source key:", source_key)
 
         # fetch the xml content
-        xml_content = fetch_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+        xml_content = fetch_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
         # print(xml_content)
         upload_contents(source_key, xml_content)
-        lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
-        check_lock_judgment_urllib(query, API_USERNAME, API_PASSWORD)
+        lock_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
+        check_lock_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
     else:
         print("Judgment not published.")
 

@@ -33,12 +33,12 @@ def validate_env_variable(env_var_name):
 ############################################
 
 
-def fetch_judgment_urllib(query, username, pw):
+def fetch_judgment_urllib(api_endpoint, query, username, pw):
     """
     Fetch the judgment from the National Archives
     """
     http = urllib3.PoolManager()
-    url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
+    url = f"{api_endpoint}judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("GET", url, headers=headers)
     print(r.status)
@@ -46,12 +46,12 @@ def fetch_judgment_urllib(query, username, pw):
     return r.data.decode()
 
 
-def patch_judgment(query, data, username, pw):
+def patch_judgment(api_endpoint, query, data, username, pw):
     """
     Apply enrichments to the judgment
     """
     http = urllib3.PoolManager()
-    url = f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}"
+    url = f"{api_endpoint}judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("PATCH", url, headers=headers, fields=data)
     print(r.status)
@@ -59,12 +59,12 @@ def patch_judgment(query, data, username, pw):
     return r.data.decode()
 
 
-def release_lock(query, username, pw):
+def release_lock(api_endpoint, query, username, pw):
     """
     Unlock the judgment after editing
     """
     http = urllib3.PoolManager()
-    url = f"https://api.staging.caselaw.nationalarchives.gov.uk/lock/{query}"
+    url = f"{api_endpoint}lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("DELETE", url, headers=headers)
     print(r.status)
@@ -72,12 +72,12 @@ def release_lock(query, username, pw):
     return r.data.decode()
 
 
-def patch_judgment_request(query, data, username, pw):
+def patch_judgment_request(api_endpoint, query, data, username, pw):
     """
     Apply enrichments to the judgment
     """
     response = requests.patch(
-        f"https://api.staging.caselaw.nationalarchives.gov.uk/judgment/{query}",
+        f"{api_endpoint}judgment/{query}",
         auth=HTTPBasicAuth(username, pw),
         data=data.encode(),
     )
@@ -100,22 +100,27 @@ def process_event(sqs_rec):
     print("Input S3 bucket:", source_bucket)
     print("Input S3 key:", source_key)
 
+    if ENVIRONMENT == 'staging':
+        api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
+    else:
+        api_endpoint == "https://api.caselaw.nationalarchives.gov.uk/"
+
     file_content = (
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")
     )
-    LOGGER.info(file_content)
+    # LOGGER.info(file_content)
 
     print(source_key)
     judgment_uri = source_key.replace("-", "/").split(".")[0]
     print(judgment_uri)
 
     # patch the judgment
-    patch_judgment_request(judgment_uri, file_content, API_USERNAME, API_PASSWORD)
+    patch_judgment_request(api_endpoint, judgment_uri, file_content, API_USERNAME, API_PASSWORD)
 
     # release the lock
-    release_lock(judgment_uri, API_USERNAME, API_PASSWORD)
+    release_lock(api_endpoint, judgment_uri, API_USERNAME, API_PASSWORD)
 
 
 ############################################
