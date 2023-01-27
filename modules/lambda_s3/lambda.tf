@@ -1398,15 +1398,15 @@ module "lambda-fetch-xml" {
       ],
       resources = ["*"]
     },
-    sqs_get = {
-      effect = "Allow",
-      actions = [
-        "sqs:ReceiveMessage",
-        "sqs:DeleteMessage",
-        "sqs:GetQueueAttributes"
-      ],
-      resources = ["${aws_sqs_queue.fetch_xml_queue.arn}"]
-    },
+    # sqs_get = {
+    #   effect = "Allow",
+    #   actions = [
+    #     "sqs:ReceiveMessage",
+    #     "sqs:DeleteMessage",
+    #     "sqs:GetQueueAttributes"
+    #   ],
+    #   resources = ["${aws_sqs_queue.fetch_xml_queue.arn}"]
+    # },
     secrets_get = {
       effect = "Allow",
       actions = [
@@ -1582,14 +1582,14 @@ module "lambda-push-enriched-xml" {
 
 }
 
-resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
-  bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
+# resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
+#   bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
 
-  lambda_function {
-    lambda_function_arn = module.lambda-push-enriched-xml.lambda_function_arn
-    events              = ["s3:ObjectCreated:*"]
-  }
-}
+#   lambda_function {
+#     lambda_function_arn = module.lambda-push-enriched-xml.lambda_function_arn
+#     events              = ["s3:ObjectCreated:*"]
+#   }
+# }
 
 module "db_backup_lambda" {
   source  = "terraform-aws-modules/lambda/aws"
