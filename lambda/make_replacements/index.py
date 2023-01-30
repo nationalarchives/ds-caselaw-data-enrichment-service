@@ -32,7 +32,7 @@ def upload_contents(source_key, text_content):
     """
     filename = source_key
 
-    LOGGER.info("uploading text content to %s/%s", DEST_BUCKET, filename)
+    LOGGER.info("Uploading text content to %s/%s", DEST_BUCKET, filename)
     s3 = boto3.resource("s3")
     object = s3.Object(DEST_BUCKET, filename)
     object.put(Body=text_content)
@@ -52,17 +52,17 @@ def process_event(sqs_rec):
     source_key = msg_attributes["source_key"]["stringValue"]
 
     replacement_bucket = msg_attributes["source_bucket"]["stringValue"]
-    LOGGER.info("replacement_bucket from message")
+    LOGGER.info("Replacement bucket from message")
     LOGGER.info(replacement_bucket)
 
     LOGGER.info(REPLACEMENTS_BUCKET)
-    LOGGER.info("source_key")
+    LOGGER.info("Source_key")
     LOGGER.info(source_key)
 
     filename = os.path.splitext(source_key)[0] + ".xml"
 
     LOGGER.info(SOURCE_BUCKET)
-    LOGGER.info("filename")
+    LOGGER.info("Filename")
     LOGGER.info(filename)
 
     file_content = (
@@ -74,7 +74,7 @@ def process_event(sqs_rec):
     # split file_content into header and judgment to ensure replacements only occur in judgment body
     judgment_split = re.split("(</header>)", file_content)
 
-    LOGGER.info("got original xml file_content")
+    LOGGER.info("Got original XML file content")
     LOGGER.info(REPLACEMENTS_BUCKET)
     replacement_file_content = (
         s3_client.get_object(Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"]
@@ -82,13 +82,13 @@ def process_event(sqs_rec):
         .decode("utf-8")
     )
 
-    LOGGER.info("got replacement file_content")
+    LOGGER.info("Got replacement file content")
 
     # extract the judgement contents
     replaced_text_content = replace_text_content(
         judgment_split[2], replacement_file_content
     )
-    LOGGER.info("got replacement text_content")
+    LOGGER.info("Got replacement text content")
 
     # combine header with replaced text content before uploading to enriched bucket
     judgment_split[2] = replaced_text_content
@@ -132,7 +132,7 @@ def replace_text_content(file_content, replacements_content):
             abb_tuple = tuple(i["abb"])
             replacement_tuples_abb.append(abb_tuple)
 
-    LOGGER.info("replacement_tuples_case")
+    LOGGER.info("Replacement caselaw")
     print(replacement_tuples_case)
 
     from replacer.replacer import replacer_pipeline
@@ -143,7 +143,7 @@ def replace_text_content(file_content, replacements_content):
         replacement_tuples_leg,
         replacement_tuples_abb,
     )
-    LOGGER.info("file_data_enriched")
+    LOGGER.info("Judgment enriched")
 
     return file_data_enriched
 
@@ -153,12 +153,11 @@ SOURCE_BUCKET = validate_env_variable("SOURCE_BUCKET_NAME")
 REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
 # make replacements
-# write to s3 which will trigger a message on an sqs queue
 def handler(event, context):
     """
     Function called by the lambda to run the process event     
     """
-    LOGGER.info("determine-replacements")
+    LOGGER.info("Make replacements")
     LOGGER.info(DEST_BUCKET)
     LOGGER.info(SOURCE_BUCKET)
     try:

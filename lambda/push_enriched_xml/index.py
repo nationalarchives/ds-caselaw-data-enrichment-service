@@ -82,7 +82,6 @@ def patch_judgment_request(api_endpoint, query, data, username, pw):
         data=data.encode(),
     )
     print(response)
-    print(response.content)
 
 
 ############################################
@@ -110,7 +109,6 @@ def process_event(sqs_rec):
         .read()
         .decode("utf-8")
     )
-    # LOGGER.info(file_content)
 
     print(source_key)
     judgment_uri = source_key.replace("-", "/").split(".")[0]

@@ -60,14 +60,9 @@ def process_event(sqs_rec):
         .decode("utf-8")
     )
 
-    LOGGER.debug(file_content)
-    LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
-
     replacements = determine_replacements(file_content)
-    LOGGER.debug("got replacements")
+    print(replacements)
     replacements_encoded = write_replacements_file(replacements)
-    LOGGER.debug("encoded replacements")
-    LOGGER.debug(replacements_encoded)
 
     # open and read existing file from s3 bucket
     replacements_content = (
@@ -80,9 +75,9 @@ def process_event(sqs_rec):
     uploaded_key = upload_replacements(
         REPLACEMENTS_BUCKET, source_key, replacements_encoded
     )
-    LOGGER.debug("uploaded replacements to %s", uploaded_key)
+    LOGGER.info("Uploaded replacements to %s", uploaded_key)
     push_contents(REPLACEMENTS_BUCKET, source_key)
-    LOGGER.debug("message sent on queue")
+    LOGGER.info("Message sent on queue to start make-replacements lambda")
 
 
 def write_replacements_file(replacement_list):
@@ -165,7 +160,7 @@ def handler(event, context):
     """
     Function called by the lambda to run the process event     
     """
-    LOGGER.info("determine-replacements")
+    LOGGER.info("Determine abbreviations")
     LOGGER.info(DEST_QUEUE)
     try:
         LOGGER.info("SQS EVENT: %s", event)

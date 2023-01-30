@@ -44,7 +44,6 @@ def process_event(sqs_rec):
         .read()
         .decode("utf-8")
     )
-    LOGGER.info(file_content)
 
     # extract the judgement contents
     text_content = extract_text_content(file_content)
@@ -64,7 +63,7 @@ def upload_contents(source_key, text_content):
     Uploads text to S3 bucket
     """
     filename = os.path.splitext(source_key)[0] + ".txt"
-    LOGGER.info("uploading text content to %s/%s", DEST_BUCKET, filename)
+    LOGGER.info("Uploading text content to %s/%s", DEST_BUCKET, filename)
     s3 = boto3.resource("s3")
     object = s3.Object(DEST_BUCKET, filename)
     object.put(Body=text_content)
@@ -77,7 +76,7 @@ def handler(event, context):
     """
     Function called by the lambda to run the process event     
     """
-    LOGGER.info("extract-judgement-contents")
+    LOGGER.info("Extract judgement contents from XML")
     LOGGER.info(DEST_BUCKET)
     try:
         LOGGER.info("SQS EVENT: %s", event)

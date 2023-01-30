@@ -9,9 +9,7 @@ import urllib.parse
 import boto3
 from bs4 import BeautifulSoup
 
-from legislation_provisions_extraction.legislation_provisions import (
-    provisions_pipeline,
-)
+from legislation_provisions_extraction.legislation_provisions import provisions_pipeline
 from replacer.second_stage_replacer import provision_replacement
 
 LOGGER = logging.getLogger()
@@ -58,7 +56,6 @@ def add_timestamp_and_engine_version(file_data):
     enrichment_version.string = "0.1.0"
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
     soup.proprietary.append(enrichment_version)
-    # print(type(soup))
     return soup
 
 
@@ -80,7 +77,6 @@ def process_event(sqs_rec):
         .read()
         .decode("utf-8")
     )
-    LOGGER.info(file_content)
 
     resolved_refs = provisions_pipeline(file_content)
     print(resolved_refs)
