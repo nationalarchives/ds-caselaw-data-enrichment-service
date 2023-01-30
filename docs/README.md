@@ -58,9 +58,9 @@ $ python runner.py
 ```
 
 ## 4 Architecture
-![Architecture](architecture.png)
+![Architecture](/docs/img/architecture.png)
 The VCite integration is shown more distinctly in the diagram below:
-![VCite-integration](tna-vcite-integration.png)
+![VCite-integration](/docs/img/tna-vcite-integration.png/)
 
 ## 5 Workflow
 
