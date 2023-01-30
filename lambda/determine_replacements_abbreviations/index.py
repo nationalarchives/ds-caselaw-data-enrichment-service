@@ -16,7 +16,7 @@ from dateutil.parser import parse as dparser
 from spacy.language import Language
 
 LOGGER = logging.getLogger()
-LOGGER.setLevel(logging.DEBUG)
+LOGGER.setLevel(logging.INFO)
 
 
 def validate_env_variable(env_var_name):

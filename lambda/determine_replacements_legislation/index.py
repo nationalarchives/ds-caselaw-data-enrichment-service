@@ -19,7 +19,7 @@ from psycopg2 import Error
 from database import db_connection
 
 LOGGER = logging.getLogger()
-LOGGER.setLevel(logging.DEBUG)
+LOGGER.setLevel(logging.INFO)
 
 
 def validate_env_variable(env_var_name):

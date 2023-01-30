@@ -11,7 +11,7 @@ import boto3
 from lxml import etree
 
 LOGGER = logging.getLogger()
-LOGGER.setLevel(logging.DEBUG)
+LOGGER.setLevel(logging.INFO)
 
 
 def validate_env_variable(env_var_name):

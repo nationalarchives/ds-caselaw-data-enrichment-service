@@ -98,9 +98,8 @@ def process_event(sqs_rec):
     LOGGER.info(filename)
 
     file_content = (
-        s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"]
-        .read()
-        .decode("utf-8")
+        s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"].read()
+        # .decode("utf-8")
     )
 
     cleaned_file_content = sanitize_judgment(file_content)
