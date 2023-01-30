@@ -13,6 +13,7 @@ from abbreviation_extraction.abbreviations import AbbreviationDetector
 
 abb = namedtuple("abb", "abb_match longform")
 
+
 def chunking_mechanism(docobj, n, start, end):
     """
     Function to split the content into a list of chunks of size n,

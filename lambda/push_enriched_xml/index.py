@@ -100,7 +100,7 @@ def process_event(sqs_rec):
     print("Input S3 bucket:", source_bucket)
     print("Input S3 key:", source_key)
 
-    if ENVIRONMENT == 'staging':
+    if ENVIRONMENT == "staging":
         api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
     else:
         api_endpoint == "https://api.caselaw.nationalarchives.gov.uk/"
@@ -117,7 +117,9 @@ def process_event(sqs_rec):
     print(judgment_uri)
 
     # patch the judgment
-    patch_judgment_request(api_endpoint, judgment_uri, file_content, API_USERNAME, API_PASSWORD)
+    patch_judgment_request(
+        api_endpoint, judgment_uri, file_content, API_USERNAME, API_PASSWORD
+    )
 
     # release the lock
     release_lock(api_endpoint, judgment_uri, API_USERNAME, API_PASSWORD)

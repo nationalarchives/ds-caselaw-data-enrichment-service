@@ -111,7 +111,7 @@ def process_event(sqs_rec):
     print("Judgment status:", status)
     print("Judgment query:", query)
 
-    if ENVIRONMENT == 'staging':
+    if ENVIRONMENT == "staging":
         api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
     else:
         api_endpoint == "https://api.caselaw.nationalarchives.gov.uk/"
@@ -122,7 +122,9 @@ def process_event(sqs_rec):
         print("Source key:", source_key)
 
         # fetch the xml content
-        xml_content = fetch_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
+        xml_content = fetch_judgment_urllib(
+            api_endpoint, query, API_USERNAME, API_PASSWORD
+        )
         # print(xml_content)
         upload_contents(source_key, xml_content)
         lock_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)

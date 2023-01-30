@@ -80,8 +80,8 @@ def validate_content(file_content):
     """
     Function to validate schema
     """
-    LOGGER.info("VALIDATE_USING_DTD")
-    LOGGER.info(VALIDATE_USING_DTD)
+    LOGGER.info("VALIDATE USING SCHEMA")
+    LOGGER.info(VALIDATE_USING_SCHEMA)
 
     parser = etree.XMLParser(dtd_validation=False)
     xmldoc = etree.parse(BytesIO(file_content), parser)

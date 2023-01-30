@@ -141,9 +141,7 @@ class TestXMLValidate(unittest.TestCase):
         # bucket.put(Body=test_data)
 
         conn.put_object(
-            Bucket=test_bucket_name,
-            Key="test_data.xml",
-            Body=test_xml_content,
+            Bucket=test_bucket_name, Key="test_data.xml", Body=test_xml_content,
         )
 
         # conn.put_object(Body=test_data, Bucket=test_bucket_name, Key=f'example/s3/path/key/test_data.xml')

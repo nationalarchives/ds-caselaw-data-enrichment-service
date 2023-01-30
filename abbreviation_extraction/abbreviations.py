@@ -98,8 +98,7 @@ def find_abbreviation(
     return short_form_candidate, long_form_candidate[starting_index:]
 
 
-def contains(str, set: Set[str]
-) -> bool:
+def contains(str, set: Set[str]) -> bool:
     """
     Check whether sequence str contains ANY of the items in set.
     Parameters
@@ -206,8 +205,7 @@ def filter_matches(
     return candidates
 
 
-def short_form_filter(span: Span
-) -> bool:
+def short_form_filter(span: Span) -> bool:
     """
     Abbreviation is checked to ensure it satisfies two constraints: 
         1. Length is between 2 and 10 

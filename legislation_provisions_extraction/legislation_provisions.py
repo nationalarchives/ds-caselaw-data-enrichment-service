@@ -61,7 +61,7 @@ def find_closest_legislation(legislations, sections, thr=30):
     section_to_leg = [
         (sections[i][1], legislations[j][1], sections[i][0][0]) for i, j in idx
     ]
-    return section_to_leg 
+    return section_to_leg
 
 
 def get_clean_section_number(section):
