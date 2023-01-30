@@ -88,7 +88,7 @@ def case_pipeline(doc, db_conn):
                 else:
                     d2 = ""
             else:
-                year = "No Year"
+                year = ""
                 d1 = components[0]
                 if len(components) > 1:
                     d2 = components[1]

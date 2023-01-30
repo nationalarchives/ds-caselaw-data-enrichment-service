@@ -65,7 +65,7 @@ def apply_correction_strategy(citation_type, citation_match, canonical_form):
         | (citation_type == "EUTCase")
     ):
         components = re.findall(r"\d+", citation_match)
-        year = "No Year"
+        year = ""
         d1 = components[0]
         d2 = components[1]
         corrected_citation = canonical_form.replace("d1", d1).replace("d2", d2)
