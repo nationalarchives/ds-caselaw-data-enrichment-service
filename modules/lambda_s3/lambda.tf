@@ -1664,3 +1664,9 @@ module "db_backup_lambda" {
 
   depends_on = [aws_ecr_repository.db-backup]
 }
+
+resource "aws_ssm_parameter" "vCite" {
+  name  = "vCite"
+  type  = "String"
+  value = "off"
+}
