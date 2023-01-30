@@ -36,7 +36,35 @@ The second stage runs the exact matcher against legislation entries in the looku
 
 The final stage completes the detection process by (i) merging the results of the first and second stages; (ii) resolving detected references that might overlap due the nature of the fuzzy matching to a [1-to-1] linking between legislation short titles and the detected reference; and (iii) createing replacement tuples for the detected references which are passed over to the first enrichment [replacer](/docs/the-replacers.md).
 
+## Legislation updates
+
+To deal with the fact that new primary legislation enters the statute book on a rolling basis, the JEP automatically updates its Postgres table of UK Public General Acts by running the following SPARQL query on a weekly basis.
 
 
+"""sparql
+                prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+                prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+                prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+                prefix void: <http://rdfs.org/ns/void#>
+                prefix dct: <http://purl.org/dc/terms/>
+                prefix sd: <http://www.w3.org/ns/sparql-service-description#>
+                prefix prov: <http://www.w3.org/ns/prov#>
+                prefix leg: <http://www.legislation.gov.uk/def/legislation/>
+                select distinct ?ref  ?title ?ref_version ?shorttitle ?citation ?acronymcitation 
+                where {
+                   ?activity prov:endedAtTime ?actTime .
+                   ?graph prov:wasInfluencedBy ?activity .
+                   ?activity rdf:type <http://www.legislation.gov.uk/def/provenance/Addition> .
+                   ?dataUnitDataSet sd:namedGraph ?graph .
+                   <http://www.legislation.gov.uk/id/dataset/topic/core> void:subset ?dataUnitDataSet .
+                   graph ?graph { ?ref a leg:Legislation; a leg:UnitedKingdomPublicGeneralAct ;
+                                        leg:title ?title ;
+                                        leg:interpretation ?version .
+                                   OPTIONAL { ?ref leg:citation ?citation  } . 
+                                   OPTIONAL {?ref leg:acronymCitation ?acronymcitation} .
+                                   OPTIONAL {?ref_version   leg:shortTitle ?shorttitle} .}
+                   FILTER(str(?actTime) > "%s")
+                }
+                """
 
-
+New legislation returned by this query is then loaded into the Postgres database. Three pieces of data are stored for each piece of legislation loaded into the legislation database: (i) `citation`; (ii) `acronymCitation`; and (iii) `shortTitle`. 
