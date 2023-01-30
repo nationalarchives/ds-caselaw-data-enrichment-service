@@ -4,11 +4,11 @@
 
 This resource documents the design and operation of the Judgment Enrichment Pipeline (JEP) built for The National Archives by MDRxTECH and vLex Justis to support the publishing process that sits behind [caselaw.nationalarchives.gov.uk](https://caselaw.nationalarchives.gov.uk).
 
-The primary purpose of the JEP is to "enrich" the judgments published on [caselaw.nationalarchives.gov.uk](https://caselaw.nationalarchives.gov.uk)) by marking up important pieces of legal information (such as references to earlier cases and legislation) cited within them. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.   
+The primary purpose of the JEP is to "enrich" the judgments published on [caselaw.nationalarchives.gov.uk](https://caselaw.nationalarchives.gov.uk)) by marking up important pieces of legal information - such as references to earlier cases and legislation - cited in the body of the judgment. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.   
 
 ## 1.1 The general anatomy of the JEP
 
-At its core, the JEP is a series of serverless functions, which we call *Annotators*, that sequentially add layers of markup to judgments submitted for enrichment. Each Annotator is responsible for performing a specific type of enrichment. For example, the [Case Law Annotator](caselaw/case-law-annotator.md) detects references to case law citations (such as [2021] 1 WLR 1) and the [Legislation Annotator](legislation/legislation-annotator.md) is responsible for marking up mentions of UK primary legislation. An overview of the *Annotators* can be found below with more detailed guidance on each set out in dedicated documentation. 
+At its core, the JEP is a series of serverless functions, which we call *Annotators*, that sequentially add layers of markup to judgments submitted for enrichment. Each Annotator is responsible for performing a specific type of enrichment. For example, the [Case Law Annotator](caselaw/case-law-annotator.md) detects references to case law citations (such as [2021] 1 WLR 1) and the [Legislation Annotator](legislation/legislation-annotator.md) is responsible for marking up mentions of UK primary legislation. An overview of the *Annotators* can be found below with more detailed notes on each set out in dedicated documentation in this folder. 
 
 The *Annotators* are supported by a cast of utility functions that are responsible for ETL, XML validation, rules-management and file manipulation. The most important of these utility functions are the [*Replacers*](the-replacers.md), which generate the enriched XML that is sent back for publication on [caselaw.nationalarchives.gov.uk](caselaw.nationalarchives.gov.uk).
 
@@ -47,7 +47,7 @@ The enrichment process typically takes five-six minutes per judgment. Enriched j
 
 ## 2.2 API integration with the MarkLogic database
 
-Not yet implemented.
+The standard mechanism for triggering the enrichment pipeline is via the TNA editor interface.
 
 ## 3 Tests
 
@@ -62,7 +62,7 @@ $ python runner.py
 The VCite integration is shown more distinctly in the diagram below:
 ![VCite-integration](tna-vcite-integration.png)
 
-## 4 Workflow
+## 5 Workflow
 
 CI/CD works in the following way:
 * Engineer branches from `main` branch, commits code and raises a pull request.
@@ -71,12 +71,12 @@ CI/CD works in the following way:
   * Terraform is validated and planned against staging and production as independent checks.
 * Upon merge, non dockerised lambdas are built, terraform is planned, applied and then docker images are built and pushed to ECR. This occurs for staging, if staging succeeds then the same happens for production.
 
-## 5 DB Backups
+## 6 DB Backups
 As we use AWS Aurora, there is no multi-AZ functionality. Instead, “Aurora automatically replicates storage six ways across three availability zones”.
 Each night there is an automated snapshot by Amazon of RDS.
 We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron based from Amazon Eventbridge that triggers a lambda. DB backups are shown in the RDS console under manual snapshots. 
 
-## Infrastructure
+## 7 Infrastructure
 Here are some brief notes on extending the infrastructure. 
 * The file `main.tf` at the root of the repo will invoke each of the modules, more of the same services can be created by adding to those modules. If more modules are created then `main.tf` will need to be extended to invoke them.
 * Adding an S3 bucket is done by invoking the `secure_bucket` module, located at `modules/secure_bucket/`, you can see how the existing buckets are created by viewing `modules/lambda_s3/bucket.tf`, new buckets should be created by adding to this file.
