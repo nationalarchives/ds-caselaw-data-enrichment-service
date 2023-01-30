@@ -46,7 +46,7 @@ def process_event(sqs_rec):
 
     content_valid = validate_content(file_content)
     if content_valid:
-        LOGGER.debug("content valid")
+        LOGGER.info("content valid")
     else:
         LOGGER.error("content invalid")
 
@@ -108,7 +108,7 @@ def handler(event, context):
     """
     Function called by lambda to validate schema
     """
-    LOGGER.info("validate-judgement-contents")
+    LOGGER.info("Validate enriched judgement XML")
     LOGGER.info(DEST_BUCKET)
     valid_content = False
     source_key = ""
@@ -129,11 +129,11 @@ def handler(event, context):
         topic = DEST_TOPIC
 
         if valid_content:
-            LOGGER.debug("content is valid sending notification")
+            LOGGER.info("Content is valid. Sending notification.")
 
         else:
-            message = "content is invalid for " + source_key
-            LOGGER.error(message)
+            message = "Content is invalid for " + source_key
+            LOGGER.info(message)
             topic = DEST_ERROR_TOPIC
             sns_client = boto3.client("sns")
             response = sns_client.publish(

@@ -7,6 +7,7 @@ import re
 import urllib.parse
 
 import boto3
+from lxml import etree, objectify
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
@@ -36,6 +37,37 @@ def upload_contents(source_key, text_content):
     s3 = boto3.resource("s3")
     object = s3.Object(DEST_BUCKET, filename)
     object.put(Body=text_content)
+
+
+def sanitize_judgment(file_content):
+    root = objectify.fromstring(file_content)
+    # Iterate over the elements in the judgementBody
+    for elem in root.judgment.judgmentBody.decision.iter():
+        # Check if the element has an existing ref tag
+        if hasattr(elem, "ref"):
+            print("Existing ref tag found")
+            for ref in elem.iterchildren():
+                # Check the reference origin is TNA
+                if (
+                    ref.attrib.get(
+                        "{https://caselaw.nationalarchives.gov.uk/akn}origin"
+                    )
+                    == "TNA"
+                ):
+                    print("Removing ref")
+                    # Remove the reference if origin is TNA
+                    elem.remove(elem.ref)
+        else:
+            continue
+
+    # Clean the tree object
+    objectify.deannotate(root)
+    etree.cleanup_namespaces(root)
+    # Output XML
+    cleaned_file_content = etree.tostring(
+        root, encoding="utf-8", pretty_print=False, xml_declaration=True
+    )
+    return cleaned_file_content
 
 
 def process_event(sqs_rec):
@@ -71,8 +103,10 @@ def process_event(sqs_rec):
         .decode("utf-8")
     )
 
+    cleaned_file_content = sanitize_judgment(file_content)
+
     # split file_content into header and judgment to ensure replacements only occur in judgment body
-    judgment_split = re.split("(</header>)", file_content)
+    judgment_split = re.split("(</header>)", cleaned_file_content)
 
     LOGGER.info("Got original XML file content")
     LOGGER.info(REPLACEMENTS_BUCKET)

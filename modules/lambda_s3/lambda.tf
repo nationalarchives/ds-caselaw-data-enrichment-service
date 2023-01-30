@@ -1229,8 +1229,8 @@ module "lambda-validate-replacements" {
   }
 
   environment_variables = {
-    # DEST_TOPIC_NAME       = "${aws_sns_topic.validation_updates.arn}"
-    # DEST_ERROR_TOPIC_NAME = "${aws_sns_topic.validation_updates_error.arn}"
+    DEST_TOPIC_NAME       = "${aws_sns_topic.validation_updates.arn}"
+    DEST_ERROR_TOPIC_NAME = "${aws_sns_topic.validation_updates_error.arn}"
     DEST_BUCKET_NAME      = module.xml_third_phase_enriched_bucket.s3_bucket_arn
     SCHEMA_BUCKET_NAME    = "${module.rules_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_KEY     = "caselaw.xsd"
