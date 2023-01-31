@@ -2,7 +2,7 @@
 
 ## 1. Introduction
 
-This resource documents the design and operation of the Judgment Enrichment Pipeline (JEP) built for The National Archives by MDRxTECH and vLex Justis to support the publishing process that sits behind [caselaw.nationalarchives.gov.uk](https://caselaw.nationalarchives.gov.uk).
+This resource documents the design and operation of the Judgment Enrichment Pipeline (JEP) built for The National Archives by MDRxTECH and vLex Justis to support the publishing process that sits behind the [Find Case Law](https://caselaw.nationalarchives.gov.uk) platform.
 
 The primary purpose of the JEP is to "enrich" the judgments published on [caselaw.nationalarchives.gov.uk](https://caselaw.nationalarchives.gov.uk)) by marking up important pieces of legal information - such as references to earlier cases and legislation - cited in the body of the judgment. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.   
 
@@ -81,11 +81,30 @@ CI/CD works in the following way:
   * Terraform is validated and planned against staging and production as independent checks.
 * Upon merge, non dockerised lambdas are built, terraform is planned, applied and then docker images are built and pushed to ECR. This occurs for staging, if staging succeeds then the same happens for production.
 
+- When a pull request is opened a series of checks are made, against both staging and production:
+  - Python Black (Formats python code correctly)
+  - Python iSort (Orders imports correctly)
+  - TFLint (Terraform Linter)
+  - Terraform Validate
+  - Terraform init.
+  - Terraform Plan (A plan of the infrastructure changes for that environment)
+- If the checks fail due to Python Black. 
+A message such as `Oh no! 💥 💔 💥 13 files would be reformatted, 5 files would be left unchanged.` 
+  - To fix this, install black locally `pip install black`, then run `black .` and commit the reformatted code.
+- If the check fails due to iSort. A message such as `ERROR: Imports are incorrectly sorted.`
+  - To fix this, install isort locally `pip install isort`, then run `isort .`
+- TFLint will explain any errors it finds. 
+- Terraform plan needs to be inspected before merging code to ensure the right thing is being applied. 
+Do not assume that a green build is going to build what you want to be built. 
+- Upon merge, staging environment docker images will be built and pushed to ECR, staging environment Terraform code will be applied.
+On success of the staging environment, production environment docker images will be built and pushed to ECR, production environment Terraform code will be applied.
+
+
 ## 7 DB Backups
 As we use AWS Aurora, there is no multi-AZ functionality. Instead, “Aurora automatically replicates storage six ways across three availability zones”.
 
 Each night there is an automated snapshot by Amazon of RDS.
-We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron based from Amazon Eventbridge that triggers a lambda. DB backups are shown in the RDS console under manual snapshots. 
+We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron-based from Amazon Eventbridge that triggers a [lambda](/lambda/db_backup/index.py). DB backups are shown in the RDS console under manual snapshots. 
 
 ## 8 Infrastructure
 Here are some brief notes on extending the infrastructure. 
