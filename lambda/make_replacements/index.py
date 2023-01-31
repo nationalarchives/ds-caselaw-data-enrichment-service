@@ -39,41 +39,33 @@ def upload_contents(source_key, text_content):
     object.put(Body=text_content)
 
 
-def sanitize_judgment(file_content):
-    root = objectify.fromstring(file_content)
-    # Iterate over the elements in the judgementBody
-    for elem in root.judgment.judgmentBody.decision.iter():
-        # Find p and span in element
-        p = elem.find("{http://docs.oasis-open.org/legaldocml/ns/akn/3.0}p")
-        span = elem.find("{http://docs.oasis-open.org/legaldocml/ns/akn/3.0}span")
-        # Sub element list
-        sub_element_list = [p, span]
-        for sub_e in sub_element_list:
-            # Check if the p has an existing ref tag
-            if hasattr(sub_e, "ref"):
-                print("Existing ref tag found")
-                # ref = p.find("{http://docs.oasis-open.org/legaldocml/ns/akn/3.0}ref")
-                for ref in sub_e.iterchildren():
-                    # Check the reference origin is TNA
-                    if (
-                        ref.attrib.get(
-                            "{https://caselaw.nationalarchives.gov.uk/akn}origin"
-                        )
-                        == "TNA"
-                    ):
-                        print("Removing ref")
-                        # Remove the reference if origin is TNA
-                        sub_e.remove(sub_e.ref)
+def detect_reference(text, etype="legislation"):
+    """
+    Detect citation references.
+    :param text: text to be searched for references
+    :param etype: type of reference to be detected
+    :returns references: List(Tuple[((start, end), detected_ref)]), of detected legislation
+    """
+    patterns = {
+        "legislation": r"<ref(((?!ref>).)*)origin=\"TNA\"(.*?)ref>",
+    }
 
-    # Clean the tree object
-    objectify.deannotate(root)
-    etree.cleanup_namespaces(root)
-    # Output XML
-    cleaned_file_content = etree.tostring(
-        root, encoding="utf-8", pretty_print=True, xml_declaration=True
-    )
-    cleaned_file_content = cleaned_file_content.decode("utf-8")
-    return cleaned_file_content
+    references = [(m.span(), m.group()) for m in re.finditer(patterns[etype], text)]
+    return references
+
+
+def sanitize_judgment(file_content):
+    remove_from_judgment = []
+    list_of_references = detect_reference(file_content)
+    for i in list_of_references:
+        opening = i[1].split(">")[0] + ">"
+        remove_from_judgment.append((opening, ""))
+        remove_from_judgment.append(("</ref>", ""))
+
+    for k, v in remove_from_judgment:
+        file_content = file_content.replace(k, v)
+
+    return file_content
 
 
 def process_event(sqs_rec):
@@ -104,8 +96,9 @@ def process_event(sqs_rec):
     LOGGER.info(filename)
 
     file_content = (
-        s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"].read()
-        # .decode("utf-8")
+        s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"]
+        .read()
+        .decode("utf-8")
     )
 
     cleaned_file_content = sanitize_judgment(file_content)
