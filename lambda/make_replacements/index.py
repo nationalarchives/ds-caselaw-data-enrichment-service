@@ -112,6 +112,7 @@ def process_event(sqs_rec):
 
     # split file_content into header and judgment to ensure replacements only occur in judgment body
     judgment_split = re.split("(</header>)", cleaned_file_content)
+    print(judgment_split)
 
     LOGGER.info("Got original XML file content")
     LOGGER.info(REPLACEMENTS_BUCKET)
@@ -128,9 +129,11 @@ def process_event(sqs_rec):
         judgment_split[2], replacement_file_content
     )
     LOGGER.info("Got replacement text content")
+    print(replaced_text_content)
 
     # combine header with replaced text content before uploading to enriched bucket
     judgment_split[2] = replaced_text_content
+    print(judgment_split[2])
     full_replaced_text_content = "".join(judgment_split)
     upload_contents(filename, full_replaced_text_content)
 

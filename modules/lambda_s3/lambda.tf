@@ -1193,19 +1193,13 @@ module "lambda-validate-replacements" {
       ],
       resources = ["*"]
     },
-    #    vcite = {
-    #      effect = "Allow",
-    #      actions = [
-    #        "s3:GetObject",
-    #        "s3:PutObject",
-    #        "s3:PutObjectAcl",
-    #        "s3:DeleteObject",
-    #        "s3:GetObjectAcl"
-    #      ],
-    #      resources = ["arn:aws:s3:::vcite-tna-files/*"],
-    #      principal = ["*"]
-    #    }
-  }
+    ssm_get_parameter = {
+      effec = "Allow",
+      actions = [
+          "ssm:GetParameters"
+      ],
+      resources = ["${aws_ssm_parameter.vCite.arn}"]
+    }
 
   allowed_triggers = {
     S3BucketUpload = {
