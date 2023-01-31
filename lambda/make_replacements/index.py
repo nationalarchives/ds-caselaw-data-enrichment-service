@@ -65,7 +65,7 @@ def sanitize_judgment(file_content):
     etree.cleanup_namespaces(root)
     # Output XML
     cleaned_file_content = etree.tostring(
-        root, encoding="utf-8", pretty_print=True xml_declaration=True
+        root, encoding="utf-8", pretty_print=True, xml_declaration=True
     )
     cleaned_file_content = cleaned_file_content.decode("utf-8")
     return cleaned_file_content

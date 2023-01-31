@@ -13,6 +13,8 @@ from lxml import etree
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
+client = boto3.client("ssm")
+
 
 def validate_env_variable(env_var_name):
     print(f"Getting the value of the environment variable: {env_var_name}")
@@ -110,6 +112,11 @@ def handler(event, context):
     """
     LOGGER.info("Validate enriched judgement XML")
     LOGGER.info(DEST_BUCKET)
+
+    parameter = client.get_parameter(Name="vCite", WithDecryption=True)
+    print(parameter)
+    print(parameter["Parameter"]["Value"])
+
     valid_content = False
     source_key = ""
     try:
