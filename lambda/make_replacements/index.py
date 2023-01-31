@@ -189,7 +189,7 @@ REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 # make replacements
 def handler(event, context):
     """
-    Function called by the lambda to run the process event     
+    Function called by the lambda to run the process event
     """
     LOGGER.info("Make replacements")
     LOGGER.info(DEST_BUCKET)

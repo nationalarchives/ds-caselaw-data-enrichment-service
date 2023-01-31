@@ -11,8 +11,8 @@ import re
 def apply_correction_strategy(citation_type, citation_match, canonical_form):
     """
     Find the appropriate correction strategy and apply it
-    :param citation_type: Citation pattern 
-    :param citation_match: Citation that was matched 
+    :param citation_type: Citation pattern
+    :param citation_match: Citation that was matched
     :param canonical_form: Canonical form of the citation
     :returns corrected_citation, year: correct citation and year
     """

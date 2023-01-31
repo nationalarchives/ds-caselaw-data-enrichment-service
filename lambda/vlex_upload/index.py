@@ -70,7 +70,7 @@ FORWARD_TO_VLEX_ENABLED = strtobool(validate_env_variable("FORWARD_TO_VLEX_ENABL
 
 def handler(event, context):
     """
-    Function called by the lambda to upload the enriched judgment to vlex    
+    Function called by the lambda to upload the enriched judgment to vlex
     """
     LOGGER.info("vlex_upload")
     LOGGER.info(DEST_BUCKET)

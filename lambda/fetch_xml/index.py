@@ -145,7 +145,7 @@ ENVIRONMENT = validate_env_variable("ENVIRONMENT")
 
 def handler(event, context):
     """
-    Function called by the lambda to run the process event     
+    Function called by the lambda to run the process event
     """
     LOGGER.info("Lambda to fetch XML judgment via API")
     LOGGER.info("Destination bucket for XML judgment: %s", DEST_BUCKET)

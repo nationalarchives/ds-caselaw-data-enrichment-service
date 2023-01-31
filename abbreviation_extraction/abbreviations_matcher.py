@@ -24,7 +24,7 @@ def chunking_mechanism(docobj, n, start, end):
     :param end: ending position of detected abbreviation
 
     Returns
-    ------- 
+    -------
     List: Judgment split into chunks
     """
     k, m = divmod(len(docobj), n)
@@ -46,9 +46,9 @@ def abb_pipeline(judgment_content_text, nlp):
     Main controller of the abbreviation detection pipeline.
     :param judgment_content_text: judgment content
     :param nlp: previously created spaCy nlp component
-    
+
     Returns
-    ------- 
+    -------
     List[Tuple[Str, Str]]: abbreviation and abbreviation long form
     """
     # init the class - stateful pipeline component

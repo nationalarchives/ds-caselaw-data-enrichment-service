@@ -36,7 +36,7 @@ def validate_env_variable(env_var_name):
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
     """
-    Function to fetch the XML, call the replacements abbreviations pipeline and upload the enriched XML to the 
+    Function to fetch the XML, call the replacements abbreviations pipeline and upload the enriched XML to the
     destination bucket
     """
     s3_client = boto3.client("s3")
@@ -82,7 +82,7 @@ def process_event(sqs_rec):
 
 def write_replacements_file(replacement_list):
     """
-    Writes tuples of abbreviations and long forms from a list of replacements  
+    Writes tuples of abbreviations and long forms from a list of replacements
     """
     tuple_file = ""
     for i in replacement_list:
@@ -158,7 +158,7 @@ REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
 def handler(event, context):
     """
-    Function called by the lambda to run the process event     
+    Function called by the lambda to run the process event
     """
     LOGGER.info("Determine abbreviations")
     LOGGER.info(DEST_QUEUE)

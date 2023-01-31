@@ -9,7 +9,9 @@ import urllib.parse
 import boto3
 from bs4 import BeautifulSoup
 
-from legislation_provisions_extraction.legislation_provisions import provisions_pipeline
+from legislation_provisions_extraction.legislation_provisions import (
+    provisions_pipeline,
+)
 from replacer.second_stage_replacer import provision_replacement
 
 LOGGER = logging.getLogger()
@@ -61,7 +63,7 @@ def add_timestamp_and_engine_version(file_data):
 
 def process_event(sqs_rec):
     """
-    Function to fetch the XML, call the legislation provisions extraction pipeline and upload the enriched XML to the 
+    Function to fetch the XML, call the legislation provisions extraction pipeline and upload the enriched XML to the
     destination bucket
     """
     s3_client = boto3.client("s3")
@@ -96,7 +98,7 @@ DEST_BUCKET = validate_env_variable("DEST_BUCKET")
 
 def handler(event, context):
     """
-    Function called by the lambda to run the process event 
+    Function called by the lambda to run the process event
     """
     LOGGER.info("detect-legislation-provisions")
     try:

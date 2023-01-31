@@ -107,7 +107,7 @@ def contains(str, set: Set[str]) -> bool:
     Set, required
     Returns
     -------
-    A Boolean, True if str appears in set. 
+    A Boolean, True if str appears in set.
     """
     return any([c in str for c in set])
 
@@ -115,21 +115,21 @@ def contains(str, set: Set[str]) -> bool:
 def filter_matches(
     matcher_output: List[Tuple[int, int, int]], doc: Doc
 ) -> List[Tuple[Span, Span]]:
-    """    
+    """
     Filter into two cases:
     1. <Short Form> ( <Long Form> )
-    2. <Long Form> (<Short Form>) [this case is most common]. 
+    2. <Long Form> (<Short Form>) [this case is most common].
     Parameters
     ----------
     matcher_output: List, required.
-        List of the abbreviation match number, the start and the end position 
+        List of the abbreviation match number, the start and the end position
         of the match found from the spaCy matcher.
     doc: Doc, required.
         Doc object of the judgment content.
     Returns
     -------
     List[Tuple[Span, Span]], Either short form and long form candidate
-    or long form and short form candidate     
+    or long form and short form candidate
     """
     candidates = []
     for match in matcher_output:
@@ -207,8 +207,8 @@ def filter_matches(
 
 def short_form_filter(span: Span) -> bool:
     """
-    Abbreviation is checked to ensure it satisfies two constraints: 
-        1. Length is between 2 and 10 
+    Abbreviation is checked to ensure it satisfies two constraints:
+        1. Length is between 2 and 10
         2. Contains alpha numeric character
     Parameters
     ----------
@@ -232,17 +232,17 @@ def verify_match_format(
     matcher_output: List[Tuple[int, int, int]], doc: Doc
 ) -> List[Tuple[Span, Span]]:
     """
-    Verify that the matches appear in a form where such as ("abbrv") or ("long_form") with quotes 
+    Verify that the matches appear in a form where such as ("abbrv") or ("long_form") with quotes
     and brackets as the first two and final two characters
     Parameters
     ----------
     matcher_output: List, required.
-        List of the abbreviation match number, the start and the end position 
+        List of the abbreviation match number, the start and the end position
         of the match found from the spaCy matcher.
     doc: Doc, required.
-        Doc object of the judgment content.        
+        Doc object of the judgment content.
     Returns
-    -------    
+    -------
     List[Tuple[Span, Span]], List of match start and end position
     """
     for match in matcher_output:
@@ -280,7 +280,7 @@ class AbbreviationDetector:
         Initialises the patterns and vocabulary to be used by spaCy's matcher
         Parameters
         ----------
-        nlp: construct a Doc object via spaCy's nlp object         
+        nlp: construct a Doc object via spaCy's nlp object
         """
         Doc.set_extension("abbreviations", default=[], force=True)
         Span.set_extension("long_form", default=None, force=True)
@@ -299,9 +299,9 @@ class AbbreviationDetector:
         ----------
         span: Span, required
         doc: Doc, required
-            Doc object of the judgment content.        
+            Doc object of the judgment content.
         Returns
-        -------    
+        -------
         Tuple[Span, Set[Span]], Abbreviation and long form
         """
         dummy_matches = [(-1, int(span.start), int(span.end))]
@@ -321,10 +321,10 @@ class AbbreviationDetector:
         Parameters
         ----------
         doc: Doc, required
-            Doc object of the judgment content.   
+            Doc object of the judgment content.
         Returns
-        -------    
-        Doc, Doc object of the judgment content.       
+        -------
+        Doc, Doc object of the judgment content.
         """
         matches = self.matcher(doc)
 
@@ -354,11 +354,11 @@ class AbbreviationDetector:
         filtered: List[Tuple[Span, Span]], required
             Abbreviations found and passed through the filter_matches function
         doc: Doc, required
-            Doc object of the judgment content.        
+            Doc object of the judgment content.
         Returns
-        -------    
+        -------
         List[Tuple[Span, Set[Span]]], for all short form and long form candidates found after filtering,
-        list of the match and every occurance of the match in the judgment body  
+        list of the match and every occurance of the match in the judgment body
         """
         rules = {}
         all_occurences: Dict[Span, Set[Span]] = defaultdict(set)

@@ -91,7 +91,7 @@ get_secret = getLoginSecrets()
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
     """
-    Function to fetch the XML, call the legislation replacements pipeline and upload the enriched XML to the 
+    Function to fetch the XML, call the legislation replacements pipeline and upload the enriched XML to the
     destination bucket
     """
     s3_client = boto3.client("s3")
@@ -165,7 +165,7 @@ def enrichment_tracking(bucket, key):
 
 def write_replacements_file(replacement_list):
     """
-    Writes tuples of abbreviations and long forms from a list of replacements  
+    Writes tuples of abbreviations and long forms from a list of replacements
     """
     tuple_file = ""
     for i in replacement_list:
@@ -190,7 +190,7 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
 
 def init_NLP():
     """
-    Load spacy model 
+    Load spacy model
     """
     nlp = spacy.load(
         "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
@@ -278,7 +278,7 @@ ENRICHMENT_BUCKET = validate_env_variable("ENRICHMENT_BUCKET")
 
 def handler(event, context):
     """
-    Function called by the lambda to run the process event     
+    Function called by the lambda to run the process event
     """
     LOGGER.info("Determine legislation replacements")
     LOGGER.info(DEST_QUEUE)
