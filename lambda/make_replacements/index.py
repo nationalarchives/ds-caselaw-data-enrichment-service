@@ -40,7 +40,7 @@ def upload_contents(source_key, text_content):
 
 
 def sanitize_judgment(file_content):
-    root = objectify.fromstring(xml)
+    root = objectify.fromstring(file_content)
     # Iterate over the elements in the judgementBody
     for elem in root.judgment.judgmentBody.decision.iter():
         # Find p and span in element
