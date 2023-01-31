@@ -16,3 +16,8 @@ variable "use_kms_encryption" {
   type    = bool
   default = true
 }
+
+variable "vcite_enriched" {
+  type    = bool
+  default = false
+}

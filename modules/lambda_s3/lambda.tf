@@ -1443,7 +1443,7 @@ module "lambda-fetch-xml" {
     DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
     API_USERNAME     = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
     API_PASSWORD     = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
-    ENVIRONMENT = "${local.environment}"
+    ENVIRONMENT      = "${local.environment}"
   }
 
   cloudwatch_logs_retention_in_days = 365
@@ -1573,7 +1573,7 @@ module "lambda-push-enriched-xml" {
     SOURCE_BUCKET = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
     API_USERNAME  = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
     API_PASSWORD  = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
-    ENVIRONMENT = "${local.environment}"
+    ENVIRONMENT   = "${local.environment}"
   }
 
   cloudwatch_logs_retention_in_days = 365
