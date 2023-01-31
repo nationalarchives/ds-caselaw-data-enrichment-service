@@ -1200,6 +1200,7 @@ module "lambda-validate-replacements" {
       ],
       resources = ["${aws_ssm_parameter.vCite.arn}"]
     }
+  }
 
   allowed_triggers = {
     S3BucketUpload = {
