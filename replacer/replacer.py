@@ -55,7 +55,7 @@ def replacer_pipeline(
     :param REPLACEMENTS_CASELAW: list of unique tuples of citation match and corrected citation
     :param REPLACEMENTS_LEG: list of unique tuples of citation match and corrected citation
     :param REPLACEMENTS_ABBR: list of unique tuples of citation match and corrected citation
-    :return: enriched XML file data    
+    :return: enriched XML file data
     """
     for replacement in list(set(REPLACEMENTS_CASELAW)):
         file_data = replacer_caselaw(file_data, replacement)
@@ -73,8 +73,8 @@ def replacer_pipeline(
 def write_replacements_file(replacement_list):
     """
     Writes tuples from a list
-    :param replacement_list: 
-    :return: tuple json file      
+    :param replacement_list:
+    :return: tuple json file
     """
     tuple_file = ""
     for i in replacement_list:

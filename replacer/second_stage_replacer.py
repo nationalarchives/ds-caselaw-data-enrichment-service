@@ -13,7 +13,7 @@ from bs4 import BeautifulSoup
 
 def splitString(text, split_points):
     """
-    Splits a string at locations in the text where a reference was detected 
+    Splits a string at locations in the text where a reference was detected
     :param text: XML file
     :param split_points: list of positions of matches
     :return: list of split strings
@@ -25,7 +25,7 @@ def splitString(text, split_points):
 
 def replacer(text, detected_refs):
     """
-    String replacement with matches from references 
+    String replacement with matches from references
     :param text: XML file
     :param detected_refs: list of dict of detected references
     :return: enriched XML file data
