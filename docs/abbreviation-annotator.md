@@ -20,6 +20,8 @@ The markup on abbreviations is straightforward. The Abbreviation Annotator wraps
 
 ## Implementation Details
 
+The logic behind the Abbreviation Annotator can be found [here](/abbreviation_extraction/).
+
 The input to the Abbreviation Annotator is the raw text of the judgment body of the incoming judgment XML file to be enriched. The output is a list of replacements that is sent to the first phase enrichment [replacer](/docs/the-replacers.md).
 
 The logic for the Abbreviation Annotator is contained in the [abbreviation extraction module](/abbreviation_extraction/). The JEP's implementation is an adaption of [Blackstone's abbreviation detector](https://github.com/ICLRandD/Blackstone/blob/master/blackstone/pipeline/abbreviations.py) which itself was an adaption of [ScispaCy's abbreviation detector](https://github.com/allenai/scispacy/blob/main/scispacy/abbreviation.py). The JEP's implementation has been updated for spaCy version 3.0+. 
