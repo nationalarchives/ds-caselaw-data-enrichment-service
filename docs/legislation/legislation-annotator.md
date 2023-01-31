@@ -1,7 +1,7 @@
 # The Legislation Annotator
 
 ## Overview
-The Legislation Annotator is the second *Annotator* function in the pipeline. It follows the [Case Law Annotator](/docs/caselaw/case-law-annotator.md) and is itself followed by the [Abbreviation Annotator](/docs/abbreviation-annotator.md). 
+The Legislation Annotator is the second *Annotator* function in the pipeline. It follows the [Case Law Annotator](/docs/caselaw/case-law-annotator.md) and is itself followed by the [Abbreviation Annotator](/docs/abbreviation-annotator.md). The Legislation Annotator performs its function in the first phase of enrichment.
 
 The purpose of the Legislation Annotator is to detect and markup references to UK primary legislation cited in the judgment being processed and uses a hybrid of deterministic and probabilistic strategies to achieve this.
 
