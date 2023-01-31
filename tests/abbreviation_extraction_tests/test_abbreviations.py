@@ -143,10 +143,8 @@ class TestAbbrevationReplacer(unittest.TestCase):
         short_form = "ECHR"
         replacement_entry = (short_form, long_form)
         text = "The case was heard before the ECHR"
-        replacement_string = (
-            'The case was heard before the <abbr title="{}">{}</abbr>'.format(
-                long_form, short_form
-            )
+        replacement_string = 'The case was heard before the <abbr title="{}">{}</abbr>'.format(
+            long_form, short_form
         )
         replaced_entry = replacer_abbr(text, replacement_entry)
         assert short_form in replaced_entry
@@ -157,10 +155,8 @@ class TestAbbrevationReplacer(unittest.TestCase):
         short_form = "the HRA 1998"
         replacement_entry = (short_form, long_form)
         text = "in breach of section 6 of the HRA 1998"
-        replacement_string = (
-            'in breach of section 6 of <abbr title="{}">{}</abbr>'.format(
-                long_form, short_form
-            )
+        replacement_string = 'in breach of section 6 of <abbr title="{}">{}</abbr>'.format(
+            long_form, short_form
         )
         replaced_entry = replacer_abbr(text, replacement_entry)
         assert short_form in replaced_entry

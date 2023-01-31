@@ -14,9 +14,7 @@ from legislation_extraction_tests.test_legislation_citations import (
     TestLegislationProcessor,
     TestLegislationReplacer,
 )
-from legislation_provision_extraction_tests import (
-    TestLegislationProvisionProcessor,
-)
+from legislation_provision_extraction_tests import TestLegislationProvisionProcessor
 from oblique_reference_extraction_tests import TestObliqueReferencesProcessor
 from test_xml_parser import TestXmlParser
 

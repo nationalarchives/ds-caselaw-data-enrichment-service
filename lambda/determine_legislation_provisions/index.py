@@ -9,9 +9,7 @@ import urllib.parse
 import boto3
 from bs4 import BeautifulSoup
 
-from legislation_provisions_extraction.legislation_provisions import (
-    provisions_pipeline,
-)
+from legislation_provisions_extraction.legislation_provisions import provisions_pipeline
 from replacer.second_stage_replacer import provision_replacement
 
 LOGGER = logging.getLogger()

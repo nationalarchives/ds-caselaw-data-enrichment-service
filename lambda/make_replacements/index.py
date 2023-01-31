@@ -40,25 +40,30 @@ def upload_contents(source_key, text_content):
 
 
 def sanitize_judgment(file_content):
-    root = objectify.fromstring(file_content)
+    root = objectify.fromstring(xml)
     # Iterate over the elements in the judgementBody
     for elem in root.judgment.judgmentBody.decision.iter():
-        # Check if the element has an existing ref tag
-        if hasattr(elem, "ref"):
-            print("Existing ref tag found")
-            for ref in elem.iterchildren():
-                # Check the reference origin is TNA
-                if (
-                    ref.attrib.get(
-                        "{https://caselaw.nationalarchives.gov.uk/akn}origin"
-                    )
-                    == "TNA"
-                ):
-                    print("Removing ref")
-                    # Remove the reference if origin is TNA
-                    elem.remove(elem.ref)
-        else:
-            continue
+        # Find p and span in element
+        p = elem.find("{http://docs.oasis-open.org/legaldocml/ns/akn/3.0}p")
+        span = elem.find("{http://docs.oasis-open.org/legaldocml/ns/akn/3.0}span")
+        # Sub element list
+        sub_element_list = [p, span]
+        for sub_e in sub_element_list:
+            # Check if the p has an existing ref tag
+            if hasattr(sub_e, "ref"):
+                print("Existing ref tag found")
+                # ref = p.find("{http://docs.oasis-open.org/legaldocml/ns/akn/3.0}ref")
+                for ref in sub_e.iterchildren():
+                    # Check the reference origin is TNA
+                    if (
+                        ref.attrib.get(
+                            "{https://caselaw.nationalarchives.gov.uk/akn}origin"
+                        )
+                        == "TNA"
+                    ):
+                        print("Removing ref")
+                        # Remove the reference if origin is TNA
+                        sub_e.remove(sub_e.ref)
 
     # Clean the tree object
     objectify.deannotate(root)
