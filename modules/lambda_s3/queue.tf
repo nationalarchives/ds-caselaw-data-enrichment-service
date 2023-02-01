@@ -296,6 +296,16 @@ resource "aws_sns_topic" "legislation_update_error" {
   display_name = "Legislation Update Error"
 }
 
+resource "aws_sns_topic" "fetch_xml_error" {
+  name         = "fetch-xml-error-topic"
+  display_name = "Fetch XML Error"
+}
+
+resource "aws_sns_topic" "push_xml_error" {
+  name         = "push-xml-error-topic"
+  display_name = "Push XML Error"
+}
+
 resource "aws_sns_topic" "extract_judgement_contents_error" {
   name         = "extract-judgement-contents-error-topic"
   display_name = "Extract Judgement Contents Error"
@@ -387,6 +397,42 @@ resource "aws_cloudwatch_metric_alarm" "legislation_update_error" {
     FunctionName = "${local.name}-${local.environment}-update-legislation-table"
   }
   alarm_actions = [aws_sns_topic.legislation_update_error.arn]
+}
+
+resource "aws_cloudwatch_metric_alarm" "fetch_xml_error" {
+  alarm_name          = "Fetch XML error"
+  alarm_description   = "Check if fetch XML lambda throws an error"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = "1"
+  metric_name         = "Errors"
+  unit                = "Count"
+  datapoints_to_alarm = "1"
+  namespace           = "AWS/Lambda"
+  period              = "180"
+  statistic           = "Sum"
+  threshold           = "0"
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-fetch-xml"
+  }
+  alarm_actions = [aws_sns_topic.fetch_xml_error.arn]
+}
+
+resource "aws_cloudwatch_metric_alarm" "push_xml_error" {
+  alarm_name          = "Push XML error"
+  alarm_description   = "Check if push XML lambda throws an error"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = "1"
+  metric_name         = "Errors"
+  unit                = "Count"
+  datapoints_to_alarm = "1"
+  namespace           = "AWS/Lambda"
+  period              = "180"
+  statistic           = "Sum"
+  threshold           = "0"
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-push-enriched-xml"
+  }
+  alarm_actions = [aws_sns_topic.push_xml_error.arn]
 }
 
 resource "aws_cloudwatch_metric_alarm" "extract-judgement-contents-error" {
@@ -539,8 +585,14 @@ resource "aws_sns_topic_subscription" "legislation-update-error-email-editha-tar
   endpoint  = "editha.nemsic@mishcon.com"
 }
 
-resource "aws_sns_topic_subscription" "extract_judgement_contents_error-email-editha-target" {
-  topic_arn = aws_sns_topic.extract_judgement_contents_error.arn
+resource "aws_sns_topic_subscription" "fetch_xml_error-email-editha-target" {
+  topic_arn = aws_sns_topic.fetch_xml_error.arn
+  protocol  = "email"
+  endpoint  = "editha.nemsic@mishcon.com"
+}
+
+resource "aws_sns_topic_subscription" "push_xml_error-email-editha-target" {
+  topic_arn = aws_sns_topic.push_xml_error.arn
   protocol  = "email"
   endpoint  = "editha.nemsic@mishcon.com"
 }

@@ -30,6 +30,18 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 
+def upload_contents(source_key, text_content):
+    """
+    Upload judgment to destination S3 bucket
+    """
+    filename = source_key
+
+    LOGGER.info("Uploading text content to %s/%s", VCITE_BUCKET, filename)
+    s3 = boto3.resource("s3")
+    object = s3.Object(VCITE_BUCKET, filename)
+    object.put(Body=text_content)
+
+
 def process_event(sqs_rec):
     """
     Isolating processing from event unpacking for portability and testing
@@ -100,6 +112,7 @@ def validate_content(file_content):
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
+VCITE_BUCKET = validate_env_variable("VCITE_BUCKET")
 DEST_ERROR_TOPIC = validate_env_variable("DEST_ERROR_TOPIC_NAME")
 DEST_TOPIC = validate_env_variable("DEST_TOPIC_NAME")
 VALIDATE_USING_SCHEMA = strtobool(validate_env_variable("VALIDATE_USING_SCHEMA"))
@@ -113,9 +126,9 @@ def handler(event, context):
     LOGGER.info("Validate enriched judgement XML")
     LOGGER.info(DEST_BUCKET)
 
-    parameter = client.get_parameter(Name="vCite", WithDecryption=True)
-    print(parameter)
-    print(parameter["Parameter"]["Value"])
+    # parameter = client.get_parameter(Name="vCite", WithDecryption=True)
+    # print(parameter)
+    # print(parameter["Parameter"]["Value"])
 
     valid_content = False
     source_key = ""
