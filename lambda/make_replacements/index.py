@@ -7,7 +7,7 @@ import re
 import urllib.parse
 
 import boto3
-from lxml import etree, objectify
+from bs4 import BeautifulSoup
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
@@ -39,7 +39,7 @@ def upload_contents(source_key, text_content):
     object.put(Body=text_content)
 
 
-def detect_reference(text, etype="legislation"):
+def detect_reference(text, etype):
     """
     Detect citation references.
     :param text: text to be searched for references
@@ -56,7 +56,7 @@ def detect_reference(text, etype="legislation"):
 
 def sanitize_judgment(file_content):
     remove_from_judgment = []
-    list_of_references = detect_reference(file_content)
+    list_of_references = detect_reference(file_content, "legislation")
     for i in list_of_references:
         opening = i[1].split(">")[0] + ">"
         remove_from_judgment.append((opening, ""))
@@ -65,7 +65,15 @@ def sanitize_judgment(file_content):
     for k, v in remove_from_judgment:
         file_content = file_content.replace(k, v)
 
-    return file_content
+    soup = BeautifulSoup(file_content, 'xml')
+    enriched_date = soup.find_all('FRBRdate', {"name": "tna-enriched"})
+    if enriched_date:
+        for i in enriched_date:
+            i.decompose()
+
+    soup_string = str(soup)
+    
+    return soup_string
 
 
 def process_event(sqs_rec):
