@@ -527,18 +527,6 @@ resource "aws_sns_topic_subscription" "validation_updates_error_sqs_target" {
   endpoint  = aws_sqs_queue.validation_updates_error_queue.arn
 }
 
-resource "aws_sns_topic_subscription" "validation-error-email-niall-target" {
-  topic_arn = aws_sns_topic.validation_updates_error.arn
-  protocol  = "email"
-  endpoint  = "niall.roche@mdrx.tech"
-}
-
-resource "aws_sns_topic_subscription" "validation-error-email-dan-target" {
-  topic_arn = aws_sns_topic.validation_updates_error.arn
-  protocol  = "email"
-  endpoint  = "daniel.hoadley@mishcon.com"
-}
-
 resource "aws_sns_topic_subscription" "rules-error-email-editha-target" {
   topic_arn = aws_sns_topic.rules_update_error.arn
   protocol  = "email"
@@ -593,12 +581,6 @@ resource "aws_sns_topic_subscription" "legislation-provisions-error-email-editha
   endpoint  = "editha.nemsic@mishcon.com"
 }
 
-resource "aws_sns_topic_subscription" "rules-error-email-dan-target" {
-  topic_arn = aws_sns_topic.rules_update_error.arn
-  protocol  = "email"
-  endpoint  = "daniel.hoadley@mishcon.com"
-}
-
 resource "aws_sns_topic_subscription" "rules-error-email-anthony-target" {
   topic_arn = aws_sns_topic.rules_update_error.arn
   protocol  = "email"
@@ -651,6 +633,60 @@ resource "aws_sns_topic_subscription" "legislation-provisions-error-email-anthon
   topic_arn = aws_sns_topic.legislation_provisions_error.arn
   protocol  = "email"
   endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
+}
+
+resource "aws_sns_topic_subscription" "rules-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.rules_update_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "legislation-update-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.legislation_update_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "extract_judgement_contents_error-email-dragon-target" {
+  topic_arn = aws_sns_topic.extract_judgement_contents_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "caselaw-detection-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.caselaw_detection_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "legislation-detection-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.legislation_detection_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "abbreviation-detection-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.abbreviation_detection_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "make-replacements-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.make_replacements_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "oblique-references-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.oblique_references_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "legislation-provisions-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.legislation_provisions_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
 }
 
 resource "aws_sqs_queue" "fetch_xml_queue" {
