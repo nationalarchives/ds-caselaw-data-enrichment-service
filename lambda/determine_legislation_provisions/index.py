@@ -53,16 +53,16 @@ def add_timestamp_and_engine_version(file_data):
         'FRBRdate date="{}" name="tna-enriched"'.format(today_str)
     )
 
-    enrichment_version = soup.find_all('uk:tna-enrichment-engine')
+    enrichment_version = soup.find_all("uk:tna-enrichment-engine")
     if enrichment_version:
         pass
     else:
         enrichment_version = soup.new_tag("uk:tna-enrichment-engine")
         enrichment_version.string = "0.1.0"
-    
+
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
     soup.proprietary.append(enrichment_version)
-    
+
     return soup
 
 

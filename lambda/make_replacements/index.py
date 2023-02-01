@@ -65,14 +65,14 @@ def sanitize_judgment(file_content):
     for k, v in remove_from_judgment:
         file_content = file_content.replace(k, v)
 
-    soup = BeautifulSoup(file_content, 'xml')
-    enriched_date = soup.find_all('FRBRdate', {"name": "tna-enriched"})
+    soup = BeautifulSoup.BeautifulSoup(file_content, "xml")
+    enriched_date = soup.find_all("FRBRdate", {"name": "tna-enriched"})
     if enriched_date:
         for i in enriched_date:
             i.decompose()
 
     soup_string = str(soup)
-    
+
     return soup_string
 
 
