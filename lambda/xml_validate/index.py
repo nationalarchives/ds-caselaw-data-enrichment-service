@@ -64,7 +64,7 @@ def process_event(sqs_rec):
     else:
         LOGGER.error("content invalid")
 
-    return content_valid, source_key
+    return content_valid, source_key, file_content
 
 
 def find_schema(schema_bucket, schema_key):
@@ -139,7 +139,7 @@ def handler(event, context):
             # stop the test notification event from breaking the parsing logic
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
-            valid_content, source_key = process_event(sqs_rec)
+            valid_content, source_key, file_content = process_event(sqs_rec)
 
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)
@@ -150,6 +150,7 @@ def handler(event, context):
 
         if valid_content:
             LOGGER.info("Content is valid. Sending notification.")
+            upload_contents(source_key, file_content)
 
         else:
             message = "Content is invalid for " + source_key
