@@ -101,7 +101,7 @@ def upload_contents(source_key, xml_content):
     object.put(Body=xml_content)
 
 
-def process_event(sqs_rec):
+def process_event(sqs_rec, api_endpoint):
     """
     Function to check the status of the judgment, fetch the judgment if it is published, lock the judgment for editing
     and upload to destination S3 bucket
@@ -110,11 +110,6 @@ def process_event(sqs_rec):
     status, query = read_message(message)
     print("Judgment status:", status)
     print("Judgment query:", query)
-
-    if ENVIRONMENT == "staging":
-        api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
-    else:
-        api_endpoint == "https://api.caselaw.nationalarchives.gov.uk/"
 
     if status == "published":
         print("Judgment:", query)
@@ -150,12 +145,18 @@ def handler(event, context):
     LOGGER.info("Lambda to fetch XML judgment via API")
     LOGGER.info("Destination bucket for XML judgment: %s", DEST_BUCKET)
     LOGGER.info(ENVIRONMENT)
+
+    if ENVIRONMENT == "staging":
+        api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
+    else:
+        api_endpoint == "https://api.caselaw.nationalarchives.gov.uk/"
+
     try:
         LOGGER.info("SQS EVENT: %s", event)
         for sqs_rec in event["Records"]:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
-            process_event(sqs_rec)
+            process_event(sqs_rec, api_endpoint)
 
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)
