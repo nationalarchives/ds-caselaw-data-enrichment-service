@@ -5,6 +5,7 @@ import logging
 import os
 import re
 import urllib.parse
+import xml
 
 import boto3
 from bs4 import BeautifulSoup
