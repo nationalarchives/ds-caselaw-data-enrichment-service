@@ -1,0 +1,30 @@
+@prefix : <http://caselaw.nationalarchives.gov.uk/def/caselaw/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix caselaw: <http://caselaw.nationalarchives.gov.uk/def/caselaw/> .
+@base <http://caselaw.nationalarchives.gov.uk/def/caselaw/> .
+
+caselaw:European_Court_of_Justice caselaw:receivesReferenceFrom caselaw:Supreme_Court .
+caselaw:European_Court_of_Justice caselaw:receivesReferenceFrom caselaw:Court_of_Appeal .
+
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/Supreme_Court>  caselaw:hearsAppealsFrom <http://caselaw.nationalarchives.gov.uk/def/caselaw/High_Court> .
+
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/High_Court>  caselaw:hasDivision <http://caselaw.nationalarchives.gov.uk/def/caselaw/Family_Division> .
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/High_Court>  caselaw:hasDivision <http://caselaw.nationalarchives.gov.uk/def/caselaw/Chancery_Division> .
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/High_Court>  caselaw:hasDivision caselaw:Court_of_Protection .
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/High_Court>  caselaw:hasDivision caselaw:Queens_Bench_Division .
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/High_Court>  caselaw:hasDivision caselaw:Kings_Bench_Division .
+
+caselaw:Queens_Bench_Division caselaw:hasDivision caselaw:Administrative_Court ,caselaw:Commercial_Court ,caselaw:General_Court_QB ,caselaw:Technology_and_Construction_Court .
+caselaw:Kings_Bench_Division caselaw:hasDivision caselaw:Administrative_Court ,caselaw:Commercial_Court ,caselaw:General_Court_KB ,caselaw:Technology_and_Construction_Court .
+
+
+
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/Supreme_Court>  caselaw:hearsAppealsFrom <http://caselaw.nationalarchives.gov.uk/def/caselaw/Court_of_Appeal> .
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/Court_of_Appeal> caselaw:hearsAppealsFrom <http://caselaw.nationalarchives.gov.uk/def/caselaw/High_Court> .
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/Court_of_Appeal> caselaw:hearsAppealsFrom <http://caselaw.nationalarchives.gov.uk/def/caselaw/Employment_Appeal_Tribunal> .
+<http://caselaw.nationalarchives.gov.uk/def/caselaw/Employment_Appeal_Tribunal> caselaw:hearsAppealsFrom <http://caselaw.nationalarchives.gov.uk/def/caselaw/Employment_Tribunal> .
