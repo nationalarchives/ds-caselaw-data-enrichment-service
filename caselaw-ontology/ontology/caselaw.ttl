@@ -145,6 +145,12 @@ caselaw:hearsAppealsFrom rdf:type owl:ObjectProperty ;
                          rdfs:range caselaw:AdjudicatingBody ;
                          rdfs:comment "Describes the originating courts whose judgments can be appealed to the present court." .
 
+###  http://caselaw.nationalarchives.gov.uk/def/caselaw/receivesReferenceFrom
+caselaw:receivesReferenceFrom rdf:type owl:ObjectProperty ;
+                         rdfs:domain caselaw:AdjudicatingBody ;
+                         rdfs:range caselaw:AdjudicatingBody ;
+                         rdfs:comment "Describes the process where a domestic couurt makes an article 234 reference to the Court of Justice of the European Union" .
+
 
 ###  http://caselaw.nationalarchives.gov.uk/def/caselaw/judge
 caselaw:judge rdf:type owl:ObjectProperty ;
