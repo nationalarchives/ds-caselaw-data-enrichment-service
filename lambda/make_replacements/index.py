@@ -71,6 +71,10 @@ def sanitize_judgment(file_content):
     if enriched_date:
         for i in enriched_date:
             i.decompose()
+    engine_version = soup.find_all("uk:tna-enrichment-engine")
+    if engine_version:
+        for i in engine_version:
+            i.decompose()
 
     soup_string = str(soup)
 

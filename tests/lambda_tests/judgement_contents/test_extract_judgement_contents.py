@@ -55,7 +55,9 @@ class TestExtractJudgement(unittest.TestCase):
     # @mock.patch.dict(os.environ, {'DEST_BUCKET_NAME': test_bucket_destination_name}, clear=True)
     def test_extract_text_content(self):
         # monkeypatch.setenv("DEST_BUCKET_NAME", test_bucket_destination_name)
-        from lambdas.extract_judgement_contents.index import extract_text_content
+        from lambdas.extract_judgement_contents.index import (
+            extract_text_content,
+        )
 
         extracted_xml_content = extract_text_content(test_xml_content)
         self.assertEqual(extracted_xml_content, test_extracted_xml_content)
