@@ -277,6 +277,49 @@ resource "aws_sqs_queue" "validation_updates_error_dlq_queue" {
   tags = local.tags
 }
 
+resource "aws_sqs_queue" "xml-validated-queue" {
+  name                       = "${local.name}-${local.environment}-xml-validated-notification-queue"
+  delay_seconds              = 90
+  max_message_size           = 2048
+  visibility_timeout_seconds = 900
+  message_retention_seconds  = 86400
+  receive_wait_time_seconds  = 10
+  sqs_managed_sse_enabled    = true
+  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.xml-validated_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+
+}
+
+resource "aws_sqs_queue_policy" "xml-validated-queue-policy" {
+  queue_url = aws_sqs_queue.xml-validated-queue.id
+  policy    = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+      "Resource": "${aws_sqs_queue.xml-validated-queue.arn}",
+      "Condition": {
+        "ArnEquals": { "aws:SourceArn": "${module.lambda-validate-replacements.lambda_function_arn}" }
+      }
+    }
+  ]
+}
+POLICY
+}
+
+resource "aws_sqs_queue" "xml-validated_dlq_queue" {
+  name                      = "${local.name}-${local.environment}-xml-validated-dlq-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled   = true
+
+  tags = local.tags
+}
+
 
 resource "aws_sns_topic" "validation_updates" {
   name = "validation-updates-topic"
@@ -360,6 +403,13 @@ resource "aws_lambda_event_source_mapping" "sqs_replacements_abbreviations_event
   event_source_arn = aws_sqs_queue.replacement-abbreviations-queue.arn
   enabled          = true
   function_name    = module.lambda-make-replacements.lambda_function_arn
+  batch_size       = 1
+}
+
+resource "aws_lambda_event_source_mapping" "sqs_validated_xml_event_source_mapping" {
+  event_source_arn = aws_sqs_queue.xml-validated-queue.arn
+  enabled          = true
+  function_name    = module.lambda-push-enriched-xml.lambda_function_arn
   batch_size       = 1
 }
 

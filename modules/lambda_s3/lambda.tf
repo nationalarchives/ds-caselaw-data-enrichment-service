@@ -1166,15 +1166,25 @@ module "lambda-validate-replacements" {
       ],
       resources = [module.xml_third_phase_enriched_bucket.kms_key_arn, module.rules_bucket.kms_key_arn]
     },
-    sqs_get = {
+    sqs_get_message = {
       effect = "Allow",
       actions = [
         "sqs:ReceiveMessage",
         "sqs:DeleteMessage",
         "sqs:GetQueueAttributes"
       ],
-      resources = ["${aws_sqs_queue.replacements-queue.arn}"]
+      "Effect" : "Allow",
+      resources = [aws_sqs_queue.xml-validated-queue.arn]
     },
+    # sqs_get = {
+    #   effect = "Allow",
+    #   actions = [
+    #     "sqs:ReceiveMessage",
+    #     "sqs:DeleteMessage",
+    #     "sqs:GetQueueAttributes"
+    #   ],
+    #   resources = ["${aws_sqs_queue.replacements-queue.arn}"]
+    # },
     sns_put = {
       effect = "Allow",
       actions = [
@@ -1232,9 +1242,8 @@ module "lambda-validate-replacements" {
     VCITE_BUCKET      = "arn:aws:s3:::vcite-tna-files"
     SCHEMA_BUCKET_NAME    = "${module.rules_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_KEY     = "caselaw.xsd"
-    VALIDATE_USING_DTD    = "False" # the xml appears to not use a DTD
-    VALIDATE_USING_SCHEMA = "True"
-
+    VALIDATE_USING_SCHEMA = "False"
+    DEST_QUEUE = aws_sqs_queue.xml-validated-queue.url
   }
 
   cloudwatch_logs_retention_in_days = 365

@@ -110,13 +110,30 @@ def validate_content(file_content):
 
     return result
 
+def trigger_push_enriched(uploaded_bucket, uploaded_key):
+    """
+    Delivers replacements to the specified queue
+    """
+    # Get the queue
+    sqs = boto3.resource("sqs")
+    queue = sqs.Queue(DEST_QUEUE)
+
+    # Create a new message
+    message = {"Validated": uploaded_key}
+    msg_attributes = {
+        "source_key": {"DataType": "String", "StringValue": uploaded_key},
+        "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
+    }
+    response = queue.send_message(
+        MessageBody=json.dumps(message), MessageAttributes=msg_attributes
+    )
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 VCITE_BUCKET = validate_env_variable("VCITE_BUCKET")
 DEST_ERROR_TOPIC = validate_env_variable("DEST_ERROR_TOPIC_NAME")
 DEST_TOPIC = validate_env_variable("DEST_TOPIC_NAME")
 VALIDATE_USING_SCHEMA = strtobool(validate_env_variable("VALIDATE_USING_SCHEMA"))
-VALIDATE_USING_DTD = strtobool(validate_env_variable("VALIDATE_USING_DTD"))
+DEST_QUEUE = validate_env_variable("DEST_QUEUE")
 
 
 def handler(event, context):
@@ -126,9 +143,9 @@ def handler(event, context):
     LOGGER.info("Validate enriched judgement XML")
     LOGGER.info(DEST_BUCKET)
 
-    # parameter = client.get_parameter(Name="vCite", WithDecryption=True)
-    # print(parameter)
-    # print(parameter["Parameter"]["Value"])
+    parameter = client.get_parameter(Name="vCite", WithDecryption=True)
+    print(parameter)
+    print("vCite configuration:", parameter["Parameter"]["Value"])
 
     valid_content = False
     source_key = ""
@@ -151,6 +168,12 @@ def handler(event, context):
         if valid_content:
             LOGGER.info("Content is valid. Sending notification.")
             upload_contents(source_key, file_content)
+
+            if parameter == 'off':
+                trigger_push_enriched(DEST_BUCKET, source_key)
+                LOGGER.info(
+                    "Message sent on queue to start determine-replacements-legislation lambda"
+                )
 
         else:
             message = "Content is invalid for " + source_key
