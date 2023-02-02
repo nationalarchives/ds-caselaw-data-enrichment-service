@@ -1166,11 +1166,10 @@ module "lambda-validate-replacements" {
       ],
       resources = [module.xml_third_phase_enriched_bucket.kms_key_arn, module.rules_bucket.kms_key_arn]
     },
-    sqs_get_message = {
+    sqs_put_message = {
       effect = "Allow",
       actions = [
-        "sqs:ReceiveMessage",
-        "sqs:DeleteMessage",
+        "sqs:SendMessage",
         "sqs:GetQueueAttributes"
       ],
       "Effect" : "Allow",
@@ -1545,6 +1544,15 @@ module "lambda-push-enriched-xml" {
         "logs:PutLogEvents"
       ],
       resources = ["*"]
+    },
+    sqs_get = {
+      effect = "Allow",
+      actions = [
+        "sqs:ReceiveMessage",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+      ],
+      resources = ["${aws_sqs_queue.xml-validated-queue.arn}"]
     },
     secrets_get = {
       effect = "Allow",
