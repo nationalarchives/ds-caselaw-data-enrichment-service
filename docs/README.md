@@ -14,7 +14,7 @@ The *Annotators* are supported by a cast of utility functions that are responsib
 
 A significant amount of core markup annotation is provided directly by the JEP, but it is also supported an integration with the [vLex](https://vlex.com/) vCite engine. vCite extends the functionality in a range of ways, including the addition of a comprehensive suite of case law citation matchers. See [here](/docs/vcite.md) for more detail on the vCite integration and how it is controlled. 
 
-A step-by-step commentary on the pipeline can be found [here](pipeline-walkthrough.md).
+![Phases of Enrichment](/docs/img/tna_enrichment_phases.png)
 
 ### 1.2 The *Annotators*
 
@@ -26,13 +26,29 @@ The JEP is a modular system comprising a series of AWS Lambda functions -- the *
 4. [Oblique Legislative References Annotator](legislation/oblique-references.md) -- detects indirect references to primary legislaton, such as `the Act` or `the 1998 Act` and determines which cited primary enactment the indirect reference corresponds to
 5. [Legislative Provision Annotator](legislation/legislative-provision-annotator.md) -- identifies references to legislation provisions, such as `section 6`, and identifies the corresponding primary enactment, for example `section 6 of the Human Rights Act`
 
+### 1.3 Enrichment phases
+
+There are four phases of enrichment. Each phase of enrichment generates enriched LegalDocML that is progressively enriched by each successive phase of enrichment. 
+
+_First Phase Enrichment_
+The first phase of enrichment consists of the [Case Law Annotator](/docs/caselaw/case-law-annotator.md); the [Legislation Annotator](/docs/legislation/legislation-annotator.md); and the [Abbreviations Annotator](/docs/abbreviation-annotator.md)
+
+_Second Phase Enrichment_
+The second phase of enrichment consists of the [Oblique Legislative References Annotator](/docs/legislation/oblique-references.md)
+
+_Third Phase Enrichment_
+The third phase of enrichment cosists of the [Legislative Provision Annotator](/docs/legislation/legislative-provision-annotator.md)
+
+_Fourth Phase Enrichment_
+The fourth and final phase of enrichment conists of the [vCite integration](/docs/vcite.md)
+
 ## 2 Adding new citation rules to the Case Law Annotator
 
 The Case Law Annotator uses a rules-based engine, the *Rules Manifest*, which is built on top of the [spaCy EntityRuler](https://spacy.io/api/entityruler) to detect case law citations (e.g. `[2022] 1 WLR 123). The *Rules Manifest* is stored as a table in Postgres where each row in the table represents a rule.
 
 The creation of rules is currently managed by modifying and uploading a CSV version of the *Rules Manifest*, which is stored in `production-tna-s3-tna-sg-rules-bucket` with a filename conforming to the pattern `yyyy_mm_dd_Citation_Manifest.csv`. 
 
-See [here](/docs/caselaw/adding-new-citation-rules.md) for guidance on how to create and modify rules in the *Rules Manifest*.
+See [here](/docs/caselaw/updating-the-rules-manifest.md) for guidance on how to create and modify rules in the *Rules Manifest*.
 
 ## 3 Enriching judgments: How to run the pipeline
 
