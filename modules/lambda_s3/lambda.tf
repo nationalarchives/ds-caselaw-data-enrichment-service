@@ -1196,7 +1196,9 @@ module "lambda-validate-replacements" {
     ssm_get_parameter = {
       effec = "Allow",
       actions = [
-          "ssm:GetParameters"
+          "ssm:GetParameters",
+          "ssm:GetParameter",
+          "ssm:GetParametersByPath"
       ],
       resources = ["${aws_ssm_parameter.vCite.arn}"]
     }
@@ -1239,6 +1241,15 @@ module "lambda-validate-replacements" {
 
   tags = local.tags
 
+}
+
+resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
+  bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
+
+  lambda_function {
+    lambda_function_arn = module.lambda-validate-replacement.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+  }
 }
 
 resource "aws_cloudwatch_event_rule" "update_legislation_table_lambda_event_rule" {
@@ -1578,14 +1589,14 @@ module "lambda-push-enriched-xml" {
 
 }
 
-resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
-  bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
+# resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
+#   bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
 
-  lambda_function {
-    lambda_function_arn = module.lambda-push-enriched-xml.lambda_function_arn
-    events              = ["s3:ObjectCreated:*"]
-  }
-}
+#   lambda_function {
+#     lambda_function_arn = module.lambda-push-enriched-xml.lambda_function_arn
+#     events              = ["s3:ObjectCreated:*"]
+#   }
+# }
 
 module "db_backup_lambda" {
   source  = "terraform-aws-modules/lambda/aws"
