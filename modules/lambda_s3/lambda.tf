@@ -1247,7 +1247,7 @@ resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification"
   bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
 
   lambda_function {
-    lambda_function_arn = module.lambda-validate-replacement.lambda_function_arn
+    lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn
     events              = ["s3:ObjectCreated:*"]
   }
 }
