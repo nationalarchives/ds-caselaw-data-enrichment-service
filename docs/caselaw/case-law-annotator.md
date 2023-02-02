@@ -110,7 +110,7 @@ The pattern above breaks down in the following way:
 	* `{""LIKE_NUM"": true}]}`: a token that represents a number
 
 
-## The Rules Manifest, Canonical and Malformed Citations
+## <a name="rules-manifest">The Rules Manifest, Canonical and Malformed Citations</a>
 
 The concept of **canonical** and **malformed** citations is central to the design of the Case Law Annotator and the system of rules that underpins it, the *Rules Manifest*. 
 
