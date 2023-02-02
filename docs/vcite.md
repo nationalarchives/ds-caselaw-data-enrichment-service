@@ -1,1 +1,3 @@
 # vCite 
+
+The vCite on/off control is managed by AWS Parameter Store. It holds one parameter called "vCite". The default value set in Terraform is "off" (because I assumed for now they'd want it to be off). The value can be changed in the console in AWS System Manager (AWS Parameter Store) or in the terraform code. The idea is that if you want to turn it on for a while (say you want it to be on for a week) change it in the console. If you want to set the default to "on" change it in the Terraform code. The reason is that if you change anything in the code and re-build the resources it will reset the parameter to "off" as thats the default value in AWS
