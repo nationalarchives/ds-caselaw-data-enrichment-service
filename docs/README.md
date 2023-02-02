@@ -4,17 +4,23 @@
 
 This resource documents the design and operation of the Judgment Enrichment Pipeline (JEP) built for The National Archives by MDRxTECH and vLex Justis to support the publishing process that sits behind the [Find Case Law](https://caselaw.nationalarchives.gov.uk) platform.
 
-The primary purpose of the JEP is to "enrich" the judgments published on [caselaw.nationalarchives.gov.uk](https://caselaw.nationalarchives.gov.uk)) by marking up important pieces of legal information - such as references to earlier cases and legislation - cited in the body of the judgment. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.   
+The primary purpose of the JEP is to "enrich" the judgments published on [Find Case Law](https://caselaw.nationalarchives.gov.uk) by marking up important pieces of legal information - such as references to earlier cases and legislation - cited in the body of the judgment. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.   
 
 ## 1.1 The general anatomy of the JEP
 
 At its core, the JEP is a series of serverless functions, which we call *Annotators*, that sequentially add layers of markup to judgments submitted for enrichment. Each Annotator is responsible for performing a specific type of enrichment. For example, the [Case Law Annotator](caselaw/case-law-annotator.md) detects references to case law citations (such as `[2021] 1 WLR 1`) and the [Legislation Annotator](legislation/legislation-annotator.md) is responsible for marking up mentions of UK primary legislation. An overview of the *Annotators* can be found below with more detailed notes on each set out in dedicated documentation in this folder. 
 
-The *Annotators* are supported by a cast of utility functions that are responsible for ETL, XML validation, rules-management and file manipulation. The most important of these utility functions are the [*Replacers*](the-replacers.md), which generate the enriched XML that is sent back for publication on [caselaw.nationalarchives.gov.uk](caselaw.nationalarchives.gov.uk).
+The *Annotators* are supported by a cast of utility functions that are responsible for ETL, XML validation, rules and data management and file manipulation. The most important of these utility functions are the [*Replacers*](#14-replacers), which generate the enriched XML that is sent back for publication on [Find Case Law](https://caselaw.nationalarchives.gov.uk).
 
-A significant amount of core markup annotation is provided directly by the JEP, but it is also supported an integration with the [vLex](https://vlex.com/) vCite engine. vCite extends the functionality in a range of ways, including the addition of a comprehensive suite of case law citation matchers. See [here](/docs/vcite.md) for more detail on the vCite integration and how it is controlled. 
+A significant amount of core markup annotation is provided directly by the JEP, but it is also supported an integration with the [vLex](https://vlex.com/) vCite engine. vCite extends the JEP's functionality in a range of ways, including the addition of a comprehensive suite of case law citation matchers. See [here](/docs/vcite.md) for more detail on the vCite integration and how it is controlled. 
 
 ![Phases of Enrichment](/docs/img/tna_enrichment_phases.png)
+
+An example enriched snippet of LegalDocML feature case law citation markup looks like this:
+
+```xml
+<ref href="https://caselaw.nationalarchives.gov.uk/ewca/civ/2021/1308" uk:canonical="[2021] EWCA Civ 1308" uk:isneutral="true" uk:type="case" uk:year="2021" uk:origin="TNA">[2021] EWCA Civ 1308</ref>, <ref href="#" uk:canonical="[2022] 1 WLR 1585" uk:isneutral="false" uk:type="case" uk:year="2022" uk:origin="TNA">[2022] 1 WLR 1585</ref>
+```
 
 ### 1.2 The *Annotators*
 
@@ -41,6 +47,19 @@ The third phase of enrichment cosists of the [Legislative Provision Annotator](/
 
 _Fourth Phase Enrichment_
 The fourth and final phase of enrichment conists of the [vCite integration](/docs/vcite.md)
+
+### 1.4 Replacers
+
+The [Replacers](/replacer/) are responsible for registering the various entities detected by the [Annotators](#12-the-annotators), including their entity types and position in the judgment body. The registered replacements are then applied to the judgment body through a series of string manipulations by the [`make_replacements`](/lambda/make_replacements/) lambda. 
+
+There are two sets of replacer logic. The [first set](/replacer/replacer.py) provides the logic for first phase enrichment replacements. The [second set of replacer logic](/replacer/second_stage_replacer.py) handles replacement in the second and third phases of enrichment. 
+
+### 1.5 Re-enrichment
+
+It is possible for the same judgment to be submitted for enrichment on multiple occassions, which creates the risk that existing enrichment present in the judgment will break as additional enrichment is added to the judgment. To address this, the JEP "sanitises" the judgment body prior to making replacements. The sanitisation process is simply performed by stripping existing `</ref>` tags from the judgment. This logic is handled in the [make_repalcements](/lambda/make_replacements/index.py) lambda. 
+
+**IMPORTANT:** the sanitisation step does not currently distinguish between enrichment supplied by the JEP itself, by vCite or from some other source! Particular care should be taken to avoid inadvertently removing vCite enrichment by re-enriching a judgment that includes vCite enrichment when the [vCite integration](vcite.md) is switched off. 
+
 
 ## 2 Adding new citation rules to the Case Law Annotator
 

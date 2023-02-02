@@ -16,7 +16,7 @@ The primary purpose of the Case Law Annotator is to apply LegalDocML markup to r
 The following snippet provides an example of enriched references to case law (a neutral citation and a reference to a case reported in The Weekly Law Reports):
 
 ```xml
-<ref href="https://caselaw.nationalarchives.gov.uk/ewca/civ/2021/1308" uk:canonical="[2021] EWCA Civ 1308" uk:isneutral="true" uk:type="case" uk:year="2021">[2021] EWCA Civ 1308</ref>, <ref href="#" uk:canonical="[2022] 1 WLR 1585" uk:isneutral="false" uk:type="case" uk:year="2022">[2022] 1 WLR 1585</ref>
+<ref href="https://caselaw.nationalarchives.gov.uk/ewca/civ/2021/1308" uk:canonical="[2021] EWCA Civ 1308" uk:isneutral="true" uk:type="case" uk:year="2021" uk:origin="TNA">[2021] EWCA Civ 1308</ref>, <ref href="#" uk:canonical="[2022] 1 WLR 1585" uk:isneutral="false" uk:type="case" uk:year="2022" uk:origin="TNA">[2022] 1 WLR 1585</ref>
 ```
 References to case law are enclosed in `</ref>` tags with the following five attributes:
 
@@ -25,6 +25,7 @@ References to case law are enclosed in `</ref>` tags with the following five att
 * `uk:isneutral`: whether the detected citation is a neutral citation 
 * `uk:type`: the type of `ref` element. For case law citations this is always set to `case`
 * `uk:year`: the year extracted from the detected citation, if present. Note: the value of `year` reflects the year in the detected citation, which is not necessarily the same as the year of judgment
+* `uk:origin`: the source of the enrichment. The JEP's origin signature is `TNA`
 
 ## Implementation details
 
