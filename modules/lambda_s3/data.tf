@@ -46,6 +46,8 @@ data "aws_iam_policy_document" "vcite_policy" {
     principals {
       identifiers = [
         "arn:aws:iam::926041203935:role/vlex-vcite",
+        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-staging-xml-validate",
+        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-staging-push-enriched-xml"
       ]
       type = "AWS"
     }
