@@ -1252,7 +1252,7 @@ resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification"
   }
 }
 
-resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
+resource "aws_s3_bucket_notification" "vcite_enriched_bucket_notification" {
   bucket = module.vcite_enriched_bucket.s3_bucket_id
 
   lambda_function {
