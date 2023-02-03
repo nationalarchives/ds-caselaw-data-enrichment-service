@@ -1208,7 +1208,7 @@ module "lambda-validate-replacements" {
     S3BucketUpload = {
       service    = "s3"
       principal  = "s3.amazonaws.com"
-      source_arn = "${module.xml_third_phase_enriched_bucket.s3_bucket_arn}"
+      source_arn = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}", "${module.vcite_enriched_bucket.s3_bucket_arn}"]
     }
   }
 
