@@ -31,7 +31,7 @@ patterns = {
 
 def detect_reference(text, etype="legislation"):
     """
-    Detect legislation and section references. 
+    Detect legislation and section references.
     :param text: text to be searched for references
     :param etype: type of reference to be detected
     :returns references: List(Tuple[((start, end), detected_ref)]), of detected legislation
@@ -61,12 +61,12 @@ def find_closest_legislation(legislations, sections, thr=30):
     section_to_leg = [
         (sections[i][1], legislations[j][1], sections[i][0][0]) for i, j in idx
     ]
-    return section_to_leg 
+    return section_to_leg
 
 
 def get_clean_section_number(section):
     """
-    Cleans just the section number. 
+    Cleans just the section number.
     :param section: section to return the number for
     :returns section_number: returns numbers from section
     """
@@ -77,7 +77,7 @@ def get_clean_section_number(section):
 def save_section_to_dict(section_dict, para_number, clean_section_dict):
     """
     Saves the section and the relevant information to the master dictionary of all sections in the judgment.
-    :param section_dict: current section information for the paragraph 
+    :param section_dict: current section information for the paragraph
     :param clean_section_dict: master dictionary of all sections in the judgment
     :param para_number: number of the paragraph in the judgment
     :returns clean_section_dict: master dictionary with addition of new definitions for sections in the judgment
@@ -124,8 +124,8 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
 
 def create_sub_section_links(section_dict, match):
     """
-    Generates the links for any sub-sections in the judgment. 
-    :param section_dict: individual dictionary for the current section 
+    Generates the links for any sub-sections in the judgment.
+    :param section_dict: individual dictionary for the current section
     :param match: the section reference found in the paragraph
     :returns new_section_dict: section_dict with replaces href with new_href
     """
@@ -144,8 +144,8 @@ def create_sub_section_links(section_dict, match):
 
 def create_section_ref_tag(section_dict, match):
     """
-    Generates the <ref> tag for a section in the judgment. 
-    :param section_dict: individual dictionary for the current section 
+    Generates the <ref> tag for a section in the judgment.
+    :param section_dict: individual dictionary for the current section
     :param match: the section reference found in the paragraph
     :returns section_ref: string of ref to be inserted in XML
     """
@@ -166,7 +166,7 @@ def check_if_sub_section(section):
 
 def get_correct_section_def(section_matches, cur_para_number, cur_pos):
     """
-    Performs the check if the current reference has been redefined and returns the correct reference by using the paragraph number. 
+    Performs the check if the current reference has been redefined and returns the correct reference by using the paragraph number.
     :param section_matches: list of dictionaries that include where that section has been redefined
     :param para_number: the number of the paragraph in the judgment
     """

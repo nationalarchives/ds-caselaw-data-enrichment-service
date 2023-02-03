@@ -75,7 +75,7 @@ DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 
 def handler(event, context):
     """
-    Function called by the lambda to run the process event     
+    Function called by the lambda to run the process event
     """
     LOGGER.info("extract-judgement-contents")
     LOGGER.info(DEST_BUCKET)

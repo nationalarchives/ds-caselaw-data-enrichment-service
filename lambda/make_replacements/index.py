@@ -156,7 +156,7 @@ REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 # write to s3 which will trigger a message on an sqs queue
 def handler(event, context):
     """
-    Function called by the lambda to run the process event     
+    Function called by the lambda to run the process event
     """
     LOGGER.info("determine-replacements")
     LOGGER.info(DEST_BUCKET)

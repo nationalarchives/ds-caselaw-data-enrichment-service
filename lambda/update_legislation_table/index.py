@@ -94,7 +94,7 @@ get_secret = getLoginSecrets()
 
 def get_leg_update(sparql_username, sparql_password, days=7):
     """
-    Fetch new legislations from legislation.gov.uk every 7 days and update the table used 
+    Fetch new legislations from legislation.gov.uk every 7 days and update the table used
     during the legislation extraction pipeline
     """
     # date = pd.to_datetime(date)
@@ -147,7 +147,7 @@ def get_leg_update(sparql_username, sparql_password, days=7):
 
 def handler(event, context):
     """
-    Function called by the lambda to update the legislation table   
+    Function called by the lambda to update the legislation table
     """
     LOGGER.info("Lambda to update legislation database")
 

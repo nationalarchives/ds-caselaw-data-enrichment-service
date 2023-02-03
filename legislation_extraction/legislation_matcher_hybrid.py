@@ -46,7 +46,7 @@ def mergedict(x, b):
     Returns
     -------
     outout : dict
-        dictionary containing the detected references.    
+        dictionary containing the detected references.
     """
     a = {}
     for k, v in b.items():
@@ -143,7 +143,7 @@ def search_for_act_fuzzy(title, docobj, nlp, cutoff, candidates=None):
     Returns
     -------
     matched_text : list(tuple)
-        List of tuples of the form ('detected reference', 'start position', 'end position', 'similarity')        
+        List of tuples of the form ('detected reference', 'start position', 'end position', 'similarity')
     """
 
     fuzzy_matcher = FuzzyMatcher(nlp.vocab)
@@ -318,7 +318,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
     conn : database connection
         Database connection to the legislation look-up table.
     Returns
-    -------    
+    -------
     List[Tuple[Str, Str, Str]], of merged results of both matchers to list of tupled references
         'detected_ref'(string): 'detected reference in the judgement body',
         'ref'(string): 'matched legislation title',
