@@ -1197,9 +1197,9 @@ module "lambda-validate-replacements" {
     ssm_get_parameter = {
       effec = "Allow",
       actions = [
-          "ssm:GetParameters",
-          "ssm:GetParameter",
-          "ssm:GetParametersByPath"
+        "ssm:GetParameters",
+        "ssm:GetParameter",
+        "ssm:GetParametersByPath"
       ],
       resources = ["${aws_ssm_parameter.vCite.arn}"]
     }
@@ -1235,12 +1235,12 @@ module "lambda-validate-replacements" {
     DEST_TOPIC_NAME       = "${aws_sns_topic.validation_updates.arn}"
     DEST_ERROR_TOPIC_NAME = "${aws_sns_topic.validation_updates_error.arn}"
     DEST_BUCKET_NAME      = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
-    VCITE_BUCKET      = "vcite-tna-files"
+    VCITE_BUCKET          = "vcite-tna-files"
     VCITE_ENRICHED_BUCKET = "${module.vcite_enriched_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_NAME    = "${module.rules_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_KEY     = "caselaw.xsd"
     VALIDATE_USING_SCHEMA = "False"
-    DEST_QUEUE = aws_sqs_queue.xml-validated-queue.url
+    DEST_QUEUE            = aws_sqs_queue.xml-validated-queue.url
   }
 
   cloudwatch_logs_retention_in_days = 365

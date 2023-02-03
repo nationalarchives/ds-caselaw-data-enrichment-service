@@ -72,15 +72,10 @@ module "container_bucket" {
 }
 
 module "vcite_enriched_bucket" {
-  source = "../secure_bucket"
-
-  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-vcite-enriched-bucket"
-
-  policy_json = data.aws_iam_policy_document.vcite_policy.json
-
-  vcite_enriched = true
-
-  environment = {environment = local.environment}
-
-  tags = local.tags
+  source          = "../secure_bucket"
+  bucket_name     = "${local.environment}-${local.name}-${var.bucket_prefix}-vcite-enriched-bucket"
+  policy_json     = data.aws_iam_policy_document.vcite_policy.json
+  kms_policy_json = data.aws_iam_policy_document.vcite_kms_policy.json
+  vcite_enriched  = true
+  tags            = local.tags
 }
