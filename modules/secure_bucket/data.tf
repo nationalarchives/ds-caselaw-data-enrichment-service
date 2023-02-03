@@ -27,7 +27,6 @@ data "aws_iam_policy_document" "vcite_kms_policy" {
       identifiers = [
         "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root",
         "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-${var.environment}-xml-validate",
-        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-${var.environment}-push-enriched-xml"
       ]
       type = "AWS"
     }

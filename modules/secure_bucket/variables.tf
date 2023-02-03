@@ -23,5 +23,8 @@ variable "vcite_enriched" {
 }
 
 variable "environment" {
-  type = string
+  type = object({
+    environment    = optional(string)
+  })
+  default = null
 }
