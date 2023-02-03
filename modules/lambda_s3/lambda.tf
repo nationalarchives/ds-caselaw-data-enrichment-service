@@ -1153,7 +1153,8 @@ module "lambda-validate-replacements" {
         "s3:GetObject",
         "s3:GetObjectVersion"
       ],
-      resources = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}/*", "${module.rules_bucket.s3_bucket_arn}/*"]
+      resources = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}/*", "${module.rules_bucket.s3_bucket_arn}/*",
+      "${module.vcite_enriched_bucket.s3_bucket_arn}/*"]
     },
     kms_get_key = {
       effect = "Allow",
@@ -1166,14 +1167,14 @@ module "lambda-validate-replacements" {
       ],
       resources = [module.xml_third_phase_enriched_bucket.kms_key_arn, module.rules_bucket.kms_key_arn]
     },
-    sqs_get = {
+    sqs_put_message = {
       effect = "Allow",
       actions = [
-        "sqs:ReceiveMessage",
-        "sqs:DeleteMessage",
+        "sqs:SendMessage",
         "sqs:GetQueueAttributes"
       ],
-      resources = ["${aws_sqs_queue.replacements-queue.arn}"]
+      "Effect" : "Allow",
+      resources = [aws_sqs_queue.xml-validated-queue.arn]
     },
     sns_put = {
       effect = "Allow",
@@ -1193,25 +1194,27 @@ module "lambda-validate-replacements" {
       ],
       resources = ["*"]
     },
-    #    vcite = {
-    #      effect = "Allow",
-    #      actions = [
-    #        "s3:GetObject",
-    #        "s3:PutObject",
-    #        "s3:PutObjectAcl",
-    #        "s3:DeleteObject",
-    #        "s3:GetObjectAcl"
-    #      ],
-    #      resources = ["arn:aws:s3:::vcite-tna-files/*"],
-    #      principal = ["*"]
-    #    }
+    ssm_get_parameter = {
+      effec = "Allow",
+      actions = [
+          "ssm:GetParameters",
+          "ssm:GetParameter",
+          "ssm:GetParametersByPath"
+      ],
+      resources = ["${aws_ssm_parameter.vCite.arn}"]
+    }
   }
 
   allowed_triggers = {
-    S3BucketUpload = {
+    ThirdPhaseUpload = {
       service    = "s3"
       principal  = "s3.amazonaws.com"
       source_arn = "${module.xml_third_phase_enriched_bucket.s3_bucket_arn}"
+    },
+    vCiteUpload = {
+      service    = "s3"
+      principal  = "s3.amazonaws.com"
+      source_arn = "${module.vcite_enriched_bucket.s3_bucket_arn}"
     }
   }
 
@@ -1229,20 +1232,39 @@ module "lambda-validate-replacements" {
   }
 
   environment_variables = {
-    # DEST_TOPIC_NAME       = "${aws_sns_topic.validation_updates.arn}"
-    # DEST_ERROR_TOPIC_NAME = "${aws_sns_topic.validation_updates_error.arn}"
-    DEST_BUCKET_NAME      = module.xml_third_phase_enriched_bucket.s3_bucket_arn
+    DEST_TOPIC_NAME       = "${aws_sns_topic.validation_updates.arn}"
+    DEST_ERROR_TOPIC_NAME = "${aws_sns_topic.validation_updates_error.arn}"
+    DEST_BUCKET_NAME      = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
+    VCITE_BUCKET      = "vcite-tna-files"
+    VCITE_ENRICHED_BUCKET = "${module.vcite_enriched_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_NAME    = "${module.rules_bucket.s3_bucket_id}"
-    SCHEMA_BUCKET_KEY     = "judgment-1-1.xsd"
-    VALIDATE_USING_DTD    = "False" # the xml appears to not use a DTD
+    SCHEMA_BUCKET_KEY     = "caselaw.xsd"
     VALIDATE_USING_SCHEMA = "False"
-
+    DEST_QUEUE = aws_sqs_queue.xml-validated-queue.url
   }
 
   cloudwatch_logs_retention_in_days = 365
 
   tags = local.tags
 
+}
+
+resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
+  bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
+
+  lambda_function {
+    lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+  }
+}
+
+resource "aws_s3_bucket_notification" "vcite_enriched_bucket_notification" {
+  bucket = module.vcite_enriched_bucket.s3_bucket_id
+
+  lambda_function {
+    lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+  }
 }
 
 resource "aws_cloudwatch_event_rule" "update_legislation_table_lambda_event_rule" {
@@ -1398,15 +1420,15 @@ module "lambda-fetch-xml" {
       ],
       resources = ["*"]
     },
-    # sqs_get = {
-    #   effect = "Allow",
-    #   actions = [
-    #     "sqs:ReceiveMessage",
-    #     "sqs:DeleteMessage",
-    #     "sqs:GetQueueAttributes"
-    #   ],
-    #   resources = ["${aws_sqs_queue.fetch_xml_queue.arn}"]
-    # },
+    sqs_get = {
+      effect = "Allow",
+      actions = [
+        "sqs:ReceiveMessage",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+      ],
+      resources = ["${aws_sqs_queue.fetch_xml_queue.arn}"]
+    },
     secrets_get = {
       effect = "Allow",
       actions = [
@@ -1443,7 +1465,7 @@ module "lambda-fetch-xml" {
     DEST_BUCKET_NAME = module.xml_original_bucket.s3_bucket_id
     API_USERNAME     = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
     API_PASSWORD     = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
-    ENVIRONMENT = "${local.environment}"
+    ENVIRONMENT      = "${local.environment}"
   }
 
   cloudwatch_logs_retention_in_days = 365
@@ -1530,6 +1552,15 @@ module "lambda-push-enriched-xml" {
       ],
       resources = ["*"]
     },
+    sqs_get = {
+      effect = "Allow",
+      actions = [
+        "sqs:ReceiveMessage",
+        "sqs:DeleteMessage",
+        "sqs:GetQueueAttributes"
+      ],
+      resources = ["${aws_sqs_queue.xml-validated-queue.arn}"]
+    },
     secrets_get = {
       effect = "Allow",
       actions = [
@@ -1573,7 +1604,7 @@ module "lambda-push-enriched-xml" {
     SOURCE_BUCKET = "${module.xml_third_phase_enriched_bucket.s3_bucket_id}"
     API_USERNAME  = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
     API_PASSWORD  = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
-    ENVIRONMENT = "${local.environment}"
+    ENVIRONMENT   = "${local.environment}"
   }
 
   cloudwatch_logs_retention_in_days = 365
@@ -1581,15 +1612,6 @@ module "lambda-push-enriched-xml" {
   tags = local.tags
 
 }
-
-# resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
-#   bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
-
-#   lambda_function {
-#     lambda_function_arn = module.lambda-push-enriched-xml.lambda_function_arn
-#     events              = ["s3:ObjectCreated:*"]
-#   }
-# }
 
 module "db_backup_lambda" {
   source  = "terraform-aws-modules/lambda/aws"

@@ -19,7 +19,7 @@ from psycopg2 import Error
 from database import db_connection
 
 LOGGER = logging.getLogger()
-LOGGER.setLevel(logging.DEBUG)
+LOGGER.setLevel(logging.INFO)
 
 
 def validate_env_variable(env_var_name):
@@ -103,11 +103,11 @@ def process_event(sqs_rec):
     source_key = msg_attributes["source_key"]["stringValue"]
 
     source_bucket = msg_attributes["source_bucket"]["stringValue"]
-    LOGGER.info("replacement_bucket from message")
+    LOGGER.info("Replacement bucket from message")
     LOGGER.info(source_bucket)
 
-    LOGGER.debug("Input bucket name:%s", source_bucket)
-    LOGGER.debug("Input S3 key:%s", source_key)
+    LOGGER.info("Input bucket name:%s", source_bucket)
+    LOGGER.info("Input S3 key:%s", source_key)
 
     # fetch the judgement contents
     file_content = (
@@ -116,15 +116,12 @@ def process_event(sqs_rec):
         .decode("utf-8")
     )
 
-    LOGGER.debug(file_content)
-    LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
-
     # determine legislation replacements
     replacements = determine_replacements(file_content)
-    LOGGER.debug("got replacements")
+    LOGGER.info("Detected citations and built replacements")
     replacements_encoded = write_replacements_file(replacements)
-    LOGGER.debug("encoded replacements")
-    LOGGER.debug(replacements_encoded)
+    LOGGER.info("Wrote replacements to file")
+    LOGGER.info(replacements_encoded)
 
     # open and read existing file from s3 bucket
     replacements_content = (
@@ -137,10 +134,12 @@ def process_event(sqs_rec):
     uploaded_key = upload_replacements(
         REPLACEMENTS_BUCKET, source_key, replacements_encoded
     )
-    LOGGER.debug("uploaded replacements to %s", uploaded_key)
+    LOGGER.info("Uploaded replacements to %s", uploaded_key)
     push_contents(source_bucket, source_key)
     # enrichment_tracking(ENRICHMENT_BUCKET, "enrichment_tracking.csv")
-    LOGGER.debug("message sent on queue")
+    LOGGER.info(
+        "Message sent on queue to start determine-replacements-abbreviations lambda"
+    )
 
 
 def enrichment_tracking(bucket, key):
@@ -181,7 +180,7 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
     Uploads replacements to S3 bucket
     """
     LOGGER.info(
-        "uploading text content to %s/%s", replacements_bucket, replacements_key
+        "Uploading text content to %s/%s", replacements_bucket, replacements_key
     )
     s3 = boto3.resource("s3")
     object = s3.Object(replacements_bucket, replacements_key)
@@ -224,19 +223,19 @@ def determine_replacements(file_content):
     """
     # connect to the database
     db_conn = init_DB()
-    LOGGER.debug("got db")
+    LOGGER.info("Connected to database")
 
     # setup the spacy pipeline
     nlp = init_NLP()
-    LOGGER.debug("got nlp")
+    LOGGER.info("Loaded NLP model")
 
     doc = nlp(file_content)
 
     leg_titles = db_connection.get_legtitles(db_conn)
 
     replacements = get_legislation_replacements(leg_titles, nlp, doc, db_conn)
-    LOGGER.debug("replacements identified")
-    LOGGER.debug(len(replacements))
+    LOGGER.info("Replacements identified")
+    LOGGER.info(len(replacements))
     close_connection(db_conn)
 
     return replacements
@@ -249,7 +248,6 @@ def get_legislation_replacements(leg_titles, nlp, doc, db_conn):
     from legislation_extraction.legislation_matcher_hybrid import leg_pipeline
 
     replacements = leg_pipeline(leg_titles, nlp, doc, db_conn)
-    # LOGGER.debug("Found the following replacements", replacements)
     print(replacements)
     return replacements
 
@@ -282,7 +280,7 @@ def handler(event, context):
     """
     Function called by the lambda to run the process event
     """
-    LOGGER.info("determine-replacements")
+    LOGGER.info("Determine legislation replacements")
     LOGGER.info(DEST_QUEUE)
     try:
         LOGGER.info("SQS EVENT: %s", event)

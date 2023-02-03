@@ -19,7 +19,7 @@ from psycopg2 import Error
 from database import db_connection
 
 LOGGER = logging.getLogger()
-LOGGER.setLevel(logging.DEBUG)
+LOGGER.setLevel(logging.INFO)
 
 
 def validate_env_variable(env_var_name):
@@ -97,8 +97,8 @@ def process_event(sqs_rec):
     source_key = urllib.parse.unquote_plus(
         sqs_rec["s3"]["object"]["key"], encoding="utf-8"
     )
-    LOGGER.debug("Input bucket name:%s", source_bucket)
-    LOGGER.debug("Input S3 key:%s", source_key)
+    LOGGER.info("Input bucket name:%s", source_bucket)
+    LOGGER.info("Input S3 key:%s", source_key)
 
     # fetch the judgement contents
     file_content = (
@@ -107,28 +107,25 @@ def process_event(sqs_rec):
         .decode("utf-8")
     )
 
-    LOGGER.debug(file_content)
-    LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
-
     # fetch the rules
     rules_content = s3_client.get_object(Bucket=RULES_FILE_BUCKET, Key=RULES_FILE_KEY)[
         "Body"
     ].read()
-    LOGGER.debug(rules_content)
-    LOGGER.debug("memory size =%d", sys.getsizeof(file_content))
 
     replacements = determine_replacements(file_content, rules_content)
-    LOGGER.debug("got replacements")
+    LOGGER.info("Detected citations and built replacements")
+    print(replacements)
     replacements_encoded = write_replacements_file(replacements)
-    LOGGER.debug("encoded replacements")
-    LOGGER.debug(replacements_encoded)
+    LOGGER.info("Wrote replacements to file")
     uploaded_key = upload_replacements(
         REPLACEMENTS_BUCKET, source_key, replacements_encoded
     )
-    LOGGER.debug("uploaded replacements to %s", uploaded_key)
+    LOGGER.info("Uploaded replacements to %s", uploaded_key)
 
     push_contents(source_bucket, source_key)
-    LOGGER.debug("message sent on queue")
+    LOGGER.info(
+        "Message sent on queue to start determine-replacements-legislation lambda"
+    )
 
 
 def write_replacements_file(replacement_list):
@@ -148,7 +145,7 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
     Uploads replacements to S3 bucket
     """
     LOGGER.info(
-        "uploading text content to %s/%s", replacements_bucket, replacements_key
+        "Uploading text content to %s/%s", replacements_bucket, replacements_key
     )
     s3 = boto3.resource("s3")
     object = s3.Object(replacements_bucket, replacements_key)
@@ -164,7 +161,7 @@ def init_NLP(rules_content):
         "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
     )
     nlp.max_length = 5000000
-    LOGGER.debug("Loading citation patterns jsonl")
+    LOGGER.info("Loading citation patterns jsonl")
 
     s3 = boto3.client("s3")
     patterns_resp = s3.get_object(Bucket=RULES_FILE_BUCKET, Key=RULES_FILE_KEY)
@@ -174,26 +171,26 @@ def init_NLP(rules_content):
     citation_ruler = nlp.add_pipe("entity_ruler")
     citation_ruler.add_patterns(pattern_list)
 
-    LOGGER.debug("checking file system access")
-    from os import listdir
-    from os.path import isfile, join
+    # LOGGER.info("checking file system access")
+    # from os import listdir
+    # from os.path import isfile, join
 
-    # mypath = '/var/task'
-    # onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
-    # print(onlyfiles)
-    # print(os.path.exists('/var/task/caselaw_extraction/rules/citation_patterns.jsonl'))
-    # rule_file_name = 'citation_patterns.jsonl'
-    # rule_file_path = '/var/task/' + rule_file_name
-    # print(os.path.exists(rule_file_path))
-    # # hack to avoid using from disk is to overwrite the local file with the latest version from s3
-    # new_filename = '/tmp/'+rule_file_name
-    # newFile = open(new_filename,'wb')
-    # newFile.write(rules_content)
-    # LOGGER.debug(os.path.exists(new_filename))
-    # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/caselaw_extraction/rules/citation_patterns.jsonl')
-    # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/citation_patterns.jsonl')
-    # citation_ruler = nlp.add_pipe("entity_ruler").from_disk(new_filename)
-    # citation_ruler = nlp.add_pipe("entity_ruler").from_bytes(rules_content)
+    # # mypath = '/var/task'
+    # # onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+    # # print(onlyfiles)
+    # # print(os.path.exists('/var/task/caselaw_extraction/rules/citation_patterns.jsonl'))
+    # # rule_file_name = 'citation_patterns.jsonl'
+    # # rule_file_path = '/var/task/' + rule_file_name
+    # # print(os.path.exists(rule_file_path))
+    # # # hack to avoid using from disk is to overwrite the local file with the latest version from s3
+    # # new_filename = '/tmp/'+rule_file_name
+    # # newFile = open(new_filename,'wb')
+    # # newFile.write(rules_content)
+    # # LOGGER.debug(os.path.exists(new_filename))
+    # # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/caselaw_extraction/rules/citation_patterns.jsonl')
+    # # citation_ruler = nlp.add_pipe("entity_ruler").from_disk('/var/task/citation_patterns.jsonl')
+    # # citation_ruler = nlp.add_pipe("entity_ruler").from_disk(new_filename)
+    # # citation_ruler = nlp.add_pipe("entity_ruler").from_bytes(rules_content)
     return nlp
 
 
@@ -224,12 +221,12 @@ def determine_replacements(file_content, rules_content):
 
     # setup the spacy pipeline
     nlp = init_NLP(rules_content)
-    LOGGER.debug("got nlp")
+    LOGGER.info("Loaded NLP model")
     doc = nlp(file_content)
 
     replacements = get_caselaw_replacements(doc, db_conn)
-    LOGGER.debug("replacements identified")
-    LOGGER.debug(len(replacements))
+    LOGGER.info("Replacements identified")
+    LOGGER.info(len(replacements))
     close_connection(db_conn)
 
     return replacements
@@ -274,7 +271,7 @@ def handler(event, context):
     """
     Function called by the lambda to run the process event
     """
-    LOGGER.info("determine-replacements")
+    LOGGER.info("Determine caselaw replacements")
     LOGGER.info(DEST_QUEUE)
     try:
         LOGGER.info("SQS EVENT: %s", event)

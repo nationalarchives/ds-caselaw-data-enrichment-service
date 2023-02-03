@@ -277,6 +277,49 @@ resource "aws_sqs_queue" "validation_updates_error_dlq_queue" {
   tags = local.tags
 }
 
+resource "aws_sqs_queue" "xml-validated-queue" {
+  name                       = "${local.name}-${local.environment}-xml-validated-notification-queue"
+  delay_seconds              = 90
+  max_message_size           = 2048
+  visibility_timeout_seconds = 900
+  message_retention_seconds  = 86400
+  receive_wait_time_seconds  = 10
+  sqs_managed_sse_enabled    = true
+  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.xml-validated_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+
+}
+
+resource "aws_sqs_queue_policy" "xml-validated-queue-policy" {
+  queue_url = aws_sqs_queue.xml-validated-queue.id
+  policy    = <<POLICY
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "sqs:SendMessage",
+      "Resource": "${aws_sqs_queue.xml-validated-queue.arn}",
+      "Condition": {
+        "ArnEquals": { "aws:SourceArn": "${module.lambda-validate-replacements.lambda_function_arn}" }
+      }
+    }
+  ]
+}
+POLICY
+}
+
+resource "aws_sqs_queue" "xml-validated_dlq_queue" {
+  name                      = "${local.name}-${local.environment}-xml-validated-dlq-queue"
+  delay_seconds             = 90
+  max_message_size          = 2048
+  message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
+  receive_wait_time_seconds = 10
+  sqs_managed_sse_enabled   = true
+
+  tags = local.tags
+}
+
 
 resource "aws_sns_topic" "validation_updates" {
   name = "validation-updates-topic"
@@ -294,6 +337,16 @@ resource "aws_sns_topic" "rules_update_error" {
 resource "aws_sns_topic" "legislation_update_error" {
   name         = "legislation-update-error-topic"
   display_name = "Legislation Update Error"
+}
+
+resource "aws_sns_topic" "fetch_xml_error" {
+  name         = "fetch-xml-error-topic"
+  display_name = "Fetch XML Error"
+}
+
+resource "aws_sns_topic" "push_xml_error" {
+  name         = "push-xml-error-topic"
+  display_name = "Push XML Error"
 }
 
 resource "aws_sns_topic" "extract_judgement_contents_error" {
@@ -353,6 +406,13 @@ resource "aws_lambda_event_source_mapping" "sqs_replacements_abbreviations_event
   batch_size       = 1
 }
 
+resource "aws_lambda_event_source_mapping" "sqs_validated_xml_event_source_mapping" {
+  event_source_arn = aws_sqs_queue.xml-validated-queue.arn
+  enabled          = true
+  function_name    = module.lambda-push-enriched-xml.lambda_function_arn
+  batch_size       = 1
+}
+
 resource "aws_cloudwatch_metric_alarm" "rules_update_error" {
   alarm_name          = "Manifest update error"
   alarm_description   = "Check if rules update lambda throws an error"
@@ -387,6 +447,42 @@ resource "aws_cloudwatch_metric_alarm" "legislation_update_error" {
     FunctionName = "${local.name}-${local.environment}-update-legislation-table"
   }
   alarm_actions = [aws_sns_topic.legislation_update_error.arn]
+}
+
+resource "aws_cloudwatch_metric_alarm" "fetch_xml_error" {
+  alarm_name          = "Fetch XML error"
+  alarm_description   = "Check if fetch XML lambda throws an error"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = "1"
+  metric_name         = "Errors"
+  unit                = "Count"
+  datapoints_to_alarm = "1"
+  namespace           = "AWS/Lambda"
+  period              = "180"
+  statistic           = "Sum"
+  threshold           = "0"
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-fetch-xml"
+  }
+  alarm_actions = [aws_sns_topic.fetch_xml_error.arn]
+}
+
+resource "aws_cloudwatch_metric_alarm" "push_xml_error" {
+  alarm_name          = "Push XML error"
+  alarm_description   = "Check if push XML lambda throws an error"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = "1"
+  metric_name         = "Errors"
+  unit                = "Count"
+  datapoints_to_alarm = "1"
+  namespace           = "AWS/Lambda"
+  period              = "180"
+  statistic           = "Sum"
+  threshold           = "0"
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-push-enriched-xml"
+  }
+  alarm_actions = [aws_sns_topic.push_xml_error.arn]
 }
 
 resource "aws_cloudwatch_metric_alarm" "extract-judgement-contents-error" {
@@ -527,18 +623,6 @@ resource "aws_sns_topic_subscription" "validation_updates_error_sqs_target" {
   endpoint  = aws_sqs_queue.validation_updates_error_queue.arn
 }
 
-resource "aws_sns_topic_subscription" "validation-error-email-niall-target" {
-  topic_arn = aws_sns_topic.validation_updates_error.arn
-  protocol  = "email"
-  endpoint  = "niall.roche@mdrx.tech"
-}
-
-resource "aws_sns_topic_subscription" "validation-error-email-dan-target" {
-  topic_arn = aws_sns_topic.validation_updates_error.arn
-  protocol  = "email"
-  endpoint  = "daniel.hoadley@mishcon.com"
-}
-
 resource "aws_sns_topic_subscription" "rules-error-email-editha-target" {
   topic_arn = aws_sns_topic.rules_update_error.arn
   protocol  = "email"
@@ -551,8 +635,14 @@ resource "aws_sns_topic_subscription" "legislation-update-error-email-editha-tar
   endpoint  = "editha.nemsic@mishcon.com"
 }
 
-resource "aws_sns_topic_subscription" "extract_judgement_contents_error-email-editha-target" {
-  topic_arn = aws_sns_topic.extract_judgement_contents_error.arn
+resource "aws_sns_topic_subscription" "fetch_xml_error-email-editha-target" {
+  topic_arn = aws_sns_topic.fetch_xml_error.arn
+  protocol  = "email"
+  endpoint  = "editha.nemsic@mishcon.com"
+}
+
+resource "aws_sns_topic_subscription" "push_xml_error-email-editha-target" {
+  topic_arn = aws_sns_topic.push_xml_error.arn
   protocol  = "email"
   endpoint  = "editha.nemsic@mishcon.com"
 }
@@ -591,12 +681,6 @@ resource "aws_sns_topic_subscription" "legislation-provisions-error-email-editha
   topic_arn = aws_sns_topic.legislation_provisions_error.arn
   protocol  = "email"
   endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "rules-error-email-dan-target" {
-  topic_arn = aws_sns_topic.rules_update_error.arn
-  protocol  = "email"
-  endpoint  = "daniel.hoadley@mishcon.com"
 }
 
 resource "aws_sns_topic_subscription" "rules-error-email-anthony-target" {
@@ -651,6 +735,60 @@ resource "aws_sns_topic_subscription" "legislation-provisions-error-email-anthon
   topic_arn = aws_sns_topic.legislation_provisions_error.arn
   protocol  = "email"
   endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
+}
+
+resource "aws_sns_topic_subscription" "rules-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.rules_update_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "legislation-update-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.legislation_update_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "extract_judgement_contents_error-email-dragon-target" {
+  topic_arn = aws_sns_topic.extract_judgement_contents_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "caselaw-detection-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.caselaw_detection_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "legislation-detection-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.legislation_detection_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "abbreviation-detection-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.abbreviation_detection_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "make-replacements-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.make_replacements_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "oblique-references-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.oblique_references_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "legislation-provisions-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.legislation_provisions_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
 }
 
 resource "aws_sqs_queue" "fetch_xml_queue" {

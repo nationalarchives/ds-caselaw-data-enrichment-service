@@ -78,5 +78,7 @@ module "vcite_enriched_bucket" {
 
   policy_json = data.aws_iam_policy_document.vcite_policy.json
 
+  vcite_enriched = true
+
   tags = local.tags
 }

@@ -11,7 +11,9 @@ import boto3
 from lxml import etree
 
 LOGGER = logging.getLogger()
-LOGGER.setLevel(logging.DEBUG)
+LOGGER.setLevel(logging.INFO)
+
+client = boto3.client("ssm")
 
 
 def validate_env_variable(env_var_name):
@@ -46,11 +48,11 @@ def process_event(sqs_rec):
 
     content_valid = validate_content(file_content)
     if content_valid:
-        LOGGER.debug("content valid")
+        LOGGER.info("content valid")
     else:
         LOGGER.error("content invalid")
 
-    return content_valid, source_key
+    return content_valid, source_key, file_content, source_bucket
 
 
 def find_schema(schema_bucket, schema_key):
@@ -80,8 +82,8 @@ def validate_content(file_content):
     """
     Function to validate schema
     """
-    LOGGER.info("VALIDATE_USING_DTD")
-    LOGGER.info(VALIDATE_USING_DTD)
+    LOGGER.info("VALIDATE USING SCHEMA")
+    LOGGER.info(VALIDATE_USING_SCHEMA)
 
     parser = etree.XMLParser(dtd_validation=False)
     xmldoc = etree.parse(BytesIO(file_content), parser)
@@ -97,19 +99,58 @@ def validate_content(file_content):
     return result
 
 
+def upload_to_vcite(source_key, text_content):
+    """
+    Upload judgment to destination S3 bucket
+    """
+    filename = source_key
+
+    LOGGER.info("Uploading text content to %s/%s", VCITE_BUCKET, filename)
+    s3 = boto3.resource("s3")
+    object = s3.Object(VCITE_BUCKET, filename)
+    object.put(Body=text_content)
+
+
+def trigger_push_enriched(uploaded_bucket, uploaded_key):
+    """
+    Delivers replacements to the specified queue
+    """
+    # Get the queue
+    sqs = boto3.resource("sqs")
+    queue = sqs.Queue(DEST_QUEUE)
+
+    # Create a new message
+    message = {"Validated": uploaded_key}
+    msg_attributes = {
+        "source_key": {"DataType": "String", "StringValue": uploaded_key},
+        "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
+    }
+    response = queue.send_message(
+        MessageBody=json.dumps(message), MessageAttributes=msg_attributes
+    )
+
+
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
+VCITE_BUCKET = validate_env_variable("VCITE_BUCKET")
+VCITE_ENRICHED_BUCKET = validate_env_variable("VCITE_ENRICHED_BUCKET")
 DEST_ERROR_TOPIC = validate_env_variable("DEST_ERROR_TOPIC_NAME")
 DEST_TOPIC = validate_env_variable("DEST_TOPIC_NAME")
 VALIDATE_USING_SCHEMA = strtobool(validate_env_variable("VALIDATE_USING_SCHEMA"))
-VALIDATE_USING_DTD = strtobool(validate_env_variable("VALIDATE_USING_DTD"))
+DEST_QUEUE = validate_env_variable("DEST_QUEUE")
 
 
 def handler(event, context):
     """
     Function called by lambda to validate schema
     """
-    LOGGER.info("validate-judgement-contents")
+    LOGGER.info("Validate enriched judgement XML")
     LOGGER.info(DEST_BUCKET)
+
+    parameter = client.get_parameter(Name="vCite", WithDecryption=True)
+    # print(parameter)
+    parameter_value = parameter["Parameter"]["Value"]
+    print("vCite configuration:", parameter["Parameter"]["Value"])
+
     valid_content = False
     source_key = ""
     try:
@@ -119,7 +160,9 @@ def handler(event, context):
             # stop the test notification event from breaking the parsing logic
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
-            valid_content, source_key = process_event(sqs_rec)
+            valid_content, source_key, file_content, source_bucket = process_event(
+                sqs_rec
+            )
 
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)
@@ -129,11 +172,23 @@ def handler(event, context):
         topic = DEST_TOPIC
 
         if valid_content:
-            LOGGER.debug("content is valid sending notification")
+            LOGGER.info("Content is valid. Sending notification.")
+
+            if parameter_value == "off":
+                trigger_push_enriched(DEST_BUCKET, source_key)
+                LOGGER.info("Message sent on queue to start push-enriched-xml lambda")
+            else:
+                if source_bucket == "tna-s3-tna-staging-xml-validate":
+                    upload_to_vcite(source_key, file_content)
+                else:
+                    trigger_push_enriched(VCITE_ENRICHED_BUCKET, source_key)
+                    LOGGER.info(
+                        "Message sent on queue to start push-enriched-xml lambda"
+                    )
 
         else:
-            message = "content is invalid for " + source_key
-            LOGGER.error(message)
+            message = "Content is invalid for " + source_key
+            LOGGER.info(message)
             topic = DEST_ERROR_TOPIC
             sns_client = boto3.client("sns")
             response = sns_client.publish(
