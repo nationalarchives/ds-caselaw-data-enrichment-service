@@ -12,6 +12,8 @@ At its core, the JEP is a series of serverless functions, which we call *Annotat
 
 The *Annotators* are supported by a cast of utility functions that are responsible for ETL, XML validation, rules and data management and file manipulation. The most important of these utility functions are the [*Replacers*](#14-replacers), which generate the enriched XML that is sent back for publication on [Find Case Law](https://caselaw.nationalarchives.gov.uk).
 
+A comprehensive map of the JEP's architecture can be found [here](/docs/img/Full%20JEP.drawio.png)
+
 A significant amount of core markup annotation is provided directly by the JEP, but it is also supported an integration with the [vLex](https://vlex.com/) vCite engine. vCite extends the JEP's functionality in a range of ways, including the addition of a comprehensive suite of case law citation matchers. See [here](/docs/vcite.md) for more detail on the vCite integration and how it is controlled. 
 
 ![Phases of Enrichment](/docs/img/tna_enrichment_phases.png)
