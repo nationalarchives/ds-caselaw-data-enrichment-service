@@ -80,5 +80,7 @@ module "vcite_enriched_bucket" {
 
   vcite_enriched = true
 
+  environment = {environment = local.environment}
+
   tags = local.tags
 }
