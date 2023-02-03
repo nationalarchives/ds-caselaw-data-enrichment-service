@@ -200,6 +200,7 @@ DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 SOURCE_BUCKET = validate_env_variable("SOURCE_BUCKET_NAME")
 REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
+
 # make replacements
 def handler(event, context):
     """

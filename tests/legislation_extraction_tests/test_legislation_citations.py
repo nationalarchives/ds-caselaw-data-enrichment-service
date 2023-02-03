@@ -30,6 +30,7 @@ from utils.helper import load_patterns
     These are independent unit tests.
 """
 
+
 # creating a global set up to avoid duplicating
 # logic normally handled in main.py
 def set_up():

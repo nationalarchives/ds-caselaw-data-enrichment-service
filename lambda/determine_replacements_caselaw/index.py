@@ -86,6 +86,7 @@ aws_region_name = validate_env_variable("REGION_NAME")
 
 get_secret = getLoginSecrets()
 
+
 # isolating processing from event unpacking for portability and testing
 def process_event(sqs_rec):
     """

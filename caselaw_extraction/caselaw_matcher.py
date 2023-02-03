@@ -46,7 +46,6 @@ def create_URI(uri_template, year, d1, d2):
 
 
 def case_pipeline(doc, db_conn):
-
     """
     Loop through detected caselaw citations and build components for xref attribute.
     :param doc: judgment as spacy Doc object

@@ -47,7 +47,7 @@ jobs:
           python /get-pip.py
           python -m pip install --upgrade pip
           rm -f /get-pip.py
-          pip3 install black==22.8.0 isort
+          pip3 install black isort
         continue-on-error: false
 
       - name: Python Black Formatting Check

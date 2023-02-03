@@ -51,6 +51,7 @@ def abb_pipeline(judgment_content_text, nlp):
     -------
     List[Tuple[Str, Str]]: abbreviation and abbreviation long form
     """
+
     # init the class - stateful pipeline component
     @Language.factory("abbreviation_detector")
     def create_abbreviation_detector(nlp, name: str):
