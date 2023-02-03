@@ -1230,6 +1230,7 @@ module "lambda-validate-replacements" {
     DEST_ERROR_TOPIC_NAME = "${aws_sns_topic.validation_updates_error.arn}"
     DEST_BUCKET_NAME      = module.xml_third_phase_enriched_bucket.s3_bucket_arn
     VCITE_BUCKET      = "vcite-tna-files"
+    VCITE_ENRICHED_BUCKET = module.vcite_enriched_bucket.s3_bucket_arn
     SCHEMA_BUCKET_NAME    = "${module.rules_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_KEY     = "caselaw.xsd"
     VALIDATE_USING_SCHEMA = "False"
@@ -1244,6 +1245,15 @@ module "lambda-validate-replacements" {
 
 resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
   bucket = module.xml_third_phase_enriched_bucket.s3_bucket_id
+
+  lambda_function {
+    lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+  }
+}
+
+resource "aws_s3_bucket_notification" "third_phase_enriched_bucket_notification" {
+  bucket = module.vcite_enriched_bucket.s3_bucket_id
 
   lambda_function {
     lambda_function_arn = module.lambda-validate-replacements.lambda_function_arn

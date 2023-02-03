@@ -52,7 +52,7 @@ def process_event(sqs_rec):
     else:
         LOGGER.error("content invalid")
 
-    return content_valid, source_key, file_content
+    return content_valid, source_key, file_content, source_bucket
 
 
 def find_schema(schema_bucket, schema_key):
@@ -132,6 +132,7 @@ def trigger_push_enriched(uploaded_bucket, uploaded_key):
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 VCITE_BUCKET = validate_env_variable("VCITE_BUCKET")
+VCITE_ENRICHED_BUCKET = validate_env_variable("VCITE_ENRICHED_BUCKET")
 DEST_ERROR_TOPIC = validate_env_variable("DEST_ERROR_TOPIC_NAME")
 DEST_TOPIC = validate_env_variable("DEST_TOPIC_NAME")
 VALIDATE_USING_SCHEMA = strtobool(validate_env_variable("VALIDATE_USING_SCHEMA"))
@@ -146,7 +147,8 @@ def handler(event, context):
     LOGGER.info(DEST_BUCKET)
 
     parameter = client.get_parameter(Name="vCite", WithDecryption=True)
-    print(parameter)
+    # print(parameter)
+    parameter_value = parameter["Parameter"]["Value"]
     print("vCite configuration:", parameter["Parameter"]["Value"])
 
     valid_content = False
@@ -158,7 +160,9 @@ def handler(event, context):
             # stop the test notification event from breaking the parsing logic
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
-            valid_content, source_key, file_content = process_event(sqs_rec)
+            valid_content, source_key, file_content, source_bucket = process_event(
+                sqs_rec
+            )
 
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)
@@ -170,13 +174,19 @@ def handler(event, context):
         if valid_content:
             LOGGER.info("Content is valid. Sending notification.")
 
-            if parameter == "off":
+            if parameter_value == "off":
                 trigger_push_enriched(DEST_BUCKET, source_key)
                 LOGGER.info(
                     "Message sent on queue to start determine-replacements-legislation lambda"
                 )
             else:
-                upload_to_vcite(source_key, file_content)
+                if source_bucket == "tna-s3-tna-staging-xml-validate":
+                    upload_to_vcite(source_key, file_content)
+                else:
+                    trigger_push_enriched(DEST_BUCKET, source_key)
+                    LOGGER.info(
+                        "Message sent on queue to start determine-replacements-legislation lambda"
+                    )
 
         else:
             message = "Content is invalid for " + source_key
