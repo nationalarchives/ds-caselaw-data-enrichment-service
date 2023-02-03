@@ -1153,7 +1153,8 @@ module "lambda-validate-replacements" {
         "s3:GetObject",
         "s3:GetObjectVersion"
       ],
-      resources = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}/*", "${module.rules_bucket.s3_bucket_arn}/*"]
+      resources = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}/*", "${module.rules_bucket.s3_bucket_arn}/*",
+      "${module.vcite_enriched_bucket.s3_bucket_arn}/*"]
     },
     kms_get_key = {
       effect = "Allow",
