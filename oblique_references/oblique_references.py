@@ -73,7 +73,6 @@ def match_numbered_act(detected_numbered_act, legislation_dicts):
     act_year = re.search("\d{4}", detected_numbered_act[1]).group(0)
     for leg_dict in legislation_dicts:
         if leg_dict["year"] == act_year:
-
             return leg_dict
 
 

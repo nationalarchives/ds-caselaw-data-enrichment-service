@@ -20,7 +20,6 @@ from replacer.second_stage_replacer import provision_replacement
 
 class TestLegislationProvisionProcessor(unittest.TestCase):
     def test_leg_detect_reference(self):
-
         ref = 'section 23 of the <ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19">Criminal Appeal Act 1968</ref>, which provides as follows:'
         leg_ref = detect_reference(ref)
         assert (

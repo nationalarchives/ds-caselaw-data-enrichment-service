@@ -136,7 +136,6 @@ class TestAbbrevationMatcher(unittest.TestCase):
 
 
 class TestAbbrevationReplacer(unittest.TestCase):
-
     # text XML replacements of the short form
     def test_abbreviation_replacer_short_form(self):
         long_form = "European Court of Human Rights"

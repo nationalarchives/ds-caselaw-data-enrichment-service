@@ -84,7 +84,6 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
     """
     # for each section found in the paragraph
     for section, full_ref, pos in section_dict:
-
         section_number = get_clean_section_number(section)
         soup = BeautifulSoup(full_ref, "xml")
         ref = soup.find("ref")
@@ -204,7 +203,6 @@ def provision_resolver(section_dict, matches, para_number):
     resolved_refs = []
     # for each section found in the paragraph
     for pos, match in matches:
-
         clean_section_num = get_clean_section_number(match)
         clean_section = "section " + str(clean_section_num)
 

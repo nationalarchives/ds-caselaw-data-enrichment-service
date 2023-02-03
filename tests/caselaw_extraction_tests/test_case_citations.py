@@ -40,6 +40,7 @@ UNKNOWN_CITATIONS = [
     "[2022]] UKUT 177 (TCC)",
 ]
 
+
 # create mock function for the db connection - extracting the logic from main.py
 def mock_return_citation(nlp, text, db_conn):
     doc = nlp(text)
