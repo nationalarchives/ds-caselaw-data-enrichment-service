@@ -4,7 +4,7 @@ resource "aws_kms_key" "this" {
   description             = "KMS key used to encrypt bucket ${var.bucket_name}"
   deletion_window_in_days = 7
   enable_key_rotation     = true
-  policy                  = var.vcite_enriched ? data.aws_iam_policy_document.vcite_kms_policy.json : null
+  policy                  = var.vcite_enriched ? var.kms_policy_json : null #data.aws_iam_policy_document.vcite_kms_policy.json : null
 }
 
 resource "aws_kms_alias" "this" {

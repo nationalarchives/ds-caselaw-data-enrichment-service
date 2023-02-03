@@ -22,9 +22,7 @@ variable "vcite_enriched" {
   default = false
 }
 
-variable "environment" {
-  type = object({
-    environment    = optional(string)
-  })
+variable "kms_policy_json" {
+  type    = string
   default = null
 }
