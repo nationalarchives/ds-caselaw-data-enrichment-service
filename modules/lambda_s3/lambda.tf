@@ -1205,10 +1205,15 @@ module "lambda-validate-replacements" {
   }
 
   allowed_triggers = {
-    S3BucketUpload = {
+    ThirdPhaseUpload = {
       service    = "s3"
       principal  = "s3.amazonaws.com"
-      source_arn = ["${module.xml_third_phase_enriched_bucket.s3_bucket_arn}", "${module.vcite_enriched_bucket.s3_bucket_arn}"]
+      source_arn = "${module.xml_third_phase_enriched_bucket.s3_bucket_arn}"
+    },
+    vCiteUpload = {
+      service    = "s3"
+      principal  = "s3.amazonaws.com"
+      source_arn = "${module.vcite_enriched_bucket.s3_bucket_arn}"
     }
   }
 
