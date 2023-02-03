@@ -30,18 +30,6 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 
-def upload_contents(source_key, text_content):
-    """
-    Upload judgment to destination S3 bucket
-    """
-    filename = source_key
-
-    LOGGER.info("Uploading text content to %s/%s", VCITE_BUCKET, filename)
-    s3 = boto3.resource("s3")
-    object = s3.Object(VCITE_BUCKET, filename)
-    object.put(Body=text_content)
-
-
 def process_event(sqs_rec):
     """
     Isolating processing from event unpacking for portability and testing
@@ -110,6 +98,19 @@ def validate_content(file_content):
 
     return result
 
+
+def upload_to_vcite(source_key, text_content):
+    """
+    Upload judgment to destination S3 bucket
+    """
+    filename = source_key
+
+    LOGGER.info("Uploading text content to %s/%s", VCITE_BUCKET, filename)
+    s3 = boto3.resource("s3")
+    object = s3.Object(VCITE_BUCKET, filename)
+    object.put(Body=text_content)
+
+
 def trigger_push_enriched(uploaded_bucket, uploaded_key):
     """
     Delivers replacements to the specified queue
@@ -127,6 +128,7 @@ def trigger_push_enriched(uploaded_bucket, uploaded_key):
     response = queue.send_message(
         MessageBody=json.dumps(message), MessageAttributes=msg_attributes
     )
+
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 VCITE_BUCKET = validate_env_variable("VCITE_BUCKET")
@@ -167,13 +169,14 @@ def handler(event, context):
 
         if valid_content:
             LOGGER.info("Content is valid. Sending notification.")
-            upload_contents(source_key, file_content)
 
-            if parameter == 'off':
+            if parameter == "off":
                 trigger_push_enriched(DEST_BUCKET, source_key)
                 LOGGER.info(
                     "Message sent on queue to start determine-replacements-legislation lambda"
                 )
+            else:
+                upload_to_vcite(source_key, file_content)
 
         else:
             message = "Content is invalid for " + source_key
