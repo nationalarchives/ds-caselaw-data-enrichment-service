@@ -48,7 +48,7 @@ def detect_reference(text, etype):
     :returns references: List(Tuple[((start, end), detected_ref)]), of detected legislation
     """
     patterns = {
-        "legislation": r"<ref(((?!ref>).)*)origin=\"TNA\"(.*?)ref>",
+        "legislation": r"<ref(((?!ref>).)*)(.*?)ref>",
     }
 
     references = [(m.span(), m.group()) for m in re.finditer(patterns[etype], text)]
