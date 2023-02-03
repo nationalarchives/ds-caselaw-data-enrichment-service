@@ -178,7 +178,10 @@ def handler(event, context):
                 trigger_push_enriched(DEST_BUCKET, source_key)
                 LOGGER.info("Message sent on queue to start push-enriched-xml lambda")
             else:
-                if source_bucket == "staging-tna-s3-tna-sg-xml-third-phase-enriched-bucket":
+                if (
+                    source_bucket
+                    == "staging-tna-s3-tna-sg-xml-third-phase-enriched-bucket"
+                ):
                     upload_to_vcite(source_key, file_content)
                 else:
                     trigger_push_enriched(VCITE_ENRICHED_BUCKET, source_key)
