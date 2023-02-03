@@ -21,3 +21,7 @@ variable "vcite_enriched" {
   type    = bool
   default = false
 }
+
+variable "environment" {
+  type = string
+}
