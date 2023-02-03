@@ -92,12 +92,6 @@ def process_event(sqs_rec):
     Function to apply enrichments to the judgment
     """
     s3_client = boto3.client("s3")
-    # source_bucket = sqs_rec["s3"]["bucket"]["name"]
-    # source_key = urllib.parse.unquote_plus(
-    #     sqs_rec["s3"]["object"]["key"], encoding="utf-8"
-    # )
-    # print("Input S3 bucket:", source_bucket)
-    # print("Input S3 key:", source_key)
 
     message = json.loads(sqs_rec["body"])
     LOGGER.info("EVENT: %s", message)

@@ -176,16 +176,14 @@ def handler(event, context):
 
             if parameter_value == "off":
                 trigger_push_enriched(DEST_BUCKET, source_key)
-                LOGGER.info(
-                    "Message sent on queue to start determine-replacements-legislation lambda"
-                )
+                LOGGER.info("Message sent on queue to start push-enriched-xml lambda")
             else:
                 if source_bucket == "tna-s3-tna-staging-xml-validate":
                     upload_to_vcite(source_key, file_content)
                 else:
-                    trigger_push_enriched(DEST_BUCKET, source_key)
+                    trigger_push_enriched(VCITE_ENRICHED_BUCKET, source_key)
                     LOGGER.info(
-                        "Message sent on queue to start determine-replacements-legislation lambda"
+                        "Message sent on queue to start push-enriched-xml lambda"
                     )
 
         else:
