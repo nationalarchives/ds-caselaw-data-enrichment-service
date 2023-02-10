@@ -108,7 +108,7 @@ def process_event(sqs_rec):
     if ENVIRONMENT == "staging":
         api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
     else:
-        api_endpoint == "https://api.caselaw.nationalarchives.gov.uk/"
+        api_endpoint = "https://api.caselaw.nationalarchives.gov.uk/"
 
     file_content = (
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
