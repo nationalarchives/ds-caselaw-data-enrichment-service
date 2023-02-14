@@ -1,0 +1,40 @@
+@prefix caselaw: <http://caselaw.nationalarchives.gov.uk/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://caselaw.nationalarchives.gov.uk/ewhc/costs/2019/1>  a   caselaw:Judgment ;
+    caselaw:caseName        "Warren v Hill Dickinson LLP" ;
+    caselaw:neutralCitation "[2019] EWHC B1 (Costs)" ;
+    caselaw:judgmentDate    "2019-01-23"^^xsd:date ;
+    caselaw:Court           <http://caselaw.nationalarchives.gov.uk/def/courts/EWHC-SeniorCourtsCosts> ;
+    
+    caselaw:cites           <https://caselaw.nationalarchives.gov.uk/report/1909/elr/2/170> ;
+    caselaw:cites           <https://caselaw.nationalarchives.gov.uk/ewhc/ch/2005/1733> ;
+    caselaw:cites           <https://caselaw.nationalarchives.gov.uk/ewhc/ch/2007/2733> ;
+    caselaw:cites           <https://caselaw.nationalarchives.gov.uk/ewhc/ch/2009/651> ;
+
+    caselaw:cites           <https://www.legislation.gov.uk/id/ukpga/1974/47> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/7> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.16> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/ukpga/1974/47/section/70/1> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/ukpga/1974/47/section/70/2> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/47> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/44.1> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/46> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.9> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.10> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/48.8> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/48.10> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/25.1> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/1.1> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/1.2> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/25> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/67> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/8> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/ukpga/1974/47/section/70> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/ukpga/1974/47/section/70/2;> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.11> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.3> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.14> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.16> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/3.10> ;
+    caselaw:cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.9> .

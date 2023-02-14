@@ -1,0 +1,151 @@
+@prefix : <http://caselaw.nationalarchives.gov.uk/> .
+@prefix application: <http://purl.org/NET/mediatypes/application/> .
+@prefix caselaw: <http://caselaw.nationalarchives.gov.uk/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
+@prefix leg: <http://www.legislation.gov.uk/def/legislation/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# This RDF is based on what could be easily extracted from the XML document.  
+# There are other things not included here that could be extracted which are not as clearly marked up - case parties, judges, etc
+
+
+<http://caselaw.nationalarchives.gov.uk/id/ewhc/costs/2019/1>  a   :Judgment ;
+    :docketNumber    "CL1602608" ;
+    :neutralCitation "[2019] EWHC B1 (Costs)" ;
+    :judgmentDate    "2019-01-23"^^xsd:date ;
+    :givenBy           <http://caselaw.nationalarchives.gov.uk/def/courts/EWHC/SeniorCourts/Costs> ; # I don't think the URLs have been defined for the courts yet so this would need updating to reflect this
+
+    :cites           <https://caselaw.nationalarchives.gov.uk/report/1909/elr/2/170> ;
+    :cites           <https://caselaw.nationalarchives.gov.uk/ewhc/ch/2005/1733> ;
+    :cites           <https://caselaw.nationalarchives.gov.uk/ewhc/ch/2007/2733> ;
+    :cites           <https://caselaw.nationalarchives.gov.uk/ewhc/ch/2009/651> ;
+
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/1.1> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/1.2> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/3.10> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/25.1> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/44.1> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.9> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.10> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.16> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.3> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.11> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.14> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.16> ;  
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/48.8> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/article/48.10> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/7> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/8> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/25> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/46> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/47> ;
+    :cites           <https://www.legislation.gov.uk/id/uksi/1998/3132/part/67> ;
+    :cites           <https://www.legislation.gov.uk/id/ukpga/1974/47> ;
+    :cites           <https://www.legislation.gov.uk/id/ukpga/1974/47/section/70> ;
+    :cites           <https://www.legislation.gov.uk/id/ukpga/1974/47/section/70/1> ;
+    :cites           <https://www.legislation.gov.uk/id/ukpga/1974/47/section/70/2> .
+
+
+<http://caselaw.nationalarchives.gov.uk/ewhc/costs/2019/1> a :JudgmentExpression ;
+    dct:language "eng" ;
+    :caseName "Warren v Hill Dickinson LLP" ;
+    frbr:expressionOf <http://caselaw.nationalarchives.gov.uk/id/ewhc/costs/2019/1> ;
+    .
+
+
+# You may have other manifestations of the judgment fro example in PDF or HTML
+
+<http://caselaw.nationalarchives.gov.uk/id/ewhc/costs/2019/1/data.xml> a :JudgmentManifestation ;
+    frbr:manifestationOf <http://caselaw.nationalarchives.gov.uk/ewhc/costs/2019/1> ;
+    dct:format application:xml .
+
+
+# Cases
+
+<https://caselaw.nationalarchives.gov.uk/report/1909/elr/2/170> a :Judgment .
+<https://caselaw.nationalarchives.gov.uk/ewhc/ch/2005/1733> a :Judgment .
+<https://caselaw.nationalarchives.gov.uk/ewhc/ch/2007/2733> a :Judgment .
+<https://caselaw.nationalarchives.gov.uk/ewhc/ch/2009/651> a :Judgment .
+
+
+# Legislation
+
+<https://www.legislation.gov.uk/id/ukpga/1974/47> a leg:Item .
+
+<http://www.legislation.gov.uk/id/ukpga/1974/47/section/70> a leg:Item .
+<http://www.legislation.gov.uk/id/ukpga/1974/47/section/70> leg:legislation <http://www.legislation.gov.uk/id/ukpga/1974/47> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/7> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/7> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.16> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.16> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/ukpga/1974/47/section/70/1> a leg:Item .
+<https://www.legislation.gov.uk/id/ukpga/1974/47/section/70/1> leg:Legislation <https://www.legislation.gov.uk/id/ukpga/1974/47> .
+
+<https://www.legislation.gov.uk/id/ukpga/1974/47/section/70/2> a leg:Item .
+<https://www.legislation.gov.uk/id/ukpga/1974/47/section/70/2> leg:Legislation <https://www.legislation.gov.uk/id/ukpga/1974/47> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/47> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/47> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/44.1> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/44.1> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/46> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/46> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.9> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.9> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.10> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.10> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/48.8> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/48.8> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/48.10> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/48.10> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/25.1> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/25.1> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/1.1> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/1.1> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/1.2> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/1.2> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/25> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/25> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/67> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/67> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/8> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/part/8> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.11> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.11> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.3> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.3> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.14> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/47.14> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.16> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.16> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/3.10> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/3.10> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.9> a leg:Item .
+<https://www.legislation.gov.uk/id/uksi/1998/3132/article/46.9> leg:Legislation <https://www.legislation.gov.uk/id/uksi/1998/3132> .
+
+
+
+
+
