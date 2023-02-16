@@ -91,7 +91,7 @@ def get_canonical_leg(conn, title):
     :return: canoncial form of legislation title
     """
     canonical_query = (
-    """SELECT citation FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
+        """SELECT citation FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
     )
     canonical_leg = pd.read_sql(
         canonical_query, conn, params={"title": "{}".format(title)}
