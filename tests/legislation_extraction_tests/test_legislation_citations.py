@@ -36,7 +36,7 @@ from utils.helper import load_patterns
 def set_up():
     nlp = English()
     nlp.max_length = 1500000
-    db_conn = create_connection("tna", "editha.nemsic", "localhost", 5432)
+    db_conn = create_connection("tna", "editha.nemsic", "", "localhost", 5432)
     leg_titles = get_legtitles(db_conn)
     return nlp, db_conn, leg_titles
 
