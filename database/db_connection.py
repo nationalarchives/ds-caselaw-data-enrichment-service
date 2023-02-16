@@ -71,13 +71,6 @@ def get_legtitles(conn):
     return leg_titles
 
 
-# sql queries for legislation lookup table
-href_query = """SELECT ref FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
-canonical_query = (
-    """SELECT citation FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
-)
-
-
 def get_hrefs(conn, title):
     """
     Retrieves link to legislation title
@@ -85,6 +78,7 @@ def get_hrefs(conn, title):
     :param title: legislation title, required
     :return: link to legislation title
     """
+    href_query = """SELECT ref FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
     test = pd.read_sql_query(href_query, conn, params={"title": "{}".format(title)})
     return test.ref.values[0]
 
@@ -96,6 +90,9 @@ def get_canonical_leg(conn, title):
     :param title: legislation title, required
     :return: canoncial form of legislation title
     """
+    canonical_query = (
+    """SELECT citation FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
+    )
     canonical_leg = pd.read_sql(
         canonical_query, conn, params={"title": "{}".format(title)}
     )
