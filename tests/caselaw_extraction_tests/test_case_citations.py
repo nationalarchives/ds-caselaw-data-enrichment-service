@@ -14,7 +14,7 @@ from replacer.replacer import replacer_caselaw
 from utils.helper import load_patterns
 
 """
-    Testing the matching of the citations based on the data found in the rules. 
+    Testing the matching of the citations based on the data found in the rules.
     These are independent unit tests.
 """
 
@@ -89,14 +89,14 @@ def set_up():
     nlp.max_length = 1500000
     nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
     # TODO: change this to a mock db?
-    db_conn = create_connection("tna", "editha.nemsic", "localhost", 5432)
+    db_conn = create_connection("tna", "editha.nemsic", "", "localhost", 5432)
     load_patterns(db_conn)
     return nlp, db_conn
 
 
 """
     This class focuses on testing the Citation Processor, which gathers the results from the DB. This class primarily uses the mock_return_citation method.
-    This includes testing incorrect or missing citations. 
+    This includes testing incorrect or missing citations.
     This is relevant for the logic performed in main.py
 """
 
@@ -237,9 +237,9 @@ class TestCitationProcessor(unittest.TestCase):
 
 
 """
-    This class focuses on testing the Citation Matcher, which includes verifying that correct citations are matched to ensure that the 
-    DB is behaving as expected. 
-    This also verifies that the year and numbers are extracted correctly is extracted from the citation as expected, this is relevant for 
+    This class focuses on testing the Citation Matcher, which includes verifying that correct citations are matched to ensure that the
+    DB is behaving as expected.
+    This also verifies that the year and numbers are extracted correctly is extracted from the citation as expected, this is relevant for
     correct_strategies.py
 """
 
