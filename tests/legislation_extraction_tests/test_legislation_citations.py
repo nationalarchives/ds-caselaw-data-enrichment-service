@@ -5,9 +5,9 @@ from numpy import mat
 from spacy.lang.en import English
 
 sys.path.append("./")
-from legislation_processing.legislation_matcher_hybrid import (
+from legislation_extraction.legislation_matcher_hybrid import (
     detect_year_span,
-    detectCandidate,
+    detect_candidates,
     hybrid,
     leg_pipeline,
     lookup_pipe,
@@ -26,7 +26,7 @@ from replacer.replacer import replacer_leg
 from utils.helper import load_patterns
 
 """
-    Testing the matching of legislation based on the data found in the lookup table. 
+    Testing the matching of legislation based on the data found in the lookup table.
     These are independent unit tests.
 """
 
@@ -43,7 +43,7 @@ def set_up():
 
 """
     This class focuses on testing the Citation Processor, which gathers the results from the DB. This class primarily uses the mock_return_citation method.
-    This includes testing incorrect or missing citations. 
+    This includes testing incorrect or missing citations.
     This is relevant for the logic performed in main.py
 """
 
@@ -79,22 +79,22 @@ class TestLegislationProcessor(unittest.TestCase):
     def test_detect_candidate(self):
         text = "checking if the code will find this Made-up Act 1987 and this second made-up Act 2013"
         doc = self.nlp(text)
-        candidates = detectCandidate(self.nlp, doc)
+        candidates = detect_candidates(self.nlp, doc)
         assert candidates == [(10, 12), (18, 20)]
 
         text = "(Act 2013) and can you find this [Act 2013]"
         doc = self.nlp(text)
-        candidates = detectCandidate(self.nlp, doc)
+        candidates = detect_candidates(self.nlp, doc)
         assert candidates == [(1, 3), (10, 12)]
 
         text = "(Act  2013) and can you find this [Act  2013]"
         doc = self.nlp(text)
-        candidates = detectCandidate(self.nlp, doc)
+        candidates = detect_candidates(self.nlp, doc)
         assert candidates == []
 
         text = "Act (2013) and can you find this"
         doc = self.nlp(text)
-        candidates = detectCandidate(self.nlp, doc)
+        candidates = detect_candidates(self.nlp, doc)
         assert candidates == []
 
     def test_search_for_act(self):
