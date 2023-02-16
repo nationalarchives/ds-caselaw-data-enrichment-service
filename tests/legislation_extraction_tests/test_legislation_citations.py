@@ -8,11 +8,11 @@ sys.path.append("./")
 from legislation_extraction.legislation_matcher_hybrid import (
     detect_year_span,
     detect_candidates,
-    hybrid,
+    fuzzy_matcher as hybrid,
     leg_pipeline,
     lookup_pipe,
     mergedict,
-    search_for_act,
+    exact_matcher as search_for_act,
     search_for_act_fuzzy,
 )
 

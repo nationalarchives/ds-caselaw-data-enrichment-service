@@ -14,10 +14,10 @@ from legislation_extraction_tests.test_legislation_citations import (
     TestLegislationProcessor,
     TestLegislationReplacer,
 )
-from legislation_provision_extraction_tests import (
+from legislation_provision_extraction_tests.test_legislation_provisions import (
     TestLegislationProvisionProcessor,
 )
-from oblique_reference_extraction_tests import TestObliqueReferencesProcessor
+from oblique_reference_extraction_tests.test_oblique_references import TestObliqueReferencesProcessor
 from test_xml_parser import TestXmlParser
 
 """
