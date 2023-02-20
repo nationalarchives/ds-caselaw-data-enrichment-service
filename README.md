@@ -43,10 +43,10 @@ _Second Phase Enrichment_
 The second phase of enrichment consists of the [Oblique Legislative References Annotator](/docs/legislation/oblique-references.md)
 
 _Third Phase Enrichment_
-The third phase of enrichment cosists of the [Legislative Provision Annotator](/docs/legislation/legislative-provision-annotator.md)
+The third phase of enrichment consists of the [Legislative Provision Annotator](/docs/legislation/legislative-provision-annotator.md)
 
 _Fourth Phase Enrichment_
-The fourth and final phase of enrichment conists of the [vCite integration](/docs/vcite.md)
+The fourth and final phase of enrichment consists of the [vCite integration](/docs/vcite.md)
 
 ### 1.4 Replacers
 
@@ -56,7 +56,7 @@ There are two sets of replacer logic. The [first set](/replacer/replacer.py) pro
 
 ### 1.5 Re-enrichment
 
-It is possible for the same judgment to be submitted for enrichment on multiple occassions, which creates the risk that existing enrichment present in the judgment will break as additional enrichment is added to the judgment. To address this, the JEP "sanitises" the judgment body prior to making replacements. The sanitisation process is simply performed by stripping existing `</ref>` tags from the judgment. This logic is handled in the [make_repalcements](/lambda/make_replacements/index.py) lambda.
+It is possible for the same judgment to be submitted for enrichment on multiple occasions, which creates the risk that existing enrichment present in the judgment will break as additional enrichment is added to the judgment. To address this, the JEP "sanitises" the judgment body prior to making replacements. The sanitisation process is simply performed by stripping existing `</ref>` tags from the judgment. This logic is handled in the [make_replacements](/lambda/make_replacements/index.py) lambda.
 
 **IMPORTANT:** the sanitisation step does not currently distinguish between enrichment supplied by the JEP itself, by vCite or from some other source! Particular care should be taken to avoid inadvertently removing vCite enrichment by re-enriching a judgment that includes vCite enrichment when the [vCite integration](vcite.md) is switched off.
 
@@ -97,8 +97,8 @@ The standard mechanism for triggering the enrichment pipeline is via the TNA edi
 
 There is a comprehensive suite of tests that can be run locally. Clone the repository, `cd` into the `tests` directory and run:
 
-```
-$ python runner.py
+```sh
+python runner.py
 ```
 
 ## 5 Architecture

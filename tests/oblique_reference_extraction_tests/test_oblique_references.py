@@ -10,6 +10,7 @@ from oblique_references.oblique_references import (
     get_replacements,
 )
 
+
 class TestDetectReference(unittest.TestCase):
     """Tests the `detect_reference` function"""
 
