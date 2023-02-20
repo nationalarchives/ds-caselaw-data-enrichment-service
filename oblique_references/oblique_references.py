@@ -3,11 +3,11 @@
 This code handles the link of oblique references (i.e 'the Act' or 'the 1977 Act'). This is done in the following way:
 1. We use the previously enriched judgment and identify where there are legislation xrefs in the judgment body.
 2. We search for 'T(t)he/T(t)his/T(t)hat Act' and 'T(t)he/T(t)his/T(t)hat [dddd] Act' references in the judgment text.
-3. If the matched oblique reference does not contain a year, we use the location of the oblique reference and 'legislation' reference 
+3. If the matched oblique reference does not contain a year, we use the location of the oblique reference and 'legislation' reference
 to find which legislation the oblique reference is closest to, and then link to that legislation.
 4. If the matched oblique reference contains a year, we search for the matched 'legislation' (found in 1.) that corresponds to that year
 and then link to that legislation.
-5. We build a replacement string that wraps the detected oblique reference into a <ref> element with the link and canonical form of the linked legislation as attributes. 
+5. We build a replacement string that wraps the detected oblique reference into a <ref> element with the link and canonical form of the linked legislation as attributes.
 
 The pipeline returns a dictionary containing the detected oblique reference, its position and the replacement string.
 """

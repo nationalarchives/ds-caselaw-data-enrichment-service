@@ -27,7 +27,7 @@ module "vpc" {
   tags = local.tags
 }
 
-# reusing this from data module 
+# reusing this from data module
 data "aws_subnets" "private" {
   filter {
     name   = "vpc-id"
@@ -73,7 +73,7 @@ resource "aws_vpc_endpoint" "secrets_manager" {
   # "type": "aws_subnet",
   # "name": "private",
 
-  # subnet_ids = [for value in module.vpc.public_subnets: value.id] 
+  # subnet_ids = [for value in module.vpc.public_subnets: value.id]
   for_each = toset(data.aws_subnets.private.ids)
   # id       = each.value
   subnet_ids = [each.value]

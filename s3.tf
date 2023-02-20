@@ -42,4 +42,3 @@
 #   function_name    = aws_lambda_function.sqs_processor.arn
 #   batch_size       = 1
 # }
-

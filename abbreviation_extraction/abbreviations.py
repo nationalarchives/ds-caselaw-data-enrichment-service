@@ -1,11 +1,11 @@
 """
 @author: amy.conroy
-Adapted from Blackstone's abbreviation detector which itself was an 
-adaption of ScispaCy's abbreviation detector. 
-Updated for SpaCy version 3.0+, as well as to handle dates in both long and short form abbreviations, 
+Adapted from Blackstone's abbreviation detector which itself was an
+adaption of ScispaCy's abbreviation detector.
+Updated for SpaCy version 3.0+, as well as to handle dates in both long and short form abbreviations,
 and to be limited specifically to abbreviations where there are quotes in the
 brackets. This prevents erroneous abbreviations being detected where brackets
-are used separaetly from defining abbreviations. 
+are used separaetly from defining abbreviations.
 Blackstone repo here -> https://github.com/ICLRandD/Blackstone
 ScispaCy repo here -> https://github.com/allenai/scispacy
 """

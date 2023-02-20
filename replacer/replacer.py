@@ -1,6 +1,6 @@
 """
-Replacer logic for first phase enrichment. 
-Handles the replacements of abbreviations, legislation, and case law. 
+Replacer logic for first phase enrichment.
+Handles the replacements of abbreviations, legislation, and case law.
 """
 
 

@@ -871,4 +871,3 @@ resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription_prod" {
   protocol  = "sqs"
   endpoint  = aws_sqs_queue.fetch_xml_queue.arn
 }
-

@@ -12,8 +12,8 @@ abb = namedtuple("abb", "abb_match longform")
 leg = namedtuple("leg", "detected_ref href")
 
 """
-    Testing the list of replacements being extracted, added to a list, 
-    and confirming the format. 
+    Testing the list of replacements being extracted, added to a list,
+    and confirming the format.
 """
 
 
@@ -59,8 +59,8 @@ def read_file():
 
 
 """
-    This class focuses on testing the Citation Replacer and ensuring that the replacements 
-    are successfully appended to the JSON file. 
+    This class focuses on testing the Citation Replacer and ensuring that the replacements
+    are successfully appended to the JSON file.
 """
 
 

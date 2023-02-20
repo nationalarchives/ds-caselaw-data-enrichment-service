@@ -1,6 +1,6 @@
 """
-Individual testing componenets that can be integrated into the pipeline, 
-and which do not require any other testing data. 
+Individual testing componenets that can be integrated into the pipeline,
+and which do not require any other testing data.
 """
 
 """

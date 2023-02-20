@@ -5,7 +5,7 @@ Created on Mon Mar 3 10:48:33 2022
 @author: Imane.Hafnaoui
 
 
-Detects legislation references by searching through a lookup table of existing acts. We do this through a hybrid approach that merges exact and fuzzy matching. 
+Detects legislation references by searching through a lookup table of existing acts. We do this through a hybrid approach that merges exact and fuzzy matching.
 The hybrid matcher goes through three stages:
     Stage 1:
         - Narrows down the search space to candidate segments in the judgement text that contain the pattern [Act YYYY]; and
@@ -16,7 +16,7 @@ The hybrid matcher goes through three stages:
         - Merges the results of Stages 1 & 2;
         - Resolves detected references that might overlap due the nature of the fuzzy matching to a [1-to-1] linking between legislation title and detected reference.
         - Creates replacement tuples for the detected references
-    
+
 """
 from collections import namedtuple
 

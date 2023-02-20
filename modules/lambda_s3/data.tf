@@ -104,4 +104,3 @@ data "aws_iam_policy_document" "vcite_kms_policy" {
     resources = ["*"]
   }
 }
-

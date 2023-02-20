@@ -104,7 +104,7 @@ caselaw:High_Court rdf:type owl:NamedIndividual ,
                    caselaw:hasDivision caselaw:Chancery_Division ,
                                        caselaw:Court_of_Protection ,
                                        caselaw:Family_Division ,
-                                       <http://caselaw.nationalarchives.gov.uk/def/caselaw/Queens_Bench_Division> , 
+                                       <http://caselaw.nationalarchives.gov.uk/def/caselaw/Queens_Bench_Division> ,
                                        <http://caselaw.nationalarchives.gov.uk/def/caselaw/Kings_Bench_Division> .
 
 
@@ -125,7 +125,7 @@ caselaw:Lands_Chamber rdf:type owl:NamedIndividual ,
 
 
 ###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Privy_Council
-caselaw:Privy_Council 
+caselaw:Privy_Council
     rdf:type owl:NamedIndividual , <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBody> ;
     :hasEpoch caselaw:Privy_Council_pre_1937 ;
     :hasEpoch caselaw:Privy_Council_1937_1978 ;
@@ -135,7 +135,7 @@ caselaw:Privy_Council
 # both Canada and Barbados were territorial jurisdictions pre 1937 - which is expressed as object
 # relationships originating from the Epoch
 caselaw:Privy_Council_pre_1937
-    rdf:type owl:NamedIndividual , <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBodyEpoch> ;    
+    rdf:type owl:NamedIndividual , <http://caselaw.nationalarchives.gov.uk/def/caselaw/AdjudicatingBodyEpoch> ;
     :territorialJurisdiction <https://www.wikidata.org/wiki/Q16>, <https://www.wikidata.org/wiki/Q244> .
 
 ###  http://caselaw.nationalarchives.gov.uk/def/caselaw/Supreme_Court
@@ -201,5 +201,3 @@ caselaw:Upper_Tribunal rdf:type owl:NamedIndividual ,
                                                                                     caselaw:Commercial_Court ,
                                                                                     caselaw:General_Court_KB ,
                                                                                     caselaw:Technology_and_Construction_Court .
-
-

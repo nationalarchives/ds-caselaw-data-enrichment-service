@@ -339,13 +339,13 @@ foaf:name rdf:type owl:DatatypeProperty ;
           rdfs:comment "Defined in Foaf ontology as \"A name for some thing\". Used in the caselaw ontology to present the name of judges or other adjudicators as they were described in a case cover." .
 
 legislation:startDate rdf:type owl:DatatypeProperty ;
-    rdfs:subPropertyOf owl:topDataProperty ;    
+    rdfs:subPropertyOf owl:topDataProperty ;
     rdfs:comment "The first day of a court epoch" ;
     rdfs:range xsd:date ;
     rdfs:domain caselaw:AdjudicatingBodyEpoch .
 
 legislation:endDate rdf:type owl:DatatypeProperty ;
-    rdfs:subPropertyOf owl:topDataProperty ;    
+    rdfs:subPropertyOf owl:topDataProperty ;
     rdfs:comment "The last day of a court epoch" ;
     rdfs:range xsd:date ;
     rdfs:domain caselaw:AdjudicatingBodyEpoch .

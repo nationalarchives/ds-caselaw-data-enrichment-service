@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
-Replacer logic for second and third phase enrichment. 
-Handles the replacements of oblique references and legislation provisions. 
+Replacer logic for second and third phase enrichment.
+Handles the replacements of oblique references and legislation provisions.
 """
 
 
