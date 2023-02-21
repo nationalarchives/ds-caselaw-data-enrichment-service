@@ -1,6 +1,7 @@
 # Replace this file with functional code rather than one that just lists the S3 buckets.
 import json
 import logging
+import os
 
 import boto3
 import urllib3
@@ -10,6 +11,7 @@ from utils.environment_helpers import validate_env_variable
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
+AWS_ENDPOINT_URL = os.environ.get("AWS_ENDPOINT_URL", None)
 
 ############################################
 # - API FUNCTIONS
@@ -80,7 +82,7 @@ def upload_contents(source_key, xml_content):
     """
     filename = source_key + ".xml"
     LOGGER.info("Uploading XML content to %s/%s", DEST_BUCKET, filename)
-    s3 = boto3.resource("s3")
+    s3 = boto3.resource("s3", endpoint_url=AWS_ENDPOINT_URL)
     object = s3.Object(DEST_BUCKET, filename)
     object.put(Body=xml_content)
 
