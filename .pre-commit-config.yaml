@@ -30,6 +30,11 @@ repos:
   #   hooks:
   #     - id: mdformat
 
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.77.1
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_docs
 
 # sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
 ci:
