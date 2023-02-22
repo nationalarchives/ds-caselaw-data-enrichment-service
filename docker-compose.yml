@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+  localstack:
+    image: localstack/localstack
+    network_mode: bridge
+    environment:
+      SERVICES: lambda,sns,s3,sqs,iam,secretsmanager
+      DEBUG: 1
+      AWS_DEFAULT_REGION: eu-west-2
+      DEFAULT_REGION: eu-west-2
+    ports:
+      - 4566:4566
+      - 4584:4584
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+
+networks:
+  default:
+    external:
+      name: caselaw

@@ -14,8 +14,10 @@ terraform {
 
   backend "s3" {
     # bucket = "${var.backend_bucket}"
-    key    = "ds-infrastructure-enrichment-pipeline/backend.tfstate"
-    region = "eu-west-2"
+    key              = "ds-infrastructure-enrichment-pipeline/backend.tfstate"
+    region           = "eu-west-2"
+    endpoint         = "http://localhost:4566"
+    force_path_style = true
   }
 
   # cloud {
