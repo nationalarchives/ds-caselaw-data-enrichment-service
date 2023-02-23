@@ -113,7 +113,7 @@ class TestObliqueReferencesProcessor(unittest.TestCase):
             {
                 "detected_ref": "this Act",
                 "ref_position": 33958,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19" uk:type="legislation">this Act</ref>',
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19" uk:type="legislation" uk:origin="TNA">this Act</ref>',
             }
         ]
 
@@ -183,12 +183,12 @@ class TestObliqueReferencesProcessor(unittest.TestCase):
             {
                 "detected_ref": "the 1985 Act",
                 "ref_position": 10093,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1985/68" uk:canonical="1985 c. 68" uk:type="legislation">the 1985 Act</ref>',
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1985/68" uk:canonical="1985 c. 68" uk:type="legislation" uk:origin="TNA">the 1985 Act</ref>',
             },
             {
                 "detected_ref": "the 1985 Act",
                 "ref_position": 37166,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1985/68" uk:canonical="1985 c. 68" uk:type="legislation">the 1985 Act</ref>',
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1985/68" uk:canonical="1985 c. 68" uk:type="legislation" uk:origin="TNA">the 1985 Act</ref>',
             },
         ]
         assert replacements == ex_replacements
@@ -331,12 +331,12 @@ class TestObliqueReferencesProcessor(unittest.TestCase):
             {
                 "detected_ref": "the Act",
                 "ref_position": 39069,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1977/37" uk:canonical="1977 c. 37" uk:type="legislation">the Act</ref>',
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1977/37" uk:canonical="1977 c. 37" uk:type="legislation" uk:origin="TNA">the Act</ref>',
             },
             {
                 "detected_ref": "this Act",
                 "ref_position": 480464,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1977/37" uk:canonical="1977 c. 37" uk:type="legislation">this Act</ref>',
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1977/37" uk:canonical="1977 c. 37" uk:type="legislation" uk:origin="TNA">this Act</ref>',
             },
         ]
         assert replacements == ex_replacements
