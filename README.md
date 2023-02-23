@@ -150,3 +150,26 @@ Here are some brief notes on extending the infrastructure.
 - Adding an S3 bucket is done by invoking the `secure_bucket` module, located at `modules/secure_bucket/`, you can see how the existing buckets are created by viewing `modules/lambda_s3/bucket.tf`, new buckets should be created by adding to this file.
   If a bucket policy is added, then an extra statement will automatically be added that denies insecure transport.
 - Docker images are stored in ECR. Each repo needs to exist before a docker image can be pushed to ECR. These are created in `modules/lambda_s3/lambda.tf`.
+
+## 9 Turning Enrichment Off
+
+There are a number of places where enrichment can be turned off:
+
+- Marklogic Username/Password
+
+  - Go to the production Marklogic interface, "Admin" (top), "Security" (left), "Users" (left), "enrichment-engine" (mid).
+  - Make sure you know where the password is stored so you can put access back afterwards!
+  - Changing the password will mean no Enrichment processes can interact with Marklogic -- no getting documents, no uploading them
+  - Messages will still be sent from the Editor interface, and will build up.
+  - Purge the queues in AWS before turning Enrichment back on, unless you're confident there is nothing bad in there.
+  - Seemed to work well last time, but there were a lot of warnings
+
+- AWS Lambda that fetches XML
+
+  - Not actually tested in anger!
+  - Log into `da-caselaw-enrichment`. Make sure to switch to `eu-west-2`/`London`.
+  - In Lambda, Functions, select `tna-s3-tna-production-fetch-xml`
+  - Top left, press Throttle.
+  - This will prevent any ingestion of the incoming messages which will build up
+  - Anything currently in process will finish and will continue to run to completion
+  - You can change the concurrency settings to unthrottle it
