@@ -18,7 +18,8 @@ from legislation_provision_extraction_tests.test_legislation_provisions import (
     TestLegislationProvisionProcessor,
 )
 from oblique_reference_extraction_tests.test_oblique_references import (
-    TestObliqueReferencesProcessor,
+    TestDetectReference,
+    TestGetReplacements
 )
 from test_xml_parser import TestXmlParser
 
@@ -53,8 +54,11 @@ LegislationReplacerSuite = unittest.TestLoader().loadTestsFromTestCase(
 LegislationProvisionSuite = unittest.TestLoader().loadTestsFromTestCase(
     TestLegislationProvisionProcessor
 )
-ObliqueReferenceSuite = unittest.TestLoader().loadTestsFromTestCase(
-    TestObliqueReferencesProcessor
+DetectReferenceSuite = unittest.TestLoader().loadTestsFromTestCase(
+    TestDetectReference
+)
+GetReplacementsSuite = unittest.TestLoader().loadTestsFromTestCase(
+    TestGetReplacements
 )
 
 suite = unittest.TestSuite(
@@ -68,7 +72,8 @@ suite = unittest.TestSuite(
         LegislationProcessorSuite,
         LegislationReplacerSuite,
         LegislationProvisionSuite,
-        ObliqueReferenceSuite,
+        DetectReferenceSuite,
+        GetReplacementsSuite
     ]
 )
 
