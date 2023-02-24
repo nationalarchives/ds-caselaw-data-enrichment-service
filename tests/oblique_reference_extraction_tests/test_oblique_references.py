@@ -68,12 +68,6 @@ class TestDetectReference(unittest.TestCase):
 
 class TestGetReplacements(unittest.TestCase):
     """Tests the `get_replacements` function"""
-    detected_acts = [
-            ((39069, 39076), "the Act"),
-            ((60093, 60105), "the 2000 Act"),
-            ((480464, 480472), "this Act"),
-            ((560093, 560105), "the 2000 Act"),
-        ]
     legislation_dicts = [
         {
             "pos": (4670, 4814),
@@ -114,46 +108,51 @@ class TestGetReplacements(unittest.TestCase):
 
     def test_get_replacements(self):
         """
-        Given lists of detected_acts, legislation_dicts
-        And numbered_act is False
+        Given lists of detected_acts with only unnumbered acts,
+            and legislation_dicts
+            and numbered_act is False
         When `get_replacements` is called with these
         Then a list of dicts containing act information is returned
             with one entry for each of the references to an act already
             defined by the time they were referenced
         """
+        detected_acts = [
+            ((39069, 39076), "the Act"),
+            ((480464, 480472), "this Act"),
+        ]
         numbered_act = False
         replacements = []
 
         replacements = get_replacements(
-            self.detected_acts, self.legislation_dicts, numbered_act, replacements
+            detected_acts, self.legislation_dicts, numbered_act, replacements
         )
 
         expected_replacements = [
             {'detected_ref': 'the Act', 'ref_position': 39069, 'ref_tag': '<ref href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19" uk:type="legislation" uk:origin="TNA">the Act</ref>'
             },
-            {'detected_ref': 'the 2000 Act', 'ref_position': 60093, 'ref_tag': '<ref href="http://www.legislation.gov.uk/id/ukpga/1991/53" uk:canonical="1991 c. 53" uk:type="legislation" uk:origin="TNA">the 2000 Act</ref>'
-            },
-            {'detected_ref': 'this Act', 'ref_position': 480464, 'ref_tag': '<ref href="http://www.legislation.gov.uk/id/ukpga/1997/43" uk:canonical="1997 c. 43" uk:type="legislation" uk:origin="TNA">this Act</ref>'
-            },
-            {'detected_ref': 'the 2000 Act', 'ref_position': 560093, 'ref_tag': '<ref href="http://www.legislation.gov.uk/id/ukpga/1997/43" uk:canonical="1997 c. 43" uk:type="legislation" uk:origin="TNA">the 2000 Act</ref>'
-            }
+            {'detected_ref': 'this Act', 'ref_position': 480464, 'ref_tag': '<ref href="http://www.legislation.gov.uk/id/ukpga/1997/43" uk:canonical="1997 c. 43" uk:type="legislation" uk:origin="TNA">this Act</ref>'}
         ]
         assert replacements == expected_replacements
 
     def test_get_replacements_with_numbered_act(self):
         """
-        Given lists of detected_acts, legislation_dicts
-        And numbered_act is True
+        Given lists of detected_acts with only numbered acts,
+            and legislation_dicts
+            and numbered_act is True
         When `get_replacements` is called with these
         Then a list of dicts containing act information is returned
             with one entry for each of the references to a numbered act
             already defined by the time they were referenced
         """
+        detected_acts = [
+            ((60093, 60105), "the 2000 Act"),
+            ((560093, 560105), "the 2000 Act"),
+        ]
         numbered_act = True
         replacements = []
         
         replacements = get_replacements(
-            self.detected_acts, self.legislation_dicts, numbered_act, replacements
+            detected_acts, self.legislation_dicts, numbered_act, replacements
         )
         
         expected_replacements = [
@@ -164,7 +163,7 @@ class TestGetReplacements(unittest.TestCase):
             },
             {
                 "detected_ref": "the 2000 Act",
-                "ref_position": 60093,
+                "ref_position": 560093,
                 "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2000/6" uk:canonical="2000 c. 6" uk:type="legislation" uk:origin="TNA">the 2000 Act</ref>',
             },
         ]
