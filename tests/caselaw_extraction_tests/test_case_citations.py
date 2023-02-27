@@ -12,12 +12,13 @@ import testing.postgresql
 from spacy.lang.en import English
 from sqlalchemy import create_engine
 
+sys.path.append("./")
+
 from caselaw_extraction.correction_strategies import apply_correction_strategy
 from database.db_connection import get_matched_rule
 from replacer.replacer import replacer_caselaw
 from utils.helper import load_patterns
 
-sys.path.append("./")
 
 CORRECT_CITATIONS = [
     "random text goes here random text goes here **[2022] UKUT 177 (TCC)",
@@ -101,8 +102,6 @@ class TestCitationProcessor(unittest.TestCase):
 
         manifest_df = pd.read_csv("rules/2022_04_08_Citation_Manifest.csv")
         manifest_df.to_sql("manifest", engine, if_exists="append", index=False)
-
-        load_patterns(self.db_conn)
 
     def tearDown(self):
         self.postgresql.stop()
