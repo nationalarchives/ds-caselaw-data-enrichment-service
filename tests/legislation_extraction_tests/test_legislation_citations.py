@@ -5,28 +5,29 @@ from numpy import mat
 from spacy.lang.en import English
 
 sys.path.append("./")
-from legislation_processing.legislation_matcher_hybrid import (
-    detect_year_span,
-    detectCandidate,
-    hybrid,
-    leg_pipeline,
-    lookup_pipe,
-    mergedict,
-    search_for_act,
-    search_for_act_fuzzy,
-)
-
 from database.db_connection import (
     close_connection,
     create_connection,
-    get_hrefs,
     get_legtitles,
 )
+from legislation_extraction.legislation_matcher_hybrid import (
+    detect_candidates,
+    detect_year_span,
+)
+from legislation_extraction.legislation_matcher_hybrid import (
+    exact_matcher as search_for_act,
+)
+from legislation_extraction.legislation_matcher_hybrid import (
+    fuzzy_matcher as hybrid,
+)
+from legislation_extraction.legislation_matcher_hybrid import (
+    lookup_pipe,
+    search_for_act_fuzzy,
+)
 from replacer.replacer import replacer_leg
-from utils.helper import load_patterns
 
 """
-    Testing the matching of legislation based on the data found in the lookup table. 
+    Testing the matching of legislation based on the data found in the lookup table.
     These are independent unit tests.
 """
 
@@ -36,14 +37,14 @@ from utils.helper import load_patterns
 def set_up():
     nlp = English()
     nlp.max_length = 1500000
-    db_conn = create_connection("tna", "editha.nemsic", "localhost", 5432)
+    db_conn = create_connection("tna", "editha.nemsic", "", "localhost", 5432)
     leg_titles = get_legtitles(db_conn)
     return nlp, db_conn, leg_titles
 
 
 """
     This class focuses on testing the Citation Processor, which gathers the results from the DB. This class primarily uses the mock_return_citation method.
-    This includes testing incorrect or missing citations. 
+    This includes testing incorrect or missing citations.
     This is relevant for the logic performed in main.py
 """
 
@@ -79,22 +80,22 @@ class TestLegislationProcessor(unittest.TestCase):
     def test_detect_candidate(self):
         text = "checking if the code will find this Made-up Act 1987 and this second made-up Act 2013"
         doc = self.nlp(text)
-        candidates = detectCandidate(self.nlp, doc)
+        candidates = detect_candidates(self.nlp, doc)
         assert candidates == [(10, 12), (18, 20)]
 
         text = "(Act 2013) and can you find this [Act 2013]"
         doc = self.nlp(text)
-        candidates = detectCandidate(self.nlp, doc)
+        candidates = detect_candidates(self.nlp, doc)
         assert candidates == [(1, 3), (10, 12)]
 
         text = "(Act  2013) and can you find this [Act  2013]"
         doc = self.nlp(text)
-        candidates = detectCandidate(self.nlp, doc)
+        candidates = detect_candidates(self.nlp, doc)
         assert candidates == []
 
         text = "Act (2013) and can you find this"
         doc = self.nlp(text)
-        candidates = detectCandidate(self.nlp, doc)
+        candidates = detect_candidates(self.nlp, doc)
         assert candidates == []
 
     def test_search_for_act(self):
