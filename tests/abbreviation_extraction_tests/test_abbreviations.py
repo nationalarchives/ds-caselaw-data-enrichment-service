@@ -142,10 +142,8 @@ class TestAbbrevationReplacer(unittest.TestCase):
         short_form = "ECHR"
         replacement_entry = (short_form, long_form)
         text = "The case was heard before the ECHR"
-        replacement_string = (
-            'The case was heard before the <abbr title="{}" uk:origin="TNA">{}</abbr>'.format(
-                long_form, short_form
-            )
+        replacement_string = 'The case was heard before the <abbr title="{}" uk:origin="TNA">{}</abbr>'.format(
+            long_form, short_form
         )
         replaced_entry = replacer_abbr(text, replacement_entry)
         assert short_form in replaced_entry
@@ -156,10 +154,8 @@ class TestAbbrevationReplacer(unittest.TestCase):
         short_form = "the HRA 1998"
         replacement_entry = (short_form, long_form)
         text = "in breach of section 6 of the HRA 1998"
-        replacement_string = (
-            'in breach of section 6 of <abbr title="{}" uk:origin="TNA">{}</abbr>'.format(
-                long_form, short_form
-            )
+        replacement_string = 'in breach of section 6 of <abbr title="{}" uk:origin="TNA">{}</abbr>'.format(
+            long_form, short_form
         )
         replaced_entry = replacer_abbr(text, replacement_entry)
         assert short_form in replaced_entry
@@ -184,7 +180,9 @@ class TestAbbrevationReplacer(unittest.TestCase):
         short_form = "FPR 2010"
         replacement_entry = (long_form, short_form)
         text = "Family Procedure Rules 2010"
-        replacement_string = '<abbr title="{}" uk:origin="TNA">{}</abbr>'.format(short_form, long_form)
+        replacement_string = '<abbr title="{}" uk:origin="TNA">{}</abbr>'.format(
+            short_form, long_form
+        )
         replaced_entry = replacer_abbr(text, replacement_entry)
         assert short_form in replaced_entry
         assert long_form in replaced_entry
@@ -194,8 +192,10 @@ class TestAbbrevationReplacer(unittest.TestCase):
         short_form = "Canadian Geese"
         replacement_entry = (long_form, short_form)
         text = "This case concerns Canadian Geese Limited"
-        replacement_string = 'This case concerns <abbr title="{}" uk:origin="TNA">{}</abbr>'.format(
-            short_form, long_form
+        replacement_string = (
+            'This case concerns <abbr title="{}" uk:origin="TNA">{}</abbr>'.format(
+                short_form, long_form
+            )
         )
         replaced_entry = replacer_abbr(text, replacement_entry)
         assert short_form in replaced_entry

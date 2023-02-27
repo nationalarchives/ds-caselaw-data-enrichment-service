@@ -10,8 +10,10 @@ from oblique_references.oblique_references import (
     get_replacements,
 )
 
+
 class TestDetectReference(unittest.TestCase):
     """Tests the `detect_reference` function"""
+
     def test_legislation(self):
         """
         Given a string with a ref tag with type "legislation" and an
@@ -66,8 +68,10 @@ class TestDetectReference(unittest.TestCase):
         assert detected_act[1][1] == "the Act"
         assert detected_act[2][1] == "that Act"
 
+
 class TestGetReplacements(unittest.TestCase):
     """Tests the `get_replacements` function"""
+
     legislation_dicts = [
         {
             "pos": (4670, 4814),
@@ -128,9 +132,16 @@ class TestGetReplacements(unittest.TestCase):
         )
 
         expected_replacements = [
-            {'detected_ref': 'the Act', 'ref_position': 39069, 'ref_tag': '<ref href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19" uk:type="legislation" uk:origin="TNA">the Act</ref>'
+            {
+                "detected_ref": "the Act",
+                "ref_position": 39069,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19" uk:type="legislation" uk:origin="TNA">the Act</ref>',
             },
-            {'detected_ref': 'this Act', 'ref_position': 480464, 'ref_tag': '<ref href="http://www.legislation.gov.uk/id/ukpga/1997/43" uk:canonical="1997 c. 43" uk:type="legislation" uk:origin="TNA">this Act</ref>'}
+            {
+                "detected_ref": "this Act",
+                "ref_position": 480464,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1997/43" uk:canonical="1997 c. 43" uk:type="legislation" uk:origin="TNA">this Act</ref>',
+            },
         ]
         assert replacements == expected_replacements
 
@@ -150,11 +161,11 @@ class TestGetReplacements(unittest.TestCase):
         ]
         numbered_act = True
         replacements = []
-        
+
         replacements = get_replacements(
             detected_acts, self.legislation_dicts, numbered_act, replacements
         )
-        
+
         expected_replacements = [
             {
                 "detected_ref": "the 2000 Act",

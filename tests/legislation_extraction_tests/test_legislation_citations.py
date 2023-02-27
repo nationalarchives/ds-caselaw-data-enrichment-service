@@ -5,25 +5,26 @@ from numpy import mat
 from spacy.lang.en import English
 
 sys.path.append("./")
-from legislation_extraction.legislation_matcher_hybrid import (
-    detect_year_span,
-    detect_candidates,
-    fuzzy_matcher as hybrid,
-    leg_pipeline,
-    lookup_pipe,
-    mergedict,
-    exact_matcher as search_for_act,
-    search_for_act_fuzzy,
-)
-
 from database.db_connection import (
     close_connection,
     create_connection,
-    get_hrefs,
     get_legtitles,
 )
+from legislation_extraction.legislation_matcher_hybrid import (
+    detect_candidates,
+    detect_year_span,
+)
+from legislation_extraction.legislation_matcher_hybrid import (
+    exact_matcher as search_for_act,
+)
+from legislation_extraction.legislation_matcher_hybrid import (
+    fuzzy_matcher as hybrid,
+)
+from legislation_extraction.legislation_matcher_hybrid import (
+    lookup_pipe,
+    search_for_act_fuzzy,
+)
 from replacer.replacer import replacer_leg
-from utils.helper import load_patterns
 
 """
     Testing the matching of legislation based on the data found in the lookup table.
