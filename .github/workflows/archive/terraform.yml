@@ -64,7 +64,7 @@ jobs:
           prod="${{ github.event.pull_request.base.ref == 'prod' || github.ref == 'refs/head/prod' }}"
           # prod=true
           if [ "$prod" = true ]; then
-            echo "::set-output name=environment::prod"
+            echo "environment=prod" >> $GITHUB_OUTPUT
             echo "prod=true" >> $GITHUB_ENV
             # set variables for docker repo suffix and prefix
             echo "ACCOUNT_ID=893937975773" >> $GITHUB_ENV
@@ -75,7 +75,7 @@ jobs:
             echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}" >> $GITHUB_ENV
 
           else
-            echo "::set-output name=environment::staging"
+            echo "environment=staging" >> $GITHUB_OUTPUT
             echo "prod=false" >> $GITHUB_ENV
             echo "ACCOUNT_ID=087925987720" >> $GITHUB_ENV
             echo "REPO_SUFFIX=dev" >> $GITHUB_ENV
@@ -242,8 +242,9 @@ jobs:
           prod="${{ github.event.pull_request.base.ref == 'main' || github.ref == 'refs/head/main' }}"
           if [ "$prod" = true ]; then
           # if [ ${{ env.prod }} = true ]; then
-            echo "::set-output name=environment::tna-prod"
-            # echo "::set-output name=account_id::893937975773"
+
+            echo "environment=tna-prod" >> $GITHUB_OUTPUT
+            # echo "account_id=893937975773" >> $GITHUB_OUTPUT
             # set variables for docker repo suffix and prefix
             echo "DEPLOYMENT_ENVIRONMENT=production" >> $GITHUB_ENV
             echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN_PROD }}" >> $GITHUB_ENV
@@ -255,7 +256,7 @@ jobs:
             echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }}" >> $GITHUB_ENV
             echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}" >> $GITHUB_ENV
           else
-            echo "::set-output name=environment::tna-staging"
+            echo "environment=tna-staging" >> $GITHUB_OUTPUT
             # echo "DEPLOYMENT_ENVIRONMENT=staging" >> $GITHUB_ENV
             echo "DEPLOYMENT_ENVIRONMENT=dev" >> $GITHUB_ENV
             echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN }}" >> $GITHUB_ENV
