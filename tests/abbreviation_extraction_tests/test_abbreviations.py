@@ -13,11 +13,11 @@ from abbreviation_extraction.abbreviations import (
 from replacer.replacer import replacer_abbr
 
 """
-    This test file looks at the matching of different abbreviations. 
+    This test file looks at the matching of different abbreviations.
 
-    Note that the current abberviation pipeline currently only supports abbreviations 
-    where the abbreviation in brackets is in quotation marks, which this file will 
-    also test for. If this is updated, this will need to be reflected in the tests. 
+    Note that the current abberviation pipeline currently only supports abbreviations
+    where the abbreviation in brackets is in quotation marks, which this file will
+    also test for. If this is updated, this will need to be reflected in the tests.
 """
 
 

@@ -7,9 +7,9 @@ import json
 from replacer.replacer import replacer_pipeline
 
 """
-    Testing the xml replacements at each stage of the pipeline, to validate that they have been replaced correctly. 
+    Testing the xml replacements at each stage of the pipeline, to validate that they have been replaced correctly.
 
-    The replacements are being made based off of tuples saved in files at each of the stage. 
+    The replacements are being made based off of tuples saved in files at each of the stage.
 """
 
 

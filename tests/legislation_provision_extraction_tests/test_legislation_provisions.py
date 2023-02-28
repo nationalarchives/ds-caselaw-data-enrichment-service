@@ -13,8 +13,8 @@ from legislation_provisions_extraction.legislation_provisions import (
 from replacer.second_stage_replacer import provision_replacement
 
 """
-    This class focuses on testing the Legislation Provision processor, which detects references to sections and links them to the 
-    section within the legislation itself. 
+    This class focuses on testing the Legislation Provision processor, which detects references to sections and links them to the
+    section within the legislation itself.
 """
 
 

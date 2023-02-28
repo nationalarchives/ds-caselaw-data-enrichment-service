@@ -14,7 +14,7 @@
 
 # Items for discussion
 #
-# * URI paths for courts 
+# * URI paths for courts
 # * Ask Legislation.gov.uk to publish their URIs for 'extents'
 # * Court URLs base path
 
@@ -29,7 +29,7 @@
     :heardBefore <https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/judge-mr-justice-morris> ;
     :heardBefore <https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709/judge-senior-costs-judge-gordon-saker-assessor> .
 
-# properties of the individual copy we received 
+# properties of the individual copy we received
 
 <https://caselaw.nationalarchives.gov.uk/ewhc/admin/2022/1709> a :JudgmentExpression
     dct:language "eng";
@@ -60,7 +60,7 @@
 <https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709> caselaw:cites <http://www.legislation.gov.uk/id/ukpga/1974/47/> .
 <https://caselaw.nationalarchives.gov.uk/id/ewhc/admin/2022/1709> caselaw:cites <https://caselaw.nationalarchives.gov.uk/ewca/civ/2020/178> .
 
-# when generating RDF links to a piece of legislation, our RDF emitted data will add one triple to describe the class 
+# when generating RDF links to a piece of legislation, our RDF emitted data will add one triple to describe the class
 # of the citation target and another one to link the section to the entity representing the whole act
 
 <http://www.legislation.gov.uk/id/ukpga/1974/47/section/70> a leg:Item .

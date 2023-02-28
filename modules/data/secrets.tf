@@ -3,7 +3,7 @@ resource "random_password" "password" {
   special = true
   # override_special = "_%@"
   # override_special = "'/@\"_% "
-  # Postgress passwords can't contain any of the following: 
+  # Postgress passwords can't contain any of the following:
   # / (slash), '(single quote), "(double quote) and @ (at sign).
   override_special = "!#$%&*()-_=+[]"
 }

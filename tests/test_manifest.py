@@ -2,7 +2,7 @@ import pandas as pd
 import spacy
 
 """
-Test for the rules manifest. 
+Test for the rules manifest.
 """
 
 MANIFEST = pd.read_csv("caselaw_extraction/rules/2022_04_05_Citation_Manifest.csv")

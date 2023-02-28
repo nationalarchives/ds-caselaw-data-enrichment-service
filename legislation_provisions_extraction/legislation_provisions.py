@@ -1,16 +1,16 @@
 """
-This code handles the link of provisions (i.e sections) to legislation. This is done in the following way: 
-1. We use the previously enriched judgment and identify where there are legislation xrefs in paragraphs. 
-2. We then search for and 'section' references in that paragraph. 
-3. We then use the location of the 'section' reference and 'legislation' reference to find which legislation the 
+This code handles the link of provisions (i.e sections) to legislation. This is done in the following way:
+1. We use the previously enriched judgment and identify where there are legislation xrefs in paragraphs.
+2. We then search for and 'section' references in that paragraph.
+3. We then use the location of the 'section' reference and 'legislation' reference to find which legislation the
 section is closest to, and then link the section to that legislation.
-4. We handle re-definition of sections by keeping track of the paragraph number when identifying xrefs and sections. 
-We use the paragraph number when replacing and only add the link to the section when we are after where the section was last defined. 
-If it is re-defined at a later paragraph, we would then use that new link instead from the paragraph number onwards. 
-To do: 
+4. We handle re-definition of sections by keeping track of the paragraph number when identifying xrefs and sections.
+We use the paragraph number when replacing and only add the link to the section when we are after where the section was last defined.
+If it is re-defined at a later paragraph, we would then use that new link instead from the paragraph number onwards.
+To do:
 1. "Sections 18-19" - we currently on replace sections 18 with a link to 18
 2. "Section 27(A)" - currently miss these references when replacing
-3. Sub-sections aren't being replaced 
+3. Sub-sections aren't being replaced
 """
 
 import os

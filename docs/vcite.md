@@ -1,4 +1,4 @@
-# vCite 
+# vCite
 
 A significant amount of core markup annotation is provided directly by the JEP, but it is also supported an integration with the [vLex](https://vlex.com/) vCite engine. vCite extends the JEP's functionality in a range of ways, including the addition of a comprehensive suite of case law citation matchers. See [here](/docs/vcite.md) for more detail on the vCite integration and how it is controlled.
 
@@ -6,13 +6,10 @@ The JEP is set to complete its own enrichment before handing the enriched XML to
 
 ## Configuration
 
-Under the current build, vCite enrichment is either "on" for all judgments or it is "off" for all judgments. 
+Under the current build, vCite enrichment is either "on" for all judgments or it is "off" for all judgments.
 
-The vCite on/off control is managed by AWS Parameter Store, which holds a single parameter called: `vCite`. The default value set in Terraform is `off`. This parameter can be changed to `on` in the console in AWS System Manager (AWS Parameter Store) or, if you prefer in the Terraform code. 
+The vCite on/off control is managed by AWS Parameter Store, which holds a single parameter called: `vCite`. The default value set in Terraform is `off`. This parameter can be changed to `on` in the console in AWS System Manager (AWS Parameter Store) or, if you prefer in the Terraform code.
 
 Or recommendation is that temporary changes to vCite's on or off state (for example, when processing large batch jobs) should be handled manually in AWS Parameter Store. More permanent changes in state should be ideally be managed in the Terraform code. The reason for this is that if the code is modified and resources the resources are re-built the vCite parameter will, by default, be set back to `off`.
 
 The process at enrichment time is managed by the [xml-validate](/lambda/xml_validate/index.py) lambda, which is responsible for the checking the value of the vCite parameter.
-
-
-

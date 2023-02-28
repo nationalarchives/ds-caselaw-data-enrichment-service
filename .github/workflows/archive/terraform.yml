@@ -70,7 +70,7 @@ jobs:
             echo "ACCOUNT_ID=893937975773" >> $GITHUB_ENV
             echo "REPO_SUFFIX=production" >> $GITHUB_ENV
             echo "TF_API_TOKEN=${{ secrets.TF_API_TOKEN_PROD }}" >> $GITHUB_ENV
-          
+
             echo "AWS_ACCESS_KEY_ID=${{ secrets.AWS_ACCESS_KEY_ID_PROD }}" >> $GITHUB_ENV
             echo "AWS_SECRET_ACCESS_KEY=${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}" >> $GITHUB_ENV
 
@@ -88,15 +88,15 @@ jobs:
         # if: ${{ false }}
         run: |
           cat lambda/determine_replacements_caselaw/requirements.txt
-          
+
           cd lambda/determine_replacements_caselaw
-          
+
           rm /home/runner/.docker/config.json
           # echo "-------------------"
           AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com
-          
+
           echo "logged in caselaw"
-          
+
           docker buildx build --load -t tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }} .
           echo "built caselaw"
           docker images --filter reference=tna-s3-tna-ecr-repository-${{ env.REPO_SUFFIX }}
@@ -138,7 +138,7 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}:latest
           echo "tagged rules update"
           docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ env.REPO_SUFFIX }}:latest
-          
+
           cd ../../lambda/determine_legislation_provisions
           echo "logged in legislation provision"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }} .
@@ -147,7 +147,7 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}:latest
           echo "tagged legislation provision"
           docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-${{ env.REPO_SUFFIX }}:latest
-          
+
           cd ../../lambda/determine_oblique_references
           echo "logged in oblique references"
           docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }} .
@@ -156,7 +156,7 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest
           echo "tagged oblique references"
           docker push ${{ env.ACCOUNT_ID }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ env.REPO_SUFFIX }}:latest
-          
+
           cd ../../lambda/fetch_xml
           echo "logged in fetch xml"
           docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-${{ env.REPO_SUFFIX }} .
@@ -195,7 +195,7 @@ jobs:
           # else
           #   echo "${{ env.REPO_SUFFIX }}"
           # fi
-          
+
           # cd ../../lambda/push_enriched_xml
           # echo "CD'd into the push_enriched_xml directory"
           # if [[ "${{ github.ref == 'refs/head/prod' }}" ]]; then
@@ -298,9 +298,9 @@ jobs:
           echo ${{ env.terraform_backend_bucket }}
           echo AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws s3 ls "s3://${{ env.terraform_backend_bucket }}" --region eu-west-2 2>&1
 
-          if 
+          if
             AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws s3 ls "s3://${{ env.terraform_backend_bucket }}" --region eu-west-2 2>&1 | grep -q 'NoSuchBucket'
-          then 
+          then
             echo "attepting to create bucket"
             AWS_ACCESS_KEY_ID=${{ env.AWS_ACCESS_KEY_ID }} AWS_SECRET_ACCESS_KEY=${{ env.AWS_SECRET_ACCESS_KEY }} aws s3api create-bucket \
               --bucket ${{ env.terraform_backend_bucket }} \

@@ -1,6 +1,6 @@
 """
-Main file that controls the abbreviation detection, including the creation of the 
-AbbreviationDetector class and the pipeline. 
+Main file that controls the abbreviation detection, including the creation of the
+AbbreviationDetector class and the pipeline.
 """
 
 

@@ -1,7 +1,7 @@
 """
 @author: editha.nemsic
-Correction strategies for the case law replacements. 
-Corrections are based on observed errors in citation formats. 
+Correction strategies for the case law replacements.
+Corrections are based on observed errors in citation formats.
 """
 
 
