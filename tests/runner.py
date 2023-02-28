@@ -2,8 +2,8 @@
 import unittest
 
 from abbreviation_extraction_tests.test_abbreviations import (
-    TestAbbrevationMatcher,
-    TestAbbrevationReplacer,
+    TestFilterMatches,
+    TestFindAbbreviation,
 )
 from caselaw_extraction_tests.test_case_citations import (
     TestCitationProcessor,
@@ -39,12 +39,10 @@ CitationProcessorSuite = unittest.TestLoader().loadTestsFromTestCase(
 CitationReplacerSuite = unittest.TestLoader().loadTestsFromTestCase(
     TestCitationReplacer
 )
-AbbreviationMatcher = unittest.TestLoader().loadTestsFromTestCase(
-    TestAbbrevationMatcher
+FindAbbreviationSuite = unittest.TestLoader().loadTestsFromTestCase(
+    TestFindAbbreviation
 )
-AbbreviationReplacer = unittest.TestLoader().loadTestsFromTestCase(
-    TestAbbrevationReplacer
-)
+FilterMatchesSuite = unittest.TestLoader().loadTestsFromTestCase(TestFilterMatches)
 LegislationProcessorSuite = unittest.TestLoader().loadTestsFromTestCase(
     TestLegislationProcessor
 )
@@ -59,12 +57,12 @@ GetReplacementsSuite = unittest.TestLoader().loadTestsFromTestCase(TestGetReplac
 
 suite = unittest.TestSuite(
     [
+        XMLParserSuite,
         CorrectionStrategySuite,
         CitationProcessorSuite,
         CitationReplacerSuite,
-        XMLParserSuite,
-        AbbreviationMatcher,
-        AbbreviationReplacer,
+        FindAbbreviationSuite,
+        FilterMatchesSuite,
         LegislationProcessorSuite,
         LegislationReplacerSuite,
         LegislationProvisionSuite,
