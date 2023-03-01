@@ -173,3 +173,12 @@ There are a number of places where enrichment can be turned off:
   - This will prevent any ingestion of the incoming messages which will build up
   - Anything currently in process will finish and will continue to run to completion
   - You can change the concurrency settings to unthrottle it
+  - Note that manual changes to the lambda settings will likely be lost if new code is deployed
+
+- Modifying the code
+
+  - We could change either the code in one of the lambdas -- probably `fetch_xml` or
+    `push_enriched_xml` for the start/end of the process
+  - Not entirely confident that the lambdas are being automatically deployed correctly at this time
+  - We could also modify the privileged API, but that potentially affect all users of it
+    but there aren't any at the time of writing
