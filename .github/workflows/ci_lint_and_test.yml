@@ -56,7 +56,7 @@ jobs:
         id: run_python_tests
         run: python tests/runner.py
 
-  tf_lint_and_plan-init:
+  tf_lint:
     runs-on: ubuntu-latest
 
     steps:
@@ -64,11 +64,6 @@ jobs:
         uses: actions/checkout@v3.1.0
         with:
           ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4.3.0
-        with:
-          python-version: 3.9
 
       - name: Install TFLint
         uses: terraform-linters/setup-tflint@v2.0.1
@@ -82,7 +77,29 @@ jobs:
           tflint --init
           tflint -f compact --loglevel warn
 
-  tf_lint_and_plan-staging:
+  tf_validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.2
+        continue-on-error: false
+
+      - name: TF Validate
+        id: run_tf_validate
+        run: |
+          set +e
+          set +o pipefail
+          terraform init -backend=false
+          terraform validate -no-color
+        continue-on-error: false
+
+  tf_plan-staging:
     runs-on: ubuntu-latest
 
     steps:
@@ -111,14 +128,6 @@ jobs:
           terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.STAGING_ACCOUNT_ID}}"
         continue-on-error: false
 
-      - name: TF Validate
-        id: run_tf_validate
-        run: |
-          set +e
-          set +o pipefail
-          terraform validate -no-color
-        continue-on-error: false
-
       - name: Terraform Plan Staging
         id: run_tf_plan_staging
         run: |
@@ -127,7 +136,7 @@ jobs:
           terraform workspace select tna-staging
           terraform plan -no-color -var "app_env=staging"
 
-  tf_lint_and_plan-prod:
+  tf_plan-prod:
     runs-on: ubuntu-latest
 
     steps:
