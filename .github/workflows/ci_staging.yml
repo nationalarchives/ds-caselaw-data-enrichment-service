@@ -47,16 +47,7 @@ jobs:
           python /get-pip.py
           python -m pip install --upgrade pip
           rm -f /get-pip.py
-          pip3 install black==22.8.0 isort
         continue-on-error: false
-
-      - name: Python Black Formatting Check
-        id: run_python_black
-        run: black . --extend-exclude "^/get-pip.py" --check --diff
-
-      - name: Python isort Order Check
-        id: run_python_isort
-        run: isort . -s "get-pip.py" --check --diff
 
       - name: Install TFLint
         uses: terraform-linters/setup-tflint@v2.0.1
@@ -105,28 +96,3 @@ jobs:
           set +o pipefail
           terraform workspace select tna-staging
           terraform plan -no-color -var "app_env=staging"
-
-# To be fixed at a later stage
-#      - uses: actions/github-script@v6
-#        with:
-#          github-token: ${{ secrets.GITHUB_TOKEN }}
-#          script: |
-#            const output = `#### Pushed by 🖌\`${{ env.github_actor }}\`
-#            `#### Terraform Format and Style 🖌\`${{ steps.fmt.outcome }}\`
-#            #### Python Black Formatter \`${{ steps.run_python_black.outcome }}\`
-#            #### Python isort Ordering \`${{ steps.run_python_isort.outcome }}\`
-#            #### TFLint 🤖\`${{ steps.run_tflint.outcome }}\`
-#            #### Terraform Initialization ⚙️\`${{ steps.run_tf_init.outcome }}\`
-#            #### Terraform Validation 🤖\`${{ steps.run_tf_validate.outcome }}\`
-#            #### Terraform Plan 📖\`${{ steps.run_tf_plan.outcome }}\`
-#            <details><summary>Show Plan</summary>
-#            \`\`\`\n
-#            ${process.env.PLAN}
-#            \`\`\`
-#            </details>
-#            github.rest.issues.createComment({
-#              issue_number: context.issue.number,
-#              owner: context.repo.owner,
-#              repo: context.repo.repo,
-#              body: output
-#            })

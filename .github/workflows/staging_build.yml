@@ -29,7 +29,6 @@ jobs:
           python /get-pip.py
           python -m pip install --upgrade pip
           rm -f /get-pip.py
-          pip3 install black isort
         continue-on-error: false
 
       - name: AWS Credentials
