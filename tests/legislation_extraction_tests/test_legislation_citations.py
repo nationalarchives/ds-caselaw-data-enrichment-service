@@ -1,15 +1,13 @@
 import sys
 import unittest
 
+import psycopg2
+import testing.postgresql
 from numpy import mat
 from spacy.lang.en import English
 
 sys.path.append("./")
-from database.db_connection import (
-    close_connection,
-    create_connection,
-    get_legtitles,
-)
+
 from legislation_extraction.legislation_matcher_hybrid import (
     detect_candidates,
     detect_year_span,
@@ -32,26 +30,61 @@ from replacer.replacer import replacer_leg
 """
 
 
-# creating a global set up to avoid duplicating
-# logic normally handled in main.py
-def set_up():
-    nlp = English()
-    nlp.max_length = 1500000
-    db_conn = create_connection("tna", "editha.nemsic", "", "localhost", 5432)
-    leg_titles = get_legtitles(db_conn)
-    return nlp, db_conn, leg_titles
-
-
-"""
-    This class focuses on testing the Citation Processor, which gathers the results from the DB. This class primarily uses the mock_return_citation method.
-    This includes testing incorrect or missing citations.
-    This is relevant for the logic performed in main.py
-"""
-
-
 class TestLegislationProcessor(unittest.TestCase):
     def setUp(self):
-        self.nlp, self.db_conn, self.leg_titles = set_up()
+        self.nlp = English()
+        self.nlp.max_length = 1500000
+        self.postgresql = testing.postgresql.Postgresql()
+        self.db_conn = psycopg2.connect(**self.postgresql.dsn())
+
+        sql_query = """
+        CREATE TABLE ukpga_lookup (
+            candidate_titles VARCHAR(100) NOT NULL,
+            ref VARCHAR(100) NOT NULL,
+            citation VARCHAR(100) NOT NULL,
+            year BIGINT NOT NULL,
+            for_fuzzy BOOLEAN NOT NULL
+        );
+        INSERT INTO ukpga_lookup (candidate_titles, ref, citation, year, for_fuzzy)
+        VALUES 
+            ('Adoption and Children Act 2002', 'http://www.legislation.gov.uk/ukpga/2002/38', 'citation_abc', 2002, true),
+            ('def', 'ref_def', 'citation_def', 2001, true),
+            ('ghi', 'ref_ghi', 'citation_ghi', 2002, false);
+        """
+
+        cursor = self.db_conn.cursor()
+        cursor.execute(sql_query)
+
+    def tearDown(self):
+        self.postgresql.stop()
+
+    def test_lookup_pipe(self):
+        text = "In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption Children Act 2002 requires the court, inter alia"
+        doc = self.nlp(text)
+        titles = ["Adoption and Children Act 2002", "Children and Families Act 2014"]
+        cutoff = 90
+        methods = {"exact": search_for_act, "hybrid": hybrid}
+        results = lookup_pipe(
+            titles, doc, self.nlp, methods["hybrid"], self.db_conn, cutoff
+        )
+        assert results == {
+            "Adoption and Children Act 2002": [
+                (
+                    "Adoption Children Act 2002",
+                    28,
+                    32,
+                    91,
+                    "http://www.legislation.gov.uk/ukpga/2002/38",
+                    "citation_abc",
+                )
+            ]
+        }
+
+
+class TestLegislationProcessorHelpers(unittest.TestCase):
+    def setUp(self):
+        self.nlp = English()
+        self.nlp.max_length = 1500000
 
     # Handling extra characters around the citations to ensure that spacy handles it well
     def test_detect_year_span(self):
@@ -128,69 +161,34 @@ class TestLegislationProcessor(unittest.TestCase):
         all_matches = hybrid(title, doc, self.nlp, cutoff, candidates)
         assert all_matches == [("Adoption Children Act 2002", 28, 32, 91)]
 
-    def test_lookup_pipe(self):
-        text = "In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption Children Act 2002 requires the court, inter alia"
-        doc = self.nlp(text)
-        titles = ["Adoption and Children Act 2002", "Children and Families Act 2014"]
-        cutoff = 90
-        methods = {"exact": search_for_act, "hybrid": hybrid}
-        results = lookup_pipe(
-            titles, doc, self.nlp, methods["hybrid"], self.db_conn, cutoff
-        )
-        assert results == {
-            "Adoption and Children Act 2002": [
-                (
-                    "Adoption Children Act 2002",
-                    28,
-                    32,
-                    91,
-                    "http://www.legislation.gov.uk/ukpga/2002/38",
-                )
-            ]
-        }
-
-    def tearDown(self):
-        close_connection(self.db_conn)
-
-
-"""
-    This class tests the replacement of the citations within the text itself. This comes from replacer.py
-"""
-
 
 class TestLegislationReplacer(unittest.TestCase):
-    def setUp(self):
-        self.nlp, self.db_conn, self.leg_titles = set_up()
+    """
+    This class tests the replacement of the citations within the text itself. This comes from replacer.py
+    """
 
     def test_citation_replacer(self):
         legislation_match = "Adoption and Children Act 2002"  # matched legislation
         href = "http://www.legislation.gov.uk/ukpga/2002/38"
         text = "In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption and Children Act 2002 requires the court, inter alia"
-        replacement_entry = (legislation_match, href)
+        canonical = "foo"
+        replacement_entry = (legislation_match, href, canonical)
         replaced_entry = replacer_leg(text, replacement_entry)
         assert legislation_match in replaced_entry
-        replacement_string = '<ref type="legislation" href="{}">{}</ref>'.format(
-            href, legislation_match
-        )
-        print(replaced_entry)
-        print(replacement_string)
+        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2002/38" uk:canonical="foo" uk:origin="TNA">Adoption and Children Act 2002</ref>'
         assert replacement_string in replaced_entry
 
         legislation_match = "Children and Families Act 2014"  # matched legislation
         href = "http://www.legislation.gov.uk/ukpga/2014/6/enacted"
         text = "In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014."
-        replacement_entry = (legislation_match, href)
+        canonical = "bar"
+        replacement_entry = (legislation_match, href, canonical)
         replaced_entry = replacer_leg(text, replacement_entry)
         assert legislation_match in replaced_entry
-        replacement_string = '<ref type="legislation" href="{}">{}</ref>'.format(
+        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'.format(
             href, legislation_match
         )
-        print(replaced_entry)
-        print(replacement_string)
         assert replacement_string in replaced_entry
-
-    def tearDown(self):
-        close_connection(self.db_conn)
 
 
 if __name__ == "__main__":

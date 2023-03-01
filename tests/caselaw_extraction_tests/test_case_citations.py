@@ -1,22 +1,23 @@
-import sys
-import unittest
-
-from spacy.lang.en import English
-
-sys.path.append("./")
-from caselaw_extraction.correction_strategies import apply_correction_strategy
-from database.db_connection import (
-    close_connection,
-    create_connection,
-    get_matched_rule,
-)
-from replacer.replacer import replacer_caselaw
-from utils.helper import load_patterns
-
 """
     Testing the matching of the citations based on the data found in the rules.
     These are independent unit tests.
 """
+
+import sys
+import unittest
+
+import pandas as pd
+import psycopg2
+import testing.postgresql
+from spacy.lang.en import English
+from sqlalchemy import create_engine
+
+sys.path.append("./")
+
+from caselaw_extraction.correction_strategies import apply_correction_strategy
+from database.db_connection import get_matched_rule
+from replacer.replacer import replacer_caselaw
+from utils.helper import load_patterns
 
 CORRECT_CITATIONS = [
     "random text goes here random text goes here **[2022] UKUT 177 (TCC)",
@@ -82,28 +83,27 @@ def mock_get_rules_total(db_conn):
     return number_of_rules
 
 
-# creating a global set up to avoid duplicating
-# logic normally handled in main.py
-def set_up():
-    nlp = English()
-    nlp.max_length = 1500000
-    nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
-    # TODO: change this to a mock db?
-    db_conn = create_connection("tna", "editha.nemsic", "", "localhost", 5432)
-    load_patterns(db_conn)
-    return nlp, db_conn
-
-
-"""
+class TestCitationProcessor(unittest.TestCase):
+    """
     This class focuses on testing the Citation Processor, which gathers the results from the DB. This class primarily uses the mock_return_citation method.
     This includes testing incorrect or missing citations.
     This is relevant for the logic performed in main.py
-"""
+    """
 
-
-class TestCitationProcessor(unittest.TestCase):
     def setUp(self):
-        self.nlp, self.db_conn = set_up()
+        self.nlp = English()
+        self.nlp.max_length = 1500000
+        self.nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
+
+        self.postgresql = testing.postgresql.Postgresql()
+        self.db_conn = psycopg2.connect(**self.postgresql.dsn())
+        engine = create_engine(self.postgresql.url())
+
+        manifest_df = pd.read_csv("rules/2022_04_08_Citation_Manifest.csv")
+        manifest_df.to_sql("manifest", engine, if_exists="append", index=False)
+
+    def tearDown(self):
+        self.postgresql.stop()
 
     # Handling extra characters around the citations to ensure that spacy handles it well
     def test_citation_matching(self):
@@ -232,22 +232,8 @@ class TestCitationProcessor(unittest.TestCase):
             ) = mock_return_citation(self.nlp, text, self.db_conn)
             assert is_canonical != True and is_canonical != False
 
-    def tearDown(self):
-        close_connection(self.db_conn)
-
-
-"""
-    This class focuses on testing the Citation Matcher, which includes verifying that correct citations are matched to ensure that the
-    DB is behaving as expected.
-    This also verifies that the year and numbers are extracted correctly is extracted from the citation as expected, this is relevant for
-    correct_strategies.py
-"""
-
 
 class TestCorrectionStrategy(unittest.TestCase):
-    def setUp(self):
-        self.nlp, self.db_conn = set_up()
-
     def test_correct_forms(self):
         citation_match = "1 ExD 123"
         citation_type = "PubNumAbbrNum"
@@ -256,7 +242,7 @@ class TestCorrectionStrategy(unittest.TestCase):
             citation_type, citation_match, canonical_form
         )
         assert corrected_citation == citation_match
-        assert year == "No Year"
+        assert year == ""
 
         citation_match = "[2025] EWHC 123 (TCC)"
         citation_type = "NCitYearAbbrNumDiv"
@@ -292,7 +278,7 @@ class TestCorrectionStrategy(unittest.TestCase):
             citation_type, citation_match, canonical_form
         )
         assert corrected_citation == citation_match
-        assert year == "No Year"
+        assert year == ""
 
     def test_incorrect_forms(self):
         citation_match = "[2022] P.N.L.R 123"
@@ -345,18 +331,11 @@ class TestCorrectionStrategy(unittest.TestCase):
         assert corrected_citation == "[2019] QB 456"
         assert year == "2019"
 
-    def tearDown(self):
-        close_connection(self.db_conn)
-
-
-"""
-    This class tests the replacement of the citations within the text itself. This comes from replacer.py
-"""
-
 
 class TestCitationReplacer(unittest.TestCase):
-    def setUp(self):
-        self.nlp, self.db_conn = set_up()
+    """
+    This class tests the replacement of the citations within the text itself. This comes from replacer.py
+    """
 
     def test_citation_replacer(self):
         citation_match = "[2025] 1 All E.R. 123"  # incorrect citation
@@ -370,11 +349,9 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref type="case" href="{}" isNeutral="{}" canonical="{}" year="{}">{}</ref>'.format(
+        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
             URI, is_neutral, corrected_citation, year, citation_match
         )
-        print(replaced_entry)
-        print(replacement_string)
         assert replacement_string in replaced_entry
 
         citation_match = "[2022] UKET 789123_2012"
@@ -386,7 +363,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref type="case" href="{}" isNeutral="{}" canonical="{}" year="{}">{}</ref>'.format(
+        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
             URI, is_neutral, corrected_citation, year, citation_match
         )
         assert replacement_string in replaced_entry
@@ -400,7 +377,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref type="case" href="{}" isNeutral="{}" canonical="{}" year="{}">{}</ref>'.format(
+        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
             URI, is_neutral, corrected_citation, year, citation_match
         )
         assert replacement_string in replaced_entry
@@ -414,7 +391,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref type="case" href="{}" isNeutral="{}" canonical="{}" year="{}">{}</ref>'.format(
+        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
             URI, is_neutral, corrected_citation, year, citation_match
         )
         assert replacement_string in replaced_entry
@@ -428,13 +405,10 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref type="case" href="{}" isNeutral="{}" canonical="{}" year="{}">{}</ref>'.format(
+        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
             URI, is_neutral, corrected_citation, year, citation_match
         )
         assert replacement_string in replaced_entry
-
-    def tearDown(self):
-        close_connection(self.db_conn)
 
 
 if __name__ == "__main__":
