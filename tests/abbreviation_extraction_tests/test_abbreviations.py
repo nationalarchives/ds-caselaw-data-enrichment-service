@@ -25,6 +25,7 @@ from replacer.replacer import replacer_abbr
 def create_abbreviation_detector(nlp, name: str):
     return AbbreviationDetector(nlp)
 
+
 class TestFindAbbreviation(unittest.TestCase):
     """Unit Tests for `find_abbreviation`"""
 
