@@ -1,4 +1,4 @@
-name: Lint and test (Source code)
+name: CI
 
 on:
   pull_request:
@@ -11,7 +11,6 @@ on:
     branches:
       - main
 
-      
 permissions:
   pull-requests: write
   id-token: write
@@ -23,7 +22,7 @@ defaults:
     shell: bash
 
 jobs:
-  lint_and_test:
+  source_lint_and_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -56,3 +55,111 @@ jobs:
       - name: Run python tests
         id: run_python_tests
         run: python tests/runner.py
+
+  tf_lint_and_plan-init:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4.3.0
+        with:
+          python-version: 3.9
+
+      - name: Install TFLint
+        uses: terraform-linters/setup-tflint@v2.0.1
+        with:
+          tflint_version: v0.38.1
+        continue-on-error: false
+
+      - name: Run TFLint
+        id: run_tflint
+        run: |
+          tflint --init
+          tflint -f compact --loglevel warn
+
+  tf_lint_and_plan-staging:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.2
+        continue-on-error: false
+
+      - name: Get Staging AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1.7.0
+        with:
+          aws-region: eu-west-2
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        continue-on-error: false
+
+      - name: Terraform init Staging
+        id: run_tf_init_staging
+        run: |
+          set +e
+          set +o pipefail
+          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.STAGING_ACCOUNT_ID}}"
+        continue-on-error: false
+
+      - name: TF Validate
+        id: run_tf_validate
+        run: |
+          set +e
+          set +o pipefail
+          terraform validate -no-color
+        continue-on-error: false
+
+      - name: Terraform Plan Staging
+        id: run_tf_plan_staging
+        run: |
+          set +e
+          set +o pipefail
+          terraform workspace select tna-staging
+          terraform plan -no-color -var "app_env=staging"
+
+  tf_lint_and_plan-prod:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.2
+        continue-on-error: false
+
+      - name: Get Production AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1.7.0
+        with:
+          aws-region: eu-west-2
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
+        continue-on-error: false
+
+      - name: Terraform init Prod
+        id: run_tf_init_prod
+        run: |
+          set +e
+          set +o pipefail
+          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.PROD_ACCOUNT_ID}}"
+        continue-on-error: false
+
+      - name: Terraform Plan Prod
+        id: run_tf_plan_prod
+        run: |
+          set +e
+          set +o pipefail
+          terraform workspace select tna-prod
+          terraform plan -no-color -var "app_env=production"
