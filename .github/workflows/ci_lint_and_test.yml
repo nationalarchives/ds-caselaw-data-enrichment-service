@@ -1,0 +1,58 @@
+name: Lint and test (Source code)
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+  push:
+    branches:
+      - main
+
+      
+permissions:
+  pull-requests: write
+  id-token: write
+  contents: read
+  issues: write
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lint_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4.3.0
+        with:
+          python-version: 3.9
+
+      - name: pip install formatting dependencies
+        run: |
+          pip3 install black==22.8.0 isort
+
+      - name: Python Black Formatting Check
+        id: run_python_black
+        run: black . --extend-exclude "^/get-pip.py" --check --diff
+
+      - name: Python isort Order Check
+        id: run_python_isort
+        run: isort . -s "get-pip.py" --check --diff
+
+      - name: pip install tests dependencies
+        run: |
+          pip3 install -r tests/requirements.txt
+
+      - name: Run python tests
+        id: run_python_tests
+        run: python tests/runner.py

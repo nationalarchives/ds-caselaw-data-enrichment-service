@@ -15,23 +15,6 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: Install pip
-        run: |
-          set +e
-          set +o pipefail
-          apt-get update && apt-get -y upgrade
-          apt-get install -y wget software-properties-common
-          add-apt-repository ppa:deadsnakes/ppa
-          apt-get install -y python3-distutils python3.9
-          apt-get purge python-pip
-          ln -sf python3 /usr/bin/python
-          wget -q https://bootstrap.pypa.io/get-pip.py
-          python /get-pip.py
-          python -m pip install --upgrade pip
-          rm -f /get-pip.py
-          pip3 install black isort
-        continue-on-error: false
-
       - name: AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1.7.0
         with:
