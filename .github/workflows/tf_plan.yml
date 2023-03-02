@@ -1,0 +1,53 @@
+name: tf_plan
+
+on:
+  workflow_call:
+    secrets:
+      aws_access_key_id:
+        required: true
+      aws_secret_access_key:
+        required: true
+      account_id:
+        required: true
+      workspace:
+        required: true
+      app_env:
+        required: true
+
+jobs:
+  tf_plan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.2
+        continue-on-error: false
+
+      - name: Get AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1.7.0
+        with:
+          aws-region: eu-west-2
+          aws-access-key-id: ${{ secrets.aws_access_key_id }}
+          aws-secret-access-key: ${{ secrets.aws_secret_access_key }}
+        continue-on-error: false
+
+      - name: Terraform init
+        id: run_tf_init
+        run: |
+          set +e
+          set +o pipefail
+          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.account_id }}"
+        continue-on-error: false
+
+      - name: Terraform Plan
+        id: run_tf_plan
+        run: |
+          set +e
+          set +o pipefail
+          terraform workspace select ${{ secrets.workspace }}
+          terraform plan -no-color -var "app_env=${{ secrets.app_env }}"
