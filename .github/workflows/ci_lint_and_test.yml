@@ -1,4 +1,4 @@
-name: Lint and test (Source code)
+name: ci_lint_and_test
 
 on:
   pull_request:
@@ -11,7 +11,6 @@ on:
     branches:
       - main
 
-      
 permissions:
   pull-requests: write
   id-token: write
@@ -23,7 +22,7 @@ defaults:
     shell: bash
 
 jobs:
-  lint_and_test:
+  source_lint_and_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -56,3 +55,64 @@ jobs:
       - name: Run python tests
         id: run_python_tests
         run: python tests/runner.py
+
+  terraform_lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Install TFLint
+        uses: terraform-linters/setup-tflint@v2.0.1
+        with:
+          tflint_version: v0.38.1
+        continue-on-error: false
+
+      - name: Run TFLint
+        id: run_tflint
+        run: |
+          tflint --init
+          tflint -f compact --loglevel warn
+
+  terraform_validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3.1.0
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.3
+        continue-on-error: false
+
+      - name: Run Terraform Validate
+        id: run_terraform_validate
+        run: |
+          set +e
+          set +o pipefail
+          terraform init -backend=false
+          terraform validate -no-color
+        continue-on-error: false
+
+  terraform_plan-staging:
+    uses: ./.github/workflows/terraform_plan.yml
+    secrets:
+      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
+      workspace: tna-staging
+      app_env: staging
+
+  terraform_plan-production:
+    uses: ./.github/workflows/terraform_plan.yml
+    secrets:
+      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
+      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
+      account_id: ${{ secrets.PROD_ACCOUNT_ID }}
+      workspace: tna-prod
+      app_env: production

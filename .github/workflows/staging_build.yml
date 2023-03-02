@@ -16,7 +16,7 @@ jobs:
           python-version: 3.9
 
       - name: AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1.7.0
+        uses: aws-actions/configure-aws-credentials@v1-node16
         with:
           aws-region: eu-west-2
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
@@ -68,7 +68,7 @@ jobs:
           cp -r replacer/*.py lambda/make_replacements/replacer/
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2.0.2
+        uses: hashicorp/setup-terraform@v2.0.3
         continue-on-error: false
 
       - name: Terraform init

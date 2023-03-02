@@ -68,7 +68,7 @@ jobs:
           cp -r replacer/*.py lambda/make_replacements/replacer/
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2.0.2
+        uses: hashicorp/setup-terraform@v2.0.3
         continue-on-error: false
 
       - name: Terraform init
