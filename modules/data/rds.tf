@@ -5,7 +5,7 @@ module "metadata-db" {
   name = "${local.name}-metadata-db-${local.environment}"
 
   engine         = "aurora-postgresql"
-  engine_version = "11.13"
+  engine_version = "13"
   instance_type  = "db.t3.medium"
 
   vpc_id                = var.vpc_id
