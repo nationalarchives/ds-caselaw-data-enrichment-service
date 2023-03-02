@@ -1,4 +1,4 @@
-name: tf_plan
+name: terraform_plan
 
 on:
   workflow_call:
@@ -15,7 +15,7 @@ on:
         required: true
 
 jobs:
-  tf_plan:
+  terraform_plan:
     runs-on: ubuntu-latest
 
     steps:
@@ -37,7 +37,7 @@ jobs:
         continue-on-error: false
 
       - name: Terraform init
-        id: run_tf_init
+        id: run_terraform_init
         run: |
           set +e
           set +o pipefail
@@ -45,7 +45,7 @@ jobs:
         continue-on-error: false
 
       - name: Terraform Plan
-        id: run_tf_plan
+        id: run_terraform_plan
         run: |
           set +e
           set +o pipefail
