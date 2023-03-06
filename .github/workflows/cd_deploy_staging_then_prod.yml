@@ -1,4 +1,4 @@
-name: Apply Staging then Prod
+name: Deploy to Staging then Prod
 
 on:
   push:
@@ -16,8 +16,8 @@ defaults:
 
 jobs:
   staging_apply:
-    name: Apply Staging Build
-    uses: ./.github/workflows/build.yml
+    name: Deploy Staging Build
+    uses: ./.github/workflows/deploy_single_environment.yml
     secrets:
       account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
       workspace: tna-staging
@@ -25,8 +25,8 @@ jobs:
 
 
   prod_apply:
-    name: Apply Production Build
-    uses: ./.github/workflows/build.yml
+    name: Deploy Production Build
+    uses: ./.github/workflows/deploy_single_environment.yml
     needs: staging_apply
     secrets:
       account_id: ${{ secrets.PROD_ACCOUNT_ID }}
