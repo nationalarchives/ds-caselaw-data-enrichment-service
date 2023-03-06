@@ -1,0 +1,34 @@
+name: Apply Staging then Prod
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  pull-requests: read
+  id-token: write
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  staging_apply:
+    name: Apply Staging Build
+    uses: ./.github/workflows/build.yml
+    secrets:
+      account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
+      workspace: tna-staging
+      app_env: staging
+
+
+  prod_apply:
+    name: Apply Production Build
+    uses: ./.github/workflows/build.yml
+    needs: staging_apply
+    secrets:
+      account_id: ${{ secrets.PROD_ACCOUNT_ID }}
+      workspace: tna-prod
+      app_env: production
