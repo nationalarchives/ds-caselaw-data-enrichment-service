@@ -1,6 +1,10 @@
 on:
   workflow_call:
     secrets:
+      aws_access_key_id:
+        required: true
+      aws_secret_access_key:
+        required: true
       account_id:
         required: true
       workspace:
@@ -22,12 +26,12 @@ jobs:
         with:
           python-version: 3.9
 
-      - name: AWS Credentials
+      - name: Get AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1-node16
         with:
           aws-region: eu-west-2
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-access-key-id: ${{ secrets.aws_access_key_id }}
+          aws-secret-access-key: ${{ secrets.aws_secret_access_key }}
         continue-on-error: false
 
       - name: Buildx
