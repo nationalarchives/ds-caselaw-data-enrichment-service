@@ -15,20 +15,24 @@ defaults:
     shell: bash
 
 jobs:
-  staging_apply:
+  deploy_staging:
     name: Deploy Staging Build
     uses: ./.github/workflows/deploy_single_environment.yml
     secrets:
+      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
       workspace: tna-staging
       app_env: staging
 
 
-  prod_apply:
+  deploy_production:
     name: Deploy Production Build
     uses: ./.github/workflows/deploy_single_environment.yml
-    needs: staging_apply
+    needs: deploy_staging
     secrets:
+      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
+      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
       account_id: ${{ secrets.PROD_ACCOUNT_ID }}
       workspace: tna-prod
       app_env: production
