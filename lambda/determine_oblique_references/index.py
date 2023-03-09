@@ -64,8 +64,6 @@ def process_event(sqs_rec):
     upload_contents(source_key, enriched_content)
 
 
-
-
 def handler(event, context):
     """
     Function called by the lambda to run the process event
