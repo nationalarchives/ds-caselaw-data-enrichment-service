@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 
-import csv
 import logging
 import os
-import re
 import urllib.parse
 
 import boto3
-from bs4 import BeautifulSoup
 
-from oblique_references.oblique_references import oblique_pipeline
-from replacer.second_stage_replacer import oblique_replacement
+from oblique_references.enrich_oblique_references import (
+    enrich_oblique_references,
+)
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -61,19 +59,9 @@ def process_event(sqs_rec):
         .decode("utf-8")
     )
 
-    # split file_content into header and judgment to ensure replacements only occur in judgment body
-    judgment_split = re.split("(</header>)", file_content)
+    enriched_content = enrich_oblique_references(file_content)
 
-    resolved_refs = oblique_pipeline(judgment_split[2])
-
-    if resolved_refs:
-        output_file_data = oblique_replacement(judgment_split[2], resolved_refs)
-        # combine header with replaced text content before uploading to enriched bucket
-        judgment_split[2] = output_file_data
-        full_replaced_text_content = "".join(judgment_split)
-        upload_contents(source_key, full_replaced_text_content)
-    else:
-        upload_contents(source_key, file_content)
+    upload_contents(source_key, enriched_content)
 
 
 
