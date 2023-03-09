@@ -182,3 +182,32 @@ There are a number of places where enrichment can be turned off:
   - Not entirely confident that the lambdas are being automatically deployed correctly at this time
   - We could also modify the privileged API, but that potentially affect all users of it
     but there aren't any at the time of writing
+
+## 10 Running Locally
+
+- `docker-compose up -d` brings up a localstack container
+- `awslocal s3api create-bucket --bucket walrus --region eu-west-2 --create-bucket-configuration "{\"LocationConstraint\": \"eu-west-2\"}"` creates a bucket named `walrus`
+- `tflocal init -reconfigure`, enter your bucket name (walrus)
+- `scripts/make_fake_secrets`
+- `tflocal apply`
+
+│   on modules/data/data.tf line 18, in data "aws_subnet" "public":
+│   18:   for_each = toset(data.aws_subnets.public.ids)
+│     ├────────────────
+│     │ data.aws_subnets.public.ids is a list of string, known only after apply
+
+│   on modules/data/data.tf line 35, in data "aws_subnet" "private":
+│   35:   for_each = toset(data.aws_subnets.private.ids)
+│     ├────────────────
+│     │ data.aws_subnets.private.ids is a list of string, known only after apply
+
+│   on modules/data/data.tf line 52, in data "aws_subnet" "database":
+│   52:   for_each = toset(data.aws_subnets.database.ids)
+│     ├────────────────
+│     │ data.aws_subnets.database.ids is a list of string, known only after apply
+
+╷
+│ Error: Invalid count argument
+│
+│   on .terraform/modules/lambda_s3.vcite_enriched_bucket.this/main.tf line 366, in data "aws_iam_policy_document" "deny_insecure_transport":
+│  366:   count = local.create_bucket && var.attach_deny_insecure_transport_policy ? 1 : 0
