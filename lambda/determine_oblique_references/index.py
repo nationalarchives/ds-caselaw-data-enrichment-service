@@ -1,16 +1,14 @@
 #!/usr/bin/env python3
 
-import csv
 import logging
 import os
-import re
 import urllib.parse
 
 import boto3
-from bs4 import BeautifulSoup
 
-from oblique_references.oblique_references import oblique_pipeline
-from replacer.second_stage_replacer import oblique_replacement
+from oblique_references.enrich_oblique_references import (
+    enrich_oblique_references,
+)
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -35,10 +33,10 @@ def upload_contents(source_key, output_file_content):
     Upload enriched file to S3 bucket
     """
     filename = source_key
-
-    LOGGER.info("Uploading enriched file to %s/%s", DEST_BUCKET, filename)
+    destination_bucket = validate_env_variable("DEST_BUCKET")
+    LOGGER.info("Uploading enriched file to %s/%s", destination_bucket, filename)
     s3 = boto3.resource("s3")
-    object = s3.Object(DEST_BUCKET, filename)
+    object = s3.Object(destination_bucket, filename)
     object.put(Body=output_file_content)
 
 
@@ -61,22 +59,9 @@ def process_event(sqs_rec):
         .decode("utf-8")
     )
 
-    # split file_content into header and judgment to ensure replacements only occur in judgment body
-    judgment_split = re.split("(</header>)", file_content)
+    enriched_content = enrich_oblique_references(file_content)
 
-    resolved_refs = oblique_pipeline(judgment_split[2])
-
-    if resolved_refs:
-        output_file_data = oblique_replacement(judgment_split[2], resolved_refs)
-        # combine header with replaced text content before uploading to enriched bucket
-        judgment_split[2] = output_file_data
-        full_replaced_text_content = "".join(judgment_split)
-        upload_contents(source_key, full_replaced_text_content)
-    else:
-        upload_contents(source_key, file_content)
-
-
-DEST_BUCKET = validate_env_variable("DEST_BUCKET")
+    upload_contents(source_key, enriched_content)
 
 
 def handler(event, context):
