@@ -35,10 +35,10 @@ def upload_contents(source_key, output_file_content):
     Upload enriched file to S3 bucket
     """
     filename = source_key
-
-    LOGGER.info("Uploading enriched file to %s/%s", DEST_BUCKET, filename)
+    destination_bucket = validate_env_variable("DEST_BUCKET")
+    LOGGER.info("Uploading enriched file to %s/%s", destination_bucket, filename)
     s3 = boto3.resource("s3")
-    object = s3.Object(DEST_BUCKET, filename)
+    object = s3.Object(destination_bucket, filename)
     object.put(Body=output_file_content)
 
 
@@ -76,7 +76,6 @@ def process_event(sqs_rec):
         upload_contents(source_key, file_content)
 
 
-DEST_BUCKET = validate_env_variable("DEST_BUCKET")
 
 
 def handler(event, context):
