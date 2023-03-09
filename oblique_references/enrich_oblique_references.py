@@ -21,11 +21,12 @@ def enrich_oblique_references(file_content: str) -> str:
 
     resolved_refs = oblique_pipeline(judgment_split[2])
 
-    if not resolved_refs:
-        return []
+    if resolved_refs:
+        output_file_data = oblique_replacement(judgment_split[2], resolved_refs)
+        # combine header with replaced text content before uploading to enriched bucket
+        judgment_split[2] = output_file_data
+        full_replaced_text_content = "".join(judgment_split)
+    else:
+        full_replaced_text_content = file_content
 
-    output_file_data = oblique_replacement(judgment_split[2], resolved_refs)
-    # combine header with replaced text content before uploading to enriched bucket
-    judgment_split[2] = output_file_data
-
-    return "".join(judgment_split)
+    return full_replaced_text_content
