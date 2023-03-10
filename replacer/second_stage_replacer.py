@@ -85,16 +85,3 @@ def replace_references_by_paragraph(
         replacement_paragraph = BeautifulSoup(replacement_paragraph_string, "lxml").p
         paragraphs[paragraph_number].replace_with(replacement_paragraph)
     return str(file_data)
-
-
-def oblique_replacement(
-    file_data: str, reference_replacements: LegislationReferenceReplacements
-) -> str:
-    """
-    Replaces references in the file_data xml
-    :param file_data: XML file
-    :param replacements: list of dict of resolved oblique refs
-    :return: enriched XML file data
-    """
-    enriched_text = replace_references(file_data, reference_replacements)
-    return enriched_text

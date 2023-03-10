@@ -72,35 +72,80 @@ class TestGetReplacements(unittest.TestCase):
 
     legislation_dicts = [
         {
-            "pos": (4670, 4814),
+            "para_pos": (4670, 4814),
+            "para": 1,
             "detected_leg": "Homicide Act 1957",
             "href": "http://www.legislation.gov.uk/id/ukpga/Eliz2/5-6/11",
             "canonical": "1957 (5  6 Eliz. 2) c. 11",
             "year": "1957",
         },
         {
-            "pos": (33697, 33828),
+            "para_pos": (33697, 33828),
+            "para": 1,
             "detected_leg": "Criminal Appeal Act 1968",
             "href": "http://www.legislation.gov.uk/id/ukpga/1968/19",
             "canonical": "1968 c. 19",
             "year": "1968",
         },
         {
-            "pos": (54039, 54191),
+            "para_pos": (54039, 54191),
+            "para": 1,
             "detected_leg": "Powers of Criminal Courts (Sentencing) Act 2000",
             "href": "http://www.legislation.gov.uk/id/ukpga/2000/6",
             "canonical": "2000 c. 6",
             "year": "2000",
         },
         {
-            "pos": (58974, 59106),
+            "para_pos": (58974, 59106),
+            "para": 1,
             "detected_leg": "Criminal Justice Act 1991",
             "href": "http://www.legislation.gov.uk/id/ukpga/1991/53",
             "canonical": "1991 c. 53",
             "year": "1991",
         },
         {
-            "pos": (61932, 62065),
+            "para_pos": (61932, 62065),
+            "para": 1,
+            "detected_leg": "Crime (Sentences) Act 1997",
+            "href": "http://www.legislation.gov.uk/id/ukpga/1997/43",
+            "canonical": "1997 c. 43",
+            "year": "1997",
+        },
+        {
+            "para_pos": (4670, 4814),
+            "para": 2,
+            "detected_leg": "Homicide Act 1957",
+            "href": "http://www.legislation.gov.uk/id/ukpga/Eliz2/5-6/11",
+            "canonical": "1957 (5  6 Eliz. 2) c. 11",
+            "year": "1957",
+        },
+        {
+            "para_pos": (33697, 33828),
+            "para": 2,
+            "detected_leg": "Criminal Appeal Act 1968",
+            "href": "http://www.legislation.gov.uk/id/ukpga/1968/19",
+            "canonical": "1968 c. 19",
+            "year": "1968",
+        },
+        {
+            "para_pos": (54039, 54191),
+            "para": 2,
+            "detected_leg": "Powers of Criminal Courts (Sentencing) Act 2000",
+            "href": "http://www.legislation.gov.uk/id/ukpga/2000/6",
+            "canonical": "2000 c. 6",
+            "year": "2000",
+        },
+        {
+            "para_pos": (58974, 59106),
+            "para": 2,
+            "detected_leg": "Criminal Justice Act 1991",
+            "href": "http://www.legislation.gov.uk/id/ukpga/1991/53",
+            "canonical": "1991 c. 53",
+            "year": "1991",
+        },
+        {
+            "para_pos": (61932, 62065),
+            "para": 2,
             "detected_leg": "Crime (Sentences) Act 1997",
             "href": "http://www.legislation.gov.uk/id/ukpga/1997/43",
             "canonical": "1997 c. 43",
@@ -113,10 +158,11 @@ class TestGetReplacements(unittest.TestCase):
         Given lists of detected_acts with only unnumbered acts,
             and legislation_dicts
             and numbered_act is False
+            and a paragraph_number
         When `get_replacements` is called with these
         Then a list of dicts containing act information is returned
             with one entry for each of the references to an act already
-            defined by the time they were referenced
+            defined by the time they were referenced in that paragraph
         """
         detected_acts = [
             ((39069, 39076), "the Act"),
@@ -125,19 +171,23 @@ class TestGetReplacements(unittest.TestCase):
         numbered_act = False
         replacements = []
 
+        paragraph_number = 2
+
         replacements = get_replacements(
-            detected_acts, self.legislation_dicts, numbered_act, replacements
+            detected_acts, self.legislation_dicts, numbered_act, replacements, paragraph_number
         )
 
         expected_replacements = [
             {
                 "detected_ref": "the Act",
                 "ref_position": 39069,
+                "ref_para": 2,
                 "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19" uk:type="legislation" uk:origin="TNA">the Act</ref>',
             },
             {
                 "detected_ref": "this Act",
                 "ref_position": 480464,
+                "ref_para": 2,
                 "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1997/43" uk:canonical="1997 c. 43" uk:type="legislation" uk:origin="TNA">this Act</ref>',
             },
         ]
@@ -148,10 +198,11 @@ class TestGetReplacements(unittest.TestCase):
         Given lists of detected_acts with only numbered acts,
             and legislation_dicts
             and numbered_act is True
+            and a paragraph_number
         When `get_replacements` is called with these
         Then a list of dicts containing act information is returned
             with one entry for each of the references to a numbered act
-            already defined by the time they were referenced
+            already defined by the time they were referenced in that paragraph
         """
         detected_acts = [
             ((60093, 60105), "the 2000 Act"),
@@ -160,19 +211,23 @@ class TestGetReplacements(unittest.TestCase):
         numbered_act = True
         replacements = []
 
+        paragraph_number = 2
+
         replacements = get_replacements(
-            detected_acts, self.legislation_dicts, numbered_act, replacements
+            detected_acts, self.legislation_dicts, numbered_act, replacements, paragraph_number
         )
 
         expected_replacements = [
             {
                 "detected_ref": "the 2000 Act",
                 "ref_position": 60093,
+                "ref_para": 2,
                 "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2000/6" uk:canonical="2000 c. 6" uk:type="legislation" uk:origin="TNA">the 2000 Act</ref>',
             },
             {
                 "detected_ref": "the 2000 Act",
                 "ref_position": 560093,
+                "ref_para": 2,
                 "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2000/6" uk:canonical="2000 c. 6" uk:type="legislation" uk:origin="TNA">the 2000 Act</ref>',
             },
         ]

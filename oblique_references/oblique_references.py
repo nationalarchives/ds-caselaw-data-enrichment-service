@@ -20,7 +20,7 @@ The pipeline returns a dictionary containing the detected oblique reference, its
 """
 
 import re
-from typing import Any, Dict, List, Optional, Tuple, Union
+from typing import Any, Dict, List, Tuple, Union
 
 from bs4 import BeautifulSoup
 
@@ -47,12 +47,13 @@ def detect_reference(text: str, etype: str) -> List[DetectedReference]:
 
 
 def create_legislation_dict(
-    legislation_references: List[DetectedReference],
+    legislation_references: List[DetectedReference], paragraph_number: int
 ) -> List[Dict[str, Any]]:
     """
     Create a dictionary containing metadata of the detected 'legislation' reference
-    :param leg_references: list of legislation references found in the judgment and
-        their location
+    :param legislation_references: list of legislation references found in the judgment
+        and their location
+    :param paragraph_number: paragraph number the legislation reference was found in
     :returns: list of legislation dictionaries
     """
     legislation_dicts = []
@@ -63,13 +64,13 @@ def create_legislation_dict(
         ref = soup.ref
         if not ref:
             continue
-        leg_name = ref.text if not None else ""
-
-        legislation_dict["pos"] = legislation_reference[0]
-        legislation_dict["detected_leg"] = leg_name
+        legislation_name = ref.text if not None else ""
+        legislation_dict["para"] = paragraph_number
+        legislation_dict["para_pos"] = legislation_reference[0]
+        legislation_dict["detected_leg"] = legislation_name
         legislation_dict["href"] = ref["href"]
         legislation_dict["canonical"] = ref.get("canonical")
-        legislation_dict["year"] = _get_legislation_year(leg_name)
+        legislation_dict["year"] = _get_legislation_year(legislation_name)
 
         legislation_dicts.append(legislation_dict)
 
@@ -109,32 +110,44 @@ def match_numbered_act(
 
 
 def match_act(
-    detected_act: DetectedReference, legislation_dicts: List[LegislationDict]
+    oblique_act: DetectedReference,
+    legislation_dicts: List[LegislationDict],
+    paragraph_number: int,
 ) -> LegislationDict:
     """
     Match oblique references without a year
     :param detected_act: detected oblique reference
     :param legislation_dicts: list of legislation dictionaries
+    :param paragraph_number: paragraph number the legislation reference was found in
     :returns: matched legislation dictionary
     """
-    eligble_references = []
-    act_pos = detected_act[0][0]
-    for leg_dict in legislation_dicts:
-        if leg_dict["pos"][0] < act_pos:
-            eligble_references.append(leg_dict)
+    oblique_act_para_pos = oblique_act[0][0]
+    eligible_legislation = [
+        leg_dict
+        for leg_dict in legislation_dicts
+        if (
+            leg_dict["para"] < paragraph_number
+            or (
+                leg_dict["para"] == paragraph_number
+                and leg_dict["para_pos"][0] < oblique_act_para_pos
+            )
+        )
+    ]
 
-    positions = []
-    for eligble_ref in eligble_references:
-        positions.append(eligble_ref["pos"][0])
-    if positions:
-        correct_pos = max(positions)
-        correct_ref = [
-            ref for ref in eligble_references if ref["pos"][0] == correct_pos
-        ][0]
-    else:
-        correct_ref = {}
+    if not eligible_legislation:
+        return {}
 
-    return correct_ref
+    legislation_to_match = eligible_legislation[-1]
+    legislation_to_match_position = legislation_to_match["para_pos"][0]
+
+    # TODO: filter because we could have multiple??? is this true or unneeded?
+    matched_act = [
+        legislation
+        for legislation in eligible_legislation
+        if legislation["para_pos"][0] == legislation_to_match_position
+    ][0]
+
+    return matched_act
 
 
 def create_section_ref_tag(replacement_dict: LegislationDict, match: str) -> str:
@@ -159,6 +172,7 @@ def get_replacements(
     legislation_dicts: List[Dict],
     numbered_act: bool,
     replacements: List[Dict],
+    paragraph_number: int,
 ) -> LegislationReferenceReplacements:
     """
     Create replacement string for detected oblique reference
@@ -166,6 +180,7 @@ def get_replacements(
     :param numbered_act: detected numbered oblique reference
     :param legislation_dicts: list of legislation dictionaries
     :param replacements: list of replacements
+    :param paragraph_number: paragraph number the legislation reference was found in
     :returns: list of replacements
     """
     for detected_act in detected_acts:
@@ -174,9 +189,12 @@ def get_replacements(
         if numbered_act:
             matched_replacement = match_numbered_act(detected_act, legislation_dicts)
         else:
-            matched_replacement = match_act(detected_act, legislation_dicts)
+            matched_replacement = match_act(
+                detected_act, legislation_dicts, paragraph_number
+            )
         replacement_dict["detected_ref"] = match
         replacement_dict["ref_position"] = detected_act[0][0]
+        replacement_dict["ref_para"] = paragraph_number
         if matched_replacement:
             replacement_dict["ref_tag"] = create_section_ref_tag(
                 matched_replacement, match
@@ -195,23 +213,42 @@ def oblique_pipeline(file_content: str) -> List[Dict]:
     """
     soup = BeautifulSoup(file_content, "xml")
     paragraphs = soup.find_all("p")
-    text = "".join([str(p) for p in paragraphs])
+    all_replacements: List[Dict] = []
+    all_legislation_dicts = []
 
-    detected_leg = detect_reference(text, "legislation")
-    legislation_dicts = create_legislation_dict(detected_leg)
+    for paragraph_number, paragraph in enumerate(paragraphs):
+        replacements: List[Dict] = []
+        detected_legislation = detect_reference(str(paragraph), "legislation")
+        legislation_dicts = create_legislation_dict(
+            detected_legislation, paragraph_number
+        )
+        all_legislation_dicts.extend(legislation_dicts)
 
-    detected_numbered_acts = detect_reference(text, "numbered_act")
-    detected_acts = detect_reference(text, "act")
+        detected_acts = detect_reference(str(paragraph), "act")
+        if detected_acts:
+            replacements = get_replacements(
+                detected_acts,
+                all_legislation_dicts,
+                False,
+                replacements,
+                paragraph_number,
+            )
 
-    replacements: List[Dict] = []
-    replacements = get_replacements(
-        detected_acts, legislation_dicts, False, replacements
-    )
-    replacements = get_replacements(
-        detected_numbered_acts, legislation_dicts, True, replacements
-    )
+        detected_numbered_acts = detect_reference(str(paragraph), "numbered_act")
+        if detected_numbered_acts:
+            replacements = get_replacements(
+                detected_numbered_acts,
+                all_legislation_dicts,
+                True,
+                replacements,
+                paragraph_number,
+            )
 
-    for replacement in replacements:
-        print(f"  => {replacement['detected_ref']} \t {replacement['ref_tag']}")
+        all_replacements.extend(replacements)
 
-    return replacements
+    for replacement in all_replacements:
+        print(
+            f"  => {replacement['detected_ref']} \t {replacement['ref_tag']} \t Paragraph: {replacement['ref_para']} \t Position: {replacement['ref_position']}"
+        )
+
+    return all_replacements
