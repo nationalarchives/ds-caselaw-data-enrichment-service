@@ -11,7 +11,7 @@ module "metadata-db" {
   vpc_id                = var.vpc_id
   subnets               = data.aws_subnets.database.ids
   create_security_group = true
-  allowed_cidr_blocks   = [for s in data.aws_subnet.private : s.cidr_block]
+  allowed_cidr_blocks   = [] # [for s in data.aws_subnet.private : s.cidr_block]
   deletion_protection   = local.db[local.environment].deletion_protection
 
   # create_random_password = true

@@ -40,10 +40,10 @@ data "aws_subnets" "private" {
   }
 }
 
-data "aws_subnet" "private" {
-  for_each = toset(data.aws_subnets.private.ids)
-  id       = each.value
-}
+# data "aws_subnet" "private" {
+#   for_each = toset(data.aws_subnets.private.ids)
+#   id       = each.value
+# }
 
 resource "aws_vpc_endpoint" "secrets_manager" {
   vpc_id            = module.vpc.vpc_id
@@ -74,9 +74,9 @@ resource "aws_vpc_endpoint" "secrets_manager" {
   # "name": "private",
 
   # subnet_ids = [for value in module.vpc.public_subnets: value.id]
-  for_each = toset(data.aws_subnets.private.ids)
-  # id       = each.value
-  subnet_ids = [each.value]
+  # for_each = toset(data.aws_subnets.private.ids)
+  # # id       = each.value
+  # subnet_ids = [each.value]
 
   # private_dns_enabled = true
 }

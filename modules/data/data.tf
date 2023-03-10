@@ -14,10 +14,10 @@ data "aws_subnets" "public" {
   }
 }
 
-data "aws_subnet" "public" {
-  for_each = toset(data.aws_subnets.public.ids)
-  id       = each.value
-}
+# data "aws_subnet" "public" {
+#   for_each = toset(data.aws_subnets.public.ids)
+#   id       = each.value
+# }
 
 data "aws_subnets" "private" {
   filter {
@@ -31,10 +31,10 @@ data "aws_subnets" "private" {
   }
 }
 
-data "aws_subnet" "private" {
-  for_each = toset(data.aws_subnets.private.ids)
-  id       = each.value
-}
+# data "aws_subnet" "private" {
+#   for_each = toset(data.aws_subnets.private.ids)
+#   id       = each.value
+# }
 
 data "aws_subnets" "database" {
   filter {
@@ -48,10 +48,10 @@ data "aws_subnets" "database" {
   }
 }
 
-data "aws_subnet" "database" {
-  for_each = toset(data.aws_subnets.database.ids)
-  id       = each.value
-}
+# data "aws_subnet" "database" {
+#   for_each = toset(data.aws_subnets.database.ids)
+#   id       = each.value
+# }
 
 # data "aws_subnets" "db" {
 #   filter {
