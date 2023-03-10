@@ -1,15 +1,22 @@
 """
 @author: editha.nemsic
-This code handles the link of oblique references (i.e 'the Act' or 'the 1977 Act'). This is done in the following way:
-1. We use the previously enriched judgment and identify where there are legislation xrefs in the judgment body.
-2. We search for 'T(t)he/T(t)his/T(t)hat Act' and 'T(t)he/T(t)his/T(t)hat [dddd] Act' references in the judgment text.
-3. If the matched oblique reference does not contain a year, we use the location of the oblique reference and 'legislation' reference
-to find which legislation the oblique reference is closest to, and then link to that legislation.
-4. If the matched oblique reference contains a year, we search for the matched 'legislation' (found in 1.) that corresponds to that year
-and then link to that legislation.
-5. We build a replacement string that wraps the detected oblique reference into a <ref> element with the link and canonical form of the linked legislation as attributes.
+This code handles the link of oblique references (i.e 'the Act' or 'the 1977 Act'). 
 
-The pipeline returns a dictionary containing the detected oblique reference, its position and the replacement string.
+This is done in the following way:
+1. We use the previously enriched judgment and identify where there are legislation
+    xrefs in the judgment body.
+2. We search for 'T(t)he/T(t)his/T(t)hat Act' and 'T(t)he/T(t)his/T(t)hat [dddd] Act'
+    references in the judgment text.
+3. If the matched oblique reference does not contain a year, we use the location of the
+    oblique reference and 'legislation' reference to find which legislation the oblique
+    reference is closest to, and then link to that legislation.
+4. If the matched oblique reference contains a year, we search for the matched
+    'legislation' (found in 1.) that corresponds to that year and then link to that legislation.
+5. We build a replacement string that wraps the detected oblique reference into a <ref>
+    element with the link and canonical form of the linked legislation as attributes.
+
+The pipeline returns a dictionary containing the detected oblique reference, its
+    position and the replacement string.
 """
 
 import re
@@ -43,7 +50,8 @@ def create_legislation_dict(
 ) -> List[Dict[str, Any]]:
     """
     Create a dictionary containing metadata of the detected 'legislation' reference
-    :param leg_references: list of legislation references found in the judgment and their location
+    :param leg_references: list of legislation references found in the judgment and
+        their location
     :returns: list of legislation dictionaries
     """
     legislation_dicts = []
@@ -137,7 +145,10 @@ def create_section_ref_tag(replacement_dict: LegislationDict, match: str) -> str
     """
     canonical = replacement_dict["canonical"]
     href = replacement_dict["href"]
-    oblique_ref = f'<ref href="{href}" uk:canonical="{canonical}" uk:type="legislation" uk:origin="TNA">{match.strip()}</ref>'
+    oblique_ref = (
+        f'<ref href="{href}" uk:canonical="{canonical}" '
+        f'uk:type="legislation" uk:origin="TNA">{match.strip()}</ref>'
+    )
 
     return oblique_ref
 
@@ -178,7 +189,8 @@ def oblique_pipeline(file_content: str) -> List[Dict]:
     """
     Create replacement string for detected oblique reference
     :param file_content: original judgment file content
-    :returns: list of dictionaries containing detected oblique references and replacement strings
+    :returns: list of dictionaries containing detected oblique
+        references and replacement strings
     """
     soup = BeautifulSoup(file_content, "xml")
     paragraphs = soup.find_all("p")
