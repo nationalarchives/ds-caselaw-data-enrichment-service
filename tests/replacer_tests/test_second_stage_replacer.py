@@ -4,16 +4,14 @@ import unittest
 
 from bs4 import BeautifulSoup
 
-from replacer.second_stage_replacer import provision_replacement
+from replacer.second_stage_replacer import replace_references_by_paragraph
 
 
 class TestSecondStageReplacer(unittest.TestCase):
-    """Unit Tests for the `second_stage_replacer` module"""
-
-    def test_provision_replacement(self):
+    def test_replace_references_by_paragraph(self):
         """
         Given some file_data soup and references with ref_tag and positional info
-        When provision_replacement is called with these
+        When `replace_references_by_paragraph` is called with these
         Then an enriched string is returned with the references replaced by the
             corresponding ref tag
         """
@@ -49,7 +47,7 @@ class TestSecondStageReplacer(unittest.TestCase):
             },
         ]
 
-        enriched_content = provision_replacement(file_data, references)
+        enriched_content = replace_references_by_paragraph(file_data, references)
 
         expected_file_path = (
             "tests/replacer_tests/ewhc-ch-2023-257_enriched_stage_2.xml"

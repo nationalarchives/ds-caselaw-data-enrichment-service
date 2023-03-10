@@ -12,7 +12,7 @@ from bs4 import BeautifulSoup
 from legislation_provisions_extraction.legislation_provisions import (
     provisions_pipeline,
 )
-from replacer.second_stage_replacer import provision_replacement
+from replacer.second_stage_replacer import replace_references_by_paragraph
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -86,7 +86,7 @@ def process_event(sqs_rec):
 
     if resolved_refs:
         soup = BeautifulSoup(file_content, "xml")
-        output_file_data = provision_replacement(soup, resolved_refs)
+        output_file_data = replace_references_by_paragraph(soup, resolved_refs)
         timestamp_added = add_timestamp_and_engine_version(output_file_data)
         upload_contents(source_key, str(timestamp_added))
     else:

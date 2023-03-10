@@ -32,6 +32,7 @@ patterns = {
 
 DetectedReference = Tuple[Tuple[int, int], str]
 LegislationDict = Dict[str, Any]
+LegislationReferenceReplacements = List[Dict[str, Union[str, int]]]
 
 
 def detect_reference(text: str, etype: str) -> List[DetectedReference]:
@@ -158,7 +159,7 @@ def get_replacements(
     legislation_dicts: List[Dict],
     numbered_act: bool,
     replacements: List[Dict],
-) -> List[Dict[str, Union[str, int]]]:
+) -> LegislationReferenceReplacements:
     """
     Create replacement string for detected oblique reference
     :param detected_acts: detected oblique references

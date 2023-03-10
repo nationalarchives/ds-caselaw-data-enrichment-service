@@ -7,15 +7,19 @@ Handles the replacements of oblique references and legislation provisions.
 
 import re
 from itertools import groupby
+from typing import Dict, List, Tuple, Union
 
 from bs4 import BeautifulSoup
 
+LegislationReference = Tuple[Tuple[int, int], str]
+LegislationReferenceReplacements = List[Dict[str, Union[str, int]]]
 
-def splitString(text, split_points):
+
+def split_string(text: str, split_points: List[int]) -> List:
     """
-    Splits a string at locations in the text where a reference was detected
-    :param text: XML file
-    :param split_points: list of positions of matches
+    Splits a string at given points in the text
+    :param text: some string of text
+    :param split_points: list of positions to split between
     :return: list of split strings
     """
     return list(
@@ -23,48 +27,74 @@ def splitString(text, split_points):
     )
 
 
-def replacer(text, detected_refs):
+def replace_references(
+    text: str, reference_replacements: LegislationReferenceReplacements
+) -> str:
     """
-    String replacement with matches from references
-    :param text: XML file
-    :param detected_refs: list of dict of detected references
-    :return: enriched XML file data
+    Replaces references in text according to the reference_replacements list
+    :param text: original text string
+    :param reference_replacements: list of dict of references and replacement information
+    :return: string with replaced references
     """
-    split_points = [match["ref_position"] for match in detected_refs]
-    split_text = splitString(text, split_points)
+    split_points: List[int] = [
+        split_point
+        for reference_replacement in reference_replacements
+        if isinstance((split_point := reference_replacement.get("ref_position")), int)
+    ]
+    split_text = split_string(text, split_points)
     enriched_text = text[: split_points[0]]
-    for spt, match in zip(split_text, detected_refs):
-        enriched_text += re.sub(re.escape(match["detected_ref"]), match["ref_tag"], spt)
+    for sub_text, reference_replacement in zip(split_text, reference_replacements):
+        detected_ref = reference_replacement["detected_ref"]
+        if not isinstance(detected_ref, str):
+            continue
+        ref_tag = reference_replacement["ref_tag"]
+        if not isinstance(ref_tag, str):
+            continue
+        enriched_text += re.sub(
+            re.escape(detected_ref),
+            ref_tag,
+            sub_text,
+        )
 
     return enriched_text
 
 
-def provision_replacement(file_data, replacements):
+def replace_references_by_paragraph(
+    file_data: BeautifulSoup, reference_replacements: LegislationReferenceReplacements
+) -> str:
     """
-    String replacement in the XML
+    Replaces references in the file_data xml by paragraph
     :param file_data: XML file
-    :param replacements: list of dict of resolved provisions
-    :return: enriched XML file data
+    :param reference_replacements: list of dict of detected references
+    :return: enriched XML file data string
     """
 
     def key_func(k):
         return k["ref_para"]
 
-    paras = file_data.find_all("p")
-    relevant_paras = sorted(replacements, key=key_func)
+    paragraphs = file_data.find_all("p")
+    ordered_reference_replacements = sorted(reference_replacements, key=key_func)
 
-    for p, matches in groupby(relevant_paras, key=key_func):
-        new_txt = BeautifulSoup(replacer(str(paras[p]), list(matches)), "lxml")
-        paras[p].replace_with(new_txt.p)
+    for paragraph_number, paragraph_reference_replacements in groupby(
+        ordered_reference_replacements, key=key_func
+    ):
+        paragraph_string = str(paragraphs[paragraph_number])
+        replacement_paragraph_string = replace_references(
+            paragraph_string, list(paragraph_reference_replacements)
+        )
+        replacement_paragraph = BeautifulSoup(replacement_paragraph_string, "lxml").p
+        paragraphs[paragraph_number].replace_with(replacement_paragraph)
     return str(file_data)
 
 
-def oblique_replacement(file_data, replacements):
+def oblique_replacement(
+    file_data: str, reference_replacements: LegislationReferenceReplacements
+) -> str:
     """
-    String replacement in the XML
+    Replaces references in the file_data xml
     :param file_data: XML file
     :param replacements: list of dict of resolved oblique refs
     :return: enriched XML file data
     """
-    enriched_text = replacer(file_data, replacements)
+    enriched_text = replace_references(file_data, reference_replacements)
     return enriched_text
