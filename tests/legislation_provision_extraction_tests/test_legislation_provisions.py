@@ -1,22 +1,19 @@
 import unittest
 
-from numpy import mat
-
 from legislation_provisions_extraction.legislation_provisions import (
     detect_reference,
     find_closest_legislation,
     get_clean_section_number,
     provision_resolver,
 )
-from replacer.second_stage_replacer import provision_replacement
-
-"""
-    This class focuses on testing the Legislation Provision processor, which detects references to sections and links them to the
-    section within the legislation itself.
-"""
 
 
 class TestLegislationProvisionProcessor(unittest.TestCase):
+    """
+    This class focuses on testing the Legislation Provision processor, which detects references to sections and links them to the
+    section within the legislation itself.
+    """
+
     def test_leg_detect_reference(self):
         ref = 'section 23 of the <ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19">Criminal Appeal Act 1968</ref>, which provides as follows:'
         leg_ref = detect_reference(ref)
