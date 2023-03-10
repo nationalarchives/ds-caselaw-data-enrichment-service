@@ -190,7 +190,7 @@ def oblique_pipeline(file_content: str) -> List[Dict]:
     detected_numbered_acts = detect_reference(text, "numbered_act")
     detected_acts = detect_reference(text, "act")
 
-    replacements: List = []
+    replacements: List[Dict] = []
     replacements = get_replacements(
         detected_acts, legislation_dicts, False, replacements
     )
