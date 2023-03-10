@@ -66,6 +66,7 @@ def create_legislation_dict(
 
     return legislation_dicts
 
+
 def _get_legislation_year(legislation_name):
     if not legislation_name:
         return ""
@@ -76,7 +77,7 @@ def _get_legislation_year(legislation_name):
     if not legislation_year:
         return ""
     return legislation_year
-    
+
 
 def match_numbered_act(
     detected_numbered_act: DetectedReference, legislation_dicts: List[LegislationDict]
@@ -122,7 +123,7 @@ def match_act(
             ref for ref in eligble_references if ref["pos"][0] == correct_pos
         ][0]
     else:
-        correct_ref = []
+        correct_ref = {}
 
     return correct_ref
 
