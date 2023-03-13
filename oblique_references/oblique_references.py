@@ -1,6 +1,6 @@
 """
 @author: editha.nemsic
-This code handles the link of oblique references (i.e 'the Act' or 'the 1977 Act'). 
+This code handles the link of oblique references (i.e 'the Act' or 'the 1977 Act').
 
 This is done in the following way:
 1. We use the previously enriched judgment and identify where there are legislation
@@ -48,7 +48,7 @@ def detect_reference(text: str, etype: str) -> List[LegislationReference]:
 
 def create_legislation_dict(
     legislation_references: List[LegislationReference], paragraph_number: int
-) -> List[Dict[str, Any]]:
+) -> List[LegislationDict]:
     """
     Create a dictionary containing metadata of the detected 'legislation' reference
     :param legislation_references: list of legislation references found in the judgment
@@ -68,7 +68,7 @@ def create_legislation_dict(
         legislation_dict["para"] = paragraph_number
         legislation_dict["para_pos"] = legislation_reference[0]
         legislation_dict["detected_leg"] = legislation_name
-        legislation_dict["href"] = ref["href"]
+        legislation_dict["href"] = ref.get("href")
         legislation_dict["canonical"] = ref.get("canonical")
         legislation_dict["year"] = _get_legislation_year(legislation_name)
 
@@ -77,16 +77,11 @@ def create_legislation_dict(
     return legislation_dicts
 
 
-def _get_legislation_year(legislation_name):
-    if not legislation_name:
+def _get_legislation_year(legislation_name: str) -> str:
+    legislation_year_match = re.search("\d{4}", legislation_name)
+    if not legislation_year_match:
         return ""
-    legislation_year_search = re.search("\d{4}", legislation_name)
-    if not legislation_year_search:
-        return ""
-    legislation_year = legislation_year_search.group(0)
-    if not legislation_year:
-        return ""
-    return legislation_year
+    return legislation_year_match.group()
 
 
 def match_numbered_act(

@@ -4,6 +4,7 @@
 import unittest
 
 from oblique_references.oblique_references import (
+    create_legislation_dict,
     detect_reference,
     get_oblique_reference_replacements_by_paragraph,
     get_replacements,
@@ -50,6 +51,137 @@ class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
                 "ref_position": 387,
                 "ref_para": 159,
                 "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2020/7" uk:canonical="2020 c. 7" uk:type="legislation" uk:origin="TNA">that Act</ref>',
+            },
+        ]
+
+
+class TestCreateLegislationDict(unittest.TestCase):
+    """Tests the `create_legislation_dict` function"""
+
+    def test_create_legislation_dict(self):
+        """
+        Given a list of detected_legislations
+        And a paragraph number for which paragraph they were built from
+        When they are passed to `create_legislation_dict`
+        Then a list of LegislationDicts is created with information for each oblique
+            detected reference is returned
+        """
+        detected_legislation = [
+            (
+                (307, 452),
+                '<ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:origin="TNA" uk:type="legislation">Finance Act 2004</ref>',
+            ),
+            (
+                (588, 733),
+                '<ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:origin="TNA" uk:type="legislation">Finance Act 2004</ref>',
+            ),
+        ]
+        paragraph_number = 2
+        oblique_reference_replacements = create_legislation_dict(
+            detected_legislation, paragraph_number
+        )
+        assert oblique_reference_replacements == [
+            {
+                "para": 2,
+                "para_pos": (307, 452),
+                "detected_leg": "Finance Act 2004",
+                "href": "http://www.legislation.gov.uk/id/ukpga/2004/12",
+                "canonical": "2004 c. 12",
+                "year": "2004",
+            },
+            {
+                "para": 2,
+                "para_pos": (588, 733),
+                "detected_leg": "Finance Act 2004",
+                "href": "http://www.legislation.gov.uk/id/ukpga/2004/12",
+                "canonical": "2004 c. 12",
+                "year": "2004",
+            },
+        ]
+
+    def test_bad_year_info(self):
+        """
+        Given a list of detected_legislations that do not have a year in their texts
+        And a paragraph number for which paragraph they were built from
+        When they are passed to `create_legislation_dict`
+        Then a list of LegislationDicts is created with information for each oblique
+            detected reference is returned with empty `year` information
+        """
+        detected_legislation = [
+            (
+                (307, 451),
+                '<ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:origin="TNA" uk:type="legislation">Finance Act 200</ref>',
+            ),
+            (
+                (507, 636),
+                '<ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:origin="TNA" uk:type="legislation"></ref>',
+            ),
+            (
+                (707, 847),
+                '<ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:origin="TNA" uk:type="legislation">Finance Act</ref>',
+            ),
+        ]
+        paragraph_number = 2
+        oblique_reference_replacements = create_legislation_dict(
+            detected_legislation, paragraph_number
+        )
+        assert oblique_reference_replacements == [
+            {
+                "para": 2,
+                "para_pos": (307, 451),
+                "detected_leg": "Finance Act 200",
+                "href": "http://www.legislation.gov.uk/id/ukpga/2004/12",
+                "canonical": "2004 c. 12",
+                "year": "",
+            },
+            {
+                "para": 2,
+                "para_pos": (507, 636),
+                "detected_leg": "",
+                "href": "http://www.legislation.gov.uk/id/ukpga/2004/12",
+                "canonical": "2004 c. 12",
+                "year": "",
+            },
+            {
+                "para": 2,
+                "para_pos": (707, 847),
+                "detected_leg": "Finance Act",
+                "href": "http://www.legislation.gov.uk/id/ukpga/2004/12",
+                "canonical": "2004 c. 12",
+                "year": "",
+            },
+        ]
+
+    def test_malformed_refs(self):
+        """
+        Given a list of detected_legislation dicts with malformed refs
+        And a paragraph number for which paragraph they were built from
+        When they are passed to `create_legislation_dict`
+        Then a list of LegislationDicts is created with information for each oblique detected reference
+            is returned with empty `year` information
+        """
+        detected_legislation = [
+            (
+                (307, 452),
+                '<bad_ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:origin="TNA" uk:type="legislation">Finance Act 2004</bad_ref>',
+            ),
+            (
+                (588, 733),
+                '<ref bad_href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:bad_canonical="2004 c. 12" uk:origin="TNA" uk:type="legislation">Finance Act 2004</bad_ref>',
+            ),
+        ]
+        paragraph_number = 2
+        oblique_reference_replacements = create_legislation_dict(
+            detected_legislation, paragraph_number
+        )
+        assert oblique_reference_replacements == [
+            {
+                "para": 2,
+                "para_pos": (588, 733),
+                "detected_leg": "Finance Act 2004",
+                "href": None,
+                "canonical": None,
+                "year": "2004",
             },
         ]
 
