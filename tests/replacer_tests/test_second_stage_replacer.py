@@ -49,9 +49,7 @@ class TestSecondStageReplacer(unittest.TestCase):
 
         enriched_content = replace_references_by_paragraph(file_data, references)
 
-        expected_file_path = (
-            "tests/fixtures/ewhc-ch-2023-257_enriched_stage_2.xml"
-        )
+        expected_file_path = "tests/fixtures/ewhc-ch-2023-257_enriched_stage_2.xml"
         with open(expected_file_path, "r", encoding="utf-8") as expected_file:
             expected_enriched_content = expected_file.read()
 

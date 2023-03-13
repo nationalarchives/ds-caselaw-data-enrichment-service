@@ -30,12 +30,12 @@ patterns = {
     "act": r"(the|this|that|The|This|That)\s(Act)",
 }
 
-DetectedReference = Tuple[Tuple[int, int], str]
+LegislationReference = Tuple[Tuple[int, int], str]
 LegislationDict = Dict[str, Any]
 LegislationReferenceReplacements = List[Dict[str, Union[str, int]]]
 
 
-def detect_reference(text: str, etype: str) -> List[DetectedReference]:
+def detect_reference(text: str, etype: str) -> List[LegislationReference]:
     """
     Detect legislation and oblique references.
     :param text: text to be searched for references
@@ -47,7 +47,7 @@ def detect_reference(text: str, etype: str) -> List[DetectedReference]:
 
 
 def create_legislation_dict(
-    legislation_references: List[DetectedReference], paragraph_number: int
+    legislation_references: List[LegislationReference], paragraph_number: int
 ) -> List[Dict[str, Any]]:
     """
     Create a dictionary containing metadata of the detected 'legislation' reference
@@ -90,7 +90,8 @@ def _get_legislation_year(legislation_name):
 
 
 def match_numbered_act(
-    detected_numbered_act: DetectedReference, legislation_dicts: List[LegislationDict]
+    detected_numbered_act: LegislationReference,
+    legislation_dicts: List[LegislationDict],
 ) -> LegislationDict:
     """
     Match oblique references containing a year
@@ -110,7 +111,7 @@ def match_numbered_act(
 
 
 def match_act(
-    oblique_act: DetectedReference,
+    oblique_act: LegislationReference,
     legislation_dicts: List[LegislationDict],
     paragraph_number: int,
 ) -> LegislationDict:
@@ -168,7 +169,7 @@ def create_section_ref_tag(replacement_dict: LegislationDict, match: str) -> str
 
 
 def get_replacements(
-    detected_acts: List[DetectedReference],
+    detected_acts: List[LegislationReference],
     legislation_dicts: List[Dict],
     numbered_act: bool,
     replacements: List[Dict],
@@ -204,9 +205,11 @@ def get_replacements(
     return replacements
 
 
-def oblique_pipeline(file_content: str) -> List[Dict]:
+def get_oblique_reference_replacements_by_paragraph(
+    file_content: str,
+) -> LegislationReferenceReplacements:
     """
-    Create replacement string for detected oblique reference
+    Determines oblique references and replacement strings grouped by paragraph
     :param file_content: original judgment file content
     :returns: list of dictionaries containing detected oblique
         references and replacement strings

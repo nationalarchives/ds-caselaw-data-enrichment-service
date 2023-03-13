@@ -2,7 +2,9 @@
 
 from bs4 import BeautifulSoup
 
-from oblique_references.oblique_references import oblique_pipeline
+from oblique_references.oblique_references import (
+    get_oblique_reference_replacements_by_paragraph,
+)
 from replacer.second_stage_replacer import replace_references_by_paragraph
 
 
@@ -13,8 +15,10 @@ def enrich_oblique_references(file_content: str) -> str:
     :param file_content: original file content
     :return: updated file content with enriched oblique references
     """
-    resolved_refs = oblique_pipeline(file_content)
-    if not resolved_refs:
+    oblique_reference_replacements = get_oblique_reference_replacements_by_paragraph(
+        file_content
+    )
+    if not oblique_reference_replacements:
         return file_content
     soup = BeautifulSoup(file_content, "xml")
-    return replace_references_by_paragraph(soup, resolved_refs)
+    return replace_references_by_paragraph(soup, oblique_reference_replacements)
