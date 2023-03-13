@@ -1,9 +1,7 @@
 """Tests the `oblique_references` module"""
 
-import sys
-import unittest
 
-sys.path.append("./")
+import unittest
 
 from oblique_references.oblique_references import (
     detect_reference,

@@ -1,12 +1,9 @@
-import sys
 import unittest
 
 import psycopg2
 import testing.postgresql
 from numpy import mat
 from spacy.lang.en import English
-
-sys.path.append("./")
 
 from legislation_extraction.legislation_matcher_hybrid import (
     detect_candidates,

@@ -3,7 +3,7 @@
     These are independent unit tests.
 """
 
-import sys
+
 import unittest
 
 import pandas as pd
@@ -11,8 +11,6 @@ import psycopg2
 import testing.postgresql
 from spacy.lang.en import English
 from sqlalchemy import create_engine
-
-sys.path.append("./")
 
 from caselaw_extraction.correction_strategies import apply_correction_strategy
 from database.db_connection import get_matched_rule
