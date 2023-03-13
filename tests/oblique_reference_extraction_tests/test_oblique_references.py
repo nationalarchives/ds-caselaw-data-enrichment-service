@@ -5,8 +5,53 @@ import unittest
 
 from oblique_references.oblique_references import (
     detect_reference,
+    get_oblique_reference_replacements_by_paragraph,
     get_replacements,
 )
+
+
+class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
+    """Tests the `get_oblique_reference_replacements_by_paragraph` function"""
+
+    def test_get_oblique_reference_replacements_by_paragraph(self):
+        """
+        Given xml judgment content without enriched oblique references
+        When it is passed to `get_oblique_reference_replacements_by_paragraph`
+        Then a dict of replacement information for each oblique detected reference
+            is returned
+        """
+        input_file_path = "tests/fixtures/ewhc-ch-2023-257_enriched_stage_1.xml"
+        with open(input_file_path, "r", encoding="utf-8") as input_file:
+            input_file_content = input_file.read()
+        oblique_reference_replacements = (
+            get_oblique_reference_replacements_by_paragraph(input_file_content)
+        )
+        assert oblique_reference_replacements == [
+            {
+                "detected_ref": "the 2004 Act",
+                "ref_position": 487,
+                "ref_para": 100,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:type="legislation" uk:origin="TNA">the 2004 Act</ref>',
+            },
+            {
+                "detected_ref": "that Act",
+                "ref_position": 186,
+                "ref_para": 153,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1996/14" uk:canonical="1996 c. 14" uk:type="legislation" uk:origin="TNA">that Act</ref>',
+            },
+            {
+                "detected_ref": "that Act",
+                "ref_position": 214,
+                "ref_para": 154,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1996/14" uk:canonical="1996 c. 14" uk:type="legislation" uk:origin="TNA">that Act</ref>',
+            },
+            {
+                "detected_ref": "that Act",
+                "ref_position": 387,
+                "ref_para": 159,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2020/7" uk:canonical="2020 c. 7" uk:type="legislation" uk:origin="TNA">that Act</ref>',
+            },
+        ]
 
 
 class TestDetectReference(unittest.TestCase):
@@ -174,7 +219,11 @@ class TestGetReplacements(unittest.TestCase):
         paragraph_number = 2
 
         replacements = get_replacements(
-            detected_acts, self.legislation_dicts, numbered_act, replacements, paragraph_number
+            detected_acts,
+            self.legislation_dicts,
+            numbered_act,
+            replacements,
+            paragraph_number,
         )
 
         expected_replacements = [
@@ -214,7 +263,11 @@ class TestGetReplacements(unittest.TestCase):
         paragraph_number = 2
 
         replacements = get_replacements(
-            detected_acts, self.legislation_dicts, numbered_act, replacements, paragraph_number
+            detected_acts,
+            self.legislation_dicts,
+            numbered_act,
+            replacements,
+            paragraph_number,
         )
 
         expected_replacements = [
