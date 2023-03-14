@@ -68,8 +68,8 @@ class TestExtractJudgement(unittest.TestCase):
         test_bucket_name = "test_bucket"
         # test_data = b'col_1,col_2\n1,2\n3,4\n'
 
-        bucket = conn.create_bucket(Bucket=test_bucket_name)
-        bucket = conn.create_bucket(Bucket=test_bucket_destination_name)
+        conn.create_bucket(Bucket=test_bucket_name)
+        conn.create_bucket(Bucket=test_bucket_destination_name)
 
         conn.put_object(
             Bucket=test_bucket_name,
@@ -77,7 +77,7 @@ class TestExtractJudgement(unittest.TestCase):
             Body=test_xml_content,
         )
 
-        response = handler(event=test_s3_event, context={})
+        handler(event=test_s3_event, context={})
         #         body = conn.Object('mybucket', 'steve').get()[
         # 'Body'].read().decode("utf-8")
         # test_bucket_destination_name/example/s3/path/key/test_data.txt

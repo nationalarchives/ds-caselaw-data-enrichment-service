@@ -126,12 +126,12 @@ class TestXMLValidate(unittest.TestCase):
         # bucket = conn.create_bucket(Bucket='mybucket')
 
         test_bucket_name = "test_bucket"
-        test_data = b"col_1,col_2\n1,2\n3,4\n"
+        # test_data = b"col_1,col_2\n1,2\n3,4\n"
 
         # object = conn.Object(test_bucket_name, f'test_data.xml')
         # object.put(Body=test_data)
 
-        bucket = conn.create_bucket(
+        conn.create_bucket(
             Bucket=test_bucket_name,
             # CreateBucketConfiguration={"LocationConstraint": "us-east-1"}
         )

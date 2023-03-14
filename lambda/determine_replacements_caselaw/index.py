@@ -249,7 +249,7 @@ def push_contents(uploaded_bucket, uploaded_key):
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
-    response = queue.send_message(
+    queue.send_message(
         MessageBody=json.dumps(message), MessageAttributes=msg_attributes
     )
 
