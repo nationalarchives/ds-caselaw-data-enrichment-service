@@ -1,5 +1,6 @@
 #!env/bin/python
 
+import base64
 import datetime
 import logging
 import os
