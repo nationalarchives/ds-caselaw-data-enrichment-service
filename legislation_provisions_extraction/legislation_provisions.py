@@ -15,7 +15,6 @@ To do:
 
 import os
 import re
-import xml
 
 import numpy as np
 from bs4 import BeautifulSoup

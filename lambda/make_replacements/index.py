@@ -4,8 +4,6 @@ import json
 import logging
 import os
 import re
-import urllib.parse
-import xml
 
 import boto3
 from bs4 import BeautifulSoup
@@ -91,7 +89,7 @@ def process_event(sqs_rec):
     LOGGER.info("EVENT: %s", message)
 
     msg_attributes = sqs_rec["messageAttributes"]
-    replacements = message["replacements"]
+    message["replacements"]
     source_key = msg_attributes["source_key"]["stringValue"]
 
     replacement_bucket = msg_attributes["source_bucket"]["stringValue"]

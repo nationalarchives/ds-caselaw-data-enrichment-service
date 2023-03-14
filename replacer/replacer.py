@@ -5,7 +5,6 @@ Handles the replacements of abbreviations, legislation, and case law.
 
 
 import json
-import re
 
 
 def replacer_caselaw(file_data, replacement):

@@ -1,7 +1,5 @@
 import os
 import unittest
-from cgitb import handler
-from multiprocessing.sharedctypes import Value
 
 import boto3
 import mock

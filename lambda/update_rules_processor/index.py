@@ -1,11 +1,10 @@
 #!env/bin/python
 
-import datetime
 import json
 import logging
 import os
 import urllib.parse
-from io import BytesIO, StringIO
+from io import StringIO
 
 import boto3
 import pandas as pd

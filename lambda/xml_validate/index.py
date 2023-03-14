@@ -5,7 +5,7 @@ import logging
 import os
 import urllib.parse
 from distutils.util import strtobool
-from io import BytesIO, StringIO
+from io import BytesIO
 
 import boto3
 from lxml import etree

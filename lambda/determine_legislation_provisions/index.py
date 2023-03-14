@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-import csv
 import datetime
 import logging
 import os

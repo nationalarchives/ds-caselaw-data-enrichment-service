@@ -43,7 +43,7 @@ class TestLegislationProcessor(unittest.TestCase):
             for_fuzzy BOOLEAN NOT NULL
         );
         INSERT INTO ukpga_lookup (candidate_titles, ref, citation, year, for_fuzzy)
-        VALUES 
+        VALUES
             ('Adoption and Children Act 2002', 'http://www.legislation.gov.uk/ukpga/2002/38', 'citation_abc', 2002, true),
             ('def', 'ref_def', 'citation_def', 2001, true),
             ('ghi', 'ref_ghi', 'citation_ghi', 2002, false);

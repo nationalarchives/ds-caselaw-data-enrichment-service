@@ -1,6 +1,5 @@
 import os
 import unittest
-from operator import index
 
 import boto3
 import mock
