@@ -95,7 +95,7 @@ The standard mechanism for triggering the enrichment pipeline is via the TNA edi
 
 ## 4 Tests
 
-There is a comprehensive suite of tests that can be run locally. Clone the repository, `cd` into the `tests` directory and run:
+There is a comprehensive suite of tests that can be run locally with
 
 ```sh
 python -m unittest
