@@ -11,11 +11,11 @@ from moto import mock_s3
 
 test_xml_content = """<?xml version="1.0" encoding="UTF-8"?>
 <akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
-	<level>
-	  <content>
-	    <p style="margin-right:0.00in;text-indent:0.00in">the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified. </p>
-	  </content>
-	</level>
+        <level>
+          <content>
+            <p style="margin-right:0.00in;text-indent:0.00in">the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified. </p>
+          </content>
+        </level>
 </akomaNtoso>"""
 
 test_s3_event = {
