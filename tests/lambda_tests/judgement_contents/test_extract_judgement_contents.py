@@ -73,7 +73,7 @@ class TestExtractJudgement(unittest.TestCase):
 
         conn.put_object(
             Bucket=test_bucket_name,
-            Key=f"example/s3/path/key/test_data.xml",
+            Key="example/s3/path/key/test_data.xml",
             Body=test_xml_content,
         )
 
@@ -83,7 +83,7 @@ class TestExtractJudgement(unittest.TestCase):
         # test_bucket_destination_name/example/s3/path/key/test_data.txt
         uploaded_content = conn.get_object(
             Bucket=test_bucket_destination_name,
-            Key=f"example/s3/path/key/test_data.txt",
+            Key="example/s3/path/key/test_data.txt",
         )
         # print(uploaded_content)
         cleaned_content = uploaded_content["Body"].read().decode("utf-8")
