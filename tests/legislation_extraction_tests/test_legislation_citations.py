@@ -181,9 +181,7 @@ class TestLegislationReplacer(unittest.TestCase):
         replacement_entry = (legislation_match, href, canonical)
         replaced_entry = replacer_leg(text, replacement_entry)
         assert legislation_match in replaced_entry
-        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'.format(
-            href, legislation_match
-        )
+        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'
         assert replacement_string in replaced_entry
 
 
