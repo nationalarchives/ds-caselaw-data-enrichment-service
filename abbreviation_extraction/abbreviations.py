@@ -11,7 +11,6 @@ ScispaCy repo here -> https://github.com/allenai/scispacy
 """
 
 from collections import defaultdict
-from nis import match
 from typing import Dict, List, Optional, Set, Tuple
 
 from spacy.language import Language

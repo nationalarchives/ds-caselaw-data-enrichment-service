@@ -8,9 +8,7 @@ from io import StringIO
 
 import boto3
 import pandas as pd
-import psycopg2 as pg
 import spacy
-from botocore.exceptions import ClientError
 from psycopg2 import Error
 from sqlalchemy import create_engine
 

@@ -4,14 +4,9 @@ import json
 import logging
 import os
 import urllib.parse
-from gc import garbage
 
 import boto3
-import psycopg2 as pg
 import spacy
-from botocore.exceptions import ClientError
-from dateutil.parser import parse as dparser
-from psycopg2 import Error
 
 from database import db_connection
 

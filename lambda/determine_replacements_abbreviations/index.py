@@ -3,13 +3,9 @@
 import json
 import logging
 import os
-from gc import garbage
 
 import boto3
 import spacy
-from botocore.exceptions import ClientError
-from dateutil.parser import parse as dparser
-from spacy.language import Language
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
