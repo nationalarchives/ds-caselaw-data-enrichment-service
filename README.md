@@ -95,11 +95,15 @@ The standard mechanism for triggering the enrichment pipeline is via the TNA edi
 
 ## 4 Tests
 
-There is a comprehensive suite of tests that can be run locally. Clone the repository, `cd` into the `tests` directory and run:
+There is a comprehensive suite of tests that can be run locally with
 
 ```sh
-python runner.py
+python -m unittest
 ```
+
+You can also obtain a test coverage report with `coverage run --source . -m unittest && coverage report`
+
+The tests are currently run in CI as specified in `.github/workflows/ci_lint_and_test.yml`
 
 ## 5 Architecture
 

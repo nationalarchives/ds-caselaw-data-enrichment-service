@@ -1,9 +1,7 @@
-import sys
 import unittest
 
 from numpy import mat
 
-sys.path.append("./")
 from legislation_provisions_extraction.legislation_provisions import (
     detect_reference,
     find_closest_legislation,

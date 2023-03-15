@@ -5,13 +5,11 @@
     where the abbreviation in brackets is in quotation marks, which this file will 
     also test for. If this is updated, this will need to be reflected in the tests. 
 """
-import sys
+
 import unittest
 
 import spacy
 from spacy.language import Language
-
-sys.path.append("./")
 
 from abbreviation_extraction.abbreviations import (
     AbbreviationDetector,

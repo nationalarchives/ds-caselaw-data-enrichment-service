@@ -54,7 +54,7 @@ jobs:
 
       - name: Run python tests
         id: run_python_tests
-        run: python tests/runner.py
+        run: coverage run --source . -m unittest && coverage report
 
   terraform_lint:
     runs-on: ubuntu-latest

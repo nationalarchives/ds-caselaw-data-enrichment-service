@@ -1,121 +1,65 @@
-import sys
-import unittest
+"""Tests the replacer.replacer module's `write_replacements_file` function"""
 
-sys.path.append("./")
 import json
+import unittest
 from collections import namedtuple
 
-from replacer.replacer import write_repl_file
-
-case = namedtuple("case", "citation_match corrected_citation year URI is_neutral")
-abb = namedtuple("abb", "abb_match longform")
-leg = namedtuple("leg", "detected_ref href")
-
-"""
-    Testing the list of replacements being extracted, added to a list,
-    and confirming the format.
-"""
+from replacer.replacer import write_replacements_file
 
 
-CITATION_REPLACEMENTS = [
-    case(
-        citation_match="[2020] EWHC 537 (Ch)",
-        corrected_citation="[2020] EWHC 537 (Ch)",
-        year="2020",
-        URI="https://caselaw.nationalarchives.gov.uk/ewhc/ch/2020/537",
-        is_neutral=True,
-    ),
-    case(
-        citation_match="[2022] 1 P&CR 123",
-        corrected_citation="[2022] 1 P&CR 123",
-        year="2022",
-        URI="#",
-        is_neutral=False,
-    ),
-]
-LEGISLATION_REPLACEMENTS = [
-    leg(
-        detected_ref="Companies Act 2006",
-        href="http://www.legislation.gov.uk/ukpga/2006/46",
-    ),
-    leg(
-        detected_ref="Trusts of Land and Appointment of Trustees Act 1996",
-        href="https://www.legislation.gov.uk/ukpga/1996/47",
-    ),
-]
-ABBREVIATION_REPLACEMENTS = [
-    abb(abb_match="Dr Guy", longform="Geoffrey Guy"),
-    abb(abb_match="ECTHR", longform="European Court of Human Rights"),
-]
+class TestWriteReplacementsFile(unittest.TestCase):
+    """
+    Tests `write_replacements_file` function
+    """
 
+    def test_write_replacements_file(self):
+        """
+        Given a list of named tuples
+        When `write_replacements_file` is called with them
+        Then a string is returned in a jsonl structure
+            with each line a dict for each named tuple
+            where they key is the name of the namedtuple and
+            the value is list corresponding to all the values in the named tuple
+        """
+        foo = namedtuple("foo", "a b c d e")
+        bar = namedtuple("bar", "f g h")
 
-def read_file():
-    replacements = []
-    tuple_file = open("tuples.jsonl", "r")
-    for line in tuple_file:
-        replacements.append(json.loads(line))
-    tuple_file.close()
-    return replacements
-
-
-"""
-    This class focuses on testing the Citation Replacer and ensuring that the replacements
-    are successfully appended to the JSON file.
-"""
-
-
-class TestReplacements(unittest.TestCase):
-    def test_write_file(self):
-        tuple_file = open("tuples.jsonl", "w+")
-        write_repl_file(tuple_file, CITATION_REPLACEMENTS)
-        write_repl_file(tuple_file, LEGISLATION_REPLACEMENTS)
-        write_repl_file(tuple_file, ABBREVIATION_REPLACEMENTS)
-        tuple_file.close()
-
-    def test_citations(self):
-        replacements = read_file()
-        test_list = [
-            "[2020] EWHC 537 (Ch)",
-            "[2020] EWHC 537 (Ch)",
-            "2020",
-            "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2020/537",
-            True,
+        replacements = [
+            foo(
+                a="[2020] EWHC 537 (Ch)",
+                b="[2020] EWHC 537 (Ch)",
+                c="2020",
+                d="https://caselaw.nationalarchives.gov.uk/ewhc/ch/2020/537",
+                e=True,
+            ),
+            bar(
+                f="[2022] 1 P&CR 123",
+                g="[2022] 1 P&CR 123",
+                h="2022",
+            ),
         ]
-        key, value = list(replacements[0].items())[0]
-        assert key == "case"
-        assert value == test_list
-        test_list = ["[2022] 1 P&CR 123", "[2022] 1 P&CR 123", "2022", "#", False]
-        key, value = list(replacements[1].items())[0]
-        assert key == "case"
-        assert value == test_list
 
-    def test_legislation(self):
-        replacements = read_file()
-        test_list = [
-            "Companies Act 2006",
-            "http://www.legislation.gov.uk/ukpga/2006/46",
-        ]
-        key, value = list(replacements[2].items())[0]
-        assert key == "leg"
-        assert value == test_list
-        test_list = [
-            "Trusts of Land and Appointment of Trustees Act 1996",
-            "https://www.legislation.gov.uk/ukpga/1996/47",
-        ]
-        key, value = list(replacements[3].items())[0]
-        assert key == "leg"
-        assert value == test_list
+        replacements_string = write_replacements_file(replacements)
 
-    def test_abbreviations(self):
-        replacements = read_file()
-        test_list = ["Dr Guy", "Geoffrey Guy"]
-        key, value = list(replacements[4].items())[0]
-        assert key == "abb"
-        assert value == test_list
-        test_list = ["ECTHR", "European Court of Human Rights"]
-        key, value = list(replacements[5].items())[0]
-        assert key == "abb"
-        assert value == test_list
+        replacements = replacements_string.splitlines()
+
+        expected_key_value_pairs = [
+            {
+                "foo": [
+                    "[2020] EWHC 537 (Ch)",
+                    "[2020] EWHC 537 (Ch)",
+                    "2020",
+                    "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2020/537",
+                    True,
+                ]
+            },
+            {"bar": ["[2022] 1 P&CR 123", "[2022] 1 P&CR 123", "2022"]},
+        ]
+
+        for index, replacement in enumerate(replacements):
+            replacement_dict = json.loads(replacement)
+            expected_key_value_pair = expected_key_value_pairs[index]
+            assert expected_key_value_pair == replacement_dict
 
 
 if __name__ == "__main__":
