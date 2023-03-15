@@ -98,7 +98,22 @@ class TestXMLValidate(unittest.TestCase):
     # @mock.patch.dict(os.environ, {'VALIDATE_USING_SCHEMA': "False",'VALIDATE_USING_DTD': "False"}, clear=True)
     # @mock.patch.dict(os.environ, {'AWS_ACCESS_KEY_ID':'fake'}, clear=True)
     @mock_s3
+    @mock.patch.dict(
+        os.environ,
+        {
+            "DEST_BUCKET_NAME": "DEST_BUCKET_NAME",
+            "VCITE_BUCKET": "VCITE_BUCKET",
+            "VCITE_ENRICHED_BUCKET": "VCITE_ENRICHED_BUCKET",
+            "DEST_ERROR_TOPIC_NAME": "DEST_ERROR_TOPIC_NAME",
+            "DEST_TOPIC_NAME": "DEST_TOPIC_NAME",
+            "VALIDATE_USING_SCHEMA": "0",
+            "DEST_QUEUE": "DEST_QUEUE",
+            "AWS_DEFAULT_REGION": "eu-west-2",
+        },
+    )
+
     # def test_lambda_handler(self):
+    @mock_s3
     def test_process_event(self):
         # monkeypatch.setenv("VALIDATE_USING_SCHEMA", "False")
 
@@ -150,7 +165,7 @@ class TestXMLValidate(unittest.TestCase):
         # from lambdas.xml_validate.index import handler
         from lambdas.xml_validate.index import process_event
 
-        process_event(test_s3_event.get("Records")[0], conn)
+        process_event(test_s3_event.get("Records")[0])
 
     #     s3.create_bucket(Bucket=test_bucket_name, CreateBucketConfiguration={
     # 'LocationConstraint': 'us-east-1'})
