@@ -52,9 +52,17 @@ jobs:
         run: |
           pip3 install -r tests/requirements.txt
 
-      - name: Run python tests
+      - name: Run python tests with coverage
         id: run_python_tests
-        run: coverage run --source . -m unittest && coverage report
+        run: coverage run --source . -m unittest
+
+      - name: Generate coverage XML
+        run: coverage xml
+
+      - name: Upload coverage to CodeClimate
+        uses: paambaati/codeclimate-action@v3.2.0
+        env:
+          CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
 
   terraform_lint:
     runs-on: ubuntu-latest
