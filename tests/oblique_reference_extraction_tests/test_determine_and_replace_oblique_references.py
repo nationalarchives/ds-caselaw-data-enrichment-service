@@ -3,10 +3,11 @@
 import sys
 import unittest
 
-sys.path.append("./")
 from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
+
+sys.path.append("./")
 
 
 class TestEnrichObliqueReferences(unittest.TestCase):
