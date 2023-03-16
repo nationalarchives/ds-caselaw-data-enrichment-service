@@ -194,7 +194,7 @@ Situations when you may want to debug an enrichment run:
 - a document we expect to have been enriched, has not been enriched as expected.
 - an AWS error alert for a lambda function has been raised to us (probably through email notification subscription)
 
-The main ways we have to debug are to look at logs for `lambda` functions and data stored in `s3` buckets but we need appropriate information to find these in AWS first.
+The main ways we have to debug are to look at `AWS` [logs](https://eu-west-2.console.aws.amazon.com/cloudwatch/home?region=eu-west-2#logsV2:log-groups) for `lambda` functions and data stored in [s3 buckets](https://s3.console.aws.amazon.com/s3/buckets?region=eu-west-2) but we need appropriate information to find these in AWS first.
 
 ### Getting information to investigate in AWS
 
@@ -211,14 +211,14 @@ The main ways we have to debug are to look at logs for `lambda` functions and da
 
 #### Look at lambda logs
 
-We can access lambda function has a `log group` in which we can access different logs for different runs of the lambda.
+Each lambda function has a [log group](https://eu-west-2.console.aws.amazon.com/cloudwatch/home?region=eu-west-2#logsV2:log-groups) in which we can access different logs for different runs of the lambda.
 
-1. We can find the logs for a parituclar lambda at a particular time by filtering the logs in that lambda's log group around the time we know the lambda run we care about was triggered.
+1. We can find the logs for a particular lambda at a particular time by filtering the logs in that lambda's log group around the time we know the lambda run we care about was triggered.
 2. Then we can find any relevant information from the logs to use for
   
 #### Look at s3 buckets
 
-At each stage of enrichment process we store the partially enriched xml back to an `s3` bucket as shown in `docs/img/architecture.png`.
+At each stage of enrichment process we store the partially enriched xml back to an [s3 bucket](https://s3.console.aws.amazon.com/s3/buckets?region=eu-west-2) as shown in `docs/img/architecture.png`.
 
 1. We can download the xml from each stage for the judgment by going to each s3 bucket in the AWS Enrichment space and searching for the judgment name.
 1. We can compare sequential stages of enriched xml for the judgment to attempt to determine where our issue may have arisen.
