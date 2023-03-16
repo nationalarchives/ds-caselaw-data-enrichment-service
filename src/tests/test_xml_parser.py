@@ -1,16 +1,19 @@
 """Testing the xml parser to ensure that information is extracted as expected"""
 
 import unittest
+from pathlib import Path
 
 from spacy.lang.en import English
 
 from utils.helper import parse_file
 
+FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "rules"
+
 
 def set_up():
     nlp = English()
     nlp.max_length = 1500000
-    nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
+    nlp.add_pipe("entity_ruler").from_disk(f"{FIXTURE_DIR}/citation_patterns.jsonl")
     # TODO: change this to a mock db?
     return nlp
 

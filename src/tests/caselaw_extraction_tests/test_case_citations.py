@@ -3,8 +3,8 @@
     These are independent unit tests.
 """
 
-
 import unittest
+from pathlib import Path
 
 import pandas as pd
 import psycopg2
@@ -80,6 +80,9 @@ def mock_get_rules_total(db_conn):
     return number_of_rules
 
 
+FIXTURE_DIR = Path(__file__).parent.parent.parent.resolve() / "rules"
+
+
 class TestCitationProcessor(unittest.TestCase):
     """
     This class focuses on testing the Citation Processor, which gathers the results from the DB. This class primarily uses the mock_return_citation method.
@@ -90,13 +93,15 @@ class TestCitationProcessor(unittest.TestCase):
     def setUp(self):
         self.nlp = English()
         self.nlp.max_length = 1500000
-        self.nlp.add_pipe("entity_ruler").from_disk("rules/citation_patterns.jsonl")
+        self.nlp.add_pipe("entity_ruler").from_disk(
+            f"{FIXTURE_DIR}/citation_patterns.jsonl"
+        )
 
         self.postgresql = testing.postgresql.Postgresql()
         self.db_conn = psycopg2.connect(**self.postgresql.dsn())
         engine = create_engine(self.postgresql.url())
 
-        manifest_df = pd.read_csv("rules/2022_04_08_Citation_Manifest.csv")
+        manifest_df = pd.read_csv(f"{FIXTURE_DIR}/2022_04_08_Citation_Manifest.csv")
         manifest_df.to_sql("manifest", engine, if_exists="append", index=False)
 
     def tearDown(self):
