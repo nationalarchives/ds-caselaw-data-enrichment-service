@@ -186,3 +186,44 @@ There are a number of places where enrichment can be turned off:
   - Not entirely confident that the lambdas are being automatically deployed correctly at this time
   - We could also modify the privileged API, but that potentially affect all users of it
     but there aren't any at the time of writing
+
+## 10 Debugging
+
+Situations when you may want to debug an enrichment run:
+
+- a document we expect to have been enriched, has not been enriched as expected.
+- an AWS error alert for a lambda function has been raised to us (probably through email notification subscription)
+
+The main ways we have to debug are to look at logs for `lambda` functions and data stored in `s3` buckets but we need appropriate information to find these in AWS first.
+
+### Getting information to investigate in AWS
+
+#### Find judgment name with failed lambda time
+
+1. Look at the logs for that lambda function in AWS and look for the logs from around the time of the error alert.
+1. Find the name of the judgment from these log0s
+
+#### Find time from judgment name
+
+1. Search for the judgment name in one of the enrichment s3 buckets (probably best to start with the first bucket in case there was a failure and so never reached the later buckets) to see when the bucket was updated.
+
+### Inspecting logs and s3 buckets in AWS
+
+#### Look at lambda logs
+
+We can access lambda function has a `log group` in which we can access different logs for different runs of the lambda.
+
+1. We can find the logs for a parituclar lambda at a particular time by filtering the logs in that lambda's log group around the time we know the lambda run we care about was triggered.
+2. Then we can find any relevant information from the logs to use for
+  
+#### Look at s3 buckets
+
+At each stage of enrichment process we store the partially enriched xml back to an `s3` bucket as shown in `docs/img/architecture.png`.
+
+1. We can download the xml from each stage for the judgment by going to each s3 bucket in the AWS Enrichment space and searching for the judgment name.
+1. We can compare sequential stages of enriched xml for the judgment to attempt to determine where our issue may have arisen.
+   - e.g. if we can see that between enrichment stage 1 completing and enrichment stage 2 completing something odd happened to the xml we can focus on the lambda function that is called in between, here the `oblique_reference_replacer` lambda.
+
+### Recreate and debug
+
+Once we have determined the lambda that caused the issue, xml from the s3 buckets on either side of the lambda, and any relevant log information as a starting point, we can use the xml from each as input and expected output fixtures for an end to end test to help us debug locally with breakpoints and fix the bug.
