@@ -1,11 +1,8 @@
 import os
 import unittest
-from cgitb import handler
-from multiprocessing.sharedctypes import Value
 
 import boto3
 import mock
-import pytest
 from moto import mock_s3
 
 # from lambda_function import *
@@ -13,11 +10,11 @@ from moto import mock_s3
 
 test_xml_content = """<?xml version="1.0" encoding="UTF-8"?>
 <akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
-	<level>
-	  <content>
-	    <p style="margin-right:0.00in;text-indent:0.00in">the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified. </p>
-	  </content>
-	</level>
+        <level>
+          <content>
+            <p style="margin-right:0.00in;text-indent:0.00in">the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified. </p>
+          </content>
+        </level>
 </akomaNtoso>"""
 
 test_s3_event = {
@@ -129,12 +126,12 @@ class TestXMLValidate(unittest.TestCase):
         # bucket = conn.create_bucket(Bucket='mybucket')
 
         test_bucket_name = "test_bucket"
-        test_data = b"col_1,col_2\n1,2\n3,4\n"
+        # test_data = b"col_1,col_2\n1,2\n3,4\n"
 
         # object = conn.Object(test_bucket_name, f'test_data.xml')
         # object.put(Body=test_data)
 
-        bucket = conn.create_bucket(
+        conn.create_bucket(
             Bucket=test_bucket_name,
             # CreateBucketConfiguration={"LocationConstraint": "us-east-1"}
         )

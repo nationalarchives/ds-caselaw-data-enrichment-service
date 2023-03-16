@@ -1,20 +1,12 @@
 #!/usr/bin/env python3
 
-import csv
+import base64
 import json
 import logging
 import os
-import random
-import sys
-import urllib.parse
-from gc import garbage
 
 import boto3
-import psycopg2 as pg
 import spacy
-from botocore.exceptions import ClientError
-from dateutil.parser import parse as dparser
-from psycopg2 import Error
 
 from database import db_connection
 
@@ -267,7 +259,7 @@ def push_contents(uploaded_bucket, uploaded_key):
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
-    response = queue.send_message(
+    queue.send_message(
         MessageBody=json.dumps(message), MessageAttributes=msg_attributes
     )
 

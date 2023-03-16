@@ -2,7 +2,6 @@ import unittest
 
 import psycopg2
 import testing.postgresql
-from numpy import mat
 from spacy.lang.en import English
 
 from legislation_extraction.legislation_matcher_hybrid import (
@@ -43,7 +42,7 @@ class TestLegislationProcessor(unittest.TestCase):
             for_fuzzy BOOLEAN NOT NULL
         );
         INSERT INTO ukpga_lookup (candidate_titles, ref, citation, year, for_fuzzy)
-        VALUES 
+        VALUES
             ('Adoption and Children Act 2002', 'http://www.legislation.gov.uk/ukpga/2002/38', 'citation_abc', 2002, true),
             ('def', 'ref_def', 'citation_def', 2001, true),
             ('ghi', 'ref_ghi', 'citation_ghi', 2002, false);
@@ -182,9 +181,7 @@ class TestLegislationReplacer(unittest.TestCase):
         replacement_entry = (legislation_match, href, canonical)
         replaced_entry = replacer_leg(text, replacement_entry)
         assert legislation_match in replaced_entry
-        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'.format(
-            href, legislation_match
-        )
+        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'
         assert replacement_string in replaced_entry
 
 

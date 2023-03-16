@@ -15,7 +15,6 @@ from sqlalchemy import create_engine
 from caselaw_extraction.correction_strategies import apply_correction_strategy
 from database.db_connection import get_matched_rule
 from replacer.replacer import replacer_caselaw
-from utils.helper import load_patterns
 
 CORRECT_CITATIONS = [
     "random text goes here random text goes here **[2022] UKUT 177 (TCC)",

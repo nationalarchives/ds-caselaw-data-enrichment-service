@@ -1,13 +1,10 @@
-import csv
 import json
 import logging
 import os
-import urllib
 
 import boto3
 import requests
 import urllib3
-from botocore.exceptions import ClientError
 from requests.auth import HTTPBasicAuth
 
 LOGGER = logging.getLogger()

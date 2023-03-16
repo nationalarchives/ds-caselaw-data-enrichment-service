@@ -1,10 +1,8 @@
 import os
 import unittest
-from operator import index
 
 import boto3
 import mock
-import pytest
 from moto import mock_s3
 
 # from lambdas.extract_judgement_contents.index import *
@@ -12,11 +10,11 @@ from moto import mock_s3
 
 test_xml_content = """<?xml version="1.0" encoding="UTF-8"?>
 <akomaNtoso>
-	<level>
-	  <content>
-	    <p style="margin-right:0.00in;text-indent:0.00in">the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified. </p>
-	  </content>
-	</level>
+        <level>
+          <content>
+            <p style="margin-right:0.00in;text-indent:0.00in">the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified. </p>
+          </content>
+        </level>
 </akomaNtoso>"""
 
 test_extracted_xml_content = "the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified."
@@ -70,22 +68,22 @@ class TestExtractJudgement(unittest.TestCase):
         test_bucket_name = "test_bucket"
         # test_data = b'col_1,col_2\n1,2\n3,4\n'
 
-        bucket = conn.create_bucket(Bucket=test_bucket_name)
-        bucket = conn.create_bucket(Bucket=test_bucket_destination_name)
+        conn.create_bucket(Bucket=test_bucket_name)
+        conn.create_bucket(Bucket=test_bucket_destination_name)
 
         conn.put_object(
             Bucket=test_bucket_name,
-            Key=f"example/s3/path/key/test_data.xml",
+            Key="example/s3/path/key/test_data.xml",
             Body=test_xml_content,
         )
 
-        response = handler(event=test_s3_event, context={})
+        handler(event=test_s3_event, context={})
         #         body = conn.Object('mybucket', 'steve').get()[
         # 'Body'].read().decode("utf-8")
         # test_bucket_destination_name/example/s3/path/key/test_data.txt
         uploaded_content = conn.get_object(
             Bucket=test_bucket_destination_name,
-            Key=f"example/s3/path/key/test_data.txt",
+            Key="example/s3/path/key/test_data.txt",
         )
         # print(uploaded_content)
         cleaned_content = uploaded_content["Body"].read().decode("utf-8")

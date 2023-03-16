@@ -1,5 +1,6 @@
 #!env/bin/python
 
+import base64
 import datetime
 import logging
 import os
@@ -8,8 +9,6 @@ from io import BytesIO
 
 import boto3
 import pandas as pd
-import psycopg2 as pg
-from botocore.exceptions import ClientError
 from psycopg2 import Error
 from SPARQLWrapper import CSV, SPARQLWrapper
 from sqlalchemy import create_engine

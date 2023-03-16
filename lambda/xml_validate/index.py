@@ -5,7 +5,7 @@ import logging
 import os
 import urllib.parse
 from distutils.util import strtobool
-from io import BytesIO, StringIO
+from io import BytesIO
 
 import boto3
 from lxml import etree
@@ -125,7 +125,7 @@ def trigger_push_enriched(uploaded_bucket, uploaded_key):
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
-    response = queue.send_message(
+    queue.send_message(
         MessageBody=json.dumps(message), MessageAttributes=msg_attributes
     )
 
@@ -194,7 +194,7 @@ def handler(event, context):
             LOGGER.info(message)
             topic = DEST_ERROR_TOPIC
             sns_client = boto3.client("sns")
-            response = sns_client.publish(
+            sns_client.publish(
                 TargetArn=topic,
                 Message=json.dumps({"default": message}),
                 MessageStructure="json",

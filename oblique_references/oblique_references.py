@@ -78,7 +78,7 @@ def create_legislation_dict(
 
 
 def _get_legislation_year(legislation_name: str) -> str:
-    legislation_year_match = re.search("\d{4}", legislation_name)
+    legislation_year_match = re.search(r"\d{4}", legislation_name)
     if not legislation_year_match:
         return ""
     return legislation_year_match.group()
@@ -94,7 +94,7 @@ def match_numbered_act(
     :param legislation_dicts: list of legislation dictionaries
     :returns: matched legislation dictionary
     """
-    act_year_match = re.search("\d{4}", detected_numbered_act[1])
+    act_year_match = re.search(r"\d{4}", detected_numbered_act[1])
     if not act_year_match:
         return {}
 

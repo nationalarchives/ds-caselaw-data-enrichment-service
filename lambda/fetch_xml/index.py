@@ -4,10 +4,7 @@ import logging
 import os
 
 import boto3
-import requests
 import urllib3
-from botocore.exceptions import ClientError
-from requests.auth import HTTPBasicAuth
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)

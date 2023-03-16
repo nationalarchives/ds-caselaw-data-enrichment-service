@@ -1,17 +1,15 @@
 #!env/bin/python
 
-import datetime
+import base64
 import json
 import logging
 import os
 import urllib.parse
-from io import BytesIO, StringIO
+from io import StringIO
 
 import boto3
 import pandas as pd
-import psycopg2 as pg
 import spacy
-from botocore.exceptions import ClientError
 from psycopg2 import Error
 from sqlalchemy import create_engine
 

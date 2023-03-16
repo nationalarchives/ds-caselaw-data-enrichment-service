@@ -1,19 +1,11 @@
 #!/usr/bin/env python3
 
-import csv
 import json
 import logging
 import os
-import random
-import sys
-import urllib.parse
-from gc import garbage
 
 import boto3
 import spacy
-from botocore.exceptions import ClientError
-from dateutil.parser import parse as dparser
-from spacy.language import Language
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -147,7 +139,7 @@ def push_contents(uploaded_bucket, uploaded_key):
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
-    response = queue.send_message(
+    queue.send_message(
         MessageBody=json.dumps(message), MessageAttributes=msg_attributes
     )
 

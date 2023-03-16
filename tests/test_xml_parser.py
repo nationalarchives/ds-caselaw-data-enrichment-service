@@ -34,11 +34,11 @@ class TestXmlParser(unittest.TestCase):
         )
 
         text = '<content>\
-                <p style="margin-left:0.80in;margin-right:0.03in;text-indent:0.00in">in accordance with CPR Rule 22.1 and PD 22.\” </p>\
+                <p style="margin-left:0.80in;margin-right:0.03in;text-indent:0.00in">in accordance with CPR Rule 22.1 and PD 22.” </p>\
             </content>'
 
         judgment_content_text = parse_file(text)
-        assert judgment_content_text == "in accordance with CPR Rule 22.1 and PD 22.\”"
+        assert judgment_content_text == "in accordance with CPR Rule 22.1 and PD 22.”"
 
         text = '<content>\
                 <p class="Heading2" style="margin-left:-0.00in;text-indent:-0.01in">CONCLUSION</p>\

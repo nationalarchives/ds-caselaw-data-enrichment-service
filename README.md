@@ -216,15 +216,15 @@ You will need access to for the staging or production Enrichment AWS space as ap
 Each lambda function has a [log group](https://eu-west-2.console.aws.amazon.com/cloudwatch/home?region=eu-west-2#logsV2:log-groups) in which we can access different logs for different runs of the lambda.
 
 1. We can find the logs for a particular lambda at a particular time by filtering the logs in that lambda's log group around the time we know the lambda run we care about was triggered.
-2. Then we can find any relevant information from the logs to use for
-  
+1. Then we can find any relevant information from the logs to use for
+
 #### Look at s3 buckets
 
 At each stage of enrichment process we store the partially enriched xml back to an [s3 bucket](https://s3.console.aws.amazon.com/s3/buckets?region=eu-west-2) as shown in `docs/img/architecture.png`.
 You can find all the s3 bucket names where they are defined in `modules/lambda_s3/bucket.tf` and can find all relationships between buckets and lambdas in `modules/lambda_s3/lambda.tf`.
 
 1. We can download the xml from each stage for the judgment by going to each s3 bucket in the AWS Enrichment space and searching for the judgment name.
-2. We can compare sequential stages of enriched xml for the judgment to attempt to determine where our issue may have arisen.
+1. We can compare sequential stages of enriched xml for the judgment to attempt to determine where our issue may have arisen.
    - e.g. if we can see that between enrichment stage 1 completing and enrichment stage 2 completing something odd happened to the xml we can focus on the lambda function that is called in between, here the `oblique_reference_replacer` lambda.
 
 ### Recreate and debug
