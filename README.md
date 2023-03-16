@@ -221,9 +221,10 @@ Each lambda function has a [log group](https://eu-west-2.console.aws.amazon.com/
 #### Look at s3 buckets
 
 At each stage of enrichment process we store the partially enriched xml back to an [s3 bucket](https://s3.console.aws.amazon.com/s3/buckets?region=eu-west-2) as shown in `docs/img/architecture.png`.
+You can find all the s3 bucket names where they are defined in `modules/lambda_s3/bucket.tf` and can find all relationships between buckets and lambdas in `modules/lambda_s3/lambda.tf`.
 
 1. We can download the xml from each stage for the judgment by going to each s3 bucket in the AWS Enrichment space and searching for the judgment name.
-1. We can compare sequential stages of enriched xml for the judgment to attempt to determine where our issue may have arisen.
+2. We can compare sequential stages of enriched xml for the judgment to attempt to determine where our issue may have arisen.
    - e.g. if we can see that between enrichment stage 1 completing and enrichment stage 2 completing something odd happened to the xml we can focus on the lambda function that is called in between, here the `oblique_reference_replacer` lambda.
 
 ### Recreate and debug
