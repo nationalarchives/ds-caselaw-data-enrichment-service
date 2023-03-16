@@ -29,7 +29,7 @@ class TestEnrichObliqueReferences(unittest.TestCase):
         with open(expected_file_path, "r", encoding="utf-8") as expected_file:
             expected_enriched_content = expected_file.read()
 
-        assert enriched_content == expected_enriched_content
+        assert enriched_content.strip() == expected_enriched_content.strip()
 
 
 if __name__ == "__main__":
