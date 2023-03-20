@@ -54,7 +54,7 @@ jobs:
 
       - name: Run python tests with coverage
         id: run_python_tests
-        run: coverage run --source . -m unittest
+        run: coverage run --source . -m pytest
 
       - name: Generate coverage XML
         run: coverage xml
