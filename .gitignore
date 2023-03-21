@@ -52,35 +52,6 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
 
 # pyenv
 .python-version
@@ -104,54 +75,30 @@ celerybeat.pid
 
 # Environments
 .env
-
+*venv
 env/
-
 ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
 
 # mypy
 .mypy_cache/
 .dmypy.json
 dmypy.json
 
-# Pyre type checker
-.pyre/
-
 # Other test files
 __pycache__
+
+# Other test files
 .DS_Store
 .venv/
 .vscode/
-test_citation_patterns.jsonl
-matched_rules.csv
-*.ipynb
-*.db
-2022_02_24_Citation_Manifest.csv
-caselaw_extraction/manifest.db
-.vscode/settings.json
-tests.ipynb
-tuples.jsonl
-tests/test_pipeline_components/output_test_files/case_law_legislation_abbreviations_replaced_enriched.xml
-tests/test_pipeline_components/output_test_files/case_law_legislation_replaced_enriched.xml
-tests/test_pipeline_components/output_test_files/case_law_replaced_enriched.xml
-enrichment/**/*.xml
-legislation_provisions_extraction/test_judgments
-legislation_provisions_extraction/output
 
-oblique_references/test_judgments
-abbreviation_extraction/abbreviations_matcher_test.py
+# Other test files
+test_citation_patterns.jsonl
+
+*.db
 
 .idea
 *.iml
@@ -168,9 +115,6 @@ crash.log
 
 # Ignore any .tfvars files used locally.
 *.tfvars
-
-
-
 
 # Ignore override files as they are usually used to override resources locally and so
 # are not checked in

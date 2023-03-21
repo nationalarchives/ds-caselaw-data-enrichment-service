@@ -72,15 +72,7 @@ def mock_return_citation(nlp, text, db_conn):
     )
 
 
-# current number of rules in the database
-def mock_get_rules_total(db_conn):
-    cursor = db_conn.cursor()
-    number_of_rules = cursor.execute("""SELECT COUNT(*) FROM manifest""")
-
-    return number_of_rules
-
-
-FIXTURE_DIR = Path(__file__).parent.parent.parent.resolve() / "rules"
+FIXTURE_DIR = Path(__file__).parent.parent.parent.resolve() / "caselaw_extraction/rules"
 
 
 class TestCitationProcessor(unittest.TestCase):
