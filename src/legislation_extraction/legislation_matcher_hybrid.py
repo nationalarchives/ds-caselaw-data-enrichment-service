@@ -115,7 +115,7 @@ def exact_matcher(title, docobj, nlp, cutoff=None, candidates=None):
     matched_items = phrase_matcher(docobj)
 
     matched_text = []
-    for match_id, start, end in matched_items:
+    for _, start, end in matched_items:
         span = docobj[start:end]
         matched_text.append((span.text, start, end, 100))
     return matched_text
@@ -152,7 +152,7 @@ def search_for_act_fuzzy(title, docobj, nlp, cutoff, candidates=None):
     fuzzy_matcher.add("Text Extractor", phrase_list, kwargs=[options])
     matched_items = fuzzy_matcher(docobj)
     matched_text = []
-    for match_id, start, end, ratio in matched_items:
+    for _, start, end, ratio in matched_items:
         span = docobj[start:end]
         matched_text.append((span.text, start, end, ratio))
     return matched_text
@@ -219,7 +219,7 @@ def detect_candidates(nlp, docobj):
     matcher = Matcher(nlp.vocab)
     matcher.add("Act Matcher", [pattern])
     matches = matcher(docobj)
-    return [(start, end) for match_id, start, end in matches]
+    return [(start, end) for _, start, end in matches]
 
 
 def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
@@ -293,7 +293,7 @@ def detect_year_span(docobj, nlp):
     dmatcher = Matcher(nlp.vocab)
     dmatcher.add("date matcher", [pattern])
     dm = dmatcher(docobj)
-    dates = [docobj[start:end].text for match_id, start, end in dm]
+    dates = [docobj[start:end].text for _, start, end in dm]
     dates = set([int(d) for d in dates if (len(d) == 4) & (d.isdigit())])
     return dates
 
