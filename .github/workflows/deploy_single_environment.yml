@@ -91,6 +91,7 @@ jobs:
         run: |
           set +e
           set +o pipefail
+          cd terraform
           terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.account_id }}"
           terraform workspace list
         continue-on-error: false
@@ -99,6 +100,7 @@ jobs:
         run: |
           set +e
           set +o pipefail
+          cd terraform
           terraform workspace select ${{ secrets.workspace }}
           terraform apply -refresh-only --auto-approve -no-color -var "app_env=${{ secrets.app_env }}"
           terraform apply --auto-approve -no-color -var "app_env=${{ secrets.app_env }}"

@@ -103,6 +103,7 @@ jobs:
         run: |
           set +e
           set +o pipefail
+          cd terraform
           terraform init -backend=false
           terraform validate -no-color
         continue-on-error: false

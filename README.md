@@ -150,14 +150,14 @@ As we use AWS Aurora, there is no multi-AZ functionality. Instead, “Aurora aut
 Each night there is an automated snapshot by Amazon of RDS.
 We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron-based from Amazon Eventbridge that triggers a [lambda](/src/lambdas/db_backup/index.py). DB backups are shown in the RDS console under manual snapshots.
 
-## 8 Infrastructure
+## 8 Terraform Infrastructure
 
 Here are some brief notes on extending the infrastructure.
 
-- The file `main.tf` at the root of the repo will invoke each of the modules, more of the same services can be created by adding to those modules. If more modules are created then `main.tf` will need to be extended to invoke them.
-- Adding an S3 bucket is done by invoking the `secure_bucket` module, located at `modules/secure_bucket/`, you can see how the existing buckets are created by viewing `modules/lambda_s3/bucket.tf`, new buckets should be created by adding to this file.
+- The file `terraform/main.tf` will invoke each of the modules, more of the same services can be created by adding to those modules. If more modules are created then `terraform/main.tf` will need to be extended to invoke them.
+- Adding an S3 bucket is done by invoking the `secure_bucket` module, located at `terraform/modules/secure_bucket/`, you can see how the existing buckets are created by viewing `terraform/modules/lambda_s3/bucket.tf`, new buckets should be created by adding to this file.
   If a bucket policy is added, then an extra statement will automatically be added that denies insecure transport.
-- Docker images are stored in ECR. Each repo needs to exist before a docker image can be pushed to ECR. These are created in `modules/lambda_s3/lambda.tf`.
+- Docker images are stored in ECR. Each repo needs to exist before a docker image can be pushed to ECR. These are created in `terraform/modules/lambda_s3/lambda.tf`.
 
 ## 9 Turning Enrichment Off
 
@@ -225,7 +225,7 @@ Each lambda function has a [log group](https://eu-west-2.console.aws.amazon.com/
 #### Look at s3 buckets
 
 At each stage of enrichment process we store the partially enriched xml back to an [s3 bucket](https://s3.console.aws.amazon.com/s3/buckets?region=eu-west-2) as shown in `docs/img/architecture.png`.
-You can find all the s3 bucket names where they are defined in `modules/lambda_s3/bucket.tf` and can find all relationships between buckets and lambdas in `modules/lambda_s3/lambda.tf`.
+You can find all the s3 bucket names where they are defined in `terraform/modules/lambda_s3/bucket.tf` and can find all relationships between buckets and lambdas in `terraform/modules/lambda_s3/lambda.tf`.
 
 1. We can download the xml from each stage for the judgment by going to each s3 bucket in the AWS Enrichment space and searching for the judgment name.
 1. We can compare sequential stages of enriched xml for the judgment to attempt to determine where our issue may have arisen.
