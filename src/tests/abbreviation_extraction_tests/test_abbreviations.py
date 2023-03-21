@@ -16,7 +16,6 @@ from abbreviation_extraction.abbreviations import (
     filter_matches,
     find_abbreviation,
 )
-from replacer.replacer import replacer_abbr
 
 
 @Language.factory("abbreviation_detector")
@@ -257,30 +256,6 @@ class TestFilterMatches(unittest.TestCase):
         doc = self.nlp(text)
         filtered = filter_matches([(1, 5, 9)], doc)
         assert len(filtered) == 0
-
-
-class TestReplacerAbbr(unittest.TestCase):
-    """Unit Tests for `replacer_abbr`"""
-
-    def test_replacer_abbr(self):
-        """
-        Given a text string and a tuple of original string and abbreviation
-            where the original string is contained in the text string
-        When replacer_abbr is called with these
-        Then a string is returned that looks like the original text string
-            with the matching string enclosed by an <abbr> tag with the replacement
-            string as the title attribute and TNA as the uk:origin attribute
-        """
-        text = "This game requires 12 GB of Random Access Memory"
-        replacement_entry = ("Random Access Memory", "RAM")
-
-        expected = (
-            "This game requires 12 GB of "
-            '<abbr title="RAM" uk:origin="TNA">'
-            "Random Access Memory"
-            "</abbr>"
-        )
-        assert replacer_abbr(text, replacement_entry) == expected
 
 
 if __name__ == "__main__":

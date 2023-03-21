@@ -14,7 +14,6 @@ from sqlalchemy import create_engine
 
 from caselaw_extraction.correction_strategies import apply_correction_strategy
 from database.db_connection import get_matched_rule
-from replacer.replacer import replacer_caselaw
 
 CORRECT_CITATIONS = [
     "random text goes here random text goes here **[2022] UKUT 177 (TCC)",
@@ -324,85 +323,6 @@ class TestCorrectionStrategy(unittest.TestCase):
         assert corrected_citation != citation_match
         assert corrected_citation == "[2019] QB 456"
         assert year == "2019"
-
-
-class TestCitationReplacer(unittest.TestCase):
-    """
-    This class tests the replacement of the citations within the text itself. This comes from replacer.py
-    """
-
-    def test_citation_replacer(self):
-        citation_match = "[2025] 1 All E.R. 123"  # incorrect citation
-        corrected_citation = (
-            "[2025] 1 All ER 123"  # in practice, returned via the citation matcher
-        )
-        year = "2025"
-        URI = "#"
-        is_neutral = "true"
-        text = "In the judgment the incorrect citation is [2025] 1 All E.R. 123."
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
-        assert replacement_string in replaced_entry
-
-        citation_match = "[2022] UKET 789123_2012"
-        corrected_citation = "[2022] UKET 789123/2012"
-        year = "2022"
-        URI = "#"
-        is_neutral = "true"
-        text = "This citation that needs to be changed is [2022] UKET 789123_2012 which discussed..."
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
-        assert replacement_string in replaced_entry
-
-        citation_match = "LR 1 A&E 123"
-        corrected_citation = "LR 1 AE 123"
-        year = "No Year"
-        text = "LR 1 A&E 123 refers to..."
-        URI = "#"
-        is_neutral = "true"
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
-        assert replacement_string in replaced_entry
-
-        citation_match = "(2022) EWHC 123 (Mercantile)"
-        corrected_citation = "[2022] EWHC 123 (Mercantile)"
-        year = "2022"
-        URI = "#"
-        is_neutral = "true"
-        text = "I defer to the judgment in (2022) EWHC 123 (Mercantile)."
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
-        assert replacement_string in replaced_entry
-
-        citation_match = "[2022] ewca civ 123"
-        corrected_citation = "[2022] EWCA Civ 123"
-        year = "2022"
-        URI = "#"
-        is_neutral = "true"
-        text = "[2022] ewca civ 123."
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
-        assert replacement_string in replaced_entry
 
 
 if __name__ == "__main__":
