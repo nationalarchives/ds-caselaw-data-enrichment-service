@@ -16,7 +16,9 @@ The primary purpose of the JEP is to "enrich" the judgments published on [Find C
 
 ## 1.1 The general anatomy of the JEP
 
-At its core, the JEP is a series of serverless functions, which we call *Annotators*, that sequentially add layers of markup to judgments submitted for enrichment. Each Annotator is responsible for performing a specific type of enrichment. For example, the [Case Law Annotator](caselaw/case-law-annotator.md) detects references to case law citations (such as `[2021] 1 WLR 1`) and the [Legislation Annotator](legislation/legislation-annotator.md) is responsible for marking up mentions of UK primary legislation. An overview of the *Annotators* can be found below with more detailed notes on each set out in dedicated documentation in this folder.
+At its core, the JEP is a series of serverless functions, which we call *Annotators*, that sequentially add layers of markup to judgments submitted for enrichment. Each Annotator is responsible for performing a specific type of enrichment. For example, the [Case Law Annotator](/docs/caselaw/case-law-annotator.md) detects references to case law citations (such as `[2021] 1 WLR 1`) and the [Legislation Annotator](/docs/legislation/legislation-annotator.md) is responsible for marking up mentions of UK primary legislation. An overview of the *Annotators* can be found below with more detailed notes on each set out in dedicated documentation in this folder.
+
+A comprehensive map of the JEP's architecture can be found [here](/docs/img/Full%20JEP.drawio.png)
 
 The *Annotators* are supported by a cast of utility functions that are responsible for ETL, XML validation, rules and data management and file manipulation. The most important of these utility functions are the [*Replacers*](#14-replacers), which generate the enriched XML that is sent back for publication on [Find Case Law](https://caselaw.nationalarchives.gov.uk).
 
@@ -34,11 +36,11 @@ An example enriched snippet of LegalDocML feature case law citation markup looks
 
 The JEP is a modular system comprising a series of AWS Lambda functions -- the *Annotators* -- that are each responsible for performing a discrete step in the enrichment pipeline. The five Annotator functions are:
 
-1. [Case Law Annotator](caselaw/case-law-annotator.md) -- detects references to UK case law citations, such as `[2022] 1 WLR 123`
-1. [Legislation Annotator](legislation/legislation-annotator.md) -- detects references to UK primary legislation, such as `Theft Act 1968`
-1. [Abbreviation Annotator](abbreviation-annotator.md) -- detects abbreviations and resolves them to their longform. For example, the longform of `HRA 1998` is `Human Rights Act 1998`
-1. [Oblique Legislative References Annotator](legislation/oblique-references.md) -- detects indirect references to primary legislaton, such as `the Act` or `the 1998 Act` and determines which cited primary enactment the indirect reference corresponds to
-1. [Legislative Provision Annotator](legislation/legislative-provision-annotator.md) -- identifies references to legislation provisions, such as `section 6`, and identifies the corresponding primary enactment, for example `section 6 of the Human Rights Act`
+1. [Case Law Annotator](/docs/caselaw/case-law-annotator.md) -- detects references to UK case law citations, such as `[2022] 1 WLR 123`
+1. [Legislation Annotator](/docs/legislation/legislation-annotator.md) -- detects references to UK primary legislation, such as `Theft Act 1968`
+1. [Abbreviation Annotator](/docs/abbreviation-annotator.md) -- detects abbreviations and resolves them to their longform. For example, the longform of `HRA 1998` is `Human Rights Act 1998`
+1. [Oblique Legislative References Annotator](/docs/legislation/oblique-references.md) -- detects indirect references to primary legislaton, such as `the Act` or `the 1998 Act` and determines which cited primary enactment the indirect reference corresponds to
+1. [Legislative Provision Annotator](/docs/legislation/legislative-provision-annotator.md) -- identifies references to legislation provisions, such as `section 6`, and identifies the corresponding primary enactment, for example `section 6 of the Human Rights Act`
 
 ### 1.3 Enrichment phases
 
@@ -58,15 +60,15 @@ The fourth and final phase of enrichment consists of the [vCite integration](/do
 
 ### 1.4 Replacers
 
-The [Replacers](/replacer/) are responsible for registering the various entities detected by the [Annotators](#12-the-annotators), including their entity types and position in the judgment body. The registered replacements are then applied to the judgment body through a series of string manipulations by the [`make_replacements`](/lambda/make_replacements/) lambda.
+The [Replacers](/src/replacer/) are responsible for registering the various entities detected by the [Annotators](#12-the-annotators), including their entity types and position in the judgment body. The registered replacements are then applied to the judgment body through a series of string manipulations by the [`make_replacements`](/src/lambdas/make_replacements/) lambda.
 
 There are two sets of replacer logic. The [first set](/replacer/replacer.py) provides the logic for first phase enrichment replacements. The [second set of replacer logic](/replacer/second_stage_replacer.py) handles replacement in the second and third phases of enrichment.
 
 ### 1.5 Re-enrichment
 
-It is possible for the same judgment to be submitted for enrichment on multiple occasions, which creates the risk that existing enrichment present in the judgment will break as additional enrichment is added to the judgment. To address this, the JEP "sanitises" the judgment body prior to making replacements. The sanitisation process is simply performed by stripping existing `</ref>` tags from the judgment. This logic is handled in the [make_replacements](/lambda/make_replacements/index.py) lambda.
+It is possible for the same judgment to be submitted for enrichment on multiple occasions, which creates the risk that existing enrichment present in the judgment will break as additional enrichment is added to the judgment. To address this, the JEP "sanitises" the judgment body prior to making replacements. The sanitisation process is simply performed by stripping existing `</ref>` tags from the judgment. This logic is handled in the [make_replacements](/src/lambdas/make_replacements/index.py) lambda.
 
-**IMPORTANT:** the sanitisation step does not currently distinguish between enrichment supplied by the JEP itself, by vCite or from some other source! Particular care should be taken to avoid inadvertently removing vCite enrichment by re-enriching a judgment that includes vCite enrichment when the [vCite integration](vcite.md) is switched off.
+**IMPORTANT:** the sanitisation step does not currently distinguish between enrichment supplied by the JEP itself, by vCite or from some other source! Particular care should be taken to avoid inadvertently removing vCite enrichment by re-enriching a judgment that includes vCite enrichment when the [vCite integration](/docs/vcite.md) is switched off.
 
 ## 2 Adding new citation rules to the Case Law Annotator
 
@@ -103,13 +105,15 @@ The standard mechanism for triggering the enrichment pipeline is via the TNA edi
 
 ## 4 Tests
 
-There is a comprehensive suite of tests that can be run locally with
+There is a suite of tests that can be run locally with
 
 ```sh
-python -m unittest
+pytest
 ```
 
-You can also obtain a test coverage report with `coverage run --source . -m unittest && coverage report`
+but you'll need to ensure you've installed `src/tests/requirements.txt`
+
+You can also obtain a test coverage report with `coverage run --source . -m pytest && coverage report`
 
 The tests are currently run in CI as specified in `.github/workflows/ci_lint_and_test.yml`
 
@@ -152,16 +156,16 @@ CI/CD works in the following way:
 As we use AWS Aurora, there is no multi-AZ functionality. Instead, “Aurora automatically replicates storage six ways across three availability zones”.
 
 Each night there is an automated snapshot by Amazon of RDS.
-We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron-based from Amazon Eventbridge that triggers a [lambda](/lambda/db_backup/index.py). DB backups are shown in the RDS console under manual snapshots.
+We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron-based from Amazon Eventbridge that triggers a [lambda](/src/lambdas/db_backup/index.py). DB backups are shown in the RDS console under manual snapshots.
 
-## 8 Infrastructure
+## 8 Terraform Infrastructure
 
 Here are some brief notes on extending the infrastructure.
 
-- The file `main.tf` at the root of the repo will invoke each of the modules, more of the same services can be created by adding to those modules. If more modules are created then `main.tf` will need to be extended to invoke them.
-- Adding an S3 bucket is done by invoking the `secure_bucket` module, located at `modules/secure_bucket/`, you can see how the existing buckets are created by viewing `modules/lambda_s3/bucket.tf`, new buckets should be created by adding to this file.
+- The file `terraform/main.tf` will invoke each of the modules, more of the same services can be created by adding to those modules. If more modules are created then `terraform/main.tf` will need to be extended to invoke them.
+- Adding an S3 bucket is done by invoking the `secure_bucket` module, located at `terraform/modules/secure_bucket/`, you can see how the existing buckets are created by viewing `terraform/modules/lambda_s3/bucket.tf`, new buckets should be created by adding to this file.
   If a bucket policy is added, then an extra statement will automatically be added that denies insecure transport.
-- Docker images are stored in ECR. Each repo needs to exist before a docker image can be pushed to ECR. These are created in `modules/lambda_s3/lambda.tf`.
+- Docker images are stored in ECR. Each repo needs to exist before a docker image can be pushed to ECR. These are created in `terraform/modules/lambda_s3/lambda.tf`.
 
 ## 9 Turning Enrichment Off
 
@@ -229,7 +233,7 @@ Each lambda function has a [log group](https://eu-west-2.console.aws.amazon.com/
 #### Look at s3 buckets
 
 At each stage of enrichment process we store the partially enriched xml back to an [s3 bucket](https://s3.console.aws.amazon.com/s3/buckets?region=eu-west-2) as shown in `docs/img/architecture.png`.
-You can find all the s3 bucket names where they are defined in `modules/lambda_s3/bucket.tf` and can find all relationships between buckets and lambdas in `modules/lambda_s3/lambda.tf`.
+You can find all the s3 bucket names where they are defined in `terraform/modules/lambda_s3/bucket.tf` and can find all relationships between buckets and lambdas in `terraform/modules/lambda_s3/lambda.tf`.
 
 1. We can download the xml from each stage for the judgment by going to each s3 bucket in the AWS Enrichment space and searching for the judgment name.
 1. We can compare sequential stages of enriched xml for the judgment to attempt to determine where our issue may have arisen.

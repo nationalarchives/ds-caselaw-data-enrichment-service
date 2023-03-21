@@ -50,11 +50,11 @@ jobs:
 
       - name: pip install tests dependencies
         run: |
-          pip3 install -r tests/requirements.txt
+          pip3 install -r src/tests/requirements.txt
 
       - name: Run python tests with coverage
         id: run_python_tests
-        run: coverage run --source . -m unittest
+        run: coverage run --source . -m pytest
 
       - name: Generate coverage XML
         run: coverage xml
@@ -103,6 +103,7 @@ jobs:
         run: |
           set +e
           set +o pipefail
+          cd terraform
           terraform init -backend=false
           terraform validate -no-color
         continue-on-error: false
