@@ -16,6 +16,7 @@ from legislation_extraction.legislation_matcher_hybrid import (
 )
 from legislation_extraction.legislation_matcher_hybrid import (
     lookup_pipe,
+    resolve_overlap,
     search_for_act_fuzzy,
 )
 
@@ -53,6 +54,154 @@ class TestLegislationProcessor(unittest.TestCase):
     def tearDown(self):
         self.postgresql.stop()
 
+    def test_resolve_overlap_without_overlap(self):
+        results = {
+            "Adoption and Children Act 2002": [
+                (
+                    "Adoption Children Act 2002",
+                    1,
+                    3,
+                    91,
+                    "http://www.legislation.gov.uk/ukpga/2002/38",
+                    "citation_abc",
+                ),
+                (
+                    "Adopted Children Act 2002",
+                    11,
+                    33,
+                    4,
+                    "http://www.legislation.gov.uk/ukpga/2011/38",
+                    "citation_abc",
+                ),
+                (
+                    "Adoption of Children Act 2002",
+                    111,
+                    333,
+                    3,
+                    "http://www.legislation.gov.uk/ukpga/2022/38",
+                    "citation_abc",
+                ),
+            ]
+        }
+        pruned_results = resolve_overlap(results)
+
+        assert pruned_results == {
+            "Adoption and Children Act 2002": [
+                (
+                    "Adoption Children Act 2002",
+                    1,
+                    3,
+                    91,
+                    "http://www.legislation.gov.uk/ukpga/2002/38",
+                    "citation_abc",
+                ),
+                (
+                    "Adopted Children Act 2002",
+                    11,
+                    33,
+                    4,
+                    "http://www.legislation.gov.uk/ukpga/2011/38",
+                    "citation_abc",
+                ),
+                (
+                    "Adoption of Children Act 2002",
+                    111,
+                    333,
+                    3,
+                    "http://www.legislation.gov.uk/ukpga/2022/38",
+                    "citation_abc",
+                ),
+            ]
+        }
+
+    def test_resolve_overlap_with_overlap_returns_last_one_if_all_equally_good(self):
+        results = {
+            "Adoption and Children Act 2002": [
+                (
+                    "Adoption Children Act 2002",
+                    28,
+                    32,
+                    91,
+                    "http://www.legislation.gov.uk/ukpga/2002/38",
+                    "citation_abc",
+                ),
+                (
+                    "Adopted Children Act 2002",
+                    28,
+                    32,
+                    91,
+                    "http://www.legislation.gov.uk/ukpga/2011/38",
+                    "citation_abc",
+                ),
+                (
+                    "Adoption of Children Act 2002",
+                    28,
+                    32,
+                    91,
+                    "http://www.legislation.gov.uk/ukpga/2022/38",
+                    "citation_abc",
+                ),
+            ]
+        }
+        pruned_results = resolve_overlap(results)
+
+        assert pruned_results == {
+            "Adoption and Children Act 2002": [
+                (
+                    "Adoption of Children Act 2002",
+                    28,
+                    32,
+                    91,
+                    "http://www.legislation.gov.uk/ukpga/2022/38",
+                    "citation_abc",
+                ),
+            ]
+        }
+
+    def test_resolve_overlap_with_overlap_returns_best_one(self):
+        results = {
+            "Adoption and Children Act 2002": [
+                (
+                    "Adoption Children Act 2002",
+                    28,
+                    32,
+                    100,
+                    "http://www.legislation.gov.uk/ukpga/2002/38",
+                    "this_is_the_best",
+                ),
+                (
+                    "Adopted Children Act 2002",
+                    28,
+                    32,
+                    3,
+                    "http://www.legislation.gov.uk/ukpga/2011/38",
+                    "citation_abc",
+                ),
+                (
+                    "Adoption of Children Act 2002",
+                    28,
+                    32,
+                    4,
+                    "http://www.legislation.gov.uk/ukpga/2022/38",
+                    "t",
+                ),
+            ]
+        }
+        pruned_results = resolve_overlap(results)
+
+        assert pruned_results == {
+            "Adoption and Children Act 2002": [
+                (
+                    "Adoption Children Act 2002",
+                    28,
+                    32,
+                    100,
+                    "http://www.legislation.gov.uk/ukpga/2002/38",
+                    "this_is_the_best",
+                ),
+            ]
+        }
+
     def test_lookup_pipe(self):
         text = "In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption Children Act 2002 requires the court, inter alia"
         doc = self.nlp(text)
@@ -62,6 +211,7 @@ class TestLegislationProcessor(unittest.TestCase):
         results = lookup_pipe(
             titles, doc, self.nlp, methods["hybrid"], self.db_conn, cutoff
         )
+
         assert results == {
             "Adoption and Children Act 2002": [
                 (
