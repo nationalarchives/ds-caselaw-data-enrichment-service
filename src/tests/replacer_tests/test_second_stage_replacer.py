@@ -1,10 +1,13 @@
 """Unit Tests for the `second_stage_replacer` module"""
 
 import unittest
+from pathlib import Path
 
 from bs4 import BeautifulSoup
 
 from replacer.second_stage_replacer import replace_references_by_paragraph
+
+FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures"
 
 
 class TestSecondStageReplacer(unittest.TestCase):
@@ -15,7 +18,7 @@ class TestSecondStageReplacer(unittest.TestCase):
         Then an enriched string is returned with the references replaced by the
             corresponding ref tag
         """
-        input_file_path = "tests/fixtures/ewhc-ch-2023-257_enriched_stage_1.xml"
+        input_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml"
         with open(input_file_path, "r", encoding="utf-8") as input_file:
             file_content = input_file.read()
         file_data = BeautifulSoup(file_content, "xml")
@@ -49,7 +52,7 @@ class TestSecondStageReplacer(unittest.TestCase):
 
         enriched_content = replace_references_by_paragraph(file_data, references)
 
-        expected_file_path = "tests/fixtures/ewhc-ch-2023-257_enriched_stage_2.xml"
+        expected_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_2.xml"
         with open(expected_file_path, "r", encoding="utf-8") as expected_file:
             expected_enriched_content = expected_file.read()
 

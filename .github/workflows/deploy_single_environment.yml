@@ -43,6 +43,9 @@ jobs:
         run: |
           set +e
           set +o pipefail
+          
+          cd src/
+
           mkdir lambdas/determine_replacements_caselaw/caselaw_extraction
           cp -r caselaw_extraction/*.py lambdas/determine_replacements_caselaw/caselaw_extraction/
           cp caselaw_extraction/requirements.txt lambdas/determine_replacements_caselaw/requirements.txt
@@ -78,6 +81,8 @@ jobs:
           mkdir -p lambdas/make_replacements/replacer
           cp -r replacer/*.py lambdas/make_replacements/replacer/
 
+          cd "${GITHUB_WORKSPACE}"
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v2.0.3
         continue-on-error: false
@@ -103,65 +108,64 @@ jobs:
         run: |
           set +e
           set +o pipefail
-          cd "lambdas/determine_replacements_caselaw"
-          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com
+          
+          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com          
+          
+          cd "src/lambdas/determine_replacements_caselaw"
           docker buildx build --load -t tna-s3-tna-ecr-repository-{{ secrets.app_env }} .
-          echo "finished buildx"
           docker tag tna-s3-tna-ecr-repository-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-{{ secrets.app_env }}:latest
-          echo "finished docker tag"
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-{{ secrets.app_env }}:latest
-          echo "finished pushing docker image"
           cd "${GITHUB_WORKSPACE}"
 
-          cd "lambdas/determine_replacements_legislation"
+          cd "src/lambdas/determine_replacements_legislation"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-legislation-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-{{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-{{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "lambdas/determine_replacements_abbreviations"
+          cd "src/lambdas/determine_replacements_abbreviations"
           docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-abbreviations-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-{{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-{{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "lambdas/update_legislation_table"
+          cd "src/lambdas/update_legislation_table"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-legislation-update-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-{{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-{{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "lambdas/update_rules_processor"
+          cd "src/lambdas/update_rules_processor"
           docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-rules-update-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-{{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-{{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "lambdas/determine_legislation_provisions"
+          cd "src/lambdas/determine_legislation_provisions"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-legislation-provision-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-{{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-{{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "lambdas/determine_oblique_references"
+          cd "src/lambdas/determine_oblique_references"
           docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-oblique-references-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-{{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-{{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "lambdas/fetch_xml"
+          cd "src/lambdas/fetch_xml"
           docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-fetch-xml-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-{{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-{{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "lambdas/push_enriched_xml"
+          cd "src/lambdas/push_enriched_xml"
           docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-push-enriched-xml-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-{{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-{{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "lambdas/db_backup"
+          cd "src/lambdas/db_backup"
           docker buildx build --load -t tna-s3-tna-ecr-repository-db-backup-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-db-backup-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-{{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-{{ secrets.app_env }}:latest

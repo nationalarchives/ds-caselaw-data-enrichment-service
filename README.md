@@ -52,13 +52,13 @@ The fourth and final phase of enrichment consists of the [vCite integration](/do
 
 ### 1.4 Replacers
 
-The [Replacers](/replacer/) are responsible for registering the various entities detected by the [Annotators](#12-the-annotators), including their entity types and position in the judgment body. The registered replacements are then applied to the judgment body through a series of string manipulations by the [`make_replacements`](/lambdas/make_replacements/) lambda.
+The [Replacers](/src/replacer/) are responsible for registering the various entities detected by the [Annotators](#12-the-annotators), including their entity types and position in the judgment body. The registered replacements are then applied to the judgment body through a series of string manipulations by the [`make_replacements`](/src/lambdas/make_replacements/) lambda.
 
 There are two sets of replacer logic. The [first set](/replacer/replacer.py) provides the logic for first phase enrichment replacements. The [second set of replacer logic](/replacer/second_stage_replacer.py) handles replacement in the second and third phases of enrichment.
 
 ### 1.5 Re-enrichment
 
-It is possible for the same judgment to be submitted for enrichment on multiple occasions, which creates the risk that existing enrichment present in the judgment will break as additional enrichment is added to the judgment. To address this, the JEP "sanitises" the judgment body prior to making replacements. The sanitisation process is simply performed by stripping existing `</ref>` tags from the judgment. This logic is handled in the [make_replacements](/lambdas/make_replacements/index.py) lambda.
+It is possible for the same judgment to be submitted for enrichment on multiple occasions, which creates the risk that existing enrichment present in the judgment will break as additional enrichment is added to the judgment. To address this, the JEP "sanitises" the judgment body prior to making replacements. The sanitisation process is simply performed by stripping existing `</ref>` tags from the judgment. This logic is handled in the [make_replacements](/src/lambdas/make_replacements/index.py) lambda.
 
 **IMPORTANT:** the sanitisation step does not currently distinguish between enrichment supplied by the JEP itself, by vCite or from some other source! Particular care should be taken to avoid inadvertently removing vCite enrichment by re-enriching a judgment that includes vCite enrichment when the [vCite integration](/docs/vcite.md) is switched off.
 
@@ -103,7 +103,7 @@ There is a suite of tests that can be run locally with
 pytest
 ```
 
-but you'll need to ensure you've installed `tests/requirements.txt`
+but you'll need to ensure you've installed `src/tests/requirements.txt`
 
 You can also obtain a test coverage report with `coverage run --source . -m pytest && coverage report`
 
@@ -148,7 +148,7 @@ CI/CD works in the following way:
 As we use AWS Aurora, there is no multi-AZ functionality. Instead, “Aurora automatically replicates storage six ways across three availability zones”.
 
 Each night there is an automated snapshot by Amazon of RDS.
-We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron-based from Amazon Eventbridge that triggers a [lambda](/lambdas/db_backup/index.py). DB backups are shown in the RDS console under manual snapshots.
+We also run a manual snapshot of the cluster at midday (UTC) each day. This is cron-based from Amazon Eventbridge that triggers a [lambda](/src/lambdas/db_backup/index.py). DB backups are shown in the RDS console under manual snapshots.
 
 ## 8 Infrastructure
 

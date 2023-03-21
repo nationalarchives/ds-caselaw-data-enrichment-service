@@ -2,6 +2,7 @@
 
 
 import unittest
+from pathlib import Path
 
 from oblique_references.oblique_references import (
     create_legislation_dict,
@@ -9,6 +10,8 @@ from oblique_references.oblique_references import (
     get_oblique_reference_replacements_by_paragraph,
     get_replacements,
 )
+
+FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 
 
 class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
@@ -21,7 +24,7 @@ class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
         Then a dict of replacement information for each oblique detected reference
             is returned
         """
-        input_file_path = "tests/fixtures/ewhc-ch-2023-257_enriched_stage_1.xml"
+        input_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml"
         with open(input_file_path, "r", encoding="utf-8") as input_file:
             input_file_content = input_file.read()
         oblique_reference_replacements = (
