@@ -64,7 +64,7 @@ variable "runtime" {
 
 variable "lambda_source_path" {
   type    = string
-  default = "./lambda/"
+  default = "./lambdas/"
 }
 
 variable "postgress_master_password_secret_id" {
