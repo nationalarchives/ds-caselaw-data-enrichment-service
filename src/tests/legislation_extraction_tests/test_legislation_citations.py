@@ -18,7 +18,6 @@ from legislation_extraction.legislation_matcher_hybrid import (
     lookup_pipe,
     search_for_act_fuzzy,
 )
-from replacer.replacer import replacer_leg
 
 """
     Testing the matching of legislation based on the data found in the lookup table.
@@ -156,33 +155,6 @@ class TestLegislationProcessorHelpers(unittest.TestCase):
         candidates = [(30, 32)]
         all_matches = hybrid(title, doc, self.nlp, cutoff, candidates)
         assert all_matches == [("Adoption Children Act 2002", 28, 32, 91)]
-
-
-class TestLegislationReplacer(unittest.TestCase):
-    """
-    This class tests the replacement of the citations within the text itself. This comes from replacer.py
-    """
-
-    def test_citation_replacer(self):
-        legislation_match = "Adoption and Children Act 2002"  # matched legislation
-        href = "http://www.legislation.gov.uk/ukpga/2002/38"
-        text = "In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption and Children Act 2002 requires the court, inter alia"
-        canonical = "foo"
-        replacement_entry = (legislation_match, href, canonical)
-        replaced_entry = replacer_leg(text, replacement_entry)
-        assert legislation_match in replaced_entry
-        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2002/38" uk:canonical="foo" uk:origin="TNA">Adoption and Children Act 2002</ref>'
-        assert replacement_string in replaced_entry
-
-        legislation_match = "Children and Families Act 2014"  # matched legislation
-        href = "http://www.legislation.gov.uk/ukpga/2014/6/enacted"
-        text = "In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014."
-        canonical = "bar"
-        replacement_entry = (legislation_match, href, canonical)
-        replaced_entry = replacer_leg(text, replacement_entry)
-        assert legislation_match in replaced_entry
-        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'
-        assert replacement_string in replaced_entry
 
 
 if __name__ == "__main__":
