@@ -71,7 +71,7 @@ def mock_return_citation(nlp, text, db_conn):
     )
 
 
-FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "caselaw_extraction/rules"
+FIXTURE_DIR = Path(__file__).parent.parent.parent.resolve() / "caselaw_extraction/rules"
 
 
 class TestCitationProcessor(unittest.TestCase):
