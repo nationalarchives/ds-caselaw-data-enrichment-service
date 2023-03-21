@@ -1,4 +1,12 @@
-# Judgment Enrichment Pipeline Documentation
+# The National Archives: Find Case Law
+
+This repository is part of the [Find Case Law](https://caselaw.nationalarchives.gov.uk/) project at [The National Archives](https://www.nationalarchives.gov.uk/). For more information on the project, check [the documentation](https://github.com/nationalarchives/ds-find-caselaw-docs).
+
+# Judgment Enrichment Pipeline
+
+![Tests](https://img.shields.io/github/actions/workflow/status/nationalarchives/ds-caselaw-data-enrichment-service/ci_lint_and_test.yml?branch=main&label=tests) ![Coverage](https://img.shields.io/codeclimate/coverage/nationalarchives/ds-caselaw-data-enrichment-service) ![Maintainability](https://img.shields.io/codeclimate/maintainability/nationalarchives/ds-caselaw-data-enrichment-service)
+
+Mark up judgments in [Find Case Law](https://caselaw.nationalarchives.gov.uk) with references to other cases and legislation.
 
 ## 1. Introduction
 
