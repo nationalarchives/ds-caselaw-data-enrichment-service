@@ -315,8 +315,8 @@ def detect_year_span(docobj, nlp):
     dmatcher = Matcher(nlp.vocab)
     dmatcher.add("date matcher", [pattern])
     dm = dmatcher(docobj)
-    dates = [docobj[start:end].text for _, start, end in dm]
-    dates = set([int(d) for d in dates if (len(d) == 4) & (d.isdigit())])
+    string_dates = [docobj[start:end].text for _, start, end in dm]
+    dates = set([int(d) for d in string_dates if (len(d) == 4) & (d.isdigit())])
     return dates
 
 
