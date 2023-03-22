@@ -334,9 +334,9 @@ class AbbreviationDetector:
         if matcher_output:
             matches_no_brackets = [(x[0], x[1] + 1, x[2] - 1) for x in matcher_output]
             filtered = filter_matches(matches_no_brackets, doc)
-            occurences = self.find_matches_for(filtered, doc)
+            occurrences = self.find_matches_for(filtered, doc)
 
-            for long_form, short_forms in occurences:
+            for long_form, short_forms in occurrences:
                 for short in short_forms:
                     short._.long_form = long_form
                     doc._.abbreviations.append(short)
