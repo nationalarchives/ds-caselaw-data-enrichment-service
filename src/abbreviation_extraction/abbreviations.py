@@ -11,7 +11,7 @@ ScispaCy repo here -> https://github.com/allenai/scispacy
 """
 
 from collections import defaultdict
-from typing import Dict, List, Optional, Set, Tuple
+from typing import Dict, Iterable, List, Optional, Set, Tuple
 
 from spacy.language import Language
 from spacy.matcher import Matcher
@@ -97,7 +97,7 @@ def find_abbreviation(
     return short_form_candidate, long_form_candidate[starting_index:]
 
 
-def contains(str, set: Set[str]) -> bool:
+def contains(str, set: Iterable[str]) -> bool:
     """
     Check whether sequence str contains ANY of the items in set.
     Parameters
