@@ -44,7 +44,7 @@ def process_event(sqs_rec):
         "Body"
     ].read()
 
-    upload_contents(file_content)
+    upload_contents(source_key, file_content)
     LOGGER.debug("content uploaded")
     return True
 
