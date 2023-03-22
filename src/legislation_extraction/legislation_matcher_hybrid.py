@@ -347,7 +347,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
         'ref'(string): 'matched legislation title',
         'canonical'(string): 'canonical form of legislation act'
     """
-    results = []
+    result_list = []
     dates = detect_year_span(docobj, nlp)
     # filter the legislation list down to the years detected above
     titles = leg_titles[leg_titles.year.isin(dates)]
@@ -360,10 +360,10 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
             .tolist()
         )
         res = lookup_pipe(relevant_titles, docobj, nlp, methods[method], conn, CUTOFF)
-        results.append(res)
+        result_list.append(res)
 
     # merges the results of both matchers to return a single list of detected references
-    results = mergedict(results[0], results[1])
+    results = mergedict(result_list[0], result_list[1])
 
     results = resolve_overlap(results) if results else results
 
