@@ -116,7 +116,6 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
             value = clean_section_dict[clean_section]
             value.append(new_definition)
             clean_section_dict[clean_section] = value
-
     return clean_section_dict
 
 
