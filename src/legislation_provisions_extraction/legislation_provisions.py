@@ -15,9 +15,12 @@ To do:
 
 import os
 import re
+from typing import Any, Dict, List
 
 import numpy as np
 from bs4 import BeautifulSoup
+
+SectionDict = Dict[str, List[Any]]
 
 THR = 30
 keys = ["detected_ref", "ref_para", "ref_position", "ref_tag"]
@@ -257,7 +260,7 @@ def main(enriched_judgment_file_path, filename):
         soup = BeautifulSoup(f, "xml")
     text = soup.find_all("p")
     cur_para_number = 0
-    section_dict = {}
+    section_dict: SectionDict = {}
     resolved_refs = []
     for line in text:
         sections = detect_reference(str(line), "section")
@@ -291,7 +294,7 @@ def provisions_pipeline(file_data):
     soup = BeautifulSoup(file_data, "xml")
     text = soup.find_all("p")
     cur_para_number = 0
-    section_dict = {}
+    section_dict: SectionDict = {}
     resolved_refs = []
 
     for line in text:
