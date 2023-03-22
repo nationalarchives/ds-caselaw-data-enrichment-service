@@ -20,7 +20,7 @@ from typing import Any, Dict, List
 import numpy as np
 from bs4 import BeautifulSoup
 
-SectionDict = Dict[str, List[Any]]
+SectionDict = Dict[str, List[Any]]  # this is a guess
 
 THR = 30
 keys = ["detected_ref", "ref_para", "ref_position", "ref_tag"]
