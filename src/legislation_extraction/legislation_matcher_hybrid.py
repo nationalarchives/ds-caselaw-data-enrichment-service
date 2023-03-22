@@ -72,21 +72,43 @@ def resolve_overlap(results_dict):
     """
     qq = pd.DataFrame([results_dict])
     qq = qq.T.explode(0)[0].apply(pd.Series)
+
     qq.columns = keys
+
     # get refs that overlap in the text
     mask = (qq.start.values[:, None] >= qq.start.values) & (
         qq.end.values[:, None] <= qq.end.values
     )
-    np.fill_diagonal(mask, 0)
+    np.fill_diagonal(mask, 0)  # omit 'pairs' that are the same thing twice
+    mask = np.triu(mask, 0)  # omit pairs where the first is after than the second
     r, c = np.where(mask)
     overlaps = list(map(list, zip(r, c)))
 
+    removals = set()
+
+    qq = qq.reset_index()
+
     # for every detected pair of refs that overlap
-    for ol in overlaps:
-        # remove the reference with the least similarity to the legislation
-        ol.remove(qq.reset_index().iloc[list(ol)].confidence.idxmax())
-        qq.drop(qq.index[ol[0]], inplace=True)
-    return qq.apply(tuple, axis=1).groupby(qq.index).apply(list).T.to_dict()
+    for ol_index in overlaps:
+        # get those two rows
+        overlap_rows = qq.iloc[list(ol_index)]
+        # get the worst of the two (or first, if they're equal)
+        worst_match_index = overlap_rows.confidence.idxmin()
+        # and mark its index for deletion
+        removals.add(worst_match_index)
+
+    # then drop all the removed entries at once
+    for removal in removals:
+        qq.drop(index=removal, inplace=True)
+
+    retval = (
+        qq.set_index("index")
+        .apply(tuple, axis=1)
+        .groupby("index")
+        .apply(list)
+        .T.to_dict()
+    )
+    return retval
 
 
 # EXACT MATCHING
