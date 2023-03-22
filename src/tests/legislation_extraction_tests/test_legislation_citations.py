@@ -202,6 +202,62 @@ class TestLegislationProcessor(unittest.TestCase):
             ]
         }
 
+    def test_resolve_overlap_with_overlap_and_no_overlap(self):
+        results = {
+            "Adoption and Children Act 2002": [
+                (
+                    "Adoption Children Act 2002",
+                    28,
+                    32,
+                    100,
+                    "http://www.legislation.gov.uk/ukpga/2002/38",
+                    "this_is_the_best",
+                ),
+                (
+                    "Adopted Children Act 2002",
+                    28,
+                    32,
+                    3,
+                    "http://www.legislation.gov.uk/ukpga/2011/38",
+                    "citation_abc",
+                ),
+            ],
+            "Completely Unrelated Act 1999": [
+                (
+                    "Completely Unrelated Act 1999",
+                    99,
+                    99,
+                    99,
+                    "http://www.legislation.gov.uk/ukut/2022/38",
+                    "citation_xyz",
+                ),
+            ],
+        }
+        pruned_results = resolve_overlap(results)
+
+        assert pruned_results == {
+            "Adoption and Children Act 2002": [
+                (
+                    "Adoption Children Act 2002",
+                    28,
+                    32,
+                    100,
+                    "http://www.legislation.gov.uk/ukpga/2002/38",
+                    "this_is_the_best",
+                ),
+            ],
+            "Completely Unrelated Act 1999": [
+                (
+                    "Completely Unrelated Act 1999",
+                    99,
+                    99,
+                    99,
+                    "http://www.legislation.gov.uk/ukut/2022/38",
+                    "citation_xyz",
+                ),
+            ],
+        }
+
     def test_lookup_pipe(self):
         text = "In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption Children Act 2002 requires the court, inter alia"
         doc = self.nlp(text)
