@@ -5,6 +5,7 @@ import unittest
 from pathlib import Path
 
 from oblique_references.oblique_references import (
+    LegislationReferenceReplacements,
     create_legislation_dict,
     detect_reference,
     get_oblique_reference_replacements_by_paragraph,
@@ -349,7 +350,7 @@ class TestGetReplacements(unittest.TestCase):
             ((480464, 480472), "this Act"),
         ]
         numbered_act = False
-        replacements = []
+        replacements: LegislationReferenceReplacements = []
 
         paragraph_number = 2
 
