@@ -19,6 +19,7 @@ The hybrid matcher goes through three stages:
 
 """
 from collections import namedtuple
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -48,7 +49,7 @@ def mergedict(x, b):
     outout : dict
         dictionary containing the detected references.
     """
-    a = {}
+    a: dict[Any, Any] = {}
     for k, v in b.items():
         a[k] = a.get(k, []) + b[k]
     for k, v in x.items():
