@@ -3,6 +3,7 @@
 
 import unittest
 from pathlib import Path
+from typing import Dict, List, Union
 
 from oblique_references.oblique_references import (
     LegislationReferenceReplacements,
@@ -394,7 +395,7 @@ class TestGetReplacements(unittest.TestCase):
             ((560093, 560105), "the 2000 Act"),
         ]
         numbered_act = True
-        replacements = []
+        replacements: List[Dict[str, Union[str, int]]] = []
 
         paragraph_number = 2
 

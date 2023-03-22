@@ -19,7 +19,7 @@ The hybrid matcher goes through three stages:
 
 """
 from collections import namedtuple
-from typing import Any
+from typing import Any, List
 
 import numpy as np
 import pandas as pd
@@ -274,7 +274,7 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
             'end'(int): 'end positin of reference',
             'confidence'(int): 'matching similarity between detected_ref and ref'}
     """
-    results = {}
+    results: dict[str, List[Any]] = {}
     # get candidate segments matching the pattern [Act YYYY]
     candidates = (
         detect_candidates(nlp, docobj) if method.__name__ == "fuzzy_matcher" else None
