@@ -262,6 +262,11 @@ def verify_match_format(
         ):
             print(str(doc[start:end]))
             matcher_output.remove(match)
+    return None  # type:ignore
+    # This return value is depended on elsewhere in the code, but previously
+    # it did not exist at all. Understanding how the abbreviation code is
+    # meant to work is a task for the future.
+    # TODO: https://trello.com/c/horD3P3F/693-enrichment-pipeline-abbreviations-not-functional
 
 
 class AbbreviationDetector:
@@ -330,9 +335,13 @@ class AbbreviationDetector:
         matches_brackets = [(x[0], x[1], x[2]) for x in matches]
 
         matcher_output = verify_match_format(matches_brackets, doc)
+        # verify_match_format returns None, which is incorrect and means this section can not
+        # have been run in it's current format.
         print(matcher_output)
         if matcher_output:
-            matches_no_brackets = [(x[0], x[1] + 1, x[2] - 1) for x in matcher_output]
+            matches_no_brackets = [
+                (x[0], x[1] + 1, x[2] - 1) for x in matcher_output  # type:ignore
+            ]
             filtered = filter_matches(matches_no_brackets, doc)
             occurrences = self.find_matches_for(filtered, doc)
 
