@@ -176,5 +176,6 @@ def handler(event, context):
         engine.dispose()
         LOGGER.info("Legislation updated")
 
-    except (Exception, Error) as error:
-        LOGGER.error("Error while connecting to PostgreSQL: %s", error)
+    except Exception as exception:
+        LOGGER.error("Exception: %s", exception)
+        raise
