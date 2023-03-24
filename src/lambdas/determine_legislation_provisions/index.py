@@ -7,11 +7,12 @@ import urllib.parse
 
 import boto3
 from bs4 import BeautifulSoup
-
 from legislation_provisions_extraction.legislation_provisions import (
     provisions_pipeline,
 )
-from replacer.second_stage_replacer import replace_references_by_paragraph
+from shared.replacer.second_stage_replacer import (
+    replace_references_by_paragraph,
+)
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)

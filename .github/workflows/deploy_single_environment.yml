@@ -46,40 +46,11 @@ jobs:
           
           cd src/
 
-          mkdir lambdas/determine_replacements_caselaw/caselaw_extraction
-          cp -r caselaw_extraction/*.py lambdas/determine_replacements_caselaw/caselaw_extraction/
-          cp caselaw_extraction/requirements.txt lambdas/determine_replacements_caselaw/requirements.txt
-          mkdir lambdas/determine_replacements_caselaw/rules
-          # cp caselaw_extraction/rules/citation_patterns.jsonl lambdas/determine_replacements_caselaw/rules/citation_patterns.jsonl
-          cp citation_patterns.jsonl lambdas/determine_replacements_caselaw/
-          mkdir lambdas/determine_replacements_caselaw/database
-          cp -r database/*.py lambdas/determine_replacements_caselaw/database/
-          mkdir lambdas/determine_replacements_caselaw/utils
-          cp -r utils/*.py lambdas/determine_replacements_caselaw/utils/
-          mkdir lambdas/determine_replacements_legislation/legislation_extraction
-          cp -r legislation_extraction/*.* lambdas/determine_replacements_legislation/legislation_extraction/
-          cp legislation_extraction/requirements.txt lambdas/determine_replacements_legislation/
-          mkdir lambdas/determine_replacements_legislation/utils
-          cp -r utils/*.py lambdas/determine_replacements_legislation/utils/
-          mkdir lambdas/determine_replacements_legislation/database
-          cp -r database/*.py lambdas/determine_replacements_legislation/database/
-          mkdir lambdas/determine_replacements_abbreviations/abbreviation_extraction
-          cp -r abbreviation_extraction/*.* lambdas/determine_replacements_abbreviations/abbreviation_extraction/
-          cp abbreviation_extraction/requirements.txt lambdas/determine_replacements_abbreviations/
-          mkdir lambdas/determine_legislation_provisions/legislation_provisions_extraction
-          cp -r legislation_provisions_extraction/*.* lambdas/determine_legislation_provisions/legislation_provisions_extraction/
-          cp legislation_provisions_extraction/requirements.txt lambdas/determine_legislation_provisions/
-          mkdir lambdas/determine_legislation_provisions/replacer
-          cp -r replacer/*.py lambdas/determine_legislation_provisions/replacer/
-          mkdir lambdas/determine_oblique_references/oblique_references
-          cp -r oblique_references/*.* lambdas/determine_oblique_references/oblique_references/
-          cp oblique_references/requirements.txt lambdas/determine_oblique_references/
-          mkdir lambdas/determine_oblique_references/replacer
-          cp -r replacer/*.py lambdas/determine_oblique_references/replacer/
-          mkdir lambdas/extract_judgement_contents/utils
-          cp -r utils/*.py lambdas/extract_judgement_contents/utils/
-          mkdir -p lambdas/make_replacements/replacer
-          cp -r replacer/*.py lambdas/make_replacements/replacer/
+          cp -r shared/ lambdas/determine_legislation_provisions/shared/
+          cp -r shared/ lambdas/determine_oblique_references/shared/
+          cp -r shared/ lambdas/determine_replacements_caselaw/shared/
+          cp -r shared/ lambdas/determine_replacements_legislation/shared/
+          cp -r shared/ lambdas/extract_judgement_contents/shared/
 
           cd "${GITHUB_WORKSPACE}"
 
@@ -111,8 +82,8 @@ jobs:
           set +e
           set +o pipefail
           
-          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com          
-          
+          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com
+
           cd "src/lambdas/determine_replacements_caselaw"
           docker buildx build --load -t tna-s3-tna-ecr-repository-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-{{ secrets.app_env }}:latest

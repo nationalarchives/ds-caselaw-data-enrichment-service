@@ -5,8 +5,7 @@ import os
 import urllib.parse
 
 import boto3
-
-from utils.helper import parse_file
+from shared.utils.helper import parse_file
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)

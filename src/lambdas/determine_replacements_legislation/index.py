@@ -8,7 +8,7 @@ import os
 import boto3
 import spacy
 
-from database import db_connection
+from shared.database import db_connection
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -238,7 +238,7 @@ def get_legislation_replacements(leg_titles, nlp, doc, db_conn):
     """
     Runs the legislation pipeline on the XML and returns the replacements
     """
-    from legislation_extraction.legislation_matcher_hybrid import leg_pipeline
+    from lambdas.determine_replacements_legislation.legislation_extraction.legislation_matcher_hybrid import leg_pipeline
 
     replacements = leg_pipeline(leg_titles, nlp, doc, db_conn)
     print(replacements)

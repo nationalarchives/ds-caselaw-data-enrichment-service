@@ -8,8 +8,11 @@ import urllib.parse
 
 import boto3
 import spacy
+from shared.database import db_connection
 
-from database import db_connection
+from lambdas.determine_replacements_caselaw.caselaw_extraction.caselaw_matcher import (
+    case_pipeline,
+)
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -230,7 +233,6 @@ def get_caselaw_replacements(doc, db_conn):
     """
     Run the caselaw pipeline on the document
     """
-    from caselaw_extraction.caselaw_matcher import case_pipeline
 
     replacements = case_pipeline(doc, db_conn)
     return replacements

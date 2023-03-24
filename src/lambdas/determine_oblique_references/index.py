@@ -5,7 +5,6 @@ import os
 import urllib.parse
 
 import boto3
-
 from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )

@@ -181,7 +181,7 @@ def replace_text_content(file_content, replacements_content):
     LOGGER.info("Replacement caselaw")
     print(replacement_tuples_case)
 
-    from replacer.replacer_pipeline import replacer_pipeline
+    from lambdas.make_replacements.replacer_pipeline import replacer_pipeline
 
     file_data_enriched = replacer_pipeline(
         file_content,
