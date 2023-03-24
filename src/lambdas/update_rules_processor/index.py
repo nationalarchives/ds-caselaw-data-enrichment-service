@@ -175,7 +175,7 @@ def lambda_handler(event, context):
         except AssertionError:
             LOGGER.error("Exception: Manifest test failed")
             raise
-        
+
         try:
             # write new jsonl file
             new_patterns_file = write_patterns_file(df["pattern"].to_list())
