@@ -162,7 +162,6 @@ def lambda_handler(event, context):
         response = s3.get_object(Bucket=source_bucket, Key=source_key)
         csv_file = response["Body"].read().decode("utf-8")
         df = pd.read_csv(StringIO(csv_file))
-        # print(df)
 
         create_test_jsonl(source_bucket, df)
         jsonl_key = "test_citation_patterns.jsonl"
@@ -173,7 +172,11 @@ def lambda_handler(event, context):
 
         try:
             test_manifest(df, pattern_list)
-
+        except AssertionError:
+            LOGGER.error("Exception: Manifest test failed")
+            raise
+        
+        try:
             # write new jsonl file
             new_patterns_file = write_patterns_file(df["pattern"].to_list())
             upload_replacements(
@@ -181,21 +184,18 @@ def lambda_handler(event, context):
             )
 
             # connect to database
-            try:
-                engine = create_engine(
-                    f"postgresql://{username}:{password}@{host}:{port}/{database_name}"
-                )
-                LOGGER.info("Engine created")
+            engine = create_engine(
+                f"postgresql://{username}:{password}@{host}:{port}/{database_name}"
+            )
+            LOGGER.info("Engine created")
 
-                # push rules to database --> if_exists="replace" as we're pushing full ruleset
-                df.to_sql("manifest", engine, if_exists="replace", index=False)
+            # push rules to database --> if_exists="replace" as we're pushing full ruleset
+            df.to_sql("manifest", engine, if_exists="replace", index=False)
 
-                # dispose of engine
-                engine.dispose()
-                LOGGER.info("Rules updated")
+            # dispose of engine
+            engine.dispose()
+            LOGGER.info("Rules updated")
 
-            except (Exception, Error) as error:
-                LOGGER.error("Error while connecting to PostgreSQL", error)
-        except AssertionError:
-            LOGGER.error("Manifest test failed")
+        except Exception as exception:
+            LOGGER.error("Exception: %s", exception)
             raise
