@@ -41,7 +41,7 @@ class TestWriteReplacementsFile(unittest.TestCase):
 
         replacements_string = write_replacements_file(replacements)
 
-        replacements = replacements_string.splitlines()
+        replacements_list = replacements_string.splitlines()
 
         expected_key_value_pairs = [
             {
@@ -56,7 +56,7 @@ class TestWriteReplacementsFile(unittest.TestCase):
             {"bar": ["[2022] 1 P&CR 123", "[2022] 1 P&CR 123", "2022"]},
         ]
 
-        for index, replacement in enumerate(replacements):
+        for index, replacement in enumerate(replacements_list):
             replacement_dict = json.loads(replacement)
             expected_key_value_pair = expected_key_value_pairs[index]
             assert expected_key_value_pair == replacement_dict

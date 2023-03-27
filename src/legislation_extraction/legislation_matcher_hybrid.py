@@ -19,6 +19,7 @@ The hybrid matcher goes through three stages:
 
 """
 from collections import namedtuple
+from typing import Any, List
 
 import numpy as np
 import pandas as pd
@@ -48,7 +49,7 @@ def mergedict(x, b):
     outout : dict
         dictionary containing the detected references.
     """
-    a = {}
+    a: dict[Any, Any] = {}
     for k, v in b.items():
         a[k] = a.get(k, []) + b[k]
     for k, v in x.items():
@@ -273,7 +274,7 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
             'end'(int): 'end positin of reference',
             'confidence'(int): 'matching similarity between detected_ref and ref'}
     """
-    results = {}
+    results: dict[str, List[Any]] = {}
     # get candidate segments matching the pattern [Act YYYY]
     candidates = (
         detect_candidates(nlp, docobj) if method.__name__ == "fuzzy_matcher" else None
@@ -315,8 +316,8 @@ def detect_year_span(docobj, nlp):
     dmatcher = Matcher(nlp.vocab)
     dmatcher.add("date matcher", [pattern])
     dm = dmatcher(docobj)
-    dates = [docobj[start:end].text for _, start, end in dm]
-    dates = set([int(d) for d in dates if (len(d) == 4) & (d.isdigit())])
+    string_dates = [docobj[start:end].text for _, start, end in dm]
+    dates = set([int(d) for d in string_dates if (len(d) == 4) & (d.isdigit())])
     return dates
 
 
@@ -346,7 +347,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
         'ref'(string): 'matched legislation title',
         'canonical'(string): 'canonical form of legislation act'
     """
-    results = []
+    result_list = []
     dates = detect_year_span(docobj, nlp)
     # filter the legislation list down to the years detected above
     titles = leg_titles[leg_titles.year.isin(dates)]
@@ -359,10 +360,10 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
             .tolist()
         )
         res = lookup_pipe(relevant_titles, docobj, nlp, methods[method], conn, CUTOFF)
-        results.append(res)
+        result_list.append(res)
 
     # merges the results of both matchers to return a single list of detected references
-    results = mergedict(results[0], results[1])
+    results = mergedict(result_list[0], result_list[1])
 
     results = resolve_overlap(results) if results else results
 

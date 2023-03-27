@@ -111,9 +111,6 @@ class TestXMLValidate(unittest.TestCase):
             "AWS_DEFAULT_REGION": "eu-west-2",
         },
     )
-
-    # def test_lambda_handler(self):
-    @mock_s3
     def test_process_event(self):
         # monkeypatch.setenv("VALIDATE_USING_SCHEMA", "False")
 
@@ -165,7 +162,10 @@ class TestXMLValidate(unittest.TestCase):
         # from lambdas.xml_validate.index import handler
         from lambdas.xml_validate.index import process_event
 
-        process_event(test_s3_event.get("Records")[0])
+        records = test_s3_event.get("Records")
+        if not records:
+            raise RuntimeError("No records found")
+        process_event(records[0])
 
     #     s3.create_bucket(Bucket=test_bucket_name, CreateBucketConfiguration={
     # 'LocationConstraint': 'us-east-1'})
