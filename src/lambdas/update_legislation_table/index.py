@@ -9,7 +9,6 @@ from io import BytesIO
 
 import boto3
 import pandas as pd
-from psycopg2 import Error
 from SPARQLWrapper import CSV, SPARQLWrapper
 from sqlalchemy import create_engine
 
@@ -114,7 +113,7 @@ def get_leg_update(sparql_username, sparql_password, days=7):
                 prefix sd: <http://www.w3.org/ns/sparql-service-description#>
                 prefix prov: <http://www.w3.org/ns/prov#>
                 prefix leg: <http://www.legislation.gov.uk/def/legislation/>
-                select distinct ?ref  ?title ?ref_version ?shorttitle ?citation ?acronymcitation
+                select distinct ?ref  ?title ?ref_version ?shorttitle ?citation ?acronymcitation ?year
                 where {
                    ?activity prov:endedAtTime ?actTime .
                    ?graph prov:wasInfluencedBy ?activity .
@@ -124,9 +123,10 @@ def get_leg_update(sparql_username, sparql_password, days=7):
                    graph ?graph { ?ref a leg:Legislation; a leg:UnitedKingdomPublicGeneralAct ;
                                         leg:title ?title ;
                                         leg:interpretation ?version .
-                                   OPTIONAL { ?ref leg:citation ?citation  } .
-                                   OPTIONAL {?ref leg:acronymCitation ?acronymcitation} .
-                                   OPTIONAL {?ref_version   leg:shortTitle ?shorttitle} .}
+                                        OPTIONAL {?ref leg:citation ?citation} .
+                                        OPTIONAL {?ref leg:acronymCitation ?acronymcitation} .
+                                        OPTIONAL {?ref leg:year ?year} .
+                                        OPTIONAL {?ref_version   leg:shortTitle ?shorttitle} .}
                    FILTER(str(?actTime) > "%s")
                 }
                 """
