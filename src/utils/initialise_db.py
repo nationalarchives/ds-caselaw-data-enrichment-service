@@ -26,7 +26,7 @@ def init_db_engine() -> sqlalchemy.Engine:
     return sqlalchemy.create_engine(db_url, verbose=True)
 
 
-def init_db_connection() -> psycopg2.connection:
+def init_db_connection() -> psycopg2.extensions.connection:
     """
     Establish database connection
     """

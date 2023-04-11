@@ -5,7 +5,7 @@ import pandas as pd
 import psycopg2
 
 
-def create_connection(db, user, password, host, port):
+def create_connection(db, user, password, host, port) -> psycopg2.extensions.connection:
     """
     Connect to the PostgreSQL database server
     :param db
