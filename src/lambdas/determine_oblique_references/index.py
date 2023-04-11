@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 
 import logging
-import os
 import urllib.parse
 
 import boto3
@@ -9,23 +8,10 @@ import boto3
 from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
+from utils.environment_helpers import validate_env_variable
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
-
-
-def validate_env_variable(env_var_name):
-    print(f"Getting the value of the environment variable: {env_var_name}")
-
-    try:
-        env_variable = os.environ[env_var_name]
-    except KeyError:
-        raise Exception(f"Please, set environment variable {env_var_name}")
-
-    if not env_variable:
-        raise Exception(f"Please, provide environment variable {env_var_name}")
-
-    return env_variable
 
 
 def upload_contents(source_key, output_file_content):

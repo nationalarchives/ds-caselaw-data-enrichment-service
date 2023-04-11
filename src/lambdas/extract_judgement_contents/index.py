@@ -6,24 +6,11 @@ import urllib.parse
 
 import boto3
 
+from utils.environment_helpers import validate_env_variable
 from utils.helper import parse_file
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
-
-
-def validate_env_variable(env_var_name):
-    print(f"Getting the value of the environment variable: {env_var_name}")
-
-    try:
-        env_variable = os.environ[env_var_name]
-    except KeyError:
-        raise Exception(f"Please, set environment variable {env_var_name}")
-
-    if not env_variable:
-        raise Exception(f"Please, provide environment variable {env_var_name}")
-
-    return env_variable
 
 
 def process_event(sqs_rec):

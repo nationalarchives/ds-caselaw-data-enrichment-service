@@ -26,7 +26,6 @@ def create_connection(db, user, password, host, port):
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
         raise
-    # return conn
 
 
 def get_manifest_row(conn, rule_id):
