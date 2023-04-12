@@ -1,13 +1,9 @@
 """Unit tests for environment_helpers"""
 
-import boto3
 import pytest
 from moto import mock_secretsmanager
 
-from utils.environment_helpers import (
-    get_database_password,
-    validate_env_variable,
-)
+from utils.environment_helpers import get_aws_secret, validate_env_variable
 
 
 class TestValidateEnvVariable:
@@ -44,67 +40,56 @@ class TestValidateEnvVariable:
             validate_env_variable(env_var_name)
 
 
-class TestGetDatabasePassword:
-    def test_get_database_password_with_valid_aws_secret(
-        self, monkeypatch, moto_secrets_manager_with_password
+class TestGetAWSSecret:
+    def test_get_aws_secret_with_valid_aws_secret(
+        self, moto_secrets_manager_with_password
     ):
         """
         Given a valid AWS secret containing the database password
-        When I call get_database_password
+        When I call get_aws_secret
         Then I should get the correct database password
         """
-        monkeypatch.setenv(
-            "SECRET_PASSWORD_LOOKUP", moto_secrets_manager_with_password["secret_name"]
+        password = get_aws_secret(
+            moto_secrets_manager_with_password["secret_name"],
+            moto_secrets_manager_with_password["region_name"],
         )
-        monkeypatch.setenv(
-            "REGION_NAME", moto_secrets_manager_with_password["region_name"]
-        )
-
-        password = get_database_password()
 
         assert (
             password
             == moto_secrets_manager_with_password["secret_value"]["SecretString"]
         )
 
-    def test_get_database_password_with_no_env_variables(self):
+    def test_get_aws_secret_with_no_env_variables(self):
         """
-        Given no SECRET_PASSWORD_LOOKUP or REGION_NAME
-        environment variables are set
-        When get_database_password is called
-        Then get_database_password should raise an Exception
+        Given no aws_secret_name or aws_region_name
+        When get_aws_secret is called
+        Then get_aws_secret should raise an Exception
         """
         with pytest.raises(Exception):
-            get_database_password()
+            get_aws_secret("", "")
 
-    def test_get_database_password_with_invalid_aws_secret_password_lookup(
-        self, monkeypatch, moto_secrets_manager_with_password
+    def test_get_aws_secret_with_invalid_aws_secret_password_lookup(
+        self, moto_secrets_manager_with_password
     ):
         """
         Given an invalid AWS secret name
-        When I call get_database_password
-        Then I should get an exception
+        When I call get_aws_secret
+        Then get_aws_secret should raise an Exception
         """
-        monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", "wrong_password")
-        monkeypatch.setenv(
-            "REGION_NAME", moto_secrets_manager_with_password["region_name"]
-        )
-
         with pytest.raises(Exception):
-            get_database_password()
+            get_aws_secret(
+                "wrong_password", moto_secrets_manager_with_password["region_name"]
+            )
 
-    def test_get_database_password_with_invalid_aws_region(
-        self, monkeypatch, moto_secrets_manager_with_password
+    def test_get_aws_secret_with_invalid_aws_region(
+        self, moto_secrets_manager_with_password
     ):
         """
         Given an invalid AWS region
-        When I call get_database_password
-        Then I should get an exception
+        When I call get_aws_secret
+        Then get_aws_secret should raise an Exception
         """
-        monkeypatch.setenv(
-            "SECRET_PASSWORD_LOOKUP", moto_secrets_manager_with_password["secret_name"]
-        )
-        monkeypatch.setenv("REGION_NAME", "wrong-region")
-
         with pytest.raises(Exception):
-            get_database_password()
+            get_aws_secret(
+                moto_secrets_manager_with_password["secret_name"], "wrong-region"
+            )

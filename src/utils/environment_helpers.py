@@ -24,13 +24,7 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 
-def get_database_password():
-    aws_secret_name = validate_env_variable("SECRET_PASSWORD_LOOKUP")
-    aws_region_name = validate_env_variable("REGION_NAME")
-    return _get_aws_secret(aws_secret_name, aws_region_name)
-
-
-def _get_aws_secret(aws_secret_name, aws_region_name):
+def get_aws_secret(aws_secret_name, aws_region_name):
     """
     Get aws secret
     """
