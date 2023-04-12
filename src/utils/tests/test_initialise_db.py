@@ -1,8 +1,9 @@
 """Unit tests for the initialise_db module"""
-
 from unittest import mock
 
 from mock import MagicMock
+
+from utils.initialise_db import init_db_connection, init_db_engine
 
 
 @mock.patch("sqlalchemy.create_engine")
@@ -19,8 +20,6 @@ def test_init_db_engine(mock_create_engine, monkeypatch):
     monkeypatch.setenv("DATABASE_PASSWORD", "mypass")
 
     mock_create_engine.return_value = MagicMock()
-
-    from utils.initialise_db import init_db_engine
 
     engine = init_db_engine()
 
@@ -43,8 +42,6 @@ def test_init_db_connection(mock_create_engine, monkeypatch):
     monkeypatch.setenv("DATABASE_PASSWORD", "mypass")
 
     mock_create_engine.return_value = MagicMock()
-
-    from utils.initialise_db import init_db_connection
 
     engine = init_db_connection()
 

@@ -12,28 +12,37 @@ from utils.environment_helpers import (
     validate_env_variable,
 )
 
-DATABASE_NAME = validate_env_variable("DATABASE_NAME")
-USERNAME = validate_env_variable("DATABASE_USERNAME")
-HOST = validate_env_variable("DATABASE_HOSTNAME")
-PORT = validate_env_variable("DATABASE_PORT")
-PASSWORD = get_database_password()
-
 
 def init_db_engine() -> sqlalchemy.Engine:
+    """
+    Initialise database engine from environment variables
+    """
+    database_name = validate_env_variable("DATABASE_NAME")
+    username = validate_env_variable("DATABASE_USERNAME")
+    host = validate_env_variable("DATABASE_HOSTNAME")
+    port = validate_env_variable("DATABASE_PORT")
+    password = get_database_password()
+
     db_url = "postgresql://{0}:{1}@{2}:{3}/{4}".format(
-        USERNAME, PASSWORD, HOST, PORT, DATABASE_NAME
+        username, password, host, port, database_name
     )
-    return sqlalchemy.create_engine(db_url, verbose=True)
+    return sqlalchemy.create_engine(db_url)
 
 
 def init_db_connection() -> psycopg2.extensions.connection:
     """
-    Establish database connection
+    Initialise database connection from environment variables
     """
+    database_name = validate_env_variable("DATABASE_NAME")
+    username = validate_env_variable("DATABASE_USERNAME")
+    host = validate_env_variable("DATABASE_HOSTNAME")
+    port = validate_env_variable("DATABASE_PORT")
+    password = get_database_password()
+
     return create_connection(
-        DATABASE_NAME,
-        USERNAME,
-        PASSWORD,
-        HOST,
-        PORT,
+        database_name,
+        username,
+        password,
+        host,
+        port,
     )
