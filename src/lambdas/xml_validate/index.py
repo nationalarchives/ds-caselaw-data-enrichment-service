@@ -2,7 +2,6 @@
 
 import json
 import logging
-import os
 import urllib.parse
 from distutils.util import strtobool
 from io import BytesIO
@@ -10,24 +9,12 @@ from io import BytesIO
 import boto3
 from lxml import etree
 
+from utils.environment_helpers import validate_env_variable
+
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 client = boto3.client("ssm")
-
-
-def validate_env_variable(env_var_name):
-    print(f"Getting the value of the environment variable: {env_var_name}")
-
-    try:
-        env_variable = os.environ[env_var_name]
-    except KeyError:
-        raise Exception(f"Please, set environment variable {env_var_name}")
-
-    if not env_variable:
-        raise Exception(f"Please, provide environment variable {env_var_name}")
-
-    return env_variable
 
 
 def process_event(sqs_rec):

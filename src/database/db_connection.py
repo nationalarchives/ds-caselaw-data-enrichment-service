@@ -5,7 +5,7 @@ import pandas as pd
 import psycopg2
 
 
-def create_connection(db, user, password, host, port):
+def create_connection(db, user, password, host, port) -> psycopg2.extensions.connection:
     """
     Connect to the PostgreSQL database server
     :param db
@@ -26,7 +26,6 @@ def create_connection(db, user, password, host, port):
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
         raise
-    # return conn
 
 
 def get_manifest_row(conn, rule_id):

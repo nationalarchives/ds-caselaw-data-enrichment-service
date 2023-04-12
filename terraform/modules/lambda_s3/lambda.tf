@@ -300,12 +300,11 @@ module "lambda-determine-replacements-caselaw" {
 
   environment_variables = {
     DATABASE_NAME          = "rules"
-    TABLE_NAME             = "rules"
-    USERNAME               = "root"
-    PORT                   = "5432"
+    DATABASE_USERNAME      = "root"
+    DATABASE_PORT          = "5432"
     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME            = "${local.region}"
-    HOSTNAME               = "${var.postgress_hostname}"
+    DATABASE_HOSTNAME      = "${var.postgress_hostname}"
 
     DEST_QUEUE_NAME     = aws_sqs_queue.replacement-caselaw-queue.url
     RULES_FILE_BUCKET   = "${module.rules_bucket.s3_bucket_id}"
@@ -429,12 +428,11 @@ module "lambda-determine-replacements-legislation" {
 
   environment_variables = {
     DATABASE_NAME          = "rules"
-    TABLE_NAME             = "rules"
-    USERNAME               = "root"
-    PORT                   = "5432"
+    DATABASE_USERNAME      = "root"
+    DATABASE_PORT          = "5432"
+    DATABASE_HOSTNAME      = "${var.postgress_hostname}"
     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME            = "${local.region}"
-    HOSTNAME               = "${var.postgress_hostname}"
 
     DEST_QUEUE_NAME = aws_sqs_queue.replacement-legislation-queue.url
 
@@ -986,12 +984,11 @@ module "lambda-update-legislation-table" {
 
   environment_variables = {
     DATABASE_NAME          = "rules"
-    TABLE_NAME             = "rules"
-    USERNAME               = "root"
-    PORT                   = "5432"
+    DATABASE_USERNAME      = "root"
+    DATABASE_HOSTNAME      = var.postgress_hostname
+    DATABASE_PORT          = "5432"
     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME            = local.region
-    HOSTNAME               = var.postgress_hostname
     SPARQL_USERNAME        = data.aws_secretsmanager_secret_version.sparql_username_credentials.secret_string
     SPARQL_PASSWORD        = data.aws_secretsmanager_secret_version.sparql_password_credentials.secret_string
   }
@@ -1108,16 +1105,11 @@ module "lambda-update-rules-processor" {
 
   environment_variables = {
     DATABASE_NAME          = "rules"
-    TABLE_NAME             = "rules"
-    USERNAME               = "root"
-    PORT                   = "5432"
+    DATABASE_USERNAME      = "root"
+    DATABASE_HOSTNAME      = "${var.postgress_hostname}"
+    DATABASE_PORT          = "5432"
     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME            = "${local.region}"
-    HOSTNAME               = "${var.postgress_hostname}"
-    # SPARQL_USERNAME = "${var.sparql_username}"
-    # SPARQL_PASSWORD = "${var.sparql_password}"
-    SPARQL_USERNAME = ""
-    SPARQL_PASSWORD = ""
   }
 
   cloudwatch_logs_retention_in_days = 365

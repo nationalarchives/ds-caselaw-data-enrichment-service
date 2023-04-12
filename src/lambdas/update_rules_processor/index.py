@@ -1,88 +1,18 @@
 #!env/bin/python
 
-import base64
 import json
 import logging
-import os
 import urllib.parse
 from io import StringIO
 
 import boto3
 import pandas as pd
 import spacy
-from psycopg2 import Error
-from sqlalchemy import create_engine
+
+from utils.initialise_db import init_db_engine
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
-
-
-def validate_env_variable(env_var_name):
-    print(f"Getting the value of the environment variable: {env_var_name}")
-
-    try:
-        env_variable = os.environ[env_var_name]
-    except KeyError:
-        raise Exception(f"Please, set environment variable {env_var_name}")
-
-    if not env_variable:
-        raise Exception(f"Please, provide environment variable {env_var_name}")
-
-    return env_variable
-
-
-############################################
-# CLASS HELPERS
-############################################
-class getLoginSecrets:
-    def get_secret(self, aws_secret_name, aws_region_name):
-        """
-        Get login secrets for database access
-        """
-        secret_name = aws_secret_name
-        region_name = aws_region_name
-
-        # Create a Secrets Manager client
-        session = boto3.session.Session()
-        client = session.client(service_name="secretsmanager", region_name=region_name)
-
-        try:
-            LOGGER.info(" about to get_secret_value_response")
-            get_secret_value_response = client.get_secret_value(SecretId=secret_name)
-            LOGGER.info("got_secret_value_response")
-
-            # Decrypts secret using the associated KMS CMK.
-            # Depending on whether the secret is a string or binary, one of these fields will be populated.
-            if "SecretString" in get_secret_value_response:
-                secret = get_secret_value_response["SecretString"]
-                LOGGER.info("got SecretString")
-            else:
-                LOGGER.info("not SecretString")
-                decoded_binary_secret = base64.b64decode(
-                    get_secret_value_response["SecretBinary"]
-                )
-                secret = decoded_binary_secret
-            LOGGER.info("here")
-            return secret
-
-        except Exception as exception:
-            LOGGER.error("Exception: %s", exception)
-            raise
-
-
-############################################
-# - INSTANTIATE CLASS HELPERS
-# - GET ENV VARIABLES
-############################################
-database_name = validate_env_variable("DATABASE_NAME")
-table_name = validate_env_variable("TABLE_NAME")
-username = validate_env_variable("USERNAME")
-port = validate_env_variable("PORT")
-host = validate_env_variable("HOSTNAME")
-aws_secret_name = validate_env_variable("SECRET_PASSWORD_LOOKUP")
-aws_region_name = validate_env_variable("REGION_NAME")
-
-get_secret = getLoginSecrets()
 
 
 def write_patterns_file(patterns_list):
@@ -147,9 +77,6 @@ def lambda_handler(event, context):
     """
     LOGGER.info("Updating case law detection rules")
 
-    # get password for database
-    password = get_secret.get_secret(aws_secret_name, aws_region_name)
-
     # read CSV file from rules bucket
     s3 = boto3.client("s3")
     source_bucket = event["Records"][0]["s3"]["bucket"]["name"]
@@ -184,9 +111,7 @@ def lambda_handler(event, context):
             )
 
             # connect to database
-            engine = create_engine(
-                f"postgresql://{username}:{password}@{host}:{port}/{database_name}"
-            )
+            engine = init_db_engine()
             LOGGER.info("Engine created")
 
             # push rules to database --> if_exists="replace" as we're pushing full ruleset
