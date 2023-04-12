@@ -17,7 +17,7 @@ class TestValidateEnvVariable:
         When the environment variable has a value
         Then validate_env_variable should return the value of the environment variable
         """
-        env_var_name = "DATABASE_PASSWORD"
+        env_var_name = "MY_ENV_VAR"
         monkeypatch.setenv(env_var_name, "my_password")
         result = validate_env_variable(env_var_name)
         assert result == "my_password"
@@ -45,37 +45,8 @@ class TestValidateEnvVariable:
 
 
 class TestGetDatabasePassword:
-    @pytest.fixture(scope="class", autouse=True)
-    def setup_moto_secrets_manager(self):
-        secret_value = {"SecretString": "mydatabasepassword"}
-        region_name = "us-east-1"
-        secret_name = "mysecret"
-        mock_secrets_manager = mock_secretsmanager()
-        mock_secrets_manager.start()
-        client = boto3.client("secretsmanager", region_name=region_name)
-        client.create_secret(
-            Name=secret_name, SecretString=secret_value["SecretString"]
-        )
-        yield {
-            "secret_value": secret_value,
-            "region_name": region_name,
-            "secret_name": secret_name,
-        }
-
-    def test_get_database_password_with_database_password(self, monkeypatch):
-        """
-        Given the DATABASE_PASSWORD environment variable is set
-        When get_database_password is called
-        Then get_database_password should return the value of the DATABASE_PASSWORD environment variable
-        """
-        monkeypatch.setenv("DATABASE_PASSWORD", "my_database_password")
-        monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", "my_secret_name")
-        monkeypatch.setenv("REGION_NAME", "us-west-2")
-
-        assert get_database_password() == "my_database_password"
-
     def test_get_database_password_with_valid_aws_secret(
-        self, monkeypatch, setup_moto_secrets_manager
+        self, monkeypatch, moto_secrets_manager_with_password
     ):
         """
         Given a valid AWS secret containing the database password
@@ -83,17 +54,22 @@ class TestGetDatabasePassword:
         Then I should get the correct database password
         """
         monkeypatch.setenv(
-            "SECRET_PASSWORD_LOOKUP", setup_moto_secrets_manager["secret_name"]
+            "SECRET_PASSWORD_LOOKUP", moto_secrets_manager_with_password["secret_name"]
         )
-        monkeypatch.setenv("REGION_NAME", setup_moto_secrets_manager["region_name"])
+        monkeypatch.setenv(
+            "REGION_NAME", moto_secrets_manager_with_password["region_name"]
+        )
 
         password = get_database_password()
 
-        assert password == setup_moto_secrets_manager["secret_value"]["SecretString"]
+        assert (
+            password
+            == moto_secrets_manager_with_password["secret_value"]["SecretString"]
+        )
 
     def test_get_database_password_with_no_env_variables(self):
         """
-        Given no DATABASE_PASSWORD, SECRET_PASSWORD_LOOKUP or REGION_NAME
+        Given no SECRET_PASSWORD_LOOKUP or REGION_NAME
         environment variables are set
         When get_database_password is called
         Then get_database_password should raise an Exception
@@ -102,7 +78,7 @@ class TestGetDatabasePassword:
             get_database_password()
 
     def test_get_database_password_with_invalid_aws_secret_password_lookup(
-        self, monkeypatch, setup_moto_secrets_manager
+        self, monkeypatch, moto_secrets_manager_with_password
     ):
         """
         Given an invalid AWS secret name
@@ -110,13 +86,15 @@ class TestGetDatabasePassword:
         Then I should get an exception
         """
         monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", "wrong_password")
-        monkeypatch.setenv("REGION_NAME", setup_moto_secrets_manager["region_name"])
+        monkeypatch.setenv(
+            "REGION_NAME", moto_secrets_manager_with_password["region_name"]
+        )
 
         with pytest.raises(Exception):
             get_database_password()
 
     def test_get_database_password_with_invalid_aws_region(
-        self, monkeypatch, setup_moto_secrets_manager
+        self, monkeypatch, moto_secrets_manager_with_password
     ):
         """
         Given an invalid AWS region
@@ -124,7 +102,7 @@ class TestGetDatabasePassword:
         Then I should get an exception
         """
         monkeypatch.setenv(
-            "SECRET_PASSWORD_LOOKUP", setup_moto_secrets_manager["secret_name"]
+            "SECRET_PASSWORD_LOOKUP", moto_secrets_manager_with_password["secret_name"]
         )
         monkeypatch.setenv("REGION_NAME", "wrong-region")
 

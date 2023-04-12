@@ -25,11 +25,6 @@ def validate_env_variable(env_var_name):
 
 
 def get_database_password():
-    try:
-        password = validate_env_variable("DATABASE_PASSWORD")
-        return password
-    except Exception:
-        pass
     aws_secret_name = validate_env_variable("SECRET_PASSWORD_LOOKUP")
     aws_region_name = validate_env_variable("REGION_NAME")
     return _get_aws_secret(aws_secret_name, aws_region_name)
