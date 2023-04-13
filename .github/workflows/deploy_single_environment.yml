@@ -51,7 +51,10 @@ jobs:
           cp caselaw_extraction/requirements.txt lambdas/determine_replacements_caselaw/requirements.txt
           mkdir lambdas/determine_replacements_caselaw/rules
           # cp caselaw_extraction/rules/citation_patterns.jsonl lambdas/determine_replacements_caselaw/rules/citation_patterns.jsonl
-          cp citation_patterns.jsonl lambdas/determine_replacements_caselaw/
+          # cp citation_patterns.jsonl lambdas/determine_replacements_caselaw/
+          # dragon: the first of these was commented out, but could copy a file. The second cannot...
+          # but we need a citations_patterns.json  in the root lambda directory, so let's make a chimera.
+          cp caselaw_extraction/rules/citation_patterns.jsonl lambdas/determine_replacements_caselaw/
           mkdir lambdas/determine_replacements_caselaw/database
           cp -r database/*.py lambdas/determine_replacements_caselaw/database/
           mkdir lambdas/determine_replacements_caselaw/utils
