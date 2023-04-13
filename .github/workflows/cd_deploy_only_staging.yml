@@ -1,0 +1,29 @@
+name: cd_deploy_only_staging
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+
+permissions:
+  pull-requests: write
+  id-token: write
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  deploy_staging:
+    name: Deploy Staging Build
+    uses: ./.github/workflows/deploy_single_environment.yml
+    secrets:
+      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
+      workspace: tna-staging
+      app_env: staging
