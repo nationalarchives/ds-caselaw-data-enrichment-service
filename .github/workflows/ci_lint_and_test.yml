@@ -53,6 +53,9 @@ jobs:
           pip3 install -r src/tests/requirements.txt
 
       - name: Run python tests with coverage
+        env:
+          SPARQL_USERNAME: ${{ secrets.SPARQL_USERNAME }}
+          SPARQL_PASSWORD: ${{ secrets.SPARQL_PASSWORD }}
         id: run_python_tests
         run: coverage run --source . -m pytest
 
