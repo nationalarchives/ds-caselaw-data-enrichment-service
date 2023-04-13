@@ -1,5 +1,5 @@
 import logging
-from typing import Dict
+from typing import Dict, Optional
 
 from lambdas.update_legislation_table.fetch_legislation import (
     fetch_legislation,
@@ -15,16 +15,32 @@ LEGISLATION_TABLE_NAME = "ukpga_lookup"
 
 def handler(event: Dict, context) -> None:
     """
-    Function called by the lambda to update the legislation table
+    Lambda function handler that updates the legislation table
+    """
+    try:
+        trigger_date = event.get("trigger_date")
+        if not isinstance(trigger_date, int):
+            trigger_date = None
+        update_legislation_table(trigger_date)
+    except Exception as exception:
+        LOGGER.error("Exception: %s", exception)
+        raise
+
+
+def update_legislation_table(trigger_date: Optional[int]):
+    """
+    Updates the legislation database table with data fetched from the
+    legislation SPARQL endpoint.
+
+    Parameters
+    ----------
+    trigger_date int optional
+        An optional integer representing the trigger date for fetching data
     """
     LOGGER.info("Updating the legislation table %s", LEGISLATION_TABLE_NAME)
 
     sparql_username = validate_env_variable("SPARQL_USERNAME")
     sparql_password = validate_env_variable("SPARQL_PASSWORD")
-
-    trigger_date = event.get("trigger_date")
-    if not isinstance(trigger_date, int):
-        trigger_date = None
 
     legislation_data_frame = fetch_legislation(
         sparql_username, sparql_password, trigger_date

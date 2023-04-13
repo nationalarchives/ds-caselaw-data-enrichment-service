@@ -2,6 +2,7 @@ import datetime
 import logging
 import re
 from io import BytesIO
+from typing import Optional
 
 import pandas as pd
 from SPARQLWrapper import CSV, SPARQLWrapper
@@ -13,7 +14,7 @@ LEGISLATION_API_URL = "https://www.legislation.gov.uk/sparql"
 
 
 def fetch_legislation(
-    sparql_username: str, sparql_password: str, days: int
+    sparql_username: str, sparql_password: str, days: Optional[int]
 ) -> pd.DataFrame:
     """
     Fetch new legislation from legislation.gov.uk since the start day, if given,

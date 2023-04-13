@@ -1,4 +1,4 @@
-from unittest.mock import MagicMock, patch
+from unittest.mock import patch
 
 import boto3
 import pandas as pd
@@ -6,7 +6,7 @@ import pytest
 from moto import mock_secretsmanager
 from pytest_postgresql import factories
 
-from lambdas.update_legislation_table.index import handler
+from lambdas.update_legislation_table.index import update_legislation_table
 
 postgresql_my_proc = factories.postgresql_proc(
     user="testuser",
@@ -44,15 +44,15 @@ def setup_moto_secrets_manager():
 
 
 @patch("lambdas.update_legislation_table.index.fetch_legislation")
-def test_handler(
-    mock_fetch_legislation: MagicMock,
+def test_update_legislation_table(
+    mock_fetch_legislation,
     monkeypatch,
     setup_moto_secrets_manager,
     test_db_connection,
 ):
     """
     Given a postgres database and valid environment variables matching this database
-    When the update_legislation_table lambda handler is called with a trigger date
+    When update_legislation_table is called with a trigger_date
     Then the ukpga_lookup table in the database is appended to with the legislation
         entries from fetch_legislation
     """
@@ -69,8 +69,8 @@ def test_handler(
     )
     monkeypatch.setenv("REGION_NAME", setup_moto_secrets_manager["region_name"])
 
-    event = {"trigger_date": 7}
-    handler(event, None)
+    trigger_date = 7
+    update_legislation_table(trigger_date)
     mock_fetch_legislation.assert_called_with("test_user", "test_password", 7)
     rows = test_db_connection.cursor().execute("SELECT * FROM ukpga_lookup").fetchall()
     assert len(rows) == 2
