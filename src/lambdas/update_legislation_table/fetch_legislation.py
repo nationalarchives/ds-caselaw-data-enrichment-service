@@ -29,7 +29,7 @@ def fetch_legislation(
     sparql.setCredentials(user=sparql_username, passwd=sparql_password)
     sparql.setReturnFormat(CSV)
 
-    filter_string = "FILTER(str(?actTime) > {start_date})" if start_date else ""
+    filter_string = f'FILTER(str(?actTime) > "{start_date}")' if start_date else ""
 
     sparql.setQuery(
         """
