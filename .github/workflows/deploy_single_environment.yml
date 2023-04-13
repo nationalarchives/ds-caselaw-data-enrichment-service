@@ -41,9 +41,9 @@ jobs:
 
       - name: Assemble Non-Dockerised Lambda
         run: |
-          set +e
-          set +o pipefail
-          
+          set -e
+          set -o pipefail
+
           cd src/
 
           mkdir lambdas/determine_replacements_caselaw/caselaw_extraction
@@ -108,11 +108,11 @@ jobs:
       # Pushing images to ECR last
       - name: Build Docker Images For Lambda
         run: |
-          set +e
-          set +o pipefail
-          
-          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com          
-          
+          set -e
+          set -o pipefail
+
+          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com
+
           cd "src/lambdas/determine_replacements_caselaw"
           docker buildx build --load -t tna-s3-tna-ecr-repository-{{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-{{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-{{ secrets.app_env }}:latest
