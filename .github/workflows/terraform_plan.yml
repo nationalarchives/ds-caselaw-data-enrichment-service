@@ -39,8 +39,8 @@ jobs:
       - name: Terraform init
         id: run_terraform_init
         run: |
-          set +e
-          set +o pipefail
+          set -e
+          set -o pipefail
           cd terraform
           terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.account_id }}"
         continue-on-error: false
@@ -48,8 +48,8 @@ jobs:
       - name: Terraform Plan
         id: run_terraform_plan
         run: |
-          set +e
-          set +o pipefail
+          set -e
+          set -o pipefail
           cd terraform
           terraform workspace select ${{ secrets.workspace }}
           terraform plan -no-color -var "app_env=${{ secrets.app_env }}"

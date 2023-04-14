@@ -104,8 +104,8 @@ jobs:
       - name: Run Terraform Validate
         id: run_terraform_validate
         run: |
-          set +e
-          set +o pipefail
+          set -e
+          set -o pipefail
           cd terraform
           terraform init -backend=false
           terraform validate -no-color
