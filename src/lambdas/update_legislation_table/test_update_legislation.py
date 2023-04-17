@@ -3,10 +3,9 @@ from unittest.mock import patch
 import boto3
 import pandas as pd
 import pytest
+from index import update_legislation_table
 from moto import mock_secretsmanager
 from pytest_postgresql import factories
-
-from lambdas.update_legislation_table.index import update_legislation_table
 
 postgresql_my_proc = factories.postgresql_proc(
     user="testuser",
@@ -43,7 +42,7 @@ def setup_moto_secrets_manager():
     }
 
 
-@patch("lambdas.update_legislation_table.index.fetch_legislation")
+@patch("index.fetch_legislation")
 def test_update_legislation_table(
     mock_fetch_legislation,
     monkeypatch,

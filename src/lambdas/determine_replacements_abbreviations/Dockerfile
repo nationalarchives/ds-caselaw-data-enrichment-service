@@ -20,7 +20,7 @@ COPY index.py ${LAMBDA_TASK_ROOT}
 #     rm -Rf /var/cache/yum
 
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
-# COPY utils/ ${LAMBDA_TASK_ROOT}/utils/
+COPY utils/ ${LAMBDA_TASK_ROOT}/utils/
 COPY abbreviation_extraction/ ${LAMBDA_TASK_ROOT}/abbreviation_extraction/
 
 RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
