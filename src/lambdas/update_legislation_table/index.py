@@ -1,9 +1,8 @@
 import logging
 from typing import Dict, Optional
 
-from lambdas.update_legislation_table.fetch_legislation import (
-    fetch_legislation,
-)
+from update_legislation_table.fetch_legislation import fetch_legislation
+
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_engine
 

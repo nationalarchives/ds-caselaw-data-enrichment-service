@@ -19,6 +19,7 @@ RUN yum update -y && \
     rm -Rf /var/cache/yum
 
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
+COPY utils/ ${LAMBDA_TASK_ROOT}/utils/
 
 RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 # RUN pip install psycopg2-binary==2.9.2 --target "${LAMBDA_TASK_ROOT}"

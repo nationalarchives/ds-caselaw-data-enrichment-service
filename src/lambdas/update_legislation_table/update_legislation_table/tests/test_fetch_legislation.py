@@ -15,10 +15,7 @@ import numpy as np
 import pandas as pd
 import pytest
 from dotenv import load_dotenv
-
-from lambdas.update_legislation_table.fetch_legislation import (
-    fetch_legislation,
-)
+from update_legislation_table.fetch_legislation import fetch_legislation
 
 
 @pytest.fixture(scope="module")
@@ -33,7 +30,7 @@ frozen_date = datetime.datetime(2023, 4, 13)
 
 
 @pytest.mark.integration
-@patch("lambdas.update_legislation_table.fetch_legislation.datetime.datetime")
+@patch("update_legislation_table.fetch_legislation.datetime.datetime")
 def test_fetch_legislation_integration(mock_datetime, set_env_vars) -> None:
     """
     GIVEN a set of environment variables including SPARQL_USERNAME and SPARQL_PASSWORD
