@@ -72,23 +72,27 @@ jobs:
           cp -r abbreviation_extraction/*.* lambdas/determine_replacements_abbreviations/abbreviation_extraction/
           cp abbreviation_extraction/requirements.txt lambdas/determine_replacements_abbreviations/
           mkdir lambdas/determine_replacements_abbreviations/utils
-          cp -r replacer/*.py lambdas/determine_replacements_abbreviations/utils/
+          cp -r utils/*.py lambdas/determine_replacements_abbreviations/utils/
           mkdir lambdas/determine_legislation_provisions/legislation_provisions_extraction
           cp -r legislation_provisions_extraction/*.* lambdas/determine_legislation_provisions/legislation_provisions_extraction/
           cp legislation_provisions_extraction/requirements.txt lambdas/determine_legislation_provisions/
           mkdir lambdas/determine_legislation_provisions/replacer
           cp -r replacer/*.py lambdas/determine_legislation_provisions/replacer/
           mkdir lambdas/determine_legislation_provisions/utils
-          cp -r replacer/*.py lambdas/determine_legislation_provisions/utils/
+          cp -r utils/*.py lambdas/determine_legislation_provisions/utils/
           mkdir lambdas/determine_oblique_references/oblique_references
           cp -r oblique_references/*.* lambdas/determine_oblique_references/oblique_references/
           cp oblique_references/requirements.txt lambdas/determine_oblique_references/
           mkdir lambdas/determine_oblique_references/replacer
           cp -r replacer/*.py lambdas/determine_oblique_references/replacer/
           mkdir lambdas/determine_oblique_references/utils
-          cp -r replacer/*.py lambdas/determine_oblique_references/utils/
+          cp -r utils/*.py lambdas/determine_oblique_references/utils/
           mkdir lambdas/extract_judgement_contents/utils
           cp -r utils/*.py lambdas/extract_judgement_contents/utils/
+          mkdir lambdas/fetch_xml/utils
+          cp -r utils/*.py lambdas/fetch_xml/utils/
+          mkdir lambdas/update_rules_processor/utils
+          cp -r utils/*.py lambdas/update_rules_processor/utils/
           mkdir -p lambdas/make_replacements/replacer
           cp -r replacer/*.py lambdas/make_replacements/replacer/
 
