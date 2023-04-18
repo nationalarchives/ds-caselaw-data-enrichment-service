@@ -1,6 +1,7 @@
 import logging
 from typing import Dict, Optional
 
+from update_legislation_table.database import remove_duplicates
 from update_legislation_table.fetch_legislation import fetch_legislation
 
 from utils.environment_helpers import validate_env_variable
@@ -50,6 +51,8 @@ def update_legislation_table(trigger_date: Optional[int]):
     legislation_data_frame.to_sql(
         LEGISLATION_TABLE_NAME, engine, if_exists="append", index=False
     )
+    with engine.connect() as db_conn:
+        remove_duplicates(db_conn, LEGISLATION_TABLE_NAME)
     engine.dispose()
 
     LOGGER.info("Legislation updated")
