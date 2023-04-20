@@ -2,13 +2,16 @@ FROM public.ecr.aws/lambda/python:3.8
 
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8
 
-
+# Install system dependencies
 RUN yum update -y && \
     rm -Rf /var/cache/yum
 
+# Copy only the requirements file first and install dependencies
+COPY requirements.txt ${LAMBDA_TASK_ROOT}/requirements.txt
+RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
+
+# Copy the rest of the code
 COPY . ${LAMBDA_TASK_ROOT}
 COPY utils/ ${LAMBDA_TASK_ROOT}/utils/
-
-RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
 CMD [ "index.lambda_handler" ]
