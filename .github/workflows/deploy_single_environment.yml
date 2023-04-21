@@ -61,6 +61,8 @@ jobs:
           cp -r utils/*.py lambdas/determine_replacements_caselaw/utils/
           mkdir lambdas/update_legislation_table/utils
           cp -r utils/*.py lambdas/update_legislation_table/utils/
+          mkdir lambdas/update_legislation_table/database
+          cp -r database/*.py lambdas/update_legislation_table/database/
           mkdir lambdas/determine_replacements_legislation/legislation_extraction
           cp -r legislation_extraction/*.* lambdas/determine_replacements_legislation/legislation_extraction/
           cp legislation_extraction/requirements.txt lambdas/determine_replacements_legislation/
@@ -93,6 +95,8 @@ jobs:
           cp -r utils/*.py lambdas/fetch_xml/utils/
           mkdir lambdas/update_rules_processor/utils
           cp -r utils/*.py lambdas/update_rules_processor/utils/
+          mkdir lambdas/update_rules_processor/database
+          cp -r database/*.py lambdas/update_rules_processor/database/
           mkdir -p lambdas/make_replacements/replacer
           cp -r replacer/*.py lambdas/make_replacements/replacer/
 

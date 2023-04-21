@@ -7,7 +7,7 @@ RUN yum update -y && \
     rm -Rf /var/cache/yum
 
 # Copy only the requirements file first and install dependencies
-COPY requirements.txt ${LAMBDA_TASK_ROOT}/requirements.txt
+COPY requirements.txt ${LAMBDA_TASK_ROOT}
 RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
 # Copy the rest of the code
