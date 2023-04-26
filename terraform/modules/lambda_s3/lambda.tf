@@ -306,13 +306,6 @@ module "lambda-determine-replacements-caselaw" {
     REGION_NAME            = "${local.region}"
     DATABASE_HOSTNAME      = "${var.postgress_hostname}"
 
-    # needed until we fix https://trello.com/c/lLABy4j9/791-certain-enrichment-lambda-functions-not-updating-on-merge-even-though-terraform-updating-env-variables-causing-errors
-    TABLE_NAME = "rules"
-    USERNAME   = "root"
-    PORT       = "5432"
-    HOSTNAME   = "${var.postgress_hostname}"
-
-
     DEST_QUEUE_NAME     = aws_sqs_queue.replacement-caselaw-queue.url
     RULES_FILE_BUCKET   = "${module.rules_bucket.s3_bucket_id}"
     RULES_FILE_KEY      = "citation_patterns.jsonl"
@@ -440,12 +433,6 @@ module "lambda-determine-replacements-legislation" {
     DATABASE_HOSTNAME      = "${var.postgress_hostname}"
     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME            = "${local.region}"
-
-    # needed until we fix https://trello.com/c/lLABy4j9/791-certain-enrichment-lambda-functions-not-updating-on-merge-even-though-terraform-updating-env-variables-causing-errors
-    TABLE_NAME = "rules"
-    USERNAME   = "root"
-    PORT       = "5432"
-    HOSTNAME   = "${var.postgress_hostname}"
 
     DEST_QUEUE_NAME = aws_sqs_queue.replacement-legislation-queue.url
 
@@ -1004,12 +991,6 @@ module "lambda-update-legislation-table" {
     REGION_NAME            = local.region
     SPARQL_USERNAME        = data.aws_secretsmanager_secret_version.sparql_username_credentials.secret_string
     SPARQL_PASSWORD        = data.aws_secretsmanager_secret_version.sparql_password_credentials.secret_string
-
-    # needed until we fix https://trello.com/c/lLABy4j9/791-certain-enrichment-lambda-functions-not-updating-on-merge-even-though-terraform-updating-env-variables-causing-errors
-    TABLE_NAME = "rules"
-    USERNAME   = "root"
-    PORT       = "5432"
-    HOSTNAME   = "${var.postgress_hostname}"
   }
 
   cloudwatch_logs_retention_in_days = 365
@@ -1129,12 +1110,6 @@ module "lambda-update-rules-processor" {
     DATABASE_PORT          = "5432"
     SECRET_PASSWORD_LOOKUP = "${var.postgress_master_password_secret_id}"
     REGION_NAME            = "${local.region}"
-
-    # needed until we fix https://trello.com/c/lLABy4j9/791-certain-enrichment-lambda-functions-not-updating-on-merge-even-though-terraform-updating-env-variables-causing-errors
-    TABLE_NAME = "rules"
-    USERNAME   = "root"
-    PORT       = "5432"
-    HOSTNAME   = "${var.postgress_hostname}"
   }
 
   cloudwatch_logs_retention_in_days = 365
