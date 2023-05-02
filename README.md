@@ -103,7 +103,9 @@ The enrichment process typically takes five-six minutes per judgment. Enriched j
 
 The standard mechanism for triggering the enrichment pipeline is via the TNA editor interface.
 
-## 4 Tests
+## 4 Local Development
+
+### 4.1 Tests
 
 There is a suite of tests that can be run locally with
 
@@ -116,6 +118,17 @@ but you'll need to ensure you've installed `src/tests/requirements.txt`
 You can also obtain a test coverage report with `coverage run --source . -m pytest && coverage report`
 
 The tests are currently run in CI as specified in `.github/workflows/ci_lint_and_test.yml`
+
+### 4.2 Running locally
+
+It's very experimental, but the `fetch_xml` lambda can be run by:
+
+- running `docker-compose up` in the ingester repo to load the localstack container
+- running `make setup` here to setup localstack
+- running `scripts/sqs-publish-notification.sh` here to send a notification
+- reading the logs in the localstack terminal
+
+You'll probably need to restart the docker container and configure it each time
 
 ## 5 Architecture
 
