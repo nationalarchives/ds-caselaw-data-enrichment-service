@@ -20,7 +20,8 @@ def fetch_legislation(
     Fetch new legislation from legislation.gov.uk since the start day, if given,
     otherwise all legislation
     """
-    start_date = datetime.datetime.today() - datetime.timedelta(days) if days else None
+    today = datetime.datetime.today()
+    start_date = today - datetime.timedelta(days) if days else None
 
     log_string = f"Retrieving all legislation from {LEGISLATION_API_URL}"
     log_string += " since {start_date}" if start_date else ""
@@ -30,7 +31,11 @@ def fetch_legislation(
     sparql.setCredentials(user=sparql_username, passwd=sparql_password)
     sparql.setReturnFormat(CSV)
 
-    filter_string = f'FILTER(str(?actTime) > "{start_date}")' if start_date else ""
+    filter_string = (
+        f'FILTER("{today}" >  str(?actTime) && str(?actTime) > "{start_date}")'
+        if start_date
+        else ""
+    )
 
     sparql.setQuery(
         """
