@@ -820,36 +820,6 @@ resource "aws_sqs_queue_policy" "fetch_xml_queue_policy" {
   policy    = data.aws_iam_policy_document.sqs_policy_fetch_xml.json
 }
 
-#  policy = <<POLICY
-#{
-#  "Version": "2012-10-17",
-#  "Statement": [
-#    {
-#      "Effect": "Allow",
-#      "Principal": {
-#        "Service": "sns.amazonaws.com"
-#      },
-#      "Action": "sqs:SendMessage",
-#      "Resource": "${aws_sqs_queue.fetch_xml_queue.arn}",
-#      "Condition": {
-#        "aws:SourceArn":"$${arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated}"
-#      }
-#    },
-#    {
-#      "Effect": "Allow",
-#      "Principal": {
-#        "Service": "sns.amazonaws.com"
-#      },
-#      "Action": [
-#        "kms:GenerateDataKey*",
-#        "kms:Decrypt"
-#      ],
-#      "Resource": "*"
-#    }
-#  ]
-#}
-#POLICY
-#}
 
 resource "aws_lambda_event_source_mapping" "sqs_replacements_fetch_xml_event_source_mapping" {
   event_source_arn = aws_sqs_queue.fetch_xml_queue.arn
