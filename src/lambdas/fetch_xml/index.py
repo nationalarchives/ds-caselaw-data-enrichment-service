@@ -1,4 +1,3 @@
-# Replace this file with functional code rather than one that just lists the S3 buckets.
 import json
 import logging
 
