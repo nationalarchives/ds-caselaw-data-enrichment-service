@@ -694,6 +694,11 @@ resource "aws_sns_topic_subscription" "make-replacements-error-email-anthony-tar
   protocol  = "email"
   endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
 }
+resource "aws_sns_topic_subscription" "push_xml-error-email-anthony-target" {
+  topic_arn = aws_sns_topic.push_xml_error.arn
+  protocol  = "email"
+  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
+}
 
 resource "aws_sns_topic_subscription" "oblique-references-error-email-anthony-target" {
   topic_arn = aws_sns_topic.oblique_references_error.arn
@@ -751,6 +756,12 @@ resource "aws_sns_topic_subscription" "abbreviation-detection-error-email-dragon
 
 resource "aws_sns_topic_subscription" "make-replacements-error-email-dragon-target" {
   topic_arn = aws_sns_topic.make_replacements_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "push_xml-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.push_xml_error.arn
   protocol  = "email"
   endpoint  = "david.mckee@dxw.com"
 }
