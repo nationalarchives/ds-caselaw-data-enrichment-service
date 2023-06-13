@@ -59,6 +59,8 @@ jobs:
           cp -r database/*.py lambdas/determine_replacements_caselaw/database/
           mkdir lambdas/determine_replacements_caselaw/utils
           cp -r utils/*.py lambdas/determine_replacements_caselaw/utils/
+          mkdir lambdas/xml_validate/utils
+          cp -r utils/*.py lambdas/xml_validate/utils/
           mkdir lambdas/update_legislation_table/utils
           cp -r utils/*.py lambdas/update_legislation_table/utils/
           mkdir lambdas/update_legislation_table/database
