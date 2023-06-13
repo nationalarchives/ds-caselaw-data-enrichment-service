@@ -623,66 +623,6 @@ resource "aws_sns_topic_subscription" "validation_updates_error_sqs_target" {
   endpoint  = aws_sqs_queue.validation_updates_error_queue.arn
 }
 
-resource "aws_sns_topic_subscription" "rules-error-email-editha-target" {
-  topic_arn = aws_sns_topic.rules_update_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "legislation-update-error-email-editha-target" {
-  topic_arn = aws_sns_topic.legislation_update_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "fetch_xml_error-email-editha-target" {
-  topic_arn = aws_sns_topic.fetch_xml_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "push_xml_error-email-editha-target" {
-  topic_arn = aws_sns_topic.push_xml_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "caselaw-detection-error-email-editha-target" {
-  topic_arn = aws_sns_topic.caselaw_detection_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "legislation-detection-error-email-editha-target" {
-  topic_arn = aws_sns_topic.legislation_detection_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "abbreviation-detection-error-email-editha-target" {
-  topic_arn = aws_sns_topic.abbreviation_detection_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "make-replacements-error-email-editha-target" {
-  topic_arn = aws_sns_topic.make_replacements_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "oblique-references-error-email-editha-target" {
-  topic_arn = aws_sns_topic.oblique_references_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
-resource "aws_sns_topic_subscription" "legislation-provisions-error-email-editha-target" {
-  topic_arn = aws_sns_topic.legislation_provisions_error.arn
-  protocol  = "email"
-  endpoint  = "editha.nemsic@mishcon.com"
-}
-
 resource "aws_sns_topic_subscription" "rules-error-email-anthony-target" {
   topic_arn = aws_sns_topic.rules_update_error.arn
   protocol  = "email"
