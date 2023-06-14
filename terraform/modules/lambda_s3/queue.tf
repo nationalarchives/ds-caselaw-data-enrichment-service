@@ -329,6 +329,16 @@ resource "aws_sns_topic" "validation_updates_error" {
   name = "validation-updates-error-topic"
 }
 
+resource "aws_sns_topic" "db_backup_error" {
+  name         = "db-backup-error-topic"
+  display_name = "DB Backup Error"
+}
+
+resource "aws_sns_topic" "xml_validate_error" {
+  name         = "xml-validate-error-topic"
+  display_name = "XML Validate Error"
+}
+
 resource "aws_sns_topic" "rules_update_error" {
   name         = "rules-update-error-topic"
   display_name = "Rules Update Error"
@@ -411,6 +421,42 @@ resource "aws_lambda_event_source_mapping" "sqs_validated_xml_event_source_mappi
   enabled          = true
   function_name    = module.lambda-push-enriched-xml.lambda_function_arn
   batch_size       = 1
+}
+
+resource "aws_cloudwatch_metric_alarm" "db_backup_error" {
+  alarm_name          = "DB backup error"
+  alarm_description   = "Check if DB backup lambda throws an error"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = "1"
+  metric_name         = "Errors"
+  unit                = "Count"
+  datapoints_to_alarm = "1"
+  namespace           = "AWS/Lambda"
+  period              = "180"
+  statistic           = "Sum"
+  threshold           = "0"
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-db-backup"
+  }
+  alarm_actions = [aws_sns_topic.db_backup_error.arn]
+}
+
+resource "aws_cloudwatch_metric_alarm" "xml_validate_error" {
+  alarm_name          = "XML validate error"
+  alarm_description   = "Check if XML validate lambda throws an error"
+  comparison_operator = "GreaterThanThreshold"
+  evaluation_periods  = "1"
+  metric_name         = "Errors"
+  unit                = "Count"
+  datapoints_to_alarm = "1"
+  namespace           = "AWS/Lambda"
+  period              = "180"
+  statistic           = "Sum"
+  threshold           = "0"
+  dimensions = {
+    FunctionName = "${local.name}-${local.environment}-xml-validate"
+  }
+  alarm_actions = [aws_sns_topic.xml_validate_error.arn]
 }
 
 resource "aws_cloudwatch_metric_alarm" "rules_update_error" {
@@ -623,6 +669,19 @@ resource "aws_sns_topic_subscription" "validation_updates_error_sqs_target" {
   endpoint  = aws_sqs_queue.validation_updates_error_queue.arn
 }
 
+
+resource "aws_sns_topic_subscription" "db_backup-error-email-anthony-target" {
+  topic_arn = aws_sns_topic.db_backup_error.arn
+  protocol  = "email"
+  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
+}
+
+resource "aws_sns_topic_subscription" "xml_validate-error-email-anthony-target" {
+  topic_arn = aws_sns_topic.xml_validate_error.arn
+  protocol  = "email"
+  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
+}
+
 resource "aws_sns_topic_subscription" "rules-error-email-anthony-target" {
   topic_arn = aws_sns_topic.rules_update_error.arn
   protocol  = "email"
@@ -664,6 +723,11 @@ resource "aws_sns_topic_subscription" "make-replacements-error-email-anthony-tar
   protocol  = "email"
   endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
 }
+resource "aws_sns_topic_subscription" "push_xml-error-email-anthony-target" {
+  topic_arn = aws_sns_topic.push_xml_error.arn
+  protocol  = "email"
+  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
+}
 
 resource "aws_sns_topic_subscription" "oblique-references-error-email-anthony-target" {
   topic_arn = aws_sns_topic.oblique_references_error.arn
@@ -676,6 +740,19 @@ resource "aws_sns_topic_subscription" "legislation-provisions-error-email-anthon
   protocol  = "email"
   endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
 }
+
+resource "aws_sns_topic_subscription" "db_backup-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.db_backup_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "xml_validate-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.xml_validate_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
 
 resource "aws_sns_topic_subscription" "rules-error-email-dragon-target" {
   topic_arn = aws_sns_topic.rules_update_error.arn
@@ -715,6 +792,12 @@ resource "aws_sns_topic_subscription" "abbreviation-detection-error-email-dragon
 
 resource "aws_sns_topic_subscription" "make-replacements-error-email-dragon-target" {
   topic_arn = aws_sns_topic.make_replacements_error.arn
+  protocol  = "email"
+  endpoint  = "david.mckee@dxw.com"
+}
+
+resource "aws_sns_topic_subscription" "push_xml-error-email-dragon-target" {
+  topic_arn = aws_sns_topic.push_xml_error.arn
   protocol  = "email"
   endpoint  = "david.mckee@dxw.com"
 }
