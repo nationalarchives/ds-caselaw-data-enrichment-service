@@ -329,69 +329,11 @@ resource "aws_sns_topic" "validation_updates_error" {
   name = "validation-updates-error-topic"
 }
 
-resource "aws_sns_topic" "db_backup_error" {
-  name         = "db-backup-error-topic"
-  display_name = "DB Backup Error"
-}
+data "aws_lambda_functions" "all" {}
 
-resource "aws_sns_topic" "xml_validate_error" {
-  name         = "xml-validate-error-topic"
-  display_name = "XML Validate Error"
-}
-
-resource "aws_sns_topic" "rules_update_error" {
-  name         = "rules-update-error-topic"
-  display_name = "Rules Update Error"
-}
-
-resource "aws_sns_topic" "legislation_update_error" {
-  name         = "legislation-update-error-topic"
-  display_name = "Legislation Update Error"
-}
-
-resource "aws_sns_topic" "fetch_xml_error" {
-  name         = "fetch-xml-error-topic"
-  display_name = "Fetch XML Error"
-}
-
-resource "aws_sns_topic" "push_xml_error" {
-  name         = "push-xml-error-topic"
-  display_name = "Push XML Error"
-}
-
-resource "aws_sns_topic" "extract_judgement_contents_error" {
-  name         = "extract-judgement-contents-error-topic"
-  display_name = "Extract Judgement Contents Error"
-}
-
-resource "aws_sns_topic" "caselaw_detection_error" {
-  name         = "caselaw-detection-error-topic"
-  display_name = "Case law Detection Error"
-}
-
-resource "aws_sns_topic" "legislation_detection_error" {
-  name         = "legislation-detection-error-topic"
-  display_name = "Legislation Detection Error"
-}
-
-resource "aws_sns_topic" "abbreviation_detection_error" {
-  name         = "abbreviation-detection-error-topic"
-  display_name = "Abbreviation Detection Error"
-}
-
-resource "aws_sns_topic" "make_replacements_error" {
-  name         = "make-replacements-error-topic"
-  display_name = "Replacements Error"
-}
-
-resource "aws_sns_topic" "oblique_references_error" {
-  name         = "oblique-references-error-topic"
-  display_name = "Oblique References Error"
-}
-
-resource "aws_sns_topic" "legislation_provisions_error" {
-  name         = "legislation-provisions-error-topic"
-  display_name = "Legislation Provisions Error"
+resource "aws_sns_topic" "enrichment_error_alerts" {
+  name         = "enrichment-error-topic"
+  display_name = "Enrichment Error"
 }
 
 # Event source from SQS
@@ -423,9 +365,10 @@ resource "aws_lambda_event_source_mapping" "sqs_validated_xml_event_source_mappi
   batch_size       = 1
 }
 
-resource "aws_cloudwatch_metric_alarm" "db_backup_error" {
-  alarm_name          = "DB backup error"
-  alarm_description   = "Check if DB backup lambda throws an error"
+resource "aws_cloudwatch_metric_alarm" "lambda_errors_alarm" {
+  count               = length(data.aws_lambda_functions.all.function_names)
+  alarm_description   = "Lambda function errors alarm"
+  alarm_name          = "lambda-errors-alarm-${data.aws_lambda_functions.all.function_names[count.index]}"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = "1"
   metric_name         = "Errors"
@@ -436,226 +379,11 @@ resource "aws_cloudwatch_metric_alarm" "db_backup_error" {
   statistic           = "Sum"
   threshold           = "0"
   dimensions = {
-    FunctionName = "${local.name}-${local.environment}-db-backup"
+    FunctionName = data.aws_lambda_functions.all.function_names[count.index]
   }
-  alarm_actions = [aws_sns_topic.db_backup_error.arn]
+  alarm_actions = [aws_sns_topic.enrichment_error_alerts.arn]
 }
 
-resource "aws_cloudwatch_metric_alarm" "xml_validate_error" {
-  alarm_name          = "XML validate error"
-  alarm_description   = "Check if XML validate lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-xml-validate"
-  }
-  alarm_actions = [aws_sns_topic.xml_validate_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "rules_update_error" {
-  alarm_name          = "Manifest update error"
-  alarm_description   = "Check if rules update lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-update-rules-processor"
-  }
-  alarm_actions = [aws_sns_topic.rules_update_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "legislation_update_error" {
-  alarm_name          = "Legislation update error"
-  alarm_description   = "Check if legislation update lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-update-legislation-table"
-  }
-  alarm_actions = [aws_sns_topic.legislation_update_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "fetch_xml_error" {
-  alarm_name          = "Fetch XML error"
-  alarm_description   = "Check if fetch XML lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-fetch-xml"
-  }
-  alarm_actions = [aws_sns_topic.fetch_xml_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "push_xml_error" {
-  alarm_name          = "Push XML error"
-  alarm_description   = "Check if push XML lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-push-enriched-xml"
-  }
-  alarm_actions = [aws_sns_topic.push_xml_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "extract-judgement-contents-error" {
-  alarm_name          = "Extract judgement contents error"
-  alarm_description   = "Check if extract judgement contents lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-extract-judgement-contents"
-  }
-  alarm_actions = [aws_sns_topic.extract_judgement_contents_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "caselaw_detection_error" {
-  alarm_name          = "Case law detection error"
-  alarm_description   = "Check if case law detection lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-determine-replacements-caselaw"
-  }
-  alarm_actions = [aws_sns_topic.caselaw_detection_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "legislation_detection_error" {
-  alarm_name          = "Legislation detection error"
-  alarm_description   = "Check if legislation detection lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-determine-replacements-legislation"
-  }
-  alarm_actions = [aws_sns_topic.legislation_detection_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "abbreviation_detection_error" {
-  alarm_name          = "Abbreviation detection error"
-  alarm_description   = "Check if abbreviation detection lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-determine-replacements-abbreviations"
-  }
-  alarm_actions = [aws_sns_topic.abbreviation_detection_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "make_replacements_error" {
-  alarm_name          = "Replacements error"
-  alarm_description   = "Check if replacements lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-make-replacements"
-  }
-  alarm_actions = [aws_sns_topic.make_replacements_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "oblique-references_error" {
-  alarm_name          = "Oblique references error"
-  alarm_description   = "Check if oblique references lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-determine-oblique-references"
-  }
-  alarm_actions = [aws_sns_topic.oblique_references_error.arn]
-}
-
-resource "aws_cloudwatch_metric_alarm" "legislation-provisions-error" {
-  alarm_name          = "Legislation provisions error"
-  alarm_description   = "Check if legislation provisions lambda throws an error"
-  comparison_operator = "GreaterThanThreshold"
-  evaluation_periods  = "1"
-  metric_name         = "Errors"
-  unit                = "Count"
-  datapoints_to_alarm = "1"
-  namespace           = "AWS/Lambda"
-  period              = "180"
-  statistic           = "Sum"
-  threshold           = "0"
-  dimensions = {
-    FunctionName = "${local.name}-${local.environment}-determine-legislation-provisions"
-  }
-  alarm_actions = [aws_sns_topic.legislation_provisions_error.arn]
-}
 
 resource "aws_sns_topic_subscription" "validation_updates_sqs_target" {
   topic_arn = aws_sns_topic.validation_updates.arn
@@ -669,150 +397,13 @@ resource "aws_sns_topic_subscription" "validation_updates_error_sqs_target" {
   endpoint  = aws_sqs_queue.validation_updates_error_queue.arn
 }
 
-
-resource "aws_sns_topic_subscription" "db_backup-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.db_backup_error.arn
+resource "aws_sns_topic_subscription" "enrichment_error_developer_email_subscriptions" {
+  count     = length(var.developer_emails)
+  topic_arn = aws_sns_topic.enrichment_error_alerts.arn
   protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
+  endpoint  = var.developer_emails[count.index]
 }
 
-resource "aws_sns_topic_subscription" "xml_validate-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.xml_validate_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "rules-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.rules_update_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "legislation-update-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.legislation_update_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "extract_judgement_contents_error-email-anthony-target" {
-  topic_arn = aws_sns_topic.extract_judgement_contents_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "caselaw-detection-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.caselaw_detection_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "legislation-detection-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.legislation_detection_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "abbreviation-detection-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.abbreviation_detection_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "make-replacements-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.make_replacements_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-resource "aws_sns_topic_subscription" "push_xml-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.push_xml_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "oblique-references-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.oblique_references_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "legislation-provisions-error-email-anthony-target" {
-  topic_arn = aws_sns_topic.legislation_provisions_error.arn
-  protocol  = "email"
-  endpoint  = "anthony.hashemi@nationalarchives.gov.uk"
-}
-
-resource "aws_sns_topic_subscription" "db_backup-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.db_backup_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "xml_validate-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.xml_validate_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-
-resource "aws_sns_topic_subscription" "rules-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.rules_update_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "legislation-update-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.legislation_update_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "extract_judgement_contents_error-email-dragon-target" {
-  topic_arn = aws_sns_topic.extract_judgement_contents_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "caselaw-detection-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.caselaw_detection_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "legislation-detection-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.legislation_detection_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "abbreviation-detection-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.abbreviation_detection_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "make-replacements-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.make_replacements_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "push_xml-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.push_xml_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "oblique-references-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.oblique_references_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
-
-resource "aws_sns_topic_subscription" "legislation-provisions-error-email-dragon-target" {
-  topic_arn = aws_sns_topic.legislation_provisions_error.arn
-  protocol  = "email"
-  endpoint  = "david.mckee@dxw.com"
-}
 
 resource "aws_sqs_queue" "fetch_xml_queue" {
   name                       = "${local.name}-${local.environment}-fetch-xml-queue"
