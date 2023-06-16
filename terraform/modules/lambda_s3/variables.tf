@@ -1,9 +1,3 @@
-# Create SNS topic subscription for each developer
-variable "developer_emails" {
-  type    = list(string)
-  default = ["anthony.hashemi@nationalarchives.gov.uk", "david.mckee@dxw.com"]
-}
-
 variable "aws_profile" {
   type    = string
   default = "default"
