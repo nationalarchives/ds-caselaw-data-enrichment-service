@@ -167,10 +167,6 @@ Here are some brief notes on extending the infrastructure.
   If a bucket policy is added, then an extra statement will automatically be added that denies insecure transport.
 - Docker images are stored in ECR. Each repo needs to exist before a docker image can be pushed to ECR. These are created in `terraform/modules/lambda_s3/lambda.tf`.
 
-### Updating the .terraform.lock.hcl file
-
-- Run `terraform init --upgrade -backend=false` locally
-
 ## 9 Turning Enrichment Off
 
 There are a number of places where enrichment can be turned off:
