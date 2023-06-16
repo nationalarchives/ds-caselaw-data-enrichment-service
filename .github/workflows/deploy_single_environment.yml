@@ -123,8 +123,8 @@ jobs:
           set -o pipefail
           cd terraform
           terraform workspace select ${{ secrets.workspace }}
-          terraform apply -refresh-only --auto-approve -no-color -var "app_env=${{ secrets.app_env }}"
-          terraform apply --auto-approve -no-color -var "app_env=${{ secrets.app_env }}"
+          terraform apply -refresh-only --auto-approve -no-color -var "app_env=${{ secrets.app_env }}" -var "error_alert_emails=${{ secrets.TF_VAR_ERROR_ALERT_EMAILS }}"
+          terraform apply --auto-approve -no-color -var "app_env=${{ secrets.app_env }}" -var "error_alert_emails=${{ secrets.TF_VAR_ERROR_ALERT_EMAILS }}"
 
       # Pushing images to ECR last
       - name: Build Docker Images For Lambda

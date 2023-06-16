@@ -1,7 +1,6 @@
-# Create SNS topic subscription for each developer
-variable "developer_emails" {
+variable "error_alert_emails" {
   type    = list(string)
-  default = ["anthony.hashemi@nationalarchives.gov.uk", "david.mckee@dxw.com"]
+  default = []
 }
 
 variable "aws_profile" {
