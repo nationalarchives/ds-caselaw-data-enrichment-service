@@ -6,14 +6,6 @@ terraform {
       version = ">=3.0.0,<4.0.0"
     }
   }
-  #   cloud {
-  #     organization = "mdr-research"
-
-  #     workspaces {
-  #       name = "mdr-insights-network-production"
-  #     }
-  #   }
-
 }
 
 module "network" {
