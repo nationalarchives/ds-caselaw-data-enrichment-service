@@ -329,8 +329,6 @@ resource "aws_sns_topic" "validation_updates_error" {
   name = "validation-updates-error-topic"
 }
 
-data "aws_lambda_functions" "all" {}
-
 resource "aws_sns_topic" "enrichment_error_alerts" {
   name         = "enrichment-error-topic"
   display_name = "Enrichment Error"
@@ -365,10 +363,16 @@ resource "aws_lambda_event_source_mapping" "sqs_validated_xml_event_source_mappi
   batch_size       = 1
 }
 
+
+locals {
+  lambda_function_names = ["fetch-xml", "extract-judgement-contents", "determine-replacements-caselaw", "determine-replacements-legislation", "make-replacements", "determine-replacements-abbreviations", "determine-oblique-references", "determine-legislation-provisions", "xml-validate", "push-enriched-xml", "db-backup", "update-rules-processor", "update-legislation-table"]
+}
+
+
 resource "aws_cloudwatch_metric_alarm" "lambda_errors_alarm" {
-  count               = length(data.aws_lambda_functions.all.function_names)
-  alarm_description   = "Lambda function errors alarm"
-  alarm_name          = "lambda-errors-alarm-${data.aws_lambda_functions.all.function_names[count.index]}"
+  count               = length(local.lambda_function_names)
+  alarm_description   = "${local.lambda_function_names[count.index]} Error"
+  alarm_name          = "${local.lambda_function_names[count.index]} Error"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = "1"
   metric_name         = "Errors"
@@ -379,7 +383,7 @@ resource "aws_cloudwatch_metric_alarm" "lambda_errors_alarm" {
   statistic           = "Sum"
   threshold           = "0"
   dimensions = {
-    FunctionName = data.aws_lambda_functions.all.function_names[count.index]
+    FunctionName = local.lambda_function_names[count.index]
   }
   alarm_actions = [aws_sns_topic.enrichment_error_alerts.arn]
 }
