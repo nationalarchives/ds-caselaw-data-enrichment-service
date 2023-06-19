@@ -365,7 +365,23 @@ resource "aws_lambda_event_source_mapping" "sqs_validated_xml_event_source_mappi
 
 
 locals {
-  lambda_function_names = ["fetch-xml", "extract-judgement-contents", "determine-replacements-caselaw", "determine-replacements-legislation", "make-replacements", "determine-replacements-abbreviations", "determine-oblique-references", "determine-legislation-provisions", "xml-validate", "push-enriched-xml", "db-backup", "update-rules-processor", "update-legislation-table"]
+  lambda_function_names = [
+    for function_name in [
+      "fetch-xml",
+      "extract-judgement-contents",
+      "determine-replacements-caselaw",
+      "determine-replacements-legislation",
+      "make-replacements",
+      "determine-replacements-abbreviations",
+      "determine-oblique-references",
+      "determine-legislation-provisions",
+      "xml-validate",
+      "push-enriched-xml",
+      "db-backup",
+      "update-rules-processor",
+      "update-legislation-table"
+    ] : "${local.name}-${local.environment}-${function_name}"
+  ]
 }
 
 
