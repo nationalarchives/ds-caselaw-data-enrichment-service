@@ -24,6 +24,13 @@ module "vpc" {
       from_port   = 443
       to_port     = 443
       cidr_blocks = "0.0.0.0/0"
+    },
+    {
+      description     = "Allow calls to rds database"
+      protocol        = "tcp"
+      from_port       = 5432
+      to_port         = 5432
+      security_groups = var.rds_security_group_id
     }
   ]
 

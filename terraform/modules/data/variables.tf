@@ -13,6 +13,10 @@ variable "vpc_id" {
   type = string
 }
 
+variable "default_security_group_id" {
+  type = string
+}
+
 variable "environment" {
   type = string
   # default = "ucl"

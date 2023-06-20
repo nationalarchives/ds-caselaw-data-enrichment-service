@@ -44,6 +44,8 @@ module "network" {
   source = "./modules/network"
 
   environment = var.app_env
+
+  rds_security_group_id = module.data.rds_security_group_id
 }
 
 
@@ -54,4 +56,5 @@ module "data" {
 
   vpc_id                     = module.network.vpc_id
   database_subnet_group_name = module.network.database_subnet_group_name
+  default_security_group_id  = module.network.default_security_group_id
 }
