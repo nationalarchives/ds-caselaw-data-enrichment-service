@@ -1,6 +1,10 @@
 variable "error_alert_emails" {
-  type    = list(string)
-  default = []
+  type    = string
+  default = "[]"
+}
+
+locals {
+  error_alert_emails_list = jsondecode(var.error_alert_emails)
 }
 
 variable "aws_profile" {

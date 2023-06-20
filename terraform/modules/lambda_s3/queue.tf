@@ -418,10 +418,10 @@ resource "aws_sns_topic_subscription" "validation_updates_error_sqs_target" {
 }
 
 resource "aws_sns_topic_subscription" "enrichment_error_alert_email_subscriptions" {
-  count     = length(var.error_alert_emails)
+  count     = length(local.error_alert_emails_list)
   topic_arn = aws_sns_topic.enrichment_error_alerts.arn
   protocol  = "email"
-  endpoint  = var.error_alert_emails[count.index]
+  endpoint  = local.error_alert_emails_list[count.index]
 }
 
 
