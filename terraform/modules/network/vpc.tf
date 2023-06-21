@@ -1,6 +1,6 @@
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = ">=3.0.0,<4.0.0"
+  version = ">=5.0.0,<6.0.0"
 
   name = "${local.name}-vpc-${local.environment}"
   cidr = var.vpc_cidr_block
@@ -15,6 +15,24 @@ module "vpc" {
   create_database_subnet_route_table = true
   create_database_nat_gateway_route  = true
   #create_database_internet_gateway_route = true
+
+  manage_default_security_group = true
+  default_security_group_egress = [
+    {
+      description = "Allow calls to external"
+      protocol    = "tcp"
+      from_port   = 443
+      to_port     = 443
+      cidr_blocks = "0.0.0.0/0"
+    },
+    {
+      description     = "Allow calls to rds database"
+      protocol        = "tcp"
+      from_port       = 5432
+      to_port         = 5432
+      security_groups = var.rds_security_group_id
+    }
+  ]
 
   enable_nat_gateway   = true
   enable_vpn_gateway   = false

@@ -30,3 +30,7 @@ output "aws_subnets_private_ids" {
   # value = data.aws_subnet.private[each.key]
   value = toset(data.aws_subnets.private.ids)
 }
+
+output "rds_security_group_id" {
+  value = module.metadata-db.security_group_id
+}
