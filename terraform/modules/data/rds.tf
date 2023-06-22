@@ -8,11 +8,12 @@ module "metadata-db" {
   engine_version = "11.17"
   instance_type  = "db.t3.medium"
 
-  vpc_id                = var.vpc_id
-  subnets               = data.aws_subnets.database.ids
-  create_security_group = true
-  allowed_cidr_blocks   = [for s in data.aws_subnet.private : s.cidr_block]
-  deletion_protection   = local.db[local.environment].deletion_protection
+  vpc_id                  = var.vpc_id
+  subnets                 = data.aws_subnets.database.ids
+  create_security_group   = true
+  allowed_security_groups = [var.default_security_group_id]
+
+  deletion_protection = local.db[local.environment].deletion_protection
 
   # create_random_password = true
 

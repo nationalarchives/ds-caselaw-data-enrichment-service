@@ -17,3 +17,7 @@ variable "vpc_cidr_block" {
   type    = string
   default = "172.19.0.0/16"
 }
+
+variable "rds_security_group_id" {
+  type = string
+}

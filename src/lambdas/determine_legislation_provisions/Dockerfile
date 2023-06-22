@@ -19,6 +19,7 @@ COPY index.py ${LAMBDA_TASK_ROOT}
 #     rm -Rf /var/cache/yum
 
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
+COPY utils/ ${LAMBDA_TASK_ROOT}/utils/
 COPY replacer/ ${LAMBDA_TASK_ROOT}/replacer/
 COPY legislation_provisions_extraction/ ${LAMBDA_TASK_ROOT}/legislation_provisions_extraction/
 
