@@ -7,6 +7,14 @@ locals {
   error_alert_emails_list = jsondecode(var.error_alert_emails)
 }
 
+output "error_alert_emails" {
+  value = var.error_alert_emails
+}
+
+output "error_alert_emails_list" {
+  value = local.error_alert_emails_list
+}
+
 variable "aws_profile" {
   type    = string
   default = "default"

@@ -22,109 +22,12 @@ defaults:
     shell: bash
 
 jobs:
-  source_lint_and_test:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v3.1.0
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Set up Python 3.9
-        uses: actions/setup-python@v4.3.0
-        with:
-          python-version: 3.9
-
-      - name: pip install formatting dependencies
-        run: |
-          pip3 install black==22.8.0 isort
-
-      - name: Python Black Formatting Check
-        id: run_python_black
-        run: black . --extend-exclude "^/get-pip.py" --check --diff
-
-      - name: Python isort Order Check
-        id: run_python_isort
-        run: isort . -s "get-pip.py" --check --diff
-
-      - name: pip install tests dependencies
-        run: |
-          pip3 install -r src/tests/requirements.txt
-
-      - name: Run python tests with coverage
-        env:
-          SPARQL_USERNAME: ${{ secrets.SPARQL_USERNAME }}
-          SPARQL_PASSWORD: ${{ secrets.SPARQL_PASSWORD }}
-        id: run_python_tests
-        run: coverage run --source . -m pytest
-
-      - name: Generate coverage XML
-        run: coverage xml
-
-      - name: Upload coverage to CodeClimate
-        uses: paambaati/codeclimate-action@v3.2.0
-        env:
-          CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
-
-  terraform_lint:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v3.1.0
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Install TFLint
-        uses: terraform-linters/setup-tflint@v2.0.1
-        with:
-          tflint_version: v0.38.1
-        continue-on-error: false
-
-      - name: Run TFLint
-        id: run_tflint
-        run: |
-          tflint --init
-          tflint -f compact --loglevel warn
-
-  terraform_validate:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v3.1.0
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}
-
-      - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2.0.3
-        continue-on-error: false
-
-      - name: Run Terraform Validate
-        id: run_terraform_validate
-        run: |
-          set -e
-          set -o pipefail
-          cd terraform
-          terraform init -backend=false
-          terraform validate -no-color
-        continue-on-error: false
-
-  terraform_plan-staging:
-    uses: ./.github/workflows/terraform_plan.yml
+  deploy_staging:
+    name: Deploy Staging Build
+    uses: ./.github/workflows/deploy_single_environment.yml
     secrets:
       aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
       aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
       workspace: tna-staging
       app_env: staging
-
-  terraform_plan-production:
-    uses: ./.github/workflows/terraform_plan.yml
-    secrets:
-      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
-      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
-      account_id: ${{ secrets.PROD_ACCOUNT_ID }}
-      workspace: tna-prod
-      app_env: production
