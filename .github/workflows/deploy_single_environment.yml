@@ -118,6 +118,8 @@ jobs:
         continue-on-error: false
 
       - name: Terraform Apply
+        env:
+          TF_VAR_error_alert_emails: ${{ vars.TF_VAR_ERROR_ALERT_EMAILS }}
         run: |
           set -e
           set -o pipefail
