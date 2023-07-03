@@ -39,7 +39,10 @@ def add_timestamp_and_engine_version(file_data):
     enriched_date = soup.new_tag(
         'FRBRdate date="{}" name="tna-enriched"'.format(today_str)
     )
-    enrichment_version = soup.new_tag("uk:tna-enrichment-engine")
+    enrichment_version = soup.new_tag(
+        "uk:tna-enrichment-engine",
+        attrs={"xmlns:uk": "https://caselaw.nationalarchives.gov.uk/akn"},
+    )
     enrichment_version.string = "0.1.0"
     soup.proprietary.append(enrichment_version)
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
