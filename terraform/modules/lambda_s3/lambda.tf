@@ -208,7 +208,7 @@ module "lambda-determine-replacements-caselaw" {
   create_current_version_allowed_triggers = false # !var.use_container_image
 
   timeout     = 900
-  memory_size = 5120
+  memory_size = 10240
 
   attach_policy_statements = true
   policy_statements = {
