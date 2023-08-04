@@ -115,7 +115,11 @@ def process_event(sqs_rec):
     cleaned_file_content = sanitize_judgment(file_content)
 
     # split file_content into header and judgment to ensure replacements only occur in judgment body
-    judgment_split = re.split("(</header>)", cleaned_file_content)
+    if "</header>" in cleaned_file_content:
+        judgment_split = re.split("(</header>)", cleaned_file_content)
+    elif "<header/>" in cleaned_file_content:
+        judgment_split = re.split("(<header/>)", cleaned_file_content)
+
     print(judgment_split)
 
     LOGGER.info("Got original XML file content")
