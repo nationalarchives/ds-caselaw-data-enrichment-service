@@ -11,4 +11,4 @@ def split_text_by_closing_header_tag(file_content: str) -> List[str]:
     for pattern in header_patterns:
         if pattern in file_content:
             return re.split(f"({pattern})", file_content)
-    return [file_content]
+    return ["", "", file_content]

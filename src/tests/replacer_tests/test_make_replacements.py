@@ -16,4 +16,4 @@ class TestSplitTextByClosingHeaderTag:
     @pytest.mark.parametrize("invalid_closing_header_tag", ["</foo>", "<foo/>"])
     def test_no_split(self, invalid_closing_header_tag):
         file_content = f"ABC{invalid_closing_header_tag}DEF"
-        assert split_text_by_closing_header_tag(file_content) == [file_content]
+        assert split_text_by_closing_header_tag(file_content) == ["", "", file_content]
