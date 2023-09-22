@@ -113,35 +113,53 @@ def process_event(sqs_rec):
         .read()
         .decode("utf-8")
     )
-
-    cleaned_file_content = sanitize_judgment(file_content)
-
-    judgment_split = split_text_by_closing_header_tag(cleaned_file_content)
-
-    print(judgment_split)
-
     LOGGER.info("Got original XML file content")
-    LOGGER.info(REPLACEMENTS_BUCKET)
+
     replacement_file_content = (
         s3_client.get_object(Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"]
         .read()
         .decode("utf-8")
     )
-
     LOGGER.info("Got replacement file content")
 
-    # extract the judgement contents
-    replaced_text_content = replace_text_content(
-        judgment_split[2], replacement_file_content
+    full_replaced_text_content = make_post_header_replacements(
+        file_content, replacement_file_content
     )
-    LOGGER.info("Got replacement text content")
-    print(replaced_text_content)
-
-    # combine header with replaced text content before uploading to enriched bucket
-    judgment_split[2] = replaced_text_content
-    print(judgment_split[2])
-    full_replaced_text_content = "".join(judgment_split)
     upload_contents(filename, full_replaced_text_content)
+
+
+def make_post_header_replacements(
+    original_content: str, post_header_replacement_content: str
+) -> str:
+    """
+    Replaces the content following a closing header tag in a legal document with new content.
+    If there is no closing header tag, then we replace the full content.
+
+    Note:
+    - This function assumes a specific structure of the legal document with closing header tags.
+
+    Args:
+        original_content (str): The original content of the legal document.
+        post_header_replacement_content (str): The replacement content to insert after the header.
+
+    Returns:
+        str: The modified legal document content with the replacement applied.
+    """
+    cleaned_file_content = sanitize_judgment(original_content)
+    document_split_by_header = split_text_by_closing_header_tag(cleaned_file_content)
+
+    post_header_content = document_split_by_header[2]
+
+    replaced_post_header_content = replace_text_content(
+        post_header_content, post_header_replacement_content
+    )
+    LOGGER.info("Got post-header replacement text content")
+    print(replaced_post_header_content)
+
+    document_split_by_header[2] = replaced_post_header_content
+    full_replaced_text_content = "".join(document_split_by_header)
+
+    return full_replaced_text_content
 
 
 def replace_text_content(file_content, replacements_content):
@@ -167,7 +185,6 @@ def replace_text_content(file_content, replacements_content):
         key, value = list(i.items())[0]
 
         LOGGER.info("replacements")
-        print(replacements)
         if key == "case":
             case_law_tuple = tuple(i["case"])
             replacement_tuples_case.append(case_law_tuple)
