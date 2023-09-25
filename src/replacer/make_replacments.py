@@ -35,7 +35,6 @@ def make_post_header_replacements(
         post_header_content, post_header_replacement_content
     )
     LOGGER.info("Got post-header replacement text content")
-    print(replaced_post_header_content)
 
     document_split_by_header[2] = replaced_post_header_content
     full_replaced_text_content = "".join(document_split_by_header)
@@ -55,31 +54,27 @@ def replace_text_content(file_content, replacements_content):
 
     tuple_file = replacements_content
     LOGGER.info("tuple_file")
-    print(tuple_file)
     LOGGER.info("---lines--")
 
     for line in tuple_file.splitlines():
         LOGGER.debug(line)
         replacements.append(json.loads(line))
 
-    for i in replacements:
-        key, value = list(i.items())[0]
+    for replacement in replacements:
+        key, value = list(replacement.items())[0]
 
         LOGGER.info("replacements")
         if key == "case":
-            case_law_tuple = tuple(i["case"])
+            case_law_tuple = tuple(replacement["case"])
             replacement_tuples_case.append(case_law_tuple)
 
         elif key == "leg":
-            leg_tuple = tuple(i["leg"])
+            leg_tuple = tuple(replacement["leg"])
             replacement_tuples_leg.append(leg_tuple)
 
         else:
-            abb_tuple = tuple(i["abb"])
+            abb_tuple = tuple(replacement["abb"])
             replacement_tuples_abb.append(abb_tuple)
-
-    LOGGER.info("Replacement caselaw")
-    print(replacement_tuples_case)
 
     from replacer.replacer_pipeline import replacer_pipeline
 
@@ -110,29 +105,40 @@ def detect_reference(text, etype):
 
 
 def sanitize_judgment(file_content):
+    file_content = _remove_legislation_references(file_content)
+
+    soup = BeautifulSoup(file_content, "xml")
+
+    _decompose_elements(soup, "FRBRdate", {"name": "tna-enriched"})
+    _decompose_elements(soup, "uk:tna-enrichment-engine")
+
+    soup_string = str(soup)
+
+    return soup_string
+
+
+def _decompose_elements(soup, name, filter=None):
+    if filter:
+        elements = soup.find_all(name, filter)
+    else:
+        elements = soup.find_all(name)
+    if elements:
+        for element in elements:
+            element.decompose()
+
+
+def _remove_legislation_references(file_content):
     remove_from_judgment = []
-    list_of_references = detect_reference(file_content, "legislation")
-    for i in list_of_references:
-        opening = i[1].split(">")[0] + ">"
+    legislation_references = detect_reference(file_content, "legislation")
+    for reference in legislation_references:
+        canonical_reference = reference[1]
+        opening = canonical_reference.split(">")[0] + ">"
         remove_from_judgment.append((opening, ""))
         remove_from_judgment.append(("</ref>", ""))
 
     for k, v in remove_from_judgment:
         file_content = file_content.replace(k, v)
-
-    soup = BeautifulSoup(file_content, "xml")
-    enriched_date = soup.find_all("FRBRdate", {"name": "tna-enriched"})
-    if enriched_date:
-        for i in enriched_date:
-            i.decompose()
-    engine_version = soup.find_all("uk:tna-enrichment-engine")
-    if engine_version:
-        for i in engine_version:
-            i.decompose()
-
-    soup_string = str(soup)
-
-    return soup_string
+    return file_content
 
 
 def split_text_by_closing_header_tag(file_content: str) -> List[str]:
