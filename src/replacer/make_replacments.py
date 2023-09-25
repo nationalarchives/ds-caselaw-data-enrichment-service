@@ -117,14 +117,10 @@ def sanitize_judgment(file_content):
     return soup_string
 
 
-def _decompose_elements(soup, name, filter=None):
-    if filter:
-        elements = soup.find_all(name, filter)
-    else:
-        elements = soup.find_all(name)
-    if elements:
-        for element in elements:
-            element.decompose()
+def _decompose_elements(soup, *element_kwargs):
+    elements = soup.find_all(*element_kwargs)
+    for element in elements:
+        element.decompose()
 
 
 def _remove_legislation_references(file_content):
