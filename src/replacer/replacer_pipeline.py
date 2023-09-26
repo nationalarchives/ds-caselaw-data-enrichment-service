@@ -57,7 +57,6 @@ def replacer_pipeline(
         file_data = replacer_caselaw(file_data, replacement)
 
     for replacement in list(set(REPLACEMENTS_LEG)):
-        print(replacement)
         file_data = replacer_leg(file_data, replacement)
 
     for replacement in list(set(REPLACEMENTS_ABBR)):
