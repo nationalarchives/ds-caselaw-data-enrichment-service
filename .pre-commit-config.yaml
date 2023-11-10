@@ -36,7 +36,7 @@ repos:
       - id: mdformat
 
   - repo: https://github.com/antonbabenko/pre-commit-terraform
-    rev: v1.77.1
+    rev: v1.77.4
     hooks:
       - id: terraform_fmt
       - id: terraform_docs
