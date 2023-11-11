@@ -1,7 +1,6 @@
 """Unit tests for environment_helpers"""
 
 import pytest
-from moto import mock_secretsmanager
 
 from utils.environment_helpers import get_aws_secret, validate_env_variable
 
