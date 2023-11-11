@@ -30,15 +30,6 @@ jobs:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v4.7.1
-        with:
-          python-version: "3.9"
-          cache: pip
-          cache-dependency-path: |
-            requirements/base.txt
-            requirements/local.txt
-
       - name: Run pre-commit
         uses: pre-commit/action@v3.0.0
 
