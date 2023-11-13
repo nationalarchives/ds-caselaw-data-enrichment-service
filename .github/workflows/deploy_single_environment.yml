@@ -105,7 +105,7 @@ jobs:
           cd "${GITHUB_WORKSPACE}"
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2.0.3
+        uses: hashicorp/setup-terraform@v3.0.0
         continue-on-error: false
 
       - name: Terraform init
