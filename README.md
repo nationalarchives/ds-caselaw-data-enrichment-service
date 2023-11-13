@@ -128,7 +128,7 @@ The VCite integration is shown more distinctly in the diagram below:
 CI/CD works in the following way:
 
 - Engineer branches from `main` branch, commits code and raises a pull request.
-  - The Python code within the repo is checked against formatting tools called `black` and `isort`.
+  - The code within the repo is checked using the tools defined in `.pre-commit-config.yaml`.
   - The Terraform code is checked against a linting tool called `TFLint`.
   - Terraform is validated and planned against staging and production as independent checks.
 - Upon merge, non dockerised lambdas are built, terraform is planned, applied and then docker images are built and pushed to ECR. This occurs for staging, if staging succeeds then the same happens for production.
@@ -140,11 +140,7 @@ CI/CD works in the following way:
   - Terraform Validate
   - Terraform init.
   - Terraform Plan (A plan of the infrastructure changes for that environment)
-* If the checks fail due to Python Black.
-  A message such as `Oh no! 💥 💔 💥 13 files would be reformatted, 5 files would be left unchanged.`
-  - To fix this, install black locally `pip install black`, then run `black .` and commit the reformatted code.
-* If the check fails due to iSort. A message such as `ERROR: Imports are incorrectly sorted.`
-  - To fix this, install isort locally `pip install isort`, then run `isort .`
+* If the checks fail at the pre-commit stage you can usually fix these with `pre-commit run --all-files` and committing the changes. Problems which can't be auto-fixed will be explained.
 * TFLint will explain any errors it finds.
 * Terraform plan needs to be inspected before merging code to ensure the right thing is being applied.
   Do not assume that a green build is going to build what you want to be built.
@@ -166,6 +162,8 @@ Here are some brief notes on extending the infrastructure.
 - Adding an S3 bucket is done by invoking the `secure_bucket` module, located at `terraform/modules/secure_bucket/`, you can see how the existing buckets are created by viewing `terraform/modules/lambda_s3/bucket.tf`, new buckets should be created by adding to this file.
   If a bucket policy is added, then an extra statement will automatically be added that denies insecure transport.
 - Docker images are stored in ECR. Each repo needs to exist before a docker image can be pushed to ECR. These are created in `terraform/modules/lambda_s3/lambda.tf`.
+
+You can find auto-generated documentation on the Terraform resources in [terraform/README.md](/terraform/README.md).
 
 ### Updating the .terraform.lock.hcl file
 

@@ -22,9 +22,20 @@ defaults:
     shell: bash
 
 jobs:
-  source_lint_and_test:
-    runs-on: ubuntu-latest
 
+  run-pre-commit:
+    name: Run pre-commit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+
+      - name: Run pre-commit
+        uses: pre-commit/action@v3.0.0
+
+  run-tests:
+    name: Run tests
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4.1.1
@@ -35,18 +46,6 @@ jobs:
         uses: actions/setup-python@v4.7.1
         with:
           python-version: 3.9
-
-      - name: pip install formatting dependencies
-        run: |
-          pip3 install black==22.8.0 isort
-
-      - name: Python Black Formatting Check
-        id: run_python_black
-        run: black . --extend-exclude "^/get-pip.py" --check --diff
-
-      - name: Python isort Order Check
-        id: run_python_isort
-        run: isort . -s "get-pip.py" --check --diff
 
       - name: pip install tests dependencies
         run: |
