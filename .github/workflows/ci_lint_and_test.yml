@@ -76,7 +76,7 @@ jobs:
           ref: ${{ github.event.pull_request.head.sha }}
 
       - name: Install TFLint
-        uses: terraform-linters/setup-tflint@v2.0.1
+        uses: terraform-linters/setup-tflint@v4.0.0
         with:
           tflint_version: v0.38.1
         continue-on-error: false
