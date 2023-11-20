@@ -1,22 +1,4 @@
-# FROM public.ecr.aws/lambda/python:3.12
-
-# WORKDIR /
-
-# RUN yum -y upgrade
-# RUN yum -y install wget
-
-# RUN ln -sf python3 /usr/bin/python
-# # install latest version of pip rather than the older OS one.
-# RUN wget -q https://bootstrap.pypa.io/get-pip.py
-# RUN python3 /get-pip.py
-# RUN python -m pip install --upgrade pip
-# RUN rm -f /get-pip.py
-# COPY . .
-# RUN python3 -m pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
-
-### TRY THIS CODE INSTEAD
-
-FROM public.ecr.aws/lambda/python:3.12
+FROM public.ecr.aws/lambda/python:3.10
 
 COPY index.py ${LAMBDA_TASK_ROOT}
 

@@ -56,7 +56,7 @@ variable "lambda_handler" {
 
 variable "runtime" {
   type    = string
-  default = "python3.12"
+  default = "python3.10"
 }
 
 variable "lambda_source_path" {
