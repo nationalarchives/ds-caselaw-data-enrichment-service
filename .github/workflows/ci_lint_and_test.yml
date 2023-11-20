@@ -45,7 +45,7 @@ jobs:
       - name: Set up Python 3.12
         uses: actions/setup-python@v4.7.1
         with:
-          python-version: 3.12
+          python-version: "3.12"
 
       - name: pip install tests dependencies
         run: |
