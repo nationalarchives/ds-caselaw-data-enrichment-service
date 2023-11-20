@@ -42,10 +42,10 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.sha }}
 
-      - name: Set up Python 3.9
+      - name: Set up Python 3.12
         uses: actions/setup-python@v4.7.1
         with:
-          python-version: 3.9
+          python-version: 3.12
 
       - name: pip install tests dependencies
         run: |
