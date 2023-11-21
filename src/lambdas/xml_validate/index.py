@@ -3,7 +3,6 @@
 import json
 import logging
 import urllib.parse
-from distutils.util import strtobool
 from io import BytesIO
 
 import boto3
@@ -122,7 +121,7 @@ VCITE_BUCKET = validate_env_variable("VCITE_BUCKET")
 VCITE_ENRICHED_BUCKET = validate_env_variable("VCITE_ENRICHED_BUCKET")
 DEST_ERROR_TOPIC = validate_env_variable("DEST_ERROR_TOPIC_NAME")
 DEST_TOPIC = validate_env_variable("DEST_TOPIC_NAME")
-VALIDATE_USING_SCHEMA = strtobool(validate_env_variable("VALIDATE_USING_SCHEMA"))
+VALIDATE_USING_SCHEMA = bool(int(validate_env_variable("VALIDATE_USING_SCHEMA")))
 DEST_QUEUE = validate_env_variable("DEST_QUEUE")
 
 

@@ -1256,7 +1256,7 @@ module "lambda-validate-replacements" {
     VCITE_ENRICHED_BUCKET = "${module.vcite_enriched_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_NAME    = "${module.rules_bucket.s3_bucket_id}"
     SCHEMA_BUCKET_KEY     = "caselaw.xsd"
-    VALIDATE_USING_SCHEMA = "False"
+    VALIDATE_USING_SCHEMA = "0"
     DEST_QUEUE            = aws_sqs_queue.xml-validated-queue.url
   }
 
