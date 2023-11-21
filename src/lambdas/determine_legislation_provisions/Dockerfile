@@ -14,10 +14,6 @@ COPY index.py ${LAMBDA_TASK_ROOT}
 # PYTHONDONTWRITEBYTECODE keeps Python from writing the .pyc files, which are unnecessary in this case
 # ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8
 
-
-# RUN yum update -y && \
-#     rm -Rf /var/cache/yum
-
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
 COPY utils/ ${LAMBDA_TASK_ROOT}/utils/
 COPY replacer/ ${LAMBDA_TASK_ROOT}/replacer/

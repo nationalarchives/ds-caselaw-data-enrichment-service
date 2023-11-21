@@ -12,9 +12,6 @@ COPY index.py ${LAMBDA_TASK_ROOT}
 # ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8
 
 
-# RUN yum update -y && \
-#     rm -Rf /var/cache/yum
-
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
 COPY utils/ ${LAMBDA_TASK_ROOT}/utils/
 COPY abbreviation_extraction/ ${LAMBDA_TASK_ROOT}/abbreviation_extraction/
