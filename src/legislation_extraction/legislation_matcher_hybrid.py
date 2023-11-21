@@ -175,7 +175,7 @@ def search_for_act_fuzzy(title, docobj, nlp, cutoff, candidates=None):
     fuzzy_matcher.add("Text Extractor", phrase_list, kwargs=[options])
     matched_items = fuzzy_matcher(docobj)
     matched_text = []
-    for _, start, end, ratio in matched_items:
+    for _, start, end, ratio, pattern in matched_items:
         span = docobj[start:end]
         matched_text.append((span.text, start, end, ratio))
     return matched_text
