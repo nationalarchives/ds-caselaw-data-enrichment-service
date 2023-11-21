@@ -1,8 +1,5 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["github>nationalarchives/ds-find-caselaw-docs"],
-  "ignoreModulesAndTests": {
-    "description": "Don't ignore tests directory. See https://github.com/renovatebot/renovate/discussions/12755",
-    "ignorePaths": []
-  }
+  "ignorePaths": []
 }
