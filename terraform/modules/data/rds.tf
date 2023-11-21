@@ -1,6 +1,6 @@
 module "metadata-db" {
   source  = "terraform-aws-modules/rds-aurora/aws"
-  version = ">=5.0.0,<6.0.0"
+  version = "< 9.0.0"
 
   name = "${local.name}-metadata-db-${local.environment}"
 
