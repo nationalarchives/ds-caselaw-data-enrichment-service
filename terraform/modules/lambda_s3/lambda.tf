@@ -8,7 +8,7 @@ module "lambda-extract-judgement-contents" {
 
   # Deploy as code
   handler     = "index.handler"
-  runtime     = "python3.9"
+  runtime     = "python3.12"
   source_path = "${var.lambda_source_path}extract_judgement_contents"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
@@ -768,7 +768,7 @@ module "lambda-make-replacements" {
   package_type  = var.use_container_image == true ? "Image" : "Zip"
 
   handler = "index.handler"
-  runtime = "python3.9"
+  runtime = "python3.12"
 
   source_path = "${var.lambda_source_path}make_replacements"
 
@@ -941,7 +941,7 @@ module "lambda-update-legislation-table" {
   function_name = "${local.name}-${local.environment}-update-legislation-table"
   package_type  = var.use_container_image == true ? "Image" : "Zip"
 
-  runtime = "python3.9" # Setting runtime is required when building package in Docker and Lambda Layer resource.
+  runtime = "python3.12" # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
   # Deploy as code
   handler = "index.handler"
@@ -1028,7 +1028,7 @@ module "lambda-update-rules-processor" {
   package_type   = "Image"
   create_package = false
 
-  runtime = "python3.8" # Setting runtime is required when building package in Docker and Lambda Layer resource.
+  runtime = "python3.12" # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
   image_uri = "${aws_ecr_repository.rules-update.repository_url}:${var.container_image_tag}"
 
@@ -1153,7 +1153,7 @@ module "lambda-validate-replacements" {
   # Deploy as code
   handler = "index.handler"
 
-  runtime     = "python3.9"
+  runtime     = "python3.12"
   source_path = "${var.lambda_source_path}xml_validate"
 
   create_current_version_allowed_triggers = false # !var.use_container_image
@@ -1379,7 +1379,7 @@ module "lambda-fetch-xml" {
   package_type   = "Image"
   create_package = false
 
-  runtime = "python3.9" # Setting runtime is required when building package in Docker and Lambda Layer resource.
+  runtime = "python3.12" # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
   image_uri = "${aws_ecr_repository.fetch-xml.repository_url}:${var.container_image_tag}"
 
@@ -1516,7 +1516,7 @@ module "lambda-push-enriched-xml" {
   package_type   = "Image"
   create_package = false
 
-  runtime = "python3.9" # Setting runtime is required when building package in Docker and Lambda Layer resource.
+  runtime = "python3.12" # Setting runtime is required when building package in Docker and Lambda Layer resource.
 
   image_uri = "${aws_ecr_repository.push_enriched_xml.repository_url}:${var.container_image_tag}"
 
