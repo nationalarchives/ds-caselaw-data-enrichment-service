@@ -105,12 +105,7 @@ The standard mechanism for triggering the enrichment pipeline is via the TNA edi
 
 ## 4 Tests
 
-There is a suite of tests that can be run locally with
-
-```sh
-pytest
-```
-
+There is a suite of tests that can be run locally with `pytest -m "not integration"` or `scripts/test`
 but you'll need to ensure you've installed `src/tests/requirements.txt`
 
 You can also obtain a test coverage report with `coverage run --source . -m pytest && coverage report`
