@@ -21,7 +21,7 @@ def apply_correction_strategy(citation_type, citation_match, canonical_form):
     citation_match : string
         detected citation match.
     canonical_form : string
-        canoncial form template for the citation type corresponding to the detected citation match.
+        canonical form template for the citation type corresponding to the detected citation match.
     Returns
     -------
     corrected_citation : string
