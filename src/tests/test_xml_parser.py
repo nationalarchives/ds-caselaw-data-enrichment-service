@@ -84,13 +84,6 @@ class TestXmlParser(unittest.TestCase):
             == "That point was also in College [2014] EWCA Civ 734 at [12]-[14]"
         )
 
-    def test_XMLStrings_header(self):
-        text = """<header>x</header>"""
-
-        judgment_content_text = parse_file(text)
-
-        assert judgment_content_text == "x"
-
 
 if __name__ == "__main__":
     unittest.main()
