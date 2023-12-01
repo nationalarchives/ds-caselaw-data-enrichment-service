@@ -1,6 +1,7 @@
 import unittest
 
 from replacer.replacer_pipeline import (
+    fixed_year,
     replacer_abbr,
     replacer_caselaw,
     replacer_leg,
@@ -44,7 +45,8 @@ class TestCitationReplacer(unittest.TestCase):
         )
         assert replacement_string in replaced_entry
 
-    def test_citation_replacer_3(self):
+    def test_citation_replacer_3_no_year(self):
+        """Note that this test does not have a year, so there is no uk:year attribute, unlike the others"""
         citation_match = "LR 1 A&E 123"
         corrected_citation = "LR 1 AE 123"
         year = "No Year"
@@ -54,9 +56,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
+        replacement_string = f'<ref uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:origin="TNA">{citation_match}</ref>'
         assert replacement_string in replaced_entry
 
     def test_citation_replacer_4(self):
@@ -140,3 +140,21 @@ class TestReplacerAbbr(unittest.TestCase):
             "</abbr>"
         )
         assert replacer_abbr(text, replacement_entry) == expected
+
+
+class TestFixedYear(unittest.TestCase):
+    def test_no_year(self):
+        assert fixed_year(None) == None
+
+    def test_empty_year(self):
+        assert fixed_year("") == None
+
+    def test_gibberish_year(self):
+        assert fixed_year("xxx") == None
+
+    def test_real_year(self):
+        assert fixed_year("1969") == "1969"
+
+    def test_mixed_year(self):
+        """This shouldn't be used anywhere, it's merely documenting the behaviour added whilst fixing the No Year issue"""
+        assert fixed_year("In the summer of '69") == "69"
