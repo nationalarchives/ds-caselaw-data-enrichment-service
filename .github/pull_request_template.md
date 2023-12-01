@@ -1,0 +1,2 @@
+- \[ \] Increase the version number in src/lambdas/determine_legislation_provisions/index.py
+- \[ \] Update CHANGELOG.md
