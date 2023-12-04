@@ -1,6 +1,7 @@
 import unittest
 
 from replacer.replacer_pipeline import (
+    fixed_year,
     replacer_abbr,
     replacer_caselaw,
     replacer_leg,
@@ -12,7 +13,7 @@ class TestCitationReplacer(unittest.TestCase):
     This class tests the replacement of the citations within the text itself. This comes from shared.replacer.py
     """
 
-    def test_citation_replacer(self):
+    def test_citation_replacer_1(self):
         citation_match = "[2025] 1 All E.R. 123"  # incorrect citation
         corrected_citation = (
             "[2025] 1 All ER 123"  # in practice, returned via the citation matcher
@@ -29,6 +30,7 @@ class TestCitationReplacer(unittest.TestCase):
         )
         assert replacement_string in replaced_entry
 
+    def test_citation_replacer_2(self):
         citation_match = "[2022] UKET 789123_2012"
         corrected_citation = "[2022] UKET 789123/2012"
         year = "2022"
@@ -43,6 +45,8 @@ class TestCitationReplacer(unittest.TestCase):
         )
         assert replacement_string in replaced_entry
 
+    def test_citation_replacer_3_no_year(self):
+        """Note that this test does not have a year, so there is no uk:year attribute, unlike the others"""
         citation_match = "LR 1 A&E 123"
         corrected_citation = "LR 1 AE 123"
         year = "No Year"
@@ -52,11 +56,10 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
+        replacement_string = f'<ref uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:origin="TNA">{citation_match}</ref>'
         assert replacement_string in replaced_entry
 
+    def test_citation_replacer_4(self):
         citation_match = "(2022) EWHC 123 (Mercantile)"
         corrected_citation = "[2022] EWHC 123 (Mercantile)"
         year = "2022"
@@ -71,6 +74,7 @@ class TestCitationReplacer(unittest.TestCase):
         )
         assert replacement_string in replaced_entry
 
+    def test_citation_replacer_5(self):
         citation_match = "[2022] ewca civ 123"
         corrected_citation = "[2022] EWCA Civ 123"
         year = "2022"
@@ -91,7 +95,7 @@ class TestLegislationReplacer(unittest.TestCase):
     This class tests the replacement of the citations within the text itself. This comes from shared.replacer.py
     """
 
-    def test_citation_replacer(self):
+    def test_citation_replacer_1(self):
         legislation_match = "Adoption and Children Act 2002"  # matched legislation
         href = "http://www.legislation.gov.uk/ukpga/2002/38"
         text = "In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption and Children Act 2002 requires the court, inter alia"
@@ -102,6 +106,7 @@ class TestLegislationReplacer(unittest.TestCase):
         replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2002/38" uk:canonical="foo" uk:origin="TNA">Adoption and Children Act 2002</ref>'
         assert replacement_string in replaced_entry
 
+    def test_citation_replacer_2(self):
         legislation_match = "Children and Families Act 2014"  # matched legislation
         href = "http://www.legislation.gov.uk/ukpga/2014/6/enacted"
         text = "In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014."
@@ -135,3 +140,21 @@ class TestReplacerAbbr(unittest.TestCase):
             "</abbr>"
         )
         assert replacer_abbr(text, replacement_entry) == expected
+
+
+class TestFixedYear(unittest.TestCase):
+    def test_no_year(self):
+        assert fixed_year(None) == None
+
+    def test_empty_year(self):
+        assert fixed_year("") == None
+
+    def test_gibberish_year(self):
+        assert fixed_year("xxx") == None
+
+    def test_real_year(self):
+        assert fixed_year("1969") == "1969"
+
+    def test_mixed_year(self):
+        """This shouldn't be used anywhere, it's merely documenting the behaviour added whilst fixing the No Year issue"""
+        assert fixed_year("In the summer of '69") == "69"

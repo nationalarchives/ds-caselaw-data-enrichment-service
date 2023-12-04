@@ -239,3 +239,17 @@ You can find all the s3 bucket names where they are defined in `terraform/module
 ### Recreate and debug
 
 Once we have determined the lambda that caused the issue, xml from the s3 buckets on either side of the lambda, and any relevant log information as a starting point, we can use the xml from each as input and expected output fixtures for an end to end test to help us debug locally with breakpoints and fix the bug.
+
+## 11 Deploy
+
+Currently, the `main` branch is deployed to staging, and if that doesn't fail, it is then deployed to production.
+
+#### Release Process
+
+The version should be an integer string (like "1"): note, however, that pre-December 2023 versions were version "0.1.0".
+
+As a part of each pull request that isn't just keeping versions up to date:
+
+- Update the version number in `enrichment_version.string` in `src/lambdas/determine_legislation_provisions/index.py`
+- Update `CHANGELOG.md` with a brief description of the change
+- Create a release on Github with a tag like `v1`. This does nothing, but is useful to help us keep track.

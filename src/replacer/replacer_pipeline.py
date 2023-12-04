@@ -3,6 +3,20 @@ Replacer logic for first phase enrichment.
 Handles the replacements of abbreviations, legislation, and case law.
 """
 
+import re
+
+
+def fixed_year(year):
+    """For some reason, years can be returned as "No Year", despite not being present in the code (outside tests) or the database
+    (as far as I can see."""
+    if not year:
+        return None
+    match = re.search(r"\d+", year)
+    if match:
+        return match.group()
+    else:
+        return None
+
 
 def replacer_caselaw(file_data, replacement):
     """
@@ -11,7 +25,10 @@ def replacer_caselaw(file_data, replacement):
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
-    replacement_string = f'<ref uk:type="case" href="{replacement[3]}" uk:isNeutral="{str(replacement[4]).lower()}" uk:canonical="{replacement[1]}" uk:year="{replacement[2]}" uk:origin="TNA">{replacement[0]}</ref>'
+
+    year = fixed_year(replacement[2])
+    year_xml = f'uk:year="{year}" ' if year else ""
+    replacement_string = f'<ref uk:type="case" href="{replacement[3]}" uk:isNeutral="{str(replacement[4]).lower()}" uk:canonical="{replacement[1]}" {year_xml}uk:origin="TNA">{replacement[0]}</ref>'
     file_data = str(file_data).replace(replacement[0], replacement_string)
     return file_data
 
