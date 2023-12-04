@@ -463,15 +463,19 @@ resource "aws_lambda_event_source_mapping" "sqs_replacements_fetch_xml_event_sou
 }
 
 resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription" {
-  count     = var.environment != "production" ? 1 : 0
-  topic_arn = "arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated"
-  protocol  = "sqs"
-  endpoint  = aws_sqs_queue.fetch_xml_queue.arn
+  count               = var.environment != "production" ? 1 : 0
+  topic_arn           = "arn:aws:sns:eu-west-2:626206937213:caselaw-stg-judgment-updated"
+  protocol            = "sqs"
+  endpoint            = aws_sqs_queue.fetch_xml_queue.arn
+  filter_policy_scope = "MessageAttributes"
+  filter_policy       = "{\"trigger_enrichment\": [{\"exists\": true}]}"
 }
 
 resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription_prod" {
-  count     = var.environment == "production" ? 1 : 0
-  topic_arn = "arn:aws:sns:eu-west-2:276505630421:caselaw-judgment-updated"
-  protocol  = "sqs"
-  endpoint  = aws_sqs_queue.fetch_xml_queue.arn
+  count               = var.environment == "production" ? 1 : 0
+  topic_arn           = "arn:aws:sns:eu-west-2:276505630421:caselaw-judgment-updated"
+  protocol            = "sqs"
+  endpoint            = aws_sqs_queue.fetch_xml_queue.arn
+  filter_policy_scope = "MessageAttributes"
+  filter_policy       = "{\"trigger_enrichment\": [{\"exists\": true}]}"
 }
