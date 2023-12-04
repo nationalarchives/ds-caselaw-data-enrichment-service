@@ -3,12 +3,37 @@ import logging
 import re
 from typing import Tuple
 
+import lxml.etree
 from bs4 import BeautifulSoup
 
 from replacer.replacer_pipeline import replacer_pipeline
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
+
+TAG_REMOVE_XSLT = """
+<xsl:stylesheet version="1.0"
+xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:akn="http://docs.oasis-open.org/legaldocml/ns/akn/3.0"
+xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
+<xsl:output method="xml" version="1.0" encoding="UTF-8" indent="yes"/>
+<xsl:strip-space elements="*"/>
+
+<!-- identity transform -->
+<xsl:template match="@*|node()">
+    <xsl:copy>
+        <xsl:apply-templates select="@*|node()"/>
+    </xsl:copy>
+</xsl:template>
+
+<xsl:template match="akn:ref[@uk:origin='TNA']">
+    <xsl:apply-templates/>
+</xsl:template>
+
+<!-- <xsl:template match="reg"/> -->
+
+</xsl:stylesheet>
+"""
 
 
 def make_post_header_replacements(
@@ -98,7 +123,7 @@ def detect_reference(text, etype):
 
 
 def sanitize_judgment(file_content):
-    file_content = _remove_legislation_references(file_content)
+    file_content = _remove_old_enrichment_references(file_content)
 
     soup = BeautifulSoup(file_content, "xml")
 
@@ -116,18 +141,17 @@ def _decompose_elements(soup, *element_kwargs):
         element.decompose()
 
 
-def _remove_legislation_references(file_content):
-    remove_from_judgment = []
-    legislation_references = detect_reference(file_content, "legislation")
-    for reference in legislation_references:
-        canonical_reference = reference[1]
-        opening = canonical_reference.split(">")[0] + ">"
-        remove_from_judgment.append((opening, ""))
-        remove_from_judgment.append(("</ref>", ""))
+def _remove_old_enrichment_references(file_content):
+    """
+    Enrichment creates <ref uk:origin="TNA"> tags; delete only these.
+    """
+    root = lxml.etree.fromstring(file_content.encode("utf-8"))
 
-    for k, v in remove_from_judgment:
-        file_content = file_content.replace(k, v)
-    return file_content
+    transform = lxml.etree.XSLT(lxml.etree.XML(TAG_REMOVE_XSLT))
+
+    result = transform(root)
+
+    return lxml.etree.tostring(result).decode("utf-8")
 
 
 def split_text_by_closing_header_tag(content: str) -> Tuple[str, str, str]:
