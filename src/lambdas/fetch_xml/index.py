@@ -90,25 +90,21 @@ def process_event(sqs_rec, api_endpoint):
     and upload to destination S3 bucket
     """
     message = json.loads(sqs_rec["body"])
-    status, query = read_message(message)
+    status, query = read_message(
+        message
+    )  # query is the URL of the item requested to be enriched
     print("Judgment status:", status)
     print("Judgment query:", query)
 
-    if status == "published":
-        print("Judgment:", query)
-        source_key = query.replace("/", "-")
-        print("Source key:", source_key)
+    source_key = query.replace("/", "-")
+    print("Source key:", source_key)
 
-        # fetch the xml content
-        xml_content = fetch_judgment_urllib(
-            api_endpoint, query, API_USERNAME, API_PASSWORD
-        )
-        # print(xml_content)
-        upload_contents(source_key, xml_content)
-        lock_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
-        check_lock_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
-    else:
-        print("Judgment not published.")
+    # fetch the xml content
+    xml_content = fetch_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
+    # print(xml_content)
+    upload_contents(source_key, xml_content)
+    lock_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
+    check_lock_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
 
 
 ############################################

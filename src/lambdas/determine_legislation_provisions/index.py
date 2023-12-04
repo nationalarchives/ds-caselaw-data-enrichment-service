@@ -43,7 +43,7 @@ def add_timestamp_and_engine_version(file_data):
         "uk:tna-enrichment-engine",
         attrs={"xmlns:uk": "https://caselaw.nationalarchives.gov.uk/akn"},
     )
-    enrichment_version.string = "1"
+    enrichment_version.string = "2"
     soup.proprietary.append(enrichment_version)
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
 
