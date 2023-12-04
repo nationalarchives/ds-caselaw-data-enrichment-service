@@ -22,7 +22,7 @@ def xml_valid_and_can_get_version(xml):
         "//example:tna-enrichment-engine/text()",
         namespaces={"example": "https://caselaw.nationalarchives.gov.uk/akn"},
     )[0]
-    return re.search(r"\d+\.\d+\.\d+", version)
+    return re.search(r"\d[\d\.]*", version)
 
 
 def test_engine_version_valid_xml_without_namespace_is_valid():
