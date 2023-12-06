@@ -1,3 +1,6 @@
+== v3.0.0 ==
+Change the version back to semver to not violate our schema.
+
 == v2 ==
 Update Terraform to filter only trigger_enrichment messages.
 Enrichment lambdas do not attempt to filter based on body JSON.
