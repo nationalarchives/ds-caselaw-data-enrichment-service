@@ -155,11 +155,11 @@ jobs:
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-determine-replacements-abbreviations --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
+          # We are unconvinced that this one does anything, since update_legislation_table is a ZIP-based lambda
           cd "src/lambdas/update_legislation_table"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-update-legislation-table --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
           cd "src/lambdas/update_rules_processor"
