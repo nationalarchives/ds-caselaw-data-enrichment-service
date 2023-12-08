@@ -36,6 +36,11 @@ def replace_references(
     :param reference_replacements: list of dict of references and replacement information
     :return: string with replaced references
     """
+
+    # Splitting the text fails if the points are not sorted
+    reference_replacements = sorted(
+        reference_replacements, key=lambda x: x["ref_position"]
+    )
     split_points: List[int] = [
         split_point
         for reference_replacement in reference_replacements
