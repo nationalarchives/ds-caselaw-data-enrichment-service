@@ -1,3 +1,6 @@
+== v4.0.0 ==
+Fix a bug which was mangling judgment text in particular scenarios when inserting references.
+
 == v3.0.0 ==
 Change the version back to semver to not violate our schema.
 
