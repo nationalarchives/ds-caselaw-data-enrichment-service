@@ -1,10 +1,16 @@
 """Tests the `oblique_references` module"""
 
 
+import re
 import unittest
 from pathlib import Path
 from typing import Dict, List, Union
 
+from caselawclient.content_hash import get_hash_from_document
+
+from oblique_references.enrich_oblique_references import (
+    enrich_oblique_references,
+)
 from oblique_references.oblique_references import (
     LegislationReferenceReplacements,
     create_legislation_dict,
@@ -12,8 +18,56 @@ from oblique_references.oblique_references import (
     get_oblique_reference_replacements_by_paragraph,
     get_replacements,
 )
+from replacer.second_stage_replacer import replace_references
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
+
+
+def nuke_tags(xml):
+    return "".join(re.findall(">([^<]*)<", str(xml)))
+
+
+class TestOutputHasSameHashAsInput(unittest.TestCase):
+    def test_rwanda_overall(self):
+        input_file_path = f"{FIXTURE_DIR}/rwanda.xml"
+        with open(input_file_path, "rb") as input_file:
+            input_file_content = input_file.read()
+        output = enrich_oblique_references(input_file_content).encode("utf-8")
+        in_hash = get_hash_from_document(input_file_content)
+        out_hash = get_hash_from_document(output)
+        assert in_hash == out_hash
+
+    def test_rwanda_specific(self):
+        text = '<p class="ParaApprovedLevel1" style="margin-left:0in;text-indent:0.5in"><span style="font-family:\'Times New Roman\'">Thirdly, section 82(1) of the <ref href="http://www.legislation.gov.uk/id/ukpga/2002/41" uk:canonical="2002 c. 41" uk:origin="TNA" uk:type="legislation">Nationality, Immigration and Asylum Act 2002</ref> (“the 2002 Act”), read together with section 84(1) of that Act, confers a right of appeal against the refusal of a protection claim (defined by section 82(2) as including a claim that the removal of a person from the United Kingdom would breach the United Kingdom’s obligations under the Refugee Convention) on the ground that removal of the person from the United Kingdom would breach the United Kingdom’s obligations under that Convention. Section 82(1), read together with section 84(2), also confers a right of appeal against the refusal of a human rights claim (defined by section 113(1) as a claim that to remove the person from the United Kingdom would be unlawful under the Human Rights Act) on the ground that removal of the person from the United Kingdom would be unlawful under section 6 of that Act. The principle of non-refoulement is therefore given effect by sections 82 and 84 of the 2002 Act, both as it is set out in the Refugee Convention and as it applies under the Human Rights Act. </span></p>'
+        reference_replacements = [
+            {
+                "detected_ref": "that Act",
+                "ref_position": 374,
+                "ref_para": 64,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2002/41" uk:canonical="2002 c. 41" uk:type="legislation" uk:origin="TNA">that Act</ref>',
+            },
+            {
+                "detected_ref": "that Act",
+                "ref_position": 1122,
+                "ref_para": 64,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2002/41" uk:canonical="2002 c. 41" uk:type="legislation" uk:origin="TNA">that Act</ref>',
+            },
+            {
+                "detected_ref": "the 2002 Act",
+                "ref_position": 322,
+                "ref_para": 64,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2002/41" uk:canonical="2002 c. 41" uk:type="legislation" uk:origin="TNA">the 2002 Act</ref>',
+            },
+            {
+                "detected_ref": "the 2002 Act",
+                "ref_position": 1216,
+                "ref_para": 64,
+                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2002/41" uk:canonical="2002 c. 41" uk:type="legislation" uk:origin="TNA">the 2002 Act</ref>',
+            },
+        ]
+        assert nuke_tags(replace_references(text, reference_replacements)) == nuke_tags(
+            text
+        )
 
 
 class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):

@@ -79,6 +79,7 @@ def patch_judgment_request(api_endpoint, query, data, username, pw):
         data=data.encode(),
     )
     print(response)
+    response.raise_for_status()
 
 
 ############################################
