@@ -20,8 +20,9 @@ The pipeline returns a dictionary containing the detected oblique reference, its
 """
 
 import re
-from typing import Any, Dict, List, Tuple, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
+import lxml.etree
 from bs4 import BeautifulSoup
 
 patterns = {
@@ -146,6 +147,16 @@ def match_act(
     return matched_act
 
 
+def make_valid_tag(
+    tag: str, body: Optional[str] = None, attrs: Optional[dict[str, str]] = None
+) -> str:
+    if not attrs:
+        attrs = {}
+    element = lxml.etree.Element(tag, attrs)
+    element.text = body
+    return lxml.etree.tostring(element)
+
+
 def create_section_ref_tag(replacement_dict: LegislationDict, match: str) -> str:
     """
     Create replacement string for detected oblique reference
@@ -159,6 +170,8 @@ def create_section_ref_tag(replacement_dict: LegislationDict, match: str) -> str
         f'<ref href="{href}" uk:canonical="{canonical}" '
         f'uk:type="legislation" uk:origin="TNA">{match.strip()}</ref>'
     )
+
+    #  make_tag(tag="ref", body = match.strip(), attrs={"href": href, "uk:canonical": canonical, 'uk:type': 'legislation', 'uk:origin':'TNA'})
 
     return oblique_ref
 
