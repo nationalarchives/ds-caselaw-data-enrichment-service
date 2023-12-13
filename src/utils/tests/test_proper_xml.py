@@ -17,7 +17,7 @@ def assert_equal_xml(a, b):
     if isinstance(a, str):
         a = a.encode("utf-8")
 
-    if isinstance(a, str):
+    if isinstance(b, str):
         b = b.encode("utf-8")
 
     assert canonical_xml(a) == canonical_xml(b)

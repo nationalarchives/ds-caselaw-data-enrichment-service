@@ -151,7 +151,7 @@ class TestLegislationProvisionProcessor(unittest.TestCase):
                 "detected_ref": "section 41",
                 "ref_para": 1005,
                 "ref_position": 170,
-                "ref_tag": '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/Edw7/6/41/section/41" uk:canonical="1906 (6 Edw. 7) c. 41 s. 41" uk:origin="TNA">section 41</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/Edw7/6/41/section/41" uk:canonical="1906 (6 Edw. 7) c. 41 s. 41" uk:origin="TNA">section 41</ref>',
             }
         ]
         resolved_ref = provision_resolver(section_dict, match, para_number)
@@ -178,7 +178,7 @@ class TestLegislationProvisionProcessor(unittest.TestCase):
                 "detected_ref": "Section 1(1)",
                 "ref_para": 202,
                 "ref_position": 950,
-                "ref_tag": '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1977/37/section/1/1" uk:canonical="1977 c. 37 s. 1" uk:origin="TNA">Section 1(1)</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1977/37/section/1/1" uk:canonical="1977 c. 37 s. 1" uk:origin="TNA">Section 1(1)</ref>',
             }
         ]
         resolved_ref = provision_resolver(section_dict, match, para_number)
@@ -235,13 +235,13 @@ class TestLegislationProvisionProcessor(unittest.TestCase):
                 "detected_ref": "Section 2(1)",
                 "ref_para": 205,
                 "ref_position": 404,
-                "ref_tag": '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1977/37/section/2/1" uk:canonical="1977 c. 37 s. 2" uk:origin="TNA">Section 2(1)</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1977/37/section/2/1" uk:canonical="1977 c. 37 s. 2" uk:origin="TNA">Section 2(1)</ref>',
             },
             {
                 "detected_ref": "Section 2(2)",
                 "ref_para": 205,
                 "ref_position": 654,
-                "ref_tag": '<ref uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1977/37/section/2/2" uk:canonical="1977 c. 37 s. 2" uk:origin="TNA">Section 2(2)</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/id/ukpga/1977/37/section/2/2" uk:canonical="1977 c. 37 s. 2" uk:origin="TNA">Section 2(2)</ref>',
             },
         ]
         resolved_ref = provision_resolver(section_dict, match, para_number)

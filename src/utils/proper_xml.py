@@ -33,4 +33,4 @@ def create_tag(
 
 
 def create_tag_string(*args, **kwargs) -> str:
-    return lxml.etree.tostring(create_tag(*args, **kwargs))
+    return lxml.etree.tostring(create_tag(*args, **kwargs)).decode("utf-8")

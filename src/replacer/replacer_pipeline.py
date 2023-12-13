@@ -3,7 +3,10 @@ Replacer logic for first phase enrichment.
 Handles the replacements of abbreviations, legislation, and case law.
 """
 
+import html
 import re
+
+from utils.proper_xml import create_tag_string
 
 
 def fixed_year(year):
@@ -27,8 +30,17 @@ def replacer_caselaw(file_data, replacement):
     """
 
     year = fixed_year(replacement[2])
-    year_xml = f'uk:year="{year}" ' if year else ""
-    replacement_string = f'<ref uk:type="case" href="{replacement[3]}" uk:isNeutral="{str(replacement[4]).lower()}" uk:canonical="{replacement[1]}" {year_xml}uk:origin="TNA">{replacement[0]}</ref>'
+    attribs = {
+        "uk:type": "case",
+        "href": replacement[3],
+        "uk:isNeutral": str(replacement[4]).lower(),
+        "uk:canonical": replacement[1],
+    }
+    if year:
+        attribs["uk:year"] = year
+    attribs["uk:origin"] = "TNA"
+    replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
+
     file_data = str(file_data).replace(replacement[0], replacement_string)
     return file_data
 
@@ -40,7 +52,13 @@ def replacer_leg(file_data, replacement):
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
-    replacement_string = f'<ref uk:type="legislation" href="{replacement[1]}" uk:canonical="{replacement[2]}" uk:origin="TNA">{replacement[0]}</ref>'
+    attribs = {
+        "uk:type": "legislation",
+        "href": replacement[1],
+        "uk:canonical": replacement[2],
+        "uk:origin": "TNA",
+    }
+    replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
     file_data = str(file_data).replace(replacement[0], replacement_string)
     return file_data
 
