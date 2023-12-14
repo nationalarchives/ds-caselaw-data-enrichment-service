@@ -91,25 +91,25 @@ class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
                 "detected_ref": "the 2004 Act",
                 "ref_position": 487,
                 "ref_para": 100,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:type="legislation" uk:origin="TNA">the 2004 Act</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:type="legislation" uk:origin="TNA">the 2004 Act</ref>',
             },
             {
                 "detected_ref": "that Act",
                 "ref_position": 186,
                 "ref_para": 153,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1996/14" uk:canonical="1996 c. 14" uk:type="legislation" uk:origin="TNA">that Act</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" href="http://www.legislation.gov.uk/id/ukpga/1996/14" uk:canonical="1996 c. 14" uk:type="legislation" uk:origin="TNA">that Act</ref>',
             },
             {
                 "detected_ref": "that Act",
                 "ref_position": 214,
                 "ref_para": 154,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1996/14" uk:canonical="1996 c. 14" uk:type="legislation" uk:origin="TNA">that Act</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" href="http://www.legislation.gov.uk/id/ukpga/1996/14" uk:canonical="1996 c. 14" uk:type="legislation" uk:origin="TNA">that Act</ref>',
             },
             {
                 "detected_ref": "that Act",
                 "ref_position": 387,
                 "ref_para": 159,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2020/7" uk:canonical="2020 c. 7" uk:type="legislation" uk:origin="TNA">that Act</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" href="http://www.legislation.gov.uk/id/ukpga/2020/7" uk:canonical="2020 c. 7" uk:type="legislation" uk:origin="TNA">that Act</ref>',
             },
         ]
 
@@ -422,13 +422,13 @@ class TestGetReplacements(unittest.TestCase):
                 "detected_ref": "the Act",
                 "ref_position": 39069,
                 "ref_para": 2,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19" uk:type="legislation" uk:origin="TNA">the Act</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" href="http://www.legislation.gov.uk/id/ukpga/1968/19" uk:canonical="1968 c. 19" uk:type="legislation" uk:origin="TNA">the Act</ref>',
             },
             {
                 "detected_ref": "this Act",
                 "ref_position": 480464,
                 "ref_para": 2,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/1997/43" uk:canonical="1997 c. 43" uk:type="legislation" uk:origin="TNA">this Act</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" href="http://www.legislation.gov.uk/id/ukpga/1997/43" uk:canonical="1997 c. 43" uk:type="legislation" uk:origin="TNA">this Act</ref>',
             },
         ]
         assert replacements == expected_replacements
@@ -466,13 +466,13 @@ class TestGetReplacements(unittest.TestCase):
                 "detected_ref": "the 2000 Act",
                 "ref_position": 60093,
                 "ref_para": 2,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2000/6" uk:canonical="2000 c. 6" uk:type="legislation" uk:origin="TNA">the 2000 Act</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" href="http://www.legislation.gov.uk/id/ukpga/2000/6" uk:canonical="2000 c. 6" uk:type="legislation" uk:origin="TNA">the 2000 Act</ref>',
             },
             {
                 "detected_ref": "the 2000 Act",
                 "ref_position": 560093,
                 "ref_para": 2,
-                "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2000/6" uk:canonical="2000 c. 6" uk:type="legislation" uk:origin="TNA">the 2000 Act</ref>',
+                "ref_tag": '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" href="http://www.legislation.gov.uk/id/ukpga/2000/6" uk:canonical="2000 c. 6" uk:type="legislation" uk:origin="TNA">the 2000 Act</ref>',
             },
         ]
         assert replacements == expected_replacements

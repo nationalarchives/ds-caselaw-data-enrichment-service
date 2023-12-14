@@ -12,13 +12,14 @@ To do:
 2. "Section 27(A)" - currently miss these references when replacing
 3. Sub-sections aren't being replaced
 """
-
 import os
 import re
 from typing import Any, Dict, List
 
 import numpy as np
 from bs4 import BeautifulSoup
+
+from utils.proper_xml import create_tag_string
 
 SectionDict = Dict[str, List[Any]]  # this is a guess
 
@@ -151,7 +152,16 @@ def create_section_ref_tag(section_dict, match):
     """
     canonical = section_dict["section_canonical"]
     href = section_dict["section_href"]
-    section_ref = f'<ref uk:type="legislation" href="{href}" uk:canonical="{canonical}" uk:origin="TNA">{match.strip()}</ref>'
+    section_ref = create_tag_string(
+        "ref",
+        match.strip(),
+        {
+            "uk:type": "legislation",
+            "href": href,
+            "uk:canonical": canonical,
+            "uk:origin": "TNA",
+        },
+    )
     return section_ref
 
 

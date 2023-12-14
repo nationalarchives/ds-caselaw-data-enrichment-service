@@ -25,7 +25,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
+        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
             URI, is_neutral, corrected_citation, year, citation_match
         )
         assert replacement_string in replaced_entry
@@ -40,7 +40,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
+        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
             URI, is_neutral, corrected_citation, year, citation_match
         )
         assert replacement_string in replaced_entry
@@ -56,7 +56,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = f'<ref uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:origin="TNA">{citation_match}</ref>'
+        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:origin="TNA">LR 1 A&amp;E 123</ref>'
         assert replacement_string in replaced_entry
 
     def test_citation_replacer_4(self):
@@ -69,7 +69,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
+        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
             URI, is_neutral, corrected_citation, year, citation_match
         )
         assert replacement_string in replaced_entry
@@ -84,7 +84,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
+        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
             URI, is_neutral, corrected_citation, year, citation_match
         )
         assert replacement_string in replaced_entry
@@ -103,7 +103,7 @@ class TestLegislationReplacer(unittest.TestCase):
         replacement_entry = (legislation_match, href, canonical)
         replaced_entry = replacer_leg(text, replacement_entry)
         assert legislation_match in replaced_entry
-        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2002/38" uk:canonical="foo" uk:origin="TNA">Adoption and Children Act 2002</ref>'
+        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2002/38" uk:canonical="foo" uk:origin="TNA">Adoption and Children Act 2002</ref>'
         assert replacement_string in replaced_entry
 
     def test_citation_replacer_2(self):
@@ -114,7 +114,7 @@ class TestLegislationReplacer(unittest.TestCase):
         replacement_entry = (legislation_match, href, canonical)
         replaced_entry = replacer_leg(text, replacement_entry)
         assert legislation_match in replaced_entry
-        replacement_string = '<ref uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'
+        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'
         assert replacement_string in replaced_entry
 
 

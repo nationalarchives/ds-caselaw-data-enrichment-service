@@ -24,6 +24,8 @@ from typing import Any, Dict, List, Tuple, Union
 
 from bs4 import BeautifulSoup
 
+from utils.proper_xml import create_tag_string
+
 patterns = {
     "legislation": r"<ref(((?!ref>).)*)type=\"legislation\"(.*?)ref>",
     "numbered_act": r"(the|this|that|The|This|That)\s([0-9]{4})\s(Act)",
@@ -155,11 +157,16 @@ def create_section_ref_tag(replacement_dict: LegislationDict, match: str) -> str
     """
     canonical = replacement_dict["canonical"]
     href = replacement_dict["href"]
-    oblique_ref = (
-        f'<ref href="{href}" uk:canonical="{canonical}" '
-        f'uk:type="legislation" uk:origin="TNA">{match.strip()}</ref>'
+    oblique_ref = create_tag_string(
+        "ref",
+        match.strip(),
+        {
+            "href": href,
+            "uk:canonical": canonical,
+            "uk:type": "legislation",
+            "uk:origin": "TNA",
+        },
     )
-
     return oblique_ref
 
 

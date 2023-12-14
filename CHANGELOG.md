@@ -1,3 +1,7 @@
+== v5.0.0 ==
+Create `create_tag` and `create_tag_string` to make more compliant XML, to try to resolve escaping issues.
+Escape some strings coming from the replacement lists on output
+
 == v4.0.0 ==
 Fix a bug which was mangling judgment text in particular scenarios when inserting references.
 

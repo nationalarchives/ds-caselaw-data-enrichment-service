@@ -3,11 +3,33 @@
 import unittest
 from pathlib import Path
 
+import lxml.etree
+
 from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
+
+
+def canonical_xml(xml_bytes):
+    """with thanks to https://stackoverflow.com/questions/52422385/python-3-xml-canonicalization"""
+    val = (
+        lxml.etree.tostring(lxml.etree.fromstring(xml_bytes), method="c14n2")
+        .replace(b"\n", b"")
+        .replace(b" ", b"")
+    )
+    return val
+
+
+def assert_equal_xml(a, b):
+    if isinstance(a, str):
+        a = a.encode("utf-8")
+
+    if isinstance(b, str):
+        b = b.encode("utf-8")
+
+    assert canonical_xml(a) == canonical_xml(b)
 
 
 class TestEnrichObliqueReferences(unittest.TestCase):
@@ -29,7 +51,7 @@ class TestEnrichObliqueReferences(unittest.TestCase):
         with open(expected_file_path, "r", encoding="utf-8") as expected_file:
             expected_enriched_content = expected_file.read()
 
-        assert enriched_content.strip() == expected_enriched_content.strip()
+        assert_equal_xml(enriched_content, expected_enriched_content)
 
 
 if __name__ == "__main__":
