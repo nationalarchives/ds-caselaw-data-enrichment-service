@@ -53,7 +53,8 @@ repos:
     hooks:
       - id: mypy
         args: [--explicit-package-bases]
-        additional_dependencies: [types-mock, types-requests]
+        additional_dependencies:
+          [types-mock, types-requests, types-beautifulsoup4]
 
 # sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
 ci:
