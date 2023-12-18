@@ -6,7 +6,7 @@ from pathlib import Path
 from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
-from utils.tests.compare_xml import assert_equal_xml
+from utils.compare_xml import assert_equal_xml
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 

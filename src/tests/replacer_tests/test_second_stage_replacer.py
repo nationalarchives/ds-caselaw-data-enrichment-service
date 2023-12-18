@@ -9,7 +9,7 @@ from replacer.second_stage_replacer import (
     create_replacement_paragraph,
     replace_references_by_paragraph,
 )
-from utils.tests.compare_xml import assert_equal_xml
+from utils.compare_xml import assert_equal_xml
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures"
 

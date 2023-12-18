@@ -7,7 +7,7 @@ from replacer.make_replacments import (
     make_post_header_replacements,
     split_text_by_closing_header_tag,
 )
-from utils.tests.compare_xml import assert_equal_xml
+from utils.compare_xml import assert_equal_xml
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 
