@@ -1,6 +1,5 @@
 from pathlib import Path
 
-import lxml.etree
 import pytest
 
 from replacer.make_replacments import (
@@ -8,22 +7,9 @@ from replacer.make_replacments import (
     make_post_header_replacements,
     split_text_by_closing_header_tag,
 )
+from utils.tests.compare_xml import assert_equal_xml
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
-
-
-def canonical_xml(text):
-    """with thanks to https://stackoverflow.com/questions/52422385/python-3-xml-canonicalization"""
-    val = (
-        lxml.etree.tostring(lxml.etree.fromstring(text.encode("utf-8")), method="c14n2")
-        .replace(b"\n", b"")
-        .replace(b" ", b"")
-    )
-    return val
-
-
-def assert_xml_same(a, b):
-    assert canonical_xml(a.strip()) == canonical_xml(b.strip())
 
 
 class TestMakePostHeaderReplacements:
@@ -43,9 +29,7 @@ class TestMakePostHeaderReplacements:
         content_with_replacements = make_post_header_replacements(
             original_file_content, replacement_content
         )
-        assert canonical_xml(content_with_replacements) == canonical_xml(
-            expected_file_content.strip()
-        )
+        assert_equal_xml(content_with_replacements, expected_file_content)
 
     def test_post_header_works_if_already_enriched(self):
         original_file_content = open(
@@ -66,7 +50,7 @@ class TestMakePostHeaderReplacements:
             original_file_content, replacement_content
         )
 
-        assert_xml_same(content_with_replacements, expected_file_content)
+        assert_equal_xml(content_with_replacements, expected_file_content)
 
     def test_remove_legislation_references(self):
         tidy_output = _remove_old_enrichment_references(

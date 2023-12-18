@@ -12,7 +12,7 @@ def canonical_xml(xml_bytes):
 
 
 def assert_equal_xml(a, b):
-    width = 180
+    """Are the two inputs the same string when canonicalised? If not, display the first difference."""
     if isinstance(a, str):
         a = a.encode("utf-8")
     canon_a = canonical_xml(a)
@@ -20,10 +20,12 @@ def assert_equal_xml(a, b):
     if isinstance(b, str):
         b = b.encode("utf-8")
     canon_b = canonical_xml(b)
+
     if canon_a != canon_b:
         for i, (char_a, char_b) in enumerate(zip(canon_a, canon_b)):
             if char_a != char_b:
                 break
+        width = 180
         raise AssertionError(
             f"xml mismatch at {i}\nbefore: {canon_a[i-width:i]}\n first: {canon_a[i:i+width]}\nsecond: {canon_b[i:i+width]}"
         )
