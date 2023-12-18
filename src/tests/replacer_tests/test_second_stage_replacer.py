@@ -6,6 +6,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 from replacer.second_stage_replacer import replace_references_by_paragraph
+from utils.tests.compare_xml import assert_equal_xml
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures"
 
@@ -56,7 +57,7 @@ class TestSecondStageReplacer(unittest.TestCase):
         with open(expected_file_path, "r", encoding="utf-8") as expected_file:
             expected_enriched_content = expected_file.read()
 
-        assert enriched_content.strip() == expected_enriched_content.strip()
+        assert_equal_xml(expected_enriched_content, enriched_content)
 
 
 if __name__ == "__main__":
