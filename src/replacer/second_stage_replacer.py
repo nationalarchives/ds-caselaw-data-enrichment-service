@@ -71,7 +71,8 @@ def create_replacement_paragraph(
     replacement_paragraph_string = replace_references(
         paragraph_string, list(paragraph_reference_replacements)
     )
-    replacement_paragraph = BeautifulSoup(replacement_paragraph_string, "xml").p
+    wrapper = f'<xml xmlns:uk="placeholder">{replacement_paragraph_string}</xml>'
+    replacement_paragraph = BeautifulSoup(wrapper, "xml").p
     return replacement_paragraph
 
 

@@ -16,6 +16,11 @@ FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures"
 
 class TestSecondStageReplacer(unittest.TestCase):
     def test_replace_single_reference(self):
+        """This tests that when a reference is replaced, it doesn't:
+        * mangle the namespaces
+        * flatten tags to lowercase
+
+        It doesn't test whether the replacement actually works."""
         paragraph_string = """<p>Schedule 36 to the <ref uk:canonical="jam">FA 2004</ref>.<CamelCase/></p>"""
         paragraph_replacements = (
             {
@@ -28,8 +33,11 @@ class TestSecondStageReplacer(unittest.TestCase):
         replacement_paragraph = str(
             create_replacement_paragraph(paragraph_string, paragraph_replacements)
         )
-        assert "<CamelCase/>" in replacement_paragraph
-        assert "uk:canonical" in replacement_paragraph
+
+        assert (
+            replacement_paragraph
+            == '<p>Schedule 36 to the <ref uk:canonical="jam">FA 2004</ref>.<CamelCase/></p>'
+        )
 
     def test_replace_references_by_paragraph(self):
         """
