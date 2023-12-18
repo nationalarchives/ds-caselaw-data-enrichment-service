@@ -1,5 +1,5 @@
+from utils.compare_xml import assert_equal_xml
 from utils.proper_xml import create_tag_string
-from utils.tests.compare_xml import assert_equal_xml
 
 
 def test_simple_tag():

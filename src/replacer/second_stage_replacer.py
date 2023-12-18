@@ -7,7 +7,7 @@ Handles the replacements of oblique references and legislation provisions.
 
 import re
 from itertools import groupby
-from typing import Dict, List, Tuple, Union
+from typing import Dict, Iterable, List, Tuple, Union
 
 from bs4 import BeautifulSoup
 
@@ -64,7 +64,10 @@ def replace_references(
     return enriched_text
 
 
-def create_replacement_paragraph(paragraph_string, paragraph_reference_replacements):
+def create_replacement_paragraph(
+    paragraph_string: str,
+    paragraph_reference_replacements: Iterable[dict[str, str | int]],
+) -> BeautifulSoup:
     replacement_paragraph_string = replace_references(
         paragraph_string, list(paragraph_reference_replacements)
     )

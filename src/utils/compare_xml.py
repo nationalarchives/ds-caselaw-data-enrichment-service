@@ -1,7 +1,9 @@
+from typing import Union
+
 import lxml.etree
 
 
-def canonical_xml(xml_bytes):
+def canonical_xml(xml_bytes: bytes) -> bytes:
     """with thanks to https://stackoverflow.com/questions/52422385/python-3-xml-canonicalization"""
     val = (
         lxml.etree.tostring(lxml.etree.fromstring(xml_bytes), method="c14n2")
@@ -11,7 +13,7 @@ def canonical_xml(xml_bytes):
     return val
 
 
-def assert_equal_xml(a, b):
+def assert_equal_xml(a: Union[str | bytes], b: Union[str | bytes]) -> None:
     """Are the two inputs the same string when canonicalised? If not, display the first difference."""
     if isinstance(a, str):
         a = a.encode("utf-8")
@@ -27,5 +29,5 @@ def assert_equal_xml(a, b):
                 break
         width = 180
         raise AssertionError(
-            f"xml mismatch at {i}\nbefore: {canon_a[i-width:i]}\n first: {canon_a[i:i+width]}\nsecond: {canon_b[i:i+width]}"
+            f"xml mismatch at {i}\nbefore: {canon_a[i-width:i]!r}\n first: {canon_a[i:i+width]!r}\nsecond: {canon_b[i:i+width]!r}"
         )
