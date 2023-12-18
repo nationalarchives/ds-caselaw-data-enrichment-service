@@ -1,26 +1,5 @@
-import lxml.etree
-
+from utils.compare_xml import assert_equal_xml
 from utils.proper_xml import create_tag_string
-
-
-def canonical_xml(xml_bytes):
-    """with thanks to https://stackoverflow.com/questions/52422385/python-3-xml-canonicalization"""
-    val = (
-        lxml.etree.tostring(lxml.etree.fromstring(xml_bytes), method="c14n2")
-        .replace(b"\n", b"")
-        .replace(b" ", b"")
-    )
-    return val
-
-
-def assert_equal_xml(a, b):
-    if isinstance(a, str):
-        a = a.encode("utf-8")
-
-    if isinstance(b, str):
-        b = b.encode("utf-8")
-
-    assert canonical_xml(a) == canonical_xml(b)
 
 
 def test_simple_tag():

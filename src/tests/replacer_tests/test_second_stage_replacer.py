@@ -5,12 +5,40 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from replacer.second_stage_replacer import replace_references_by_paragraph
+from replacer.second_stage_replacer import (
+    create_replacement_paragraph,
+    replace_references_by_paragraph,
+)
+from utils.compare_xml import assert_equal_xml
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures"
 
 
 class TestSecondStageReplacer(unittest.TestCase):
+    def test_replace_single_reference(self):
+        """This tests that when a reference is replaced, it doesn't:
+        * mangle the namespaces
+        * flatten tags to lowercase
+
+        It doesn't test whether the replacement actually works."""
+        paragraph_string = """<p>Schedule 36 to the <ref uk:canonical="jam">FA 2004</ref>.<CamelCase/></p>"""
+        paragraph_replacements = (
+            {
+                "detected_ref": "the 2004 Act",
+                "ref_para": 100,
+                "ref_position": 487,
+                "ref_tag": '<ref uk:canonical="jam">the 2004 Act</ref>',
+            },
+        )
+        replacement_paragraph = str(
+            create_replacement_paragraph(paragraph_string, paragraph_replacements)
+        )
+
+        assert (
+            replacement_paragraph
+            == '<p>Schedule 36 to the <ref uk:canonical="jam">FA 2004</ref>.<CamelCase/></p>'
+        )
+
     def test_replace_references_by_paragraph(self):
         """
         Given some file_data soup and references with ref_tag and positional info
@@ -55,8 +83,7 @@ class TestSecondStageReplacer(unittest.TestCase):
         expected_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_2.xml"
         with open(expected_file_path, "r", encoding="utf-8") as expected_file:
             expected_enriched_content = expected_file.read()
-
-        assert enriched_content.strip() == expected_enriched_content.strip()
+        assert_equal_xml(expected_enriched_content, enriched_content)
 
 
 if __name__ == "__main__":
