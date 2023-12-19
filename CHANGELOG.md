@@ -1,3 +1,6 @@
+== v6.0.0 ==
+Fix case where `replace_references_by_paragraph` was treating XML as HTML (symptom: forced lower case tags
+
 == v5.0.0 ==
 Create `create_tag` and `create_tag_string` to make more compliant XML, to try to resolve escaping issues.
 Escape some strings coming from the replacement lists on output
