@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Enrichment Logs and Output</title>
+</head>
+<body>
+<h1>Enrichment Logs and Output</h1>
+<form id="xmlform">
+  <input id="xmlname" onchange=""></input><button type="submit">Submit</button>
+</form>
+<script>
+
+const form = document.getElementById("xmlform");
+const input = document.getElementById("xmlname");
+
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  update_links(input.value);
+});
+
+function update_links(xmlname) {
+  links = document.querySelectorAll("a.bucketlink");
+  links.forEach(function(item) {update_bucket_link(item, xmlname)})
+  links = document.querySelectorAll("a.lambdalink");
+  links.forEach(function(item) {update_lambda_link(item, xmlname)})
+  links = document.querySelectorAll("a.lambdalink");
+  links.forEach(function(item) {update_lambda_link(item, xmlname)})
+}
+
+function update_bucket_link(link, xmlname) {
+  bucket = link.getAttribute("bucket");
+  s = xmlname
+  s = s.replaceAll('/','-')
+  console.log(s)
+  link.href="https://s3.console.aws.amazon.com/s3/object/"+bucket+"?region=eu-west-2&prefix="+s+".xml"
+}
+
+function update_lambda_link(link, xmlname) {
+  lambda = link.getAttribute("lambda");
+  s = xmlname
+  s = s.replaceAll('/','-')
+  link.href = "https://eu-west-2.console.aws.amazon.com/cloudwatch/home?region=eu-west-2#logsV2:logs-insights$3FqueryDetail$3D~(end~0~start~-3600~timeType~'RELATIVE~unit~'seconds~editorString~'fields*20*40timestamp*2c*20*40message*2c*20*40logStream*2c*20*40log*0a*7c*20filter*20*40message*20like*20*22"+s+"*22*0a*7c*20sort*20*40timestamp*20desc*0a*7c*20limit*2020~source~(~'*2faws*2flambda*2f"+lambda+"))"
+}
+
+
+</script>
+<ul>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-fetch-xml">λ fetch-xml</a></li>
+<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-original-bucket">🪣 xml-original</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-extract-judgement-contents">λ extract-judgement-contents</a></li>
+<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-text-content-bucket">🪣 text-content</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-replacements-caselaw">λ determine-replacements-caselaw</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-replacements-legislation">λ determine-replacements-legislation</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-replacements-abbreviations">λ determine-replacements-abbreviations</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-make-replacements">λ make-replacements</a></li>
+<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-enriched-bucket">🪣 xml-enriched</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-oblique-references">λ determine-oblique-references</a></li>
+<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-second-phase-enriched-bucket">🪣 xml-second-phase-enriched</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-legislation-provisions">λ determine-legislation-provisions lambda</a></li>
+<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-third-phase-enriched-bucket">🪣 xml-third-phase-enriched</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-push-enriched-xml">λ push-enriched-xml</a></li>
+<li><a target=_blank class='papertraillink' href="https://my.papertrailapp.com/groups/32176061/events?q=Unprocessable+Entity">papertrail 422 errors</a></li>
+
+</ul>
+<ul><li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-xml-validate">λ xml-validate</a></li></ul>
+</body>
+</html>
