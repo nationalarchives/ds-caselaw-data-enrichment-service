@@ -32,5 +32,5 @@ def create_tag(
     return root
 
 
-def create_tag_string(*args, **kwargs) -> str:
-    return lxml.etree.tostring(create_tag(*args, **kwargs)).decode("utf-8")
+def create_tag_string(tag: str, contents: str = "", attrs: Optional[dict[str, str]] = None) -> str:
+    return lxml.etree.tostring(create_tag(tag=tag, contents=contents, attrs=attrs)).decode("utf-8")
