@@ -25,6 +25,11 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 
+def fcl_uri(source_key):
+    slashed = source_key.replace("-", "/").split(".")[0]
+    return slashed.replace("press/summary", "press-summary")
+
+
 ############################################
 # - API FUNCTIONS
 ############################################
@@ -115,7 +120,7 @@ def process_event(sqs_rec):
     )
 
     print(source_key)
-    judgment_uri = source_key.replace("-", "/").split(".")[0]
+    judgment_uri = fcl_uri(source_key)
     print(judgment_uri)
 
     # patch the judgment
