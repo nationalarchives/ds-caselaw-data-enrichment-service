@@ -1,12 +1,13 @@
 import json
 import logging
 import re
-from typing import Tuple
+from typing import Literal
 
 import lxml.etree
 from bs4 import BeautifulSoup
 
 from replacer.replacer_pipeline import replacer_pipeline
+from utils.types import Reference
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
@@ -107,7 +108,7 @@ def apply_replacements(content: str, replacement_patterns: str) -> str:
     return file_data_enriched
 
 
-def detect_reference(text, etype):
+def detect_reference(text: str, etype: Literal["legislation"]) -> Reference:
     """
     Detect citation references.
     :param text: text to be searched for references
@@ -122,26 +123,20 @@ def detect_reference(text, etype):
     return references
 
 
-def sanitize_judgment(file_content):
+def sanitize_judgment(file_content: str) -> str:
     file_content = _remove_old_enrichment_references(file_content)
 
     soup = BeautifulSoup(file_content, "xml")
 
-    _decompose_elements(soup, "FRBRdate", {"name": "tna-enriched"})
-    _decompose_elements(soup, "uk:tna-enrichment-engine")
-
-    soup_string = str(soup)
-
-    return soup_string
-
-
-def _decompose_elements(soup, *element_kwargs):
-    elements = soup.find_all(*element_kwargs)
-    for element in elements:
+    for element in soup.find_all("FRBRdate", {"name": "tna-enriched"}):
+        element.decompose()
+    for element in soup.find_all("uk:tna-enrichment-engine"):
         element.decompose()
 
+    return str(soup)
 
-def _remove_old_enrichment_references(file_content):
+
+def _remove_old_enrichment_references(file_content: str) -> str:
     """
     Enrichment creates <ref uk:origin="TNA"> tags; delete only these.
     """
@@ -154,7 +149,7 @@ def _remove_old_enrichment_references(file_content):
     return lxml.etree.tostring(result).decode("utf-8")
 
 
-def split_text_by_closing_header_tag(content: str) -> Tuple[str, str, str]:
+def split_text_by_closing_header_tag(content: str) -> tuple[str, str, str]:
     """
     Split content into start, closing header tag and body
     to ensure replacements only occur in the body.
