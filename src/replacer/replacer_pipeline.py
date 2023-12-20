@@ -5,11 +5,13 @@ Handles the replacements of abbreviations, legislation, and case law.
 
 import html
 import re
+from typing import Optional
 
 from utils.proper_xml import create_tag_string
+from utils.types import Replacement
 
 
-def fixed_year(year):
+def fixed_year(year: str) -> Optional[str]:
     """For some reason, years can be returned as "No Year", despite not being present in the code (outside tests) or the database
     (as far as I can see."""
     if not year:
@@ -21,7 +23,7 @@ def fixed_year(year):
         return None
 
 
-def replacer_caselaw(file_data, replacement):
+def replacer_caselaw(file_data: str, replacement: Replacement) -> str:
     """
     String replacement in the XML
     :param file_data: XML file
@@ -45,7 +47,7 @@ def replacer_caselaw(file_data, replacement):
     return file_data
 
 
-def replacer_leg(file_data, replacement):
+def replacer_leg(file_data: str, replacement: Replacement) -> str:
     """
     String replacement in the XML
     :param file_data: XML file
@@ -63,7 +65,7 @@ def replacer_leg(file_data, replacement):
     return file_data
 
 
-def replacer_abbr(file_data, replacement):
+def replacer_abbr(file_data: str, replacement: Replacement) -> str:
     """
     String replacement in the XML
     :param file_data: XML file
@@ -78,8 +80,11 @@ def replacer_abbr(file_data, replacement):
 
 
 def replacer_pipeline(
-    file_data, REPLACEMENTS_CASELAW, REPLACEMENTS_LEG, REPLACEMENTS_ABBR
-):
+    file_data: str,
+    REPLACEMENTS_CASELAW: list[Replacement],
+    REPLACEMENTS_LEG: list[Replacement],
+    REPLACEMENTS_ABBR: list[Replacement],
+) -> str:
     """
     Pipeline to run replacer_caselaw, replacer_leg, replacer_abbr
     :param file_data: XML file

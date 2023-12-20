@@ -52,8 +52,8 @@ repos:
     rev: v1.8.0 # Use the sha / tag you want to point at
     hooks:
       - id: mypy
-        args: [--explicit-package-bases]
-        additional_dependencies: [types-mock, types-requests, types-lxml]
+        args: [--explicit-package-bases, --strict]
+        additional_dependencies: [types-mock, types-requests, types-lxml, types-beautifulsoup4]
 
 # sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
 ci:
