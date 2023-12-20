@@ -9,7 +9,7 @@ import re
 from itertools import groupby
 from typing import Dict, Iterable, List, Tuple, Union
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 LegislationReference = Tuple[Tuple[int, int], str]
 LegislationReferenceReplacements = List[Dict[str, Union[str, int]]]
@@ -67,12 +67,14 @@ def replace_references(
 def create_replacement_paragraph(
     paragraph_string: str,
     paragraph_reference_replacements: Iterable[dict[str, str | int]],
-) -> BeautifulSoup:
+) -> Tag:
     replacement_paragraph_string = replace_references(
         paragraph_string, list(paragraph_reference_replacements)
     )
     wrapper = f'<xml xmlns:uk="placeholder">{replacement_paragraph_string}</xml>'
     replacement_paragraph = BeautifulSoup(wrapper, "xml").p
+    if replacement_paragraph is None:
+        raise RuntimeError(f"No paragraphs found in {replacement_paragraph_string}")
     return replacement_paragraph
 
 
