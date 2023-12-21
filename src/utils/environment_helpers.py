@@ -10,7 +10,7 @@ LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
-def validate_env_variable(env_var_name):
+def validate_env_variable(env_var_name: str) -> str:
     print(f"Getting the value of the environment variable: {env_var_name}")
 
     try:
