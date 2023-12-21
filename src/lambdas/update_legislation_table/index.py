@@ -1,6 +1,11 @@
 import logging
-from typing import Dict, Optional
+from typing import Optional
 
+from aws_lambda_powertools.utilities.data_classes import (
+    EventBridgeEvent,
+    event_source,
+)
+from aws_lambda_powertools.utilities.typing import LambdaContext
 from update_legislation_table.database import remove_duplicates
 from update_legislation_table.fetch_legislation import fetch_legislation
 
@@ -13,7 +18,8 @@ LOGGER.setLevel(logging.INFO)
 LEGISLATION_TABLE_NAME = "ukpga_lookup"
 
 
-def handler(event: Dict, context) -> None:
+@event_source(data_class=EventBridgeEvent)
+def handler(event: EventBridgeEvent, context: LambdaContext) -> None:
     """
     Lambda function handler that updates the legislation table
     """

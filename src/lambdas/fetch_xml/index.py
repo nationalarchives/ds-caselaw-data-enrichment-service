@@ -3,6 +3,9 @@ import logging
 
 import boto3
 import urllib3
+from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
+from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from utils.environment_helpers import validate_env_variable
 
@@ -84,12 +87,12 @@ def upload_contents(source_key, xml_content):
     object.put(Body=xml_content)
 
 
-def process_event(sqs_rec, api_endpoint):
+def process_event(sqs_rec: SQSRecord, api_endpoint) -> None:
     """
     Function to check the status of the judgment, fetch the judgment if it is published, lock the judgment for editing
     and upload to destination S3 bucket
     """
-    message = json.loads(sqs_rec["body"])
+    message = json.loads(sqs_rec.body)
     status, query = read_message(
         message
     )  # query is the URL of the item requested to be enriched
@@ -117,7 +120,8 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 ENVIRONMENT = validate_env_variable("ENVIRONMENT")
 
 
-def handler(event, context):
+@event_source(data_class=SQSEvent)
+def handler(event: SQSEvent, context: LambdaContext) -> None:
     """
     Function called by the lambda to run the process event
     """
@@ -132,7 +136,7 @@ def handler(event, context):
 
     try:
         LOGGER.info("SQS EVENT: %s", event)
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
             process_event(sqs_rec, api_endpoint)

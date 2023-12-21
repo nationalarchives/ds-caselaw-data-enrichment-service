@@ -5,6 +5,9 @@ import os
 import urllib.parse
 
 import boto3
+from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
+from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from utils.environment_helpers import validate_env_variable
 from utils.helper import parse_file
@@ -13,15 +16,13 @@ LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
-def process_event(sqs_rec):
+def process_event(sqs_rec: S3EventRecord):
     """
     Isolating processing from event unpacking for portability and testing
     """
     s3_client = boto3.client("s3")
-    source_bucket = sqs_rec["s3"]["bucket"]["name"]
-    source_key = urllib.parse.unquote_plus(
-        sqs_rec["s3"]["object"]["key"], encoding="utf-8"
-    )
+    source_bucket = sqs_rec.s3.bucket.name
+    source_key = urllib.parse.unquote_plus(sqs_rec.s3.get_object.key, encoding="utf-8")
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
@@ -58,7 +59,8 @@ def upload_contents(source_key, text_content):
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 
 
-def handler(event, context):
+@event_source(data_class=S3Event)
+def handler(event: S3Event, context: LambdaContext) -> None:
     """
     Function called by the lambda to run the process event
     """
@@ -67,7 +69,7 @@ def handler(event, context):
     try:
         LOGGER.info("SQS EVENT: %s", event)
 
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
             process_event(sqs_rec)
