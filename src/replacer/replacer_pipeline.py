@@ -8,7 +8,7 @@ import re
 from typing import Optional
 
 from utils.proper_xml import create_tag_string
-from utils.types import Replacement
+from utils.types import Replacement, DocumentAsXMLString
 
 
 def fixed_year(year: str) -> Optional[str]:
@@ -23,7 +23,9 @@ def fixed_year(year: str) -> Optional[str]:
         return None
 
 
-def replacer_caselaw(file_data: str, replacement: Replacement) -> str:
+def replacer_caselaw(
+    file_data: DocumentAsXMLString, replacement: Replacement
+) -> DocumentAsXMLString:
     """
     String replacement in the XML
     :param file_data: XML file
@@ -43,11 +45,14 @@ def replacer_caselaw(file_data: str, replacement: Replacement) -> str:
     attribs["uk:origin"] = "TNA"
     replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
 
-    file_data = str(file_data).replace(replacement[0], replacement_string)
-    return file_data
+    return DocumentAsXMLString(
+        str(file_data).replace(replacement[0], replacement_string)
+    )
 
 
-def replacer_leg(file_data: str, replacement: Replacement) -> str:
+def replacer_leg(
+    file_data: DocumentAsXMLString, replacement: Replacement
+) -> DocumentAsXMLString:
     """
     String replacement in the XML
     :param file_data: XML file
@@ -61,11 +66,14 @@ def replacer_leg(file_data: str, replacement: Replacement) -> str:
         "uk:origin": "TNA",
     }
     replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
-    file_data = str(file_data).replace(replacement[0], replacement_string)
-    return file_data
+    return DocumentAsXMLString(
+        str(file_data).replace(replacement[0], replacement_string)
+    )
 
 
-def replacer_abbr(file_data: str, replacement: Replacement) -> str:
+def replacer_abbr(
+    file_data: DocumentAsXMLString, replacement: Replacement
+) -> DocumentAsXMLString:
     """
     String replacement in the XML
     :param file_data: XML file
@@ -75,16 +83,17 @@ def replacer_abbr(file_data: str, replacement: Replacement) -> str:
     replacement_string = (
         f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
     )
-    file_data = str(file_data).replace(str(replacement[0]), replacement_string)
-    return file_data
+    return DocumentAsXMLString(
+        str(file_data).replace(str(replacement[0]), replacement_string)
+    )
 
 
 def replacer_pipeline(
-    file_data: str,
+    file_data: DocumentAsXMLString,
     REPLACEMENTS_CASELAW: list[Replacement],
     REPLACEMENTS_LEG: list[Replacement],
     REPLACEMENTS_ABBR: list[Replacement],
-) -> str:
+) -> DocumentAsXMLString:
     """
     Pipeline to run replacer_caselaw, replacer_leg, replacer_abbr
     :param file_data: XML file

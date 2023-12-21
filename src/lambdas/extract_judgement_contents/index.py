@@ -11,6 +11,7 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from utils.environment_helpers import validate_env_variable
 from utils.helper import parse_file
+from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -26,7 +27,7 @@ def process_event(sqs_rec: S3EventRecord):
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")
@@ -37,12 +38,11 @@ def process_event(sqs_rec: S3EventRecord):
     upload_contents(source_key, text_content)
 
 
-def extract_text_content(file_content):
+def extract_text_content(file_content: DocumentAsXMLString) -> str:
     """
     Extract text from the content elements of the XML file
     """
-    file_content = parse_file(file_content)
-    return file_content
+    return parse_file(file_content)
 
 
 def upload_contents(source_key, text_content):

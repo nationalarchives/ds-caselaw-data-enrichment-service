@@ -10,7 +10,7 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 from requests.auth import HTTPBasicAuth
 
 from utils.environment_helpers import validate_env_variable
-from utils.types import APIEndpointBaseURL
+from utils.types import APIEndpointBaseURL, DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)

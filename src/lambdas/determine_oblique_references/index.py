@@ -12,12 +12,13 @@ from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
 from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
-def upload_contents(source_key, output_file_content):
+def upload_contents(source_key: str, output_file_content: DocumentAsXMLString) -> None:
     """
     Upload enriched file to S3 bucket
     """
@@ -40,7 +41,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")

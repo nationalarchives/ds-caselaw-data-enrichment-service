@@ -8,7 +8,7 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from utils.environment_helpers import validate_env_variable
-from utils.types import APIEndpointBaseURL
+from utils.types import APIEndpointBaseURL, DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -21,7 +21,7 @@ LOGGER.setLevel(logging.INFO)
 
 def fetch_judgment_urllib(
     api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
-) -> str:
+) -> DocumentAsXMLString:
     """
     Fetch the judgment from the National Archives
     """
@@ -31,7 +31,7 @@ def fetch_judgment_urllib(
     r = http.request("GET", url, headers=headers)
     print("Fetch judgment status:", r.status)
     print("Fetch judgment data:", r.data)
-    return r.data.decode()
+    return DocumentAsXMLString(r.data.decode())
 
 
 def lock_judgment_urllib(
@@ -83,7 +83,7 @@ def read_message(message):
     return status, query
 
 
-def upload_contents(source_key, xml_content):
+def upload_contents(source_key: str, xml_content: DocumentAsXMLString) -> None:
     """
     Upload judgment to destination S3 bucket
     """

@@ -15,12 +15,13 @@ from legislation_provisions_extraction.legislation_provisions import (
 )
 from replacer.second_stage_replacer import replace_references_by_paragraph
 from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
-def upload_contents(source_key, output_file_content):
+def upload_contents(source_key: str, output_file_content: DocumentAsXMLString) -> None:
     """
     Upload enriched file to S3 bucket
     """
@@ -32,7 +33,9 @@ def upload_contents(source_key, output_file_content):
     object.put(Body=output_file_content)
 
 
-def add_timestamp_and_engine_version(file_data):
+def add_timestamp_and_engine_version(
+    file_data: DocumentAsXMLString,
+) -> DocumentAsXMLString:
     """
     Add today's timestamp and version at time of enrichment
     """
@@ -50,7 +53,7 @@ def add_timestamp_and_engine_version(file_data):
     soup.proprietary.append(enrichment_version)
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
 
-    return soup
+    return DocumentAsXMLString(str(soup))
 
 
 def process_event(sqs_rec: S3EventRecord) -> None:
@@ -64,7 +67,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")
@@ -77,10 +80,10 @@ def process_event(sqs_rec: S3EventRecord) -> None:
         soup = BeautifulSoup(file_content, "xml")
         output_file_data = replace_references_by_paragraph(soup, resolved_refs)
         timestamp_added = add_timestamp_and_engine_version(output_file_data)
-        upload_contents(source_key, str(timestamp_added))
+        upload_contents(source_key, timestamp_added)
     else:
         timestamp_added = add_timestamp_and_engine_version(file_content)
-        upload_contents(source_key, str(timestamp_added))
+        upload_contents(source_key, timestamp_added)
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET")

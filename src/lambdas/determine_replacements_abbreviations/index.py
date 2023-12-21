@@ -10,6 +10,7 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -36,7 +37,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.debug("Input S3 key:%s", source_key)
 
     # fetch the judgement contents
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")
