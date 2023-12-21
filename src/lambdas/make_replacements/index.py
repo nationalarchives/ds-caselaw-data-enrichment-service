@@ -11,12 +11,13 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from replacer.make_replacments import make_post_header_replacements
 from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
 
 
-def upload_contents(source_key, text_content):
+def upload_contents(source_key: str, text_content: DocumentAsXMLString) -> None:
     """
     Upload judgment to destination S3 bucket
     """
@@ -55,7 +56,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info("Filename")
     LOGGER.info(filename)
 
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"]
         .read()
         .decode("utf-8")

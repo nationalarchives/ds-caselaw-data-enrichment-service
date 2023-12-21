@@ -20,6 +20,7 @@ import numpy as np
 from bs4 import BeautifulSoup
 
 from utils.proper_xml import create_tag_string
+from utils.types import DocumentAsXMLString
 
 SectionDict = Dict[str, List[Any]]  # this is a guess
 
@@ -295,7 +296,7 @@ def main(enriched_judgment_file_path, filename):
     return resolved_refs
 
 
-def provisions_pipeline(file_data):
+def provisions_pipeline(file_data: DocumentAsXMLString) -> list:
     """
     Matches all sections in the judgment to the correct legislation and provides necessary information for the replacements.
     :param file_data: file path of the judgment

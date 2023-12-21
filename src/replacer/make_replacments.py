@@ -7,7 +7,7 @@ import lxml.etree
 from bs4 import BeautifulSoup
 
 from replacer.replacer_pipeline import replacer_pipeline
-from utils.types import Reference
+from utils.types import DocumentAsXMLString, Reference
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
@@ -38,8 +38,8 @@ xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
 
 
 def make_post_header_replacements(
-    original_content: str, replacement_patterns: str
-) -> str:
+    original_content: DocumentAsXMLString, replacement_patterns: str
+) -> DocumentAsXMLString:
     """
     Replaces the content following a closing header tag in a legal document with new content.
     If there is no closing header tag, then we replace the full content.
@@ -66,10 +66,12 @@ def make_post_header_replacements(
         pre_header + end_header_tag + replaced_post_header_content
     )
 
-    return full_replaced_text_content
+    return DocumentAsXMLString(full_replaced_text_content)
 
 
-def apply_replacements(content: str, replacement_patterns: str) -> str:
+def apply_replacements(
+    content: DocumentAsXMLString, replacement_patterns: str
+) -> DocumentAsXMLString:
     """
     Run the replacer pipeline to make replacements on caselaw, legislation and abbreviations
     """
@@ -123,7 +125,7 @@ def detect_reference(text: str, etype: Literal["legislation"]) -> Reference:
     return references
 
 
-def sanitize_judgment(file_content: str) -> str:
+def sanitize_judgment(file_content: DocumentAsXMLString) -> DocumentAsXMLString:
     file_content = _remove_old_enrichment_references(file_content)
 
     soup = BeautifulSoup(file_content, "xml")
@@ -133,10 +135,12 @@ def sanitize_judgment(file_content: str) -> str:
     for element in soup.find_all("uk:tna-enrichment-engine"):
         element.decompose()
 
-    return str(soup)
+    return DocumentAsXMLString(str(soup))
 
 
-def _remove_old_enrichment_references(file_content: str) -> str:
+def _remove_old_enrichment_references(
+    file_content: DocumentAsXMLString,
+) -> DocumentAsXMLString:
     """
     Enrichment creates <ref uk:origin="TNA"> tags; delete only these.
     """
@@ -146,7 +150,7 @@ def _remove_old_enrichment_references(file_content: str) -> str:
 
     result = transform(root)
 
-    return lxml.etree.tostring(result).decode("utf-8")
+    return DocumentAsXMLString(lxml.etree.tostring(result).decode("utf-8"))
 
 
 def split_text_by_closing_header_tag(content: str) -> tuple[str, str, str]:

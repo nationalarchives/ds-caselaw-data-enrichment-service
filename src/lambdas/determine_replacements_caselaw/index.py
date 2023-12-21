@@ -13,6 +13,7 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 from database import db_connection
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
+from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -31,7 +32,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
     LOGGER.info("Input S3 key:%s", source_key)
 
     # fetch the judgement contents
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")

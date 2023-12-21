@@ -11,6 +11,8 @@ from typing import Iterable, TypedDict
 
 from bs4 import BeautifulSoup, Tag
 
+from utils.types import DocumentAsXMLString
+
 LegislationReference = tuple[tuple[int, int], str]
 
 
@@ -87,7 +89,7 @@ def create_replacement_paragraph(
 def replace_references_by_paragraph(
     file_data: BeautifulSoup,
     reference_replacements: list[LegislationReferenceReplacement],
-) -> str:
+) -> DocumentAsXMLString:
     """
     Replaces references in the file_data xml by paragraph
     :param file_data: XML file
@@ -110,4 +112,4 @@ def replace_references_by_paragraph(
                 paragraph_string, paragraph_reference_replacements
             )
         )
-    return str(file_data)
+    return DocumentAsXMLString(str(file_data))
