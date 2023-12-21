@@ -8,6 +8,7 @@ import spacy
 from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
 from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
+from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
 from database import db_connection
 from utils.environment_helpers import validate_env_variable
@@ -181,7 +182,7 @@ def push_contents(uploaded_bucket, uploaded_key):
 
     # Create a new message
     message = {"replacements": uploaded_key}
-    msg_attributes = {
+    msg_attributes: dict[str, MessageAttributeValueQueueTypeDef] = {
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
