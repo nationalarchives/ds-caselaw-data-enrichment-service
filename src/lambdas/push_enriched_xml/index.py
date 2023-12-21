@@ -21,7 +21,9 @@ LOGGER.setLevel(logging.INFO)
 ############################################
 
 
-def fetch_judgment_urllib(api_endpoint: APIEndpointBaseURL, query, username, pw):
+def fetch_judgment_urllib(
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+) -> DocumentAsXMLString:
     """
     Fetch the judgment from the National Archives
     """
@@ -31,10 +33,12 @@ def fetch_judgment_urllib(api_endpoint: APIEndpointBaseURL, query, username, pw)
     r = http.request("GET", url, headers=headers)
     print(r.status)
     print(r.data)
-    return r.data.decode()
+    return DocumentAsXMLString(r.data.decode())
 
 
-def release_lock(api_endpoint: APIEndpointBaseURL, query, username, pw):
+def release_lock(
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+) -> None:
     """
     Unlock the judgment after editing
     """
@@ -44,10 +48,11 @@ def release_lock(api_endpoint: APIEndpointBaseURL, query, username, pw):
     r = http.request("DELETE", url, headers=headers)
     print(r.status)
     print(r.data)
-    return r.data.decode()
 
 
-def patch_judgment_request(api_endpoint: APIEndpointBaseURL, query, data, username, pw):
+def patch_judgment_request(
+    api_endpoint: APIEndpointBaseURL, query: str, data: str, username: str, pw: str
+) -> None:
     """
     Apply enrichments to the judgment
     """
