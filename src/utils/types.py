@@ -15,3 +15,6 @@ APIEndpointBaseURL = NewType("APIEndpointBaseURL", str)
 
 DocumentAsXMLString = NewType("DocumentAsXMLString", str)
 """ An entire document as a string representation of XML. """
+
+DocumentAsXMLBytes = NewType("DocumentAsXMLBytes", bytes)
+""" An entire document as a bytestring representation of XML. """

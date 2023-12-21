@@ -13,6 +13,7 @@ from lxml import etree
 from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
 from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLBytes
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -20,7 +21,7 @@ LOGGER.setLevel(logging.INFO)
 client = boto3.client("ssm")
 
 
-def process_event(sqs_rec: S3EventRecord):
+def process_event(sqs_rec: S3EventRecord) -> tuple[bool, str, DocumentAsXMLBytes, str]:
     """
     Isolating processing from event unpacking for portability and testing
     """
@@ -30,9 +31,9 @@ def process_event(sqs_rec: S3EventRecord):
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
-    file_content = s3_client.get_object(Bucket=source_bucket, Key=source_key)[
-        "Body"
-    ].read()
+    file_content = DocumentAsXMLBytes(
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read()
+    )
 
     content_valid = validate_content(file_content)
     if content_valid:
@@ -43,7 +44,7 @@ def process_event(sqs_rec: S3EventRecord):
     return content_valid, source_key, file_content, source_bucket
 
 
-def find_schema(schema_bucket, schema_key):
+def find_schema(schema_bucket: str, schema_key: str) -> bytes:
     """
     Fetch schema from the schema S3 bucket
     """
@@ -55,7 +56,7 @@ def find_schema(schema_bucket, schema_key):
     return schema_content
 
 
-def load_schema(schema_content):
+def load_schema(schema_content: bytes) -> etree.XMLSchema:
     """
     Parse the schema to XML schema to describe structure of XML document
     """
@@ -66,7 +67,7 @@ def load_schema(schema_content):
     return xmlschema
 
 
-def validate_content(file_content):
+def validate_content(file_content: DocumentAsXMLBytes) -> bool:
     """
     Function to validate schema
     """
@@ -87,7 +88,7 @@ def validate_content(file_content):
     return result
 
 
-def upload_to_vcite(source_key, text_content):
+def upload_to_vcite(source_key: str, text_content: DocumentAsXMLBytes) -> None:
     """
     Upload judgment to destination S3 bucket
     """
@@ -99,7 +100,7 @@ def upload_to_vcite(source_key, text_content):
     object.put(Body=text_content)
 
 
-def trigger_push_enriched(uploaded_bucket, uploaded_key):
+def trigger_push_enriched(uploaded_bucket: str, uploaded_key: str) -> None:
     """
     Delivers replacements to the specified queue
     """
