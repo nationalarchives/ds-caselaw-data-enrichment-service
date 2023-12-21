@@ -34,19 +34,6 @@ def fetch_judgment_urllib(api_endpoint: APIEndpointBaseURL, query, username, pw)
     return r.data.decode()
 
 
-def patch_judgment(api_endpoint: APIEndpointBaseURL, query, data, username, pw):
-    """
-    Apply enrichments to the judgment
-    """
-    http = urllib3.PoolManager()
-    url = f"{api_endpoint}judgment/{query}"
-    headers = urllib3.make_headers(basic_auth=username + ":" + pw)
-    r = http.request("PATCH", url, headers=headers, fields=data)
-    print(r.status)
-    print(r.data)
-    return r.data.decode()
-
-
 def release_lock(api_endpoint: APIEndpointBaseURL, query, username, pw):
     """
     Unlock the judgment after editing
