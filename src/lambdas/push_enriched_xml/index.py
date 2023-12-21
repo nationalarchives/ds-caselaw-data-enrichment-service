@@ -4,6 +4,9 @@ import logging
 import boto3
 import requests
 import urllib3
+from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
+from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
 from requests.auth import HTTPBasicAuth
 
 from utils.environment_helpers import validate_env_variable
@@ -72,13 +75,13 @@ def patch_judgment_request(api_endpoint, query, data, username, pw):
 ############################################
 
 
-def process_event(sqs_rec):
+def process_event(sqs_rec: SQSRecord) -> None:
     """
     Function to apply enrichments to the judgment
     """
     s3_client = boto3.client("s3")
 
-    message = json.loads(sqs_rec["body"])
+    message = json.loads(sqs_rec.body)
     LOGGER.info("EVENT: %s", message)
     msg_attributes = sqs_rec["messageAttributes"]
     validated_file = message["Validated"]
@@ -126,7 +129,8 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 ENVIRONMENT = validate_env_variable("ENVIRONMENT")
 
 
-def handler(event, context):
+@event_source(data_class=SQSEvent)
+def handler(event: SQSEvent, context: LambdaContext) -> None:
     """
     Function called by the lambda to run the process event
     """
@@ -136,7 +140,7 @@ def handler(event, context):
     LOGGER.info(ENVIRONMENT)
     try:
         LOGGER.info("SQS EVENT: %s", event)
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
             process_event(sqs_rec)

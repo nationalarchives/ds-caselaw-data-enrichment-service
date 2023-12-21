@@ -6,6 +6,9 @@ import urllib.parse
 from io import BytesIO
 
 import boto3
+from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
+from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
 from lxml import etree
 
 from utils.environment_helpers import validate_env_variable
@@ -16,15 +19,13 @@ LOGGER.setLevel(logging.INFO)
 client = boto3.client("ssm")
 
 
-def process_event(sqs_rec):
+def process_event(sqs_rec: S3EventRecord):
     """
     Isolating processing from event unpacking for portability and testing
     """
     s3_client = boto3.client("s3")
-    source_bucket = sqs_rec["s3"]["bucket"]["name"]
-    source_key = urllib.parse.unquote_plus(
-        sqs_rec["s3"]["object"]["key"], encoding="utf-8"
-    )
+    source_bucket = sqs_rec.s3.bucket.name
+    source_key = urllib.parse.unquote_plus(sqs_rec.s3.get_object.key, encoding="utf-8")
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
@@ -125,7 +126,8 @@ VALIDATE_USING_SCHEMA = bool(int(validate_env_variable("VALIDATE_USING_SCHEMA"))
 DEST_QUEUE = validate_env_variable("DEST_QUEUE")
 
 
-def handler(event, context):
+@event_source(data_class=S3Event)
+def handler(event: S3Event, context: LambdaContext) -> None:
     """
     Function called by lambda to validate schema
     """
@@ -142,7 +144,7 @@ def handler(event, context):
     try:
         LOGGER.info("SQS EVENT: %s", event)
 
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             # stop the test notification event from breaking the parsing logic
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
