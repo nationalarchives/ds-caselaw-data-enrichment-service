@@ -10,6 +10,7 @@ from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
 from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 from lxml import etree
+from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
 from utils.environment_helpers import validate_env_variable
 
@@ -108,7 +109,7 @@ def trigger_push_enriched(uploaded_bucket, uploaded_key):
 
     # Create a new message
     message = {"Validated": uploaded_key}
-    msg_attributes = {
+    msg_attributes: dict[str, MessageAttributeValueQueueTypeDef] = {
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
