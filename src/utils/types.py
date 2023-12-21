@@ -9,3 +9,6 @@ Reference = list[tuple[tuple[int, int], str]]
 
 # from typing import TypeAlias
 # Replacement: TypeAlias = Iterable
+
+APIEndpointBaseURL = NewType("APIEndpointBaseURL", str)
+""" A string representing the endpoint URL of an FCL Privileged API instance. """
