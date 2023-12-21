@@ -10,6 +10,7 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 from requests.auth import HTTPBasicAuth
 
 from utils.environment_helpers import validate_env_variable
+from utils.types import APIEndpointBaseURL
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -20,7 +21,7 @@ LOGGER.setLevel(logging.INFO)
 ############################################
 
 
-def fetch_judgment_urllib(api_endpoint, query, username, pw):
+def fetch_judgment_urllib(api_endpoint: APIEndpointBaseURL, query, username, pw):
     """
     Fetch the judgment from the National Archives
     """
@@ -33,7 +34,7 @@ def fetch_judgment_urllib(api_endpoint, query, username, pw):
     return r.data.decode()
 
 
-def patch_judgment(api_endpoint, query, data, username, pw):
+def patch_judgment(api_endpoint: APIEndpointBaseURL, query, data, username, pw):
     """
     Apply enrichments to the judgment
     """
@@ -46,7 +47,7 @@ def patch_judgment(api_endpoint, query, data, username, pw):
     return r.data.decode()
 
 
-def release_lock(api_endpoint, query, username, pw):
+def release_lock(api_endpoint: APIEndpointBaseURL, query, username, pw):
     """
     Unlock the judgment after editing
     """
@@ -59,7 +60,7 @@ def release_lock(api_endpoint, query, username, pw):
     return r.data.decode()
 
 
-def patch_judgment_request(api_endpoint, query, data, username, pw):
+def patch_judgment_request(api_endpoint: APIEndpointBaseURL, query, data, username, pw):
     """
     Apply enrichments to the judgment
     """
@@ -94,11 +95,15 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info(validated_file)
 
     if ENVIRONMENT == "staging":
-        api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
+        api_endpoint = APIEndpointBaseURL(
+            "https://api.staging.caselaw.nationalarchives.gov.uk/"
+        )
     else:
-        api_endpoint = "https://api.caselaw.nationalarchives.gov.uk/"
+        api_endpoint = APIEndpointBaseURL(
+            "https://api.caselaw.nationalarchives.gov.uk/"
+        )
 
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")
