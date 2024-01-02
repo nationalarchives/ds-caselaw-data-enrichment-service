@@ -15,7 +15,8 @@ import numpy as np
 import pandas as pd
 import pytest
 from dotenv import load_dotenv
-from update_legislation_table.fetch_legislation import fetch_legislation
+
+from ..fetch_legislation import fetch_legislation
 
 
 @pytest.fixture(scope="module")
