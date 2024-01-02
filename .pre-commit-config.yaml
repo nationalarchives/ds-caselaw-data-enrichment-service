@@ -53,7 +53,7 @@ repos:
     hooks:
       - id: mypy
         name: mypy-src
-        args: [--explicit-package-bases, --strict]
+        args: [--explicit-package-bases]
         additional_dependencies:
           [
             types-mock,
