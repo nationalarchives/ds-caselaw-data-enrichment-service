@@ -13,6 +13,9 @@ Reference = list[tuple[tuple[int, int], str]]
 APIEndpointBaseURL = NewType("APIEndpointBaseURL", str)
 """ A string representing the endpoint URL of an FCL Privileged API instance. """
 
+XMLFragmentAsString = NewType("XMLFragmentAsString", str)
+""" A string representation of some XML. """
+
 DocumentAsXMLString = NewType("DocumentAsXMLString", str)
 """ An entire document as a string representation of XML. """
 
