@@ -3,9 +3,10 @@ from unittest.mock import patch
 import boto3
 import pandas as pd
 import pytest
-from index import update_legislation_table
 from moto import mock_secretsmanager
 from pytest_postgresql import factories
+
+from .index import update_legislation_table
 
 postgresql_my_proc = factories.postgresql_proc(
     user="testuser",

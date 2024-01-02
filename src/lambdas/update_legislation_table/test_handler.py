@@ -1,6 +1,6 @@
 from unittest.mock import Mock, patch
 
-from index import handler
+from .index import handler
 
 
 class TestHandler:
