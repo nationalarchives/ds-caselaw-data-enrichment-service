@@ -7,7 +7,12 @@ import lxml.etree
 from bs4 import BeautifulSoup
 
 from replacer.replacer_pipeline import replacer_pipeline
-from utils.types import DocumentAsXMLString, Reference, XMLFragmentAsString
+from utils.types import (
+    DocumentAsXMLString,
+    Reference,
+    Replacement,
+    XMLFragmentAsString,
+)
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
@@ -76,9 +81,9 @@ def apply_replacements(
     Run the replacer pipeline to make replacements on caselaw, legislation and abbreviations
     """
 
-    case_replacement_patterns = []
-    leg_replacement_patterns = []
-    abb_replacement_patterns = []
+    case_replacement_patterns: list[Replacement] = []
+    leg_replacement_patterns: list[Replacement] = []
+    abb_replacement_patterns: list[Replacement] = []
 
     for replacement_pattern_json in replacement_patterns.splitlines():
         LOGGER.debug(replacement_pattern_json)

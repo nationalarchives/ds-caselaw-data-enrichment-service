@@ -1,5 +1,6 @@
 import json
 import logging
+from typing import Any
 
 import boto3
 import urllib3
@@ -68,11 +69,11 @@ def check_lock_judgment_urllib(
 ############################################
 
 
-def read_message(message):
+def read_message(message_dict: dict[Any, Any]) -> tuple[str, str]:
     """
     Return the status and URI of the judgment
     """
-    json_body = json.dumps(message)
+    json_body = json.dumps(message_dict)
     json_message = json.loads(json_body)
     message = json_message["Message"]
     message_read = json.loads(message)

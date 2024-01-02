@@ -72,7 +72,9 @@ def write_replacements_file(replacement_list):
     return tuple_file
 
 
-def upload_replacements(replacements_bucket, replacements_key, replacements):
+def upload_replacements(
+    replacements_bucket: str, replacements_key: str, replacements: str
+) -> str:
     """
     Uploads replacements to S3 bucket
     """

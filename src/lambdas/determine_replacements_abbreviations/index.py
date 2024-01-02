@@ -10,8 +10,9 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
+from abbreviation_extraction.abbreviations_matcher import abb, abb_pipeline
 from utils.environment_helpers import validate_env_variable
-from utils.types import DocumentAsXMLString
+from utils.types import DocumentAsXMLString, NLPModel, Replacement
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -56,15 +57,13 @@ def process_event(sqs_rec: SQSRecord) -> None:
     )
     replacements_encoded = replacements_content + replacements_encoded
 
-    uploaded_key = upload_replacements(
-        REPLACEMENTS_BUCKET, source_key, replacements_encoded
-    )
-    LOGGER.info("Uploaded replacements to %s", uploaded_key)
+    upload_replacements(REPLACEMENTS_BUCKET, source_key, replacements_encoded)
+    LOGGER.info("Uploaded replacements to %s", REPLACEMENTS_BUCKET)
     push_contents(REPLACEMENTS_BUCKET, source_key)
     LOGGER.info("Message sent on queue to start make-replacements lambda")
 
 
-def write_replacements_file(replacement_list):
+def write_replacements_file(replacement_list: list[Replacement]) -> str:
     """
     Writes tuples of abbreviations and long forms from a list of replacements
     """
@@ -76,7 +75,9 @@ def write_replacements_file(replacement_list):
     return tuple_file
 
 
-def upload_replacements(replacements_bucket, replacements_key, replacements):
+def upload_replacements(
+    replacements_bucket: str, replacements_key: str, replacements: str
+) -> None:
     """
     Uploads replacements to S3 bucket
     """
@@ -85,7 +86,7 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
     object.put(Body=replacements)
 
 
-def determine_replacements(file_content):
+def determine_replacements(file_content: str) -> list[abb]:
     """
     Calls abbreviation function to return abbreviation and long form
     """
@@ -94,11 +95,10 @@ def determine_replacements(file_content):
     return replacements
 
 
-def get_abbreviation_replacements(file_content):
+def get_abbreviation_replacements(file_content: str) -> list[abb]:
     """
     Calls abbreviation pipeline to return abbreviation and long form
     """
-    from abbreviation_extraction.abbreviations_matcher import abb_pipeline
 
     nlp = init_NLP()
     replacements = abb_pipeline(file_content, nlp)
@@ -106,7 +106,7 @@ def get_abbreviation_replacements(file_content):
     return replacements
 
 
-def init_NLP():
+def init_NLP() -> NLPModel:
     """
     Load spacy model
     """
@@ -117,7 +117,7 @@ def init_NLP():
     return nlp
 
 
-def push_contents(uploaded_bucket, uploaded_key):
+def push_contents(uploaded_bucket: str, uploaded_key: str) -> None:
     """
     Delivers replacements to the specified queue
     """
