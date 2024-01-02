@@ -7,7 +7,7 @@ import lxml.etree
 from bs4 import BeautifulSoup
 
 from replacer.replacer_pipeline import replacer_pipeline
-from utils.types import DocumentAsXMLString, Reference
+from utils.types import DocumentAsXMLString, Reference, XMLFragmentAsString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
@@ -70,8 +70,8 @@ def make_post_header_replacements(
 
 
 def apply_replacements(
-    content: DocumentAsXMLString, replacement_patterns: str
-) -> DocumentAsXMLString:
+    content: XMLFragmentAsString, replacement_patterns: str
+) -> XMLFragmentAsString:
     """
     Run the replacer pipeline to make replacements on caselaw, legislation and abbreviations
     """
@@ -153,7 +153,9 @@ def _remove_old_enrichment_references(
     return DocumentAsXMLString(lxml.etree.tostring(result).decode("utf-8"))
 
 
-def split_text_by_closing_header_tag(content: str) -> tuple[str, str, str]:
+def split_text_by_closing_header_tag(
+    content: DocumentAsXMLString,
+) -> tuple[XMLFragmentAsString, XMLFragmentAsString, XMLFragmentAsString]:
     """
     Split content into start, closing header tag and body
     to ensure replacements only occur in the body.
@@ -162,5 +164,14 @@ def split_text_by_closing_header_tag(content: str) -> tuple[str, str, str]:
     for pattern in header_patterns:
         if pattern not in content:
             continue
-        return content.partition(pattern)
-    return "", "", content
+
+        return (
+            XMLFragmentAsString(content.partition(pattern)[0]),
+            XMLFragmentAsString(content.partition(pattern)[1]),
+            XMLFragmentAsString(content.partition(pattern)[2]),
+        )  # This cannot be a list comprehension because we need to know the length of the tuple
+    return (
+        XMLFragmentAsString(""),
+        XMLFragmentAsString(""),
+        XMLFragmentAsString(content),
+    )
