@@ -21,6 +21,10 @@ LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
+class SourceXMLMissingElement(RuntimeError):
+    """The provided XML document is missing an expected element, and we are choosing to fail."""
+
+
 def upload_contents(source_key: str, output_file_content: DocumentAsXMLString) -> None:
     """
     Upload enriched file to S3 bucket
@@ -50,7 +54,19 @@ def add_timestamp_and_engine_version(
         attrs={"xmlns:uk": "https://caselaw.nationalarchives.gov.uk/akn"},
     )
     enrichment_version.string = "6.0.0"
+
+    if not soup.proprietary:
+        raise SourceXMLMissingElement(
+            "This document does not have a <proprietary> element."
+        )
+
     soup.proprietary.append(enrichment_version)
+
+    if not soup.FRBRManifestation or not soup.FRBRManifestation.FRBRdate:
+        raise SourceXMLMissingElement(
+            "This document does not already have a manifestation date."
+        )
+
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
 
     return DocumentAsXMLString(str(soup))
