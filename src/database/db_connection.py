@@ -1,11 +1,16 @@
 """ Handles the database connection """
 
 
+from typing import Any
+
 import pandas as pd
 import psycopg2
+from sqlalchemy import Connection
 
 
-def create_connection(db, user, password, host, port) -> psycopg2.extensions.connection:
+def create_connection(
+    db: str, user: str, password: str, host: str, port: str
+) -> psycopg2.extensions.connection:
     """
     Connect to the PostgreSQL database server
     :param db
@@ -28,7 +33,7 @@ def create_connection(db, user, password, host, port) -> psycopg2.extensions.con
         raise
 
 
-def get_manifest_row(conn, rule_id):
+def get_manifest_row(conn: Connection, rule_id: str) -> pd.DataFrame:
     """
     Select all fields/rows from manifest that match the rule id
     :param conn: database connection created with create_connection()
@@ -41,7 +46,9 @@ def get_manifest_row(conn, rule_id):
     return matched_rule
 
 
-def get_matched_rule(conn, rule_id):
+def get_matched_rule(
+    conn: Connection, rule_id: str
+) -> tuple[Any, Any, bool, Any, Any, Any]:
     """
     Uses database connection to select fields/rows of interest from manifest that match the rule id
     :param conn: database connection, required
@@ -58,7 +65,7 @@ def get_matched_rule(conn, rule_id):
     return family, URItemplate, is_neutral, is_canonical, citation_type, canonical_form
 
 
-def get_legtitles(conn):
+def get_legtitles(conn: Connection) -> pd.DataFrame:
     """
     Retrieves legislation titles from legislation lookup table
     :param conn: database connection, required
@@ -70,7 +77,7 @@ def get_legtitles(conn):
     return leg_titles
 
 
-def get_hrefs(conn, title):
+def get_hrefs(conn: Connection, title: str):
     """
     Retrieves link to legislation title
     :param conn: database connection, required
@@ -82,7 +89,7 @@ def get_hrefs(conn, title):
     return test.ref.values[0]
 
 
-def get_canonical_leg(conn, title):
+def get_canonical_leg(conn, title: str):
     """
     Retrieves canonical form of legislation title
     :param conn: database connection, required
@@ -98,7 +105,7 @@ def get_canonical_leg(conn, title):
     return canonical_leg.citation.values[0]
 
 
-def close_connection(conn):
+def close_connection(conn: Connection) -> None:
     """
     Closes the Database connection
     :param conn: database connection to be closed

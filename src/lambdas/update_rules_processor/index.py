@@ -17,9 +17,9 @@ LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
-def write_patterns_file(patterns_list):
+def write_patterns_file(patterns_list: str) -> str:
     """
-    Write patterns to seperate lines
+    Write patterns to separate lines
     """
     patterns_file = ""
     for pattern in patterns_list:
@@ -27,7 +27,9 @@ def write_patterns_file(patterns_list):
     return patterns_file
 
 
-def upload_replacements(pattern_bucket, pattern_key, patterns_file):
+def upload_replacements(
+    pattern_bucket: str, pattern_key: str, patterns_file: str
+) -> str:
     """
     Upload replacements to S3 bucket
     """
@@ -38,7 +40,7 @@ def upload_replacements(pattern_bucket, pattern_key, patterns_file):
     return object.key
 
 
-def create_test_jsonl(source_bucket, df):
+def create_test_jsonl(source_bucket: str, df: pd.DataFrame) -> None:
     """
     Create test jsonl of patterns pulled from a csv
     """
@@ -47,7 +49,7 @@ def create_test_jsonl(source_bucket, df):
     upload_replacements(source_bucket, "test_citation_patterns.jsonl", patterns_file)
 
 
-def test_manifest(df, patterns):
+def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
     """
     Test for the rules manifest.
     """

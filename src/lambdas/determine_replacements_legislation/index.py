@@ -13,7 +13,7 @@ from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 from database import db_connection
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
-from utils.types import DocumentAsXMLString
+from utils.types import DocumentAsXMLString, NLPModel
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -106,7 +106,9 @@ def write_replacements_file(replacement_list):
     return tuple_file
 
 
-def upload_replacements(replacements_bucket, replacements_key, replacements):
+def upload_replacements(
+    replacements_bucket: str, replacements_key: str, replacements: str
+) -> str:
     """
     Uploads replacements to S3 bucket
     """
@@ -119,7 +121,7 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
     return object.key
 
 
-def init_NLP():
+def init_NLP() -> NLPModel:
     """
     Load spacy model
     """
@@ -130,7 +132,7 @@ def init_NLP():
     return nlp
 
 
-def close_connection(db_conn):
+def close_connection(db_conn) -> None:
     """
     Close the database connection
     """

@@ -55,7 +55,7 @@ DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 FORWARD_TO_VLEX_ENABLED = strtobool(validate_env_variable("FORWARD_TO_VLEX_ENABLED"))
 
 
-def handler(event, context):
+def handler(event, context) -> None:
     """
     Function called by the lambda to upload the enriched judgment to vlex
     """
