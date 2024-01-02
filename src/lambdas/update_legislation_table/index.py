@@ -10,8 +10,8 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_engine
 
-from .update_legislation_table.database import remove_duplicates
-from .update_legislation_table.fetch_legislation import fetch_legislation
+from update_legislation_table.database import remove_duplicates
+from update_legislation_table.fetch_legislation import fetch_legislation
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)

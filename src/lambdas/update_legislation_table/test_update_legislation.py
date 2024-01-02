@@ -6,7 +6,7 @@ import pytest
 from moto import mock_secretsmanager
 from pytest_postgresql import factories
 
-from .index import update_legislation_table
+from index import update_legislation_table
 
 postgresql_my_proc = factories.postgresql_proc(
     user="testuser",
