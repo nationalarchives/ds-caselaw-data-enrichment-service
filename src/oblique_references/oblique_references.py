@@ -20,19 +20,13 @@ The pipeline returns a dictionary containing the detected oblique reference, its
 """
 
 import re
-from typing import Any, Dict, List, Tuple, TypedDict, Union
+from typing import Dict, List, TypedDict, Union
 
 from bs4 import BeautifulSoup
 
 from utils.proper_xml import create_tag_string
 
-patterns = {
-    "legislation": r"<ref(((?!ref>).)*)type=\"legislation\"(.*?)ref>",
-    "numbered_act": r"(the|this|that|The|This|That)\s([0-9]{4})\s(Act)",
-    "act": r"(the|this|that|The|This|That)\s(Act)",
-}
-
-LegislationReference = Tuple[Tuple[int, int], str]
+LegislationReference = tuple[tuple[int, int], str]
 
 
 class LegislationDict(TypedDict):
@@ -40,11 +34,24 @@ class LegislationDict(TypedDict):
     year: str
     para: int
     para_pos: tuple[int, int]
-    canonical: str | list[str] | None
-    href: str | list[str] | None
+    canonical: str
+    href: str
 
 
 LegislationReferenceReplacements = List[Dict[str, Union[str, int]]]
+
+
+class NotExactlyOneRefTag(RuntimeError):
+    """soup.get() can return None if there is no <ref> tag to find, or
+    a list of hits if there are multiple tags. These are not handled
+    correctly."""
+
+
+patterns = {
+    "legislation": r"<ref(((?!ref>).)*)type=\"legislation\"(.*?)ref>",
+    "numbered_act": r"(the|this|that|The|This|That)\s([0-9]{4})\s(Act)",
+    "act": r"(the|this|that|The|This|That)\s(Act)",
+}
 
 
 def detect_reference(text: str, etype: str) -> List[LegislationReference]:
@@ -77,12 +84,24 @@ def create_legislation_dict(
             continue
         legislation_name = ref.text if not None else ""
 
+        href = ref.get("href")
+        canonical = ref.get("canonical")
+
+        if not isinstance(href, str):
+            raise NotExactlyOneRefTag(
+                f"Legislation reference {legislation_reference!r} does not have exactly one 'href', paragraph {paragraph_number}"
+            )
+        if not isinstance(canonical, str):
+            raise NotExactlyOneRefTag(
+                f"Legislation reference {legislation_reference!r} does not have exactly one 'canonical', paragraph {paragraph_number}"
+            )
+
         legislation_dict: LegislationDict = {
             "para": paragraph_number,
             "para_pos": legislation_reference[0],
             "detected_leg": legislation_name,
-            "href": ref.get("href"),
-            "canonical": ref.get("canonical"),
+            "href": href,
+            "canonical": canonical,
             "year": _get_legislation_year(legislation_name),
         }
 
@@ -184,7 +203,7 @@ def create_section_ref_tag(replacement_dict: LegislationDict, match: str) -> str
 
 def get_replacements(
     detected_acts: List[LegislationReference],
-    legislation_dicts: List[Dict],
+    legislation_dicts: List[LegislationDict],
     numbered_act: bool,
     replacements: List[Dict],
     paragraph_number: int,
