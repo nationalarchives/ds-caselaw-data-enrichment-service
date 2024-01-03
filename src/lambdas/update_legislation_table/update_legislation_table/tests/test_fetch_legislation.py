@@ -42,8 +42,8 @@ def test_fetch_legislation_integration(mock_datetime, set_env_vars) -> None:
     mock_datetime.today.return_value = frozen_date
 
     # WHEN
-    sparql_username = os.environ.get("SPARQL_USERNAME")
-    sparql_password = os.environ.get("SPARQL_PASSWORD")
+    sparql_username = os.environ.get("SPARQL_USERNAME", "")
+    sparql_password = os.environ.get("SPARQL_PASSWORD", "")
 
     days = 16
 

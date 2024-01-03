@@ -63,7 +63,6 @@ repos:
             "boto3-stubs[essential, secretsmanager]",
             aws_lambda_powertools,
           ]
-        exclude: tests/
 
   # Check the tests in regular mode
   # - repo: https://github.com/pre-commit/mirrors-mypy

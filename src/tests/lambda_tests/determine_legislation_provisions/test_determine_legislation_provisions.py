@@ -1,7 +1,7 @@
 import os
 import re
 
-import lxml
+import lxml.etree
 
 os.environ["DEST_BUCKET"] = "PLACEHOLDER"
 from lambdas.determine_legislation_provisions.index import (  # noqa: E402
