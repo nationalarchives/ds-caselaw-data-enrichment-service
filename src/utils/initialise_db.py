@@ -45,7 +45,7 @@ def init_db_connection() -> psycopg2.extensions.connection:
     )
 
 
-def _get_database_password():
+def _get_database_password() -> str:
     aws_secret_name = validate_env_variable("SECRET_PASSWORD_LOOKUP")
     aws_region_name = validate_env_variable("REGION_NAME")
     return get_aws_secret(aws_secret_name, aws_region_name)

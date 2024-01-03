@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, text
 from testing.postgresql import Postgresql
-from update_legislation_table.database import remove_duplicates
+
+from ..database import remove_duplicates
 
 
 def test_remove_duplicates():

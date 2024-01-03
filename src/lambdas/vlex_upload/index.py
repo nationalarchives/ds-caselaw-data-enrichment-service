@@ -7,22 +7,10 @@ from distutils.util import strtobool
 
 import boto3
 
+from utils.environment_helpers import validate_env_variable
+
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
-
-
-def validate_env_variable(env_var_name):
-    print(f"Getting the value of the environment variable: {env_var_name}")
-
-    try:
-        env_variable = os.environ[env_var_name]
-    except KeyError:
-        raise Exception(f"Please, set environment variable {env_var_name}")
-
-    if not env_variable:
-        raise Exception(f"Please, provide environment variable {env_var_name}")
-
-    return env_variable
 
 
 def process_event(sqs_rec):
@@ -67,7 +55,7 @@ DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
 FORWARD_TO_VLEX_ENABLED = strtobool(validate_env_variable("FORWARD_TO_VLEX_ENABLED"))
 
 
-def handler(event, context):
+def handler(event, context) -> None:
     """
     Function called by the lambda to upload the enriched judgment to vlex
     """

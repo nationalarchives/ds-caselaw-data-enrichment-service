@@ -5,15 +5,21 @@ import logging
 
 import boto3
 import spacy
+from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
+from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
+from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
+from abbreviation_extraction.abbreviations_matcher import abb, abb_pipeline
 from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLString, NLPModel, Replacement
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
 # isolating processing from event unpacking for portability and testing
-def process_event(sqs_rec):
+def process_event(sqs_rec: SQSRecord) -> None:
     """
     Function to fetch the XML, call the replacements abbreviations pipeline and upload the enriched XML to the
     destination bucket
@@ -33,7 +39,7 @@ def process_event(sqs_rec):
     LOGGER.debug("Input S3 key:%s", source_key)
 
     # fetch the judgement contents
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")
@@ -51,15 +57,13 @@ def process_event(sqs_rec):
     )
     replacements_encoded = replacements_content + replacements_encoded
 
-    uploaded_key = upload_replacements(
-        REPLACEMENTS_BUCKET, source_key, replacements_encoded
-    )
-    LOGGER.info("Uploaded replacements to %s", uploaded_key)
+    upload_replacements(REPLACEMENTS_BUCKET, source_key, replacements_encoded)
+    LOGGER.info("Uploaded replacements to %s", REPLACEMENTS_BUCKET)
     push_contents(REPLACEMENTS_BUCKET, source_key)
     LOGGER.info("Message sent on queue to start make-replacements lambda")
 
 
-def write_replacements_file(replacement_list):
+def write_replacements_file(replacement_list: list[Replacement]) -> str:
     """
     Writes tuples of abbreviations and long forms from a list of replacements
     """
@@ -71,7 +75,9 @@ def write_replacements_file(replacement_list):
     return tuple_file
 
 
-def upload_replacements(replacements_bucket, replacements_key, replacements):
+def upload_replacements(
+    replacements_bucket: str, replacements_key: str, replacements: str
+) -> None:
     """
     Uploads replacements to S3 bucket
     """
@@ -80,7 +86,7 @@ def upload_replacements(replacements_bucket, replacements_key, replacements):
     object.put(Body=replacements)
 
 
-def determine_replacements(file_content):
+def determine_replacements(file_content: str) -> list[abb]:
     """
     Calls abbreviation function to return abbreviation and long form
     """
@@ -89,11 +95,10 @@ def determine_replacements(file_content):
     return replacements
 
 
-def get_abbreviation_replacements(file_content):
+def get_abbreviation_replacements(file_content: str) -> list[abb]:
     """
     Calls abbreviation pipeline to return abbreviation and long form
     """
-    from abbreviation_extraction.abbreviations_matcher import abb_pipeline
 
     nlp = init_NLP()
     replacements = abb_pipeline(file_content, nlp)
@@ -101,7 +106,7 @@ def get_abbreviation_replacements(file_content):
     return replacements
 
 
-def init_NLP():
+def init_NLP() -> NLPModel:
     """
     Load spacy model
     """
@@ -112,7 +117,7 @@ def init_NLP():
     return nlp
 
 
-def push_contents(uploaded_bucket, uploaded_key):
+def push_contents(uploaded_bucket: str, uploaded_key: str) -> None:
     """
     Delivers replacements to the specified queue
     """
@@ -122,7 +127,7 @@ def push_contents(uploaded_bucket, uploaded_key):
 
     # Create a new message
     message = {"replacements": uploaded_key}
-    msg_attributes = {
+    msg_attributes: dict[str, MessageAttributeValueQueueTypeDef] = {
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
@@ -135,7 +140,8 @@ DEST_QUEUE = validate_env_variable("DEST_QUEUE_NAME")
 REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
 
-def handler(event, context):
+@event_source(data_class=SQSEvent)
+def handler(event: SQSEvent, context: LambdaContext) -> None:
     """
     Function called by the lambda to run the process event
     """
@@ -144,7 +150,7 @@ def handler(event, context):
     try:
         LOGGER.info("SQS EVENT: %s", event)
 
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             # stop the test notification event from breaking the parsing logic
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break

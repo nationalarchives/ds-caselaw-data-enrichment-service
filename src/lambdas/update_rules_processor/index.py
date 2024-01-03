@@ -8,6 +8,8 @@ from io import StringIO
 import boto3
 import pandas as pd
 import spacy
+from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
+from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from utils.initialise_db import init_db_engine
 
@@ -15,9 +17,9 @@ LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
-def write_patterns_file(patterns_list):
+def write_patterns_file(patterns_list: str) -> str:
     """
-    Write patterns to seperate lines
+    Write patterns to separate lines
     """
     patterns_file = ""
     for pattern in patterns_list:
@@ -25,7 +27,9 @@ def write_patterns_file(patterns_list):
     return patterns_file
 
 
-def upload_replacements(pattern_bucket, pattern_key, patterns_file):
+def upload_replacements(
+    pattern_bucket: str, pattern_key: str, patterns_file: str
+) -> str:
     """
     Upload replacements to S3 bucket
     """
@@ -36,7 +40,7 @@ def upload_replacements(pattern_bucket, pattern_key, patterns_file):
     return object.key
 
 
-def create_test_jsonl(source_bucket, df):
+def create_test_jsonl(source_bucket: str, df: pd.DataFrame) -> None:
     """
     Create test jsonl of patterns pulled from a csv
     """
@@ -45,7 +49,7 @@ def create_test_jsonl(source_bucket, df):
     upload_replacements(source_bucket, "test_citation_patterns.jsonl", patterns_file)
 
 
-def test_manifest(df, patterns):
+def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
     """
     Test for the rules manifest.
     """
@@ -71,7 +75,8 @@ def test_manifest(df, patterns):
     assert len(MATCHED_IDS) == df.shape[0]
 
 
-def lambda_handler(event, context):
+@event_source(data_class=S3Event)
+def lambda_handler(event: S3Event, context: LambdaContext) -> None:
     """
     Function called by the lambda to update the rules
     """
@@ -79,9 +84,10 @@ def lambda_handler(event, context):
 
     # read CSV file from rules bucket
     s3 = boto3.client("s3")
-    source_bucket = event["Records"][0]["s3"]["bucket"]["name"]
+    event_record = event.record
+    source_bucket = event_record.s3.bucket.name
     source_key = urllib.parse.unquote_plus(
-        event["Records"][0]["s3"]["object"]["key"], encoding="utf-8"
+        event_record.s3.get_object.key, encoding="utf-8"
     )
     print(source_bucket)
     print(source_key)

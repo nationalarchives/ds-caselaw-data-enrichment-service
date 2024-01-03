@@ -5,7 +5,7 @@ This module contains utility functions for working with databases using SQLAlche
 from sqlalchemy import Connection, text
 
 
-def remove_duplicates(db_conn: Connection, table_name: str):
+def remove_duplicates(db_conn: Connection, table_name: str) -> None:
     """
     Removes duplicate rows from the specified table in the database.
     Uses a SQL query to identify duplicate rows based on all columns, except for the

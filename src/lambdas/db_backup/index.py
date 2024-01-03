@@ -1,10 +1,16 @@
 from datetime import datetime
 
 import boto3
+from aws_lambda_powertools.utilities.data_classes import (
+    EventBridgeEvent,
+    event_source,
+)
+from aws_lambda_powertools.utilities.typing import LambdaContext
 from botocore.exceptions import ClientError
 
 
-def lambda_handler(event, context):
+@event_source(data_class=EventBridgeEvent)
+def lambda_handler(event: EventBridgeEvent, context: LambdaContext) -> None:
     # Create RDS and S3 clients
     rds = boto3.client("rds")
     db = event["db-name"]

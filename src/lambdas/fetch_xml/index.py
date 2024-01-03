@@ -1,10 +1,15 @@
 import json
 import logging
+from typing import Any
 
 import boto3
 import urllib3
+from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
+from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from utils.environment_helpers import validate_env_variable
+from utils.types import APIEndpointBaseURL, DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -15,7 +20,9 @@ LOGGER.setLevel(logging.INFO)
 ############################################
 
 
-def fetch_judgment_urllib(api_endpoint, query, username, pw):
+def fetch_judgment_urllib(
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+) -> DocumentAsXMLString:
     """
     Fetch the judgment from the National Archives
     """
@@ -25,10 +32,12 @@ def fetch_judgment_urllib(api_endpoint, query, username, pw):
     r = http.request("GET", url, headers=headers)
     print("Fetch judgment status:", r.status)
     print("Fetch judgment data:", r.data)
-    return r.data.decode()
+    return DocumentAsXMLString(r.data.decode())
 
 
-def lock_judgment_urllib(api_endpoint, query, username, pw):
+def lock_judgment_urllib(
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+) -> None:
     """
     Lock the judgment for editing
     """
@@ -40,7 +49,9 @@ def lock_judgment_urllib(api_endpoint, query, username, pw):
     # return r.data.decode()
 
 
-def check_lock_judgment_urllib(api_endpoint, query, username, pw):
+def check_lock_judgment_urllib(
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+) -> None:
     """
     Check whether the judgment is locked
     """
@@ -58,11 +69,11 @@ def check_lock_judgment_urllib(api_endpoint, query, username, pw):
 ############################################
 
 
-def read_message(message):
+def read_message(message_dict: dict[Any, Any]) -> tuple[str, str]:
     """
     Return the status and URI of the judgment
     """
-    json_body = json.dumps(message)
+    json_body = json.dumps(message_dict)
     json_message = json.loads(json_body)
     message = json_message["Message"]
     message_read = json.loads(message)
@@ -73,7 +84,7 @@ def read_message(message):
     return status, query
 
 
-def upload_contents(source_key, xml_content):
+def upload_contents(source_key: str, xml_content: DocumentAsXMLString) -> None:
     """
     Upload judgment to destination S3 bucket
     """
@@ -84,12 +95,12 @@ def upload_contents(source_key, xml_content):
     object.put(Body=xml_content)
 
 
-def process_event(sqs_rec, api_endpoint):
+def process_event(sqs_rec: SQSRecord, api_endpoint: APIEndpointBaseURL) -> None:
     """
     Function to check the status of the judgment, fetch the judgment if it is published, lock the judgment for editing
     and upload to destination S3 bucket
     """
-    message = json.loads(sqs_rec["body"])
+    message = json.loads(sqs_rec.body)
     status, query = read_message(
         message
     )  # query is the URL of the item requested to be enriched
@@ -117,7 +128,8 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 ENVIRONMENT = validate_env_variable("ENVIRONMENT")
 
 
-def handler(event, context):
+@event_source(data_class=SQSEvent)
+def handler(event: SQSEvent, context: LambdaContext) -> None:
     """
     Function called by the lambda to run the process event
     """
@@ -126,13 +138,18 @@ def handler(event, context):
     LOGGER.info(ENVIRONMENT)
 
     if ENVIRONMENT == "staging":
-        api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
+        api_endpoint = APIEndpointBaseURL(
+            "https://api.staging.caselaw.nationalarchives.gov.uk/"
+        )
+
     else:
-        api_endpoint = "https://api.caselaw.nationalarchives.gov.uk/"
+        api_endpoint = APIEndpointBaseURL(
+            "https://api.caselaw.nationalarchives.gov.uk/"
+        )
 
     try:
         LOGGER.info("SQS EVENT: %s", event)
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
             process_event(sqs_rec, api_endpoint)

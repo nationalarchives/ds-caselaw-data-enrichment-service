@@ -7,15 +7,23 @@ Handles the replacements of oblique references and legislation provisions.
 
 import re
 from itertools import groupby
-from typing import Dict, Iterable, List, Tuple, Union
+from typing import Iterable, TypedDict
 
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
-LegislationReference = Tuple[Tuple[int, int], str]
-LegislationReferenceReplacements = List[Dict[str, Union[str, int]]]
+from utils.types import DocumentAsXMLString
+
+LegislationReference = tuple[tuple[int, int], str]
 
 
-def split_string(text: str, split_points: List[int]) -> List:
+class LegislationReferenceReplacement(TypedDict):
+    detected_ref: str  # "the 2004 Act"
+    ref_position: int
+    ref_para: int
+    ref_tag: str  # "<ref href='...'>the 2004 Act</ref>"
+
+
+def split_string(text: str, split_points: list[int]) -> list[str]:
     """
     Splits a string at given points in the text
     :param text: some string of text
@@ -28,7 +36,7 @@ def split_string(text: str, split_points: List[int]) -> List:
 
 
 def replace_references(
-    text: str, reference_replacements: LegislationReferenceReplacements
+    text: str, reference_replacements: list[LegislationReferenceReplacement]
 ) -> str:
     """
     Replaces references in text according to the reference_replacements list
@@ -41,7 +49,7 @@ def replace_references(
     reference_replacements = sorted(
         reference_replacements, key=lambda x: x["ref_position"]
     )
-    split_points: List[int] = [
+    split_points: list[int] = [
         split_point
         for reference_replacement in reference_replacements
         if isinstance((split_point := reference_replacement.get("ref_position")), int)
@@ -66,19 +74,22 @@ def replace_references(
 
 def create_replacement_paragraph(
     paragraph_string: str,
-    paragraph_reference_replacements: Iterable[dict[str, str | int]],
-) -> BeautifulSoup:
+    paragraph_reference_replacements: Iterable[LegislationReferenceReplacement],
+) -> Tag:
     replacement_paragraph_string = replace_references(
         paragraph_string, list(paragraph_reference_replacements)
     )
     wrapper = f'<xml xmlns:uk="placeholder">{replacement_paragraph_string}</xml>'
     replacement_paragraph = BeautifulSoup(wrapper, "xml").p
+    if replacement_paragraph is None:
+        raise RuntimeError(f"No paragraphs found in {replacement_paragraph_string}")
     return replacement_paragraph
 
 
 def replace_references_by_paragraph(
-    file_data: BeautifulSoup, reference_replacements: LegislationReferenceReplacements
-) -> str:
+    file_data: BeautifulSoup,
+    reference_replacements: list[LegislationReferenceReplacement],
+) -> DocumentAsXMLString:
     """
     Replaces references in the file_data xml by paragraph
     :param file_data: XML file
@@ -86,7 +97,7 @@ def replace_references_by_paragraph(
     :return: enriched XML file data string
     """
 
-    def key_func(k):
+    def key_func(k: LegislationReferenceReplacement) -> int:
         return k["ref_para"]
 
     paragraphs = file_data.find_all("p")
@@ -101,4 +112,4 @@ def replace_references_by_paragraph(
                 paragraph_string, paragraph_reference_replacements
             )
         )
-    return str(file_data)
+    return DocumentAsXMLString(str(file_data))

@@ -17,9 +17,10 @@ import re
 from typing import Any, Dict, List
 
 import numpy as np
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 from utils.proper_xml import create_tag_string
+from utils.types import DocumentAsXMLString
 
 SectionDict = Dict[str, List[Any]]  # this is a guess
 
@@ -67,11 +68,11 @@ def find_closest_legislation(legislations, sections, thr=30):
     return section_to_leg
 
 
-def get_clean_section_number(section):
+def get_clean_section_number(section: str) -> str:
     """
     Cleans just the section number.
     :param section: section to return the number for
-    :returns section_number: returns numbers from section
+    :returns section_number: returns numbers from section as a string
     """
     section_number = re.findall(r"\d+", section)
     return section_number[0]
@@ -90,6 +91,8 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
         section_number = get_clean_section_number(section)
         soup = BeautifulSoup(full_ref, "xml")
         ref = soup.find("ref")
+        if not isinstance(ref, Tag):
+            raise ValueError("Did not successfully get <ref> tag")
         canonical = ref.get("canonical")  # get the legislation canonical form
         leg_href = ref.get("href")  # get the legislation href
         section_href = (
@@ -98,7 +101,7 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
         clean_section = "section " + str(section_number)
 
         # creates the canonical form for subsection
-        sub_canonical = canonical + " s. " + section_number if canonical else ""
+        sub_canonical = f"{canonical} s. {section_number}" if canonical else ""
 
         # new dictionary with the relevant information for the entry
         new_definition = {
@@ -295,7 +298,7 @@ def main(enriched_judgment_file_path, filename):
     return resolved_refs
 
 
-def provisions_pipeline(file_data):
+def provisions_pipeline(file_data: DocumentAsXMLString) -> list:
     """
     Matches all sections in the judgment to the correct legislation and provides necessary information for the replacements.
     :param file_data: file path of the judgment

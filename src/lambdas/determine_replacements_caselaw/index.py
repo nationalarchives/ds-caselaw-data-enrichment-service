@@ -6,31 +6,34 @@ import urllib.parse
 
 import boto3
 import spacy
+from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
+from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
+from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
 from database import db_connection
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
+from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
 # isolating processing from event unpacking for portability and testing
-def process_event(sqs_rec):
+def process_event(sqs_rec: S3EventRecord) -> None:
     """
     Function to fetch the XML, call the determine_replacements_caselaw pipeline and upload the enriched XML to the
     destination bucket
     """
     s3_client = boto3.client("s3")
-    source_bucket = sqs_rec["s3"]["bucket"]["name"]
-    source_key = urllib.parse.unquote_plus(
-        sqs_rec["s3"]["object"]["key"], encoding="utf-8"
-    )
+    source_bucket = sqs_rec.s3.bucket.name
+    source_key = urllib.parse.unquote_plus(sqs_rec.s3.get_object.key, encoding="utf-8")
     LOGGER.info("Input bucket name:%s", source_bucket)
     LOGGER.info("Input S3 key:%s", source_key)
 
     # fetch the judgement contents
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")
@@ -69,7 +72,9 @@ def write_replacements_file(replacement_list):
     return tuple_file
 
 
-def upload_replacements(replacements_bucket, replacements_key, replacements):
+def upload_replacements(
+    replacements_bucket: str, replacements_key: str, replacements: str
+) -> str:
     """
     Uploads replacements to S3 bucket
     """
@@ -170,7 +175,7 @@ def push_contents(uploaded_bucket, uploaded_key):
 
     # Create a new message
     message = {"replacements": uploaded_key}
-    msg_attributes = {
+    msg_attributes: dict[str, MessageAttributeValueQueueTypeDef] = {
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
@@ -185,7 +190,8 @@ RULES_FILE_KEY = validate_env_variable("RULES_FILE_KEY")
 REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
 
-def handler(event, context):
+@event_source(data_class=S3Event)
+def handler(event: S3Event, context: LambdaContext) -> None:
     """
     Function called by the lambda to run the process event
     """
@@ -194,7 +200,7 @@ def handler(event, context):
     try:
         LOGGER.info("SQS EVENT: %s", event)
 
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             # stop the test notification event from breaking the parsing logic
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break

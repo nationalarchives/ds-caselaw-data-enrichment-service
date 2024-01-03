@@ -5,28 +5,19 @@ import logging
 import os
 
 import boto3
+from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
+from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from replacer.make_replacments import make_post_header_replacements
+from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
 
 
-def validate_env_variable(env_var_name):
-    print(f"Getting the value of the environment variable: {env_var_name}")
-
-    try:
-        env_variable = os.environ[env_var_name]
-    except KeyError:
-        raise Exception(f"Please, set environment variable {env_var_name}")
-
-    if not env_variable:
-        raise Exception(f"Please, provide environment variable {env_var_name}")
-
-    return env_variable
-
-
-def upload_contents(source_key, text_content):
+def upload_contents(source_key: str, text_content: DocumentAsXMLString) -> None:
     """
     Upload judgment to destination S3 bucket
     """
@@ -38,7 +29,7 @@ def upload_contents(source_key, text_content):
     object.put(Body=text_content)
 
 
-def process_event(sqs_rec):
+def process_event(sqs_rec: SQSRecord) -> None:
     """
     Isolating processing from event unpacking for portability and testing
     """
@@ -65,7 +56,7 @@ def process_event(sqs_rec):
     LOGGER.info("Filename")
     LOGGER.info(filename)
 
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"]
         .read()
         .decode("utf-8")
@@ -91,7 +82,8 @@ REPLACEMENTS_BUCKET = validate_env_variable("REPLACEMENTS_BUCKET")
 
 
 # make replacements
-def handler(event, context):
+@event_source(data_class=SQSEvent)
+def handler(event: SQSEvent, context: LambdaContext) -> None:
     """
     Function called by the lambda to run the process event
     """
@@ -101,7 +93,7 @@ def handler(event, context):
     try:
         LOGGER.info("SQS EVENT: %s", event)
 
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             # stop the test notification event from breaking the parsing logic
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break

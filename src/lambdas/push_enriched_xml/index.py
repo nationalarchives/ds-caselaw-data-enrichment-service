@@ -1,28 +1,19 @@
 import json
 import logging
-import os
 
 import boto3
 import requests
 import urllib3
+from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
+from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
 from requests.auth import HTTPBasicAuth
+
+from utils.environment_helpers import validate_env_variable
+from utils.types import APIEndpointBaseURL, DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
-
-
-def validate_env_variable(env_var_name):
-    LOGGER.debug(f"Getting the value of the environment variable: {env_var_name}")
-
-    try:
-        env_variable = os.environ[env_var_name]
-    except KeyError:
-        raise Exception(f"Please, set environment variable {env_var_name}")
-
-    if not env_variable:
-        raise Exception(f"Please, provide environment variable {env_var_name}")
-
-    return env_variable
 
 
 ############################################
@@ -30,7 +21,9 @@ def validate_env_variable(env_var_name):
 ############################################
 
 
-def fetch_judgment_urllib(api_endpoint, query, username, pw):
+def fetch_judgment_urllib(
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+) -> DocumentAsXMLString:
     """
     Fetch the judgment from the National Archives
     """
@@ -40,23 +33,12 @@ def fetch_judgment_urllib(api_endpoint, query, username, pw):
     r = http.request("GET", url, headers=headers)
     print(r.status)
     print(r.data)
-    return r.data.decode()
+    return DocumentAsXMLString(r.data.decode())
 
 
-def patch_judgment(api_endpoint, query, data, username, pw):
-    """
-    Apply enrichments to the judgment
-    """
-    http = urllib3.PoolManager()
-    url = f"{api_endpoint}judgment/{query}"
-    headers = urllib3.make_headers(basic_auth=username + ":" + pw)
-    r = http.request("PATCH", url, headers=headers, fields=data)
-    print(r.status)
-    print(r.data)
-    return r.data.decode()
-
-
-def release_lock(api_endpoint, query, username, pw):
+def release_lock(
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+) -> None:
     """
     Unlock the judgment after editing
     """
@@ -66,10 +48,11 @@ def release_lock(api_endpoint, query, username, pw):
     r = http.request("DELETE", url, headers=headers)
     print(r.status)
     print(r.data)
-    return r.data.decode()
 
 
-def patch_judgment_request(api_endpoint, query, data, username, pw):
+def patch_judgment_request(
+    api_endpoint: APIEndpointBaseURL, query: str, data: str, username: str, pw: str
+) -> None:
     """
     Apply enrichments to the judgment
     """
@@ -85,13 +68,13 @@ def patch_judgment_request(api_endpoint, query, data, username, pw):
 ############################################
 
 
-def process_event(sqs_rec):
+def process_event(sqs_rec: SQSRecord) -> None:
     """
     Function to apply enrichments to the judgment
     """
     s3_client = boto3.client("s3")
 
-    message = json.loads(sqs_rec["body"])
+    message = json.loads(sqs_rec.body)
     LOGGER.info("EVENT: %s", message)
     msg_attributes = sqs_rec["messageAttributes"]
     validated_file = message["Validated"]
@@ -104,11 +87,15 @@ def process_event(sqs_rec):
     LOGGER.info(validated_file)
 
     if ENVIRONMENT == "staging":
-        api_endpoint = "https://api.staging.caselaw.nationalarchives.gov.uk/"
+        api_endpoint = APIEndpointBaseURL(
+            "https://api.staging.caselaw.nationalarchives.gov.uk/"
+        )
     else:
-        api_endpoint = "https://api.caselaw.nationalarchives.gov.uk/"
+        api_endpoint = APIEndpointBaseURL(
+            "https://api.caselaw.nationalarchives.gov.uk/"
+        )
 
-    file_content = (
+    file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
         .decode("utf-8")
@@ -139,7 +126,8 @@ API_PASSWORD = validate_env_variable("API_PASSWORD")
 ENVIRONMENT = validate_env_variable("ENVIRONMENT")
 
 
-def handler(event, context):
+@event_source(data_class=SQSEvent)
+def handler(event: SQSEvent, context: LambdaContext) -> None:
     """
     Function called by the lambda to run the process event
     """
@@ -149,7 +137,7 @@ def handler(event, context):
     LOGGER.info(ENVIRONMENT)
     try:
         LOGGER.info("SQS EVENT: %s", event)
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
             process_event(sqs_rec)

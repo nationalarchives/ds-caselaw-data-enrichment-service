@@ -10,7 +10,7 @@ LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
-def validate_env_variable(env_var_name):
+def validate_env_variable(env_var_name: str) -> str:
     print(f"Getting the value of the environment variable: {env_var_name}")
 
     try:
@@ -24,7 +24,7 @@ def validate_env_variable(env_var_name):
     return env_variable
 
 
-def get_aws_secret(aws_secret_name, aws_region_name):
+def get_aws_secret(aws_secret_name: str, aws_region_name: str) -> str | bytes:
     """
     Get aws secret
     """
@@ -43,16 +43,11 @@ def get_aws_secret(aws_secret_name, aws_region_name):
         # Decrypts secret using the associated KMS CMK.
         # Depending on whether the secret is a string or binary, one of these fields will be populated.
         if "SecretString" in get_secret_value_response:
-            secret = get_secret_value_response["SecretString"]
             LOGGER.info("got SecretString")
+            return get_secret_value_response["SecretString"]
         else:
             LOGGER.info("not SecretString")
-            decoded_binary_secret = base64.b64decode(
-                get_secret_value_response["SecretBinary"]
-            )
-            secret = decoded_binary_secret
-        LOGGER.info("here")
-        return secret
+            return base64.b64decode(get_secret_value_response["SecretBinary"])
     # added as the validation exception was not being caught
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)

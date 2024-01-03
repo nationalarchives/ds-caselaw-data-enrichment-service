@@ -6,9 +6,14 @@ import urllib.parse
 from io import BytesIO
 
 import boto3
+from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
+from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
+from aws_lambda_powertools.utilities.typing import LambdaContext
 from lxml import etree
+from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
 from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLBytes
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -16,21 +21,19 @@ LOGGER.setLevel(logging.INFO)
 client = boto3.client("ssm")
 
 
-def process_event(sqs_rec):
+def process_event(sqs_rec: S3EventRecord) -> tuple[bool, str, DocumentAsXMLBytes, str]:
     """
     Isolating processing from event unpacking for portability and testing
     """
     s3_client = boto3.client("s3")
-    source_bucket = sqs_rec["s3"]["bucket"]["name"]
-    source_key = urllib.parse.unquote_plus(
-        sqs_rec["s3"]["object"]["key"], encoding="utf-8"
-    )
+    source_bucket = sqs_rec.s3.bucket.name
+    source_key = urllib.parse.unquote_plus(sqs_rec.s3.get_object.key, encoding="utf-8")
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
-    file_content = s3_client.get_object(Bucket=source_bucket, Key=source_key)[
-        "Body"
-    ].read()
+    file_content = DocumentAsXMLBytes(
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read()
+    )
 
     content_valid = validate_content(file_content)
     if content_valid:
@@ -41,7 +44,7 @@ def process_event(sqs_rec):
     return content_valid, source_key, file_content, source_bucket
 
 
-def find_schema(schema_bucket, schema_key):
+def find_schema(schema_bucket: str, schema_key: str) -> bytes:
     """
     Fetch schema from the schema S3 bucket
     """
@@ -53,7 +56,7 @@ def find_schema(schema_bucket, schema_key):
     return schema_content
 
 
-def load_schema(schema_content):
+def load_schema(schema_content: bytes) -> etree.XMLSchema:
     """
     Parse the schema to XML schema to describe structure of XML document
     """
@@ -64,7 +67,7 @@ def load_schema(schema_content):
     return xmlschema
 
 
-def validate_content(file_content):
+def validate_content(file_content: DocumentAsXMLBytes) -> bool:
     """
     Function to validate schema
     """
@@ -85,7 +88,7 @@ def validate_content(file_content):
     return result
 
 
-def upload_to_vcite(source_key, text_content):
+def upload_to_vcite(source_key: str, text_content: DocumentAsXMLBytes) -> None:
     """
     Upload judgment to destination S3 bucket
     """
@@ -97,7 +100,7 @@ def upload_to_vcite(source_key, text_content):
     object.put(Body=text_content)
 
 
-def trigger_push_enriched(uploaded_bucket, uploaded_key):
+def trigger_push_enriched(uploaded_bucket: str, uploaded_key: str) -> None:
     """
     Delivers replacements to the specified queue
     """
@@ -107,7 +110,7 @@ def trigger_push_enriched(uploaded_bucket, uploaded_key):
 
     # Create a new message
     message = {"Validated": uploaded_key}
-    msg_attributes = {
+    msg_attributes: dict[str, MessageAttributeValueQueueTypeDef] = {
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
@@ -125,7 +128,8 @@ VALIDATE_USING_SCHEMA = bool(int(validate_env_variable("VALIDATE_USING_SCHEMA"))
 DEST_QUEUE = validate_env_variable("DEST_QUEUE")
 
 
-def handler(event, context):
+@event_source(data_class=S3Event)
+def handler(event: S3Event, context: LambdaContext) -> None:
     """
     Function called by lambda to validate schema
     """
@@ -142,7 +146,7 @@ def handler(event, context):
     try:
         LOGGER.info("SQS EVENT: %s", event)
 
-        for sqs_rec in event["Records"]:
+        for sqs_rec in event.records:
             # stop the test notification event from breaking the parsing logic
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break

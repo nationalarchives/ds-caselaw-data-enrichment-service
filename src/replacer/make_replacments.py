@@ -1,12 +1,18 @@
 import json
 import logging
 import re
-from typing import Tuple
+from typing import Literal
 
 import lxml.etree
 from bs4 import BeautifulSoup
 
 from replacer.replacer_pipeline import replacer_pipeline
+from utils.types import (
+    DocumentAsXMLString,
+    Reference,
+    Replacement,
+    XMLFragmentAsString,
+)
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
@@ -37,8 +43,8 @@ xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
 
 
 def make_post_header_replacements(
-    original_content: str, replacement_patterns: str
-) -> str:
+    original_content: DocumentAsXMLString, replacement_patterns: str
+) -> DocumentAsXMLString:
     """
     Replaces the content following a closing header tag in a legal document with new content.
     If there is no closing header tag, then we replace the full content.
@@ -65,17 +71,19 @@ def make_post_header_replacements(
         pre_header + end_header_tag + replaced_post_header_content
     )
 
-    return full_replaced_text_content
+    return DocumentAsXMLString(full_replaced_text_content)
 
 
-def apply_replacements(content: str, replacement_patterns: str) -> str:
+def apply_replacements(
+    content: XMLFragmentAsString, replacement_patterns: str
+) -> XMLFragmentAsString:
     """
     Run the replacer pipeline to make replacements on caselaw, legislation and abbreviations
     """
 
-    case_replacement_patterns = []
-    leg_replacement_patterns = []
-    abb_replacement_patterns = []
+    case_replacement_patterns: list[Replacement] = []
+    leg_replacement_patterns: list[Replacement] = []
+    abb_replacement_patterns: list[Replacement] = []
 
     for replacement_pattern_json in replacement_patterns.splitlines():
         LOGGER.debug(replacement_pattern_json)
@@ -107,7 +115,7 @@ def apply_replacements(content: str, replacement_patterns: str) -> str:
     return file_data_enriched
 
 
-def detect_reference(text, etype):
+def detect_reference(text: str, etype: Literal["legislation"]) -> Reference:
     """
     Detect citation references.
     :param text: text to be searched for references
@@ -122,26 +130,22 @@ def detect_reference(text, etype):
     return references
 
 
-def sanitize_judgment(file_content):
+def sanitize_judgment(file_content: DocumentAsXMLString) -> DocumentAsXMLString:
     file_content = _remove_old_enrichment_references(file_content)
 
     soup = BeautifulSoup(file_content, "xml")
 
-    _decompose_elements(soup, "FRBRdate", {"name": "tna-enriched"})
-    _decompose_elements(soup, "uk:tna-enrichment-engine")
-
-    soup_string = str(soup)
-
-    return soup_string
-
-
-def _decompose_elements(soup, *element_kwargs):
-    elements = soup.find_all(*element_kwargs)
-    for element in elements:
+    for element in soup.find_all("FRBRdate", {"name": "tna-enriched"}):
+        element.decompose()
+    for element in soup.find_all("uk:tna-enrichment-engine"):
         element.decompose()
 
+    return DocumentAsXMLString(str(soup))
 
-def _remove_old_enrichment_references(file_content):
+
+def _remove_old_enrichment_references(
+    file_content: DocumentAsXMLString,
+) -> DocumentAsXMLString:
     """
     Enrichment creates <ref uk:origin="TNA"> tags; delete only these.
     """
@@ -151,10 +155,12 @@ def _remove_old_enrichment_references(file_content):
 
     result = transform(root)
 
-    return lxml.etree.tostring(result).decode("utf-8")
+    return DocumentAsXMLString(lxml.etree.tostring(result).decode("utf-8"))
 
 
-def split_text_by_closing_header_tag(content: str) -> Tuple[str, str, str]:
+def split_text_by_closing_header_tag(
+    content: DocumentAsXMLString,
+) -> tuple[XMLFragmentAsString, XMLFragmentAsString, XMLFragmentAsString]:
     """
     Split content into start, closing header tag and body
     to ensure replacements only occur in the body.
@@ -163,5 +169,14 @@ def split_text_by_closing_header_tag(content: str) -> Tuple[str, str, str]:
     for pattern in header_patterns:
         if pattern not in content:
             continue
-        return content.partition(pattern)
-    return "", "", content
+
+        return (
+            XMLFragmentAsString(content.partition(pattern)[0]),
+            XMLFragmentAsString(content.partition(pattern)[1]),
+            XMLFragmentAsString(content.partition(pattern)[2]),
+        )  # This cannot be a list comprehension because we need to know the length of the tuple
+    return (
+        XMLFragmentAsString(""),
+        XMLFragmentAsString(""),
+        XMLFragmentAsString(content),
+    )
