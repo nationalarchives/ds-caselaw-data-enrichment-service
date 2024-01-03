@@ -68,11 +68,11 @@ def find_closest_legislation(legislations, sections, thr=30):
     return section_to_leg
 
 
-def get_clean_section_number(section):
+def get_clean_section_number(section: str) -> str:
     """
     Cleans just the section number.
     :param section: section to return the number for
-    :returns section_number: returns numbers from section
+    :returns section_number: returns numbers from section as a string
     """
     section_number = re.findall(r"\d+", section)
     return section_number[0]
