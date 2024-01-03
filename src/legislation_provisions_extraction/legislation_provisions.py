@@ -17,7 +17,7 @@ import re
 from typing import Any, Dict, List
 
 import numpy as np
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, Tag
 
 from utils.proper_xml import create_tag_string
 from utils.types import DocumentAsXMLString
@@ -91,6 +91,8 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
         section_number = get_clean_section_number(section)
         soup = BeautifulSoup(full_ref, "xml")
         ref = soup.find("ref")
+        if not isinstance(ref, Tag):
+            raise ValueError("Did not successfully get <ref> tag")
         canonical = ref.get("canonical")  # get the legislation canonical form
         leg_href = ref.get("href")  # get the legislation href
         section_href = (
