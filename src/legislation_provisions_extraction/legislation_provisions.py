@@ -101,7 +101,7 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
         clean_section = "section " + str(section_number)
 
         # creates the canonical form for subsection
-        sub_canonical = canonical + " s. " + section_number if canonical else ""
+        sub_canonical = f"{canonical} s. {section_number}" if canonical else ""
 
         # new dictionary with the relevant information for the entry
         new_definition = {
