@@ -46,6 +46,11 @@ jobs:
 
           cd src/
 
+          ## FETCH_XML
+
+          mkdir lambdas/fetch_xml/utils
+          cp -r utils/*.py lambdas/fetch_xml/utils/
+
           ## DETERMINE_REPLACEMENTS_CASELAW
 
           mkdir lambdas/determine_replacements_caselaw/caselaw_extraction
@@ -127,11 +132,6 @@ jobs:
 
           mkdir lambdas/extract_judgement_contents/utils
           cp -r utils/*.py lambdas/extract_judgement_contents/utils/
-
-          ## FETCH_XML
-
-          mkdir lambdas/fetch_xml/utils
-          cp -r utils/*.py lambdas/fetch_xml/utils/
 
           ## UPDATE_RULES_PROCESSOR
 
