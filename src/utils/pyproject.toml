@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "utils"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+license = "MIT"
+packages = [
+    { include = "utils", from = "." },
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+spacy = "^3.7.2"
+pandas = "^2.1.4"
+lxml = "^4.9.4"
+beautifulsoup4 = "^4.12.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
