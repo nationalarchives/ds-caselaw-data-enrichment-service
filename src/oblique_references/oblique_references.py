@@ -20,21 +20,38 @@ The pipeline returns a dictionary containing the detected oblique reference, its
 """
 
 import re
-from typing import Any, Dict, List, Tuple, Union
+from typing import Dict, List, TypedDict, Union
 
 from bs4 import BeautifulSoup
 
 from utils.proper_xml import create_tag_string
+
+LegislationReference = tuple[tuple[int, int], str]
+
+
+class LegislationDict(TypedDict):
+    detected_leg: str
+    year: str
+    para: int
+    para_pos: tuple[int, int]
+    canonical: str
+    href: str
+
+
+LegislationReferenceReplacements = List[Dict[str, Union[str, int]]]
+
+
+class NotExactlyOneRefTag(RuntimeError):
+    """soup.get() can return None if there is no <ref> tag to find, or
+    a list of hits if there are multiple tags. These are not handled
+    correctly."""
+
 
 patterns = {
     "legislation": r"<ref(((?!ref>).)*)type=\"legislation\"(.*?)ref>",
     "numbered_act": r"(the|this|that|The|This|That)\s([0-9]{4})\s(Act)",
     "act": r"(the|this|that|The|This|That)\s(Act)",
 }
-
-LegislationReference = Tuple[Tuple[int, int], str]
-LegislationDict = Dict[str, Any]
-LegislationReferenceReplacements = List[Dict[str, Union[str, int]]]
 
 
 def detect_reference(text: str, etype: str) -> List[LegislationReference]:
@@ -58,21 +75,35 @@ def create_legislation_dict(
     :param paragraph_number: paragraph number the legislation reference was found in
     :returns: list of legislation dictionaries
     """
-    legislation_dicts = []
+    legislation_dicts: list[LegislationDict] = []
 
     for legislation_reference in legislation_references:
-        legislation_dict: Dict[str, Any] = {}
         soup = BeautifulSoup(legislation_reference[1], "xml")
         ref = soup.ref
         if not ref:
             continue
         legislation_name = ref.text if not None else ""
-        legislation_dict["para"] = paragraph_number
-        legislation_dict["para_pos"] = legislation_reference[0]
-        legislation_dict["detected_leg"] = legislation_name
-        legislation_dict["href"] = ref.get("href")
-        legislation_dict["canonical"] = ref.get("canonical")
-        legislation_dict["year"] = _get_legislation_year(legislation_name)
+
+        href = ref.get("href")
+        canonical = ref.get("canonical")
+
+        if not isinstance(href, str):
+            raise NotExactlyOneRefTag(
+                f"Legislation reference {legislation_reference!r} does not have exactly one 'href', paragraph {paragraph_number}"
+            )
+        if not isinstance(canonical, str):
+            raise NotExactlyOneRefTag(
+                f"Legislation reference {legislation_reference!r} does not have exactly one 'canonical', paragraph {paragraph_number}"
+            )
+
+        legislation_dict: LegislationDict = {
+            "para": paragraph_number,
+            "para_pos": legislation_reference[0],
+            "detected_leg": legislation_name,
+            "href": href,
+            "canonical": canonical,
+            "year": _get_legislation_year(legislation_name),
+        }
 
         legislation_dicts.append(legislation_dict)
 
@@ -89,7 +120,7 @@ def _get_legislation_year(legislation_name: str) -> str:
 def match_numbered_act(
     detected_numbered_act: LegislationReference,
     legislation_dicts: List[LegislationDict],
-) -> LegislationDict:
+) -> LegislationDict | None:
     """
     Match oblique references containing a year
     :param detected_numbered_act: detected oblique reference
@@ -98,20 +129,20 @@ def match_numbered_act(
     """
     act_year_match = re.search(r"\d{4}", detected_numbered_act[1])
     if not act_year_match:
-        return {}
+        return None
 
     act_year = act_year_match.group(0)
     for leg_dict in legislation_dicts:
         if leg_dict["year"] == act_year:
             return leg_dict
-    return {}
+    return None
 
 
 def match_act(
     oblique_act: LegislationReference,
     legislation_dicts: List[LegislationDict],
     paragraph_number: int,
-) -> LegislationDict:
+) -> LegislationDict | None:
     """
     Match oblique references without a year
     :param detected_act: detected oblique reference
@@ -133,7 +164,7 @@ def match_act(
     ]
 
     if not eligible_legislation:
-        return {}
+        return None
 
     legislation_to_match = eligible_legislation[-1]
     legislation_to_match_position = legislation_to_match["para_pos"][0]
@@ -172,7 +203,7 @@ def create_section_ref_tag(replacement_dict: LegislationDict, match: str) -> str
 
 def get_replacements(
     detected_acts: List[LegislationReference],
-    legislation_dicts: List[Dict],
+    legislation_dicts: List[LegislationDict],
     numbered_act: bool,
     replacements: List[Dict],
     paragraph_number: int,

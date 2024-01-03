@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 from typing import Dict, List, Union
 
+import pytest
 from caselawclient.content_hash import get_hash_from_document
 
 from oblique_references.enrich_oblique_references import (
@@ -13,6 +14,7 @@ from oblique_references.enrich_oblique_references import (
 )
 from oblique_references.oblique_references import (
     LegislationReferenceReplacements,
+    NotExactlyOneRefTag,
     create_legislation_dict,
     detect_reference,
     get_oblique_reference_replacements_by_paragraph,
@@ -230,19 +232,8 @@ class TestCreateLegislationDict(unittest.TestCase):
             ),
         ]
         paragraph_number = 2
-        oblique_reference_replacements = create_legislation_dict(
-            detected_legislation, paragraph_number
-        )
-        assert oblique_reference_replacements == [
-            {
-                "para": 2,
-                "para_pos": (588, 733),
-                "detected_leg": "Finance Act 2004",
-                "href": None,
-                "canonical": None,
-                "year": "2004",
-            },
-        ]
+        with pytest.raises(NotExactlyOneRefTag):
+            create_legislation_dict(detected_legislation, paragraph_number)
 
 
 class TestDetectReference(unittest.TestCase):
