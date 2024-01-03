@@ -85,7 +85,7 @@ def create_legislation_dict(
         legislation_name = ref.text if not None else ""
 
         href = ref.get("href")
-        canonical = ref.get("canonical")
+        canonical = ref.get("uk:canonical") or ref.get("canonical")
 
         if not isinstance(href, str):
             raise NotExactlyOneRefTag(

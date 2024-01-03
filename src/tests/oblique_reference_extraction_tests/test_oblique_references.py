@@ -134,7 +134,7 @@ class TestCreateLegislationDict(unittest.TestCase):
             ),
             (
                 (588, 733),
-                '<ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:origin="TNA" uk:type="legislation">Finance Act 2004</ref>',
+                '<ref href="http://www.legislation.gov.uk/id/ukpga/2004/12" uk:canonical="2004 c. 12" uk:origin="TNA" uk:type="legislation" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">Finance Act 2004</ref>',
             ),
         ]
         paragraph_number = 2
