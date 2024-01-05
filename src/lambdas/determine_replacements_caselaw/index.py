@@ -15,10 +15,16 @@ from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
 from utils.types import DocumentAsXMLString
 
-from ..database import db_connection
-
 if TYPE_CHECKING:
     from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
+
+# This is horrid, but we're copying database.py to a different folder
+# to where it is within the repo within the install script.
+if TYPE_CHECKING:
+    from ..database import db_connection
+else:
+    from database import db_connection
+
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
