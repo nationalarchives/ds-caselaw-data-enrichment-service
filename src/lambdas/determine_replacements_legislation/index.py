@@ -13,11 +13,12 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 from database import db_connection
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
+from utils.types import DocumentAsXMLString
 
 if TYPE_CHECKING:
     from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
-    from utils.types import DocumentAsXMLString, NLPModel
+    from utils.types import NLPModel
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
