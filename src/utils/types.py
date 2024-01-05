@@ -1,9 +1,4 @@
-from typing import TYPE_CHECKING, NewType
-
-if TYPE_CHECKING:
-    import spacy
-
-    NLPModel = spacy.lang.en.English
+from typing import NewType
 
 Replacement = NewType("Replacement", tuple[str, str, str, str, bool])
 # ('[2022] UKSC 3', '[2022] UKSC 3', '2022', 'https://caselaw.nationalarchives.gov.uk/uksc/2022/3', True)

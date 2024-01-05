@@ -5,15 +5,11 @@ AbbreviationDetector class and the pipeline.
 
 
 from collections import namedtuple
-from typing import TYPE_CHECKING
 
+import spacy
 from spacy.language import Language
 
 from abbreviation_extraction.abbreviations import AbbreviationDetector
-
-if TYPE_CHECKING:
-    from utils.types import NLPModel
-
 
 abb = namedtuple("abb", "abb_match longform")
 
@@ -45,7 +41,7 @@ def chunking_mechanism(docobj, n, start, end):
     return judgment_chunks
 
 
-def abb_pipeline(judgment_content_text: str, nlp: NLPModel) -> list[abb]:
+def abb_pipeline(judgment_content_text: str, nlp: spacy.lang.en.English) -> list[abb]:
     """
     Main controller of the abbreviation detection pipeline.
     :param judgment_content_text: judgment content
@@ -58,7 +54,9 @@ def abb_pipeline(judgment_content_text: str, nlp: NLPModel) -> list[abb]:
 
     # init the class - stateful pipeline component
     @Language.factory("abbreviation_detector")
-    def create_abbreviation_detector(nlp: NLPModel, name: str) -> AbbreviationDetector:
+    def create_abbreviation_detector(
+        nlp: spacy.lang.en.English, name: str
+    ) -> AbbreviationDetector:
         return AbbreviationDetector(nlp)
 
     nlp.add_pipe("abbreviation_detector", last=True)

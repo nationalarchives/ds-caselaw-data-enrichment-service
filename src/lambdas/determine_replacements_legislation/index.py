@@ -18,8 +18,6 @@ from utils.types import DocumentAsXMLString
 if TYPE_CHECKING:
     from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
-    from utils.types import NLPModel
-
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
@@ -126,7 +124,7 @@ def upload_replacements(
     return object.key
 
 
-def init_NLP() -> NLPModel:
+def init_NLP() -> spacy.lang.en.English:
     """
     Load spacy model
     """
