@@ -2,25 +2,10 @@ name: ci_lint_and_test
 
 on:
   pull_request:
-    types:
-      - opened
-      - reopened
-      - edited
-      - synchronize
+    branches: [main]
   push:
-    branches:
-      - main
+    branches: [main]
   merge_group:
-
-permissions:
-  pull-requests: write
-  id-token: write
-  contents: read
-  issues: write
-
-defaults:
-  run:
-    shell: bash
 
 jobs:
 
