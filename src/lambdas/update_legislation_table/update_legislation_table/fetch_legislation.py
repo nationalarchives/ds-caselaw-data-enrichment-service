@@ -14,7 +14,7 @@ LEGISLATION_API_URL = "https://www.legislation.gov.uk/sparql"
 
 
 def fetch_legislation(
-    sparql_username: str, sparql_password: str, days: Optional[int]
+    sparql_username: str, sparql_password: str, days: Optional[int],
 ) -> pd.DataFrame:
     """
     Fetch new legislation from legislation.gov.uk since the start day, if given,
@@ -64,7 +64,7 @@ def fetch_legislation(
                     %s
                 }
                 """
-        % filter_string
+        % filter_string,
     )
 
     results = sparql.query().convert()
@@ -81,6 +81,6 @@ def _enhance_legislation_data(df):
     df = df.explode("candidate_titles")
     df = df[~df["candidate_titles"].isna()].drop_duplicates("candidate_titles")
     df["for_fuzzy"] = df.candidate_titles.apply(
-        lambda x: re.search(r"Act\s+(\d{4})", x) != None
+        lambda x: re.search(r"Act\s+(\d{4})", x) != None,
     )
     return df

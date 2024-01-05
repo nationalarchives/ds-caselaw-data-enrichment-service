@@ -19,7 +19,7 @@ from spacy.tokens import Doc, Span
 
 
 def find_abbreviation(
-    long_form_candidate: Span, short_form_candidate: Span
+    long_form_candidate: Span, short_form_candidate: Span,
 ) -> Tuple[Span, Optional[Span]]:
     """
     Implements the abbreviation detection algorithm in "A simple algorithm
@@ -112,7 +112,7 @@ def contains(str, set: Iterable[str]) -> bool:
 
 
 def filter_matches(
-    matcher_output: List[Tuple[int, int, int]], doc: Doc
+    matcher_output: List[Tuple[int, int, int]], doc: Doc,
 ) -> List[Tuple[Span, Span]]:
     """
     Filter into two cases:
@@ -196,7 +196,7 @@ def filter_matches(
             # abbreviation must have 3 or more characters
             if len(str(doc[start:end])) >= 3:
                 candidates.append(
-                    (long_form_candidate, doc[start + quote_offset_new : end])
+                    (long_form_candidate, doc[start + quote_offset_new : end]),
                 )
 
             continue
@@ -228,7 +228,7 @@ def short_form_filter(span: Span) -> bool:
 
 
 def verify_match_format(
-    matcher_output: List[Tuple[int, int, int]], doc: Doc
+    matcher_output: List[Tuple[int, int, int]], doc: Doc,
 ) -> List[Tuple[Span, Span]]:
     """
     Verify that the matches appear in a form where such as ("abbrv") or ("long_form") with quotes
@@ -353,7 +353,7 @@ class AbbreviationDetector:
         return doc
 
     def find_matches_for(
-        self, filtered: List[Tuple[Span, Span]], doc: Doc
+        self, filtered: List[Tuple[Span, Span]], doc: Doc,
     ) -> List[Tuple[Span, Set[Span]]]:
         """
         Function to return all start and end positions of an abbreviation found in the judgment content.

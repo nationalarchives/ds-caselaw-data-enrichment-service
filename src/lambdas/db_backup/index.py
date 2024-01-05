@@ -22,7 +22,7 @@ def lambda_handler(event: EventBridgeEvent, context: LambdaContext) -> None:
         print("Trying to create db snapshot")
         snapshot_name = "db-snapshot-" + date
         rds.create_db_cluster_snapshot(
-            DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db
+            DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db,
         )
         print("Snapshot creating")
 

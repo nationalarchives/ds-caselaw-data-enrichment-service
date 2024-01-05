@@ -21,7 +21,7 @@ LOGGER.setLevel(logging.INFO)
 
 
 def fetch_judgment_urllib(
-    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str,
 ) -> DocumentAsXMLString:
     """
     Fetch the judgment from the National Archives
@@ -36,7 +36,7 @@ def fetch_judgment_urllib(
 
 
 def lock_judgment_urllib(
-    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str,
 ) -> None:
     """
     Lock the judgment for editing
@@ -50,7 +50,7 @@ def lock_judgment_urllib(
 
 
 def check_lock_judgment_urllib(
-    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
+    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str,
 ) -> None:
     """
     Check whether the judgment is locked
@@ -102,7 +102,7 @@ def process_event(sqs_rec: SQSRecord, api_endpoint: APIEndpointBaseURL) -> None:
     """
     message = json.loads(sqs_rec.body)
     status, query = read_message(
-        message
+        message,
     )  # query is the URL of the item requested to be enriched
     print("Judgment status:", status)
     print("Judgment query:", query)
@@ -139,12 +139,12 @@ def handler(event: SQSEvent, context: LambdaContext) -> None:
 
     if ENVIRONMENT == "staging":
         api_endpoint = APIEndpointBaseURL(
-            "https://api.staging.caselaw.nationalarchives.gov.uk/"
+            "https://api.staging.caselaw.nationalarchives.gov.uk/",
         )
 
     else:
         api_endpoint = APIEndpointBaseURL(
-            "https://api.caselaw.nationalarchives.gov.uk/"
+            "https://api.caselaw.nationalarchives.gov.uk/",
         )
 
     try:

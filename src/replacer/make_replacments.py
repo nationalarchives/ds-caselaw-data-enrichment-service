@@ -43,7 +43,7 @@ xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
 
 
 def make_post_header_replacements(
-    original_content: DocumentAsXMLString, replacement_patterns: str
+    original_content: DocumentAsXMLString, replacement_patterns: str,
 ) -> DocumentAsXMLString:
     """
     Replaces the content following a closing header tag in a legal document with new content.
@@ -61,7 +61,7 @@ def make_post_header_replacements(
     """
     cleaned_file_content = sanitize_judgment(original_content)
     pre_header, end_header_tag, post_header = split_text_by_closing_header_tag(
-        cleaned_file_content
+        cleaned_file_content,
     )
 
     replaced_post_header_content = apply_replacements(post_header, replacement_patterns)
@@ -75,7 +75,7 @@ def make_post_header_replacements(
 
 
 def apply_replacements(
-    content: XMLFragmentAsString, replacement_patterns: str
+    content: XMLFragmentAsString, replacement_patterns: str,
 ) -> XMLFragmentAsString:
     """
     Run the replacer pipeline to make replacements on caselaw, legislation and abbreviations
@@ -90,7 +90,7 @@ def apply_replacements(
         replacement_pattern_dict = json.loads(replacement_pattern_json)
 
         replacement_type, replacement_pattern_list = list(
-            replacement_pattern_dict.items()
+            replacement_pattern_dict.items(),
         )[0]
         replacement_pattern = tuple(replacement_pattern_list)
 

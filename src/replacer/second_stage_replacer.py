@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Replacer logic for second and third phase enrichment.
 Handles the replacements of oblique references and legislation provisions.
@@ -31,12 +30,12 @@ def split_string(text: str, split_points: list[int]) -> list[str]:
     :return: list of split strings
     """
     return list(
-        map(lambda x: text[slice(*x)], zip(split_points, split_points[1:] + [None]))
+        map(lambda x: text[slice(*x)], zip(split_points, split_points[1:] + [None])),
     )
 
 
 def replace_references(
-    text: str, reference_replacements: list[LegislationReferenceReplacement]
+    text: str, reference_replacements: list[LegislationReferenceReplacement],
 ) -> str:
     """
     Replaces references in text according to the reference_replacements list
@@ -47,7 +46,7 @@ def replace_references(
 
     # Splitting the text fails if the points are not sorted
     reference_replacements = sorted(
-        reference_replacements, key=lambda x: x["ref_position"]
+        reference_replacements, key=lambda x: x["ref_position"],
     )
     split_points: list[int] = [
         split_point
@@ -77,7 +76,7 @@ def create_replacement_paragraph(
     paragraph_reference_replacements: Iterable[LegislationReferenceReplacement],
 ) -> Tag:
     replacement_paragraph_string = replace_references(
-        paragraph_string, list(paragraph_reference_replacements)
+        paragraph_string, list(paragraph_reference_replacements),
     )
     wrapper = f'<xml xmlns:uk="placeholder">{replacement_paragraph_string}</xml>'
     replacement_paragraph = BeautifulSoup(wrapper, "xml").p
@@ -104,12 +103,12 @@ def replace_references_by_paragraph(
     ordered_reference_replacements = sorted(reference_replacements, key=key_func)
 
     for paragraph_number, paragraph_reference_replacements in groupby(
-        ordered_reference_replacements, key=key_func
+        ordered_reference_replacements, key=key_func,
     ):
         paragraph_string = str(paragraphs[paragraph_number])
         paragraphs[paragraph_number].replace_with(
             create_replacement_paragraph(
-                paragraph_string, paragraph_reference_replacements
-            )
+                paragraph_string, paragraph_reference_replacements,
+            ),
         )
     return DocumentAsXMLString(str(file_data))

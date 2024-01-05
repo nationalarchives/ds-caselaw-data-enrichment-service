@@ -47,7 +47,7 @@ def add_timestamp_and_engine_version(
     today = datetime.datetime.now()
     today_str = today.strftime("%Y-%m-%dT%H:%M:%S")
     enriched_date = soup.new_tag(
-        'FRBRdate date="{}" name="tna-enriched"'.format(today_str)
+        f'FRBRdate date="{today_str}" name="tna-enriched"',
     )
     enrichment_version = soup.new_tag(
         "uk:tna-enrichment-engine",
@@ -57,14 +57,14 @@ def add_timestamp_and_engine_version(
 
     if not soup.proprietary:
         raise SourceXMLMissingElement(
-            "This document does not have a <proprietary> element."
+            "This document does not have a <proprietary> element.",
         )
 
     soup.proprietary.append(enrichment_version)
 
     if not soup.FRBRManifestation or not soup.FRBRManifestation.FRBRdate:
         raise SourceXMLMissingElement(
-            "This document does not already have a manifestation date."
+            "This document does not already have a manifestation date.",
         )
 
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
@@ -86,7 +86,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
     file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
-        .decode("utf-8")
+        .decode("utf-8"),
     )
 
     resolved_refs = provisions_pipeline(file_content)

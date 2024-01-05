@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Mar 3 10:48:33 2022
 
@@ -218,7 +217,7 @@ def fuzzy_matcher(title, docobj, nlp, cutoff, candidates=None):
                 [
                     (docobj[end - 1 - e + s : end].text, end - 1 - e + s, end, ratio)
                     for text, s, e, ratio in matches
-                ]
+                ],
             )
     return all_matches
 

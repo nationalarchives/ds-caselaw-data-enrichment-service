@@ -26,7 +26,7 @@ class TestCitationReplacer(unittest.TestCase):
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
         replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
+            URI, is_neutral, corrected_citation, year, citation_match,
         )
         assert replacement_string in replaced_entry
 
@@ -41,7 +41,7 @@ class TestCitationReplacer(unittest.TestCase):
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
         replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
+            URI, is_neutral, corrected_citation, year, citation_match,
         )
         assert replacement_string in replaced_entry
 
@@ -70,7 +70,7 @@ class TestCitationReplacer(unittest.TestCase):
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
         replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
+            URI, is_neutral, corrected_citation, year, citation_match,
         )
         assert replacement_string in replaced_entry
 
@@ -85,7 +85,7 @@ class TestCitationReplacer(unittest.TestCase):
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
         replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
+            URI, is_neutral, corrected_citation, year, citation_match,
         )
         assert replacement_string in replaced_entry
 

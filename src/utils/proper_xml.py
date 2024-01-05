@@ -16,7 +16,7 @@ def expand_namespace(namespaced_name: str) -> str:
 
 
 def create_tag(
-    tag: str, contents: str = "", attrs: Optional[dict[str, str]] = None
+    tag: str, contents: str = "", attrs: Optional[dict[str, str]] = None,
 ) -> lxml.etree._Element:
     """Create a tag with text-based contents, parsed correctly as XML"""
     """Note that this will create bloated XML in the enrichment process, but that Marklogic will canonicalise the XML when it is ingested"""
@@ -33,8 +33,8 @@ def create_tag(
 
 
 def create_tag_string(
-    tag: str, contents: str = "", attrs: Optional[dict[str, str]] = None
+    tag: str, contents: str = "", attrs: Optional[dict[str, str]] = None,
 ) -> str:
     return lxml.etree.tostring(
-        create_tag(tag=tag, contents=contents, attrs=attrs)
+        create_tag(tag=tag, contents=contents, attrs=attrs),
     ).decode("utf-8")

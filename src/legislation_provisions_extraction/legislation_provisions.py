@@ -184,7 +184,7 @@ def get_correct_section_def(section_matches, cur_para_number, cur_pos):
     :param para_number: the number of the paragraph in the judgment
     """
     pos_refs = np.asarray(
-        [(match["para_number"], match["section_position"]) for match in section_matches]
+        [(match["para_number"], match["section_position"]) for match in section_matches],
     )
     para_numbers = pos_refs[:, 0]
 
@@ -242,7 +242,7 @@ def provision_resolver(section_dict, matches, para_number):
 
             # create a <ref> tag for detected provision
             correct_reference["section_ref"] = create_section_ref_tag(
-                correct_reference, match
+                correct_reference, match,
             )
 
             resolved_refs.append(
@@ -250,11 +250,11 @@ def provision_resolver(section_dict, matches, para_number):
                     zip(
                         keys,
                         [match, para_number, pos[0], correct_reference["section_ref"]],
-                    )
-                )
+                    ),
+                ),
             )
             print(
-                f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}"
+                f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}",
             )
 
     return resolved_refs
@@ -269,7 +269,7 @@ def main(enriched_judgment_file_path, filename):
     """
     enriched_judgment_file = os.path.join(enriched_judgment_file_path, filename)
     print("======", enriched_judgment_file)
-    with open(enriched_judgment_file, "r") as f:
+    with open(enriched_judgment_file) as f:
         soup = BeautifulSoup(f, "xml")
     text = soup.find_all("p")
     cur_para_number = 0
@@ -281,17 +281,17 @@ def main(enriched_judgment_file_path, filename):
             legislations = detect_reference(str(line))
             if legislations:
                 section_to_leg_matches = find_closest_legislation(
-                    legislations, sections, THR
+                    legislations, sections, THR,
                 )
 
                 # create the master section dictionary with relevant leg links
                 section_dict = save_section_to_dict(
-                    section_to_leg_matches, cur_para_number, section_dict
+                    section_to_leg_matches, cur_para_number, section_dict,
                 )
 
             # resolve sections to legislations
             resolved_refs.extend(
-                provision_resolver(section_dict, sections, cur_para_number)
+                provision_resolver(section_dict, sections, cur_para_number),
             )
 
         cur_para_number += 1
@@ -316,17 +316,17 @@ def provisions_pipeline(file_data: DocumentAsXMLString) -> list:
             legislations = detect_reference(str(line))
             if legislations:
                 section_to_leg_matches = find_closest_legislation(
-                    legislations, sections, THR
+                    legislations, sections, THR,
                 )
 
                 # create the master section dictionary with relevant leg links
                 section_dict = save_section_to_dict(
-                    section_to_leg_matches, cur_para_number, section_dict
+                    section_to_leg_matches, cur_para_number, section_dict,
                 )
 
             # resolve sections to legislations
             resolved_refs.extend(
-                provision_resolver(section_dict, sections, cur_para_number)
+                provision_resolver(section_dict, sections, cur_para_number),
             )
 
         cur_para_number += 1

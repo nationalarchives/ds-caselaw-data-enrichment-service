@@ -45,7 +45,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
-        .decode("utf-8")
+        .decode("utf-8"),
     )
 
     replacements = determine_replacements(file_content)
@@ -72,14 +72,14 @@ def write_replacements_file(replacement_list: list[Replacement]) -> str:
     """
     tuple_file = ""
     for i in replacement_list:
-        replacement_object = {"{}".format(type(i).__name__): list(i)}
+        replacement_object = {f"{type(i).__name__}": list(i)}
         tuple_file += json.dumps(replacement_object)
         tuple_file += "\n"
     return tuple_file
 
 
 def upload_replacements(
-    replacements_bucket: str, replacements_key: str, replacements: str
+    replacements_bucket: str, replacements_key: str, replacements: str,
 ) -> None:
     """
     Uploads replacements to S3 bucket
@@ -114,7 +114,7 @@ def init_NLP() -> NLPModel:
     Load spacy model
     """
     nlp = spacy.load(
-        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
+        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"],
     )
     nlp.max_length = 2500000
     return nlp
@@ -135,7 +135,7 @@ def push_contents(uploaded_bucket: str, uploaded_key: str) -> None:
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
     queue.send_message(
-        MessageBody=json.dumps(message), MessageAttributes=msg_attributes
+        MessageBody=json.dumps(message), MessageAttributes=msg_attributes,
     )
 
 

@@ -68,14 +68,14 @@ def case_pipeline(doc, db_conn):
         ) = get_matched_rule(db_conn, rule_id)
         if is_canonical == False:
             corrected_citation, year, d1, d2 = apply_correction_strategy(
-                citation_type, citation_match, canonical_form
+                citation_type, citation_match, canonical_form,
             )
             if URItemplate != None:
                 URI = create_URI(URItemplate, year, d1, d2)
             else:
                 URI = "#"
             replacement_entry = case(
-                citation_match, corrected_citation, year, URI, is_neutral
+                citation_match, corrected_citation, year, URI, is_neutral,
             )
         else:
             components = re.findall(r"\d+", citation_match)
@@ -98,7 +98,7 @@ def case_pipeline(doc, db_conn):
             else:
                 URI = "#"
             replacement_entry = case(
-                citation_match, citation_match, year, URI, is_neutral
+                citation_match, citation_match, year, URI, is_neutral,
             )
 
         REPLACEMENTS_CASELAW.append(replacement_entry)

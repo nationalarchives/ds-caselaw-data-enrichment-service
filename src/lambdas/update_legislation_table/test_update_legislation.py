@@ -17,7 +17,7 @@ postgresql_my_proc = factories.postgresql_proc(
 postgresql_my = factories.postgresql("postgresql_my_proc")
 
 
-@pytest.fixture
+@pytest.fixture()
 def test_db_connection(postgresql_my):
     conn = postgresql_my
     conn.autocommit = True
@@ -52,7 +52,7 @@ def setup_moto_secrets_manager():
     mock_secrets_manager.start()
     client = boto3.client("secretsmanager", region_name=region_name)
     client.create_secret(Name=secret_name, SecretString=secret_value["SecretString"])
-    yield {
+    return {
         "secret_value": secret_value,
         "region_name": region_name,
         "secret_name": secret_name,
@@ -84,7 +84,7 @@ def test_update_legislation_table(
             "year": [2001, 2001],
             "candidate_titles": ["b_candidate_titles", "c_candidate_titles"],
             "for_fuzzy": [True, True],
-        }
+        },
     )
 
     monkeypatch.setenv("SPARQL_USERNAME", "test_user")
@@ -94,7 +94,7 @@ def test_update_legislation_table(
     monkeypatch.setenv("DATABASE_HOSTNAME", "localhost")
     monkeypatch.setenv("DATABASE_PORT", "5431")
     monkeypatch.setenv(
-        "SECRET_PASSWORD_LOOKUP", setup_moto_secrets_manager["secret_name"]
+        "SECRET_PASSWORD_LOOKUP", setup_moto_secrets_manager["secret_name"],
     )
     monkeypatch.setenv("REGION_NAME", setup_moto_secrets_manager["region_name"])
 

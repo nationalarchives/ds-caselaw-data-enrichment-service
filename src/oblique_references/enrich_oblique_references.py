@@ -17,7 +17,7 @@ def enrich_oblique_references(file_content: DocumentAsXMLString) -> DocumentAsXM
     :return: updated file content with enriched oblique references
     """
     oblique_reference_replacements = get_oblique_reference_replacements_by_paragraph(
-        file_content
+        file_content,
     )
     if not oblique_reference_replacements:
         return file_content

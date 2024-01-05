@@ -30,7 +30,7 @@ def set_env_vars():
 frozen_date = datetime.datetime(2023, 4, 13)
 
 
-@pytest.mark.integration
+@pytest.mark.integration()
 @patch("update_legislation_table.fetch_legislation.datetime.datetime")
 def test_fetch_legislation_integration(mock_datetime, set_env_vars) -> None:
     """

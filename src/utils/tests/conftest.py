@@ -13,7 +13,7 @@ def moto_secrets_manager_with_password():
     mock_secrets_manager.start()
     client = boto3.client("secretsmanager", region_name=region_name)
     client.create_secret(Name=secret_name, SecretString=secret_value["SecretString"])
-    yield {
+    return {
         "secret_value": secret_value,
         "region_name": region_name,
         "secret_name": secret_name,

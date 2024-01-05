@@ -36,7 +36,7 @@ def process_event(sqs_rec: S3EventRecord) -> tuple[bool, str, DocumentAsXMLBytes
     print("Input S3 key:", source_key)
 
     file_content = DocumentAsXMLBytes(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read()
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read(),
     )
 
     content_valid = validate_content(file_content)
@@ -119,7 +119,7 @@ def trigger_push_enriched(uploaded_bucket: str, uploaded_key: str) -> None:
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
     queue.send_message(
-        MessageBody=json.dumps(message), MessageAttributes=msg_attributes
+        MessageBody=json.dumps(message), MessageAttributes=msg_attributes,
     )
 
 
@@ -155,7 +155,7 @@ def handler(event: S3Event, context: LambdaContext) -> None:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
             valid_content, source_key, file_content, source_bucket = process_event(
-                sqs_rec
+                sqs_rec,
             )
 
     except Exception as exception:
@@ -180,7 +180,7 @@ def handler(event: S3Event, context: LambdaContext) -> None:
                 else:
                     trigger_push_enriched(VCITE_ENRICHED_BUCKET, source_key)
                     LOGGER.info(
-                        "Message sent on queue to start push-enriched-xml lambda"
+                        "Message sent on queue to start push-enriched-xml lambda",
                     )
 
         else:

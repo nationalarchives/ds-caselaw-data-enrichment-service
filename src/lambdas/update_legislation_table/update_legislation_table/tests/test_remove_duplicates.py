@@ -15,12 +15,12 @@ def test_remove_duplicates():
         engine = create_engine(postgresql.url())
         with engine.connect() as conn:
             conn.execute(
-                text("CREATE TABLE test_table (name VARCHAR(255), age INTEGER)")
+                text("CREATE TABLE test_table (name VARCHAR(255), age INTEGER)"),
             )
             conn.execute(
                 text(
-                    "INSERT INTO test_table (name, age) VALUES ('John', 30), ('John', 30), ('Sarah', 25)"
-                )
+                    "INSERT INTO test_table (name, age) VALUES ('John', 30), ('John', 30), ('Sarah', 25)",
+                ),
             )
             conn.commit()
 

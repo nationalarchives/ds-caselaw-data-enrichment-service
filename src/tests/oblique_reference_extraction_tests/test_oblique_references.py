@@ -8,7 +8,6 @@ from typing import Dict, List, Union
 
 import pytest
 from caselawclient.content_hash import get_hash_from_document
-
 from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
@@ -20,6 +19,7 @@ from oblique_references.oblique_references import (
     get_oblique_reference_replacements_by_paragraph,
     get_replacements,
 )
+
 from replacer.second_stage_replacer import replace_references
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
@@ -68,7 +68,7 @@ class TestOutputHasSameHashAsInput(unittest.TestCase):
             },
         ]
         assert nuke_tags(replace_references(text, reference_replacements)) == nuke_tags(
-            text
+            text,
         )
 
 
@@ -83,7 +83,7 @@ class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
             is returned
         """
         input_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml"
-        with open(input_file_path, "r", encoding="utf-8") as input_file:
+        with open(input_file_path, encoding="utf-8") as input_file:
             input_file_content = input_file.read()
         oblique_reference_replacements = (
             get_oblique_reference_replacements_by_paragraph(input_file_content)
@@ -139,7 +139,7 @@ class TestCreateLegislationDict(unittest.TestCase):
         ]
         paragraph_number = 2
         oblique_reference_replacements = create_legislation_dict(
-            detected_legislation, paragraph_number
+            detected_legislation, paragraph_number,
         )
         assert oblique_reference_replacements == [
             {
@@ -184,7 +184,7 @@ class TestCreateLegislationDict(unittest.TestCase):
         ]
         paragraph_number = 2
         oblique_reference_replacements = create_legislation_dict(
-            detected_legislation, paragraph_number
+            detected_legislation, paragraph_number,
         )
         assert oblique_reference_replacements == [
             {

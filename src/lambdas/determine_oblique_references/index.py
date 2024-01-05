@@ -7,10 +7,10 @@ import boto3
 from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
 from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
-
 from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
+
 from utils.environment_helpers import validate_env_variable
 from utils.types import DocumentAsXMLString
 
@@ -44,7 +44,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
     file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
-        .decode("utf-8")
+        .decode("utf-8"),
     )
 
     enriched_content = enrich_oblique_references(file_content)

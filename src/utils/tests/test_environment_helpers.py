@@ -41,7 +41,7 @@ class TestValidateEnvVariable:
 
 class TestGetAWSSecret:
     def test_get_aws_secret_with_valid_aws_secret(
-        self, moto_secrets_manager_with_password
+        self, moto_secrets_manager_with_password,
     ):
         """
         Given a valid AWS secret containing the database password
@@ -68,7 +68,7 @@ class TestGetAWSSecret:
             get_aws_secret("", "")
 
     def test_get_aws_secret_with_invalid_aws_secret_password_lookup(
-        self, moto_secrets_manager_with_password
+        self, moto_secrets_manager_with_password,
     ):
         """
         Given an invalid AWS secret name
@@ -77,11 +77,11 @@ class TestGetAWSSecret:
         """
         with pytest.raises(Exception):
             get_aws_secret(
-                "wrong_password", moto_secrets_manager_with_password["region_name"]
+                "wrong_password", moto_secrets_manager_with_password["region_name"],
             )
 
     def test_get_aws_secret_with_invalid_aws_region(
-        self, moto_secrets_manager_with_password
+        self, moto_secrets_manager_with_password,
     ):
         """
         Given an invalid AWS region
@@ -90,5 +90,5 @@ class TestGetAWSSecret:
         """
         with pytest.raises(Exception):
             get_aws_secret(
-                moto_secrets_manager_with_password["secret_name"], "wrong-region"
+                moto_secrets_manager_with_password["secret_name"], "wrong-region",
             )

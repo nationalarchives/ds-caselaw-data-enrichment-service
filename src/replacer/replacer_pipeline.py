@@ -24,7 +24,7 @@ def fixed_year(year: str) -> Optional[str]:
 
 
 def replacer_caselaw(
-    file_data: XMLFragmentAsString, replacement: Replacement
+    file_data: XMLFragmentAsString, replacement: Replacement,
 ) -> XMLFragmentAsString:
     """
     String replacement in the XML
@@ -46,12 +46,12 @@ def replacer_caselaw(
     replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
 
     return XMLFragmentAsString(
-        str(file_data).replace(replacement[0], replacement_string)
+        str(file_data).replace(replacement[0], replacement_string),
     )
 
 
 def replacer_leg(
-    file_data: XMLFragmentAsString, replacement: Replacement
+    file_data: XMLFragmentAsString, replacement: Replacement,
 ) -> XMLFragmentAsString:
     """
     String replacement in the XML
@@ -67,12 +67,12 @@ def replacer_leg(
     }
     replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
     return XMLFragmentAsString(
-        str(file_data).replace(replacement[0], replacement_string)
+        str(file_data).replace(replacement[0], replacement_string),
     )
 
 
 def replacer_abbr(
-    file_data: XMLFragmentAsString, replacement: Replacement
+    file_data: XMLFragmentAsString, replacement: Replacement,
 ) -> XMLFragmentAsString:
     """
     String replacement in the XML
@@ -84,7 +84,7 @@ def replacer_abbr(
         f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
     )
     return XMLFragmentAsString(
-        str(file_data).replace(str(replacement[0]), replacement_string)
+        str(file_data).replace(str(replacement[0]), replacement_string),
     )
 
 

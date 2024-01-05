@@ -59,7 +59,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"]
         .read()
-        .decode("utf-8")
+        .decode("utf-8"),
     )
     LOGGER.info("Got original XML file content")
 
@@ -71,7 +71,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info("Got replacement file content")
 
     full_replaced_text_content = make_post_header_replacements(
-        file_content, replacement_file_content
+        file_content, replacement_file_content,
     )
     upload_contents(filename, full_replaced_text_content)
 

@@ -1,8 +1,8 @@
 import os
 import unittest
+from unittest import mock
 
 import boto3
-import mock
 from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
 from moto import mock_s3
 
@@ -16,11 +16,11 @@ test_xml_content = """<?xml version="1.0" encoding="UTF-8"?>
 </akomaNtoso>"""
 
 test_s3_event_record = S3EventRecord(
-    {"s3": {"bucket": {"name": "test_bucket"}, "object": {"key": "test_data.xml"}}}
+    {"s3": {"bucket": {"name": "test_bucket"}, "object": {"key": "test_data.xml"}}},
 )
 
 
-class MyModel(object):
+class MyModel:
     def __init__(self, name, value):
         self.name = name
         self.value = value

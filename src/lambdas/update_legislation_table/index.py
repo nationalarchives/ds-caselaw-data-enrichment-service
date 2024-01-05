@@ -49,13 +49,13 @@ def update_legislation_table(trigger_date: Optional[int]):
     sparql_password = validate_env_variable("SPARQL_PASSWORD")
 
     legislation_data_frame = fetch_legislation(
-        sparql_username, sparql_password, trigger_date
+        sparql_username, sparql_password, trigger_date,
     )
 
     engine = init_db_engine()
     LOGGER.info("Engine created")
     legislation_data_frame.to_sql(
-        LEGISLATION_TABLE_NAME, engine, if_exists="append", index=False
+        LEGISLATION_TABLE_NAME, engine, if_exists="append", index=False,
     )
     with engine.connect() as db_conn:
         remove_duplicates(db_conn, LEGISLATION_TABLE_NAME)

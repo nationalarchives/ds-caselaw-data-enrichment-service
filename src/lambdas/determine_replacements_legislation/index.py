@@ -47,7 +47,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
         .read()
-        .decode("utf-8")
+        .decode("utf-8"),
     )
 
     # determine legislation replacements
@@ -66,13 +66,13 @@ def process_event(sqs_rec: SQSRecord) -> None:
     replacements_encoded = replacements_content + replacements_encoded
 
     uploaded_key = upload_replacements(
-        REPLACEMENTS_BUCKET, source_key, replacements_encoded
+        REPLACEMENTS_BUCKET, source_key, replacements_encoded,
     )
     LOGGER.info("Uploaded replacements to %s", uploaded_key)
     push_contents(source_bucket, source_key)
     # enrichment_tracking(ENRICHMENT_BUCKET, "enrichment_tracking.csv")
     LOGGER.info(
-        "Message sent on queue to start determine-replacements-abbreviations lambda"
+        "Message sent on queue to start determine-replacements-abbreviations lambda",
     )
 
 
@@ -103,20 +103,20 @@ def write_replacements_file(replacement_list):
     """
     tuple_file = ""
     for i in replacement_list:
-        replacement_object = {"{}".format(type(i).__name__): list(i)}
+        replacement_object = {f"{type(i).__name__}": list(i)}
         tuple_file += json.dumps(replacement_object)
         tuple_file += "\n"
     return tuple_file
 
 
 def upload_replacements(
-    replacements_bucket: str, replacements_key: str, replacements: str
+    replacements_bucket: str, replacements_key: str, replacements: str,
 ) -> str:
     """
     Uploads replacements to S3 bucket
     """
     LOGGER.info(
-        "Uploading text content to %s/%s", replacements_bucket, replacements_key
+        "Uploading text content to %s/%s", replacements_bucket, replacements_key,
     )
     s3 = boto3.resource("s3")
     object = s3.Object(replacements_bucket, replacements_key)
@@ -129,7 +129,7 @@ def init_NLP() -> NLPModel:
     Load spacy model
     """
     nlp = spacy.load(
-        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
+        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"],
     )
     nlp.max_length = 2500000
     return nlp
@@ -192,7 +192,7 @@ def push_contents(uploaded_bucket, uploaded_key):
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
     queue.send_message(
-        MessageBody=json.dumps(message), MessageAttributes=msg_attributes
+        MessageBody=json.dumps(message), MessageAttributes=msg_attributes,
     )
 
 
