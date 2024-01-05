@@ -4,16 +4,20 @@ import json
 import logging
 import urllib.parse
 from io import BytesIO
+from typing import TYPE_CHECKING
 
 import boto3
 from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
 from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 from lxml import etree
-from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
 from utils.environment_helpers import validate_env_variable
 from utils.types import DocumentAsXMLBytes
+
+if TYPE_CHECKING:
+    from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
+
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
