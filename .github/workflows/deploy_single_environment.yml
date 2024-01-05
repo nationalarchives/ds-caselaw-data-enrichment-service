@@ -172,6 +172,13 @@ jobs:
           cp -r utils/*.py lambdas/xml_validate/utils/
 
 
+          ###############
+          ## PUSH_ENRICHED_XML
+
+          mkdir lambdas/push_enriched_xml/utils
+          cp -r utils/*.py lambdas/push_enriched_xml/utils/
+
+
           cd "${GITHUB_WORKSPACE}"
 
       - name: Setup Terraform
@@ -290,17 +297,6 @@ jobs:
           docker tag tna-s3-tna-ecr-repository-push-enriched-xml-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-${{ secrets.app_env }}:latest
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-push-enriched-xml --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-${{ secrets.app_env }}:latest
-          cd "${GITHUB_WORKSPACE}"
-
-
-          ###########################
-          ## UPDATE_LEGISLATION_TABLE
-
-          # We are unconvinced that this one does anything, since update_legislation_table is a ZIP-based lambda
-          cd "src/lambdas/update_legislation_table"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
 
