@@ -11,10 +11,11 @@ from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
 from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
-from ..database import db_connection
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
 from utils.types import DocumentAsXMLString
+
+from ..database import db_connection
 
 if TYPE_CHECKING:
     from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
