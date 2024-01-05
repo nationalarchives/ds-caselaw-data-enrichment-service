@@ -17,8 +17,6 @@ from utils.types import DocumentAsXMLString, Replacement
 if TYPE_CHECKING:
     from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
-    from utils.types import NLPModel
-
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
@@ -111,7 +109,7 @@ def get_abbreviation_replacements(file_content: str) -> list[abb]:
     return replacements
 
 
-def init_NLP() -> NLPModel:
+def init_NLP() -> spacy.lang.en.English:
     """
     Load spacy model
     """
