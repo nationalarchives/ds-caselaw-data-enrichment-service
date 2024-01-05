@@ -5,11 +5,15 @@ AbbreviationDetector class and the pipeline.
 
 
 from collections import namedtuple
+from typing import TYPE_CHECKING
 
 from spacy.language import Language
 
 from abbreviation_extraction.abbreviations import AbbreviationDetector
-from utils.types import NLPModel
+
+if TYPE_CHECKING:
+    from utils.types import NLPModel
+
 
 abb = namedtuple("abb", "abb_match longform")
 
