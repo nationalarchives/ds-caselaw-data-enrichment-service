@@ -12,11 +12,12 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from abbreviation_extraction.abbreviations_matcher import abb, abb_pipeline
 from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLString, Replacement
 
 if TYPE_CHECKING:
     from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
 
-    from utils.types import DocumentAsXMLString, NLPModel, Replacement
+    from utils.types import NLPModel
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
