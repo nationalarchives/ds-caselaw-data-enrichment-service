@@ -109,7 +109,7 @@ def get_abbreviation_replacements(file_content: str) -> list[abb]:
     return replacements
 
 
-def init_NLP() -> spacy.lang.en.English:
+def init_NLP():
     """
     Load spacy model
     """

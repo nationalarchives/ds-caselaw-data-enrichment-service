@@ -124,7 +124,7 @@ def upload_replacements(
     return object.key
 
 
-def init_NLP() -> spacy.lang.en.English:
+def init_NLP():
     """
     Load spacy model
     """
