@@ -6,7 +6,6 @@ AbbreviationDetector class and the pipeline.
 
 from collections import namedtuple
 
-import spacy
 from spacy.language import Language
 
 from abbreviation_extraction.abbreviations import AbbreviationDetector
@@ -41,7 +40,7 @@ def chunking_mechanism(docobj, n, start, end):
     return judgment_chunks
 
 
-def abb_pipeline(judgment_content_text: str, nlp: spacy.lang.en.English) -> list[abb]:
+def abb_pipeline(judgment_content_text: str, nlp) -> list[abb]:
     """
     Main controller of the abbreviation detection pipeline.
     :param judgment_content_text: judgment content
@@ -54,9 +53,7 @@ def abb_pipeline(judgment_content_text: str, nlp: spacy.lang.en.English) -> list
 
     # init the class - stateful pipeline component
     @Language.factory("abbreviation_detector")
-    def create_abbreviation_detector(
-        nlp: spacy.lang.en.English, name: str
-    ) -> AbbreviationDetector:
+    def create_abbreviation_detector(nlp, name: str) -> AbbreviationDetector:
         return AbbreviationDetector(nlp)
 
     nlp.add_pipe("abbreviation_detector", last=True)
