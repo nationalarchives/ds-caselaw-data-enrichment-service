@@ -149,6 +149,11 @@ jobs:
           mkdir -p lambdas/make_replacements/replacer
           cp -r replacer/*.py lambdas/make_replacements/replacer/
 
+          ## PUSH_XML
+
+          mkdir -p lambdas/push_enriched_xml/utils
+          cp -r utils/*.py lambdas/push_enriched_xml/utils/
+
           cd "${GITHUB_WORKSPACE}"
 
       - name: Setup Terraform
