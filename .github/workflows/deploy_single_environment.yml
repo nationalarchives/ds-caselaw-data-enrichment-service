@@ -39,13 +39,54 @@ jobs:
         with:
           install: true
 
-      - name: Assemble Non-Dockerised Lambda
+      - name: Assemble Lambdas
         run: |
           set -e
           set -o pipefail
 
           cd src/
 
+
+          ###################################
+          ## DETERMINE_LEGISLATION_PROVISIONS
+
+          mkdir lambdas/determine_legislation_provisions/legislation_provisions_extraction
+          cp -r legislation_provisions_extraction/*.* lambdas/determine_legislation_provisions/legislation_provisions_extraction/
+          cp legislation_provisions_extraction/requirements.txt lambdas/determine_legislation_provisions/
+
+          mkdir lambdas/determine_legislation_provisions/replacer
+          cp -r replacer/*.py lambdas/determine_legislation_provisions/replacer/
+
+          mkdir lambdas/determine_legislation_provisions/utils
+          cp -r utils/*.py lambdas/determine_legislation_provisions/utils/
+
+
+          ###############################
+          ## DETERMINE_OBLIQUE_REFERENCES
+
+          mkdir lambdas/determine_oblique_references/oblique_references
+          cp -r oblique_references/*.* lambdas/determine_oblique_references/oblique_references/
+          cp oblique_references/requirements.txt lambdas/determine_oblique_references/
+
+          mkdir lambdas/determine_oblique_references/replacer
+          cp -r replacer/*.py lambdas/determine_oblique_references/replacer/
+
+          mkdir lambdas/determine_oblique_references/utils
+          cp -r utils/*.py lambdas/determine_oblique_references/utils/
+
+
+          #######################################
+          ## DETERMINE_REPLACEMENTS_ABBREVIATIONS
+
+          mkdir lambdas/determine_replacements_abbreviations/abbreviation_extraction
+          cp -r abbreviation_extraction/*.* lambdas/determine_replacements_abbreviations/abbreviation_extraction/
+          cp abbreviation_extraction/requirements.txt lambdas/determine_replacements_abbreviations/
+
+          mkdir lambdas/determine_replacements_abbreviations/utils
+          cp -r utils/*.py lambdas/determine_replacements_abbreviations/utils/
+
+
+          #################################
           ## DETERMINE_REPLACEMENTS_CASELAW
 
           mkdir lambdas/determine_replacements_caselaw/caselaw_extraction
@@ -65,19 +106,8 @@ jobs:
           mkdir lambdas/determine_replacements_caselaw/utils
           cp -r utils/*.py lambdas/determine_replacements_caselaw/utils/
 
-          ## XML_VALIDATE
 
-          mkdir lambdas/xml_validate/utils
-          cp -r utils/*.py lambdas/xml_validate/utils/
-
-          ## UPDATE_LEGISLATION_TABLE
-
-          mkdir lambdas/update_legislation_table/utils
-          cp -r utils/*.py lambdas/update_legislation_table/utils/
-
-          mkdir lambdas/update_legislation_table/database
-          cp -r database/*.py lambdas/update_legislation_table/database/
-
+          #####################################
           ## DETERMINE_REPLACEMENTS_LEGISLATION
 
           mkdir lambdas/determine_replacements_legislation/legislation_extraction
@@ -90,49 +120,42 @@ jobs:
           mkdir lambdas/determine_replacements_legislation/database
           cp -r database/*.py lambdas/determine_replacements_legislation/database/
 
-          ## DETERMINE_REPLACEMENTS_ABBREVIATIONS
 
-          mkdir lambdas/determine_replacements_abbreviations/abbreviation_extraction
-          cp -r abbreviation_extraction/*.* lambdas/determine_replacements_abbreviations/abbreviation_extraction/
-          cp abbreviation_extraction/requirements.txt lambdas/determine_replacements_abbreviations/
-
-          mkdir lambdas/determine_replacements_abbreviations/utils
-          cp -r utils/*.py lambdas/determine_replacements_abbreviations/utils/
-
-          ## DETERMINE_LEGISLATION_PROVISIONS
-
-          mkdir lambdas/determine_legislation_provisions/legislation_provisions_extraction
-          cp -r legislation_provisions_extraction/*.* lambdas/determine_legislation_provisions/legislation_provisions_extraction/
-          cp legislation_provisions_extraction/requirements.txt lambdas/determine_legislation_provisions/
-
-          mkdir lambdas/determine_legislation_provisions/replacer
-          cp -r replacer/*.py lambdas/determine_legislation_provisions/replacer/
-
-          mkdir lambdas/determine_legislation_provisions/utils
-          cp -r utils/*.py lambdas/determine_legislation_provisions/utils/
-
-          ## DETERMINE_OBLIQUE_REFERENCES
-
-          mkdir lambdas/determine_oblique_references/oblique_references
-          cp -r oblique_references/*.* lambdas/determine_oblique_references/oblique_references/
-          cp oblique_references/requirements.txt lambdas/determine_oblique_references/
-
-          mkdir lambdas/determine_oblique_references/replacer
-          cp -r replacer/*.py lambdas/determine_oblique_references/replacer/
-
-          mkdir lambdas/determine_oblique_references/utils
-          cp -r utils/*.py lambdas/determine_oblique_references/utils/
-
-          ## EXTRACT_JUDGMENT_CONTENTS
+          #############################
+          ## EXTRACT_JUDGEMENT_CONTENTS
 
           mkdir lambdas/extract_judgement_contents/utils
           cp -r utils/*.py lambdas/extract_judgement_contents/utils/
 
+
+          ############
           ## FETCH_XML
 
           mkdir lambdas/fetch_xml/utils
           cp -r utils/*.py lambdas/fetch_xml/utils/
 
+
+          ####################
+          ## MAKE_REPLACEMENTS
+
+          mkdir -p lambdas/make_replacements/utils
+          cp -r utils/*.py lambdas/make_replacements/utils/
+
+          mkdir -p lambdas/make_replacements/replacer
+          cp -r replacer/*.py lambdas/make_replacements/replacer/
+
+
+          ###########################
+          ## UPDATE_LEGISLATION_TABLE
+
+          mkdir lambdas/update_legislation_table/utils
+          cp -r utils/*.py lambdas/update_legislation_table/utils/
+
+          mkdir lambdas/update_legislation_table/database
+          cp -r database/*.py lambdas/update_legislation_table/database/
+
+
+          #########################
           ## UPDATE_RULES_PROCESSOR
 
           mkdir lambdas/update_rules_processor/utils
@@ -141,13 +164,20 @@ jobs:
           mkdir lambdas/update_rules_processor/database
           cp -r database/*.py lambdas/update_rules_processor/database/
 
-          ## MAKE_REPLACEMENTS
 
-          mkdir -p lambdas/make_replacements/utils
-          cp -r utils/*.py lambdas/make_replacements/utils/
+          ###############
+          ## XML_VALIDATE
 
-          mkdir -p lambdas/make_replacements/replacer
-          cp -r replacer/*.py lambdas/make_replacements/replacer/
+          mkdir lambdas/xml_validate/utils
+          cp -r utils/*.py lambdas/xml_validate/utils/
+
+
+          ###############
+          ## PUSH_ENRICHED_XML
+
+          mkdir lambdas/push_enriched_xml/utils
+          cp -r utils/*.py lambdas/push_enriched_xml/utils/
+
 
           ## PUSH_XML
 
@@ -186,40 +216,20 @@ jobs:
 
           aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com
 
-          cd "src/lambdas/determine_replacements_caselaw"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-determine-replacements-caselaw --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ secrets.app_env }}:latest
+
+          ############
+          ## DB_BACKUP
+
+          cd "src/lambdas/db_backup"
+          docker buildx build --load -t tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }} .
+          docker tag tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
+          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
+          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-db-backup --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "src/lambdas/determine_replacements_legislation"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-determine-replacements-legislation --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }}:latest
-          cd "${GITHUB_WORKSPACE}"
 
-          cd "src/lambdas/determine_replacements_abbreviations"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-determine-replacements-abbreviations --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }}:latest
-          cd "${GITHUB_WORKSPACE}"
-
-          # We are unconvinced that this one does anything, since update_legislation_table is a ZIP-based lambda
-          cd "src/lambdas/update_legislation_table"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
-          cd "${GITHUB_WORKSPACE}"
-
-          cd "src/lambdas/update_rules_processor"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-update-rules-processor --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
-          cd "${GITHUB_WORKSPACE}"
+          ###################################
+          ## DETERMINE_LEGISLATION_PROVISIONS
 
           cd "src/lambdas/determine_legislation_provisions"
           docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-provision-${{ secrets.app_env }} .
@@ -228,12 +238,53 @@ jobs:
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-determine-legislation-provisions --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-provision-${{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
+
+          ###############################
+          ## DETERMINE_OBLIQUE_REFERENCES
+
           cd "src/lambdas/determine_oblique_references"
           docker buildx build --load -t tna-s3-tna-ecr-repository-oblique-references-${{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-oblique-references-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ secrets.app_env }}:latest
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-determine-oblique-references --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-oblique-references-${{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
+
+
+          #######################################
+          ## DETERMINE_REPLACEMENTS_ABBREVIATIONS
+
+          cd "src/lambdas/determine_replacements_abbreviations"
+          docker buildx build --load -t tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }} .
+          docker tag tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }}:latest
+          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }}:latest
+          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-determine-replacements-abbreviations --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-abbreviations-${{ secrets.app_env }}:latest
+          cd "${GITHUB_WORKSPACE}"
+
+
+          #################################
+          ## DETERMINE_REPLACEMENTS_CASELAW
+
+          cd "src/lambdas/determine_replacements_caselaw"
+          docker buildx build --load -t tna-s3-tna-ecr-repository-${{ secrets.app_env }} .
+          docker tag tna-s3-tna-ecr-repository-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ secrets.app_env }}:latest
+          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ secrets.app_env }}:latest
+          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-determine-replacements-caselaw --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-${{ secrets.app_env }}:latest
+          cd "${GITHUB_WORKSPACE}"
+
+
+          #####################################
+          ## DETERMINE_REPLACEMENTS_LEGISLATION
+
+          cd "src/lambdas/determine_replacements_legislation"
+          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }} .
+          docker tag tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }}:latest
+          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }}:latest
+          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-determine-replacements-legislation --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-${{ secrets.app_env }}:latest
+          cd "${GITHUB_WORKSPACE}"
+
+
+          ############
+          ## FETCH_XML
 
           cd "src/lambdas/fetch_xml"
           docker buildx build --load -t tna-s3-tna-ecr-repository-fetch-xml-${{ secrets.app_env }} .
@@ -242,6 +293,10 @@ jobs:
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-fetch-xml --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-fetch-xml-${{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
+
+          ####################
+          ## PUSH_ENRICHED_XML
+
           cd "src/lambdas/push_enriched_xml"
           docker buildx build --load -t tna-s3-tna-ecr-repository-push-enriched-xml-${{ secrets.app_env }} .
           docker tag tna-s3-tna-ecr-repository-push-enriched-xml-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-${{ secrets.app_env }}:latest
@@ -249,9 +304,13 @@ jobs:
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-push-enriched-xml --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-push-enriched-xml-${{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
 
-          cd "src/lambdas/db_backup"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-db-backup --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
+
+          #########################
+          ## UPDATE_RULES_PROCESSOR
+
+          cd "src/lambdas/update_rules_processor"
+          docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }} .
+          docker tag tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
+          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
+          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-update-rules-processor --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
           cd "${GITHUB_WORKSPACE}"
