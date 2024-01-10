@@ -42,9 +42,15 @@ def lock_judgment_urllib(
     Lock the judgment for editing
     """
     http = urllib3.PoolManager()
-    url = f"{api_endpoint}lock/{query}"
+    # currently unlock only looks for a truthy/falsy value
+    # but we might upgrade that to be a time in seconds
+    url = f"{api_endpoint}lock/{query}?unlock=3600"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
-    r = http.request("PUT", url, headers=headers)
+    r = http.request(
+        "PUT",
+        url,
+        headers=headers,
+    )
     print("Lock judgment API status:", r.status)
     # return r.data.decode()
 
