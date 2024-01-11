@@ -52,7 +52,7 @@ class TestMakePostHeaderReplacements:
 
         assert_equal_xml(content_with_replacements, expected_file_content)
 
-    def test_remove_legislation_references(self):
+    def test_remove_nested_legislation_references(self):
         tidy_output = _remove_old_enrichment_references(
             """
             <xml xmlns='http://docs.oasis-open.org/legaldocml/ns/akn/3.0' xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
@@ -61,8 +61,19 @@ class TestMakePostHeaderReplacements:
         )
 
         assert "<a><e><b>AAA</b><c/>D</e></a>" in tidy_output
+
+    def test_dont_delete_not_TNA_ref_tags(self):
         assert "not-TNA" in _remove_old_enrichment_references(
-            '<akomaNtoso xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn"><ref uk:origin="not-TNA"></ref></akomaNtoso>'
+            """<xml xmlns='http://docs.oasis-open.org/legaldocml/ns/akn/3.0' xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
+            <ref uk:origin="not-TNA"></ref>
+            </xml>"""
+        )
+
+    def test_delete_no_origin_ref_tags(self):
+        assert "ref" not in _remove_old_enrichment_references(
+            """<xml xmlns='http://docs.oasis-open.org/legaldocml/ns/akn/3.0' xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
+            <ref></ref>
+            </xml>"""
         )
 
 

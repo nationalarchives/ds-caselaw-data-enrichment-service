@@ -32,11 +32,15 @@ xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
     </xsl:copy>
 </xsl:template>
 
+<!-- delete ref tags with origin=TNA attribute -->
 <xsl:template match="akn:ref[@uk:origin='TNA']">
     <xsl:apply-templates/>
 </xsl:template>
 
-<!-- <xsl:template match="reg"/> -->
+<!-- delete ref tags with no origin attribute -->
+<xsl:template match="akn:ref[not(@uk:origin)]">
+    <xsl:apply-templates/>
+</xsl:template>
 
 </xsl:stylesheet>
 """
@@ -147,7 +151,8 @@ def _remove_old_enrichment_references(
     file_content: DocumentAsXMLString,
 ) -> DocumentAsXMLString:
     """
-    Enrichment creates <ref uk:origin="TNA"> tags; delete only these.
+    Enrichment creates <ref uk:origin="TNA"> tags; delete these.
+    vCite enrichment created <ref> tags with no uk:origin, delete these too.
     """
     root = lxml.etree.fromstring(file_content.encode("utf-8"))
 
