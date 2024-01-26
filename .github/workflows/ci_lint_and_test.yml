@@ -96,6 +96,43 @@ jobs:
           terraform validate -no-color
         continue-on-error: false
 
+  terraform_format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4.1.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3.0.0
+        continue-on-error: false
+
+      - name: Run Terraform format
+        id: run_terraform_validate
+        run: |
+          set -e
+          set -o pipefail
+          cd terraform
+          terraform fmt -check -recursive
+        continue-on-error: false
+
+  tfsec-pr-commenter:
+    name: tfsec PR commenter
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v4
+      - name: tfsec
+        uses: aquasecurity/tfsec-pr-commenter-action@v1.3.1
+        with:
+          github_token: ${{ github.token }}
+          working_directory: 'terraform'
+
   terraform_plan-staging:
     uses: ./.github/workflows/terraform_plan.yml
     secrets:
