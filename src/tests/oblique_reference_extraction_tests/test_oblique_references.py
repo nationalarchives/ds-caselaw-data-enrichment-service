@@ -1,6 +1,5 @@
 """Tests the `oblique_references` module"""
 
-
 import re
 import unittest
 from pathlib import Path

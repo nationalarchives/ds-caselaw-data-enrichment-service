@@ -12,6 +12,7 @@ To do:
 2. "Section 27(A)" - currently miss these references when replacing
 3. Sub-sections aren't being replaced
 """
+
 import os
 import re
 from typing import Any, Dict, List
