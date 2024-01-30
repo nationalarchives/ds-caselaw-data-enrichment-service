@@ -3,7 +3,6 @@ Main file that controls the abbreviation detection, including the creation of th
 AbbreviationDetector class and the pipeline.
 """
 
-
 from collections import namedtuple
 
 from spacy.language import Language

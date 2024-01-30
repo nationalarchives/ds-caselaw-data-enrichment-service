@@ -1,6 +1,5 @@
 """ Handles the database connection """
 
-
 from typing import Any
 
 import pandas as pd

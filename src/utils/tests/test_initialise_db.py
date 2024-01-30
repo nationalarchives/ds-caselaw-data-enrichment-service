@@ -1,4 +1,5 @@
 """Unit tests for the initialise_db module"""
+
 from unittest import mock
 
 from mock import MagicMock

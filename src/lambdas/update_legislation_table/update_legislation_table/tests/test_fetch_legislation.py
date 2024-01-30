@@ -6,7 +6,6 @@ The credentials should be stored in environment variables named
 'SPARQL_USERNAME' and 'SPARQL_PASSWORD'.
 """
 
-
 import datetime
 import os
 from unittest.mock import patch
