@@ -53,6 +53,28 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
 
+  terraform_format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4.1.1
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3.0.0
+        continue-on-error: false
+
+      - name: Run Terraform format
+        id: run_terraform_validate
+        run: |
+          set -e
+          set -o pipefail
+          cd terraform
+          terraform fmt -check -recursive
+        continue-on-error: false
+
   terraform_lint:
     runs-on: ubuntu-latest
 
