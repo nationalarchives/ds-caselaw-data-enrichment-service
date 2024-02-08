@@ -60,6 +60,7 @@ def patch_judgment_request(
         f"{api_endpoint}judgment/{query}",
         auth=HTTPBasicAuth(username, pw),
         data=data.encode(),
+        params={"unlock": True},
     )
     print(response)
     response.raise_for_status()
@@ -109,9 +110,6 @@ def process_event(sqs_rec: SQSRecord) -> None:
     patch_judgment_request(
         api_endpoint, judgment_uri, file_content, API_USERNAME, API_PASSWORD
     )
-
-    # release the lock
-    release_lock(api_endpoint, judgment_uri, API_USERNAME, API_PASSWORD)
 
 
 ############################################
