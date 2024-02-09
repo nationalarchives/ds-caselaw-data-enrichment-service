@@ -92,7 +92,7 @@ class TestCitationProcessor(unittest.TestCase):
         self.db_conn = psycopg2.connect(**self.postgresql.dsn())
         engine = create_engine(self.postgresql.url())
 
-        manifest_df = pd.read_csv(f"{FIXTURE_DIR}/2022_04_08_Citation_Manifest.csv")
+        manifest_df = pd.read_csv(f"{FIXTURE_DIR}/2022_06_30_Citation_Manifest.csv")
         manifest_df.to_sql("manifest", engine, if_exists="append", index=False)
 
     def tearDown(self):
