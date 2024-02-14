@@ -50,7 +50,8 @@ def case_pipeline(doc, db_conn):
     Loop through detected caselaw citations and build components for xref attribute.
     :param doc: judgment as spacy Doc object
     :param db_conn: DB connection parameters to call Rules Manifest
-    :returns: list of tuples containing detected caselaw and associated attributes
+    :returns: list of tuples containing detected caselaw and associated attributes;
+        they're referred to as "replacements" in determine_replacements_caselaw
     """
 
     REPLACEMENTS_CASELAW = []
