@@ -1,17 +1,16 @@
 #!env/bin/python
 
-import json
 import logging
 import urllib.parse
 from io import StringIO
 
 import boto3
 import pandas as pd
-import spacy
 from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from utils.initialise_db import init_db_engine
+from utils.validate_patterns import test_manifest
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -49,32 +48,6 @@ def create_test_jsonl(source_bucket: str, df: pd.DataFrame) -> None:
     upload_replacements(source_bucket, "test_citation_patterns.jsonl", patterns_file)
 
 
-def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
-    """
-    Test for the rules manifest.
-    """
-    nlp = spacy.load(
-        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
-    )
-    nlp.max_length = 2500000
-
-    citation_ruler = nlp.add_pipe("entity_ruler")
-    citation_ruler.add_patterns(patterns)
-
-    examples = df["match_example"].tolist()
-
-    MATCHED_IDS = []
-
-    for example in examples:
-        doc = nlp(example)
-        ent = [str(ent.ent_id_) for ent in doc.ents][0]
-        MATCHED_IDS.append(ent)
-
-    MATCHED_IDS = list(set(MATCHED_IDS))
-    print(len(MATCHED_IDS), df.shape[0])
-    assert len(MATCHED_IDS) == df.shape[0]
-
-
 @event_source(data_class=S3Event)
 def lambda_handler(event: S3Event, context: LambdaContext) -> None:
     """
@@ -96,15 +69,11 @@ def lambda_handler(event: S3Event, context: LambdaContext) -> None:
         csv_file = response["Body"].read().decode("utf-8")
         df = pd.read_csv(StringIO(csv_file))
 
+        # used by determine_replacements_caselaw
         create_test_jsonl(source_bucket, df)
-        jsonl_key = "test_citation_patterns.jsonl"
-
-        patterns_resp = s3.get_object(Bucket=source_bucket, Key=jsonl_key)
-        patterns = patterns_resp["Body"]
-        pattern_list = [json.loads(line) for line in patterns.iter_lines()]
 
         try:
-            test_manifest(df, pattern_list)
+            test_manifest(df)
         except AssertionError:
             LOGGER.error("Exception: Manifest test failed")
             raise
