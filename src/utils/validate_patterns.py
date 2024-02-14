@@ -1,8 +1,10 @@
+import json
+
 import pandas as pd
 import spacy
 
 
-def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
+def test_manifest(df: pd.DataFrame) -> None:
     """
     Test for the rules manifest: given a dataframe of the CSV file, and the patterns
     (which are also derived directly from that CSV file), check that the number of
@@ -13,6 +15,7 @@ def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
         "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
     )
     nlp.max_length = 2500000
+    patterns = [json.loads(s) for s in df["pattern"]]
 
     citation_ruler = nlp.add_pipe("entity_ruler")
     citation_ruler.add_patterns(patterns)

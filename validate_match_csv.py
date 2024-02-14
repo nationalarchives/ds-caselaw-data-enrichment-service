@@ -55,5 +55,4 @@ for item in csv_dict:
     if len(match) > 1:
         raise RuntimeError(f"{len(match)} matches for {item['match_example']!r}")
 
-
-test_manifest(df, patterns)
+test_manifest(df)

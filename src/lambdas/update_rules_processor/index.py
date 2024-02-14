@@ -1,6 +1,5 @@
 #!env/bin/python
 
-import json
 import logging
 import urllib.parse
 from io import StringIO
@@ -70,15 +69,11 @@ def lambda_handler(event: S3Event, context: LambdaContext) -> None:
         csv_file = response["Body"].read().decode("utf-8")
         df = pd.read_csv(StringIO(csv_file))
 
+        # used by determine_replacements_caselaw
         create_test_jsonl(source_bucket, df)
-        jsonl_key = "test_citation_patterns.jsonl"
-
-        patterns_resp = s3.get_object(Bucket=source_bucket, Key=jsonl_key)
-        patterns = patterns_resp["Body"]
-        pattern_list = [json.loads(line) for line in patterns.iter_lines()]
 
         try:
-            test_manifest(df, pattern_list)
+            test_manifest(df)
         except AssertionError:
             LOGGER.error("Exception: Manifest test failed")
             raise
