@@ -7,11 +7,11 @@ from io import StringIO
 
 import boto3
 import pandas as pd
-import spacy
 from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from utils.initialise_db import init_db_engine
+from utils.validate_patterns import test_manifest
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
@@ -47,32 +47,6 @@ def create_test_jsonl(source_bucket: str, df: pd.DataFrame) -> None:
     patterns = df["pattern"].tolist()
     patterns_file = write_patterns_file(patterns)
     upload_replacements(source_bucket, "test_citation_patterns.jsonl", patterns_file)
-
-
-def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
-    """
-    Test for the rules manifest.
-    """
-    nlp = spacy.load(
-        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
-    )
-    nlp.max_length = 2500000
-
-    citation_ruler = nlp.add_pipe("entity_ruler")
-    citation_ruler.add_patterns(patterns)
-
-    examples = df["match_example"].tolist()
-
-    MATCHED_IDS = []
-
-    for example in examples:
-        doc = nlp(example)
-        ent = [str(ent.ent_id_) for ent in doc.ents][0]
-        MATCHED_IDS.append(ent)
-
-    MATCHED_IDS = list(set(MATCHED_IDS))
-    print(len(MATCHED_IDS), df.shape[0])
-    assert len(MATCHED_IDS) == df.shape[0]
 
 
 @event_source(data_class=S3Event)
