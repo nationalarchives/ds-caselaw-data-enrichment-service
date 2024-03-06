@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2022 The National Archives, UK
+Copyright (C) 2022 Crown Copyright (The National Archives)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
