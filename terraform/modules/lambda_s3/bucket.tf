@@ -1,4 +1,3 @@
-
 module "xml_original_bucket" {
   source = "../secure_bucket"
 

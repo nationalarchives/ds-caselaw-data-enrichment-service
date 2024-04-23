@@ -6,7 +6,6 @@ variable "aws_profile" {
 variable "aws_region" {
   type    = string
   default = "eu-west-2"
-  # default = "eu-west-1" #for testing
 }
 
 variable "vpc_id" {
@@ -18,8 +17,7 @@ variable "default_security_group_id" {
 }
 
 variable "environment" {
-  type = string
-  # default = "ucl"
+  type    = string
   default = "development"
 }
 

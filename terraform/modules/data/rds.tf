@@ -1,6 +1,6 @@
 module "metadata-db" {
   source  = "terraform-aws-modules/rds-aurora/aws"
-  version = ">=5.0.0,<6.0.0"
+  version = "5.3.0"
 
   name = "${local.name}-metadata-db-${local.environment}"
 
@@ -15,13 +15,7 @@ module "metadata-db" {
 
   deletion_protection = local.db[local.environment].deletion_protection
 
-  # create_random_password = true
-
-  # database_name   = jsondecode(data.aws_secretsmanager_secret_version.postgress_master_password.secret_string)["db_name"]
-  # master_username = jsondecode(data.aws_secretsmanager_secret_version.postgress_master_password.secret_string)["db_username"]
-  # password = jsondecode(aws_secretsmanager_secret_version.postgress_master_password.secret_string)["db_password"]
   password = aws_secretsmanager_secret_version.postgress_master_password.secret_string
-
 
   apply_immediately   = true
   skip_final_snapshot = true

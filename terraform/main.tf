@@ -1,4 +1,3 @@
-
 terraform {
   required_version = ">=1.4"
   required_providers {
@@ -13,7 +12,6 @@ terraform {
   }
 
   backend "s3" {
-    # bucket = "${var.backend_bucket}"
     key    = "ds-infrastructure-enrichment-pipeline/backend.tfstate"
     region = "eu-west-2"
   }
@@ -21,7 +19,8 @@ terraform {
 
 module "lambda_s3" {
   source = "./modules/lambda_s3"
-  name   = "tna"
+
+  name = "tna"
 
   environment = var.app_env
 
@@ -31,9 +30,6 @@ module "lambda_s3" {
 
   postgress_master_password_secret_id = module.data.postgress_master_password
   postgress_hostname                  = module.data.postgress_hostname
-
-  # sparql_username = "${module.data.sparql_username}"
-  # sparql_password = "${module.data.sparql_password}"
 
   default_security_group_id = module.network.default_security_group_id
 
@@ -47,7 +43,6 @@ module "network" {
 
   rds_security_group_id = module.data.rds_security_group_id
 }
-
 
 module "data" {
   source = "./modules/data"
