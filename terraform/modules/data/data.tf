@@ -52,15 +52,3 @@ data "aws_subnet" "database" {
   for_each = toset(data.aws_subnets.database.ids)
   id       = each.value
 }
-
-# data "aws_subnets" "db" {
-#   filter {
-#     name   = "vpc-id"
-#     values = [var.vpc_id]
-#   }
-
-#   filter {
-#     name   = "tag:Name"
-#     values = ["*-db-*"]
-#   }
-# }

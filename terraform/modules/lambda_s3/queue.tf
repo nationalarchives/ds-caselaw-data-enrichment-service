@@ -1,4 +1,3 @@
-
 resource "aws_sqs_queue" "replacement-caselaw-queue" {
   name                       = "${local.name}-${local.environment}-replacement-caselaw-event-notification-queue"
   delay_seconds              = 90
@@ -38,12 +37,9 @@ resource "aws_sqs_queue" "replacements-caselaw_dlq_queue" {
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
-  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
-
-
 
 resource "aws_sqs_queue" "replacements_dlq_queue" {
   name                      = "${local.name}-${local.environment}-replacements-dlq-queue"
@@ -52,7 +48,6 @@ resource "aws_sqs_queue" "replacements_dlq_queue" {
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
-  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
@@ -65,7 +60,10 @@ resource "aws_sqs_queue" "replacements-queue" {
   message_retention_seconds  = 86400
   receive_wait_time_seconds  = 10
   sqs_managed_sse_enabled    = true
-  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+  redrive_policy = jsonencode({
+    deadLetterTargetArn = aws_sqs_queue.replacements_dlq_queue.arn,
+    maxReceiveCount     = 4,
+  })
 
   tags = local.tags
 }
@@ -90,9 +88,6 @@ resource "aws_sqs_queue_policy" "replacements-queue-policy" {
 POLICY
 }
 
-
-
-
 resource "aws_sqs_queue" "replacement-legislation-queue" {
   name                       = "${local.name}-${local.environment}-replacement-legislation-event-notification-queue"
   delay_seconds              = 90
@@ -101,8 +96,10 @@ resource "aws_sqs_queue" "replacement-legislation-queue" {
   message_retention_seconds  = 86400
   receive_wait_time_seconds  = 10
   sqs_managed_sse_enabled    = true
-  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-legislation_dlq_queue.arn}\",\"maxReceiveCount\":4}"
-
+  redrive_policy = jsonencode({
+    deadLetterTargetArn = aws_sqs_queue.replacements-legislation_dlq_queue.arn,
+    maxReceiveCount     = 4,
+  })
 }
 
 resource "aws_sqs_queue_policy" "replacement-legislation-queue-policy" {
@@ -132,14 +129,9 @@ resource "aws_sqs_queue" "replacements-legislation_dlq_queue" {
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
-  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
-
-
-
-
 
 resource "aws_sqs_queue" "replacement-abbreviations-queue" {
   name                       = "${local.name}-${local.environment}-replacement-abbreviations-event-notification-queue"
@@ -149,8 +141,10 @@ resource "aws_sqs_queue" "replacement-abbreviations-queue" {
   message_retention_seconds  = 86400
   receive_wait_time_seconds  = 10
   sqs_managed_sse_enabled    = true
-  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.replacements-abbreviations_dlq_queue.arn}\",\"maxReceiveCount\":4}"
-
+  redrive_policy = jsonencode({
+    deadLetterTargetArn = aws_sqs_queue.replacements-abbreviations_dlq_queue.arn,
+    maxReceiveCount     = 4,
+  })
 }
 
 resource "aws_sqs_queue_policy" "replacements-abbreviations-queue-policy" {
@@ -180,12 +174,9 @@ resource "aws_sqs_queue" "replacements-abbreviations_dlq_queue" {
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
-  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
-
-
 
 resource "aws_sqs_queue" "validation-queue" {
   name = "${local.name}-${local.environment}-validation-event-notification-queue"
@@ -195,7 +186,10 @@ resource "aws_sqs_queue" "validation-queue" {
   message_retention_seconds = 86400
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
-  redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.validation_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+  redrive_policy = jsonencode({
+    deadLetterTargetArn = aws_sqs_queue.validation_dlq_queue.arn,
+    maxReceiveCount     = 4,
+  })
 
   tags = local.tags
 }
@@ -260,7 +254,6 @@ resource "aws_sqs_queue" "validation_updates_dlq_queue" {
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
-  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
@@ -272,7 +265,6 @@ resource "aws_sqs_queue" "validation_updates_error_dlq_queue" {
   message_retention_seconds = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds = 10
   sqs_managed_sse_enabled   = true
-  #   redrive_policy            = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.terraform_queue_deadletter.arn}\",\"maxReceiveCount\":4}"
 
   tags = local.tags
 }
@@ -285,8 +277,10 @@ resource "aws_sqs_queue" "xml-validated-queue" {
   message_retention_seconds  = 86400
   receive_wait_time_seconds  = 10
   sqs_managed_sse_enabled    = true
-  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.xml-validated_dlq_queue.arn}\",\"maxReceiveCount\":4}"
-
+  redrive_policy = jsonencode({
+    deadLetterTargetArn = aws_sqs_queue.xml-validated_dlq_queue.arn,
+    maxReceiveCount     = 4,
+  })
 }
 
 resource "aws_sqs_queue_policy" "xml-validated-queue-policy" {
@@ -433,7 +427,10 @@ resource "aws_sqs_queue" "fetch_xml_queue" {
   message_retention_seconds  = 1209600 #max is 2 weeks or 1209600 secs
   receive_wait_time_seconds  = 10
   sqs_managed_sse_enabled    = true
-  redrive_policy             = "{\"deadLetterTargetArn\":\"${aws_sqs_queue.fetch_xml_dlq_queue.arn}\",\"maxReceiveCount\":4}"
+  redrive_policy = jsonencode({
+    deadLetterTargetArn = aws_sqs_queue.fetch_xml_dlq_queue.arn,
+    maxReceiveCount     = 4,
+  })
 
   tags = local.tags
 }
@@ -468,7 +465,13 @@ resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription" {
   protocol            = "sqs"
   endpoint            = aws_sqs_queue.fetch_xml_queue.arn
   filter_policy_scope = "MessageAttributes"
-  filter_policy       = "{\"trigger_enrichment\": [{\"exists\": true}]}"
+  filter_policy = jsonencode({
+    trigger_enrichment = [
+      {
+        exists = true
+      }
+    ]
+  })
 }
 
 resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription_prod" {
@@ -477,5 +480,11 @@ resource "aws_sns_topic_subscription" "fetch_xml_queue_subscription_prod" {
   protocol            = "sqs"
   endpoint            = aws_sqs_queue.fetch_xml_queue.arn
   filter_policy_scope = "MessageAttributes"
-  filter_policy       = "{\"trigger_enrichment\": [{\"exists\": true}]}"
+  filter_policy = jsonencode({
+    trigger_enrichment = [
+      {
+        exists = true
+      }
+    ]
+  })
 }

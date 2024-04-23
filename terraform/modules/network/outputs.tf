@@ -7,11 +7,6 @@ output "database_subnet_group_name" {
 }
 
 output "public_subnets" {
-  # value = "${element(tolist(module.vpc.public_subnets.ids))}"
-  # value = "${tolist(module.vpc.public_subnets.ids)}"
-  # for_each = module.vpc.public_subnets.ids
-  # value =each.value
-  # value = "${module.vpc.public_subnets.ids}"
   value = []
 }
 
