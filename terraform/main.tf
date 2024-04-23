@@ -53,3 +53,11 @@ module "data" {
   database_subnet_group_name = module.network.database_subnet_group_name
   default_security_group_id  = module.network.default_security_group_id
 }
+
+module "github_oidc" {
+  source = "./modules/github_oidc"
+
+  name        = "tna"
+  environment = var.app_env
+  github_repo = "nationalarchives/ds-caselaw-data-enrichment-service"
+}
