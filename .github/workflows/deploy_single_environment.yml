@@ -183,9 +183,17 @@ jobs:
 
           cd "${GITHUB_WORKSPACE}"
 
+      - name: Get terraform version
+        id: get-terraform-version
+        run: |
+          DOTFILE_VERSION=$(cat terraform/.terraform-version)
+          echo "version=$DOTFILE_VERSION" >> $GITHUB_OUTPUT
+
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3.0.0
         continue-on-error: false
+        with:
+          terraform_version: ${{ steps.get-terraform-version.outputs.version }}
 
       - name: Terraform init
         run: |
