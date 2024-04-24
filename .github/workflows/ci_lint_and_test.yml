@@ -99,8 +99,7 @@ jobs:
   terraform_plan-staging:
     uses: ./.github/workflows/terraform_plan.yml
     secrets:
-      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN }}
       account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
       workspace: tna-staging
       app_env: staging
@@ -108,8 +107,7 @@ jobs:
   terraform_plan-production:
     uses: ./.github/workflows/terraform_plan.yml
     secrets:
-      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID_PROD }}
-      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY_PROD }}
+      aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN_PROD }}
       account_id: ${{ secrets.PROD_ACCOUNT_ID }}
       workspace: tna-prod
       app_env: production
