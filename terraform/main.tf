@@ -57,7 +57,8 @@ module "data" {
 module "github_oidc" {
   source = "./modules/github_oidc"
 
-  name        = "tna"
-  environment = var.app_env
-  github_repo = "nationalarchives/ds-caselaw-data-enrichment-service"
+  name                        = "tna"
+  environment                 = var.app_env
+  github_repo                 = "nationalarchives/ds-caselaw-data-enrichment-service"
+  github_oidc_create_provider = false
 }
