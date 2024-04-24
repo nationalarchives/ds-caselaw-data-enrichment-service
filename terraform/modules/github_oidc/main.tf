@@ -1,7 +1,9 @@
 resource "aws_iam_openid_connect_provider" "github" {
+  count = local.github_oidc_create_provider ? 1 : 0
+
   url             = "https://${local.github_oidc_host}"
   client_id_list  = ["sts.amazonaws.com"]
-  thumbprint_list = [data.external.github_oidc_certificate_thumbprint.result.thumbprint]
+  thumbprint_list = [data.external.github_oidc_certificate_thumbprint[0].result.thumbprint]
 }
 
 data "aws_iam_policy_document" "github_oidc_assume_role_policy" {
@@ -9,7 +11,7 @@ data "aws_iam_policy_document" "github_oidc_assume_role_policy" {
     actions = ["sts:AssumeRoleWithWebIdentity"]
     principals {
       type        = "Federated"
-      identifiers = [aws_iam_openid_connect_provider.github.arn]
+      identifiers = [local.github_oidc_provider.arn]
     }
 
     condition {

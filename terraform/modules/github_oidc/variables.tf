@@ -8,6 +8,11 @@ variable "environment" {
   type        = string
 }
 
+variable "github_oidc_create_provider" {
+  description = "Conditionally create GitHub OpenID Connect provider. Only 1 provider configured with the GitHub url is allowed. Set to `false` to use the existing one."
+  type        = bool
+}
+
 variable "github_oidc_host" {
   description = "GitHub OpenID host name"
   type        = string
