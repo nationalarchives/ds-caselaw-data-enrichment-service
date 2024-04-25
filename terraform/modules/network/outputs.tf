@@ -13,3 +13,7 @@ output "public_subnets" {
 output "default_security_group_id" {
   value = module.vpc.default_security_group_id
 }
+
+output "database_subnet_ids" {
+  value = module.vpc.database_subnets
+}
