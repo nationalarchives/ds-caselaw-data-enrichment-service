@@ -14,7 +14,7 @@ resource "aws_launch_template" "jump_host" {
   }
 
   network_interfaces {
-    associate_public_ip_address = false
+    associate_public_ip_address = true
     subnet_id                   = local.subnet_id
     security_groups             = [aws_security_group.jump_host.id]
   }
