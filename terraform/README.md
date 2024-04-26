@@ -17,6 +17,7 @@ No providers.
 |------|--------|---------|
 | <a name="module_data"></a> [data](#module\_data) | ./modules/data | n/a |
 | <a name="module_github_oidc"></a> [github\_oidc](#module\_github\_oidc) | ./modules/github_oidc | n/a |
+| <a name="module_jump_host"></a> [jump\_host](#module\_jump\_host) | ./modules/jump_host | n/a |
 | <a name="module_lambda_s3"></a> [lambda\_s3](#module\_lambda\_s3) | ./modules/lambda_s3 | n/a |
 | <a name="module_network"></a> [network](#module\_network) | ./modules/network | n/a |
 

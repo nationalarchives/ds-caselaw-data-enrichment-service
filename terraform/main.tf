@@ -62,3 +62,12 @@ module "github_oidc" {
   github_repo                 = "nationalarchives/ds-caselaw-data-enrichment-service"
   github_oidc_create_provider = false
 }
+
+module "jump_host" {
+  source = "./modules/jump_host"
+
+  name          = "tna"
+  environment   = var.app_env
+  instance_type = "t2.micro"
+  subnet_id     = module.network.database_subnet_ids[0]
+}
