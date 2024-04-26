@@ -3,6 +3,8 @@
 # Install useful packages
 sudo yum update -y
 
+sudo yum install -y https://s3.amazonaws.com/ec2-downloads-windows/SSMAgent/latest/linux_amd64/amazon-ssm-agent.rpm
+
 if ! command -v aws &> /dev/null
 then
   sudo yum install -y aws-cli
