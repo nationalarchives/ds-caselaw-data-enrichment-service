@@ -39,7 +39,9 @@ resource "aws_launch_template" "jump_host" {
   instance_initiated_shutdown_behavior = "stop"
   instance_type                        = local.instance_type
 
-  user_data = templatefile("${path.module}/ec2-userdata/jump-host.tpl", {})
+  user_data = base64encode(
+    templatefile("${path.module}/ec2-userdata/jump-host.tpl", {})
+  )
 }
 
 resource "aws_instance" "jump_host" {
