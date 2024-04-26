@@ -51,7 +51,7 @@ data "aws_iam_policy_document" "jump_host_ssm_dhmc" {
       "ssm:UpdateServiceSetting"
     ]
     resources = [
-      "arn:aws:iam::${local.aws_account_id}:role/${data.external.ssm_dhmc_setting.result.setting_value}"
+      data.external.ssm_dhmc_setting.result.arn
     ]
   }
 }
