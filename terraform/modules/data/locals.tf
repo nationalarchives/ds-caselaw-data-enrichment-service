@@ -12,6 +12,8 @@ locals {
     }
   }
 
+  aurora_rds = var.aurora_rds
+
   tags = {
     Environment = var.environment
     Project     = "TNA judgement enrichment"
