@@ -28,13 +28,19 @@ module "aurora-metadata-db" {
 
   database_name = "rules"
 
+  depends_on = [
+    aws_db_parameter_group.aurora_postgres,
+    aws_rds_cluster_parameter_group.aurora_postgres,
+    aws_secretsmanager_secret_version.aurora_postgress_master_password,
+  ]
+
   tags = local.tags
 }
 
 resource "aws_db_parameter_group" "aurora_postgres" {
   for_each = local.aurora_rds
 
-  name        = "${local.name}-${each.key}-aurora-db-postgres11-parameter-group"
+  name        = "${local.name}-${each.key}-aurora-db-postgres${split(".", each.value["engine_version"])[0]}-parameter-group"
   family      = "aurora-postgresql${split(".", each.value["engine_version"])[0]}"
   description = "${local.name}-${each.key}-aurora-db-postgres${split(".", each.value["engine_version"])[0]}-parameter-group"
   tags        = local.tags
