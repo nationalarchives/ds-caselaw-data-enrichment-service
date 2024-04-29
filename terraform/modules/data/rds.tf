@@ -11,7 +11,7 @@ module "metadata-db" {
   vpc_id                  = var.vpc_id
   subnets                 = data.aws_subnets.database.ids
   create_security_group   = true
-  allowed_security_groups = [var.default_security_group_id]
+  allowed_security_groups = var.default_security_group_ids
 
   deletion_protection = local.db[local.environment].deletion_protection
 
