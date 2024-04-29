@@ -24,3 +24,11 @@ variable "environment" {
 variable "database_subnet_group_name" {
   type = string
 }
+
+variable "aurora_rds" {
+  type = map(object({
+    engine_version          = string
+    instance_type           = string
+    allowed_security_groups = list(string)
+  }))
+}

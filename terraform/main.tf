@@ -55,6 +55,17 @@ module "data" {
     module.network.default_security_group_id,
     module.jump_host.security_group_id,
   ]
+
+  aurora_rds = {
+    "main" = {
+      engine_version = "16.2"
+      instance_type  = "db.t3.medium"
+      allowed_security_groups = [
+        module.network.default_security_group_id,
+        module.jump_host.security_group_id,
+      ]
+    }
+  }
 }
 
 module "github_oidc" {
