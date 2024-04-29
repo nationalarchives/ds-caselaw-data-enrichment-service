@@ -210,7 +210,6 @@ jobs:
           set -o pipefail
           cd terraform
           terraform workspace select ${{ secrets.workspace }}
-          terraform apply -refresh-only --auto-approve -no-color -var "app_env=${{ secrets.app_env }}"
           terraform apply --auto-approve -no-color -var "app_env=${{ secrets.app_env }}"
 
       # Pushing images to ECR last
