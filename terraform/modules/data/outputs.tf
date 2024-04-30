@@ -22,6 +22,6 @@ output "aws_subnets_private_ids" {
   value = toset(data.aws_subnets.private.ids)
 }
 
-output "rds_security_group_id" {
-  value = module.metadata-db.security_group_id
+output "aurora_security_group_ids" {
+  value = [for k, v in local.aurora_rds : module.aurora-metadata-db[k].security_group_id]
 }

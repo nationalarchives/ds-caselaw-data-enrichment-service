@@ -41,7 +41,7 @@ module "network" {
 
   environment = var.app_env
 
-  rds_security_group_id = module.data.rds_security_group_id
+  rds_security_group_ids = module.data.aurora_security_group_ids
 }
 
 module "data" {
