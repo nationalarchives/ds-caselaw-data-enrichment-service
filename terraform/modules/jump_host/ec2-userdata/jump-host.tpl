@@ -12,4 +12,8 @@ fi
 
 sudo yum install -y \
   jq \
-  rsync
+  rsync \
+  vim \
+  docker
+
+sudo service docker start
