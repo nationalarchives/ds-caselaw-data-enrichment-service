@@ -28,8 +28,8 @@ module "lambda_s3" {
 
   vpc_id = module.network.vpc_id
 
-  postgress_master_password_secret_id = module.data.postgress_master_password
-  postgress_hostname                  = module.data.postgress_hostname
+  postgress_master_password_secret_id = module.data.aurora_postgress_master_password["main"]
+  postgress_hostname                  = module.data.aurora_postgress_hostname["main"]
 
   default_security_group_id = module.network.default_security_group_id
 
