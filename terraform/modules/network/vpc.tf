@@ -28,7 +28,7 @@ module "vpc" {
       protocol        = "tcp"
       from_port       = 5432
       to_port         = 5432
-      security_groups = var.rds_security_group_id
+      security_groups = join(",", var.rds_security_group_ids)
     }
   ]
 
