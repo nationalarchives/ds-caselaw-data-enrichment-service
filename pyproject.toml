@@ -3,3 +3,4 @@ profile = "black"
 
 [tool.pytest.ini_options]
 markers = ["integration: requires access to legislation SPARQL endpoint"]
+pythonpath = "src"
