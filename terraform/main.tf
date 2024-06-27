@@ -51,10 +51,6 @@ module "data" {
 
   vpc_id                     = module.network.vpc_id
   database_subnet_group_name = module.network.database_subnet_group_name
-  default_security_group_ids = [
-    module.network.default_security_group_id,
-    module.jump_host.security_group_id,
-  ]
 
   aurora_rds = {
     "main" = {

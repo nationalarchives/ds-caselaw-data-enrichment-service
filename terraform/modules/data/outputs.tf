@@ -1,13 +1,5 @@
-output "postgress_master_password" {
-  value = aws_secretsmanager_secret_version.postgress_master_password.secret_id
-}
-
 output "aurora_postgress_master_password" {
   value = { for k, v in local.aurora_rds : k => aws_secretsmanager_secret_version.aurora_postgress_master_password[k].secret_id }
-}
-
-output "postgress_hostname" {
-  value = module.metadata-db.rds_cluster_endpoint
 }
 
 output "aurora_postgress_hostname" {
