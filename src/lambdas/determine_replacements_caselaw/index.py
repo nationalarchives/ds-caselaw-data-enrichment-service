@@ -16,7 +16,7 @@ from utils.initialise_db import init_db_connection
 from utils.types import DocumentAsXMLString
 
 if TYPE_CHECKING:
-    from mypy_boto3_sqs.type_defs import MessageAttributeValueQueueTypeDef
+    from mypy_boto3_sqs.type_defs import MessageAttributeValueTypeDef
 
 # This is horrid, but we're copying database.py to a different folder
 # to where it is within the repo within the install script.
@@ -185,7 +185,7 @@ def push_contents(uploaded_bucket, uploaded_key):
 
     # Create a new message
     message = {"replacements": uploaded_key}
-    msg_attributes: dict[str, MessageAttributeValueQueueTypeDef] = {
+    msg_attributes: dict[str, MessageAttributeValueTypeDef] = {
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
