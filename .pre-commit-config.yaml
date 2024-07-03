@@ -77,9 +77,3 @@ repos:
   #       name: mypy-tests
   #       additional_dependencies: [types-mock, types-requests, types-lxml, types-beautifulsoup4]
   #       files: tests/
-
-# sets up .pre-commit-ci.yaml to ensure pre-commit dependencies stay up to date
-ci:
-  autoupdate_schedule: weekly
-  skip: []
-  submodules: false
