@@ -24,7 +24,6 @@ jobs:
       workspace: tna-staging
       app_env: staging
 
-
   deploy_production:
     name: Deploy Production Build
     uses: ./.github/workflows/deploy_single_environment.yml

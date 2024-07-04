@@ -12,15 +12,15 @@ Mark up judgments in [Find Case Law](https://caselaw.nationalarchives.gov.uk) wi
 
 This resource documents the design and operation of the Judgment Enrichment Pipeline (JEP) built for The National Archives by MDRxTECH and vLex Justis to support the publishing process that sits behind the [Find Case Law](https://caselaw.nationalarchives.gov.uk) platform.
 
-The primary purpose of the JEP is to "enrich" the judgments published on [Find Case Law](https://caselaw.nationalarchives.gov.uk) by marking up important pieces of legal information - such as references to earlier cases and legislation - cited in the body of the judgment. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or *resolve* entities that are malformed whilst respecting the original text of the judgment in question.
+The primary purpose of the JEP is to "enrich" the judgments published on [Find Case Law](https://caselaw.nationalarchives.gov.uk) by marking up important pieces of legal information - such as references to earlier cases and legislation - cited in the body of the judgment. In certain scenarios described elsewhere in this documentation, the JEP will "repair" or _resolve_ entities that are malformed whilst respecting the original text of the judgment in question.
 
 ## 1.1 The general anatomy of the JEP
 
-At its core, the JEP is a series of serverless functions, which we call *Annotators*, that sequentially add layers of markup to judgments submitted for enrichment. Each Annotator is responsible for performing a specific type of enrichment. For example, the [Case Law Annotator](/docs/caselaw/case-law-annotator.md) detects references to case law citations (such as `[2021] 1 WLR 1`) and the [Legislation Annotator](/docs/legislation/legislation-annotator.md) is responsible for marking up mentions of UK primary legislation. An overview of the *Annotators* can be found below with more detailed notes on each set out in dedicated documentation in this folder.
+At its core, the JEP is a series of serverless functions, which we call _Annotators_, that sequentially add layers of markup to judgments submitted for enrichment. Each Annotator is responsible for performing a specific type of enrichment. For example, the [Case Law Annotator](/docs/caselaw/case-law-annotator.md) detects references to case law citations (such as `[2021] 1 WLR 1`) and the [Legislation Annotator](/docs/legislation/legislation-annotator.md) is responsible for marking up mentions of UK primary legislation. An overview of the _Annotators_ can be found below with more detailed notes on each set out in dedicated documentation in this folder.
 
 A comprehensive map of the JEP's architecture can be found [here](/docs/img/Full%20JEP.drawio.png)
 
-The *Annotators* are supported by a cast of utility functions that are responsible for ETL, XML validation, rules and data management and file manipulation. The most important of these utility functions are the [*Replacers*](#14-replacers), which generate the enriched XML that is sent back for publication on [Find Case Law](https://caselaw.nationalarchives.gov.uk).
+The _Annotators_ are supported by a cast of utility functions that are responsible for ETL, XML validation, rules and data management and file manipulation. The most important of these utility functions are the [_Replacers_](#14-replacers), which generate the enriched XML that is sent back for publication on [Find Case Law](https://caselaw.nationalarchives.gov.uk).
 
 A significant amount of core markup annotation is provided directly by the JEP, but it is also supported an integration with the [vLex](https://vlex.com/) vCite engine. vCite extends the JEP's functionality in a range of ways, including the addition of a comprehensive suite of case law citation matchers. See [here](/docs/vcite.md) for more detail on the vCite integration and how it is controlled.
 
@@ -32,9 +32,9 @@ An example enriched snippet of LegalDocML feature case law citation markup looks
 <ref href="https://caselaw.nationalarchives.gov.uk/ewca/civ/2021/1308" uk:canonical="[2021] EWCA Civ 1308" uk:isneutral="true" uk:type="case" uk:year="2021" uk:origin="TNA">[2021] EWCA Civ 1308</ref>, <ref href="#" uk:canonical="[2022] 1 WLR 1585" uk:isneutral="false" uk:type="case" uk:year="2022" uk:origin="TNA">[2022] 1 WLR 1585</ref>
 ```
 
-### 1.2 The *Annotators*
+### 1.2 The _Annotators_
 
-The JEP is a modular system comprising a series of AWS Lambda functions -- the *Annotators* -- that are each responsible for performing a discrete step in the enrichment pipeline. The five Annotator functions are:
+The JEP is a modular system comprising a series of AWS Lambda functions -- the _Annotators_ -- that are each responsible for performing a discrete step in the enrichment pipeline. The five Annotator functions are:
 
 1. [Case Law Annotator](/docs/caselaw/case-law-annotator.md) -- detects references to UK case law citations, such as `[2022] 1 WLR 123`
 1. [Legislation Annotator](/docs/legislation/legislation-annotator.md) -- detects references to UK primary legislation, such as `Theft Act 1968`
@@ -72,11 +72,11 @@ It is possible for the same judgment to be submitted for enrichment on multiple 
 
 ## 2 Adding new citation rules to the Case Law Annotator
 
-The Case Law Annotator uses a rules-based engine, the *Rules Manifest*, which is built on top of the [spaCy EntityRuler](https://spacy.io/api/entityruler) to detect case law citations (e.g. \`\[2022\] 1 WLR 123). The *Rules Manifest* is stored as a table in Postgres where each row in the table represents a rule.
+The Case Law Annotator uses a rules-based engine, the _Rules Manifest_, which is built on top of the [spaCy EntityRuler](https://spacy.io/api/entityruler) to detect case law citations (e.g. \`\[2022\] 1 WLR 123). The _Rules Manifest_ is stored as a table in Postgres where each row in the table represents a rule.
 
-The creation of rules is currently managed by modifying and uploading a CSV version of the *Rules Manifest*, which is stored in `production-tna-s3-tna-sg-rules-bucket` with a filename conforming to the pattern `yyyy_mm_dd_Citation_Manifest.csv`.
+The creation of rules is currently managed by modifying and uploading a CSV version of the _Rules Manifest_, which is stored in `production-tna-s3-tna-sg-rules-bucket` with a filename conforming to the pattern `yyyy_mm_dd_Citation_Manifest.csv`.
 
-See [here](/docs/caselaw/updating-the-rules-manifest.md) for guidance on how to create and modify rules in the *Rules Manifest*.
+See [here](/docs/caselaw/updating-the-rules-manifest.md) for guidance on how to create and modify rules in the _Rules Manifest_.
 
 ## 3 Enriching judgments: How to run the pipeline
 

@@ -17,7 +17,7 @@ The OLRA is the fourth annotator in the JEP and kicks into action in the second 
 1. The OLRA uses the previously phase two enriched judgment as input and identifies where there are legislation `</ref>` tags in the judgment body.
 1. The annotator then searches for oblique reference patterns, such as `T(t)he/T(t)his/T(t)hat Act` and `T(t)he/T(t)his/T(t)hat [dddd] Act` references in the judgment text.
 1. Where the matched oblique reference does not contain a year, the OLRA uses the location of the oblique reference and the legislation reference to determine which citation to legislation the oblique reference is closest to, and then links to that legislation.
-1. Where the matched oblique reference contains a year, the OLRA searches  for the matched legislation reference (identified in step 1 above) that corresponds to that year and then links to that legislation.
+1. Where the matched oblique reference contains a year, the OLRA searches for the matched legislation reference (identified in step 1 above) that corresponds to that year and then links to that legislation.
 1. OLRA then builds builds a replacement string that wraps the detected oblique reference into a <ref> element with the link and canonical form of the linked legislation as attributes.
 
 The pipeline returns a dictionary containing the detected oblique reference, its position and the replacement string.
