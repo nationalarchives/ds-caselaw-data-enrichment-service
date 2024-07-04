@@ -23,9 +23,7 @@ def fixed_year(year: str) -> Optional[str]:
         return None
 
 
-def replacer_caselaw(
-    file_data: XMLFragmentAsString, replacement: Replacement
-) -> XMLFragmentAsString:
+def replacer_caselaw(file_data: XMLFragmentAsString, replacement: Replacement) -> XMLFragmentAsString:
     """
     String replacement in the XML
     :param file_data: XML file
@@ -45,14 +43,10 @@ def replacer_caselaw(
     attribs["uk:origin"] = "TNA"
     replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
 
-    return XMLFragmentAsString(
-        str(file_data).replace(replacement[0], replacement_string)
-    )
+    return XMLFragmentAsString(str(file_data).replace(replacement[0], replacement_string))
 
 
-def replacer_leg(
-    file_data: XMLFragmentAsString, replacement: Replacement
-) -> XMLFragmentAsString:
+def replacer_leg(file_data: XMLFragmentAsString, replacement: Replacement) -> XMLFragmentAsString:
     """
     String replacement in the XML
     :param file_data: XML file
@@ -66,26 +60,18 @@ def replacer_leg(
         "uk:origin": "TNA",
     }
     replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
-    return XMLFragmentAsString(
-        str(file_data).replace(replacement[0], replacement_string)
-    )
+    return XMLFragmentAsString(str(file_data).replace(replacement[0], replacement_string))
 
 
-def replacer_abbr(
-    file_data: XMLFragmentAsString, replacement: Replacement
-) -> XMLFragmentAsString:
+def replacer_abbr(file_data: XMLFragmentAsString, replacement: Replacement) -> XMLFragmentAsString:
     """
     String replacement in the XML
     :param file_data: XML file
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
-    replacement_string = (
-        f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
-    )
-    return XMLFragmentAsString(
-        str(file_data).replace(str(replacement[0]), replacement_string)
-    )
+    replacement_string = f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
+    return XMLFragmentAsString(str(file_data).replace(str(replacement[0]), replacement_string))
 
 
 def replacer_pipeline(

@@ -20,9 +20,7 @@ LOGGER.setLevel(logging.INFO)
 ############################################
 
 
-def fetch_judgment_urllib(
-    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
-) -> DocumentAsXMLString:
+def fetch_judgment_urllib(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str) -> DocumentAsXMLString:
     """
     Fetch the judgment from the National Archives
     """
@@ -35,9 +33,7 @@ def fetch_judgment_urllib(
     return DocumentAsXMLString(r.data.decode())
 
 
-def lock_judgment_urllib(
-    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
-) -> None:
+def lock_judgment_urllib(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str) -> None:
     """
     Lock the judgment for editing
     """
@@ -55,9 +51,7 @@ def lock_judgment_urllib(
     # return r.data.decode()
 
 
-def check_lock_judgment_urllib(
-    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
-) -> None:
+def check_lock_judgment_urllib(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str) -> None:
     """
     Check whether the judgment is locked
     """
@@ -107,9 +101,7 @@ def process_event(sqs_rec: SQSRecord, api_endpoint: APIEndpointBaseURL) -> None:
     and upload to destination S3 bucket
     """
     message = json.loads(sqs_rec.body)
-    status, query = read_message(
-        message
-    )  # query is the URL of the item requested to be enriched
+    status, query = read_message(message)  # query is the URL of the item requested to be enriched
     print("Judgment status:", status)
     print("Judgment query:", query)
 
@@ -144,14 +136,10 @@ def handler(event: SQSEvent, context: LambdaContext) -> None:
     LOGGER.info(ENVIRONMENT)
 
     if ENVIRONMENT == "staging":
-        api_endpoint = APIEndpointBaseURL(
-            "https://api.staging.caselaw.nationalarchives.gov.uk/"
-        )
+        api_endpoint = APIEndpointBaseURL("https://api.staging.caselaw.nationalarchives.gov.uk/")
 
     else:
-        api_endpoint = APIEndpointBaseURL(
-            "https://api.caselaw.nationalarchives.gov.uk/"
-        )
+        api_endpoint = APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
 
     try:
         LOGGER.info("SQS EVENT: %s", event)

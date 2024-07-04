@@ -22,15 +22,11 @@ def process_event(sqs_rec):
 
     s3_client = boto3.client("s3")
     source_bucket = sqs_rec["s3"]["bucket"]["name"]
-    source_key = urllib.parse.unquote_plus(
-        sqs_rec["s3"]["object"]["key"], encoding="utf-8"
-    )
+    source_key = urllib.parse.unquote_plus(sqs_rec["s3"]["object"]["key"], encoding="utf-8")
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
-    file_content = s3_client.get_object(Bucket=source_bucket, Key=source_key)[
-        "Body"
-    ].read()
+    file_content = s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read()
 
     upload_contents(source_key, file_content)
     LOGGER.debug("content uploaded")

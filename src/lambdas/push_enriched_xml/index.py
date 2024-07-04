@@ -21,9 +21,7 @@ LOGGER.setLevel(logging.INFO)
 ############################################
 
 
-def fetch_judgment_urllib(
-    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
-) -> DocumentAsXMLString:
+def fetch_judgment_urllib(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str) -> DocumentAsXMLString:
     """
     Fetch the judgment from the National Archives
     """
@@ -36,9 +34,7 @@ def fetch_judgment_urllib(
     return DocumentAsXMLString(r.data.decode())
 
 
-def release_lock(
-    api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str
-) -> None:
+def release_lock(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str) -> None:
     """
     Unlock the judgment after editing
     """
@@ -50,9 +46,7 @@ def release_lock(
     print(r.data)
 
 
-def patch_judgment_request(
-    api_endpoint: APIEndpointBaseURL, query: str, data: str, username: str, pw: str
-) -> None:
+def patch_judgment_request(api_endpoint: APIEndpointBaseURL, query: str, data: str, username: str, pw: str) -> None:
     """
     Apply enrichments to the judgment
     """
@@ -88,18 +82,12 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info(validated_file)
 
     if ENVIRONMENT == "staging":
-        api_endpoint = APIEndpointBaseURL(
-            "https://api.staging.caselaw.nationalarchives.gov.uk/"
-        )
+        api_endpoint = APIEndpointBaseURL("https://api.staging.caselaw.nationalarchives.gov.uk/")
     else:
-        api_endpoint = APIEndpointBaseURL(
-            "https://api.caselaw.nationalarchives.gov.uk/"
-        )
+        api_endpoint = APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
-        .read()
-        .decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
     )
 
     print(source_key)
@@ -107,9 +95,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     print(judgment_uri)
 
     # patch the judgment
-    patch_judgment_request(
-        api_endpoint, judgment_uri, file_content, API_USERNAME, API_PASSWORD
-    )
+    patch_judgment_request(api_endpoint, judgment_uri, file_content, API_USERNAME, API_PASSWORD)
 
 
 ############################################

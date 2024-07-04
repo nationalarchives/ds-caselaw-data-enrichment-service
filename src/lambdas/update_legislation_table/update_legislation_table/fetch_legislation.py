@@ -13,9 +13,7 @@ LOGGER.setLevel(logging.INFO)
 LEGISLATION_API_URL = "https://www.legislation.gov.uk/sparql"
 
 
-def fetch_legislation(
-    sparql_username: str, sparql_password: str, days: Optional[int]
-) -> pd.DataFrame:
+def fetch_legislation(sparql_username: str, sparql_password: str, days: Optional[int]) -> pd.DataFrame:
     """
     Fetch new legislation from legislation.gov.uk since the start day, if given,
     otherwise all legislation
@@ -31,11 +29,7 @@ def fetch_legislation(
     sparql.setCredentials(user=sparql_username, passwd=sparql_password)
     sparql.setReturnFormat(CSV)
 
-    filter_string = (
-        f'FILTER("{today}" >  str(?actTime) && str(?actTime) > "{start_date}")'
-        if start_date
-        else ""
-    )
+    filter_string = f'FILTER("{today}" >  str(?actTime) && str(?actTime) > "{start_date}")' if start_date else ""
 
     sparql.setQuery(
         """
@@ -80,7 +74,5 @@ def _enhance_legislation_data(df):
     df["candidate_titles"] = df[stitles].apply(list, axis=1)
     df = df.explode("candidate_titles")
     df = df[~df["candidate_titles"].isna()].drop_duplicates("candidate_titles")
-    df["for_fuzzy"] = df.candidate_titles.apply(
-        lambda x: re.search(r"Act\s+(\d{4})", x) != None
-    )
+    df["for_fuzzy"] = df.candidate_titles.apply(lambda x: re.search(r"Act\s+(\d{4})", x) != None)
     return df

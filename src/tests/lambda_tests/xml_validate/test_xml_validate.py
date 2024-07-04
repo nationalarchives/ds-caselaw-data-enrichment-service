@@ -15,9 +15,7 @@ test_xml_content = """<?xml version="1.0" encoding="UTF-8"?>
         </level>
 </akomaNtoso>"""
 
-test_s3_event_record = S3EventRecord(
-    {"s3": {"bucket": {"name": "test_bucket"}, "object": {"key": "test_data.xml"}}}
-)
+test_s3_event_record = S3EventRecord({"s3": {"bucket": {"name": "test_bucket"}, "object": {"key": "test_data.xml"}}})
 
 
 class MyModel(object):

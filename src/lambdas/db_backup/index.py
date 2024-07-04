@@ -21,9 +21,7 @@ def lambda_handler(event: EventBridgeEvent, context: LambdaContext) -> None:
         # Take snapshot of RDS database
         print("Trying to create db snapshot")
         snapshot_name = "db-snapshot-" + date
-        rds.create_db_cluster_snapshot(
-            DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db
-        )
+        rds.create_db_cluster_snapshot(DBClusterSnapshotIdentifier=snapshot_name, DBClusterIdentifier=db)
         print("Snapshot creating")
 
         # create a waiter for the DB cluster snapshot to be available

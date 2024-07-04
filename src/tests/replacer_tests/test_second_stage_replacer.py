@@ -30,14 +30,9 @@ class TestSecondStageReplacer(unittest.TestCase):
                 "ref_tag": '<ref uk:canonical="jam">the 2004 Act</ref>',
             },
         )
-        replacement_paragraph = str(
-            create_replacement_paragraph(paragraph_string, paragraph_replacements)
-        )
+        replacement_paragraph = str(create_replacement_paragraph(paragraph_string, paragraph_replacements))
 
-        assert (
-            replacement_paragraph
-            == '<p>Schedule 36 to the <ref uk:canonical="jam">FA 2004</ref>.<CamelCase/></p>'
-        )
+        assert replacement_paragraph == '<p>Schedule 36 to the <ref uk:canonical="jam">FA 2004</ref>.<CamelCase/></p>'
 
     def test_replace_references_by_paragraph(self):
         """

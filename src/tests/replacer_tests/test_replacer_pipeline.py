@@ -15,9 +15,7 @@ class TestCitationReplacer(unittest.TestCase):
 
     def test_citation_replacer_1(self):
         citation_match = "[2025] 1 All E.R. 123"  # incorrect citation
-        corrected_citation = (
-            "[2025] 1 All ER 123"  # in practice, returned via the citation matcher
-        )
+        corrected_citation = "[2025] 1 All ER 123"  # in practice, returned via the citation matcher
         year = "2025"
         URI = "#"
         is_neutral = "true"
@@ -133,12 +131,7 @@ class TestReplacerAbbr(unittest.TestCase):
         text = "This game requires 12 GB of Random Access Memory"
         replacement_entry = ("Random Access Memory", "RAM")
 
-        expected = (
-            "This game requires 12 GB of "
-            '<abbr title="RAM" uk:origin="TNA">'
-            "Random Access Memory"
-            "</abbr>"
-        )
+        expected = "This game requires 12 GB of " '<abbr title="RAM" uk:origin="TNA">' "Random Access Memory" "</abbr>"
         assert replacer_abbr(text, replacement_entry) == expected
 
 

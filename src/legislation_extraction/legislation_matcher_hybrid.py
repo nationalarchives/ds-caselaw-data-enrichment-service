@@ -18,6 +18,7 @@ The hybrid matcher goes through three stages:
         - Creates replacement tuples for the detected references
 
 """
+
 from collections import namedtuple
 from typing import Any, List
 
@@ -77,9 +78,7 @@ def resolve_overlap(results_dict):
     qq.columns = keys
 
     # get refs that overlap in the text
-    mask = (qq.start.values[:, None] >= qq.start.values) & (
-        qq.end.values[:, None] <= qq.end.values
-    )
+    mask = (qq.start.values[:, None] >= qq.start.values) & (qq.end.values[:, None] <= qq.end.values)
     np.fill_diagonal(mask, 0)  # omit 'pairs' that are the same thing twice
     mask = np.triu(mask, 0)  # omit pairs where the first is after than the second
     r, c = np.where(mask)
@@ -102,13 +101,7 @@ def resolve_overlap(results_dict):
     for removal in removals:
         qq.drop(index=removal, inplace=True)
 
-    retval = (
-        qq.set_index("index")
-        .apply(tuple, axis=1)
-        .groupby("index")
-        .apply(list)
-        .T.to_dict()
-    )
+    retval = qq.set_index("index").apply(tuple, axis=1).groupby("index").apply(list).T.to_dict()
     return retval
 
 
@@ -215,10 +208,7 @@ def fuzzy_matcher(title, docobj, nlp, cutoff, candidates=None):
         matches = search_for_act_fuzzy(act, segment, nlp, cutoff=cutoff)
         if (len(matches) > 0) & (dyear == year):
             all_matches.extend(
-                [
-                    (docobj[end - 1 - e + s : end].text, end - 1 - e + s, end, ratio)
-                    for text, s, e, ratio in matches
-                ]
+                [(docobj[end - 1 - e + s : end].text, end - 1 - e + s, end, ratio) for text, s, e, ratio in matches]
             )
     return all_matches
 
@@ -276,9 +266,7 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
     """
     results: dict[str, List[Any]] = {}
     # get candidate segments matching the pattern [Act YYYY]
-    candidates = (
-        detect_candidates(nlp, docobj) if method.__name__ == "fuzzy_matcher" else None
-    )
+    candidates = detect_candidates(nlp, docobj) if method.__name__ == "fuzzy_matcher" else None
     # for every legislation title in the table
     for title in nlp.pipe(titles, batch_size=100):
         # detect legislation in the judgement body
@@ -354,11 +342,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
 
     for fuzzy, method in zip([True, False], ("fuzzy", "exact")):
         # select the titles relevant to the approach to be run using the 'for_fuzzy' flag already built into the look-up table
-        relevant_titles = (
-            titles[titles.for_fuzzy == fuzzy]
-            .candidate_titles.drop_duplicates()
-            .tolist()
-        )
+        relevant_titles = titles[titles.for_fuzzy == fuzzy].candidate_titles.drop_duplicates().tolist()
         res = lookup_pipe(relevant_titles, docobj, nlp, methods[method], conn, CUTOFF)
         result_list.append(res)
 

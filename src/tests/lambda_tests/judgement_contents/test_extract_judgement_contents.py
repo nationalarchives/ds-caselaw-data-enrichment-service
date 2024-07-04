@@ -17,7 +17,9 @@ test_xml_content = """<?xml version="1.0" encoding="UTF-8"?>
         </level>
 </akomaNtoso>"""
 
-test_extracted_xml_content = "the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified."
+test_extracted_xml_content = (
+    "the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified."
+)
 # test_extracted_xml_content = """<p style="margin-right:0.00in;text-indent:0.00in">the properties of golf clubs, the ISP is not, as the CMA decided and the CAT held, objectively justified. </p>"""
 
 test_s3_event = {
@@ -42,9 +44,7 @@ test_s3_event = {
 test_bucket_destination_name = "test_bucket_destination_name"
 
 
-@mock.patch.dict(
-    os.environ, {"DEST_BUCKET_NAME": test_bucket_destination_name}, clear=True
-)
+@mock.patch.dict(os.environ, {"DEST_BUCKET_NAME": test_bucket_destination_name}, clear=True)
 class TestExtractJudgement(unittest.TestCase):
     # def setUp(self):
     #     print("setUp")

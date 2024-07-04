@@ -79,10 +79,7 @@ class TestXmlParser(unittest.TestCase):
 
         judgment_content_text = parse_file(text)
 
-        assert (
-            judgment_content_text
-            == "That point was also in College [2014] EWCA Civ 734 at [12]-[14]"
-        )
+        assert judgment_content_text == "That point was also in College [2014] EWCA Civ 734 at [12]-[14]"
 
 
 if __name__ == "__main__":

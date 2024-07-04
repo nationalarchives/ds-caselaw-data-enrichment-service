@@ -264,9 +264,7 @@ class TestLegislationProcessor(unittest.TestCase):
         titles = ["Adoption and Children Act 2002", "Children and Families Act 2014"]
         cutoff = 90
         methods = {"exact": search_for_act, "hybrid": hybrid}
-        results = lookup_pipe(
-            titles, doc, self.nlp, methods["hybrid"], self.db_conn, cutoff
-        )
+        results = lookup_pipe(titles, doc, self.nlp, methods["hybrid"], self.db_conn, cutoff)
 
         assert results == {
             "Adoption and Children Act 2002": [

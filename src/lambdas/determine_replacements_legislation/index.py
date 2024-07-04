@@ -45,9 +45,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
 
     # fetch the judgement contents
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
-        .read()
-        .decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
     )
 
     # determine legislation replacements
@@ -59,21 +57,15 @@ def process_event(sqs_rec: SQSRecord) -> None:
 
     # open and read existing file from s3 bucket
     replacements_content = (
-        s3_client.get_object(Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"]
-        .read()
-        .decode("utf-8")
+        s3_client.get_object(Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"].read().decode("utf-8")
     )
     replacements_encoded = replacements_content + replacements_encoded
 
-    uploaded_key = upload_replacements(
-        REPLACEMENTS_BUCKET, source_key, replacements_encoded
-    )
+    uploaded_key = upload_replacements(REPLACEMENTS_BUCKET, source_key, replacements_encoded)
     LOGGER.info("Uploaded replacements to %s", uploaded_key)
     push_contents(source_bucket, source_key)
     # enrichment_tracking(ENRICHMENT_BUCKET, "enrichment_tracking.csv")
-    LOGGER.info(
-        "Message sent on queue to start determine-replacements-abbreviations lambda"
-    )
+    LOGGER.info("Message sent on queue to start determine-replacements-abbreviations lambda")
 
 
 def enrichment_tracking(bucket, key):
@@ -109,15 +101,11 @@ def write_replacements_file(replacement_list):
     return tuple_file
 
 
-def upload_replacements(
-    replacements_bucket: str, replacements_key: str, replacements: str
-) -> str:
+def upload_replacements(replacements_bucket: str, replacements_key: str, replacements: str) -> str:
     """
     Uploads replacements to S3 bucket
     """
-    LOGGER.info(
-        "Uploading text content to %s/%s", replacements_bucket, replacements_key
-    )
+    LOGGER.info("Uploading text content to %s/%s", replacements_bucket, replacements_key)
     s3 = boto3.resource("s3")
     object = s3.Object(replacements_bucket, replacements_key)
     object.put(Body=replacements)
@@ -128,9 +116,7 @@ def init_NLP():
     """
     Load spacy model
     """
-    nlp = spacy.load(
-        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
-    )
+    nlp = spacy.load("en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"])
     nlp.max_length = 2500000
     return nlp
 
@@ -191,9 +177,7 @@ def push_contents(uploaded_bucket, uploaded_key):
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
-    queue.send_message(
-        MessageBody=json.dumps(message), MessageAttributes=msg_attributes
-    )
+    queue.send_message(MessageBody=json.dumps(message), MessageAttributes=msg_attributes)
 
 
 DEST_QUEUE = validate_env_variable("DEST_QUEUE_NAME")

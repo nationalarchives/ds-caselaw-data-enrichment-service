@@ -20,9 +20,7 @@ def init_db_engine() -> sqlalchemy.Engine:
     port = validate_env_variable("DATABASE_PORT")
     password = _get_database_password()
 
-    db_url = "postgresql://{0}:{1}@{2}:{3}/{4}".format(
-        username, password, host, port, database_name
-    )
+    db_url = "postgresql://{0}:{1}@{2}:{3}/{4}".format(username, password, host, port, database_name)
     return sqlalchemy.create_engine(db_url)
 
 

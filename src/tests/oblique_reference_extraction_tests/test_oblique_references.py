@@ -66,9 +66,7 @@ class TestOutputHasSameHashAsInput(unittest.TestCase):
                 "ref_tag": '<ref href="http://www.legislation.gov.uk/id/ukpga/2002/41" uk:canonical="2002 c. 41" uk:type="legislation" uk:origin="TNA">the 2002 Act</ref>',
             },
         ]
-        assert nuke_tags(replace_references(text, reference_replacements)) == nuke_tags(
-            text
-        )
+        assert nuke_tags(replace_references(text, reference_replacements)) == nuke_tags(text)
 
 
 class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
@@ -84,9 +82,7 @@ class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
         input_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml"
         with open(input_file_path, "r", encoding="utf-8") as input_file:
             input_file_content = input_file.read()
-        oblique_reference_replacements = (
-            get_oblique_reference_replacements_by_paragraph(input_file_content)
-        )
+        oblique_reference_replacements = get_oblique_reference_replacements_by_paragraph(input_file_content)
         assert oblique_reference_replacements == [
             {
                 "detected_ref": "the 2004 Act",
@@ -137,9 +133,7 @@ class TestCreateLegislationDict(unittest.TestCase):
             ),
         ]
         paragraph_number = 2
-        oblique_reference_replacements = create_legislation_dict(
-            detected_legislation, paragraph_number
-        )
+        oblique_reference_replacements = create_legislation_dict(detected_legislation, paragraph_number)
         assert oblique_reference_replacements == [
             {
                 "para": 2,
@@ -182,9 +176,7 @@ class TestCreateLegislationDict(unittest.TestCase):
             ),
         ]
         paragraph_number = 2
-        oblique_reference_replacements = create_legislation_dict(
-            detected_legislation, paragraph_number
-        )
+        oblique_reference_replacements = create_legislation_dict(detected_legislation, paragraph_number)
         assert oblique_reference_replacements == [
             {
                 "para": 2,

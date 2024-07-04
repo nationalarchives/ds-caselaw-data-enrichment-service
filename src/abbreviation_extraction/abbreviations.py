@@ -18,9 +18,7 @@ from spacy.matcher import Matcher
 from spacy.tokens import Doc, Span
 
 
-def find_abbreviation(
-    long_form_candidate: Span, short_form_candidate: Span
-) -> Tuple[Span, Optional[Span]]:
+def find_abbreviation(long_form_candidate: Span, short_form_candidate: Span) -> Tuple[Span, Optional[Span]]:
     """
     Implements the abbreviation detection algorithm in "A simple algorithm
     for identifying abbreviation definitions in biomedical text.", (Schwartz & Hearst, 2003).
@@ -60,19 +58,11 @@ def find_abbreviation(
             contains_date += 1
 
         while (
-            (
-                long_index >= 0
-                and long_form[long_index].lower() != current_char
-                and abrv_date != True
-            )
+            (long_index >= 0 and long_form[long_index].lower() != current_char and abrv_date != True)
             or
             # .... or if we are checking the first character of the abbreviation, we enforce
             # to be the _starting_ character of a span.
-            (
-                short_index == 0
-                and long_index > 0
-                and long_form[long_index - 1].isalnum()
-            )
+            (short_index == 0 and long_index > 0 and long_form[long_index - 1].isalnum())
         ):
             long_index -= 1
             if long_index < 0:
@@ -111,9 +101,7 @@ def contains(str, set: Iterable[str]) -> bool:
     return any([c in str for c in set])
 
 
-def filter_matches(
-    matcher_output: List[Tuple[int, int, int]], doc: Doc
-) -> List[Tuple[Span, Span]]:
+def filter_matches(matcher_output: List[Tuple[int, int, int]], doc: Doc) -> List[Tuple[Span, Span]]:
     """
     Filter into two cases:
     1. <Short Form> ( <Long Form> )
@@ -150,9 +138,7 @@ def filter_matches(
         if end - start > 3:
             # Long form is inside the parens.
             # Take two words before.
-            short_form_candidate = doc[
-                start - 3 - quote_offset : start - 1 - quote_offset
-            ]
+            short_form_candidate = doc[start - 3 - quote_offset : start - 1 - quote_offset]
             if short_form_filter(short_form_candidate):
                 candidates.append((doc[start:end], short_form_candidate))
         else:
@@ -162,9 +148,7 @@ def filter_matches(
             abbreviation_length = sum([len(x) for x in doc[start:end]])
             max_words = min(abbreviation_length + 5, abbreviation_length * 2)
             # # Look up to max_words backwards
-            long_form_candidate = doc[
-                max(start - max_words - 1 - quote_offset, 0) : start - 1 - quote_offset
-            ]
+            long_form_candidate = doc[max(start - max_words - 1 - quote_offset, 0) : start - 1 - quote_offset]
             short_form = str(doc[start:end])
             word = short_form
             quote_offset_new = 0
@@ -187,17 +171,12 @@ def filter_matches(
             if first_char.isupper() is not True:
                 continue
             # if the last character of the abbreviation is not upper case AND it is not a number (this is to allow years in the abbreviations)
-            if (
-                last_char[length - 1].isupper() is not True
-                and last_char[length - 1].isnumeric() is not True
-            ):
+            if last_char[length - 1].isupper() is not True and last_char[length - 1].isnumeric() is not True:
                 continue
 
             # abbreviation must have 3 or more characters
             if len(str(doc[start:end])) >= 3:
-                candidates.append(
-                    (long_form_candidate, doc[start + quote_offset_new : end])
-                )
+                candidates.append((long_form_candidate, doc[start + quote_offset_new : end]))
 
             continue
 
@@ -227,9 +206,7 @@ def short_form_filter(span: Span) -> bool:
     return True
 
 
-def verify_match_format(
-    matcher_output: List[Tuple[int, int, int]], doc: Doc
-) -> List[Tuple[Span, Span]]:
+def verify_match_format(matcher_output: List[Tuple[int, int, int]], doc: Doc) -> List[Tuple[Span, Span]]:
     """
     Verify that the matches appear in a form where such as ("abbrv") or ("long_form") with quotes
     and brackets as the first two and final two characters
@@ -340,7 +317,8 @@ class AbbreviationDetector:
         print(matcher_output)
         if matcher_output:
             matches_no_brackets = [
-                (x[0], x[1] + 1, x[2] - 1) for x in matcher_output  # type:ignore
+                (x[0], x[1] + 1, x[2] - 1)  # type:ignore
+                for x in matcher_output
             ]
             filtered = filter_matches(matches_no_brackets, doc)
             occurrences = self.find_matches_for(filtered, doc)
@@ -352,9 +330,7 @@ class AbbreviationDetector:
 
         return doc
 
-    def find_matches_for(
-        self, filtered: List[Tuple[Span, Span]], doc: Doc
-    ) -> List[Tuple[Span, Set[Span]]]:
+    def find_matches_for(self, filtered: List[Tuple[Span, Span]], doc: Doc) -> List[Tuple[Span, Set[Span]]]:
         """
         Function to return all start and end positions of an abbreviation found in the judgment content.
         Parameters

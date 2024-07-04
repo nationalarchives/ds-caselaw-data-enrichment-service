@@ -27,9 +27,7 @@ def write_patterns_file(patterns_list: str) -> str:
     return patterns_file
 
 
-def upload_replacements(
-    pattern_bucket: str, pattern_key: str, patterns_file: str
-) -> str:
+def upload_replacements(pattern_bucket: str, pattern_key: str, patterns_file: str) -> str:
     """
     Upload replacements to S3 bucket
     """
@@ -53,9 +51,7 @@ def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
     """
     Test for the rules manifest.
     """
-    nlp = spacy.load(
-        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
-    )
+    nlp = spacy.load("en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"])
     nlp.max_length = 2500000
 
     citation_ruler = nlp.add_pipe("entity_ruler")
@@ -86,9 +82,7 @@ def lambda_handler(event: S3Event, context: LambdaContext) -> None:
     s3 = boto3.client("s3")
     event_record = event.record
     source_bucket = event_record.s3.bucket.name
-    source_key = urllib.parse.unquote_plus(
-        event_record.s3.get_object.key, encoding="utf-8"
-    )
+    source_key = urllib.parse.unquote_plus(event_record.s3.get_object.key, encoding="utf-8")
     print(source_bucket)
     print(source_key)
     if source_key.endswith(".csv"):
@@ -112,9 +106,7 @@ def lambda_handler(event: S3Event, context: LambdaContext) -> None:
         try:
             # write new jsonl file
             new_patterns_file = write_patterns_file(df["pattern"].to_list())
-            upload_replacements(
-                source_bucket, "citation_patterns.jsonl", new_patterns_file
-            )
+            upload_replacements(source_bucket, "citation_patterns.jsonl", new_patterns_file)
 
             # connect to database
             engine = init_db_engine()

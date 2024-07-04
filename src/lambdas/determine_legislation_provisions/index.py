@@ -46,9 +46,7 @@ def add_timestamp_and_engine_version(
     soup = BeautifulSoup(file_data, "xml")
     today = datetime.datetime.now()
     today_str = today.strftime("%Y-%m-%dT%H:%M:%S")
-    enriched_date = soup.new_tag(
-        'FRBRdate date="{}" name="tna-enriched"'.format(today_str)
-    )
+    enriched_date = soup.new_tag('FRBRdate date="{}" name="tna-enriched"'.format(today_str))
     enrichment_version = soup.new_tag(
         "uk:tna-enrichment-engine",
         attrs={"xmlns:uk": "https://caselaw.nationalarchives.gov.uk/akn"},
@@ -56,16 +54,12 @@ def add_timestamp_and_engine_version(
     enrichment_version.string = "6.0.0"
 
     if not soup.proprietary:
-        raise SourceXMLMissingElement(
-            "This document does not have a <proprietary> element."
-        )
+        raise SourceXMLMissingElement("This document does not have a <proprietary> element.")
 
     soup.proprietary.append(enrichment_version)
 
     if not soup.FRBRManifestation or not soup.FRBRManifestation.FRBRdate:
-        raise SourceXMLMissingElement(
-            "This document does not already have a manifestation date."
-        )
+        raise SourceXMLMissingElement("This document does not already have a manifestation date.")
 
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
 
@@ -84,9 +78,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
     print("Input S3 key:", source_key)
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
-        .read()
-        .decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
     )
 
     resolved_refs = provisions_pipeline(file_content)

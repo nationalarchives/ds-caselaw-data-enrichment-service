@@ -21,10 +21,7 @@ def test_replacement_caselaw(caselaw):
         assert replacement[1] is not None
         assert replacement[2] is not None
         assert replacement[3] is not None
-        assert (
-            str(replacement[4]).lower() == "true"
-            or str(replacement[4]).lower() == "false"
-        )
+        assert str(replacement[4]).lower() == "true" or str(replacement[4]).lower() == "false"
 
 
 """
