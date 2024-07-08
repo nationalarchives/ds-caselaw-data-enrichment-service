@@ -55,6 +55,7 @@ def patch_judgment_request(api_endpoint: APIEndpointBaseURL, query: str, data: s
         auth=HTTPBasicAuth(username, pw),
         data=data.encode(),
         params={"unlock": True},
+        timeout=10,
     )
     print(response)
     response.raise_for_status()
