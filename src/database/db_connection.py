@@ -44,7 +44,7 @@ def get_manifest_row(conn: Connection, rule_id: str) -> pd.DataFrame:
     :param rule_id: ID of manifest rule to be extracted
     :return: DataFrame of matched rule
     """
-    matched_rule = pd.read_sql("SELECT * FROM manifest where id='{0}'".format(rule_id), conn)
+    matched_rule = pd.read_sql(f"SELECT * FROM manifest where id='{rule_id}'", conn)
     return matched_rule
 
 
@@ -83,7 +83,7 @@ def get_hrefs(conn: Connection, title: str):
     :return: link to legislation title
     """
     href_query = """SELECT ref FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
-    test = pd.read_sql_query(href_query, conn, params={"title": "{}".format(title)})
+    test = pd.read_sql_query(href_query, conn, params={"title": f"{title}"})
     return test.ref.values[0]
 
 
@@ -95,7 +95,7 @@ def get_canonical_leg(conn, title: str):
     :return: canoncial form of legislation title
     """
     canonical_query = """SELECT citation FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
-    canonical_leg = pd.read_sql(canonical_query, conn, params={"title": "{}".format(title)})
+    canonical_leg = pd.read_sql(canonical_query, conn, params={"title": f"{title}"})
     return canonical_leg.citation.values[0]
 
 

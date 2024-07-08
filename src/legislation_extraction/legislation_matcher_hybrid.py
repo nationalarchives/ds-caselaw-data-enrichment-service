@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Mar 3 10:48:33 2022
 
@@ -20,7 +19,7 @@ The hybrid matcher goes through three stages:
 """
 
 from collections import namedtuple
-from typing import Any, List
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -264,7 +263,7 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
             'end'(int): 'end positin of reference',
             'confidence'(int): 'matching similarity between detected_ref and ref'}
     """
-    results: dict[str, List[Any]] = {}
+    results: dict[str, list[Any]] = {}
     # get candidate segments matching the pattern [Act YYYY]
     candidates = detect_candidates(nlp, docobj) if method.__name__ == "fuzzy_matcher" else None
     # for every legislation title in the table

@@ -14,11 +14,10 @@ FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 
 class TestMakePostHeaderReplacements:
     def test_make_post_header_replacements(self):
-        original_file_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_original.xml", "r", encoding="utf-8").read()
-        replacement_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_replacements.txt", "r", encoding="utf-8").read()
+        original_file_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_original.xml", encoding="utf-8").read()
+        replacement_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_replacements.txt", encoding="utf-8").read()
         expected_file_content = open(
             f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml",
-            "r",
             encoding="utf-8",
         ).read()
 
@@ -28,13 +27,11 @@ class TestMakePostHeaderReplacements:
     def test_post_header_works_if_already_enriched(self):
         original_file_content = open(
             f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml",
-            "r",
             encoding="utf-8",
         ).read()
-        replacement_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_replacements.txt", "r", encoding="utf-8").read()
+        replacement_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_replacements.txt", encoding="utf-8").read()
         expected_file_content = open(
             f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml",
-            "r",
             encoding="utf-8",
         ).read()
 

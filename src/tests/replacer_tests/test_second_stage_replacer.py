@@ -42,7 +42,7 @@ class TestSecondStageReplacer(unittest.TestCase):
             corresponding ref tag
         """
         input_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml"
-        with open(input_file_path, "r", encoding="utf-8") as input_file:
+        with open(input_file_path, encoding="utf-8") as input_file:
             file_content = input_file.read()
         file_data = BeautifulSoup(file_content, "xml")
 
@@ -76,7 +76,7 @@ class TestSecondStageReplacer(unittest.TestCase):
         enriched_content = replace_references_by_paragraph(file_data, references)
 
         expected_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_2.xml"
-        with open(expected_file_path, "r", encoding="utf-8") as expected_file:
+        with open(expected_file_path, encoding="utf-8") as expected_file:
             expected_enriched_content = expected_file.read()
         assert_equal_xml(expected_enriched_content, enriched_content)
 

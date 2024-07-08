@@ -46,7 +46,7 @@ def add_timestamp_and_engine_version(
     soup = BeautifulSoup(file_data, "xml")
     today = datetime.datetime.now()
     today_str = today.strftime("%Y-%m-%dT%H:%M:%S")
-    enriched_date = soup.new_tag('FRBRdate date="{}" name="tna-enriched"'.format(today_str))
+    enriched_date = soup.new_tag(f'FRBRdate date="{today_str}" name="tna-enriched"')
     enrichment_version = soup.new_tag(
         "uk:tna-enrichment-engine",
         attrs={"xmlns:uk": "https://caselaw.nationalarchives.gov.uk/akn"},

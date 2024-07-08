@@ -11,14 +11,14 @@ ScispaCy repo here -> https://github.com/allenai/scispacy
 """
 
 from collections import defaultdict
-from typing import Dict, Iterable, List, Optional, Set, Tuple
+from collections.abc import Iterable
 
 from spacy.language import Language
 from spacy.matcher import Matcher
 from spacy.tokens import Doc, Span
 
 
-def find_abbreviation(long_form_candidate: Span, short_form_candidate: Span) -> Tuple[Span, Optional[Span]]:
+def find_abbreviation(long_form_candidate: Span, short_form_candidate: Span) -> tuple[Span, Span | None]:
     """
     Implements the abbreviation detection algorithm in "A simple algorithm
     for identifying abbreviation definitions in biomedical text.", (Schwartz & Hearst, 2003).
@@ -101,7 +101,7 @@ def contains(str, set: Iterable[str]) -> bool:
     return any([c in str for c in set])
 
 
-def filter_matches(matcher_output: List[Tuple[int, int, int]], doc: Doc) -> List[Tuple[Span, Span]]:
+def filter_matches(matcher_output: list[tuple[int, int, int]], doc: Doc) -> list[tuple[Span, Span]]:
     """
     Filter into two cases:
     1. <Short Form> ( <Long Form> )
@@ -206,7 +206,7 @@ def short_form_filter(span: Span) -> bool:
     return True
 
 
-def verify_match_format(matcher_output: List[Tuple[int, int, int]], doc: Doc) -> List[Tuple[Span, Span]]:
+def verify_match_format(matcher_output: list[tuple[int, int, int]], doc: Doc) -> list[tuple[Span, Span]]:
     """
     Verify that the matches appear in a form where such as ("abbrv") or ("long_form") with quotes
     and brackets as the first two and final two characters
@@ -271,7 +271,7 @@ class AbbreviationDetector:
         self.matcher.add("parenthesis", patterns)
         self.global_matcher = Matcher(nlp.vocab)
 
-    def find(self, span: Span, doc: Doc) -> Tuple[Span, Set[Span]]:
+    def find(self, span: Span, doc: Doc) -> tuple[Span, set[Span]]:
         """
         Functional version of calling the matcher for a single span.
         This method is helpful if you already have an abbreviation which
@@ -330,7 +330,7 @@ class AbbreviationDetector:
 
         return doc
 
-    def find_matches_for(self, filtered: List[Tuple[Span, Span]], doc: Doc) -> List[Tuple[Span, Set[Span]]]:
+    def find_matches_for(self, filtered: list[tuple[Span, Span]], doc: Doc) -> list[tuple[Span, set[Span]]]:
         """
         Function to return all start and end positions of an abbreviation found in the judgment content.
         Parameters
@@ -345,9 +345,9 @@ class AbbreviationDetector:
         list of the match and every occurance of the match in the judgment body
         """
         rules = {}
-        all_occurences: Dict[Span, Set[Span]] = defaultdict(set)
-        already_seen_long: Set[str] = set()
-        already_seen_short: Set[str] = set()
+        all_occurences: dict[Span, set[Span]] = defaultdict(set)
+        already_seen_long: set[str] = set()
+        already_seen_short: set[str] = set()
         for long_candidate, short_candidate in filtered:
             short, long = find_abbreviation(long_candidate, short_candidate)
             # We need the long and short form definitions to be unique, because we need

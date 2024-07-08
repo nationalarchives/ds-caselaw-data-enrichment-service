@@ -15,7 +15,7 @@ To do:
 
 import os
 import re
-from typing import Any, Dict, List
+from typing import Any
 
 import numpy as np
 from bs4 import BeautifulSoup, Tag
@@ -23,7 +23,7 @@ from bs4 import BeautifulSoup, Tag
 from utils.proper_xml import create_tag_string
 from utils.types import DocumentAsXMLString
 
-SectionDict = Dict[str, List[Any]]  # this is a guess
+SectionDict = dict[str, list[Any]]  # this is a guess
 
 THR = 30
 keys = ["detected_ref", "ref_para", "ref_position", "ref_tag"]
@@ -255,7 +255,7 @@ def main(enriched_judgment_file_path, filename):
     """
     enriched_judgment_file = os.path.join(enriched_judgment_file_path, filename)
     print("======", enriched_judgment_file)
-    with open(enriched_judgment_file, "r") as f:
+    with open(enriched_judgment_file) as f:
         soup = BeautifulSoup(f, "xml")
     text = soup.find_all("p")
     cur_para_number = 0

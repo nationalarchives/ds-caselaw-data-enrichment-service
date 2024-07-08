@@ -23,9 +23,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
+        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:year="{year}" uk:origin="TNA">{citation_match}</ref>'
         assert replacement_string in replaced_entry
 
     def test_citation_replacer_2(self):
@@ -38,9 +36,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
+        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:year="{year}" uk:origin="TNA">{citation_match}</ref>'
         assert replacement_string in replaced_entry
 
     def test_citation_replacer_3_no_year(self):
@@ -67,9 +63,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
+        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:year="{year}" uk:origin="TNA">{citation_match}</ref>'
         assert replacement_string in replaced_entry
 
     def test_citation_replacer_5(self):
@@ -82,9 +76,7 @@ class TestCitationReplacer(unittest.TestCase):
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
-        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{}" uk:isNeutral="{}" uk:canonical="{}" uk:year="{}" uk:origin="TNA">{}</ref>'.format(
-            URI, is_neutral, corrected_citation, year, citation_match
-        )
+        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:year="{year}" uk:origin="TNA">{citation_match}</ref>'
         assert replacement_string in replaced_entry
 
 

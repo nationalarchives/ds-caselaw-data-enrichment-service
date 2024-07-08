@@ -1,12 +1,12 @@
-# -*- coding: utf-8 -*-
 """
 Replacer logic for second and third phase enrichment.
 Handles the replacements of oblique references and legislation provisions.
 """
 
 import re
+from collections.abc import Iterable
 from itertools import groupby
-from typing import Iterable, TypedDict
+from typing import TypedDict
 
 from bs4 import BeautifulSoup, Tag
 

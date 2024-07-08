@@ -1,5 +1,4 @@
 import logging
-from typing import Optional
 
 from aws_lambda_powertools.utilities.data_classes import (
     EventBridgeEvent,
@@ -33,7 +32,7 @@ def handler(event: EventBridgeEvent, context: LambdaContext) -> None:
         raise
 
 
-def update_legislation_table(trigger_date: Optional[int]):
+def update_legislation_table(trigger_date: int | None):
     """
     Updates the legislation database table with data fetched from the
     legislation SPARQL endpoint.
