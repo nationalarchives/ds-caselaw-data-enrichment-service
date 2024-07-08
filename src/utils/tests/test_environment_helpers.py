@@ -2,7 +2,8 @@
 
 import pytest
 
-from utils.environment_helpers import get_aws_secret, validate_env_variable
+from utils.environment_helpers import get_aws_secret, validate_env_variable, MissingEnvironmentVariableError
+from botocore.exceptions import ClientError
 
 
 class TestValidateEnvVariable:
@@ -25,7 +26,7 @@ class TestValidateEnvVariable:
         """
         env_var_name = "EMPTY_VAR"
         monkeypatch.setenv(env_var_name, "")
-        with pytest.raises(Exception):
+        with pytest.raises(MissingEnvironmentVariableError):
             validate_env_variable(env_var_name)
 
     def test_validate_env_variable_failure(self):
@@ -35,7 +36,7 @@ class TestValidateEnvVariable:
         Then validate_env_variable should raise an Exception
         """
         env_var_name = "NON_EXISTENT_VAR"
-        with pytest.raises(Exception):
+        with pytest.raises(MissingEnvironmentVariableError):
             validate_env_variable(env_var_name)
 
 
@@ -59,7 +60,7 @@ class TestGetAWSSecret:
         When get_aws_secret is called
         Then get_aws_secret should raise an Exception
         """
-        with pytest.raises(Exception):
+        with pytest.raises(ValueError):
             get_aws_secret("", "")
 
     def test_get_aws_secret_with_invalid_aws_secret_password_lookup(self, moto_secrets_manager_with_password):
@@ -68,7 +69,7 @@ class TestGetAWSSecret:
         When I call get_aws_secret
         Then get_aws_secret should raise an Exception
         """
-        with pytest.raises(Exception):
+        with pytest.raises(ClientError):
             get_aws_secret("wrong_password", moto_secrets_manager_with_password["region_name"])
 
     def test_get_aws_secret_with_invalid_aws_region(self, moto_secrets_manager_with_password):
@@ -77,5 +78,5 @@ class TestGetAWSSecret:
         When I call get_aws_secret
         Then get_aws_secret should raise an Exception
         """
-        with pytest.raises(Exception):
+        with pytest.raises(KeyError):
             get_aws_secret(moto_secrets_manager_with_password["secret_name"], "wrong-region")

@@ -10,16 +10,20 @@ LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
+class MissingEnvironmentVariableError(Exception):
+    pass
+
+
 def validate_env_variable(env_var_name: str) -> str:
     print(f"Getting the value of the environment variable: {env_var_name}")
 
     try:
         env_variable = os.environ[env_var_name]
-    except KeyError:
-        raise Exception(f"Please, set environment variable {env_var_name}")
+    except KeyError as err:
+        raise MissingEnvironmentVariableError(f"Please, set environment variable {env_var_name}") from err
 
     if not env_variable:
-        raise Exception(f"Please, provide environment variable {env_var_name}")
+        raise MissingEnvironmentVariableError(f"Please, provide environment variable {env_var_name}")
 
     return env_variable
 
