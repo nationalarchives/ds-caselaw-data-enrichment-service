@@ -58,7 +58,7 @@ def find_abbreviation(long_form_candidate: Span, short_form_candidate: Span) -> 
             contains_date += 1
 
         while (
-            (long_index >= 0 and long_form[long_index].lower() != current_char and abrv_date != True)
+            (long_index >= 0 and long_form[long_index].lower() != current_char and abrv_date is not True)
             or
             # .... or if we are checking the first character of the abbreviation, we enforce
             # to be the _starting_ character of a span.

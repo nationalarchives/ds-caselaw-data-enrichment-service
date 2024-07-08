@@ -137,13 +137,13 @@ class TestReplacerAbbr(unittest.TestCase):
 
 class TestFixedYear(unittest.TestCase):
     def test_no_year(self):
-        assert fixed_year(None) == None
+        assert fixed_year(None) is None
 
     def test_empty_year(self):
-        assert fixed_year("") == None
+        assert fixed_year("") is None
 
     def test_gibberish_year(self):
-        assert fixed_year("xxx") == None
+        assert fixed_year("xxx") is None
 
     def test_real_year(self):
         assert fixed_year("1969") == "1969"

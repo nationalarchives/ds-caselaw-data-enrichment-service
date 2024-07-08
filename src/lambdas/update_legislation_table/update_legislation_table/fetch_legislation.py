@@ -74,5 +74,5 @@ def _enhance_legislation_data(df):
     df["candidate_titles"] = df[stitles].apply(list, axis=1)
     df = df.explode("candidate_titles")
     df = df[~df["candidate_titles"].isna()].drop_duplicates("candidate_titles")
-    df["for_fuzzy"] = df.candidate_titles.apply(lambda x: re.search(r"Act\s+(\d{4})", x) != None)
+    df["for_fuzzy"] = df.candidate_titles.apply(lambda x: re.search(r"Act\s+(\d{4})", x) is not None)
     return df
