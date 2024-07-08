@@ -51,9 +51,9 @@ def mergedict(x, b):
         dictionary containing the detected references.
     """
     a: dict[Any, Any] = {}
-    for k, v in b.items():
+    for k, _v in b.items():
         a[k] = a.get(k, []) + b[k]
-    for k, v in x.items():
+    for k, _v in x.items():
         a[k] = a.get(k, []) + x[k]
     return a
 
@@ -168,7 +168,7 @@ def search_for_act_fuzzy(title, docobj, nlp, cutoff, candidates=None):
     fuzzy_matcher.add("Text Extractor", phrase_list, kwargs=[options])
     matched_items = fuzzy_matcher(docobj)
     matched_text = []
-    for _, start, end, ratio, pattern in matched_items:
+    for _, start, end, ratio, _pattern in matched_items:
         span = docobj[start:end]
         matched_text.append((span.text, start, end, ratio))
     return matched_text
