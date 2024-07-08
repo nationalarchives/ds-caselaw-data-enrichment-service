@@ -3,9 +3,9 @@
 import logging
 import os
 import urllib.parse
-from distutils.util import strtobool
 
 import boto3
+from distutils.util import strtobool
 
 from utils.environment_helpers import validate_env_variable
 

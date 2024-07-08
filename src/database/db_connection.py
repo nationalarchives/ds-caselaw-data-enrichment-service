@@ -1,11 +1,10 @@
 """Handles the database connection"""
 
-from typing import Any
+from typing import Any, NamedTuple
 
 import pandas as pd
 import psycopg2
 from sqlalchemy import Connection
-from typing import NamedTuple
 
 
 class MatchedRule(NamedTuple):

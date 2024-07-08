@@ -1,6 +1,7 @@
+import pytest
+
 from utils.compare_xml import assert_equal_xml
 from utils.proper_xml import create_tag_string
-import pytest
 
 
 def test_simple_tag():

@@ -1,9 +1,9 @@
 """Unit tests for environment_helpers"""
 
 import pytest
-
-from utils.environment_helpers import get_aws_secret, validate_env_variable, MissingEnvironmentVariableError
 from botocore.exceptions import ClientError
+
+from utils.environment_helpers import MissingEnvironmentVariableError, get_aws_secret, validate_env_variable
 
 
 class TestValidateEnvVariable:
