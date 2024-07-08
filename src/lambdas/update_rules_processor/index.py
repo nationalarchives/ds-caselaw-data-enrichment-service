@@ -17,6 +17,10 @@ LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
+class MismatchedIdShapeError(Exception):
+    pass
+
+
 def write_patterns_file(patterns_list: str) -> str:
     """
     Write patterns to separate lines
@@ -68,7 +72,8 @@ def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
 
     MATCHED_IDS = list(set(MATCHED_IDS))
     print(len(MATCHED_IDS), df.shape[0])
-    assert len(MATCHED_IDS) == df.shape[0]
+    if len(MATCHED_IDS) != df.shape[0]:
+        raise MismatchedIdShapeError
 
 
 @event_source(data_class=S3Event)
