@@ -9,7 +9,7 @@ from moto import mock_secretsmanager
 def moto_secrets_manager_with_password():
     secret_value = {"SecretString": "mydatabasepassword"}
     region_name = "us-east-1"
-    secret_name = "mysecret"
+    secret_name = "mysecret"  # noqa: S105
     mock_secrets_manager = mock_secretsmanager()
     mock_secrets_manager.start()
     client = boto3.client("secretsmanager", region_name=region_name)
