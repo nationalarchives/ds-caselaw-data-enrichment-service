@@ -10,7 +10,7 @@ line-length = 120
 src = ["src"]
 
 [tool.ruff.lint]
-ignore = ["E501", "G004", "PLR2004", "RUF005", "RUF012", "UP040"] # long lines, fstrings in logs, magic values, consider not concat, mutable classbits, type instead of TypeAlias
+ignore = ["E501", "G004", "PLR2004", "RUF005", "RUF012", "UP040", "S320"] # long lines, fstrings in logs, magic values, consider not concat, mutable classbits, type instead of TypeAlias, parsing in lxml
 extend-select = ["W", "B", "Q", "C90", "I", "UP", "YTT", "ASYNC", "S"]
 # extend-select = ["BLE", "A", "COM", "C4", "DTZ", "T10", "DJ", "EM", "EXE", "FA",
 #                  "ISC", "ICN", "G", "INP", "PIE", "T20", "PYI", "PT", "Q", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "INT", "PTH",
