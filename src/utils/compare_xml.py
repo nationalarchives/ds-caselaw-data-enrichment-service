@@ -9,7 +9,7 @@ def canonical_xml(xml_bytes: bytes) -> bytes:
     return val
 
 
-def assert_equal_xml(a: Union[str | bytes], b: Union[str | bytes]) -> None:
+def assert_equal_xml(a: Union[str, bytes], b: Union[str, bytes]) -> None:
     """Are the two inputs the same string when canonicalised? If not, display the first difference."""
     if isinstance(a, str):
         a = a.encode("utf-8")
