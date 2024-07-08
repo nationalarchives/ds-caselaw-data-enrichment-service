@@ -31,7 +31,7 @@ def fetch_legislation(sparql_username: str, sparql_password: str, days: int | No
     filter_string = f'FILTER("{today}" >  str(?actTime) && str(?actTime) > "{start_date}")' if start_date else ""
 
     sparql.setQuery(
-        """
+        f"""
                 prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
                 prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
                 prefix xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -41,23 +41,22 @@ def fetch_legislation(sparql_username: str, sparql_password: str, days: int | No
                 prefix prov: <http://www.w3.org/ns/prov#>
                 prefix leg: <http://www.legislation.gov.uk/def/legislation/>
                 select distinct ?ref  ?title ?ref_version ?shorttitle ?citation ?acronymcitation ?year
-                where {
+                where {{
                    ?activity prov:endedAtTime ?actTime .
                    ?graph prov:wasInfluencedBy ?activity .
                    ?activity rdf:type <http://www.legislation.gov.uk/def/provenance/Addition> .
                    ?dataUnitDataSet sd:namedGraph ?graph .
                    <http://www.legislation.gov.uk/id/dataset/topic/core> void:subset ?dataUnitDataSet .
-                   graph ?graph { ?ref a leg:Legislation; a leg:UnitedKingdomPublicGeneralAct ;
+                   graph ?graph {{ ?ref a leg:Legislation; a leg:UnitedKingdomPublicGeneralAct ;
                                         leg:title ?title ;
                                         leg:interpretation ?version .
-                                        OPTIONAL {?ref leg:citation ?citation} .
-                                        OPTIONAL {?ref leg:acronymCitation ?acronymcitation} .
-                                        OPTIONAL {?ref leg:year ?year} .
-                                        OPTIONAL {?ref_version   leg:shortTitle ?shorttitle} .}
-                    %s
-                }
+                                        OPTIONAL {{?ref leg:citation ?citation}} .
+                                        OPTIONAL {{?ref leg:acronymCitation ?acronymcitation}} .
+                                        OPTIONAL {{?ref leg:year ?year}} .
+                                        OPTIONAL {{?ref_version   leg:shortTitle ?shorttitle}} .}}
+                    {filter_string}
+                }}
                 """
-        % filter_string
     )
 
     results = sparql.query().convert()
