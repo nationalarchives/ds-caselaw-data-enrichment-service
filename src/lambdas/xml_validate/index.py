@@ -35,9 +35,7 @@ def process_event(sqs_rec: S3EventRecord) -> tuple[bool, str, DocumentAsXMLBytes
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
-    file_content = DocumentAsXMLBytes(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read()
-    )
+    file_content = DocumentAsXMLBytes(s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read())
 
     content_valid = validate_content(file_content)
     if content_valid:
@@ -53,9 +51,7 @@ def find_schema(schema_bucket: str, schema_key: str) -> bytes:
     Fetch schema from the schema S3 bucket
     """
     s3_client = boto3.client("s3")
-    schema_content = s3_client.get_object(Bucket=schema_bucket, Key=schema_key)[
-        "Body"
-    ].read()
+    schema_content = s3_client.get_object(Bucket=schema_bucket, Key=schema_key)["Body"].read()
 
     return schema_content
 
@@ -118,9 +114,7 @@ def trigger_push_enriched(uploaded_bucket: str, uploaded_key: str) -> None:
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
-    queue.send_message(
-        MessageBody=json.dumps(message), MessageAttributes=msg_attributes
-    )
+    queue.send_message(MessageBody=json.dumps(message), MessageAttributes=msg_attributes)
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
@@ -154,9 +148,7 @@ def handler(event: S3Event, context: LambdaContext) -> None:
             # stop the test notification event from breaking the parsing logic
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
-            valid_content, source_key, file_content, source_bucket = process_event(
-                sqs_rec
-            )
+            valid_content, source_key, file_content, source_bucket = process_event(sqs_rec)
 
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)
@@ -172,16 +164,11 @@ def handler(event: S3Event, context: LambdaContext) -> None:
                 trigger_push_enriched(DEST_BUCKET, source_key)
                 LOGGER.info("Message sent on queue to start push-enriched-xml lambda")
             else:
-                if (
-                    source_bucket
-                    == "staging-tna-s3-tna-sg-xml-third-phase-enriched-bucket"
-                ):
+                if source_bucket == "staging-tna-s3-tna-sg-xml-third-phase-enriched-bucket":
                     upload_to_vcite(source_key, file_content)
                 else:
                     trigger_push_enriched(VCITE_ENRICHED_BUCKET, source_key)
-                    LOGGER.info(
-                        "Message sent on queue to start push-enriched-xml lambda"
-                    )
+                    LOGGER.info("Message sent on queue to start push-enriched-xml lambda")
 
         else:
             message = "Content is invalid for " + source_key

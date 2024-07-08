@@ -63,9 +63,7 @@ def find_closest_legislation(legislations, sections, thr=30):
 
     # returns sections that are within a threshold distance from legs
     idx = np.argwhere(dist < thr)
-    section_to_leg = [
-        (sections[i][1], legislations[j][1], sections[i][0][0]) for i, j in idx
-    ]
+    section_to_leg = [(sections[i][1], legislations[j][1], sections[i][0][0]) for i, j in idx]
     return section_to_leg
 
 
@@ -96,9 +94,7 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
             raise ValueError("Did not successfully get <ref> tag")
         canonical = ref.get("canonical")  # get the legislation canonical form
         leg_href = ref.get("href")  # get the legislation href
-        section_href = (
-            str(leg_href) + "/section/" + str(section_number)
-        )  # creates the section href
+        section_href = str(leg_href) + "/section/" + str(section_number)  # creates the section href
         clean_section = "section " + str(section_number)
 
         # creates the canonical form for subsection
@@ -184,27 +180,19 @@ def get_correct_section_def(section_matches, cur_para_number, cur_pos):
     :param section_matches: list of dictionaries that include where that section has been redefined
     :param para_number: the number of the paragraph in the judgment
     """
-    pos_refs = np.asarray(
-        [(match["para_number"], match["section_position"]) for match in section_matches]
-    )
+    pos_refs = np.asarray([(match["para_number"], match["section_position"]) for match in section_matches])
     para_numbers = pos_refs[:, 0]
 
     # Get the closest paragraph with a previous mention of the match
     idx = (np.abs(para_numbers - cur_para_number)).argmin()
-    candidates = [
-        match for match in section_matches if match["para_number"] == para_numbers[idx]
-    ]
+    candidates = [match for match in section_matches if match["para_number"] == para_numbers[idx]]
     if len(candidates) == 1:
         return candidates[0]
     else:
         # same as above; relies on position within a paragraph if the section is redefined within the paragraph.
         positions = pos_refs[:, 1]
         idx = (np.abs(positions - cur_pos)).argmin()
-        return [
-            match
-            for match in section_matches
-            if match["section_position"] == positions[idx]
-        ][0]
+        return [match for match in section_matches if match["section_position"] == positions[idx]][0]
 
 
 def provision_resolver(section_dict, matches, para_number):
@@ -242,9 +230,7 @@ def provision_resolver(section_dict, matches, para_number):
                 correct_reference = create_sub_section_links(correct_reference, match)
 
             # create a <ref> tag for detected provision
-            correct_reference["section_ref"] = create_section_ref_tag(
-                correct_reference, match
-            )
+            correct_reference["section_ref"] = create_section_ref_tag(correct_reference, match)
 
             resolved_refs.append(
                 dict(
@@ -254,9 +240,7 @@ def provision_resolver(section_dict, matches, para_number):
                     )
                 )
             )
-            print(
-                f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}"
-            )
+            print(f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}")
 
     return resolved_refs
 
@@ -281,19 +265,13 @@ def main(enriched_judgment_file_path, filename):
         if sections:
             legislations = detect_reference(str(line))
             if legislations:
-                section_to_leg_matches = find_closest_legislation(
-                    legislations, sections, THR
-                )
+                section_to_leg_matches = find_closest_legislation(legislations, sections, THR)
 
                 # create the master section dictionary with relevant leg links
-                section_dict = save_section_to_dict(
-                    section_to_leg_matches, cur_para_number, section_dict
-                )
+                section_dict = save_section_to_dict(section_to_leg_matches, cur_para_number, section_dict)
 
             # resolve sections to legislations
-            resolved_refs.extend(
-                provision_resolver(section_dict, sections, cur_para_number)
-            )
+            resolved_refs.extend(provision_resolver(section_dict, sections, cur_para_number))
 
         cur_para_number += 1
     return resolved_refs
@@ -316,19 +294,13 @@ def provisions_pipeline(file_data: DocumentAsXMLString) -> list:
         if sections:
             legislations = detect_reference(str(line))
             if legislations:
-                section_to_leg_matches = find_closest_legislation(
-                    legislations, sections, THR
-                )
+                section_to_leg_matches = find_closest_legislation(legislations, sections, THR)
 
                 # create the master section dictionary with relevant leg links
-                section_dict = save_section_to_dict(
-                    section_to_leg_matches, cur_para_number, section_dict
-                )
+                section_dict = save_section_to_dict(section_to_leg_matches, cur_para_number, section_dict)
 
             # resolve sections to legislations
-            resolved_refs.extend(
-                provision_resolver(section_dict, sections, cur_para_number)
-            )
+            resolved_refs.extend(provision_resolver(section_dict, sections, cur_para_number))
 
         cur_para_number += 1
     return resolved_refs

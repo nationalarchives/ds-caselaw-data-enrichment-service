@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Legislation Annotator is the second *Annotator* function in the pipeline. It follows the [Case Law Annotator](/docs/caselaw/case-law-annotator.md) and is itself followed by the [Abbreviation Annotator](/docs/abbreviation-annotator.md). The Legislation Annotator performs its function in the first phase of enrichment.
+The Legislation Annotator is the second _Annotator_ function in the pipeline. It follows the [Case Law Annotator](/docs/caselaw/case-law-annotator.md) and is itself followed by the [Abbreviation Annotator](/docs/abbreviation-annotator.md). The Legislation Annotator performs its function in the first phase of enrichment.
 
 The purpose of the Legislation Annotator is to detect and markup references to UK primary legislation cited in the judgment being processed and uses a hybrid of deterministic and probabilistic strategies to achieve this.
 
@@ -51,7 +51,7 @@ prefix dct: <http://purl.org/dc/terms/>
 prefix sd: <http://www.w3.org/ns/sparql-service-description#>
 prefix prov: <http://www.w3.org/ns/prov#>
 prefix leg: <http://www.legislation.gov.uk/def/legislation/>
-select distinct ?ref  ?title ?ref_version ?shorttitle ?citation ?acronymcitation
+select distinct ?ref ?title ?ref_version ?shorttitle ?citation ?acronymcitation
 where {
 ?activity prov:endedAtTime ?actTime .
 ?graph prov:wasInfluencedBy ?activity .
@@ -61,9 +61,9 @@ where {
 graph ?graph { ?ref a leg:Legislation; a leg:UnitedKingdomPublicGeneralAct ;
 leg:title ?title ;
 leg:interpretation ?version .
-OPTIONAL { ?ref leg:citation ?citation  } .
+OPTIONAL { ?ref leg:citation ?citation } .
 OPTIONAL {?ref leg:acronymCitation ?acronymcitation} .
-OPTIONAL {?ref_version   leg:shortTitle ?shorttitle} .}
+OPTIONAL {?ref_version leg:shortTitle ?shorttitle} .}
 FILTER(str(?actTime) > "%s")
 }
 """

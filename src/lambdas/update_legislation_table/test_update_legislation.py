@@ -93,9 +93,7 @@ def test_update_legislation_table(
     monkeypatch.setenv("DATABASE_USERNAME", "testuser")
     monkeypatch.setenv("DATABASE_HOSTNAME", "localhost")
     monkeypatch.setenv("DATABASE_PORT", "5431")
-    monkeypatch.setenv(
-        "SECRET_PASSWORD_LOOKUP", setup_moto_secrets_manager["secret_name"]
-    )
+    monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", setup_moto_secrets_manager["secret_name"])
     monkeypatch.setenv("REGION_NAME", setup_moto_secrets_manager["region_name"])
 
     trigger_date = 7

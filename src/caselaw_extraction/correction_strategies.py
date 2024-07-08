@@ -54,9 +54,7 @@ def apply_correction_strategy(citation_type, citation_match, canonical_form):
         year = components[0]
         d1 = components[1]
         d2 = components[2]
-        corrected_citation = (
-            canonical_form.replace("dddd", year).replace("d1", d1).replace("d2", d2)
-        )
+        corrected_citation = canonical_form.replace("dddd", year).replace("d1", d1).replace("d2", d2)
 
     elif (
         (citation_type == "PubAbbrNumAbbrNum")

@@ -1,4 +1,4 @@
-""" Handles the database connection """
+"""Handles the database connection"""
 
 from typing import Any
 
@@ -7,9 +7,7 @@ import psycopg2
 from sqlalchemy import Connection
 
 
-def create_connection(
-    db: str, user: str, password: str, host: str, port: str
-) -> psycopg2.extensions.connection:
+def create_connection(db: str, user: str, password: str, host: str, port: str) -> psycopg2.extensions.connection:
     """
     Connect to the PostgreSQL database server
     :param db
@@ -23,9 +21,7 @@ def create_connection(
     try:
         # connect to the PostgreSQL server
         print("Connecting to the PostgreSQL database...")
-        conn = psycopg2.connect(
-            database=db, user=user, password=password, host=host, port=port
-        )
+        conn = psycopg2.connect(database=db, user=user, password=password, host=host, port=port)
         return conn
     except (Exception, psycopg2.DatabaseError) as error:
         print(error)
@@ -39,15 +35,11 @@ def get_manifest_row(conn: Connection, rule_id: str) -> pd.DataFrame:
     :param rule_id: ID of manifest rule to be extracted
     :return: DataFrame of matched rule
     """
-    matched_rule = pd.read_sql(
-        "SELECT * FROM manifest where id='{0}'".format(rule_id), conn
-    )
+    matched_rule = pd.read_sql("SELECT * FROM manifest where id='{0}'".format(rule_id), conn)
     return matched_rule
 
 
-def get_matched_rule(
-    conn: Connection, rule_id: str
-) -> tuple[Any, Any, bool, Any, Any, Any]:
+def get_matched_rule(conn: Connection, rule_id: str) -> tuple[Any, Any, bool, Any, Any, Any]:
     """
     Uses database connection to select fields/rows of interest from manifest that match the rule id
     :param conn: database connection, required
@@ -70,9 +62,7 @@ def get_legtitles(conn: Connection) -> pd.DataFrame:
     :param conn: database connection, required
     :return: DataFrame of legislation titles
     """
-    leg_titles = pd.read_sql(
-        "SELECT candidate_titles, year, for_fuzzy FROM ukpga_lookup", conn
-    )
+    leg_titles = pd.read_sql("SELECT candidate_titles, year, for_fuzzy FROM ukpga_lookup", conn)
     return leg_titles
 
 
@@ -95,12 +85,8 @@ def get_canonical_leg(conn, title: str):
     :param title: legislation title, required
     :return: canoncial form of legislation title
     """
-    canonical_query = (
-        """SELECT citation FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
-    )
-    canonical_leg = pd.read_sql(
-        canonical_query, conn, params={"title": "{}".format(title)}
-    )
+    canonical_query = """SELECT citation FROM ukpga_lookup WHERE candidate_titles= %(title)s"""
+    canonical_leg = pd.read_sql(canonical_query, conn, params={"title": "{}".format(title)})
     return canonical_leg.citation.values[0]
 
 

@@ -43,9 +43,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
 
     # fetch the judgement contents
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
-        .read()
-        .decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
     )
 
     replacements = determine_replacements(file_content)
@@ -54,9 +52,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
 
     # open and read existing file from s3 bucket
     replacements_content = (
-        s3_client.get_object(Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"]
-        .read()
-        .decode("utf-8")
+        s3_client.get_object(Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"].read().decode("utf-8")
     )
     replacements_encoded = replacements_content + replacements_encoded
 
@@ -78,9 +74,7 @@ def write_replacements_file(replacement_list: list[Replacement]) -> str:
     return tuple_file
 
 
-def upload_replacements(
-    replacements_bucket: str, replacements_key: str, replacements: str
-) -> None:
+def upload_replacements(replacements_bucket: str, replacements_key: str, replacements: str) -> None:
     """
     Uploads replacements to S3 bucket
     """
@@ -113,9 +107,7 @@ def init_NLP():
     """
     Load spacy model
     """
-    nlp = spacy.load(
-        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
-    )
+    nlp = spacy.load("en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"])
     nlp.max_length = 2500000
     return nlp
 
@@ -134,9 +126,7 @@ def push_contents(uploaded_bucket: str, uploaded_key: str) -> None:
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
-    queue.send_message(
-        MessageBody=json.dumps(message), MessageAttributes=msg_attributes
-    )
+    queue.send_message(MessageBody=json.dumps(message), MessageAttributes=msg_attributes)
 
 
 DEST_QUEUE = validate_env_variable("DEST_QUEUE_NAME")

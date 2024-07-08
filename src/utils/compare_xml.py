@@ -5,11 +5,7 @@ import lxml.etree
 
 def canonical_xml(xml_bytes: bytes) -> bytes:
     """with thanks to https://stackoverflow.com/questions/52422385/python-3-xml-canonicalization"""
-    val = (
-        lxml.etree.tostring(lxml.etree.fromstring(xml_bytes), method="c14n2")
-        .replace(b"\n", b"")
-        .replace(b" ", b"")
-    )
+    val = lxml.etree.tostring(lxml.etree.fromstring(xml_bytes), method="c14n2").replace(b"\n", b"").replace(b" ", b"")
     return val
 
 

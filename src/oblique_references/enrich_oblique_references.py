@@ -16,9 +16,7 @@ def enrich_oblique_references(file_content: DocumentAsXMLString) -> DocumentAsXM
     :param file_content: original file content
     :return: updated file content with enriched oblique references
     """
-    oblique_reference_replacements = get_oblique_reference_replacements_by_paragraph(
-        file_content
-    )
+    oblique_reference_replacements = get_oblique_reference_replacements_by_paragraph(file_content)
     if not oblique_reference_replacements:
         return file_content
     soup = BeautifulSoup(file_content, "xml")

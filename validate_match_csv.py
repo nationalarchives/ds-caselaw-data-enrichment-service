@@ -42,9 +42,7 @@ run_nlp(nlp, "this is [2023] UKSC 3 you know")
 for item in csv_dict:
     match = run_nlp(nlp, f"jam {item['match_example']} cake")
     if not match[0][0] == item["match_example"]:
-        raise RuntimeError(
-            f"Matched {match[0][0]!r} which isn't {item['match_example']!r}"
-        )
+        raise RuntimeError(f"Matched {match[0][0]!r} which isn't {item['match_example']!r}")
     if not match[0][1] == item["id"]:
         raise RuntimeError(f"Matched ID was {match[0][1]!r} which isn't {item['id']!r}")
     if len(match) > 1:

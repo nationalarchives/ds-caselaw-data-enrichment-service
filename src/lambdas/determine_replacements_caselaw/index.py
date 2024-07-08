@@ -44,30 +44,22 @@ def process_event(sqs_rec: S3EventRecord) -> None:
 
     # fetch the judgement contents
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"]
-        .read()
-        .decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
     )
 
     # fetch the rules
-    rules_content = s3_client.get_object(Bucket=RULES_FILE_BUCKET, Key=RULES_FILE_KEY)[
-        "Body"
-    ].read()
+    rules_content = s3_client.get_object(Bucket=RULES_FILE_BUCKET, Key=RULES_FILE_KEY)["Body"].read()
 
     replacements = determine_replacements(file_content, rules_content)
     LOGGER.info("Detected citations and built replacements")
     print(replacements)
     replacements_encoded = write_replacements_file(replacements)
     LOGGER.info("Wrote replacements to file")
-    uploaded_key = upload_replacements(
-        REPLACEMENTS_BUCKET, source_key, replacements_encoded
-    )
+    uploaded_key = upload_replacements(REPLACEMENTS_BUCKET, source_key, replacements_encoded)
     LOGGER.info("Uploaded replacements to %s", uploaded_key)
 
     push_contents(source_bucket, source_key)
-    LOGGER.info(
-        "Message sent on queue to start determine-replacements-legislation lambda"
-    )
+    LOGGER.info("Message sent on queue to start determine-replacements-legislation lambda")
 
 
 def write_replacements_file(replacement_list):
@@ -82,15 +74,11 @@ def write_replacements_file(replacement_list):
     return tuple_file
 
 
-def upload_replacements(
-    replacements_bucket: str, replacements_key: str, replacements: str
-) -> str:
+def upload_replacements(replacements_bucket: str, replacements_key: str, replacements: str) -> str:
     """
     Uploads replacements to S3 bucket
     """
-    LOGGER.info(
-        "Uploading text content to %s/%s", replacements_bucket, replacements_key
-    )
+    LOGGER.info("Uploading text content to %s/%s", replacements_bucket, replacements_key)
     s3 = boto3.resource("s3")
     object = s3.Object(replacements_bucket, replacements_key)
     object.put(Body=replacements)
@@ -101,9 +89,7 @@ def init_NLP(rules_content):
     """
     Load spacy model and add rules from pre-defined patterns list
     """
-    nlp = spacy.load(
-        "en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"]
-    )
+    nlp = spacy.load("en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"])
     nlp.max_length = 5000000
     LOGGER.info("Loading citation patterns jsonl")
 
@@ -189,9 +175,7 @@ def push_contents(uploaded_bucket, uploaded_key):
         "source_key": {"DataType": "String", "StringValue": uploaded_key},
         "source_bucket": {"DataType": "String", "StringValue": uploaded_bucket},
     }
-    queue.send_message(
-        MessageBody=json.dumps(message), MessageAttributes=msg_attributes
-    )
+    queue.send_message(MessageBody=json.dumps(message), MessageAttributes=msg_attributes)
 
 
 DEST_QUEUE = validate_env_variable("DEST_QUEUE_NAME")

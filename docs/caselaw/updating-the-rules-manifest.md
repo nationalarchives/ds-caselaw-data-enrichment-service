@@ -1,8 +1,8 @@
 # Updating the Rules Manifest
 
-The [Case Law Annotator](/docs/caselaw/case-law-annotator.md) is rules-based engine that detects and enriches citations to case law. The rules that underpin this functionality are managed in, and derived from, the *Rules Manifest* -- a single table dataset where each row contains a spaCy entity rule that matches a citation pattern and an assortment of related data, such as whether the rule matches the relevant citation's canonical form and whether the citation is a neutral citation. You can read more about the [*Rules Manifest*](/docs/caselaw/case-law-annotator.md#the-rules-manifest-canonical-and-malformed-citations) and its attributes [here](/docs/caselaw/case-law-annotator.md)
+The [Case Law Annotator](/docs/caselaw/case-law-annotator.md) is rules-based engine that detects and enriches citations to case law. The rules that underpin this functionality are managed in, and derived from, the _Rules Manifest_ -- a single table dataset where each row contains a spaCy entity rule that matches a citation pattern and an assortment of related data, such as whether the rule matches the relevant citation's canonical form and whether the citation is a neutral citation. You can read more about the [_Rules Manifest_](/docs/caselaw/case-law-annotator.md#the-rules-manifest-canonical-and-malformed-citations) and its attributes [here](/docs/caselaw/case-law-annotator.md)
 
-The purpose of this note is to set out the steps you need to take to update the *Rules Manifest*.
+The purpose of this note is to set out the steps you need to take to update the _Rules Manifest_.
 
 ## Step 1: Download the current version of the Rules Manifest
 
@@ -12,7 +12,7 @@ The first step is to download the current version of the Rules Manifest from the
 
 Our strong recommendation is to work in a code editor when making changes to the rules file rather than in Excel or some other spreadsheet GUI. Applications like Excel commonly introduce unwanted character changes, particularly where double-quotes are concerned (and these are used extensively throughout the rules file)!
 
-The *Rules Manifest* already contains a large number of rules that match canoncial and malformed variants of case law citations. As such, it is more likely than not that a rule already exists that will serve as a clse template for the new rule you wish to create. We recommend spending the time finding an example that closely matches the rule under construction. This can then be copied and pasted on a new line and edited.
+The _Rules Manifest_ already contains a large number of rules that match canoncial and malformed variants of case law citations. As such, it is more likely than not that a rule already exists that will serve as a clse template for the new rule you wish to create. We recommend spending the time finding an example that closely matches the rule under construction. This can then be copied and pasted on a new line and edited.
 
 ### Set the new rule's attributes
 

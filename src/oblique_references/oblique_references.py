@@ -156,10 +156,7 @@ def match_act(
         for leg_dict in legislation_dicts
         if (
             leg_dict["para"] < paragraph_number
-            or (
-                leg_dict["para"] == paragraph_number
-                and leg_dict["para_pos"][0] < oblique_act_para_pos
-            )
+            or (leg_dict["para"] == paragraph_number and leg_dict["para_pos"][0] < oblique_act_para_pos)
         )
     ]
 
@@ -223,16 +220,12 @@ def get_replacements(
         if numbered_act:
             matched_replacement = match_numbered_act(detected_act, legislation_dicts)
         else:
-            matched_replacement = match_act(
-                detected_act, legislation_dicts, paragraph_number
-            )
+            matched_replacement = match_act(detected_act, legislation_dicts, paragraph_number)
         replacement_dict["detected_ref"] = match
         replacement_dict["ref_position"] = detected_act[0][0]
         replacement_dict["ref_para"] = paragraph_number
         if matched_replacement:
-            replacement_dict["ref_tag"] = create_section_ref_tag(
-                matched_replacement, match
-            )
+            replacement_dict["ref_tag"] = create_section_ref_tag(matched_replacement, match)
             replacements.append(replacement_dict)
 
     return replacements
@@ -255,9 +248,7 @@ def get_oblique_reference_replacements_by_paragraph(
     for paragraph_number, paragraph in enumerate(paragraphs):
         replacements: List[Dict] = []
         detected_legislation = detect_reference(str(paragraph), "legislation")
-        legislation_dicts = create_legislation_dict(
-            detected_legislation, paragraph_number
-        )
+        legislation_dicts = create_legislation_dict(detected_legislation, paragraph_number)
         all_legislation_dicts.extend(legislation_dicts)
 
         detected_acts = detect_reference(str(paragraph), "act")

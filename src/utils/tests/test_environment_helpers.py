@@ -40,9 +40,7 @@ class TestValidateEnvVariable:
 
 
 class TestGetAWSSecret:
-    def test_get_aws_secret_with_valid_aws_secret(
-        self, moto_secrets_manager_with_password
-    ):
+    def test_get_aws_secret_with_valid_aws_secret(self, moto_secrets_manager_with_password):
         """
         Given a valid AWS secret containing the database password
         When I call get_aws_secret
@@ -53,10 +51,7 @@ class TestGetAWSSecret:
             moto_secrets_manager_with_password["region_name"],
         )
 
-        assert (
-            password
-            == moto_secrets_manager_with_password["secret_value"]["SecretString"]
-        )
+        assert password == moto_secrets_manager_with_password["secret_value"]["SecretString"]
 
     def test_get_aws_secret_with_no_env_variables(self):
         """
@@ -67,28 +62,20 @@ class TestGetAWSSecret:
         with pytest.raises(Exception):
             get_aws_secret("", "")
 
-    def test_get_aws_secret_with_invalid_aws_secret_password_lookup(
-        self, moto_secrets_manager_with_password
-    ):
+    def test_get_aws_secret_with_invalid_aws_secret_password_lookup(self, moto_secrets_manager_with_password):
         """
         Given an invalid AWS secret name
         When I call get_aws_secret
         Then get_aws_secret should raise an Exception
         """
         with pytest.raises(Exception):
-            get_aws_secret(
-                "wrong_password", moto_secrets_manager_with_password["region_name"]
-            )
+            get_aws_secret("wrong_password", moto_secrets_manager_with_password["region_name"])
 
-    def test_get_aws_secret_with_invalid_aws_region(
-        self, moto_secrets_manager_with_password
-    ):
+    def test_get_aws_secret_with_invalid_aws_region(self, moto_secrets_manager_with_password):
         """
         Given an invalid AWS region
         When I call get_aws_secret
         Then get_aws_secret should raise an Exception
         """
         with pytest.raises(Exception):
-            get_aws_secret(
-                moto_secrets_manager_with_password["secret_name"], "wrong-region"
-            )
+            get_aws_secret(moto_secrets_manager_with_password["secret_name"], "wrong-region")

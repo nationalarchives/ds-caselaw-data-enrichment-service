@@ -1,6 +1,6 @@
-[tool.isort]
-profile = "black"
-
 [tool.pytest.ini_options]
 markers = ["integration: requires access to legislation SPARQL endpoint"]
 pythonpath = "src"
+
+[tool.ruff]
+line-length = 120

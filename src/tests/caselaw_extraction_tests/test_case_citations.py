@@ -1,6 +1,6 @@
 """
-    Testing the matching of the citations based on the data found in the rules.
-    These are independent unit tests.
+Testing the matching of the citations based on the data found in the rules.
+These are independent unit tests.
 """
 
 import unittest
@@ -23,8 +23,7 @@ CORRECT_CITATIONS = [
     "[2022] EWHC 123 (TCC))",
     "random text goes here [2022] 1 WLR 123 random text goes here",
     "random text goes here random text goes here [2022] UKUT 123 (TCC)",
-    "random text [2004] AC 816 goes here  random text goes here "
-    "[2022] EWHC 123 (Pat)",
+    "random text [2004] AC 816 goes here  random text goes here " "[2022] EWHC 123 (Pat)",
     "......[2022] 1 QB 123......",
 ]
 INCORRECT_CITATIONS = [
@@ -84,9 +83,7 @@ class TestCitationProcessor(unittest.TestCase):
     def setUp(self):
         self.nlp = English()
         self.nlp.max_length = 1500000
-        self.nlp.add_pipe("entity_ruler").from_disk(
-            f"{FIXTURE_DIR}/citation_patterns.jsonl"
-        )
+        self.nlp.add_pipe("entity_ruler").from_disk(f"{FIXTURE_DIR}/citation_patterns.jsonl")
 
         self.postgresql = testing.postgresql.Postgresql()
         self.db_conn = psycopg2.connect(**self.postgresql.dsn())
@@ -231,45 +228,35 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "1 ExD 123"
         citation_type = "PubNumAbbrNum"
         canonical_form = "d1 ExD d2"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation == citation_match
         assert year == ""
 
         citation_match = "[2025] EWHC 123 (TCC)"
         citation_type = "NCitYearAbbrNumDiv"
         canonical_form = "[dddd] EWHC d+ (TCC)"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation == citation_match
         assert year == "2025"
 
         citation_match = "[2024] EWCOP 758"
         citation_type = "NCitYearAbbrNum"
         canonical_form = "[dddd] EWCOP d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation == citation_match
         assert year == "2024"
 
         citation_match = "[1999] LGR 666"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] LGR d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation == citation_match
         assert year == "1999"
 
         citation_match = "Case T-123/12"
         citation_type = "EUTCase"
         canonical_form = "Case T-123/12"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation == citation_match
         assert year == ""
 
@@ -277,9 +264,7 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "[2022] P.N.L.R 123"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] PNLR d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation != citation_match
         assert corrected_citation == "[2022] PNLR 123"
         assert year == "2022"
@@ -287,9 +272,7 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "(1995) 99 Cr. App. R. 123"
         citation_type = "PubYearNumAbbrNum"
         canonical_form = "(dddd) d1 Cr App R d2"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation != citation_match
         assert corrected_citation == "(1995) 99 Cr App R 123"
         assert year == "1995"
@@ -297,9 +280,7 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "(2026) EWHC 789 (Fam)"
         citation_type = "NCitYearAbbrNumDiv"
         canonical_form = "[dddd] EWHC d+ (Fam)"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation != citation_match
         assert corrected_citation == "[2026] EWHC 789 (Fam)"
         assert year == "2026"
@@ -307,9 +288,7 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "[1999] A.C. 666"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] AC d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation != citation_match
         assert corrected_citation == "[1999] AC 666"
         assert year == "1999"
@@ -317,9 +296,7 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "[2019] Q.B. 456"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] QB d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
-            citation_type, citation_match, canonical_form
-        )
+        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
         assert corrected_citation != citation_match
         assert corrected_citation == "[2019] QB 456"
         assert year == "2019"
