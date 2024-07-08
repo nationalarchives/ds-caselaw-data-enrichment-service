@@ -82,7 +82,7 @@ def resolve_overlap(results_dict):
     np.fill_diagonal(mask, 0)  # omit 'pairs' that are the same thing twice
     mask = np.triu(mask, 0)  # omit pairs where the first is after than the second
     r, c = np.where(mask)
-    overlaps = list(map(list, zip(r, c)))
+    overlaps = list(map(list, zip(r, c, strict=False)))
 
     removals = set()
 
@@ -340,7 +340,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
     # filter the legislation list down to the years detected above
     titles = leg_titles[leg_titles.year.isin(dates)]
 
-    for fuzzy, method in zip([True, False], ("fuzzy", "exact")):
+    for fuzzy, method in zip([True, False], ("fuzzy", "exact"), strict=False):
         # select the titles relevant to the approach to be run using the 'for_fuzzy' flag already built into the look-up table
         relevant_titles = titles[titles.for_fuzzy == fuzzy].candidate_titles.drop_duplicates().tolist()
         res = lookup_pipe(relevant_titles, docobj, nlp, methods[method], conn, CUTOFF)
@@ -351,7 +351,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
 
     results = resolve_overlap(results) if results else results
 
-    results = dict([(k, [dict(zip(keys, j)) for j in v]) for k, v in results.items()])
+    results = dict([(k, [dict(zip(keys, j, strict=False)) for j in v]) for k, v in results.items()])
     refs = [i for j in results.values() for i in j]
 
     # keys_to_extract = {'detected_ref', 'ref'}

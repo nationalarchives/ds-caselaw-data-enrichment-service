@@ -20,7 +20,7 @@ def assert_equal_xml(a: Union[str | bytes], b: Union[str | bytes]) -> None:
     canon_b = canonical_xml(b)
 
     if canon_a != canon_b:
-        for i, (char_a, char_b) in enumerate(zip(canon_a, canon_b)):
+        for i, (char_a, char_b) in enumerate(zip(canon_a, canon_b, strict=False)):
             if char_a != char_b:
                 break
         width = 180

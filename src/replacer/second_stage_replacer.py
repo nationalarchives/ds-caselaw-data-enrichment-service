@@ -29,7 +29,7 @@ def split_string(text: str, split_points: list[int]) -> list[str]:
     :param split_points: list of positions to split between
     :return: list of split strings
     """
-    return list(map(lambda x: text[slice(*x)], zip(split_points, split_points[1:] + [None])))
+    return list(map(lambda x: text[slice(*x)], zip(split_points, split_points[1:] + [None], strict=False)))
 
 
 def replace_references(text: str, reference_replacements: list[LegislationReferenceReplacement]) -> str:
@@ -49,7 +49,7 @@ def replace_references(text: str, reference_replacements: list[LegislationRefere
     ]
     split_text = split_string(text, split_points)
     enriched_text = text[: split_points[0]]
-    for sub_text, reference_replacement in zip(split_text, reference_replacements):
+    for sub_text, reference_replacement in zip(split_text, reference_replacements, strict=False):
         detected_ref = reference_replacement["detected_ref"]
         if not isinstance(detected_ref, str):
             continue

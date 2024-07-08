@@ -25,7 +25,7 @@ def csv_as_dict(csv_path):
     with open(csv_path) as csv_file:
         csvreader = csv.reader(csv_file)
         headers = next(csvreader)
-        return [{k: v for (k, v) in zip(headers, row)} for row in csvreader]
+        return [{k: v for (k, v) in zip(headers, row, strict=False)} for row in csvreader]
 
 
 def get_patterns(csv_dict):

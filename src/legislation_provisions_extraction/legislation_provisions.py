@@ -237,6 +237,7 @@ def provision_resolver(section_dict, matches, para_number):
                     zip(
                         keys,
                         [match, para_number, pos[0], correct_reference["section_ref"]],
+                        strict=False,
                     )
                 )
             )
