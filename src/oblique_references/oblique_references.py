@@ -66,7 +66,8 @@ def detect_reference(text: str, etype: str) -> list[LegislationReference]:
 
 
 def create_legislation_dict(
-    legislation_references: list[LegislationReference], paragraph_number: int
+    legislation_references: list[LegislationReference],
+    paragraph_number: int,
 ) -> list[LegislationDict]:
     """
     Create a dictionary containing metadata of the detected 'legislation' reference
@@ -89,11 +90,11 @@ def create_legislation_dict(
 
         if not isinstance(href, str):
             raise NotExactlyOneRefTag(
-                f"Legislation reference {legislation_reference!r} does not have exactly one 'href', paragraph {paragraph_number}"
+                f"Legislation reference {legislation_reference!r} does not have exactly one 'href', paragraph {paragraph_number}",
             )
         if not isinstance(canonical, str):
             raise NotExactlyOneRefTag(
-                f"Legislation reference {legislation_reference!r} does not have exactly one 'canonical', paragraph {paragraph_number}"
+                f"Legislation reference {legislation_reference!r} does not have exactly one 'canonical', paragraph {paragraph_number}",
             )
 
         legislation_dict: LegislationDict = {
@@ -275,7 +276,7 @@ def get_oblique_reference_replacements_by_paragraph(
 
     for replacement in all_replacements:
         print(
-            f"  => {replacement['detected_ref']} \t {replacement['ref_tag']} \t Paragraph: {replacement['ref_para']} \t Position: {replacement['ref_position']}"
+            f"  => {replacement['detected_ref']} \t {replacement['ref_tag']} \t Paragraph: {replacement['ref_para']} \t Position: {replacement['ref_position']}",
         )
 
     return all_replacements

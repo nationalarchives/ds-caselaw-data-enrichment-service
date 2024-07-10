@@ -22,5 +22,5 @@ def assert_equal_xml(a: str | bytes, b: str | bytes) -> None:
             if char_a != char_b:
                 width = 180
                 raise AssertionError(
-                    f"xml mismatch at {i}\nbefore: {canon_a[i-width:i]!r}\n first: {canon_a[i:i+width]!r}\nsecond: {canon_b[i:i+width]!r}"
+                    f"xml mismatch at {i}\nbefore: {canon_a[i-width:i]!r}\n first: {canon_a[i:i+width]!r}\nsecond: {canon_b[i:i+width]!r}",
                 )

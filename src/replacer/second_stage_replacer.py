@@ -97,6 +97,6 @@ def replace_references_by_paragraph(
     for paragraph_number, paragraph_reference_replacements in groupby(ordered_reference_replacements, key=key_func):
         paragraph_string = str(paragraphs[paragraph_number])
         paragraphs[paragraph_number].replace_with(
-            create_replacement_paragraph(paragraph_string, paragraph_reference_replacements)
+            create_replacement_paragraph(paragraph_string, paragraph_reference_replacements),
         )
     return DocumentAsXMLString(str(file_data))

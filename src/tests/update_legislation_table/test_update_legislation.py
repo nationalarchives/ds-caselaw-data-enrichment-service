@@ -84,7 +84,7 @@ def test_update_legislation_table(
             "year": [2001, 2001],
             "candidate_titles": ["b_candidate_titles", "c_candidate_titles"],
             "for_fuzzy": [True, True],
-        }
+        },
     )
 
     monkeypatch.setenv("SPARQL_USERNAME", "test_user")

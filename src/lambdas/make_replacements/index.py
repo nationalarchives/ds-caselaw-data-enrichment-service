@@ -57,7 +57,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info(filename)
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"].read().decode("utf-8")
+        s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"].read().decode("utf-8"),
     )
     LOGGER.info("Got original XML file content")
 

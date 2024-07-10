@@ -88,7 +88,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
         api_endpoint = APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
 
     print(source_key)

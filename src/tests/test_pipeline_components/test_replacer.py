@@ -51,7 +51,7 @@ class TestWriteReplacementsFile(unittest.TestCase):
                     "2020",
                     "https://caselaw.nationalarchives.gov.uk/ewhc/ch/2020/537",
                     True,
-                ]
+                ],
             },
             {"bar": ["[2022] 1 P&CR 123", "[2022] 1 P&CR 123", "2022"]},
         ]

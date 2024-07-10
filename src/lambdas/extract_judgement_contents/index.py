@@ -28,7 +28,7 @@ def process_event(sqs_rec: S3EventRecord):
     print("Input S3 key:", source_key)
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
 
     # extract the judgement contents

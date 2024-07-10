@@ -56,7 +56,7 @@ def fetch_legislation(sparql_username: str, sparql_password: str, days: int | No
                                         OPTIONAL {{?ref_version   leg:shortTitle ?shorttitle}} .}}
                     {filter_string}
                 }}
-                """
+                """,
     )
 
     results = sparql.query().convert()

@@ -28,9 +28,9 @@ test_s3_event = {
             "s3": {
                 "bucket": {"name": "test_bucket"},
                 "object": {"key": "example/s3/path/key/test_data.xml"},
-            }
-        }
-    ]
+            },
+        },
+    ],
 }
 
 # test_sqs_event = {

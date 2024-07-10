@@ -238,8 +238,8 @@ def provision_resolver(section_dict, matches, para_number):
                         keys,
                         [match, para_number, pos[0], correct_reference["section_ref"]],
                         strict=False,
-                    )
-                )
+                    ),
+                ),
             )
             print(f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}")
 

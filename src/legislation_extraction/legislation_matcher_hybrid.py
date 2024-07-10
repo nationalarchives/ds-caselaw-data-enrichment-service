@@ -207,7 +207,7 @@ def fuzzy_matcher(title, docobj, nlp, cutoff, candidates=None):
         matches = search_for_act_fuzzy(act, segment, nlp, cutoff=cutoff)
         if (len(matches) > 0) & (dyear == year):
             all_matches.extend(
-                [(docobj[end - 1 - e + s : end].text, end - 1 - e + s, end, ratio) for text, s, e, ratio in matches]
+                [(docobj[end - 1 - e + s : end].text, end - 1 - e + s, end, ratio) for text, s, e, ratio in matches],
             )
     return all_matches
 

@@ -44,7 +44,7 @@ class TestMakePostHeaderReplacements:
             """
             <xml xmlns='http://docs.oasis-open.org/legaldocml/ns/akn/3.0' xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
                 <a><e><ref uk:origin="TNA"><ref uk:origin="TNA"><b>AAA</b></ref><c/></ref>D</e></a>
-            </xml>"""
+            </xml>""",
         )
 
         assert "<a><e><b>AAA</b><c/>D</e></a>" in tidy_output
@@ -53,14 +53,14 @@ class TestMakePostHeaderReplacements:
         assert "not-TNA" in _remove_old_enrichment_references(
             """<xml xmlns='http://docs.oasis-open.org/legaldocml/ns/akn/3.0' xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
             <ref uk:origin="not-TNA"></ref>
-            </xml>"""
+            </xml>""",
         )
 
     def test_delete_no_origin_ref_tags(self):
         assert "ref" not in _remove_old_enrichment_references(
             """<xml xmlns='http://docs.oasis-open.org/legaldocml/ns/akn/3.0' xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
             <ref></ref>
-            </xml>"""
+            </xml>""",
         )
 
 
