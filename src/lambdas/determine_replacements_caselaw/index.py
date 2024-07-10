@@ -80,9 +80,9 @@ def upload_replacements(replacements_bucket: str, replacements_key: str, replace
     """
     LOGGER.info("Uploading text content to %s/%s", replacements_bucket, replacements_key)
     s3 = boto3.resource("s3")
-    object = s3.Object(replacements_bucket, replacements_key)
-    object.put(Body=replacements)
-    return object.key
+    s3_obj = s3.Object(replacements_bucket, replacements_key)
+    s3_obj.put(Body=replacements)
+    return s3_obj.key
 
 
 def init_NLP(rules_content):

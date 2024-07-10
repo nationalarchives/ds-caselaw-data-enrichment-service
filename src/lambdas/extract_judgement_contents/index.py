@@ -43,15 +43,15 @@ def extract_text_content(file_content: DocumentAsXMLString) -> str:
     return parse_file(file_content)
 
 
-def upload_contents(source_key, text_content):
+def upload_contents(source_key: str, text_content: DocumentAsXMLString):
     """
     Uploads text to S3 bucket
     """
     filename = os.path.splitext(source_key)[0] + ".txt"
     LOGGER.info("Uploading text content to %s/%s", DEST_BUCKET, filename)
     s3 = boto3.resource("s3")
-    object = s3.Object(DEST_BUCKET, filename)
-    object.put(Body=text_content)
+    s3_obj = s3.Object(DEST_BUCKET, filename)
+    s3_obj.put(Body=text_content)
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")

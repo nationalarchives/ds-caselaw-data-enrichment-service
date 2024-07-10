@@ -87,7 +87,7 @@ def find_abbreviation(long_form_candidate: Span, short_form_candidate: Span) -> 
     return short_form_candidate, long_form_candidate[starting_index:]
 
 
-def contains(str, set: Iterable[str]) -> bool:
+def contains(string: str, string_set: Iterable[str]) -> bool:
     """
     Check whether sequence str contains ANY of the items in set.
     Parameters
@@ -98,7 +98,7 @@ def contains(str, set: Iterable[str]) -> bool:
     -------
     A Boolean, True if str appears in set.
     """
-    return any([c in str for c in set])
+    return any([c in string for c in string_set])
 
 
 def filter_matches(matcher_output: list[tuple[int, int, int]], doc: Doc) -> list[tuple[Span, Span]]:

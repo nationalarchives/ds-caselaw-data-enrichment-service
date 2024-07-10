@@ -96,8 +96,8 @@ def upload_to_vcite(source_key: str, text_content: DocumentAsXMLBytes) -> None:
 
     LOGGER.info("Uploading text content to %s/%s", VCITE_BUCKET, filename)
     s3 = boto3.resource("s3")
-    object = s3.Object(VCITE_BUCKET, filename)
-    object.put(Body=text_content)
+    s3_obj = s3.Object(VCITE_BUCKET, filename)
+    s3_obj.put(Body=text_content)
 
 
 def trigger_push_enriched(uploaded_bucket: str, uploaded_key: str) -> None:

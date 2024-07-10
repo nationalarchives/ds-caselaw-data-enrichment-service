@@ -79,8 +79,8 @@ def upload_replacements(replacements_bucket: str, replacements_key: str, replace
     Uploads replacements to S3 bucket
     """
     s3 = boto3.resource("s3")
-    object = s3.Object(replacements_bucket, replacements_key)
-    object.put(Body=replacements)
+    s3_obj = s3.Object(replacements_bucket, replacements_key)
+    s3_obj.put(Body=replacements)
 
 
 def determine_replacements(file_content: str) -> list[abb]:

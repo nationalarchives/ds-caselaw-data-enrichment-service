@@ -37,9 +37,9 @@ def upload_replacements(pattern_bucket: str, pattern_key: str, patterns_file: st
     """
     LOGGER.info("Uploading text content to %s/%s", pattern_bucket, pattern_key)
     s3 = boto3.resource("s3")
-    object = s3.Object(pattern_bucket, pattern_key)
-    object.put(Body=patterns_file)
-    return object.key
+    s3_obj = s3.Object(pattern_bucket, pattern_key)
+    s3_obj.put(Body=patterns_file)
+    return s3_obj.key
 
 
 def create_test_jsonl(source_bucket: str, df: pd.DataFrame) -> None:
