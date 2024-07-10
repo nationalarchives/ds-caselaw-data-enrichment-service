@@ -30,6 +30,6 @@ def remove_duplicates(db_conn: Connection, table_name: str) -> None:
         ) t
         WHERE t.rnum > 1
         );
-    """
+    """  # noqa: S608
     db_conn.execute(text(sql_string))
     db_conn.commit()
