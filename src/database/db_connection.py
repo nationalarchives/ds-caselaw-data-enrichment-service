@@ -44,7 +44,7 @@ def get_manifest_row(conn: Connection, rule_id: str) -> pd.DataFrame:
     :param rule_id: ID of manifest rule to be extracted
     :return: DataFrame of matched rule
     """
-    matched_rule = pd.read_sql(f"SELECT * FROM manifest where id='{rule_id}'", conn)
+    matched_rule = pd.read_sql("SELECT * FROM manifest where id=%(rule_id)s", conn, params={"rule_id": rule_id})
     return matched_rule
 
 
