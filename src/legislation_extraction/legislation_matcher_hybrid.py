@@ -304,7 +304,7 @@ def detect_year_span(docobj, nlp):
     dmatcher.add("date matcher", [pattern])
     dm = dmatcher(docobj)
     string_dates = [docobj[start:end].text for _, start, end in dm]
-    dates = set([int(d) for d in string_dates if (len(d) == 4) & (d.isdigit())])
+    dates = {int(d) for d in string_dates if (len(d) == 4) & (d.isdigit())}
     return dates
 
 
@@ -350,7 +350,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
 
     results = resolve_overlap(results) if results else results
 
-    results = dict([(k, [dict(zip(keys, j, strict=False)) for j in v]) for k, v in results.items()])
+    results = {k: [dict(zip(keys, j, strict=False)) for j in v] for k, v in results.items()}
     refs = [i for j in results.values() for i in j]
 
     # keys_to_extract = {'detected_ref', 'ref'}

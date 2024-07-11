@@ -98,7 +98,7 @@ def contains(string: str, string_set: Iterable[str]) -> bool:
     -------
     A Boolean, True if str appears in set.
     """
-    return any([c in string for c in string_set])
+    return any(c in string for c in string_set)
 
 
 def filter_matches(matcher_output: list[tuple[int, int, int]], doc: Doc) -> list[tuple[Span, Span]]:
@@ -197,10 +197,10 @@ def short_form_filter(span: Span) -> bool:
     Boolean, True if abbreviation passes both constraints
     """
     # All words are between length 2 and 10
-    if not all([2 < len(x) < 10 for x in span]):
+    if not all(2 < len(x) < 10 for x in span):
         return False
     # At least one word is alpha numeric
-    if not any([x.is_alpha for x in span]):
+    if not any(x.is_alpha for x in span):
         return False
 
     return True
@@ -375,4 +375,4 @@ class AbbreviationDetector:
             # Clean up the global matcher.
             self.global_matcher.remove(key)
 
-        return [(k, v) for k, v in all_occurences.items()]
+        return list(all_occurences.items())
