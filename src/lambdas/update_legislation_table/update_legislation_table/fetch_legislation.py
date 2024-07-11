@@ -17,7 +17,7 @@ def fetch_legislation(sparql_username: str, sparql_password: str, days: int | No
     Fetch new legislation from legislation.gov.uk since the start day, if given,
     otherwise all legislation
     """
-    today = datetime.datetime.today()
+    today = datetime.datetime.now(tz=datetime.UTC).date()
     start_date = today - datetime.timedelta(days) if days else None
 
     log_string = f"Retrieving all legislation from {LEGISLATION_API_URL}"

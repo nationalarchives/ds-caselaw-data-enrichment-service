@@ -26,7 +26,7 @@ def set_env_vars():
     del os.environ["SPARQL_PASSWORD"]
 
 
-frozen_date = datetime.datetime(2023, 4, 13)
+frozen_now_time = datetime.datetime(2023, 4, 13, 3, tzinfo=datetime.UTC)
 
 
 @pytest.mark.integration
@@ -38,7 +38,7 @@ def test_fetch_legislation_integration(mock_datetime, set_env_vars) -> None:
     THEN the resulting DataFrame should be as expected
     """
     # GIVEN
-    mock_datetime.today.return_value = frozen_date
+    mock_datetime.now.return_value = frozen_now_time
 
     # WHEN
     sparql_username = os.environ.get("SPARQL_USERNAME", "")

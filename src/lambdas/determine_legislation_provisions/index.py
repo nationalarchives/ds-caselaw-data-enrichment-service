@@ -44,7 +44,7 @@ def add_timestamp_and_engine_version(
     Add today's timestamp and version at time of enrichment
     """
     soup = BeautifulSoup(file_data, "xml")
-    today = datetime.datetime.now()
+    today = datetime.datetime.now(tz=datetime.UTC)
     today_str = today.strftime("%Y-%m-%dT%H:%M:%S")
     enriched_date = soup.new_tag(f'FRBRdate date="{today_str}" name="tna-enriched"')
     enrichment_version = soup.new_tag(
