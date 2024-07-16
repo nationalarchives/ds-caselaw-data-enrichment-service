@@ -44,7 +44,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
 
     # fetch the judgement contents
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
 
     # fetch the rules
@@ -68,7 +68,7 @@ def write_replacements_file(replacement_list):
     """
     tuple_file = ""
     for i in replacement_list:
-        replacement_object = {"{}".format(type(i).__name__): list(i)}
+        replacement_object = {f"{type(i).__name__}": list(i)}
         tuple_file += json.dumps(replacement_object)
         tuple_file += "\n"
     return tuple_file
@@ -80,9 +80,9 @@ def upload_replacements(replacements_bucket: str, replacements_key: str, replace
     """
     LOGGER.info("Uploading text content to %s/%s", replacements_bucket, replacements_key)
     s3 = boto3.resource("s3")
-    object = s3.Object(replacements_bucket, replacements_key)
-    object.put(Body=replacements)
-    return object.key
+    s3_obj = s3.Object(replacements_bucket, replacements_key)
+    s3_obj.put(Body=replacements)
+    return s3_obj.key
 
 
 def init_NLP(rules_content):

@@ -55,6 +55,7 @@ def patch_judgment_request(api_endpoint: APIEndpointBaseURL, query: str, data: s
         auth=HTTPBasicAuth(username, pw),
         data=data.encode(),
         params={"unlock": True},
+        timeout=10,
     )
     print(response)
     response.raise_for_status()
@@ -87,7 +88,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
         api_endpoint = APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
 
     print(source_key)

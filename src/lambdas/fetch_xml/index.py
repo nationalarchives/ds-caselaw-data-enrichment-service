@@ -91,8 +91,8 @@ def upload_contents(source_key: str, xml_content: DocumentAsXMLString) -> None:
     filename = source_key + ".xml"
     LOGGER.info("Uploading XML content to %s/%s", DEST_BUCKET, filename)
     s3 = boto3.resource("s3")
-    object = s3.Object(DEST_BUCKET, filename)
-    object.put(Body=xml_content)
+    s3_obj = s3.Object(DEST_BUCKET, filename)
+    s3_obj.put(Body=xml_content)
 
 
 def process_event(sqs_rec: SQSRecord, api_endpoint: APIEndpointBaseURL) -> None:

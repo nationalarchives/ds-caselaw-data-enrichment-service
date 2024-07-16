@@ -12,7 +12,7 @@ postgresql_my_proc = factories.postgresql_proc(
     host="localhost",
     port=5431,
     dbname="testdb",
-    password="secret_password",
+    password="secret_password",  # noqa: S106
 )
 postgresql_my = factories.postgresql("postgresql_my_proc")
 
@@ -47,7 +47,7 @@ def test_db_connection(postgresql_my):
 def setup_moto_secrets_manager():
     secret_value = {"SecretString": "secret_password"}
     region_name = "us-east-1"
-    secret_name = "mysecret"
+    secret_name = "mysecret"  # noqa: S105
     mock_secrets_manager = mock_secretsmanager()
     mock_secrets_manager.start()
     client = boto3.client("secretsmanager", region_name=region_name)
@@ -84,7 +84,7 @@ def test_update_legislation_table(
             "year": [2001, 2001],
             "candidate_titles": ["b_candidate_titles", "c_candidate_titles"],
             "for_fuzzy": [True, True],
-        }
+        },
     )
 
     monkeypatch.setenv("SPARQL_USERNAME", "test_user")

@@ -14,11 +14,10 @@ FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 
 class TestMakePostHeaderReplacements:
     def test_make_post_header_replacements(self):
-        original_file_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_original.xml", "r", encoding="utf-8").read()
-        replacement_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_replacements.txt", "r", encoding="utf-8").read()
+        original_file_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_original.xml", encoding="utf-8").read()
+        replacement_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_replacements.txt", encoding="utf-8").read()
         expected_file_content = open(
             f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml",
-            "r",
             encoding="utf-8",
         ).read()
 
@@ -28,13 +27,11 @@ class TestMakePostHeaderReplacements:
     def test_post_header_works_if_already_enriched(self):
         original_file_content = open(
             f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml",
-            "r",
             encoding="utf-8",
         ).read()
-        replacement_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_replacements.txt", "r", encoding="utf-8").read()
+        replacement_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_replacements.txt", encoding="utf-8").read()
         expected_file_content = open(
             f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml",
-            "r",
             encoding="utf-8",
         ).read()
 
@@ -47,7 +44,7 @@ class TestMakePostHeaderReplacements:
             """
             <xml xmlns='http://docs.oasis-open.org/legaldocml/ns/akn/3.0' xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
                 <a><e><ref uk:origin="TNA"><ref uk:origin="TNA"><b>AAA</b></ref><c/></ref>D</e></a>
-            </xml>"""
+            </xml>""",
         )
 
         assert "<a><e><b>AAA</b><c/>D</e></a>" in tidy_output
@@ -56,14 +53,14 @@ class TestMakePostHeaderReplacements:
         assert "not-TNA" in _remove_old_enrichment_references(
             """<xml xmlns='http://docs.oasis-open.org/legaldocml/ns/akn/3.0' xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
             <ref uk:origin="not-TNA"></ref>
-            </xml>"""
+            </xml>""",
         )
 
     def test_delete_no_origin_ref_tags(self):
         assert "ref" not in _remove_old_enrichment_references(
             """<xml xmlns='http://docs.oasis-open.org/legaldocml/ns/akn/3.0' xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
             <ref></ref>
-            </xml>"""
+            </xml>""",
         )
 
 

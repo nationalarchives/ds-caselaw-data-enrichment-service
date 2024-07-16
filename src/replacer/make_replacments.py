@@ -47,7 +47,8 @@ xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
 
 
 def make_post_header_replacements(
-    original_content: DocumentAsXMLString, replacement_patterns: str
+    original_content: DocumentAsXMLString,
+    replacement_patterns: str,
 ) -> DocumentAsXMLString:
     """
     Replaces the content following a closing header tag in a legal document with new content.

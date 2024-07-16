@@ -26,8 +26,8 @@ def upload_contents(source_key: str, output_file_content: DocumentAsXMLString) -
     destination_bucket = validate_env_variable("DEST_BUCKET")
     LOGGER.info("Uploading enriched file to %s/%s", destination_bucket, filename)
     s3 = boto3.resource("s3")
-    object = s3.Object(destination_bucket, filename)
-    object.put(Body=output_file_content)
+    s3_obj = s3.Object(destination_bucket, filename)
+    s3_obj.put(Body=output_file_content)
 
 
 def process_event(sqs_rec: S3EventRecord) -> None:
@@ -42,7 +42,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
     print("Input S3 key:", source_key)
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
 
     enriched_content = enrich_oblique_references(file_content)

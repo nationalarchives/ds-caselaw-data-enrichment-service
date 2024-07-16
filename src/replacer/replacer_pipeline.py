@@ -5,13 +5,12 @@ Handles the replacements of abbreviations, legislation, and case law.
 
 import html
 import re
-from typing import Optional
 
 from utils.proper_xml import create_tag_string
 from utils.types import Replacement, XMLFragmentAsString
 
 
-def fixed_year(year: str) -> Optional[str]:
+def fixed_year(year: str) -> str | None:
     """For some reason, years can be returned as "No Year", despite not being present in the code (outside tests) or the database
     (as far as I can see."""
     if not year:

@@ -1,8 +1,8 @@
 import os
 import unittest
+from unittest import mock
 
 import boto3
-import mock
 from moto import mock_s3
 
 # from lambdas.extract_judgement_contents.index import *
@@ -28,9 +28,9 @@ test_s3_event = {
             "s3": {
                 "bucket": {"name": "test_bucket"},
                 "object": {"key": "example/s3/path/key/test_data.xml"},
-            }
-        }
-    ]
+            },
+        },
+    ],
 }
 
 # test_sqs_event = {

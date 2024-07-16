@@ -25,8 +25,8 @@ def upload_contents(source_key: str, text_content: DocumentAsXMLString) -> None:
 
     LOGGER.info("Uploading text content to %s/%s", DEST_BUCKET, filename)
     s3 = boto3.resource("s3")
-    object = s3.Object(DEST_BUCKET, filename)
-    object.put(Body=text_content)
+    s3_obj = s3.Object(DEST_BUCKET, filename)
+    s3_obj.put(Body=text_content)
 
 
 def process_event(sqs_rec: SQSRecord) -> None:
@@ -57,7 +57,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info(filename)
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"].read().decode("utf-8")
+        s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"].read().decode("utf-8"),
     )
     LOGGER.info("Got original XML file content")
 

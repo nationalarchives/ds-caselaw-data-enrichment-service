@@ -67,9 +67,9 @@ def case_pipeline(doc, db_conn):
             citation_type,
             canonical_form,
         ) = get_matched_rule(db_conn, rule_id)
-        if is_canonical == False:
+        if is_canonical is False:
             corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
-            if URItemplate != None:
+            if URItemplate is not None:
                 URI = create_URI(URItemplate, year, d1, d2)
             else:
                 URI = "#"
@@ -90,7 +90,7 @@ def case_pipeline(doc, db_conn):
                     d2 = components[1]
                 else:
                     d2 = ""
-            if URItemplate != None:
+            if URItemplate is not None:
                 URI = create_URI(URItemplate, year, d1, d2)
             else:
                 URI = "#"

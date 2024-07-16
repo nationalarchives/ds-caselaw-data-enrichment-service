@@ -17,6 +17,10 @@ LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 
+class MismatchedIdShapeError(Exception):
+    pass
+
+
 def write_patterns_file(patterns_list: str) -> str:
     """
     Write patterns to separate lines
@@ -33,9 +37,9 @@ def upload_replacements(pattern_bucket: str, pattern_key: str, patterns_file: st
     """
     LOGGER.info("Uploading text content to %s/%s", pattern_bucket, pattern_key)
     s3 = boto3.resource("s3")
-    object = s3.Object(pattern_bucket, pattern_key)
-    object.put(Body=patterns_file)
-    return object.key
+    s3_obj = s3.Object(pattern_bucket, pattern_key)
+    s3_obj.put(Body=patterns_file)
+    return s3_obj.key
 
 
 def create_test_jsonl(source_bucket: str, df: pd.DataFrame) -> None:
@@ -68,7 +72,8 @@ def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
 
     MATCHED_IDS = list(set(MATCHED_IDS))
     print(len(MATCHED_IDS), df.shape[0])
-    assert len(MATCHED_IDS) == df.shape[0]
+    if len(MATCHED_IDS) != df.shape[0]:
+        raise MismatchedIdShapeError
 
 
 @event_source(data_class=S3Event)

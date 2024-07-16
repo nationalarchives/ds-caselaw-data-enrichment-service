@@ -7,17 +7,15 @@ from spacy.lang.en import English
 from legislation_extraction.legislation_matcher_hybrid import (
     detect_candidates,
     detect_year_span,
+    lookup_pipe,
+    resolve_overlap,
+    search_for_act_fuzzy,
 )
 from legislation_extraction.legislation_matcher_hybrid import (
     exact_matcher as search_for_act,
 )
 from legislation_extraction.legislation_matcher_hybrid import (
     fuzzy_matcher as hybrid,
-)
-from legislation_extraction.legislation_matcher_hybrid import (
-    lookup_pipe,
-    resolve_overlap,
-    search_for_act_fuzzy,
 )
 
 """
@@ -81,7 +79,7 @@ class TestLegislationProcessor(unittest.TestCase):
                     "http://www.legislation.gov.uk/ukpga/2022/38",
                     "citation_abc",
                 ),
-            ]
+            ],
         }
         pruned_results = resolve_overlap(results)
 
@@ -111,7 +109,7 @@ class TestLegislationProcessor(unittest.TestCase):
                     "http://www.legislation.gov.uk/ukpga/2022/38",
                     "citation_abc",
                 ),
-            ]
+            ],
         }
 
     def test_resolve_overlap_with_overlap_returns_last_one_if_all_equally_good(self):
@@ -141,7 +139,7 @@ class TestLegislationProcessor(unittest.TestCase):
                     "http://www.legislation.gov.uk/ukpga/2022/38",
                     "citation_abc",
                 ),
-            ]
+            ],
         }
         pruned_results = resolve_overlap(results)
 
@@ -155,7 +153,7 @@ class TestLegislationProcessor(unittest.TestCase):
                     "http://www.legislation.gov.uk/ukpga/2022/38",
                     "citation_abc",
                 ),
-            ]
+            ],
         }
 
     def test_resolve_overlap_with_overlap_returns_best_one(self):
@@ -185,7 +183,7 @@ class TestLegislationProcessor(unittest.TestCase):
                     "http://www.legislation.gov.uk/ukpga/2022/38",
                     "t",
                 ),
-            ]
+            ],
         }
         pruned_results = resolve_overlap(results)
 
@@ -199,7 +197,7 @@ class TestLegislationProcessor(unittest.TestCase):
                     "http://www.legislation.gov.uk/ukpga/2002/38",
                     "this_is_the_best",
                 ),
-            ]
+            ],
         }
 
     def test_resolve_overlap_with_overlap_and_no_overlap(self):
@@ -275,8 +273,8 @@ class TestLegislationProcessor(unittest.TestCase):
                     91,
                     "http://www.legislation.gov.uk/ukpga/2002/38",
                     "citation_abc",
-                )
-            ]
+                ),
+            ],
         }
 
 

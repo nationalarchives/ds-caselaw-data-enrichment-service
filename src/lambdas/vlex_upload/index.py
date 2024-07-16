@@ -3,11 +3,12 @@
 import logging
 import os
 import urllib.parse
-from distutils.util import strtobool
 
 import boto3
+from distutils.util import strtobool
 
 from utils.environment_helpers import validate_env_variable
+from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
@@ -33,7 +34,7 @@ def process_event(sqs_rec):
     return True
 
 
-def upload_contents(source_key, text_content):
+def upload_contents(source_key: str, text_content: DocumentAsXMLString):
     """
     Upload judgment XML to destination S3 bucket
     """
@@ -43,8 +44,8 @@ def upload_contents(source_key, text_content):
     # filename = source_key.print(os.path.splitext("/path/to/some/file.txt")[0])
     LOGGER.info("uploading text content to %s/%s", DEST_BUCKET, filename)
     s3 = boto3.resource("s3")
-    object = s3.Object(DEST_BUCKET, filename)
-    object.put(Body=text_content)
+    s3_obj = s3.Object(DEST_BUCKET, filename)
+    s3_obj.put(Body=text_content)
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")

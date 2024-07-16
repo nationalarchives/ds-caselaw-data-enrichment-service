@@ -108,7 +108,7 @@ class TestCitationProcessor(unittest.TestCase):
             citation_type,
             canonical_form,
         ) = mock_return_citation(self.nlp, text, self.db_conn)
-        assert is_canonical == True
+        assert is_canonical is True
 
         text = "[2022] UKFTT 2020__0341 (GRC)"
         (
@@ -132,7 +132,7 @@ class TestCitationProcessor(unittest.TestCase):
             citation_type,
             canonical_form,
         ) = mock_return_citation(self.nlp, text, self.db_conn)
-        assert is_canonical == True
+        assert is_canonical is True
 
     # for correct citations - ensure it finds that it is canonical
     def test_correct_canonical(self):
@@ -147,7 +147,7 @@ class TestCitationProcessor(unittest.TestCase):
                 canonical_form,
             ) = mock_return_citation(self.nlp, text, self.db_conn)
             print("Testing: " + text)
-            assert is_canonical == True
+            assert is_canonical is True
 
     # for correct citations - make sure it finds the citation type & the citation in the DB
     def test_citation_type_found(self):
@@ -191,7 +191,7 @@ class TestCitationProcessor(unittest.TestCase):
                 canonical_form,
             ) = mock_return_citation(self.nlp, text, self.db_conn)
             print("Testing: " + text)
-            assert is_canonical == False
+            assert is_canonical is False
             assert type(canonical_form) is str
 
     def test_incorrect_citation_match(self):
@@ -220,7 +220,7 @@ class TestCitationProcessor(unittest.TestCase):
                 citation_type,
                 canonical_form,
             ) = mock_return_citation(self.nlp, text, self.db_conn)
-            assert is_canonical != True and is_canonical != False
+            assert is_canonical is not True and is_canonical is not False
 
 
 class TestCorrectionStrategy(unittest.TestCase):

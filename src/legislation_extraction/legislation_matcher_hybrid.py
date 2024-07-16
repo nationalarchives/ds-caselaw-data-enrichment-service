@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 Created on Mon Mar 3 10:48:33 2022
 
@@ -20,7 +19,7 @@ The hybrid matcher goes through three stages:
 """
 
 from collections import namedtuple
-from typing import Any, List
+from typing import Any
 
 import numpy as np
 import pandas as pd
@@ -51,9 +50,9 @@ def mergedict(x, b):
         dictionary containing the detected references.
     """
     a: dict[Any, Any] = {}
-    for k, v in b.items():
+    for k, _v in b.items():
         a[k] = a.get(k, []) + b[k]
-    for k, v in x.items():
+    for k, _v in x.items():
         a[k] = a.get(k, []) + x[k]
     return a
 
@@ -82,7 +81,7 @@ def resolve_overlap(results_dict):
     np.fill_diagonal(mask, 0)  # omit 'pairs' that are the same thing twice
     mask = np.triu(mask, 0)  # omit pairs where the first is after than the second
     r, c = np.where(mask)
-    overlaps = list(map(list, zip(r, c)))
+    overlaps = list(map(list, zip(r, c, strict=False)))
 
     removals = set()
 
@@ -168,7 +167,7 @@ def search_for_act_fuzzy(title, docobj, nlp, cutoff, candidates=None):
     fuzzy_matcher.add("Text Extractor", phrase_list, kwargs=[options])
     matched_items = fuzzy_matcher(docobj)
     matched_text = []
-    for _, start, end, ratio, pattern in matched_items:
+    for _, start, end, ratio, _pattern in matched_items:
         span = docobj[start:end]
         matched_text.append((span.text, start, end, ratio))
     return matched_text
@@ -208,7 +207,7 @@ def fuzzy_matcher(title, docobj, nlp, cutoff, candidates=None):
         matches = search_for_act_fuzzy(act, segment, nlp, cutoff=cutoff)
         if (len(matches) > 0) & (dyear == year):
             all_matches.extend(
-                [(docobj[end - 1 - e + s : end].text, end - 1 - e + s, end, ratio) for text, s, e, ratio in matches]
+                [(docobj[end - 1 - e + s : end].text, end - 1 - e + s, end, ratio) for text, s, e, ratio in matches],
             )
     return all_matches
 
@@ -264,7 +263,7 @@ def lookup_pipe(titles, docobj, nlp, method, conn, cutoff):
             'end'(int): 'end positin of reference',
             'confidence'(int): 'matching similarity between detected_ref and ref'}
     """
-    results: dict[str, List[Any]] = {}
+    results: dict[str, list[Any]] = {}
     # get candidate segments matching the pattern [Act YYYY]
     candidates = detect_candidates(nlp, docobj) if method.__name__ == "fuzzy_matcher" else None
     # for every legislation title in the table
@@ -305,7 +304,7 @@ def detect_year_span(docobj, nlp):
     dmatcher.add("date matcher", [pattern])
     dm = dmatcher(docobj)
     string_dates = [docobj[start:end].text for _, start, end in dm]
-    dates = set([int(d) for d in string_dates if (len(d) == 4) & (d.isdigit())])
+    dates = {int(d) for d in string_dates if (len(d) == 4) & (d.isdigit())}
     return dates
 
 
@@ -340,7 +339,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
     # filter the legislation list down to the years detected above
     titles = leg_titles[leg_titles.year.isin(dates)]
 
-    for fuzzy, method in zip([True, False], ("fuzzy", "exact")):
+    for fuzzy, method in zip([True, False], ("fuzzy", "exact"), strict=False):
         # select the titles relevant to the approach to be run using the 'for_fuzzy' flag already built into the look-up table
         relevant_titles = titles[titles.for_fuzzy == fuzzy].candidate_titles.drop_duplicates().tolist()
         res = lookup_pipe(relevant_titles, docobj, nlp, methods[method], conn, CUTOFF)
@@ -351,7 +350,7 @@ def leg_pipeline(leg_titles, nlp, docobj, conn):
 
     results = resolve_overlap(results) if results else results
 
-    results = dict([(k, [dict(zip(keys, j)) for j in v]) for k, v in results.items()])
+    results = {k: [dict(zip(keys, j, strict=False)) for j in v] for k, v in results.items()}
     refs = [i for j in results.values() for i in j]
 
     # keys_to_extract = {'detected_ref', 'ref'}

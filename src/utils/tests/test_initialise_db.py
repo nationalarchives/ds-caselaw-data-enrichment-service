@@ -1,8 +1,7 @@
 """Unit tests for the initialise_db module"""
 
 from unittest import mock
-
-from mock import MagicMock
+from unittest.mock import MagicMock
 
 from utils.initialise_db import init_db_connection, init_db_engine
 

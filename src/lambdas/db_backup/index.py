@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import UTC, datetime
 
 import boto3
 from aws_lambda_powertools.utilities.data_classes import (
@@ -14,7 +14,7 @@ def lambda_handler(event: EventBridgeEvent, context: LambdaContext) -> None:
     # Create RDS and S3 clients
     rds = boto3.client("rds")
     db = event["db-name"]
-    now = datetime.now()
+    now = datetime.now(tz=UTC)
     date = now.strftime("%d-%m-%Y")
 
     try:

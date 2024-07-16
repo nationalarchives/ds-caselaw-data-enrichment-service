@@ -43,7 +43,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
 
     # fetch the judgement contents
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8")
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
 
     replacements = determine_replacements(file_content)
@@ -68,7 +68,7 @@ def write_replacements_file(replacement_list: list[Replacement]) -> str:
     """
     tuple_file = ""
     for i in replacement_list:
-        replacement_object = {"{}".format(type(i).__name__): list(i)}
+        replacement_object = {f"{type(i).__name__}": list(i)}
         tuple_file += json.dumps(replacement_object)
         tuple_file += "\n"
     return tuple_file
@@ -79,8 +79,8 @@ def upload_replacements(replacements_bucket: str, replacements_key: str, replace
     Uploads replacements to S3 bucket
     """
     s3 = boto3.resource("s3")
-    object = s3.Object(replacements_bucket, replacements_key)
-    object.put(Body=replacements)
+    s3_obj = s3.Object(replacements_bucket, replacements_key)
+    s3_obj.put(Body=replacements)
 
 
 def determine_replacements(file_content: str) -> list[abb]:
