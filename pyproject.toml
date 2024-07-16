@@ -1,4 +1,5 @@
 [project]
+version="6.0.0"
 requires-python = ">=3.12"
 
 [tool.pytest.ini_options]
@@ -33,3 +34,10 @@ unfixable = ["ERA"]
 
 [tool.ruff.lint.extend-per-file-ignores]
 "*/tests/*" = ["S101"]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "v$version"
+version_scheme = "semver"
+version_provider = "pep621"
+update_changelog_on_bump = true
