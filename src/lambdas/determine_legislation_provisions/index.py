@@ -54,12 +54,14 @@ def add_timestamp_and_engine_version(
     enrichment_version.string = "6.0.1"
 
     if not soup.proprietary:
-        raise SourceXMLMissingElement("This document does not have a <proprietary> element.")
+        msg = "This document does not have a <proprietary> element."
+        raise SourceXMLMissingElement(msg)
 
     soup.proprietary.append(enrichment_version)
 
     if not soup.FRBRManifestation or not soup.FRBRManifestation.FRBRdate:
-        raise SourceXMLMissingElement("This document does not already have a manifestation date.")
+        msg = "This document does not already have a manifestation date."
+        raise SourceXMLMissingElement(msg)
 
     soup.FRBRManifestation.FRBRdate.insert_after(enriched_date)
 

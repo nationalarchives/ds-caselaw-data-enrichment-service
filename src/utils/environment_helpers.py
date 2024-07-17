@@ -20,10 +20,12 @@ def validate_env_variable(env_var_name: str) -> str:
     try:
         env_variable = os.environ[env_var_name]
     except KeyError as err:
-        raise MissingEnvironmentVariableError(f"Please, set environment variable {env_var_name}") from err
+        msg = f"Please, set environment variable {env_var_name}"
+        raise MissingEnvironmentVariableError(msg) from err
 
     if not env_variable:
-        raise MissingEnvironmentVariableError(f"Please, provide environment variable {env_var_name}")
+        msg = f"Please, provide environment variable {env_var_name}"
+        raise MissingEnvironmentVariableError(msg)
 
     return env_variable
 

@@ -73,7 +73,8 @@ def create_replacement_paragraph(
     wrapper = f'<xml xmlns:uk="placeholder">{replacement_paragraph_string}</xml>'
     replacement_paragraph = BeautifulSoup(wrapper, "xml").p
     if replacement_paragraph is None:
-        raise RuntimeError(f"No paragraphs found in {replacement_paragraph_string}")
+        msg = f"No paragraphs found in {replacement_paragraph_string}"
+        raise RuntimeError(msg)
     return replacement_paragraph
 
 
