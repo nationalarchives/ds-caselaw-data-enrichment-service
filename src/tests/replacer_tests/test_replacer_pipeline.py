@@ -134,7 +134,7 @@ class TestReplacerAbbr(unittest.TestCase):
         text = "This game requires 12 GB of Random Access Memory"
         replacement_entry = ("Random Access Memory", "RAM")
 
-        expected = "This game requires 12 GB of " '<abbr title="RAM" uk:origin="TNA">' "Random Access Memory" "</abbr>"
+        expected = 'This game requires 12 GB of <abbr title="RAM" uk:origin="TNA">Random Access Memory</abbr>'
         assert replacer_abbr(text, replacement_entry) == expected
 
 
