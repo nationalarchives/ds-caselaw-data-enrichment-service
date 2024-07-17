@@ -66,7 +66,7 @@ def handler(event, context) -> None:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
             uploaded = process_event(sqs_rec)
-            LOGGER.info("uploaded=" + uploaded)
+            LOGGER.info(f"uploaded={uploaded}")
 
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)
