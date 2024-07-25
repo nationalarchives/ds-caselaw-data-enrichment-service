@@ -6,9 +6,10 @@ module "aurora-metadata-db" {
 
   name = "${local.name}-${each.key}-metadata-db-${local.environment}"
 
-  engine         = "aurora-postgresql"
-  engine_version = each.value["engine_version"]
-  instance_type  = each.value["instance_type"]
+  engine             = "aurora-postgresql"
+  engine_version     = each.value["engine_version"]
+  instance_type      = each.value["instance_type"]
+  ca_cert_identifier = "rds-ca-rsa4096-g1"
 
   vpc_id                  = var.vpc_id
   subnets                 = data.aws_subnets.database.ids
