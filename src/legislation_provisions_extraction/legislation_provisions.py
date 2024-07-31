@@ -91,7 +91,8 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
         soup = BeautifulSoup(full_ref, "xml")
         ref = soup.find("ref")
         if not isinstance(ref, Tag):
-            raise ValueError("Did not successfully get <ref> tag")
+            msg = "Did not successfully get <ref> tag"
+            raise ValueError(msg)
         canonical = ref.get("canonical")  # get the legislation canonical form
         leg_href = ref.get("href")  # get the legislation href
         section_href = str(leg_href) + "/section/" + str(section_number)  # creates the section href
