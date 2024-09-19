@@ -17,6 +17,11 @@ from dotenv import load_dotenv
 
 from ..fetch_legislation import fetch_legislation
 
+# Do not truncate debug output
+pd.set_option("display.max_rows", None)
+pd.set_option("display.max_columns", None)
+pd.set_option("display.max_colwidth", None)
+
 
 @pytest.fixture(scope="module")
 def set_env_vars():
@@ -52,37 +57,37 @@ def test_fetch_legislation_integration(mock_datetime, set_env_vars) -> None:
     expected_df = pd.DataFrame(
         {
             "ref": [
-                "http://www.legislation.gov.uk/id/ukpga/2023/8",
-                "http://www.legislation.gov.uk/id/ukpga/2023/8",
                 "http://www.legislation.gov.uk/id/ukpga/2023/10",
                 "http://www.legislation.gov.uk/id/ukpga/2023/10",
+                "http://www.legislation.gov.uk/id/ukpga/2023/8",
+                "http://www.legislation.gov.uk/id/ukpga/2023/8",
             ],
             "title": [
-                "Seafarers Wages Act 2023",
-                "Seafarers Wages Act 2023",
                 "UK Infrastructure Bank Act 2023",
                 "UK Infrastructure Bank Act 2023",
+                "Seafarers Wages Act 2023",
+                "Seafarers Wages Act 2023",
             ],
             "ref_version": [
+                "http://www.legislation.gov.uk/ukpga/2023/10",
+                "http://www.legislation.gov.uk/ukpga/2023/10",
                 "http://www.legislation.gov.uk/ukpga/2023/8/enacted",
                 "http://www.legislation.gov.uk/ukpga/2023/8/enacted",
-                "http://www.legislation.gov.uk/ukpga/2023/10/enacted",
-                "http://www.legislation.gov.uk/ukpga/2023/10/enacted",
             ],
             "shorttitle": [
-                "Seafarers Wages Act 2023",
-                "Seafarers Wages Act 2023",
                 "UK Infrastructure Bank Act 2023",
                 "UK Infrastructure Bank Act 2023",
+                "Seafarers Wages Act 2023",
+                "Seafarers Wages Act 2023",
             ],
-            "citation": ["2023 c. 8", "2023 c. 8", "2023 c. 10", "2023 c. 10"],
+            "citation": ["2023 c. 10", "2023 c. 10", "2023 c. 8", "2023 c. 8"],
             "acronymcitation": [np.nan, np.nan, np.nan, np.nan],
             "year": [2023, 2023, 2023, 2023],
             "candidate_titles": [
-                "Seafarers Wages Act 2023",
-                "2023 c. 8",
                 "UK Infrastructure Bank Act 2023",
                 "2023 c. 10",
+                "Seafarers Wages Act 2023",
+                "2023 c. 8",
             ],
             "for_fuzzy": [True, False, True, False],
         },
