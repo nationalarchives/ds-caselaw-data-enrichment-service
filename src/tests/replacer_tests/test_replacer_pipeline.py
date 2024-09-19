@@ -107,6 +107,17 @@ class TestLegislationReplacer(unittest.TestCase):
         replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'
         assert replacement_string in replaced_entry
 
+    def test_citation_replacer_2_no_enacted(self):
+        legislation_match = "Children and Families Act 2014"  # matched legislation
+        href = "http://www.legislation.gov.uk/ukpga/2014/6"
+        text = "In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014."
+        canonical = "bar"
+        replacement_entry = (legislation_match, href, canonical)
+        replaced_entry = replacer_leg(text, replacement_entry)
+        assert legislation_match in replaced_entry
+        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'
+        assert replacement_string in replaced_entry
+
 
 class TestReplacerAbbr(unittest.TestCase):
     """Unit Tests for `replacer_abbr`"""
