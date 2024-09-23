@@ -141,7 +141,7 @@ jobs:
         uses: aquasecurity/tfsec-pr-commenter-action@v1.3.1
         with:
           github_token: ${{ github.token }}
-          working_directory: 'terraform'
+          working_directory: "terraform"
 
   terraform_plan-staging:
     uses: ./.github/workflows/terraform_plan.yml
