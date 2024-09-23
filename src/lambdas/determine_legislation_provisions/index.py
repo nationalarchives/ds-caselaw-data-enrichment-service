@@ -51,7 +51,7 @@ def add_timestamp_and_engine_version(
         "uk:tna-enrichment-engine",
         attrs={"xmlns:uk": "https://caselaw.nationalarchives.gov.uk/akn"},
     )
-    enrichment_version.string = "6.0.0"
+    enrichment_version.string = "6.0.1"
 
     if not soup.proprietary:
         raise SourceXMLMissingElement("This document does not have a <proprietary> element.")

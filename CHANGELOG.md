@@ -2,6 +2,8 @@
 
 ## v6.0.1 (2024-07-16)
 
+- Fix CI by reflecting changed output from legislation SPARQL output
+
 ### Refactor
 
 - **FCL-176**: explicitly set timezones to UTC
