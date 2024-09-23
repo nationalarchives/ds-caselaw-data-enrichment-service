@@ -23,7 +23,7 @@ CORRECT_CITATIONS = [
     "[2022] EWHC 123 (TCC))",
     "random text goes here [2022] 1 WLR 123 random text goes here",
     "random text goes here random text goes here [2022] UKUT 123 (TCC)",
-    "random text [2004] AC 816 goes here  random text goes here " "[2022] EWHC 123 (Pat)",
+    "random text [2004] AC 816 goes here  random text goes here [2022] EWHC 123 (Pat)",
     "......[2022] 1 QB 123......",
 ]
 INCORRECT_CITATIONS = [

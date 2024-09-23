@@ -89,13 +89,11 @@ def create_legislation_dict(
         canonical = ref.get("uk:canonical") or ref.get("canonical")
 
         if not isinstance(href, str):
-            raise NotExactlyOneRefTag(
-                f"Legislation reference {legislation_reference!r} does not have exactly one 'href', paragraph {paragraph_number}",
-            )
+            msg = f"Legislation reference {legislation_reference!r} does not have exactly one 'href', paragraph {paragraph_number}"
+            raise NotExactlyOneRefTag(msg)
         if not isinstance(canonical, str):
-            raise NotExactlyOneRefTag(
-                f"Legislation reference {legislation_reference!r} does not have exactly one 'canonical', paragraph {paragraph_number}",
-            )
+            msg = f"Legislation reference {legislation_reference!r} does not have exactly one 'canonical', paragraph {paragraph_number}"
+            raise NotExactlyOneRefTag(msg)
 
         legislation_dict: LegislationDict = {
             "para": paragraph_number,
