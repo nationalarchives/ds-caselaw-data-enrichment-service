@@ -190,7 +190,7 @@ jobs:
           echo "version=$DOTFILE_VERSION" >> $GITHUB_OUTPUT
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3.1.1
+        uses: hashicorp/setup-terraform@v3.1.2
         continue-on-error: false
         with:
           terraform_version: ${{ steps.get-terraform-version.outputs.version }}
