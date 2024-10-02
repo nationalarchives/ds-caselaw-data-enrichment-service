@@ -27,18 +27,21 @@ function update_links(xmlname) {
   links.forEach(function(item) {update_lambda_link(item, xmlname)})
 }
 
+function clean_string(s) {
+  s = s.replace(/^\/+/, "")
+  s = s.replaceAll('/','-')
+  return s
+}
+
 function update_bucket_link(link, xmlname) {
   bucket = link.getAttribute("bucket");
-  s = xmlname
-  s = s.replaceAll('/','-')
-  console.log(s)
+  s = clean_string(xmlname)
   link.href="https://s3.console.aws.amazon.com/s3/object/"+bucket+"?region=eu-west-2&prefix="+s+".xml"
 }
 
 function update_lambda_link(link, xmlname) {
   lambda = link.getAttribute("lambda");
-  s = xmlname
-  s = s.replaceAll('/','-')
+  s = clean_string(xmlname)
   link.href = "https://eu-west-2.console.aws.amazon.com/cloudwatch/home?region=eu-west-2#logsV2:logs-insights$3FqueryDetail$3D~(end~0~start~-3600~timeType~'RELATIVE~unit~'seconds~editorString~'fields*20*40timestamp*2c*20*40message*2c*20*40logStream*2c*20*40log*0a*7c*20filter*20*40message*20like*20*22"+s+"*22*0a*7c*20sort*20*40timestamp*20desc*0a*7c*20limit*2020~source~(~'*2faws*2flambda*2f"+lambda+"))"
 }
 
