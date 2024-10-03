@@ -93,6 +93,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
 
     print(source_key)
     judgment_uri = source_key.replace("-", "/").split(".")[0]
+    judgment_uri = judgment_uri.replace("press/summary", "press-summary")
     print(judgment_uri)
 
     # patch the judgment

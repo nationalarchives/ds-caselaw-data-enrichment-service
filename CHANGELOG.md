@@ -1,5 +1,9 @@
 # Changelog
 
+## v6.0.2 (2024-10-03)
+
+- Enrich press summaries by fixing patch url to be press-summary, not press/summary
+
 ## v6.0.1 (2024-07-16)
 
 - Fix CI by reflecting changed output from legislation SPARQL output
