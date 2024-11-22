@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <style>
+    body {background-color: peachpuff;}
+  </style>
   <title>Enrichment Logs and Output</title>
 </head>
 <body>
@@ -20,7 +24,9 @@ form.addEventListener('submit', event => {
 
 function update_links(xmlname) {
   links = document.querySelectorAll("a.bucketlink");
-  links.forEach(function(item) {update_bucket_link(item, xmlname)})
+  links.forEach(function(item) {update_bucket_link(item, xmlname, ext=".xml")})
+  links = document.querySelectorAll("a.bucketlinktxt");
+  links.forEach(function(item) {update_bucket_link(item, xmlname, ext=".txt")})
   links = document.querySelectorAll("a.lambdalink");
   links.forEach(function(item) {update_lambda_link(item, xmlname)})
   links = document.querySelectorAll("a.lambdalink");
@@ -33,10 +39,10 @@ function clean_string(s) {
   return s
 }
 
-function update_bucket_link(link, xmlname) {
+function update_bucket_link(link, xmlname, ext) {
   bucket = link.getAttribute("bucket");
   s = clean_string(xmlname)
-  link.href="https://s3.console.aws.amazon.com/s3/object/"+bucket+"?region=eu-west-2&prefix="+s+".xml"
+  link.href="https://s3.console.aws.amazon.com/s3/object/"+bucket+"?region=eu-west-2&prefix="+s+ext
 }
 
 function update_lambda_link(link, xmlname) {
@@ -48,21 +54,22 @@ function update_lambda_link(link, xmlname) {
 
 </script>
 <ul>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-fetch-xml">λ fetch-xml</a></li>
-<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-original-bucket">🪣 xml-original</a></li>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-extract-judgement-contents">λ extract-judgement-contents</a></li>
-<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-text-content-bucket">🪣 text-content</a></li>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-replacements-caselaw">λ determine-replacements-caselaw</a></li>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-replacements-legislation">λ determine-replacements-legislation</a></li>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-replacements-abbreviations">λ determine-replacements-abbreviations</a></li>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-make-replacements">λ make-replacements</a></li>
-<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-enriched-bucket">🪣 xml-enriched</a></li>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-oblique-references">λ determine-oblique-references</a></li>
-<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-second-phase-enriched-bucket">🪣 xml-second-phase-enriched</a></li>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-legislation-provisions">λ determine-legislation-provisions lambda</a></li>
-<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-third-phase-enriched-bucket">🪣 xml-third-phase-enriched</a></li>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-push-enriched-xml">λ push-enriched-xml</a></li>
-<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-xml-validate">λ xml-validate</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-fetch-xml">🌩️ λ:fetch-xml</a></li>
+<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-original-bucket">🪣❎ xml-original</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-extract-judgement-contents">🌩️ λ:extract-judgement-contents</a></li>
+<li><a target=_blank class='bucketlinktxt' bucket="production-tna-s3-tna-sg-text-content-bucket">🪣🔠 text-content</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-replacements-caselaw">🌩️ λ:determine-replacements-caselaw</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-replacements-legislation">🌩️ λ:determine-replacements-legislation</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-replacements-abbreviations">🌩️ λ:determine-replacements-abbreviations</a></li>
+<li><a target=_blank class='bucketlinktxt' bucket="production-tna-s3-tna-sg-replacements-bucket">🪣🔠 sg-replacements-bucket</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-make-replacements">🌩️ λ:make-replacements</a></li>
+<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-enriched-bucket">🪣❎ xml-enriched</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-oblique-references">🌩️ λ:determine-oblique-references</a></li>
+<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-second-phase-enriched-bucket">🪣❎ xml-second-phase-enriched</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-determine-legislation-provisions">🌩️ λ:determine-legislation-provisions lambda</a></li>
+<li><a target=_blank class='bucketlink' bucket="production-tna-s3-tna-sg-xml-third-phase-enriched-bucket">🪣❎ xml-third-phase-enriched</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-push-enriched-xml">🌩️ λ:push-enriched-xml</a></li>
+<li><a target=_blank class='lambdalink' lambda="tna-s3-tna-production-xml-validate">🌩️ λ:xml-validate</a></li>
 </ul>
 <ul>
   <li><a target=_blank class='papertraillink' href="https://my.papertrailapp.com/groups/32176061/events?q=Unprocessable+Entity">papertrail 422 errors</a></li>
