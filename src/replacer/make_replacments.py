@@ -65,6 +65,7 @@ def make_post_header_replacements(
         str: The modified legal document content with the replacement applied.
     """
     cleaned_file_content = sanitize_judgment(original_content)
+
     pre_header, end_header_tag, post_header = split_text_by_closing_header_tag(cleaned_file_content)
 
     replaced_post_header_content = apply_replacements(post_header, replacement_patterns)

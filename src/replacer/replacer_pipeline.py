@@ -41,8 +41,10 @@ def replacer_caselaw(file_data: XMLFragmentAsString, replacement: Replacement) -
         attribs["uk:year"] = year
     attribs["uk:origin"] = "TNA"
     replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
+    new = XMLFragmentAsString(str(file_data).replace(replacement[0], replacement_string))
+    return new
 
-    return XMLFragmentAsString(str(file_data).replace(replacement[0], replacement_string))
+    ### DRAGON: use utils.proper_xml.create_tag_string when creating. But for now, focus on making it not change attributes, only XML running text
 
 
 def replacer_leg(file_data: XMLFragmentAsString, replacement: Replacement) -> XMLFragmentAsString:
