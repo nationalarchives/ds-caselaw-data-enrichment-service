@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import lxml.etree
 import pytest
 
 from replacer.make_replacments import (
@@ -13,6 +14,12 @@ FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 
 
 class TestMakePostHeaderReplacements:
+    def test_make_failing_post_header_replacements(self):
+        original_file_content = open(f"{FIXTURE_DIR}/broken.xml", encoding="utf-8").read()
+        replacement_content = open(f"{FIXTURE_DIR}/broken.txt", encoding="utf-8").read()
+        content_with_replacements = make_post_header_replacements(original_file_content, replacement_content)
+        lxml.etree.fromstring(content_with_replacements.encode("utf-8"))
+
     def test_make_post_header_replacements(self):
         original_file_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_original.xml", encoding="utf-8").read()
         replacement_content = open(f"{FIXTURE_DIR}/ewhc-ch-2023-257_replacements.txt", encoding="utf-8").read()
