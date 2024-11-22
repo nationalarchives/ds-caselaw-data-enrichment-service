@@ -4,7 +4,7 @@ from unittest import mock
 
 import boto3
 from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
-from moto import mock_s3
+from moto import mock_aws
 
 test_xml_content = """<?xml version="1.0" encoding="UTF-8"?>
 <akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
@@ -34,7 +34,7 @@ class MyModel:
     clear=True,
 )
 class TestXMLValidate(unittest.TestCase):
-    @mock_s3
+    @mock_aws
     def test_my_model_save(self):
         conn = boto3.resource("s3", region_name="us-east-1")
         # We need to create the bucket since this is all in Moto's 'virtual' AWS account
@@ -47,7 +47,7 @@ class TestXMLValidate(unittest.TestCase):
 
         assert body == "is awesome"
 
-    @mock_s3
+    @mock_aws
     @mock.patch.dict(
         os.environ,
         {

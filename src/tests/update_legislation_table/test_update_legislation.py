@@ -4,7 +4,7 @@ import boto3
 import pandas as pd
 import pytest
 from index import update_legislation_table
-from moto import mock_secretsmanager
+from moto import mock_aws
 from pytest_postgresql import factories
 
 postgresql_my_proc = factories.postgresql_proc(
@@ -48,7 +48,7 @@ def setup_moto_secrets_manager():
     secret_value = {"SecretString": "secret_password"}
     region_name = "us-east-1"
     secret_name = "mysecret"  # noqa: S105
-    mock_secrets_manager = mock_secretsmanager()
+    mock_secrets_manager = mock_aws()
     mock_secrets_manager.start()
     client = boto3.client("secretsmanager", region_name=region_name)
     client.create_secret(Name=secret_name, SecretString=secret_value["SecretString"])
@@ -57,6 +57,7 @@ def setup_moto_secrets_manager():
         "region_name": region_name,
         "secret_name": secret_name,
     }
+    mock_secrets_manager.stop()
 
 
 @patch("index.fetch_legislation")
