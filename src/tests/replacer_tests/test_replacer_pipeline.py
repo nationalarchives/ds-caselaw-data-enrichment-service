@@ -19,7 +19,7 @@ class TestCitationReplacer(unittest.TestCase):
         year = "2025"
         URI = "#"
         is_neutral = "true"
-        text = "In the judgment the incorrect citation is [2025] 1 All E.R. 123."
+        text = "<z>In the judgment the incorrect citation is [2025] 1 All E.R. 123.</z>"
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
@@ -32,7 +32,7 @@ class TestCitationReplacer(unittest.TestCase):
         year = "2022"
         URI = "#"
         is_neutral = "true"
-        text = "This citation that needs to be changed is [2022] UKET 789123_2012 which discussed..."
+        text = "<z>This citation that needs to be changed is [2022] UKET 789123_2012 which discussed...</z>"
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
@@ -44,7 +44,7 @@ class TestCitationReplacer(unittest.TestCase):
         citation_match = "LR 1 A&E 123"
         corrected_citation = "LR 1 AE 123"
         year = "No Year"
-        text = "LR 1 A&E 123 refers to..."
+        text = "<z>LR 1 A&amp;E 123 refers to...</z>"
         URI = "#"
         is_neutral = "true"
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
@@ -59,7 +59,7 @@ class TestCitationReplacer(unittest.TestCase):
         year = "2022"
         URI = "#"
         is_neutral = "true"
-        text = "I defer to the judgment in (2022) EWHC 123 (Mercantile)."
+        text = "<z>I defer to the judgment in (2022) EWHC 123 (Mercantile).</z>"
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
@@ -72,7 +72,7 @@ class TestCitationReplacer(unittest.TestCase):
         year = "2022"
         URI = "#"
         is_neutral = "true"
-        text = "[2022] ewca civ 123."
+        text = "<z>[2022] ewca civ 123.</z>"
         replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
         replaced_entry = replacer_caselaw(text, replacement_entry)
         assert corrected_citation in replaced_entry
@@ -88,7 +88,7 @@ class TestLegislationReplacer(unittest.TestCase):
     def test_citation_replacer_1(self):
         legislation_match = "Adoption and Children Act 2002"  # matched legislation
         href = "http://www.legislation.gov.uk/ukpga/2002/38"
-        text = "In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption and Children Act 2002 requires the court, inter alia"
+        text = "<z>In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption and Children Act 2002 requires the court, inter alia</z>"
         canonical = "foo"
         replacement_entry = (legislation_match, href, canonical)
         replaced_entry = replacer_leg(text, replacement_entry)
@@ -99,7 +99,7 @@ class TestLegislationReplacer(unittest.TestCase):
     def test_citation_replacer_2(self):
         legislation_match = "Children and Families Act 2014"  # matched legislation
         href = "http://www.legislation.gov.uk/ukpga/2014/6/enacted"
-        text = "In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014."
+        text = "<z>In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014.</z>"
         canonical = "bar"
         replacement_entry = (legislation_match, href, canonical)
         replaced_entry = replacer_leg(text, replacement_entry)
@@ -110,7 +110,7 @@ class TestLegislationReplacer(unittest.TestCase):
     def test_citation_replacer_2_no_enacted(self):
         legislation_match = "Children and Families Act 2014"  # matched legislation
         href = "http://www.legislation.gov.uk/ukpga/2014/6"
-        text = "In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014."
+        text = "<z>In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014.</z>"
         canonical = "bar"
         replacement_entry = (legislation_match, href, canonical)
         replaced_entry = replacer_leg(text, replacement_entry)
@@ -131,10 +131,10 @@ class TestReplacerAbbr(unittest.TestCase):
             with the matching string enclosed by an <abbr> tag with the replacement
             string as the title attribute and TNA as the uk:origin attribute
         """
-        text = "This game requires 12 GB of Random Access Memory"
+        text = "<z xmlns:uk='https://caselaw.nationalarchives.gov.uk/akn'>This game requires 12 GB of Random Access Memory</z>"
         replacement_entry = ("Random Access Memory", "RAM")
 
-        expected = 'This game requires 12 GB of <abbr title="RAM" uk:origin="TNA">Random Access Memory</abbr>'
+        expected = '<z xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">This game requires 12 GB of <abbr title="RAM" uk:origin="TNA">Random Access Memory</abbr></z>'
         assert replacer_abbr(text, replacement_entry) == expected
 
 

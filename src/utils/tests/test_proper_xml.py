@@ -11,6 +11,28 @@ class TestReplaceStringWithTag:
             b'<p>In <ref blah="blah">blah</ref> ...</p>',
         )
 
+    @pytest.mark.xfail
+    def test_as_text_quotes(self):
+        """The quotes in Lloyd's fouls it up; investigate why later"""
+        assert_equal_xml(
+            replace_string_with_tag(
+                "<p>In [2013] 2 Lloyd's Rep 69 ...</p>",
+                "[2013] 2 Lloyd's Rep 69",
+                "<ref blah='blah'>blah</ref>",
+            ),
+            b'<p>In <ref blah="blah">blah</ref> ...</p>',
+        )
+
+    def test_as_text_quotes_no_crash(self):
+        """At least check that quotes don't crash the enrichment process"""
+        (
+            replace_string_with_tag(
+                "<p>In [2013] 2 Lloyd's Rep 69 ...</p>",
+                "[2013] 2 Lloyd's Rep 69",
+                "<ref blah='blah'>blah</ref>",
+            ),
+        )
+
     def test_as_text_multi(self):
         assert_equal_xml(
             replace_string_with_tag(
@@ -23,10 +45,10 @@ class TestReplaceStringWithTag:
 
     @pytest.mark.xfail
     def test_as_text_multi_in_tag(self):
-        """Ideally, this should have <cite/> - <cite/> in the output; we could rerun until it runs clean"""
+        """Ideally, this should have <cite/> - <cite/> in the output, instead of just doing the first; we could rerun until it runs clean"""
         assert_equal_xml(
             replace_string_with_tag("<p>[2024] UKSC 1 - [2024] UKSC 1</p>", "[2024] UKSC 1", "<cite/>"),
-            b"<p><cite/> - [2024] UKSC 1</p>",
+            b"<p><cite/> - <cite/></p>",
         )
 
     def test_as_attribute(self):
