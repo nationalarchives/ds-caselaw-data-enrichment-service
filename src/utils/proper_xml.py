@@ -5,6 +5,43 @@ namespaces = {
     "uk": "https://caselaw.nationalarchives.gov.uk/akn",
 }
 
+XSLT_TEMPLATE = """
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output method="xml" indent="yes"/>
+
+    <xsl:template match="xml">
+        <xsl:copy>
+            <xsl:apply-templates select="text()"/>
+        </xsl:copy>
+    </xsl:template>
+
+    <xsl:template match="text()[contains(., '{replaced_string}')]">
+        <xsl:value-of select="substring-before(., '{replaced_string}')"/>
+        {replacement_tag}
+        <xsl:value-of select="substring-after(., '{replaced_string}')"/>
+    </xsl:template>
+
+    <!-- Copy everything else as-is -->
+    <xsl:template match="@*|node()">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+    </xsl:template>
+</xsl:stylesheet>
+"""
+
+
+def replace_string_with_tag(xml: bytes, string: str, tag: str) -> bytes:
+    """
+    Replace citations in running text, but not in XML attributes
+    This is probably quite inefficient, being called once per replacement! But we can make it better later
+    """
+    root = lxml.etree.fromstring(xml)
+    stylesheet = lxml.etree.XML(XSLT_TEMPLATE.format(replaced_string=string, replacement_tag=tag))
+    transformer = lxml.etree.XSLT(stylesheet)
+    output = transformer(root)
+    return lxml.etree.tostring(output)
+
 
 def expand_namespace(namespaced_name: str) -> str:
     if ":" not in namespaced_name:
