@@ -72,6 +72,9 @@ def make_post_header_replacements(
 
     full_replaced_text_content = pre_header + end_header_tag + replaced_post_header_content
 
+    # raises an lxml.etree.XMLSyntaxError if the output is not valid XML
+    lxml.etree.fromstring(full_replaced_text_content.encode("utf-8"))
+
     return DocumentAsXMLString(full_replaced_text_content)
 
 
