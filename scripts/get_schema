@@ -1,0 +1,4 @@
+echo Saving caselaw XSD from github to schema directory
+curl https://raw.githubusercontent.com/nationalarchives/ds-caselaw-marklogic/refs/heads/main/src/main/ml-schemas/akn-modified.xsd -o schema/akn-modified.xsd
+curl https://raw.githubusercontent.com/nationalarchives/ds-caselaw-marklogic/refs/heads/main/src/main/ml-schemas/caselaw.xsd -o schema/caselaw.xsd
+curl https://raw.githubusercontent.com/nationalarchives/ds-caselaw-marklogic/refs/heads/main/src/main/ml-schemas/xml.xsd -o schema/xml.xsd
