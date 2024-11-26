@@ -47,7 +47,7 @@ def replace_string_with_tag(xml: XMLFragmentAsString, string: str, tag: str) -> 
     stylesheet = lxml.etree.XML(XSLT_TEMPLATE.format(replaced_string=sanitised_string, replacement_tag=tag))
     transformer = lxml.etree.XSLT(stylesheet)
     output = lxml.etree.tostring(transformer(root))
-    return output.decode("utf-8")
+    return XMLFragmentAsString(output.decode("utf-8"))
 
 
 def expand_namespace(namespaced_name: str) -> str:
@@ -73,4 +73,4 @@ def create_tag(tag: str, contents: str = "", attrs: dict[str, str] | None = None
 
 
 def create_tag_string(tag: str, contents: str = "", attrs: dict[str, str] | None = None) -> XMLFragmentAsString:
-    return lxml.etree.tostring(create_tag(tag=tag, contents=contents, attrs=attrs)).decode("utf-8")
+    return XMLFragmentAsString(lxml.etree.tostring(create_tag(tag=tag, contents=contents, attrs=attrs)).decode("utf-8"))

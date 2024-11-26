@@ -34,7 +34,7 @@ def process_event(sqs_rec: S3EventRecord):
     upload_contents(source_key, text_content)
 
 
-def extract_text_content(file_content: DocumentAsXMLString) -> str:
+def extract_text_content(file_content: DocumentAsXMLString) -> DocumentAsXMLString:
     """
     Extract text from the content elements of the XML file
     """

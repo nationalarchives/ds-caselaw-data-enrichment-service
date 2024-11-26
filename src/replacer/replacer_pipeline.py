@@ -30,7 +30,7 @@ def _replace_string_with_tag_handling_junk(file_data, string, tag):
         good = file_data
         tail = ""
 
-    new = replace_string_with_tag(good, string, tag)
+    new = replace_string_with_tag(XMLFragmentAsString(good), string, tag)
     return new + tail
 
 
