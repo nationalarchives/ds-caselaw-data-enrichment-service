@@ -60,7 +60,7 @@ class TestGetAWSSecret:
         When get_aws_secret is called
         Then get_aws_secret should raise an Exception
         """
-        with pytest.raises(ValueError):
+        with pytest.raises(RuntimeError):
             get_aws_secret("", "")
 
     def test_get_aws_secret_with_invalid_aws_secret_password_lookup(self, moto_secrets_manager_with_password):

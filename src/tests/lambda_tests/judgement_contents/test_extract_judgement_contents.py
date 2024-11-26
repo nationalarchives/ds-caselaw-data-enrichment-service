@@ -3,7 +3,7 @@ import unittest
 from unittest import mock
 
 import boto3
-from moto import mock_s3
+from moto import mock_aws
 
 # from lambdas.extract_judgement_contents.index import *
 # _function import *
@@ -49,7 +49,7 @@ class TestExtractJudgement(unittest.TestCase):
     # def setUp(self):
     #     print("setUp")
 
-    @mock_s3
+    @mock_aws
     # @mock.patch.dict(os.environ, {'DEST_BUCKET_NAME': test_bucket_destination_name}, clear=True)
     def test_extract_text_content(self):
         # monkeypatch.setenv("DEST_BUCKET_NAME", test_bucket_destination_name)
@@ -60,7 +60,7 @@ class TestExtractJudgement(unittest.TestCase):
         extracted_xml_content = extract_text_content(test_xml_content)
         self.assertEqual(extracted_xml_content, test_extracted_xml_content)
 
-    @mock_s3
+    @mock_aws
     def test_lambda_handler(self):
         from lambdas.extract_judgement_contents.index import handler
 

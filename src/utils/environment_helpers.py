@@ -34,6 +34,14 @@ def get_aws_secret(aws_secret_name: str, aws_region_name: str) -> str | bytes:
     """
     Get aws secret
     """
+
+    if not aws_secret_name:
+        msg = "No aws_secret_name provided"
+        raise RuntimeError(msg)
+    if not aws_region_name:
+        msg = "No aws_region_name provided"
+        raise RuntimeError(msg)
+
     secret_name = aws_secret_name
     region_name = aws_region_name
 
