@@ -24,9 +24,11 @@ from typing import TypedDict
 
 from bs4 import BeautifulSoup
 
+from replacer.second_stage_replacer import LegislationReferenceReplacement
 from utils.proper_xml import create_tag_string
 
 LegislationReference = tuple[tuple[int, int], str]
+LegislationReferenceReplacements = list[LegislationReferenceReplacement]
 
 
 class LegislationDict(TypedDict):
@@ -36,9 +38,6 @@ class LegislationDict(TypedDict):
     para_pos: tuple[int, int]
     canonical: str
     href: str
-
-
-LegislationReferenceReplacements = list[dict[str, str | int]]
 
 
 class NotExactlyOneRefTag(RuntimeError):
@@ -201,7 +200,7 @@ def get_replacements(
     detected_acts: list[LegislationReference],
     legislation_dicts: list[LegislationDict],
     numbered_act: bool,
-    replacements: list[dict],
+    replacements: list[LegislationReferenceReplacement],
     paragraph_number: int,
 ) -> LegislationReferenceReplacements:
     """
@@ -214,18 +213,22 @@ def get_replacements(
     :returns: list of replacements
     """
     for detected_act in detected_acts:
-        replacement_dict: dict[str, str | int] = {}
         match = detected_act[1]
         if numbered_act:
             matched_replacement = match_numbered_act(detected_act, legislation_dicts)
         else:
             matched_replacement = match_act(detected_act, legislation_dicts, paragraph_number)
-        replacement_dict["detected_ref"] = match
-        replacement_dict["ref_position"] = detected_act[0][0]
-        replacement_dict["ref_para"] = paragraph_number
         if matched_replacement:
-            replacement_dict["ref_tag"] = create_section_ref_tag(matched_replacement, match)
-            replacements.append(replacement_dict)
+            ref_tag = create_section_ref_tag(matched_replacement, match)
+
+            replacements.append(
+                LegislationReferenceReplacement(
+                    detected_ref=match,
+                    ref_position=detected_act[0][0],
+                    ref_para=paragraph_number,
+                    ref_tag=ref_tag,
+                ),
+            )
 
     return replacements
 
@@ -241,11 +244,11 @@ def get_oblique_reference_replacements_by_paragraph(
     """
     soup = BeautifulSoup(file_content, "xml")
     paragraphs = soup.find_all("p")
-    all_replacements: list[dict] = []
+    all_replacements: list[LegislationReferenceReplacement] = []
     all_legislation_dicts = []
 
     for paragraph_number, paragraph in enumerate(paragraphs):
-        replacements: list[dict] = []
+        replacements: list[LegislationReferenceReplacement] = []
         detected_legislation = detect_reference(str(paragraph), "legislation")
         legislation_dicts = create_legislation_dict(detected_legislation, paragraph_number)
         all_legislation_dicts.extend(legislation_dicts)
