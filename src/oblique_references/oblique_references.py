@@ -28,7 +28,6 @@ from replacer.second_stage_replacer import LegislationReferenceReplacement
 from utils.proper_xml import create_tag_string
 
 LegislationReference = tuple[tuple[int, int], str]
-LegislationReferenceReplacements = list[LegislationReferenceReplacement]
 
 
 class LegislationDict(TypedDict):
@@ -202,7 +201,7 @@ def get_replacements(
     numbered_act: bool,
     replacements: list[LegislationReferenceReplacement],
     paragraph_number: int,
-) -> LegislationReferenceReplacements:
+) -> list[LegislationReferenceReplacement]:
     """
     Create replacement string for detected oblique reference
     :param detected_acts: detected oblique references
@@ -235,7 +234,7 @@ def get_replacements(
 
 def get_oblique_reference_replacements_by_paragraph(
     file_content: str,
-) -> LegislationReferenceReplacements:
+) -> list[LegislationReferenceReplacement]:
     """
     Determines oblique references and replacement strings grouped by paragraph
     :param file_content: original judgment file content

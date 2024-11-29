@@ -11,7 +11,7 @@ from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
 from oblique_references.oblique_references import (
-    LegislationReferenceReplacements,
+    LegislationReferenceReplacement,
     NotExactlyOneRefTag,
     create_legislation_dict,
     detect_reference,
@@ -386,7 +386,7 @@ class TestGetReplacements(unittest.TestCase):
             ((480464, 480472), "this Act"),
         ]
         numbered_act = False
-        replacements: LegislationReferenceReplacements = []
+        replacements: list[LegislationReferenceReplacement] = []
 
         paragraph_number = 2
 
