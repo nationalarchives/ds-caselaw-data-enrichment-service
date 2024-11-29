@@ -13,12 +13,6 @@ FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 
 
 class TestMakePostHeaderReplacements:
-    def test_make_failing_post_header_replacements(self):
-        """This used to fail because the input data contained ref tags with text matching a replacement"""
-        original_file_content = open(FIXTURE_DIR / "broken.xml", encoding="utf-8").read()
-        replacement_content = open(FIXTURE_DIR / "broken.txt", encoding="utf-8").read()
-        make_post_header_replacements(original_file_content, replacement_content)
-
     def test_make_post_header_replacements(self):
         original_file_content = open(FIXTURE_DIR / "ewhc-ch-2023-257_original.xml", encoding="utf-8").read()
         replacement_content = open(FIXTURE_DIR / "ewhc-ch-2023-257_replacements.txt", encoding="utf-8").read()
@@ -43,6 +37,28 @@ class TestMakePostHeaderReplacements:
 
         content_with_replacements = make_post_header_replacements(original_file_content, replacement_content)
 
+        assert_equal_xml(content_with_replacements, expected_file_content)
+
+    def test_post_header_double_replacement(self):
+        """When a value is replaced, the value is an attribute in a ref tag.
+        If the replacement value is then replaced, invalid XML was generated."""
+
+        original_file_content = """<?xml version="1.0" encoding="utf-8"?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
+<judgment name="judgment">
+<header></header><judgmentBody>a</judgmentBody></judgment></akomaNtoso>
+"""
+
+        replacement_content = """
+        {"case": ["a", "b", "2008", "#", true]}
+        {"case": ["b", "c", "1937", "#", true]}
+        """.strip()
+        expected_file_content = """<?xml version="1.0" encoding="utf-8"?>
+        <akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
+        <judgment name="judgment"><header/><judgmentBody>
+        <ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="#" uk:isNeutral="true" uk:canonical="b" uk:year="2008" uk:origin="TNA">a</ref>
+        </judgmentBody></judgment></akomaNtoso>"""
+        content_with_replacements = make_post_header_replacements(original_file_content, replacement_content)
         assert_equal_xml(content_with_replacements, expected_file_content)
 
     def test_remove_nested_legislation_references(self):
