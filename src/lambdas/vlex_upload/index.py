@@ -6,7 +6,7 @@ import boto3
 from distutils.util import strtobool
 
 from utils.environment_helpers import validate_env_variable
-from utils.types import DocumentAsXMLString
+from utils.types import DocumentAsXMLBytes
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)
@@ -25,14 +25,14 @@ def process_event(sqs_rec):
     print("Input bucket name:", source_bucket)
     print("Input S3 key:", source_key)
 
-    file_content = s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read()
+    file_content = DocumentAsXMLBytes(s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read())
 
     upload_contents(source_key, file_content)
     LOGGER.debug("content uploaded")
     return True
 
 
-def upload_contents(source_key: str, text_content: DocumentAsXMLString):
+def upload_contents(source_key: str, text_content: DocumentAsXMLBytes):
     """
     Upload judgment XML to destination S3 bucket
     """
