@@ -9,7 +9,7 @@ import bs4 as BeautifulSoup
 from utils.types import DocumentAsXMLString
 
 
-def parse_file(file_data: DocumentAsXMLString) -> DocumentAsXMLString:
+def parse_file(file_data: DocumentAsXMLString) -> str:
     """
     Parse XML file. Only get text within content elements
     :param file_data: XML file
