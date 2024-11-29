@@ -34,14 +34,14 @@ def process_event(sqs_rec: S3EventRecord):
     upload_contents(source_key, text_content)
 
 
-def extract_text_content(file_content: DocumentAsXMLString) -> DocumentAsXMLString:
+def extract_text_content(file_content: DocumentAsXMLString) -> str:
     """
     Extract text from the content elements of the XML file
     """
     return parse_file(file_content)
 
 
-def upload_contents(source_key: str, text_content: DocumentAsXMLString):
+def upload_contents(source_key: str, text_content: DocumentAsXMLString | str):
     """
     Uploads text to S3 bucket
     """
