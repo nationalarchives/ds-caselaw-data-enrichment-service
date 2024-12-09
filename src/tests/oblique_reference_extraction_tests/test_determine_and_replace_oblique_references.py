@@ -20,7 +20,7 @@ class TestEnrichObliqueReferences(unittest.TestCase):
         When it is passed to `enrich_oblique_references`
         Then xml judgment content is returned with enriched oblique references
         """
-        input_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1.xml"
+        input_file_path = f"{FIXTURE_DIR}/ewhc-ch-2023-257_enriched_stage_1_ORIGINAL.xml"
         with open(input_file_path, encoding="utf-8") as input_file:
             input_file_content = input_file.read()
 

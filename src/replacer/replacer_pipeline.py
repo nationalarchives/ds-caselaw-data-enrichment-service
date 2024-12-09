@@ -6,8 +6,32 @@ Handles the replacements of abbreviations, legislation, and case law.
 import html
 import re
 
-from utils.proper_xml import create_tag_string
+from utils.proper_xml import create_tag_string, replace_string_with_tag
 from utils.types import Replacement, XMLFragmentAsString
+
+JUNK_REGEX = r"</judgment>\s*</akomaNtoso>\s*$"
+BAD = '="<'
+
+
+def assert_not_bad(s):
+    if BAD in s:
+        msg = f"{BAD!r} found in XML"
+        raise RuntimeError(msg)
+
+
+def _replace_string_with_tag_handling_junk(file_data, string, tag):
+    """The XML might contain </judgment></akomaNtoso> at the end; remove and replace if so."""
+
+    junk = re.search(JUNK_REGEX, file_data)
+    if junk:
+        good = re.sub(JUNK_REGEX, "", file_data)
+        tail = junk.group()
+    else:
+        good = file_data
+        tail = ""
+
+    new = replace_string_with_tag(XMLFragmentAsString(good), string, tag)
+    return new + tail
 
 
 def fixed_year(year: str) -> str | None:
@@ -40,9 +64,12 @@ def replacer_caselaw(file_data: XMLFragmentAsString, replacement: Replacement) -
     if year:
         attribs["uk:year"] = year
     attribs["uk:origin"] = "TNA"
-    replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
 
-    return XMLFragmentAsString(str(file_data).replace(replacement[0], replacement_string))
+    replacement_tag = create_tag_string("ref", html.escape(replacement[0]), attribs)
+    output = _replace_string_with_tag_handling_junk(file_data, replacement[0], replacement_tag)
+
+    assert_not_bad(file_data)
+    return output
 
 
 def replacer_leg(file_data: XMLFragmentAsString, replacement: Replacement) -> XMLFragmentAsString:
@@ -58,8 +85,10 @@ def replacer_leg(file_data: XMLFragmentAsString, replacement: Replacement) -> XM
         "uk:canonical": replacement[2],
         "uk:origin": "TNA",
     }
-    replacement_string = create_tag_string("ref", html.escape(replacement[0]), attribs)
-    return XMLFragmentAsString(str(file_data).replace(replacement[0], replacement_string))
+    replacement_tag = create_tag_string("ref", html.escape(replacement[0]), attribs)
+    output = _replace_string_with_tag_handling_junk(file_data, replacement[0], replacement_tag)
+    assert_not_bad(file_data)
+    return output
 
 
 def replacer_abbr(file_data: XMLFragmentAsString, replacement: Replacement) -> XMLFragmentAsString:
@@ -69,8 +98,11 @@ def replacer_abbr(file_data: XMLFragmentAsString, replacement: Replacement) -> X
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
-    replacement_string = f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
-    return XMLFragmentAsString(str(file_data).replace(str(replacement[0]), replacement_string))
+    replacement_tag = f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
+
+    output = _replace_string_with_tag_handling_junk(file_data, replacement[0], replacement_tag)
+    assert_not_bad(file_data)
+    return output
 
 
 def replacer_pipeline(
@@ -87,13 +119,19 @@ def replacer_pipeline(
     :param REPLACEMENTS_ABBR: list of unique tuples of citation match and corrected citation
     :return: enriched XML file data
     """
+
+    assert_not_bad(file_data)
+
     for replacement in list(set(REPLACEMENTS_CASELAW)):
         file_data = replacer_caselaw(file_data, replacement)
+    assert_not_bad(file_data)
 
     for replacement in list(set(REPLACEMENTS_LEG)):
         file_data = replacer_leg(file_data, replacement)
+    assert_not_bad(file_data)
 
     for replacement in list(set(REPLACEMENTS_ABBR)):
         file_data = replacer_abbr(file_data, replacement)
+    assert_not_bad(file_data)
 
     return file_data

@@ -1,5 +1,10 @@
 # Changelog
 
+## v7.0.0 (2024-11-28)
+
+- Ensure that documents with matching replacements don't replace inside XML strings
+- Fix type linting
+
 ## v6.0.2 (2024-10-03)
 
 - Enrich press summaries by fixing patch url to be press-summary, not press/summary
