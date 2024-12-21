@@ -2,7 +2,7 @@ module "aurora-metadata-db" {
   for_each = local.aurora_rds
 
   source  = "terraform-aws-modules/rds-aurora/aws"
-  version = "5.3.0"
+  version = "9.11.0"
 
   name = "${local.name}-${each.key}-metadata-db-${local.environment}"
 
