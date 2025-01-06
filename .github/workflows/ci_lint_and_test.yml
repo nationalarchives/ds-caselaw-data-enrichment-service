@@ -10,7 +10,7 @@ on:
 jobs:
   run-pre-commit:
     name: Run pre-commit
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code Repository
         uses: actions/checkout@v4
@@ -22,7 +22,7 @@ jobs:
 
   run-tests:
     name: Run tests
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4.2.2
@@ -54,7 +54,7 @@ jobs:
           CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
 
   terraform_format:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout source code
@@ -76,7 +76,7 @@ jobs:
         continue-on-error: false
 
   terraform_lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout source code
@@ -97,7 +97,7 @@ jobs:
           tflint -f compact --loglevel warn
 
   terraform_validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
       - name: Checkout source code
@@ -129,7 +129,7 @@ jobs:
 
   tfsec-pr-commenter:
     name: tfsec PR commenter
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     permissions:
       contents: read
       pull-requests: write
