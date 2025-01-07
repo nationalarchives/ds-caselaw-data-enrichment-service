@@ -89,8 +89,11 @@ def resolve_overlap(results_dict):
 
     # for every detected pair of refs that overlap
     for ol_index in overlaps:
+        # mypy was complaining about ol_index being a `list[signedinteger[_32Bit | _64Bit]]`
+        # so just force it to be a regular list of ints
+        int_ol_index = list(map(int, ol_index))
         # get those two rows
-        overlap_rows = qq.iloc[list(ol_index)]
+        overlap_rows = qq.iloc[int_ol_index]
         # get the worst of the two (or first, if they're equal)
         worst_match_index = overlap_rows.confidence.idxmin()
         # and mark its index for deletion
