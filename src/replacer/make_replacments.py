@@ -65,12 +65,16 @@ def make_post_header_replacements(
         str: The modified legal document content with the replacement applied.
     """
     cleaned_file_content = sanitize_judgment(original_content)
+
     pre_header, end_header_tag, post_header = split_text_by_closing_header_tag(cleaned_file_content)
 
     replaced_post_header_content = apply_replacements(post_header, replacement_patterns)
     LOGGER.info("Got post-header replacement text content")
 
     full_replaced_text_content = pre_header + end_header_tag + replaced_post_header_content
+
+    # raises an lxml.etree.XMLSyntaxError if the output is not valid XML
+    lxml.etree.fromstring(full_replaced_text_content.encode("utf-8"))
 
     return DocumentAsXMLString(full_replaced_text_content)
 
@@ -89,7 +93,7 @@ def apply_replacements(content: XMLFragmentAsString, replacement_patterns: str) 
         replacement_pattern_dict = json.loads(replacement_pattern_json)
 
         replacement_type, replacement_pattern_list = list(replacement_pattern_dict.items())[0]
-        replacement_pattern = tuple(replacement_pattern_list)
+        replacement_pattern = Replacement(tuple(replacement_pattern_list))
 
         if replacement_type == "case":
             case_replacement_patterns.append(replacement_pattern)

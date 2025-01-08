@@ -1,7 +1,65 @@
 import pytest
 
 from utils.compare_xml import assert_equal_xml
-from utils.proper_xml import create_tag_string
+from utils.proper_xml import create_tag_string, replace_string_with_tag
+
+
+class TestReplaceStringWithTag:
+    def test_as_text(self):
+        assert_equal_xml(
+            replace_string_with_tag("<p>In [2024] UKSC 1 ...</p>", "[2024] UKSC 1", "<ref blah='blah'>blah</ref>"),
+            b'<p>In <ref blah="blah">blah</ref> ...</p>',
+        )
+
+    @pytest.mark.xfail
+    def test_as_text_quotes(self):
+        """The quotes in Lloyd's fouls it up; investigate why later"""
+        assert_equal_xml(
+            replace_string_with_tag(
+                "<p>In [2013] 2 Lloyd's Rep 69 ...</p>",
+                "[2013] 2 Lloyd's Rep 69",
+                "<ref blah='blah'>blah</ref>",
+            ),
+            b'<p>In <ref blah="blah">blah</ref> ...</p>',
+        )
+
+    def test_as_text_quotes_no_crash(self):
+        """At least check that quotes don't crash the enrichment process"""
+        (
+            replace_string_with_tag(
+                "<p>In [2013] 2 Lloyd's Rep 69 ...</p>",
+                "[2013] 2 Lloyd's Rep 69",
+                "<ref blah='blah'>blah</ref>",
+            ),
+        )
+
+    def test_as_text_multi(self):
+        assert_equal_xml(
+            replace_string_with_tag(
+                "<p><span>[2024] UKSC 1</span><span>[2024] UKSC 1</span></p>",
+                "[2024] UKSC 1",
+                "<cite/>",
+            ),
+            b"<p><span><cite/></span><span><cite/></span></p>",
+        )
+
+    @pytest.mark.xfail
+    def test_as_text_multi_in_tag(self):
+        """Ideally, this should have <cite/> - <cite/> in the output, instead of just doing the first; we could rerun until it runs clean"""
+        assert_equal_xml(
+            replace_string_with_tag("<p>[2024] UKSC 1 - [2024] UKSC 1</p>", "[2024] UKSC 1", "<cite/>"),
+            b"<p><cite/> - <cite/></p>",
+        )
+
+    def test_as_attribute(self):
+        assert_equal_xml(
+            replace_string_with_tag(
+                "<p>In <ref nc='[2024] UKSC 1'>the previous judgment</ref> ...</p>",
+                "[2024] UKSC 1",
+                "<ref blah='blah'>blah</ref>",
+            ),
+            b'<p>In <ref nc="[2024] UKSC 1">the previous judgment</ref> ...</p>',
+        )
 
 
 def test_simple_tag():

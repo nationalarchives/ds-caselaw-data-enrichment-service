@@ -44,8 +44,12 @@ repos:
             types-requests,
             types-lxml,
             types-beautifulsoup4,
+            types-psycopg2,
+            pandas-stubs,
+            pytest-stub,
             "boto3-stubs[essential, secretsmanager]",
             aws_lambda_powertools,
+            moto,
           ]
 
   - repo: https://github.com/pre-commit/mirrors-prettier

@@ -19,7 +19,7 @@ class MismatchedIdShapeError(Exception):
     pass
 
 
-def write_patterns_file(patterns_list: str) -> str:
+def write_patterns_file(patterns_list: list[str]) -> str:
     """
     Write patterns to separate lines
     """

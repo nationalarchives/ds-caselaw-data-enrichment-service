@@ -41,7 +41,7 @@ def extract_text_content(file_content: DocumentAsXMLString) -> str:
     return parse_file(file_content)
 
 
-def upload_contents(source_key: str, text_content: DocumentAsXMLString):
+def upload_contents(source_key: str, text_content: DocumentAsXMLString | str):
     """
     Uploads text to S3 bucket
     """

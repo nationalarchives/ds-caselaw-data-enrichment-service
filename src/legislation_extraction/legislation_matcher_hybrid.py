@@ -59,7 +59,7 @@ def mergedict(x, b):
 
 def resolve_overlap(results_dict):
     """
-    Resolves references that have been detected as legislation but overlap in the body of judgement to the most accurate legislation.
+    Resolves references that have been detected as legislation but overlap in the body of judgment to the most accurate legislation.
     This might occur due to the nature of the fuzzy matching where it matches two closely worded legislation to the same text in a judgement.
     This function ensures a 1-to-1 linkage between a legislation title and a detected reference.
     Parameters
@@ -72,9 +72,9 @@ def resolve_overlap(results_dict):
         dictionary containing the detected references with overlapped references removed.
     """
     qq = pd.DataFrame([results_dict])
-    qq = qq.T.explode(0)[0].apply(pd.Series)
+    qq = qq.T.explode([0])[0].apply(pd.Series)
 
-    qq.columns = keys
+    qq.columns = pd.Index(keys)
 
     # get refs that overlap in the text
     mask = (qq.start.values[:, None] >= qq.start.values) & (qq.end.values[:, None] <= qq.end.values)
@@ -89,8 +89,11 @@ def resolve_overlap(results_dict):
 
     # for every detected pair of refs that overlap
     for ol_index in overlaps:
+        # mypy was complaining about ol_index being a `list[signedinteger[_32Bit | _64Bit]]`
+        # so just force it to be a regular list of ints
+        int_ol_index = list(map(int, ol_index))
         # get those two rows
-        overlap_rows = qq.iloc[list(ol_index)]
+        overlap_rows = qq.iloc[int_ol_index]
         # get the worst of the two (or first, if they're equal)
         worst_match_index = overlap_rows.confidence.idxmin()
         # and mark its index for deletion
