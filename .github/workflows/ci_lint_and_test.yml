@@ -12,6 +12,10 @@ jobs:
     name: Run pre-commit
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3.1.2
+        continue-on-error: false
+
       - name: Checkout Code Repository
         uses: actions/checkout@v4
 
