@@ -1032,36 +1032,36 @@ files = [
 
 [[package]]
 name = "django-environ"
-version = "0.11.2"
+version = "0.12.0"
 description = "A package that allows you to utilize 12factor inspired environment variables to configure your Django application."
 optional = false
-python-versions = ">=3.6,<4"
+python-versions = "<4,>=3.9"
 files = [
-    {file = "django-environ-0.11.2.tar.gz", hash = "sha256:f32a87aa0899894c27d4e1776fa6b477e8164ed7f6b3e410a62a6d72caaf64be"},
-    {file = "django_environ-0.11.2-py2.py3-none-any.whl", hash = "sha256:0ff95ab4344bfeff693836aa978e6840abef2e2f1145adff7735892711590c05"},
+    {file = "django_environ-0.12.0-py2.py3-none-any.whl", hash = "sha256:92fb346a158abda07ffe6eb23135ce92843af06ecf8753f43adf9d2366dcc0ca"},
+    {file = "django_environ-0.12.0.tar.gz", hash = "sha256:227dc891453dd5bde769c3449cf4a74b6f2ee8f7ab2361c93a07068f4179041a"},
 ]
 
 [package.extras]
-develop = ["coverage[toml] (>=5.0a4)", "furo (>=2021.8.17b43,<2021.9.dev0)", "pytest (>=4.6.11)", "sphinx (>=3.5.0)", "sphinx-notfound-page"]
-docs = ["furo (>=2021.8.17b43,<2021.9.dev0)", "sphinx (>=3.5.0)", "sphinx-notfound-page"]
-testing = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)"]
+develop = ["coverage[toml] (>=5.0a4)", "furo (>=2024.8.6)", "pytest (>=4.6.11)", "setuptools (>=71.0.0)", "sphinx (>=5.0)", "sphinx-notfound-page"]
+docs = ["furo (>=2024.8.6)", "sphinx (>=5.0)", "sphinx-notfound-page"]
+testing = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)", "setuptools (>=71.0.0)"]
 
 [[package]]
 name = "ds-caselaw-marklogic-api-client"
-version = "28.2.0"
+version = "29.2.0"
 description = "An API client for interacting with the underlying data in Find Caselaw."
 optional = false
 python-versions = "<4.0,>=3.9"
 files = [
-    {file = "ds_caselaw_marklogic_api_client-28.2.0-py3-none-any.whl", hash = "sha256:36b79f3a6e304dd38b23457f438199965cbe0b51188878fc6f2787b52b04954e"},
-    {file = "ds_caselaw_marklogic_api_client-28.2.0.tar.gz", hash = "sha256:5b9e8689b783fb16b5161c97f0aae10c455ad0165a71f2c7c7041971ad25f23f"},
+    {file = "ds_caselaw_marklogic_api_client-29.2.0-py3-none-any.whl", hash = "sha256:fff231207eae1118c3a33cc4b0d88ec484445d9d7d012fb14db4560e61b818fd"},
+    {file = "ds_caselaw_marklogic_api_client-29.2.0.tar.gz", hash = "sha256:b6a477caba1012205bdac0c80d8bc7f645767ca5d8348bc987b4ae61f4f8a76e"},
 ]
 
 [package.dependencies]
 boto3 = ">=1.26.112,<2.0.0"
 certifi = ">=2024.12.14,<2024.13.0"
 charset-normalizer = ">=3.0.0,<4.0.0"
-django-environ = ">=0.11.0,<0.12.0"
+django-environ = ">=0.12.0"
 ds-caselaw-utils = ">=2.0.0,<3.0.0"
 idna = ">=3.4,<4.0"
 lxml = ">=5.0.0,<6.0.0"
@@ -3636,4 +3636,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "1ac8fc660ccb45351ca025fc74775bc51ce2e2991ac0f9a6b933d188a74094f4"
+content-hash = "8c9888b0a0ffc094f8ed4d673f428e891072d47a4f6ca701f1e14845700bb11c"
