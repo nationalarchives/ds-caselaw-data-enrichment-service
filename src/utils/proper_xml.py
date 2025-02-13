@@ -2,7 +2,7 @@ from xml.sax.saxutils import escape as xml_escape
 
 import lxml.etree
 
-from utils.types import XMLFragmentAsString
+from utils.custom_types import XMLFragmentAsString
 
 namespaces = {
     None: "http://docs.oasis-open.org/legaldocml/ns/akn/3.0",

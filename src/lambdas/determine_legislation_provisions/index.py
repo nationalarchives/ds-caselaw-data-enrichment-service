@@ -12,8 +12,8 @@ from legislation_provisions_extraction.legislation_provisions import (
     provisions_pipeline,
 )
 from replacer.second_stage_replacer import replace_references_by_paragraph
+from utils.custom_types import DocumentAsXMLString
 from utils.environment_helpers import validate_env_variable
-from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)

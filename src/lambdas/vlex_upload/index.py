@@ -5,8 +5,8 @@ import urllib.parse
 import boto3
 from distutils.util import strtobool
 
+from utils.custom_types import DocumentAsXMLBytes
 from utils.environment_helpers import validate_env_variable
-from utils.types import DocumentAsXMLBytes
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.DEBUG)

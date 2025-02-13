@@ -9,9 +9,9 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from database import db_connection
+from utils.custom_types import DocumentAsXMLString
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
-from utils.types import DocumentAsXMLString
 
 if TYPE_CHECKING:
     from mypy_boto3_sqs.type_defs import MessageAttributeValueTypeDef

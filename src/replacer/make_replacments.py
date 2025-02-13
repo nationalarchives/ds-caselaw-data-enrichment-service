@@ -7,7 +7,7 @@ import lxml.etree
 from bs4 import BeautifulSoup
 
 from replacer.replacer_pipeline import replacer_pipeline
-from utils.types import (
+from utils.custom_types import (
     DocumentAsXMLString,
     Reference,
     Replacement,

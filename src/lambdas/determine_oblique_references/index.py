@@ -9,8 +9,8 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 from oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
+from utils.custom_types import DocumentAsXMLString
 from utils.environment_helpers import validate_env_variable
-from utils.types import DocumentAsXMLString
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)

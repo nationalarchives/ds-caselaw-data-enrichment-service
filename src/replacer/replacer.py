@@ -5,7 +5,7 @@ Handles the replacements of abbreviations, legislation, and case law.
 
 import json
 
-from utils.types import Replacement
+from utils.custom_types import Replacement
 
 
 def write_replacements_file(replacement_list: list[Replacement]) -> str:
