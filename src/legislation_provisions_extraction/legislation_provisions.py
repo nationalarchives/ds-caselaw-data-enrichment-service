@@ -20,8 +20,8 @@ from typing import Any
 import numpy as np
 from bs4 import BeautifulSoup, Tag
 
+from utils.custom_types import DocumentAsXMLString
 from utils.proper_xml import create_tag_string
-from utils.types import DocumentAsXMLString
 
 SectionDict = dict[str, list[Any]]  # this is a guess
 

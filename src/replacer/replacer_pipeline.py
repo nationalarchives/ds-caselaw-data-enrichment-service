@@ -6,8 +6,8 @@ Handles the replacements of abbreviations, legislation, and case law.
 import html
 import re
 
+from utils.custom_types import Replacement, XMLFragmentAsString
 from utils.proper_xml import create_tag_string, replace_string_with_tag
-from utils.types import Replacement, XMLFragmentAsString
 
 JUNK_REGEX = r"</judgment>\s*</akomaNtoso>\s*$"
 BAD = '="<'

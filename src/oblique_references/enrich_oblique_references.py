@@ -6,7 +6,7 @@ from oblique_references.oblique_references import (
     get_oblique_reference_replacements_by_paragraph,
 )
 from replacer.second_stage_replacer import replace_references_by_paragraph
-from utils.types import DocumentAsXMLString
+from utils.custom_types import DocumentAsXMLString
 
 
 def enrich_oblique_references(file_content: DocumentAsXMLString) -> DocumentAsXMLString:

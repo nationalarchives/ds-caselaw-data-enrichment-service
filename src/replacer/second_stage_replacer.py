@@ -10,7 +10,7 @@ from typing import TypedDict
 
 from bs4 import BeautifulSoup, Tag
 
-from utils.types import DocumentAsXMLString
+from utils.custom_types import DocumentAsXMLString
 
 LegislationReference = tuple[tuple[int, int], str]
 

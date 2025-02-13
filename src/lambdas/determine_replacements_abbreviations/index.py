@@ -9,8 +9,8 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from abbreviation_extraction.abbreviations_matcher import abb, abb_pipeline
+from utils.custom_types import DocumentAsXMLString, Replacement
 from utils.environment_helpers import validate_env_variable
-from utils.types import DocumentAsXMLString, Replacement
 
 if TYPE_CHECKING:
     from mypy_boto3_sqs.type_defs import MessageAttributeValueTypeDef

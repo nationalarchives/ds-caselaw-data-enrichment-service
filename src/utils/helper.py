@@ -6,7 +6,7 @@ import re
 
 import bs4 as BeautifulSoup
 
-from utils.types import DocumentAsXMLString
+from utils.custom_types import DocumentAsXMLString
 
 
 def parse_file(file_data: DocumentAsXMLString) -> str:
