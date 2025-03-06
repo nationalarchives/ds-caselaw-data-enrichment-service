@@ -2398,21 +2398,21 @@ testing = ["covdefaults (>=2.3)", "coverage (>=7.6.1)", "pytest-mock (>=3.14)"]
 
 [[package]]
 name = "pytest-postgresql"
-version = "6.1.1"
+version = "7.0.0"
 description = "Postgresql fixtures and fixture factories for Pytest."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 files = [
-    {file = "pytest_postgresql-6.1.1-py3-none-any.whl", hash = "sha256:bd4c0970d25685ac3d34d42263fcbfbf134bf02d22519fce7e1ccf4122d8b99a"},
-    {file = "pytest_postgresql-6.1.1.tar.gz", hash = "sha256:f996637367e6aecebba1349da52eea95340bdb434c90e4b79739e62c656056e2"},
+    {file = "pytest_postgresql-7.0.0-py3-none-any.whl", hash = "sha256:aaebadbf060b85cca7755fdf5ed7aa2929edd0f842c9b7f56ffe1e58e0d3b749"},
+    {file = "pytest_postgresql-7.0.0.tar.gz", hash = "sha256:cf0016cee5d9ac06f50cfc61bb0597d1fa90780d77c4453bc18e4930cae04aaa"},
 ]
 
 [package.dependencies]
-mirakuru = "*"
+mirakuru = ">=2.6.0"
+packaging = "*"
 port-for = ">=0.7.3"
 psycopg = ">=3.0.0"
 pytest = ">=6.2"
-setuptools = "*"
 
 [[package]]
 name = "pytest-socket"
@@ -3693,4 +3693,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "1ac8fc660ccb45351ca025fc74775bc51ce2e2991ac0f9a6b933d188a74094f4"
+content-hash = "623fee4c2703f1a0b8f755ce4a2b110bbc37cf3634a03c9c1e2e20102bc3ab9d"
