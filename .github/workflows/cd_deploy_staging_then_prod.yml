@@ -7,7 +7,6 @@ on:
 
 permissions:
   pull-requests: read
-  id-token: write
   contents: read
 
 defaults:
@@ -23,6 +22,8 @@ jobs:
       account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
       workspace: tna-staging
       app_env: staging
+    permissions:
+      id-token: write
 
   deploy_production:
     name: Deploy Production Build
@@ -33,3 +34,5 @@ jobs:
       account_id: ${{ secrets.PROD_ACCOUNT_ID }}
       workspace: tna-prod
       app_env: production
+    permissions:
+      id-token: write
