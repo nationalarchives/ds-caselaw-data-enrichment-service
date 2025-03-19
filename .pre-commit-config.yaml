@@ -58,3 +58,8 @@ repos:
       - id: prettier
         types_or: [yaml, json, xml, markdown, scss, javascript]
         exclude: "terraform/README.md"
+
+  - repo: https://github.com/woodruffw/zizmor-pre-commit
+    rev: v1.5.1
+    hooks:
+      - id: zizmor
