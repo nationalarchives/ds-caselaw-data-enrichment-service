@@ -156,6 +156,9 @@ jobs:
 
   terraform_plan-staging:
     uses: ./.github/workflows/terraform_plan.yml
+    permissions:
+      contents: read
+      id-token: write
     secrets:
       aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN }}
       account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
@@ -164,6 +167,9 @@ jobs:
 
   terraform_plan-production:
     uses: ./.github/workflows/terraform_plan.yml
+    permissions:
+      contents: read
+      id-token: write
     secrets:
       aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN_PROD }}
       account_id: ${{ secrets.PROD_ACCOUNT_ID }}
