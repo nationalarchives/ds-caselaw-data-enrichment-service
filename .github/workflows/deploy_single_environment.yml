@@ -23,7 +23,7 @@ jobs:
       - name: Set up Python 3.12
         uses: actions/setup-python@8d9ed9ac5c53483de85588cdf95a591a75ab9f55 # v5.5.0
         with:
-          python-version: "3.12"
+          python-version: "3.13"
 
       - name: Get AWS Credentials
         uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502 # v4
