@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.0.1 (2025-05-19)
+
+- Fix replace_string_with_tag for when the xml fragment string includes uk namespace attributes
+
 ## v7.0.0 (2024-11-28)
 
 - Ensure that documents with matching replacements don't replace inside XML strings

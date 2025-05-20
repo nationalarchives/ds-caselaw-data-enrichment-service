@@ -53,13 +53,8 @@ class TestMakePostHeaderReplacements:
         {"case": ["a", "b", "2008", "#", true]}
         {"case": ["b", "c", "1937", "#", true]}
         """.strip()
-        expected_file_content = """<?xml version="1.0" encoding="utf-8"?>
-        <akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">
-        <judgment name="judgment"><header/><judgmentBody>
-        <ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="#" uk:isNeutral="true" uk:canonical="b" uk:year="2008" uk:origin="TNA">a</ref>
-        </judgmentBody></judgment></akomaNtoso>"""
-        content_with_replacements = make_post_header_replacements(original_file_content, replacement_content)
-        assert_equal_xml(content_with_replacements, expected_file_content)
+        expected_file_content = '<?xml version="1.0" encoding="utf-8"?>\n<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn"><judgment name="judgment"><header/><judgmentBody><ref xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="#" uk:isNeutral="true" uk:canonical="b" uk:year="2008" uk:origin="TNA">a</ref></judgmentBody></judgment></akomaNtoso>'
+        assert make_post_header_replacements(original_file_content, replacement_content) == expected_file_content
 
     def test_remove_nested_legislation_references(self):
         tidy_output = _remove_old_enrichment_references(
