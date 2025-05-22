@@ -5,6 +5,22 @@ from utils.proper_xml import create_tag_string, replace_string_with_tag
 
 
 class TestReplaceStringWithTag:
+    def test_when_includes_uk_namespace_attributes(self):
+        """
+        Given an XML fragment containing uk: attributes on an element (e.g., <table>),
+        And a string to search for (e.g., "a"),
+        And a replacement string (e.g., <ref uk:type="case">a</ref>),
+        When replace_string_with_tag is called,
+        Then the XML fragment should be modified to include the replacement string
+        """
+        input_xml = '<judgmentBody><table uk:widths="1.38in">a</table></judgmentBody>'
+        search = "a"
+        replacement = '<ref uk:type="case">a</ref>'
+        expected = '<judgmentBody><table uk:widths="1.38in"><ref uk:type="case">a</ref></table></judgmentBody>'
+
+        result = replace_string_with_tag(input_xml, search, replacement)
+        assert result == expected
+
     def test_as_text(self):
         assert_equal_xml(
             replace_string_with_tag("<p>In [2024] UKSC 1 ...</p>", "[2024] UKSC 1", "<ref blah='blah'>blah</ref>"),

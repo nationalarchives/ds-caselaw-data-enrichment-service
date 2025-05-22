@@ -41,13 +41,26 @@ def replace_string_with_tag(xml: XMLFragmentAsString, string: str, tag: str) -> 
     Replace citations in running text, but not in XML attributes
     This is probably quite inefficient, being called once per replacement! But we can make it better later
     """
-    root = lxml.etree.fromstring(xml)
+    # Add root tags to the XML, with uk namespace if not already present
+    uk_ns_1 = 'xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn"'
+    uk_ns_2 = "xmlns:uk='https://caselaw.nationalarchives.gov.uk/akn'"
+    needs_wrapper = uk_ns_1 not in str(xml) and uk_ns_2 not in str(xml)
+    root_start = f"<root {uk_ns_1}>" if needs_wrapper else "<root>"
+    root_end = "</root>"
+    xml_wrapped = XMLFragmentAsString(root_start + str(xml) + root_end)
+    root = lxml.etree.fromstring(xml_wrapped)
+
     # DRAGON: this currently isn't working but stops it crashing
     sanitised_string = xml_escape(string, entities={"'": "&amp;apos;", '"': "&amp;quot;"})
+
     stylesheet = lxml.etree.XML(XSLT_TEMPLATE.format(replaced_string=sanitised_string, replacement_tag=tag))
     transformer = lxml.etree.XSLT(stylesheet)
     output = lxml.etree.tostring(transformer(root))
-    return XMLFragmentAsString(output.decode("utf-8"))
+    decoded_output = output.decode("utf-8")
+
+    # Remove the root tags that were added at the start of the function
+    final_output = decoded_output[len(root_start) : -len(root_end)]
+    return XMLFragmentAsString(final_output)
 
 
 def expand_namespace(namespaced_name: str) -> str:

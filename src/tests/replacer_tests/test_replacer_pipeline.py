@@ -17,27 +17,27 @@ class TestCitationReplacer(unittest.TestCase):
         citation_match = "[2025] 1 All E.R. 123"  # incorrect citation
         corrected_citation = "[2025] 1 All ER 123"  # in practice, returned via the citation matcher
         year = "2025"
-        URI = "#"
+        uri = "#"
         is_neutral = "true"
-        text = "<z>In the judgment the incorrect citation is [2025] 1 All E.R. 123.</z>"
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:year="{year}" uk:origin="TNA">{citation_match}</ref>'
-        assert replacement_string in replaced_entry
+        text = "<z>In the judgment the incorrect citation is [2025] 1 All E.R. 123. <table uk:widths='1.38in 1.05in 0.91in 0.98in 0.98in 0.95in'></table></z>"
+        replacement_entry = (citation_match, corrected_citation, year, uri, is_neutral)
+        assert (
+            replacer_caselaw(text, replacement_entry)
+            == '<z>In the judgment the incorrect citation is <ref xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="#" uk:isNeutral="true" uk:canonical="[2025] 1 All ER 123" uk:year="2025" uk:origin="TNA">[2025] 1 All E.R. 123</ref>. <table uk:widths="1.38in 1.05in 0.91in 0.98in 0.98in 0.95in"/></z>'
+        )
 
     def test_citation_replacer_2(self):
         citation_match = "[2022] UKET 789123_2012"
         corrected_citation = "[2022] UKET 789123/2012"
         year = "2022"
-        URI = "#"
+        uri = "#"
         is_neutral = "true"
         text = "<z>This citation that needs to be changed is [2022] UKET 789123_2012 which discussed...</z>"
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:year="{year}" uk:origin="TNA">{citation_match}</ref>'
-        assert replacement_string in replaced_entry
+        replacement_entry = (citation_match, corrected_citation, year, uri, is_neutral)
+        assert (
+            replacer_caselaw(text, replacement_entry)
+            == '<z>This citation that needs to be changed is <ref xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="#" uk:isNeutral="true" uk:canonical="[2022] UKET 789123/2012" uk:year="2022" uk:origin="TNA">[2022] UKET 789123_2012</ref> which discussed...</z>'
+        )
 
     def test_citation_replacer_3_no_year(self):
         """Note that this test does not have a year, so there is no uk:year attribute, unlike the others"""
@@ -45,39 +45,39 @@ class TestCitationReplacer(unittest.TestCase):
         corrected_citation = "LR 1 AE 123"
         year = "No Year"
         text = "<z>LR 1 A&amp;E 123 refers to...</z>"
-        URI = "#"
+        uri = "#"
         is_neutral = "true"
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:origin="TNA">LR 1 A&amp;E 123</ref>'
-        assert replacement_string in replaced_entry
+        replacement_entry = (citation_match, corrected_citation, year, uri, is_neutral)
+        assert (
+            replacer_caselaw(text, replacement_entry)
+            == '<z><ref xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="#" uk:isNeutral="true" uk:canonical="LR 1 AE 123" uk:origin="TNA">LR 1 A&amp;E 123</ref> refers to...</z>'
+        )
 
     def test_citation_replacer_4(self):
         citation_match = "(2022) EWHC 123 (Mercantile)"
         corrected_citation = "[2022] EWHC 123 (Mercantile)"
         year = "2022"
-        URI = "#"
+        uri = "#"
         is_neutral = "true"
         text = "<z>I defer to the judgment in (2022) EWHC 123 (Mercantile).</z>"
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:year="{year}" uk:origin="TNA">{citation_match}</ref>'
-        assert replacement_string in replaced_entry
+        replacement_entry = (citation_match, corrected_citation, year, uri, is_neutral)
+        assert (
+            replacer_caselaw(text, replacement_entry)
+            == '<z>I defer to the judgment in <ref xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="#" uk:isNeutral="true" uk:canonical="[2022] EWHC 123 (Mercantile)" uk:year="2022" uk:origin="TNA">(2022) EWHC 123 (Mercantile)</ref>.</z>'
+        )
 
     def test_citation_replacer_5(self):
         citation_match = "[2022] ewca civ 123"
         corrected_citation = "[2022] EWCA Civ 123"
         year = "2022"
-        URI = "#"
+        uri = "#"
         is_neutral = "true"
         text = "<z>[2022] ewca civ 123.</z>"
-        replacement_entry = (citation_match, corrected_citation, year, URI, is_neutral)
-        replaced_entry = replacer_caselaw(text, replacement_entry)
-        assert corrected_citation in replaced_entry
-        replacement_string = f'<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="{URI}" uk:isNeutral="{is_neutral}" uk:canonical="{corrected_citation}" uk:year="{year}" uk:origin="TNA">{citation_match}</ref>'
-        assert replacement_string in replaced_entry
+        replacement_entry = (citation_match, corrected_citation, year, uri, is_neutral)
+        assert (
+            replacer_caselaw(text, replacement_entry)
+            == '<z><ref xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="case" href="#" uk:isNeutral="true" uk:canonical="[2022] EWCA Civ 123" uk:year="2022" uk:origin="TNA">[2022] ewca civ 123</ref>.</z>'
+        )
 
 
 class TestLegislationReplacer(unittest.TestCase):
@@ -91,10 +91,10 @@ class TestLegislationReplacer(unittest.TestCase):
         text = "<z>In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the Adoption and Children Act 2002 requires the court, inter alia</z>"
         canonical = "foo"
         replacement_entry = (legislation_match, href, canonical)
-        replaced_entry = replacer_leg(text, replacement_entry)
-        assert legislation_match in replaced_entry
-        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2002/38" uk:canonical="foo" uk:origin="TNA">Adoption and Children Act 2002</ref>'
-        assert replacement_string in replaced_entry
+        assert (
+            replacer_leg(text, replacement_entry)
+            == '<z>In their skeleton argument in support of the first ground, Mr Goodwin and Mr Redmond remind the court that the welfare checklist in s.1(4) of the <ref xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2002/38" uk:canonical="foo" uk:origin="TNA">Adoption and Children Act 2002</ref> requires the court, inter alia</z>'
+        )
 
     def test_citation_replacer_2(self):
         legislation_match = "Children and Families Act 2014"  # matched legislation
@@ -102,10 +102,10 @@ class TestLegislationReplacer(unittest.TestCase):
         text = "<z>In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014.</z>"
         canonical = "bar"
         replacement_entry = (legislation_match, href, canonical)
-        replaced_entry = replacer_leg(text, replacement_entry)
-        assert legislation_match in replaced_entry
-        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'
-        assert replacement_string in replaced_entry
+        assert (
+            replacer_leg(text, replacement_entry)
+            == '<z>In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children&#8217;s proceedings is governed by s.13 of the <ref xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6/enacted" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>.</z>'
+        )
 
     def test_citation_replacer_2_no_enacted(self):
         legislation_match = "Children and Families Act 2014"  # matched legislation
@@ -113,10 +113,10 @@ class TestLegislationReplacer(unittest.TestCase):
         text = "<z>In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children’s proceedings is governed by s.13 of the Children and Families Act 2014.</z>"
         canonical = "bar"
         replacement_entry = (legislation_match, href, canonical)
-        replaced_entry = replacer_leg(text, replacement_entry)
-        assert legislation_match in replaced_entry
-        replacement_string = '<ref xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn" xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>'
-        assert replacement_string in replaced_entry
+        assert (
+            replacer_leg(text, replacement_entry)
+            == '<z>In her first judgment on 31 January, the judge correctly directed herself as to the law, reminding herself that any application for expert evidence in children&#8217;s proceedings is governed by s.13 of the <ref xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0" uk:type="legislation" href="http://www.legislation.gov.uk/ukpga/2014/6" uk:canonical="bar" uk:origin="TNA">Children and Families Act 2014</ref>.</z>'
+        )
 
 
 class TestReplacerAbbr(unittest.TestCase):
