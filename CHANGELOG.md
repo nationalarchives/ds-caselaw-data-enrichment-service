@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.1.0 (2025-05-22)
+
+- Upgrade aurora_rds version to 16.6
+
 ## v7.0.1 (2025-05-19)
 
 - Fix replace_string_with_tag for when the xml fragment string includes uk namespace attributes
