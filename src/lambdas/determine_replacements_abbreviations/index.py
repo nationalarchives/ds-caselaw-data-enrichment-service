@@ -9,6 +9,7 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from abbreviation_extraction.abbreviations_matcher import abb_pipeline
+from replacer.replacer import encode_replacements_to_string
 from utils.custom_types import Abbreviation, DocumentAsXMLString, ReplacementList
 from utils.environment_helpers import validate_env_variable
 
@@ -60,18 +61,6 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info("Message sent on queue to start make-replacements lambda")
 
 
-def encode_replacements_to_string(replacement_list: ReplacementList) -> str:
-    """
-    Writes tuples of abbreviations and long forms from a list of replacements
-    """
-    tuple_file = ""
-    for i in replacement_list:
-        replacement_object = {f"{type(i).__name__}": list(i)}
-        tuple_file += json.dumps(replacement_object)
-        tuple_file += "\n"
-    return tuple_file
-
-
 def upload_replacements(replacements_bucket: str, replacements_key: str, replacements: str) -> None:
     """
     Uploads replacements to S3 bucket
@@ -81,7 +70,7 @@ def upload_replacements(replacements_bucket: str, replacements_key: str, replace
     s3_obj.put(Body=replacements)
 
 
-def determine_replacements(file_content: str) -> list[Abbreviation]:
+def determine_replacements(file_content: str) -> ReplacementList:
     """
     Calls abbreviation function to return abbreviation and long form
     """
