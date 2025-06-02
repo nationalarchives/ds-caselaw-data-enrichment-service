@@ -1,7 +1,7 @@
 import json
 import logging
 from typing import TYPE_CHECKING
-from utils.custom_types import Abbreviation
+
 import boto3
 import spacy
 from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
@@ -9,7 +9,7 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from abbreviation_extraction.abbreviations_matcher import abb_pipeline
-from utils.custom_types import DocumentAsXMLString, Replacement
+from utils.custom_types import Abbreviation, DocumentAsXMLString, ReplacementList
 from utils.environment_helpers import validate_env_variable
 
 if TYPE_CHECKING:
@@ -46,7 +46,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
 
     replacements = determine_replacements(file_content)
     print(replacements)
-    replacements_encoded = write_replacements_file(replacements)
+    replacements_encoded = encode_replacements_to_string(replacements)
 
     # open and read existing file from s3 bucket
     replacements_content = (
@@ -60,7 +60,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info("Message sent on queue to start make-replacements lambda")
 
 
-def write_replacements_file(replacement_list: list[Replacement]) -> str:
+def encode_replacements_to_string(replacement_list: ReplacementList) -> str:
     """
     Writes tuples of abbreviations and long forms from a list of replacements
     """

@@ -9,7 +9,7 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from database import db_connection
-from utils.custom_types import DocumentAsXMLString
+from utils.custom_types import DocumentAsXMLString, ReplacementList
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
 
@@ -49,7 +49,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     # determine legislation replacements
     replacements = determine_replacements(file_content)
     LOGGER.info("Detected citations and built replacements")
-    replacements_encoded = write_replacements_file(replacements)
+    replacements_encoded = encode_replacements_to_string(replacements)
     LOGGER.info("Wrote replacements to file")
     LOGGER.info(replacements_encoded)
 
@@ -87,7 +87,7 @@ def enrichment_tracking(bucket, key):
     # print(line[0], line[1])
 
 
-def write_replacements_file(replacement_list):
+def encode_replacements_to_string(replacement_list: ReplacementList) -> str:
     """
     Writes tuples of abbreviations and long forms from a list of replacements
     """

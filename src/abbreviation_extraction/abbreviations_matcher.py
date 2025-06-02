@@ -3,11 +3,10 @@ Main file that controls the abbreviation detection, including the creation of th
 AbbreviationDetector class and the pipeline.
 """
 
-from utils.custom_types import Abbreviation
-
 from spacy.language import Language
 
 from abbreviation_extraction.abbreviations import AbbreviationDetector
+from utils.custom_types import Abbreviation
 
 
 def chunking_mechanism(docobj, n, start, end):
@@ -67,7 +66,7 @@ def abb_pipeline(judgment_content_text: str, nlp) -> list[Abbreviation]:
     for chunk in chunk_strings:
         doc = nlp(chunk)
         for abrv in doc._.abbreviations:
-            abr_tuple = abb(str(abrv), str(abrv._.long_form))
+            abr_tuple = Abbreviation(str(abrv), str(abrv._.long_form))
             REPLACEMENTS_ABBR.append(abr_tuple)
 
     return REPLACEMENTS_ABBR
