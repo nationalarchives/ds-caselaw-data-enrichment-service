@@ -9,7 +9,7 @@ from aws_lambda_powertools.utilities.data_classes import S3Event, event_source
 from aws_lambda_powertools.utilities.data_classes.s3_event import S3EventRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
-from utils.custom_types import DocumentAsXMLString
+from utils.custom_types import DocumentAsXMLString, ReplacementList
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
 
@@ -51,7 +51,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
     replacements = determine_replacements(file_content, rules_content)
     LOGGER.info("Detected citations and built replacements")
     print(replacements)
-    replacements_encoded = write_replacements_file(replacements)
+    replacements_encoded = encode_replacements_to_string(replacements)
     LOGGER.info("Wrote replacements to file")
     uploaded_key = upload_replacements(REPLACEMENTS_BUCKET, source_key, replacements_encoded)
     LOGGER.info("Uploaded replacements to %s", uploaded_key)
@@ -60,7 +60,7 @@ def process_event(sqs_rec: S3EventRecord) -> None:
     LOGGER.info("Message sent on queue to start determine-replacements-legislation lambda")
 
 
-def write_replacements_file(replacement_list):
+def encode_replacements_to_string(replacement_list: ReplacementList) -> str:
     """
     Writes tuples of abbreviations and long forms from a list of replacements
     """
