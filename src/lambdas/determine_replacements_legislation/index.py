@@ -9,6 +9,7 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from database import db_connection
+from replacer.replacer import encode_replacements_to_string
 from utils.custom_types import DocumentAsXMLString, ReplacementList
 from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_connection
@@ -87,18 +88,6 @@ def enrichment_tracking(bucket, key):
     # print(line[0], line[1])
 
 
-def encode_replacements_to_string(replacement_list: ReplacementList) -> str:
-    """
-    Writes tuples of abbreviations and long forms from a list of replacements
-    """
-    tuple_file = ""
-    for i in replacement_list:
-        replacement_object = {f"{type(i).__name__}": list(i)}
-        tuple_file += json.dumps(replacement_object)
-        tuple_file += "\n"
-    return tuple_file
-
-
 def upload_replacements(replacements_bucket: str, replacements_key: str, replacements: str) -> str:
     """
     Uploads replacements to S3 bucket
@@ -126,7 +115,7 @@ def close_connection(db_conn) -> None:
     db_connection.close_connection(db_conn)
 
 
-def determine_replacements(file_content):
+def determine_replacements(file_content) -> ReplacementList:
     """
     Fetch legislation replacements from database
     """
