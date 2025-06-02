@@ -1,11 +1,13 @@
-from typing import NewType
 from collections import namedtuple
+from typing import NewType
 
-Abbreviation = namedtuple("abb", "abb_match longform")
+Abbreviation = namedtuple("Abbreviation", ["abb_match", "longform"])
 # An abbreviation, and its long form.
 
 Replacement = NewType("Replacement", tuple[str, str, str, str, bool])
 # ('[2022] UKSC 3', '[2022] UKSC 3', '2022', 'https://caselaw.nationalarchives.gov.uk/uksc/2022/3', True)
+
+ReplacementList = NewType("ReplacementList", list[Replacement])
 
 Reference = list[tuple[tuple[int, int], str]]
 # The first part is a span (from inter-character-position to another) and the second is the string found there
