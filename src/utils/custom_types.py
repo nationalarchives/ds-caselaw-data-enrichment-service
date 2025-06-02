@@ -1,4 +1,8 @@
 from typing import NewType
+from collections import namedtuple
+
+Abbreviation = namedtuple("abb", "abb_match longform")
+# An abbreviation, and its long form.
 
 Replacement = NewType("Replacement", tuple[str, str, str, str, bool])
 # ('[2022] UKSC 3', '[2022] UKSC 3', '2022', 'https://caselaw.nationalarchives.gov.uk/uksc/2022/3', True)
