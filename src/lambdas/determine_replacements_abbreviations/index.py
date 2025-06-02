@@ -1,14 +1,14 @@
 import json
 import logging
 from typing import TYPE_CHECKING
-
+from utils.custom_types import Abbreviation
 import boto3
 import spacy
 from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
 from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
-from abbreviation_extraction.abbreviations_matcher import abb, abb_pipeline
+from abbreviation_extraction.abbreviations_matcher import abb_pipeline
 from utils.custom_types import DocumentAsXMLString, Replacement
 from utils.environment_helpers import validate_env_variable
 
@@ -81,7 +81,7 @@ def upload_replacements(replacements_bucket: str, replacements_key: str, replace
     s3_obj.put(Body=replacements)
 
 
-def determine_replacements(file_content: str) -> list[abb]:
+def determine_replacements(file_content: str) -> list[Abbreviation]:
     """
     Calls abbreviation function to return abbreviation and long form
     """
@@ -90,7 +90,7 @@ def determine_replacements(file_content: str) -> list[abb]:
     return replacements
 
 
-def get_abbreviation_replacements(file_content: str) -> list[abb]:
+def get_abbreviation_replacements(file_content: str) -> list[Abbreviation]:
     """
     Calls abbreviation pipeline to return abbreviation and long form
     """
