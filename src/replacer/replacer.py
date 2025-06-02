@@ -5,10 +5,10 @@ Handles the replacements of abbreviations, legislation, and case law.
 
 import json
 
-from utils.custom_types import Replacement
+from utils.custom_types import ReplacementList
 
 
-def write_replacements_file(replacement_list: list[Replacement]) -> str:
+def encode_replacements_to_string(replacement_list: ReplacementList) -> str:
     """
     Writes tuples from a list
     :param replacement_list:
