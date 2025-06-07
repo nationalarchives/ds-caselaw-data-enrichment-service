@@ -7,7 +7,7 @@ from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
 from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
-from replacer.make_replacments import make_post_header_replacements
+from replacer.make_replacements import make_post_header_replacements
 from utils.custom_types import DocumentAsXMLString
 from utils.environment_helpers import validate_env_variable
 

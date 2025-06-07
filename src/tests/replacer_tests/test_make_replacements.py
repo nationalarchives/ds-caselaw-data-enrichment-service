@@ -2,7 +2,7 @@ from pathlib import Path
 
 import pytest
 
-from replacer.make_replacments import (
+from replacer.make_replacements import (
     _remove_old_enrichment_references,
     make_post_header_replacements,
     split_text_by_closing_header_tag,
