@@ -6,7 +6,7 @@ AbbreviationDetector class and the pipeline.
 from spacy.language import Language
 
 from abbreviation_extraction.abbreviations import AbbreviationDetector
-from utils.custom_types import Abbreviation
+from utils.custom_types import AbbreviationData, Replacement
 
 
 def chunking_mechanism(docobj, n, start, end):
@@ -36,7 +36,7 @@ def chunking_mechanism(docobj, n, start, end):
     return judgment_chunks
 
 
-def abb_pipeline(judgment_content_text: str, nlp) -> list[Abbreviation]:
+def abb_pipeline(judgment_content_text: str, nlp) -> list[Replacement[AbbreviationData]]:
     """
     Main controller of the abbreviation detection pipeline.
     :param judgment_content_text: judgment content
@@ -55,7 +55,7 @@ def abb_pipeline(judgment_content_text: str, nlp) -> list[Abbreviation]:
     nlp.add_pipe("abbreviation_detector", last=True)
     print("added abbr pipeline")
 
-    REPLACEMENTS_ABBR = []
+    REPLACEMENTS_ABBR: list[Replacement[AbbreviationData]] = []
 
     # new chunking mechanism
     docobj = nlp(judgment_content_text)
@@ -66,7 +66,7 @@ def abb_pipeline(judgment_content_text: str, nlp) -> list[Abbreviation]:
     for chunk in chunk_strings:
         doc = nlp(chunk)
         for abrv in doc._.abbreviations:
-            abr_tuple = Abbreviation(str(abrv), str(abrv._.long_form))
+            abr_tuple = Replacement[AbbreviationData](str(abrv), AbbreviationData(str(abrv._.long_form)))
             REPLACEMENTS_ABBR.append(abr_tuple)
 
     return REPLACEMENTS_ABBR

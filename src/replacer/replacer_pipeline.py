@@ -6,7 +6,13 @@ Handles the replacements of abbreviations, legislation, and case law.
 import html
 import re
 
-from utils.custom_types import Replacement, XMLFragmentAsString
+from utils.custom_types import (
+    AbbreviationData,
+    CaselawData,
+    LegislationData,
+    Replacement,
+    XMLFragmentAsString,
+)
 from utils.proper_xml import create_tag_string, replace_string_with_tag
 
 JUNK_REGEX = r"</judgment>\s*</akomaNtoso>\s*$"
@@ -46,7 +52,10 @@ def fixed_year(year: str) -> str | None:
         return None
 
 
-def replacer_caselaw(file_data: XMLFragmentAsString, replacement: Replacement) -> XMLFragmentAsString:
+def replacer_caselaw(
+    file_data: XMLFragmentAsString,
+    replacement: Replacement[CaselawData],
+) -> XMLFragmentAsString:
     """
     String replacement in the XML
     :param file_data: XML file
@@ -54,12 +63,14 @@ def replacer_caselaw(file_data: XMLFragmentAsString, replacement: Replacement) -
     :return: enriched XML file data
     """
 
-    year = fixed_year(replacement[2])
+    data = replacement[1]
+
+    year = fixed_year(data[1])
     attribs = {
         "uk:type": "case",
-        "href": replacement[3],
-        "uk:isNeutral": str(replacement[4]).lower(),
-        "uk:canonical": replacement[1],
+        "href": data[2],
+        "uk:isNeutral": str(data[3]).lower(),
+        "uk:canonical": data[0],
     }
     if year:
         attribs["uk:year"] = year
@@ -72,17 +83,22 @@ def replacer_caselaw(file_data: XMLFragmentAsString, replacement: Replacement) -
     return output
 
 
-def replacer_leg(file_data: XMLFragmentAsString, replacement: Replacement) -> XMLFragmentAsString:
+def replacer_leg(
+    file_data: XMLFragmentAsString,
+    replacement: Replacement[LegislationData],
+) -> XMLFragmentAsString:
     """
     String replacement in the XML
     :param file_data: XML file
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
+
+    data = replacement[1]
     attribs = {
         "uk:type": "legislation",
-        "href": replacement[1],
-        "uk:canonical": replacement[2],
+        "href": data[0],
+        "uk:canonical": data[1],
         "uk:origin": "TNA",
     }
     replacement_tag = create_tag_string("ref", html.escape(replacement[0]), attribs)
@@ -91,14 +107,18 @@ def replacer_leg(file_data: XMLFragmentAsString, replacement: Replacement) -> XM
     return output
 
 
-def replacer_abbr(file_data: XMLFragmentAsString, replacement: Replacement) -> XMLFragmentAsString:
+def replacer_abbr(
+    file_data: XMLFragmentAsString,
+    replacement: Replacement[AbbreviationData],
+) -> XMLFragmentAsString:
     """
     String replacement in the XML
     :param file_data: XML file
     :param replacement: tuple of citation match and corrected citation
     :return: enriched XML file data
     """
-    replacement_tag = f'<abbr title="{replacement[1]}" uk:origin="TNA">{replacement[0]}</abbr>'
+    data = replacement[1]
+    replacement_tag = f'<abbr title="{data[0]}" uk:origin="TNA">{replacement[0]}</abbr>'
 
     output = _replace_string_with_tag_handling_junk(file_data, replacement[0], replacement_tag)
     assert_not_bad(file_data)
@@ -107,9 +127,9 @@ def replacer_abbr(file_data: XMLFragmentAsString, replacement: Replacement) -> X
 
 def replacer_pipeline(
     file_data: XMLFragmentAsString,
-    REPLACEMENTS_CASELAW: list[Replacement],
-    REPLACEMENTS_LEG: list[Replacement],
-    REPLACEMENTS_ABBR: list[Replacement],
+    REPLACEMENTS_CASELAW: list[Replacement[CaselawData]],
+    REPLACEMENTS_LEG: list[Replacement[LegislationData]],
+    REPLACEMENTS_ABBR: list[Replacement[AbbreviationData]],
 ) -> XMLFragmentAsString:
     """
     Pipeline to run replacer_caselaw, replacer_leg, replacer_abbr
@@ -122,16 +142,16 @@ def replacer_pipeline(
 
     assert_not_bad(file_data)
 
-    for replacement in list(set(REPLACEMENTS_CASELAW)):
-        file_data = replacer_caselaw(file_data, replacement)
+    for caselaw_replacement in list(set(REPLACEMENTS_CASELAW)):
+        file_data = replacer_caselaw(file_data, caselaw_replacement)
     assert_not_bad(file_data)
 
-    for replacement in list(set(REPLACEMENTS_LEG)):
-        file_data = replacer_leg(file_data, replacement)
+    for legislation_replacement in list(set(REPLACEMENTS_LEG)):
+        file_data = replacer_leg(file_data, legislation_replacement)
     assert_not_bad(file_data)
 
-    for replacement in list(set(REPLACEMENTS_ABBR)):
-        file_data = replacer_abbr(file_data, replacement)
+    for abbreviation_replacement in list(set(REPLACEMENTS_ABBR)):
+        file_data = replacer_abbr(file_data, abbreviation_replacement)
     assert_not_bad(file_data)
 
     return file_data

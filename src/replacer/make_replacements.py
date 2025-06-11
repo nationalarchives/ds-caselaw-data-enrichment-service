@@ -8,7 +8,10 @@ from bs4 import BeautifulSoup
 
 from replacer.replacer_pipeline import replacer_pipeline
 from utils.custom_types import (
+    AbbreviationData,
+    CaselawData,
     DocumentAsXMLString,
+    LegislationData,
     Reference,
     Replacement,
     XMLFragmentAsString,
@@ -84,9 +87,9 @@ def apply_replacements(content: XMLFragmentAsString, replacement_patterns: str) 
     Run the replacer pipeline to make replacements on caselaw, legislation and abbreviations
     """
 
-    case_replacement_patterns: list[Replacement] = []
-    leg_replacement_patterns: list[Replacement] = []
-    abb_replacement_patterns: list[Replacement] = []
+    case_replacement_patterns: list[Replacement[CaselawData]] = []
+    leg_replacement_patterns: list[Replacement[LegislationData]] = []
+    abb_replacement_patterns: list[Replacement[AbbreviationData]] = []
 
     for replacement_pattern_json in replacement_patterns.splitlines():
         LOGGER.debug(replacement_pattern_json)

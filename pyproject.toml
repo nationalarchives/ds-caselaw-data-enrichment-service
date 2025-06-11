@@ -1,5 +1,7 @@
 [project]
-version="6.0.1"
+name = "tests"
+version = "6.0.1"
+readme = "README.md"
 requires-python = ">=3.12"
 
 [tool.pytest.ini_options]
@@ -41,13 +43,6 @@ tag_format = "v$version"
 version_scheme = "semver"
 version_provider = "pep621"
 update_changelog_on_bump = true
-
-[tool.poetry]
-name = "tests"
-version = "6.0.1"
-description = ""
-authors = ["David McKee <david.mckee@dxw.com>"]
-readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.12"

@@ -6,6 +6,7 @@ from replacer.replacer_pipeline import (
     replacer_caselaw,
     replacer_leg,
 )
+from utils.custom_types import AbbreviationData, Replacement
 
 
 class TestCitationReplacer(unittest.TestCase):
@@ -132,7 +133,7 @@ class TestReplacerAbbr(unittest.TestCase):
             string as the title attribute and TNA as the uk:origin attribute
         """
         text = "<z xmlns:uk='https://caselaw.nationalarchives.gov.uk/akn'>This game requires 12 GB of Random Access Memory</z>"
-        replacement_entry = ("Random Access Memory", "RAM")
+        replacement_entry = Replacement[AbbreviationData]("Random Access Memory", AbbreviationData("RAM"))
 
         expected = '<z xmlns:uk="https://caselaw.nationalarchives.gov.uk/akn">This game requires 12 GB of <abbr title="RAM" uk:origin="TNA">Random Access Memory</abbr></z>'
         assert replacer_abbr(text, replacement_entry) == expected

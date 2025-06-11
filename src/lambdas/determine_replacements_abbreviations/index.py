@@ -10,7 +10,7 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from abbreviation_extraction.abbreviations_matcher import abb_pipeline
 from replacer.replacer import encode_replacements_to_string
-from utils.custom_types import Abbreviation, DocumentAsXMLString, ReplacementList
+from utils.custom_types import AbbreviationReplacement, DocumentAsXMLString
 from utils.environment_helpers import validate_env_variable
 
 if TYPE_CHECKING:
@@ -70,7 +70,7 @@ def upload_replacements(replacements_bucket: str, replacements_key: str, replace
     s3_obj.put(Body=replacements)
 
 
-def determine_replacements(file_content: str) -> ReplacementList:
+def determine_replacements(file_content: str) -> list[AbbreviationReplacement]:
     """
     Calls abbreviation function to return abbreviation and long form
     """
@@ -79,7 +79,7 @@ def determine_replacements(file_content: str) -> ReplacementList:
     return replacements
 
 
-def get_abbreviation_replacements(file_content: str) -> list[Abbreviation]:
+def get_abbreviation_replacements(file_content: str) -> list[AbbreviationReplacement]:
     """
     Calls abbreviation pipeline to return abbreviation and long form
     """

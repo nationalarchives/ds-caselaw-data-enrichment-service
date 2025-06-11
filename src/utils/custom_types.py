@@ -1,13 +1,26 @@
-from collections import namedtuple
-from typing import NewType
+from typing import NamedTuple, NewType
 
-Abbreviation = namedtuple("Abbreviation", ["abb_match", "longform"])
-# An abbreviation, and its long form.
 
-Replacement = NewType("Replacement", tuple[str, str, str, str, bool])
-# ('[2022] UKSC 3', '[2022] UKSC 3', '2022', 'https://caselaw.nationalarchives.gov.uk/uksc/2022/3', True)
+class Replacement[T](NamedTuple):
+    match: str
+    data: T
 
-ReplacementList = NewType("ReplacementList", list[Replacement])
+
+class AbbreviationData(NamedTuple):
+    longform: str
+
+
+class CaselawData(NamedTuple):
+    canonical: str
+    year: str
+    url: str
+    is_ncn: bool
+
+
+class LegislationData(NamedTuple):
+    url: str
+    canonical: str
+
 
 Reference = list[tuple[tuple[int, int], str]]
 # The first part is a span (from inter-character-position to another) and the second is the string found there
