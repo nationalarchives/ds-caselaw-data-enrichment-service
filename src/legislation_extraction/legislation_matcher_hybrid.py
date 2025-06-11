@@ -77,7 +77,7 @@ def resolve_overlap(results_dict):
     qq.columns = pd.Index(keys)
 
     # get refs that overlap in the text
-    mask = (qq.start.values[:, None] >= qq.start.values) & (qq.end.values[:, None] <= qq.end.values)
+    mask = (qq.start.values[:, None] >= qq.start.values) & (qq.end.values[:, None] <= qq.end.values)  # type: ignore[call-overload]
     np.fill_diagonal(mask, 0)  # omit 'pairs' that are the same thing twice
     mask = np.triu(mask, 0)  # omit pairs where the first is after than the second
     r, c = np.where(mask)
