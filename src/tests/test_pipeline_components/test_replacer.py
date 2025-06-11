@@ -1,21 +1,21 @@
-"""Tests the replacer.replacer module's `write_replacements_file` function"""
+"""Tests the replacer.replacer module's `encode_replacements_to_string` function"""
 
 import json
 import unittest
 from collections import namedtuple
 
-from replacer.replacer import write_replacements_file
+from replacer.replacer import encode_replacements_to_string
 
 
 class TestWriteReplacementsFile(unittest.TestCase):
     """
-    Tests `write_replacements_file` function
+    Tests `encode_replacements_to_string` function
     """
 
-    def test_write_replacements_file(self):
+    def test_encode_replacements_to_string(self):
         """
         Given a list of named tuples
-        When `write_replacements_file` is called with them
+        When `encode_replacements_to_string` is called with them
         Then a string is returned in a jsonl structure
             with each line a dict for each named tuple
             where they key is the name of the namedtuple and
@@ -39,7 +39,7 @@ class TestWriteReplacementsFile(unittest.TestCase):
             ),
         ]
 
-        replacements_string = write_replacements_file(replacements)
+        replacements_string = encode_replacements_to_string(replacements)
 
         replacements_list = replacements_string.splitlines()
 
