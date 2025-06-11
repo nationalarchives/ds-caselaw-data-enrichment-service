@@ -9,7 +9,7 @@ from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from abbreviation_extraction.abbreviations_matcher import abb_pipeline
-from utils.custom_types import Abbreviation, DocumentAsXMLString, ReplacementList
+from utils.custom_types import Abbreviation, DocumentAsXMLString
 from utils.environment_helpers import validate_env_variable
 
 if TYPE_CHECKING:
@@ -60,7 +60,7 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info("Message sent on queue to start make-replacements lambda")
 
 
-def encode_replacements_to_string(replacement_list: ReplacementList) -> str:
+def encode_replacements_to_string(replacement_list: list[Abbreviation]) -> str:
     """
     Writes tuples of abbreviations and long forms from a list of replacements
     """
