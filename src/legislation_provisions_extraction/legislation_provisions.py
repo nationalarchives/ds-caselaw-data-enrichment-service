@@ -63,7 +63,7 @@ def find_closest_legislation(legislations, sections, thr=30):
 
     # returns sections that are within a threshold distance from legs
     idx = np.argwhere(dist < thr)
-    section_to_leg = [(sections[i][1], legislations[j][1], sections[i][0][0]) for i, j in idx]  # type: ignore[has-type, misc]
+    section_to_leg = [(sections[i][1], legislations[j][1], sections[i][0][0]) for i, j in idx]
     return section_to_leg
 
 
