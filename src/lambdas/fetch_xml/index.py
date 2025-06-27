@@ -79,9 +79,9 @@ def read_message(message_dict: dict[Any, Any]) -> tuple[str, str]:
     message_read = json.loads(message)
     print(message_read)
     status = message_read["status"]
-    query = message_read["uri_reference"]
+    uri_reference = message_read["uri_reference"]
 
-    return status, query
+    return status, uri_reference
 
 
 def upload_contents(source_key: str, xml_content: DocumentAsXMLString) -> None:
@@ -96,24 +96,17 @@ def upload_contents(source_key: str, xml_content: DocumentAsXMLString) -> None:
 
 
 def process_event(sqs_rec: SQSRecord, api_endpoint: APIEndpointBaseURL) -> None:
-    """
-    Function to check the status of the judgment, fetch the judgment if it is published, lock the judgment for editing
-    and upload to destination S3 bucket
-    """
+    """Fetch the judgment xml, upload it to S3, and lock it for editing."""
     message = json.loads(sqs_rec.body)
-    status, query = read_message(message)  # query is the URL of the item requested to be enriched
+    status, uri_reference = read_message(message)
     print("Judgment status:", status)
-    print("Judgment query:", query)
+    print("Judgment uri:", uri_reference)
 
-    source_key = query.replace("/", "-")
-    print("Source key:", source_key)
+    xml_content = fetch_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
 
-    # fetch the xml content
-    xml_content = fetch_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
-    # print(xml_content)
-    upload_contents(source_key, xml_content)
-    lock_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
-    check_lock_judgment_urllib(api_endpoint, query, API_USERNAME, API_PASSWORD)
+    upload_contents(uri_reference, xml_content)
+    lock_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
+    check_lock_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
 
 
 ############################################

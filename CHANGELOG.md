@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.2.0 (2025-06-27)
+
+- Stopped replacing hyphens with slashes from the original document database uri when storing the xml in s3 as it causes issue for documents with hyphens in the uri when trying to reverse the process when pushing back to judgment database.
+
 ## v7.1.0 (2025-05-22)
 
 - Upgrade aurora_rds version to 16.6

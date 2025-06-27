@@ -13,7 +13,6 @@ To do:
 3. Sub-sections aren't being replaced
 """
 
-import os
 import re
 from typing import Any
 
@@ -56,14 +55,17 @@ def find_closest_legislation(legislations, sections, thr=30):
     sec_pos = np.asarray([x[0] for x in sections])
     leg_pos = np.asarray([x[0] for x in legislations])
 
-    # calculates distance between legislations ans sections
+    # calculates distance between legislations and sections
     dist1 = sec_pos[:, 0][:, None] - leg_pos[:, 1]
     dist2 = leg_pos[:, 0] - sec_pos[:, 1][:, None]
     dist = dist1 * (dist1 > 0) + dist2 * (dist2 > 0)
 
     # returns sections that are within a threshold distance from legs
-    idx = np.argwhere(dist < thr)
-    section_to_leg = [(sections[i][1], legislations[j][1], sections[i][0][0]) for i, j in idx]  # type: ignore[has-type, misc]
+    matching_index_pairs: list[tuple[int, int]] = [tuple(row) for row in np.argwhere(dist < thr).tolist()]
+    section_to_leg = [
+        (sections[section_idx][1], legislations[legislation_idx][1], sections[section_idx][0][0])
+        for section_idx, legislation_idx in matching_index_pairs
+    ]
     return section_to_leg
 
 
@@ -244,38 +246,6 @@ def provision_resolver(section_dict, matches, para_number):
             )
             print(f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}")
 
-    return resolved_refs
-
-
-def main(enriched_judgment_file_path, filename):
-    """
-    Matches all sections in the judgment to the correct legislation and provides necessary information for the replacements.
-    :param enriched_judgment_file_path: file path of the judgment
-    :param filename: file name of the judgment
-    :returns resolved_refs: list of dictionaries with the information for the replacements in each section
-    """
-    enriched_judgment_file = os.path.join(enriched_judgment_file_path, filename)
-    print("======", enriched_judgment_file)
-    with open(enriched_judgment_file) as f:
-        soup = BeautifulSoup(f, "xml")
-    text = soup.find_all("p")
-    cur_para_number = 0
-    section_dict: SectionDict = {}
-    resolved_refs = []
-    for line in text:
-        sections = detect_reference(str(line), "section")
-        if sections:
-            legislations = detect_reference(str(line))
-            if legislations:
-                section_to_leg_matches = find_closest_legislation(legislations, sections, THR)
-
-                # create the master section dictionary with relevant leg links
-                section_dict = save_section_to_dict(section_to_leg_matches, cur_para_number, section_dict)
-
-            # resolve sections to legislations
-            resolved_refs.extend(provision_resolver(section_dict, sections, cur_para_number))
-
-        cur_para_number += 1
     return resolved_refs
 
 

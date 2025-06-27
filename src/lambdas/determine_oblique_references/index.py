@@ -20,11 +20,10 @@ def upload_contents(source_key: str, output_file_content: DocumentAsXMLString) -
     """
     Upload enriched file to S3 bucket
     """
-    filename = source_key
     destination_bucket = validate_env_variable("DEST_BUCKET")
-    LOGGER.info("Uploading enriched file to %s/%s", destination_bucket, filename)
+    LOGGER.info("Uploading enriched file to %s/%s", destination_bucket, source_key)
     s3 = boto3.resource("s3")
-    s3_obj = s3.Object(destination_bucket, filename)
+    s3_obj = s3.Object(destination_bucket, source_key)
     s3_obj.put(Body=output_file_content)
 
 
