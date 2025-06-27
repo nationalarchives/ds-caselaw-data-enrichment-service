@@ -56,14 +56,17 @@ def find_closest_legislation(legislations, sections, thr=30):
     sec_pos = np.asarray([x[0] for x in sections])
     leg_pos = np.asarray([x[0] for x in legislations])
 
-    # calculates distance between legislations ans sections
+    # calculates distance between legislations and sections
     dist1 = sec_pos[:, 0][:, None] - leg_pos[:, 1]
     dist2 = leg_pos[:, 0] - sec_pos[:, 1][:, None]
     dist = dist1 * (dist1 > 0) + dist2 * (dist2 > 0)
 
     # returns sections that are within a threshold distance from legs
-    idx = np.argwhere(dist < thr)
-    section_to_leg = [(sections[i][1], legislations[j][1], sections[i][0][0]) for i, j in idx]
+    matching_index_pairs = map(tuple, np.argwhere(dist < thr))
+    section_to_leg = [
+        (sections[section_idx][1], legislations[legislation_idx][1], sections[section_idx][0][0])
+        for section_idx, legislation_idx in matching_index_pairs
+    ]
     return section_to_leg
 
 
