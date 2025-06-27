@@ -46,12 +46,18 @@ def release_lock(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw
     print(r.data)
 
 
-def patch_judgment_request(api_endpoint: APIEndpointBaseURL, query: str, data: str, username: str, pw: str) -> None:
+def patch_judgment_request(
+    api_endpoint: APIEndpointBaseURL,
+    document_uri: str,
+    data: str,
+    username: str,
+    pw: str,
+) -> None:
     """
     Apply enrichments to the judgment
     """
     response = requests.patch(
-        f"{api_endpoint}judgment/{query}",
+        f"{api_endpoint}judgment/{document_uri}",
         auth=HTTPBasicAuth(username, pw),
         data=data.encode(),
         params={"unlock": True},
@@ -74,8 +80,9 @@ def process_event(sqs_rec: SQSRecord) -> None:
     LOGGER.info("EVENT: %s", message)
     msg_attributes = sqs_rec["messageAttributes"]
     validated_file = message["Validated"]
-    source_key = msg_attributes["source_key"]["stringValue"]
-
+    document_uri = msg_attributes["source_key"]["stringValue"]
+    LOGGER.info("Document URI from message")
+    LOGGER.info(document_uri)
     source_bucket = msg_attributes["source_bucket"]["stringValue"]
     LOGGER.info("Source bucket from message")
     LOGGER.info(source_bucket)
@@ -88,16 +95,11 @@ def process_event(sqs_rec: SQSRecord) -> None:
         api_endpoint = APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
+        s3_client.get_object(Bucket=source_bucket, Key=document_uri)["Body"].read().decode("utf-8"),
     )
 
-    print(source_key)
-    judgment_uri = source_key.replace("-", "/").split(".")[0]
-    judgment_uri = judgment_uri.replace("press/summary", "press-summary")
-    print(judgment_uri)
-
     # patch the judgment
-    patch_judgment_request(api_endpoint, judgment_uri, file_content, API_USERNAME, API_PASSWORD)
+    patch_judgment_request(api_endpoint, document_uri, file_content, API_USERNAME, API_PASSWORD)
 
 
 ############################################
