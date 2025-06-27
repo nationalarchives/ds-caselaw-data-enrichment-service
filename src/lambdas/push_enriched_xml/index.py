@@ -79,13 +79,13 @@ def process_event(sqs_rec: SQSRecord) -> None:
     message = json.loads(sqs_rec.body)
     LOGGER.info("EVENT: %s", message)
     msg_attributes = sqs_rec["messageAttributes"]
-    validated_file = message["Validated"]
-    document_uri = msg_attributes["source_key"]["stringValue"]
-    LOGGER.info("Document URI from message")
-    LOGGER.info(document_uri)
     source_bucket = msg_attributes["source_bucket"]["stringValue"]
+    source_key = msg_attributes["source_key"]["stringValue"]
+    validated_file = message["Validated"]
     LOGGER.info("Source bucket from message")
     LOGGER.info(source_bucket)
+    LOGGER.info("Source key from message")
+    LOGGER.info(source_key)
     LOGGER.info("Validated file from message")
     LOGGER.info(validated_file)
 
@@ -95,8 +95,12 @@ def process_event(sqs_rec: SQSRecord) -> None:
         api_endpoint = APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
 
     file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=document_uri)["Body"].read().decode("utf-8"),
+        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
+
+    document_uri = source_key.replace(".xml", "")
+    LOGGER.info("Document URI from message")
+    LOGGER.info(document_uri)
 
     # patch the judgment
     patch_judgment_request(api_endpoint, document_uri, file_content, API_USERNAME, API_PASSWORD)
