@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.2.1 (2025-06-27)
+
+- Fixed push_enriched_xml by stripping the .xml suffix from the specified uri when patching the doc in the database
+
 ## v7.2.0 (2025-06-27)
 
 - Stopped replacing hyphens with slashes from the original document database uri when storing the xml in s3 as it causes issue for documents with hyphens in the uri when trying to reverse the process when pushing back to judgment database.
