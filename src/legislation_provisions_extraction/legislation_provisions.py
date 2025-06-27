@@ -13,7 +13,6 @@ To do:
 3. Sub-sections aren't being replaced
 """
 
-import os
 import re
 from typing import Any
 
@@ -247,38 +246,6 @@ def provision_resolver(section_dict, matches, para_number):
             )
             print(f"  => {match} \t {para_number} \t {pos[0]} \t {correct_reference['section_ref']}")
 
-    return resolved_refs
-
-
-def main(enriched_judgment_file_path, filename):
-    """
-    Matches all sections in the judgment to the correct legislation and provides necessary information for the replacements.
-    :param enriched_judgment_file_path: file path of the judgment
-    :param filename: file name of the judgment
-    :returns resolved_refs: list of dictionaries with the information for the replacements in each section
-    """
-    enriched_judgment_file = os.path.join(enriched_judgment_file_path, filename)
-    print("======", enriched_judgment_file)
-    with open(enriched_judgment_file) as f:
-        soup = BeautifulSoup(f, "xml")
-    text = soup.find_all("p")
-    cur_para_number = 0
-    section_dict: SectionDict = {}
-    resolved_refs = []
-    for line in text:
-        sections = detect_reference(str(line), "section")
-        if sections:
-            legislations = detect_reference(str(line))
-            if legislations:
-                section_to_leg_matches = find_closest_legislation(legislations, sections, THR)
-
-                # create the master section dictionary with relevant leg links
-                section_dict = save_section_to_dict(section_to_leg_matches, cur_para_number, section_dict)
-
-            # resolve sections to legislations
-            resolved_refs.extend(provision_resolver(section_dict, sections, cur_para_number))
-
-        cur_para_number += 1
     return resolved_refs
 
 
