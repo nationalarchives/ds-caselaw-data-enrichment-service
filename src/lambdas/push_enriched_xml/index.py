@@ -7,6 +7,7 @@ import urllib3
 from aws_lambda_powertools.utilities.data_classes import SQSEvent, event_source
 from aws_lambda_powertools.utilities.data_classes.sqs_event import SQSRecord
 from aws_lambda_powertools.utilities.typing import LambdaContext
+from lxml import etree
 from requests.auth import HTTPBasicAuth
 
 from utils.custom_types import APIEndpointBaseURL, DocumentAsXMLString
@@ -97,13 +98,14 @@ def process_event(sqs_rec: SQSRecord) -> None:
     file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
+    canonical_xml = etree.canonicalize(file_content)
 
     document_uri = source_key.replace(".xml", "")
     LOGGER.info("Document URI from message")
     LOGGER.info(document_uri)
 
     # patch the judgment
-    patch_judgment_request(api_endpoint, document_uri, file_content, API_USERNAME, API_PASSWORD)
+    patch_judgment_request(api_endpoint, document_uri, canonical_xml, API_USERNAME, API_PASSWORD)
 
 
 ############################################

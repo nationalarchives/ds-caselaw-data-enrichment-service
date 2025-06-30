@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.2.2 (2025-06-30)
+
+- Fixed push_enriched_xml by stripping canonicalizing the xml stored in the final stage enrichment s3 bucket before sending it to the privileged api.
+
 ## v7.2.1 (2025-06-27)
 
 - Fixed push_enriched_xml by stripping the .xml suffix from the specified uri when patching the doc in the database
