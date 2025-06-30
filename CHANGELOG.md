@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.2.3 (2025-06-30)
+
+- Add `lxml` as a dependency for the `push_enriched_xml` lambda
+
 ## v7.2.2 (2025-06-30)
 
 - Fixed push_enriched_xml by stripping canonicalizing the xml stored in the final stage enrichment s3 bucket before sending it to the privileged api.
