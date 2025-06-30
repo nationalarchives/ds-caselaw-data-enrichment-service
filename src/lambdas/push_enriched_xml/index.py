@@ -98,7 +98,9 @@ def process_event(sqs_rec: SQSRecord) -> None:
     file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
-    canonical_xml = etree.canonicalize(file_content)
+    # Canonicalize using lxml.etree.tostring with method="c14n"
+    tree = etree.fromstring(file_content)
+    canonical_xml = etree.tostring(tree, method="c14n").decode("utf-8")
 
     document_uri = source_key.replace(".xml", "")
     LOGGER.info("Document URI from message")
