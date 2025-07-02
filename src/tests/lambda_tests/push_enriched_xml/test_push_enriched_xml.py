@@ -29,7 +29,7 @@ def test_push_enriched_xml(requests_mock, monkeypatch, source_key_prefix):
     s3.create_bucket(Bucket="test_bucket")
 
     # Non-canonical XML: redundant xmlns on child
-    non_canonical_xml = """<?xml version="1.0"?>
+    non_canonical_xml = """<?xml version="1.0" encoding="UTF-8"?>
     <root xmlns="urn:foo" xmlns:bar="urn:bar" attr2="2" attr1="1">
         <parent attr="p1" xmlns:bar="urn:bar">
             <child1 bar:attr="b1" attr="c1" xmlns="urn:foo" xmlns:bar="urn:bar">

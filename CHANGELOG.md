@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.2.5 (2025-07-02)
+
+- Fixed push_enriched_xml by fetching the xml as bytes as etree.fromstring does not support encoding declarations in the XML
+
 ## v7.2.4 (2025-07-02)
 
 - Fixed push_enriched_xml by fully canonicalizing the xml stored in the final stage enrichment s3 bucket before sending it to the privileged api.
