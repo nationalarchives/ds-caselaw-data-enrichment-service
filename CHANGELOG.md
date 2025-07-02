@@ -1,12 +1,16 @@
 # Changelog
 
+## v7.2.4 (2025-07-02)
+
+- Fixed push_enriched_xml by fully canonicalizing the xml stored in the final stage enrichment s3 bucket before sending it to the privileged api.
+
 ## v7.2.3 (2025-06-30)
 
 - Add `lxml` as a dependency for the `push_enriched_xml` lambda
 
 ## v7.2.2 (2025-06-30)
 
-- Fixed push_enriched_xml by stripping canonicalizing the xml stored in the final stage enrichment s3 bucket before sending it to the privileged api.
+- Fixed push_enriched_xml by canonicalizing the xml stored in the final stage enrichment s3 bucket before sending it to the privileged api.
 
 ## v7.2.1 (2025-06-27)
 
