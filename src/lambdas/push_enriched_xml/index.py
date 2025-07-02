@@ -95,9 +95,9 @@ def process_event(sqs_rec: SQSRecord) -> None:
     else:
         api_endpoint = APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
 
-    file_content = DocumentAsXMLString(
-        s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
-    )
+    # Fetch the xml as bytes as etree.fromstring does not support encoding declarations in the XML
+    # when in string format.
+    file_content: bytes = s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read()
 
     # Canonicalize the xml with C14N 1.0 so that only the apex node defines the namespaces
     # and the attributes are in the same order.
