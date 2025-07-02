@@ -98,7 +98,15 @@ def process_event(sqs_rec: SQSRecord) -> None:
     file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=source_bucket, Key=source_key)["Body"].read().decode("utf-8"),
     )
-    canonical_xml = etree.canonicalize(file_content)
+
+    # Canonicalize the xml with C14N 1.0 so that only the apex node defines the namespaces
+    # and the attributes are in the same order.
+    # This is important for the API to accept the XML.
+    # Note C14N 2.0 is not supported by the API and further the XML should not have
+    # sub namespaces defined in the child nodes; they are only there due to the way the XML is
+    # generated and ideally we would fix that, but for now this is a quick way to get things into shape.
+    tree = etree.fromstring(file_content)
+    canonical_xml = etree.tostring(tree, method="c14n").decode("utf-8")
 
     document_uri = source_key.replace(".xml", "")
     LOGGER.info("Document URI from message")

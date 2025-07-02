@@ -29,9 +29,21 @@ def test_push_enriched_xml(requests_mock, monkeypatch, source_key_prefix):
     s3.create_bucket(Bucket="test_bucket")
 
     # Non-canonical XML: redundant xmlns on child
-    non_canonical_xml = (
-        '<root xmlns="urn:foo"><child xmlns="urn:foo">text</child><child2 xmlns="urn:foo">more</child2></root>'
-    )
+    non_canonical_xml = """<?xml version="1.0"?>
+    <root xmlns="urn:foo" xmlns:bar="urn:bar" attr2="2" attr1="1">
+        <parent attr="p1" xmlns:bar="urn:bar">
+            <child1 bar:attr="b1" attr="c1" xmlns="urn:foo" xmlns:bar="urn:bar">
+                <subchild attr="s1" bar:attr="sb1">
+                    value
+                </subchild>
+            </child1>
+            <child2 attr="c2" xmlns="urn:foo">
+                <subchild2 attr="s2"/>
+            </child2>
+        </parent>
+        <emptychild xmlns="urn:foo" />
+    </root>
+    """
     s3.put_object(Bucket="test_bucket", Key=f"{source_key_prefix}.xml", Body=non_canonical_xml)
 
     class FakeSQSRecord(dict):
@@ -47,7 +59,21 @@ def test_push_enriched_xml(requests_mock, monkeypatch, source_key_prefix):
     # Assert that the requests.patch method was called with the correct data
     requests_mock.patch.assert_called_once()
     args, kwargs = requests_mock.patch.call_args
-    assert kwargs["data"] == b'<root xmlns="urn:foo"><child>text</child><child2>more</child2></root>'
+    expected_canonical = b"""<root xmlns="urn:foo" xmlns:bar="urn:bar" attr1="1" attr2="2">
+        <parent attr="p1">
+            <child1 attr="c1" bar:attr="b1">
+                <subchild attr="s1" bar:attr="sb1">
+                    value
+                </subchild>
+            </child1>
+            <child2 attr="c2">
+                <subchild2 attr="s2"></subchild2>
+            </child2>
+        </parent>
+        <emptychild></emptychild>
+    </root>"""
+
+    assert kwargs["data"] == expected_canonical
     assert kwargs["params"] == {"unlock": True}
     assert isinstance(kwargs["auth"], HTTPBasicAuth)
     assert (
