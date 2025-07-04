@@ -26,7 +26,6 @@ The tests are currently run in CI as specified in `.github/workflows/ci_lint_and
 There are a number of places where enrichment can be turned off:
 
 - Marklogic Username/Password
-
   - Go to the production Marklogic interface, "Admin" (top), "Security" (left), "Users" (left), "enrichment-engine" (mid).
   - Make sure you know where the password is stored so you can put access back afterwards!
   - Changing the password will mean no Enrichment processes can interact with Marklogic -- no getting documents, no uploading them
@@ -35,7 +34,6 @@ There are a number of places where enrichment can be turned off:
   - Seemed to work well last time, but there were a lot of warnings
 
 - AWS Lambda that fetches XML
-
   - Not actually tested in anger!
   - Log into `da-caselaw-enrichment`. Make sure to switch to `eu-west-2`/`London`.
   - In Lambda, Functions, select `tna-s3-tna-production-fetch-xml`
@@ -46,7 +44,6 @@ There are a number of places where enrichment can be turned off:
   - Note that manual changes to the lambda settings will likely be lost if new code is deployed
 
 - Modifying the code
-
   - We could change either the code in one of the lambdas -- probably `fetch_xml` or
     `push_enriched_xml` for the start/end of the process
   - We could also modify the privileged API, but that potentially affect all users of it
