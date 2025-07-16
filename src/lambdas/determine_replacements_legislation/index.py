@@ -31,7 +31,6 @@ def process_event(sqs_rec: SQSRecord) -> None:
     message = json.loads(sqs_rec.body)
     LOGGER.info("EVENT: %s", message)
     msg_attributes = sqs_rec["messageAttributes"]
-    replacements = message["replacements"]
     source_key = msg_attributes["source_key"]["stringValue"]
 
     source_bucket = msg_attributes["source_bucket"]["stringValue"]

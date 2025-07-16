@@ -37,7 +37,6 @@ def process_event(sqs_rec: SQSRecord, dest_bucket: str, source_bucket: str, repl
     LOGGER.info("EVENT: %s", message)
 
     msg_attributes = sqs_rec["messageAttributes"]
-    message["replacements"]
     source_key = msg_attributes["source_key"]["stringValue"]
 
     replacement_bucket = msg_attributes["source_bucket"]["stringValue"]
