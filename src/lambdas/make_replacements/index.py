@@ -57,15 +57,23 @@ def process_event(sqs_rec: SQSRecord) -> None:
     file_content = DocumentAsXMLString(
         s3_client.get_object(Bucket=SOURCE_BUCKET, Key=filename)["Body"].read().decode("utf-8"),
     )
-    LOGGER.info("Got original XML file content")
+    LOGGER.info("Fetched original XML file content")
 
     replacement_file_content = (
         s3_client.get_object(Bucket=REPLACEMENTS_BUCKET, Key=source_key)["Body"].read().decode("utf-8")
     )
-    LOGGER.info("Got replacement file content")
+    LOGGER.info("Fetched replacement mapping file")
 
-    full_replaced_text_content = make_post_header_replacements(file_content, replacement_file_content)
-    upload_contents(filename, full_replaced_text_content)
+    if replacement_file_content:
+        LOGGER.info("Applying replacements to the original XML content")
+        updated_xml_file_content = make_post_header_replacements(file_content, replacement_file_content)
+    else:
+        LOGGER.info("Replacement mapping file is empty, so no replacements will be made.")
+        updated_xml_file_content = file_content
+
+    upload_contents(filename, updated_xml_file_content)
+
+    LOGGER.info("Uploaded updated XML file content to destination bucket")
 
 
 DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
