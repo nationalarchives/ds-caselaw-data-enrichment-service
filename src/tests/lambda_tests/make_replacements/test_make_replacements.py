@@ -32,18 +32,19 @@ def test_process_event_basic():
         Body=input_xml,
     )
 
-    # Add empty replacements file
+    # Add replacements file with an origin-ref replacement
+    replacement_content = '{"ref": ["Content to replace", "", "", "", true]}'
     s3.put_object(
         Bucket="replacements-bucket",
         Key="test.xml",
-        Body="",
+        Body=replacement_content,
     )
 
     # Create mock SQS event
     sqs_record = {
         "messageAttributes": {
             "source_key": {"stringValue": "test.xml"},
-            "source_bucket": {"stringValue": "source_bucket"},
+            "source_bucket": {"stringValue": "source-bucket"},
         },
     }
 
@@ -54,11 +55,18 @@ def test_process_event_basic():
     response = s3.get_object(Bucket="dest-bucket", Key="test.xml")
     processed_content = response["Body"].read().decode()
 
-    # Verify replacements
-    assert "<origin-ref>" not in processed_content
-    assert "Content to replace" in processed_content
-    assert "<p>Test content before</p>" in processed_content
-    assert "<p>Test content after</p>" in processed_content
+    # Verify the exact output XML
+    expected_xml = """<akomaNtoso>
+        <judgment>
+            <header>Some header content</header>
+            <judgmentBody>
+                <p>Test content before</p>
+                Content to replace
+                <p>Test content after</p>
+            </judgmentBody>
+        </judgment>
+    </akomaNtoso>"""
+    assert processed_content == expected_xml
 
 
 @mock_aws
@@ -87,17 +95,20 @@ def test_process_event_multiple_replacements():
         Body=input_xml,
     )
 
-    # Add empty replacements file
+    # Add replacements file with multiple replacements
+    replacement_content = (
+        '{"ref": ["First replacement", "", "", "", true]}\n{"ref": ["Second replacement", "", "", "", true]}'
+    )
     s3.put_object(
         Bucket="replacements-bucket",
         Key="test.xml",
-        Body="",
+        Body=replacement_content,
     )
 
     sqs_record = {
         "messageAttributes": {
             "source_key": {"stringValue": "test.xml"},
-            "source_bucket": {"stringValue": "source_bucket"},
+            "source_bucket": {"stringValue": "source-bucket"},
         },
     }
 
@@ -106,10 +117,17 @@ def test_process_event_multiple_replacements():
     response = s3.get_object(Bucket="dest-bucket", Key="test.xml")
     processed_content = response["Body"].read().decode()
 
-    assert "<origin-ref>" not in processed_content
-    assert "First replacement" in processed_content
-    assert "Second replacement" in processed_content
-    assert "<p>Middle content</p>" in processed_content
+    expected_xml = """<akomaNtoso>
+        <judgment>
+            <header>Some header content</header>
+            <judgmentBody>
+                First replacement
+                <p>Middle content</p>
+                Second replacement
+            </judgmentBody>
+        </judgment>
+    </akomaNtoso>"""
+    assert processed_content == expected_xml
 
 
 @mock_aws
@@ -145,7 +163,7 @@ def test_process_event_no_replacements_needed():
     sqs_record = {
         "messageAttributes": {
             "source_key": {"stringValue": "test.xml"},
-            "source_bucket": {"stringValue": "source_bucket"},
+            "source_bucket": {"stringValue": "source-bucket"},
         },
     }
 
