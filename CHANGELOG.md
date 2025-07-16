@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.3.0 (2025-07-17)
+
+- Fixed `make_replacements` lambda to handle the case where there are no replacements to be made
+
 ## v7.2.5 (2025-07-02)
 
 - Fixed push_enriched_xml by fetching the xml as bytes as etree.fromstring does not support encoding declarations in the XML
