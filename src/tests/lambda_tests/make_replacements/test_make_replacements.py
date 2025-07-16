@@ -1,28 +1,11 @@
-import json
-
 import boto3
-import pytest
 from moto import mock_aws
 
 from lambdas.make_replacements.index import process_event
 
 
-@pytest.fixture
-def fake_sqs_record():
-    """
-    Fixture to create a fake SQS record for testing.
-    """
-    return {
-        "body": json.dumps({"Validated": True}),
-        "messageAttributes": {
-            "source_key": {"stringValue": "test_source_key.xml"},
-            "source_bucket": {"stringValue": "test_source_bucket"},
-        },
-    }
-
-
 @mock_aws
-def test_process_event_basic(fake_sqs_record):
+def test_process_event_basic():
     # Set up mock AWS resources
     s3 = boto3.client("s3")
     # Create all required buckets
@@ -57,7 +40,12 @@ def test_process_event_basic(fake_sqs_record):
     )
 
     # Create mock SQS event
-    sqs_record = fake_sqs_record
+    sqs_record = {
+        "messageAttributes": {
+            "source_key": {"stringValue": "test.xml"},
+            "source_bucket": {"stringValue": "source_bucket"},
+        },
+    }
 
     # Call the function with distinct buckets
     process_event(sqs_record, "dest-bucket", "source-bucket", "replacements-bucket")
@@ -74,7 +62,7 @@ def test_process_event_basic(fake_sqs_record):
 
 
 @mock_aws
-def test_process_event_multiple_replacements(fake_sqs_record):
+def test_process_event_multiple_replacements():
     s3 = boto3.client("s3")
     # Create all required buckets
     s3.create_bucket(Bucket="source-bucket")
@@ -106,7 +94,12 @@ def test_process_event_multiple_replacements(fake_sqs_record):
         Body="",
     )
 
-    sqs_record = fake_sqs_record
+    sqs_record = {
+        "messageAttributes": {
+            "source_key": {"stringValue": "test.xml"},
+            "source_bucket": {"stringValue": "source_bucket"},
+        },
+    }
 
     process_event(sqs_record, "dest-bucket", "source-bucket", "replacements-bucket")
 
@@ -120,7 +113,7 @@ def test_process_event_multiple_replacements(fake_sqs_record):
 
 
 @mock_aws
-def test_process_event_no_replacements_needed(fake_sqs_record):
+def test_process_event_no_replacements_needed():
     s3 = boto3.client("s3")
     # Create all required buckets
     s3.create_bucket(Bucket="source-bucket")
@@ -149,8 +142,12 @@ def test_process_event_no_replacements_needed(fake_sqs_record):
         Key="test.xml",
         Body="",  # Empty replacements file
     )
-
-    sqs_record = fake_sqs_record
+    sqs_record = {
+        "messageAttributes": {
+            "source_key": {"stringValue": "test.xml"},
+            "source_bucket": {"stringValue": "source_bucket"},
+        },
+    }
 
     process_event(sqs_record, "dest-bucket", "source-bucket", "replacements-bucket")
 
