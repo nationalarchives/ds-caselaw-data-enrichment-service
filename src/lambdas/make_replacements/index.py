@@ -1,4 +1,3 @@
-import json
 import logging
 import os
 
@@ -33,14 +32,11 @@ def process_event(sqs_rec: SQSRecord, dest_bucket: str, source_bucket: str, repl
     """
     s3_client = boto3.client("s3")
 
-    message = json.loads(sqs_rec["body"])
-    LOGGER.info("EVENT: %s", message)
-
     msg_attributes = sqs_rec["messageAttributes"]
     source_key = msg_attributes["source_key"]["stringValue"]
 
     replacement_bucket = msg_attributes["source_bucket"]["stringValue"]
-    LOGGER.info("Replacement bucket from message")
+    LOGGER.info("Replacement bucket")
     LOGGER.info(replacement_bucket)
 
     LOGGER.info(replacements_bucket)
