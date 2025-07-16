@@ -16,7 +16,10 @@ class FakeSQSRecord(dict):
 def test_process_event_basic():
     # Set up mock AWS resources
     s3 = boto3.client("s3")
-    s3.create_bucket(Bucket="test_bucket")
+    # Create all required buckets
+    s3.create_bucket(Bucket="source-bucket")
+    s3.create_bucket(Bucket="dest-bucket")
+    s3.create_bucket(Bucket="replacements-bucket")
 
     # Create test input XML
     input_xml = """<akomaNtoso>
@@ -30,27 +33,34 @@ def test_process_event_basic():
         </judgment>
     </akomaNtoso>"""
 
-    # Upload test file to mock S3
+    # Upload XML to source bucket
     s3.put_object(
-        Bucket="test_bucket",
+        Bucket="source-bucket",
         Key="test.xml",
         Body=input_xml,
+    )
+
+    # Add empty replacements file
+    s3.put_object(
+        Bucket="replacements-bucket",
+        Key="test.xml",
+        Body="",
     )
 
     # Create mock SQS event
     sqs_record = FakeSQSRecord(
         body={"Validated": True},
         message_attributes={
-            "source_bucket": {"stringValue": "test_bucket"},
+            "source_bucket": {"stringValue": "source-bucket"},
             "source_key": {"stringValue": "test.xml"},
         },
     )
 
-    # Call the function
-    process_event(sqs_record)
+    # Call the function with distinct buckets
+    process_event(sqs_record, "dest-bucket", "source-bucket", "replacements-bucket")
 
     # Get the processed file from S3
-    response = s3.get_object(Bucket="test_bucket", Key="test.xml")
+    response = s3.get_object(Bucket="dest-bucket", Key="test.xml")
     processed_content = response["Body"].read().decode()
 
     # Verify replacements
@@ -63,7 +73,10 @@ def test_process_event_basic():
 @mock_aws
 def test_process_event_multiple_replacements():
     s3 = boto3.client("s3")
-    s3.create_bucket(Bucket="test_bucket")
+    # Create all required buckets
+    s3.create_bucket(Bucket="source-bucket")
+    s3.create_bucket(Bucket="dest-bucket")
+    s3.create_bucket(Bucket="replacements-bucket")
 
     input_xml = """<akomaNtoso>
         <judgment>
@@ -76,23 +89,31 @@ def test_process_event_multiple_replacements():
         </judgment>
     </akomaNtoso>"""
 
+    # Upload XML to source bucket
     s3.put_object(
-        Bucket="test_bucket",
+        Bucket="source-bucket",
         Key="test.xml",
         Body=input_xml,
+    )
+
+    # Add empty replacements file
+    s3.put_object(
+        Bucket="replacements-bucket",
+        Key="test.xml",
+        Body="",
     )
 
     sqs_record = FakeSQSRecord(
         body={"Validated": True},
         message_attributes={
-            "source_bucket": {"stringValue": "test_bucket"},
+            "source_bucket": {"stringValue": "source-bucket"},
             "source_key": {"stringValue": "test.xml"},
         },
     )
 
-    process_event(sqs_record)
+    process_event(sqs_record, "dest-bucket", "source-bucket", "replacements-bucket")
 
-    response = s3.get_object(Bucket="test_bucket", Key="test.xml")
+    response = s3.get_object(Bucket="dest-bucket", Key="test.xml")
     processed_content = response["Body"].read().decode()
 
     assert "<origin-ref>" not in processed_content
@@ -104,7 +125,10 @@ def test_process_event_multiple_replacements():
 @mock_aws
 def test_process_event_no_replacements_needed():
     s3 = boto3.client("s3")
-    s3.create_bucket(Bucket="test_bucket")
+    # Create all required buckets
+    s3.create_bucket(Bucket="source-bucket")
+    s3.create_bucket(Bucket="dest-bucket")
+    s3.create_bucket(Bucket="replacements-bucket")
 
     input_xml = """<akomaNtoso>
         <judgment>
@@ -115,23 +139,31 @@ def test_process_event_no_replacements_needed():
         </judgment>
     </akomaNtoso>"""
 
+    # Upload XML to source bucket
     s3.put_object(
-        Bucket="test_bucket",
+        Bucket="source-bucket",
         Key="test.xml",
         Body=input_xml,
+    )
+
+    # Add empty replacements file
+    s3.put_object(
+        Bucket="replacements-bucket",
+        Key="test.xml",
+        Body="",  # Empty replacements file
     )
 
     sqs_record = FakeSQSRecord(
         body={"Validated": True},
         message_attributes={
-            "source_bucket": {"stringValue": "test_bucket"},
+            "source_bucket": {"stringValue": "source-bucket"},
             "source_key": {"stringValue": "test.xml"},
         },
     )
 
-    process_event(sqs_record)
+    process_event(sqs_record, "dest-bucket", "source-bucket", "replacements-bucket")
 
-    response = s3.get_object(Bucket="test_bucket", Key="test.xml")
+    response = s3.get_object(Bucket="dest-bucket", Key="test.xml")
     processed_content = response["Body"].read().decode()
 
     assert processed_content == input_xml
