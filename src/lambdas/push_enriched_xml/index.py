@@ -29,9 +29,16 @@ def fetch_judgment_urllib(api_endpoint: APIEndpointBaseURL, query: str, username
     http = urllib3.PoolManager()
     url = f"{api_endpoint}judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
+
     r = http.request("GET", url, headers=headers)
-    print(r.status)
-    print(r.data)
+
+    if r.status != 200:
+        error_msg = f"Failed to fetch judgment from {url}, status code: {r.status}, response: {r.data.decode()}"
+        LOGGER.error(error_msg)
+        raise RuntimeError(error_msg)
+
+    LOGGER.info("Successfully fetched judgment at %s", query)
+
     return DocumentAsXMLString(r.data.decode())
 
 
@@ -42,9 +49,13 @@ def release_lock(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw
     http = urllib3.PoolManager()
     url = f"{api_endpoint}lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
+
     r = http.request("DELETE", url, headers=headers)
-    print(r.status)
-    print(r.data)
+
+    if r.status != 200:
+        error_msg = f"Failed to release lock from {url}, status code: {r.status}, response: {r.data.decode()}"
+        LOGGER.error(error_msg)
+        raise RuntimeError(error_msg)
 
 
 def patch_judgment_request(
@@ -64,8 +75,14 @@ def patch_judgment_request(
         params={"unlock": True},
         timeout=10,
     )
-    print(response)
-    response.raise_for_status()
+    try:
+        response.raise_for_status()
+    except requests.exceptions.HTTPError as e:
+        error_msg = (
+            f"Failed to patch judgment {document_uri}, status code: {response.status_code}, response: {response.text}"
+        )
+        LOGGER.error(error_msg)
+        raise RuntimeError(error_msg) from e
 
 
 ############################################

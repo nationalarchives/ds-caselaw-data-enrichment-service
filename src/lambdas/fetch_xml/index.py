@@ -28,8 +28,13 @@ def fetch_judgment_urllib(api_endpoint: APIEndpointBaseURL, query: str, username
     url = f"{api_endpoint}judgment/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
     r = http.request("GET", url, headers=headers)
-    print("Fetch judgment status:", r.status)
-    print("Fetch judgment data:", r.data)
+
+    if r.status != 200:
+        error_msg = f"Failed to fetch judgment from {url}, status code: {r.status}, response: {r.data.decode()}"
+        LOGGER.error(error_msg)
+        raise RuntimeError(error_msg)
+
+    LOGGER.info(f"Successfully fetched judgment from {url}")
     return DocumentAsXMLString(r.data.decode())
 
 
@@ -38,30 +43,49 @@ def lock_judgment_urllib(api_endpoint: APIEndpointBaseURL, query: str, username:
     Lock the judgment for editing
     """
     http = urllib3.PoolManager()
+
     # currently unlock only looks for a truthy/falsy value
     # but we might upgrade that to be a time in seconds
     url = f"{api_endpoint}lock/{query}?unlock=3600"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
+
     r = http.request(
         "PUT",
         url,
         headers=headers,
     )
-    print("Lock judgment API status:", r.status)
-    # return r.data.decode()
+
+    if r.status != 201:
+        error_msg = f"Failed to lock judgment from {url}, status code: {r.status}, response: {r.data.decode()}"
+        LOGGER.error(error_msg)
+        raise RuntimeError(error_msg)
+
+    LOGGER.info("Judgment locked successfully")
 
 
-def check_lock_judgment_urllib(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str) -> None:
+def check_lock_judgment_urllib(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw: str) -> bool:
     """
     Check whether the judgment is locked
     """
     http = urllib3.PoolManager()
     url = f"{api_endpoint}lock/{query}"
     headers = urllib3.make_headers(basic_auth=username + ":" + pw)
+
     r = http.request("GET", url, headers=headers)
-    print("Check lock status:", r.status)
-    print("Check lock data:", r.data.decode())
-    # return r.data.decode()
+
+    if r.status != 200:
+        error_msg = f"Failed to check lock status from {url}, status code: {r.status}, response: {r.data.decode()}"
+        LOGGER.error(error_msg)
+        raise RuntimeError(error_msg)
+
+    response_data = json.loads(r.data.decode())
+    locked = response_data["status"] == "Locked"
+
+    if locked:
+        LOGGER.info("Judgment is locked")
+    else:
+        LOGGER.info("Judgment is not locked")
+    return locked
 
 
 ############################################
@@ -103,10 +127,15 @@ def process_event(sqs_rec: SQSRecord, api_endpoint: APIEndpointBaseURL) -> None:
     print("Judgment uri:", uri_reference)
 
     xml_content = fetch_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
+    lock_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
+    locked = check_lock_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
+
+    if not locked:
+        error_message = "Judgment was not locked successfully."
+        LOGGER.error(error_message)
+        raise RuntimeError(error_message)
 
     upload_contents(uri_reference, xml_content)
-    lock_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
-    check_lock_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
 
 
 ############################################

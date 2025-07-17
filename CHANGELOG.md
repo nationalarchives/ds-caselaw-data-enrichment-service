@@ -1,5 +1,9 @@
 # Changelog
 
+## v7.4.0 (2025-07-17)
+
+- Make enrichment lambdas `fetch_xml` and `push_enriched_xml` error out when any of their calls to Marklogic error out.
+
 ## v7.3.0 (2025-07-17)
 
 - Fixed `make_replacements` lambda to handle the case where there are no replacements to be made
