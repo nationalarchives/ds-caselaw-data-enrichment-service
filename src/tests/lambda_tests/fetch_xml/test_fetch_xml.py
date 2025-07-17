@@ -10,10 +10,12 @@ from moto import mock_aws
 
 from lambdas.fetch_xml.index import (
     APIEndpointBaseURL,
+    DocumentAsXMLString,
     check_lock_judgment_urllib,
     fetch_judgment_urllib,
     lock_judgment_urllib,
     process_event,
+    upload_contents,
 )
 
 # Test data
@@ -184,6 +186,27 @@ def test_check_lock_judgment_urllib_locked(mock_pool_manager, api_client):
     assert result
 
 
+@mock_aws
+def test_upload_contents():
+    # Set up S3 bucket
+    bucket_name = "test-upload-bucket"
+    s3 = boto3.client("s3", region_name="us-east-1")
+    s3.create_bucket(Bucket=bucket_name)
+
+    # Upload content
+    source_key = "test-document"
+    content = DocumentAsXMLString("<test>content</test>")
+    upload_contents(source_key, content, bucket_name)
+
+    # Verify upload
+    response = s3.get_object(
+        Bucket=bucket_name,
+        Key="test-document.xml",
+    )
+    uploaded_content = response["Body"].read().decode()
+    assert uploaded_content == content
+
+
 @pytest.fixture
 def env_vars():
     with mock.patch.dict(
@@ -192,6 +215,7 @@ def env_vars():
             "DEST_BUCKET_NAME": "test-bucket",
             "API_USERNAME": "test-user",
             "API_PASSWORD": "test-pass",
+            "ENVIRONMENT": "staging",
         },
     ):
         yield
@@ -239,7 +263,13 @@ def test_process_event_success(mock_pool_manager, env_vars, mock_sqs_record, api
     s3.create_bucket(Bucket="test-bucket")
 
     # Run the process_event function
-    process_event(mock_sqs_record, api_client["api_endpoint"])
+    process_event(
+        mock_sqs_record,
+        api_client["api_endpoint"],
+        api_client["username"],
+        api_client["password"],
+        "test-bucket",
+    )
 
     # Verify S3 upload
     response = s3.get_object(
@@ -258,5 +288,5 @@ def test_process_event_success(mock_pool_manager, env_vars, mock_sqs_record, api
     actual_calls = mock_pool_manager.return_value.request.call_args_list
     assert len(actual_calls) == len(expected_calls)
     for expected, actual in zip(expected_calls, actual_calls, strict=False):
-        assert expected[0] == actual[0][0]  # Compare HTTP method
-        assert expected[1] == actual[0][1]  # Compare URL
+        assert expected.args[0] == actual[0][0]  # Compare HTTP method
+        assert expected.args[1] == actual[0][1]  # Compare URL

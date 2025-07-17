@@ -108,44 +108,45 @@ def read_message(message_dict: dict[Any, Any]) -> tuple[str, str]:
     return status, uri_reference
 
 
-def upload_contents(source_key: str, xml_content: DocumentAsXMLString) -> None:
+def upload_contents(source_key: str, xml_content: DocumentAsXMLString, dest_bucket: str) -> None:
     """
     Upload judgment to destination S3 bucket
     """
     filename = source_key + ".xml"
-    LOGGER.info("Uploading XML content to %s/%s", DEST_BUCKET, filename)
+    LOGGER.info("Uploading XML content to %s/%s", dest_bucket, filename)
     s3 = boto3.resource("s3")
-    s3_obj = s3.Object(DEST_BUCKET, filename)
+    s3_obj = s3.Object(dest_bucket, filename)
     s3_obj.put(Body=xml_content)
 
 
-def process_event(sqs_rec: SQSRecord, api_endpoint: APIEndpointBaseURL) -> None:
+def process_event(
+    sqs_rec: SQSRecord,
+    api_endpoint: APIEndpointBaseURL,
+    api_username: str,
+    api_password: str,
+    dest_bucket: str,
+) -> None:
     """Fetch the judgment xml, upload it to S3, and lock it for editing."""
     message = json.loads(sqs_rec.body)
     status, uri_reference = read_message(message)
     print("Judgment status:", status)
     print("Judgment uri:", uri_reference)
 
-    xml_content = fetch_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
-    lock_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
-    locked = check_lock_judgment_urllib(api_endpoint, uri_reference, API_USERNAME, API_PASSWORD)
+    xml_content = fetch_judgment_urllib(api_endpoint, uri_reference, api_username, api_password)
+    lock_judgment_urllib(api_endpoint, uri_reference, api_username, api_password)
+    locked = check_lock_judgment_urllib(api_endpoint, uri_reference, api_username, api_password)
 
     if not locked:
         error_message = "Judgment was not locked successfully."
         LOGGER.error(error_message)
         raise RuntimeError(error_message)
 
-    upload_contents(uri_reference, xml_content)
+    upload_contents(uri_reference, xml_content, dest_bucket)
 
 
 ############################################
 # LAMBDA HANDLER
 ############################################
-
-DEST_BUCKET = validate_env_variable("DEST_BUCKET_NAME")
-API_USERNAME = validate_env_variable("API_USERNAME")
-API_PASSWORD = validate_env_variable("API_PASSWORD")
-ENVIRONMENT = validate_env_variable("ENVIRONMENT")
 
 
 @event_source(data_class=SQSEvent)
@@ -153,13 +154,18 @@ def handler(event: SQSEvent, context: LambdaContext) -> None:
     """
     Function called by the lambda to run the process event
     """
+    # Initialize environment variables
+    dest_bucket = validate_env_variable("DEST_BUCKET_NAME")
+    api_username = validate_env_variable("API_USERNAME")
+    api_password = validate_env_variable("API_PASSWORD")
+    environment = validate_env_variable("ENVIRONMENT")
+
     LOGGER.info("Lambda to fetch XML judgment via API")
-    LOGGER.info("Destination bucket for XML judgment: %s", DEST_BUCKET)
-    LOGGER.info(ENVIRONMENT)
+    LOGGER.info("Destination bucket for XML judgment: %s", dest_bucket)
+    LOGGER.info(environment)
 
-    if ENVIRONMENT == "staging":
+    if environment == "staging":
         api_endpoint = APIEndpointBaseURL("https://api.staging.caselaw.nationalarchives.gov.uk/")
-
     else:
         api_endpoint = APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
 
@@ -168,7 +174,13 @@ def handler(event: SQSEvent, context: LambdaContext) -> None:
         for sqs_rec in event.records:
             if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
                 break
-            process_event(sqs_rec, api_endpoint)
+            process_event(
+                sqs_rec,
+                api_endpoint,
+                api_username,
+                api_password,
+                dest_bucket,
+            )
 
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)
