@@ -57,6 +57,8 @@ def release_lock(api_endpoint: APIEndpointBaseURL, query: str, username: str, pw
         LOGGER.error(error_msg)
         raise RuntimeError(error_msg)
 
+    LOGGER.info("Successfully released lock for %s", query)
+
 
 def patch_judgment_request(
     api_endpoint: APIEndpointBaseURL,
