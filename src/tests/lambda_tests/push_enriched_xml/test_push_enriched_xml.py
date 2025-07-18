@@ -1,12 +1,19 @@
-from unittest.mock import patch
+"""Tests for push_enriched_xml lambda."""
+
+from unittest.mock import Mock, patch
 
 import boto3
 import pytest
+import requests
 from moto import mock_aws
 from requests.auth import HTTPBasicAuth
 
 from lambdas.push_enriched_xml.index import (  # noqa: E402
+    APIEndpointBaseURL,
+    fetch_judgment_urllib,
+    patch_judgment_request,
     process_event,
+    release_lock,
 )
 
 
@@ -82,3 +89,83 @@ def test_push_enriched_xml(requests_mock, monkeypatch, source_key_prefix):
     assert kwargs["auth"].password == "TEST_PASSWORD"  # noqa: S105
     assert kwargs["timeout"] == 10
     assert args[0] == f"https://api.caselaw.nationalarchives.gov.uk/judgment/{source_key_prefix}"
+
+
+@pytest.fixture
+def api_client():
+    return {
+        "api_endpoint": APIEndpointBaseURL("https://test.example.com/"),
+        "username": "test-user",
+        "password": "test-pass",
+        "document_uri": "test-document",
+    }
+
+
+def test_patch_judgment_request_error(api_client):
+    """Test that patch_judgment_request properly handles HTTP errors"""
+    with patch("requests.patch") as mock_patch:
+        # Mock a 500 error response
+        mock_response = Mock()
+        mock_response.status_code = 500
+        mock_response.text = "Internal Server Error"
+        mock_response.raise_for_status.side_effect = requests.exceptions.HTTPError(
+            response=mock_response,
+        )
+        mock_patch.return_value = mock_response
+
+        with pytest.raises(RuntimeError) as exc_info:
+            patch_judgment_request(
+                api_client["api_endpoint"],
+                api_client["document_uri"],
+                "<test>data</test>",
+                api_client["username"],
+                api_client["password"],
+            )
+
+        assert "Failed to patch judgment" in str(exc_info.value)
+        assert "500" in str(exc_info.value)
+        assert "Internal Server Error" in str(exc_info.value)
+
+
+@patch("urllib3.PoolManager")
+def test_release_lock_error(mock_pool_manager, api_client):
+    """Test that release_lock properly handles HTTP errors"""
+    mock_response = Mock()
+    mock_response.status = 500
+    mock_response.data.decode.return_value = "Internal Server Error"
+
+    mock_pool_manager.return_value.request.return_value = mock_response
+
+    with pytest.raises(RuntimeError) as exc_info:
+        release_lock(
+            api_client["api_endpoint"],
+            api_client["document_uri"],
+            api_client["username"],
+            api_client["password"],
+        )
+
+    assert "Failed to release lock" in str(exc_info.value)
+    assert "500" in str(exc_info.value)
+    assert "Internal Server Error" in str(exc_info.value)
+
+
+@patch("urllib3.PoolManager")
+def test_fetch_judgment_urllib_error(mock_pool_manager, api_client):
+    """Test that fetch_judgment_urllib properly handles HTTP errors"""
+    mock_response = Mock()
+    mock_response.status = 404
+    mock_response.data.decode.return_value = "Not Found"
+
+    mock_pool_manager.return_value.request.return_value = mock_response
+
+    with pytest.raises(RuntimeError) as exc_info:
+        fetch_judgment_urllib(
+            api_client["api_endpoint"],
+            api_client["document_uri"],
+            api_client["username"],
+            api_client["password"],
+        )
+
+    assert "Failed to fetch judgment" in str(exc_info.value)
+    assert "404" in str(exc_info.value)
+    assert "Not Found" in str(exc_info.value)
