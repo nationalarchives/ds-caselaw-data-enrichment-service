@@ -49,15 +49,11 @@ jobs:
         env:
           SPARQL_USERNAME: ${{ secrets.SPARQL_USERNAME }}
           SPARQL_PASSWORD: ${{ secrets.SPARQL_PASSWORD }}
-        id: run_python_tests
-        run: coverage run --source . -m pytest -ra -vvvv
+        run: pytest -rsax -vvvv --cov --cov-branch --cov-report=xml
 
-      - name: Generate coverage XML
-        run: coverage xml
-
-      - name: Upload coverage to CodeCov
-        uses: codecov/codecov-action@2db07e317924c76f654a414629d71c65876882e2
-        env:
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24 # v5.4.3
+        with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
   terraform_format:
