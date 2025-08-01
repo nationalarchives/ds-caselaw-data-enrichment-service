@@ -6,6 +6,10 @@ requires-python = ">=3.12"
 markers = ["integration: requires access to legislation SPARQL endpoint"]
 pythonpath = "src"
 
+[tool.bandit]
+exclude_dirs = ['*_test.py', '*/test_*.py', 'venv', 'node_modules']
+skips = ["B105"]
+
 [tool.ruff]
 line-length = 120
 src = ["src"]
