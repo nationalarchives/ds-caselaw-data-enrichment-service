@@ -4,7 +4,8 @@ This repository is part of the [Find Case Law](https://caselaw.nationalarchives.
 
 # Judgment Enrichment Pipeline
 
-![Tests](https://img.shields.io/github/actions/workflow/status/nationalarchives/ds-caselaw-data-enrichment-service/ci_lint_and_test.yml?branch=main&label=tests) ![Coverage](https://img.shields.io/codeclimate/coverage/nationalarchives/ds-caselaw-data-enrichment-service) ![Maintainability](https://img.shields.io/codeclimate/maintainability/nationalarchives/ds-caselaw-data-enrichment-service)
+![Tests](https://img.shields.io/github/actions/workflow/status/nationalarchives/ds-caselaw-data-enrichment-service/ci_lint_and_test.yml?branch=main&label=tests)
+![Code Coverage](https://img.shields.io/codecov/c/github/nationalarchives/ds-caselaw-data-enrichment-service)
 
 Marks up judgments in [Find Case Law](https://caselaw.nationalarchives.gov.uk) with references to other cases and legislation.
 
