@@ -50,7 +50,7 @@ jobs:
           SPARQL_USERNAME: ${{ secrets.SPARQL_USERNAME }}
           SPARQL_PASSWORD: ${{ secrets.SPARQL_PASSWORD }}
         id: run_python_tests
-        run: coverage run --source . -m pytest -rsax -vvvv
+        run: coverage run --source . -m pytest -ra -vvvv
 
       - name: Generate coverage XML
         run: coverage xml
