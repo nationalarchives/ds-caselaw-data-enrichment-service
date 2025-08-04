@@ -7,10 +7,10 @@ def xml_escape(text: str) -> str:
     """Safely escape XML special characters"""
     return (
         text.replace("&", "&amp;")
-        .replace("<", "&lt;")
-        .replace(">", "&gt;")
-        .replace('"', "&quot;")
-        .replace("'", "&apos;")
+        .replace("<", "&amp;lt;")
+        .replace(">", "&amp;gt;")
+        .replace('"', "&amp;quot;")
+        .replace("'", "&amp;apos;")
     )
 
 
