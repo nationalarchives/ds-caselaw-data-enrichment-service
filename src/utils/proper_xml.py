@@ -1,8 +1,18 @@
-from xml.sax.saxutils import escape as xml_escape
-
 import lxml.etree
 
 from utils.custom_types import XMLFragmentAsString
+
+
+def xml_escape(text: str) -> str:
+    """Safely escape XML special characters"""
+    return (
+        text.replace("&", "&amp;")
+        .replace("<", "&amp;lt;")
+        .replace(">", "&amp;gt;")
+        .replace('"', "&amp;quot;")
+        .replace("'", "&amp;apos;")
+    )
+
 
 namespaces = {
     None: "http://docs.oasis-open.org/legaldocml/ns/akn/3.0",
@@ -51,7 +61,7 @@ def replace_string_with_tag(xml: XMLFragmentAsString, string: str, tag: str) -> 
     root = lxml.etree.fromstring(xml_wrapped)
 
     # DRAGON: this currently isn't working but stops it crashing
-    sanitised_string = xml_escape(string, entities={"'": "&amp;apos;", '"': "&amp;quot;"})
+    sanitised_string = xml_escape(string)
 
     stylesheet = lxml.etree.XML(XSLT_TEMPLATE.format(replaced_string=sanitised_string, replacement_tag=tag))
     transformer = lxml.etree.XSLT(stylesheet)

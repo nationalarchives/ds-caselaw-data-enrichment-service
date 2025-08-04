@@ -50,15 +50,15 @@ jobs:
           SPARQL_USERNAME: ${{ secrets.SPARQL_USERNAME }}
           SPARQL_PASSWORD: ${{ secrets.SPARQL_PASSWORD }}
         id: run_python_tests
-        run: coverage run --source . -m pytest
+        run: coverage run --source . -m pytest -ra -vvvv
 
       - name: Generate coverage XML
         run: coverage xml
 
-      - name: Upload coverage to CodeClimate
-        uses: paambaati/codeclimate-action@f429536ee076d758a24705203199548125a28ca7 # v9.0.0
+      - name: Upload coverage to CodeCov
+        uses: codecov/codecov-action@18283e04ce6e62d37312384ff67231eb8fd56d24
         env:
-          CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
+          token: ${{ secrets.CODECOV_TOKEN }}
 
   terraform_format:
     runs-on: ubuntu-latest
