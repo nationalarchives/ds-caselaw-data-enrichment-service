@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.12@sha256:396d1bae4a672f4eea5aed57fdb5f8317281e3398dd2494b8b45ec5d3a674832
+FROM public.ecr.aws/lambda/python:3.12@sha256:7a27652d4de92eddea94cd6336b336322752650ca81ab1b1c8d0766a3d5dc4db
 
 # Copy only the requirements file first and install dependencies
 COPY requirements.txt ${LAMBDA_TASK_ROOT}
