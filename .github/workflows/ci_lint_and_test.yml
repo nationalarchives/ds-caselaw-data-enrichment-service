@@ -90,7 +90,7 @@ jobs:
           persist-credentials: false
 
       - name: Install TFLint
-        uses: terraform-linters/setup-tflint@90f302c255ef959cbfb4bd10581afecdb7ece3e6 # v4.1.1
+        uses: terraform-linters/setup-tflint@ae78205cfffec9e8d93fd2b3115c7e9d3166d4b6 # v5.0.0
         with:
           tflint_version: v0.38.1
         continue-on-error: false
