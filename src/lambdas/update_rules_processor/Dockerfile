@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.12@sha256:a6c4dac64e272b4b46a0ee98ce6cd9f82cdacc5ef2e1e97099e1e1c45bcd6f2e
+FROM public.ecr.aws/lambda/python:3.12@sha256:eea4bb781f8e7ccd51f261cc0126e5390e309ccb957e73d4c1a9d4ffe0863a8d
 
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8
 
