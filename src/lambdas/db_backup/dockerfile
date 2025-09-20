@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.12@sha256:780f5e02e1459a2b007751c2c0de9246d524ccc3e27839b1c0ae3e3d696a9c7d
+FROM public.ecr.aws/lambda/python:3.12@sha256:4d8f89780fd314460946be936ef6219cdecaa3da4e6369f84f2dc4e755dbc5a0
 
 COPY index.py ${LAMBDA_TASK_ROOT}
 
