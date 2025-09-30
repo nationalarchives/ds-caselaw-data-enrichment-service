@@ -31,6 +31,8 @@ repos:
     hooks:
       - id: terraform-docs-go
         args: ["markdown", "table", "--output-file", "README.md", "./terraform"]
+        # remove when https://github.com/terraform-docs/terraform-docs/issues/870 resolved
+        language_version: "1.24.6"
 
   - repo: https://github.com/PyCQA/bandit
     rev: 1.8.6
