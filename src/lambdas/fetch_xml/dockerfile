@@ -13,7 +13,7 @@
 
 ### TRY THIS CODE INSTEAD
 
-FROM public.ecr.aws/lambda/python:3.14@sha256:249216003386d2295ce290c49c0262f566034a68df2d84af6a6638b6a04005b5
+FROM public.ecr.aws/lambda/python:3.14@sha256:00f546a470dff36160dd8238387c2bbcadd0a6f3a0f480f8675646552d8fcdfe
 
 COPY index.py ${LAMBDA_TASK_ROOT}
 
