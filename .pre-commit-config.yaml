@@ -35,7 +35,7 @@ repos:
         language_version: "1.24.6"
 
   - repo: https://github.com/PyCQA/bandit
-    rev: 1.9.1
+    rev: 1.9.2
     hooks:
       - id: bandit
         args: ["-c", "pyproject.toml"]
