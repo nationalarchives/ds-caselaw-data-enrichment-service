@@ -1,6 +1,6 @@
 module "lambda-extract-judgement-contents" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   function_name = "${local.name}-${local.environment}-extract-judgement-contents"
   package_type  = var.use_container_image == true ? "Image" : "Zip"
@@ -192,7 +192,7 @@ resource "random_pet" "this" {
 
 module "lambda-determine-replacements-caselaw" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   function_name = "${local.name}-${local.environment}-determine-replacements-caselaw"
 
@@ -325,7 +325,7 @@ module "lambda-determine-replacements-caselaw" {
 
 module "lambda-determine-replacements-legislation" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   function_name = "${local.name}-${local.environment}-determine-replacements-legislation"
 
@@ -460,7 +460,7 @@ module "lambda-determine-replacements-legislation" {
 
 module "lambda-determine-replacements-abbreviations" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   function_name = "${local.name}-${local.environment}-determine-replacements-abbreviations"
 
@@ -571,7 +571,7 @@ module "lambda-determine-replacements-abbreviations" {
 
 module "lambda-determine-legislation-provisions" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   function_name  = "${local.name}-${local.environment}-determine-legislation-provisions"
   package_type   = "Image"
@@ -666,7 +666,7 @@ module "lambda-determine-legislation-provisions" {
 
 module "lambda-determine-oblique-references" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   function_name  = "${local.name}-${local.environment}-determine-oblique-references"
   package_type   = "Image"
@@ -760,7 +760,7 @@ module "lambda-determine-oblique-references" {
 
 module "lambda-make-replacements" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   function_name = "${local.name}-${local.environment}-make-replacements"
   package_type  = var.use_container_image == true ? "Image" : "Zip"
@@ -933,7 +933,7 @@ data "aws_secretsmanager_secret_version" "sparql_password_credentials" {
 
 module "lambda-update-legislation-table" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   # Lambda function declaration
   function_name = "${local.name}-${local.environment}-update-legislation-table"
@@ -1018,7 +1018,7 @@ module "lambda-update-legislation-table" {
 
 module "lambda-update-rules-processor" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   # Lambda function declaration
   function_name = "${local.name}-${local.environment}-update-rules-processor"
@@ -1143,7 +1143,7 @@ module "lambda-update-rules-processor" {
 
 module "lambda-validate-replacements" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   function_name = "${local.name}-${local.environment}-xml-validate"
   package_type  = var.use_container_image == true ? "Image" : "Zip"
@@ -1506,7 +1506,7 @@ resource "aws_ecr_lifecycle_policy" "pe_retention" {
 
 module "lambda-push-enriched-xml" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   # Lambda function declaration
   function_name = "${local.name}-${local.environment}-push-enriched-xml"
@@ -1630,7 +1630,7 @@ module "lambda-push-enriched-xml" {
 
 module "db_backup_lambda" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.4.0"
+  version = "8.5.0"
 
   function_name = "${local.name}-${local.environment}-db-backup"
   description   = "Takes a snapshot each day"
