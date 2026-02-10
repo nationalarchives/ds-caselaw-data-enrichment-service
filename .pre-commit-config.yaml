@@ -50,16 +50,16 @@ repos:
         args: [--explicit-package-bases]
         additional_dependencies:
           [
-            types-mock,
-            types-requests,
-            types-lxml,
-            types-beautifulsoup4,
-            types-psycopg2,
-            pandas-stubs,
-            pytest-stub,
-            "boto3-stubs[essential, secretsmanager]",
-            aws_lambda_powertools,
-            moto,
+            types-mock==5.2.0.20250924,
+            types-requests==2.32.4.20260107,
+            types-lxml==2026.1.1,
+            types-beautifulsoup4==4.12.0.20250516,
+            types-psycopg2==2.9.21.20251012,
+            pandas-stubs==3.0.0.260204,
+            pytest-stub==1.1.0,
+            "boto3-stubs[essential, secretsmanager]==1.42.45",
+            aws_lambda_powertools==3.24.0,
+            moto==5.1.21,
           ]
 
   - repo: https://github.com/pre-commit/mirrors-prettier
