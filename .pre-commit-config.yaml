@@ -46,6 +46,7 @@ repos:
     hooks:
       - id: mypy
         name: mypy-src
+        language: python
         args: [--explicit-package-bases]
         additional_dependencies:
           [
