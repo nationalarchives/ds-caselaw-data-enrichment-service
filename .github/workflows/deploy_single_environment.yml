@@ -26,7 +26,7 @@ jobs:
           python-version: "3.13"
 
       - name: Get AWS Credentials
-        uses: aws-actions/configure-aws-credentials@61815dcd50bd041e203e49132bacad1fd04d2708 # v5
+        uses: aws-actions/configure-aws-credentials@8df5847569e6427dd6c4fb1cf565c83acfa8afa7 # v6
         with:
           aws-region: eu-west-2
           role-to-assume: ${{ secrets.aws_oidc_role_arn }}
