@@ -2529,19 +2529,19 @@ dev = ["argcomplete", "attrs (>=19.2)", "hypothesis (>=3.56)", "mock", "requests
 
 [[package]]
 name = "pytest-env"
-version = "1.5.0"
+version = "1.6.0"
 description = "pytest plugin that allows you to add environment variables."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "pytest_env-1.5.0-py3-none-any.whl", hash = "sha256:89a15686ac837c9cd009a8a2d52bd55865e2f23c82094247915dae4540c87161"},
-    {file = "pytest_env-1.5.0.tar.gz", hash = "sha256:db8994b9ce170f135a37acc09ac753a6fc697d15e691b576ed8d8ca261c40246"},
+    {file = "pytest_env-1.6.0-py3-none-any.whl", hash = "sha256:1e7f8a62215e5885835daaed694de8657c908505b964ec8097a7ce77b403d9a3"},
+    {file = "pytest_env-1.6.0.tar.gz", hash = "sha256:ac02d6fba16af54d61e311dd70a3c61024a4e966881ea844affc3c8f0bf207d3"},
 ]
 
 [package.dependencies]
 pytest = ">=9.0.2"
-python-dotenv = ">=1.2.1"
+python-dotenv = ">=1.2.2"
 
 [package.extras]
 testing = ["covdefaults (>=2.3)", "coverage (>=7.13.4)", "pytest-mock (>=3.15.1)"]
