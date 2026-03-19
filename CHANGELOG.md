@@ -1,5 +1,9 @@
 # Changelog
 
+## Unreleased
+
+- Remove non-breaking space in precommit config
+
 ## v7.4.0 (2025-07-17)
 
 - Make enrichment lambdas `fetch_xml` and `push_enriched_xml` error out when any of their calls to Marklogic error out.
