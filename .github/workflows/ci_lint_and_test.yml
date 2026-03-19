@@ -46,9 +46,6 @@ jobs:
           pip3 install -r src/tests/requirements.txt
 
       - name: Run python tests with coverage
-        env:
-          SPARQL_USERNAME: ${{ secrets.SPARQL_USERNAME }}
-          SPARQL_PASSWORD: ${{ secrets.SPARQL_PASSWORD }}
         run: pytest -rsax -vvvv --cov --cov-branch --cov-report=xml
 
       - name: Upload coverage reports to Codecov
