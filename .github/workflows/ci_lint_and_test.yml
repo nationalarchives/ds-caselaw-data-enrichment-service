@@ -133,22 +133,22 @@ jobs:
           terraform validate -no-color
         continue-on-error: false
 
-  tfsec-pr-commenter:
-    name: tfsec PR commenter
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pull-requests: write
-    steps:
-      - name: Clone repo
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
-        with:
-          persist-credentials: false
-      - name: tfsec
-        uses: aquasecurity/tfsec-pr-commenter-action@7a44c5dcde5dfab737363e391800629e27b6376b # v1.3.1
-        with:
-          github_token: ${{ github.token }}
-          working_directory: "terraform"
+  # tfsec-pr-commenter:
+  #   name: tfsec PR commenter
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #     pull-requests: write
+  #   steps:
+  #     - name: Clone repo
+  #       uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+  #       with:
+  #         persist-credentials: false
+  #     - name: tfsec
+  #       uses: aquasecurity/tfsec-pr-commenter-action@7a44c5dcde5dfab737363e391800629e27b6376b # v1.3.1
+  #       with:
+  #         github_token: ${{ github.token }}
+  #         working_directory: "terraform"
 
   terraform_plan-staging:
     uses: ./.github/workflows/terraform_plan.yml
