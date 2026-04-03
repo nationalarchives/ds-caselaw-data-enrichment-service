@@ -35,7 +35,7 @@ repos:
         language_version: "1.24.6"
 
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v1.19.1
+    rev: v1.20.0
     hooks:
       - id: mypy
         name: mypy-src
