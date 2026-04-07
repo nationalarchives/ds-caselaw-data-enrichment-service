@@ -17,6 +17,8 @@ jobs:
   deploy_staging:
     name: Deploy Staging Build
     uses: ./.github/workflows/deploy_single_environment.yml
+    with:
+      environment: staging
     secrets:
       aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN }}
       account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
@@ -29,6 +31,8 @@ jobs:
     name: Deploy Production Build
     uses: ./.github/workflows/deploy_single_environment.yml
     needs: deploy_staging
+    with:
+      environment: production
     secrets:
       aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN_PROD }}
       account_id: ${{ secrets.PROD_ACCOUNT_ID }}

@@ -152,6 +152,8 @@ jobs:
     permissions:
       contents: read
       id-token: write
+    with:
+      environment: staging
     secrets:
       aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN }}
       account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
@@ -163,6 +165,8 @@ jobs:
     permissions:
       contents: read
       id-token: write
+    with:
+      environment: production
     secrets:
       aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN_PROD }}
       account_id: ${{ secrets.PROD_ACCOUNT_ID }}
