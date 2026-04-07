@@ -2,6 +2,10 @@ name: terraform_plan
 
 on:
   workflow_call:
+    inputs:
+      environment:
+        required: true
+        type: string
     secrets:
       aws_oidc_role_arn:
         required: true
@@ -15,6 +19,7 @@ on:
 jobs:
   terraform_plan:
     runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
     permissions:
       id-token: write
       contents: read
