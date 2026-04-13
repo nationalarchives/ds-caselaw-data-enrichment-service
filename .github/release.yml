@@ -1,0 +1,17 @@
+# .github/release.yml
+
+changelog:
+  categories:
+    - title: What's new
+      labels:
+        - "*"
+      exclude:
+        authors:
+          - "renovate[bot]"
+          - "renovate"
+    - title: Renovate
+      labels:
+        - "*"
+      authors:
+        - "renovate[bot]"
+        - "renovate"

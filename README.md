@@ -69,11 +69,13 @@ You will need access to for the staging or production Enrichment AWS space as ap
 
 If you run `scripts/get_schema`, the schema will be downloaded, and `scripts/validate_local <xmlfile>` will check it complies with the schema
 
-## Deploy
+## Deployment
 
-Currently, the `main` branch is deployed to staging, and if that doesn't fail, it is then deployed to production.
+<!-- last_review: 2026-04-13 -->
 
-#### Release Process
+Currently, the `main` branch is deployed to staging, and if that doesn't fail, it is then automatically deployed to production.
+
+## Release versioning
 
 The version should be an integer string (like "1"): note, however, that pre-December 2023 versions were version "0.1.0".
 

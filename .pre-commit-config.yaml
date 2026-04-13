@@ -62,6 +62,13 @@ repos:
         types_or: [yaml, json, xml, markdown, scss, javascript]
         exclude: "terraform/README.md"
 
+  - repo: https://github.com/renovatebot/pre-commit-hooks
+    rev: 43.110.14
+    hooks:
+      - id: renovate-config-validator
+        args: [--strict]
+        files: (^|/)renovate\\.json$
+
   - repo: https://github.com/woodruffw/zizmor-pre-commit
     rev: v1.23.1
     hooks:
