@@ -67,7 +67,7 @@ repos:
     hooks:
       - id: renovate-config-validator
         args: [--strict]
-        files: (^|/)renovate\\.json$
+        files: ^renovate\.json$
 
   - repo: https://github.com/woodruffw/zizmor-pre-commit
     rev: v1.23.1
