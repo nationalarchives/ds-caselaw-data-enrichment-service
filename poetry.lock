@@ -2448,24 +2448,24 @@ test = ["psleak", "pytest", "pytest-instafail", "pytest-xdist", "pywin32 ; os_na
 
 [[package]]
 name = "psycopg"
-version = "3.3.3"
+version = "3.3.4"
 description = "PostgreSQL database adapter for Python"
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "psycopg-3.3.3-py3-none-any.whl", hash = "sha256:f96525a72bcfade6584ab17e89de415ff360748c766f0106959144dcbb38c698"},
-    {file = "psycopg-3.3.3.tar.gz", hash = "sha256:5e9a47458b3c1583326513b2556a2a9473a1001a56c9efe9e587245b43148dd9"},
+    {file = "psycopg-3.3.4-py3-none-any.whl", hash = "sha256:b6bbc25ccf05c8fad3b061d9db2ef0909a555171b84b07f29458a447253d679a"},
+    {file = "psycopg-3.3.4.tar.gz", hash = "sha256:e21207764952cff81b6b8bdacad9a3939f2793367fdac2987b3aac36a651b5bc"},
 ]
 
 [package.dependencies]
 tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 
 [package.extras]
-binary = ["psycopg-binary (==3.3.3) ; implementation_name != \"pypy\""]
-c = ["psycopg-c (==3.3.3) ; implementation_name != \"pypy\""]
+binary = ["psycopg-binary (==3.3.4) ; implementation_name != \"pypy\""]
+c = ["psycopg-c (==3.3.4) ; implementation_name != \"pypy\""]
 dev = ["ast-comments (>=1.1.2)", "black (>=26.1.0)", "codespell (>=2.2)", "cython-lint (>=0.16)", "dnspython (>=2.1)", "flake8 (>=4.0)", "isort-psycopg", "isort[colors] (>=6.0)", "mypy (>=1.19.0)", "pre-commit (>=4.0.1)", "types-setuptools (>=57.4)", "types-shapely (>=2.0)", "wheel (>=0.37)"]
-docs = ["Sphinx (>=5.0)", "furo (==2022.6.21)", "sphinx-autobuild (>=2021.3.14)", "sphinx-autodoc-typehints (>=1.12)"]
+docs = ["Sphinx (>=9.1)", "furo (==2025.12.19)", "sphinx-autobuild (>=2025.8.25)", "sphinx-autodoc-typehints (>=3.10.2)"]
 pool = ["psycopg-pool"]
 test = ["anyio (>=4.0)", "mypy (>=1.19.0) ; implementation_name != \"pypy\"", "pproxy (>=2.7)", "pytest (>=6.2.5)", "pytest-cov (>=3.0)", "pytest-randomly (>=3.5)"]
 
@@ -4136,4 +4136,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.1"
 python-versions = "3.14.4"
-content-hash = "81446d232ca2b2c9162cd6abc5657d5ea38dac0b27233edab65888bfad7f1084"
+content-hash = "2893563b48a7edd7f321745d0f79d40bc9e07c5cd54c3d67a727cb4211fa104c"
