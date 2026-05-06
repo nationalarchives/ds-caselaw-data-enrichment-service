@@ -56,14 +56,14 @@ files = [
 
 [[package]]
 name = "aws-lambda-powertools"
-version = "3.28.0"
+version = "3.29.0"
 description = "Powertools for AWS Lambda (Python) is a developer toolkit to implement Serverless best practices and increase developer velocity."
 optional = false
 python-versions = "<4.0.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "aws_lambda_powertools-3.28.0-py3-none-any.whl", hash = "sha256:6db5996784913b4b3a7ff04943cefaef4089440569ecbc2180ce07f08dd87659"},
-    {file = "aws_lambda_powertools-3.28.0.tar.gz", hash = "sha256:8849bc4fb01562aa13f1530a456626192256081ce2cfdf0cb0836ad6cba3c6b1"},
+    {file = "aws_lambda_powertools-3.29.0-py3-none-any.whl", hash = "sha256:e9ca87b5a8a835a7f7e327d5bafa43b6e0c150c6cb8c6b42158b0814377edc7a"},
+    {file = "aws_lambda_powertools-3.29.0.tar.gz", hash = "sha256:a81ce122356343878e095a11bd38f3e9a70f3fa0fea57b10b327d1e8dfe82b6e"},
 ]
 
 [package.dependencies]
@@ -71,10 +71,10 @@ jmespath = ">=1.0.1,<2.0.0"
 typing-extensions = ">=4.11.0,<5.0.0"
 
 [package.extras]
-all = ["aws-encryption-sdk (>=3.1.1,<5.0.0)", "aws-xray-sdk (>=2.8.0,<3.0.0)", "fastjsonschema (>=2.14.5,<3.0.0)", "jsonpath-ng (>=1.6.0,<2.0.0)", "pydantic (>=2.4.0,<3.0.0)", "pydantic-settings (>=2.6.1,<3.0.0)"]
+all = ["aws-encryption-sdk (>=3.3.1,!=4.0.0,!=4.0.1,!=4.0.2,!=4.0.3,!=4.0.4,<5.0.0)", "aws-xray-sdk (>=2.8.0,<3.0.0)", "fastjsonschema (>=2.14.5,<3.0.0)", "jsonpath-ng (>=1.6.0,<2.0.0)", "pydantic (>=2.4.0,<3.0.0)", "pydantic-settings (>=2.6.1,<3.0.0)"]
 aws-sdk = ["boto3 (>=1.34.32,<2.0.0)"]
 datadog = ["datadog-lambda (>=8.114.0,<9.0.0)"]
-datamasking = ["aws-encryption-sdk (>=3.1.1,<5.0.0)", "jsonpath-ng (>=1.6.0,<2.0.0)"]
+datamasking = ["aws-encryption-sdk (>=3.3.1,!=4.0.0,!=4.0.1,!=4.0.2,!=4.0.3,!=4.0.4,<5.0.0)", "jsonpath-ng (>=1.6.0,<2.0.0)"]
 kafka-consumer-avro = ["avro (>=1.12.0,<2.0.0)"]
 kafka-consumer-protobuf = ["protobuf (>=6.30.2,<8.0.0)"]
 parser = ["pydantic (>=2.4.0,<3.0.0)"]
@@ -4134,4 +4134,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.1"
 python-versions = "3.14.4"
-content-hash = "224f96cd94d17a6e8906d71d13953a1b10ea801810f08346633cd24b5d99a7b6"
+content-hash = "499bbbd840d32d983c40597b816f7454e3bd0088ae9cb6f369e96e13086a498c"
