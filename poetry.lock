@@ -691,14 +691,14 @@ files = [
 
 [[package]]
 name = "certifi"
-version = "2026.2.25"
+version = "2026.4.22"
 description = "Python package for providing Mozilla's CA Bundle."
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "certifi-2026.2.25-py3-none-any.whl", hash = "sha256:027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa"},
-    {file = "certifi-2026.2.25.tar.gz", hash = "sha256:e887ab5cee78ea814d3472169153c2d12cd43b14bd03329a39a9c6e2e80bfba7"},
+    {file = "certifi-2026.4.22-py3-none-any.whl", hash = "sha256:3cb2210c8f88ba2318d29b0388d1023c8492ff72ecdde4ebdaddbb13a31b1c4a"},
+    {file = "certifi-2026.4.22.tar.gz", hash = "sha256:8d455352a37b71bf76a79caa83a3d6c25afee4a385d632127b6afb3963f1c580"},
 ]
 
 [[package]]
@@ -1286,19 +1286,19 @@ testing = ["coverage[toml] (>=5.0a4)", "pytest (>=4.6.11)", "setuptools (>=71.0.
 
 [[package]]
 name = "ds-caselaw-marklogic-api-client"
-version = "45.0.0"
+version = "46.1.1"
 description = "An API client for interacting with the underlying data in Find Caselaw."
 optional = false
 python-versions = "<4.0.0,>=3.12.0"
 groups = ["main"]
 files = [
-    {file = "ds_caselaw_marklogic_api_client-45.0.0-py3-none-any.whl", hash = "sha256:1a372fae3521a9ba51d52f9156eb5c23db561bbad5fd95a81a93b604f3cb7534"},
-    {file = "ds_caselaw_marklogic_api_client-45.0.0.tar.gz", hash = "sha256:8be378625e3cc86fa7253ccd4a5ca3ebb231847c442c56e2e96f9732691eba6f"},
+    {file = "ds_caselaw_marklogic_api_client-46.1.1-py3-none-any.whl", hash = "sha256:60fd30f610fa0944d59b8ed94155e21aac414c787dbe596b1dfcbfc1e2b85b84"},
+    {file = "ds_caselaw_marklogic_api_client-46.1.1.tar.gz", hash = "sha256:1f24cfec5bec937d7bb838dc854a291433f423be4695ef41489fd26318c0f044"},
 ]
 
 [package.dependencies]
-boto3 = ">=1.26.112,<2.0.0"
-certifi = ">=2026.2.25,<2026.3.0"
+boto3 = ">=1.43.3,<2.0.0"
+certifi = ">=2026.4.22,<2026.5.0"
 charset-normalizer = ">=3.0.0,<4.0.0"
 defusedxml = ">=0.7.1,<0.8.0"
 django-environ = ">=0.12.0"
@@ -1306,8 +1306,8 @@ ds-caselaw-utils = ">=4.0.0,<5.0.0"
 idna = ">=3.4,<4.0"
 lxml = ">=6.0.0,<7.0.0"
 memoization = ">=0.4.0,<0.5.0"
-mypy-boto3-s3 = ">=1.26.104,<2.0.0"
-mypy-boto3-sns = ">=1.26.69,<2.0.0"
+mypy-boto3-s3 = ">=1.43.0,<2.0.0"
+mypy-boto3-sns = ">=1.43.0,<2.0.0"
 pydantic = ">=2.12.3,<3.0.0"
 python-dateutil = ">=2.9.0-post.0,<3.0.0"
 pytz = ">2024"
@@ -4134,4 +4134,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.1"
 python-versions = "3.14.4"
-content-hash = "74f6edaafa6b265cdf2aa8a7abb162b2e8c311cea817f1a176ac1327bf688e0d"
+content-hash = "8bc6ca0ef9ddb160d8f1058169f3b9b90257a8cda28be930cc250bb931bb8df8"
