@@ -54,7 +54,7 @@ module "data" {
 
   aurora_rds = {
     "main" = {
-      engine_version = "16.8"
+      engine_version = "16.11"
       instance_type  = "db.t3.medium"
       allowed_security_groups = [
         module.network.default_security_group_id,
