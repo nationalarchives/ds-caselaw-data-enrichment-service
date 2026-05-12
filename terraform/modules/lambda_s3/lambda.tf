@@ -937,9 +937,13 @@ module "lambda-update-legislation-table" {
 
   # Lambda function declaration
   function_name = "${local.name}-${local.environment}-update-legislation-table"
-  package_type  = var.use_container_image == true ? "Image" : "Zip"
+
+  package_type   = "Image"
+  create_package = false
 
   runtime = "python3.12" # Setting runtime is required when building package in Docker and Lambda Layer resource.
+
+  image_uri = "${aws_ecr_repository.legislation-update.repository_url}:${var.container_image_tag}"
 
   # Deploy as code
   handler = "index.handler"
