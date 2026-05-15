@@ -1,5 +1,5 @@
 
-FROM public.ecr.aws/lambda/python:3.14@sha256:c78fae22ed86aedf25666c470abd39ef54e321ed215409a3742931c01bdd80aa
+FROM public.ecr.aws/lambda/python:3.14@sha256:df6e4a279456e8a85ae19b41126dd36e4241f0db2c30c8d5cd8fd836f845f809
 
 COPY index.py ${LAMBDA_TASK_ROOT}
 # Set the timezone
