@@ -1,4 +1,4 @@
-FROM public.ecr.aws/lambda/python:3.14@sha256:c747507eb32b1a643568441d24b5c7fb27935df48b50467791f34a4c09ca171e
+FROM public.ecr.aws/lambda/python:3.14@sha256:4c7451d2f2d3d76a9e01cc768894ae2915e5b54bcbb52f7586dbf4dd3a0bd641
 # FROM public.ecr.aws/lambda/python:3.12
 # Using AWS lambda image for Python 3.6 that can use the pre-built postgress driver library
 # FROM lambci/lambda:build-python3.6
