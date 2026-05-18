@@ -2725,14 +2725,14 @@ testing = ["covdefaults (>=2.3)", "coverage (>=7.13.4)", "pytest-mock (>=3.15.1)
 
 [[package]]
 name = "pytest-postgresql"
-version = "8.0.0"
+version = "8.1.0"
 description = "Postgresql fixtures and fixture factories for Pytest."
 optional = false
 python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "pytest_postgresql-8.0.0-py3-none-any.whl", hash = "sha256:125b63b16d630c2dea19807062ed4c96e6123f06058ce65b82b4b14174d6c4b8"},
-    {file = "pytest_postgresql-8.0.0.tar.gz", hash = "sha256:26cbd44a0adef76cf4a82a3a2263f0e029bc54b5863556a9bd86ca3edfa91cce"},
+    {file = "pytest_postgresql-8.1.0-py3-none-any.whl", hash = "sha256:0868bb3374fa4f454efd73ac1d7b23d2da623782044371b84d39f83a0893f56f"},
+    {file = "pytest_postgresql-8.1.0.tar.gz", hash = "sha256:ffd24027a28aba3d05a909fb03ee87d1d474574c3504f332d6047e8699170adc"},
 ]
 
 [package.dependencies]
@@ -4134,4 +4134,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.1"
 python-versions = "3.14.4"
-content-hash = "ddaf62e007b15cda4a730deee76d3086fe64a22421335e29fee8012f92a0a033"
+content-hash = "e669644f49b2455cc71abac3995b80e40f6b1ede2dec01f397493a9b919c240b"
