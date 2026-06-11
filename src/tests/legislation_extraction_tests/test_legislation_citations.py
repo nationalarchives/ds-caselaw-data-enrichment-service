@@ -4,17 +4,17 @@ import psycopg2
 import testing.postgresql
 from spacy.lang.en import English
 
-from legislation_extraction.legislation_matcher_hybrid import (
+from enrichment.legislation_extraction.legislation_matcher_hybrid import (
     detect_candidates,
     detect_year_span,
     lookup_pipe,
     resolve_overlap,
     search_for_act_fuzzy,
 )
-from legislation_extraction.legislation_matcher_hybrid import (
+from enrichment.legislation_extraction.legislation_matcher_hybrid import (
     exact_matcher as search_for_act,
 )
-from legislation_extraction.legislation_matcher_hybrid import (
+from enrichment.legislation_extraction.legislation_matcher_hybrid import (
     fuzzy_matcher as hybrid,
 )
 

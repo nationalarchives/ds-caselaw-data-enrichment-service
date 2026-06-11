@@ -5,7 +5,7 @@ from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from replacer.second_stage_replacer import (
+from enrichment.replacer.second_stage_replacer import (
     create_replacement_paragraph,
     replace_references_by_paragraph,
 )

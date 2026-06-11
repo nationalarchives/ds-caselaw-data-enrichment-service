@@ -3,7 +3,7 @@
 import unittest
 from pathlib import Path
 
-from oblique_references.enrich_oblique_references import (
+from enrichment.oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
 from utils.compare_xml import assert_equal_xml

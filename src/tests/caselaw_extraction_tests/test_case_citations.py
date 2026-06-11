@@ -12,8 +12,8 @@ import testing.postgresql
 from spacy.lang.en import English
 from sqlalchemy import create_engine
 
-from caselaw_extraction.correction_strategies import apply_correction_strategy
 from database.db_connection import get_matched_rule
+from enrichment.caselaw_extraction.correction_strategies import apply_correction_strategy
 
 CORRECT_CITATIONS = [
     "random text goes here random text goes here **[2022] UKUT 177 (TCC)",
@@ -70,7 +70,7 @@ def mock_return_citation(nlp, text, db_conn):
     )
 
 
-FIXTURE_DIR = Path(__file__).parent.parent.parent.resolve() / "caselaw_extraction/rules"
+FIXTURE_DIR = Path(__file__).parent.parent.parent.resolve() / "enrichment/caselaw_extraction/rules"
 
 
 class TestCitationProcessor(unittest.TestCase):

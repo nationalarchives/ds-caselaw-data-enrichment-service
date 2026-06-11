@@ -4,7 +4,7 @@ import json
 import unittest
 from collections import namedtuple
 
-from replacer.replacer import encode_replacements_to_string
+from enrichment.replacer.replacer import encode_replacements_to_string
 
 
 class TestWriteReplacementsFile(unittest.TestCase):
