@@ -2,24 +2,17 @@ from unittest.mock import patch
 
 import boto3
 import pandas as pd
+import psycopg2
 import pytest
+import testing.postgresql
 from index import update_legislation_table
 from moto import mock_aws
-from pytest_postgresql import factories
-
-postgresql_my_proc = factories.postgresql_proc(
-    user="testuser",
-    host="localhost",
-    port=5431,
-    dbname="testdb",
-    password="secret_password",  # noqa: S106
-)
-postgresql_my = factories.postgresql("postgresql_my_proc")
 
 
 @pytest.fixture
-def test_db_connection(postgresql_my):
-    conn = postgresql_my
+def test_db_connection():
+    postgresql = testing.postgresql.Postgresql()
+    conn = psycopg2.connect(**postgresql.dsn())
     conn.autocommit = True
     sql_query = """
     CREATE TABLE ukpga_lookup (
@@ -39,8 +32,10 @@ def test_db_connection(postgresql_my):
         ('b', 'b_title', 'b_ref_version', 'b_shorttitle', 'b_citation', 'b_acronymcitation', 2001, 'b_candidate_titles', true)
     """
     conn.cursor().execute(sql_query)
-    yield conn
+    yield conn, postgresql
     conn.cursor().execute("DROP TABLE ukpga_lookup")
+    conn.close()
+    postgresql.stop()
 
 
 @pytest.fixture(scope="function")
@@ -90,17 +85,21 @@ def test_update_legislation_table(
 
     monkeypatch.setenv("SPARQL_USERNAME", "test_user")
     monkeypatch.setenv("SPARQL_PASSWORD", "test_password")
-    monkeypatch.setenv("DATABASE_NAME", "testdb")
-    monkeypatch.setenv("DATABASE_USERNAME", "testuser")
-    monkeypatch.setenv("DATABASE_HOSTNAME", "localhost")
-    monkeypatch.setenv("DATABASE_PORT", "5431")
+    conn, postgresql = test_db_connection
+    dsn = postgresql.dsn()
+    monkeypatch.setenv("DATABASE_NAME", dsn["database"])
+    monkeypatch.setenv("DATABASE_USERNAME", dsn["user"])
+    monkeypatch.setenv("DATABASE_HOSTNAME", dsn["host"])
+    monkeypatch.setenv("DATABASE_PORT", str(dsn["port"]))
     monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", setup_moto_secrets_manager["secret_name"])
     monkeypatch.setenv("REGION_NAME", setup_moto_secrets_manager["region_name"])
 
     trigger_date = 7
     update_legislation_table(trigger_date)
     mock_fetch_legislation.assert_called_with("test_user", "test_password", 7)
-    rows = test_db_connection.cursor().execute("SELECT * FROM ukpga_lookup").fetchall()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM ukpga_lookup")
+    rows = cursor.fetchall()
     assert rows == [
         (
             "a",

@@ -7,10 +7,10 @@ from pathlib import Path
 import pytest
 from caselawclient.content_hash import get_hash_from_document
 
-from oblique_references.enrich_oblique_references import (
+from enrichment.oblique_references.enrich_oblique_references import (
     enrich_oblique_references,
 )
-from oblique_references.oblique_references import (
+from enrichment.oblique_references.oblique_references import (
     LegislationReferenceReplacement,
     NotExactlyOneRefTag,
     create_legislation_dict,
@@ -18,7 +18,7 @@ from oblique_references.oblique_references import (
     get_oblique_reference_replacements_by_paragraph,
     get_replacements,
 )
-from replacer.second_stage_replacer import replace_references
+from enrichment.replacer.second_stage_replacer import replace_references
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 

@@ -1,6 +1,6 @@
 import unittest
 
-from replacer.replacer_pipeline import (
+from enrichment.replacer.replacer_pipeline import (
     fixed_year,
     replacer_abbr,
     replacer_caselaw,
