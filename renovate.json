@@ -7,6 +7,12 @@
       "matchManagers": ["dockerfile"],
       "matchUpdateTypes": ["digest"],
       "automerge": true
+    },
+    {
+      "description": "Keep Python pinned to 3.13.x (no automatic 3.14+ bumps)",
+      "matchManagers": ["dockerfile", "pep621", "poetry"],
+      "matchPackageNames": ["python", "public.ecr.aws/lambda/python"],
+      "allowedVersions": "<3.14"
     }
   ]
 }
