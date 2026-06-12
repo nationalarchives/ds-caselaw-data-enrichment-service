@@ -1,5 +1,6 @@
 from sqlalchemy import create_engine, text
-from testing.postgresql import Postgresql
+
+from tests.postgres_test_factory import postgres_instance
 
 from ..database import remove_duplicates
 
@@ -11,7 +12,7 @@ def test_remove_duplicates():
     Then the number of rows in the table should be reduced
         due to the removed duplicates
     """
-    with Postgresql() as postgresql:
+    with postgres_instance() as postgresql:
         engine = create_engine(postgresql.url())
         with engine.connect() as conn:
             conn.execute(text("CREATE TABLE test_table (name VARCHAR(255), age INTEGER)"))

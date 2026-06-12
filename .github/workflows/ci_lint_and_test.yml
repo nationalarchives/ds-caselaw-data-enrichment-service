@@ -11,6 +11,22 @@ jobs:
   run-tests:
     name: Run tests
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: testdb
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d testdb"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      TEST_POSTGRES_URL: postgresql://postgres:postgres@127.0.0.1:5432/testdb
     steps:
       - name: Checkout source code
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
@@ -23,12 +39,15 @@ jobs:
         with:
           python-version: "3.13"
 
-      - name: pip install tests dependencies
-        run: |
-          pip3 install -r src/tests/requirements.txt
+      - name: Install Poetry
+        run: pip3 install poetry==2.1.3
 
-      - name: Run python tests with coverage
-        run: pytest -rsax -vvvv --cov --cov-branch --cov-report=xml
+      - name: Install dependencies
+        run: |
+          poetry install --no-interaction --no-root
+
+      - name: Run tests via make
+        run: make test TEST_ARGS='-rsax -vvvv --cov --cov-branch --cov-report=xml'
 
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@e79a6962e0d4c0c17b229090214935d2e33f8354 # v6.0.1

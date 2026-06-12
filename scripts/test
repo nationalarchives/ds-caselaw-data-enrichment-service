@@ -1,1 +1,1 @@
-pytest $*
+bash "$(dirname "$0")/test_with_postgres.sh" "$@"

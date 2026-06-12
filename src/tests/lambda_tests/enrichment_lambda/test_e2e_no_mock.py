@@ -1,8 +1,8 @@
 import psycopg2
 from moto import mock_aws
-from testing.postgresql import Postgresql
 
 from lambdas.enrichment_lambda.index import enrich_xml_file
+from tests.postgres_test_factory import postgres_instance
 
 
 def _create_lookup_table(pg_dsn: dict) -> None:
@@ -45,7 +45,7 @@ def _create_lookup_table(pg_dsn: dict) -> None:
 
 
 def test_enrich_xml_file_end_to_end_without_unittest_mock(monkeypatch):
-    with Postgresql() as pg:
+    with postgres_instance() as pg:
         pg_dsn = pg.dsn()
         _create_lookup_table(pg_dsn)
 

@@ -4,17 +4,18 @@ import boto3
 import pandas as pd
 import psycopg2
 import pytest
-import testing.postgresql
 from index import update_legislation_table
 from moto import mock_aws
+
+from tests.postgres_test_factory import postgres_instance
 
 
 @pytest.fixture
 def test_db_connection():
-    postgresql = testing.postgresql.Postgresql()
-    conn = psycopg2.connect(**postgresql.dsn())
-    conn.autocommit = True
-    sql_query = """
+    with postgres_instance() as postgresql:
+        conn = psycopg2.connect(**postgresql.dsn())
+        conn.autocommit = True
+        sql_query = """
     CREATE TABLE ukpga_lookup (
         ref VARCHAR(100) NOT NULL,
         title VARCHAR(100) NOT NULL,
@@ -31,11 +32,10 @@ def test_db_connection():
         ('a', 'a_title', 'a_ref_version', 'a_shorttitle', 'a_citation', 'a_acronymcitation', 2001, 'a_candidate_titles', true),
         ('b', 'b_title', 'b_ref_version', 'b_shorttitle', 'b_citation', 'b_acronymcitation', 2001, 'b_candidate_titles', true)
     """
-    conn.cursor().execute(sql_query)
-    yield conn, postgresql
-    conn.cursor().execute("DROP TABLE ukpga_lookup")
-    conn.close()
-    postgresql.stop()
+        conn.cursor().execute(sql_query)
+        yield conn, postgresql
+        conn.cursor().execute("DROP TABLE ukpga_lookup")
+        conn.close()
 
 
 @pytest.fixture(scope="function")

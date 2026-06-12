@@ -8,12 +8,12 @@ from pathlib import Path
 
 import pandas as pd
 import psycopg2
-import testing.postgresql
 from spacy.lang.en import English
 from sqlalchemy import create_engine
 
 from database.db_connection import get_matched_rule
 from enrichment.caselaw_extraction.correction_strategies import apply_correction_strategy
+from tests.postgres_test_factory import postgres_for_unittest
 
 CORRECT_CITATIONS = [
     "random text goes here random text goes here **[2022] UKUT 177 (TCC)",
@@ -85,15 +85,12 @@ class TestCitationProcessor(unittest.TestCase):
         self.nlp.max_length = 1500000
         self.nlp.add_pipe("entity_ruler").from_disk(f"{FIXTURE_DIR}/citation_patterns.jsonl")
 
-        self.postgresql = testing.postgresql.Postgresql()
+        self.postgresql = postgres_for_unittest(self)
         self.db_conn = psycopg2.connect(**self.postgresql.dsn())
         engine = create_engine(self.postgresql.url())
 
         manifest_df = pd.read_csv(f"{FIXTURE_DIR}/2022_06_30_Citation_Manifest.csv")
         manifest_df.to_sql("manifest", engine, if_exists="append", index=False)
-
-    def tearDown(self):
-        self.postgresql.stop()
 
     # Handling extra characters around the citations to ensure that spacy handles it well
     def test_citation_matching(self):

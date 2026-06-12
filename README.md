@@ -15,12 +15,35 @@ Marks up judgments in [Find Case Law](https://caselaw.nationalarchives.gov.uk) w
 
 ## Tests
 
-There is a suite of tests that can be run locally with `pytest -m "not integration"` or `scripts/test`
-but you'll need to ensure you've installed the requirements in `src/tests/requirements.txt`
+There is a suite of tests that can be run locally with `make test` (or `scripts/test`).
+This command automatically handles PostgreSQL for DB-backed tests:
+
+- If `TEST_POSTGRES_URL` is already set, it is used.
+- Else, it starts an ephemeral Docker PostgreSQL container, runs tests, and tears it down.
+
+Prerequisite for `make test`:
+
+- Docker must be installed and running, unless you provide `TEST_POSTGRES_URL` to an existing PostgreSQL instance.
+
+You'll still need the project dependencies installed via Poetry.
+
+If you want to force a specific database, set `TEST_POSTGRES_URL` explicitly:
+
+```bash
+docker run --rm --name enrichment-test-pg \
+  -e POSTGRES_PASSWORD=postgres \
+  -e POSTGRES_DB=testdb \
+  -p 55432:5432 postgres:16
+
+TEST_POSTGRES_URL='postgresql://postgres:postgres@127.0.0.1:55432/testdb' \
+PYTHONPATH=src poetry run pytest -q
+```
+
+DB-backed tests require `TEST_POSTGRES_URL`; `make test` sets this automatically.
 
 You can also obtain a test coverage report with `coverage run --source . -m pytest && coverage report`
 
-The tests are currently run in CI as specified in `.github/workflows/ci_lint_and_test.yml`
+The tests are run in CI via the same `make test` entrypoint, configured in `.github/workflows/ci_lint_and_test.yml`.
 
 ## Turning Enrichment Off
 
