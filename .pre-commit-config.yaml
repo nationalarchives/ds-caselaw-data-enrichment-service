@@ -15,7 +15,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.15.16
+    rev: v0.15.17
     hooks:
       - id: ruff
         args: [--fix, --exit-non-zero-on-fix]
@@ -50,7 +50,7 @@ repos:
             types-psycopg2==2.9.21.20260518,
             pandas-stubs==3.0.0.260204,
             pytest-stub==1.1.0,
-            "boto3-stubs[essential, secretsmanager]==1.43.26",
+            "boto3-stubs[essential, secretsmanager]==1.43.29",
             aws_lambda_powertools==3.29.0,
             moto==5.2.2,
           ]
@@ -63,7 +63,7 @@ repos:
         exclude: "terraform/README.md"
 
   - repo: https://github.com/renovatebot/pre-commit-hooks
-    rev: 43.217.1
+    rev: 43.218.0
     hooks:
       - id: renovate-config-validator
         args: [--strict]
