@@ -6,7 +6,7 @@ from lambdas.make_replacements.index import process_event
 
 @mock_aws
 def test_process_event_multiple_replacements():
-    s3 = boto3.client("s3")
+    s3 = boto3.client("s3", region_name="us-east-1")
     # Create all required buckets
     s3.create_bucket(Bucket="source-bucket")
     s3.create_bucket(Bucket="dest-bucket")
@@ -70,7 +70,7 @@ def test_process_event_multiple_replacements():
 
 @mock_aws
 def test_process_event_no_replacements_needed():
-    s3 = boto3.client("s3")
+    s3 = boto3.client("s3", region_name="us-east-1")
     # Create all required buckets
     s3.create_bucket(Bucket="source-bucket")
     s3.create_bucket(Bucket="dest-bucket")

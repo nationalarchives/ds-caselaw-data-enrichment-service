@@ -1,7 +1,6 @@
 import unittest
 
 import psycopg2
-import testing.postgresql
 from spacy.lang.en import English
 
 from legislation_extraction.legislation_matcher_hybrid import (
@@ -17,6 +16,7 @@ from legislation_extraction.legislation_matcher_hybrid import (
 from legislation_extraction.legislation_matcher_hybrid import (
     fuzzy_matcher as hybrid,
 )
+from tests.postgres_test_factory import postgres_for_unittest
 
 """
     Testing the matching of legislation based on the data found in the lookup table.
@@ -28,7 +28,7 @@ class TestLegislationProcessor(unittest.TestCase):
     def setUp(self):
         self.nlp = English()
         self.nlp.max_length = 1500000
-        self.postgresql = testing.postgresql.Postgresql()
+        self.postgresql = postgres_for_unittest(self)
         self.db_conn = psycopg2.connect(**self.postgresql.dsn())
 
         sql_query = """
@@ -48,9 +48,6 @@ class TestLegislationProcessor(unittest.TestCase):
 
         cursor = self.db_conn.cursor()
         cursor.execute(sql_query)
-
-    def tearDown(self):
-        self.postgresql.stop()
 
     def test_resolve_overlap_without_overlap(self):
         results = {

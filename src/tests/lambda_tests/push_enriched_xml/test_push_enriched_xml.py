@@ -32,7 +32,7 @@ def test_push_enriched_xml(requests_mock, monkeypatch, source_key_prefix):
     """
 
     # Setup mock S3
-    s3 = boto3.client("s3")
+    s3 = boto3.client("s3", region_name="us-east-1")
     s3.create_bucket(Bucket="test_bucket")
 
     # Non-canonical XML: redundant xmlns on child
