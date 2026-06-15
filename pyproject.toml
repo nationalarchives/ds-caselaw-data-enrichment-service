@@ -1,7 +1,7 @@
 [project]
 version="6.0.1"
 name="data-enrichment"
-requires-python = ">=3.12"
+requires-python = ">=3.12,<3.13"
 
 [tool.pytest.ini_options]
 markers = ["integration: requires access to legislation SPARQL endpoint"]
@@ -51,7 +51,7 @@ authors = ["David McKee <david.mckee@dxw.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "3.13.*"
+python = ">=3.12,<3.13"
 spacy = "3.8.14"
 pandas = "2.3.3"
 psycopg2 = "2.9.12"
