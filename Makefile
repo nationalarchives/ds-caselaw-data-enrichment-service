@@ -1,9 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: test test-unit
+.PHONY: test
 
 test:
-	bash scripts/test_with_postgres.sh $(TEST_ARGS)
-
-test-unit:
-	PYTHONPATH=src poetry run pytest -m "not integration"
+	poetry run pytest ${TEST_ARGS}
