@@ -5,42 +5,6 @@ import pandas as pd
 import pytest
 from index import update_legislation_table
 from moto import mock_aws
-from sqlalchemy import create_engine
-from testcontainers.postgres import PostgresContainer
-
-
-@pytest.fixture
-def test_db_connection():
-
-    postgres = PostgresContainer("postgres:17")
-    postgres.start()
-
-    engine = create_engine(postgres.get_connection_url())
-    conn = engine.connect()
-    conn.execution_options(isolation_level="AUTOCOMMIT")
-
-    sql_query = """
-    CREATE TABLE ukpga_lookup (
-        ref VARCHAR(100) NOT NULL,
-        title VARCHAR(100) NOT NULL,
-        ref_version VARCHAR(100) NOT NULL,
-        shorttitle VARCHAR(100) NOT NULL,
-        citation VARCHAR(100) NOT NULL,
-        acronymcitation VARCHAR(100) NOT NULL,
-        year BIGINT NOT NULL,
-        candidate_titles VARCHAR(100) NOT NULL,
-        for_fuzzy BOOLEAN NOT NULL
-    );
-    INSERT INTO ukpga_lookup (ref, title, ref_version, shorttitle, citation, acronymcitation, year, candidate_titles, for_fuzzy)
-    VALUES
-        ('a', 'a_title', 'a_ref_version', 'a_shorttitle', 'a_citation', 'a_acronymcitation', 2001, 'a_candidate_titles', true),
-        ('b', 'b_title', 'b_ref_version', 'b_shorttitle', 'b_citation', 'b_acronymcitation', 2001, 'b_candidate_titles', true)
-    """
-    conn.exec_driver_sql(sql_query)
-
-    yield conn
-
-    conn.close()
 
 
 @pytest.fixture(scope="function")
@@ -61,7 +25,8 @@ def test_update_legislation_table(
     mock_fetch_legislation,
     monkeypatch,
     setup_moto_secrets_manager,
-    test_db_connection,
+    manifest_table,
+    db_connection,
 ):
     """
     Given a postgres database and valid environment variables matching this database
@@ -86,8 +51,28 @@ def test_update_legislation_table(
 
     monkeypatch.setenv("SPARQL_USERNAME", "test_user")
     monkeypatch.setenv("SPARQL_PASSWORD", "test_password")
-    conn = test_db_connection
-    dsn = conn.engine.url
+
+    sql_query = """
+    CREATE TABLE ukpga_lookup (
+        ref VARCHAR(100) NOT NULL,
+        title VARCHAR(100) NOT NULL,
+        ref_version VARCHAR(100) NOT NULL,
+        shorttitle VARCHAR(100) NOT NULL,
+        citation VARCHAR(100) NOT NULL,
+        acronymcitation VARCHAR(100) NOT NULL,
+        year BIGINT NOT NULL,
+        candidate_titles VARCHAR(100) NOT NULL,
+        for_fuzzy BOOLEAN NOT NULL
+    );
+    INSERT INTO ukpga_lookup (ref, title, ref_version, shorttitle, citation, acronymcitation, year, candidate_titles, for_fuzzy)
+    VALUES
+        ('a', 'a_title', 'a_ref_version', 'a_shorttitle', 'a_citation', 'a_acronymcitation', 2001, 'a_candidate_titles', true),
+        ('b', 'b_title', 'b_ref_version', 'b_shorttitle', 'b_citation', 'b_acronymcitation', 2001, 'b_candidate_titles', true)
+    """
+    with db_connection.begin():
+        db_connection.exec_driver_sql(sql_query)
+
+    dsn = db_connection.engine.url
 
     client = boto3.client("secretsmanager", region_name=setup_moto_secrets_manager["region_name"])
     client.create_secret(Name=setup_moto_secrets_manager["secret_name"], SecretString=dsn.password)
@@ -102,9 +87,10 @@ def test_update_legislation_table(
     trigger_date = 7
     update_legislation_table(trigger_date)
     mock_fetch_legislation.assert_called_with("test_user", "test_password", 7)
-    with conn.connection.cursor() as cursor:
+    with db_connection.connection.cursor() as cursor:
         cursor.execute("SELECT * FROM ukpga_lookup")
         rows = cursor.fetchall()
+
     assert rows == [
         (
             "a",

@@ -41,6 +41,18 @@ No local PostgreSQL installation is required
 - Docker must be installed and running (required by Testcontainers)
 - Python dependencies must be installed via Poetry
 
+#### Test contribution
+
+Test configuration is managed via pytest fixtures in `conftest.py`
+These fixtures automatically set up shared resources such as:
+
+- A temporary PostgreSQL instance using testcontainers
+- SQLAlchemy database engine and connections
+- NLP pipeline (spaCy with entity ruler loaded from fixtures)
+- Preloaded database tables for integration tests
+
+This means tests do not require any manual database setup or external services.
+
 #### Test behaviour
 
 - Tests run in isolation
