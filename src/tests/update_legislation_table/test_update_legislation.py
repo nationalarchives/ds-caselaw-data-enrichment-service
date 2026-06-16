@@ -2,20 +2,24 @@ from unittest.mock import patch
 
 import boto3
 import pandas as pd
-import psycopg2
 import pytest
 from index import update_legislation_table
 from moto import mock_aws
-
-from tests.postgres_test_factory import postgres_instance
+from sqlalchemy import create_engine
+from testcontainers.postgres import PostgresContainer
 
 
 @pytest.fixture
 def test_db_connection():
-    with postgres_instance() as postgresql:
-        conn = psycopg2.connect(**postgresql.dsn())
-        conn.autocommit = True
-        sql_query = """
+
+    postgres = PostgresContainer("postgres:17")
+    postgres.start()
+
+    engine = create_engine(postgres.get_connection_url())
+    conn = engine.connect()
+    conn.execution_options(isolation_level="AUTOCOMMIT")
+
+    sql_query = """
     CREATE TABLE ukpga_lookup (
         ref VARCHAR(100) NOT NULL,
         title VARCHAR(100) NOT NULL,
@@ -32,10 +36,11 @@ def test_db_connection():
         ('a', 'a_title', 'a_ref_version', 'a_shorttitle', 'a_citation', 'a_acronymcitation', 2001, 'a_candidate_titles', true),
         ('b', 'b_title', 'b_ref_version', 'b_shorttitle', 'b_citation', 'b_acronymcitation', 2001, 'b_candidate_titles', true)
     """
-        conn.cursor().execute(sql_query)
-        yield conn, postgresql
-        conn.cursor().execute("DROP TABLE ukpga_lookup")
-        conn.close()
+    conn.exec_driver_sql(sql_query)
+
+    yield conn
+
+    conn.close()
 
 
 @pytest.fixture(scope="function")
@@ -81,25 +86,25 @@ def test_update_legislation_table(
 
     monkeypatch.setenv("SPARQL_USERNAME", "test_user")
     monkeypatch.setenv("SPARQL_PASSWORD", "test_password")
-    conn, postgresql = test_db_connection
-    dsn = postgresql.dsn()
+    conn = test_db_connection
+    dsn = conn.engine.url
 
     client = boto3.client("secretsmanager", region_name=setup_moto_secrets_manager["region_name"])
-    client.create_secret(Name=setup_moto_secrets_manager["secret_name"], SecretString=dsn["password"])
+    client.create_secret(Name=setup_moto_secrets_manager["secret_name"], SecretString=dsn.password)
 
-    monkeypatch.setenv("DATABASE_NAME", dsn["database"])
-    monkeypatch.setenv("DATABASE_USERNAME", dsn["user"])
-    monkeypatch.setenv("DATABASE_HOSTNAME", dsn["host"])
-    monkeypatch.setenv("DATABASE_PORT", str(dsn["port"]))
+    monkeypatch.setenv("DATABASE_NAME", dsn.database)
+    monkeypatch.setenv("DATABASE_USERNAME", dsn.username)
+    monkeypatch.setenv("DATABASE_HOSTNAME", dsn.host)
+    monkeypatch.setenv("DATABASE_PORT", str(dsn.port))
     monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", setup_moto_secrets_manager["secret_name"])
     monkeypatch.setenv("REGION_NAME", setup_moto_secrets_manager["region_name"])
 
     trigger_date = 7
     update_legislation_table(trigger_date)
     mock_fetch_legislation.assert_called_with("test_user", "test_password", 7)
-    cursor = conn.cursor()
-    cursor.execute("SELECT * FROM ukpga_lookup")
-    rows = cursor.fetchall()
+    with conn.connection.cursor() as cursor:
+        cursor.execute("SELECT * FROM ukpga_lookup")
+        rows = cursor.fetchall()
     assert rows == [
         (
             "a",

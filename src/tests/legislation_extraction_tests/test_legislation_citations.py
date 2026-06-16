@@ -1,7 +1,8 @@
 import unittest
 
-import psycopg2
 from spacy.lang.en import English
+from sqlalchemy import create_engine
+from testcontainers.postgres import PostgresContainer
 
 from legislation_extraction.legislation_matcher_hybrid import (
     detect_candidates,
@@ -16,7 +17,6 @@ from legislation_extraction.legislation_matcher_hybrid import (
 from legislation_extraction.legislation_matcher_hybrid import (
     fuzzy_matcher as hybrid,
 )
-from tests.postgres_test_factory import postgres_for_unittest
 
 """
     Testing the matching of legislation based on the data found in the lookup table.
@@ -28,8 +28,10 @@ class TestLegislationProcessor(unittest.TestCase):
     def setUp(self):
         self.nlp = English()
         self.nlp.max_length = 1500000
-        self.postgresql = postgres_for_unittest(self)
-        self.db_conn = psycopg2.connect(**self.postgresql.dsn())
+
+        self.postgres = PostgresContainer("postgres:17")
+        self.postgres.start()
+        self.db_conn = create_engine(self.postgres.get_connection_url())
 
         sql_query = """
         CREATE TABLE ukpga_lookup (
@@ -46,8 +48,10 @@ class TestLegislationProcessor(unittest.TestCase):
             ('ghi', 'ref_ghi', 'citation_ghi', 2002, false);
         """
 
-        cursor = self.db_conn.cursor()
-        cursor.execute(sql_query)
+        self.db_conn = create_engine(self.postgres.get_connection_url())
+
+        with self.db_conn.begin() as conn:
+            conn.exec_driver_sql(sql_query)
 
     def test_resolve_overlap_without_overlap(self):
         results = {
