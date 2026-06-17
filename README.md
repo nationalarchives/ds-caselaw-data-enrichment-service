@@ -40,6 +40,12 @@ No local PostgreSQL installation is required
 
 - Docker must be installed and running (required by Testcontainers)
 - Python dependencies must be installed via Poetry
+- On Mac: libpq must be installed and set on PATH:
+
+```bash
+brew install libpq
+PATH="/opt/homebrew/opt/libpq/bin:$PATH" && make test
+```
 
 #### Test contribution
 
