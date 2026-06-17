@@ -15,12 +15,69 @@ Marks up judgments in [Find Case Law](https://caselaw.nationalarchives.gov.uk) w
 
 ## Tests
 
-There is a suite of tests that can be run locally with `pytest -m "not integration"` or `scripts/test`
-but you'll need to ensure you've installed the requirements in `src/tests/requirements.txt`
+There is a suite of tests that can be run locally with:
 
-You can also obtain a test coverage report with `coverage run --source . -m pytest && coverage report`
+```bash
+make test
+```
 
-The tests are currently run in CI as specified in `.github/workflows/ci_lint_and_test.yml`
+or directly:
+
+```bash
+PYTHONPATH=src poetry run pytest
+```
+
+### Database-backed tests
+
+Some tests require a PostgreSQL database. This is handled automatically using
+Testcontainers:
+
+Each test (or test fixture) starts a temporary PostgreSQL container
+The container is created and destroyed automatically during the test run
+No local PostgreSQL installation is required
+
+#### Prerequisites
+
+- Docker must be installed and running (required by Testcontainers)
+- Python dependencies must be installed via Poetry
+- On Mac: libpq must be installed and set on PATH:
+
+```bash
+brew install libpq
+PATH="/opt/homebrew/opt/libpq/bin:$PATH" && make test
+```
+
+#### Test contribution
+
+Test configuration is managed via pytest fixtures in `conftest.py`
+These fixtures automatically set up shared resources such as:
+
+- A temporary PostgreSQL instance using testcontainers
+- SQLAlchemy database engine and connections
+- NLP pipeline (spaCy with entity ruler loaded from fixtures)
+- Preloaded database tables for integration tests
+
+This means tests do not require any manual database setup or external services.
+
+#### Test behaviour
+
+- Tests run in isolation
+- A fresh PostgreSQL instance is created per test (or per fixture scope)
+- No manual database setup is required
+
+### Coverage report
+
+You can obtain a coverage report with:
+
+```bash
+coverage run --source . -m pytest
+coverage report
+```
+
+### CI execution
+
+Tests are executed in CI as part of the GitHub Actions workflow
+(.github/workflows/ci_lint_and_test.yml).
 
 ## Turning Enrichment Off
 

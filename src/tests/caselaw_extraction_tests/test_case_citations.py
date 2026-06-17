@@ -3,14 +3,7 @@ Testing the matching of the citations based on the data found in the rules.
 These are independent unit tests.
 """
 
-import unittest
-from pathlib import Path
-
-import pandas as pd
-import psycopg2
-import testing.postgresql
-from spacy.lang.en import English
-from sqlalchemy import create_engine
+import pytest
 
 from caselaw_extraction.correction_strategies import apply_correction_strategy
 from database.db_connection import get_matched_rule
@@ -70,35 +63,20 @@ def mock_return_citation(nlp, text, db_conn):
     )
 
 
-FIXTURE_DIR = Path(__file__).parent.parent.parent.resolve() / "caselaw_extraction/rules"
-
-
-class TestCitationProcessor(unittest.TestCase):
+@pytest.mark.integration
+class TestCitationProcessor:
     """
-    This class focuses on testing the Citation Processor, which gathers the results from the DB. This class primarily uses the mock_return_citation method.
-    This includes testing incorrect or missing citations.
-    This is relevant for the logic performed in main.py
+    Tests the Citation Processor, which resolves citations from the database.
+
+    Focus:
+    - spaCy entity matching
+    - DB-backed citation resolution
+    - correctness of canonical / non-canonical classification
     """
 
-    def setUp(self):
-        self.nlp = English()
-        self.nlp.max_length = 1500000
-        self.nlp.add_pipe("entity_ruler").from_disk(f"{FIXTURE_DIR}/citation_patterns.jsonl")
-
-        self.postgresql = testing.postgresql.Postgresql()
-        self.db_conn = psycopg2.connect(**self.postgresql.dsn())
-        engine = create_engine(self.postgresql.url())
-
-        manifest_df = pd.read_csv(f"{FIXTURE_DIR}/2022_06_30_Citation_Manifest.csv")
-        manifest_df.to_sql("manifest", engine, if_exists="append", index=False)
-
-    def tearDown(self):
-        self.postgresql.stop()
-
-    # Handling extra characters around the citations to ensure that spacy handles it well
-    def test_citation_matching(self):
-        # including additional text around the citation to handling the parsing
+    def test_citation_matching(self, nlp, db_connection, manifest_table):
         text = "!!!!!!!_________[2047] Costs LR 123_____"
+
         (
             citation_match,
             family,
@@ -107,10 +85,12 @@ class TestCitationProcessor(unittest.TestCase):
             is_canonical,
             citation_type,
             canonical_form,
-        ) = mock_return_citation(self.nlp, text, self.db_conn)
+        ) = mock_return_citation(nlp, text, db_connection)
+
         assert is_canonical is True
 
         text = "[2022] UKFTT 2020__0341 (GRC)"
+
         (
             citation_match,
             family,
@@ -119,10 +99,12 @@ class TestCitationProcessor(unittest.TestCase):
             is_canonical,
             citation_type,
             canonical_form,
-        ) = mock_return_citation(self.nlp, text, self.db_conn)
+        ) = mock_return_citation(nlp, text, db_connection)
+
         assert is_canonical is None
 
         text = "amy [2022] KB 123"
+
         (
             citation_match,
             family,
@@ -131,132 +113,123 @@ class TestCitationProcessor(unittest.TestCase):
             is_canonical,
             citation_type,
             canonical_form,
-        ) = mock_return_citation(self.nlp, text, self.db_conn)
+        ) = mock_return_citation(nlp, text, db_connection)
+
         assert is_canonical is True
 
-    # for correct citations - ensure it finds that it is canonical
-    def test_correct_canonical(self):
+    def test_correct_canonical(self, nlp, db_connection, manifest_table):
         for text in CORRECT_CITATIONS:
-            (
-                citation_match,
-                family,
-                URItemplate,
-                is_neutral,
-                is_canonical,
-                citation_type,
-                canonical_form,
-            ) = mock_return_citation(self.nlp, text, self.db_conn)
-            print("Testing: " + text)
+            _, _, _, _, is_canonical, _, _ = mock_return_citation(
+                nlp,
+                text,
+                db_connection,
+            )
             assert is_canonical is True
 
-    # for correct citations - make sure it finds the citation type & the citation in the DB
-    def test_citation_type_found(self):
+    def test_citation_type_found(self, nlp, db_connection, manifest_table):
         for text in CORRECT_CITATIONS:
-            (
-                citation_match,
-                family,
-                URItemplate,
-                is_neutral,
-                is_canonical,
-                citation_type,
-                canonical_form,
-            ) = mock_return_citation(self.nlp, text, self.db_conn)
-            print("Testing: " + text)
+            _, _, _, _, _, citation_type, _ = mock_return_citation(
+                nlp,
+                text,
+                db_connection,
+            )
             assert citation_type is not None
 
-    # for correct citations - make sure it finds the canonical form (if its not found, it will be None)
-    def test_canonical_form_found(self):
+    def test_canonical_form_found(self, nlp, db_connection, manifest_table):
         for text in CORRECT_CITATIONS:
-            (
-                citation_match,
-                family,
-                URItemplate,
-                is_neutral,
-                is_canonical,
-                citation_type,
-                canonical_form,
-            ) = mock_return_citation(self.nlp, text, self.db_conn)
-            print("Testing: " + text)
+            _, _, _, _, _, _, canonical_form = mock_return_citation(
+                nlp,
+                text,
+                db_connection,
+            )
             assert canonical_form is not None
 
-    def test_incorrect_canonical_form(self):
+    def test_incorrect_canonical_form(self, nlp, db_connection, manifest_table):
         for text in INCORRECT_CITATIONS:
-            (
-                citation_match,
-                family,
-                URItemplate,
-                is_neutral,
-                is_canonical,
-                citation_type,
-                canonical_form,
-            ) = mock_return_citation(self.nlp, text, self.db_conn)
-            print("Testing: " + text)
-            assert is_canonical is False
-            assert type(canonical_form) is str
+            _, _, _, _, is_canonical, _, canonical_form = mock_return_citation(
+                nlp,
+                text,
+                db_connection,
+            )
 
-    def test_incorrect_citation_match(self):
+            assert is_canonical is False
+            assert isinstance(canonical_form, str)
+
+    def test_incorrect_citation_match(self, nlp, db_connection, manifest_table):
         for text in INCORRECT_CITATIONS:
-            (
-                citation_match,
-                family,
-                URItemplate,
-                is_neutral,
-                is_canonical,
-                citation_type,
-                canonical_form,
-            ) = mock_return_citation(self.nlp, text, self.db_conn)
-            print("Testing: " + text)
+            citation_match, _, _, _, _, _, _ = mock_return_citation(
+                nlp,
+                text,
+                db_connection,
+            )
+
             assert citation_match is not None
 
-    def test_unknown_citations(self):
+    def test_unknown_citations(self, nlp, db_connection, manifest_table):
         for text in UNKNOWN_CITATIONS:
-            print("Testing: " + text)
-            (
-                citation_match,
-                family,
-                URItemplate,
-                is_neutral,
-                is_canonical,
-                citation_type,
-                canonical_form,
-            ) = mock_return_citation(self.nlp, text, self.db_conn)
-            assert is_canonical is not True and is_canonical is not False
+            _, _, _, _, is_canonical, _, _ = mock_return_citation(
+                nlp,
+                text,
+                db_connection,
+            )
+
+            assert is_canonical not in (True, False)
 
 
-class TestCorrectionStrategy(unittest.TestCase):
+class TestCorrectionStrategy:
     def test_correct_forms(self):
         citation_match = "1 ExD 123"
         citation_type = "PubNumAbbrNum"
         canonical_form = "d1 ExD d2"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation == citation_match
         assert year == ""
 
         citation_match = "[2025] EWHC 123 (TCC)"
         citation_type = "NCitYearAbbrNumDiv"
         canonical_form = "[dddd] EWHC d+ (TCC)"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation == citation_match
         assert year == "2025"
 
         citation_match = "[2024] EWCOP 758"
         citation_type = "NCitYearAbbrNum"
         canonical_form = "[dddd] EWCOP d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation == citation_match
         assert year == "2024"
 
         citation_match = "[1999] LGR 666"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] LGR d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation == citation_match
         assert year == "1999"
 
         citation_match = "Case T-123/12"
         citation_type = "EUTCase"
         canonical_form = "Case T-123/12"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation == citation_match
         assert year == ""
 
@@ -264,7 +237,11 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "[2022] P.N.L.R 123"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] PNLR d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation != citation_match
         assert corrected_citation == "[2022] PNLR 123"
         assert year == "2022"
@@ -272,7 +249,11 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "(1995) 99 Cr. App. R. 123"
         citation_type = "PubYearNumAbbrNum"
         canonical_form = "(dddd) d1 Cr App R d2"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation != citation_match
         assert corrected_citation == "(1995) 99 Cr App R 123"
         assert year == "1995"
@@ -280,7 +261,11 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "(2026) EWHC 789 (Fam)"
         citation_type = "NCitYearAbbrNumDiv"
         canonical_form = "[dddd] EWHC d+ (Fam)"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation != citation_match
         assert corrected_citation == "[2026] EWHC 789 (Fam)"
         assert year == "2026"
@@ -288,7 +273,11 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "[1999] A.C. 666"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] AC d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation != citation_match
         assert corrected_citation == "[1999] AC 666"
         assert year == "1999"
@@ -296,11 +285,11 @@ class TestCorrectionStrategy(unittest.TestCase):
         citation_match = "[2019] Q.B. 456"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] QB d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(citation_type, citation_match, canonical_form)
+        corrected_citation, year, d1, d2 = apply_correction_strategy(
+            citation_type,
+            citation_match,
+            canonical_form,
+        )
         assert corrected_citation != citation_match
         assert corrected_citation == "[2019] QB 456"
         assert year == "2019"
-
-
-if __name__ == "__main__":
-    unittest.main()
