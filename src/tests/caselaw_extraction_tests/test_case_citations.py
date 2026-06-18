@@ -5,8 +5,8 @@ These are independent unit tests.
 
 import pytest
 
-from caselaw_extraction.correction_strategies import apply_correction_strategy
 from database.db_connection import get_matched_rule
+from enrichment.caselaw_extraction.correction_strategies import apply_correction_strategy
 
 CORRECT_CITATIONS = [
     "random text goes here random text goes here **[2022] UKUT 177 (TCC)",

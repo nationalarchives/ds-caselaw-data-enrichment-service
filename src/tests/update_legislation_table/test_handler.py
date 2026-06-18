@@ -1,10 +1,10 @@
 from unittest.mock import Mock, patch
 
-from index import handler
+from update_legislation_table.index import handler
 
 
 class TestHandler:
-    @patch("index.update_legislation_table")
+    @patch("update_legislation_table.index.update_legislation_table")
     def test_handler(
         self,
         mock_update_legislation_table,
@@ -20,7 +20,7 @@ class TestHandler:
         handler(event, context)
         mock_update_legislation_table.assert_called_with(7)
 
-    @patch("index.update_legislation_table")
+    @patch("update_legislation_table.index.update_legislation_table")
     def test_handler_non_integer_trigger_date(
         self,
         mock_update_legislation_table,
@@ -35,7 +35,7 @@ class TestHandler:
         handler(event, context)
         mock_update_legislation_table.assert_called_with(None)
 
-    @patch("index.update_legislation_table")
+    @patch("update_legislation_table.index.update_legislation_table")
     def test_handler_no_trigger_date(
         self,
         mock_update_legislation_table,

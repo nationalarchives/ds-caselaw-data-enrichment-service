@@ -1,6 +1,4 @@
-import unittest
-
-from legislation_provisions_extraction.legislation_provisions import (
+from enrichment.legislation_provisions_extraction.legislation_provisions import (
     detect_reference,
     find_closest_legislation,
     get_clean_section_number,
@@ -8,7 +6,7 @@ from legislation_provisions_extraction.legislation_provisions import (
 )
 
 
-class TestLegislationProvisionProcessor(unittest.TestCase):
+class TestLegislationProvisionProcessors:
     """
     This class focuses on testing the Legislation Provision processor, which detects references to sections and links them to the
     section within the legislation itself.
@@ -247,7 +245,3 @@ class TestLegislationProvisionProcessor(unittest.TestCase):
         resolved_ref = provision_resolver(section_dict, match, para_number)
 
         assert ex_resolved_ref == resolved_ref
-
-
-if __name__ == "__main__":
-    unittest.main()

@@ -11,7 +11,7 @@ import unittest
 import spacy
 from spacy.language import Language
 
-from abbreviation_extraction.abbreviations import (
+from enrichment.abbreviation_extraction.abbreviations import (
     AbbreviationDetector,
     filter_matches,
     find_abbreviation,
@@ -256,7 +256,3 @@ class TestFilterMatches(unittest.TestCase):
         doc = self.nlp(text)
         filtered = filter_matches([(1, 5, 9)], doc)
         assert len(filtered) == 0
-
-
-if __name__ == "__main__":
-    unittest.main()

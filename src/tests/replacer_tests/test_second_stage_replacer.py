@@ -1,11 +1,10 @@
 """Unit Tests for the `second_stage_replacer` module"""
 
-import unittest
 from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-from replacer.second_stage_replacer import (
+from enrichment.replacer.second_stage_replacer import (
     create_replacement_paragraph,
     replace_references_by_paragraph,
 )
@@ -14,7 +13,7 @@ from utils.compare_xml import assert_equal_xml
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures"
 
 
-class TestSecondStageReplacer(unittest.TestCase):
+class TestSecondStageReplacer:
     def test_replace_single_reference(self):
         """This tests that when a reference is replaced, it doesn't:
         * mangle the namespaces
@@ -79,7 +78,3 @@ class TestSecondStageReplacer(unittest.TestCase):
         with open(expected_file_path, encoding="utf-8") as expected_file:
             expected_enriched_content = expected_file.read()
         assert_equal_xml(expected_enriched_content, enriched_content)
-
-
-if __name__ == "__main__":
-    unittest.main()

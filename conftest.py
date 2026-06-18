@@ -35,7 +35,7 @@ def db_connection(db_engine):
         yield conn
 
 
-FIXTURE_DIR = "src/caselaw_extraction/rules"
+FIXTURE_DIR = "src/enrichment/caselaw_extraction/rules"
 
 
 @pytest.fixture

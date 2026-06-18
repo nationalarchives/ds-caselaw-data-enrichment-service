@@ -1,0 +1,16 @@
+# Aggregated requirements for the consolidated enrichment lambda
+# Covers: abbreviation_extraction, caselaw_extraction, legislation_extraction,
+#         legislation_provisions_extraction, oblique_references, fetch_xml, push_enriched_xml
+
+spacy==3.8.14
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+spaczz==0.6.1
+pandas==2.3.3
+psycopg2-binary==2.9.12
+beautifulsoup4==4.14.3
+lxml==6.1.1
+numpy==1.26.4
+sqlalchemy==2.0.50
+aws_lambda_powertools==3.29.0
+requests==2.33.0
+urllib3==2.7.0

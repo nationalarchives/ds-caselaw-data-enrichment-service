@@ -3,8 +3,9 @@ from unittest.mock import patch
 import boto3
 import pandas as pd
 import pytest
-from index import update_legislation_table
 from moto import mock_aws
+
+from lambdas.update_legislation_table.index import update_legislation_table
 
 
 @pytest.fixture(scope="function")
@@ -20,7 +21,7 @@ def setup_moto_secrets_manager():
     mock_secrets_manager.stop()
 
 
-@patch("index.fetch_legislation")
+@patch("lambdas.update_legislation_table.index.fetch_legislation")
 def test_update_legislation_table(
     mock_fetch_legislation,
     monkeypatch,

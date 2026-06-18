@@ -1,17 +1,14 @@
 """Module contains integration tests for enrich_oblique_references"""
 
-import unittest
 from pathlib import Path
 
-from oblique_references.enrich_oblique_references import (
-    enrich_oblique_references,
-)
+from lambdas.enrichment_lambda.steps import enrich_oblique_references
 from utils.compare_xml import assert_equal_xml
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 
 
-class TestEnrichObliqueReferences(unittest.TestCase):
+class TestEnrichObliqueReferences:
     """Integration tests for enrich_oblique_references"""
 
     def test_enrich_oblique_references(self):
@@ -31,7 +28,3 @@ class TestEnrichObliqueReferences(unittest.TestCase):
             expected_enriched_content = expected_file.read()
 
         assert_equal_xml(enriched_content, expected_enriched_content)
-
-
-if __name__ == "__main__":
-    unittest.main()
