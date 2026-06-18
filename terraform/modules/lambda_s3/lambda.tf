@@ -292,7 +292,7 @@ module "lambda-update-legislation-table" {
   function_name  = "${local.name}-${local.environment}-update-legislation-table"
   package_type   = "Image"
   create_package = false
-  runtime        = "python3.12"
+  runtime        = "python3.13"
   image_uri      = "${aws_ecr_repository.legislation-update.repository_url}:${var.container_image_tag}"
   handler        = "index.handler"
   source_path    = "${var.lambda_source_path}update_legislation_table"
@@ -385,7 +385,7 @@ module "lambda-update-rules-processor" {
   function_name  = "${local.name}-${local.environment}-update-rules-processor"
   package_type   = "Image"
   create_package = false
-  runtime        = "python3.12"
+  runtime        = "python3.13"
   image_uri      = "${aws_ecr_repository.rules-update.repository_url}:${var.container_image_tag}"
   handler        = "index.handler"
   source_path    = "${var.lambda_source_path}update_rules_processor"
