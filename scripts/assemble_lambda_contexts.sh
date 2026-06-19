@@ -6,6 +6,12 @@ SRC_DIR="${REPO_ROOT}/src"
 
 cd "${SRC_DIR}"
 
+# ENRICHMENT_LAMBDA
+rm -rf lambdas/enrichment_lambda/utils lambdas/enrichment_lambda/database
+mkdir -p lambdas/enrichment_lambda/utils lambdas/enrichment_lambda/database
+cp -r utils/*.py lambdas/enrichment_lambda/utils/
+cp -r database/*.py lambdas/enrichment_lambda/database/
+
 # UPDATE_LEGISLATION_TABLE
 rm -rf lambdas/update_legislation_table/utils lambdas/update_legislation_table/database
 mkdir -p lambdas/update_legislation_table/utils lambdas/update_legislation_table/database
@@ -17,5 +23,7 @@ rm -rf lambdas/update_rules_processor/utils lambdas/update_rules_processor/datab
 mkdir -p lambdas/update_rules_processor/utils lambdas/update_rules_processor/database
 cp -r utils/*.py lambdas/update_rules_processor/utils/
 cp -r database/*.py lambdas/update_rules_processor/database/
+
+# DB_BACKUP (no utils/database needed)
 
 echo "Assembled lambda build contexts under ${SRC_DIR}/lambdas"

@@ -99,6 +99,20 @@ __pycache__
 test_citation_patterns.jsonl
 src/tests/testfile.xml
 
+# Assembly artifacts (copied by assemble_lambda_contexts.sh)
+src/lambdas/enrichment_lambda/utils/
+src/lambdas/enrichment_lambda/database/
+src/lambdas/update_legislation_table/utils/
+src/lambdas/update_legislation_table/database/
+src/lambdas/update_rules_processor/utils/
+src/lambdas/update_rules_processor/database/
+
+# Assembled lambda contexts (temporary build artifacts)
+src/lambdas/update_legislation_table/utils/
+src/lambdas/update_legislation_table/database/
+src/lambdas/update_rules_processor/utils/
+src/lambdas/update_rules_processor/database/
+
 *.db
 
 .idea

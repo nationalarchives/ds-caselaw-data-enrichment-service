@@ -1,9 +1,17 @@
 FROM public.ecr.aws/lambda/python:3.13@sha256:759c0bc7c7f9b6b68f2e8e28590815585b3073f500d2831f58c24c0e54401ae5
 
-COPY index.py ${LAMBDA_TASK_ROOT}
+ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8
 
-COPY requirements.txt ${LAMBDA_TASK_ROOT}
+# Install poetry
+RUN pip install poetry
 
-RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
+# Copy root pyproject.toml and poetry.lock for dependency resolution
+COPY pyproject.toml poetry.lock ${LAMBDA_TASK_ROOT}/
+
+# Install dependencies (backup lambda uses core deps only)
+RUN cd ${LAMBDA_TASK_ROOT} && poetry config virtualenvs.create false && poetry install --no-root
+
+# Copy lambda code
+COPY src/lambdas/db_backup/index.py ${LAMBDA_TASK_ROOT}/
 
 CMD [ "index.lambda_handler" ]

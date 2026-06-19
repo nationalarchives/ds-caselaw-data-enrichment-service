@@ -85,33 +85,26 @@ jobs:
 
           aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com
 
-
           ## ENRICHMENT (consolidated pipeline)
-          docker buildx build --load -f src/lambdas/enrichment_lambda/Dockerfile -t tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }} "${GITHUB_WORKSPACE}"
-          docker tag tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest
+          make build-lambda LAMBDA=enrichment_lambda ASSEMBLED=1
+          docker tag enrichment_lambda:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-enrichment --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest
 
           ## DB_BACKUP
-          cd "src/lambdas/db_backup"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
+          make build-lambda LAMBDA=db_backup ASSEMBLED=1
+          docker tag db_backup:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-db-backup --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
-          cd "${GITHUB_WORKSPACE}"
 
           ## UPDATE_LEGISLATION_TABLE
-          cd "src/lambdas/update_legislation_table"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
+          make build-lambda LAMBDA=update_legislation_table ASSEMBLED=1
+          docker tag update_legislation_table:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-update-legislation-table --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
-          cd "${GITHUB_WORKSPACE}"
 
           ## UPDATE_RULES_PROCESSOR
-          cd "src/lambdas/update_rules_processor"
-          docker buildx build --load -t tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }} .
-          docker tag tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
+          make build-lambda LAMBDA=update_rules_processor ASSEMBLED=1
+          docker tag update_rules_processor:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
           aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-update-rules-processor --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
-          cd "${GITHUB_WORKSPACE}"

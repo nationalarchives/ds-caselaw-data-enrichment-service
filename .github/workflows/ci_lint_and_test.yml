@@ -45,7 +45,7 @@ jobs:
         run: pip3 install poetry==2.1.3
 
       - name: Install dependencies
-        run: poetry install --no-root
+        run: make setup
 
       - name: Set up docker for testcontainers
         uses: docker/setup-buildx-action@d7f5e7f509e45cec5c76c4d5afdd7de93d0b3df5 # v4.1.0
@@ -67,19 +67,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - lambda: enrichment_lambda
-            dockerfile: Dockerfile
-            context: .
-          - lambda: db_backup
-            dockerfile: dockerfile
-            context: src/lambdas/db_backup
-          - lambda: update_legislation_table
-            dockerfile: Dockerfile
-            context: src/lambdas/update_legislation_table
-          - lambda: update_rules_processor
-            dockerfile: Dockerfile
-            context: src/lambdas/update_rules_processor
+        lambda:
+          - enrichment_lambda
+          - db_backup
+          - update_legislation_table
+          - update_rules_processor
     steps:
       - name: Checkout source code
         uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
@@ -87,22 +79,8 @@ jobs:
           ref: ${{ github.sha }}
           persist-credentials: false
 
-      - name: Assemble lambda build contexts
-        run: ./scripts/assemble_lambda_contexts.sh
-
-      - name: Buildx
-        uses: docker/setup-buildx-action@d7f5e7f509e45cec5c76c4d5afdd7de93d0b3df5 # v4.1.0
-        with:
-          install: true
-
       - name: Build ${{ matrix.lambda }}
-        run: |
-          docker buildx build \
-            --platform linux/amd64 \
-            --progress=plain \
-            --load \
-            -f src/lambdas/${{ matrix.lambda }}/${{ matrix.dockerfile }} \
-            ${{ matrix.context }}
+        run: make build-lambda LAMBDA=${{ matrix.lambda }}
 
   terraform_format:
     runs-on: ubuntu-latest
