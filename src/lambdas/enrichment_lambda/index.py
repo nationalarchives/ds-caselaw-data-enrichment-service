@@ -36,9 +36,8 @@ def _is_test_event(record: dict[str, Any]) -> bool:
 
 
 def _get_api_endpoint(environment: str) -> APIEndpointBaseURL:
-    if environment == "staging":
-        return APIEndpointBaseURL("https://api.staging.caselaw.nationalarchives.gov.uk/")
-    return APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
+    subdomain = "api.staging" if environment == "staging" else "api"
+    return APIEndpointBaseURL(f"https://{subdomain}.caselaw.nationalarchives.gov.uk/")
 
 
 def _read_vcite_toggle() -> str:
