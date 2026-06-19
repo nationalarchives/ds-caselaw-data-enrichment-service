@@ -62,6 +62,7 @@ psycopg2-binary = "2.9.12"
 # Lambda-specific dependency groups (supplementing top-level dependencies)
 [tool.poetry.group.enrichment-lambda.dependencies]
 spacy = "3.8.14"
+click = "8.1.8"
 en-core-web-sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl"}
 spaczz = "0.6.1"
 beautifulsoup4 = "4.15.0"
@@ -74,6 +75,7 @@ sparqlwrapper = "2.0.0"
 
 [tool.poetry.group.rules-lambda.dependencies]
 spacy = "3.8.14"
+click = "8.1.8"
 en-core-web-sm = {url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl"}
 
 [tool.poetry.group.backup-lambda.dependencies]
