@@ -63,23 +63,34 @@ def process_event(
 ) -> None:
     LOGGER.info("Enriching judgment: %s", uri_reference)
 
+    LOGGER.info("Fetching judgment from API endpoint: %s", api_endpoint)
     xml_content = fetch_judgment(api_endpoint, uri_reference, api_username, api_password)
+
+    LOGGER.info("Locking judgment: %s", uri_reference)
     lock_judgment(api_endpoint, uri_reference, api_username, api_password)
 
+    LOGGER.info("Enriching judgment content for: %s", uri_reference)
     enriched_xml = enrich_xml_file(xml_content, pattern_list, enrichment_version="7.4.0")
 
+    LOGGER.info("Patching enriched judgment back to API endpoint: %s", api_endpoint)
     patch_judgment(api_endpoint, uri_reference, enriched_xml, api_username, api_password)
+
     LOGGER.info("Successfully enriched and patched: %s", uri_reference)
 
 
 @event_source(data_class=SQSEvent)
 def handler(event: SQSEvent, context: LambdaContext) -> None:
+    num_records = len(list(event.records))
+    LOGGER.info("Received SQS event with %d records", num_records)
     api_username = validate_env_variable("API_USERNAME")
     api_password = validate_env_variable("API_PASSWORD")
     environment = validate_env_variable("ENVIRONMENT")
     rules_bucket = validate_env_variable("RULES_FILE_BUCKET")
     rules_key = validate_env_variable("RULES_FILE_KEY")
 
+    LOGGER.info("Enrichment Lambda triggered, environment: %s", environment)
+
+    LOGGER.info("Fetching rules from S3 bucket: %s, key: %s", rules_bucket, rules_key)
     s3 = boto3.client("s3")
     patterns_resp = s3.get_object(Bucket=rules_bucket, Key=rules_key)
     patterns = patterns_resp["Body"].read().decode("utf-8")
@@ -90,14 +101,16 @@ def handler(event: SQSEvent, context: LambdaContext) -> None:
     else:
         api_endpoint = APIEndpointBaseURL("https://api.caselaw.nationalarchives.gov.uk/")
 
-    LOGGER.info("Enrichment Lambda triggered, environment: %s", environment)
     for sqs_rec in event.records:
         if "Event" in sqs_rec.keys() and sqs_rec["Event"] == "s3:TestEvent":
             continue
         try:
+            LOGGER.info("Processing SQS record: %s", sqs_rec.message_id)
             message = json.loads(sqs_rec.body)
             _status, uri_reference = read_message(message)
             process_event(uri_reference, api_endpoint, api_username, api_password, pattern_list)
+            LOGGER.info("Successfully processed SQS record: %s", sqs_rec.message_id)
         except Exception as exc:
             LOGGER.error("Failed to process record: %s", exc)
             raise
+    LOGGER.info("Successfully enriched and patched all %d records in the SQS event", num_records)
