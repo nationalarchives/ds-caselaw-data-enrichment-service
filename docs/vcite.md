@@ -12,4 +12,8 @@ The vCite on/off control is managed by AWS Parameter Store, which holds a single
 
 Or recommendation is that temporary changes to vCite's on or off state (for example, when processing large batch jobs) should be handled manually in AWS Parameter Store. More permanent changes in state should be ideally be managed in the Terraform code. The reason for this is that if the code is modified and resources the resources are re-built the vCite parameter will, by default, be set back to `off`.
 
-The process at enrichment time is managed by the [xml-validate](/lambdas/xml_validate/index.py) lambda, which is responsible for the checking the value of the vCite parameter.
+The process at enrichment time is managed by the [enrichment lambda](/src/lambdas/enrichment_lambda/index.py), which checks the value of the `vCite` parameter.
+
+When `vCite` is `off`, the enrichment lambda applies JEP enrichment and patches directly back to the API.
+
+When `vCite` is `on`, the enrichment lambda applies JEP enrichment, writes the XML to the external vCite input bucket, and waits for the callback file written to the JEP vCite enriched bucket. The callback object creation event triggers the enrichment lambda again, which then patches the returned XML back to the API.

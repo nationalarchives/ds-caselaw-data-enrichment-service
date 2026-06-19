@@ -32,3 +32,14 @@ module "vcite_enriched_bucket" {
   vcite_enriched  = true
   tags            = local.tags
 }
+
+# Notification: when vCite writes back enriched XML, route callback to enrichment lambda
+resource "aws_s3_bucket_notification" "vcite_enriched_bucket_notification" {
+  bucket = module.vcite_enriched_bucket.s3_bucket_id
+
+  lambda_function {
+    lambda_function_arn = module.lambda-enrichment.lambda_function_arn
+    events              = ["s3:ObjectCreated:*"]
+    filter_suffix       = ".xml"
+  }
+}

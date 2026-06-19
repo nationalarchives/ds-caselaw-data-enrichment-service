@@ -124,6 +124,14 @@ module "lambda-enrichment" {
 
   create_current_version_allowed_triggers = false
 
+  allowed_triggers = {
+    vciteCallback = {
+      service    = "s3"
+      principal  = "s3.amazonaws.com"
+      source_arn = module.vcite_enriched_bucket.s3_bucket_arn
+    }
+  }
+
   timeout     = 900
   memory_size = 10240
 
@@ -139,6 +147,11 @@ module "lambda-enrichment" {
       actions   = ["s3:PutObject", "s3:PutObjectAcl"]
       resources = ["${module.vcite_enriched_bucket.s3_bucket_arn}/*"]
     }
+    s3_read_vcite = {
+      effect    = "Allow"
+      actions   = ["s3:HeadObject", "s3:GetObject", "s3:GetObjectVersion"]
+      resources = ["${module.vcite_enriched_bucket.s3_bucket_arn}/*"]
+    }
     kms = {
       effect  = "Allow"
       actions = ["kms:Encrypt", "kms:DescribeKey", "kms:GenerateDataKey", "kms:Decrypt", "kms:ReEncryptTo"]
@@ -146,6 +159,11 @@ module "lambda-enrichment" {
         module.rules_bucket.kms_key_arn,
         module.vcite_enriched_bucket.kms_key_arn,
       ]
+    }
+    ssm_get_parameter = {
+      effect    = "Allow"
+      actions   = ["ssm:GetParameters", "ssm:GetParameter", "ssm:GetParametersByPath"]
+      resources = [aws_ssm_parameter.vCite.arn]
     }
     secrets_get = {
       effect  = "Allow"
@@ -207,6 +225,8 @@ module "lambda-enrichment" {
     HOSTNAME               = var.postgress_hostname
     RULES_FILE_BUCKET      = module.rules_bucket.s3_bucket_id
     RULES_FILE_KEY         = "citation_patterns.jsonl"
+    VCITE_BUCKET           = "vcite-tna-files"
+    VCITE_ENRICHED_BUCKET  = module.vcite_enriched_bucket.s3_bucket_id
   }
 
   cloudwatch_logs_retention_in_days = 365
