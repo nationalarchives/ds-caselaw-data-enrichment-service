@@ -2,7 +2,6 @@ import datetime
 import json
 import logging
 
-import boto3
 import lxml
 import spacy
 from bs4 import BeautifulSoup
@@ -38,10 +37,10 @@ def determine_abbreviation_replacements(file_content: str):
     return abb_pipeline(file_content, nlp)
 
 
-def determine_caselaw_replacements(file_content: str, rules_bucket: str, rules_key: str):
+def determine_caselaw_replacements(file_content: str, pattern_list: list[dict]):
     db_conn = init_db_connection()
     try:
-        nlp = _init_caselaw_nlp(rules_bucket, rules_key)
+        nlp = _init_caselaw_nlp(pattern_list)
         LOGGER.info("Loaded caselaw NLP model")
         doc = nlp(file_content)
         replacements = case_pipeline(doc, db_conn)
@@ -120,14 +119,9 @@ def add_timestamp_and_engine_version(
     return DocumentAsXMLString(str(soup))
 
 
-def _init_caselaw_nlp(rules_bucket: str, rules_key: str):
+def _init_caselaw_nlp(pattern_list: list[dict]) -> spacy.language.Language:
     nlp = spacy.load("en_core_web_sm", exclude=["tok2vec", "attribute_ruler", "lemmatizer", "ner"])
     nlp.max_length = 5000000
-
-    s3 = boto3.client("s3")
-    patterns_resp = s3.get_object(Bucket=rules_bucket, Key=rules_key)
-    patterns = patterns_resp["Body"]
-    pattern_list = [json.loads(line) for line in patterns.iter_lines()]
 
     citation_ruler = nlp.add_pipe("entity_ruler")
     citation_ruler.add_patterns(pattern_list)

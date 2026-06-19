@@ -1,5 +1,8 @@
 import json
-from unittest.mock import Mock, patch
+from unittest.mock import patch
+
+import boto3
+from moto import mock_aws
 
 from lambdas.enrichment_lambda import index
 from utils.custom_types import APIEndpointBaseURL
@@ -51,33 +54,40 @@ def test_make_replacements_input_serializes_all_replacement_lists():
 @patch("lambdas.enrichment_lambda.index.enrich_xml_file", return_value="<enriched/>")
 @patch("lambdas.enrichment_lambda.index.lock_judgment")
 @patch("lambdas.enrichment_lambda.index.fetch_judgment", return_value="<xml/>")
-@patch("lambdas.enrichment_lambda.index.read_message", return_value=("ready", "uksc/2024/1"))
 def test_process_event_happy_path(
-    mock_read_message,
     mock_fetch,
     mock_lock,
     mock_enrich,
     mock_patch,
 ):
-    sqs_record = Mock()
-    sqs_record.body = json.dumps({"Message": "{}"})
-
+    uri_reference = "uksc/2024/1"
     endpoint = APIEndpointBaseURL("https://api.example/")
 
     index.process_event(
-        sqs_record,
+        uri_reference,
         endpoint,
         "user",
         "pass",
+        pattern_list=[
+            {"pattern": "value"},
+            {"pattern2": "value2"},
+        ],
     )
 
-    mock_read_message.assert_called_once()
     mock_fetch.assert_called_once_with(endpoint, "uksc/2024/1", "user", "pass")
     mock_lock.assert_called_once_with(endpoint, "uksc/2024/1", "user", "pass")
-    mock_enrich.assert_called_once_with("<xml/>", enrichment_version="7.4.0")
+    mock_enrich.assert_called_once_with(
+        "<xml/>",
+        [
+            {"pattern": "value"},
+            {"pattern2": "value2"},
+        ],
+        enrichment_version="7.4.0",
+    )
     mock_patch.assert_called_once_with(endpoint, "uksc/2024/1", "<enriched/>", "user", "pass")
 
 
+@mock_aws
 @patch("lambdas.enrichment_lambda.index.process_event")
 @patch("lambdas.enrichment_lambda.index.validate_env_variable")
 def test_handler_uses_staging_endpoint_and_skips_s3_test_event(mock_validate_env, mock_process_event):
@@ -85,26 +95,46 @@ def test_handler_uses_staging_endpoint_and_skips_s3_test_event(mock_validate_env
         "API_USERNAME": "api-user",
         "API_PASSWORD": "api-credential",
         "ENVIRONMENT": "staging",
+        "RULES_FILE_BUCKET": "rules-bucket",
+        "RULES_FILE_KEY": "rules-key",
     }
     mock_validate_env.side_effect = lambda key: env_values[key]
+
+    s3 = boto3.client("s3", region_name="us-east-1")
+    s3.create_bucket(Bucket=env_values["RULES_FILE_BUCKET"])
+    patterns = '{"pattern": "value"}\n{"pattern2": "value2"}'
+    s3.put_object(Bucket=env_values["RULES_FILE_BUCKET"], Key=env_values["RULES_FILE_KEY"], Body=patterns)
+
+    sqs_message = json.dumps(
+        {
+            "status": "ready",
+            "uri_reference": "ewhc/ch/2023/257",
+        },
+    )
 
     event = {
         "Records": [
             _sqs_record("{}", event_value="s3:TestEvent"),
-            _sqs_record(json.dumps({"Message": "{}"})),
+            _sqs_record(json.dumps({"Message": sqs_message})),
         ],
     }
 
     index.handler(event, None)
-
     assert mock_process_event.call_count == 1
-    called_record, called_endpoint, called_user, called_password = mock_process_event.call_args.args
-    assert called_record.body == json.dumps({"Message": "{}"})
+    called_uri_reference, called_endpoint, called_user, called_password, called_pattern_list = (
+        mock_process_event.call_args.args
+    )
+    assert called_uri_reference == "ewhc/ch/2023/257"
     assert called_endpoint == "https://api.staging.caselaw.nationalarchives.gov.uk/"
     assert called_user == "api-user"
     assert called_password == env_values["API_PASSWORD"]
+    assert called_pattern_list == [
+        {"pattern": "value"},
+        {"pattern2": "value2"},
+    ]
 
 
+@mock_aws
 @patch("lambdas.enrichment_lambda.index.patch_judgment")
 @patch("lambdas.enrichment_lambda.index.enrich_xml_file", return_value="<enriched-body/>")
 @patch("lambdas.enrichment_lambda.index.lock_judgment")
@@ -121,8 +151,15 @@ def test_handler_e2e_style_single_record(
         "API_USERNAME": "api-user",
         "API_PASSWORD": "api-credential",
         "ENVIRONMENT": "production",
+        "RULES_FILE_BUCKET": "rules-bucket",
+        "RULES_FILE_KEY": "rules-key",
     }
     mock_validate_env.side_effect = lambda key: env_values[key]
+
+    s3 = boto3.client("s3", region_name="us-east-1")
+    s3.create_bucket(Bucket=env_values["RULES_FILE_BUCKET"])
+    patterns = '{"pattern": "value"}\n{"pattern2": "value2"}'
+    s3.put_object(Bucket=env_values["RULES_FILE_BUCKET"], Key=env_values["RULES_FILE_KEY"], Body=patterns)
 
     sqs_message = {
         "Message": json.dumps(
@@ -153,7 +190,14 @@ def test_handler_e2e_style_single_record(
         "api-user",
         env_values["API_PASSWORD"],
     )
-    mock_enrich.assert_called_once_with("<source-xml/>", enrichment_version="7.4.0")
+    mock_enrich.assert_called_once_with(
+        "<source-xml/>",
+        [
+            {"pattern": "value"},
+            {"pattern2": "value2"},
+        ],
+        enrichment_version="7.4.0",
+    )
     mock_patch.assert_called_once_with(
         "https://api.caselaw.nationalarchives.gov.uk/",
         "ewhc/ch/2023/257",
