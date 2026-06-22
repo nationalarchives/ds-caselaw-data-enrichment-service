@@ -8,7 +8,7 @@
 # from moto import mock_aws
 # from sqlalchemy import URL, create_engine
 
-# from lambdas.enrichment_lambda.index import enrich_xml_file
+# from lambdas.enrichment_lambda.index import enrich_xml
 
 
 # def _repo_root() -> Path:
@@ -78,7 +78,7 @@
 #         _seed_legislation(pg_dsn, root)  # still needed — no pipeline function populates this
 #         _seed_manifest(pg_dsn, root)  # still needed — no pipeline function populates this
 
-#         new_xml = enrich_xml_file(original_xml, enrichment_version="7.3.0")
+#         new_xml = enrich_xml(original_xml, enrichment_version="7.3.0")
 
 #     new_xml_canonical = _canonicalize_xml(new_xml)
 #     expected_xml_canonical = _canonicalize_xml(expected_xml)
