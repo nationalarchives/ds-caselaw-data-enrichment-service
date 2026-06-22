@@ -54,7 +54,7 @@ def test_make_replacements_input_serializes_all_replacement_lists():
 @patch("lambdas.enrichment_lambda.index.enrich_xml_file", return_value="<enriched/>")
 @patch("lambdas.enrichment_lambda.index.lock_judgment")
 @patch("lambdas.enrichment_lambda.index.fetch_judgment", return_value="<xml/>")
-def test_process_event_happy_path(
+def test_enrich_judgment_happy_path(
     mock_fetch,
     mock_lock,
     mock_enrich,
@@ -63,7 +63,7 @@ def test_process_event_happy_path(
     uri_reference = "uksc/2024/1"
     endpoint = APIEndpointBaseURL("https://api.example/")
 
-    index.process_event(
+    index.enrich_judgment(
         uri_reference,
         endpoint,
         "user",

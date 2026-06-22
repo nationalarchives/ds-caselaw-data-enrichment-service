@@ -105,7 +105,7 @@ def enrich_xml_file(xml: str, pattern_list: list[dict], enrichment_version: str 
     return fully_enriched_xml_with_timestamp
 
 
-def process_event(
+def enrich_judgment(
     uri_reference: str,
     api_endpoint: APIEndpointBaseURL,
     api_username: str,
