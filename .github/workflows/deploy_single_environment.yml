@@ -69,16 +69,24 @@ jobs:
           terraform workspace list
         continue-on-error: false
 
-      - name: Terraform Apply
+      - name: "Terraform Phase 1: Create ECR Repositories"
         run: |
           set -e
           set -o pipefail
           cd terraform
           terraform workspace select ${{ secrets.workspace }}
-          terraform apply --auto-approve -no-color -var "app_env=${{ secrets.app_env }}"
+          terraform apply --auto-approve -no-color \
+            -target=module.lambda_s3.aws_ecr_repository.enrichment \
+            -target=module.lambda_s3.aws_ecr_repository.db-backup \
+            -target=module.lambda_s3.aws_ecr_repository.legislation-update \
+            -target=module.lambda_s3.aws_ecr_repository.rules-update \
+            -target=module.lambda_s3.aws_ecr_lifecycle_policy.enrichment_retention \
+            -target=module.lambda_s3.aws_ecr_lifecycle_policy.db_backup_retention \
+            -target=module.lambda_s3.aws_ecr_lifecycle_policy.lu_retention \
+            -target=module.lambda_s3.aws_ecr_lifecycle_policy.ru_retention \
+            -var "app_env=${{ secrets.app_env }}"
 
-      # Pushing images to ECR last
-      - name: Build Docker Images For Lambda
+      - name: Build and Push Docker Images
         run: |
           set -e
           set -o pipefail
@@ -89,22 +97,26 @@ jobs:
           make build-lambda LAMBDA=enrichment_lambda ASSEMBLED=1
           docker tag enrichment_lambda:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-enrichment --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest
 
           ## DB_BACKUP
           make build-lambda LAMBDA=db_backup ASSEMBLED=1
           docker tag db_backup:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-db-backup --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
 
           ## UPDATE_LEGISLATION_TABLE
           make build-lambda LAMBDA=update_legislation_table ASSEMBLED=1
           docker tag update_legislation_table:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-update-legislation-table --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
 
           ## UPDATE_RULES_PROCESSOR
           make build-lambda LAMBDA=update_rules_processor ASSEMBLED=1
           docker tag update_rules_processor:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
           docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
-          aws lambda update-function-code --function-name tna-s3-tna-${{ secrets.app_env }}-update-rules-processor --image-uri ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
+
+      - name: "Terraform Phase 2: Deploy Complete Infrastructure"
+        run: |
+          set -e
+          set -o pipefail
+          cd terraform
+          terraform workspace select ${{ secrets.workspace }}
+          terraform apply --auto-approve -no-color -var "app_env=${{ secrets.app_env }}"

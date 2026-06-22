@@ -16,13 +16,6 @@ resource "aws_s3_bucket_notification" "rules_bucket_notification" {
   }
 }
 
-# container_bucket - deployment artefacts
-module "container_bucket" {
-  source      = "../secure_bucket"
-  bucket_name = "${local.environment}-${local.name}-${var.bucket_prefix}-container-bucket"
-  tags        = local.tags
-}
-
 # vcite_enriched_bucket - output for vlex integration
 module "vcite_enriched_bucket" {
   source          = "../secure_bucket"

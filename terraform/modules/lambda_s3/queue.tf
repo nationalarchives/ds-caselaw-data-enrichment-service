@@ -29,7 +29,7 @@ resource "aws_sqs_queue" "enrichment_dlq_queue" {
 
 resource "aws_sqs_queue_policy" "enrichment_queue_policy" {
   queue_url = aws_sqs_queue.enrichment_queue.id
-  policy    = data.aws_iam_policy_document.sqs_policy_fetch_xml.json
+  policy    = data.aws_iam_policy_document.sqs_policy_enrichment_queue.json
 }
 
 # Subscribe to staging SNS topic (non-production)

@@ -1,12 +1,13 @@
 data "aws_caller_identity" "current" {}
 
-data "aws_iam_policy_document" "sqs_policy_fetch_xml" {
+data "aws_iam_policy_document" "sqs_policy_enrichment_queue" {
   statement {
     sid    = "ReceiveActions"
     effect = "Allow"
     actions = [
       "sqs:*"
     ]
+    resources = [aws_sqs_queue.enrichment_queue.arn]
     principals {
       identifiers = [
         "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root"
