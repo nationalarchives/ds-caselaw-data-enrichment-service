@@ -17,7 +17,7 @@ data "aws_iam_policy_document" "sqs_policy_fetch_xml" {
   statement {
     sid       = "SenderActions"
     effect    = "Allow"
-    resources = [aws_sqs_queue.fetch_xml_queue.arn]
+    resources = [aws_sqs_queue.enrichment_queue.arn]
     actions = [
       "sqs:*",
     ]
@@ -46,8 +46,7 @@ data "aws_iam_policy_document" "vcite_policy" {
     principals {
       identifiers = [
         "arn:aws:iam::926041203935:role/vlex-vcite",
-        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-${local.environment}-xml-validate",
-        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-${local.environment}-push-enriched-xml"
+        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-${local.environment}-enrichment"
       ]
       type = "AWS"
     }
@@ -92,8 +91,7 @@ data "aws_iam_policy_document" "vcite_kms_policy" {
     principals {
       identifiers = [
         "arn:aws:iam::${data.aws_caller_identity.current.account_id}:root",
-        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-${local.environment}-push-enriched-xml",
-        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-${local.environment}-xml-validate",
+        "arn:aws:iam::${data.aws_caller_identity.current.account_id}:role/tna-s3-tna-${local.environment}-enrichment",
       ]
       type = "AWS"
     }

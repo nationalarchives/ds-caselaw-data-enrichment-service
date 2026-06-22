@@ -1,13 +1,12 @@
 """Tests the replacer.replacer module's `encode_replacements_to_string` function"""
 
 import json
-import unittest
 from collections import namedtuple
 
-from replacer.replacer import encode_replacements_to_string
+from enrichment.replacer.replacer import encode_replacements_to_string
 
 
-class TestWriteReplacementsFile(unittest.TestCase):
+class TestWriteReplacementsFile:
     """
     Tests `encode_replacements_to_string` function
     """
@@ -60,7 +59,3 @@ class TestWriteReplacementsFile(unittest.TestCase):
             replacement_dict = json.loads(replacement)
             expected_key_value_pair = expected_key_value_pairs[index]
             assert expected_key_value_pair == replacement_dict
-
-
-if __name__ == "__main__":
-    unittest.main()

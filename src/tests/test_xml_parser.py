@@ -1,27 +1,9 @@
 """Testing the xml parser to ensure that information is extracted as expected"""
 
-import unittest
-from pathlib import Path
-
-from spacy.lang.en import English
-
 from utils.helper import parse_file
 
-FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "rules"
 
-
-def set_up():
-    nlp = English()
-    nlp.max_length = 1500000
-    nlp.add_pipe("entity_ruler").from_disk(f"{FIXTURE_DIR}/citation_patterns.jsonl")
-    # TODO: change this to a mock db?
-    return nlp
-
-
-class TestXmlParser(unittest.TestCase):
-    def SetUp(self):
-        self.nlp = set_up()
-
+class TestXmlParser:
     def test_XMLStrings1(self):
         text = '<paragraph> \
             <num style="font-style:normal;font-weight:normal;text-decoration:none;vertical-align:baseline;font-family:\'Times New Roman\';font-size:12pt;color:#000000;background-color:auto;margin-left:0.50in;text-indent:-0.50in">36.</num>\
@@ -80,7 +62,3 @@ class TestXmlParser(unittest.TestCase):
         judgment_content_text = parse_file(text)
 
         assert judgment_content_text == "That point was also in College [2014] EWCA Civ 734 at [12]-[14]"
-
-
-if __name__ == "__main__":
-    unittest.main()

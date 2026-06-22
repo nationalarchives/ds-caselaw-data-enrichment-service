@@ -1,16 +1,12 @@
 """Tests the `oblique_references` module"""
 
 import re
-import unittest
 from pathlib import Path
 
 import pytest
 from caselawclient.content_hash import get_hash_from_document
 
-from oblique_references.enrich_oblique_references import (
-    enrich_oblique_references,
-)
-from oblique_references.oblique_references import (
+from enrichment.oblique_references.oblique_references import (
     LegislationReferenceReplacement,
     NotExactlyOneRefTag,
     create_legislation_dict,
@@ -18,7 +14,10 @@ from oblique_references.oblique_references import (
     get_oblique_reference_replacements_by_paragraph,
     get_replacements,
 )
-from replacer.second_stage_replacer import replace_references
+from enrichment.replacer.second_stage_replacer import replace_references
+from lambdas.enrichment_lambda.steps import (
+    enrich_oblique_references,
+)
 
 FIXTURE_DIR = Path(__file__).parent.parent.resolve() / "fixtures/"
 
@@ -27,7 +26,7 @@ def nuke_tags(xml):
     return "".join(re.findall(">([^<]*)<", str(xml)))
 
 
-class TestOutputHasSameHashAsInput(unittest.TestCase):
+class TestOutputHasSameHashAsInput:
     def test_rwanda_overall(self):
         input_file_path = f"{FIXTURE_DIR}/rwanda.xml"
         with open(input_file_path, "rb") as input_file:
@@ -68,7 +67,7 @@ class TestOutputHasSameHashAsInput(unittest.TestCase):
         assert nuke_tags(replace_references(text, reference_replacements)) == nuke_tags(text)
 
 
-class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
+class TestGetObliqueReferenceReplacementsByParagraph:
     """Tests the `get_oblique_reference_replacements_by_paragraph` function"""
 
     def test_get_oblique_reference_replacements_by_paragraph(self):
@@ -110,7 +109,7 @@ class TestGetObliqueReferenceReplacementsByParagraph(unittest.TestCase):
         ]
 
 
-class TestCreateLegislationDict(unittest.TestCase):
+class TestCreateLegislationDict:
     """Tests the `create_legislation_dict` function"""
 
     def test_create_legislation_dict(self):
@@ -226,7 +225,7 @@ class TestCreateLegislationDict(unittest.TestCase):
             create_legislation_dict(detected_legislation, paragraph_number)
 
 
-class TestDetectReference(unittest.TestCase):
+class TestDetectReference:
     """Tests the `detect_reference` function"""
 
     def test_legislation(self):
@@ -284,7 +283,7 @@ class TestDetectReference(unittest.TestCase):
         assert detected_act[2][1] == "that Act"
 
 
-class TestGetReplacements(unittest.TestCase):
+class TestGetReplacements:
     """Tests the `get_replacements` function"""
 
     legislation_dicts = [
@@ -457,7 +456,3 @@ class TestGetReplacements(unittest.TestCase):
             },
         ]
         assert replacements == expected_replacements
-
-
-if __name__ == "__main__":
-    unittest.main()

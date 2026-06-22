@@ -1,6 +1,4 @@
-import unittest
-
-from replacer.replacer_pipeline import (
+from enrichment.replacer.replacer_pipeline import (
     fixed_year,
     replacer_abbr,
     replacer_caselaw,
@@ -8,7 +6,7 @@ from replacer.replacer_pipeline import (
 )
 
 
-class TestCitationReplacer(unittest.TestCase):
+class TestCitationReplacer:
     """
     This class tests the replacement of the citations within the text itself. This comes from shared.replacer.py
     """
@@ -80,7 +78,7 @@ class TestCitationReplacer(unittest.TestCase):
         )
 
 
-class TestLegislationReplacer(unittest.TestCase):
+class TestLegislationReplacer:
     """
     This class tests the replacement of the citations within the text itself. This comes from shared.replacer.py
     """
@@ -119,7 +117,7 @@ class TestLegislationReplacer(unittest.TestCase):
         )
 
 
-class TestReplacerAbbr(unittest.TestCase):
+class TestReplacerAbbr:
     """Unit Tests for `replacer_abbr`"""
 
     def test_replacer_abbr(self):
@@ -138,7 +136,7 @@ class TestReplacerAbbr(unittest.TestCase):
         assert replacer_abbr(text, replacement_entry) == expected
 
 
-class TestFixedYear(unittest.TestCase):
+class TestFixedYear:
     def test_no_year(self):
         assert fixed_year(None) is None
 

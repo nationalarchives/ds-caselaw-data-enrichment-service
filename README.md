@@ -13,6 +13,56 @@ Marks up judgments in [Find Case Law](https://caselaw.nationalarchives.gov.uk) w
 
 [A description of the system's architecture](DESCRIPTION.md)
 
+## Development Setup
+
+### Local Environment
+
+Install all dependencies (including test dependencies) for local development:
+
+```bash
+make setup
+```
+
+This uses Poetry to install:
+
+- Core dependencies: `boto3`, `botocore`, `aws-lambda-powertools`, `pandas`, `psycopg2-binary`, `sqlalchemy`
+- Lambda-specific groups: `enrichment-lambda`, `legislation-lambda`, `rules-lambda`, `backup-lambda`
+- Test dependencies: `pytest`, `pytest-cov`, `moto`, `testcontainers`, etc.
+
+All dependencies are managed centrally in `pyproject.toml` with a locked `poetry.lock` file for reproducible builds.
+
+### Dependency Management
+
+- **Single source of truth**: `pyproject.toml` at repository root
+- **Locked versions**: `poetry.lock` ensures reproducible builds across environments
+- **Lambda groups**: Each lambda function has an optional dependency group:
+  - `enrichment-lambda`: spacy, beautifulsoup4, lxml, requests (NLP and XML processing)
+  - `legislation-lambda`: sparqlwrapper (SPARQL queries)
+  - `rules-lambda`: spacy (NLP processing)
+  - `backup-lambda`: none (uses core deps only)
+  - `test`: pytest, moto, testcontainers, coverage, etc.
+
+### Updating Dependencies
+
+To update a dependency version (e.g., update boto3):
+
+```bash
+poetry update boto3
+make test  # Verify changes don't break tests
+```
+
+To add a new dependency to a lambda group:
+
+```bash
+poetry add --group enrichment-lambda new-package-name
+```
+
+To sync your environment after poetry.lock changes:
+
+```bash
+poetry install
+```
+
 ## Tests
 
 There is a suite of tests that can be run locally with:
@@ -21,49 +71,73 @@ There is a suite of tests that can be run locally with:
 make test
 ```
 
-or directly:
+This automatically cleans assembly artifacts and runs:
+
+```bash
+poetry run pytest ${TEST_ARGS}
+```
+
+You can also run pytest directly:
 
 ```bash
 PYTHONPATH=src poetry run pytest
 ```
 
+To run specific tests:
+
+```bash
+make test TEST_ARGS="src/tests/caselaw_extraction_tests/"
+make test TEST_ARGS="-k test_xml_parser"
+```
+
 ### Database-backed tests
 
-Some tests require a PostgreSQL database. This is handled automatically using
-Testcontainers:
+Some tests require a PostgreSQL database. This is handled automatically using Testcontainers:
 
-Each test (or test fixture) starts a temporary PostgreSQL container
-The container is created and destroyed automatically during the test run
-No local PostgreSQL installation is required
+- Each test (or test fixture) starts a temporary PostgreSQL container
+- The container is created and destroyed automatically during the test run
+- No local PostgreSQL installation is required
 
 #### Prerequisites
 
-- Docker must be installed and running (required by Testcontainers)
-- Python dependencies must be installed via Poetry
-- On Mac: libpq must be installed and set on PATH:
+- **Docker**: Must be installed and running (required by Testcontainers)
+- **Python 3.13+**: With Poetry installed
+- **On Mac**: libpq must be installed and on PATH (for psycopg2):
+  ```bash
+  brew install libpq
+  PATH="/opt/homebrew/opt/libpq/bin:$PATH" && make test
+  ```
 
-```bash
-brew install libpq
-PATH="/opt/homebrew/opt/libpq/bin:$PATH" && make test
-```
+#### Test configuration
 
-#### Test contribution
-
-Test configuration is managed via pytest fixtures in `conftest.py`
-These fixtures automatically set up shared resources such as:
+Test configuration is managed via pytest fixtures in `conftest.py`. These fixtures automatically set up:
 
 - A temporary PostgreSQL instance using testcontainers
-- SQLAlchemy database engine and connections
-- NLP pipeline (spaCy with entity ruler loaded from fixtures)
+- SQLAlchemy database engine and session
+- NLP pipeline (spaCy with entity ruler)
 - Preloaded database tables for integration tests
 
-This means tests do not require any manual database setup or external services.
+No manual database setup or external services required.
 
-#### Test behaviour
+#### Test execution
 
 - Tests run in isolation
-- A fresh PostgreSQL instance is created per test (or per fixture scope)
-- No manual database setup is required
+- A fresh PostgreSQL instance is created per test session
+- All fixtures clean up automatically after completion
+
+#### Test markers
+
+Run only integration tests (tests requiring PostgreSQL):
+
+```bash
+make test TEST_ARGS="-m integration"
+```
+
+Run tests excluding integration tests:
+
+```bash
+make test TEST_ARGS="-m 'not integration'"
+```
 
 ### Coverage report
 
@@ -76,8 +150,60 @@ coverage report
 
 ### CI execution
 
-Tests are executed in CI as part of the GitHub Actions workflow
-(.github/workflows/ci_lint_and_test.yml).
+Tests are executed in CI as part of the GitHub Actions workflow (.github/workflows/ci_lint_and_test.yml).
+
+## Building Lambda Functions
+
+Use Make targets as the single public interface for local and CI builds.
+
+```bash
+make build-lambdas
+make build-lambda LAMBDA=enrichment_lambda
+```
+
+Build principles:
+
+- One dependency source of truth: `pyproject.toml` + `poetry.lock`
+- One build implementation: `make build-lambda`
+- Consistent behavior across local, PR CI, and deploy CI
+
+Where implementation details live:
+
+- Build orchestration: `Makefile`
+- Lambda image definitions: `src/lambdas/*/Dockerfile`
+- Context assembly script: `scripts/assemble_lambda_contexts.sh`
+- PR CI matrix: `.github/workflows/ci_lint_and_test.yml`
+- Deploy workflow: `.github/workflows/deploy_single_environment.yml`
+
+CI and deploy both call `make build-lambda`; `make build-lambdas` is a convenience wrapper that delegates to `make build-lambda` for each lambda.
+
+## Make Targets Reference
+
+### Development & Testing
+
+| Target                      | Description                                                                  |
+| --------------------------- | ---------------------------------------------------------------------------- |
+| `make setup`                | Install all dependencies for development and testing                         |
+| `make test`                 | Run all tests (cleans artifacts first)                                       |
+| `make test TEST_ARGS="..."` | Run tests with custom pytest args (e.g., `-k test_name` or `-m integration`) |
+
+### Building
+
+| Target                            | Description                                                     |
+| --------------------------------- | --------------------------------------------------------------- |
+| `make assemble-lambda-contexts`   | Copy shared utils/ and database/ into lambda directories        |
+| `make build-lambdas`              | Build all lambda Docker images (delegates to `build-lambda`)    |
+| `make build-lambda LAMBDA=<name>` | Build one lambda image (assembles unless `ASSEMBLED=1`)         |
+| `make clean`                      | Remove assembled artifacts (utils/, database/) from lambda dirs |
+
+### Example workflows
+
+```bash
+make setup
+make test
+make build-lambdas
+make clean
+```
 
 ## Turning Enrichment Off
 

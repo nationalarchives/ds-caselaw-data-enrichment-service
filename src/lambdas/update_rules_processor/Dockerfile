@@ -2,13 +2,18 @@ FROM public.ecr.aws/lambda/python:3.13@sha256:759c0bc7c7f9b6b68f2e8e28590815585b
 
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PYTHONIOENCODING=UTF-8
 
-# Copy only the requirements file first and install dependencies
-COPY requirements.txt ${LAMBDA_TASK_ROOT}
-RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
+# Install poetry
+RUN pip install poetry
 
-# Copy the rest of the code
-COPY . ${LAMBDA_TASK_ROOT}
-COPY utils/ ${LAMBDA_TASK_ROOT}/utils/
-COPY database/ ${LAMBDA_TASK_ROOT}/database/
+# Copy root pyproject.toml and poetry.lock for dependency resolution
+COPY pyproject.toml poetry.lock ${LAMBDA_TASK_ROOT}/
+
+# Install dependencies with rules-lambda group
+RUN cd ${LAMBDA_TASK_ROOT} && poetry config virtualenvs.create false && poetry install --with rules-lambda --no-root
+
+# Copy lambda code and shared utils/database modules (assembled by make)
+COPY src/lambdas/update_rules_processor/index.py ${LAMBDA_TASK_ROOT}/
+COPY src/lambdas/update_rules_processor/utils/ ${LAMBDA_TASK_ROOT}/utils/
+COPY src/lambdas/update_rules_processor/database/ ${LAMBDA_TASK_ROOT}/database/
 
 CMD [ "index.lambda_handler" ]
