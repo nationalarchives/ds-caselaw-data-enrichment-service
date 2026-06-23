@@ -15,6 +15,16 @@ on:
         required: true
       app_env:
         required: true
+      vcite_enabled:
+        required: true
+      api_username:
+        required: true
+      api_password:
+        required: true
+      sparql_username:
+        required: true
+      sparql_password:
+        required: true
 
 jobs:
   terraform_plan:
@@ -60,6 +70,12 @@ jobs:
 
       - name: Terraform Plan
         id: run_terraform_plan
+        env:
+          TF_VAR_vcite_enabled: ${{ secrets.vcite_enabled }}
+          TF_VAR_api_username: ${{ secrets.api_username }}
+          TF_VAR_api_password: ${{ secrets.api_password }}
+          TF_VAR_sparql_username: ${{ secrets.sparql_username }}
+          TF_VAR_sparql_password: ${{ secrets.sparql_password }}
         run: |
           set -e
           set -o pipefail

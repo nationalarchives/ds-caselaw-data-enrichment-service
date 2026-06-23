@@ -184,6 +184,11 @@ jobs:
       account_id: ${{ secrets.STAGING_ACCOUNT_ID }}
       workspace: tna-staging
       app_env: staging
+      vcite_enabled: ${{ secrets.VCITE_ENABLED }}
+      api_username: ${{ secrets.API_USERNAME }}
+      api_password: ${{ secrets.API_PASSWORD }}
+      sparql_username: ${{ secrets.SPARQL_USERNAME }}
+      sparql_password: ${{ secrets.SPARQL_PASSWORD }}
 
   terraform_plan-production:
     uses: ./.github/workflows/terraform_plan.yml
@@ -197,3 +202,8 @@ jobs:
       account_id: ${{ secrets.PROD_ACCOUNT_ID }}
       workspace: tna-prod
       app_env: production
+      vcite_enabled: ${{ secrets.VCITE_ENABLED }}
+      api_username: ${{ secrets.API_USERNAME }}
+      api_password: ${{ secrets.API_PASSWORD }}
+      sparql_username: ${{ secrets.SPARQL_USERNAME }}
+      sparql_password: ${{ secrets.SPARQL_PASSWORD }}
