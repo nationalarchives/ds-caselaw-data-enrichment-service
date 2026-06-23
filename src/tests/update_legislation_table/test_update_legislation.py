@@ -1,31 +1,18 @@
+import json
 from unittest.mock import patch
 
 import boto3
 import pandas as pd
-import pytest
 from moto import mock_aws
 
 from lambdas.update_legislation_table.index import update_legislation_table
 
 
-@pytest.fixture(scope="function")
-def setup_moto_secrets_manager():
-    region_name = "us-east-1"
-    secret_name = "mysecret"  # noqa: S105
-    mock_secrets_manager = mock_aws()
-    mock_secrets_manager.start()
-    yield {
-        "region_name": region_name,
-        "secret_name": secret_name,
-    }
-    mock_secrets_manager.stop()
-
-
+@mock_aws
 @patch("lambdas.update_legislation_table.index.fetch_legislation")
 def test_update_legislation_table(
     mock_fetch_legislation,
     monkeypatch,
-    setup_moto_secrets_manager,
     manifest_table,
     db_connection,
 ):
@@ -35,7 +22,6 @@ def test_update_legislation_table(
     Then the ukpga_lookup table in the database is appended to with the legislation
         entries from fetch_legislation
     """
-
     mock_fetch_legislation.return_value = pd.DataFrame(
         {
             "ref": ["b", "c"],
@@ -50,8 +36,9 @@ def test_update_legislation_table(
         },
     )
 
-    monkeypatch.setenv("SPARQL_USERNAME", "test_user")
-    monkeypatch.setenv("SPARQL_PASSWORD", "test_password")
+    region_name = "us-east-1"
+    db_password_secret_name = "mysecret"  # noqa: S105
+    sparql_secret_name = "sparql-credentials-secret"  # noqa: S105
 
     sql_query = """
     CREATE TABLE ukpga_lookup (
@@ -75,15 +62,23 @@ def test_update_legislation_table(
 
     dsn = db_connection.engine.url
 
-    client = boto3.client("secretsmanager", region_name=setup_moto_secrets_manager["region_name"])
-    client.create_secret(Name=setup_moto_secrets_manager["secret_name"], SecretString=dsn.password)
+    # Create secrets in moto's Secrets Manager with region specified
+    region_name = "us-east-1"
 
     monkeypatch.setenv("DATABASE_NAME", dsn.database)
     monkeypatch.setenv("DATABASE_USERNAME", dsn.username)
     monkeypatch.setenv("DATABASE_HOSTNAME", dsn.host)
     monkeypatch.setenv("DATABASE_PORT", str(dsn.port))
-    monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", setup_moto_secrets_manager["secret_name"])
-    monkeypatch.setenv("REGION_NAME", setup_moto_secrets_manager["region_name"])
+    monkeypatch.setenv("DB_PASSWORD_SECRET_NAME", db_password_secret_name)
+    monkeypatch.setenv("AWS_DEFAULT_REGION", region_name)
+    monkeypatch.setenv("SPARQL_SECRET_NAME", sparql_secret_name)
+
+    client = boto3.client("secretsmanager")
+    client.create_secret(Name=db_password_secret_name, SecretString=dsn.password)
+    client.create_secret(
+        Name=sparql_secret_name,
+        SecretString=json.dumps({"username": "test_user", "password": "test_password"}),
+    )
 
     trigger_date = 7
     update_legislation_table(trigger_date)
