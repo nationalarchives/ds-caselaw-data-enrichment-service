@@ -45,13 +45,13 @@ class TestHandler:
             "VCITE_BUCKET": "vcite-tna-files",
             "VCITE_ENRICHED_BUCKET": "staging-vcite-enriched-bucket",
             "VCITE_ENABLED": "false",
-            "AWS_DEFAULT_REGION": "eu-west-2",
+            "AWS_DEFAULT_REGION": "us-east-1",
         }
         for key, value in env_values.items():
             monkeypatch.setenv(key, value)
 
         # Create secret in moto with region matching AWS_DEFAULT_REGION
-        secrets_client = boto3.client("secretsmanager", region_name=env_values["AWS_DEFAULT_REGION"])
+        secrets_client = boto3.client("secretsmanager")
         secrets_client.create_secret(
             Name=env_values["API_SECRET_NAME"],
             SecretString=json.dumps(
@@ -62,7 +62,7 @@ class TestHandler:
             ),
         )
 
-        s3 = boto3.client("s3", region_name="us-east-1")
+        s3 = boto3.client("s3")
         s3.create_bucket(Bucket=env_values["RULES_FILE_BUCKET"])
         patterns = '{"pattern": "value"}\n{"pattern2": "value2"}'
         s3.put_object(
@@ -117,13 +117,13 @@ class TestHandler:
             "VCITE_BUCKET": "vcite-tna-files",
             "VCITE_ENRICHED_BUCKET": bucket_name,
             "VCITE_ENABLED": "true",
-            "AWS_DEFAULT_REGION": "eu-west-2",
+            "AWS_DEFAULT_REGION": "us-east-1",
         }
         for key, value in env_values.items():
             monkeypatch.setenv(key, value)
 
         # Create secret in moto with region matching AWS_DEFAULT_REGION
-        secrets_client = boto3.client("secretsmanager", region_name=env_values["AWS_DEFAULT_REGION"])
+        secrets_client = boto3.client("secretsmanager")
         secrets_client.create_secret(
             Name=env_values["API_SECRET_NAME"],
             SecretString=json.dumps(
@@ -134,7 +134,7 @@ class TestHandler:
             ),
         )
 
-        s3 = boto3.client("s3", region_name="us-east-1")
+        s3 = boto3.client("s3")
         s3.create_bucket(Bucket=bucket_name)
         xml_key = "ewhc/ch/2023/257.xml"
         xml_body = "<akomaNtoso><judgment><p>vcite</p></judgment></akomaNtoso>"
@@ -144,7 +144,7 @@ class TestHandler:
             "Records": [
                 {
                     "eventSource": "aws:s3",
-                    "awsRegion": "eu-west-2",
+                    "awsRegion": "us-east-1",
                     "eventName": "ObjectCreated:Put",
                     "s3": {
                         "bucket": {"name": bucket_name},
