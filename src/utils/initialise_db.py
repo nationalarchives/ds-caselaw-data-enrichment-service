@@ -7,7 +7,8 @@ import psycopg2
 import sqlalchemy
 
 from database.db_connection import create_connection
-from utils.environment_helpers import get_aws_secret, validate_env_variable
+from utils.environment_helpers import validate_env_variable
+from utils.secrets_manager import resolve_secret_value
 
 
 def init_db_engine() -> sqlalchemy.Engine:
@@ -44,9 +45,4 @@ def init_db_connection() -> psycopg2.extensions.connection:
 
 
 def _get_database_password() -> str:
-    aws_secret_name = validate_env_variable("SECRET_PASSWORD_LOOKUP")
-    aws_region_name = validate_env_variable("REGION_NAME")
-    secret = get_aws_secret(aws_secret_name, aws_region_name)
-    if isinstance(secret, bytes):
-        return secret.decode("utf-8")
-    return secret
+    return resolve_secret_value("DB_PASSWORD_SECRET_NAME")

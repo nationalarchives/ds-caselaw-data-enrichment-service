@@ -3,22 +3,33 @@
 from unittest import mock
 from unittest.mock import MagicMock
 
+import boto3
+from moto import mock_aws
+
 from utils.initialise_db import init_db_connection, init_db_engine
 
 
+@mock_aws
 @mock.patch("sqlalchemy.create_engine")
-def test_init_db_engine(mock_create_engine, monkeypatch, moto_secrets_manager_with_password):
+def test_init_db_engine(mock_create_engine, monkeypatch):
     """
     Given: The environment variables for the database are set
     When: The `init_db_engine` function is called
     Then create_engine was called with the correct arguments
     """
+    # Create secret in moto with name matching the env var name
+    secret_name = "DB_PASSWORD_SECRET_NAME"  # noqa: S105
+    region_name = "us-east-1"
+
     monkeypatch.setenv("DATABASE_NAME", "mydb")
     monkeypatch.setenv("DATABASE_USERNAME", "myuser")
     monkeypatch.setenv("DATABASE_HOSTNAME", "localhost")
     monkeypatch.setenv("DATABASE_PORT", "5432")
-    monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", moto_secrets_manager_with_password["secret_name"])
-    monkeypatch.setenv("REGION_NAME", moto_secrets_manager_with_password["region_name"])
+    monkeypatch.setenv("DB_PASSWORD_SECRET_NAME", secret_name)
+    monkeypatch.setenv("AWS_DEFAULT_REGION", region_name)
+
+    secrets_client = boto3.client("secretsmanager")
+    secrets_client.create_secret(Name=secret_name, SecretString="mydatabasepassword")
 
     mock_create_engine.return_value = MagicMock()
 
@@ -29,19 +40,27 @@ def test_init_db_engine(mock_create_engine, monkeypatch, moto_secrets_manager_wi
     assert engine == mock_create_engine.return_value
 
 
+@mock_aws
 @mock.patch("utils.initialise_db.create_connection")
-def test_init_db_connection(mock_create_engine, monkeypatch, moto_secrets_manager_with_password):
+def test_init_db_connection(mock_create_engine, monkeypatch):
     """
     Given: The environment variables for the database are set
     When: The `init_db_connection` function is called
     Then create_connection was called with the correct arguments
     """
+    # Create secret in moto with name matching the env var name
+    secret_name = "DB_PASSWORD_SECRET_NAME"  # noqa: S105
+    region_name = "us-east-1"
+
     monkeypatch.setenv("DATABASE_NAME", "mydb")
     monkeypatch.setenv("DATABASE_USERNAME", "myuser")
     monkeypatch.setenv("DATABASE_HOSTNAME", "localhost")
     monkeypatch.setenv("DATABASE_PORT", "5432")
-    monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", moto_secrets_manager_with_password["secret_name"])
-    monkeypatch.setenv("REGION_NAME", moto_secrets_manager_with_password["region_name"])
+    monkeypatch.setenv("DB_PASSWORD_SECRET_NAME", secret_name)
+    monkeypatch.setenv("AWS_DEFAULT_REGION", region_name)
+
+    secrets_client = boto3.client("secretsmanager")
+    secrets_client.create_secret(Name=secret_name, SecretString="mydatabasepassword")
 
     mock_create_engine.return_value = MagicMock()
 
