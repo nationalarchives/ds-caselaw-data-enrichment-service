@@ -1,0 +1,20 @@
+{
+  "Records": [
+    {
+      "messageId": "test-message-id",
+      "receiptHandle": "test-receipt-handle",
+      "body": "{\"Records\": [{\"EventSource\": \"aws:sns\", \"Sns\": {\"Message\": \"{\\\"judgment_uri\\\": \\\"test-judgment\\\"}\", \"MessageAttributes\": {\"trigger_enrichment\": {\"Type\": \"String\", \"Value\": \"true\"}}}}]}",
+      "attributes": {
+        "ApproximateReceiveCount": "1",
+        "SentTimestamp": "1234567890",
+        "SenderId": "test-sender",
+        "ApproximateFirstReceiveTimestamp": "1234567890"
+      },
+      "messageAttributes": {},
+      "md5OfBody": "test-md5",
+      "eventSource": "aws:sqs",
+      "eventSourceARN": "arn:aws:sqs:eu-west-2:123456789012:test-queue",
+      "awsRegion": "eu-west-2"
+    }
+  ]
+}

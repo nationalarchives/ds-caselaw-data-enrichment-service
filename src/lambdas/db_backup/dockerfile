@@ -11,7 +11,11 @@ COPY pyproject.toml poetry.lock ${LAMBDA_TASK_ROOT}/
 # Install dependencies (backup lambda uses core deps only)
 RUN cd ${LAMBDA_TASK_ROOT} && poetry config virtualenvs.create false && poetry install --no-root
 
-# Copy lambda code
-COPY src/lambdas/db_backup/index.py ${LAMBDA_TASK_ROOT}/
+# Copy shared utilities and database modules (needed by all lambdas)
+COPY src/utils ${LAMBDA_TASK_ROOT}/utils
+COPY src/database ${LAMBDA_TASK_ROOT}/database
 
-CMD [ "index.lambda_handler" ]
+# Copy this lambda's code
+COPY src/lambdas/db_backup ${LAMBDA_TASK_ROOT}/lambdas/db_backup
+
+CMD ["lambdas.db_backup.index.lambda_handler"]

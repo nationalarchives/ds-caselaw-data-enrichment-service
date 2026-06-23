@@ -1,6 +1,6 @@
 from sqlalchemy import text
 
-from ..database import remove_duplicates
+from lambdas.update_legislation_table.database import remove_duplicates
 
 
 def test_remove_duplicates(db_connection):
