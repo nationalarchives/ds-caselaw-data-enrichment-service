@@ -1,6 +1,5 @@
 """This module contains functions to read in environment variables"""
 
-import base64
 import logging
 import os
 
@@ -30,39 +29,23 @@ def validate_env_variable(env_var_name: str) -> str:
     return env_variable
 
 
-def get_aws_secret(aws_secret_name: str, aws_region_name: str) -> str | bytes:
+def get_aws_secret(aws_secret_name: str) -> str:
     """
-    Get aws secret
+    Get aws secret value from AWS Secrets Manager using boto3 client
     """
-
     if not aws_secret_name:
         msg = "No aws_secret_name provided"
         raise RuntimeError(msg)
-    if not aws_region_name:
-        msg = "No aws_region_name provided"
-        raise RuntimeError(msg)
-
-    secret_name = aws_secret_name
-    region_name = aws_region_name
 
     # Create a Secrets Manager client
     session = boto3.session.Session()
-    client = session.client(service_name="secretsmanager", region_name=region_name)
+    client = session.client(service_name="secretsmanager")
 
     try:
         LOGGER.info(" about to get_secret_value_response")
-        get_secret_value_response = client.get_secret_value(SecretId=secret_name)
-        LOGGER.info("got_secret_value_response")
-
-        # Decrypts secret using the associated KMS CMK.
-        # Depending on whether the secret is a string or binary, one of these fields will be populated.
-        if "SecretString" in get_secret_value_response:
-            LOGGER.info("got SecretString")
-            return get_secret_value_response["SecretString"]
-        else:
-            LOGGER.info("not SecretString")
-            return base64.b64decode(get_secret_value_response["SecretBinary"])
-    # added as the validation exception was not being caught
+        get_secret_value_response = client.get_secret_value(SecretId=aws_secret_name)
     except Exception as exception:
         LOGGER.error("Exception: %s", exception)
         raise
+    LOGGER.info("got_secret_value_response")
+    return get_secret_value_response["SecretString"]
