@@ -29,9 +29,14 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_api_password"></a> [api\_password](#input\_api\_password) | API password to store in AWS Secrets Manager | `string` | n/a | yes |
+| <a name="input_api_username"></a> [api\_username](#input\_api\_username) | API username to store in AWS Secrets Manager | `string` | n/a | yes |
 | <a name="input_app_env"></a> [app\_env](#input\_app\_env) | Common prefix for all Terraform created resources | `string` | `"staging"` | no |
 | <a name="input_bucket_prefix"></a> [bucket\_prefix](#input\_bucket\_prefix) | n/a | `string` | `"sg"` | no |
 | <a name="input_region"></a> [region](#input\_region) | AWS Region to deploy to | `string` | `"eu-west-2"` | no |
+| <a name="input_sparql_password"></a> [sparql\_password](#input\_sparql\_password) | SPARQL password to store in AWS Secrets Manager | `string` | n/a | yes |
+| <a name="input_sparql_username"></a> [sparql\_username](#input\_sparql\_username) | SPARQL username to store in AWS Secrets Manager | `string` | n/a | yes |
+| <a name="input_vcite_enabled"></a> [vcite\_enabled](#input\_vcite\_enabled) | Enable vCite processing and upload in enrichment lambda | `bool` | n/a | yes |
 
 ## Outputs
 

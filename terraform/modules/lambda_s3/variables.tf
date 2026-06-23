@@ -87,3 +87,27 @@ variable "aws_subnets_private_ids" {
 variable "bucket_prefix" {
   default = "sg"
 }
+
+variable "vcite_enabled" {
+  type = bool
+}
+
+variable "api_username" {
+  type      = string
+  sensitive = true
+}
+
+variable "api_password" {
+  type      = string
+  sensitive = true
+}
+
+variable "sparql_username" {
+  type      = string
+  sensitive = true
+}
+
+variable "sparql_password" {
+  type      = string
+  sensitive = true
+}
