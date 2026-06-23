@@ -60,7 +60,7 @@
 #     monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", secret_name)
 #     monkeypatch.setenv("RULES_FILE_BUCKET", rules_bucket)
 #     monkeypatch.setenv("RULES_FILE_KEY", rules_key)
-#     monkeypatch.setenv("REGION_NAME", region)
+#     monkeypatch.setenv("AWS_DEFAULT_REGION", region)
 
 #     with mock_aws():
 #         s3 = boto3.client("s3", region_name=region)
