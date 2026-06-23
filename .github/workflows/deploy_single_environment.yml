@@ -15,7 +15,7 @@ on:
         required: true
 
 jobs:
-  deploy_single_environment:
+  setup-terraform-phase-1:
     runs-on: ubuntu-latest
     environment: ${{ inputs.environment }}
     steps:
@@ -36,11 +36,6 @@ jobs:
           aws-region: eu-west-2
           role-to-assume: ${{ secrets.aws_oidc_role_arn }}
         continue-on-error: false
-
-      - name: Buildx
-        uses: docker/setup-buildx-action@d7f5e7f509e45cec5c76c4d5afdd7de93d0b3df5 # v4.1.0
-        with:
-          install: true
 
       - name: Assemble Lambdas
         run: |
@@ -86,32 +81,113 @@ jobs:
             -target=module.lambda_s3.aws_ecr_lifecycle_policy.ru_retention \
             -var "app_env=${{ secrets.app_env }}"
 
-      - name: Build and Push Docker Images
+  build-and-push-lambda:
+    name: Build and push ${{ matrix.lambda }}
+    needs: setup-terraform-phase-1
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    strategy:
+      fail-fast: false
+      matrix:
+        lambda:
+          - enrichment_lambda
+          - db_backup
+          - update_legislation_table
+          - update_rules_processor
+        include:
+          - lambda: enrichment_lambda
+            ecr_repo: tna-s3-tna-ecr-repository-enrichment
+          - lambda: db_backup
+            ecr_repo: tna-s3-tna-ecr-repository-db-backup
+          - lambda: update_legislation_table
+            ecr_repo: tna-s3-tna-ecr-repository-legislation-update
+          - lambda: update_rules_processor
+            ecr_repo: tna-s3-tna-ecr-repository-rules-update
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Get AWS Credentials
+        uses: aws-actions/configure-aws-credentials@e7f100cf4c008499ea8adda475de1042d6975c7b # v6.2.0
+        with:
+          aws-region: eu-west-2
+          role-to-assume: ${{ secrets.aws_oidc_role_arn }}
+        continue-on-error: false
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@d7f5e7f509e45cec5c76c4d5afdd7de93d0b3df5 # v4.1.0
+        with:
+          install: true
+
+      - name: Build and push ${{ matrix.lambda }}
+        env:
+          DOCKER_BUILDKIT: 1
         run: |
           set -e
           set -o pipefail
 
           aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com
 
-          ## ENRICHMENT (consolidated pipeline)
-          make build-lambda LAMBDA=enrichment_lambda ASSEMBLED=1
-          docker tag enrichment_lambda:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-enrichment-${{ secrets.app_env }}:latest
+          make build-lambda LAMBDA=${{ matrix.lambda }} ASSEMBLED=1
 
-          ## DB_BACKUP
-          make build-lambda LAMBDA=db_backup ASSEMBLED=1
-          docker tag db_backup:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-db-backup-${{ secrets.app_env }}:latest
+      - name: Smoke test ${{ matrix.lambda }}
+        env:
+          DOCKER_BUILDKIT: 1
+        run: make smoke-test LAMBDA=${{ matrix.lambda }}
 
-          ## UPDATE_LEGISLATION_TABLE
-          make build-lambda LAMBDA=update_legislation_table ASSEMBLED=1
-          docker tag update_legislation_table:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-legislation-update-${{ secrets.app_env }}:latest
+      - name: Push ${{ matrix.lambda }} to ECR
+        env:
+          DOCKER_BUILDKIT: 1
+        run: |
+          set -e
+          set -o pipefail
 
-          ## UPDATE_RULES_PROCESSOR
-          make build-lambda LAMBDA=update_rules_processor ASSEMBLED=1
-          docker tag update_rules_processor:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/tna-s3-tna-ecr-repository-rules-update-${{ secrets.app_env }}:latest
+          aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com
+
+          docker tag ${{ matrix.lambda }}:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/${{ matrix.ecr_repo }}-${{ secrets.app_env }}:latest
+          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/${{ matrix.ecr_repo }}-${{ secrets.app_env }}:latest
+
+  deploy-terraform-phase-2:
+    name: Deploy infrastructure
+    needs: build-and-push-lambda
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Get AWS Credentials
+        uses: aws-actions/configure-aws-credentials@e7f100cf4c008499ea8adda475de1042d6975c7b # v6.2.0
+        with:
+          aws-region: eu-west-2
+          role-to-assume: ${{ secrets.aws_oidc_role_arn }}
+        continue-on-error: false
+
+      - name: Get terraform version
+        id: get-terraform-version
+        run: |
+          DOTFILE_VERSION=$(cat terraform/.terraform-version)
+          echo "version=$DOTFILE_VERSION" >> $GITHUB_OUTPUT
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e # v4.0.1
+        continue-on-error: false
+        with:
+          terraform_version: ${{ steps.get-terraform-version.outputs.version }}
+
+      - name: Terraform init
+        run: |
+          set -e
+          set -o pipefail
+          cd terraform
+          terraform init -upgrade -input=false -backend-config="bucket=tna-terraform-backend-state-enrichment-pipeline-${{ secrets.account_id }}"
+        continue-on-error: false
 
       - name: "Terraform Phase 2: Deploy Complete Infrastructure"
         run: |

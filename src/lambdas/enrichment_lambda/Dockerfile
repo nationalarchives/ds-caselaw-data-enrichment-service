@@ -11,11 +11,14 @@ COPY pyproject.toml poetry.lock ${LAMBDA_TASK_ROOT}/
 # Install dependencies with enrichment-lambda group
 RUN cd ${LAMBDA_TASK_ROOT} && poetry config virtualenvs.create false && poetry install --with enrichment-lambda --no-root
 
-# Copy lambda code and shared utils/database modules (assembled by make)
-COPY src/lambdas/enrichment_lambda/index.py ${LAMBDA_TASK_ROOT}/
-COPY src/lambdas/enrichment_lambda/utils/ ${LAMBDA_TASK_ROOT}/utils/
-COPY src/lambdas/enrichment_lambda/database/ ${LAMBDA_TASK_ROOT}/database/
-COPY src/lambdas/enrichment_lambda/steps.py ${LAMBDA_TASK_ROOT}/
-COPY src/lambdas/enrichment_lambda/api.py ${LAMBDA_TASK_ROOT}/
+# Copy shared utilities and database modules (needed by all lambdas)
+COPY src/utils ${LAMBDA_TASK_ROOT}/utils
+COPY src/database ${LAMBDA_TASK_ROOT}/database
 
-CMD ["index.handler"]
+# Copy enrichment modules (specific to this lambda)
+COPY src/enrichment ${LAMBDA_TASK_ROOT}/enrichment
+
+# Copy this lambda's code
+COPY src/lambdas/enrichment_lambda ${LAMBDA_TASK_ROOT}/lambdas/enrichment_lambda
+
+CMD ["lambdas.enrichment_lambda.index.handler"]

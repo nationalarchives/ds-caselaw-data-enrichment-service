@@ -4,7 +4,7 @@ This repository is part of the [Find Case Law](https://caselaw.nationalarchives.
 
 # Judgment Enrichment Pipeline
 
-![Tests](https://img.shields.io/github/actions/workflow/status/nationalarchives/ds-caselaw-data-enrichment-service/ci_lint_and_test.yml?branch=main&label=tests)
+![Tests](https://img.shields.io/github/actions/workflow/status/nationalarchives/ds-caselaw-data-enrichment-service/ci.yml?branch=main&label=tests)
 ![Code Coverage](https://img.shields.io/codecov/c/github/nationalarchives/ds-caselaw-data-enrichment-service)
 
 Marks up judgments in [Find Case Law](https://caselaw.nationalarchives.gov.uk) with references to other cases and legislation.
@@ -150,32 +150,11 @@ coverage report
 
 ### CI execution
 
-Tests are executed in CI as part of the GitHub Actions workflow (.github/workflows/ci_lint_and_test.yml).
+Tests are executed in CI as part of the GitHub Actions workflow (.github/workflows/ci.yml).
 
-## Building Lambda Functions
+## Building and Validating Lambda Functions
 
-Use Make targets as the single public interface for local and CI builds.
-
-```bash
-make build-lambdas
-make build-lambda LAMBDA=enrichment_lambda
-```
-
-Build principles:
-
-- One dependency source of truth: `pyproject.toml` + `poetry.lock`
-- One build implementation: `make build-lambda`
-- Consistent behavior across local, PR CI, and deploy CI
-
-Where implementation details live:
-
-- Build orchestration: `Makefile`
-- Lambda image definitions: `src/lambdas/*/Dockerfile`
-- Context assembly script: `scripts/assemble_lambda_contexts.sh`
-- PR CI matrix: `.github/workflows/ci_lint_and_test.yml`
-- Deploy workflow: `.github/workflows/deploy_single_environment.yml`
-
-CI and deploy both call `make build-lambda`; `make build-lambdas` is a convenience wrapper that delegates to `make build-lambda` for each lambda.
+Use Make targets as the single public interface for local and CI validation/builds.
 
 ## Make Targets Reference
 
@@ -184,26 +163,67 @@ CI and deploy both call `make build-lambda`; `make build-lambdas` is a convenien
 | Target                      | Description                                                                  |
 | --------------------------- | ---------------------------------------------------------------------------- |
 | `make setup`                | Install all dependencies for development and testing                         |
-| `make test`                 | Run all tests (cleans artifacts first)                                       |
+| `make test`                 | Run all tests with pytest                                                    |
 | `make test TEST_ARGS="..."` | Run tests with custom pytest args (e.g., `-k test_name` or `-m integration`) |
 
-### Building
+### Building & Validation
 
-| Target                            | Description                                                     |
-| --------------------------------- | --------------------------------------------------------------- |
-| `make assemble-lambda-contexts`   | Copy shared utils/ and database/ into lambda directories        |
-| `make build-lambdas`              | Build all lambda Docker images (delegates to `build-lambda`)    |
-| `make build-lambda LAMBDA=<name>` | Build one lambda image (assembles unless `ASSEMBLED=1`)         |
-| `make clean`                      | Remove assembled artifacts (utils/, database/) from lambda dirs |
+| Target                            | Description                                                                |
+| --------------------------------- | -------------------------------------------------------------------------- |
+| `make build-lambdas`              | Build all Lambda Docker images for local testing                           |
+| `make build-lambda LAMBDA=<name>` | Build one Lambda image                                                     |
+| `make smoke-test`                 | Test all Lambda containers using AWS Lambda Runtime Interface (RIE)        |
+| `make smoke-test LAMBDA=<name>`   | Test one specific Lambda container (used by CI matrix for parallelization) |
+| `make validate`                   | Full validation pipeline: test → build-lambdas → smoke-test                |
+| `make clean`                      | Clean Docker build artifacts                                               |
 
-### Example workflows
+### Smoke Testing Strategy
 
-```bash
-make setup
-make test
-make build-lambdas
-make clean
+**Local:** `make smoke-test` builds Lambda Docker images and validates them with AWS Lambda Runtime Interface Emulator (RIE). Runs all 4 lambdas sequentially, or with `LAMBDA=<name>` for a single lambda.
+
+**CI/CD:** `.github/workflows/ci.yml` runs unit tests first, then invokes `make smoke-test LAMBDA=<name>` for each lambda in parallel (4 jobs). `.github/workflows/deploy_single_environment.yml` builds and smoke tests all 4 lambdas in parallel before pushing to ECR, ensuring broken images never reach production.
+
+**Full validation:** `make validate` runs unit tests → builds all lambdas → smoke tests all containers. This is the comprehensive pre-commit gate.
+
+Build principles:
+
+- One dependency source of truth: `pyproject.toml` + `poetry.lock`
+- Selective COPY in Dockerfiles (not full `src/`): Preserves build cache granularity
+- Dependencies installed before source: Code changes don't force dependency reinstall
+- One build implementation: `make build-lambda`
+- Consistent behavior across local, PR CI, and deploy CI
+
+Where implementation details live:
+
+- Build orchestration: `Makefile`
+- Lambda image definitions: `src/lambdas/*/Dockerfile`
+- CI pipeline: `.github/workflows/ci.yml` (unit tests → parallel smoke tests)
+- Deployment pipeline: `.github/workflows/deploy_single_environment.yml` (parallel build → smoke test → ECR push → Terraform deploy)
+
+## Repository Structure and Build Process
+
+The `src/` directory contains all code used by both tests and Docker builds:
+
 ```
+src/
+├── lambdas/                    # Lambda entry points (enrichment, legislation, rules, backup)
+├── enrichment/                 # Enrichment modules
+├── database/                   # Shared database utilities
+└── utils/                      # Shared utilities
+```
+
+**Testing with absolute imports:** `pytest.ini` adds `src/` to pythonpath, enabling:
+
+```python
+from lambdas.enrichment_lambda.api import read_message
+from utils.environment_helpers import validate_env_variable
+```
+
+**Docker builds:** Dockerfiles at `src/lambdas/{lambda_name}/Dockerfile` are built with `docker build -f "src/lambdas/$(LAMBDA)/Dockerfile" -t $(LAMBDA):local .`
+
+- Install dependencies first (Poetry layers reused across code changes)
+- Selectively copy only: `src/utils/`, `src/database/`, `src/lambdas/{name}/`, and `src/enrichment/` (enrichment_lambda only)
+- Result: Build caches stay granular; code changes don't force dependency reinstall
 
 ## Turning Enrichment Off
 

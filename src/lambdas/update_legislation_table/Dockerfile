@@ -11,9 +11,11 @@ COPY pyproject.toml poetry.lock ${LAMBDA_TASK_ROOT}/
 # Install dependencies with legislation-lambda group
 RUN cd ${LAMBDA_TASK_ROOT} && poetry config virtualenvs.create false && poetry install --with legislation-lambda --no-root
 
-# Copy lambda code and shared utils/database modules (assembled by make)
-COPY src/lambdas/update_legislation_table/index.py ${LAMBDA_TASK_ROOT}/
-COPY src/lambdas/update_legislation_table/utils/ ${LAMBDA_TASK_ROOT}/utils/
-COPY src/lambdas/update_legislation_table/database/ ${LAMBDA_TASK_ROOT}/database/
+# Copy shared utilities and database modules (needed by all lambdas)
+COPY src/utils ${LAMBDA_TASK_ROOT}/utils
+COPY src/database ${LAMBDA_TASK_ROOT}/database
 
-CMD [ "index.lambda_handler" ]
+# Copy this lambda's code
+COPY src/lambdas/update_legislation_table ${LAMBDA_TASK_ROOT}/lambdas/update_legislation_table
+
+CMD ["lambdas.update_legislation_table.index.handler"]

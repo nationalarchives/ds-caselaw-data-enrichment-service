@@ -1,0 +1,13 @@
+{
+  "version": "0",
+  "id": "test-event-id",
+  "detail-type": "Scheduled Event",
+  "source": "aws.events",
+  "account": "123456789012",
+  "time": "2024-01-01T12:00:00Z",
+  "region": "eu-west-2",
+  "resources": ["arn:aws:events:eu-west-2:123456789012:rule/test-rule"],
+  "detail": {
+    "trigger": "scheduled-db-backup"
+  }
+}
