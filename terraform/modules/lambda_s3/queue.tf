@@ -4,7 +4,6 @@
 
 resource "aws_sqs_queue" "enrichment_queue" {
   name                       = "${local.name}-${local.environment}-enrichment-queue"
-  delay_seconds              = 90
   max_message_size           = 2048
   visibility_timeout_seconds = 900
   message_retention_seconds  = 1209600
@@ -19,7 +18,6 @@ resource "aws_sqs_queue" "enrichment_queue" {
 
 resource "aws_sqs_queue" "enrichment_dlq_queue" {
   name                      = "${local.name}-${local.environment}-enrichment-dlq-queue"
-  delay_seconds             = 90
   max_message_size          = 2048
   message_retention_seconds = 1209600
   receive_wait_time_seconds = 10
