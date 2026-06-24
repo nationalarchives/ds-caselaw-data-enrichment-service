@@ -90,7 +90,7 @@ class TestEnrichJudgment:
         with pytest.raises(Exception, match="API error"):
             enrich_judgment(uri_reference, endpoint, "user", "pass", [])
 
-        mock_lock.assert_not_called()
+        mock_lock.assert_called()
         mock_enrich.assert_not_called()
         mock_patch.assert_not_called()
 
@@ -153,7 +153,7 @@ class TestEnrichJudgment:
         with pytest.raises(Exception, match="Lock failed"):
             enrich_judgment(uri_reference, endpoint, "user", "pass", [])
 
-        mock_fetch.assert_called_once()
+        mock_fetch.assert_not_called()
         mock_enrich.assert_not_called()
         mock_patch.assert_not_called()
 
