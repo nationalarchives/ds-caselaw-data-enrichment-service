@@ -32,25 +32,37 @@ def _sqs_record(body: str, event_value: str | None = None) -> dict:
 class TestHandler:
     @mock_aws
     @patch("lambdas.enrichment_lambda.index.enrich_judgment")
-    @patch("lambdas.enrichment_lambda.index.validate_env_variable")
     def test_handler_uses_staging_endpoint_and_skips_s3_test_event(
         self,
-        mock_validate_env,
         mock_enrich_judgment,
+        monkeypatch,
     ):
         env_values = {
-            "API_USERNAME": "api-user",
-            "API_PASSWORD": "api-credential",
+            "API_SECRET_NAME": "api-credentials-secret",
             "ENVIRONMENT": "staging",
             "RULES_FILE_BUCKET": "rules-bucket",
             "RULES_FILE_KEY": "rules-key",
             "VCITE_BUCKET": "vcite-tna-files",
             "VCITE_ENRICHED_BUCKET": "staging-vcite-enriched-bucket",
             "VCITE_ENABLED": "false",
+            "AWS_DEFAULT_REGION": "us-east-1",
         }
-        mock_validate_env.side_effect = lambda key: env_values[key]
+        for key, value in env_values.items():
+            monkeypatch.setenv(key, value)
 
-        s3 = boto3.client("s3", region_name="us-east-1")
+        # Create secret in moto with region matching AWS_DEFAULT_REGION
+        secrets_client = boto3.client("secretsmanager")
+        secrets_client.create_secret(
+            Name=env_values["API_SECRET_NAME"],
+            SecretString=json.dumps(
+                {
+                    "username": "api-user",
+                    "password": "api-credential",
+                },
+            ),
+        )
+
+        s3 = boto3.client("s3")
         s3.create_bucket(Bucket=env_values["RULES_FILE_BUCKET"])
         patterns = '{"pattern": "value"}\n{"pattern2": "value2"}'
         s3.put_object(
@@ -81,7 +93,7 @@ class TestHandler:
         assert call_args[0][0] == "ewhc/ch/2023/257"  # uri_reference
         assert call_args[0][1] == "https://api.staging.caselaw.nationalarchives.gov.uk/"  # endpoint
         assert call_args[0][2] == "api-user"  # api_username
-        assert call_args[0][3] == env_values["API_PASSWORD"]  # api_password
+        assert call_args[0][3] == "api-credential"  # api_password
         assert call_args[0][4] == [
             {"pattern": "value"},
             {"pattern2": "value2"},
@@ -91,26 +103,38 @@ class TestHandler:
 
     @mock_aws
     @patch("lambdas.enrichment_lambda.patch_from_vcite_callback.patch_judgment")
-    @patch("lambdas.enrichment_lambda.index.validate_env_variable")
     def test_handler_vcite_callback_patches_returned_xml(
         self,
-        mock_validate_env,
         mock_patch,
+        monkeypatch,
     ):
         bucket_name = "production-tna-s3-tna-sg-vcite-enriched-bucket"
         env_values = {
-            "API_USERNAME": "api-user",
-            "API_PASSWORD": "api-credential",
+            "API_SECRET_NAME": "api-credentials-secret",
             "ENVIRONMENT": "production",
             "RULES_FILE_BUCKET": "rules-bucket",
             "RULES_FILE_KEY": "rules-key",
             "VCITE_BUCKET": "vcite-tna-files",
             "VCITE_ENRICHED_BUCKET": bucket_name,
             "VCITE_ENABLED": "true",
+            "AWS_DEFAULT_REGION": "us-east-1",
         }
-        mock_validate_env.side_effect = lambda key: env_values[key]
+        for key, value in env_values.items():
+            monkeypatch.setenv(key, value)
 
-        s3 = boto3.client("s3", region_name="us-east-1")
+        # Create secret in moto with region matching AWS_DEFAULT_REGION
+        secrets_client = boto3.client("secretsmanager")
+        secrets_client.create_secret(
+            Name=env_values["API_SECRET_NAME"],
+            SecretString=json.dumps(
+                {
+                    "username": "api-user",
+                    "password": "api-credential",
+                },
+            ),
+        )
+
+        s3 = boto3.client("s3")
         s3.create_bucket(Bucket=bucket_name)
         xml_key = "ewhc/ch/2023/257.xml"
         xml_body = "<akomaNtoso><judgment><p>vcite</p></judgment></akomaNtoso>"
@@ -120,7 +144,7 @@ class TestHandler:
             "Records": [
                 {
                     "eventSource": "aws:s3",
-                    "awsRegion": "eu-west-2",
+                    "awsRegion": "us-east-1",
                     "eventName": "ObjectCreated:Put",
                     "s3": {
                         "bucket": {"name": bucket_name},
@@ -137,4 +161,4 @@ class TestHandler:
         assert called_doc_uri == "ewhc/ch/2023/257"
         assert "<akomaNtoso" in called_xml
         assert called_user == "api-user"
-        assert called_password == env_values["API_PASSWORD"]
+        assert called_password == "api-credential"  # noqa: S105

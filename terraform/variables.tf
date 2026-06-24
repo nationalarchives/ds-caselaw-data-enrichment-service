@@ -11,3 +11,32 @@ variable "app_env" {
 variable "bucket_prefix" {
   default = "sg"
 }
+
+variable "vcite_enabled" {
+  type        = bool
+  description = "Enable vCite processing and upload in enrichment lambda"
+}
+
+variable "api_username" {
+  type        = string
+  description = "API username to store in AWS Secrets Manager"
+  sensitive   = true
+}
+
+variable "api_password" {
+  type        = string
+  description = "API password to store in AWS Secrets Manager"
+  sensitive   = true
+}
+
+variable "sparql_username" {
+  type        = string
+  description = "SPARQL username to store in AWS Secrets Manager"
+  sensitive   = true
+}
+
+variable "sparql_password" {
+  type        = string
+  description = "SPARQL password to store in AWS Secrets Manager"
+  sensitive   = true
+}

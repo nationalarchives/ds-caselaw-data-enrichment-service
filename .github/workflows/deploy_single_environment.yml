@@ -13,6 +13,16 @@ on:
         required: true
       app_env:
         required: true
+      vcite_enabled:
+        required: true
+      api_username:
+        required: true
+      api_password:
+        required: true
+      sparql_username:
+        required: true
+      sparql_password:
+        required: true
 
 jobs:
   setup-terraform-phase-1:
@@ -65,6 +75,12 @@ jobs:
         continue-on-error: false
 
       - name: "Terraform Phase 1: Create ECR Repositories"
+        env:
+          TF_VAR_vcite_enabled: ${{ secrets.vcite_enabled }}
+          TF_VAR_api_username: ${{ secrets.api_username }}
+          TF_VAR_api_password: ${{ secrets.api_password }}
+          TF_VAR_sparql_username: ${{ secrets.sparql_username }}
+          TF_VAR_sparql_password: ${{ secrets.sparql_password }}
         run: |
           set -e
           set -o pipefail
@@ -190,6 +206,12 @@ jobs:
         continue-on-error: false
 
       - name: "Terraform Phase 2: Deploy Complete Infrastructure"
+        env:
+          TF_VAR_vcite_enabled: ${{ secrets.vcite_enabled }}
+          TF_VAR_api_username: ${{ secrets.api_username }}
+          TF_VAR_api_password: ${{ secrets.api_password }}
+          TF_VAR_sparql_username: ${{ secrets.sparql_username }}
+          TF_VAR_sparql_password: ${{ secrets.sparql_password }}
         run: |
           set -e
           set -o pipefail

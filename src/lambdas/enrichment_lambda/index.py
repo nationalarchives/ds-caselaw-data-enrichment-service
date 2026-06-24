@@ -12,9 +12,17 @@ from lambdas.enrichment_lambda.enrich_judgment import enrich_judgment
 from lambdas.enrichment_lambda.patch_from_vcite_callback import patch_from_vcite_callback
 from utils.custom_types import APIEndpointBaseURL
 from utils.environment_helpers import validate_env_variable
+from utils.secrets_manager import resolve_secret_value
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
+
+
+def _resolve_api_credentials() -> tuple[str, str]:
+    """Resolve API username and password from combined secret."""
+    secret_json = resolve_secret_value("API_SECRET_NAME")
+    credentials = json.loads(secret_json)
+    return credentials["username"], credentials["password"]
 
 
 def _is_vcite_callback_event(event: dict[str, Any], vcite_enriched_bucket: str) -> bool:
@@ -98,8 +106,9 @@ def handler(event: dict[str, Any], context: LambdaContext) -> None:
     LOGGER.info("Received event with %d records", len(records))
 
     # Environment variables common to both events
-    api_username: str = validate_env_variable("API_USERNAME")
-    api_password: str = validate_env_variable("API_PASSWORD")
+    api_username: str
+    api_password: str
+    api_username, api_password = _resolve_api_credentials()
     environment: str = validate_env_variable("ENVIRONMENT")
     vcite_enabled: bool = validate_env_variable("VCITE_ENABLED") == "true"
 

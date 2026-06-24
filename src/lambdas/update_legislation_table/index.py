@@ -1,3 +1,4 @@
+import json
 import logging
 
 from aws_lambda_powertools.utilities.data_classes import (
@@ -8,13 +9,20 @@ from aws_lambda_powertools.utilities.typing import LambdaContext
 
 from lambdas.update_legislation_table.database import remove_duplicates
 from lambdas.update_legislation_table.fetch_legislation import fetch_legislation
-from utils.environment_helpers import validate_env_variable
 from utils.initialise_db import init_db_engine
+from utils.secrets_manager import resolve_secret_value
 
 LOGGER = logging.getLogger()
 LOGGER.setLevel(logging.INFO)
 
 LEGISLATION_TABLE_NAME = "ukpga_lookup"
+
+
+def _resolve_sparql_credentials() -> tuple[str, str]:
+    """Resolve SPARQL username and password from combined secret."""
+    secret_json = resolve_secret_value("SPARQL_SECRET_NAME")
+    credentials = json.loads(secret_json)
+    return credentials["username"], credentials["password"]
 
 
 @event_source(data_class=EventBridgeEvent)
@@ -39,13 +47,12 @@ def update_legislation_table(trigger_date: int | None):
 
     Parameters
     ----------
-    trigger_date int optional
+    trigger_date : int | None
         An optional integer representing the trigger date for fetching data
     """
     LOGGER.info("Updating the legislation table %s", LEGISLATION_TABLE_NAME)
 
-    sparql_username = validate_env_variable("SPARQL_USERNAME")
-    sparql_password = validate_env_variable("SPARQL_PASSWORD")
+    sparql_username, sparql_password = _resolve_sparql_credentials()
 
     engine = init_db_engine()
     LOGGER.info("Engine created")

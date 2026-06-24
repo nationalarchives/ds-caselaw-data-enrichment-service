@@ -46,7 +46,7 @@
 
 #     pg_dsn = db_engine.url
 
-#     region = "eu-west-2"
+#     region = "us-east-1"
 #     secret_name = "integration-db-lookup"  # noqa: S105
 #     rules_bucket = "integration-rules-bucket"
 #     rules_key = "rules/citation_patterns.jsonl"
@@ -60,18 +60,17 @@
 #     monkeypatch.setenv("SECRET_PASSWORD_LOOKUP", secret_name)
 #     monkeypatch.setenv("RULES_FILE_BUCKET", rules_bucket)
 #     monkeypatch.setenv("RULES_FILE_KEY", rules_key)
-#     monkeypatch.setenv("REGION_NAME", region)
+#     monkeypatch.setenv("AWS_DEFAULT_REGION", region)
 
 #     with mock_aws():
-#         s3 = boto3.client("s3", region_name=region)
+#         s3 = boto3.client("s3")
 #         s3.create_bucket(
 #             Bucket=rules_bucket,
-#             CreateBucketConfiguration={"LocationConstraint": region},
 #         )
 #         patterns_path = root / "src" / "enrichment" / "caselaw_extraction" / "rules" / "citation_patterns.jsonl"
 #         s3.put_object(Bucket=rules_bucket, Key=rules_key, Body=patterns_path.read_bytes())
 
-#         secrets = boto3.client("secretsmanager", region_name=region)
+#         secrets = boto3.client("secretsmanager")
 #         secrets.create_secret(Name=secret_name, SecretString=pg_dsn["password"])
 
 #         # update_legislation_table(trigger_date=None)

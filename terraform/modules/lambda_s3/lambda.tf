@@ -46,66 +46,38 @@ resource "aws_ecr_lifecycle_policy" "ru_retention" {
 # API CREDENTIALS  (Secrets Manager)
 # ============================================================
 
-resource "aws_secretsmanager_secret" "API_username" {
-  description             = "Secret for storing the API username"
-  name                    = "${local.name}-API-username-${local.environment}"
+resource "aws_secretsmanager_secret" "api_credentials" {
+  description             = "Combined secret for API username and password"
+  name                    = "${local.name}-api-credentials-${local.environment}"
   recovery_window_in_days = 0
   tags                    = local.tags
 }
 
-resource "aws_secretsmanager_secret" "API_password" {
-  description             = "Secret for storing the API password"
-  name                    = "${local.name}-API-password-${local.environment}"
-  recovery_window_in_days = 0
-  tags                    = local.tags
-}
-
-data "aws_secretsmanager_secret" "API_username" {
-  name = "${local.name}-API-username-${local.environment}"
-}
-data "aws_secretsmanager_secret_version" "API_username_credentials" {
-  secret_id  = data.aws_secretsmanager_secret.API_username.id
-  depends_on = [aws_secretsmanager_secret.API_username]
-}
-
-data "aws_secretsmanager_secret" "API_password" {
-  name = "${local.name}-API-password-${local.environment}"
-}
-data "aws_secretsmanager_secret_version" "API_password_credentials" {
-  secret_id  = data.aws_secretsmanager_secret.API_password.id
-  depends_on = [aws_secretsmanager_secret.API_password]
+resource "aws_secretsmanager_secret_version" "api_credentials" {
+  secret_id = aws_secretsmanager_secret.api_credentials.id
+  secret_string = jsonencode({
+    username = var.api_username
+    password = var.api_password
+  })
 }
 
 # ============================================================
 # SPARQL CREDENTIALS  (for update_legislation_table)
 # ============================================================
 
-resource "aws_secretsmanager_secret" "sparql_username" {
-  description             = "Secret for storing the sparql username"
-  name                    = "${local.name}-sparql-username-${local.environment}"
+resource "aws_secretsmanager_secret" "sparql_credentials" {
+  description             = "Combined secret for SPARQL username and password"
+  name                    = "${local.name}-sparql-credentials-${local.environment}"
   recovery_window_in_days = 0
   tags                    = local.tags
 }
 
-resource "aws_secretsmanager_secret" "sparql_password" {
-  description             = "Secret for storing the sparql password"
-  name                    = "${local.name}-sparql-password-${local.environment}"
-  recovery_window_in_days = 0
-  tags                    = local.tags
-}
-
-data "aws_secretsmanager_secret" "sparql_username" {
-  name = "${local.name}-sparql-username-${local.environment}"
-}
-data "aws_secretsmanager_secret_version" "sparql_username_credentials" {
-  secret_id = data.aws_secretsmanager_secret.sparql_username.id
-}
-
-data "aws_secretsmanager_secret" "sparql_password" {
-  name = "${local.name}-sparql-password-${local.environment}"
-}
-data "aws_secretsmanager_secret_version" "sparql_password_credentials" {
-  secret_id = data.aws_secretsmanager_secret.sparql_password.id
+resource "aws_secretsmanager_secret_version" "sparql_credentials" {
+  secret_id = aws_secretsmanager_secret.sparql_credentials.id
+  secret_string = jsonencode({
+    username = var.sparql_username
+    password = var.sparql_password
+  })
 }
 
 # ============================================================
@@ -169,8 +141,7 @@ module "lambda-enrichment" {
       effect  = "Allow"
       actions = ["secretsmanager:GetResourcePolicy", "secretsmanager:GetSecretValue", "secretsmanager:DescribeSecret", "secretsmanager:ListSecretVersionIds"]
       resources = [
-        aws_secretsmanager_secret.API_username.arn,
-        aws_secretsmanager_secret.API_password.arn,
+        aws_secretsmanager_secret.api_credentials.arn,
         var.postgress_master_password_secret_id,
       ]
     }
@@ -210,23 +181,22 @@ module "lambda-enrichment" {
   vpc_subnet_ids         = var.aws_subnets_private_ids
 
   environment_variables = {
-    API_USERNAME           = data.aws_secretsmanager_secret_version.API_username_credentials.secret_string
-    API_PASSWORD           = data.aws_secretsmanager_secret_version.API_password_credentials.secret_string
-    ENVIRONMENT            = local.environment
-    DATABASE_NAME          = "rules"
-    DATABASE_USERNAME      = "root"
-    DATABASE_PORT          = "5432"
-    DATABASE_HOSTNAME      = var.postgress_hostname
-    SECRET_PASSWORD_LOOKUP = var.postgress_master_password_secret_id
-    REGION_NAME            = local.region
-    TABLE_NAME             = "rules"
-    USERNAME               = "root"
-    PORT                   = "5432"
-    HOSTNAME               = var.postgress_hostname
-    RULES_FILE_BUCKET      = module.rules_bucket.s3_bucket_id
-    RULES_FILE_KEY         = "citation_patterns.jsonl"
-    VCITE_BUCKET           = "vcite-tna-files"
-    VCITE_ENRICHED_BUCKET  = module.vcite_enriched_bucket.s3_bucket_id
+    API_SECRET_NAME         = aws_secretsmanager_secret.api_credentials.name
+    ENVIRONMENT             = local.environment
+    DATABASE_NAME           = "rules"
+    DATABASE_USERNAME       = "root"
+    DATABASE_PORT           = "5432"
+    DATABASE_HOSTNAME       = var.postgress_hostname
+    DB_PASSWORD_SECRET_NAME = var.postgress_master_password_secret_id
+    TABLE_NAME              = "rules"
+    USERNAME                = "root"
+    PORT                    = "5432"
+    HOSTNAME                = var.postgress_hostname
+    RULES_FILE_BUCKET       = module.rules_bucket.s3_bucket_id
+    RULES_FILE_KEY          = "citation_patterns.jsonl"
+    VCITE_BUCKET            = "vcite-tna-files"
+    VCITE_ENRICHED_BUCKET   = module.vcite_enriched_bucket.s3_bucket_id
+    VCITE_ENABLED           = var.vcite_enabled
   }
 
   cloudwatch_logs_retention_in_days = 365
@@ -336,8 +306,7 @@ module "lambda-update-legislation-table" {
       actions = ["secretsmanager:GetResourcePolicy", "secretsmanager:GetSecretValue", "secretsmanager:DescribeSecret", "secretsmanager:ListSecretVersionIds"]
       resources = [
         var.postgress_master_password_secret_id,
-        aws_secretsmanager_secret.sparql_username.arn,
-        aws_secretsmanager_secret.sparql_password.arn,
+        aws_secretsmanager_secret.sparql_credentials.arn,
       ]
     }
   }
@@ -356,18 +325,15 @@ module "lambda-update-legislation-table" {
   vpc_subnet_ids         = var.aws_subnets_private_ids
 
   environment_variables = {
-    DATABASE_NAME          = "rules"
-    DATABASE_USERNAME      = "root"
-    DATABASE_HOSTNAME      = var.postgress_hostname
-    DATABASE_PORT          = "5432"
-    SECRET_PASSWORD_LOOKUP = var.postgress_master_password_secret_id
-    REGION_NAME            = local.region
-    SPARQL_USERNAME        = data.aws_secretsmanager_secret_version.sparql_username_credentials.secret_string
-    SPARQL_PASSWORD        = data.aws_secretsmanager_secret_version.sparql_password_credentials.secret_string
-    TABLE_NAME             = "rules"
-    USERNAME               = "root"
-    PORT                   = "5432"
-    HOSTNAME               = var.postgress_hostname
+    DATABASE_NAME           = "rules"
+    DATABASE_USERNAME       = "root"
+    DATABASE_HOSTNAME       = var.postgress_hostname
+    DATABASE_PORT           = "5432"
+    DB_PASSWORD_SECRET_NAME = var.postgress_master_password_secret_id
+    SPARQL_SECRET_NAME      = aws_secretsmanager_secret.sparql_credentials.name
+    USERNAME                = "root"
+    PORT                    = "5432"
+    HOSTNAME                = var.postgress_hostname
   }
 
   cloudwatch_logs_retention_in_days = 365
@@ -473,16 +439,15 @@ module "lambda-update-rules-processor" {
   vpc_subnet_ids         = var.aws_subnets_private_ids
 
   environment_variables = {
-    DATABASE_NAME          = "rules"
-    DATABASE_USERNAME      = "root"
-    DATABASE_HOSTNAME      = var.postgress_hostname
-    DATABASE_PORT          = "5432"
-    SECRET_PASSWORD_LOOKUP = var.postgress_master_password_secret_id
-    REGION_NAME            = local.region
-    TABLE_NAME             = "rules"
-    USERNAME               = "root"
-    PORT                   = "5432"
-    HOSTNAME               = var.postgress_hostname
+    DATABASE_NAME           = "rules"
+    DATABASE_USERNAME       = "root"
+    DATABASE_HOSTNAME       = var.postgress_hostname
+    DATABASE_PORT           = "5432"
+    DB_PASSWORD_SECRET_NAME = var.postgress_master_password_secret_id
+    TABLE_NAME              = "rules"
+    USERNAME                = "root"
+    PORT                    = "5432"
+    HOSTNAME                = var.postgress_hostname
   }
 
   cloudwatch_logs_retention_in_days = 365
