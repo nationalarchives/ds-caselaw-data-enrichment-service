@@ -66,13 +66,11 @@ jobs:
 
       - name: Run E2E verification in SQS mode
         env:
-          E2E_RUN: "true"
           E2E_TRIGGER_MODE: sqs
-          E2E_SEED_IF_MISSING: "true"
+          E2E_SEED_IF_MISSING: "false"
           E2E_RESTORE_ORIGINAL: "false"
           E2E_TIMEOUT_SECONDS: "300"
-          E2E_SOURCE_XML_PATH: test_files/ewca_civ_2025_673-original.xml
-          E2E_URI: staging-e2e-${{ github.run_id }}-${{ github.run_attempt }}
+          E2E_URI: ${{ secrets.E2E_HEALTHCHECK_URI }}
           AWS_REGION: eu-west-2
           ENVIRONMENT: staging
           API_SECRET_NAME: ${{ secrets.E2E_API_SECRET_NAME }}
@@ -81,8 +79,6 @@ jobs:
           RULES_FILE_KEY: citation_patterns.jsonl
           VCITE_BUCKET: vcite-tna-files
           VCITE_ENRICHED_BUCKET: foo
-          MARKLOGIC_API_CLIENT_HOST: ${{ secrets.E2E_MARKLOGIC_API_CLIENT_HOST }}
-          MARKLOGIC_USE_HTTPS: "false"
         run: make test-e2e
 
   # deploy_production:
