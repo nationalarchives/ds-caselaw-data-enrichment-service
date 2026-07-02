@@ -1,6 +1,6 @@
 SHELL := /bin/bash
 
-.PHONY: setup test build-lambdas build-lambda smoke-test validate clean
+.PHONY: setup test test-e2e build-lambdas build-lambda smoke-test validate clean
 
 setup:
 	@echo "Setting up local development environment..."
@@ -8,7 +8,10 @@ setup:
 	@echo "Development environment ready. Use 'make test' to run tests or 'make build-lambdas' to build."
 
 test:
-	poetry run pytest ${TEST_ARGS}
+	poetry run pytest -m "not e2e" ${TEST_ARGS}
+
+test-e2e:
+	poetry run pytest -m e2e src/tests/end_to_end_tests/test_marklogic_e2e.py -rs -vvv -s -q ${TEST_ARGS}
 
 build-lambdas:
 	@for lambda in src/lambdas/*/; do \
