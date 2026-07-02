@@ -48,12 +48,65 @@ class E2EConfig:
     timeout_seconds: int
     seed_if_missing: bool
     should_restore: bool
+    sqs_queue_name: str | None
+    source_xml_path: str | None
+    marklogic_api_client_host: str | None
+    marklogic_use_https: bool | None
+    marklogic_secret_name: str | None
+    marklogic_username: str | None
+    marklogic_password: str | None
+    database_name: str | None
+    database_username: str | None
+    db_password_secret_name: str | None
+    e2e_db_host: str | None
+    e2e_db_port: str | None
 
     @classmethod
     def from_env(cls) -> "E2EConfig":
         aws_region = _require_any_env("AWS_REGION", "AWS_DEFAULT_REGION")
         environment = _require_env("ENVIRONMENT")
         uri = _require_env("E2E_URI")
+        trigger_mode = os.getenv("E2E_TRIGGER_MODE", "sqs").lower()
+        if trigger_mode not in {"sqs", "local_handler"}:
+            pytest.fail("Invalid E2E_TRIGGER_MODE. Use 'sqs' or 'local_handler'.")
+
+        seed_if_missing = os.getenv("E2E_SEED_IF_MISSING", "false") == "true"
+
+        sqs_queue_name = _require_env("SQS_ENRICHMENT_QUEUE_NAME") if trigger_mode == "sqs" else None
+
+        if seed_if_missing:
+            marklogic_api_client_host = _require_env("MARKLOGIC_API_CLIENT_HOST")
+            if "://" in marklogic_api_client_host:
+                pytest.fail("MARKLOGIC_API_CLIENT_HOST must be host[:port] without scheme")
+            marklogic_use_https = _require_env("MARKLOGIC_USE_HTTPS").strip().lower() == "true"
+        else:
+            marklogic_api_client_host = os.getenv("MARKLOGIC_API_CLIENT_HOST")
+            marklogic_use_https = (
+                os.getenv("MARKLOGIC_USE_HTTPS", "false").strip().lower() == "true"
+                if os.getenv("MARKLOGIC_USE_HTTPS") is not None
+                else None
+            )
+
+        marklogic_secret_name = os.getenv("MARKLOGIC_SECRET_NAME")
+        marklogic_username = os.getenv("MARKLOGIC_USERNAME")
+        marklogic_password = os.getenv("MARKLOGIC_PASSWORD")
+        if (marklogic_username and not marklogic_password) or (marklogic_password and not marklogic_username):
+            pytest.fail(
+                "Both MARKLOGIC_USERNAME and MARKLOGIC_PASSWORD must be set when using explicit credentials",
+            )
+
+        if trigger_mode == "local_handler":
+            database_name = _require_env("DATABASE_NAME")
+            database_username = _require_env("DATABASE_USERNAME")
+            db_password_secret_name = _require_env("DB_PASSWORD_SECRET_NAME")
+            e2e_db_host = _require_env("E2E_DB_HOST")
+            e2e_db_port = _require_env("E2E_DB_PORT")
+        else:
+            database_name = None
+            database_username = None
+            db_password_secret_name = None
+            e2e_db_host = None
+            e2e_db_port = None
 
         return cls(
             aws_region=aws_region,
@@ -65,17 +118,29 @@ class E2EConfig:
             rules_key=_require_env("RULES_FILE_KEY"),
             vcite_bucket=_require_env("VCITE_BUCKET"),
             vcite_enriched_bucket=_require_env("VCITE_ENRICHED_BUCKET"),
-            trigger_mode=os.getenv("E2E_TRIGGER_MODE", "sqs").lower(),
+            trigger_mode=trigger_mode,
             timeout_seconds=int(os.getenv("E2E_TIMEOUT_SECONDS", "180")),
-            seed_if_missing=os.getenv("E2E_SEED_IF_MISSING", "false") == "true",
+            seed_if_missing=seed_if_missing,
             should_restore=os.getenv("E2E_RESTORE_ORIGINAL", "true") == "true",
+            sqs_queue_name=sqs_queue_name,
+            source_xml_path=os.getenv("E2E_SOURCE_XML_PATH"),
+            marklogic_api_client_host=marklogic_api_client_host,
+            marklogic_use_https=marklogic_use_https,
+            marklogic_secret_name=marklogic_secret_name,
+            marklogic_username=marklogic_username,
+            marklogic_password=marklogic_password,
+            database_name=database_name,
+            database_username=database_username,
+            db_password_secret_name=db_password_secret_name,
+            e2e_db_host=e2e_db_host,
+            e2e_db_port=e2e_db_port,
         )
 
 
 def _require_env(name: str) -> str:
     value = os.getenv(name)
     if not value:
-        pytest.skip(f"Missing required env var for E2E: {name}")
+        pytest.fail(f"Missing required env var for E2E: {name}")
     return value
 
 
@@ -84,49 +149,43 @@ def _require_any_env(*names: str) -> str:
         value = os.getenv(name)
         if value:
             return value
-    pytest.skip(f"Missing required env var for E2E: one of {', '.join(names)}")
+    pytest.fail(f"Missing required env var for E2E: one of {', '.join(names)}")
 
 
-def _resolve_marklogic_fixture_credentials(aws_region: str) -> tuple[str, str]:
+def _resolve_marklogic_fixture_credentials(cfg: E2EConfig) -> tuple[str, str]:
     """Resolve fixture-seeding credentials.
 
     Defaults to API_SECRET_NAME unless MARKLOGIC_SECRET_NAME is explicitly set.
     MARKLOGIC_USERNAME/MARKLOGIC_PASSWORD may be used as explicit overrides.
     """
-    explicit_username = os.getenv("MARKLOGIC_USERNAME")
-    explicit_password = os.getenv("MARKLOGIC_PASSWORD")
+    explicit_username = cfg.marklogic_username
+    explicit_password = cfg.marklogic_password
 
     if explicit_username or explicit_password:
-        if not (explicit_username and explicit_password):
-            pytest.skip(
-                "Both MARKLOGIC_USERNAME and MARKLOGIC_PASSWORD must be set when using explicit credentials",
-            )
         return explicit_username, explicit_password
 
-    secret_name = os.getenv("MARKLOGIC_SECRET_NAME") or _require_env("API_SECRET_NAME")
-    return _resolve_api_credentials_from_secret(secret_name, aws_region)
+    secret_name = cfg.marklogic_secret_name or cfg.api_secret_name
+    return _resolve_api_credentials_from_secret(secret_name, cfg.aws_region)
 
 
-def _create_marklogic_client_for_fixture() -> MarklogicApiClient:
-    host = _require_env("MARKLOGIC_API_CLIENT_HOST")
-    if "://" in host:
-        pytest.skip("MARKLOGIC_API_CLIENT_HOST must be host[:port] without scheme")
-
-    use_https = _require_env("MARKLOGIC_USE_HTTPS").strip().lower() == "true"
-    aws_region = _require_any_env("AWS_REGION", "AWS_DEFAULT_REGION")
-    username, password = _resolve_marklogic_fixture_credentials(aws_region)
+def _create_marklogic_client_for_fixture(cfg: E2EConfig) -> MarklogicApiClient:
+    if not cfg.marklogic_api_client_host or cfg.marklogic_use_https is None:
+        pytest.fail(
+            "Fixture seeding requires MARKLOGIC_API_CLIENT_HOST and MARKLOGIC_USE_HTTPS",
+        )
+    username, password = _resolve_marklogic_fixture_credentials(cfg)
 
     return MarklogicApiClient(
-        host=host,
+        host=cfg.marklogic_api_client_host,
         username=username,
         password=password,
-        use_https=use_https,
+        use_https=cfg.marklogic_use_https,
         user_agent=f"ds-caselaw-data-enrichment-service/e2e {DEFAULT_USER_AGENT}",
     )
 
 
-def _seed_fixture_document_from_repo_xml(target_uri: str) -> bool:
-    source_xml_path = os.getenv("E2E_SOURCE_XML_PATH")
+def _seed_fixture_document_from_repo_xml(cfg: E2EConfig, target_uri: str) -> bool:
+    source_xml_path = cfg.source_xml_path
     if not source_xml_path:
         return False
 
@@ -135,9 +194,9 @@ def _seed_fixture_document_from_repo_xml(target_uri: str) -> bool:
         xml_path = PROJECT_ROOT / xml_path
 
     if not xml_path.exists():
-        pytest.skip(f"Fixture XML path does not exist: {xml_path}")
+        pytest.fail(f"Fixture XML path does not exist: {xml_path}")
 
-    marklogic_client = _create_marklogic_client_for_fixture()
+    marklogic_client = _create_marklogic_client_for_fixture(cfg)
     target = DocumentURIString(target_uri)
 
     if marklogic_client.document_exists(target):
@@ -157,10 +216,14 @@ def _seed_fixture_document_from_repo_xml(target_uri: str) -> bool:
     return True
 
 
-def _delete_fixture_document_if_created(target_uri: str, fixture_was_created: bool) -> None:
+def _delete_fixture_document_if_created(
+    cfg: E2EConfig,
+    target_uri: str,
+    fixture_was_created: bool,
+) -> None:
     if not fixture_was_created:
         return
-    marklogic_client = _create_marklogic_client_for_fixture()
+    marklogic_client = _create_marklogic_client_for_fixture(cfg)
     marklogic_client.delete_judgment(DocumentURIString(target_uri))
 
 
@@ -176,10 +239,11 @@ def _get_api_endpoint(environment: str) -> APIEndpointBaseURL:
     return APIEndpointBaseURL(f"https://{subdomain}.caselaw.nationalarchives.gov.uk/")
 
 
-def _get_queue_url(aws_region: str) -> str:
-    queue_name = _require_env("SQS_ENRICHMENT_QUEUE_NAME")
-    sqs = boto3.client("sqs", region_name=aws_region)
-    response = sqs.get_queue_url(QueueName=queue_name)
+def _get_queue_url(cfg: E2EConfig) -> str:
+    if not cfg.sqs_queue_name:
+        pytest.fail("SQS_ENRICHMENT_QUEUE_NAME is required for sqs trigger mode")
+    sqs = boto3.client("sqs", region_name=cfg.aws_region)
+    response = sqs.get_queue_url(QueueName=cfg.sqs_queue_name)
     return response["QueueUrl"]
 
 
@@ -231,23 +295,31 @@ def _build_sqs_event(uri_reference: str, aws_region: str) -> dict:
     }
 
 
-def _configure_local_handler_db_env(monkeypatch) -> None:
+def _configure_local_handler_db_env(monkeypatch, cfg: E2EConfig) -> None:
     """Configure DB env vars for local handler execution mode.
 
     Set E2E_DB_HOST/E2E_DB_PORT explicitly
     (for example 127.0.0.1:15432).
     """
-    db_name = _require_env("DATABASE_NAME")
-    db_username = _require_env("DATABASE_USERNAME")
-    db_password_secret_name = _require_env("DB_PASSWORD_SECRET_NAME")
-    db_host = _require_env("E2E_DB_HOST")
-    db_port = _require_env("E2E_DB_PORT")
+    if not all(
+        [
+            cfg.database_name,
+            cfg.database_username,
+            cfg.db_password_secret_name,
+            cfg.e2e_db_host,
+            cfg.e2e_db_port,
+        ],
+    ):
+        pytest.fail(
+            "local_handler mode requires DATABASE_NAME, DATABASE_USERNAME, DB_PASSWORD_SECRET_NAME, "
+            "E2E_DB_HOST, and E2E_DB_PORT",
+        )
 
-    monkeypatch.setenv("DATABASE_NAME", db_name)
-    monkeypatch.setenv("DATABASE_USERNAME", db_username)
-    monkeypatch.setenv("DB_PASSWORD_SECRET_NAME", db_password_secret_name)
-    monkeypatch.setenv("DATABASE_HOSTNAME", db_host)
-    monkeypatch.setenv("DATABASE_PORT", db_port)
+    monkeypatch.setenv("DATABASE_NAME", cfg.database_name)
+    monkeypatch.setenv("DATABASE_USERNAME", cfg.database_username)
+    monkeypatch.setenv("DB_PASSWORD_SECRET_NAME", cfg.db_password_secret_name)
+    monkeypatch.setenv("DATABASE_HOSTNAME", cfg.e2e_db_host)
+    monkeypatch.setenv("DATABASE_PORT", cfg.e2e_db_port)
 
 
 def _configure_enrichment_handler_env(monkeypatch, cfg: E2EConfig) -> None:
@@ -320,30 +392,27 @@ def _wait_for_judgment_fetchable(
 
 def _trigger_enrichment(monkeypatch, cfg: E2EConfig) -> None:
     if cfg.trigger_mode == "sqs":
-        queue_url = _get_queue_url(cfg.aws_region)
+        queue_url = _get_queue_url(cfg)
         _send_enrichment_message(cfg.aws_region, queue_url, cfg.uri)
         return
 
     if cfg.trigger_mode == "local_handler":
-        _configure_local_handler_db_env(monkeypatch)
+        _configure_local_handler_db_env(monkeypatch, cfg)
         handler(_build_sqs_event(cfg.uri, cfg.aws_region), None)
         return
 
-    pytest.skip("Invalid E2E_TRIGGER_MODE. Use 'sqs' or 'local_handler'.")
+    pytest.fail("Invalid E2E_TRIGGER_MODE. Use 'sqs' or 'local_handler'.")
 
 
 @pytest.mark.e2e
 def test_enrichment_lambda_triggers_and_updates_marklogic(monkeypatch):
-    if os.getenv("E2E_RUN") != "true":
-        pytest.skip("Set E2E_RUN=true to run E2E tests")
-
     cfg = E2EConfig.from_env()
     _configure_enrichment_handler_env(monkeypatch, cfg)
 
     try:
         fixture_was_created = False
         if cfg.seed_if_missing:
-            fixture_was_created = _seed_fixture_document_from_repo_xml(cfg.uri)
+            fixture_was_created = _seed_fixture_document_from_repo_xml(cfg, cfg.uri)
 
         username, password = _resolve_api_credentials_from_secret(cfg.api_secret_name, cfg.aws_region)
         if fixture_was_created:
@@ -366,7 +435,7 @@ def test_enrichment_lambda_triggers_and_updates_marklogic(monkeypatch):
         assert after_xml != before_xml
     finally:
         if fixture_was_created:
-            _delete_fixture_document_if_created(cfg.uri, fixture_was_created)
+            _delete_fixture_document_if_created(cfg, cfg.uri, fixture_was_created)
         elif cfg.should_restore:
             try:
                 lock_judgment(cfg.api_endpoint, cfg.uri, username, password)

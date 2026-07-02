@@ -161,17 +161,19 @@ Default test runs (`make test`) exclude E2E tests by marker.
 
 Core required settings:
 
-- `E2E_RUN=true`
 - `AWS_REGION` (or `AWS_DEFAULT_REGION`)
 - `ENVIRONMENT` (for example `staging`)
 - `API_SECRET_NAME` (secret JSON with `username` and `password`)
 - `E2E_URI` (must contain one of: `e2e`, `test-fixture`, `staging-e2e`)
-- `MARKLOGIC_API_CLIENT_HOST` (host[:port], no scheme)
-- `MARKLOGIC_USE_HTTPS` (`true`/`false`)
 - `RULES_FILE_BUCKET`
 - `RULES_FILE_KEY`
 - `VCITE_BUCKET`
 - `VCITE_ENRICHED_BUCKET`
+
+Fixture-seeding-only settings (required only when `E2E_SEED_IF_MISSING=true`):
+
+- `MARKLOGIC_API_CLIENT_HOST` (host[:port], no scheme)
+- `MARKLOGIC_USE_HTTPS` (`true`/`false`)
 
 Credential behavior for fixture seeding:
 
@@ -221,10 +223,11 @@ Seed/restore/delete behavior:
 Recommended CI-safe settings for deployment verification:
 
 - `E2E_TRIGGER_MODE=sqs`
-- `E2E_SEED_IF_MISSING=true`
+- `E2E_SEED_IF_MISSING=false`
 - `E2E_RESTORE_ORIGINAL=false`
-- `E2E_SOURCE_XML_PATH=test_files/ewca_civ_2025_673-original.xml`
-- `E2E_URI` generated per run, for example `staging-e2e-${RUN_ID}-${RUN_ATTEMPT}`
+- `E2E_URI` from a dedicated health-check document that already exists (for example via `E2E_HEALTHCHECK_URI` secret)
+
+If your CI runner does not have VPC/VPN access to MarkLogic, avoid fixture seed/delete in CI and use a pre-existing health-check URI instead.
 
 Keep environment-specific values (queue names, buckets, secret names, hosts) in environment config rather than README prose:
 
