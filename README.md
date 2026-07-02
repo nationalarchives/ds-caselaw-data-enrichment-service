@@ -139,6 +139,98 @@ Run tests excluding integration tests:
 make test TEST_ARGS="-m 'not integration'"
 ```
 
+### E2E (Opt-in)
+
+There is an opt-in E2E test at `src/tests/end_to_end_tests/test_marklogic_e2e.py`.
+
+Prerequisite: your machine/runner must have network access to the target MarkLogic/API endpoints used by this test (including fixture seed/delete checks). For TNA staging, this typically means DXW VPN access.
+
+Use an env file so you do not need to export variables every run:
+
+```bash
+cp .env.e2e.example .env.e2e
+```
+
+Fill values in `.env.e2e` and export it, then run:
+
+```bash
+make test-e2e
+```
+
+Default test runs (`make test`) exclude E2E tests by marker.
+
+Core required settings:
+
+- `E2E_RUN=true`
+- `AWS_REGION` (or `AWS_DEFAULT_REGION`)
+- `ENVIRONMENT` (for example `staging`)
+- `API_SECRET_NAME` (secret JSON with `username` and `password`)
+- `E2E_URI` (must contain one of: `e2e`, `test-fixture`, `staging-e2e`)
+- `MARKLOGIC_API_CLIENT_HOST` (host[:port], no scheme)
+- `MARKLOGIC_USE_HTTPS` (`true`/`false`)
+- `RULES_FILE_BUCKET`
+- `RULES_FILE_KEY`
+- `VCITE_BUCKET`
+- `VCITE_ENRICHED_BUCKET`
+
+Credential behavior for fixture seeding:
+
+- Default: fixture seeding reuses `API_SECRET_NAME` credentials from Secrets Manager.
+- Optional override secret: set `MARKLOGIC_SECRET_NAME` to use a different secret for seeding/deleting fixtures.
+- Optional explicit override: set both `MARKLOGIC_USERNAME` and `MARKLOGIC_PASSWORD`.
+  - If one is set without the other, the test skips with a clear error.
+
+Trigger modes:
+
+- `E2E_TRIGGER_MODE=sqs`: send message to the environment queue (tests deployed lambda path)
+- `E2E_TRIGGER_MODE=local_handler`: call local `handler(...)` with real environment resources
+
+`local_handler` mode also requires:
+
+- `DATABASE_NAME`
+- `DATABASE_USERNAME`
+- `DB_PASSWORD_SECRET_NAME`
+- `E2E_DB_HOST`
+- `E2E_DB_PORT`
+
+For local `local_handler` runs against an environment RDS from your machine, use an SSM port-forward tunnel and point DB env vars to localhost:
+
+```bash
+aws ssm start-session \
+  --target <ec2-instance-id> \
+  --document-name AWS-StartPortForwardingSessionToRemoteHost \
+  --parameters '{"host":["<rds-endpoint>"],"portNumber":["5432"],"localPortNumber":["15432"]}' \
+  --profile <aws-profile> \
+  --region <aws-region>
+```
+
+Then set:
+
+- `E2E_DB_HOST=127.0.0.1`
+- `E2E_DB_PORT=15432`
+
+Keep the SSM session terminal open while the test is running.
+
+Seed/restore/delete behavior:
+
+- `E2E_SEED_IF_MISSING=true`: if `E2E_URI` does not exist and `E2E_SOURCE_XML_PATH` is set, the test inserts that XML as a temporary fixture.
+- Seeded fixture is always deleted at the end of the test.
+- Existing URI + `E2E_RESTORE_ORIGINAL=true`: test attempts to patch original XML back after verification.
+- Existing URI + `E2E_RESTORE_ORIGINAL=false`: test leaves enriched result in place.
+
+Recommended CI-safe settings for deployment verification:
+
+- `E2E_TRIGGER_MODE=sqs`
+- `E2E_SEED_IF_MISSING=true`
+- `E2E_RESTORE_ORIGINAL=false`
+- `E2E_SOURCE_XML_PATH=test_files/ewca_civ_2025_673-original.xml`
+- `E2E_URI` generated per run, for example `staging-e2e-${RUN_ID}-${RUN_ATTEMPT}`
+
+Keep environment-specific values (queue names, buckets, secret names, hosts) in environment config rather than README prose:
+
+- Local template: `.env.e2e.example`
+- CI deployment verification: `.github/workflows/cd_deploy_staging_then_prod.yml`
+
 ### Coverage report
 
 You can obtain a coverage report with:
@@ -163,7 +255,8 @@ Use Make targets as the single public interface for local and CI validation/buil
 | Target                      | Description                                                                  |
 | --------------------------- | ---------------------------------------------------------------------------- |
 | `make setup`                | Install all dependencies for development and testing                         |
-| `make test`                 | Run all tests with pytest                                                    |
+| `make test`                 | Run tests with pytest (excludes E2E marker by default)                       |
+| `make test-e2e`             | Run only the E2E pytest suite                                                |
 | `make test TEST_ARGS="..."` | Run tests with custom pytest args (e.g., `-k test_name` or `-m integration`) |
 
 ### Building & Validation
