@@ -25,6 +25,7 @@ jobs:
       workspace: tna-staging
       app_env: staging
       vcite_enabled: ${{ secrets.VCITE_ENABLED }}
+      api_endpoint: ${{ secrets.API_ENDPOINT }}
       api_username: ${{ secrets.API_USERNAME }}
       api_password: ${{ secrets.API_PASSWORD }}
       sparql_username: ${{ secrets.SPARQL_USERNAME }}
@@ -71,8 +72,8 @@ jobs:
           E2E_RESTORE_ORIGINAL: "false"
           E2E_TIMEOUT_SECONDS: "300"
           E2E_URI: ${{ secrets.E2E_HEALTHCHECK_URI }}
+          API_ENDPOINT: https://api.staging.caselaw.nationalarchives.gov.uk/
           AWS_REGION: eu-west-2
-          ENVIRONMENT: staging
           API_SECRET_NAME: ${{ secrets.E2E_API_SECRET_NAME }}
           SQS_ENRICHMENT_QUEUE_NAME: tna-s3-tna-staging-enrichment-queue
           RULES_FILE_BUCKET: staging-tna-s3-tna-sg-rules-bucket
@@ -93,6 +94,7 @@ jobs:
   #     workspace: tna-prod
   #     app_env: production
   #     vcite_enabled: ${{ secrets.VCITE_ENABLED }}
+  #     api_endpoint: ${{ secrets.API_ENDPOINT }}
   #     api_username: ${{ secrets.API_USERNAME }}
   #     api_password: ${{ secrets.API_PASSWORD }}
   #     sparql_username: ${{ secrets.SPARQL_USERNAME }}

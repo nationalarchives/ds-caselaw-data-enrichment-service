@@ -39,7 +39,7 @@ class TestHandler:
     ):
         env_values = {
             "API_SECRET_NAME": "api-credentials-secret",
-            "ENVIRONMENT": "staging",
+            "API_ENDPOINT": "staging-api-endpoint",
             "RULES_FILE_BUCKET": "rules-bucket",
             "RULES_FILE_KEY": "rules-key",
             "VCITE_BUCKET": "vcite-tna-files",
@@ -91,7 +91,7 @@ class TestHandler:
         assert mock_enrich_judgment.call_count == 1
         call_args = mock_enrich_judgment.call_args
         assert call_args[0][0] == "ewhc/ch/2023/257"  # uri_reference
-        assert call_args[0][1] == "https://api.staging.caselaw.nationalarchives.gov.uk/"  # endpoint
+        assert call_args[0][1] == "staging-api-endpoint"  # endpoint
         assert call_args[0][2] == "api-user"  # api_username
         assert call_args[0][3] == "api-credential"  # api_password
         assert call_args[0][4] == [
@@ -111,7 +111,7 @@ class TestHandler:
         bucket_name = "production-tna-s3-tna-sg-vcite-enriched-bucket"
         env_values = {
             "API_SECRET_NAME": "api-credentials-secret",
-            "ENVIRONMENT": "production",
+            "API_ENDPOINT": "staging-api-endpoint",
             "RULES_FILE_BUCKET": "rules-bucket",
             "RULES_FILE_KEY": "rules-key",
             "VCITE_BUCKET": "vcite-tna-files",
@@ -157,7 +157,7 @@ class TestHandler:
         index.handler(event, None)
 
         called_endpoint, called_doc_uri, called_xml, called_user, called_password = mock_patch.call_args.args
-        assert called_endpoint == "https://api.caselaw.nationalarchives.gov.uk/"
+        assert called_endpoint == "staging-api-endpoint"
         assert called_doc_uri == "ewhc/ch/2023/257"
         assert "<akomaNtoso" in called_xml
         assert called_user == "api-user"

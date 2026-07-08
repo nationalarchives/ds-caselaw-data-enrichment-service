@@ -36,7 +36,6 @@ load_dotenv(PROJECT_ROOT / ".env.e2e", override=True)
 @dataclass(frozen=True)
 class E2EConfig:
     aws_region: str
-    environment: str
     api_endpoint: APIEndpointBaseURL
     uri: str
     api_secret_name: str
@@ -64,7 +63,6 @@ class E2EConfig:
     @classmethod
     def from_env(cls) -> "E2EConfig":
         aws_region = _require_any_env("AWS_REGION", "AWS_DEFAULT_REGION")
-        environment = _require_env("ENVIRONMENT")
         uri = _require_env("E2E_URI")
         trigger_mode = os.getenv("E2E_TRIGGER_MODE", "sqs").lower()
         if trigger_mode not in {"sqs", "local_handler"}:
@@ -110,8 +108,7 @@ class E2EConfig:
 
         return cls(
             aws_region=aws_region,
-            environment=environment,
-            api_endpoint=_get_api_endpoint(environment),
+            api_endpoint=APIEndpointBaseURL(_require_env("API_ENDPOINT")),
             uri=uri,
             api_secret_name=_require_env("API_SECRET_NAME"),
             rules_bucket=_require_env("RULES_FILE_BUCKET"),
@@ -234,11 +231,6 @@ def _resolve_api_credentials_from_secret(secret_name: str, aws_region: str) -> t
     return secret_json["username"], secret_json["password"]
 
 
-def _get_api_endpoint(environment: str) -> APIEndpointBaseURL:
-    subdomain = "api.staging" if environment == "staging" else "api"
-    return APIEndpointBaseURL(f"https://{subdomain}.caselaw.nationalarchives.gov.uk/")
-
-
 def _get_queue_url(cfg: E2EConfig) -> str:
     if not cfg.sqs_queue_name:
         pytest.fail("SQS_ENRICHMENT_QUEUE_NAME is required for sqs trigger mode")
@@ -324,7 +316,7 @@ def _configure_local_handler_db_env(monkeypatch, cfg: E2EConfig) -> None:
 
 def _configure_enrichment_handler_env(monkeypatch, cfg: E2EConfig) -> None:
     monkeypatch.setenv("API_SECRET_NAME", cfg.api_secret_name)
-    monkeypatch.setenv("ENVIRONMENT", cfg.environment)
+    monkeypatch.setenv("API_ENDPOINT", str(cfg.api_endpoint))
     monkeypatch.setenv("VCITE_ENABLED", "false")
     monkeypatch.setenv("VCITE_BUCKET", cfg.vcite_bucket)
     monkeypatch.setenv("VCITE_ENRICHED_BUCKET", cfg.vcite_enriched_bucket)

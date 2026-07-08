@@ -185,6 +185,7 @@ jobs:
       workspace: tna-staging
       app_env: staging
       vcite_enabled: ${{ secrets.VCITE_ENABLED }}
+      api_endpoint: ${{ secrets.API_ENDPOINT }}
       api_username: ${{ secrets.API_USERNAME }}
       api_password: ${{ secrets.API_PASSWORD }}
       sparql_username: ${{ secrets.SPARQL_USERNAME }}
@@ -203,6 +204,7 @@ jobs:
       workspace: tna-prod
       app_env: production
       vcite_enabled: ${{ secrets.VCITE_ENABLED }}
+      api_endpoint: ${{ secrets.API_ENDPOINT }}
       api_username: ${{ secrets.API_USERNAME }}
       api_password: ${{ secrets.API_PASSWORD }}
       sparql_username: ${{ secrets.SPARQL_USERNAME }}
