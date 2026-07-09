@@ -72,9 +72,10 @@ jobs:
           E2E_RESTORE_ORIGINAL: "false"
           E2E_TIMEOUT_SECONDS: "300"
           E2E_URI: ${{ secrets.E2E_HEALTHCHECK_URI }}
-          API_ENDPOINT: https://api.staging.caselaw.nationalarchives.gov.uk/
+          API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
+          API_USERNAME: ${{ secrets.API_USERNAME }}
+          API_PASSWORD: ${{ secrets.API_PASSWORD }}
           AWS_REGION: eu-west-2
-          API_SECRET_NAME: ${{ secrets.E2E_API_SECRET_NAME }}
           SQS_ENRICHMENT_QUEUE_NAME: tna-s3-tna-staging-enrichment-queue
           RULES_FILE_BUCKET: staging-tna-s3-tna-sg-rules-bucket
           RULES_FILE_KEY: citation_patterns.jsonl
