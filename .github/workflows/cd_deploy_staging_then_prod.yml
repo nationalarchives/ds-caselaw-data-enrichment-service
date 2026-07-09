@@ -83,22 +83,23 @@ jobs:
           VCITE_ENRICHED_BUCKET: foo
         run: make test-e2e
 
-  # deploy_production:
-  #   name: Deploy Production Build
-  #   uses: ./.github/workflows/deploy_single_environment.yml
-  #   needs: verify_staging_e2e
-  #   with:
-  #     environment: production
-  #   secrets:
-  #     aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN_PROD }}
-  #     account_id: ${{ secrets.PROD_ACCOUNT_ID }}
-  #     workspace: tna-prod
-  #     app_env: production
-  #     vcite_enabled: ${{ secrets.VCITE_ENABLED }}
-  #     api_endpoint: ${{ secrets.API_ENDPOINT }}
-  #     api_username: ${{ secrets.API_USERNAME }}
-  #     api_password: ${{ secrets.API_PASSWORD }}
-  #     sparql_username: ${{ secrets.SPARQL_USERNAME }}
-  #     sparql_password: ${{ secrets.SPARQL_PASSWORD }}
-  #   permissions:
-  #     id-token: write
+  deploy_production:
+    name: Deploy Production Build
+    uses: ./.github/workflows/deploy_single_environment.yml
+    needs: verify_staging_e2e
+    if: ${{ needs.verify_staging_e2e.result == 'success' }}
+    with:
+      environment: production
+    secrets:
+      aws_oidc_role_arn: ${{ secrets.AWS_OIDC_ROLE_ARN_PROD }}
+      account_id: ${{ secrets.PROD_ACCOUNT_ID }}
+      workspace: tna-prod
+      app_env: production
+      vcite_enabled: ${{ secrets.VCITE_ENABLED }}
+      api_endpoint: ${{ secrets.API_ENDPOINT }}
+      api_username: ${{ secrets.API_USERNAME }}
+      api_password: ${{ secrets.API_PASSWORD }}
+      sparql_username: ${{ secrets.SPARQL_USERNAME }}
+      sparql_password: ${{ secrets.SPARQL_PASSWORD }}
+    permissions:
+      id-token: write
