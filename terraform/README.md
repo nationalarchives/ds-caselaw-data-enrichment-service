@@ -29,6 +29,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_api_endpoint"></a> [api\_endpoint](#input\_api\_endpoint) | Base API endpoint used by enrichment lambda | `string` | n/a | yes |
 | <a name="input_api_password"></a> [api\_password](#input\_api\_password) | API password to store in AWS Secrets Manager | `string` | n/a | yes |
 | <a name="input_api_username"></a> [api\_username](#input\_api\_username) | API username to store in AWS Secrets Manager | `string` | n/a | yes |
 | <a name="input_app_env"></a> [app\_env](#input\_app\_env) | Common prefix for all Terraform created resources | `string` | `"staging"` | no |

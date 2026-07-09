@@ -34,11 +34,6 @@ def _is_test_event(record: dict[str, Any]) -> bool:
     return "Event" in record and record["Event"] == "s3:TestEvent"
 
 
-def _get_api_endpoint(environment: str) -> APIEndpointBaseURL:
-    subdomain = "api.staging" if environment == "staging" else "api"
-    return APIEndpointBaseURL(f"https://{subdomain}.caselaw.nationalarchives.gov.uk/")
-
-
 def _process_vcite_callback_event(
     event: dict[str, Any],
     api_endpoint: APIEndpointBaseURL,
@@ -109,7 +104,6 @@ def handler(event: dict[str, Any], context: LambdaContext) -> None:
     api_username: str
     api_password: str
     api_username, api_password = _resolve_api_credentials()
-    environment: str = validate_env_variable("ENVIRONMENT")
     vcite_enabled: bool = validate_env_variable("VCITE_ENABLED") == "true"
 
     # Environment variables only for sqs enrichment event
@@ -120,9 +114,9 @@ def handler(event: dict[str, Any], context: LambdaContext) -> None:
     # Environment variable only needed for vCite callback event
     vcite_enriched_bucket: str = validate_env_variable("VCITE_ENRICHED_BUCKET")
 
-    LOGGER.info("Enrichment Lambda triggered, environment: %s", environment)
+    api_endpoint = APIEndpointBaseURL(validate_env_variable("API_ENDPOINT"))
 
-    api_endpoint = _get_api_endpoint(environment)
+    LOGGER.info("Enrichment Lambda triggered, endpoint: %s", api_endpoint)
 
     try:
         # May delete this block if we don't want to support vCite callback events in the enrichment lambda

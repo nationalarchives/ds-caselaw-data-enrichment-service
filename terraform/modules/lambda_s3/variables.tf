@@ -24,6 +24,11 @@ variable "name" {
 variable "environment" {
   type = string
 }
+
+variable "api_endpoint" {
+  type = string
+}
+
 variable "source_bucket_folder" {
   type    = string
   default = ""

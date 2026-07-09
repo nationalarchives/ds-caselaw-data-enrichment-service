@@ -31,6 +31,7 @@ module "lambda_s3" {
   postgress_master_password_secret_id = module.data.aurora_postgress_master_password["main"]
   postgress_hostname                  = module.data.aurora_postgress_hostname["main"]
   vcite_enabled                       = var.vcite_enabled
+  api_endpoint                        = var.api_endpoint
   api_username                        = var.api_username
   api_password                        = var.api_password
   sparql_username                     = var.sparql_username

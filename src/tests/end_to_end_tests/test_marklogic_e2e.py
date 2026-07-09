@@ -36,11 +36,12 @@ load_dotenv(PROJECT_ROOT / ".env.e2e", override=True)
 @dataclass(frozen=True)
 class E2EConfig:
     aws_region: str
-    environment: str
     api_endpoint: APIEndpointBaseURL
+    api_username: str
+    api_password: str
     uri: str
-    api_secret_name: str
     rules_bucket: str
+    api_secret_name: str | None
     rules_key: str
     vcite_bucket: str
     vcite_enriched_bucket: str
@@ -64,7 +65,6 @@ class E2EConfig:
     @classmethod
     def from_env(cls) -> "E2EConfig":
         aws_region = _require_any_env("AWS_REGION", "AWS_DEFAULT_REGION")
-        environment = _require_env("ENVIRONMENT")
         uri = _require_env("E2E_URI")
         trigger_mode = os.getenv("E2E_TRIGGER_MODE", "sqs").lower()
         if trigger_mode not in {"sqs", "local_handler"}:
@@ -95,6 +95,10 @@ class E2EConfig:
                 "Both MARKLOGIC_USERNAME and MARKLOGIC_PASSWORD must be set when using explicit credentials",
             )
 
+        api_username = _require_env("API_USERNAME")
+        api_password = _require_env("API_PASSWORD")
+        api_secret_name = os.getenv("API_SECRET_NAME")  # Optional, only used for local_handler
+
         if trigger_mode == "local_handler":
             database_name = _require_env("DATABASE_NAME")
             database_username = _require_env("DATABASE_USERNAME")
@@ -110,10 +114,8 @@ class E2EConfig:
 
         return cls(
             aws_region=aws_region,
-            environment=environment,
-            api_endpoint=_get_api_endpoint(environment),
+            api_endpoint=APIEndpointBaseURL(_require_env("API_ENDPOINT")),
             uri=uri,
-            api_secret_name=_require_env("API_SECRET_NAME"),
             rules_bucket=_require_env("RULES_FILE_BUCKET"),
             rules_key=_require_env("RULES_FILE_KEY"),
             vcite_bucket=_require_env("VCITE_BUCKET"),
@@ -129,11 +131,14 @@ class E2EConfig:
             marklogic_secret_name=marklogic_secret_name,
             marklogic_username=marklogic_username,
             marklogic_password=marklogic_password,
+            api_username=api_username,
+            api_password=api_password,
             database_name=database_name,
             database_username=database_username,
             db_password_secret_name=db_password_secret_name,
             e2e_db_host=e2e_db_host,
             e2e_db_port=e2e_db_port,
+            api_secret_name=api_secret_name,
         )
 
 
@@ -152,33 +157,16 @@ def _require_any_env(*names: str) -> str:
     pytest.fail(f"Missing required env var for E2E: one of {', '.join(names)}")
 
 
-def _resolve_marklogic_fixture_credentials(cfg: E2EConfig) -> tuple[str, str]:
-    """Resolve fixture-seeding credentials.
-
-    Defaults to API_SECRET_NAME unless MARKLOGIC_SECRET_NAME is explicitly set.
-    MARKLOGIC_USERNAME/MARKLOGIC_PASSWORD may be used as explicit overrides.
-    """
-    explicit_username = cfg.marklogic_username
-    explicit_password = cfg.marklogic_password
-
-    if explicit_username or explicit_password:
-        return explicit_username, explicit_password
-
-    secret_name = cfg.marklogic_secret_name or cfg.api_secret_name
-    return _resolve_api_credentials_from_secret(secret_name, cfg.aws_region)
-
-
 def _create_marklogic_client_for_fixture(cfg: E2EConfig) -> MarklogicApiClient:
     if not cfg.marklogic_api_client_host or cfg.marklogic_use_https is None:
         pytest.fail(
             "Fixture seeding requires MARKLOGIC_API_CLIENT_HOST and MARKLOGIC_USE_HTTPS",
         )
-    username, password = _resolve_marklogic_fixture_credentials(cfg)
 
     return MarklogicApiClient(
         host=cfg.marklogic_api_client_host,
-        username=username,
-        password=password,
+        username=cfg.api_username,
+        password=cfg.api_password,
         use_https=cfg.marklogic_use_https,
         user_agent=f"ds-caselaw-data-enrichment-service/e2e {DEFAULT_USER_AGENT}",
     )
@@ -225,18 +213,6 @@ def _delete_fixture_document_if_created(
         return
     marklogic_client = _create_marklogic_client_for_fixture(cfg)
     marklogic_client.delete_judgment(DocumentURIString(target_uri))
-
-
-def _resolve_api_credentials_from_secret(secret_name: str, aws_region: str) -> tuple[str, str]:
-    sm = boto3.client("secretsmanager", region_name=aws_region)
-    secret_string = sm.get_secret_value(SecretId=secret_name)["SecretString"]
-    secret_json = json.loads(secret_string)
-    return secret_json["username"], secret_json["password"]
-
-
-def _get_api_endpoint(environment: str) -> APIEndpointBaseURL:
-    subdomain = "api.staging" if environment == "staging" else "api"
-    return APIEndpointBaseURL(f"https://{subdomain}.caselaw.nationalarchives.gov.uk/")
 
 
 def _get_queue_url(cfg: E2EConfig) -> str:
@@ -323,14 +299,16 @@ def _configure_local_handler_db_env(monkeypatch, cfg: E2EConfig) -> None:
 
 
 def _configure_enrichment_handler_env(monkeypatch, cfg: E2EConfig) -> None:
-    monkeypatch.setenv("API_SECRET_NAME", cfg.api_secret_name)
-    monkeypatch.setenv("ENVIRONMENT", cfg.environment)
+    monkeypatch.setenv("API_ENDPOINT", str(cfg.api_endpoint))
     monkeypatch.setenv("VCITE_ENABLED", "false")
     monkeypatch.setenv("VCITE_BUCKET", cfg.vcite_bucket)
     monkeypatch.setenv("VCITE_ENRICHED_BUCKET", cfg.vcite_enriched_bucket)
     monkeypatch.setenv("RULES_FILE_BUCKET", cfg.rules_bucket)
     monkeypatch.setenv("RULES_FILE_KEY", cfg.rules_key)
     monkeypatch.setenv("AWS_DEFAULT_REGION", cfg.aws_region)
+    # API_SECRET_NAME required only for local_handler mode (Lambda needs SM access)
+    if cfg.trigger_mode == "local_handler" and cfg.api_secret_name:
+        monkeypatch.setenv("API_SECRET_NAME", cfg.api_secret_name)
 
 
 def _latest_tna_enriched_date(xml: str) -> str | None:
@@ -414,19 +392,18 @@ def test_enrichment_lambda_triggers_and_updates_marklogic(monkeypatch):
         if cfg.seed_if_missing:
             fixture_was_created = _seed_fixture_document_from_repo_xml(cfg, cfg.uri)
 
-        username, password = _resolve_api_credentials_from_secret(cfg.api_secret_name, cfg.aws_region)
         if fixture_was_created:
-            _wait_for_judgment_fetchable(cfg.api_endpoint, cfg.uri, username, password)
+            _wait_for_judgment_fetchable(cfg.api_endpoint, cfg.uri, cfg.api_username, cfg.api_password)
 
-        before_xml = fetch_judgment(cfg.api_endpoint, cfg.uri, username, password)
+        before_xml = fetch_judgment(cfg.api_endpoint, cfg.uri, cfg.api_username, cfg.api_password)
 
         _trigger_enrichment(monkeypatch, cfg)
 
         after_xml = _wait_for_enrichment(
             cfg.api_endpoint,
             cfg.uri,
-            username,
-            password,
+            cfg.api_username,
+            cfg.api_password,
             before_xml,
             cfg.timeout_seconds,
         )
@@ -438,8 +415,8 @@ def test_enrichment_lambda_triggers_and_updates_marklogic(monkeypatch):
             _delete_fixture_document_if_created(cfg, cfg.uri, fixture_was_created)
         elif cfg.should_restore:
             try:
-                lock_judgment(cfg.api_endpoint, cfg.uri, username, password)
-                patch_judgment(cfg.api_endpoint, cfg.uri, before_xml, username, password)
+                lock_judgment(cfg.api_endpoint, cfg.uri, cfg.api_username, cfg.api_password)
+                patch_judgment(cfg.api_endpoint, cfg.uri, before_xml, cfg.api_username, cfg.api_password)
             except RuntimeError as exc:
                 # Do not mask enrichment result with restore races on shared docs.
                 if "content hash" in str(exc).lower():

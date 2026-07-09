@@ -145,6 +145,14 @@ There is an opt-in E2E test at `src/tests/end_to_end_tests/test_marklogic_e2e.py
 
 Prerequisite: your machine/runner must have network access to the target MarkLogic/API endpoints used by this test (including fixture seed/delete checks). For TNA staging, this typically means DXW VPN access.
 
+#### Credential handling
+
+- **In GitHub Actions (SQS mode)**: `API_USERNAME` and `API_PASSWORD` are fetched from GitHub Secrets and masked in logs to prevent credential leakage.
+- **Locally**: Set `API_USERNAME` and `API_PASSWORD` in `.env.e2e` for manual testing.
+- **Local handler mode**: Requires `API_SECRET_NAME` (Lambda needs access to the combined secret in Secrets Manager).
+
+#### Running the tests
+
 Use an env file so you do not need to export variables every run:
 
 ```bash
@@ -162,8 +170,9 @@ Default test runs (`make test`) exclude E2E tests by marker.
 Core required settings:
 
 - `AWS_REGION` (or `AWS_DEFAULT_REGION`)
-- `ENVIRONMENT` (for example `staging`)
-- `API_SECRET_NAME` (secret JSON with `username` and `password`)
+- `API_ENDPOINT` (endpoint URL for the Priv API)
+- `API_USERNAME` (API username)
+- `API_PASSWORD` (API password)
 - `E2E_URI` (must contain one of: `e2e`, `test-fixture`, `staging-e2e`)
 - `RULES_FILE_BUCKET`
 - `RULES_FILE_KEY`
@@ -177,15 +186,15 @@ Fixture-seeding-only settings (required only when `E2E_SEED_IF_MISSING=true`):
 
 Credential behavior for fixture seeding:
 
-- Default: fixture seeding reuses `API_SECRET_NAME` credentials from Secrets Manager.
-- Optional override secret: set `MARKLOGIC_SECRET_NAME` to use a different secret for seeding/deleting fixtures.
-- Optional explicit override: set both `MARKLOGIC_USERNAME` and `MARKLOGIC_PASSWORD`.
+- Default: fixture seeding reuses `API_USERNAME` and `API_PASSWORD` from config.
+- Optional explicit override: set both `MARKLOGIC_USERNAME` and `MARKLOGIC_PASSWORD` to use different credentials for seeding/deleting fixtures.
   - If one is set without the other, the test skips with a clear error.
+- Note: `API_SECRET_NAME` is only required for `local_handler` mode (Lambda needs access to SM for combined secret).
 
 Trigger modes:
 
-- `E2E_TRIGGER_MODE=sqs`: send message to the environment queue (tests deployed lambda path)
-- `E2E_TRIGGER_MODE=local_handler`: call local `handler(...)` with real environment resources
+- `E2E_TRIGGER_MODE=sqs`: send message to the environment queue (tests deployed lambda path). This is the primary CI/CD flow; credentials come from `API_USERNAME`/`API_PASSWORD`.
+- `E2E_TRIGGER_MODE=local_handler`: call local `handler(...)` with real environment resources. Requires `API_SECRET_NAME` to be set so Lambda can fetch combined credentials from Secrets Manager.
 
 `local_handler` mode also requires:
 

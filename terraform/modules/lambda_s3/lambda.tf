@@ -182,7 +182,7 @@ module "lambda-enrichment" {
 
   environment_variables = {
     API_SECRET_NAME         = aws_secretsmanager_secret.api_credentials.name
-    ENVIRONMENT             = local.environment
+    API_ENDPOINT            = local.api_endpoint
     DATABASE_NAME           = "rules"
     DATABASE_USERNAME       = "root"
     DATABASE_PORT           = "5432"
