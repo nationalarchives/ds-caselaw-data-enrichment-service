@@ -12,6 +12,12 @@ variable "bucket_prefix" {
   default = "sg"
 }
 
+variable "container_image_tag" {
+  type        = string
+  description = "Container image tag used by Lambda image-based deployments"
+  default     = "latest"
+}
+
 variable "vcite_enabled" {
   type        = bool
   description = "Enable vCite processing and upload in enrichment lambda"

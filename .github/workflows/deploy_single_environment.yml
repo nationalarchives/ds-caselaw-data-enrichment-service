@@ -166,8 +166,15 @@ jobs:
 
           aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com
 
-          docker tag ${{ matrix.lambda }}:local ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/${{ matrix.ecr_repo }}-${{ secrets.app_env }}:latest
-          docker push ${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/${{ matrix.ecr_repo }}-${{ secrets.app_env }}:latest
+          IMAGE_REPO="${{ secrets.account_id }}.dkr.ecr.eu-west-2.amazonaws.com/${{ matrix.ecr_repo }}-${{ secrets.app_env }}"
+          IMAGE_TAG="${{ github.sha }}"
+
+          docker tag ${{ matrix.lambda }}:local ${IMAGE_REPO}:${IMAGE_TAG}
+          docker push ${IMAGE_REPO}:${IMAGE_TAG}
+
+          # Keep latest for operational convenience while deployments use immutable SHA tags.
+          docker tag ${{ matrix.lambda }}:local ${IMAGE_REPO}:latest
+          docker push ${IMAGE_REPO}:latest
 
   deploy-terraform-phase-2:
     name: Deploy infrastructure
@@ -221,4 +228,6 @@ jobs:
           set -o pipefail
           cd terraform
           terraform workspace select ${{ secrets.workspace }}
-          terraform apply --auto-approve -no-color -var "app_env=${{ secrets.app_env }}"
+          terraform apply --auto-approve -no-color \
+            -var "app_env=${{ secrets.app_env }}" \
+            -var "container_image_tag=${{ github.sha }}"
