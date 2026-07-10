@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Case Law Annotator is the first _Annotator_ function in the pipeline and is followed by the [Legislation Annotator](../legislation/legislation-annotator.md)). The Case Law Annotator performs its function in the first phase of enrichment. The purpose of the Case Law Annotator is to detect and markup citations to UK case law cited in the judgment being processed. The Case Law Annotator uses a rules-based engine, the _Rules Manifest_, which is built on top of the [spaCy EntityRuler](https://spacy.io/api/entityruler). The [_Rules Manifest_]() is stored as a table in Postgres where each row in the table represents a rule.
+The Case Law Annotator is the first _Annotator_ function in the pipeline and is followed by the [Legislation Annotator](../legislation/legislation-annotator.md)). The Case Law Annotator performs its function in the first phase of enrichment. The purpose of the Case Law Annotator is to detect and markup citations to UK case law cited in the judgment being processed. The Case Law Annotator uses a rules-based engine, the _Rules Manifest_, which is built on top of the [spaCy EntityRuler](https://spacy.io/api/entityruler). The _Rules Manifest_ is stored as a table in Postgres where each row in the table represents a rule.
 
 The Case Law Annotator provides the following core functionality:
 
