@@ -26,8 +26,6 @@ module "lambda_s3" {
 
   bucket_prefix = "sg"
 
-  vpc_id = module.network.vpc_id
-
   postgress_master_password_secret_id = module.data.aurora_postgress_master_password["main"]
   postgress_hostname                  = module.data.aurora_postgress_hostname["main"]
   container_image_tag                 = var.container_image_tag
