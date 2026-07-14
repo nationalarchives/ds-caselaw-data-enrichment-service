@@ -98,6 +98,14 @@ def detect_reference(text: str, etype: Literal["legislation"]) -> Reference:
     return references
 
 
+def split_xml_declaration(content: str) -> tuple[str, str]:
+    match = re.match(r"\s*(<\?xml[^>]*\?>)", content)
+    if not match:
+        return "", content
+
+    return match.group(1), content[match.end() :].lstrip()
+
+
 def sanitize_judgment(file_content: DocumentAsXMLString) -> DocumentAsXMLString:
     file_content = _remove_old_enrichment_references(file_content)
 

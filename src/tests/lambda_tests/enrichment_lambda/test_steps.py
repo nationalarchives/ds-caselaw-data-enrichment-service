@@ -1,6 +1,8 @@
 from pathlib import Path
 from unittest.mock import Mock, patch
 
+import lxml.etree
+
 from lambdas.enrichment_lambda.steps import (
     make_post_header_replacements,
     replace_legislation_provisions,
@@ -59,6 +61,24 @@ class TestMakePostHeaderReplacements:
         content_with_replacements = make_post_header_replacements(original_file_content, replacement_content)
 
         assert_equal_xml(content_with_replacements, expected_file_content)
+
+    def test_press_summary_without_header_does_not_crash(self):
+        """pressSummary documents have no <header> element; the entire document
+        becomes the replacement target.  Previously this caused an XMLSyntaxError
+        because the XML declaration ended up wrapped inside a root element."""
+        original_file_content = open(
+            FIXTURE_DIR / "uksc-2022-14-press-summary.xml",
+            encoding="utf-8",
+        ).read()
+        # "Competition Act 1998" appears as plain text in the press summary body
+        replacement_content = '{"leg": ["Competition Act 1998", "https://www.legislation.gov.uk/ukpga/1998/41/contents", "Competition Act 1998"]}'
+
+        result = make_post_header_replacements(original_file_content, replacement_content)
+
+        lxml.etree.fromstring(result.encode("utf-8"))
+        # The legislation reference must have been tagged
+        assert 'uk:type="legislation"' in result
+        assert "Competition Act 1998" in result
 
     def test_post_header_double_replacement(self):
         """When a value is replaced, the value is an attribute in a ref tag.

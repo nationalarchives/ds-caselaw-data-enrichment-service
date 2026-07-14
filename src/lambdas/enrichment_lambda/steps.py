@@ -20,6 +20,7 @@ from enrichment.replacer.make_replacements import (
     apply_replacements,
     sanitize_judgment,
     split_text_by_closing_header_tag,
+    split_xml_declaration,
 )
 from enrichment.replacer.second_stage_replacer import replace_references_by_paragraph
 from utils.custom_types import DocumentAsXMLString
@@ -162,9 +163,11 @@ def make_post_header_replacements(
     Returns:
         str: The modified legal document content with the replacement applied.
     """
+    xml_declaration, _ = split_xml_declaration(original_content)
     cleaned_file_content = sanitize_judgment(original_content)
+    _, cleaned_body = split_xml_declaration(cleaned_file_content)
 
-    pre_header, end_header_tag, post_header = split_text_by_closing_header_tag(cleaned_file_content)
+    pre_header, end_header_tag, post_header = split_text_by_closing_header_tag(DocumentAsXMLString(cleaned_body))
 
     replaced_post_header_content = apply_replacements(post_header, replacement_patterns)
     LOGGER.info("Got post-header replacement text content")
@@ -173,5 +176,8 @@ def make_post_header_replacements(
 
     # raises an lxml.etree.XMLSyntaxError if the output is not valid XML
     lxml.etree.fromstring(full_replaced_text_content.encode("utf-8"))
+
+    if xml_declaration:
+        full_replaced_text_content = f"{xml_declaration}\n{full_replaced_text_content}"
 
     return DocumentAsXMLString(full_replaced_text_content)
