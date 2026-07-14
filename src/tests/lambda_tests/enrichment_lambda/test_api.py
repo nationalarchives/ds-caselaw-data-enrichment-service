@@ -41,6 +41,17 @@ def test_lock_judgment_non_201_raises(mock_pool_manager):
         api.lock_judgment("https://api.example/", "uksc/2024/1", "user", "pass")
 
 
+@patch("lambdas.enrichment_lambda.api.urllib3.PoolManager")
+def test_unlock_judgment_non_204_or_200_raises(mock_pool_manager):
+    response = Mock()
+    response.status = 500
+    response.data.decode.return_value = "error"
+    mock_pool_manager.return_value.request.return_value = response
+
+    with pytest.raises(RuntimeError, match="Failed to unlock judgment"):
+        api.unlock_judgment("https://api.example/", "uksc/2024/1", "user", "pass")
+
+
 @patch("lambdas.enrichment_lambda.api.requests.patch")
 def test_patch_judgment_http_error_raises_runtime_error(mock_patch):
     response = Mock()
