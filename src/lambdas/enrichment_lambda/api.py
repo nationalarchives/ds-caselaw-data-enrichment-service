@@ -45,6 +45,22 @@ def lock_judgment(api_endpoint: APIEndpointBaseURL, query: str, username: str, p
     LOGGER.info("Judgment locked successfully")
 
 
+def unlock_judgment(api_endpoint: APIEndpointBaseURL, query: str, username: str, password: str) -> None:
+    http = urllib3.PoolManager()
+    url = f"{api_endpoint}lock/{query}"
+    headers = urllib3.make_headers(basic_auth=username + ":" + password)
+    response = http.request("DELETE", url, headers=headers)
+
+    if response.status not in (200, 204):
+        message = (
+            f"Failed to unlock judgment from {url}, status code: {response.status}, response: {response.data.decode()}"
+        )
+        LOGGER.error(message)
+        raise RuntimeError(message)
+
+    LOGGER.info("Judgment unlocked successfully")
+
+
 def patch_judgment(
     api_endpoint: APIEndpointBaseURL,
     document_uri: str,
