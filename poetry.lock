@@ -2466,22 +2466,19 @@ testing = ["process-tests", "pytest-xdist", "virtualenv"]
 
 [[package]]
 name = "pytest-env"
-version = "1.6.0"
+version = "1.7.0"
 description = "pytest plugin that allows you to add environment variables."
 optional = false
 python-versions = ">=3.10"
 groups = ["test"]
 files = [
-    {file = "pytest_env-1.6.0-py3-none-any.whl", hash = "sha256:1e7f8a62215e5885835daaed694de8657c908505b964ec8097a7ce77b403d9a3"},
-    {file = "pytest_env-1.6.0.tar.gz", hash = "sha256:ac02d6fba16af54d61e311dd70a3c61024a4e966881ea844affc3c8f0bf207d3"},
+    {file = "pytest_env-1.7.0-py3-none-any.whl", hash = "sha256:9ee0f1fe859d23fcdb533fe2909a404b3b133d02674a56df275bbe4df4eb104b"},
+    {file = "pytest_env-1.7.0.tar.gz", hash = "sha256:0c1dc1101fb8d3ab3611e8f8d657ba06c3c0c167fc85c90457e5b27f2508f43e"},
 ]
 
 [package.dependencies]
 pytest = ">=9.0.2"
 python-dotenv = ">=1.2.2"
-
-[package.extras]
-testing = ["covdefaults (>=2.3)", "coverage (>=7.13.4)", "pytest-mock (>=3.15.1)"]
 
 [[package]]
 name = "pytest-postgresql"
@@ -3909,4 +3906,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13,<3.14"
-content-hash = "af1ba3bcdfd13cd54d14a3ecb1633184ca320863d6f0703ea93897bfd0af86cd"
+content-hash = "a86c901899befb53859f8d505ff62ca6c4a14ba0d6a9d7088330abeb07c6aae8"
