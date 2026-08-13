@@ -50,10 +50,10 @@ def mergedict(x, b):
         dictionary containing the detected references.
     """
     a: dict[Any, Any] = {}
-    for k, _v in b.items():
-        a[k] = a.get(k, []) + b[k]
-    for k, _v in x.items():
-        a[k] = a.get(k, []) + x[k]
+    for k, v in b.items():
+        a[k] = a.get(k, []) + v
+    for k, v in x.items():
+        a[k] = a.get(k, []) + v
     return a
 
 
@@ -229,7 +229,6 @@ def detect_candidates(nlp, docobj):
     output : list(tuple)
         List of tuples indicating the position of the candidate segments in the text.
     """
-    #
     pattern = [{"ORTH": "Act"}, {"SHAPE": "dddd"}]
     matcher = Matcher(nlp.vocab)
     matcher.add("Act Matcher", [pattern])

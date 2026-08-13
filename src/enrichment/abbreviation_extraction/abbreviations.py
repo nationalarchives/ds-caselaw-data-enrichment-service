@@ -153,12 +153,7 @@ def filter_matches(matcher_output: list[tuple[int, int, int]], doc: Doc) -> list
             word = short_form
             quote_offset_new = 0
             # Occassionally quotations at the start of the short form slips through - this is to clean that
-            if (
-                short_form.startswith('"')
-                or short_form.startswith("“")
-                or short_form.startswith("”")
-                or short_form.startswith("“")
-            ):
+            if short_form.startswith(('"', "“", "”")):
                 word = short_form[1:]
                 quote_offset_new = 1
 
@@ -200,10 +195,7 @@ def short_form_filter(span: Span) -> bool:
     if not all(2 < len(x) < 10 for x in span):
         return False
     # At least one word is alpha numeric
-    if not any(x.is_alpha for x in span):
-        return False
-
-    return True
+    return any(x.is_alpha for x in span)
 
 
 def verify_match_format(matcher_output: list[tuple[int, int, int]], doc: Doc) -> list[tuple[Span, Span]]:

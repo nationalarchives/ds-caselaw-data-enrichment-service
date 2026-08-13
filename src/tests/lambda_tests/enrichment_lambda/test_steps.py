@@ -37,26 +37,17 @@ FIXTURE_DIR = Path(__file__).parent.parent.parent.resolve() / "fixtures/"
 
 class TestMakePostHeaderReplacements:
     def test_make_post_header_replacements(self):
-        original_file_content = open(FIXTURE_DIR / "ewhc-ch-2023-257_original.xml", encoding="utf-8").read()
-        replacement_content = open(FIXTURE_DIR / "ewhc-ch-2023-257_replacements.txt", encoding="utf-8").read()
-        expected_file_content = open(
-            FIXTURE_DIR / "ewhc-ch-2023-257_enriched_stage_1.xml",
-            encoding="utf-8",
-        ).read()
+        original_file_content = (FIXTURE_DIR / "ewhc-ch-2023-257_original.xml").read_text(encoding="utf-8")
+        replacement_content = (FIXTURE_DIR / "ewhc-ch-2023-257_replacements.txt").read_text(encoding="utf-8")
+        expected_file_content = (FIXTURE_DIR / "ewhc-ch-2023-257_enriched_stage_1.xml").read_text(encoding="utf-8")
 
         content_with_replacements = make_post_header_replacements(original_file_content, replacement_content)
         assert_equal_xml(content_with_replacements, expected_file_content)
 
     def test_post_header_works_if_already_enriched(self):
-        original_file_content = open(
-            FIXTURE_DIR / "ewhc-ch-2023-257_enriched_stage_1.xml",
-            encoding="utf-8",
-        ).read()
-        replacement_content = open(FIXTURE_DIR / "ewhc-ch-2023-257_replacements.txt", encoding="utf-8").read()
-        expected_file_content = open(
-            FIXTURE_DIR / "ewhc-ch-2023-257_enriched_stage_1.xml",
-            encoding="utf-8",
-        ).read()
+        original_file_content = (FIXTURE_DIR / "ewhc-ch-2023-257_enriched_stage_1.xml").read_text(encoding="utf-8")
+        replacement_content = (FIXTURE_DIR / "ewhc-ch-2023-257_replacements.txt").read_text(encoding="utf-8")
+        expected_file_content = (FIXTURE_DIR / "ewhc-ch-2023-257_enriched_stage_1.xml").read_text(encoding="utf-8")
 
         content_with_replacements = make_post_header_replacements(original_file_content, replacement_content)
 
@@ -66,10 +57,7 @@ class TestMakePostHeaderReplacements:
         """pressSummary documents have no <header> element; the entire document
         becomes the replacement target.  Previously this caused an XMLSyntaxError
         because the XML declaration ended up wrapped inside a root element."""
-        original_file_content = open(
-            FIXTURE_DIR / "uksc-2022-14-press-summary.xml",
-            encoding="utf-8",
-        ).read()
+        original_file_content = (FIXTURE_DIR / "uksc-2022-14-press-summary.xml").read_text(encoding="utf-8")
         # "Competition Act 1998" appears as plain text in the press summary body
         replacement_content = '{"leg": ["Competition Act 1998", "https://www.legislation.gov.uk/ukpga/1998/41/contents", "Competition Act 1998"]}'
 

@@ -59,7 +59,7 @@ def apply_replacements(content: XMLFragmentAsString, replacement_patterns: str) 
         LOGGER.debug(replacement_pattern_json)
         replacement_pattern_dict = json.loads(replacement_pattern_json)
 
-        replacement_type, replacement_pattern_list = list(replacement_pattern_dict.items())[0]
+        replacement_type, replacement_pattern_list = next(iter(replacement_pattern_dict.items()))
         replacement_pattern = Replacement(tuple(replacement_pattern_list))
 
         if replacement_type == "case":

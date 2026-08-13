@@ -78,13 +78,13 @@ class TestCitationProcessor:
         text = "!!!!!!!_________[2047] Costs LR 123_____"
 
         (
-            citation_match,
-            family,
-            URItemplate,
-            is_neutral,
+            _citation_match,
+            _family,
+            _URItemplate,
+            _is_neutral,
             is_canonical,
-            citation_type,
-            canonical_form,
+            _citation_type,
+            _canonical_form,
         ) = mock_return_citation(nlp, text, db_connection)
 
         assert is_canonical is True
@@ -92,13 +92,13 @@ class TestCitationProcessor:
         text = "[2022] UKFTT 2020__0341 (GRC)"
 
         (
-            citation_match,
-            family,
-            URItemplate,
-            is_neutral,
+            _citation_match,
+            _family,
+            _URItemplate,
+            _is_neutral,
             is_canonical,
-            citation_type,
-            canonical_form,
+            _citation_type,
+            _canonical_form,
         ) = mock_return_citation(nlp, text, db_connection)
 
         assert is_canonical is None
@@ -106,13 +106,13 @@ class TestCitationProcessor:
         text = "amy [2022] KB 123"
 
         (
-            citation_match,
-            family,
-            URItemplate,
-            is_neutral,
+            _citation_match,
+            _family,
+            _URItemplate,
+            _is_neutral,
             is_canonical,
-            citation_type,
-            canonical_form,
+            _citation_type,
+            _canonical_form,
         ) = mock_return_citation(nlp, text, db_connection)
 
         assert is_canonical is True
@@ -181,7 +181,7 @@ class TestCorrectionStrategy:
         citation_match = "1 ExD 123"
         citation_type = "PubNumAbbrNum"
         canonical_form = "d1 ExD d2"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,
@@ -192,7 +192,7 @@ class TestCorrectionStrategy:
         citation_match = "[2025] EWHC 123 (TCC)"
         citation_type = "NCitYearAbbrNumDiv"
         canonical_form = "[dddd] EWHC d+ (TCC)"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,
@@ -203,7 +203,7 @@ class TestCorrectionStrategy:
         citation_match = "[2024] EWCOP 758"
         citation_type = "NCitYearAbbrNum"
         canonical_form = "[dddd] EWCOP d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,
@@ -214,7 +214,7 @@ class TestCorrectionStrategy:
         citation_match = "[1999] LGR 666"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] LGR d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,
@@ -225,7 +225,7 @@ class TestCorrectionStrategy:
         citation_match = "Case T-123/12"
         citation_type = "EUTCase"
         canonical_form = "Case T-123/12"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,
@@ -237,7 +237,7 @@ class TestCorrectionStrategy:
         citation_match = "[2022] P.N.L.R 123"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] PNLR d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,
@@ -249,7 +249,7 @@ class TestCorrectionStrategy:
         citation_match = "(1995) 99 Cr. App. R. 123"
         citation_type = "PubYearNumAbbrNum"
         canonical_form = "(dddd) d1 Cr App R d2"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,
@@ -261,7 +261,7 @@ class TestCorrectionStrategy:
         citation_match = "(2026) EWHC 789 (Fam)"
         citation_type = "NCitYearAbbrNumDiv"
         canonical_form = "[dddd] EWHC d+ (Fam)"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,
@@ -273,7 +273,7 @@ class TestCorrectionStrategy:
         citation_match = "[1999] A.C. 666"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] AC d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,
@@ -285,7 +285,7 @@ class TestCorrectionStrategy:
         citation_match = "[2019] Q.B. 456"
         citation_type = "PubYearAbbrNum"
         canonical_form = "[dddd] QB d+"
-        corrected_citation, year, d1, d2 = apply_correction_strategy(
+        corrected_citation, year, _d1, _d2 = apply_correction_strategy(
             citation_type,
             citation_match,
             canonical_form,

@@ -65,7 +65,7 @@ def test_manifest(df: pd.DataFrame, patterns: list[str]) -> None:
 
     for example in examples:
         doc = nlp(example)
-        ent = [str(ent.ent_id_) for ent in doc.ents][0]
+        ent = next(str(ent.ent_id_) for ent in doc.ents)
         MATCHED_IDS.append(ent)
 
     MATCHED_IDS = list(set(MATCHED_IDS))
