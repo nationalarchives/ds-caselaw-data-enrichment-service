@@ -96,7 +96,7 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
         ref = soup.find("ref")
         if not isinstance(ref, Tag):
             msg = "Did not successfully get <ref> tag"
-            raise ValueError(msg)
+            raise TypeError(msg)
         canonical = ref.get("canonical")  # get the legislation canonical form
         leg_href = ref.get("href")  # get the legislation href
         section_href = str(leg_href) + "/section/" + str(section_number)  # creates the section href
@@ -117,7 +117,7 @@ def save_section_to_dict(section_dict, para_number, clean_section_dict):
         }
 
         # isn't currently in the master dictionary
-        if clean_section not in clean_section_dict.keys():
+        if clean_section not in clean_section_dict:
             clean_section_dict[clean_section] = [new_definition]
 
         else:
@@ -197,7 +197,7 @@ def get_correct_section_def(section_matches, cur_para_number, cur_pos):
         # same as above; relies on position within a paragraph if the section is redefined within the paragraph.
         positions = pos_refs[:, 1]
         idx = (np.abs(positions - cur_pos)).argmin()
-        return [match for match in section_matches if match["section_position"] == positions[idx]][0]
+        return next(match for match in section_matches if match["section_position"] == positions[idx])
 
 
 def provision_resolver(section_dict, matches, para_number):
@@ -215,7 +215,7 @@ def provision_resolver(section_dict, matches, para_number):
         clean_section = "section " + str(clean_section_num)
 
         # check if we have a match for the section that we've found
-        if clean_section in section_dict.keys():
+        if clean_section in section_dict:
             values = section_dict[clean_section]
             # if they referred to the section before it was defined in a paragraph with linked leg, skip
             if para_number < values[0]["para_number"]:
@@ -259,11 +259,10 @@ def provisions_pipeline(file_data: DocumentAsXMLString) -> list:
     """
     soup = BeautifulSoup(file_data, "xml")
     text = soup.find_all("p")
-    cur_para_number = 0
     section_dict: SectionDict = {}
     resolved_refs = []
 
-    for line in text:
+    for cur_para_number, line in enumerate(text):
         sections = detect_reference(str(line), "section")
         if sections:
             legislations = detect_reference(str(line))
@@ -276,5 +275,4 @@ def provisions_pipeline(file_data: DocumentAsXMLString) -> list:
             # resolve sections to legislations
             resolved_refs.extend(provision_resolver(section_dict, sections, cur_para_number))
 
-        cur_para_number += 1
     return resolved_refs
