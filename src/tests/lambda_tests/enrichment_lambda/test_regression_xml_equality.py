@@ -47,7 +47,7 @@
 #     pg_dsn = db_engine.url
 
 #     region = "us-east-1"
-#     secret_name = "integration-db-lookup"  # noqa: S105
+#     secret_name = "integration-db-lookup"
 #     rules_bucket = "integration-rules-bucket"
 #     rules_key = "rules/citation_patterns.jsonl"
 #     monkeypatch.setenv("DATABASE_NAME", pg_dsn["database"])
