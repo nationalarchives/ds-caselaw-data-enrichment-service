@@ -60,7 +60,7 @@ def case_pipeline(doc, db_conn):
         rule_id = ent.ent_id_
         citation_match = ent.text
         (
-            family,
+            _family,
             URItemplate,
             is_neutral,
             is_canonical,
