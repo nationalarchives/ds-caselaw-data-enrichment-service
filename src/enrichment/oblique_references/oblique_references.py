@@ -164,13 +164,11 @@ def match_act(
     legislation_to_match_position = legislation_to_match["para_pos"][0]
 
     # TODO: filter because we could have multiple??? is this true or unneeded?
-    matched_act = [
+    return next(
         legislation
         for legislation in eligible_legislation
         if legislation["para_pos"][0] == legislation_to_match_position
-    ][0]
-
-    return matched_act
+    )
 
 
 def create_section_ref_tag(replacement_dict: LegislationDict, match: str) -> str:
