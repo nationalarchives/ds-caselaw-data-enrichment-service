@@ -2701,14 +2701,14 @@ python-dotenv = ">=1.2.2"
 
 [[package]]
 name = "pytest-postgresql"
-version = "8.1.0"
+version = "9.1.0"
 description = "Postgresql fixtures and fixture factories for Pytest."
 optional = false
 python-versions = ">=3.10"
 groups = ["test"]
 files = [
-    {file = "pytest_postgresql-8.1.0-py3-none-any.whl", hash = "sha256:0868bb3374fa4f454efd73ac1d7b23d2da623782044371b84d39f83a0893f56f"},
-    {file = "pytest_postgresql-8.1.0.tar.gz", hash = "sha256:ffd24027a28aba3d05a909fb03ee87d1d474574c3504f332d6047e8699170adc"},
+    {file = "pytest_postgresql-9.1.0-py3-none-any.whl", hash = "sha256:78d5b04e321c1d9b2ac86c837aa536f833f4141bd297196d54b6755a3aeba008"},
+    {file = "pytest_postgresql-9.1.0.tar.gz", hash = "sha256:d340789d6f43cac901fc14f52b15723279bd66db4db7a6506d969417c36cdf04"},
 ]
 
 [package.dependencies]
@@ -2717,6 +2717,9 @@ packaging = "*"
 port-for = ">=0.7.3"
 psycopg = ">=3.0.0"
 pytest = ">=8.2"
+
+[package.extras]
+async = ["aiofiles (>=23.0)", "pytest-asyncio (>=1.4)"]
 
 [[package]]
 name = "pytest-socket"
@@ -4150,4 +4153,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13,<3.14"
-content-hash = "fb3acbd183023e6584c05104352f5e2a54c7d7f78434c8abd6f1def55d40460f"
+content-hash = "2e647b8cb83fe115c892954ca32819fcda31b32d2c4abcd1789b242768fae8f9"
