@@ -6,28 +6,40 @@ module "aurora-metadata-db" {
 
   name = "${local.name}-${each.key}-metadata-db-${local.environment}"
 
-  engine             = "aurora-postgresql"
-  engine_version     = each.value["engine_version"]
-  instance_type      = each.value["instance_type"]
-  ca_cert_identifier = "rds-ca-rsa4096-g1"
+  engine          = "aurora-postgresql"
+  engine_version  = each.value["engine_version"]
+  master_username = "root"
 
-  vpc_id                  = var.vpc_id
-  subnets                 = data.aws_subnets.database.ids
-  create_security_group   = true
-  allowed_security_groups = each.value["allowed_security_groups"]
+  manage_master_user_password = false
+  master_password_wo          = aws_secretsmanager_secret_version.aurora_postgress_master_password[each.key].secret_string
+  master_password_wo_version  = 1
+
+  vpc_id                = var.vpc_id
+  db_subnet_group_name  = var.database_subnet_group_name
+  create_security_group = true
+  security_group_ingress_rules = {
+    for index, security_group_id in each.value["allowed_security_groups"] :
+    "allowed_security_group_${index}" => {
+      referenced_security_group_id = security_group_id
+    }
+  }
 
   deletion_protection = local.db[local.environment].deletion_protection
-
-  password = aws_secretsmanager_secret_version.aurora_postgress_master_password[each.key].secret_string
 
   apply_immediately   = true
   skip_final_snapshot = true
 
-  db_parameter_group_name         = aws_db_parameter_group.aurora_postgres[each.key].id
-  db_cluster_parameter_group_name = aws_rds_cluster_parameter_group.aurora_postgres[each.key].id
+  cluster_parameter_group_name    = aws_rds_cluster_parameter_group.aurora_postgres[each.key].id
   enabled_cloudwatch_logs_exports = ["postgresql"]
 
   database_name = "rules"
+  instances = {
+    one = {
+      ca_cert_identifier      = "rds-ca-rsa4096-g1"
+      db_parameter_group_name = aws_db_parameter_group.aurora_postgres[each.key].id
+      instance_class          = each.value["instance_type"]
+    }
+  }
 
   depends_on = [
     aws_db_parameter_group.aurora_postgres,
