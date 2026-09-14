@@ -12,7 +12,7 @@ module "aurora-metadata-db" {
 
   manage_master_user_password = false
   master_password_wo          = aws_secretsmanager_secret_version.aurora_postgress_master_password[each.key].secret_string
-  master_password_wo_version  = parseint(substr(md5(aws_secretsmanager_secret_version.aurora_postgress_master_password[each.key].secret_string), 0, 8), 16)
+  master_password_wo_version  = parseint(substr(replace(aws_secretsmanager_secret_version.aurora_postgress_master_password[each.key].version_id, "-", ""), 0, 8), 16)
 
   vpc_id                = var.vpc_id
   db_subnet_group_name  = var.database_subnet_group_name
