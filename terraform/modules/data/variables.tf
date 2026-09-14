@@ -25,6 +25,7 @@ variable "aurora_rds" {
   type = map(object({
     engine_version          = string
     instance_type           = string
+    password_version        = optional(number, 1)
     allowed_security_groups = list(string)
   }))
 }
