@@ -173,7 +173,7 @@ jobs:
         continue-on-error: false
 
   terraform_plan-staging:
-    uses: ./.github/workflows/terraform_plan.yml
+    uses: $/.github/workflows/terraform_plan.yml
     permissions:
       contents: read
       id-token: write
@@ -192,7 +192,7 @@ jobs:
       sparql_password: ${{ secrets.SPARQL_PASSWORD }}
 
   terraform_plan-production:
-    uses: ./.github/workflows/terraform_plan.yml
+    uses: $/.github/workflows/terraform_plan.yml
     permissions:
       contents: read
       id-token: write
