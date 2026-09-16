@@ -56,8 +56,8 @@ repos:
             moto==5.2.3,
           ]
 
-  - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v4.0.0-alpha.8
+  - repo: https://github.com/rbubley/mirrors-prettier
+    rev: v3.9.6
     hooks:
       - id: prettier
         types_or: [yaml, json, xml, markdown, scss, javascript]
@@ -71,6 +71,6 @@ repos:
         files: ^renovate\.json$
 
   - repo: https://github.com/woodruffw/zizmor-pre-commit
-    rev: v1.29.0
+    rev: v1.30.1
     hooks:
       - id: zizmor

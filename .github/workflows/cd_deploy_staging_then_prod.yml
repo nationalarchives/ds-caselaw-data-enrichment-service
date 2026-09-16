@@ -16,7 +16,7 @@ defaults:
 jobs:
   deploy_staging:
     name: Deploy Staging Build
-    uses: ./.github/workflows/deploy_single_environment.yml
+    uses: $/.github/workflows/deploy_single_environment.yml
     with:
       environment: staging
     concurrency:
@@ -89,7 +89,7 @@ jobs:
 
   deploy_production:
     name: Deploy Production Build
-    uses: ./.github/workflows/deploy_single_environment.yml
+    uses: $/.github/workflows/deploy_single_environment.yml
     needs: verify_staging_e2e
     if: ${{ needs.verify_staging_e2e.result == 'success' }}
     with:
