@@ -86,7 +86,7 @@ resource "aws_secretsmanager_secret_version" "sparql_credentials" {
 
 module "lambda-enrichment" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.8.2"
+  version = "8.9.0"
 
   function_name  = "${local.name}-${local.environment}-enrichment"
   package_type   = "Image"
@@ -216,7 +216,7 @@ resource "aws_lambda_event_source_mapping" "sqs_enrichment_trigger" {
 
 module "db_backup_lambda" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.8.2"
+  version = "8.9.0"
 
   function_name = "${local.name}-${local.environment}-db-backup"
   description   = "Takes a snapshot each day"
@@ -277,7 +277,7 @@ module "db_backup_lambda" {
 
 module "lambda-update-legislation-table" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.8.2"
+  version = "8.9.0"
 
   function_name  = "${local.name}-${local.environment}-update-legislation-table"
   package_type   = "Image"
@@ -366,7 +366,7 @@ resource "aws_lambda_permission" "update_legislation_table_allow_cloudwatch" {
 
 module "lambda-update-rules-processor" {
   source  = "terraform-aws-modules/lambda/aws"
-  version = "8.8.2"
+  version = "8.9.0"
 
   function_name  = "${local.name}-${local.environment}-update-rules-processor"
   package_type   = "Image"
