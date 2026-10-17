@@ -112,14 +112,14 @@ files = [
 
 [[package]]
 name = "aws-lambda-powertools"
-version = "3.35.0"
+version = "3.36.0"
 description = "Powertools for AWS Lambda (Python) is a developer toolkit to implement Serverless best practices and increase developer velocity."
 optional = false
 python-versions = "<4.0.0,>=3.10"
 groups = ["main"]
 files = [
-    {file = "aws_lambda_powertools-3.35.0-py3-none-any.whl", hash = "sha256:e8fbc27d74272fb99cbec67305250e825d1630dceb2dbfdcf5908dc9c4c82dcf"},
-    {file = "aws_lambda_powertools-3.35.0.tar.gz", hash = "sha256:27c1c7d7920f214a68a11505dca33ce3709a38c4b79f5fbc94141ec0af92c9f8"},
+    {file = "aws_lambda_powertools-3.36.0-py3-none-any.whl", hash = "sha256:cc44418d9f7ba27b571a515a356206d2aeebc019871082467e88b2bff3e3bdb5"},
+    {file = "aws_lambda_powertools-3.36.0.tar.gz", hash = "sha256:3931b362265b5bb6b5bc31dd8f8821cbfb3cfd0fd44df28749aff9547be00fe2"},
 ]
 
 [package.dependencies]
@@ -127,12 +127,14 @@ jmespath = ">=1.0.1,<2.0.0"
 typing-extensions = ">=4.11.0,<5.0.0"
 
 [package.extras]
-all = ["aws-encryption-sdk (>=4.0.5,<5.0.0)", "aws-xray-sdk (>=2.8.0,<3.0.0)", "fastjsonschema (>=2.14.5,<3.0.0)", "jsonpath-ng (>=1.6.0,<2.0.0)", "pydantic (>=2.4.0,<3.0.0)", "pydantic-settings (>=2.6.1,<3.0.0)"]
+all = ["aws-encryption-sdk (>=4.0.5,<5.0.0)", "aws-xray-sdk (>=2.8.0,<3.0.0)", "cryptography (>=50.0.1,<51.0.0)", "fastjsonschema (>=2.14.5,<3.0.0)", "jsonpath-ng (>=1.6.0,<2.0.0)", "pydantic (>=2.4.0,<3.0.0)", "pydantic-settings (>=2.6.1,<3.0.0)", "pyjwt (>=2.14.0,<3.0.0)", "urllib3 (>=2.7.0,<3.0.0)"]
 aws-sdk = ["boto3 (>=1.34.32,<2.0.0)"]
 datadog = ["datadog-lambda (>=8.114.0,<9.0.0)"]
 datamasking = ["aws-encryption-sdk (>=4.0.5,<5.0.0)", "jsonpath-ng (>=1.6.0,<2.0.0)"]
+jwt = ["cryptography (>=50.0.1,<51.0.0)", "pyjwt (>=2.14.0,<3.0.0)", "urllib3 (>=2.7.0,<3.0.0)"]
 kafka-consumer-avro = ["avro (>=1.12.0,<2.0.0)"]
 kafka-consumer-protobuf = ["protobuf (>=6.30.2,<8.0.0)"]
+oauth2 = ["urllib3 (>=2.7.0,<3.0.0)"]
 parser = ["pydantic (>=2.4.0,<3.0.0)"]
 redis = ["redis (>=4.4,<9.0)"]
 tracer = ["aws-xray-sdk (>=2.8.0,<3.0.0)"]
@@ -4206,4 +4208,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.16"
-content-hash = "b8d7c3a02260df142615801c2b3ca6d25bad79e6821909db346f60cbe4f031f1"
+content-hash = "e8cf8203ef925ffccfdfa0fe08e7306e064d28a268e3abefe6aecd495d7add88"
