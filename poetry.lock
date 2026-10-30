@@ -307,14 +307,14 @@ files = [
 
 [[package]]
 name = "certifi"
-version = "2026.7.22"
+version = "2026.10.23"
 description = "Python package for providing Mozilla's CA Bundle."
 optional = false
 python-versions = ">=3.7"
 groups = ["main", "enrichment-lambda", "rules-lambda", "test"]
 files = [
-    {file = "certifi-2026.7.22-py3-none-any.whl", hash = "sha256:62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"},
-    {file = "certifi-2026.7.22.tar.gz", hash = "sha256:741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55"},
+    {file = "certifi-2026.10.23-py3-none-any.whl", hash = "sha256:e9b54de76e530bb6cf0ccd036787103acb58fd42ba930ea8bf948ddbaa2f61d1"},
+    {file = "certifi-2026.10.23.tar.gz", hash = "sha256:a9895e6e2758b371e0545e321a3a8fd1fcfd9829ada8824a936dfb16aaaf36cd"},
 ]
 
 [[package]]
@@ -1009,19 +1009,19 @@ websockets = ["websocket-client (>=1.3.0)"]
 
 [[package]]
 name = "ds-caselaw-marklogic-api-client"
-version = "50.0.1"
+version = "51.0.1"
 description = "An API client for interacting with the underlying data in Find Caselaw."
 optional = false
 python-versions = "<4.0.0,>=3.12.0"
 groups = ["test"]
 files = [
-    {file = "ds_caselaw_marklogic_api_client-50.0.1-py3-none-any.whl", hash = "sha256:943a7653a3abe59430f25ed644182650d4d90f17e2c53bb2742c473ddf5319c0"},
-    {file = "ds_caselaw_marklogic_api_client-50.0.1.tar.gz", hash = "sha256:211106c9df79dd6d520a2e682475a832893a8b0ef1af51648dac5f292f971f17"},
+    {file = "ds_caselaw_marklogic_api_client-51.0.1-py3-none-any.whl", hash = "sha256:5230894bfff034effc2093926c7ba5a96a01d12de6e7aebb4f3a9e40ceea795e"},
+    {file = "ds_caselaw_marklogic_api_client-51.0.1.tar.gz", hash = "sha256:a3873e5c1afe48aa014ab39205f3740a206c4b8d8e67ffed0bd5e89a51dcaca2"},
 ]
 
 [package.dependencies]
 boto3 = ">=1.43.3,<2.0.0"
-certifi = ">=2026.7.22,<2026.8.0"
+certifi = ">=2026.10.18,<2026.11.0"
 charset-normalizer = ">=3.0.0,<4.0.0"
 defusedxml = ">=0.7.1,<0.8.0"
 django-environ = ">=0.12.0"
@@ -4283,4 +4283,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.16"
-content-hash = "9353a46d703eed422953552199c8b6f288e09e55cc3bafe445c656cb6b2aafb8"
+content-hash = "bd4b14e70a61759aed31d3fa70dc3d14bd27de96ce118c8fc503b9ed8dced1a6"
