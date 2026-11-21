@@ -255,18 +255,18 @@ files = [
 
 [[package]]
 name = "boto3"
-version = "1.43.118"
+version = "1.44.6"
 description = "The AWS SDK for Python (Boto3)"
 optional = false
 python-versions = ">=3.10"
 groups = ["main", "test"]
 files = [
-    {file = "boto3-1.43.118-py3-none-any.whl", hash = "sha256:ab8f3d2c622ef039338b4f228d97ea55f1abd573d84bb9b9a5ee8cb6780c0ccd"},
-    {file = "boto3-1.43.118.tar.gz", hash = "sha256:c0620f799e0f0c222ba42c337b65cdbcd3da38a3121187f634d8926cbbb28a9c"},
+    {file = "boto3-1.44.6-py3-none-any.whl", hash = "sha256:7d5f43c824bdfcf203fd7c115cfb7bd4283f63caac01c731d8a667f8da096d52"},
+    {file = "boto3-1.44.6.tar.gz", hash = "sha256:af75aa81455f1c4dbbdd9bbd14c6ee3e66fb827430d1615014d4c45878e79c49"},
 ]
 
 [package.dependencies]
-botocore = ">=1.43.118,<1.44.0"
+botocore = ">=1.44.6,<1.45.0"
 jmespath = ">=0.7.1,<2.0.0"
 s3transfer = ">=0.19.0,<0.20.0"
 
@@ -275,14 +275,14 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "botocore"
-version = "1.43.118"
+version = "1.44.6"
 description = "Low-level, data-driven core of boto 3."
 optional = false
 python-versions = ">=3.10"
 groups = ["main", "test"]
 files = [
-    {file = "botocore-1.43.118-py3-none-any.whl", hash = "sha256:a45d7ae570674161e4a3542d8c68633bf7503f92d1de781ef7361b79488eda6f"},
-    {file = "botocore-1.43.118.tar.gz", hash = "sha256:7f3f9d88cc9e847587690f82a42e3c3c292c3026c92c1e60d68a9310018e003f"},
+    {file = "botocore-1.44.6-py3-none-any.whl", hash = "sha256:757c7f33d006e8a3c873e1fed71611baaaa2ee4d72e6f830ec0423d02ec5de2d"},
+    {file = "botocore-1.44.6.tar.gz", hash = "sha256:9deb4d9479d63aabf8fbd9169800821c1f47be77352d8b9b3d020de9a824794a"},
 ]
 
 [package.dependencies]
@@ -291,7 +291,7 @@ python-dateutil = ">=2.1,<3.0.0"
 urllib3 = ">=1.25.4,<2.2.0 || >2.2.0,<3"
 
 [package.extras]
-crt = ["awscrt (==0.36.0)"]
+crt = ["awscrt (==0.38.0)"]
 
 [[package]]
 name = "catalogue"
@@ -4283,4 +4283,4 @@ test = ["pytest", "pytest-cov"]
 [metadata]
 lock-version = "2.1"
 python-versions = "==3.13.16"
-content-hash = "9353a46d703eed422953552199c8b6f288e09e55cc3bafe445c656cb6b2aafb8"
+content-hash = "4183afcce7ce63d20ea983b12d03cfaf7ca6f7093c53773bbb4893e87aaf8ddc"
